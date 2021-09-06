@@ -9,6 +9,7 @@
 \usepackage{microtype}
 \usepackage[margin=1in]{geometry}
 %\usepackage{indentfirst}
+\usepackage{hyperref}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -98,6 +99,15 @@ ECE Dept., Whiting School of Engineering
 <mzhou32@jhu.edu>
 \end_layout
 
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Problem 1.1
 \end_layout
@@ -150,7 +160,7 @@ The three unique events are
 \begin_inset Formula $G$
 \end_inset
 
- means that the traffic light is in green when we made the observation.
+ means that the traffic light was in green when we made the observation.
 \end_layout
 
 \begin_layout Subsection
@@ -372,6 +382,96 @@ name "fig:11d"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Problem 1.2
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename 12a.svg
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sketch of events A, B, C and D for 1.2(a).
+ Shaded areas (in gray) indicates the respective events.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:12a"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(a) Sample space
+\end_layout
+
+\begin_layout Standard
+The sample space is 
+\begin_inset Formula $\Omega=\{(x,y)|x\in[0,1],y\in[0,1]\}$
+\end_inset
+
+ where both 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ are real.
+ The sketch of events can be found in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:12a"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \end_layout
 
 \end_body
