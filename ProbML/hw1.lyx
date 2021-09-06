@@ -474,5 +474,33 @@ noprefix "false"
 .
 \end_layout
 
+\begin_layout Subsection
+(b) Independence
+\end_layout
+
+\begin_layout Standard
+(i) 
+\begin_inset Formula $A\cap C\neq\phi$
+\end_inset
+
+, they are not independent; (ii) 
+\begin_inset Formula $A\cap D\neq\phi$
+\end_inset
+
+, they are not independenty; (iii) 
+\begin_inset Formula $C\cap D\neq\phi$
+\end_inset
+
+, they are not independent; (iv) 
+\begin_inset Formula $A\cap B=\phi$
+\end_inset
+
+, they are independent.
+\end_layout
+
+\begin_layout Subsection
+Jointly Independent?
+\end_layout
+
 \end_body
 \end_document
