@@ -8,6 +8,7 @@
 \begin_preamble
 \usepackage{microtype}
 \usepackage[margin=1in]{geometry}
+%\usepackage{indentfirst}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -69,7 +70,7 @@
 \math_numbering_side default
 \quotes_style english
 \dynamic_quotes 0
-\papercolumns 1
+\papercolumns 2
 \papersides 1
 \paperpagestyle default
 \tracking_changes false
@@ -91,14 +92,286 @@ Mo Zhou
 \end_inset
 
 ECE Dept., Whiting School of Engineering
+\begin_inset Newline newline
+\end_inset
+
+<mzhou32@jhu.edu>
 \end_layout
 
 \begin_layout Section
 Problem 1.1
 \end_layout
 
+\begin_layout Subsection
+(a) Sample Space
+\end_layout
+
 \begin_layout Standard
-(a) The sample space of this experiment is
+The sample space of this experiment is 
+\begin_inset Formula $\Omega=\{G,R,Y\}$
+\end_inset
+
+.
+ The traffic light can only be in one state at a time.
+ So the possible outcome of observation can be only 
+\begin_inset Formula $G$
+\end_inset
+
+, 
+\begin_inset Formula $R$
+\end_inset
+
+, or 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+(b) Unique Events
+\end_layout
+
+\begin_layout Standard
+The three unique events are 
+\begin_inset Formula $G$
+\end_inset
+
+, 
+\begin_inset Formula $R$
+\end_inset
+
+, and 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+ For instance, 
+\begin_inset Formula $G$
+\end_inset
+
+ means that the traffic light is in green when we made the observation.
+\end_layout
+
+\begin_layout Subsection
+
+\series bold
+(c)
+\series default
+ Minimal 
+\begin_inset Formula $\sigma$
+\end_inset
+
+-field
+\end_layout
+
+\begin_layout Standard
+The minimal 
+\begin_inset Formula $\sigma$
+\end_inset
+
+-field contains 
+\begin_inset Formula $2^{3}$
+\end_inset
+
+ elements.
+ Assume that there is a binary mask vector of length 
+\begin_inset Formula $3$
+\end_inset
+
+, where each mask corresponds to an element in the sample space, and the
+ 
+\begin_inset Formula $1$
+\end_inset
+
+ mask indicates the element (event) involves the corresponding outcome,
+ while the 
+\begin_inset Formula $1$
+\end_inset
+
+ mask indicates the opposite.
+ In particular, the concrete expression of the 
+\begin_inset Formula $\sigma$
+\end_inset
+
+-field is 
+\begin_inset Formula $\mathcal{F}=\big\{\phi,\{G\},\{R\},\{Y\},\{G\cup R\},\{G\cup Y\},\{R\cup Y\},\Omega\big\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+(d) Probability Mass Function
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $P(\Omega)=1$
+\end_inset
+
+ and 
+\begin_inset Formula $P(G)=P(Y)=0.5P(R)$
+\end_inset
+
+, we obtain 
+\begin_inset Formula $P(G)=1/4$
+\end_inset
+
+, 
+\begin_inset Formula $P(Y)=1/4$
+\end_inset
+
+, and 
+\begin_inset Formula $P(R)=1/2$
+\end_inset
+
+.
+ The plot of the probability mass function 
+\begin_inset Formula $p_{X}(x)$
+\end_inset
+
+ is shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:11d"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+# Python code for the plot.
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+import numpy as np, matplotlib.pyplot as plt
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+plt.stem([-1, 0, 1], [.25, .5, .25])
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+plt.grid(True)
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+plt.xlabel('X')
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+plt.ylabel('P')
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+plt.title('Problem 1.1(d)')
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+plt.savefig('11d.svg')
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename 11d.svg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Probability Mass Function for Problem 1.1(d).
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:11d"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
