@@ -820,5 +820,158 @@ where both
 Problem 4
 \end_layout
 
+\begin_layout Standard
+Let 
+\begin_inset Formula $X\sim U[0,1]$
+\end_inset
+
+ and 
+\begin_inset Formula $Y\sim U[0,1]$
+\end_inset
+
+ be two different random variables representing the delay of Romeo and Juliet
+ respectively.
+ The two variables are independent to each other.
+ The sample space is 
+\begin_inset Formula $\Omega=\{(x,y)\big|0<x\leq1,0<y\leq1\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+(a) Wait for 
+\begin_inset Formula $>15$
+\end_inset
+
+min?
+\end_layout
+
+\begin_layout Standard
+Let event 
+\begin_inset Formula $A$
+\end_inset
+
+ be 
+\begin_inset Formula $\{(x,y)\big||x-y|>1/4\}$
+\end_inset
+
+.
+ The question requires us to find 
+\begin_inset Formula $P(A)$
+\end_inset
+
+ .
+ This probability is the area of two triangals in the square shape, separated
+ by the region between 
+\begin_inset Formula $x-y=1/4$
+\end_inset
+
+ and 
+\begin_inset Formula $y-x=1/4$
+\end_inset
+
+.
+ Thus,
+\begin_inset Formula 
+\[
+P(A)=2(\frac{1}{2}\times\frac{3}{4}\times\frac{3}{4})=\frac{9}{16}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(b) Probability of a successful date
+\end_layout
+
+\begin_layout Standard
+Based on Romeo's impatience, we let event 
+\begin_inset Formula $B$
+\end_inset
+
+ be 
+\begin_inset Formula $\{(x,y)\big|x>y\}$
+\end_inset
+
+.
+ This covers the area of the lower triangular area in the square shape,
+ with 
+\begin_inset Formula $x=y$
+\end_inset
+
+ being the split line.
+\end_layout
+
+\begin_layout Standard
+Based on Juliet's tolerance of 20 minutes, we let event 
+\begin_inset Formula $C$
+\end_inset
+
+ be 
+\begin_inset Formula $\{(x,y)|x-y<1/3\}$
+\end_inset
+
+, namely 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\{(x,y)|y>x-1/3\}$
+\end_inset
+
+.
+ This covers the area of the square above the line 
+\begin_inset Formula $y=x-1/3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A successful date means event 
+\begin_inset Formula $B$
+\end_inset
+
+ and event 
+\begin_inset Formula $C$
+\end_inset
+
+ happends at the same time.
+ The corresponding probability is 
+\begin_inset Formula $P(B\cap C)$
+\end_inset
+
+, namely the intersection of the two areas described above.
+ Thus, it is the area of the lower triangular minus the triangular part
+ below line 
+\begin_inset Formula $y=x-1/3$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(B\cap C)=\frac{1}{2}-\frac{1}{2}(\frac{2}{3}\times\frac{2}{3})=\frac{1}{2}-\frac{2}{9}=\frac{5}{18}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
