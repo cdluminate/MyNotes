@@ -92,10 +92,6 @@ Mo Zhou
 \begin_inset Newline newline
 \end_inset
 
-ECE Dept., Whiting School of Engineering
-\begin_inset Newline newline
-\end_inset
-
 <mzhou32@jhu.edu>
 \end_layout
 
@@ -444,7 +440,7 @@ name "fig:12a"
 \end_layout
 
 \begin_layout Subsection
-(a) Sample space
+(a) Sample space 
 \end_layout
 
 \begin_layout Standard
@@ -480,26 +476,64 @@ noprefix "false"
 
 \begin_layout Standard
 (i) 
-\begin_inset Formula $A\cap C\neq\phi$
+\begin_inset Formula $P(A\cap C)=\frac{1}{4}=P(A)P(C)=\frac{1}{2}\times\frac{1}{2}$
 \end_inset
 
-, they are not independent; (ii) 
-\begin_inset Formula $A\cap D\neq\phi$
+, they are independent;
+\end_layout
+
+\begin_layout Standard
+(ii) 
+\begin_inset Formula $P(A\cap D)=\frac{1}{4}=P(A)P(D)=\frac{1}{2}\times\frac{1}{2}$
 \end_inset
 
-, they are not independenty; (iii) 
-\begin_inset Formula $C\cap D\neq\phi$
+, they are independent;
+\end_layout
+
+\begin_layout Standard
+(iii) 
+\begin_inset Formula $P(C\cap D)=\frac{1}{4}=P(C)P(D)$
 \end_inset
 
-, they are not independent; (iv) 
-\begin_inset Formula $A\cap B=\phi$
+, they are independent;
+\end_layout
+
+\begin_layout Standard
+(iv) 
+\begin_inset Formula $P(A\cap B)=0\neq P(A)P(B)=\frac{1}{2}\times\frac{1}{2}$
 \end_inset
 
-, they are independent.
+, they are NOT independent.
 \end_layout
 
 \begin_layout Subsection
-Jointly Independent?
+(c) A, C, D Jointly Independent?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+P(A\cap C)= & P(A)P(C),\\
+P(A\cap D)= & P(A)P(D),\\
+P(C\cap D)= & P(C)P(D),\\
+P(A\cap C\cap D)=0\neq & P(A)P(C)P(D).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By definition A, C, D are not jointly independent.
+\end_layout
+
+\begin_layout Subsection
+Establish Facts
+\end_layout
+
+\begin_layout Section
+Problem 1.3
 \end_layout
 
 \end_body
