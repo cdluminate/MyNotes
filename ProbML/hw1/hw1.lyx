@@ -1007,7 +1007,80 @@ Let event
 \begin_inset Formula $P(D\cup E)=3/4$
 \end_inset
 
- .
+.
+\end_layout
+
+\begin_layout Subsection
+(d) Probability that they meet
+\end_layout
+
+\begin_layout Standard
+Let event 
+\series bold
+
+\begin_inset Formula $F$
+\end_inset
+
+
+\series default
+ and 
+\begin_inset Formula $G$
+\end_inset
+
+ represent that Romeo and Juliet chickens out, respectively.
+ When they do not chicken out, we have two independent random variables
+ 
+\begin_inset Formula $X\sim\text{exp}(x;\lambda)$
+\end_inset
+
+ and 
+\begin_inset Formula $Y\sim\text{exp}(x;\lambda)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+When both of them do not checken out, the probability that they meet is
+\begin_inset Formula 
+\[
+P(\{(x,y)\big||x-y|<\frac{1}{4}\}\Big|F^{C}\cap G^{C})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which is a definite integral in the square, and between 
+\begin_inset Formula $x-y=1/4$
+\end_inset
+
+ and 
+\begin_inset Formula $y-x=1/4$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \int_{0}^{1}\int_{y-1/4}^{y+1/4}F_{XY}(x,y)dxdy\\
+= & \int_{0}^{1}\int_{y-1/4}^{y+1/4}\lambda^{2}e^{-\lambda x}u(x)e^{-\lambda y}u(y)dxdy\\
+= & \lambda^{2}\int_{0}^{1}e^{-\lambda y}u(y)\int_{y-1/4}^{y+1/4}e^{-\lambda x}u(x)dxdy\\
+= & \lambda^{2}\Big(\int_{0}^{1/4}e^{-\lambda y}\int_{0}^{y+1/4}e^{-\lambda x}dxdy\\
+ & +\int_{1/4}^{1}e^{-\lambda y}\int_{y-1/4}^{y+1/4}e^{-\lambda x}dxdy\Big)\\
+= & \int_{0}^{1/4}(-\lambda)e^{-\lambda y}\int_{0}^{y+1/4}(-\lambda)e^{-\lambda x}dxdy\\
+ & +\int_{1/4}^{1}(-\lambda)e^{-\lambda y}\int_{y-1/4}^{y+1/4}(-\lambda)e^{-\lambda x}dxdy\\
+= & \int_{0}^{1/4}(-\lambda)e^{-\lambda y}\big(e^{-\lambda(y+1/4)}-e^{0}\big)dy\\
+ & +\int_{1/4}^{1}(-\lambda)e^{-\lambda y}\big(e^{-\lambda(y+1/4)}-e^{-\lambda(y-1/4)})dy
+\end{align*}
+
+\end_inset
+
+ 
 \end_layout
 
 \end_body
