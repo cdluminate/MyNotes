@@ -821,7 +821,8 @@ Problem 4
 \end_layout
 
 \begin_layout Standard
-Let 
+We use hour as the unit in the answer.
+ Let 
 \begin_inset Formula $X\sim U[0,1]$
 \end_inset
 
@@ -837,6 +838,7 @@ Let
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -971,6 +973,41 @@ P(B\cap C)=\frac{1}{2}-\frac{1}{2}(\frac{2}{3}\times\frac{2}{3})=\frac{1}{2}-\fr
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+(c) Arrived in time
+\end_layout
+
+\begin_layout Standard
+Let event 
+\begin_inset Formula $D$
+\end_inset
+
+ be 
+\begin_inset Formula $\{(x,y)\big|x<\frac{1}{2}\}$
+\end_inset
+
+ and event 
+\begin_inset Formula $E$
+\end_inset
+
+ be 
+\begin_inset Formula $\{(x,y)\big|y<\frac{1}{2}\}$
+\end_inset
+
+.
+ The question requires us to find 
+\begin_inset Formula $P(D\cup E)$
+\end_inset
+
+.
+ We can reuse the sketch for Problem 1.2 (they are respectively the event
+ C and event B in Problem 1.2), and obtain that 
+\begin_inset Formula $P(D\cup E)=3/4$
+\end_inset
+
+ .
 \end_layout
 
 \end_body
