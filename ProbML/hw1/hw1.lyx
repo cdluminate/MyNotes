@@ -1223,5 +1223,83 @@ P(X\leq7) & =1-e^{-7/5}/4-3e^{-7/2}/4\approx1-0.062-0.023=0.915\\
 
 \end_layout
 
+\begin_layout Section
+Problem 1.6
+\end_layout
+
+\begin_layout Subsection
+(a) 
+\begin_inset Formula $P(Y\geq X)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $X\sim U[0,1]$
+\end_inset
+
+, we have 
+\begin_inset Formula $f_{X}(x)=1,\forall x\in[0,1]$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $Y\sim\text{exp}(x;\mu=1/2)$
+\end_inset
+
+, we have 
+\begin_inset Formula $f_{Y}=2e^{-2x}u(x)$
+\end_inset
+
+.
+ We know that 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are independent, so
+\begin_inset Formula 
+\[
+f_{X,Y}(x,y)=f_{X}(x)f_{Y}(y)=2e^{-2x},\forall x\in[0,1],\forall y\in[0,+\infty)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & P(Y\geq X)\\
+= & 1-P(Y<X)\\
+= & 1-\int_{0}^{1}[\int_{0}^{x}f_{X,Y}(x,y)dy]dx\\
+= & 1-\int_{0}^{1}[\int_{0}^{x}2e^{-2x}dy]dx\\
+= & 1-\int_{0}^{1}2e^{-2x}\int_{0}^{x}dydx\\
+= & 1-\int_{0}^{1}2xe^{-2x}dx\\
+= & 1-\{-\int_{0}^{1}x\cdot(-2)e^{-2x}dx\}\\
+= & 1-\{-[x\cdot e^{-2x}]\big|_{0}^{1}+\int_{0}^{1}e^{-2x}dx\}\\
+= & 1-\{-e^{-2}-\frac{1}{2}\int_{0}^{1}(-2)e^{-2x}dx\}\\
+= & 1-\{-e^{-2}-\frac{1}{2}(e^{-2x})\big|_{0}^{1}\}\\
+= & 1-\{-e^{-2}-\frac{1}{2}e^{-2}+\frac{1}{2}e^{0}\}\\
+= & 1-\{\frac{1}{2}-\frac{3}{2}e^{-2}\}\\
+\approx & 1-0.297\\
+= & 0.703
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
