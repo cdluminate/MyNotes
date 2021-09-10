@@ -1326,15 +1326,32 @@ Then we have
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
+\begin_inset Formula 
+\begin{align*}
+ & F_{Z}(z|Y=y)\\
+= & P(Z\leq z|Y=y)\\
+= & P(X+Y\leq z|Y=y)\\
+= & P(X\leq z-y)\\
+= & F_{X}(z-y)\\
+= & z-y
+\end{align*}
 
-\begin_layout Plain Layout
+\end_inset
 
 
-\backslash
-todo
 \end_layout
+
+\begin_layout Standard
+The condition is 
+\begin_inset Formula $\forall z,\forall y,z-y\in[0,1]$
+\end_inset
+
+.
+ Then we have the PDF
+\begin_inset Formula 
+\[
+f_{Z}(z|Y=y)=\frac{d}{dz}F_{Z}(z|Y=y)=1-y
+\]
 
 \end_inset
 
