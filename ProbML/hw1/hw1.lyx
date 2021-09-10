@@ -1081,6 +1081,146 @@ which is a definite integral in the square, and between
 \end_inset
 
  
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+todo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Problem 1.5
+\end_layout
+
+\begin_layout Subsection
+(a) Burn at least two months
+\end_layout
+
+\begin_layout Standard
+The probability that the bulb burns within 
+\begin_inset Formula $x$
+\end_inset
+
+ months is 
+\begin_inset Formula $P(X\leq x)$
+\end_inset
+
+.
+ So the probability the the bulb will burn after two months is 
+\begin_inset Formula $1-P(X\leq x)$
+\end_inset
+
+.
+ In addition, we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P(X\leq x\big|A)=F_{X}(x)-F_{X}(0)=1-e^{-x/5}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P(X\leq x\big|B)=F_{X}(x)-F_{X}(0)=1-e^{-x/2}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P(A)=1/4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P(B)=3/4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then we have the total probability
+\begin_inset Formula 
+\begin{align*}
+P(X\leq x) & =P(X\leq x|A)P(A)+P(X\leq x|B)P(B)\\
+ & =\text{\ensuremath{\frac{1}{4}}}(1-e^{-x/5})+\frac{3}{4}(1-e^{-x/2})\\
+ & =1-e^{-x/5}/4-3e^{-x/2}/4
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hence, when 
+\begin_inset Formula $x=2$
+\end_inset
+
+, we have 
+\begin_inset Formula $P(X\leq2)=1-e^{-2/5}/4-3e^{-1}/4\approx1-0.168-0.276=0.556$
+\end_inset
+
+.
+ So the probability that a random bulb burns after two months is 
+\begin_inset Formula $1-P(X\leq2)\approx0.444$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+(b) Five months
+\end_layout
+
+\begin_layout Standard
+By plugging 
+\begin_inset Formula $x=5$
+\end_inset
+
+ into the formulation we obtained in question (a), we get
+\begin_inset Formula 
+\begin{align*}
+P(X\leq5) & =1-e^{-1}/4-3e^{-5/2}/4\approx1-0.092-0.062=0.846\\
+1-P(X\leq5) & \approx0.154
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(c) Seven months
+\end_layout
+
+\begin_layout Standard
+By plugging 
+\begin_inset Formula $x=7$
+\end_inset
+
+ into the formulation we obtained in question (a), we get
+\begin_inset Formula 
+\begin{align*}
+P(X\leq7) & =1-e^{-7/5}/4-3e^{-7/2}/4\approx1-0.062-0.023=0.915\\
+1-P(X\leq7) & \approx0.085
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \end_body
