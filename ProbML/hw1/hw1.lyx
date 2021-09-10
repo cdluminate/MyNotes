@@ -1613,5 +1613,39 @@ name "fig:p17"
 Problem 1.8
 \end_layout
 
+\begin_layout Standard
+Let 
+\begin_inset Formula $L=\max(X_{1},X_{2},\ldots,X_{n})$
+\end_inset
+
+.
+ Then we have
+\begin_inset Formula 
+\begin{align*}
+F_{L}(l)= & P(L\leq l)\\
+= & P(\cap_{i=1}^{n}\{X_{i}\leq l\})\\
+= & \prod_{i=1}^{n}P(X_{i}\leq l)\\
+= & \prod_{i=1}^{n}l=l^{n}\\
+f_{L}(l)= & \frac{dF_{L}(l)}{dl}=nl^{n-1}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+todo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
