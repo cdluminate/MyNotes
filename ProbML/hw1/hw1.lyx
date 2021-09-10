@@ -1067,29 +1067,44 @@ which is a definite integral in the square, and between
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
- & \int_{0}^{1}\int_{y-1/4}^{y+1/4}F_{XY}(x,y)dxdy\\
-= & \int_{0}^{1}\int_{y-1/4}^{y+1/4}\lambda^{2}e^{-\lambda x}u(x)e^{-\lambda y}u(y)dxdy\\
-= & \lambda^{2}\int_{0}^{1}e^{-\lambda y}u(y)\int_{y-1/4}^{y+1/4}e^{-\lambda x}u(x)dxdy\\
-= & \lambda^{2}\Big(\int_{0}^{1/4}e^{-\lambda y}\int_{0}^{y+1/4}e^{-\lambda x}dxdy\\
- & +\int_{1/4}^{1}e^{-\lambda y}\int_{y-1/4}^{y+1/4}e^{-\lambda x}dxdy\Big)\\
-= & \int_{0}^{1/4}(-\lambda)e^{-\lambda y}\int_{0}^{y+1/4}(-\lambda)e^{-\lambda x}dxdy\\
- & +\int_{1/4}^{1}(-\lambda)e^{-\lambda y}\int_{y-1/4}^{y+1/4}(-\lambda)e^{-\lambda x}dxdy\\
-= & \int_{0}^{1/4}(-\lambda)e^{-\lambda y}\big(e^{-\lambda(y+1/4)}-e^{0}\big)dy\\
- & +\int_{1/4}^{1}(-\lambda)e^{-\lambda y}\big(e^{-\lambda(y+1/4)}-e^{-\lambda(y-1/4)})dy
+ & \int_{0}^{+\infty}\int_{x-1/4}^{x+1/4}F_{XY}(x,y)dydx\\
+= & \int_{0}^{+\infty}\int_{x-1/4}^{x+1/4}\lambda^{2}e^{-\lambda x}u(x)e^{-\lambda y}u(y)dydx\\
+= & \int_{0}^{1/4}\int_{0}^{x+1/4}\lambda^{2}e^{-\lambda x}e^{-\lambda y}dydx+\int_{1/4}^{+\infty}\int_{x-1/4}^{x+1/4}\lambda^{2}e^{-\lambda x}e^{-\lambda y}dydx\\
+= & \int_{0}^{1/4}(-\lambda)e^{-\lambda x}\int_{0}^{x+1/4}(-\lambda)e^{-\lambda y}dydx+\int_{1/4}^{+\infty}(-\lambda)e^{-\lambda x}\int_{x-1/4}^{x+1/4}(-\lambda)e^{-\lambda y}dydx\\
+= & \int_{0}^{1/4}(-\lambda)e^{-\lambda x}[e^{-\lambda(x+1/4)}-1]dx+\int_{1/4}^{+\infty}(-\lambda)e^{-\lambda x}[e^{-\lambda(x+1/4)}-e^{-\lambda(x-1/4)}]dx\\
+= & \frac{1}{2}e^{-\frac{\lambda}{4}}\int_{0}^{1/4}(-2\lambda)e^{-2\lambda x}dx-\int_{0}^{1/4}(-\lambda)e^{-\lambda x}dx\\
+ & +\frac{1}{2}e^{-\frac{\lambda}{4}}\int_{1/4}^{+\infty}(-2\lambda)e^{-2\lambda x}dx-\frac{1}{2}e^{\frac{\lambda}{4}}\int_{1/4}^{+\infty}(-2\lambda)e^{-2\lambda x}dx\\
+= & \frac{1}{2}e^{-\frac{\lambda}{4}}[e^{-\lambda/2}-1]-[e^{-\lambda/4}-1]+\frac{1}{2}e^{-\frac{\lambda}{4}}[0-e^{-\lambda/2}]-\frac{1}{2}e^{\frac{\lambda}{4}}[0-e^{-\lambda/2}]\\
+= & 1-e^{-\lambda/4}
 \end{align*}
 
 \end_inset
 
- 
-\begin_inset ERT
-status open
 
-\begin_layout Plain Layout
-
-
-\backslash
-todo
 \end_layout
+
+\begin_layout Standard
+When 
+\begin_inset Formula $\lambda=2$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+P(\{(x,y)\big||x-y|<\frac{1}{4}\}\Big|F^{C}\cap G^{C})=1-e^{-\lambda/4}\approx0.393
+\]
+
+\end_inset
+
+Then the final probability that they meet when we have no prior knowledge
+ whether they will chicken out is
+\begin_inset Formula 
+\begin{align*}
+ & P(\{(x,y)\big||x-y|<\frac{1}{4}\}\cap F^{C}\cap G^{C})\\
+= & P(\{(x,y)\big||x-y|<\frac{1}{4}\}\Big|F^{C}\cap G^{C})P(F^{C})P(G^{C})\\
+= & (1-e^{-\lambda/4})\times\frac{3}{4}\times\frac{3}{4}\\
+\approx & 0.221
+\end{align*}
 
 \end_inset
 
