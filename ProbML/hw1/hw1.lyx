@@ -1413,103 +1413,105 @@ In this way we don't have to write code that easily lead to large numbers
 \end_layout
 
 \begin_layout Standard
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
 width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-\family typewriter
+
+\backslash
+begin{quote}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{verbatim}
+\end_layout
+
+\begin_layout Plain Layout
+
 px = [0.5, zeros(1, 5000)]; % px(0)=0.5
 \end_layout
 
 \begin_layout Plain Layout
 
-\family typewriter
 for i = 3:2:5001
 \end_layout
 
 \begin_layout Plain Layout
 
-\family typewriter
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\family typewriter
-
-\backslash
-qquad
-\end_layout
-
-\end_inset
-
-x = i-1; % I dislike languages with indeces starting from 1
+	x = i-1; % I dislike languages with indeces starting from 1
 \end_layout
 
 \begin_layout Plain Layout
 
-\family typewriter
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\family typewriter
-
-\backslash
-qquad
-\end_layout
-
-\end_inset
-
-px(i) = prod([5000:-1:5000-x/2+1]./[5001:1:5000+x/2])^2;
+	px(i) = prod([5000:-1:5000-x/2+1]./[5001:1:5000+x/2])^2;
 \end_layout
 
 \begin_layout Plain Layout
 
-\family typewriter
 end
 \end_layout
 
 \begin_layout Plain Layout
 
-\family typewriter
 px = px / sum(px); % normalize
 \end_layout
 
 \begin_layout Plain Layout
 
-\family typewriter
 plot(0:5000, px); % cannot annotate the plot due to limit on linse of code
 \end_layout
 
 \begin_layout Plain Layout
 
-\family typewriter
 print('p17', '-dsvg');
 \end_layout
 
 \begin_layout Plain Layout
 
-\family typewriter
 ex = sum([0:5000].*px)
 \end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{verbatim}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{quote}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
 
 \end_inset
 
