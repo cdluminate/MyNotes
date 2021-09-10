@@ -600,19 +600,61 @@ P(J\cap K)= & 1/8\\
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-todo
-\end_layout
+True.
+ The reason is as follows
+\begin_inset Formula 
+\begin{align*}
+P(V\cap W|Q)= & \frac{P(V\cap W\cap Q)}{P(Q)}\\
+P(V|W\cap Q)P(W|Q)= & \frac{P(V\cap W\cap Q)}{P(W\cap Q)}\cdot\frac{P(W\cap Q)}{P(Q)}=\frac{P(V\cap W\cap Q)}{P(Q)}
+\end{align*}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+We find the left side of the given formulation always equal to the right
+ side.
+ So the formulation is true.
+\end_layout
+
+\begin_layout Standard
+For example, when 
+\begin_inset Formula $V=J$
+\end_inset
+
+, 
+\begin_inset Formula $W=K$
+\end_inset
+
+, 
+\begin_inset Formula $Q=L$
+\end_inset
+
+ this equation holds (
+\begin_inset Formula $J,K,L$
+\end_inset
+
+ are events from the anser for (d)).
+ In this case, 
+\begin_inset Formula $P(J\cap K|L)=1/4$
+\end_inset
+
+, 
+\begin_inset Formula $P(J|K\cap L)=P(J|L)=1/2$
+\end_inset
+
+, 
+\begin_inset Formula $P(K|L)=1/2$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $P(J\cap K|L)=P(J|K\cap L)P(K|L)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
