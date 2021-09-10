@@ -1301,5 +1301,59 @@ Then we have
 
 \end_layout
 
+\begin_layout Subsection
+\begin_inset Formula $f_{Z}(z|Y=y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+todo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $f_{Y}(y|Z=3)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+todo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Problem 1.7
+\end_layout
+
+\begin_layout Subsection
+Problem 1.8
+\end_layout
+
 \end_body
 \end_document
