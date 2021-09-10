@@ -36,7 +36,7 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize default
+\paperfontsize 11
 \spacing single
 \use_hyperref false
 \papersize default
@@ -73,7 +73,7 @@
 \math_numbering_side default
 \quotes_style english
 \dynamic_quotes 0
-\papercolumns 2
+\papercolumns 1
 \papersides 1
 \paperpagestyle default
 \tracking_changes false
@@ -1193,7 +1193,8 @@ By plugging
  into the formulation we obtained in question (a), we get
 \begin_inset Formula 
 \begin{align*}
-P(X\leq5) & =1-e^{-1}/4-3e^{-5/2}/4\approx1-0.092-0.062=0.846\\
+P(X\leq5) & =1-e^{-1}/4-3e^{-5/2}/4\\
+ & \approx1-0.092-0.062=0.846\\
 1-P(X\leq5) & \approx0.154
 \end{align*}
 
@@ -1214,7 +1215,8 @@ By plugging
  into the formulation we obtained in question (a), we get
 \begin_inset Formula 
 \begin{align*}
-P(X\leq7) & =1-e^{-7/5}/4-3e^{-7/2}/4\approx1-0.062-0.023=0.915\\
+P(X\leq7) & =1-e^{-7/5}/4-3e^{-7/2}/4\\
+ & \approx1-0.062-0.023=0.915\\
 1-P(X\leq7) & \approx0.085
 \end{align*}
 
@@ -1351,7 +1353,261 @@ todo
 Problem 1.7
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
+First, 
+\begin_inset Formula $\forall x=2k-1,k=1,2,\ldots,2500$
+\end_inset
+
+, we have 
+\begin_inset Formula $p_{X}(x)=0$
+\end_inset
+
+ because the count of heads or tails must be integer.
+ Since
+\begin_inset Formula 
+\begin{align*}
+p_{X}(0)= & (\frac{1}{2})^{10000}(_{5000}^{10000})(_{5000}^{10000})\\
+p_{X}(2)= & 2(\frac{1}{2})^{10000}(_{4999}^{10000})(_{5001}^{10000})\\
+\ldots\\
+P_{X}(5000)= & 2(\frac{1}{2})^{10000}(_{0}^{10000})(_{10000}^{10000})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To simplify them, we let
+\begin_inset Formula 
+\[
+a=(\frac{1}{2})^{9999}(_{5000}^{10000})^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then we have
+\begin_inset Formula 
+\begin{align*}
+p_{X}(0)= & \frac{1}{2}a\\
+p_{X}(2)= & (\frac{5000}{5001})^{2}a\\
+p_{X}(4)= & (\frac{5000}{5001}\cdot\frac{4999}{5002})^{2}a\\
+\ldots\\
+p_{X}(5000)= & (\frac{5000}{5001}\cdot\frac{4999}{5002}\cdots\frac{2501}{7500})^{2}a
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this way we don't have to write code that easily lead to large numbers
+ that double precision floating point format (see IEEE754 standard for detail)
+ cannot present.
+ Thus the code can be found as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+px = [0.5, zeros(1, 5000)]; % px(0)=0.5
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+for i = 3:2:5001
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+x = i-1; % I dislike languages with indeces starting from 1
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+px(i) = prod([5000:-1:5000-x/2+1]./[5001:1:5000+x/2])^2;
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+px = px / sum(px); % normalize
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+plot(0:5000, px); % cannot annotate the plot due to limit on linse of code
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+print('p17', '-dsvg');
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+ex = sum([0:5000].*px)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The computed result is 
+\begin_inset Formula $E[X]\approx56.4168$
+\end_inset
+
+.
+ And the sketch of 
+\begin_inset Formula $p_{X}(x)$
+\end_inset
+
+ can be found in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:p17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename p17.svg
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sketch of 
+\begin_inset Formula $p_{X}(x)$
+\end_inset
+
+ for problem 1.7.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:p17"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Problem 1.8
 \end_layout
 
