@@ -1625,26 +1625,97 @@ Let
 F_{L}(l)= & P(L\leq l)\\
 = & P(\cap_{i=1}^{n}\{X_{i}\leq l\})\\
 = & \prod_{i=1}^{n}P(X_{i}\leq l)\\
-= & \prod_{i=1}^{n}l=l^{n}\\
-f_{L}(l)= & \frac{dF_{L}(l)}{dl}=nl^{n-1}
+= & \prod_{i=1}^{n}l\\
+= & l^{n}\\
+f_{L}(l)= & \frac{d}{dl}F_{L}(l)=nl^{n-1}
 \end{align*}
 
 \end_inset
 
 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-todo
 \end_layout
+
+\begin_layout Standard
+Similarly, we let 
+\begin_inset Formula $S=\min(X_{1},X_{2},\ldots,X_{n})$
+\end_inset
+
+.
+ Then we have
+\begin_inset Formula 
+\begin{align*}
+F_{S}(s)= & P(S\leq s)\\
+= & 1-P(S\geq s)\\
+= & 1-P(\cap_{i=1}^{n}\{X_{i}\geq s\})\\
+= & 1-\prod_{i=1}^{n}P(X_{i}\geq s)\\
+= & 1-\prod_{i=1}^{n}[1-P(X_{i}\leq s)]\\
+= & 1-(1-s)^{n}\\
+f_{S}(s)= & \frac{d}{ds}F_{S}(s)=n(1-s)^{n-1}
+\end{align*}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Following the similar way, we have the conditional CDF
+\begin_inset Formula 
+\begin{align*}
+F_{S|L}(s|l)= & P(S\leq s|L=l)\\
+= & 1-P(S\geq s|L=l)\\
+= & 1-P(\cap_{i=1}^{n}\{X_{i}\geq s\}|L=l)\\
+= & 1-\prod_{i=1}^{n}P(X_{i}\geq s|L=l)\\
+= & 1-\prod_{i=1}^{n}P(s\leq X_{i}\leq l)\\
+= & 1-(l-s)^{n}\\
+f_{S|L}(s|l)= & \frac{\partial^{2}}{\partial s\partial l}F_{S|L}(s|l)=\frac{\partial^{2}}{\partial s\partial l}\{-(l-s)^{n}\}\\
+= & \frac{\partial}{\partial s}[-n(l-s)^{n-1}]\\
+= & n(n-1)(l-s)^{n-2}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Next we can restore the joint probability density function from the conditional
+ PDF 
+\begin_inset Formula $f_{S|L}(s|l)$
+\end_inset
+
+ and the marginal distribution 
+\begin_inset Formula $f_{L}(l)$
+\end_inset
+
+ as follows
+\begin_inset Formula 
+\begin{align*}
+f_{S,L}(s,l)= & f_{S|L}(s|l)\cdot f_{L}(l)\\
+= & n^{2}(n-1)(l-s)^{n-2}l^{n-1}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Additionally, since
+\begin_inset Formula 
+\begin{align*}
+ & f_{S}(s)\cdot f_{L}(l)\\
+= & n^{2}(1-s)^{n-1}l^{n-1}\\
+\neq & f_{S,L}(s,l)
+\end{align*}
+
+\end_inset
+
+we know that the two random variables are indeed not independent to each
+ other.
+ Hence the hint in the question.
+ I learned that joint PDFs can be restored based on conditional PDFs when
+ some of the random variables are not independent to each other.
 \end_layout
 
 \end_body
