@@ -1,6 +1,4 @@
-% SCRIPT TO CREATE A DEMO FOR NEWTON'S METHOD
-% Use this as JUST a guide and feel free to write as you wish
-
+%% Lab 2 / Mo Zhou <mzhou32@jhu.edu>
 
 % create a function poly.m and write desired equation and return
 % independent variable
@@ -23,31 +21,53 @@ xr=xi;
 % caluculate function values for each value of xlim_values using for loop
 f_values=[];
 xlim_values=[-abs(xr):0.1:abs(xr)];
-% write from here
+%% write from here
 
+for x = xlim_values
+	f_values = [f_values, f(x)];
+end
 
 % plot the xlim_values vs function values and draw x-axis and y-axis
 % centered at origin
-% write your code here
+%% write your code here
 
+plot(xlim_values, f_values);
+grid on;
+xlim([-12, 12]);
+xlabel('x');
+ylim([-160, 160]);
+ylabel('f');
 
 % write xr as 'x0' to denote initial point. Use text function to write text on figures
-% write from here
+%% write from here
 
-
+text(xr, 0, 'x0');
 
 % plot tangent at xr
-% write from here
+%% write from here
 
+% line: y = f'(x)x - f(xr)-fder(xr)*xr
+tangent_line = fder(xr) .* xlim_values + f(xr)-fder(xr)*xr;
+hold on;
+plot(xlim_values, tangent_line, 'r');
 
 % draw line from xr to f(xr). Use functions text and line
 [xr] = newtons_update(f,fder, xi);
-% write from here
+%% write from here
+
+line([xr, xr], [0, f(xr)], 'Color', 'green', 'LineStyle', '--');
+text(xr, 0, 'x1');
 
 
 % find Newtons update and write on the same plot
-% write from here
-
+%% write from here
+tangent_line = fder(xr) .* xlim_values + f(xr)-fder(xr)*xr;
+plot(xlim_values, tangent_line, 'r');
+xi = xr;
+[xr] = newtons_update(f, fder, xi);
+line([xr, xr], [0, f(xr)], 'Color', 'green', 'LineStyle', '--');
+text(xr, 0, 'x2');
+pause
 
 % M is the variable to hold frames of video. Use getframe function
 M=[];
