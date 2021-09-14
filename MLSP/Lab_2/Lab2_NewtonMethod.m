@@ -153,6 +153,7 @@ display(root);
 %% unfortunately the matlab 2022 has removed movie2avi
 % movie2avi(M,sprintf('lab2_starting_from_%d.avi', xi),'Compression','Cinepak')
 v = VideoWriter(sprintf('lab2_starting_from_%d.avi', xi));
+v.FrameRate = 0.5;
 open(v);
 for i = M
 	writeVideo(v, i)
