@@ -13,6 +13,8 @@ tol = 1e-06;
 
 % experiment with different values of xi
 xi = 10.0;
+%xi = -1
+%xi = 8
 
 % Initialization of relative errors, rel_errs
 rel_errs = zeros(maxIters,1);
@@ -63,21 +65,26 @@ text(xr, 0, 'x1');
 %% write from here
 tangent_line = fder(xr) .* xlim_values + f(xr)-fder(xr)*xr;
 plot(xlim_values, tangent_line, 'r');
-xi = xr;
-[xr] = newtons_update(f, fder, xi);
+[xr] = newtons_update(f, fder, xr);
 line([xr, xr], [0, f(xr)], 'Color', 'green', 'LineStyle', '--');
 text(xr, 0, 'x2');
-pause
 
 % M is the variable to hold frames of video. Use getframe function
 M=[];
 count=1;
-% write command here and store in M[count]
+%% write command here and store in M[count]
 
+tmp = getframe();
+M = [M, tmp];
 
 count=count+1;
-pause
+hold off
+%pause
 
+%% we should reset xr in order to create a complete movie -- mo zhou
+xr = xi;
+M = [];
+count = 1;
 
 for iter = 1:maxIters
     xrold=xr;
@@ -87,37 +94,52 @@ for iter = 1:maxIters
     % Relative error from xr and xrold and stopping criteria and break if
     % rel_err<tol. 
     % write from here
-
-    
+	xlim_values=[-abs(10):0.1:abs(10)];
+	if abs(xr - xrold) < tol
+		break
+	end
     
     % plot the xlim_values vs function values and draw x-axis and y-axis
     % centered at origin
     % write from here
-
+	f_values = f(xlim_values);
+	plot(xlim_values, f_values);
+	grid on;
+	xlim([-12, 12]);
+	xlabel('x');
+	ylim([-160, 160]);
+	ylabel('f');
     
     % plot tangent at xr
     % write from here
-
+	tangent_line = fder(xrold) .* xlim_values + f(xrold)-fder(xrold)*xrold;
+	hold on;
+	plot(xlim_values, tangent_line, 'r');
 
     % write xr as xiter_no. ex: x1, x2 for first and second iteration
     % write from here
-
+	if iter == 1
+		text(xrold, 0, sprintf("x%d", count-1));
+		line([xrold, xrold], [0, f(xrold)], 'Color', 'black');
+	end
+	text(xr, 0, sprintf("x%d", iter));
 
     % draw line from xr to f(xr)
     % write from here
+	line([xr, xr], [0, f(xr)], 'Color', 'green', 'LineStyle', '--');
 
     % find Newtons update and write on the same plot
     % write from here
-    
+	%tangent_line = fder(xr) .* xlim_values + f(xr)-fder(xr)*xr;
+	%plot(xlim_values, tangent_line, 'r');
     
     hold off
     % save the current frame for the video. Store in M(count)
     % write from here
-    
-    
+	M = [M, getframe()];
     
     count=count+1;
-    pause
+    %pause
  
 end
   root = xr; % root found by your algorithm
@@ -125,6 +147,14 @@ end
  
 %  play movie using movie commnad. 
 % write from here
+display(root);
+%movie(M, 100, 0.5);
 
-
-
+%% unfortunately the matlab 2022 has removed movie2avi
+% movie2avi(M,sprintf('lab2_starting_from_%d.avi', xi),'Compression','Cinepak')
+v = VideoWriter(sprintf('lab2_starting_from_%d.avi', xi));
+open(v);
+for i = M
+	writeVideo(v, i)
+end
+close(v);
