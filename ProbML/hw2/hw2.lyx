@@ -36,7 +36,7 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize 12
+\paperfontsize 11
 \spacing single
 \use_hyperref false
 \papersize default
@@ -164,6 +164,10 @@ Problem 2.2
 \end_layout
 
 \begin_layout Section
+Problem 2.3
+\end_layout
+
+\begin_layout Section
 Problem 2.4
 \end_layout
 
@@ -208,6 +212,14 @@ Var[Y] & =E[(Y-E[Y])^{2}]\\
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Problem 2.5
+\end_layout
+
+\begin_layout Section
+Problem 2.6
 \end_layout
 
 \end_body
