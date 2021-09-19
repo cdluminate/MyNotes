@@ -10,7 +10,9 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{hyperref}
 \usepackage{indentfirst}
+\usepackage{bm}
 \end_preamble
+\options b5
 \use_default_options true
 \maintain_unincluded_children false
 \language english
@@ -20,7 +22,7 @@
 \font_roman "times" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
-\font_math "libertine-ntxm" "auto"
+\font_math "newtxmath" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
@@ -34,7 +36,7 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize default
+\paperfontsize 12
 \spacing single
 \use_hyperref false
 \papersize default
@@ -159,6 +161,53 @@ f_{Y}(y) & =\frac{d}{dy}F_{Y}(y)\\
 
 \begin_layout Section
 Problem 2.2
+\end_layout
+
+\begin_layout Section
+Problem 2.4
+\end_layout
+
+\begin_layout Standard
+We have 
+\begin_inset Formula $E[\bm{X}]=\bm{\mu}_{X}$
+\end_inset
+
+, and 
+\begin_inset Formula $\bm{K}_{XX}=E[(\bm{X}-\bm{\mu}_{X})(\bm{X}-\bm{\mu}_{X})^{T}]$
+\end_inset
+
+.
+ Then the mean of the new variable is
+\begin_inset Formula 
+\begin{align*}
+E[Y] & =E[\bm{a}^{T}\bm{X}+b]\\
+ & =\sum_{i}a_{i}E[X_{i}]+b\\
+ & =\bm{a}^{T}\bm{\mu}_{X}+b
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And the variance of the new variable is
+\begin_inset Formula 
+\begin{align*}
+Var[Y] & =E[(Y-E[Y])^{2}]\\
+ & =E[(\bm{a}^{T}\bm{X}+b-\bm{a}^{T}\bm{\mu}_{X}-b)^{2}]\\
+ & =E[(\bm{a}^{T}\bm{X}-\bm{a}^{T}\bm{\mu}_{X})^{2}]\\
+ & =E[(\bm{a}^{T}\bm{X}-\bm{a}^{T}\bm{\mu}_{X})(\bm{a}^{T}\bm{X}-\bm{a}^{T}\bm{\mu}_{X})^{T}]\\
+ & =E[(\bm{a}^{T}\bm{X}-\bm{a}^{T}\bm{\mu}_{X})(\bm{X}^{T}\bm{a}-\bm{\mu}_{X}^{T}\bm{a})]\\
+ & =E[\bm{a}^{T}\bm{X}\bm{X}^{T}\bm{a}-\bm{a}^{T}\bm{\mu}_{X}\bm{X}^{T}\bm{a}-\bm{a}^{T}\bm{X}\bm{\mu}_{X}^{T}\bm{a}+\bm{a}^{T}\bm{\mu}_{X}\bm{\mu}_{X}^{T}\bm{a}]\\
+ & =E[\bm{a}^{T}(\bm{X}\bm{X}^{T}-\bm{\mu}_{X}\bm{X}^{T}-\bm{X}\bm{\mu}_{X}^{T}+\bm{\mu}_{X}\bm{\mu}_{X}^{T})\bm{a}]\\
+ & =\bm{a}^{T}E(\bm{X}\bm{X}^{T}-\bm{\mu}_{X}\bm{X}^{T}-\bm{X}\bm{\mu}_{X}^{T}+\bm{\mu}_{X}\bm{\mu}_{X}^{T})]\bm{a}\\
+ & =\bm{a}^{T}\bm{K}_{XX}\bm{a}
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \end_body
