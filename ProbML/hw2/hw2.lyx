@@ -234,6 +234,64 @@ E[Y|X=x]= & \int_{-\infty}^{+\infty}yf_{Y|X}(y|x)dy\\
 Problem 2.3
 \end_layout
 
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial M_{X}(s)}{\partial s}= & 2be^{2s}+4ce^{4s}\\
+\frac{\partial^{2}M_{X}(s)}{\partial s^{2}}= & 4be^{2s}+16ce^{4s}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\partial M_{X}(S)/\partial s|_{s=0}=E[X]$
+\end_inset
+
+, 
+\begin_inset Formula $\partial^{2}M_{X}(s)/\partial s^{2}|_{s=0}=E[X^{2}]$
+\end_inset
+
+, and 
+\begin_inset Formula $M_{X}(0)=1$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{align*}
+E[X]= & 2b+4c=3\\
+E[X^{2}]=Var[X]+(E[X])^{2}= & 4b+16c=11\\
+M_{X}(0)= & a+b+c=1
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By solving the linear system, we obtain 
+\begin_inset Formula $a=1/8$
+\end_inset
+
+, 
+\begin_inset Formula $b=1/4$
+\end_inset
+
+, 
+\begin_inset Formula $c=5/8$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Section
 Problem 2.4
 \end_layout
