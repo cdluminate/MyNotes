@@ -222,12 +222,27 @@ f_{Y|X}(y|x)= & f_{X,Y}(x,y)/f_{Y}(y)\\
 \begin{align*}
 E[Y|X=x]= & \int_{-\infty}^{+\infty}yf_{Y|X}(y|x)dy\\
 = & \int_{-\infty}^{+\infty}y\frac{1}{\sqrt{2\pi\sigma^{2}(1-\rho^{2})}}\exp\{-\frac{(x-\rho y)^{2}}{2\sigma^{2}(1-\rho^{2})}\}dy\\
-\\
+ & \text{let }z=(x-\rho y)/(\sigma\sqrt{1-\rho^{2}})\\
+= & \int_{-\infty}^{+\infty}(\frac{1}{\rho}x+\frac{\sigma\sqrt{1-\rho^{2}}}{\rho}z)\exp\{-\frac{1}{2}z^{2}\}dz\\
+= & \frac{1}{\rho}x
 \end{align*}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+X and Y are not independent.
+ Given prior knowledge on 
+\begin_inset Formula $X$
+\end_inset
+
+, the expectation of 
+\begin_inset Formula $Y$
+\end_inset
+
+ will differ.
 \end_layout
 
 \begin_layout Section
