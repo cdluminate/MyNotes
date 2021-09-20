@@ -210,9 +210,9 @@ f_{Y}(y)= & \int_{-\infty}^{+\infty}\frac{1}{2\pi\sigma^{2}\sqrt{1-\rho^{2}}}\ex
 
 \begin_inset Formula 
 \begin{align*}
-f_{Y|X}(y|x)= & f_{X,Y}(x,y)/f_{Y}(y)\\
-= & \big\{\frac{1}{2\pi\sigma^{2}\sqrt{1-\rho^{2}}}\exp\{-\frac{(x-\rho y)^{2}}{2\sigma^{2}(1-\rho^{2})}\}\exp\{-\frac{y^{2}}{2\sigma^{2}}\}\big\}/\big\{\frac{1}{\sqrt{2\pi}\sigma}\exp\{-\frac{y^{2}}{2\sigma^{2}}\}\big\}\\
-= & \frac{1}{\sqrt{2\pi\sigma^{2}(1-\rho^{2})}}\exp\{-\frac{(x-\rho y)^{2}}{2\sigma^{2}(1-\rho^{2})}\}
+f_{Y|X}(y|x)= & f_{X,Y}(x,y)/f_{X}(x)\\
+= & \big\{\frac{1}{2\pi\sigma^{2}\sqrt{1-\rho^{2}}}\exp\{-\frac{(y-\rho x)^{2}}{2\sigma^{2}(1-\rho^{2})}\}\exp\{-\frac{x^{2}}{2\sigma^{2}}\}\big\}/\big\{\frac{1}{\sqrt{2\pi}\sigma}\exp\{-\frac{x^{2}}{2\sigma^{2}}\}\big\}\\
+= & \frac{1}{\sqrt{2\pi\sigma^{2}(1-\rho^{2})}}\exp\{-\frac{(y-\rho x)^{2}}{2\sigma^{2}(1-\rho^{2})}\}
 \end{align*}
 
 \end_inset
@@ -221,10 +221,10 @@ f_{Y|X}(y|x)= & f_{X,Y}(x,y)/f_{Y}(y)\\
 \begin_inset Formula 
 \begin{align*}
 E[Y|X=x]= & \int_{-\infty}^{+\infty}yf_{Y|X}(y|x)dy\\
-= & \int_{-\infty}^{+\infty}y\frac{1}{\sqrt{2\pi\sigma^{2}(1-\rho^{2})}}\exp\{-\frac{(x-\rho y)^{2}}{2\sigma^{2}(1-\rho^{2})}\}dy\\
- & \text{let }z=(x-\rho y)/(\sigma\sqrt{1-\rho^{2}})\\
-= & \int_{-\infty}^{+\infty}(\frac{1}{\rho}x+\frac{\sigma\sqrt{1-\rho^{2}}}{\rho}z)\exp\{-\frac{1}{2}z^{2}\}dz\\
-= & \frac{1}{\rho}x
+= & \int_{-\infty}^{+\infty}y\frac{1}{\sqrt{2\pi\sigma^{2}(1-\rho^{2})}}\exp\{-\frac{(y-\rho x)^{2}}{2\sigma^{2}(1-\rho^{2})}\}dy\\
+ & \text{let }z=(y-\rho x)/(\sigma\sqrt{1-\rho^{2}})\\
+= & \int_{-\infty}^{+\infty}(\rho x+\frac{\sigma\sqrt{1-\rho^{2}}}{\rho}z)\exp\{-\frac{1}{2}z^{2}\}dz\\
+= & \rho x
 \end{align*}
 
 \end_inset
