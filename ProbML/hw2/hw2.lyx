@@ -180,7 +180,7 @@ Since
  as follows
 \begin_inset Formula 
 \begin{align*}
-E[Y]= & \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}yf_{Y}(y)dy\\
+E[Y]= & \int_{-\infty}^{+\infty}yf_{Y}(y)dy\\
 = & \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}yf_{X,Y}(x,y)dxdy\\
 = & \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}y\frac{1}{2\pi\sigma^{2}\sqrt{1-\rho^{2}}}\exp\{-\frac{x^{2}+y^{2}-2\rho xy}{2\sigma^{2}(1-\rho^{2})}\}dxdy\\
 = & \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}y\frac{1}{2\pi\sigma^{2}\sqrt{1-\rho^{2}}}\exp\{-\frac{x^{2}-2\rho xy+\rho^{2}y^{2}+y^{2}-\rho^{2}y^{2}}{2\sigma^{2}(1-\rho^{2})}\}dxdy\\
@@ -190,6 +190,39 @@ E[Y]= & \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}yf_{Y}(y)dy\\
 = & \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}y\frac{\sqrt{2\pi}\sigma\sqrt{1-\rho^{2}}}{2\pi\sigma^{2}\sqrt{1-\rho^{2}}}\cdot\frac{1}{\sqrt{2\pi}\sigma\sqrt{1-\rho^{2}}}\exp\{-\frac{(x-\rho y)^{2}}{2\sigma^{2}(1-\rho^{2})}\}\exp\{-\frac{y^{2}}{2\sigma^{2}}\}dxdy\\
 = & \int_{-\infty}^{+\infty}y\frac{1}{\sqrt{2\pi}\sigma}\exp\{-\frac{y^{2}}{2\sigma^{2}}\}dxdy\\
 = & 0\text{\text{ (because we are integrating an odd function)}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then we can calculate the conditional expectation as follows
+\begin_inset Formula 
+\begin{align*}
+f_{Y}(y)= & \int_{-\infty}^{+\infty}\frac{1}{2\pi\sigma^{2}\sqrt{1-\rho^{2}}}\exp\{-\frac{(x-\rho y)^{2}}{2\sigma^{2}(1-\rho^{2})}\}\exp\{-\frac{y^{2}}{2\sigma^{2}}\}dx\\
+= & \frac{1}{\sqrt{2\pi}\sigma}\exp\{-\frac{y^{2}}{2\sigma^{2}}\}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+f_{Y|X}(y|x)= & f_{X,Y}(x,y)/f_{Y}(y)\\
+= & \big\{\frac{1}{2\pi\sigma^{2}\sqrt{1-\rho^{2}}}\exp\{-\frac{(x-\rho y)^{2}}{2\sigma^{2}(1-\rho^{2})}\}\exp\{-\frac{y^{2}}{2\sigma^{2}}\}\big\}/\big\{\frac{1}{\sqrt{2\pi}\sigma}\exp\{-\frac{y^{2}}{2\sigma^{2}}\}\big\}\\
+= & \frac{1}{\sqrt{2\pi\sigma^{2}(1-\rho^{2})}}\exp\{-\frac{(x-\rho y)^{2}}{2\sigma^{2}(1-\rho^{2})}\}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+E[Y|X=x]= & \int_{-\infty}^{+\infty}yf_{Y|X}(y|x)dy\\
+= & \int_{-\infty}^{+\infty}y\frac{1}{\sqrt{2\pi\sigma^{2}(1-\rho^{2})}}\exp\{-\frac{(x-\rho y)^{2}}{2\sigma^{2}(1-\rho^{2})}\}dy\\
+\\
 \end{align*}
 
 \end_inset
