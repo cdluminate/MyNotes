@@ -163,6 +163,40 @@ f_{Y}(y) & =\frac{d}{dy}F_{Y}(y)\\
 Problem 2.2
 \end_layout
 
+\begin_layout Standard
+Since 
+\begin_inset Formula $|\rho|<1$
+\end_inset
+
+, we know that 
+\begin_inset Formula $1-\rho^{2}>0$
+\end_inset
+
+.
+ Next we can calculate the expectation of 
+\begin_inset Formula $Y$
+\end_inset
+
+ as follows
+\begin_inset Formula 
+\begin{align*}
+E[Y]= & \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}yf_{Y}(y)dy\\
+= & \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}yf_{X,Y}(x,y)dxdy\\
+= & \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}y\frac{1}{2\pi\sigma^{2}\sqrt{1-\rho^{2}}}\exp\{-\frac{x^{2}+y^{2}-2\rho xy}{2\sigma^{2}(1-\rho^{2})}\}dxdy\\
+= & \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}y\frac{1}{2\pi\sigma^{2}\sqrt{1-\rho^{2}}}\exp\{-\frac{x^{2}-2\rho xy+\rho^{2}y^{2}+y^{2}-\rho^{2}y^{2}}{2\sigma^{2}(1-\rho^{2})}\}dxdy\\
+= & \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}y\frac{1}{2\pi\sigma^{2}\sqrt{1-\rho^{2}}}\exp\{-\frac{(x-\rho y)^{2}+(1-\rho^{2})y^{2}}{2\sigma^{2}(1-\rho^{2})}\}dxdy\\
+= & \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}y\frac{1}{2\pi\sigma^{2}\sqrt{1-\rho^{2}}}\exp\{-\frac{(x-\rho y)^{2}}{2\sigma^{2}(1-\rho^{2})}\}\exp\{-\frac{y^{2}}{2\sigma^{2}}\}dxdy\\
+= & \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}y\frac{\sqrt{2\pi}\sigma\sqrt{1-\rho^{2}}}{2\pi\sigma^{2}\sqrt{1-\rho^{2}}}\cdot\frac{1}{\sqrt{2\pi}\sigma\sqrt{1-\rho^{2}}}\exp\{-\frac{(x-\rho y)^{2}}{2\sigma^{2}(1-\rho^{2})}\}\exp\{-\frac{y^{2}}{2\sigma^{2}}\}dxdy\\
+= & \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}y\frac{\sqrt{2\pi}\sigma\sqrt{1-\rho^{2}}}{2\pi\sigma^{2}\sqrt{1-\rho^{2}}}\cdot\frac{1}{\sqrt{2\pi}\sigma\sqrt{1-\rho^{2}}}\exp\{-\frac{(x-\rho y)^{2}}{2\sigma^{2}(1-\rho^{2})}\}\exp\{-\frac{y^{2}}{2\sigma^{2}}\}dxdy\\
+= & \int_{-\infty}^{+\infty}y\frac{1}{\sqrt{2\pi}\sigma}\exp\{-\frac{y^{2}}{2\sigma^{2}}\}dxdy\\
+= & 0\text{\text{ (because we are integrating an odd function)}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Problem 2.3
 \end_layout
