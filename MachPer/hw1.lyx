@@ -182,8 +182,45 @@ SIFT
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 Justify why SIFT is insensitive to scale, illumination and view point (restricte
 d).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Scale:
+\series default
+ The modeling of SIFT involves the scale space, from which the maxima and
+ minima of the difference of Gaussians will be found.
+ SIFT is insensitive to scale from the design.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Illumination:
+\series default
+ Given a local image area, where the illumination is changed to be brighter
+ (assume a constant is added to the local region, so the RGB values are
+ closer to 255).
+ In this case, the gradient in this local area is unchanged, and it does
+ not affect the SIFT result.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+View Point:
+\series default
+ SIFT is merely somewhat insensitive to view point - the view point change
+ should not be significant.
+ Slight translation of object on an image is not expected to cause abrupt
+ change in the keypoint descriptors and orientation histograms.
+ The view point insensitiveness is also explained on page 20 of the course
+ note.
 \end_layout
 
 \begin_layout Section
