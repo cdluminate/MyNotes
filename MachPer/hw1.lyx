@@ -96,8 +96,8 @@ Gaussian Smoothing Filter
 \begin_layout Standard
 
 \bar under
-Q: Justify the use of Gaussian smoothing filter in the context of a) Marr-Hildre
-th operator, 2) Canny edge detector and the SIFT operator.
+Justify the use of Gaussian smoothing filter in the context of a) Marr-Hildreth
+ operator, 2) Canny edge detector and the SIFT operator.
  Compare and contrast the underlying assumptions and implications.
 \end_layout
 
@@ -159,7 +159,22 @@ Sub-pixel Extraction
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 Design a general algorithm for sub-pixel extraction of edges and key points.
+\end_layout
+
+\begin_layout Standard
+Sub-pixels provide finer resolution compared to that of the pixel width,
+ at a fraction of the pixel size (non-integer coordinates).
+ A straightforward idea to provide sub-pixel level edge and key point detection
+ is to apply existing algorithms on an upscaled input (via e.g., linear interpolat
+ion), and then we can obtain the non-integer location of the edges and key
+ points.
+ For example, Marr-Hildreth Operator can be used to find the edges according
+ to the zero crossings of the second derivative (Laplacian of Gaussian).
+ SIFT can be used to find the keypoints according to the maxima and minima
+ of the difference of Gaussians.
 \end_layout
 
 \begin_layout Section
