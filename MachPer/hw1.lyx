@@ -228,8 +228,62 @@ Rotational Invariance Extension
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 Derive the rotational-invariance extension of the local binary pattern texture
  features.
+\end_layout
+
+\begin_layout Standard
+Rotational invariance means we expect the same output (or at least very
+ similar) from a rotated input.
+ According to the LBP formulation (Eq.
+ 121 from the course note):
+\begin_inset Formula 
+\[
+\text{LBP}_{P,R}=\sum_{p=0}^{P-1}s(g_{p}-g_{c})2^{p},
+\]
+
+\end_inset
+
+different powers of 2 will be associated with different adjacent pixels
+ after rotation, hence resulting in a different LBP value.
+ The C value will not be changed.
+\end_layout
+
+\begin_layout Standard
+A way to make it rotation-invariant is to rotate the weights, and calculate
+ the sum of LBP over all possible rotated weights.
+ For example, originally we have the weight matrix:
+\begin_inset Formula 
+\[
+\begin{bmatrix}1 & 2 & 4\\
+128 &  & 8\\
+64 & 32 & 16
+\end{bmatrix}
+\]
+
+\end_inset
+
+Then we find all possible rotations of the weight matrix:
+\begin_inset Formula 
+\[
+\begin{bmatrix}128 & 1 & 2\\
+64 &  & 4\\
+32 & 16 & 8
+\end{bmatrix},\begin{bmatrix}64 & 128 & 1\\
+32 &  & 2\\
+16 & 8 & 4
+\end{bmatrix},\ldots,\begin{bmatrix}2 & 4 & 8\\
+1 &  & 16\\
+128 & 64 & 32
+\end{bmatrix}
+\]
+
+\end_inset
+
+With all these 8 weight matrices, the sum of the corresponding outputs will
+ remain the same even if the adjacent pixels rotates.
 \end_layout
 
 \end_body
