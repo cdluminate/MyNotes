@@ -5,13 +5,17 @@
 \save_transient_properties true
 \origin unavailable
 \textclass article
+\begin_preamble
+\usepackage{microtype}
+\usepackage[margin=1in]{geometry}
+\end_preamble
 \use_default_options true
 \maintain_unincluded_children false
 \language english
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "default"
+\font_roman "times" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
@@ -29,6 +33,7 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
+\spacing single
 \use_hyperref false
 \papersize default
 \use_geometry false
@@ -44,6 +49,7 @@
 \use_package undertilde 1
 \cite_engine basic
 \cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -88,9 +94,64 @@ Gaussian Smoothing Filter
 \end_layout
 
 \begin_layout Standard
-Justify the use of Gaussian smoothing filter in the context of a) Marr-Hildreth
- operator, 2) Canny edge detector and the SIFT operator.
+
+\bar under
+Q: Justify the use of Gaussian smoothing filter in the context of a) Marr-Hildre
+th operator, 2) Canny edge detector and the SIFT operator.
  Compare and contrast the underlying assumptions and implications.
+\end_layout
+
+\begin_layout Standard
+The 
+\series bold
+Marr-Hildreth Operator
+\series default
+ involves Gaussian filter in the form of LoG (Laplacian of Gaussian).
+ Since differential operations may amplify noise, the Gaussian filter is
+ used as a low-pass filter to suppress noise as well as smoothing the input.
+ Specifically, the Marr-Hildreth operator involves the determination of
+ zero crossings fo the second directional derivative, whicn means its has
+ to compute
+\begin_inset Formula $f(x,y)=D^{2}[G(\vec{r})*I(x,y)]=D^{2}G*I(x,y).$
+\end_inset
+
+ In this formulation, 
+\begin_inset Formula $D^{2}G$
+\end_inset
+
+ is the Laplacian of Gaussian.
+\end_layout
+
+\begin_layout Standard
+The 
+\series bold
+Canny Edge Detector
+\series default
+ also adopts Gaussian filter to smooth the input and reduce noise.
+ It approximates a differential equation with the first derivative of the
+ Gaussian.
+ Canny Edge Detector assumes we are going to detect edges from an input
+ with Gaussian noise: 
+\begin_inset Formula $I(x)=Au_{-1}(x)+n(x)$
+\end_inset
+
+.
+ The noise is expected to be zero-mean.
+ 
+\end_layout
+
+\begin_layout Standard
+The 
+\series bold
+SIFT Operator
+\series default
+ adopts Gaussian filter for smoothing the input and reducing noise as well.
+ SIFT allows multi-scale processing, and uses Gaussian smoothing to transform
+ the input into scale space: 
+\begin_inset Formula $L(x,y,\sigma)=G(x,y,\sigma)*I(x,y)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
