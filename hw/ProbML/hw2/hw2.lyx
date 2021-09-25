@@ -1,0 +1,366 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{bm}
+\end_preamble
+\options b5
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "times" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "newtxmath" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+ECE 520.651 Homework #2
+\end_layout
+
+\begin_layout Author
+Mo Zhou
+\begin_inset Newline newline
+\end_inset
+
+mzhou32@jhu.edu
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Problem 2.1
+\end_layout
+
+\begin_layout Standard
+We first find the CDF of the exponential distribution:
+\begin_inset Formula 
+\begin{align*}
+F_{X_{i}}(x_{i}) & =\int_{-\infty}^{x_{i}}\lambda_{i}e^{-\lambda_{i}z}u(z)dz\\
+ & =-\int_{0}^{x_{i}}(-\lambda_{i})e^{-\lambda_{i}z}dz\\
+ & =1-e^{-\lambda_{i}x_{i}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Given that 
+\begin_inset Formula $Y=\min\{X_{1,}X_{2},\ldots,X_{n}\}$
+\end_inset
+
+, we have:
+\begin_inset Formula 
+\begin{align*}
+F_{Y}(y)= & P(Y\leq y)\\
+= & 1-P(Y\geq y)\\
+= & 1-P(\cap_{i=1}^{n}\{X_{i}\geq y\})\\
+= & 1-\prod_{i=1}^{n}(1-P(X_{i}\leq y))\\
+= & 1-\prod_{i=1}^{n}(1-F_{X_{i}}(y))\\
+= & 1-\prod_{i=1}^{n}e^{-\lambda_{i}y}\\
+= & 1-e^{-(\sum_{i=1}^{n}\lambda_{i})y}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So we can obtain the PDF by differentiating the CDF:
+\begin_inset Formula 
+\begin{align*}
+f_{Y}(y) & =\frac{d}{dy}F_{Y}(y)\\
+ & =1+(\sum_{i=1}^{n}\lambda_{i})e^{-(\sum_{i=1}^{n})y}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Problem 2.2
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $|\rho|<1$
+\end_inset
+
+, we know that 
+\begin_inset Formula $1-\rho^{2}>0$
+\end_inset
+
+.
+ Next we can calculate the expectation of 
+\begin_inset Formula $Y$
+\end_inset
+
+ as follows
+\begin_inset Formula 
+\begin{align*}
+E[Y]= & \int_{-\infty}^{+\infty}yf_{Y}(y)dy\\
+= & \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}yf_{X,Y}(x,y)dxdy\\
+= & \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}y\frac{1}{2\pi\sigma^{2}\sqrt{1-\rho^{2}}}\exp\{-\frac{x^{2}+y^{2}-2\rho xy}{2\sigma^{2}(1-\rho^{2})}\}dxdy\\
+= & \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}y\frac{1}{2\pi\sigma^{2}\sqrt{1-\rho^{2}}}\exp\{-\frac{x^{2}-2\rho xy+\rho^{2}y^{2}+y^{2}-\rho^{2}y^{2}}{2\sigma^{2}(1-\rho^{2})}\}dxdy\\
+= & \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}y\frac{1}{2\pi\sigma^{2}\sqrt{1-\rho^{2}}}\exp\{-\frac{(x-\rho y)^{2}+(1-\rho^{2})y^{2}}{2\sigma^{2}(1-\rho^{2})}\}dxdy\\
+= & \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}y\frac{1}{2\pi\sigma^{2}\sqrt{1-\rho^{2}}}\exp\{-\frac{(x-\rho y)^{2}}{2\sigma^{2}(1-\rho^{2})}\}\exp\{-\frac{y^{2}}{2\sigma^{2}}\}dxdy\\
+= & \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}y\frac{\sqrt{2\pi}\sigma\sqrt{1-\rho^{2}}}{2\pi\sigma^{2}\sqrt{1-\rho^{2}}}\cdot\frac{1}{\sqrt{2\pi}\sigma\sqrt{1-\rho^{2}}}\exp\{-\frac{(x-\rho y)^{2}}{2\sigma^{2}(1-\rho^{2})}\}\exp\{-\frac{y^{2}}{2\sigma^{2}}\}dxdy\\
+= & \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}y\frac{\sqrt{2\pi}\sigma\sqrt{1-\rho^{2}}}{2\pi\sigma^{2}\sqrt{1-\rho^{2}}}\cdot\frac{1}{\sqrt{2\pi}\sigma\sqrt{1-\rho^{2}}}\exp\{-\frac{(x-\rho y)^{2}}{2\sigma^{2}(1-\rho^{2})}\}\exp\{-\frac{y^{2}}{2\sigma^{2}}\}dxdy\\
+= & \int_{-\infty}^{+\infty}y\frac{1}{\sqrt{2\pi}\sigma}\exp\{-\frac{y^{2}}{2\sigma^{2}}\}dxdy\\
+= & 0\text{\text{ (because we are integrating an odd function)}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then we can calculate the conditional expectation as follows
+\begin_inset Formula 
+\begin{align*}
+f_{Y}(y)= & \int_{-\infty}^{+\infty}\frac{1}{2\pi\sigma^{2}\sqrt{1-\rho^{2}}}\exp\{-\frac{(x-\rho y)^{2}}{2\sigma^{2}(1-\rho^{2})}\}\exp\{-\frac{y^{2}}{2\sigma^{2}}\}dx\\
+= & \frac{1}{\sqrt{2\pi}\sigma}\exp\{-\frac{y^{2}}{2\sigma^{2}}\}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+f_{Y|X}(y|x)= & f_{X,Y}(x,y)/f_{X}(x)\\
+= & \big\{\frac{1}{2\pi\sigma^{2}\sqrt{1-\rho^{2}}}\exp\{-\frac{(y-\rho x)^{2}}{2\sigma^{2}(1-\rho^{2})}\}\exp\{-\frac{x^{2}}{2\sigma^{2}}\}\big\}/\big\{\frac{1}{\sqrt{2\pi}\sigma}\exp\{-\frac{x^{2}}{2\sigma^{2}}\}\big\}\\
+= & \frac{1}{\sqrt{2\pi\sigma^{2}(1-\rho^{2})}}\exp\{-\frac{(y-\rho x)^{2}}{2\sigma^{2}(1-\rho^{2})}\}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+E[Y|X=x]= & \int_{-\infty}^{+\infty}yf_{Y|X}(y|x)dy\\
+= & \int_{-\infty}^{+\infty}y\frac{1}{\sqrt{2\pi\sigma^{2}(1-\rho^{2})}}\exp\{-\frac{(y-\rho x)^{2}}{2\sigma^{2}(1-\rho^{2})}\}dy\\
+ & \text{let }z=(y-\rho x)/(\sigma\sqrt{1-\rho^{2}})\\
+= & \int_{-\infty}^{+\infty}(\rho x+\frac{\sigma\sqrt{1-\rho^{2}}}{\rho}z)\exp\{-\frac{1}{2}z^{2}\}dz\\
+= & \rho x
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+X and Y are not independent.
+ Given prior knowledge on 
+\begin_inset Formula $X$
+\end_inset
+
+, the expectation of 
+\begin_inset Formula $Y$
+\end_inset
+
+ will differ.
+\end_layout
+
+\begin_layout Section
+Problem 2.3
+\end_layout
+
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial M_{X}(s)}{\partial s}= & 2be^{2s}+4ce^{4s}\\
+\frac{\partial^{2}M_{X}(s)}{\partial s^{2}}= & 4be^{2s}+16ce^{4s}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\partial M_{X}(S)/\partial s|_{s=0}=E[X]$
+\end_inset
+
+, 
+\begin_inset Formula $\partial^{2}M_{X}(s)/\partial s^{2}|_{s=0}=E[X^{2}]$
+\end_inset
+
+, and 
+\begin_inset Formula $M_{X}(0)=1$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{align*}
+E[X]= & 2b+4c=3\\
+E[X^{2}]=Var[X]+(E[X])^{2}= & 4b+16c=11\\
+M_{X}(0)= & a+b+c=1
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By solving the linear system, we obtain 
+\begin_inset Formula $a=1/8$
+\end_inset
+
+, 
+\begin_inset Formula $b=1/4$
+\end_inset
+
+, 
+\begin_inset Formula $c=5/8$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Problem 2.4
+\end_layout
+
+\begin_layout Standard
+We have 
+\begin_inset Formula $E[\bm{X}]=\bm{\mu}_{X}$
+\end_inset
+
+, and 
+\begin_inset Formula $\bm{K}_{XX}=E[(\bm{X}-\bm{\mu}_{X})(\bm{X}-\bm{\mu}_{X})^{T}]$
+\end_inset
+
+.
+ Then the mean of the new variable is
+\begin_inset Formula 
+\begin{align*}
+E[Y] & =E[\bm{a}^{T}\bm{X}+b]\\
+ & =\sum_{i}a_{i}E[X_{i}]+b\\
+ & =\bm{a}^{T}\bm{\mu}_{X}+b
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And the variance of the new variable is
+\begin_inset Formula 
+\begin{align*}
+Var[Y] & =E[(Y-E[Y])^{2}]\\
+ & =E[(\bm{a}^{T}\bm{X}+b-\bm{a}^{T}\bm{\mu}_{X}-b)^{2}]\\
+ & =E[(\bm{a}^{T}\bm{X}-\bm{a}^{T}\bm{\mu}_{X})^{2}]\\
+ & =E[(\bm{a}^{T}\bm{X}-\bm{a}^{T}\bm{\mu}_{X})(\bm{a}^{T}\bm{X}-\bm{a}^{T}\bm{\mu}_{X})^{T}]\\
+ & =E[(\bm{a}^{T}\bm{X}-\bm{a}^{T}\bm{\mu}_{X})(\bm{X}^{T}\bm{a}-\bm{\mu}_{X}^{T}\bm{a})]\\
+ & =E[\bm{a}^{T}\bm{X}\bm{X}^{T}\bm{a}-\bm{a}^{T}\bm{\mu}_{X}\bm{X}^{T}\bm{a}-\bm{a}^{T}\bm{X}\bm{\mu}_{X}^{T}\bm{a}+\bm{a}^{T}\bm{\mu}_{X}\bm{\mu}_{X}^{T}\bm{a}]\\
+ & =E[\bm{a}^{T}(\bm{X}\bm{X}^{T}-\bm{\mu}_{X}\bm{X}^{T}-\bm{X}\bm{\mu}_{X}^{T}+\bm{\mu}_{X}\bm{\mu}_{X}^{T})\bm{a}]\\
+ & =\bm{a}^{T}E(\bm{X}\bm{X}^{T}-\bm{\mu}_{X}\bm{X}^{T}-\bm{X}\bm{\mu}_{X}^{T}+\bm{\mu}_{X}\bm{\mu}_{X}^{T})]\bm{a}\\
+ & =\bm{a}^{T}\bm{K}_{XX}\bm{a}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Problem 2.5
+\end_layout
+
+\begin_layout Section
+Problem 2.6
+\end_layout
+
+\end_body
+\end_document

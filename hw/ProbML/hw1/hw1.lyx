@@ -1,0 +1,1817 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{microtype}
+\usepackage[margin=1in]{geometry}
+%\usepackage{indentfirst}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\newcommand{\todo}{\textcolor{red}{[TODO]}}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "times" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "libertine-ntxm" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+ECE 520.651 Homework #1
+\end_layout
+
+\begin_layout Author
+Mo Zhou
+\begin_inset Newline newline
+\end_inset
+
+<mzhou32@jhu.edu>
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Problem 1.1
+\end_layout
+
+\begin_layout Subsection
+(a) Sample Space
+\end_layout
+
+\begin_layout Standard
+The sample space of this experiment is 
+\begin_inset Formula $\Omega=\{G,R,Y\}$
+\end_inset
+
+.
+ The traffic light can only be in one state at a time.
+ So the possible outcome of observation can be only 
+\begin_inset Formula $G$
+\end_inset
+
+, 
+\begin_inset Formula $R$
+\end_inset
+
+, or 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+(b) Unique Events
+\end_layout
+
+\begin_layout Standard
+The three unique events are 
+\begin_inset Formula $G$
+\end_inset
+
+, 
+\begin_inset Formula $R$
+\end_inset
+
+, and 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+ For instance, 
+\begin_inset Formula $G$
+\end_inset
+
+ means that the traffic light was in green when we made the observation.
+\end_layout
+
+\begin_layout Subsection
+
+\series bold
+(c)
+\series default
+ Minimal 
+\begin_inset Formula $\sigma$
+\end_inset
+
+-field
+\end_layout
+
+\begin_layout Standard
+The minimal 
+\begin_inset Formula $\sigma$
+\end_inset
+
+-field contains 
+\begin_inset Formula $2^{3}$
+\end_inset
+
+ elements.
+ Assume that there is a binary mask vector of length 
+\begin_inset Formula $3$
+\end_inset
+
+, where each mask corresponds to an element in the sample space, and the
+ 
+\begin_inset Formula $1$
+\end_inset
+
+ mask indicates the element (event) involves the corresponding outcome,
+ while the 
+\begin_inset Formula $1$
+\end_inset
+
+ mask indicates the opposite.
+ In particular, the concrete expression of the 
+\begin_inset Formula $\sigma$
+\end_inset
+
+-field is 
+\begin_inset Formula $\mathcal{F}=\big\{\phi,\{G\},\{R\},\{Y\},\{G\cup R\},\{G\cup Y\},\{R\cup Y\},\Omega\big\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+(d) Probability Mass Function
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $P(\Omega)=1$
+\end_inset
+
+ and 
+\begin_inset Formula $P(G)=P(Y)=0.5P(R)$
+\end_inset
+
+, we obtain 
+\begin_inset Formula $P(G)=1/4$
+\end_inset
+
+, 
+\begin_inset Formula $P(Y)=1/4$
+\end_inset
+
+, and 
+\begin_inset Formula $P(R)=1/2$
+\end_inset
+
+.
+ The plot of the probability mass function 
+\begin_inset Formula $p_{X}(x)$
+\end_inset
+
+ is shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:11d"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+# Python code for the plot.
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+import numpy as np, matplotlib.pyplot as plt
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+plt.stem([-1, 0, 1], [.25, .5, .25])
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+plt.grid(True)
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+plt.xlabel('X')
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+plt.ylabel('P')
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+plt.title('Problem 1.1(d)')
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+plt.savefig('11d.svg')
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename 11d.svg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Probability Mass Function for Problem 1.1(d).
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:11d"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Problem 1.2
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename 12a.svg
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sketch of events A, B, C and D for 1.2(a).
+ Shaded areas (in gray) indicates the respective events.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:12a"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(a) Sample space 
+\end_layout
+
+\begin_layout Standard
+The sample space is 
+\begin_inset Formula $\Omega=\{(x,y)|x\in[0,1],y\in[0,1]\}$
+\end_inset
+
+ where both 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ are real.
+ The sketch of events can be found in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:12a"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+(b) Independence
+\end_layout
+
+\begin_layout Standard
+(i) 
+\begin_inset Formula $P(A\cap C)=\frac{1}{4}=P(A)P(C)=\frac{1}{2}\times\frac{1}{2}$
+\end_inset
+
+, they are independent;
+\end_layout
+
+\begin_layout Standard
+(ii) 
+\begin_inset Formula $P(A\cap D)=\frac{1}{4}=P(A)P(D)=\frac{1}{2}\times\frac{1}{2}$
+\end_inset
+
+, they are independent;
+\end_layout
+
+\begin_layout Standard
+(iii) 
+\begin_inset Formula $P(C\cap D)=\frac{1}{4}=P(C)P(D)$
+\end_inset
+
+, they are independent;
+\end_layout
+
+\begin_layout Standard
+(iv) 
+\begin_inset Formula $P(A\cap B)=0\neq P(A)P(B)=\frac{1}{2}\times\frac{1}{2}$
+\end_inset
+
+, they are NOT independent.
+\end_layout
+
+\begin_layout Subsection
+(c) A, C, D Jointly Independent?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+P(A\cap C)= & P(A)P(C),\\
+P(A\cap D)= & P(A)P(D),\\
+P(C\cap D)= & P(C)P(D),\\
+P(A\cap C\cap D)=0\neq & P(A)P(C)P(D).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By definition A, C, D are not jointly independent.
+\end_layout
+
+\begin_layout Subsection
+(d) Establish Facts
+\end_layout
+
+\begin_layout Standard
+(i) We have 
+\begin_inset Formula $P(A\cap C)=P(A)P(C)$
+\end_inset
+
+, but
+\begin_inset Formula 
+\begin{align*}
+P(A\cap C|D) & =0\\
+P(A|D)P(C|D) & =\frac{P(A\cap D)}{P(D)}\frac{P(C\cap D)}{P(D)}=\frac{1}{2}\times\frac{1}{2}\\
+P(A\cap C|D) & \neq P(A|D)P(C|D)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(ii) We define 
+\begin_inset Formula $J=\{x<1/2,y>1/2\}$
+\end_inset
+
+, 
+\begin_inset Formula $K=\{x<1/4\}$
+\end_inset
+
+, 
+\begin_inset Formula $L=\{x<1/2\}$
+\end_inset
+
+, as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename 12d2.svg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then we get
+\begin_inset Formula 
+\begin{align*}
+P(J\cap K|L)= & 1/4\\
+= & 1/2\times1/2\\
+= & P(J|L)P(K|L)\\
+P(J\cap K)= & 1/8\\
+\neq & P(J)P(K)\\
+= & 1/16
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(e) True or False
+\end_layout
+
+\begin_layout Standard
+True.
+ The reason is as follows
+\begin_inset Formula 
+\begin{align*}
+P(V\cap W|Q)= & \frac{P(V\cap W\cap Q)}{P(Q)}\\
+P(V|W\cap Q)P(W|Q)= & \frac{P(V\cap W\cap Q)}{P(W\cap Q)}\cdot\frac{P(W\cap Q)}{P(Q)}=\frac{P(V\cap W\cap Q)}{P(Q)}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We find the left side of the given formulation always equal to the right
+ side.
+ So the formulation is true.
+\end_layout
+
+\begin_layout Standard
+For example, when 
+\begin_inset Formula $V=J$
+\end_inset
+
+, 
+\begin_inset Formula $W=K$
+\end_inset
+
+, 
+\begin_inset Formula $Q=L$
+\end_inset
+
+ this equation holds (
+\begin_inset Formula $J,K,L$
+\end_inset
+
+ are events from the anser for (d)).
+ In this case, 
+\begin_inset Formula $P(J\cap K|L)=1/4$
+\end_inset
+
+, 
+\begin_inset Formula $P(J|K\cap L)=P(J|L)=1/2$
+\end_inset
+
+, 
+\begin_inset Formula $P(K|L)=1/2$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $P(J\cap K|L)=P(J|K\cap L)P(K|L)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Problem 1.3
+\end_layout
+
+\begin_layout Subsection
+When 
+\begin_inset Formula $P(H)=P(T)=1/2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We know that the sample sapce 
+\begin_inset Formula $\Omega=\{HH,HT,TH,TT\}$
+\end_inset
+
+.
+ Let event 
+\begin_inset Formula $A$
+\end_inset
+
+ be 
+\begin_inset Formula $\{HH\}$
+\end_inset
+
+ (two Heads), event 
+\begin_inset Formula $B$
+\end_inset
+
+ be 
+\begin_inset Formula $\{HH\cup HT\}$
+\end_inset
+
+ (the first toss is Head), event 
+\begin_inset Formula $C$
+\end_inset
+
+ be 
+\begin_inset Formula $\{HH\cup HT\cup TH\}$
+\end_inset
+
+ (at least a toss is Head).
+ Then we have 
+\begin_inset Formula $P(A)=1/4$
+\end_inset
+
+, 
+\begin_inset Formula $P(B)=1/2$
+\end_inset
+
+, 
+\begin_inset Formula $P(C)=3/4$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Alice claims that 
+\begin_inset Formula $P(A|B)$
+\end_inset
+
+ is greater or equal to 
+\begin_inset Formula $P(A|C)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $P(A|B)=P(A\cap B)/P(B)=1/2$
+\end_inset
+
+, 
+\begin_inset Formula $P(A|C)=P(A\cap C)/P(C)=1/3$
+\end_inset
+
+, anc 
+\begin_inset Formula $P(A|B)>P(A|C)$
+\end_inset
+
+, what Alice said is True.
+\end_layout
+
+\begin_layout Subsection
+When 
+\begin_inset Formula $P(H)=p$
+\end_inset
+
+, 
+\begin_inset Formula $P(T)=1-p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Given the same definitions of events 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+, 
+\begin_inset Formula $C$
+\end_inset
+
+ as above and a biased possibility, we can re-calculate the probabilities:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P(A)=p^{2}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P(B)=p^{2}+p(1-p)=p$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P(C)=p^{2}+p(1-p)+p(1-p)=2p-p^{2}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P(A\cap B)=p^{2}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P(A\cap C)=p^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Then we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P(A|B)=P(A\cap B)/P(B)=\frac{p^{2}}{p}=p$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P(A|C)=P(A\cap C)/P(C)=\frac{p^{2}}{2p-p^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In order to make 
+\begin_inset Formula $P(A|B)\geq P(A|C)$
+\end_inset
+
+ establish, we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p\geqslant\frac{p^{2}}{2p-p^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which can be simplified into
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p^{2}-p^{3}\geq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Namely
+\begin_inset Formula 
+\[
+p^{2}(1-p)\geq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where both 
+\begin_inset Formula $p^{2}\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $(1-p)\geq0$
+\end_inset
+
+ always hold.
+ This means the requirement can be always satisfied given any 
+\begin_inset Formula $p$
+\end_inset
+
+ (biased coin).
+\end_layout
+
+\begin_layout Section
+Problem 4
+\end_layout
+
+\begin_layout Standard
+We use hour as the unit in the answer.
+ Let 
+\begin_inset Formula $X\sim U[0,1]$
+\end_inset
+
+ and 
+\begin_inset Formula $Y\sim U[0,1]$
+\end_inset
+
+ be two different random variables representing the delay of Romeo and Juliet
+ respectively.
+ The two variables are independent to each other.
+ The sample space is 
+\begin_inset Formula $\Omega=\{(x,y)\big|0<x\leq1,0<y\leq1\}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+(a) Wait for 
+\begin_inset Formula $>15$
+\end_inset
+
+min?
+\end_layout
+
+\begin_layout Standard
+Let event 
+\begin_inset Formula $A$
+\end_inset
+
+ be 
+\begin_inset Formula $\{(x,y)\big||x-y|>1/4\}$
+\end_inset
+
+.
+ The question requires us to find 
+\begin_inset Formula $P(A)$
+\end_inset
+
+ .
+ This probability is the area of two triangals in the square shape, separated
+ by the region between 
+\begin_inset Formula $x-y=1/4$
+\end_inset
+
+ and 
+\begin_inset Formula $y-x=1/4$
+\end_inset
+
+.
+ Thus,
+\begin_inset Formula 
+\[
+P(A)=2(\frac{1}{2}\times\frac{3}{4}\times\frac{3}{4})=\frac{9}{16}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(b) Probability of a successful date
+\end_layout
+
+\begin_layout Standard
+Based on Romeo's impatience, we let event 
+\begin_inset Formula $B$
+\end_inset
+
+ be 
+\begin_inset Formula $\{(x,y)\big|x>y\}$
+\end_inset
+
+.
+ This covers the area of the lower triangular area in the square shape,
+ with 
+\begin_inset Formula $x=y$
+\end_inset
+
+ being the split line.
+\end_layout
+
+\begin_layout Standard
+Based on Juliet's tolerance of 20 minutes, we let event 
+\begin_inset Formula $C$
+\end_inset
+
+ be 
+\begin_inset Formula $\{(x,y)|x-y<1/3\}$
+\end_inset
+
+, namely 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\{(x,y)|y>x-1/3\}$
+\end_inset
+
+.
+ This covers the area of the square above the line 
+\begin_inset Formula $y=x-1/3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A successful date means event 
+\begin_inset Formula $B$
+\end_inset
+
+ and event 
+\begin_inset Formula $C$
+\end_inset
+
+ happends at the same time.
+ The corresponding probability is 
+\begin_inset Formula $P(B\cap C)$
+\end_inset
+
+, namely the intersection of the two areas described above.
+ Thus, it is the area of the lower triangular minus the triangular part
+ below line 
+\begin_inset Formula $y=x-1/3$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(B\cap C)=\frac{1}{2}-\frac{1}{2}(\frac{2}{3}\times\frac{2}{3})=\frac{1}{2}-\frac{2}{9}=\frac{5}{18}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(c) Arrived in time
+\end_layout
+
+\begin_layout Standard
+Let event 
+\begin_inset Formula $D$
+\end_inset
+
+ be 
+\begin_inset Formula $\{(x,y)\big|x<\frac{1}{2}\}$
+\end_inset
+
+ and event 
+\begin_inset Formula $E$
+\end_inset
+
+ be 
+\begin_inset Formula $\{(x,y)\big|y<\frac{1}{2}\}$
+\end_inset
+
+.
+ The question requires us to find 
+\begin_inset Formula $P(D\cup E)$
+\end_inset
+
+.
+ We can reuse the sketch for Problem 1.2 (they are respectively the event
+ C and event B in Problem 1.2), and obtain that 
+\begin_inset Formula $P(D\cup E)=3/4$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+(d) Probability that they meet
+\end_layout
+
+\begin_layout Standard
+Let event 
+\series bold
+
+\begin_inset Formula $F$
+\end_inset
+
+
+\series default
+ and 
+\begin_inset Formula $G$
+\end_inset
+
+ represent that Romeo and Juliet chickens out, respectively.
+ When they do not chicken out, we have two independent random variables
+ 
+\begin_inset Formula $X\sim\text{exp}(x;\lambda)$
+\end_inset
+
+ and 
+\begin_inset Formula $Y\sim\text{exp}(x;\lambda)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+When both of them do not checken out, the probability that they meet is
+\begin_inset Formula 
+\[
+P(\{(x,y)\big||x-y|<\frac{1}{4}\}\Big|F^{C}\cap G^{C})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which is a definite integral in the square, and between 
+\begin_inset Formula $x-y=1/4$
+\end_inset
+
+ and 
+\begin_inset Formula $y-x=1/4$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \int_{0}^{+\infty}\int_{x-1/4}^{x+1/4}F_{XY}(x,y)dydx\\
+= & \int_{0}^{+\infty}\int_{x-1/4}^{x+1/4}\lambda^{2}e^{-\lambda x}u(x)e^{-\lambda y}u(y)dydx\\
+= & \int_{0}^{1/4}\int_{0}^{x+1/4}\lambda^{2}e^{-\lambda x}e^{-\lambda y}dydx+\int_{1/4}^{+\infty}\int_{x-1/4}^{x+1/4}\lambda^{2}e^{-\lambda x}e^{-\lambda y}dydx\\
+= & \int_{0}^{1/4}(-\lambda)e^{-\lambda x}\int_{0}^{x+1/4}(-\lambda)e^{-\lambda y}dydx+\int_{1/4}^{+\infty}(-\lambda)e^{-\lambda x}\int_{x-1/4}^{x+1/4}(-\lambda)e^{-\lambda y}dydx\\
+= & \int_{0}^{1/4}(-\lambda)e^{-\lambda x}[e^{-\lambda(x+1/4)}-1]dx+\int_{1/4}^{+\infty}(-\lambda)e^{-\lambda x}[e^{-\lambda(x+1/4)}-e^{-\lambda(x-1/4)}]dx\\
+= & \frac{1}{2}e^{-\frac{\lambda}{4}}\int_{0}^{1/4}(-2\lambda)e^{-2\lambda x}dx-\int_{0}^{1/4}(-\lambda)e^{-\lambda x}dx\\
+ & +\frac{1}{2}e^{-\frac{\lambda}{4}}\int_{1/4}^{+\infty}(-2\lambda)e^{-2\lambda x}dx-\frac{1}{2}e^{\frac{\lambda}{4}}\int_{1/4}^{+\infty}(-2\lambda)e^{-2\lambda x}dx\\
+= & \frac{1}{2}e^{-\frac{\lambda}{4}}[e^{-\lambda/2}-1]-[e^{-\lambda/4}-1]+\frac{1}{2}e^{-\frac{\lambda}{4}}[0-e^{-\lambda/2}]-\frac{1}{2}e^{\frac{\lambda}{4}}[0-e^{-\lambda/2}]\\
+= & 1-e^{-\lambda/4}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When 
+\begin_inset Formula $\lambda=2$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+P(\{(x,y)\big||x-y|<\frac{1}{4}\}\Big|F^{C}\cap G^{C})=1-e^{-\lambda/4}\approx0.393
+\]
+
+\end_inset
+
+Then the final probability that they meet when we have no prior knowledge
+ whether they will chicken out is
+\begin_inset Formula 
+\begin{align*}
+ & P(\{(x,y)\big||x-y|<\frac{1}{4}\}\cap F^{C}\cap G^{C})\\
+= & P(\{(x,y)\big||x-y|<\frac{1}{4}\}\Big|F^{C}\cap G^{C})P(F^{C})P(G^{C})\\
+= & (1-e^{-\lambda/4})\times\frac{3}{4}\times\frac{3}{4}\\
+\approx & 0.221
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Problem 1.5
+\end_layout
+
+\begin_layout Subsection
+(a) Burn at least two months
+\end_layout
+
+\begin_layout Standard
+The probability that the bulb burns within 
+\begin_inset Formula $x$
+\end_inset
+
+ months is 
+\begin_inset Formula $P(X\leq x)$
+\end_inset
+
+.
+ So the probability the the bulb will burn after two months is 
+\begin_inset Formula $1-P(X\leq x)$
+\end_inset
+
+.
+ In addition, we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P(X\leq x\big|A)=F_{X}(x)-F_{X}(0)=1-e^{-x/5}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P(X\leq x\big|B)=F_{X}(x)-F_{X}(0)=1-e^{-x/2}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P(A)=1/4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P(B)=3/4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then we have the total probability
+\begin_inset Formula 
+\begin{align*}
+P(X\leq x) & =P(X\leq x|A)P(A)+P(X\leq x|B)P(B)\\
+ & =\text{\ensuremath{\frac{1}{4}}}(1-e^{-x/5})+\frac{3}{4}(1-e^{-x/2})\\
+ & =1-e^{-x/5}/4-3e^{-x/2}/4
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hence, when 
+\begin_inset Formula $x=2$
+\end_inset
+
+, we have 
+\begin_inset Formula $P(X\leq2)=1-e^{-2/5}/4-3e^{-1}/4\approx1-0.168-0.276=0.556$
+\end_inset
+
+.
+ So the probability that a random bulb burns after two months is 
+\begin_inset Formula $1-P(X\leq2)\approx0.444$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+(b) Five months
+\end_layout
+
+\begin_layout Standard
+By plugging 
+\begin_inset Formula $x=5$
+\end_inset
+
+ into the formulation we obtained in question (a), we get
+\begin_inset Formula 
+\begin{align*}
+P(X\leq5) & =1-e^{-1}/4-3e^{-5/2}/4\\
+ & \approx1-0.092-0.062=0.846\\
+1-P(X\leq5) & \approx0.154
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(c) Seven months
+\end_layout
+
+\begin_layout Standard
+By plugging 
+\begin_inset Formula $x=7$
+\end_inset
+
+ into the formulation we obtained in question (a), we get
+\begin_inset Formula 
+\begin{align*}
+P(X\leq7) & =1-e^{-7/5}/4-3e^{-7/2}/4\\
+ & \approx1-0.062-0.023=0.915\\
+1-P(X\leq7) & \approx0.085
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Problem 1.6
+\end_layout
+
+\begin_layout Subsection
+(a) 
+\begin_inset Formula $P(Y\geq X)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $X\sim U[0,1]$
+\end_inset
+
+, we have 
+\begin_inset Formula $f_{X}(x)=1,\forall x\in[0,1]$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $Y\sim\text{exp}(y;\mu=1/2)$
+\end_inset
+
+, we have 
+\begin_inset Formula $f_{Y}=2e^{-2y}u(y)$
+\end_inset
+
+.
+ We know that 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are independent, so
+\begin_inset Formula 
+\[
+f_{X,Y}(x,y)=f_{X}(x)f_{Y}(y)=2e^{-2y},\forall x\in[0,1],\forall y\in[0,+\infty)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & P(Y\geq X)\\
+= & 1-P(Y<X)\\
+= & 1-\int_{0}^{1}[\int_{0}^{x}f_{X,Y}(x,y)dy]dx\\
+= & 1-\int_{0}^{1}[\int_{0}^{x}2e^{-2y}dy]dx\\
+= & 1+\int_{0}^{1}(e^{-2x}-1)dx\\
+= & 1+(-\frac{1}{2}e^{-2x}-x)|_{0}^{1}\\
+= & 1+[-\frac{1}{2}e^{-2}-1+\frac{1}{2}]\\
+= & \frac{1}{2}(1-e^{-2})\\
+\approx & 0.432
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $f_{Z}(z|Y=y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & F_{Z}(z|Y=y)\\
+= & P(Z\leq z|Y=y)\\
+= & P(X+Y\leq z|Y=y)\\
+= & P(X\leq z-y)\\
+= & F_{X}(z-y)\\
+= & z-y
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The condition is 
+\begin_inset Formula $\forall z,\forall y,z-y\in[0,1]$
+\end_inset
+
+.
+ Then we have the PDF
+\begin_inset Formula 
+\[
+f_{Z}(z|Y=y)=\frac{d}{dz}F_{Z}(z|Y=y)=1-y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $f_{Y}(y|Z=3)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+F_{Y}(y|Z=3)= & P(Y\leq y|X+Y=3)\\
+= & P(3-X\leq y)\\
+= & P(X\geq3-y)\\
+= & 1-P(X\leq3-y)\\
+= & y-2\\
+f_{Y}(y|Z=3)= & \frac{\partial}{\partial y}F_{Y}(y|Z=3)=1
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Problem 1.7
+\end_layout
+
+\begin_layout Standard
+First, 
+\begin_inset Formula $\forall x=2k-1,k=1,2,\ldots,2500$
+\end_inset
+
+, we have 
+\begin_inset Formula $p_{X}(x)=0$
+\end_inset
+
+ because the count of heads or tails must be integer.
+ Since
+\begin_inset Formula 
+\begin{align*}
+p_{X}(0)= & (\frac{1}{2})^{10000}(_{5000}^{10000})(_{5000}^{10000})\\
+p_{X}(2)= & 2(\frac{1}{2})^{10000}(_{4999}^{10000})(_{5001}^{10000})\\
+\ldots\\
+P_{X}(5000)= & 2(\frac{1}{2})^{10000}(_{0}^{10000})(_{10000}^{10000})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To simplify them, we let
+\begin_inset Formula 
+\[
+a=(\frac{1}{2})^{9999}(_{5000}^{10000})^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then we have
+\begin_inset Formula 
+\begin{align*}
+p_{X}(0)= & \frac{1}{2}a\\
+p_{X}(2)= & (\frac{5000}{5001})^{2}a\\
+p_{X}(4)= & (\frac{5000}{5001}\cdot\frac{4999}{5002})^{2}a\\
+\ldots\\
+p_{X}(5000)= & (\frac{5000}{5001}\cdot\frac{4999}{5002}\cdots\frac{2501}{7500})^{2}a
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this way we don't have to write code that easily lead to large numbers
+ that double precision floating point format (see IEEE754 standard for detail)
+ cannot present.
+ Thus the code can be found as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{quote}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{verbatim}
+\end_layout
+
+\begin_layout Plain Layout
+
+px = [0.5, zeros(1, 5000)]; % px(0)=0.5
+\end_layout
+
+\begin_layout Plain Layout
+
+for i = 3:2:5001
+\end_layout
+
+\begin_layout Plain Layout
+
+	x = i-1; % I dislike languages with indeces starting from 1
+\end_layout
+
+\begin_layout Plain Layout
+
+	px(i) = prod([5000:-1:5000-x/2+1]./[5001:1:5000+x/2])^2;
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+px = px / sum(px); % normalize
+\end_layout
+
+\begin_layout Plain Layout
+
+plot(0:5000, px); % cannot annotate the plot due to limit on linse of code
+\end_layout
+
+\begin_layout Plain Layout
+
+print('p17', '-dsvg');
+\end_layout
+
+\begin_layout Plain Layout
+
+ex = sum([0:5000].*px)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{verbatim}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{quote}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The computed result is 
+\begin_inset Formula $E[X]\approx56.4168$
+\end_inset
+
+.
+ And the sketch of 
+\begin_inset Formula $p_{X}(x)$
+\end_inset
+
+ can be found in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:p17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename p17.svg
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sketch of 
+\begin_inset Formula $p_{X}(x)$
+\end_inset
+
+ for problem 1.7.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:p17"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Problem 1.8
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $L=\max(X_{1},X_{2},\ldots,X_{n})$
+\end_inset
+
+.
+ Then we have
+\begin_inset Formula 
+\begin{align*}
+F_{L}(l)= & P(L\leq l)\\
+= & P(\cap_{i=1}^{n}\{X_{i}\leq l\})\\
+= & \prod_{i=1}^{n}P(X_{i}\leq l)\\
+= & \prod_{i=1}^{n}l\\
+= & l^{n}\\
+f_{L}(l)= & \frac{d}{dl}F_{L}(l)=nl^{n-1}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Similarly, we let 
+\begin_inset Formula $S=\min(X_{1},X_{2},\ldots,X_{n})$
+\end_inset
+
+.
+ Then we have
+\begin_inset Formula 
+\begin{align*}
+F_{S}(s)= & P(S\leq s)\\
+= & 1-P(S\geq s)\\
+= & 1-P(\cap_{i=1}^{n}\{X_{i}\geq s\})\\
+= & 1-\prod_{i=1}^{n}P(X_{i}\geq s)\\
+= & 1-\prod_{i=1}^{n}[1-P(X_{i}\leq s)]\\
+= & 1-(1-s)^{n}\\
+f_{S}(s)= & \frac{d}{ds}F_{S}(s)=n(1-s)^{n-1}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Following the similar way, we have the conditional CDF
+\begin_inset Formula 
+\begin{align*}
+F_{S|L}(s|l)= & P(S\leq s|L=l)\\
+= & 1-P(S\geq s|L=l)\\
+= & 1-P(\cap_{i=1}^{n}\{X_{i}\geq s\}|L=l)\\
+= & 1-\prod_{i=1}^{n}P(X_{i}\geq s|L=l)\\
+= & 1-\prod_{i=1}^{n}P(s\leq X_{i}\leq l)\\
+= & 1-(l-s)^{n}\\
+f_{S|L}(s|l)= & \frac{\partial^{2}}{\partial s\partial l}F_{S|L}(s|l)=\frac{\partial^{2}}{\partial s\partial l}\{-(l-s)^{n}\}\\
+= & \frac{\partial}{\partial s}[-n(l-s)^{n-1}]\\
+= & n(n-1)(l-s)^{n-2}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Next we can restore the joint probability density function from the conditional
+ PDF 
+\begin_inset Formula $f_{S|L}(s|l)$
+\end_inset
+
+ and the marginal distribution 
+\begin_inset Formula $f_{L}(l)$
+\end_inset
+
+ as follows
+\begin_inset Formula 
+\begin{align*}
+f_{S,L}(s,l)= & f_{S|L}(s|l)\cdot f_{L}(l)\\
+= & n^{2}(n-1)(l-s)^{n-2}l^{n-1}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Additionally, since
+\begin_inset Formula 
+\begin{align*}
+ & f_{S}(s)\cdot f_{L}(l)\\
+= & n^{2}(1-s)^{n-1}l^{n-1}\\
+\neq & f_{S,L}(s,l)
+\end{align*}
+
+\end_inset
+
+we know that the two random variables are indeed not independent to each
+ other.
+ Hence the hint in the question.
+ I learned that joint PDFs can be restored based on conditional PDFs when
+ some of the random variables are not independent to each other.
+\end_layout
+
+\end_body
+\end_document
