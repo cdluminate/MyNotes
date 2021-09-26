@@ -362,6 +362,42 @@ This means we should always claim
  to minimize the cost.
 \end_layout
 
+\begin_layout Subsection
+(c)
+\end_layout
+
+\begin_layout Standard
+Since the above decision rule always gives 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+, the set 
+\begin_inset Formula $\{x|\hat{H}(x)=H_{1}\}$
+\end_inset
+
+ is empty.
+ Namely the area to integrate is null.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P_{D}=P(\hat{H}(x)=H_{1}|H_{1})=\int_{x:\hat{H}(x)=H_{1}}P_{X|H}(x|H_{1})dx=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+P_{F}=P(\hat{H}(x)=H_{0}|H_{1})=\int_{x:\hat{H}(x)=H_{1}}P_{X|H}(x|H_{0})dx=0
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Problem 3.3
 \end_layout
