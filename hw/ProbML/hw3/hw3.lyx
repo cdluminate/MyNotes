@@ -324,6 +324,44 @@ P_{X|H}(X=x|H_{1})= & P(T_{1}\leq x)P(T_{2}\leq x)\\
 
 \end_layout
 
+\begin_layout Subsection
+(b)
+\end_layout
+
+\begin_layout Standard
+Assume symmetric cost.
+ Since 
+\begin_inset Formula $P_{0}=P_{1}$
+\end_inset
+
+, we can adopt the maximum likelihood decision rule:
+\begin_inset Formula 
+\begin{align*}
+P_{X|H}(x|H_{1}) & \gtrless_{H_{0}}^{H_{1}}P_{X|H}(x|H_{0})\\
+1-2e^{-\lambda x}+e^{-2\lambda x} & \gtrless_{H_{0}}^{H_{1}}1-e^{-2\lambda x}\\
+e^{-2\lambda x}-e^{-\lambda x} & \gtrless_{H_{0}}^{H_{1}}0\\
+x & \gtrless_{H_{1}}^{H_{0}}0
+\end{align*}
+
+\end_inset
+
+This means we should always claim 
+\begin_inset Formula $\hat{H}(x)=H_{0}$
+\end_inset
+
+, because 
+\begin_inset Formula $x$
+\end_inset
+
+ is always greater or equal than 0.
+ Parallel connection is more endurable than serial connection.
+ Hence once we observe a light off, we will claim 
+\begin_inset Formula $\hat{H}(x)=H_{0}$
+\end_inset
+
+ to minimize the cost.
+\end_layout
+
 \begin_layout Section
 Problem 3.3
 \end_layout
