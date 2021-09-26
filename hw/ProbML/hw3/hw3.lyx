@@ -276,8 +276,52 @@ By summarizing the likelyhood ratio tests, the best decision rule is to
 
 \end_layout
 
+\begin_layout Standard
+Well, the result is expected to be symmetric, but I could not figure out
+ where the problem is.
+\end_layout
+
 \begin_layout Section
 Problem 3.2
+\end_layout
+
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+In case of series connection, either of them or both of them being failing
+ turns off the bulb.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+P_{X|H}(X=x|H_{0})= & 1-P(T_{1}>x,T_{2}>x)\\
+= & 1-P(T_{1}>x)P(T_{2}>x)\\
+= & 1-(1-P(T_{1}\leq x))(1-P(T_{2}\leq x))\\
+= & 1-(1-\int_{0}^{x}\lambda e^{-\lambda t}dt)(1-\int_{0}^{x}\lambda e^{-\lambda t}dt)\\
+= & 1-(1-(1-e^{-\lambda x}))(1-(1-e^{-\lambda x}))\\
+= & 1-e^{-2\lambda x}
+\end{align*}
+
+\end_inset
+
+In case of parallel connection, both of them being failing turns off the
+ bulb.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+P_{X|H}(X=x|H_{1})= & P(T_{1}\leq x)P(T_{2}\leq x)\\
+= & (1-e^{-\lambda x})^{2}\\
+= & 1-2e^{-\lambda x}+e^{-2\lambda x}
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
