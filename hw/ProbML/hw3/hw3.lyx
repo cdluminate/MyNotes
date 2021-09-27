@@ -609,8 +609,100 @@ None of the point on the contour of
 (c)
 \end_layout
 
+\begin_layout Standard
+When 
+\begin_inset Formula $1/2<w<1$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{H}(w)=H_{0}$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $2<w<5/2$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{H}(w)=H_{1}$
+\end_inset
+
+.
+ We focus on the case when 
+\begin_inset Formula $1<w<2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P_{F}=\int_{w:H_{1}}P(w|H_{0})dw=\begin{cases}
+\min(x_{1},x_{2}) & 3/2<w<2\\
+x_{1}x_{2} & 1<w<3/2
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So 
+\begin_inset Formula $P_{F}\leq0.045$
+\end_inset
+
+ is the area between the contour 
+\begin_inset Formula $x_{1}x_{2}\leq0.045$
+\end_inset
+
+ and the axis, above the line 
+\begin_inset Formula $x+y=1$
+\end_inset
+
+.
+ In this case, 
+\begin_inset Formula $P_{D}=\int_{w:H_{1}}P(w|H_{1})dw=0$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\lambda=0$
+\end_inset
+
+, the decision is 
+\begin_inset Formula $\hat{H}(w)=H_{1}$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsection
 (d)
+\end_layout
+
+\begin_layout Standard
+In case (a), the integral (i.e., 
+\begin_inset Formula $P_{D}$
+\end_inset
+
+) is 1-D, while in case (b) the integral is 2-D.
+ Case (b) differs from case (a), because even if we observed an ambiguous
+ 
+\begin_inset Formula $x_{1}\in[1/2,1],$
+\end_inset
+
+an observation that 
+\begin_inset Formula $x_{2}<1/2$
+\end_inset
+
+ or 
+\begin_inset Formula $x_{2}>1$
+\end_inset
+
+ will eliminate the ambiguity and make the decision definite.
 \end_layout
 
 \begin_layout Section
