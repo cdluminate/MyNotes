@@ -511,6 +511,100 @@ Hence we get the following curve:
 (b)
 \end_layout
 
+\begin_layout Standard
+When 
+\begin_inset Formula $x_{1}<1/2$
+\end_inset
+
+ or 
+\begin_inset Formula $x_{2}<1/2$
+\end_inset
+
+, the decision is unexceptionally 
+\begin_inset Formula $\hat{H}(z)=H_{0}$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $x_{1}>1$
+\end_inset
+
+ or 
+\begin_inset Formula $x_{2}>1$
+\end_inset
+
+, the decision is unexceptionally 
+\begin_inset Formula $\hat{H}(z)=H_{1}$
+\end_inset
+
+.
+ So we will only focus on the squared area 
+\begin_inset Formula $1/2<x_{1}<1$
+\end_inset
+
+, 
+\begin_inset Formula $1/2<x_{2}<1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+When 
+\begin_inset Formula $P_{F}\leq0.045$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+P_{F}=\int_{z:H_{1}}P_{Z|H}(z|H_{0})dz=x_{1}x_{2}\leq0.045
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+None of the point on the contour of 
+\begin_inset Formula $x_{1}x_{2}\leq0.045$
+\end_inset
+
+ enters the non-zero area of 
+\begin_inset Formula $P_{Z|H}(z|H_{1})$
+\end_inset
+
+.
+ So on this contour 
+\begin_inset Formula $P_{Z|H}(z|H_{1})$
+\end_inset
+
+ is always zero.
+ Hence 
+\begin_inset Formula $\lambda=0$
+\end_inset
+
+ and 
+\begin_inset Formula $P_{D}=\int_{z:H_{1}}P_{Z|H}(z|H_{1})dz=0$
+\end_inset
+
+.
+ The decision when 
+\begin_inset Formula $1/2<x_{1}<1$
+\end_inset
+
+, 
+\begin_inset Formula $1/2<x_{2}<1$
+\end_inset
+
+ is 
+\begin_inset Formula $\hat{H}(z)=H_{1}$
+\end_inset
+
+.
+ The answer is unique.
+\end_layout
+
 \begin_layout Subsection
 (c)
 \end_layout
