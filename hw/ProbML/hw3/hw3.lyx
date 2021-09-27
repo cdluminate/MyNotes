@@ -19,7 +19,7 @@
 \font_roman "times" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
-\font_math "auto" "auto"
+\font_math "newtxmath" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
@@ -707,6 +707,46 @@ an observation that
 
 \begin_layout Section
 Problem 3.4
+\end_layout
+
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+In case of 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $p_{Y|H}(y|H_{0})=p_{N}(y)=e^{-y}u(y)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+(b)
+\end_layout
+
+\begin_layout Subsection
+(c)
+\end_layout
+
+\begin_layout Subsection
+(d)
+\end_layout
+
+\begin_layout Subsection
+(e)
+\end_layout
+
+\begin_layout Subsection
+(f)
+\end_layout
+
+\begin_layout Subsection
+(g)
 \end_layout
 
 \end_body
