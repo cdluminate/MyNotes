@@ -28,8 +28,8 @@ fprintf("ssNMF: init: obj=%f\n", obj);
 obj_prev = obj;
 for iter = 1:max_iter
     
-    B = B .* (((V ./ (B*W))* W')./(ones(size(V))*W' + beta));
-    W = W .* ((B' * (V ./ (B*W)))./(B' * ones(size(V)) + alpha));
+    B = B .* (((V ./ (B*W))* W')./(ones(size(V))*W' + beta.*sum(W')));
+    W = W .* ((B' * (V ./ (B*W)))./(B' * ones(size(V)) + alpha.*sum(W)));
     B(B<0) = 0;
     W(W<0) = 0;
     assert(min(min(B)) >= 0.0);
