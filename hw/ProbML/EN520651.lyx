@@ -541,6 +541,78 @@ Independent Experiments
  future values of the other experiment.
 \end_layout
 
+\begin_layout Subsection
+Bayes Rule
+\end_layout
+
+\begin_layout Standard
+Total Probability: Let 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+(
+\begin_inset Formula $i=1,\ldots,n)$
+\end_inset
+
+ be mutually exclusive and exhaustive w/ nonzero probability, for all 
+\begin_inset Formula $B\in\Omega$
+\end_inset
+
+, we can write
+\begin_inset Formula 
+\[
+P(B)=\sum_{i=1}^{n}P(A_{i})P(B|A_{i})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Bayes Rule: Given the above setup and 
+\begin_inset Formula $P(B)>0$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+P(A_{j}|B)=\frac{P(A_{j}\cap B)}{P(B)}=\frac{P(A_{j})P(B|A_{j})}{\sum_{i=1}^{n}P(A_{i})P(B|A_{i})}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $P(A_{i})$
+\end_inset
+
+ is 
+\begin_inset Quotes eld
+\end_inset
+
+prior
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Formula $P(B|A_{i})$
+\end_inset
+
+ is 
+\begin_inset Quotes eld
+\end_inset
+
+likelihood
+\begin_inset Quotes erd
+\end_inset
+
+, and 
+\begin_inset Formula $P(A_{i}|B)$
+\end_inset
+
+ is posterior.
+\end_layout
+
 \begin_layout Section
 Random Variables
 \end_layout
