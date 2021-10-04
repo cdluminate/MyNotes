@@ -309,6 +309,238 @@ We care about fields and sigma fields because of consistency.
 , then the rule will be broken.
 \end_layout
 
+\begin_layout Standard
+
+\bar under
+EX: Toss a coin once, find 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Omega=\{H,T\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{F}=\{\phi,\Omega,H,T\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Strategy for the smallest 
+\begin_inset Formula $\sigma$
+\end_inset
+
+-field
+\end_layout
+
+\begin_layout Standard
+(1) Include 
+\begin_inset Formula $\phi$
+\end_inset
+
+ and 
+\begin_inset Formula $\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(2) Include disjoint parts
+\end_layout
+
+\begin_layout Standard
+(3) Include all pairs, triplets, quadruplets, etc
+\end_layout
+
+\begin_layout Standard
+Alternative strategy: use a binary mask, and the size of the set would be
+ 
+\begin_inset Formula $2^{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Axioms of Probability
+\end_layout
+
+\begin_layout Standard
+Set function 
+\begin_inset Formula $P:E\in\mathcal{F}\mapsto P(E)\in\mathbb{R}^{+}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(1) 
+\begin_inset Formula $P(E)\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(2) 
+\begin_inset Formula $P(\Omega)=1$
+\end_inset
+
+ – normalization
+\end_layout
+
+\begin_layout Standard
+(3) 
+\begin_inset Formula $P(E\cup F)=P(E)+P(F),\forall E,F\in\Omega,s.t.E\cap F=\phi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then we can establish
+\end_layout
+
+\begin_layout Standard
+(4) 
+\begin_inset Formula $P(\phi)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(5) 
+\begin_inset Formula $P(E)=1-P(E^{C})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(6) 
+\begin_inset Formula $P(E\cup F)=P(E)+P(F)-P(E\cap F)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(7) 
+\begin_inset Formula $P(\cap_{i=1}^{n}E_{i})\leq\sum_{i=1}^{n}P(E_{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Relationship Between Events
+\end_layout
+
+\begin_layout Standard
+Joint probability 
+\begin_inset Formula $P(A\cap B)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Conditional probability 
+\begin_inset Formula $P(B|A)=P(A\cap B)/P(A)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+– 
+\begin_inset Formula $P(B|A)P(A)=P(A|B)P(B)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Two events 
+\begin_inset Formula $A\in\mathcal{F}$
+\end_inset
+
+and 
+\begin_inset Formula $B\in\mathcal{F}$
+\end_inset
+
+are 
+\bar under
+independent
+\bar default
+ if 
+\begin_inset Formula $P(A\cap B)=P(A)P(B)$
+\end_inset
+
+ for 
+\begin_inset Formula $P(A)>0$
+\end_inset
+
+ and 
+\begin_inset Formula $P(B)>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Three events 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ (non-zero probability) are 
+\bar under
+jointly independent
+\bar default
+ if
+\end_layout
+
+\begin_layout Standard
+(1) 
+\begin_inset Formula $P(A\cap B)=P(A)P(B)$
+\end_inset
+
+ – all pairwise combinations alike
+\end_layout
+
+\begin_layout Standard
+(2) 
+\begin_inset Formula $P(A\cap B\cap C)=P(A)P(B)P(C)$
+\end_inset
+
+ – mutual
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Independent Experiments
+\bar default
+: the outcome of one experiment is not affected by the past, present, or
+ future values of the other experiment.
+\end_layout
+
 \begin_layout Section
 Random Variables
 \end_layout
