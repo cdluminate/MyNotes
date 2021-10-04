@@ -617,6 +617,241 @@ likelihood
 Random Variables
 \end_layout
 
+\begin_layout Standard
+A random variable 
+\begin_inset Formula $X(\cdot)$
+\end_inset
+
+ is a function that maps every outcome 
+\begin_inset Formula $\omega\in\Omega$
+\end_inset
+
+ onto the real number line 
+\begin_inset Formula $X(\omega)\in\mathbb{R}$
+\end_inset
+
+.
+ Namely 
+\begin_inset Formula $X:\Omega\mapsto\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Cumulative Distribution Function
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F_{X}(x)=P(\omega\in\Omega|X(\omega)\leq x)\triangleq P(X\leq x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(1) 
+\begin_inset Formula $F_{X}(-\infty)=P(\phi)=0$
+\end_inset
+
+, 
+\begin_inset Formula $F_{X}(+\infty)=P(\phi)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(2) 
+\begin_inset Formula $x_{1}\leq x_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $F_{X}(x_{1})<F_{X}(x_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(3) 
+\begin_inset Formula $F_{X}(x)=\lim_{\epsilon\rightarrow0^{+}}F_{X}(x+\epsilon)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Implication: 
+\begin_inset Formula $P(a<X\leq b)=F_{X}(b)-F_{X}(a)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Probability Density Function
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f_{X}(x)=\frac{d}{dx}F_{X}(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(1) 
+\begin_inset Formula $f_{X}(x)\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(2) 
+\begin_inset Formula $\int_{-\infty}^{\infty}f_{X}(\xi)d\xi=F_{X}(\infty)-F_{X}(-\infty)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(3) 
+\begin_inset Formula $F_{X}(x)=\int_{-\infty}^{x}f_{X}(\xi)d\xi=P(X\leq x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(4) 
+\begin_inset Formula $\int_{x_{1}}^{x_{2}}f_{X}(\xi)d\xi=F_{X}(x_{2})-F_{X}(x_{1})=P(x_{1}<X\leq x_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Useful Distributions
+\end_layout
+
+\begin_layout Standard
+(1) Normal 
+\begin_inset Formula $X\sim\mathcal{N}(x;\mu,\sigma^{2})$
+\end_inset
+
+ (Continuous RV)
+\begin_inset Formula 
+\[
+f_{X}(x)=\frac{1}{\sqrt{2\pi\sigma^{2}}}\exp\{-\frac{1}{2\sigma^{2}}(x-\mu)^{2}\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(2) Uniform 
+\begin_inset Formula $X\sim Unf(x;[a,b])$
+\end_inset
+
+ (Continuous)
+\begin_inset Formula 
+\[
+f_{X}(x)=\frac{1}{b-a}\mathbb{I}\{x\in[a,b]\}+0\mathbb{I}\{x\notin[a,b]\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(3) Exponential 
+\begin_inset Formula $X\sim Exp(x;\lambda)$
+\end_inset
+
+ (Continuous, Sometimes use 
+\begin_inset Formula $\lambda=1/\mu$
+\end_inset
+
+)
+\begin_inset Formula 
+\[
+f_{X}(x)=\lambda e^{-\lambda x}u(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(4) Bernoulli 
+\begin_inset Formula $X\sim B(x;p)$
+\end_inset
+
+ (discrete RV)
+\begin_inset Formula 
+\[
+f_{X}(x)=p^{x}(1-p)^{1-x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(5) Poisson 
+\begin_inset Formula $X\sim Poisson(x;\mu)$
+\end_inset
+
+ (discrete)
+\begin_inset Formula 
+\[
+f_{X}(x)=\frac{\mu^{x}}{x!}e^{-\mu},x=0,1,2,\ldots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Mixed Random Variables
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(X=x)=\lim_{e\rightarrow0^{+}}\int_{x}^{x+e}f_{X}(\xi)d\xi
+\]
+
+\end_inset
+
+ The above value is generally zero for continuous RV.
+ When we need nonzero mass at 
+\begin_inset Formula $x=x_{0}$
+\end_inset
+
+, we can use a Dirac delta 
+\begin_inset Formula $\delta(x-x_{0})$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Section
 Functions of Random Variables
 \end_layout
