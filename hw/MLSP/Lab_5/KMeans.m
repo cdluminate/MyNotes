@@ -9,7 +9,7 @@ X = reshape(X, [Height*Width, Channel]); % a pixel per row
 
 %% 2. Intial RGB Centroid Calculation
 
-% what does this step mean?
+% I asked the CA. This step is not necessary for non-top-down kmeans.
 
 %% 3. Randomly initializing K centroids (select those centroids from the actual points)
 Ri = randi(Height*Width, [K, 1]);
@@ -57,4 +57,5 @@ for i = 1:K
 end
 [junk, argmin] = min(dist, [], 2);
 segmented_image = uint8(C(argmin, :));
+segmented_image = reshape(segmented_image, [Height, Width, Channel]);
 end
