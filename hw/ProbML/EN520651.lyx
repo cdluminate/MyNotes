@@ -1,0 +1,900 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage[margin=1in]{geometry}
+\usepackage{indentfirst}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "times" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "newtxmath" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 2
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+EN 520.651 Probablistic Machine Learning
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Probability Review
+\end_layout
+
+\begin_layout Subsection
+Probablistic Models
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Omega$
+\end_inset
+
+: sample space;
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A$
+\end_inset
+
+: event;
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P(A)$
+\end_inset
+
+: probability measure, non-negative;
+\end_layout
+
+\begin_layout Subsection
+Sample Space
+\end_layout
+
+\begin_layout Standard
+EX: single roll of dice 
+\begin_inset Formula $\Omega=\{1,2,3,4,5,6\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Events
+\end_layout
+
+\begin_layout Standard
+An event 
+\begin_inset Formula $A$
+\end_inset
+
+ is a set of outcomes.
+\end_layout
+
+\begin_layout Standard
+The boundary case is 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ (certain set) and 
+\begin_inset Formula $\phi$
+\end_inset
+
+ (null set).
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Venn Diagrams to visualize basic set operations.
+\end_layout
+
+\begin_layout Standard
+(1) Union 
+\begin_inset Formula $A\cup B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(2) Intersection: 
+\begin_inset Formula $A\cap B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(3) Complement: 
+\begin_inset Formula $A^{C}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(4) Disjoint: 
+\begin_inset Formula $A\cap B=\phi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Set Algebra
+\end_layout
+
+\begin_layout Standard
+(1) 
+\begin_inset Formula $(A\cup B)^{C}=A^{C}\cap B^{C}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(2) 
+\begin_inset Formula $(A\cap B)^{C}=A^{C}\cup B^{C}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(3) 
+\begin_inset Formula $A\cup(B\cup C)=(A\cup B)\cup C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(4) 
+\begin_inset Formula $A\cup(B\cap C)=(A\cup B)\cap(A\cup C)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Sigma Fields
+\end_layout
+
+\begin_layout Standard
+Given a sample space 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ and events 
+\begin_inset Formula $E,F$
+\end_inset
+
+, the colection of subsets of 
+\begin_inset Formula $\Omega$
+\end_inset
+
+, defined as 
+\begin_inset Formula $M$
+\end_inset
+
+, forms a field if (1) 
+\begin_inset Formula $\phi\in M$
+\end_inset
+
+, 
+\begin_inset Formula $\Omega\in M$
+\end_inset
+
+; (2) If 
+\begin_inset Formula $E,F\in M$
+\end_inset
+
+, then 
+\begin_inset Formula $E\cup F\in M$
+\end_inset
+
+ and 
+\begin_inset Formula $E\cap F\in M$
+\end_inset
+
+; (3) If 
+\begin_inset Formula $E\in M$
+\end_inset
+
+, then 
+\begin_inset Formula $E^{C}\in M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A sigma field is closed under a countable number of unions, intersections,
+ and complements.
+\end_layout
+
+\begin_layout Standard
+We care about fields and sigma fields because of consistency.
+ When 
+\begin_inset Formula $P(E)$
+\end_inset
+
+ and 
+\begin_inset Formula $P(F)$
+\end_inset
+
+ are defined, but not 
+\begin_inset Formula $P(E\cap F)$
+\end_inset
+
+, then the rule will be broken.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+EX: Toss a coin once, find 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Omega=\{H,T\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{F}=\{\phi,\Omega,H,T\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Strategy for the smallest 
+\begin_inset Formula $\sigma$
+\end_inset
+
+-field
+\end_layout
+
+\begin_layout Standard
+(1) Include 
+\begin_inset Formula $\phi$
+\end_inset
+
+ and 
+\begin_inset Formula $\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(2) Include disjoint parts
+\end_layout
+
+\begin_layout Standard
+(3) Include all pairs, triplets, quadruplets, etc
+\end_layout
+
+\begin_layout Standard
+Alternative strategy: use a binary mask, and the size of the set would be
+ 
+\begin_inset Formula $2^{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Axioms of Probability
+\end_layout
+
+\begin_layout Standard
+Set function 
+\begin_inset Formula $P:E\in\mathcal{F}\mapsto P(E)\in\mathbb{R}^{+}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(1) 
+\begin_inset Formula $P(E)\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(2) 
+\begin_inset Formula $P(\Omega)=1$
+\end_inset
+
+ – normalization
+\end_layout
+
+\begin_layout Standard
+(3) 
+\begin_inset Formula $P(E\cup F)=P(E)+P(F),\forall E,F\in\Omega,s.t.E\cap F=\phi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then we can establish
+\end_layout
+
+\begin_layout Standard
+(4) 
+\begin_inset Formula $P(\phi)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(5) 
+\begin_inset Formula $P(E)=1-P(E^{C})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(6) 
+\begin_inset Formula $P(E\cup F)=P(E)+P(F)-P(E\cap F)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(7) 
+\begin_inset Formula $P(\cap_{i=1}^{n}E_{i})\leq\sum_{i=1}^{n}P(E_{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Relationship Between Events
+\end_layout
+
+\begin_layout Standard
+Joint probability 
+\begin_inset Formula $P(A\cap B)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Conditional probability 
+\begin_inset Formula $P(B|A)=P(A\cap B)/P(A)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+– 
+\begin_inset Formula $P(B|A)P(A)=P(A|B)P(B)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Two events 
+\begin_inset Formula $A\in\mathcal{F}$
+\end_inset
+
+and 
+\begin_inset Formula $B\in\mathcal{F}$
+\end_inset
+
+are 
+\bar under
+independent
+\bar default
+ if 
+\begin_inset Formula $P(A\cap B)=P(A)P(B)$
+\end_inset
+
+ for 
+\begin_inset Formula $P(A)>0$
+\end_inset
+
+ and 
+\begin_inset Formula $P(B)>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Three events 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ (non-zero probability) are 
+\bar under
+jointly independent
+\bar default
+ if
+\end_layout
+
+\begin_layout Standard
+(1) 
+\begin_inset Formula $P(A\cap B)=P(A)P(B)$
+\end_inset
+
+ – all pairwise combinations alike
+\end_layout
+
+\begin_layout Standard
+(2) 
+\begin_inset Formula $P(A\cap B\cap C)=P(A)P(B)P(C)$
+\end_inset
+
+ – mutual
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Independent Experiments
+\bar default
+: the outcome of one experiment is not affected by the past, present, or
+ future values of the other experiment.
+\end_layout
+
+\begin_layout Subsection
+Bayes Rule
+\end_layout
+
+\begin_layout Standard
+Total Probability: Let 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+(
+\begin_inset Formula $i=1,\ldots,n)$
+\end_inset
+
+ be mutually exclusive and exhaustive w/ nonzero probability, for all 
+\begin_inset Formula $B\in\Omega$
+\end_inset
+
+, we can write
+\begin_inset Formula 
+\[
+P(B)=\sum_{i=1}^{n}P(A_{i})P(B|A_{i})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Bayes Rule: Given the above setup and 
+\begin_inset Formula $P(B)>0$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+P(A_{j}|B)=\frac{P(A_{j}\cap B)}{P(B)}=\frac{P(A_{j})P(B|A_{j})}{\sum_{i=1}^{n}P(A_{i})P(B|A_{i})}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $P(A_{i})$
+\end_inset
+
+ is 
+\begin_inset Quotes eld
+\end_inset
+
+prior
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Formula $P(B|A_{i})$
+\end_inset
+
+ is 
+\begin_inset Quotes eld
+\end_inset
+
+likelihood
+\begin_inset Quotes erd
+\end_inset
+
+, and 
+\begin_inset Formula $P(A_{i}|B)$
+\end_inset
+
+ is posterior.
+\end_layout
+
+\begin_layout Section
+Random Variables
+\end_layout
+
+\begin_layout Standard
+A random variable 
+\begin_inset Formula $X(\cdot)$
+\end_inset
+
+ is a function that maps every outcome 
+\begin_inset Formula $\omega\in\Omega$
+\end_inset
+
+ onto the real number line 
+\begin_inset Formula $X(\omega)\in\mathbb{R}$
+\end_inset
+
+.
+ Namely 
+\begin_inset Formula $X:\Omega\mapsto\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Cumulative Distribution Function
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F_{X}(x)=P(\omega\in\Omega|X(\omega)\leq x)\triangleq P(X\leq x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(1) 
+\begin_inset Formula $F_{X}(-\infty)=P(\phi)=0$
+\end_inset
+
+, 
+\begin_inset Formula $F_{X}(+\infty)=P(\phi)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(2) 
+\begin_inset Formula $x_{1}\leq x_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $F_{X}(x_{1})<F_{X}(x_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(3) 
+\begin_inset Formula $F_{X}(x)=\lim_{\epsilon\rightarrow0^{+}}F_{X}(x+\epsilon)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Implication: 
+\begin_inset Formula $P(a<X\leq b)=F_{X}(b)-F_{X}(a)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Probability Density Function
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f_{X}(x)=\frac{d}{dx}F_{X}(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(1) 
+\begin_inset Formula $f_{X}(x)\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(2) 
+\begin_inset Formula $\int_{-\infty}^{\infty}f_{X}(\xi)d\xi=F_{X}(\infty)-F_{X}(-\infty)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(3) 
+\begin_inset Formula $F_{X}(x)=\int_{-\infty}^{x}f_{X}(\xi)d\xi=P(X\leq x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(4) 
+\begin_inset Formula $\int_{x_{1}}^{x_{2}}f_{X}(\xi)d\xi=F_{X}(x_{2})-F_{X}(x_{1})=P(x_{1}<X\leq x_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Useful Distributions
+\end_layout
+
+\begin_layout Standard
+(1) Normal 
+\begin_inset Formula $X\sim\mathcal{N}(x;\mu,\sigma^{2})$
+\end_inset
+
+ (Continuous RV)
+\begin_inset Formula 
+\[
+f_{X}(x)=\frac{1}{\sqrt{2\pi\sigma^{2}}}\exp\{-\frac{1}{2\sigma^{2}}(x-\mu)^{2}\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(2) Uniform 
+\begin_inset Formula $X\sim Unf(x;[a,b])$
+\end_inset
+
+ (Continuous)
+\begin_inset Formula 
+\[
+f_{X}(x)=\frac{1}{b-a}\mathbb{I}\{x\in[a,b]\}+0\mathbb{I}\{x\notin[a,b]\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(3) Exponential 
+\begin_inset Formula $X\sim Exp(x;\lambda)$
+\end_inset
+
+ (Continuous, Sometimes use 
+\begin_inset Formula $\lambda=1/\mu$
+\end_inset
+
+)
+\begin_inset Formula 
+\[
+f_{X}(x)=\lambda e^{-\lambda x}u(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(4) Bernoulli 
+\begin_inset Formula $X\sim B(x;p)$
+\end_inset
+
+ (discrete RV)
+\begin_inset Formula 
+\[
+f_{X}(x)=p^{x}(1-p)^{1-x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(5) Poisson 
+\begin_inset Formula $X\sim Poisson(x;\mu)$
+\end_inset
+
+ (discrete)
+\begin_inset Formula 
+\[
+f_{X}(x)=\frac{\mu^{x}}{x!}e^{-\mu},x=0,1,2,\ldots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Mixed Random Variables
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(X=x)=\lim_{e\rightarrow0^{+}}\int_{x}^{x+e}f_{X}(\xi)d\xi
+\]
+
+\end_inset
+
+ The above value is generally zero for continuous RV.
+ When we need nonzero mass at 
+\begin_inset Formula $x=x_{0}$
+\end_inset
+
+, we can use a Dirac delta 
+\begin_inset Formula $\delta(x-x_{0})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Functions of Random Variables
+\end_layout
+
+\begin_layout Section
+Moment Generating Functions
+\end_layout
+
+\begin_layout Section
+Random Vectors
+\end_layout
+
+\begin_layout Section
+Bayesian Hypothesis Testing
+\end_layout
+
+\begin_layout Section
+NonBayesian Hypothesis Testing
+\end_layout
+
+\begin_layout Section
+Minmax Decision Theory
+\end_layout
+
+\begin_layout Section
+Bayesian Parameter Estimation
+\end_layout
+
+\begin_layout Section
+Linear Least Squares Estimation
+\end_layout
+
+\begin_layout Section
+NonBayesian Parameter Estimation
+\end_layout
+
+\begin_layout Section
+Vector Parameters
+\end_layout
+
+\begin_layout Section
+Exponential Families
+\end_layout
+
+\end_body
+\end_document
