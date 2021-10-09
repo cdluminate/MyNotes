@@ -9,3 +9,4 @@ function [synMusic] = synthesize_music(sphaseMusic,smagMusicProj)
 
 %% Music synthesis
 % Fill your code here to return 'synMusic'
+synMusic = stft(smagMusicProj .* sphaseMusic, 2048, 256, 0, hann(2048));

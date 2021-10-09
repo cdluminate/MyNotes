@@ -20,6 +20,7 @@ for i = 1:15
     w_i = (smagMusic.' * nrmN).'; % projection
     W(i, :) = w_i;
 end
+save('results/problem1a.dat', 'W', '-ascii');
 
 % (b)
 M = zeros(size(smagMusic));
@@ -30,21 +31,28 @@ end
 recons = stft(M .* sphaseMusic, 2048, 256, 0, hann(2048));
 sound(recons, fs);
 clear sound;
+audiowrite('results/problem1a_synthesis.wav', recons, fs);
 
 % (comment)
 disp('I. the rythms is still there. but the fidelity is poor.');
 
 % (save .dat)
-save('problem2a.dat', 'W', '-ascii');
+%save('results/problem2a.dat', 'W', '-ascii');
+%disp('(I am not sure whether the filename in the comment is correct.');
+%disp('(let me write another file with a file name that I think is correct.');
+save('results/problem1a.dat', 'W', '-ascii');
 
 %% Solution to Problem 1.2 here:  Synthesize Music
 % Use the 'synthesize_music' function here.
 % Use 'wavwrite' function to write the synthesized music as 'problem2b_synthesis.wav' to the 'results' folder.
 
 W2 = pinv(smagNote) * smagMusic;
+save('results/problem1b.dat', 'W2', '-ascii');
 M2 = smagNote * W2;
-recons2 = stft(M2 .* sphaseMusic, 2048, 256, 0, hann(2048));
+% recons2 = stft(M2 .* sphaseMusic, 2048, 256, 0, hann(2048));
+recons2 = synthesize_music(sphaseMusic, M2);
 sound(recons2, 16000);
+audiowrite('results/problem1b_synthesis.wav', recons2, fs);
 % clear sound;
 
 disp('II. similar to what I heard from I. low fidelity.');
