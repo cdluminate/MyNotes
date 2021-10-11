@@ -122,10 +122,106 @@ Q4
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 Show that if the transfer function of the hidden units is linear, a three-layer
  network is equivalent to a two-layer one.
  Explain why, therefore, that a three-layer network with linear hidden units
  cannot solve a non-linearly separable problem such as XOR or n-bit parity.
+ 
+\end_layout
+
+\begin_layout Standard
+Let's use the matrix notation for the neural network.
+ Denote 
+\begin_inset Formula $W_{l}$
+\end_inset
+
+ as the weight of the 
+\begin_inset Formula $l$
+\end_inset
+
+-th layer, 
+\begin_inset Formula $I$
+\end_inset
+
+ as the input, 
+\begin_inset Formula $A_{l}$
+\end_inset
+
+ as the pre-activation output of the 
+\begin_inset Formula $l$
+\end_inset
+
+-th layer, and 
+\begin_inset Formula $B_{l}$
+\end_inset
+
+ as the activated output of the 
+\begin_inset Formula $l$
+\end_inset
+
+-th layer, and 
+\begin_inset Formula $\sigma_{l}$
+\end_inset
+
+ as the activation function of the 
+\begin_inset Formula $l$
+\end_inset
+
+-th layer.
+ We omit the bias term or convenience like did in many textbooks (the bias
+ can be concatenated to the weight matrix, and a constant 
+\begin_inset Formula $1$
+\end_inset
+
+ will be appended to the layer's input).
+ In such setting, a three-layer neural network will look like:
+\begin_inset Formula 
+\[
+A_{3}=W_{3}\sigma_{2}(W_{2}\sigma_{1}(W_{1}I)).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If the transfer function, or say activation function of the hidden units
+ is linear, it means 
+\begin_inset Formula $\sigma_{2}$
+\end_inset
+
+ is linear transformation that could be represented by matrix 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ (any linear transformation can be represented by matrix multiplication).
+ So let's plug 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ into the above equation, and obtain
+\begin_inset Formula 
+\[
+A_{3}=W_{3}T_{2}W_{2}\sigma_{1}(W_{1}I)).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Clearly, without a non-linear activation function for the hidden layer,
+ a three-layer neural network could degenerate into a two-layer neural network
+ where its weight matrix for the second layer 
+\begin_inset Formula $W_{2}^{\prime}=W_{3}T_{2}W_{2}$
+\end_inset
+
+.
+ This is mathematically equivalent.
  
 \end_layout
 
