@@ -134,9 +134,59 @@ Q5
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 What problem(s) will result from using a learning rate that is too high?
  How would you detect these problems? What problem(s) will result from using
  a learning rate that is too low? How would you detect these problems?
+\end_layout
+
+\begin_layout Standard
+(1) When the learning rate is excessively high, the optimizer may drive
+ the parameters off their desired range, and lead to an diverging loss curve.
+ In the worst case, it may even cause the loss value being NaN or Inf due
+ to numerical precision issues or division by zero.
+ The loss curve on the training set during the training process is a good
+ way to diagnose and detect such problem.
+\end_layout
+
+\begin_layout Standard
+(2) When the learning rate is too low, the loss may decrease as usual, but
+ at a extremely slow rate.
+ An ideal loss curve should look like a 
+\begin_inset Formula $e^{-\alpha x}$
+\end_inset
+
+ function.
+ So a good way to detect such issue is to plot and check the loss curve.
+\end_layout
+
+\begin_layout Standard
+In general practice of deep learning, there is not any default learning
+ rate that is guaranteed to work.
+ An appropriate learning rate depends on the parameter initlaization method,
+ the optimizer, the data and loss function, etc.
+ A good practice to search for a good learning rate for a neural network
+ is to start from the powers of 
+\begin_inset Formula $10^{-1}$
+\end_inset
+
+, for instance 
+\begin_inset Formula $[10^{-1},10^{-2},\ldots,10^{-5}]$
+\end_inset
+
+.
+ Empirically 
+\begin_inset Formula $10^{-3}$
+\end_inset
+
+ may be a good start for training a network from scratch, and 
+\begin_inset Formula $10^{-5}$
+\end_inset
+
+ may be a good start for fine-tunining a network.
+ An appropriate learning rate could be the largest learning rate at which
+ the loss curve could converge during the training process.
 \end_layout
 
 \end_body
