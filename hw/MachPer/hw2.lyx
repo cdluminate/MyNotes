@@ -69,7 +69,7 @@
 \math_numbering_side default
 \quotes_style english
 \dynamic_quotes 0
-\papercolumns 2
+\papercolumns 1
 \papersides 1
 \paperpagestyle default
 \tracking_changes false
@@ -115,7 +115,466 @@ Q3
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 Calculate the number of parameters in AlexNet, VGGnet, ResNet and InceptionNet.
+\end_layout
+
+\begin_layout Standard
+(1) AlexNet.
+ Number of parameters is: Conv1 (11*11*3*96+96) + Conv2 (5*5*48*256+256)
+ + Conv3 (3*3*256*384+384) + Conv4 (3*3*192*384+384) + Conv5 (3*3*192*256+256)
+ + Fc6 (6*6*256*4096 + 4096) + Fc7 (4096 * 4096 + 4096) + Fc8 (4096 * 1000
+ + 1000).
+ Torchvision's AlexNet is slightly different from the original paper, hence
+ a slight difference in number of parameters.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{verbatim}
+\end_layout
+
+\begin_layout Plain Layout
+
+#!/usr/bin/python3
+\end_layout
+
+\begin_layout Plain Layout
+
+import numpy as np
+\end_layout
+
+\begin_layout Plain Layout
+
+print('Nparams of AlexNet:',
+\end_layout
+
+\begin_layout Plain Layout
+
+    np.sum([11*11*3*96 + 96,
+\end_layout
+
+\begin_layout Plain Layout
+
+    5*5*48*256 + 256,
+\end_layout
+
+\begin_layout Plain Layout
+
+    3*3*256*384 + 384,
+\end_layout
+
+\begin_layout Plain Layout
+
+    3*3*192*384 + 384,
+\end_layout
+
+\begin_layout Plain Layout
+
+    3*3*192*256 + 256,
+\end_layout
+
+\begin_layout Plain Layout
+
+    6*6*256*4096 + 4096,
+\end_layout
+
+\begin_layout Plain Layout
+
+    4096*4096 + 4096,
+\end_layout
+
+\begin_layout Plain Layout
+
+    4096*1000 + 1000]))
+\end_layout
+
+\begin_layout Plain Layout
+
+import torchvision as V
+\end_layout
+
+\begin_layout Plain Layout
+
+print('Nparams of Torchvision.AlexNet:',
+\end_layout
+
+\begin_layout Plain Layout
+
+        np.sum([x.numel() for x in
+\end_layout
+
+\begin_layout Plain Layout
+
+        V.models.alexnet().parameters()]))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Nparams of AlexNet: 60965224
+\end_layout
+
+\begin_layout Plain Layout
+
+Nparams of Torchvision.AlexNet: 61100840 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(2) VGG16.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{verbatim}
+\end_layout
+
+\begin_layout Plain Layout
+
+import numpy as np
+\end_layout
+
+\begin_layout Plain Layout
+
+print('Nparams of VGG16:',
+\end_layout
+
+\begin_layout Plain Layout
+
+    np.sum([
+\end_layout
+
+\begin_layout Plain Layout
+
+    3**2 * 3 * 64 + 64,
+\end_layout
+
+\begin_layout Plain Layout
+
+    3**2 * 64 * 64 + 64,
+\end_layout
+
+\begin_layout Plain Layout
+
+    #
+\end_layout
+
+\begin_layout Plain Layout
+
+    3**2 * 64 * 128 + 128,
+\end_layout
+
+\begin_layout Plain Layout
+
+    3**2 * 128 * 128 + 128,
+\end_layout
+
+\begin_layout Plain Layout
+
+    #
+\end_layout
+
+\begin_layout Plain Layout
+
+    3**2 * 128 * 256 + 256,
+\end_layout
+
+\begin_layout Plain Layout
+
+    3**2 * 256 * 256 + 256,
+\end_layout
+
+\begin_layout Plain Layout
+
+    3**2 * 256 * 256 + 256,
+\end_layout
+
+\begin_layout Plain Layout
+
+    #
+\end_layout
+
+\begin_layout Plain Layout
+
+    3**2 * 256 * 512 + 512,
+\end_layout
+
+\begin_layout Plain Layout
+
+    3**2 * 512 * 512 + 512,
+\end_layout
+
+\begin_layout Plain Layout
+
+    3**2 * 512 * 512 + 512,
+\end_layout
+
+\begin_layout Plain Layout
+
+    #
+\end_layout
+
+\begin_layout Plain Layout
+
+    3**2 * 512 * 512 + 512,
+\end_layout
+
+\begin_layout Plain Layout
+
+    3**2 * 512 * 512 + 512,
+\end_layout
+
+\begin_layout Plain Layout
+
+    3**2 * 512 * 512 + 512,
+\end_layout
+
+\begin_layout Plain Layout
+
+    #
+\end_layout
+
+\begin_layout Plain Layout
+
+    25088 * 4096 + 4096,
+\end_layout
+
+\begin_layout Plain Layout
+
+    4096 * 4096 + 4096,
+\end_layout
+
+\begin_layout Plain Layout
+
+    4096 * 1000 + 1000,
+\end_layout
+
+\begin_layout Plain Layout
+
+    ]))
+\end_layout
+
+\begin_layout Plain Layout
+
+import torchvision as V
+\end_layout
+
+\begin_layout Plain Layout
+
+print('Nparams of Torchvision.VGG16:',
+\end_layout
+
+\begin_layout Plain Layout
+
+        np.sum([x.numel() for x in
+\end_layout
+
+\begin_layout Plain Layout
+
+        V.models.vgg16().parameters()]))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Nparams of VGG16: 138357544
+\end_layout
+
+\begin_layout Plain Layout
+
+Nparams of Torchvision.VGG16: 138357544
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(3) ResNet.
+ ResNet has several frequently used depth: ResNet18, ResNet34, ResNet50,
+ ResNet101, ResNet152.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{verbatim}
+\end_layout
+
+\begin_layout Plain Layout
+
+import numpy as np
+\end_layout
+
+\begin_layout Plain Layout
+
+import torchvision as V
+\end_layout
+
+\begin_layout Plain Layout
+
+M = ['resnet'+str(x) for x in (18, 34, 50, 101, 152)]
+\end_layout
+
+\begin_layout Plain Layout
+
+for m in M:
+\end_layout
+
+\begin_layout Plain Layout
+
+    params = getattr(V.models, m)().parameters()
+\end_layout
+
+\begin_layout Plain Layout
+
+    print(f'Nparams for {m}:', np.sum([x.numel()
+\end_layout
+
+\begin_layout Plain Layout
+
+        for x in params]))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Nparams for resnet18: 11689512
+\end_layout
+
+\begin_layout Plain Layout
+
+Nparams for resnet34: 21797672
+\end_layout
+
+\begin_layout Plain Layout
+
+Nparams for resnet50: 25557032
+\end_layout
+
+\begin_layout Plain Layout
+
+Nparams for resnet101: 44549160
+\end_layout
+
+\begin_layout Plain Layout
+
+Nparams for resnet152: 60192808
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(4) Inception V3
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{verbatim}
+\end_layout
+
+\begin_layout Plain Layout
+
+import numpy as np
+\end_layout
+
+\begin_layout Plain Layout
+
+import torchvision as V
+\end_layout
+
+\begin_layout Plain Layout
+
+params = V.models.inception_v3().parameters()
+\end_layout
+
+\begin_layout Plain Layout
+
+print('Nparams for Inception V3:', np.sum([x.numel() for x in params]))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Nparams for Inception V3: 27161264
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{verbatim}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
