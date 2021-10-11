@@ -7,6 +7,7 @@
 \textclass article
 \begin_preamble
 \usepackage[margin=1in]{geometry}
+\usepackage{microtype}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -24,7 +25,7 @@
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
-\use_microtype true
+\use_microtype false
 \use_dash_ligatures true
 \graphics default
 \default_output_format default
@@ -198,6 +199,19 @@ If the transfer function, or say activation function of the hidden units
 \end_inset
 
  (any linear transformation can be represented by matrix multiplication).
+ If the question meant 
+\begin_inset Quotes eld
+\end_inset
+
+doing nothing
+\begin_inset Quotes erd
+\end_inset
+
+ for activation, then 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ can be an identity matrix.
  So let's plug 
 \begin_inset Formula $T_{2}$
 \end_inset
