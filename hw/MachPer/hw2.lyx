@@ -8,6 +8,9 @@
 \begin_preamble
 \usepackage[margin=1in]{geometry}
 \usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -18,7 +21,7 @@
 \font_roman "times" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
-\font_math "auto" "auto"
+\font_math "default" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
