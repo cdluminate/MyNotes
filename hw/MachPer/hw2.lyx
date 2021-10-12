@@ -94,11 +94,117 @@ Q1
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 Consider a first order Gaussian Markov random field with a single coefficient.
  Derive the constraint on the coefficient so that the Markov random field
  is stable.
  Calculate the eigenvalues and eigenvector of the covariance matrix of the
  data obeying this MRF model assuming doubly-periodic boundary conditions.
+\end_layout
+
+\begin_layout Standard
+We use the notations in the lecture note.
+ The first order GMRF with a single coefficient is
+\begin_inset Formula 
+\[
+y(s)=\sum_{r\in N}\theta(s\mod r)+e(s)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $N=\{(0,-1),(0,1),(-1,0),(1,0)\}$
+\end_inset
+
+.
+ The model 
+\begin_inset Formula $y(s)$
+\end_inset
+
+ can be represented in vector-matrix form using a symmetric block-circulation
+ matrix 
+\begin_inset Formula $B(\theta)$
+\end_inset
+
+ as
+\begin_inset Formula 
+\[
+B(\theta)y=e
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In order for this to be stable, the covariance matrix must be positive definite.
+ As a result, we know that the eigenvalues 
+\begin_inset Formula $\mu_{k}$
+\end_inset
+
+ are also greater than 
+\begin_inset Formula $0$
+\end_inset
+
+.
+ For block-circulant matrix, the eigenvalues are the discrete Fourier of
+ the first row.
+ Then, we have the following stability condition for 
+\begin_inset Formula $\{y(s)\}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\mu_{k}=1-\vec{\theta}^{T}\phi_{k}>0,k\in K
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since there is only one parameter, elements in vector 
+\begin_inset Formula $\vec{\theta}$
+\end_inset
+
+ are the same value 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ According to page 89 of the corresponding paper, when 
+\begin_inset Formula $y(s)$
+\end_inset
+
+ is represented in a toroidal lattice, then 
+\begin_inset Formula $B^{-1}(\theta)$
+\end_inset
+
+ is a block-circulent matrix with eigenvalues 
+\begin_inset Formula $1/\mu_{s}$
+\end_inset
+
+ and eigen vectors
+\begin_inset Formula 
+\[
+f_{S}=\text{Col.}[1,\lambda_{i},\lambda_{i}^{2}t_{j},\ldots,\lambda_{i}^{M-1}t_{j}],s=(i,j)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which is an 
+\begin_inset Formula $M^{2}$
+\end_inset
+
+ vector.
 \end_layout
 
 \begin_layout Section
