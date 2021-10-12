@@ -216,6 +216,99 @@ Compare the computational complexity of Gibbs and Metropolis sampling algorithm
  for synthesizing an NxN texture image.
 \end_layout
 
+\begin_layout Standard
+According to the reference material, i.e.
+ page 66 of 
+\begin_inset Quotes eld
+\end_inset
+
+3.
+ Low Level MRF Models
+\begin_inset Quotes erd
+\end_inset
+
+, the Metropolis sampler repeats 
+\begin_inset Quotes eld
+\end_inset
+
+step (2)
+\begin_inset Quotes erd
+\end_inset
+
+ for 
+\begin_inset Formula $N$
+\end_inset
+
+ times.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+step (2)
+\begin_inset Quotes erd
+\end_inset
+
+ traverses all elements in point set 
+\begin_inset Formula $\mathcal{S}$
+\end_inset
+
+.
+ The steps in (2) has constant complexity.
+ In summary, the complexity of Metropolis sampler is
+\begin_inset Formula 
+\[
+O_{\text{Metropolis}}(N\times|\mathcal{S}|)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $|\mathcal{S}|$
+\end_inset
+
+ means the size of the set 
+\begin_inset Formula $\mathcal{S}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+According to the same page of the reference material, the step (3) of Gibbs
+ sampler repeats step (2) for 
+\begin_inset Formula $N$
+\end_inset
+
+ times.
+ Step (2) traverses through the point set 
+\begin_inset Formula $\mathcal{S}$
+\end_inset
+
+.
+ Step (2.1) computes probability values for all 
+\begin_inset Formula $l\in\mathbf{\mathcal{L}}$
+\end_inset
+
+.
+ The complexity of this algorithm is
+\begin_inset Formula 
+\[
+O_{\text{Gibbs}}(N\times|\mathcal{S}|\times|\mathcal{L}|)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If I understood correctly, the Gibbs sampler is 
+\begin_inset Formula $|\mathcal{L}|$
+\end_inset
+
+ times more complex than the Metropolis sampler.
+\end_layout
+
 \begin_layout Section
 Q3 
 \end_layout
