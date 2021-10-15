@@ -15,7 +15,7 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "default"
+\font_roman "times" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
@@ -205,6 +205,57 @@ So
 \end_inset
 
  parameter exponential family.
+\end_layout
+
+\begin_layout Subsection
+(b)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\log P_{Y}(y;x) & =xt(y)-\alpha(x)+\beta(y)\\
+\log P_{Y}(y;x) & =\log\{p_{1}(y)^{1-x}p_{2}(y)^{x}/c(x)\}\\
+ & =(1-x)\log p_{1}(y)+x\log p_{2}(y)-\log c(x)\\
+ & =x\log p_{2}(y)-x\log p_{1}(y)+\log p_{1}(y)-\log c(x)\\
+ & =x\log\frac{p_{2}(y)}{p_{1}(y)}-\log c(x)+\log p_{1}(y)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The above equation means 
+\begin_inset Formula $\lambda(x)=x$
+\end_inset
+
+, 
+\begin_inset Formula $t(y)=\log(p_{2}(y)/p_{1}(y))$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha(x)=\log c(x)$
+\end_inset
+
+, 
+\begin_inset Formula $\beta(y)=\log p_{1}(y)$
+\end_inset
+
+.
+ We take exponential for these answers, and obtain
+\begin_inset Formula 
+\begin{align*}
+p_{1}(y) & =\exp\{\beta(y)\}\\
+c(x) & =\exp\{\alpha(x)\}\\
+\frac{p_{2}(y)}{p_{1}(y)} & =\exp\{t(y)\}\\
+p_{2}(y) & =\exp\{t(y)\}\cdot p_{1}(y)=\exp\{t(y)+\beta(y)\}
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \end_body
