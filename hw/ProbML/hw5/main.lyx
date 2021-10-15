@@ -90,6 +90,94 @@ Mo Zhou <mzhou32@jhu.edu>
 \end_layout
 
 \begin_layout Section
+Problem 5.6
+\end_layout
+
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P_{Y}(y;x)=\lambda(x)t(y)-\alpha(x)+\beta(y)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+P_{Z}(z;x)=P_{Y}(z-a;x) & =\lambda(x)t(z-a)-\alpha(x)+\beta(z-a)\\
+ & =\lambda(x)t'(z)-\alpha(x)+\beta'(z)
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $t'(z)=t(z-a)$
+\end_inset
+
+, and 
+\begin_inset Formula $\beta'(z)=\beta(z-a)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P_{Z}(z;a)$
+\end_inset
+
+ is still in the exponential family.
+\end_layout
+
+\begin_layout Subsection
+(b)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P_{Y}(y;x)=\exp(xy)-\alpha(x)+\beta(y)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & P_{Y}(y)P_{Y}(z-y)\\
+= & [\exp(xy)-\alpha(x)+\beta(y)][\exp(x(z-y))-\alpha(x)+\beta(z-y)]\\
+= & \exp(xz)-\alpha(x)\exp(x(z-y))+\beta(y)\exp(x(z-y))\\
+ & -\alpha(x)\exp(x(z-y))+\alpha^{2}(x)-\alpha(x)\beta(z-y)\\
+ & +\beta(y)\exp(x(z-y))-\alpha(x)\beta(y)+\beta(y)\beta(z-y)\\
+= & \exp(xz)+2(\alpha(x)+\beta(y))\exp(x(z-y))+\alpha^{2}(x)-\alpha(x)\beta(y)+\beta(y)\beta(z-y)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+P_{Z}(z;x) & =\int_{-\infty}^{\infty}P_{Y}(y)P_{Y}(z-y)dy\\
+ & =\int_{-\infty}^{\infty}[\exp(xz)+2(\alpha(x)+\beta(y))\exp(x(z-y))-\alpha(x)\beta(y)+\beta(y)\beta(z-y)]dy
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Stuck here.
+\end_layout
+
+\begin_layout Section
 Problem 5.7
 \end_layout
 
