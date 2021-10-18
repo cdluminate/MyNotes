@@ -1,0 +1,1213 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage{bm}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "times" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\listings_params "basicstyle={\footnotesize\ttfamily},language=Matlab,showstringspaces=false"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MidTerm 520.665
+\end_layout
+
+\begin_layout Author
+Mo Zhou <mzhou32@jhu.edu>
+\end_layout
+
+\begin_layout Section
+Question 1
+\end_layout
+
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+Laplacian of Gaussian is isotropic.
+ The other is not.
+\end_layout
+
+\begin_layout Subsection
+(b)
+\end_layout
+
+\begin_layout Standard
+LoG uses second order graduent, i.e.
+ 
+\begin_inset Formula $\nabla^{2}f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+(c)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma$
+\end_inset
+
+ for Gaussian filter for LoG.
+ For Canny edge, we need 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ for gaussian filter, thresholds 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+(d)
+\end_layout
+
+\begin_layout Standard
+Canny.
+ According to the demo pictures in the Canny paper, the contours looks long
+ and thin.
+\end_layout
+
+\begin_layout Section
+Question 2
+\end_layout
+
+\begin_layout Subsection
+(a) Rotational invariant LBPs
+\end_layout
+
+\begin_layout Standard
+The principal of rotational invariance is to produce the same output for
+ a rotated input.
+ In the LBP case, we can figure out all possible rotations of the weights,
+ and figure out all the corresponding LBP values.
+ Then the sum, mean, maximum, or minimum of these LBP values will be invariant
+ to ratation of the input.
+ Since the weights are powers of 2, we can take the minimum in order to
+ avoid numerical overflow issue in practice.
+\end_layout
+
+\begin_layout Subsection
+(b)
+\end_layout
+
+\begin_layout Standard
+Let's use the minimum LBP value (as discussed above) for the calculation.
+\end_layout
+
+\begin_layout Standard
+For the first value, the threshold is 30.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+% let matlab do calculation
+\end_layout
+
+\begin_layout Plain Layout
+
+w = [1,2,4,8,16,32,64,128];
+\end_layout
+
+\begin_layout Plain Layout
+
+W = [w;shift(w,1);shift(w,2);shift(w,3);shift(w,5);shift(w,6);shift(w,7)]
+\end_layout
+
+\begin_layout Plain Layout
+
+i1 =  [1,1,1,1,0,1,1,1]
+\end_layout
+
+\begin_layout Plain Layout
+
+min(sum(W .* i1, 2))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+i2 = [1,1,1,1,0,0,1,1]
+\end_layout
+
+\begin_layout Plain Layout
+
+min(sum(W .* i2, 2))
+\end_layout
+
+\begin_layout Plain Layout
+
+i3 = [1,1,1,0,0,1,1,1]
+\end_layout
+
+\begin_layout Plain Layout
+
+min(sum(W .* i3, 2))
+\end_layout
+
+\begin_layout Plain Layout
+
+i4 = [1,1,1,1,1,1,1,1]
+\end_layout
+
+\begin_layout Plain Layout
+
+min(sum(W .* i4, 2))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The result of first value.
+ namely, the (1,1) item in the red part is 127.
+\end_layout
+
+\begin_layout Standard
+Similar way, the (1,2) item in the red part is 63.
+\end_layout
+
+\begin_layout Standard
+The (1,3) item in the red part is 63.
+\end_layout
+
+\begin_layout Standard
+The (1,4) item in the red part is 255.
+\end_layout
+
+\begin_layout Standard
+Namely the original LBPs are 
+\begin_inset Formula $\begin{bmatrix}127 & 63\\
+63 & 255
+\end{bmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After the rotation, The LBPs are 
+\begin_inset Formula $\begin{bmatrix}63 & 127\\
+255 & 63
+\end{bmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Question 3
+\end_layout
+
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B(\bm{\theta})\bm{y}=\hm{e}$
+\end_inset
+
+, where 
+\begin_inset Formula $B(\bm{\theta})$
+\end_inset
+
+ is a symmetric block circulant matrix.
+\end_layout
+
+\begin_layout Subsection
+(b)
+\end_layout
+
+\begin_layout Subsection
+(c)
+\end_layout
+
+\begin_layout Section
+Question 4
+\end_layout
+
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+Given a training set D.
+ If the training set error (loss) is very high assuming the implementation
+ is correct (both in programming and mathematically), it means the neural
+ network may not have enough capacity to learn the problem.
+ 
+\end_layout
+
+\begin_layout Standard
+Choice (i) a bigger neural network means to increase model capacity, which
+ should work.
+ 
+\end_layout
+
+\begin_layout Standard
+Choice (ii) will not work in this case.
+ It cannot even converge on D, why can it converge on an augmented dataset?
+ 
+\end_layout
+
+\begin_layout Standard
+As for Choice (iii), the regularization term is used to impose restriction
+ on the hypothesis space of the model.
+ It is irrelevant when the model cannot converge on the training set.
+\end_layout
+
+\begin_layout Standard
+Choice (iv) will not help here.
+ Dropout can be seen as regularization.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+The answer is (i).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(b)
+\end_layout
+
+\begin_layout Standard
+1x1 Conv changes the channel across the whole height and width.
+ It has 16 + 1 = 17 parameters.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+The answer is (ii)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(c)
+\end_layout
+
+\begin_layout Standard
+Momentum in SGD helps the weight get out of local minima.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Answer: (ii)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(d)
+\end_layout
+
+\begin_layout Standard
+Gradient clipping is helpful to mitigate gradient explosion.
+ This reminds me of tricks in LSTM and RNN training on long sequences.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Answer: (iv)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(e)
+\end_layout
+
+\begin_layout Standard
+(i) false.
+ (ii) false.
+ (iii) true.
+ (iv) false.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Answer: (iii)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Question 5
+\end_layout
+
+\begin_layout Standard
+This is the same question as our homework 3.
+ Since I have derived the matrix formulation of the whole network, please
+ let me reuse my answer to homework 3.
+\end_layout
+
+\begin_layout Standard
+Denote the input as 
+\begin_inset Formula $I=\begin{bmatrix}i_{1}\\
+i_{2}
+\end{bmatrix}$
+\end_inset
+
+, the the hidden layer as 
+\begin_inset Formula $H=\begin{bmatrix}h_{1}\\
+h_{2}
+\end{bmatrix}$
+\end_inset
+
+, the output as 
+\begin_inset Formula $O=\begin{bmatrix}o_{1}\\
+o_{2}
+\end{bmatrix}$
+\end_inset
+
+, the weight matrices for the first and second layer as 
+\begin_inset Formula $W_{1}=\begin{bmatrix}w_{1} & w_{2}\\
+w_{3} & w_{4}
+\end{bmatrix}$
+\end_inset
+
+ and 
+\begin_inset Formula $W_{2}=\begin{bmatrix}w_{5} & w_{6}\\
+w_{7} & w_{8}
+\end{bmatrix}$
+\end_inset
+
+, respectively.
+ Note, the given ground truth output is denoted as 
+\begin_inset Formula $O_{GT}=\begin{bmatrix}0.01\\
+0.99
+\end{bmatrix}$
+\end_inset
+
+.
+ We also denote pre-activation outputs using symbols with a hat, e.g.
+ 
+\begin_inset Formula $H=\sigma(\hat{H})$
+\end_inset
+
+.
+ The matrix form of the neural network is
+\begin_inset Formula 
+\begin{align*}
+O & =\sigma(W_{2}H+b_{2})\\
+H & =\sigma(W_{1}I+b_{1})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And the loss function is MSE
+\begin_inset Formula 
+\[
+l=\frac{1}{2}(O_{GT}-O)^{T}(O_{GT}-O)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Following the computation graph.
+ If we denote the gradient of the loss function with respect to one step's
+ output as 
+\begin_inset Formula $\delta$
+\end_inset
+
+, we can find the gradients for updating the parameters:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial l}{\partial O} & =O-O_{GT}\\
+\frac{\partial l}{\partial\hat{O}} & =O\odot(1-O)\odot\delta_{O}=O\odot(1-O)\odot\frac{\partial l}{\partial O}\\
+\frac{\partial l}{\partial W_{2}} & =\delta_{\hat{O}}H^{T}=\frac{\partial l}{\partial\hat{O}}\cdot H^{T}\\
+\frac{\partial l}{\partial H} & =W_{2}^{T}\delta=W^{T}\cdot\frac{\partial l}{\partial\hat{O}}\\
+\frac{\partial l}{\partial\hat{H}} & =H\odot(1-H)\odot\delta=H\odot(1-H)\odot\frac{\partial l}{\partial H}\\
+\frac{\partial l}{\partial W_{1}} & =\delta I^{T}=\frac{\partial l}{\partial\hat{H}}\cdot I^{T}
+\end{align*}
+
+\end_inset
+
+Note, the symbol 
+\begin_inset Formula $\odot$
+\end_inset
+
+ means element-wise product.
+ Then let's throw the numerical stuff for the forward, backward, and update
+ steps to matlab.
+ In the experiment, the learning rate is set as 
+\begin_inset Formula $0.5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+First let's define the sigmoid function:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function y = sigmoid(x)
+\end_layout
+
+\begin_layout Plain Layout
+
+  y = 1 ./ (1 + exp(-x));
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And we write the following matlab code for the three steps:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+clear;
+\end_layout
+
+\begin_layout Plain Layout
+
+I = [0.05; 0.10];
+\end_layout
+
+\begin_layout Plain Layout
+
+W1 = [0.15, 0.20; 0.25, 0.30];
+\end_layout
+
+\begin_layout Plain Layout
+
+b1 = 0.35;
+\end_layout
+
+\begin_layout Plain Layout
+
+W2 = [0.40, 0.45; 0.50, 0.55];
+\end_layout
+
+\begin_layout Plain Layout
+
+b2 = 0.60;
+\end_layout
+
+\begin_layout Plain Layout
+
+O_GT = [0.01; 0.99];
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+disp('forward layer 1');
+\end_layout
+
+\begin_layout Plain Layout
+
+H_ = W1 * I + b1
+\end_layout
+
+\begin_layout Plain Layout
+
+H = sigmoid(H_)
+\end_layout
+
+\begin_layout Plain Layout
+
+disp('forward layer 2');
+\end_layout
+
+\begin_layout Plain Layout
+
+O_ = W2 * H + b2
+\end_layout
+
+\begin_layout Plain Layout
+
+O = sigmoid(O_)
+\end_layout
+
+\begin_layout Plain Layout
+
+disp('MSE loss');
+\end_layout
+
+\begin_layout Plain Layout
+
+loss = sum((O - O_GT).^2)/2
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+disp('backward pass layer 2');
+\end_layout
+
+\begin_layout Plain Layout
+
+gO = O - O_GT
+\end_layout
+
+\begin_layout Plain Layout
+
+gO_ = O .* (1 - O) .* gO
+\end_layout
+
+\begin_layout Plain Layout
+
+gW2 = gO_ * H'
+\end_layout
+
+\begin_layout Plain Layout
+
+gH = W2' * gO_
+\end_layout
+
+\begin_layout Plain Layout
+
+gH_ = H .* (1 - H) .* gH
+\end_layout
+
+\begin_layout Plain Layout
+
+gW1 = gH_ * I'
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+lr = 0.5;
+\end_layout
+
+\begin_layout Plain Layout
+
+fprintf('learning rate is %f
+\backslash
+n', lr);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+disp('update parameters');
+\end_layout
+
+\begin_layout Plain Layout
+
+W1 = W1 - lr * gW1
+\end_layout
+
+\begin_layout Plain Layout
+
+W2 = W2 - lr * gW2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And the output is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+forward layer 1
+\end_layout
+
+\begin_layout Plain Layout
+
+H_ =
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.3775
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.3925
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+H =
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.5933
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.5969
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+forward layer 2
+\end_layout
+
+\begin_layout Plain Layout
+
+O_ =
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   1.1059
+\end_layout
+
+\begin_layout Plain Layout
+
+   1.2249
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+O =
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.7514
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.7729
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+MSE loss
+\end_layout
+
+\begin_layout Plain Layout
+
+loss = 0.2984
+\end_layout
+
+\begin_layout Plain Layout
+
+backward pass layer 2
+\end_layout
+
+\begin_layout Plain Layout
+
+gO =
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.7414
+\end_layout
+
+\begin_layout Plain Layout
+
+  -0.2171
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+gO_ =
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.138499
+\end_layout
+
+\begin_layout Plain Layout
+
+  -0.038098
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+gW2 =
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.082167   0.082668
+\end_layout
+
+\begin_layout Plain Layout
+
+  -0.022603  -0.022740
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+gH =
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.036350
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.041370
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+gH_ =
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   8.7714e-03
+\end_layout
+
+\begin_layout Plain Layout
+
+   9.9543e-03
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+gW1 =
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   4.3857e-04   8.7714e-04
+\end_layout
+
+\begin_layout Plain Layout
+
+   4.9771e-04   9.9543e-04
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+learning rate is 0.500000
+\end_layout
+
+\begin_layout Plain Layout
+
+update parameters
+\end_layout
+
+\begin_layout Plain Layout
+
+W1 =
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.1498   0.1996
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.2498   0.2995
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+W2 =
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.3589   0.4087
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.5113   0.5614
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+>>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+So the updated weights are: 
+\begin_inset Formula $w_{2}^{\prime}=0.1996$
+\end_inset
+
+, 
+\begin_inset Formula $w_{6}^{\prime}=0.4087$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
