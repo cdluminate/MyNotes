@@ -7,6 +7,7 @@
 \textclass article
 \begin_preamble
 \usepackage[margin=1in]{geometry}
+\newcommand{\pperp}{\perp\kern-5pt\perp}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -20,8 +21,8 @@ todonotes
 \font_roman "times" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
-\font_math "auto" "auto"
-\font_default_family default
+\font_math "newtxmath" "auto"
+\font_default_family rmdefault
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
@@ -93,6 +94,25 @@ Mo Zhou <mzhou32@jhu.edu>
 
 \begin_layout Section
 Problem 6.1
+\end_layout
+
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+X\pperp\{Y,W\}|Z & \Rightarrow P(W,X,Y,Z)\\
+ & =P(Y)P(W|Y)P(Z|Y)P(X|Z)\\
+\text{Marginalize }W & \Rightarrow P(Y)[\sum_{W}P(W|Y)]P(Z|Y)P(X|Z)\\
+ & =P(Y)P(Z|Y)P(X|Z)\\
+ & \Rightarrow X\pperp Y|Z
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
