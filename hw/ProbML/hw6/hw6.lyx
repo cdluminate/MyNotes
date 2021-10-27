@@ -103,11 +103,24 @@ Problem 6.1
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-X\pperp\{Y,W\}|Z & \Rightarrow P(W,X,Y,Z)\\
- & =P(Y)P(W|Y)P(Z|Y)P(X|Z)\\
-\text{Marginalize }W & \Rightarrow P(Y)[\sum_{W}P(W|Y)]P(Z|Y)P(X|Z)\\
+X\pperp\{Y,W\}|Z & \Rightarrow P(X|Y,W,Z)=P(X|Z)\\
+X\pperp Y|Z & \Rightarrow P(X|Y,Z)=P(X|Z)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+P(W,X,Y,Z) & =P(Y)P(Z|Y)P(W|Y,Z)P(X|Z)\\
+\text{Marginalize }W & \Rightarrow\\
+P(X,Y,Z) & =P(Y)P(Z|Y)[\sum_{W}P(W|Y,Z)]P(X|Z)\\
  & =P(Y)P(Z|Y)P(X|Z)\\
- & \Rightarrow X\pperp Y|Z
+\text{Marginalize }X & \Rightarrow\\
+P(Y,Z) & =P(Y)P(Z|Y)\\
+\text{So that}\\
+P(X|Y,Z) & =P(X,Y,Z)/P(Y,Z)\\
+ & =P(X|Z)
 \end{align*}
 
 \end_inset
