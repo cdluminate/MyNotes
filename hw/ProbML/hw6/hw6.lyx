@@ -104,14 +104,7 @@ Problem 6.1
 \begin_inset Formula 
 \begin{align*}
 X\pperp\{Y,W\}|Z & \Rightarrow P(X|Y,W,Z)=P(X|Z)\\
-X\pperp Y|Z & \Rightarrow P(X|Y,Z)=P(X|Z)
-\end{align*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{align*}
+\underline{\text{We want to figure out if }}X\pperp Y|Z & \Rightarrow P(X|Y,Z)=P(X|Z)\\
 P(W,X,Y,Z) & =P(Y)P(Z|Y)P(W|Y,Z)P(X|Z)\\
 \text{Marginalize }W & \Rightarrow\\
 P(X,Y,Z) & =P(Y)P(Z|Y)[\sum_{W}P(W|Y,Z)]P(X|Z)\\
@@ -121,6 +114,46 @@ P(Y,Z) & =P(Y)P(Z|Y)\\
 \text{So that}\\
 P(X|Y,Z) & =P(X,Y,Z)/P(Y,Z)\\
  & =P(X|Z)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(b)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+X\pperp Y|Z & \Rightarrow P(X|Y,Z)=P(X|Z)\\
+X\pperp W|Y & \Rightarrow P(X|W,Y)=P(X|Y)\\
+\underline{\text{We want to figure out if }}X\pperp W|Z & \Rightarrow P(X|W,Z)=P(X|Z)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(c)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+X\pperp\{Y,W\}|Z & \Rightarrow P(X|Y,W,Z)=P(X|Z)\\
+Y\pperp W|Z & \Rightarrow P(Y|W,Z)=P(Y|Z)\\
+\underline{\text{We want to figure out if }}\{X,W\}\pperp Y|Z & \Rightarrow P(X,W|Y,Z)=P(X,W|Z)\\
+P(X,Y,W,Z) & =P(Z)P(W|Z)P(Y|W,Z)P(X|Y,W,Z)\\
+ & =P(Z)P(W|Z)P(Y|Z)P(X|Z)\\
+P(X,W|Y,Z) & =\frac{P(X,Y,W,Z)}{P(Y,Z)}\\
+ & =\frac{P(Z)P(W|Z)P(Y|Z)P(X|Z)}{P(Z)P(Y|Z)}\\
+ & =P(W|Z)P(X|Z)\\
+ & =P(X,W|Z)
 \end{align*}
 
 \end_inset
