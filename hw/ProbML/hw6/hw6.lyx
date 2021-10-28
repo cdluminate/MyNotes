@@ -122,6 +122,10 @@ P(X|Y,Z) & =P(X,Y,Z)/P(Y,Z)\\
 \end_layout
 
 \begin_layout Standard
+True.
+\end_layout
+
+\begin_layout Subsection
 (b)
 \end_layout
 
@@ -135,10 +139,10 @@ X\pperp W|Y & \Rightarrow P(X|W,Y)=P(X|Y)\\
 
 \end_inset
 
-
+Could not find a path for that equation we want.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
 (c)
 \end_layout
 
@@ -154,6 +158,26 @@ P(X,W|Y,Z) & =\frac{P(X,Y,W,Z)}{P(Y,Z)}\\
  & =\frac{P(Z)P(W|Z)P(Y|Z)P(X|Z)}{P(Z)P(Y|Z)}\\
  & =P(W|Z)P(X|Z)\\
  & =P(X,W|Z)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+True.
+\end_layout
+
+\begin_layout Subsection
+(d)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+X\pperp Y|Z & \Rightarrow P(X|Y,Z)=P(X|Z)\\
+X\pperp Y|W & \Rightarrow P(X|Y,W)=P(X|W)
 \end{align*}
 
 \end_inset
