@@ -434,5 +434,43 @@ So
 Problem 6.4
 \end_layout
 
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $X_{1},\ldots,X_{N}$
+\end_inset
+
+ are i.i.d, we first find 
+\begin_inset Formula $f_{X_{i}}(x_{i};p,\epsilon)$
+\end_inset
+
+, and then get the joint probability:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+f_{Z_{i}}(z_{i};p) & =p^{z_{i}}(1-p)^{1-z_{i}}\\
+f_{X_{i}}(x_{i};p,\epsilon) & =\sum_{z_{i}}P(z_{i})P(x_{i}|z_{i})\\
+ & =P(z_{i}=0)P(x_{i}|z_{i}=0)+P(z_{i}=1)P(x_{i}|z_{i}=1)\\
+ & =(1-p)\epsilon^{x_{i}}(1-\epsilon)^{1-x_{i}}+p(1-\epsilon)^{x_{i}}\epsilon^{1-x_{i}}\\
+f_{X}(X;p,\epsilon) & =\prod_{i}f_{X_{i}}(x_{i};p,\epsilon)\\
+ & =\prod_{i}[\sum_{j}P(z_{j})P(x_{i}|z_{j})]\\
+\log f_{X}(X;p,\epsilon) & =\sum_{i}\log[\sum_{j}P(z_{j})P(x_{i}|z_{j})]\\
+ & =\sum_{i}\log[(1-p)\epsilon^{x_{i}}(1-\epsilon)^{1-x_{i}}+p(1-\epsilon)^{x_{i}}\epsilon^{1-x_{i}}]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is not easy to optimize.
+\end_layout
+
 \end_body
 \end_document
