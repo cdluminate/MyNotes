@@ -187,6 +187,10 @@ X\pperp Y|W & \Rightarrow P(X|Y,W)=P(X|W)
 
 \end_layout
 
+\begin_layout Standard
+Could not find a path for that equation we want.
+\end_layout
+
 \begin_layout Section
 Problem 6.2
 \end_layout
@@ -338,6 +342,92 @@ Yes.
 
 \begin_layout Section
 Problem 6.3
+\end_layout
+
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+If we start a ball from 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ towards 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+, it is blocked.
+\end_layout
+
+\begin_layout Standard
+If we start a ball from 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ towards 
+\begin_inset Formula $X_{9}$
+\end_inset
+
+, it will be blocked at 
+\begin_inset Formula $X_{5}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{7}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+So 
+\begin_inset Formula $X_{1}\pperp\{X_{3},X_{4},X_{5},X_{7}\}|X_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+(b)
+\end_layout
+
+\begin_layout Standard
+If we start a ball from 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+, it can reach 
+\begin_inset Formula $X_{3}$
+\end_inset
+
+ and will be bounced back.
+ It cannot reach 
+\begin_inset Formula $X_{5}$
+\end_inset
+
+ when the first time it passes 
+\begin_inset Formula $X_{4}$
+\end_inset
+
+.
+ As leaf node 
+\begin_inset Formula $X_{7}$
+\end_inset
+
+ will stop the ball, 
+\begin_inset Formula $X_{5}$
+\end_inset
+
+ is the only node that the ball cannot reach.
+\end_layout
+
+\begin_layout Standard
+So 
+\begin_inset Formula $X_{1}\pperp X_{5}|X_{2}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
