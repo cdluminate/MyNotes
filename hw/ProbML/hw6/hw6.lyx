@@ -331,6 +331,14 @@ P(X_{1},X_{2},X_{3},X_{4},X_{5}) & =P(X_{1},X_{2},X_{3})P(X_{4}|X_{1},X_{2})P(X_
 
 \end_layout
 
+\begin_layout Standard
+Which means 
+\begin_inset Formula $X_{4}\pperp X_{5}|\{X_{1},X_{2},X_{3}\}$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsection
 (d)
 \end_layout
@@ -458,8 +466,8 @@ f_{X_{i}}(x_{i};p,\epsilon) & =\sum_{z_{i}}P(z_{i})P(x_{i}|z_{i})\\
  & =P(z_{i}=0)P(x_{i}|z_{i}=0)+P(z_{i}=1)P(x_{i}|z_{i}=1)\\
  & =(1-p)\epsilon^{x_{i}}(1-\epsilon)^{1-x_{i}}+p(1-\epsilon)^{x_{i}}\epsilon^{1-x_{i}}\\
 f_{X}(X;p,\epsilon) & =\prod_{i}f_{X_{i}}(x_{i};p,\epsilon)\\
- & =\prod_{i}[\sum_{j}P(z_{j})P(x_{i}|z_{j})]\\
-\log f_{X}(X;p,\epsilon) & =\sum_{i}\log[\sum_{j}P(z_{j})P(x_{i}|z_{j})]\\
+ & =\prod_{i}[\sum_{z_{i}}P(z_{i})P(x_{i}|z_{i})]\\
+\log f_{X}(X;p,\epsilon) & =\sum_{i}\log[\sum_{z_{i}}P(z_{i})P(x_{i}|z_{i})]\\
  & =\sum_{i}\log[(1-p)\epsilon^{x_{i}}(1-\epsilon)^{1-x_{i}}+p(1-\epsilon)^{x_{i}}\epsilon^{1-x_{i}}]
 \end{align*}
 
@@ -470,6 +478,139 @@ f_{X}(X;p,\epsilon) & =\prod_{i}f_{X_{i}}(x_{i};p,\epsilon)\\
 
 \begin_layout Standard
 This is not easy to optimize.
+\end_layout
+
+\begin_layout Subsection
+(b)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+f_{X_{i},Z_{i}}(x_{i},z_{i};p,\epsilon) & =[p(1-\epsilon)^{x_{i}}\epsilon^{1-x_{i}}]^{z_{i}}[(1-p)\epsilon^{x_{i}}(1-\epsilon)^{1-x_{i}}]^{1-z_{i}}\\
+ & =p^{z_{i}}(1-p)^{1-z_{i}}(1-\epsilon)^{x_{i}z_{i}+(1-x_{i})(1-z_{i})}\epsilon^{z_{i}(1-x_{i})+x_{i}(1-z_{i})}\\
+f_{X,Z}(x,z;p,\epsilon) & =\prod_{i}f(x_{i},z_{i};p,\varepsilon)\\
+\log f_{X,Z}(x,z;p,\epsilon) & =\sum_{i}\log f(x_{i},z_{i};p,\varepsilon)\\
+ & =\sum_{i}\Big[z_{i}\log(p)+(1-z_{i})\log(1-p)+[x_{i}z_{i}+(1-x_{i})(1-z_{i})]\log(1-\epsilon)+[z_{i}(1-x_{i})+x_{i}(1-z_{i})]\log(\epsilon)]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(c)
+\end_layout
+
+\begin_layout Standard
+The observed data is 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+, while 
+\begin_inset Formula $Z_{i}$
+\end_inset
+
+ is hidden.
+ I think the 
+\begin_inset Quotes eld
+\end_inset
+
+closed-form
+\begin_inset Quotes erd
+\end_inset
+
+ means we calculate 
+\begin_inset Formula $\eta_{i}$
+\end_inset
+
+ from the observed data.
+ Then we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\eta_{i} & =E_{Z|X}[Z_{i}]=P(Z_{i}=1|X_{i})\\
+ & =\frac{P(Z_{i}=1)P(X_{i}|Z_{i}=1)}{P(X_{i})}\\
+ & =\frac{p(1-\epsilon)^{x_{i}}\epsilon^{1-x_{i}}}{(1-p)\epsilon^{x_{i}}(1-\epsilon)^{1-x_{i}}+p(1-\epsilon)^{x_{i}}\epsilon^{1-x_{i}}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(d)
+\end_layout
+
+\begin_layout Standard
+Based on the results we got in the previous steps, we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+E_{Z|X}[\log f_{X,Z}(x,z;p,\epsilon)] & =E_{Z|X}[\sum_{i}\log f(x_{i},z_{i};p,\varepsilon)]\\
+ & =E_{Z|X}[\sum_{i}\Big[z_{i}\log(p)+(1-z_{i})\log(1-p)\\
+ & +[x_{i}z_{i}+(1-x_{i})(1-z_{i})]\log(1-\epsilon)+[z_{i}(1-x_{i})+x_{i}(1-z_{i})]\log(\epsilon)]]\\
+ & =\sum_{i}E_{Z|X}\Big[\ldots\Big]\\
+ & =\sum_{i}\Big[\eta_{i}\log(p)+(1-\eta_{i})\log(1-p)\\
+ & +[x_{i}\eta_{i}+(1-x_{i})(1-\eta_{i})]\log(1-\epsilon)+[\eta_{i}(1-x_{i})+x_{i}(1-\eta_{i})]\log(\epsilon)\Big]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(e)
+\end_layout
+
+\begin_layout Standard
+We constract the Lagrangian
+\begin_inset Formula 
+\begin{align*}
+\phi(x,z;p,\epsilon) & =E_{Z|X}[\log f_{X,Z}(x,z;p,\epsilon)]-\lambda_{1}(p-1)-\lambda_{2}(\epsilon-1)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial\phi}{\partial p} & =0\\
+0 & =\sum_{i}[\frac{\eta_{i}}{p}-\frac{1-\eta_{i}}{1-p}]-\lambda_{1}\\
+\lambda_{1} & =\sum_{i}[\frac{\eta_{i}}{p}-\frac{1-\eta_{i}}{1-p}]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial\phi}{\partial\epsilon} & =0\\
+0 & =\sum_{i}[\frac{[\eta_{i}(1-x_{i})+x_{i}(1-\eta_{i})]}{\epsilon}-\frac{[x_{i}\eta_{i}+(1-x_{i})(1-\eta_{i})]}{1-\epsilon}]-\lambda_{2}\\
+\lambda_{2} & =\sum_{i}[\frac{\eta_{i}(1-x_{i})+x_{i}(1-\eta_{i})}{\epsilon}-\frac{x_{i}\eta_{i}+(1-x_{i})(1-\eta_{i})}{1-\epsilon}]
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \end_body
