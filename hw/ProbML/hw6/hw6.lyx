@@ -8,6 +8,8 @@
 \begin_preamble
 \usepackage[margin=1in]{geometry}
 \newcommand{\pperp}{\perp\kern-5pt\perp}
+\usepackage{tikz}
+\usetikzlibrary[arrows,snakes,backgrounds]
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -187,6 +189,151 @@ X\pperp Y|W & \Rightarrow P(X|Y,W)=P(X|W)
 
 \begin_layout Section
 Problem 6.2
+\end_layout
+
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[thick]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[draw,circle] (x1) at (0,0) {$X_1$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[draw,circle] (x2) at (0,-1) {$X_2$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[draw,circle] (x3) at (0,-2) {$X_3$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[draw,circle] (x4) at (2,-0.5) {$X_4$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[draw,circle] (x5) at (2, -1.5) {$X_5$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->,>=latex] (x1.east) -- (x4.west);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->,>=latex] (x2.east) -- (x4.west);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->,>=latex] (x2.east) -- (x5.west);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->,>=latex] (x3.east) -- (x5.west);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+P(X_{1},X_{2},X_{4}) & =P(X_{1})P(X_{2})P(X_{4}|X_{1},X_{2})\\
+P(X_{2},X_{3},X_{5}) & =P(X_{2})P(X_{3})P(X_{5}|X_{2},X_{3})\\
+P(X_{2},X_{4},X_{5}) & =P(X_{2})P(X_{4}|X_{2})P(X_{5}|X_{2})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(b)
+\end_layout
+
+\begin_layout Standard
+Leveraging the Bayes' Ball Algorithm, we have
+\begin_inset Formula 
+\begin{align*}
+X_{4}\pperp X_{5}|X_{2}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(c)
+\end_layout
+
+\begin_layout Standard
+Maybe 
+\begin_inset Formula 
+\begin{align*}
+P(X_{1},X_{2},X_{3},X_{4},X_{5}) & =P(X_{1},X_{2},X_{3})P(X_{4}|X_{1},X_{2})P(X_{5}|X_{2},X_{3})\\
+ & \Rightarrow P(X_{4},X_{5}|X_{1},X_{2},X_{3})=P(X_{4}|X_{1},X_{2},X_{3})P(X_{5}|X_{1},X_{2},X_{3})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(d)
+\end_layout
+
+\begin_layout Standard
+Yes.
+ The graph is invariant to the parameter of the Bernoulli.
 \end_layout
 
 \begin_layout Section
