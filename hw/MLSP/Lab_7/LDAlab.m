@@ -33,5 +33,11 @@ for i = 1:num_class
     end
 end
 
+[V, D] = eigs(SB, SW, LDAdimension);
+size(V);
+size(D);
+
+TrainingLDA = TrainingPCA * V;
+TestingLDA = TestingPCA * V;
 
 end
