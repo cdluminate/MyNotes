@@ -140,6 +140,281 @@ The natural number of clusters
  in this dataset according to the scatter plot.
 \end_layout
 
+\begin_layout Subsection
+(b)
+\end_layout
+
+\begin_layout Standard
+We first create the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|KMeans.m|
+\end_layout
+
+\end_inset
+
+ file, as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+% K-Means function to locate K clusters from input dataset
+\end_layout
+
+\begin_layout Plain Layout
+
+% Author Name: Mo Zhou
+\end_layout
+
+\begin_layout Plain Layout
+
+function [C, labels] = KMeans(X, K, maxIter)
+\end_layout
+
+\begin_layout Plain Layout
+
+% Input:
+\end_layout
+
+\begin_layout Plain Layout
+
+%  X: dataset, observations in rows, variables in columns.
+\end_layout
+
+\begin_layout Plain Layout
+
+%  K: "K"-means
+\end_layout
+
+\begin_layout Plain Layout
+
+% Output:
+\end_layout
+
+\begin_layout Plain Layout
+
+%  C: centroids
+\end_layout
+
+\begin_layout Plain Layout
+
+%  labels: class labels assigned to each observation in X
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+N = size(X, 1);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% Randomly initializing K centroids
+\end_layout
+
+\begin_layout Plain Layout
+
+Ri = randi(N, [K, 1]);
+\end_layout
+
+\begin_layout Plain Layout
+
+C = X(Ri, :);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% start k-means loop
+\end_layout
+
+\begin_layout Plain Layout
+
+for iter = 1:maxIter
+\end_layout
+
+\begin_layout Plain Layout
+
+    % assign data to clusters
+\end_layout
+
+\begin_layout Plain Layout
+
+    dist = zeros(N, K);
+\end_layout
+
+\begin_layout Plain Layout
+
+    for i = 1:K
+\end_layout
+
+\begin_layout Plain Layout
+
+        d = vecnorm(C(i, :) - X, 2, 2);
+\end_layout
+
+\begin_layout Plain Layout
+
+        dist(:, i) = d;
+\end_layout
+
+\begin_layout Plain Layout
+
+    end
+\end_layout
+
+\begin_layout Plain Layout
+
+    [~, argmin] = min(dist, [], 2);
+\end_layout
+
+\begin_layout Plain Layout
+
+    % re-compute centroids
+\end_layout
+
+\begin_layout Plain Layout
+
+    for i = 1:K
+\end_layout
+
+\begin_layout Plain Layout
+
+        idx = find(argmin == i);
+\end_layout
+
+\begin_layout Plain Layout
+
+        ci = mean(X(idx, :), 1);
+\end_layout
+
+\begin_layout Plain Layout
+
+        C(i, :) = ci;
+\end_layout
+
+\begin_layout Plain Layout
+
+    end
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% assign labels to X
+\end_layout
+
+\begin_layout Plain Layout
+
+dist = zeros(N, K);
+\end_layout
+
+\begin_layout Plain Layout
+
+for i = 1:K
+\end_layout
+
+\begin_layout Plain Layout
+
+    d = vecnorm(C(i, :) - X, 2, 2);
+\end_layout
+
+\begin_layout Plain Layout
+
+    dist(:, i) = d;
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+[~, argmin] = min(dist, [], 2);
+\end_layout
+
+\begin_layout Plain Layout
+
+labels = argmin;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then we cluster the given data and visualize:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+[C, labels] = KMeans(X, 5, 10);
+\end_layout
+
+\begin_layout Plain Layout
+
+scatter3(X(:,1), X(:,2), X(:,3), [], labels);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename scatter3xkmeans.svg
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Problem 7.2
 \end_layout
