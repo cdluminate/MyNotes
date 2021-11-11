@@ -9,6 +9,7 @@
 \usepackage[margin=1in]{geometry}
 %\usepackage{indentfirst}
 %\setlength{\parindent}{0pt}
+\usepackage{bm}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -1070,6 +1071,99 @@ The
 \begin_inset Formula 
 \[
 \lim_{\epsilon\rightarrow0}\hat{x}_{MUC}(y)=\arg\max_{a}P_{X|Y}(x|y)\triangleq\hat{x}_{MAP}(y)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Bayes Least Squares
+\end_layout
+
+\begin_layout Standard
+This is the most commonly used estinator.
+ We use the vector version here:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+C(\hm{a},\hat{\hm{a}})=\|\hm{a}-\hat{\hm{a}}\|=(a-\hat{a})^{T}(a-\hat{a})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We plug the cost into the optimization problem, the derive the internal
+ part and letting the derivative be zero, and obtain
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\hm{x}}_{BLS}(\hm{y})=\int_{-\infty}^{\infty}xP_{X|Y}dx=E[\hm{X}|\bm{y}]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Performance Characeteristics
+\end_layout
+
+\begin_layout Standard
+In this subsection we use vector by default.
+\end_layout
+
+\begin_layout Itemize
+Error.
+ Given an instance 
+\begin_inset Formula $x$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+e(x,y)=\hat{x}(y)-x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Bias
+\begin_inset Formula 
+\[
+b=E_{XY}[e(x,y)]=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}e(x,y)P_{x,y}dxdy
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Variance
+\begin_inset Formula 
+\[
+\Lambda_{e}=E_{xy}\{[e(x,y)-b][e(x,y)-b]^{T}\}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+MSE=E_{xy}[e(x,y)e(x,y)^{T}]=\Lambda_{e}+bb^{T}
 \]
 
 \end_inset
