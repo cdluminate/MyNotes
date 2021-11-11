@@ -1179,6 +1179,35 @@ Linear Least Squares Estimation
 NonBayesian Parameter Estimation
 \end_layout
 
+\begin_layout Subsection
+Maximum Likelihood Estimation
+\end_layout
+
+\begin_layout Standard
+Convenient proxy for efficient estimator with nice properties.
+\begin_inset Formula 
+\[
+\hat{x}_{ML}(y)=\arg\max_{x\in\mathcal{X}}P_{Y}(y;x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The ML estimator is simpler to compute or numerically approximate.
+ Meanwhile, it is intuitive because picking 
+\begin_inset Formula $x$
+\end_inset
+
+ that gives you the largest chance of observing the data 
+\begin_inset Formula $Y=y$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Section
 Vector Parameters
 \end_layout
@@ -1209,6 +1238,10 @@ Stochastic Approximations
 
 \begin_layout Section
 Markov Chains
+\end_layout
+
+\begin_layout Section
+References
 \end_layout
 
 \end_body
