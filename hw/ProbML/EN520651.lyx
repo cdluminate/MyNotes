@@ -1220,8 +1220,37 @@ Exponential Families
 Graphical Models
 \end_layout
 
+\begin_layout Subsection
+Directed Graph Model
+\end_layout
+
+\begin_layout Subsection
+Conditional Independence
+\end_layout
+
+\begin_layout Subsection
+Bayes' Ball Algorithm
+\end_layout
+
+\begin_layout Subsection
+Plate Notation
+\end_layout
+
 \begin_layout Section
 Mixture Models
+\end_layout
+
+\begin_layout Standard
+Intuition: Each cluster in a dataset looks like gaussian, but how about
+ the entire dataset?
+\end_layout
+
+\begin_layout Subsection
+K-Means
+\end_layout
+
+\begin_layout Subsection
+Mixture Model
 \end_layout
 
 \begin_layout Section
@@ -1237,7 +1266,31 @@ Stochastic Approximations
 \end_layout
 
 \begin_layout Section
-Markov Chains
+Approximations Continued
+\end_layout
+
+\begin_layout Section
+Markov Chains and HMMs
+\end_layout
+
+\begin_layout Section
+HMMs Continued
+\end_layout
+
+\begin_layout Section
+Kalman Filtering
+\end_layout
+
+\begin_layout Section
+Conjugate Priors
+\end_layout
+
+\begin_layout Section
+Dirichlet Process Priors
+\end_layout
+
+\begin_layout Section
+Gaussian Processes
 \end_layout
 
 \begin_layout Section
