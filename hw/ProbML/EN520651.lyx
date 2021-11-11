@@ -7,7 +7,8 @@
 \textclass article
 \begin_preamble
 \usepackage[margin=1in]{geometry}
-\usepackage{indentfirst}
+%\usepackage{indentfirst}
+%\setlength{\parindent}{0pt}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -32,9 +33,18 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize 10
+\paperfontsize 12
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry false
 \use_package amsmath 1
@@ -69,7 +79,7 @@
 \math_numbering_side default
 \quotes_style english
 \dynamic_quotes 0
-\papercolumns 2
+\papercolumns 1
 \papersides 1
 \paperpagestyle default
 \tracking_changes false
@@ -880,6 +890,193 @@ Minmax Decision Theory
 Bayesian Parameter Estimation
 \end_layout
 
+\begin_layout Subsection
+Problem Setting
+\end_layout
+
+\begin_layout Itemize
+Hidden parameter 
+\begin_inset Formula $X\in\mathcal{X}$
+\end_inset
+
+ is continuous (random variable);
+\end_layout
+
+\begin_layout Itemize
+Noisy observation 
+\begin_inset Formula $Y\in\mathcal{Y}$
+\end_inset
+
+ can be either continuous or discrete;
+\end_layout
+
+\begin_layout Itemize
+Prior belief 
+\begin_inset Formula $P_{X}(x)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+Likelihood (observation model) 
+\begin_inset Formula $P_{Y|X}(y|x)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+The goal is to construct an estimator 
+\begin_inset Formula $\hat{x}(\cdot)$
+\end_inset
+
+ that produces an estimate of 
+\begin_inset Formula $x$
+\end_inset
+
+ given the observation 
+\begin_inset Formula $Y=y$
+\end_inset
+
+.
+ Similar to Bayesian HY, an objective criterion 
+\begin_inset Formula $C(a,\hat{a)}$
+\end_inset
+
+ is required to build and evaluate this estimator, so
+\begin_inset Formula 
+\begin{align*}
+\hat{x}(\cdot) & =\arg\min_{f(\cdot)}E_{XY}[\tilde{C}(X,f(Y))]\\
+ & =\arg\min_{a}\int_{-\infty}^{\infty}C(x,a)P_{X|Y}(x|y)dx\\
+ & =\arg\min_{a}E_{X|Y}[C(X,a)|Y=y]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The posterior belief summarizes everything we need to know to construct
+ any estimator, because 
+\begin_inset Formula $P_{X|Y}(x|y)=[P_{X}P_{Y|X}/P_{Y}]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Minimum Absolute Error (MAE)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+C(a,\hat{a})=|a-\hat{a}|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{x}_{MAE}(y)=\arg\min_{a}\int_{-\infty}^{\infty}|x-a|P_{X|Y}(x|y)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After expanding the integral, we let the derivative of the internal part
+ be zero.
+ Then we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Rightarrow\int_{-\infty}^{a}P_{X|Y}(x|y)dx-\int_{a}^{\infty}P_{X|Y}(x|y)dx=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This means 
+\begin_inset Formula $\hat{x}_{MAE}(y)$
+\end_inset
+
+ is the MEDIAN of 
+\begin_inset Formula $P_{X|Y}$
+\end_inset
+
+.
+ The solution is not always unique.
+\end_layout
+
+\begin_layout Subsection
+Minimum Uniform Cost
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+C(a,\hat{a})=\mathbf{1}\{|a-\hat{a}|>\epsilon\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{x}_{MUC}(y)=\arg\max_{a}\int_{a-\epsilon}^{a+\epsilon}P_{X|Y}(x|y)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Formula $\hat{x}_{MUC}(y)$
+\end_inset
+
+ is the center of the 
+\begin_inset Formula $2\epsilon$
+\end_inset
+
+ interval with the most mass of 
+\begin_inset Formula $P_{X|Y}$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ tends to zero, MUC is defined as the MAP estimator,
+\begin_inset Formula 
+\[
+\lim_{\epsilon\rightarrow0}\hat{x}_{MUC}(y)=\arg\max_{a}P_{X|Y}(x|y)\triangleq\hat{x}_{MAP}(y)
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Linear Least Squares Estimation
 \end_layout
@@ -894,6 +1091,30 @@ Vector Parameters
 
 \begin_layout Section
 Exponential Families
+\end_layout
+
+\begin_layout Section
+Graphical Models
+\end_layout
+
+\begin_layout Section
+Mixture Models
+\end_layout
+
+\begin_layout Section
+EM Algorithm
+\end_layout
+
+\begin_layout Section
+Deterministic Approximations
+\end_layout
+
+\begin_layout Section
+Stochastic Approximations
+\end_layout
+
+\begin_layout Section
+Markov Chains
 \end_layout
 
 \end_body
