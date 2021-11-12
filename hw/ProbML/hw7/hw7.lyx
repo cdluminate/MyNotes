@@ -634,6 +634,38 @@ title(sprintf("N=%d", N));
 Problem 7.3
 \end_layout
 
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+P(y_{1},y_{2}) & =\epsilon_{1}^{y_{1}}(1-\epsilon_{1})^{1-y_{1}}\epsilon_{2}^{y_{2}}(1-\epsilon_{2})^{1-y_{2}}\\
+q(y_{1},y_{2}) & =\epsilon^{y_{1}+y_{2}}(1-\epsilon)^{2-y_{1}-y_{2}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+D(q\|P_{Y_{1}Y_{2}}) & =E_{q}[\log\frac{q}{P_{Y_{1}Y_{2}}}]\\
+ & =E_{q}[(y_{1}+y_{2})\log\epsilon+(2-y_{1}-y_{2})\log(1-\epsilon)-\sum_{i}(y_{i}\log\epsilon_{i}+(1-y_{i})\log(1-\epsilon_{i}))]\\
+(E_{q}[y_{i}]=\epsilon)\Rightarrow & =2\epsilon\log\epsilon+(2-2\epsilon)\log(1-\epsilon)-\sum_{i}(\epsilon\log(\epsilon_{i})+(1-\epsilon)\log(1-\epsilon_{i}))\\
+\frac{\partial}{\partial\epsilon}D(q\|P_{Y_{1}Y_{2}}) & =2\log\frac{\epsilon}{1-\epsilon}-\sum_{i}\log\frac{\epsilon_{i}}{1-\epsilon_{i}}=0\\
+\frac{\epsilon}{1-\epsilon} & =\prod_{i}\exp\frac{\epsilon_{i}}{2(1-\epsilon_{i})}\triangleq Q\\
+\epsilon & =\frac{Q}{1+Q}=\frac{\prod_{i}\exp\frac{\epsilon_{i}}{2(1-\epsilon_{i})}}{1+\prod_{i}\exp\frac{\epsilon_{i}}{2(1-\epsilon_{i})}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Problem 7.4
 \end_layout
