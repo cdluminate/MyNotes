@@ -10,7 +10,9 @@
 %\usepackage{indentfirst}
 %\setlength{\parindent}{0pt}
 \usepackage{bm}
+\usepackage{times}
 \end_preamble
+\options a4
 \use_default_options true
 \maintain_unincluded_children false
 \language english
@@ -34,7 +36,7 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize 12
+\paperfontsize 10
 \spacing single
 \use_hyperref true
 \pdf_bookmarks true
@@ -94,6 +96,14 @@
 
 \begin_layout Title
 EN 520.651 Probablistic Machine Learning
+\begin_inset Newline newline
+\end_inset
+
+Course Note
+\end_layout
+
+\begin_layout Author
+Mo Zhou <mzhou32@jhu.edu>
 \end_layout
 
 \begin_layout Standard
@@ -1261,8 +1271,239 @@ EM Algorithm
 Deterministic Approximations
 \end_layout
 
+\begin_layout Standard
+The goal of 
+\begin_inset Quotes eld
+\end_inset
+
+belief approximation
+\begin_inset Quotes erd
+\end_inset
+
+ is to find a simpler distribution 
+\begin_inset Formula $q(\cdot)$
+\end_inset
+
+ that is sufficiently 
+\begin_inset Quotes eld
+\end_inset
+
+close
+\begin_inset Quotes erd
+\end_inset
+
+ to 
+\begin_inset Formula $P_{X|Y}(\cdot|y)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+DL Divergence
+\end_layout
+
+\begin_layout Standard
+Given a true distribution 
+\begin_inset Formula $p(\cdot)$
+\end_inset
+
+, and an approximating distribution 
+\begin_inset Formula $q(\cdot)$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+D(p\|q)=E_{p}[\log\frac{p(x)}{q(x)}]=\sum_{x\in\mathcal{X}}p(x)\log\frac{p(x)}{q(x)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+According to Gibb's inequality, we have 
+\begin_inset Formula $D(p\|q)=E_{p}[\log p(x)]-E_{p}[\log q(x)]\geq0$
+\end_inset
+
+.
+ Only when 
+\begin_inset Formula $p=q$
+\end_inset
+
+, 
+\begin_inset Formula $D(p\|q)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Laplace's Method
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P_{X|Y}(x|y)\approx\mathcal{N}(x;\hat{x}_{MAP}(y),\hat{\sigma}^{2}(y))
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\hat{\sigma}^{2}(y)=[-\frac{\partial^{2}}{\partial x^{2}}\log P_{X}(x)|_{\hat{x}_{MAP}}-\frac{\partial^{2}}{\partial x^{2}}\log P_{Y|X}(y|x)|_{\hat{x}_{MAP}}]^{-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Variational Methods
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\hat{p}(x) & =\arg\min_{q\in Q}D(q\|p_{X|Y})\\
+\hat{p}(x) & =\arg\min_{q\in Q}D(q\|p_{X,Y})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Stochastic Approximations
+\end_layout
+
+\begin_layout Standard
+Goal: approximate 
+\begin_inset Formula $E_{p}[f(x)]$
+\end_inset
+
+ for general 
+\begin_inset Formula $f(\cdot)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Approach: suppose we had samples of 
+\begin_inset Formula $x_{1},\ldots,x_{n}\sim iid\,p(x)$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{align*}
+E_{p}[f(x)] & \approx\hat{f}=\frac{1}{n}\sum_{i=1}^{n}f(x_{i})\\
+E_{p}[\hat{f}] & =\frac{1}{n}\sum_{i=1}^{n}E_{p}[f(x_{i})]=E_{p}[f(x)]\\
+Var[\hat{f}] & =\frac{1}{n^{2}}\sum_{i=1}^{n}Var[f(x_{i})]=\frac{Var[f(x)]}{n}\rightarrow_{n\rightarrow\infty}0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We obtain samples from 
+\begin_inset Formula $q(\cdot)$
+\end_inset
+
+, which is easy to handle, and transform them into samples of 
+\begin_inset Formula $p(\cdot)$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+q(x)>0\ \forall\ x\in\mathcal{X}\ s.t.\ p(x)>0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Importance Sampling
+\end_layout
+
+\begin_layout Standard
+We call 
+\begin_inset Formula $q(\cdot)$
+\end_inset
+
+ as 
+\begin_inset Quotes eld
+\end_inset
+
+proposal
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+sampling
+\begin_inset Quotes erd
+\end_inset
+
+ distribution.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+q(x)=\frac{q_{0}(x)}{Z_{q}}=\frac{q_{0}(x)}{\int_{x\in\mathcal{X}}q_{0}(x)dx}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The importance weights
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+w(x_{i})=\frac{p_{0}(x_{i})}{q_{0}(x_{i})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{f}\triangleq\sum_{i=1}^{n}\frac{w(x_{i})}{\sum_{j=1}^{n}w(x_{j})}f(x_{i})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Rejection Sampling
+\end_layout
+
+\begin_layout Subsection
+Markov-Chain Monte Carlo (MCMC)
 \end_layout
 
 \begin_layout Section
