@@ -419,6 +419,100 @@ scatter3(X(:,1), X(:,2), X(:,3), [], labels);
 Problem 7.2
 \end_layout
 
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+The posterior density 
+\begin_inset Formula $P(x|\bm{y})$
+\end_inset
+
+ is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+P(x|y_{1},y_{2},\ldots,y_{N}) & =\frac{P(X)\prod_{i}^{N}P(y_{i}|x)}{P(y_{1},y_{2},\ldots,y_{N})}\\
+ & =\frac{x^{N}e^{-x}\prod_{i}^{N}y_{i}^{x-1}u(x)}{P(\bm{y})}\quad\forall i,y_{i}\in[0,1]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and we have
+\begin_inset Formula 
+\begin{align*}
+\log P(x|\bm{y}) & =N\log(x)-x+(x-1)\sum_{i}y_{i}-\log P(\hm{y})\\
+\frac{\partial}{\partial x}\log P(x|\bm{y}) & =\frac{N}{x}-1+\sum_{i}y_{i}\\
+\frac{\partial^{2}}{\partial x^{2}}\log P(x|\bm{y}) & =-\frac{N}{x^{2}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(b)
+\end_layout
+
+\begin_layout Standard
+First the likelihood is
+\begin_inset Formula 
+\begin{align*}
+P(y_{1},\ldots,y_{N}|x) & =\prod_{i}^{N}p(y_{i}|x)=x^{N}\prod_{i}^{N}y_{i}^{x-1}\\
+\log P(\bm{y}|x) & =N\log(x)+(x-1)\sum_{i}^{N}y_{i}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And the ML estimator is
+\begin_inset Formula 
+\begin{align*}
+\hat{x}_{ML} & =\arg\max_{x}P(\bm{y}|x)\\
+\frac{\partial}{\partial x}\log P(\bm{y}|x) & =0=\frac{N}{x}+\sum_{i}^{N}y_{i}\\
+\Rightarrow & x=-\frac{N}{\sum_{i}^{N}y_{i}}=\hat{x}_{ML}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The observed Fisher information
+\begin_inset Formula 
+\[
+-J(\hat{x})=\frac{\partial^{2}}{\partial x^{2}}\log P(\bm{y}|x)=-\frac{N}{x^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then the Laplace's approximation for the posterior is
+\begin_inset Formula 
+\begin{align*}
+\log P(x|\bm{y}) & \approx\log P(\hat{x}|\bm{y})+\frac{1}{2}(x-\hat{x})\frac{\partial^{2}}{\partial x^{2}}\log P(x|\bm{y})|_{x=\hat{x}}\\
+ & =\log P(\hat{x}|\bm{y})-\frac{1}{2}(x-\hat{x})\frac{N}{(\hat{x})^{2}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Problem 7.3
 \end_layout
