@@ -688,8 +688,146 @@ D(P_{Y_{1}Y_{2}}\|q) & =E_{P}[\log\frac{P_{Y_{1}Y_{2}}}{q}]\\
 Problem 7.4
 \end_layout
 
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+D(p_{XY}\|q) & =E_{p}[\log\frac{p_{XY}}{q}]\\
+ & =E_{p}[\log(p_{XY})-\log q_{X}-\log q_{Y}]\\
+ & =E_{p}[\log p_{X|Y}+\log p_{Y}-\log q_{X}-\log q_{Y}]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Still have no idea on how to minimize the KL divergence after factorizing
+ 
+\begin_inset Formula $p_{XY}$
+\end_inset
+
+...
+\end_layout
+
+\begin_layout Subsection
+(b)
+\end_layout
+
 \begin_layout Section
 Problem 7.5
+\end_layout
+
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+w(0) & =p(0)/q(0)=3/4\\
+w(1) & =3/2\\
+w(2) & =3/4
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{p}\triangleq\sum_{i=1}^{n}\frac{w(x_{i})}{\sum_{j=1}^{n}w(x_{j})}p(x_{i})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+w = [3/4, 3/2, 3/4];
+\end_layout
+
+\begin_layout Plain Layout
+
+x = [1,2,0,2,2,1,0,0,1,2];
+\end_layout
+
+\begin_layout Plain Layout
+
+c = sum(w(x+1));
+\end_layout
+
+\begin_layout Plain Layout
+
+p = [1/4, 1/2, 1/4];
+\end_layout
+
+\begin_layout Plain Layout
+
+sum(w(x+1)/c .* p(x+1))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(i) The empirical estimate of mean is 
+\begin_inset Formula $\hat{\mu}=0.3654$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+>> x = [1,2,0,2,2,1,0,0,1,2];
+\end_layout
+
+\begin_layout Plain Layout
+
+>> mean(x)
+\end_layout
+
+\begin_layout Plain Layout
+
+ans = 1.1000
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(ii) when the samples are drawn from 
+\begin_inset Formula $p(x)$
+\end_inset
+
+, the estimate changes into 
+\begin_inset Formula $1.1$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
