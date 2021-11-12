@@ -666,6 +666,24 @@ D(q\|P_{Y_{1}Y_{2}}) & =E_{q}[\log\frac{q}{P_{Y_{1}Y_{2}}}]\\
 
 \end_layout
 
+\begin_layout Subsection
+(b)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+D(P_{Y_{1}Y_{2}}\|q) & =E_{P}[\log\frac{P_{Y_{1}Y_{2}}}{q}]\\
+(E_{P}[y_{i}]=\epsilon_{i})\Rightarrow & =-(\epsilon_{1}+\epsilon_{2})\log\epsilon-(2-\epsilon_{1}-\epsilon_{2})\log(1-\epsilon)+constant\\
+\frac{\partial}{\partial\epsilon}D(P_{Y_{1}Y_{2}}\|q) & =\frac{2-\epsilon_{1}-\epsilon_{2}}{1-\epsilon}-\frac{\epsilon_{1}+\epsilon_{2}}{\epsilon}=0\\
+\epsilon & =\frac{\epsilon_{1}+\epsilon_{2}}{2}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Problem 7.4
 \end_layout
