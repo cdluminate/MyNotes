@@ -447,7 +447,7 @@ P(x|y_{1},y_{2},\ldots,y_{N}) & =\frac{P(X)\prod_{i}^{N}P(y_{i}|x)}{P(y_{1},y_{2
 and we have
 \begin_inset Formula 
 \begin{align*}
-\log P(x|\bm{y}) & =N\log(x)-x+(x-1)\sum_{i}y_{i}-\log P(\hm{y})\\
+\log P(x|\bm{y}) & =N\log(x)-x+(x-1)\sum_{i}y_{i}-\log P(\hm{y})\qquad x>0,y_{i}\in[0,1]\\
 \frac{\partial}{\partial x}\log P(x|\bm{y}) & =\frac{N}{x}-1+\sum_{i}y_{i}\\
 \frac{\partial^{2}}{\partial x^{2}}\log P(x|\bm{y}) & =-\frac{N}{x^{2}}
 \end{align*}
@@ -492,7 +492,7 @@ And the ML estimator is
 The observed Fisher information
 \begin_inset Formula 
 \[
--J(\hat{x})=\frac{\partial^{2}}{\partial x^{2}}\log P(\bm{y}|x)=-\frac{N}{x^{2}}
+J(\hat{x})=-\frac{\partial^{2}}{\partial x^{2}}\log P(\bm{y}|x)=\frac{N}{x^{2}}
 \]
 
 \end_inset
@@ -504,8 +504,13 @@ The observed Fisher information
 Then the Laplace's approximation for the posterior is
 \begin_inset Formula 
 \begin{align*}
-\log P(x|\bm{y}) & \approx\log P(\hat{x}|\bm{y})+\frac{1}{2}(x-\hat{x})\frac{\partial^{2}}{\partial x^{2}}\log P(x|\bm{y})|_{x=\hat{x}}\\
- & =\log P(\hat{x}|\bm{y})-\frac{1}{2}(x-\hat{x})\frac{N}{(\hat{x})^{2}}
+\hat{x}_{MAP} & =\frac{N}{1-\sum_{i}y_{i}}\Leftarrow\frac{\partial}{\partial x}\log P(x|\bm{y})=0\\
+\frac{\partial^{2}}{\partial x^{2}}\log P(x) & =0\\
+\hat{\sigma}^{2} & =\Big[-\frac{\partial^{2}}{\partial x^{2}}\log P(x)|_{\hat{x}_{MAP}}-\frac{\partial^{2}}{\partial x^{2}}\log P(\bm{y}|x)|_{\hat{x}_{MAP}}\Big]^{-1}\\
+ & =(\hat{x}_{MAP})^{2}/N\\
+\log P(x|\bm{y}) & \approx\mathcal{N}(x;\hat{x}_{MAP},\hat{\sigma}^{2})\\
+ & =\frac{1}{\sqrt{2\pi(\frac{1}{J(\hat{x})})}}\exp\{-\frac{1}{2}J(\hat{x})(x-\hat{x})^{2}\}\\
+ & =\frac{1}{\sqrt{2\pi\frac{\hat{x}^{2}}{N}}}\exp\{-\frac{N}{2\hat{x}^{2}}(x-\hat{x})^{2}\}
 \end{align*}
 
 \end_inset
@@ -568,17 +573,22 @@ plot(x, p);
 
 \begin_layout Plain Layout
 
-xhat = -N/(.5*N);
+xhat = N/(1-(y*N));
 \end_layout
 
 \begin_layout Plain Layout
 
-approx = x .* e.^(-x) .* (y.^(x-1)).^N + ...
+sigma2 = xhat.^2./N;
 \end_layout
 
 \begin_layout Plain Layout
 
-    (-.5) .* (x - xhat) .* N ./ (xhat)^2;
+jx = N./(xhat^2);
+\end_layout
+
+\begin_layout Plain Layout
+
+approx = 1./(2*pi./jx) * exp(-0.5.*jx.*(x-xhat).^2);
 \end_layout
 
 \begin_layout Plain Layout
