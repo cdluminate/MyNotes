@@ -1,0 +1,2716 @@
+\documentclass[11pt]{article}
+
+    \usepackage[breakable]{tcolorbox}
+    \usepackage{parskip} % Stop auto-indenting (to mimic markdown behaviour)
+    
+    \usepackage{iftex}
+    \ifPDFTeX
+    	\usepackage[T1]{fontenc}
+    	\usepackage{mathpazo}
+    \else
+    	\usepackage{fontspec}
+    \fi
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % Maintain compatibility with old templates. Remove in nbconvert 6.0
+    \let\Oldincludegraphics\includegraphics
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionFormat{nocaption}{}
+    \captionsetup{format=nocaption,aboveskip=0pt,belowskip=0pt}
+
+    \usepackage{float}
+    \floatplacement{figure}{H} % forces figures to be placed at the correct location
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range
+    \makeatletter % fix for old versions of grffile with XeLaTeX
+    \@ifpackagelater{grffile}{2019/11/01}
+    {
+      % Do nothing on new versions
+    }
+    {
+      \def\Gread@@xetex#1{%
+        \IfFileExists{"\Gin@base".bb}%
+        {\Gread@eps{\Gin@base.bb}}%
+        {\Gread@@xetex@aux#1}%
+      }
+    }
+    \makeatother
+    \usepackage[Export]{adjustbox} % Used to constrain images to a maximum size
+    \adjustboxset{max size={0.9\linewidth}{0.9\paperheight}}
+
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    % The default LaTeX title has an obnoxious amount of whitespace. By default,
+    % titling removes some of it. It also provides customization options.
+    \usepackage{titling}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    \usepackage{mathrsfs}
+    
+
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+    \definecolor{ansi-default-inverse-fg}{HTML}{FFFFFF}
+    \definecolor{ansi-default-inverse-bg}{HTML}{000000}
+
+    % common color for the border for error outputs.
+    \definecolor{outerrorbackground}{HTML}{FFDFDF}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatibility definitions
+    \def\gt{>}
+    \def\lt{<}
+    \let\Oldtex\TeX
+    \let\Oldlatex\LaTeX
+    \renewcommand{\TeX}{\textrm{\Oldtex}}
+    \renewcommand{\LaTeX}{\textrm{\Oldlatex}}
+    % Document parameters
+    % Document title
+    \title{EN 520.665 Project 1}
+    
+    
+    
+    
+    
+% Pygments definitions
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\@namedef{PY@tok@w}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\@namedef{PY@tok@c}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\@namedef{PY@tok@cp}{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\@namedef{PY@tok@k}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@kp}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@kt}{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\@namedef{PY@tok@o}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@ow}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\@namedef{PY@tok@nb}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@nf}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\@namedef{PY@tok@nc}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\@namedef{PY@tok@nn}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\@namedef{PY@tok@ne}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\@namedef{PY@tok@nv}{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\@namedef{PY@tok@no}{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\@namedef{PY@tok@nl}{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\@namedef{PY@tok@ni}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\@namedef{PY@tok@na}{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\@namedef{PY@tok@nt}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@nd}{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\@namedef{PY@tok@s}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@sd}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@si}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\@namedef{PY@tok@se}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\@namedef{PY@tok@sr}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\@namedef{PY@tok@ss}{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\@namedef{PY@tok@sx}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@m}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@gh}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\@namedef{PY@tok@gu}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\@namedef{PY@tok@gd}{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\@namedef{PY@tok@gi}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\@namedef{PY@tok@gr}{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\@namedef{PY@tok@ge}{\let\PY@it=\textit}
+\@namedef{PY@tok@gs}{\let\PY@bf=\textbf}
+\@namedef{PY@tok@gp}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\@namedef{PY@tok@go}{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\@namedef{PY@tok@gt}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\@namedef{PY@tok@err}{\def\PY@bc##1{{\setlength{\fboxsep}{\string -\fboxrule}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}}
+\@namedef{PY@tok@kc}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@kd}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@kn}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@kr}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@bp}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@fm}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\@namedef{PY@tok@vc}{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\@namedef{PY@tok@vg}{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\@namedef{PY@tok@vi}{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\@namedef{PY@tok@vm}{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\@namedef{PY@tok@sa}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@sb}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@sc}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@dl}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@s2}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@sh}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@s1}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@mb}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@mf}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@mh}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@mi}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@il}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@mo}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@ch}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\@namedef{PY@tok@cm}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\@namedef{PY@tok@cpf}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\@namedef{PY@tok@c1}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\@namedef{PY@tok@cs}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % For linebreaks inside Verbatim environment from package fancyvrb. 
+    \makeatletter
+        \newbox\Wrappedcontinuationbox 
+        \newbox\Wrappedvisiblespacebox 
+        \newcommand*\Wrappedvisiblespace {\textcolor{red}{\textvisiblespace}} 
+        \newcommand*\Wrappedcontinuationsymbol {\textcolor{red}{\llap{\tiny$\m@th\hookrightarrow$}}} 
+        \newcommand*\Wrappedcontinuationindent {3ex } 
+        \newcommand*\Wrappedafterbreak {\kern\Wrappedcontinuationindent\copy\Wrappedcontinuationbox} 
+        % Take advantage of the already applied Pygments mark-up to insert 
+        % potential linebreaks for TeX processing. 
+        %        {, <, #, %, $, ' and ": go to next line. 
+        %        _, }, ^, &, >, - and ~: stay at end of broken line. 
+        % Use of \textquotesingle for straight quote. 
+        \newcommand*\Wrappedbreaksatspecials {% 
+            \def\PYGZus{\discretionary{\char`\_}{\Wrappedafterbreak}{\char`\_}}% 
+            \def\PYGZob{\discretionary{}{\Wrappedafterbreak\char`\{}{\char`\{}}% 
+            \def\PYGZcb{\discretionary{\char`\}}{\Wrappedafterbreak}{\char`\}}}% 
+            \def\PYGZca{\discretionary{\char`\^}{\Wrappedafterbreak}{\char`\^}}% 
+            \def\PYGZam{\discretionary{\char`\&}{\Wrappedafterbreak}{\char`\&}}% 
+            \def\PYGZlt{\discretionary{}{\Wrappedafterbreak\char`\<}{\char`\<}}% 
+            \def\PYGZgt{\discretionary{\char`\>}{\Wrappedafterbreak}{\char`\>}}% 
+            \def\PYGZsh{\discretionary{}{\Wrappedafterbreak\char`\#}{\char`\#}}% 
+            \def\PYGZpc{\discretionary{}{\Wrappedafterbreak\char`\%}{\char`\%}}% 
+            \def\PYGZdl{\discretionary{}{\Wrappedafterbreak\char`\$}{\char`\$}}% 
+            \def\PYGZhy{\discretionary{\char`\-}{\Wrappedafterbreak}{\char`\-}}% 
+            \def\PYGZsq{\discretionary{}{\Wrappedafterbreak\textquotesingle}{\textquotesingle}}% 
+            \def\PYGZdq{\discretionary{}{\Wrappedafterbreak\char`\"}{\char`\"}}% 
+            \def\PYGZti{\discretionary{\char`\~}{\Wrappedafterbreak}{\char`\~}}% 
+        } 
+        % Some characters . , ; ? ! / are not pygmentized. 
+        % This macro makes them "active" and they will insert potential linebreaks 
+        \newcommand*\Wrappedbreaksatpunct {% 
+            \lccode`\~`\.\lowercase{\def~}{\discretionary{\hbox{\char`\.}}{\Wrappedafterbreak}{\hbox{\char`\.}}}% 
+            \lccode`\~`\,\lowercase{\def~}{\discretionary{\hbox{\char`\,}}{\Wrappedafterbreak}{\hbox{\char`\,}}}% 
+            \lccode`\~`\;\lowercase{\def~}{\discretionary{\hbox{\char`\;}}{\Wrappedafterbreak}{\hbox{\char`\;}}}% 
+            \lccode`\~`\:\lowercase{\def~}{\discretionary{\hbox{\char`\:}}{\Wrappedafterbreak}{\hbox{\char`\:}}}% 
+            \lccode`\~`\?\lowercase{\def~}{\discretionary{\hbox{\char`\?}}{\Wrappedafterbreak}{\hbox{\char`\?}}}% 
+            \lccode`\~`\!\lowercase{\def~}{\discretionary{\hbox{\char`\!}}{\Wrappedafterbreak}{\hbox{\char`\!}}}% 
+            \lccode`\~`\/\lowercase{\def~}{\discretionary{\hbox{\char`\/}}{\Wrappedafterbreak}{\hbox{\char`\/}}}% 
+            \catcode`\.\active
+            \catcode`\,\active 
+            \catcode`\;\active
+            \catcode`\:\active
+            \catcode`\?\active
+            \catcode`\!\active
+            \catcode`\/\active 
+            \lccode`\~`\~ 	
+        }
+    \makeatother
+
+    \let\OriginalVerbatim=\Verbatim
+    \makeatletter
+    \renewcommand{\Verbatim}[1][1]{%
+        %\parskip\z@skip
+        \sbox\Wrappedcontinuationbox {\Wrappedcontinuationsymbol}%
+        \sbox\Wrappedvisiblespacebox {\FV@SetupFont\Wrappedvisiblespace}%
+        \def\FancyVerbFormatLine ##1{\hsize\linewidth
+            \vtop{\raggedright\hyphenpenalty\z@\exhyphenpenalty\z@
+                \doublehyphendemerits\z@\finalhyphendemerits\z@
+                \strut ##1\strut}%
+        }%
+        % If the linebreak is at a space, the latter will be displayed as visible
+        % space at end of first line, and a continuation symbol starts next line.
+        % Stretch/shrink are however usually zero for typewriter font.
+        \def\FV@Space {%
+            \nobreak\hskip\z@ plus\fontdimen3\font minus\fontdimen4\font
+            \discretionary{\copy\Wrappedvisiblespacebox}{\Wrappedafterbreak}
+            {\kern\fontdimen2\font}%
+        }%
+        
+        % Allow breaks at special characters using \PYG... macros.
+        \Wrappedbreaksatspecials
+        % Breaks at punctuation characters . , ; ? ! and / need catcode=\active 	
+        \OriginalVerbatim[#1,codes*=\Wrappedbreaksatpunct]%
+    }
+    \makeatother
+
+    % Exact colors from NB
+    \definecolor{incolor}{HTML}{303F9F}
+    \definecolor{outcolor}{HTML}{D84315}
+    \definecolor{cellborder}{HTML}{CFCFCF}
+    \definecolor{cellbackground}{HTML}{F7F7F7}
+    
+    % prompt
+    \makeatletter
+    \newcommand{\boxspacing}{\kern\kvtcb@left@rule\kern\kvtcb@boxsep}
+    \makeatother
+    \newcommand{\prompt}[4]{
+        {\ttfamily\llap{{\color{#2}[#3]:\hspace{3pt}#4}}\vspace{-\baselineskip}}
+    }
+    
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+\begin{document}
+    
+    \maketitle
+    
+    
+
+    
+    \hypertarget{en-520.665-project-1-cifar10-classification}{%
+\section{EN 520.665 Project 1: CIFAR10
+Classification}\label{en-520.665-project-1-cifar10-classification}}
+
+Author: Mo Zhou
+\href{mailto:mzhou32@jhu.edu}{\nolinkurl{mzhou32@jhu.edu}} Date: Nov.~17
+2021
+
+\hypertarget{our-method}{%
+\subsection{Our Method}\label{our-method}}
+
+In this project, we train a standard ResNet-18 Model on the CIFAR-10
+dataset using the cross-entropy loss. SGD optimizer is used to update
+the model parameters, with a learning rate 0.1 and momemtum 0.9. L-2
+regularization is also used with a weight 0.0002. The model is trained
+for 200 epoches with a batch size 256. The learning rate is decayed by
+factor 0.1 at the 100th and the 150th epoch, respectively following the
+original paper.
+
+The results and plots can be found in the last part. The experiment is
+conducted with an Nvidia Titan Xp GPU.
+
+\hypertarget{code}{%
+\subsection{Code}\label{code}}
+
+The code is written on top of PyTorch and Pytorch-Lightning for
+convenience. I borrowed some code from my own project:
+https://github.com/cdluminate/robrank.
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{1}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k+kn}{import} \PY{n+nn}{os}
+\PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+\PY{k+kn}{import} \PY{n+nn}{torch} \PY{k}{as} \PY{n+nn}{th}
+\PY{k+kn}{from} \PY{n+nn}{torch}\PY{n+nn}{.}\PY{n+nn}{utils}\PY{n+nn}{.}\PY{n+nn}{data} \PY{k+kn}{import} \PY{n}{Dataset}
+\PY{k+kn}{import} \PY{n+nn}{torchvision} \PY{k}{as} \PY{n+nn}{V}
+\PY{k+kn}{import} \PY{n+nn}{pickle}
+\PY{k+kn}{from} \PY{n+nn}{PIL} \PY{k+kn}{import} \PY{n}{Image}
+\PY{k+kn}{import} \PY{n+nn}{pytorch\PYZus{}lightning} \PY{k}{as} \PY{n+nn}{thl}
+\PY{k+kn}{from} \PY{n+nn}{torch}\PY{n+nn}{.}\PY{n+nn}{utils}\PY{n+nn}{.}\PY{n+nn}{data} \PY{k+kn}{import} \PY{n}{DataLoader}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{2}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} configurations}
+\PY{n}{cifar10\PYZus{}path} \PY{o}{=} \PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{expanduser}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZti{}/.torch/cifar\PYZhy{}10\PYZhy{}batches\PYZhy{}py}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{batch\PYZus{}size} \PY{o}{=} \PY{l+m+mi}{256}
+\PY{n}{learning\PYZus{}rate} \PY{o}{=} \PY{l+m+mf}{1e\PYZhy{}1}
+\PY{n}{momentum} \PY{o}{=} \PY{l+m+mf}{9e\PYZhy{}1}
+\PY{n}{weight\PYZus{}decay} \PY{o}{=} \PY{l+m+mf}{2e\PYZhy{}4}
+\PY{n}{maxepoch} \PY{o}{=} \PY{l+m+mi}{200}
+\PY{n}{Imean} \PY{o}{=} \PY{n}{th}\PY{o}{.}\PY{n}{tensor}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.485}\PY{p}{,} \PY{l+m+mf}{0.456}\PY{p}{,} \PY{l+m+mf}{0.406}\PY{p}{]}\PY{p}{)}
+\PY{n}{Istd} \PY{o}{=} \PY{n}{th}\PY{o}{.}\PY{n}{tensor}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.229}\PY{p}{,} \PY{l+m+mf}{0.224}\PY{p}{,} \PY{l+m+mf}{0.225}\PY{p}{]}\PY{p}{)}
+
+\PY{k}{def} \PY{n+nf}{unpickle}\PY{p}{(}\PY{n}{file}\PY{p}{)}\PY{p}{:}
+    \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{n}{file}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{rb}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{fo}\PY{p}{:}
+        \PY{n}{dic} \PY{o}{=} \PY{n}{pickle}\PY{o}{.}\PY{n}{load}\PY{p}{(}\PY{n}{fo}\PY{p}{,} \PY{n}{encoding}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{latin1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+    \PY{k}{return} \PY{n}{dic}
+
+\PY{k}{def} \PY{n+nf}{renorm}\PY{p}{(}\PY{n}{im}\PY{p}{)}\PY{p}{:}
+    \PY{k}{return} \PY{n}{im}\PY{o}{.}\PY{n}{sub}\PY{p}{(}\PY{n}{Imean}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{k+kc}{None}\PY{p}{,} \PY{k+kc}{None}\PY{p}{]}\PY{o}{.}\PY{n}{to}\PY{p}{(}\PY{n}{im}\PY{o}{.}\PY{n}{device}\PY{p}{)}\PY{p}{)}\PY{o}{.}\PY{n}{div}\PY{p}{(}
+        \PY{n}{Istd}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{k+kc}{None}\PY{p}{,}\PY{k+kc}{None}\PY{p}{]}\PY{o}{.}\PY{n}{to}\PY{p}{(}\PY{n}{im}\PY{o}{.}\PY{n}{device}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{3}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} create dataset class}
+\PY{k}{class} \PY{n+nc}{Cifar10Dataset}\PY{p}{(}\PY{n}{Dataset}\PY{p}{)}\PY{p}{:}
+    \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}}
+\PY{l+s+sd}{    CIFAR 10 Dataset Class}
+\PY{l+s+sd}{    \PYZsq{}\PYZsq{}\PYZsq{}}
+    \PY{k}{def} \PY{n+nf+fm}{\PYZus{}\PYZus{}init\PYZus{}\PYZus{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{path}\PY{p}{,} \PY{n}{kind}\PY{p}{)}\PY{p}{:}
+        \PY{c+c1}{\PYZsh{} determine type \PYZob{}train, test\PYZcb{}}
+        \PY{k}{if} \PY{n}{kind} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{train}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}
+            \PY{n}{transform} \PY{o}{=} \PY{n}{V}\PY{o}{.}\PY{n}{transforms}\PY{o}{.}\PY{n}{Compose}\PY{p}{(}\PY{p}{[}
+                \PY{n}{V}\PY{o}{.}\PY{n}{transforms}\PY{o}{.}\PY{n}{RandomCrop}\PY{p}{(}\PY{l+m+mi}{32}\PY{p}{,} \PY{n}{padding}\PY{o}{=}\PY{l+m+mi}{4}\PY{p}{)}\PY{p}{,}
+                \PY{n}{V}\PY{o}{.}\PY{n}{transforms}\PY{o}{.}\PY{n}{RandomHorizontalFlip}\PY{p}{(}\PY{p}{)}\PY{p}{,}
+                \PY{n}{V}\PY{o}{.}\PY{n}{transforms}\PY{o}{.}\PY{n}{ToTensor}\PY{p}{(}\PY{p}{)}\PY{p}{,}
+            \PY{p}{]}\PY{p}{)}
+        \PY{k}{elif} \PY{n}{kind} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{test}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}
+            \PY{n}{transform} \PY{o}{=} \PY{n}{V}\PY{o}{.}\PY{n}{transforms}\PY{o}{.}\PY{n}{Compose}\PY{p}{(}\PY{p}{[}
+                \PY{n}{V}\PY{o}{.}\PY{n}{transforms}\PY{o}{.}\PY{n}{ToTensor}\PY{p}{(}\PY{p}{)}\PY{p}{,}
+            \PY{p}{]}\PY{p}{)}
+        \PY{k}{else}\PY{p}{:}
+            \PY{k}{raise} \PY{n+ne}{ValueError}
+        \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{transform} \PY{o}{=} \PY{n}{transform}
+        \PY{c+c1}{\PYZsh{} load dataset}
+        \PY{k}{if} \PY{n}{kind} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{train}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}
+            \PY{n}{files} \PY{o}{=} \PY{p}{[}\PY{l+s+sa}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{data\PYZus{}batch\PYZus{}}\PY{l+s+si}{\PYZob{}}\PY{n}{x}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s1}{\PYZsq{}} \PY{k}{for} \PY{n}{x} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{5}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{]}
+            \PY{n}{files} \PY{o}{=} \PY{p}{[}\PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{path}\PY{p}{,} \PY{n}{x}\PY{p}{)} \PY{k}{for} \PY{n}{x} \PY{o+ow}{in} \PY{n}{files}\PY{p}{]}
+            \PY{n}{images}\PY{p}{,} \PY{n}{labels} \PY{o}{=} \PY{p}{[}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{p}{]}
+            \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n}{files}\PY{p}{:}
+                \PY{n}{data} \PY{o}{=} \PY{n}{unpickle}\PY{p}{(}\PY{n}{i}\PY{p}{)}
+                \PY{n}{images}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{data}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{data}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+                \PY{n}{labels}\PY{o}{.}\PY{n}{extend}\PY{p}{(}\PY{n}{data}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{labels}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+            \PY{n}{images} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{vstack}\PY{p}{(}\PY{n}{images}\PY{p}{)}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{32}\PY{p}{,} \PY{l+m+mi}{32}\PY{p}{)}
+            \PY{n}{labels} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{n}{labels}\PY{p}{)}
+        \PY{k}{elif} \PY{n}{kind} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{test}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}
+            \PY{n}{file} \PY{o}{=} \PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{path}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{test\PYZus{}batch}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+            \PY{n}{data} \PY{o}{=} \PY{n}{unpickle}\PY{p}{(}\PY{n}{file}\PY{p}{)}
+            \PY{n}{images} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{n}{data}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{data}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{32}\PY{p}{,} \PY{l+m+mi}{32}\PY{p}{)}
+            \PY{n}{labels} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{n}{data}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{labels}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+        \PY{k}{else}\PY{p}{:}
+            \PY{k}{raise} \PY{n+ne}{ValueError}
+        \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{images} \PY{o}{=} \PY{n}{images}
+        \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{labels} \PY{o}{=} \PY{n}{labels}
+        
+    \PY{k}{def} \PY{n+nf+fm}{\PYZus{}\PYZus{}len\PYZus{}\PYZus{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{)}\PY{p}{:}
+        \PY{k}{return} \PY{n+nb}{len}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{labels}\PY{p}{)}
+    
+    \PY{k}{def} \PY{n+nf+fm}{\PYZus{}\PYZus{}getitem\PYZus{}\PYZus{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{idx}\PY{p}{)}\PY{p}{:}
+        \PY{n}{image} \PY{o}{=} \PY{n}{Image}\PY{o}{.}\PY{n}{fromarray}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{images}\PY{p}{[}\PY{n}{idx}\PY{p}{]}\PY{o}{.}\PY{n}{transpose}\PY{p}{(}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+        \PY{n}{label} \PY{o}{=} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{labels}\PY{p}{[}\PY{n}{idx}\PY{p}{]}
+        \PY{k}{if} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{transform} \PY{o+ow}{is} \PY{o+ow}{not} \PY{k+kc}{None}\PY{p}{:}
+            \PY{n}{image} \PY{o}{=} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{transform}\PY{p}{(}\PY{n}{image}\PY{p}{)}
+        \PY{k}{return} \PY{n}{image}\PY{p}{,} \PY{n}{label}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{4}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} create resnet 18 model}
+\PY{k}{class} \PY{n+nc}{ResNet18}\PY{p}{(}\PY{n}{thl}\PY{o}{.}\PY{n}{LightningModule}\PY{p}{)}\PY{p}{:}
+    
+    \PY{k}{def} \PY{n+nf+fm}{\PYZus{}\PYZus{}init\PYZus{}\PYZus{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{)}\PY{p}{:}
+        \PY{n+nb}{super}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n+nf+fm}{\PYZus{}\PYZus{}init\PYZus{}\PYZus{}}\PY{p}{(}\PY{p}{)}
+        \PY{c+c1}{\PYZsh{} create resnet18 backbone}
+        \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{backbone} \PY{o}{=} \PY{n}{V}\PY{o}{.}\PY{n}{models}\PY{o}{.}\PY{n}{resnet18}\PY{p}{(}\PY{k+kc}{False}\PY{p}{)}
+        \PY{c+c1}{\PYZsh{} perform surgery}
+        \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{backbone}\PY{o}{.}\PY{n}{fc} \PY{o}{=} \PY{n}{th}\PY{o}{.}\PY{n}{nn}\PY{o}{.}\PY{n}{Linear}\PY{p}{(}\PY{l+m+mi}{512}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{)}
+        
+    \PY{k}{def} \PY{n+nf}{setup}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{stage}\PY{o}{=}\PY{k+kc}{None}\PY{p}{)}\PY{p}{:}
+        \PY{c+c1}{\PYZsh{} instantiate dataset objects}
+        \PY{n}{TrainDataset} \PY{o}{=} \PY{n}{Cifar10Dataset}\PY{p}{(}\PY{n}{cifar10\PYZus{}path}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{train}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{TestDataset} \PY{o}{=} \PY{n}{Cifar10Dataset}\PY{p}{(}\PY{n}{cifar10\PYZus{}path}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{test}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{* training set size}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n+nb}{len}\PY{p}{(}\PY{n}{TrainDataset}\PY{p}{)}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{* test set size}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n+nb}{len}\PY{p}{(}\PY{n}{TestDataset}\PY{p}{)}\PY{p}{)}
+        \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{data\PYZus{}train} \PY{o}{=} \PY{n}{TrainDataset}
+        \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{data\PYZus{}val} \PY{o}{=} \PY{n}{TestDataset}
+        \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{data\PYZus{}test} \PY{o}{=} \PY{k+kc}{None}
+        
+    \PY{k}{def} \PY{n+nf}{train\PYZus{}dataloader}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{)}\PY{p}{:}
+        \PY{n}{train\PYZus{}loader} \PY{o}{=} \PY{n}{DataLoader}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{data\PYZus{}train}\PY{p}{,}
+                                  \PY{n}{batch\PYZus{}size}\PY{o}{=}\PY{n}{batch\PYZus{}size}\PY{p}{,}
+                                  \PY{n}{shuffle}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,}
+                                  \PY{n}{pin\PYZus{}memory}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,}
+                                  \PY{n}{num\PYZus{}workers}\PY{o}{=}\PY{l+m+mi}{4}\PY{p}{)}
+        \PY{k}{return} \PY{n}{train\PYZus{}loader}
+    
+    \PY{k}{def} \PY{n+nf}{val\PYZus{}dataloader}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{)}\PY{p}{:}
+        \PY{n}{val\PYZus{}loader} \PY{o}{=} \PY{n}{DataLoader}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{data\PYZus{}val}\PY{p}{,}
+                               \PY{n}{batch\PYZus{}size}\PY{o}{=}\PY{n}{batch\PYZus{}size}\PY{p}{,}
+                               \PY{n}{pin\PYZus{}memory}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,}
+                               \PY{n}{num\PYZus{}workers}\PY{o}{=}\PY{l+m+mi}{4}\PY{p}{)}
+        \PY{k}{return} \PY{n}{val\PYZus{}loader}
+    
+    \PY{k}{def} \PY{n+nf}{configure\PYZus{}optimizers}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{)}\PY{p}{:}
+        \PY{n}{optim} \PY{o}{=} \PY{n}{th}\PY{o}{.}\PY{n}{optim}\PY{o}{.}\PY{n}{SGD}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{parameters}\PY{p}{(}\PY{p}{)}\PY{p}{,}
+                    \PY{n}{lr}\PY{o}{=}\PY{n}{learning\PYZus{}rate}\PY{p}{,} \PY{n}{momentum}\PY{o}{=}\PY{n}{momentum}\PY{p}{,}
+                    \PY{n}{weight\PYZus{}decay}\PY{o}{=}\PY{n}{weight\PYZus{}decay}\PY{p}{)}
+        \PY{n}{scheduler} \PY{o}{=} \PY{n}{th}\PY{o}{.}\PY{n}{optim}\PY{o}{.}\PY{n}{lr\PYZus{}scheduler}\PY{o}{.}\PY{n}{MultiStepLR}\PY{p}{(}
+            \PY{n}{optim}\PY{p}{,} \PY{n}{milestones}\PY{o}{=}\PY{p}{[}\PY{l+m+mi}{100}\PY{p}{,} \PY{l+m+mi}{150}\PY{p}{]}\PY{p}{,} \PY{n}{gamma}\PY{o}{=}\PY{l+m+mf}{0.1}\PY{p}{)}
+        \PY{k}{return} \PY{p}{[}\PY{n}{optim}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{n}{scheduler}\PY{p}{]}
+    
+    \PY{k}{def} \PY{n+nf}{forward}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{x}\PY{p}{)}\PY{p}{:}
+        \PY{k}{with} \PY{n}{th}\PY{o}{.}\PY{n}{no\PYZus{}grad}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+            \PY{n}{x} \PY{o}{=} \PY{n}{renorm}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+        \PY{n}{x} \PY{o}{=} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{backbone}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+        \PY{k}{return} \PY{n}{x}
+    
+    \PY{k}{def} \PY{n+nf}{training\PYZus{}step}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{batch}\PY{p}{,} \PY{n}{batch\PYZus{}idx}\PY{p}{)}\PY{p}{:}
+        \PY{n}{images}\PY{p}{,} \PY{n}{labels} \PY{o}{=} \PY{p}{(}\PY{n}{batch}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{to}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{device}\PY{p}{)}\PY{p}{,} \PY{n}{batch}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{to}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{device}\PY{p}{)}\PY{p}{)}
+        \PY{n}{output} \PY{o}{=} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{forward}\PY{p}{(}\PY{n}{images}\PY{p}{)}
+        \PY{n}{loss} \PY{o}{=} \PY{n}{th}\PY{o}{.}\PY{n}{nn}\PY{o}{.}\PY{n}{functional}\PY{o}{.}\PY{n}{cross\PYZus{}entropy}\PY{p}{(}\PY{n}{output}\PY{p}{,} \PY{n}{labels}\PY{p}{)}
+        \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{log}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Train/loss}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{loss}\PY{o}{.}\PY{n}{item}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+        \PY{n}{accuracy} \PY{o}{=} \PY{n}{output}\PY{o}{.}\PY{n}{max}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{eq}\PY{p}{(}
+            \PY{n}{labels}\PY{o}{.}\PY{n}{view}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{item}\PY{p}{(}\PY{p}{)} \PY{o}{/} \PY{n}{labels}\PY{o}{.}\PY{n}{nelement}\PY{p}{(}\PY{p}{)}
+        \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{log}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Train/accuracy}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{accuracy}\PY{p}{)}
+        \PY{k}{return} \PY{n}{loss}
+    
+    \PY{k}{def} \PY{n+nf}{validation\PYZus{}step}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{batch}\PY{p}{,} \PY{n}{batch\PYZus{}idx}\PY{p}{)}\PY{p}{:}
+        \PY{n}{images}\PY{p}{,} \PY{n}{labels} \PY{o}{=} \PY{p}{(}\PY{n}{batch}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{to}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{device}\PY{p}{)}\PY{p}{,} \PY{n}{batch}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{to}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{device}\PY{p}{)}\PY{p}{)}
+        \PY{n}{output} \PY{o}{=} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{forward}\PY{p}{(}\PY{n}{images}\PY{p}{)}
+        \PY{n}{loss} \PY{o}{=} \PY{n}{th}\PY{o}{.}\PY{n}{nn}\PY{o}{.}\PY{n}{functional}\PY{o}{.}\PY{n}{cross\PYZus{}entropy}\PY{p}{(}\PY{n}{output}\PY{p}{,} \PY{n}{labels}\PY{p}{)}
+        \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{log}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Val/loss}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{loss}\PY{o}{.}\PY{n}{item}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+        \PY{n}{accuracy} \PY{o}{=} \PY{n}{output}\PY{o}{.}\PY{n}{max}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{eq}\PY{p}{(}
+            \PY{n}{labels}\PY{o}{.}\PY{n}{view}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{item}\PY{p}{(}\PY{p}{)} \PY{o}{/} \PY{n}{labels}\PY{o}{.}\PY{n}{nelement}\PY{p}{(}\PY{p}{)}
+        \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{log}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Val/accuracy}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{accuracy}\PY{p}{)}
+        \PY{k}{return} \PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{loss}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{n}{loss}\PY{o}{.}\PY{n}{item}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{accuracy}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{n}{accuracy}\PY{p}{\PYZcb{}}
+    
+    \PY{k}{def} \PY{n+nf}{validation\PYZus{}epoch\PYZus{}end}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{outputs}\PY{p}{)}\PY{p}{:}
+        \PY{n}{summary} \PY{o}{=} \PY{p}{\PYZob{}}\PY{n}{key}\PY{p}{:} \PY{n}{np}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{n+nb}{tuple}\PY{p}{(}\PY{n}{x}\PY{p}{[}\PY{n}{key}\PY{p}{]} \PY{k}{for} \PY{n}{x} \PY{o+ow}{in} \PY{n}{outputs}\PY{p}{)}\PY{p}{)}
+                   \PY{k}{for} \PY{n}{key} \PY{o+ow}{in} \PY{n}{outputs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{keys}\PY{p}{(}\PY{p}{)}\PY{p}{\PYZcb{}}
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Validation Summary: loss=}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+              \PY{n}{summary}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{loss}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,}
+              \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{accuracy=}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+              \PY{n}{summary}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{accuracy}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,} \PY{n}{end}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{5}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} define training loop}
+\PY{k}{class} \PY{n+nc}{Train}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+    \PY{k}{def} \PY{n+nf+fm}{\PYZus{}\PYZus{}init\PYZus{}\PYZus{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{)}\PY{p}{:}
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{* Initializing model ...}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{model} \PY{o}{=} \PY{n}{ResNet18}\PY{p}{(}\PY{p}{)}
+        
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{* Start training loop ...}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{trainer} \PY{o}{=} \PY{n}{thl}\PY{o}{.}\PY{n}{Trainer}\PY{p}{(}\PY{n}{max\PYZus{}epochs}\PY{o}{=}\PY{n}{maxepoch}\PY{p}{,}
+                              \PY{n}{log\PYZus{}every\PYZus{}n\PYZus{}steps}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{,}
+                              \PY{n}{check\PYZus{}val\PYZus{}every\PYZus{}n\PYZus{}epoch}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{,}
+                              \PY{n}{gpus}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{,} \PY{c+c1}{\PYZsh{}th.cuda.device\PYZus{}count(),}
+                              \PY{n}{accelerator}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ddp}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{trainer}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{model}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{* finished training ...}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{6}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} start training}
+\PY{n}{Train}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+* Initializing model {\ldots}
+* Start training loop {\ldots}
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+LOCAL\_RANK: 0 - CUDA\_VISIBLE\_DEVICES: [0,1]
+initializing ddp: GLOBAL\_RANK: 0, MEMBER: 1/1
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+* training set size 50000
+* test set size 10000
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+  | Name     | Type   | Params
+------------------------------------
+0 | backbone | ResNet | 11.2 M
+------------------------------------
+11.2 M    Trainable params
+0         Non-trainable params
+11.2 M    Total params
+44.727    Total estimated model params size (MB)
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation sanity check: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 2.333478808403015 accuracy= 0.11328125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Training: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 1.5719489306211472 accuracy= 0.42080078125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 1.355274000763893 accuracy= 0.53115234375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 1.3385864064097404 accuracy= 0.56064453125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 1.124035057425499 accuracy= 0.60576171875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 1.0584546416997909 accuracy= 0.62998046875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.9785867214202881 accuracy= 0.66728515625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.96278817653656 accuracy= 0.6720703125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.8623888105154037 accuracy= 0.6994140625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.8447653636336326 accuracy= 0.69736328125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.8567550569772721 accuracy= 0.70771484375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.8347675532102585 accuracy= 0.70869140625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.7146277263760566 accuracy= 0.75595703125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.7275224655866623 accuracy= 0.7431640625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.758560860157013 accuracy= 0.74267578125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6756385371088982 accuracy= 0.76025390625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.7543443500995636 accuracy= 0.75
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.761492233723402 accuracy= 0.7443359375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6323633193969727 accuracy= 0.781640625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6870658077299595 accuracy= 0.766796875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6771755568683148 accuracy= 0.7708984375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6119501680135727 accuracy= 0.7912109375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6725631430745125 accuracy= 0.7705078125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6440955020487309 accuracy= 0.78203125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6766715750098229 accuracy= 0.780078125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6167709715664387 accuracy= 0.79326171875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6227638773620129 accuracy= 0.79443359375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5872392043471336 accuracy= 0.7953125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6417065098881721 accuracy= 0.78505859375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6184763178229332 accuracy= 0.78798828125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5703439846634865 accuracy= 0.80517578125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6273761220276356 accuracy= 0.7923828125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5908405669033527 accuracy= 0.79873046875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6172116659581661 accuracy= 0.7955078125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5570637702941894 accuracy= 0.81220703125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.606589087843895 accuracy= 0.80009765625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.617194376140833 accuracy= 0.8001953125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5919547364115715 accuracy= 0.80517578125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6016125835478305 accuracy= 0.792578125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6035500332713127 accuracy= 0.7955078125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6992100887000561 accuracy= 0.76923828125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5850346438586712 accuracy= 0.80615234375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5750300765037537 accuracy= 0.81416015625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6086239948868751 accuracy= 0.801953125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6014822833240032 accuracy= 0.80625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6365287579596043 accuracy= 0.7951171875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5986101448535919 accuracy= 0.80869140625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5895230054855347 accuracy= 0.80546875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5724939838051796 accuracy= 0.811328125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5856907896697521 accuracy= 0.8107421875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5762584179639816 accuracy= 0.81640625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5555527180433273 accuracy= 0.82705078125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5718503564596176 accuracy= 0.81767578125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6219490393996239 accuracy= 0.80439453125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5440866321325302 accuracy= 0.82529296875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5807734988629818 accuracy= 0.8111328125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5902116969227791 accuracy= 0.81181640625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5768497470766306 accuracy= 0.81611328125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.559658233821392 accuracy= 0.81884765625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5908588908612729 accuracy= 0.81240234375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5764903806149959 accuracy= 0.80751953125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5923024661839008 accuracy= 0.81328125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5584845952689648 accuracy= 0.8203125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5398909159004688 accuracy= 0.82373046875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6263121947646141 accuracy= 0.796875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5728555969893933 accuracy= 0.814453125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5963203832507133 accuracy= 0.815625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6025411777198315 accuracy= 0.80810546875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5995022468268871 accuracy= 0.81376953125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5907536029815674 accuracy= 0.8126953125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.56806935146451 accuracy= 0.81669921875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5590824633836746 accuracy= 0.8232421875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.586397971957922 accuracy= 0.8115234375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5749364241957664 accuracy= 0.81875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6161385640501976 accuracy= 0.80400390625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6007272522896528 accuracy= 0.80107421875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6012667946517467 accuracy= 0.8076171875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5907720565795899 accuracy= 0.8146484375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5421953462064266 accuracy= 0.83125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5682397954165935 accuracy= 0.82099609375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5535523995757103 accuracy= 0.8265625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5729731127619744 accuracy= 0.81171875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6229374364018441 accuracy= 0.81240234375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5483333624899387 accuracy= 0.82783203125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5864346213638783 accuracy= 0.81728515625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5618139762431383 accuracy= 0.81865234375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5648076869547367 accuracy= 0.82626953125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5479686904698611 accuracy= 0.8279296875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5301938474178314 accuracy= 0.83310546875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6383413441479207 accuracy= 0.80576171875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5718089625239372 accuracy= 0.81943359375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6177575908601284 accuracy= 0.81064453125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6842574760317802 accuracy= 0.79423828125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5679467357695103 accuracy= 0.8197265625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6022960379719734 accuracy= 0.8150390625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5856825962662697 accuracy= 0.81728515625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6035532556474209 accuracy= 0.80947265625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5703616254031658 accuracy= 0.8205078125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5579380422830582 accuracy= 0.82705078125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5864544674754143 accuracy= 0.81416015625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.557019080594182 accuracy= 0.8212890625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.43560357913374903 accuracy= 0.86533203125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.4427366077899933 accuracy= 0.866796875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.44430318400263785 accuracy= 0.86767578125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.4546850256621838 accuracy= 0.86904296875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.45596969947218896 accuracy= 0.8701171875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.47717736214399337 accuracy= 0.86640625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.46461058743298056 accuracy= 0.86884765625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.470114204287529 accuracy= 0.869140625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.4740915920585394 accuracy= 0.8673828125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.4874423507601023 accuracy= 0.86669921875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.48970811665058134 accuracy= 0.87041015625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.4980515334755182 accuracy= 0.87001953125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.49999207369983195 accuracy= 0.87109375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5061949983239173 accuracy= 0.8689453125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5038391306996346 accuracy= 0.8697265625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.516250703111291 accuracy= 0.86669921875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5233912549912929 accuracy= 0.86630859375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.522114922106266 accuracy= 0.8693359375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.529690558090806 accuracy= 0.8669921875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5523855365812779 accuracy= 0.86669921875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5458698874339462 accuracy= 0.86533203125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5493428770452737 accuracy= 0.87080078125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5481876961886882 accuracy= 0.86962890625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5550843302160502 accuracy= 0.86982421875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5661654889583587 accuracy= 0.86455078125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5642624884843827 accuracy= 0.86630859375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5671784151345491 accuracy= 0.86484375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5739845432341099 accuracy= 0.86591796875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5783980548381805 accuracy= 0.8673828125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5788789544254541 accuracy= 0.86376953125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5827510267496109 accuracy= 0.86376953125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5851840841583907 accuracy= 0.86787109375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5899426585063339 accuracy= 0.86513671875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.588272569514811 accuracy= 0.86884765625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6023102478124202 accuracy= 0.8673828125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5960938408970833 accuracy= 0.86865234375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5880665525794029 accuracy= 0.868359375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.596235615736805 accuracy= 0.8705078125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5906170986592769 accuracy= 0.86953125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.611452904343605 accuracy= 0.8669921875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6062188202515244 accuracy= 0.87080078125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.5927249907981604 accuracy= 0.87138671875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6021315850084648 accuracy= 0.86826171875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6147631311789155 accuracy= 0.86767578125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6201751267537474 accuracy= 0.86552734375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6222131100483239 accuracy= 0.86689453125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6280102346092462 accuracy= 0.86728515625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6305111581459641 accuracy= 0.868359375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6224103443324566 accuracy= 0.8658203125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6256889220327139 accuracy= 0.8642578125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6098345261067152 accuracy= 0.86748046875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6097218282520771 accuracy= 0.86767578125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6125049412250518 accuracy= 0.86953125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6117558959871531 accuracy= 0.869921875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6145485438406467 accuracy= 0.8697265625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6111521100625396 accuracy= 0.8697265625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6067535690963268 accuracy= 0.87119140625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6093178736045957 accuracy= 0.8734375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6180533533915877 accuracy= 0.87236328125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.613771332334727 accuracy= 0.8712890625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6192941458895802 accuracy= 0.87333984375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6165025062859059 accuracy= 0.87109375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6154682198539376 accuracy= 0.87509765625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6202364880591631 accuracy= 0.87109375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.619309070520103 accuracy= 0.87109375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6189511343836784 accuracy= 0.8728515625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6213332410901785 accuracy= 0.8732421875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6236913368105889 accuracy= 0.87265625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6211217882111668 accuracy= 0.874609375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6201856524683536 accuracy= 0.87470703125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6227305853739381 accuracy= 0.8759765625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6278669206425548 accuracy= 0.87333984375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6292258750647306 accuracy= 0.87177734375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6287868646904826 accuracy= 0.87578125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6285518625751138 accuracy= 0.87421875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6324538075365126 accuracy= 0.8755859375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6252026744186878 accuracy= 0.875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6331520088948309 accuracy= 0.87490234375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6355431827716529 accuracy= 0.87353515625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6337366162799298 accuracy= 0.8751953125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6301226132549346 accuracy= 0.87568359375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6313173549249769 accuracy= 0.87490234375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6360757456161081 accuracy= 0.87451171875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6333043165504932 accuracy= 0.8748046875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6361026957631111 accuracy= 0.8728515625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6414953643456102 accuracy= 0.87333984375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6407956866547465 accuracy= 0.8734375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6425489247776568 accuracy= 0.87412109375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6380377668421715 accuracy= 0.87548828125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6398351761978119 accuracy= 0.87578125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6499551444780082 accuracy= 0.87431640625
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6479213822633028 accuracy= 0.873828125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6488297568634153 accuracy= 0.873828125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6448305930010975 accuracy= 0.8740234375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6451935838907957 accuracy= 0.87421875
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6468406081199646 accuracy= 0.8751953125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6467198669910431 accuracy= 0.87548828125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6479262600652873 accuracy= 0.8751953125
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6492047257721424 accuracy= 0.874609375
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validating: 0it [00:00, ?it/s]
+    \end{Verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Validation Summary: loss= 0.6499844034202397 accuracy= 0.87392578125* finished
+training {\ldots}
+    \end{Verbatim}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{6}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+<\_\_main\_\_.Train at 0x7efecd12bfd0>
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{12}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{loss\PYZus{}curve} \PY{o}{=} \PY{p}{[}\PY{l+m+mf}{2.333478808403015}\PY{p}{,} \PY{l+m+mf}{1.5719489306211472}\PY{p}{,} \PY{l+m+mf}{1.355274000763893}\PY{p}{,} \PY{l+m+mf}{1.3385864064097404}\PY{p}{,} \PY{l+m+mf}{1.124035057425499}\PY{p}{,} \PY{l+m+mf}{1.0584546416997909}\PY{p}{,} \PY{l+m+mf}{0.9785867214202881}\PY{p}{,} \PY{l+m+mf}{0.96278817653656}\PY{p}{,} \PY{l+m+mf}{0.8623888105154037}\PY{p}{,} \PY{l+m+mf}{0.8447653636336326}\PY{p}{,} \PY{l+m+mf}{0.8567550569772721}\PY{p}{,} \PY{l+m+mf}{0.8347675532102585}\PY{p}{,} \PY{l+m+mf}{0.7146277263760566}\PY{p}{,} \PY{l+m+mf}{0.7275224655866623}\PY{p}{,} \PY{l+m+mf}{0.758560860157013}\PY{p}{,} \PY{l+m+mf}{0.6756385371088982}\PY{p}{,} \PY{l+m+mf}{0.7543443500995636}\PY{p}{,} \PY{l+m+mf}{0.761492233723402}\PY{p}{,} \PY{l+m+mf}{0.6323633193969727}\PY{p}{,} \PY{l+m+mf}{0.6870658077299595}\PY{p}{,} \PY{l+m+mf}{0.6771755568683148}\PY{p}{,} \PY{l+m+mf}{0.6119501680135727}\PY{p}{,} \PY{l+m+mf}{0.6725631430745125}\PY{p}{,} \PY{l+m+mf}{0.6440955020487309}\PY{p}{,} \PY{l+m+mf}{0.6766715750098229}\PY{p}{,} \PY{l+m+mf}{0.6167709715664387}\PY{p}{,} \PY{l+m+mf}{0.6227638773620129}\PY{p}{,} \PY{l+m+mf}{0.5872392043471336}\PY{p}{,} \PY{l+m+mf}{0.6417065098881721}\PY{p}{,} \PY{l+m+mf}{0.6184763178229332}\PY{p}{,} \PY{l+m+mf}{0.5703439846634865}\PY{p}{,} \PY{l+m+mf}{0.6273761220276356}\PY{p}{,} \PY{l+m+mf}{0.5908405669033527}\PY{p}{,} \PY{l+m+mf}{0.6172116659581661}\PY{p}{,} \PY{l+m+mf}{0.5570637702941894}\PY{p}{,} \PY{l+m+mf}{0.606589087843895}\PY{p}{,} \PY{l+m+mf}{0.617194376140833}\PY{p}{,} \PY{l+m+mf}{0.5919547364115715}\PY{p}{,} \PY{l+m+mf}{0.6016125835478305}\PY{p}{,} \PY{l+m+mf}{0.6035500332713127}\PY{p}{,} \PY{l+m+mf}{0.6992100887000561}\PY{p}{,} \PY{l+m+mf}{0.5850346438586712}\PY{p}{,} \PY{l+m+mf}{0.5750300765037537}\PY{p}{,} \PY{l+m+mf}{0.6086239948868751}\PY{p}{,} \PY{l+m+mf}{0.6014822833240032}\PY{p}{,} \PY{l+m+mf}{0.6365287579596043}\PY{p}{,} \PY{l+m+mf}{0.5986101448535919}\PY{p}{,} \PY{l+m+mf}{0.5895230054855347}\PY{p}{,} \PY{l+m+mf}{0.5724939838051796}\PY{p}{,} \PY{l+m+mf}{0.5856907896697521}\PY{p}{,} \PY{l+m+mf}{0.5762584179639816}\PY{p}{,} \PY{l+m+mf}{0.5555527180433273}\PY{p}{,} \PY{l+m+mf}{0.5718503564596176}\PY{p}{,} \PY{l+m+mf}{0.6219490393996239}\PY{p}{,} \PY{l+m+mf}{0.5440866321325302}\PY{p}{,} \PY{l+m+mf}{0.5807734988629818}\PY{p}{,} \PY{l+m+mf}{0.5902116969227791}\PY{p}{,} \PY{l+m+mf}{0.5768497470766306}\PY{p}{,} \PY{l+m+mf}{0.559658233821392}\PY{p}{,} \PY{l+m+mf}{0.5908588908612729}\PY{p}{,} \PY{l+m+mf}{0.5764903806149959}\PY{p}{,} \PY{l+m+mf}{0.5923024661839008}\PY{p}{,} \PY{l+m+mf}{0.5584845952689648}\PY{p}{,} \PY{l+m+mf}{0.5398909159004688}\PY{p}{,} \PY{l+m+mf}{0.6263121947646141}\PY{p}{,} \PY{l+m+mf}{0.5728555969893933}\PY{p}{,} \PY{l+m+mf}{0.5963203832507133}\PY{p}{,} \PY{l+m+mf}{0.6025411777198315}\PY{p}{,} \PY{l+m+mf}{0.5995022468268871}\PY{p}{,} \PY{l+m+mf}{0.5907536029815674}\PY{p}{,} \PY{l+m+mf}{0.56806935146451}\PY{p}{,} \PY{l+m+mf}{0.5590824633836746}\PY{p}{,} \PY{l+m+mf}{0.586397971957922}\PY{p}{,} \PY{l+m+mf}{0.5749364241957664}\PY{p}{,} \PY{l+m+mf}{0.6161385640501976}\PY{p}{,} \PY{l+m+mf}{0.6007272522896528}\PY{p}{,} \PY{l+m+mf}{0.6012667946517467}\PY{p}{,} \PY{l+m+mf}{0.5907720565795899}\PY{p}{,} \PY{l+m+mf}{0.5421953462064266}\PY{p}{,} \PY{l+m+mf}{0.5682397954165935}\PY{p}{,} \PY{l+m+mf}{0.5535523995757103}\PY{p}{,} \PY{l+m+mf}{0.5729731127619744}\PY{p}{,} \PY{l+m+mf}{0.6229374364018441}\PY{p}{,} \PY{l+m+mf}{0.5483333624899387}\PY{p}{,} \PY{l+m+mf}{0.5864346213638783}\PY{p}{,} \PY{l+m+mf}{0.5618139762431383}\PY{p}{,} \PY{l+m+mf}{0.5648076869547367}\PY{p}{,} \PY{l+m+mf}{0.5479686904698611}\PY{p}{,} \PY{l+m+mf}{0.5301938474178314}\PY{p}{,} \PY{l+m+mf}{0.6383413441479207}\PY{p}{,} \PY{l+m+mf}{0.5718089625239372}\PY{p}{,} \PY{l+m+mf}{0.6177575908601284}\PY{p}{,} \PY{l+m+mf}{0.6842574760317802}\PY{p}{,} \PY{l+m+mf}{0.5679467357695103}\PY{p}{,} \PY{l+m+mf}{0.6022960379719734}\PY{p}{,} \PY{l+m+mf}{0.5856825962662697}\PY{p}{,} \PY{l+m+mf}{0.6035532556474209}\PY{p}{,} \PY{l+m+mf}{0.5703616254031658}\PY{p}{,} \PY{l+m+mf}{0.5579380422830582}\PY{p}{,} \PY{l+m+mf}{0.5864544674754143}\PY{p}{,} \PY{l+m+mf}{0.557019080594182}\PY{p}{,} \PY{l+m+mf}{0.43560357913374903}\PY{p}{,} \PY{l+m+mf}{0.4427366077899933}\PY{p}{,} \PY{l+m+mf}{0.44430318400263785}\PY{p}{,} \PY{l+m+mf}{0.4546850256621838}\PY{p}{,} \PY{l+m+mf}{0.45596969947218896}\PY{p}{,} \PY{l+m+mf}{0.47717736214399337}\PY{p}{,} \PY{l+m+mf}{0.46461058743298056}\PY{p}{,} \PY{l+m+mf}{0.470114204287529}\PY{p}{,} \PY{l+m+mf}{0.4740915920585394}\PY{p}{,} \PY{l+m+mf}{0.4874423507601023}\PY{p}{,} \PY{l+m+mf}{0.48970811665058134}\PY{p}{,} \PY{l+m+mf}{0.4980515334755182}\PY{p}{,} \PY{l+m+mf}{0.49999207369983195}\PY{p}{,} \PY{l+m+mf}{0.5061949983239173}\PY{p}{,} \PY{l+m+mf}{0.5038391306996346}\PY{p}{,} \PY{l+m+mf}{0.516250703111291}\PY{p}{,} \PY{l+m+mf}{0.5233912549912929}\PY{p}{,} \PY{l+m+mf}{0.522114922106266}\PY{p}{,} \PY{l+m+mf}{0.529690558090806}\PY{p}{,} \PY{l+m+mf}{0.5523855365812779}\PY{p}{,} \PY{l+m+mf}{0.5458698874339462}\PY{p}{,} \PY{l+m+mf}{0.5493428770452737}\PY{p}{,} \PY{l+m+mf}{0.5481876961886882}\PY{p}{,} \PY{l+m+mf}{0.5550843302160502}\PY{p}{,} \PY{l+m+mf}{0.5661654889583587}\PY{p}{,} \PY{l+m+mf}{0.5642624884843827}\PY{p}{,} \PY{l+m+mf}{0.5671784151345491}\PY{p}{,} \PY{l+m+mf}{0.5739845432341099}\PY{p}{,} \PY{l+m+mf}{0.5783980548381805}\PY{p}{,} \PY{l+m+mf}{0.5788789544254541}\PY{p}{,} \PY{l+m+mf}{0.5827510267496109}\PY{p}{,} \PY{l+m+mf}{0.5851840841583907}\PY{p}{,} \PY{l+m+mf}{0.5899426585063339}\PY{p}{,} \PY{l+m+mf}{0.588272569514811}\PY{p}{,} \PY{l+m+mf}{0.6023102478124202}\PY{p}{,} \PY{l+m+mf}{0.5960938408970833}\PY{p}{,} \PY{l+m+mf}{0.5880665525794029}\PY{p}{,} \PY{l+m+mf}{0.596235615736805}\PY{p}{,} \PY{l+m+mf}{0.5906170986592769}\PY{p}{,} \PY{l+m+mf}{0.611452904343605}\PY{p}{,} \PY{l+m+mf}{0.6062188202515244}\PY{p}{,} \PY{l+m+mf}{0.5927249907981604}\PY{p}{,} \PY{l+m+mf}{0.6021315850084648}\PY{p}{,} \PY{l+m+mf}{0.6147631311789155}\PY{p}{,} \PY{l+m+mf}{0.6201751267537474}\PY{p}{,} \PY{l+m+mf}{0.6222131100483239}\PY{p}{,} \PY{l+m+mf}{0.6280102346092462}\PY{p}{,} \PY{l+m+mf}{0.6305111581459641}\PY{p}{,} \PY{l+m+mf}{0.6224103443324566}\PY{p}{,} \PY{l+m+mf}{0.6256889220327139}\PY{p}{,} \PY{l+m+mf}{0.6098345261067152}\PY{p}{,} \PY{l+m+mf}{0.6097218282520771}\PY{p}{,} \PY{l+m+mf}{0.6125049412250518}\PY{p}{,} \PY{l+m+mf}{0.6117558959871531}\PY{p}{,} \PY{l+m+mf}{0.6145485438406467}\PY{p}{,} \PY{l+m+mf}{0.6111521100625396}\PY{p}{,} \PY{l+m+mf}{0.6067535690963268}\PY{p}{,} \PY{l+m+mf}{0.6093178736045957}\PY{p}{,} \PY{l+m+mf}{0.6180533533915877}\PY{p}{,} \PY{l+m+mf}{0.613771332334727}\PY{p}{,} \PY{l+m+mf}{0.6192941458895802}\PY{p}{,} \PY{l+m+mf}{0.6165025062859059}\PY{p}{,} \PY{l+m+mf}{0.6154682198539376}\PY{p}{,} \PY{l+m+mf}{0.6202364880591631}\PY{p}{,} \PY{l+m+mf}{0.619309070520103}\PY{p}{,} \PY{l+m+mf}{0.6189511343836784}\PY{p}{,} \PY{l+m+mf}{0.6213332410901785}\PY{p}{,} \PY{l+m+mf}{0.6236913368105889}\PY{p}{,} \PY{l+m+mf}{0.6211217882111668}\PY{p}{,} \PY{l+m+mf}{0.6201856524683536}\PY{p}{,} \PY{l+m+mf}{0.6227305853739381}\PY{p}{,} \PY{l+m+mf}{0.6278669206425548}\PY{p}{,} \PY{l+m+mf}{0.6292258750647306}\PY{p}{,} \PY{l+m+mf}{0.6287868646904826}\PY{p}{,} \PY{l+m+mf}{0.6285518625751138}\PY{p}{,} \PY{l+m+mf}{0.6324538075365126}\PY{p}{,} \PY{l+m+mf}{0.6252026744186878}\PY{p}{,} \PY{l+m+mf}{0.6331520088948309}\PY{p}{,} \PY{l+m+mf}{0.6355431827716529}\PY{p}{,} \PY{l+m+mf}{0.6337366162799298}\PY{p}{,} \PY{l+m+mf}{0.6301226132549346}\PY{p}{,} \PY{l+m+mf}{0.6313173549249769}\PY{p}{,} \PY{l+m+mf}{0.6360757456161081}\PY{p}{,} \PY{l+m+mf}{0.6333043165504932}\PY{p}{,} \PY{l+m+mf}{0.6361026957631111}\PY{p}{,} \PY{l+m+mf}{0.6414953643456102}\PY{p}{,} \PY{l+m+mf}{0.6407956866547465}\PY{p}{,} \PY{l+m+mf}{0.6425489247776568}\PY{p}{,} \PY{l+m+mf}{0.6380377668421715}\PY{p}{,} \PY{l+m+mf}{0.6398351761978119}\PY{p}{,} \PY{l+m+mf}{0.6499551444780082}\PY{p}{,} \PY{l+m+mf}{0.6479213822633028}\PY{p}{,} \PY{l+m+mf}{0.6488297568634153}\PY{p}{,} \PY{l+m+mf}{0.6448305930010975}\PY{p}{,} \PY{l+m+mf}{0.6451935838907957}\PY{p}{,} \PY{l+m+mf}{0.6468406081199646}\PY{p}{,} \PY{l+m+mf}{0.6467198669910431}\PY{p}{,} \PY{l+m+mf}{0.6479262600652873}\PY{p}{,} \PY{l+m+mf}{0.6492047257721424}\PY{p}{,} \PY{l+m+mf}{0.6499844034202397}\PY{p}{]}
+\PY{n}{accuracy\PYZus{}curve} \PY{o}{=} \PY{p}{[}\PY{l+m+mf}{0.11328125}\PY{p}{,} \PY{l+m+mf}{0.42080078125}\PY{p}{,} \PY{l+m+mf}{0.53115234375}\PY{p}{,} \PY{l+m+mf}{0.56064453125}\PY{p}{,} \PY{l+m+mf}{0.60576171875}\PY{p}{,} \PY{l+m+mf}{0.62998046875}\PY{p}{,} \PY{l+m+mf}{0.66728515625}\PY{p}{,} \PY{l+m+mf}{0.6720703125}\PY{p}{,} \PY{l+m+mf}{0.6994140625}\PY{p}{,} \PY{l+m+mf}{0.69736328125}\PY{p}{,} \PY{l+m+mf}{0.70771484375}\PY{p}{,} \PY{l+m+mf}{0.70869140625}\PY{p}{,} \PY{l+m+mf}{0.75595703125}\PY{p}{,} \PY{l+m+mf}{0.7431640625}\PY{p}{,} \PY{l+m+mf}{0.74267578125}\PY{p}{,} \PY{l+m+mf}{0.76025390625}\PY{p}{,} \PY{l+m+mf}{0.75}\PY{p}{,} \PY{l+m+mf}{0.7443359375}\PY{p}{,} \PY{l+m+mf}{0.781640625}\PY{p}{,} \PY{l+m+mf}{0.766796875}\PY{p}{,} \PY{l+m+mf}{0.7708984375}\PY{p}{,} \PY{l+m+mf}{0.7912109375}\PY{p}{,} \PY{l+m+mf}{0.7705078125}\PY{p}{,} \PY{l+m+mf}{0.78203125}\PY{p}{,} \PY{l+m+mf}{0.780078125}\PY{p}{,} \PY{l+m+mf}{0.79326171875}\PY{p}{,} \PY{l+m+mf}{0.79443359375}\PY{p}{,} \PY{l+m+mf}{0.7953125}\PY{p}{,} \PY{l+m+mf}{0.78505859375}\PY{p}{,} \PY{l+m+mf}{0.78798828125}\PY{p}{,} \PY{l+m+mf}{0.80517578125}\PY{p}{,} \PY{l+m+mf}{0.7923828125}\PY{p}{,} \PY{l+m+mf}{0.79873046875}\PY{p}{,} \PY{l+m+mf}{0.7955078125}\PY{p}{,} \PY{l+m+mf}{0.81220703125}\PY{p}{,} \PY{l+m+mf}{0.80009765625}\PY{p}{,} \PY{l+m+mf}{0.8001953125}\PY{p}{,} \PY{l+m+mf}{0.80517578125}\PY{p}{,} \PY{l+m+mf}{0.792578125}\PY{p}{,} \PY{l+m+mf}{0.7955078125}\PY{p}{,} \PY{l+m+mf}{0.76923828125}\PY{p}{,} \PY{l+m+mf}{0.80615234375}\PY{p}{,} \PY{l+m+mf}{0.81416015625}\PY{p}{,} \PY{l+m+mf}{0.801953125}\PY{p}{,} \PY{l+m+mf}{0.80625}\PY{p}{,} \PY{l+m+mf}{0.7951171875}\PY{p}{,} \PY{l+m+mf}{0.80869140625}\PY{p}{,} \PY{l+m+mf}{0.80546875}\PY{p}{,} \PY{l+m+mf}{0.811328125}\PY{p}{,} \PY{l+m+mf}{0.8107421875}\PY{p}{,} \PY{l+m+mf}{0.81640625}\PY{p}{,} \PY{l+m+mf}{0.82705078125}\PY{p}{,} \PY{l+m+mf}{0.81767578125}\PY{p}{,} \PY{l+m+mf}{0.80439453125}\PY{p}{,} \PY{l+m+mf}{0.82529296875}\PY{p}{,} \PY{l+m+mf}{0.8111328125}\PY{p}{,} \PY{l+m+mf}{0.81181640625}\PY{p}{,} \PY{l+m+mf}{0.81611328125}\PY{p}{,} \PY{l+m+mf}{0.81884765625}\PY{p}{,} \PY{l+m+mf}{0.81240234375}\PY{p}{,} \PY{l+m+mf}{0.80751953125}\PY{p}{,} \PY{l+m+mf}{0.81328125}\PY{p}{,} \PY{l+m+mf}{0.8203125}\PY{p}{,} \PY{l+m+mf}{0.82373046875}\PY{p}{,} \PY{l+m+mf}{0.796875}\PY{p}{,} \PY{l+m+mf}{0.814453125}\PY{p}{,} \PY{l+m+mf}{0.815625}\PY{p}{,} \PY{l+m+mf}{0.80810546875}\PY{p}{,} \PY{l+m+mf}{0.81376953125}\PY{p}{,} \PY{l+m+mf}{0.8126953125}\PY{p}{,} \PY{l+m+mf}{0.81669921875}\PY{p}{,} \PY{l+m+mf}{0.8232421875}\PY{p}{,} \PY{l+m+mf}{0.8115234375}\PY{p}{,} \PY{l+m+mf}{0.81875}\PY{p}{,} \PY{l+m+mf}{0.80400390625}\PY{p}{,} \PY{l+m+mf}{0.80107421875}\PY{p}{,} \PY{l+m+mf}{0.8076171875}\PY{p}{,} \PY{l+m+mf}{0.8146484375}\PY{p}{,} \PY{l+m+mf}{0.83125}\PY{p}{,} \PY{l+m+mf}{0.82099609375}\PY{p}{,} \PY{l+m+mf}{0.8265625}\PY{p}{,} \PY{l+m+mf}{0.81171875}\PY{p}{,} \PY{l+m+mf}{0.81240234375}\PY{p}{,} \PY{l+m+mf}{0.82783203125}\PY{p}{,} \PY{l+m+mf}{0.81728515625}\PY{p}{,} \PY{l+m+mf}{0.81865234375}\PY{p}{,} \PY{l+m+mf}{0.82626953125}\PY{p}{,} \PY{l+m+mf}{0.8279296875}\PY{p}{,} \PY{l+m+mf}{0.83310546875}\PY{p}{,} \PY{l+m+mf}{0.80576171875}\PY{p}{,} \PY{l+m+mf}{0.81943359375}\PY{p}{,} \PY{l+m+mf}{0.81064453125}\PY{p}{,} \PY{l+m+mf}{0.79423828125}\PY{p}{,} \PY{l+m+mf}{0.8197265625}\PY{p}{,} \PY{l+m+mf}{0.8150390625}\PY{p}{,} \PY{l+m+mf}{0.81728515625}\PY{p}{,} \PY{l+m+mf}{0.80947265625}\PY{p}{,} \PY{l+m+mf}{0.8205078125}\PY{p}{,} \PY{l+m+mf}{0.82705078125}\PY{p}{,} \PY{l+m+mf}{0.81416015625}\PY{p}{,} \PY{l+m+mf}{0.8212890625}\PY{p}{,} \PY{l+m+mf}{0.86533203125}\PY{p}{,} \PY{l+m+mf}{0.866796875}\PY{p}{,} \PY{l+m+mf}{0.86767578125}\PY{p}{,} \PY{l+m+mf}{0.86904296875}\PY{p}{,} \PY{l+m+mf}{0.8701171875}\PY{p}{,} \PY{l+m+mf}{0.86640625}\PY{p}{,} \PY{l+m+mf}{0.86884765625}\PY{p}{,} \PY{l+m+mf}{0.869140625}\PY{p}{,} \PY{l+m+mf}{0.8673828125}\PY{p}{,} \PY{l+m+mf}{0.86669921875}\PY{p}{,} \PY{l+m+mf}{0.87041015625}\PY{p}{,} \PY{l+m+mf}{0.87001953125}\PY{p}{,} \PY{l+m+mf}{0.87109375}\PY{p}{,} \PY{l+m+mf}{0.8689453125}\PY{p}{,} \PY{l+m+mf}{0.8697265625}\PY{p}{,} \PY{l+m+mf}{0.86669921875}\PY{p}{,} \PY{l+m+mf}{0.86630859375}\PY{p}{,} \PY{l+m+mf}{0.8693359375}\PY{p}{,} \PY{l+m+mf}{0.8669921875}\PY{p}{,} \PY{l+m+mf}{0.86669921875}\PY{p}{,} \PY{l+m+mf}{0.86533203125}\PY{p}{,} \PY{l+m+mf}{0.87080078125}\PY{p}{,} \PY{l+m+mf}{0.86962890625}\PY{p}{,} \PY{l+m+mf}{0.86982421875}\PY{p}{,} \PY{l+m+mf}{0.86455078125}\PY{p}{,} \PY{l+m+mf}{0.86630859375}\PY{p}{,} \PY{l+m+mf}{0.86484375}\PY{p}{,} \PY{l+m+mf}{0.86591796875}\PY{p}{,} \PY{l+m+mf}{0.8673828125}\PY{p}{,} \PY{l+m+mf}{0.86376953125}\PY{p}{,} \PY{l+m+mf}{0.86376953125}\PY{p}{,} \PY{l+m+mf}{0.86787109375}\PY{p}{,} \PY{l+m+mf}{0.86513671875}\PY{p}{,} \PY{l+m+mf}{0.86884765625}\PY{p}{,} \PY{l+m+mf}{0.8673828125}\PY{p}{,} \PY{l+m+mf}{0.86865234375}\PY{p}{,} \PY{l+m+mf}{0.868359375}\PY{p}{,} \PY{l+m+mf}{0.8705078125}\PY{p}{,} \PY{l+m+mf}{0.86953125}\PY{p}{,} \PY{l+m+mf}{0.8669921875}\PY{p}{,} \PY{l+m+mf}{0.87080078125}\PY{p}{,} \PY{l+m+mf}{0.87138671875}\PY{p}{,} \PY{l+m+mf}{0.86826171875}\PY{p}{,} \PY{l+m+mf}{0.86767578125}\PY{p}{,} \PY{l+m+mf}{0.86552734375}\PY{p}{,} \PY{l+m+mf}{0.86689453125}\PY{p}{,} \PY{l+m+mf}{0.86728515625}\PY{p}{,} \PY{l+m+mf}{0.868359375}\PY{p}{,} \PY{l+m+mf}{0.8658203125}\PY{p}{,} \PY{l+m+mf}{0.8642578125}\PY{p}{,} \PY{l+m+mf}{0.86748046875}\PY{p}{,} \PY{l+m+mf}{0.86767578125}\PY{p}{,} \PY{l+m+mf}{0.86953125}\PY{p}{,} \PY{l+m+mf}{0.869921875}\PY{p}{,} \PY{l+m+mf}{0.8697265625}\PY{p}{,} \PY{l+m+mf}{0.8697265625}\PY{p}{,} \PY{l+m+mf}{0.87119140625}\PY{p}{,} \PY{l+m+mf}{0.8734375}\PY{p}{,} \PY{l+m+mf}{0.87236328125}\PY{p}{,} \PY{l+m+mf}{0.8712890625}\PY{p}{,} \PY{l+m+mf}{0.87333984375}\PY{p}{,} \PY{l+m+mf}{0.87109375}\PY{p}{,} \PY{l+m+mf}{0.87509765625}\PY{p}{,} \PY{l+m+mf}{0.87109375}\PY{p}{,} \PY{l+m+mf}{0.87109375}\PY{p}{,} \PY{l+m+mf}{0.8728515625}\PY{p}{,} \PY{l+m+mf}{0.8732421875}\PY{p}{,} \PY{l+m+mf}{0.87265625}\PY{p}{,} \PY{l+m+mf}{0.874609375}\PY{p}{,} \PY{l+m+mf}{0.87470703125}\PY{p}{,} \PY{l+m+mf}{0.8759765625}\PY{p}{,} \PY{l+m+mf}{0.87333984375}\PY{p}{,} \PY{l+m+mf}{0.87177734375}\PY{p}{,} \PY{l+m+mf}{0.87578125}\PY{p}{,} \PY{l+m+mf}{0.87421875}\PY{p}{,} \PY{l+m+mf}{0.8755859375}\PY{p}{,} \PY{l+m+mf}{0.875}\PY{p}{,} \PY{l+m+mf}{0.87490234375}\PY{p}{,} \PY{l+m+mf}{0.87353515625}\PY{p}{,} \PY{l+m+mf}{0.8751953125}\PY{p}{,} \PY{l+m+mf}{0.87568359375}\PY{p}{,} \PY{l+m+mf}{0.87490234375}\PY{p}{,} \PY{l+m+mf}{0.87451171875}\PY{p}{,} \PY{l+m+mf}{0.8748046875}\PY{p}{,} \PY{l+m+mf}{0.8728515625}\PY{p}{,} \PY{l+m+mf}{0.87333984375}\PY{p}{,} \PY{l+m+mf}{0.8734375}\PY{p}{,} \PY{l+m+mf}{0.87412109375}\PY{p}{,} \PY{l+m+mf}{0.87548828125}\PY{p}{,} \PY{l+m+mf}{0.87578125}\PY{p}{,} \PY{l+m+mf}{0.87431640625}\PY{p}{,} \PY{l+m+mf}{0.873828125}\PY{p}{,} \PY{l+m+mf}{0.873828125}\PY{p}{,} \PY{l+m+mf}{0.8740234375}\PY{p}{,} \PY{l+m+mf}{0.87421875}\PY{p}{,} \PY{l+m+mf}{0.8751953125}\PY{p}{,} \PY{l+m+mf}{0.87548828125}\PY{p}{,} \PY{l+m+mf}{0.8751953125}\PY{p}{,} \PY{l+m+mf}{0.874609375}\PY{p}{,} \PY{l+m+mf}{0.87392578125}\PY{p}{]}
+\PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
+\PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{p}{)}
+\PY{n}{t} \PY{o}{=} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{loss\PYZus{}curve}\PY{p}{)}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,} \PY{n}{loss\PYZus{}curve}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Validation Loss Curve}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Epoch}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Value}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+
+\PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,} \PY{n}{accuracy\PYZus{}curve}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Validation Accuracy}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Epoch}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Accuracy}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{12}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+Text(0, 0.5, 'Accuracy')
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_7_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_7_2.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+\end{document}
