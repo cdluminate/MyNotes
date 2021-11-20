@@ -1,0 +1,220 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+todonotes
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "libertine" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "libertine-ntxm" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3cm
+\rightmargin 3cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+EN 520.665 HW#4
+\end_layout
+
+\begin_layout Author
+Mo Zhou <mzhou32@jhu.edu>
+\end_layout
+
+\begin_layout Section
+Problem 1
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Consider a camera moving along its optical axis toward a planar surface
+ at right angles to the optical axis.
+ (a) Show that the optical flow is given by u = Wx/Z, v = Wy/Z where W is
+ the velocity and Z the distance to the plane.
+ (b) Is the optical flow stationary (that is, independent of time)? (c)
+ Is the Laplacian of the optical flow zero? (d) How could you predict the
+ time to impact?
+\end_layout
+
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+The camera is movin towards the plane.
+ According to Newton's third law, the scenario is equivalent to that the
+ plane is moving towards the camera in velocity 
+\begin_inset Formula $W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Given a point 
+\begin_inset Formula $I(x,y,Z)$
+\end_inset
+
+ on the plane, it is firstly projected to 
+\begin_inset Formula $I(\frac{f}{Z}x,\frac{f}{Z}y,f)$
+\end_inset
+
+ for the camera.
+\end_layout
+
+\begin_layout Standard
+After time period 
+\begin_inset Formula $\Delta t$
+\end_inset
+
+, the point has moved to 
+\begin_inset Formula $I(x,y,Z-W\Delta t)$
+\end_inset
+
+, which will be projected to 
+\begin_inset Formula $I(\frac{f}{Z-W\text{\ensuremath{\Delta t}}}x,\frac{f}{Z-W\text{\ensuremath{\Delta t}}}y,f)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Then we have the the position shift along the 
+\begin_inset Formula $x$
+\end_inset
+
+ axis, namely 
+\begin_inset Formula $\text{\ensuremath{\Delta x}}$
+\end_inset
+
+ is:
+\begin_inset Formula 
+\[
+\Delta x=(\frac{f}{Z-W\Delta t}-\frac{f}{Z})x=\frac{W\Delta t}{Z(Z-W\Delta t)}x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So that
+\begin_inset Formula 
+\[
+\frac{\Delta x}{\Delta t}=\frac{W}{Z(Z-W\Delta t)}x\rightarrow_{\Delta t\rightarrow0}\frac{dx}{dt}=\frac{W}{Z}x=u
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Similarly, we can obtain that 
+\begin_inset Formula $v=dy/dt=Wy/Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Problem 2
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Derive the equations for estimating optical flow using the calculus of variation
+s approach.
+\end_layout
+
+\begin_layout Section
+Problem 3
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Derive the equations for optic flow when the moving object is a 3D planar
+ patch, aX+bY+cZ=1.
+ Assume the small rotation matrix R, with angular velocities A, B and C
+ respectively along the three axes and the translation vector with components
+ U,V and W along the three axes.
+ 
+\end_layout
+
+\end_body
+\end_document
