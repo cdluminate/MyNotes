@@ -295,6 +295,186 @@ Derive the equations for estimating optical flow using the calculus of variation
 s approach.
 \end_layout
 
+\begin_layout Standard
+The optical flow constraint equation is 
+\begin_inset Formula 
+\[
+I_{x}u+I_{y}v=-I_{t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In order to determine 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+, merely the above equation is not enough.
+ Hnece, we need an additional constraints.
+ We define the smoothness error as
+\begin_inset Formula 
+\[
+c_{ij}=\frac{1}{4}[(u_{i+1,j}-u_{ij})^{2}+(u_{i,j+1}-u_{ij})^{2}+(v_{i+1,j}-v_{ij})^{2}+(v_{i,j+1}-v_{ij})^{2}]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and the continuity error as 
+\begin_inset Formula 
+\[
+c_{ij}=(I_{x}^{ij}u_{ij}+I_{y}^{ij}v_{ij}+I_{t}^{ij})^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The total error is thus
+\begin_inset Formula 
+\[
+e=\sum_{i}\sum_{j}(s_{ij}+\lambda c_{ij})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And we desire a minimum for the total error.
+\end_layout
+
+\begin_layout Standard
+The Euler-Lagrange equations for 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+ in this optimization problem are
+\begin_inset Formula 
+\[
+F_{u}-\frac{\partial}{\partial x}F_{u_{x}}-\frac{\partial}{\partial y}F_{u_{y}}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+F_{v}-\frac{\partial}{\partial x}F_{v_{x}}-\frac{\partial}{\partial y}F_{v_{y}}=0
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula 
+\[
+F=\alpha^{2}[(u_{x}^{2}+u_{y}^{2})+(v_{x}^{2}+v_{y}^{2})]+(I_{x}u+I_{y}v+I_{t})^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Evaluating the differentials for the Euler-Lagrange equations, we obtain
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+F_{u} & =2(I_{x}u+I_{y}v+I_{t})I_{x}\\
+F_{u_{x}} & =2\alpha^{2}u_{x}\Rightarrow\frac{\partial}{\partial x}F_{u_{x}}=2\alpha^{2}\frac{\partial^{2}u}{\partial x^{2}}\\
+F_{u_{y}} & =2\alpha^{2}u_{y}\Rightarrow\frac{\partial}{\partial y}F_{u_{y}}=2\alpha^{2}\frac{\partial^{2}u}{\partial y^{2}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From the Euler-Lagrange equations:
+\begin_inset Formula 
+\begin{align*}
+ & F_{u} & =\frac{\partial}{\partial x}F_{u_{x}}+\frac{\partial}{\partial y}F_{u_{y}}\\
+\Rightarrow & \alpha^{2}\nabla^{2}u-I_{x}I_{t}=I_{x}^{2}u+I_{x}I_{y}v
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Similarly, the Euler-Lagrange equation for 
+\begin_inset Formula $v$
+\end_inset
+
+ is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\alpha^{2}\nabla^{2}v-I_{y}I_{t}=I_{x}I_{y}u+I_{y}^{2}v
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To solve the equations, we first make the following approximations fo the
+ Laplacian:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\nabla^{2}u & =k(\bar{u}-u)\\
+\nabla^{2}v & =k(\bar{v}-v)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By substituting these into the equations, we obtain the following recursions:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+u^{n+1} & =-\frac{I_{x}(I_{x}\bar{u}^{n}+I_{y}\bar{v}^{n}+I_{t})}{(\alpha^{\prime2}+I_{x}^{2}+I_{y}^{2})}\\
+v^{n+1} & =-\frac{I_{y}(I_{x}\bar{u}^{n}+I_{y}\bar{v}^{n}+I_{t})}{(\alpha^{\prime2}+I_{x}^{2}+I_{y}^{2})}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Problem 3
 \end_layout
@@ -308,6 +488,113 @@ Derive the equations for optic flow when the moving object is a 3D planar
  respectively along the three axes and the translation vector with components
  U,V and W along the three axes.
  
+\end_layout
+
+\begin_layout Standard
+We have the translational velocity of camera as
+\begin_inset Formula 
+\[
+T=\begin{bmatrix}U\\
+V\\
+W
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and the angular velocity as
+\begin_inset Formula 
+\[
+\Omega=\begin{bmatrix}A\\
+B\\
+C
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The velocity of the point 
+\begin_inset Formula $P(x,y,z)$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+\frac{dP}{dt}=T+\Omega\times P=\begin{bmatrix}U\\
+V\\
+W
+\end{bmatrix}+\begin{bmatrix}BZ-CY\\
+CX-AZ\\
+AY-BZ
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The given planar path is
+\begin_inset Formula 
+\begin{align*}
+aX+bY+cZ & =1\\
+\Rightarrow\frac{1}{Z}= & ax+by+c
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and
+\begin_inset Formula 
+\begin{align*}
+\alpha & =Axy+B(1+x^{2})-Cy+\frac{U-Wx}{Z}\\
+ & =a_{1}+a_{2}x+a_{3}y+a_{7}x^{2}+a_{8}xy\\
+\beta & =a_{4}+a_{5}x+a_{6}y+a_{7}xy+a^{8}y^{2}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where
+\begin_inset Formula 
+\[
+\begin{bmatrix}a_{1}\\
+a_{2}\\
+a_{3}\\
+a_{4}\\
+a_{5}\\
+a_{6}\\
+a_{7}\\
+a_{8}
+\end{bmatrix}=\begin{bmatrix}B+cU\\
+aU-cW\\
+-C+bU\\
+C+cV\\
+C+aV\\
+bV-cW\\
+B-aW\\
+-A-bW
+\end{bmatrix}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_body
