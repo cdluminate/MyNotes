@@ -124,11 +124,11 @@ The camera is movin towards the plane.
 
 \begin_layout Standard
 Given a point 
-\begin_inset Formula $I(x,y,Z)$
+\begin_inset Formula $I(x,y,Z;t=0)$
 \end_inset
 
  on the plane, it is firstly projected to 
-\begin_inset Formula $I(\frac{f}{Z}x,\frac{f}{Z}y,f)$
+\begin_inset Formula $I(\frac{f}{Z}x,\frac{f}{Z}y,f;t=0)$
 \end_inset
 
  for the camera.
@@ -140,11 +140,11 @@ After time period
 \end_inset
 
 , the point has moved to 
-\begin_inset Formula $I(x,y,Z-W\Delta t)$
+\begin_inset Formula $I(x,y,Z-W\Delta t;t=\Delta t)$
 \end_inset
 
 , which will be projected to 
-\begin_inset Formula $I(\frac{f}{Z-W\text{\ensuremath{\Delta t}}}x,\frac{f}{Z-W\text{\ensuremath{\Delta t}}}y,f)$
+\begin_inset Formula $I(\frac{f}{Z-W\text{\ensuremath{\Delta t}}}x,\frac{f}{Z-W\text{\ensuremath{\Delta t}}}y,f;t=\Delta t)$
 \end_inset
 
 .
@@ -188,6 +188,100 @@ Similarly, we can obtain that
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Subsection
+(b)
+\end_layout
+
+\begin_layout Standard
+The optical flow is not independent to time 
+\begin_inset Formula $t$
+\end_inset
+
+, because 
+\begin_inset Formula $Z$
+\end_inset
+
+ depends on 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{bmatrix}u\\
+v
+\end{bmatrix}=\frac{W}{Z}\begin{bmatrix}x\\
+y
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(c)
+\end_layout
+
+\begin_layout Standard
+The Laplacian of the optical flow is indeed zero.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\nabla^{2}\begin{bmatrix}u\\
+v
+\end{bmatrix}=\frac{W}{Z}\nabla\begin{bmatrix}1\\
+1
+\end{bmatrix}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(d)
+\end_layout
+
+\begin_layout Standard
+If we assume that the velocity 
+\begin_inset Formula $W$
+\end_inset
+
+ is constant, then the predicted time of collision, namely the estimated
+ time that the camera go through distance 
+\begin_inset Formula $Z$
+\end_inset
+
+, which is 
+\begin_inset Formula $\tau=\frac{Z}{W}$
+\end_inset
+
+.
+ This can be compuated as the inverse of the gradient of the optical flow:
+ 
+\begin_inset Formula $\tau=\frac{1}{\nabla u}=\frac{1}{\nabla v}$
+\end_inset
+
+, because 
+\begin_inset Formula $\nabla[u,v]=[W/Z,W/Z]$
+\end_inset
+
+.
+ When the velocity 
+\begin_inset Formula $W$
+\end_inset
+
+ is varying instead of being a constant, there will be some prediction error.
 \end_layout
 
 \begin_layout Section
