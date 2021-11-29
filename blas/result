@@ -1,0 +1,80 @@
+GEMM_1 Benchmark: naive implementation
+(   64)       176 μs,  2.979 gflops, maxerr  0.000 | ref    28223 μs,     0.019 gflops
+(  128)      6753 μs,  0.621 gflops, maxerr  0.000 | ref       86 μs,    48.771 gflops
+(  256)     31351 μs,  1.070 gflops, maxerr  0.000 | ref      559 μs,    60.026 gflops
+(  512)    228918 μs,  1.173 gflops, maxerr -0.000 | ref     1275 μs,   210.538 gflops
+( 1024)   2619628 μs,  0.820 gflops, maxerr -0.001 | ref     6442 μs,   333.357 gflops
+( 2048)  46530427 μs,  0.369 gflops, maxerr  0.002 | ref    49382 μs,   347.897 gflops
+( 4096) 463495714 μs,  0.297 gflops, maxerr -0.005 | ref   459812 μs,   298.902 gflops
+GEMM_2 Benchmark: nesting and unroll
+(   64)       184 μs,  2.849 gflops, maxerr  0.000 | ref       17 μs,    30.840 gflops
+(  128)      1809 μs,  2.319 gflops, maxerr  0.000 | ref       32 μs,   131.072 gflops
+(  256)     16989 μs,  1.975 gflops, maxerr  0.000 | ref      147 μs,   228.261 gflops
+(  512)    155731 μs,  1.724 gflops, maxerr -0.000 | ref      794 μs,   338.080 gflops
+( 1024)   1294367 μs,  1.659 gflops, maxerr -0.001 | ref     6310 μs,   340.330 gflops
+( 2048)  24672851 μs,  0.696 gflops, maxerr -0.002 | ref    49622 μs,   346.215 gflops
+( 4096) 236304100 μs,  0.582 gflops, maxerr -0.005 | ref   496180 μs,   276.994 gflops
+GEMM_3 Benchmark: register
+(   64)        86 μs,  6.096 gflops, maxerr  0.000 | ref       73 μs,     7.182 gflops
+(  128)       996 μs,  4.211 gflops, maxerr  0.000 | ref       78 μs,    53.773 gflops
+(  256)      7857 μs,  4.271 gflops, maxerr  0.000 | ref     2732 μs,    12.282 gflops
+(  512)     91433 μs,  2.936 gflops, maxerr  0.000 | ref     1451 μs,   185.000 gflops
+( 1024)    864879 μs,  2.483 gflops, maxerr  0.001 | ref     6310 μs,   340.330 gflops
+( 2048)  13814717 μs,  1.244 gflops, maxerr  0.002 | ref    51726 μs,   332.132 gflops
+( 4096) 138526119 μs,  0.992 gflops, maxerr  0.005 | ref   547522 μs,   251.020 gflops
+GEMM_4 Benchmark: eliminate offset calculation
+(   64)        74 μs,  7.085 gflops, maxerr  0.000 | ref     2294 μs,     0.229 gflops
+(  128)       889 μs,  4.718 gflops, maxerr  0.000 | ref     4727 μs,     0.887 gflops
+(  256)      7474 μs,  4.489 gflops, maxerr  0.000 | ref     4807 μs,     6.980 gflops
+(  512)    115198 μs,  2.330 gflops, maxerr  0.000 | ref     1721 μs,   155.976 gflops
+( 1024)    830053 μs,  2.587 gflops, maxerr -0.001 | ref    12642 μs,   169.869 gflops
+( 2048)  15619264 μs,  1.100 gflops, maxerr -0.002 | ref    68944 μs,   249.186 gflops
+( 4096) 130874111 μs,  1.050 gflops, maxerr -0.005 | ref   472881 μs,   290.642 gflops
+GEMM_5 Benchmark: unroll more loop
+(   64)       104 μs,  5.041 gflops, maxerr -0.000 | ref       18 μs,    29.127 gflops
+(  128)       760 μs,  5.519 gflops, maxerr -0.000 | ref       31 μs,   135.300 gflops
+(  256)      6414 μs,  5.231 gflops, maxerr  0.000 | ref      140 μs,   239.675 gflops
+(  512)     66050 μs,  4.064 gflops, maxerr  0.000 | ref      811 μs,   330.993 gflops
+( 1024)    583866 μs,  3.678 gflops, maxerr  0.001 | ref    13509 μs,   158.967 gflops
+( 2048)   7633723 μs,  2.251 gflops, maxerr -0.002 | ref    58186 μs,   295.258 gflops
+( 4096)  74495750 μs,  1.845 gflops, maxerr  0.005 | ref   496117 μs,   277.029 gflops
+GEMM_6 Benchmark: SIMD SSE
+(   64)        18 μs, 29.127 gflops, maxerr  0.000 | ref       17 μs,    30.840 gflops
+(  128)       160 μs, 26.214 gflops, maxerr  0.000 | ref       20 μs,   209.715 gflops
+(  256)      1403 μs, 23.916 gflops, maxerr  0.000 | ref      129 μs,   260.112 gflops
+(  512)     17130 μs, 15.670 gflops, maxerr -0.000 | ref      749 μs,   358.392 gflops
+( 1024)    191224 μs, 11.230 gflops, maxerr  0.001 | ref     6554 μs,   327.660 gflops
+( 2048)   3264185 μs,  5.263 gflops, maxerr -0.002 | ref    61395 μs,   279.825 gflops
+( 4096)  32147655 μs,  4.275 gflops, maxerr -0.005 | ref   572770 μs,   239.955 gflops
+GEMM_7 Benchmark: SIMD AVX
+(   64)        10 μs, 52.429 gflops, maxerr  0.000 | ref       18 μs,    29.127 gflops
+(  128)        72 μs, 58.254 gflops, maxerr  0.000 | ref       21 μs,   199.729 gflops
+(  256)       639 μs, 52.511 gflops, maxerr  0.000 | ref      129 μs,   260.112 gflops
+(  512)      7149 μs, 37.549 gflops, maxerr  0.000 | ref      941 μs,   285.266 gflops
+( 1024)     81873 μs, 26.229 gflops, maxerr  0.001 | ref     7002 μs,   306.696 gflops
+( 2048)   1272485 μs, 13.501 gflops, maxerr  0.002 | ref    59638 μs,   288.069 gflops
+( 4096)  11691064 μs, 11.756 gflops, maxerr -0.005 | ref   495240 μs,   277.520 gflops
+GEMM_8 Benchmark: Blocking
+(   64)        10 μs, 52.429 gflops, maxerr  0.000 | ref       16 μs,    32.768 gflops
+(  128)        87 μs, 48.210 gflops, maxerr  0.000 | ref       33 μs,   127.100 gflops
+(  256)       757 μs, 44.326 gflops, maxerr  0.000 | ref      141 μs,   237.975 gflops
+(  512)      7023 μs, 38.222 gflops, maxerr  0.000 | ref     1087 μs,   246.951 gflops
+( 1024)     79113 μs, 27.145 gflops, maxerr  0.001 | ref     7235 μs,   296.819 gflops
+( 2048)    639034 μs, 26.884 gflops, maxerr -0.002 | ref    58449 μs,   293.929 gflops
+( 4096)   5257103 μs, 26.143 gflops, maxerr  0.005 | ref   589996 μs,   232.949 gflops
+GEMM_9 Benchmark: Packing A
+(   64)        15 μs, 34.953 gflops, maxerr  0.000 | ref       20 μs,    26.214 gflops
+(  128)        96 μs, 43.691 gflops, maxerr  0.000 | ref       18 μs,   233.017 gflops
+(  256)       755 μs, 44.443 gflops, maxerr  0.000 | ref      129 μs,   260.112 gflops
+(  512)      6468 μs, 41.502 gflops, maxerr -0.000 | ref      900 μs,   298.262 gflops
+( 1024)     73487 μs, 29.223 gflops, maxerr  0.001 | ref     7454 μs,   288.098 gflops
+( 2048)    595667 μs, 28.841 gflops, maxerr -0.002 | ref    70636 μs,   243.217 gflops
+( 4096)   4728007 μs, 29.069 gflops, maxerr -0.005 | ref   511192 μs,   268.860 gflops
+GEMM_10 Benchmark: Packing B
+(   64)        13 μs, 40.330 gflops, maxerr  0.000 | ref       17 μs,    30.840 gflops
+(  128)        96 μs, 43.691 gflops, maxerr  0.000 | ref       30 μs,   139.810 gflops
+(  256)       739 μs, 45.405 gflops, maxerr  0.000 | ref      147 μs,   228.261 gflops
+(  512)      6945 μs, 38.652 gflops, maxerr  0.000 | ref     1325 μs,   202.593 gflops
+( 1024)     79139 μs, 27.136 gflops, maxerr  0.001 | ref     7262 μs,   295.715 gflops
+( 2048)    623866 μs, 27.538 gflops, maxerr -0.002 | ref    57379 μs,   299.410 gflops
+( 4096)   5015326 μs, 27.404 gflops, maxerr  0.005 | ref   484985 μs,   283.388 gflops
