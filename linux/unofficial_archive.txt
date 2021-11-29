@@ -1,0 +1,6 @@
+```shell
+#!/bin/sh
+dpkg-scanpackages . | gzip > Packages.gz
+```
+
+reprepro

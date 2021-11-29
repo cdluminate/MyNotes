@@ -1,0 +1,18 @@
+How to merge 2 git repo into 1?
+-------------------------------
+
+$ cd /new-repo
+$ git remote add old-repo-alias /path/to/old-repo
+$ git fetch old-repo-alias
+$ git merge old-repo-alias
+
+How to create an empty git branch?
+----------------------------------
+
+$ git clone repo.git
+$ git checkout --orphan newstart
+$ git rm -rf .
+$ git touch stub
+$ git add .
+$ git commit -m 'this is a new start'
+$ git push origin newstart
