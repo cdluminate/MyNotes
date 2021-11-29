@@ -1518,8 +1518,93 @@ Markov Chains and HMMs
 HMMs Continued
 \end_layout
 
+\begin_layout Subsection
+Graphical Model
+\end_layout
+
+\begin_layout Standard
+Parametrization for Homogeneous HMM; doesw not depend on time.
+\end_layout
+
+\begin_layout Standard
+Binary indicator vector
+\begin_inset Formula 
+\[
+q_{t}=[q_{t}^{1},\ldots,q_{t}^{M}]^{T}\qquad
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Initial state probabilities
+\begin_inset Formula 
+\[
+\pi=[\pi^{1},\ldots,\pi^{M}]^{T}\qquad p(q_{0}^{i}=1)=\pi^{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We augment the prior 
+\begin_inset Formula $\pi$
+\end_inset
+
+ w/ 
+\begin_inset Formula $M\times M$
+\end_inset
+
+ transition probability matrix 
+\begin_inset Formula $\mathbb{\mathbf{A}}$
+\end_inset
+
+, where 
+\begin_inset Formula 
+\[
+a_{ij}=p(q_{t+1}=j|q_{t}=i)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Likelihood
+\begin_inset Formula 
+\[
+p(y_{t}|q_{t};\eta)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So the joint density of HMM is
+\begin_inset Formula 
+\[
+p(\bm{q},\bm{y})=p(q_{0})\prod_{t=0}^{T-1}p(q_{t+1}|q_{t})\prod_{t=0}^{T}p(y_{t}|q_{t};\eta)
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Kalman Filtering
+\end_layout
+
+\begin_layout Standard
+Graphical Models -> (Discrete states from ML perspective) -> HMMs; Graphical
+ Models -> (Continuous states from SP perspective) -> Kalman Filter.
 \end_layout
 
 \begin_layout Section
