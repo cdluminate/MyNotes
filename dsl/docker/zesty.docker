@@ -1,0 +1,26 @@
+# debootstrap zesty . https://ftp2.cn.debian.org/ubuntu
+# docker build -t ubuntu:xxx -f xxx.docker .
+
+FROM ubuntu:1704
+MAINTAINER foobar
+
+ENV LANG "C"
+ENV LANGUATE "C"
+ENV LC_ALL "C"
+
+RUN echo "root:toor" > /passwords
+RUN chpasswd < /passwords
+RUN echo "deb http://mirrors.xdlinux.info/ubuntu zesty main restricted universe multiverse" > /etc/apt/sources.list
+RUN apt update -y
+RUN apt upgrade -y
+RUN apt install vim htop openssh-server -y
+RUN echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
+
+# workarounds:
+# - Missing privilege separation directory: /run/sshd
+RUN mkdir /run/sshd
+
+ENTRYPOINT /usr/sbin/sshd -D
+
+# remap port22 to port 6666 docker run -d -p 6666:22 CONTAINER
+EXPOSE 22 

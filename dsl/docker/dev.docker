@@ -1,0 +1,52 @@
+# Docker Image for Debian Development
+# docker build -t dev -f dev.docker .
+# This image can be used for whalebuilder and manual build.
+FROM debian:unstable
+MAINTAINER lumin <cdluminate@gmail.com>
+
+ENV LANG "C"
+ENV LANGUATE "C"
+ENV LC_ALL "C"
+
+RUN echo "force-unsafe-io" > /etc/dpkg/dpkg.cfg.d/01-nosync
+
+#RUN echo "deb http://linux.xidian.edu.cn/mirrors/debian sid main contrib non-free" > /etc/apt/sources.list
+RUN echo "deb https://mirrors6.tuna.tsinghua.edu.cn/debian sid main contrib non-free" > /etc/apt/sources.list
+RUN echo "deb http://mirrors.tuna.tsinghua.edu.cn/debian sid main contrib non-free" > /etc/apt/sources.list
+
+RUN apt update -y
+RUN apt install ca-certificates eatmydata -y
+
+ENV LD_PRELOAD "libeatmydata.so"
+
+RUN update-ca-certificates -v
+
+RUN dpkg-divert --divert /usr/bin/apt.real --rename /usr/bin/apt
+RUN echo 'IyEvYmluL3NoCmVhdG15ZGF0YSAtLSBhcHQucmVhbCAkQAo=' | \
+		base64 -d > /usr/bin/apt
+RUN chmod +x /usr/bin/apt
+
+RUN dpkg-divert --divert /usr/bin/apt-get.real --rename /usr/bin/apt-get
+RUN echo 'IyEvYmluL3NoCmVhdG15ZGF0YSAtLSBhcHQtZ2V0LnJlYWwgJEAK' | \
+		base64 -d > /usr/bin/apt-get
+RUN chmod +x /usr/bin/apt-get
+
+RUN apt install aptitude -y
+
+RUN dpkg-divert --divert /usr/bin/aptitude.real --rename /usr/bin/aptitude
+RUN echo 'IyEvYmluL3NoCmVhdG15ZGF0YSAtLSBhcHRpdHVkZS5yZWFsICRACg==' | \
+		base64 -d > /usr/bin/aptitude
+RUN chmod +x /usr/bin/aptitude
+
+RUN apt upgrade -y
+
+RUN apt install build-essential debhelper devscripts -y
+RUN apt install fish rsync vim ranger ripgrep aria2 ncdu gdb -y
+RUN apt install git-buildpackage pristine-tar htop less quilt tig -y
+RUN apt clean
+
+RUN chsh -s /usr/bin/fish
+
+RUN groupadd -r whalebuilder && \
+		useradd -r -g whalebuilder -d /home/whalebuilder -m whalebuilder
+WORKDIR /root

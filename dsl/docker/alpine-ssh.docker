@@ -1,0 +1,25 @@
+# docker build -t alpine:hello -f xxx.docker .
+
+FROM alpine:latest
+MAINTAINER foobar
+
+# run command under shell
+RUN echo "This is a simple dockerfile example"
+
+# ADD src dest # copy file
+# CMD command arg1 arg2 # default command of the container
+# EXPOSE port
+# VOLUME "/data" #grant access to the host machine for the container
+
+RUN echo "root:toor" > /passwords
+RUN chpasswd < /passwords
+RUN echo -e "http://ftp2.cn.debian.org/alpine/v3.6/main\nhttp://ftp2.cn.debian.org/alpine/v3.6/community" > /etc/apk/repositories
+RUN apk update
+RUN apk add openssh vim htop
+RUN ssh-keygen -A
+RUN echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
+
+ENTRYPOINT /usr/sbin/sshd -D
+
+# remap port22 to port 6666 docker run -d -p 6666:22 CONTAINER
+EXPOSE 22 

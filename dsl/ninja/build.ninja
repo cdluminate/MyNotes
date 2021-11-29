@@ -1,0 +1,6 @@
+cflags = -Wall -g -O2
+
+rule cc
+ command = gcc $cflags $in -o $out
+
+build hello: cc hello.c
