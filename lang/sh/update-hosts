@@ -1,0 +1,37 @@
+#!/bin/sh
+# update-hosts
+#set -e
+
+NAMESERVER="8.8.4.4"
+DIG_PARAM="+short +tcp"
+
+STDOUT="/dev/stdout"
+STDERR="/dev/stderr"
+
+CONFFILE="hostnames.list"
+OUTFILE=$STDOUT # default
+
+Usage () {
+  cat <<EOF
+usage
+EOF
+}
+
+dnslookup () {
+  if [ ! -z $1 ]; then
+    ipaddr=$(eval "dig ${DIG_PARAM} $1 AAAA")
+    printf "\n"
+    for IP in $ipaddr; do
+      printf "${IP} \t $1\n" >> $OUTFILE
+    done
+  fi
+}
+
+main () {
+  for HOST in $(eval "cat ${CONFFILE}"); do
+    dnslookup ${HOST}
+    printf "I: look up $HOST [OK]\n" >> $STDERR
+  done
+}
+
+main

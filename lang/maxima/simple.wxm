@@ -1,0 +1,25 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 16.12.2 ] */
+
+/* [wxMaxima: input   start ] */
+integrate(1/(1+x^3), x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot2d(sin(x), [x,0,2*%pi]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+plot3d(x^2-y^2, [x,-2,2], [y,-2,2], [grid,12,12]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+taylor(%e^x, x, 0, 8);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+wxplot2d(exp(-t/10)*sin(10*t), [t,0,4]);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

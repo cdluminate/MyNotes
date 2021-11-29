@@ -1,0 +1,83 @@
+% -*- latex -*-
+\documentclass[a4paper,12pt]{article}
+
+%% insert packages here
+% base packages
+\usepackage{times}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+% extra packages
+\usepackage{booktabs}
+\usepackage[breaklinks=true,bookmarks=false,colorlinks,linkcolor=black]{hyperref}
+\usepackage{framed}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{listings}
+%\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{float}
+% package configuration
+\geometry{left=3cm,right=3cm,top=3cm,bottom=4cm}
+\fancyhead[RO,LE]{The Template}
+
+%% titlepage
+\begin{titlepage}
+\title{A Template for Mathematic Modeling}
+\author{Author}
+\date{\today}
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%
+\begin{document}
+\pagestyle{fancy}
+
+% generate the title page
+\maketitle
+
+% Generate a table of contents, namely index.
+%\tableofcontents
+
+\section*{Abstract}
+Abstract
+
+\section{Introduction}
+Introduction
+
+\section{Assumptions}
+Assumption
+
+\section{Model}
+Model
+
+\subsection{Detail1}
+Detail
+
+\subsection{Detail2}
+Detail
+
+\subsection{Detail3}
+Detail
+
+\section{Experiments}
+Experiments
+
+\section{Discussion}
+Discussion
+
+\subsection{Sensitivity Analysis}
+Sensitivity
+
+%%%%%%%%%
+\appendix
+
+\section{Appendix1}
+Appendix
+
+\begin{thebibliography}{10}
+\bibitem{bib:mm} author, paper, journal
+\end{thebibliography}
+
+\end{document}
+% -*- end latex -*-

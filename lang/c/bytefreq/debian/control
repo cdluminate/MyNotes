@@ -1,0 +1,14 @@
+Source: bytefreq
+Section: utils
+Priority: optional
+Maintainer: C.D.Luminate <cdluminate@gmail.com>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.5
+Homepage: https://github.com/cdluminate/bytefreq.git
+#Vcs-Git: git://anonscm.debian.org/collab-maint/bytefreq.git
+#Vcs-Browser: http://anonscm.debian.org/?p=collab-maint/bytefreq.git;a=summary
+
+Package: bytefreq
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Count Byte Frequency

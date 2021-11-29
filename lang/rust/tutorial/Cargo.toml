@@ -1,0 +1,8 @@
+[package]
+name = "tutorial"
+version = "0.1.0"
+authors = ["Zhou Mo <cdluminate@gmail.com>"]
+
+[dependencies]
+libc="0.2.0"
+#rand="0.3.0"

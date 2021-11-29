@@ -1,0 +1,112 @@
+\documentclass[10pt,a4paper]{article}
+% use Cantarell (Gnome) as default English font
+\usepackage[default]{cantarell}
+% CJK utf8
+\usepackage{CJKutf8}
+% CJKulem : such as uline
+\usepackage{CJKulem}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{amsmath} 
+\usepackage{amssymb} 
+\usepackage{fancyhdr}
+\usepackage{indentfirst}
+\usepackage{graphicx} 
+%\usepackage{natbib}
+\usepackage{float}
+
+\usepackage[colorlinks,linkcolor=blue,anchorcolor=blue,citecolor=blue]{hyperref}
+
+\begin{titlepage}
+\title{数学建模论文模板：这是论文题目}
+\author{cdluminate@gmail.com}
+\date{\today}
+\end{titlepage}
+
+% 论文用白色A4纸打印；上下左右各留出至少2.5厘米的页边距
+\geometry{left=3cm,right=3cm,top=3cm,bottom=3cm}
+
+% ----start document----
+\begin{document}
+\begin{CJK}{UTF8}{gbsn}
+\thispagestyle{empty}
+% generate the title page
+\maketitle
+% this cancels page number display.
+% \thispagestyle{empty}
+
+\section*{关键词}
+这里填写关键词们
+
+\section*{Abstract/摘要}
+\subsection*{部分论文格式要求}
+论文题目、摘要和关键词写在论文第三页上（无需译成英文），并从此页开始编写页码；
+页码必须位于每页页脚中部，用阿拉伯数字从“1”开始连续编号。
+注意：摘要应该是一份简明扼要的详细摘要，请认真书写（但篇幅不能超过一页）。
+
+\newpage
+
+\section{正文长度应当控制在20页以内}
+我们需要正确引用参考文献，比如此模板是根据全国大学生数学建模竞赛论文格式规范（2012年8月修订版）\cite{bib:plate}创建的。
+	\begin{verbatim}
+	参考文献按正文中的引用次序列出，其中书籍的表述方式为：
+	[编号] 作者，书名，出版地：出版社，出版年。
+	参考文献中期刊杂志论文的表述方式为：
+	[编号] 作者，论文名，杂志名，卷期号：起止页码，出版年。
+	参考文献中网上资源的表述方式为：
+	[编号] 作者，资源标题，网址，访问时间（年月日）。
+	\end{verbatim}
+这三条要求用\LaTeX的\underline{thebibliography}很容易达成。
+
+\section{正文节2}
+我在本模板中忽略了规范\cite{bib:plate} 所要求的第一页和第二页，因为用户完全可以自行打印那两页然后连同本文档一起装订。
+这样也可以免去在本tex模板中对那两页进行白白浪费时间的排版。
+
+\section{数学建模的一般步骤}
+此章节参考了一本数学建模教材\cite{bib:mm}，旨在填充本模板。
+\subsection{模型准备}
+\subsection{模型假设}
+\subsection{模型构成}
+\subsection{模型求解}
+\subsection{模型分析}
+\subsection{模型检验}
+\subsection{模型应用}
+
+\section{公式示例}
+比如这是有名的 Fourier Transform ：
+\begin{equation}
+	F(j\omega) = \int_{-\infty}^{\infty} f(t) e^{-j\omega t} dt
+\end{equation}
+及其逆变换：
+\begin{equation}
+	f(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} F(j\omega) e^{j\omega t} d\omega
+\end{equation}
+
+\newpage
+\appendix
+\begin{thebibliography}{10}
+	\bibitem{bib:mm} 姜启源，谢金星，叶俊，数学建模（第三版），北京：高等教育出版社，2003
+	\bibitem{bib:plate} 全国大学生数学建模竞赛组委会，\\
+		全国大学生数学建模竞赛论文格式规范（2012年8月修订版），\\
+		http://www.mcm.edu.cn/html\_cn/node/896257972ddd6961d0250d2431522904.html\\
+		\today
+\end{thebibliography}
+
+\section{其他}
+在论文纸质版附录中，应给出参赛者实际使用的软件名称、命令和编写的全部计算机源程序（若有的话）。同时，所有源程序文件必须放入论文电子版中备查。论文及源程序电子版压缩在一个文件中，一般不要超过20MB，且应与纸质版同时提交。（如果发现程序不能运行，或者运行结果与论文中报告的不一致，该论文可能会被认定为弄虚作假而被取消评奖资格。）
+\subsection{实际使用的软件}
+\begin{enumerate}
+	\item GNU C Compiler
+	\item Python 3.4
+	\item Matlab R2013a UNIX
+	\item LINGO xxx
+	\item your programs
+\end{enumerate}
+\subsection{源代码}
+\subsection{xxx}
+xxx
+
+\end{CJK}
+\end{document}
+% ----end document----

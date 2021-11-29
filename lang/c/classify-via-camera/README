@@ -1,0 +1,8 @@
+Caffetoy :: subprogram
+======================
+
+FAQ
+
+Q1. F1005 03:33:48.570318 12555 caffetoy.cc:27] Check failed: pCapture != NULL cvCreateCameraCapture [failed]
+----------------------
+make sure you have load kernel module 'uvcvideo'

@@ -1,0 +1,9 @@
+What to put on this dir?
+========================
+
+```
+system ("classification m/deploy.prototxt m/bvlc_reference_caffenet.caffemodel m/imagenet_mean.binaryproto m/synset_words.txt Frame.jpg");
+```
+  
+Note the above line, you need a `deploy.prototxt`, a trained `*.caffemodel`, a `mean.binaryproto`,
+a `labels.txt`. The `picture.jpg` is not required when it is captured from camera.

@@ -1,0 +1,7 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: bytefreq
+Source: <https://github.com/cdluminate/bytefreq.git>
+
+Files: *
+Copyright: 2014-2015 lumin <cdluminate@gmail.com>
+License: MIT

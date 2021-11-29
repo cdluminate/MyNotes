@@ -1,0 +1,104 @@
+\documentclass{beamer}
+\usepackage{times}
+\usepackage{CJKutf8}
+
+% @reference /usr/share/doc/texlive-doc/latex/beamer/doc
+% /usr/share/doc/texlive-doc/latex/beamer/doc/beameruserguide.pdf
+
+%themes = AnnArbor Antibes Berkeley Berlin Bergen Boadilla Copenhagen \
+%  Darmstadt Dresden EastLansing Frankfurt Goettingen Hannover Ilmenau JuanLesPins \
+%  Luebeck Malmoe Madrid Marburg Montpellier PaloAlto Pittsburgh \
+%  Rochester Singapore Szeged Warsaw \
+%  CambridgeUS \
+%  default boxes
+\usetheme{default} %--> no sidebar
+%\usetheme{Berkeley} %--> has sidebar
+
+%fontthemes = default serif structurebold structureitalicserif structuresmallcapsserif 
+%\usefonttheme{serif}
+\usefonttheme{structuresmallcapsserif}
+
+%colorthemes = default crane albatross seahorse whale dolphin \
+%  rose orchid sidebartab lily structure dove seagull beetle fly wolverine spruce \
+%  beaver 
+\usecolortheme{default}
+%\usecolortheme{beaver}
+
+%innerthemes = default circles rectangles rounded inmargin
+\useinnertheme{default}
+
+%outerthemes = default infolines miniframes shadow sidebar smoothbars smoothtree split tree
+\useoutertheme{default}
+%\useoutertheme{sidebar}
+
+\title{Title of Your Presentation}
+\subtitle{You can also have a subtitle}
+\author{Lumin Zhou}
+\institute{Example Organization}
+\date{\today}
+
+\begin{document}
+\begin{CJK}{UTF8}{gkai}
+
+\begin{frame}
+ \titlepage
+\end{frame}
+
+\begin{frame}
+ \frametitle{Overview}
+ \tableofcontents
+\end{frame}
+
+\section{Section}
+
+\begin{frame}
+ \frametitle{This is frametitle}
+ \framesubtitle{This is framesubtitle}
+ \begin{enumerate}
+  \item item1
+  \item item2
+ \end{enumerate}
+ \[ E = mc^2 \]
+\end{frame}
+
+\subsection{subsection}
+
+\begin{frame}
+ \frametitle{This is frametitle}
+ \framesubtitle{This is framesubtitle}
+ \begin{itemize}
+  \item item1
+   \[ v = \lambda f \]
+  \item item2
+ \end{itemize}
+\end{frame}
+
+\section{CJK Test}
+
+\begin{frame}
+ \frametitle{你好}
+ 再见
+\end{frame}
+
+\subsection{中文测试}
+
+\begin{frame}
+ 谢谢
+ $$ e^{i\pi} = -1 $$
+\end{frame}
+
+\section{Reference}
+
+\begin{frame}
+ \frametitle{Reference}
+ \begin{thebibliography}{10}
+  \bibitem{bib:beamer} Beamer package documentation
+ \end{thebibliography}
+\end{frame}
+
+\begin{frame}
+ \centering \Huge Thanks!
+\end{frame}
+
+\end{CJK}
+\end{document}

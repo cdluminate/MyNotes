@@ -1,0 +1,90 @@
+\documentclass[a4paper,10pt,twocolumn]{report}
+\usepackage{MinionPro}
+%\usepackage{times}
+%\usepackage{indentfirst}
+\usepackage[breaklinks=true,bookmarks=false,colorlinks,linkcolor=green]{hyperref}
+
+% Makefile
+%main:
+%	pdflatex main.tex
+%	bibtex main.aux
+%	pdflatex main.tex
+%	pdflatex main.tex
+%v:
+%	evince main.pdf
+%clean:
+%	-$(RM) *.aux *.log *.bbl *.blg *.toc *.out
+%
+%gen_pool_list:
+%	find pool/ -type f -name '*.pdf' | sort
+
+% --[[ new commands ]]--
+\newcommand{\arxiv}[2]{
+ \section{{#2} \href{{#1}}{#1}}
+}
+
+% --[[ title page ]]--
+\begin{titlepage}
+ \title{Papers Archive}
+ \author{Author}
+ \date{\today}
+\end{titlepage}
+
+% --[[ document ]]--
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\part{ArXiv Archive}
+
+ \chapter{Year 2016}
+
+  \arxiv{pool/1604.01931.pdf}{Geometric Scene Parsing with Hierarchical LSTM}
+
+  \arxiv{pool/1603.00375.pdf}{Easy-First Dependency Parsing with Hierarchical Tree LSTMs}
+
+ \chapter{Year 2015}
+
+  \arxiv{pool/1511.03476.pdf}{Hierarchical Recurrent Neural Encoder for Video Representation with Application to Captioning}
+
+  \arxiv{pool/1510.07712.pdf}{Video Paragraph Captioning Using Hierarchical Recurrent Neural Networks}
+  CVPR2016 Oral
+
+ \chapter{Year 2014}
+
+  \arxiv{pool/1412.1123.pdf}{DeepEdge: A Multi-Scale Bifurcated Deep Network for Top-Down Contour Detection}
+  Edge detection; CNN;
+
+  \arxiv{pool/1408.5093.pdf}{Caffe: Convolutional Architecture for Fast Feature Embedding}
+  This paper~\cite{jia2014caffe} is the original paper for Caffe, a deep learning framework written in C++.
+
+  \arxiv{pool/1406.4729.pdf}{Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition}
+  SPP-Net
+
+ \chapter{Year 2013}
+
+  \arxiv{pool/1311.2901v3.pdf}{Visualizing and Understanding Convolutional Networks}
+  The concept of "deconvolution" is introduced by this paper.
+
+\part{Conference Archive}
+
+ \chapter{ACCV14}
+
+  \arxiv{pool/ACCV14-Yi.pdf}{Age Estimation by Multi-scale Convolutional Network}
+
+ \chapter{NIPS2012}
+
+  \arxiv{pool/nips2012-alexnet.pdf}{AlexNet}
+
+ \chapter{CVPR 2006}
+
+  \arxiv{pool/hadsell-chopra-lecun-06.pdf}{Contrastive Loss Function by LeCun}
+  The one used by Caffe.
+
+\part{Appendix}
+
+\bibliographystyle{abbrv} % BibTex standard bibliography style.
+\bibliography{bibfile} % 
+
+\end{document}
