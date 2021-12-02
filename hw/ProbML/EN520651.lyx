@@ -82,7 +82,7 @@
 \math_numbering_side default
 \quotes_style english
 \dynamic_quotes 0
-\papercolumns 1
+\papercolumns 2
 \papersides 1
 \paperpagestyle default
 \tracking_changes false
@@ -94,25 +94,10 @@
 
 \begin_body
 
-\begin_layout Title
-EN 520.651 Probablistic Machine Learning
-\begin_inset Newline newline
-\end_inset
-
-Course Note
-\end_layout
-
-\begin_layout Author
-Mo Zhou <mzhou32@jhu.edu>
-\end_layout
-
 \begin_layout Standard
-\begin_inset CommandInset toc
-LatexCommand tableofcontents
 
-\end_inset
-
-
+\series bold
+EN 520.651 Probablistic Machine Learning
 \end_layout
 
 \begin_layout Section
