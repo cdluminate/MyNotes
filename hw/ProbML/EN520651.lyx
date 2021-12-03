@@ -2070,8 +2070,50 @@ K-Means.
 \end_layout
 
 \begin_layout Standard
-Intuition: Each cluster in a dataset looks like gaussian, but how about
- the entire dataset?
+Mixture Model.
+ Observe i.i.d.
+ scalars 
+\begin_inset Formula $Y_{1},\ldots,Y_{N}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $P_{Y}(Y_{1},\ldots,Y_{N}|\theta)=\prod_{n}\sum_{k}\pi_{k}p_{k}(y_{n};\theta_{k})$
+\end_inset
+
+.
+ Goal is to find ML parameter estimates for 
+\begin_inset Formula $\pi_{k}$
+\end_inset
+
+ and 
+\begin_inset Formula $\theta_{k}$
+\end_inset
+
+.
+ The log likelihood is 
+\begin_inset Formula $\ell(\ubar Y,\theta)=\sum_{n}\log(\sum_{k}\pi_{k}p_{k}(y_{n};\theta_{k}))$
+\end_inset
+
+.
+ This is not easy to optimize.
+ We introduce auxilliary one-hot RV 
+\begin_inset Formula $Z_{n}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+P(Y_{1},\ldots,Y_{N},Z_{1},\ldots,Z_{N};\theta)=\prod_{n}\prod_{k}[\pi_{k}p_{k}(y_{n};\theta_{k})]^{Z_{n}^{k}}
+\]
+
+\end_inset
+
+and the corresponding 
+\begin_inset Formula $\ell(\ubar Y,\ubar Z;\theta)$
+\end_inset
+
+ is easier to optimize as the summation inside log has been eliminated.
 \end_layout
 
 \begin_layout Subsection
