@@ -248,108 +248,68 @@ Strategy for the smallest
 .
 \end_layout
 
-\begin_layout Subsection
-Axioms of Probability
-\end_layout
-
 \begin_layout Standard
-Set function 
+
+\series bold
+Probability.
+
+\series default
+ Set function 
 \begin_inset Formula $P:E\in\mathcal{F}\mapsto P(E)\in\mathbb{R}^{+}$
+\end_inset
+
+.
+ (1) 
+\begin_inset Formula $P(E)\geq0$
+\end_inset
+
+ (2) 
+\begin_inset Formula $P(\Omega)=1$
+\end_inset
+
+ i.e., normalization (3) 
+\begin_inset Formula $P(E\cup F)=P(E)+P(F),\forall E,F\in\Omega,s.t.E\cap F=\phi$
+\end_inset
+
+.
+ Then we can establish (4) 
+\begin_inset Formula $P(\phi)=0$
+\end_inset
+
+ (5) 
+\begin_inset Formula $P(E)=1-P(E^{C})$
+\end_inset
+
+ (6) 
+\begin_inset Formula $P(E\cup F)=P(E)+P(F)-P(E\cap F)$
+\end_inset
+
+ (7) 
+\begin_inset Formula $P(\cap_{i=1}^{n}E_{i})\leq\sum_{i=1}^{n}P(E_{i})$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-(1) 
-\begin_inset Formula $P(E)\geq0$
-\end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-(2) 
-\begin_inset Formula $P(\Omega)=1$
-\end_inset
-
- – normalization
-\end_layout
-
-\begin_layout Standard
-(3) 
-\begin_inset Formula $P(E\cup F)=P(E)+P(F),\forall E,F\in\Omega,s.t.E\cap F=\phi$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Then we can establish
-\end_layout
-
-\begin_layout Standard
-(4) 
-\begin_inset Formula $P(\phi)=0$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-(5) 
-\begin_inset Formula $P(E)=1-P(E^{C})$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-(6) 
-\begin_inset Formula $P(E\cup F)=P(E)+P(F)-P(E\cap F)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-(7) 
-\begin_inset Formula $P(\cap_{i=1}^{n}E_{i})\leq\sum_{i=1}^{n}P(E_{i})$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Relationship Between Events
-\end_layout
-
-\begin_layout Standard
+\series bold
+Relationship Between Events: 
+\series default
 Joint probability 
 \begin_inset Formula $P(A\cap B)$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-Conditional probability 
+; Conditional probability 
 \begin_inset Formula $P(B|A)=P(A\cap B)/P(A)$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-– 
+ which means 
 \begin_inset Formula $P(B|A)P(A)=P(A|B)P(B)$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-Two events 
+.
+ Two events 
 \begin_inset Formula $A\in\mathcal{F}$
 \end_inset
 
@@ -374,10 +334,7 @@ independent
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-Three events 
+ Three events 
 \begin_inset Formula $A,B,C$
 \end_inset
 
@@ -385,27 +342,16 @@ Three events
 \bar under
 jointly independent
 \bar default
- if
-\end_layout
-
-\begin_layout Standard
-(1) 
+ if (1) 
 \begin_inset Formula $P(A\cap B)=P(A)P(B)$
 \end_inset
 
- – all pairwise combinations alike
-\end_layout
-
-\begin_layout Standard
-(2) 
+ – all pairwise combinations alike; (2) 
 \begin_inset Formula $P(A\cap B\cap C)=P(A)P(B)P(C)$
 \end_inset
 
- – mutual
-\end_layout
-
-\begin_layout Standard
-
+ – mutual independence.
+ 
 \bar under
 Independent Experiments
 \bar default
@@ -413,12 +359,12 @@ Independent Experiments
  future values of the other experiment.
 \end_layout
 
-\begin_layout Subsection
-Bayes Rule
-\end_layout
-
 \begin_layout Standard
-Total Probability: Let 
+
+\series bold
+Total Probability:
+\series default
+ Let 
 \begin_inset Formula $A_{i}$
 \end_inset
 
@@ -442,11 +388,15 @@ P(B)=\sum_{i=1}^{n}P(A_{i})P(B|A_{i})
 \end_layout
 
 \begin_layout Standard
-Bayes Rule: Given the above setup and 
+
+\series bold
+Bayes Rule:
+\series default
+ Given the above setup and 
 \begin_inset Formula $P(B)>0$
 \end_inset
 
-
+, then
 \begin_inset Formula 
 \[
 P(A_{j}|B)=\frac{P(A_{j}\cap B)}{P(B)}=\frac{P(A_{j})P(B|A_{j})}{\sum_{i=1}^{n}P(A_{i})P(B|A_{i})}
@@ -482,7 +432,15 @@ likelihood
 \begin_inset Formula $P(A_{i}|B)$
 \end_inset
 
- is posterior.
+ is 
+\begin_inset Quotes eld
+\end_inset
+
+posterior
+\begin_inset Quotes erd
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
