@@ -2070,7 +2070,11 @@ K-Means.
 \end_layout
 
 \begin_layout Standard
+
+\series bold
 Mixture Model.
+
+\series default
  Observe i.i.d.
  scalars 
 \begin_inset Formula $Y_{1},\ldots,Y_{N}$
@@ -2114,6 +2118,25 @@ and the corresponding
 \end_inset
 
  is easier to optimize as the summation inside log has been eliminated.
+ Then we want to maximize the lower bound of 
+\begin_inset Formula $\ell(\ubar y,\theta)$
+\end_inset
+
+, namely 
+\begin_inset Formula $E_{Z|Y}[\ell(\ubar y,\ubar z;\theta)]$
+\end_inset
+
+.
+ We let the posterior 
+\begin_inset Formula $\tau_{n}^{k}=E[Z_{n}^{k}]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Clustering (EM) Algorithm.
+ 
 \end_layout
 
 \begin_layout Subsection
