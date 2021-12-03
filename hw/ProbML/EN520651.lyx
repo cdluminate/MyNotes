@@ -99,10 +99,17 @@
 
 \begin_body
 
+\begin_layout Section
+
+\series bold
+Probablistic Machine Learning
+\end_layout
+
 \begin_layout Standard
 
 \series bold
-EN 520.651 Probablistic Machine Learning
+JHU ECE EN 520.651 2021 Fall / M.
+ Zhou
 \end_layout
 
 \begin_layout Section
@@ -2161,7 +2168,65 @@ Clustering (EM) Algorithm.
 
 \end_inset
 
-Step (M):
+Step (M): Find mixing weights 
+\begin_inset Formula $\{\pi_{k}\}$
+\end_inset
+
+ given 
+\begin_inset Formula $\ubar y$
+\end_inset
+
+, 
+\begin_inset Formula $\{\tau_{n}^{k}\}$
+\end_inset
+
+ and 
+\begin_inset Formula $\{\theta_{*}\}$
+\end_inset
+
+ using Lagrangian,
+\begin_inset Formula 
+\[
+\phi(\ubar y,\ubar z;\theta)=E_{Z|Y}[\ell(\ubar y,\ubar z;\theta)]-\lambda(\sum_{k}\pi_{k}-1)
+\]
+
+\end_inset
+
+And setting 
+\begin_inset Formula $\partial\phi/\partial\pi_{k}$
+\end_inset
+
+ to zero yields 
+\begin_inset Formula $\pi_{k}=\frac{1}{N}\sum_{n}\tau_{n}^{k}$
+\end_inset
+
+.
+ Then we optimize 
+\begin_inset Formula $\{\theta_{*}\}$
+\end_inset
+
+ based on specified densities.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Gaussian Mixture.
+
+\series default
+ 
+\begin_inset Formula $p_{k}(y_{n};\theta_{k})=\mathcal{N}(y_{n};\mu_{k},\sigma_{k}^{2})$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\mu_{k}=\frac{\sum_{n}\tau_{n}^{k}y_{n}}{\sum_{n}\tau_{n}^{k}}\qquad\sigma_{k}^{2}=\frac{\sum_{n}\tau_{n}^{k}(y_{n}-\mu_{k})^{2}}{\sum_{n}\tau_{n}^{k}}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
