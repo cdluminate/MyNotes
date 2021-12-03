@@ -14,6 +14,8 @@
 \newcommand{\pperp}{\perp\kern-5pt\perp}
 \usepackage{tikz}
 \usetikzlibrary[arrows,shapes,snakes,backgrounds,bayesnet]
+\usepackage{accents}
+\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
 \end_preamble
 \options a4
 \use_default_options true
@@ -2015,8 +2017,56 @@ end{tikzpicture}%
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Mixture Models
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+K-Means.
+
+\series default
+ Centroid of 
+\begin_inset Formula $k$
+\end_inset
+
+-th cluster 
+\begin_inset Formula $\mu_{k}$
+\end_inset
+
+.
+ Cluster assignment of the 
+\begin_inset Formula $n$
+\end_inset
+
+-th point 
+\begin_inset Formula $Z_{n}\in\{1,\ldots,K\}$
+\end_inset
+
+.
+ We define 
+\begin_inset Formula $\ubar{Z}_{n}=[Z_{n}^{1},\ldots,Z_{n}^{k}]$
+\end_inset
+
+ as binary indicator vector.
+ (1) Given centroids, we can assign clusters as 
+\begin_inset Formula $Z_{n}^{k}=\bm{1}\{k=\arg\min_{k'}\|y_{n}-\mu_{k'}\|\}$
+\end_inset
+
+.
+ (2) Given assignments, we compute the centroids as 
+\begin_inset Formula $\mu_{k}=(\sum_{n}Z_{n}^{k}y_{n})/\sum_{n}Z_{n}^{k}$
+\end_inset
+
+.
+ In this algorithm, we are actually doing coordinate descent to minimize
+ the L2 objective 
+\begin_inset Formula $J=\sum_{n}\sum_{k}Z_{n}^{k}\|y_{n}-\mu_{k}\|^{2}$
+\end_inset
+
+.
+ This leads to solution to a Gaussian mixture model w/ equal variances.
 \end_layout
 
 \begin_layout Standard
