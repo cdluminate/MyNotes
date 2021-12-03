@@ -2135,8 +2135,33 @@ and the corresponding
 \end_layout
 
 \begin_layout Standard
+
+\series bold
 Clustering (EM) Algorithm.
- 
+
+\series default
+ Step (E): find posterior 
+\begin_inset Formula $\{\tau_{n}^{k}\}$
+\end_inset
+
+ given 
+\begin_inset Formula $\ubar y$
+\end_inset
+
+ and parameters 
+\begin_inset Formula $\{\pi_{*},\theta_{*}\}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{align*}
+\tau_{n}^{k} & =E_{Z|Y}[Z_{n}^{k}]=Pr(Z_{n}^{k}=1|y_{n};\theta)\\
+ & =\frac{Pr(Z_{n}=k)p_{k}(y_{n};\theta_{k})}{P_{Y}(y_{n};\theta)}=\frac{\pi_{k}p_{k}(y_{n};\theta_{k})}{\sum_{k'}\pi_{k'}p_{k'}(y_{n};\theta_{k})}
+\end{align*}
+
+\end_inset
+
+Step (M):
 \end_layout
 
 \begin_layout Subsection
