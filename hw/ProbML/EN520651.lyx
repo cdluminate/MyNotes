@@ -112,61 +112,35 @@ JHU ECE EN 520.651 2021 Fall / M.
  Zhou
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Probability Review
 \end_layout
 
-\begin_layout Subsection
-Probablistic Models
-\end_layout
-
 \begin_layout Standard
+
+\series bold
+Probablistic Model.
+
+\series default
+ 
 \begin_inset Formula $\Omega$
 \end_inset
 
-: sample space;
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $A$
-\end_inset
-
-: event;
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $P(A)$
-\end_inset
-
-: probability measure, non-negative;
-\end_layout
-
-\begin_layout Subsection
-Sample Space
-\end_layout
-
-\begin_layout Standard
-EX: single roll of dice 
+: sample space.
+ For instance, single roll of dice 
 \begin_inset Formula $\Omega=\{1,2,3,4,5,6\}$
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Subsection
-Events
-\end_layout
-
-\begin_layout Standard
-An event 
+; 
 \begin_inset Formula $A$
 \end_inset
 
- is a set of outcomes.
-\end_layout
+: event, a set of outcomes.
+ Venn diagrams can be used to visualize basic set operations; 
+\begin_inset Formula $P(A)$
+\end_inset
 
-\begin_layout Standard
-The boundary case is 
+: probability measure, non-negative; For a event, the boundary case is 
 \begin_inset Formula $\Omega$
 \end_inset
 
@@ -179,86 +153,11 @@ The boundary case is
 
 \begin_layout Standard
 
-\bar under
-Venn Diagrams to visualize basic set operations.
-\end_layout
+\series bold
+Sigma Field.
 
-\begin_layout Standard
-(1) Union 
-\begin_inset Formula $A\cup B$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-(2) Intersection: 
-\begin_inset Formula $A\cap B$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-(3) Complement: 
-\begin_inset Formula $A^{C}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-(4) Disjoint: 
-\begin_inset Formula $A\cap B=\phi$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\bar under
-Set Algebra
-\end_layout
-
-\begin_layout Standard
-(1) 
-\begin_inset Formula $(A\cup B)^{C}=A^{C}\cap B^{C}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-(2) 
-\begin_inset Formula $(A\cap B)^{C}=A^{C}\cup B^{C}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-(3) 
-\begin_inset Formula $A\cup(B\cup C)=(A\cup B)\cup C$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-(4) 
-\begin_inset Formula $A\cup(B\cap C)=(A\cup B)\cap(A\cup C)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Sigma Fields
-\end_layout
-
-\begin_layout Standard
-Given a sample space 
+\series default
+ Given a sample space 
 \begin_inset Formula $\Omega$
 \end_inset
 
@@ -303,15 +202,9 @@ Given a sample space
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-A sigma field is closed under a countable number of unions, intersections,
+ A sigma field is closed under a countable number of unions, intersections,
  and complements.
-\end_layout
-
-\begin_layout Standard
-We care about fields and sigma fields because of consistency.
+ We care about fields and sigma fields because of consistency.
  When 
 \begin_inset Formula $P(E)$
 \end_inset
@@ -329,44 +222,15 @@ We care about fields and sigma fields because of consistency.
 
 \begin_layout Standard
 
-\bar under
-EX: Toss a coin once, find 
-\begin_inset Formula $\Omega$
-\end_inset
-
- and 
-\begin_inset Formula $\mathcal{F}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\Omega=\{H,T\}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\mathcal{F}=\{\phi,\Omega,H,T\}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\bar under
+\series bold
 Strategy for the smallest 
 \begin_inset Formula $\sigma$
 \end_inset
 
--field
-\end_layout
+-field.
 
-\begin_layout Standard
-(1) Include 
+\series default
+ (1) Include 
 \begin_inset Formula $\phi$
 \end_inset
 
@@ -374,20 +238,10 @@ Strategy for the smallest
 \begin_inset Formula $\Omega$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-(2) Include disjoint parts
-\end_layout
-
-\begin_layout Standard
-(3) Include all pairs, triplets, quadruplets, etc
-\end_layout
-
-\begin_layout Standard
-Alternative strategy: use a binary mask, and the size of the set would be
- 
+; (2) Include disjoint parts; (3) Include all pairs, triplets, quadruplets,
+ etc.
+ Alternative strategy: use a binary mask, and the size of the set would
+ be 
 \begin_inset Formula $2^{N}$
 \end_inset
 
