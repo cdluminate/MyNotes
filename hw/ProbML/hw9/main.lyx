@@ -84,11 +84,11 @@ Problem 9.4
 \end_layout
 
 \begin_layout Standard
-(i)
+(a.i)
 \end_layout
 
 \begin_layout Standard
-(ii)
+(a.ii)
 \end_layout
 
 \begin_layout Standard
@@ -105,18 +105,22 @@ p(y_{1},\ldots,y_{N};\sigma^{2},\gamma^{2}) & =\int_{-\infty}^{\infty}p(\theta,y
 \end_layout
 
 \begin_layout Standard
-(iii)
+(a.iii)
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-p(y_{N+1}|y_{1},\ldots,y_{N}) & =p(y_{1},\ldots,y_{N},y_{N+1})\\
+p(y_{N+1}|y_{1},\ldots,y_{N}) & =\frac{p(y_{1},\ldots,y_{N},y_{N+1})}{p(y_{1},\ldots,y_{N})}\\
 \end{align*}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+(b.i)
 \end_layout
 
 \end_body
