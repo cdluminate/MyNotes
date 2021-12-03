@@ -108,8 +108,14 @@ Probablistic Machine Learning
 \begin_layout Standard
 
 \series bold
-JHU ECE EN 520.651 2021 Fall / M.
- Zhou
+JHU ECE EN 520.651 2021 Fall
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+M.
+ Zhou / Simplified Course Notes
 \end_layout
 
 \begin_layout Subsection
@@ -719,27 +725,83 @@ Independence.
 Functions of Random Variables
 \end_layout
 
-\begin_layout Section
+\begin_layout Standard
+
+\series bold
+Discrete RV.
+
+\series default
+ 
+\begin_inset Formula $x\in\mathcal{X}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P_{X}(x)=P(X=x)$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $\sum_{x\in\mathcal{X}}P_{X}(x)=1$
+\end_inset
+
+.
+ Then for 
+\begin_inset Formula $Y=g(X)$
+\end_inset
+
+ we have 
+\begin_inset Formula $P_{Y}(y)=\sum_{x:g(x)=y}P_{X}(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Continuous RV.
+
+\series default
+ Method I: direct computation.
+ First compute the CDF of 
+\begin_inset Formula $Y$
+\end_inset
+
+, then differentiate to obtain PDF.
+ 
+\begin_inset Formula $P(Y\leq y)=P(g(X)\leq y)=P(X\leq g^{-1}(y))=F_{X}(g^{-1}(y))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Method II.
+ Root Formula.
+\end_layout
+
+\begin_layout Subsection
 Moment Generating Functions
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Random Vectors
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Bayesian Hypothesis Testing
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 NonBayesian Hypothesis Testing
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Minmax Decision Theory
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Bayesian Parameter Estimation
 \end_layout
 
