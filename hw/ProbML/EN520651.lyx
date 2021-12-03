@@ -680,13 +680,42 @@ and marginal is
 
 .
  The conditional is 
-\begin_inset Formula $f_{X|Y}=\frac{f_{XY}}{f_{Y}}$
+\begin_inset Formula $f_{X|Y}(x|y)=\frac{f_{XY}}{f_{Y}}=\frac{f_{X}f_{Y|X}}{\int_{-\infty}^{\infty}f_{X}(x')f_{Y|X}(y|x')dx'}$
+\end_inset
+
+ (a slice).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Independence.
+
+\series default
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are independent if 
+\begin_inset Formula $F_{XY}=F_{X}F_{Y}$
+\end_inset
+
+ or 
+\begin_inset Formula $f_{XY}=f_{X}f_{Y}$
+\end_inset
+
+ or 
+\begin_inset Formula $f_{X|Y}=f_{X}$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Functions of Random Variables
 \end_layout
 
