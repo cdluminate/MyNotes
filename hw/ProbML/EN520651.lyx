@@ -11,6 +11,9 @@
 %\setlength{\parindent}{0pt}
 \usepackage{bm}
 \usepackage{times}
+\newcommand{\pperp}{\perp\kern-5pt\perp}
+\usepackage{tikz}
+\usetikzlibrary[arrows,snakes,backgrounds,bayesnet]
 \end_preamble
 \options a4
 \use_default_options true
@@ -1203,28 +1206,668 @@ The ML estimator is simpler to compute or numerically approximate.
 .
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Vector Parameters
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Exponential Families
 \end_layout
 
-\begin_layout Section
-Graphical Models
+\begin_layout Subsection
+Directed Graphical Models
 \end_layout
 
-\begin_layout Subsection
-Directed Graph Model
+\begin_layout Standard
+Defines a family of joint probability distributions over set of RVs.
+ The setup if Directed Acyclic Graph 
+\begin_inset Formula $\mathcal{G}(\mathcal{V},\mathcal{E})$
+\end_inset
+
+ with nodes (RVs) and edges.
+ For each node 
+\begin_inset Formula $i\in\mathcal{V}$
+\end_inset
+
+, let 
+\begin_inset Formula $\pi_{i}$
+\end_inset
+
+ be the set of parent nodes.
+ Then the family of distributions satisfy 
+\begin_inset Formula $P_{X}(x_{1},\ldots,x_{n})=\prod_{i=1}^{n}P_{X}(x_{i}|x_{\pi_{i}})$
+\end_inset
+
+.
+ In this graph, absenceof edge means conditional independence.
 \end_layout
 
-\begin_layout Subsection
-Conditional Independence
+\begin_layout Standard
+
+\series bold
+Bayes' Ball Algorithm.
+
+\series default
+ It determines conditional independence given obserations.
+ Examine whether 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+ are marginally independent 
+\begin_inset Formula $p(x,z)=p(x)p(z)$
+\end_inset
+
+, or conditionally independent 
+\begin_inset Formula $p(x,z|y)=p(x|y)p(z|y)$
+\end_inset
+
+.
 \end_layout
 
-\begin_layout Subsection
-Bayes' Ball Algorithm
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[thick]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[latent] (X) {$X$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[latent,right=of X] (Y) {$Y$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[latent,right=of Y] (Z) {$Z$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->] (X) -- (Y);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->] (Y) -- (Z);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+~ Can pass through $Y$.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[thick]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[latent] (X) {$X$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[obs,right=of X] (Y) {$Y$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[latent,right=of Y] (Z) {$Z$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->] (X) -- (Y);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->] (Y) -- (Z);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+~ Blocked at $Y$.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[thick]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[latent] (X) {$X$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[latent,right=of X,yshift=0.2cm] (Y) {$Y$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[latent,right=of Y,yshift=-0.2cm] (Z) {$Z$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[<-] (X) -- (Y);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->] (Y) -- (Z);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+~ Can pass through $Y$.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[thick]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[latent] (X) {$X$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[obs,right=of X,yshift=0.2cm] (Y) {$Y$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[latent,right=of Y,yshift=-0.2cm] (Z) {$Z$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[<-] (X) -- (Y);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->] (Y) -- (Z);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+~ Blocked at $Y$.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[thick]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[latent] (X) {$X$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[latent,right=of X,yshift=-0.2cm] (Y) {$Y$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[latent,right=of Y,yshift=0.2cm] (Z) {$Z$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->] (X) -- (Y);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[<-] (Y) -- (Z);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+~ Blocked at $Y$.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[thick]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[latent] (X) {$X$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[obs,right=of X,yshift=-0.2cm] (Y) {$Y$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[latent,right=of Y,yshift=0.2cm] (Z) {$Z$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->] (X) -- (Y);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[<-] (Y) -- (Z);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+~ Can pass through $Y$.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[thick]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[latent] (Z) {?};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[latent,right=of Z] (X) {$X$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[latent,right=of X] (Y) {$Y$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[<->] (Z) -- (X);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[<-] (Y) -- (X);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+~ Ball stops at leaf $Y$.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[thick]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[latent] (Z) {?};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[latent,right=of Z] (X) {$X$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[obs,right=of X] (Y) {$Y$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[<->] (Z) -- (X);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[<-] (Y) -- (X);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+~ Ball bounces back at $Y$.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[thick]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[latent] (X) {$X$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[latent,right=of X] (Y) {$Y$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[<-] (X) -- (Y);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+~ Ball bounces back at root $Y$.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[thick]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[latent] (X) {$X$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[obs,right=of X] (Y) {$Y$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[<-] (X) -- (Y);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+~ Ball stops at root $Y$.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
