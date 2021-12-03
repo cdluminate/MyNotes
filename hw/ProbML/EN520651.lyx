@@ -13,7 +13,7 @@
 \usepackage{times}
 \newcommand{\pperp}{\perp\kern-5pt\perp}
 \usepackage{tikz}
-\usetikzlibrary[arrows,snakes,backgrounds,bayesnet]
+\usetikzlibrary[arrows,shapes,snakes,backgrounds,bayesnet]
 \end_preamble
 \options a4
 \use_default_options true
@@ -1870,8 +1870,149 @@ end{tikzpicture}
 
 \end_layout
 
-\begin_layout Subsection
-Plate Notation
+\begin_layout Standard
+
+\series bold
+Plate Notation.
+ 
+\series default
+See 
+\begin_inset CommandInset href
+LatexCommand href
+name "wikipedia."
+target "https://en.wikipedia.org/wiki/Plate_notation"
+literal "false"
+
+\end_inset
+
+ Circles: random variable; Squares: non-random parameters.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[thick]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[latent] (Xk) {$X_k$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[obs,below=of Xk] (Ynk) {$Y_{nk}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[const,right=of Xk] (tx) {$
+\backslash
+theta_x$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[const,right=of Ynk] (ty) {$
+\backslash
+theta_y$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+plate {p1} {(Ynk)} {N};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+plate {p2} {(Xk)(p1)} {K};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->,>=latex] (Xk) -- (Ynk);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->,>=latex] (tx) -- (Xk);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->,>=latex] (ty) -- (Ynk);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[right=of tx,align=left] (a1) {$p(x_
+\backslash
+cdot,y_
+\backslash
+cdot)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+$=
+\backslash
+prod_k [p_X(x_k;
+\backslash
+theta_k)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+prod_n p_{Y|X}(y_{nk}|x_k;
+\backslash
+theta_y)]$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}%
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
