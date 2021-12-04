@@ -961,7 +961,7 @@ High Order Moments.
 \end_inset
 
 .
- Most notably, the variance is defined as 
+ The variance is 
 \begin_inset Formula 
 \[
 c_{2}\triangleq\sigma_{X}^{2}=E[(x-\mu_{x})^{2}]=E[X^{2}]-\mu_{X}^{2}
@@ -971,6 +971,19 @@ c_{2}\triangleq\sigma_{X}^{2}=E[(x-\mu_{x})^{2}]=E[X^{2}]-\mu_{X}^{2}
 
 Moments do not always exist.
  For example, Cauthy distribution does not have that.
+ Some properties  
+\begin_inset Formula $Var[X+a]=Var[X]$
+\end_inset
+
+, 
+\begin_inset Formula $Var[aX]=a^{2}Var[X]$
+\end_inset
+
+, 
+\begin_inset Formula $Var[aX+bY]=a^{2}Var[X]+b^{2}Var[Y]+2abCov[X,Y]$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1056,8 +1069,38 @@ Weak Law of Large Numbers.
 \end_layout
 
 \begin_layout Standard
-Central Limite Theorem.
- 
+
+\series bold
+Central Limit Theorem.
+
+\series default
+ Characteristic function: 
+\begin_inset Formula $\Phi_{X}(\omega)=\int_{-\infty}^{+\infty}e^{j\omega x}f_{X}(x)dx$
+\end_inset
+
+ is Fourier equivalent of MGF.
+ Let 
+\begin_inset Formula $X_{1},\ldots,X_{n}\sim i.i.d$
+\end_inset
+
+ with 
+\begin_inset Formula $\mu_{X}=0$
+\end_inset
+
+, 
+\begin_inset Formula $Var(X)=1$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $Z_{n}=\frac{1}{\sqrt{n}}\sum_{i=1}^{n}X_{i}$
+\end_inset
+
+, then 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\Phi_{Z_{n}}(\omega)=\exp\{-\frac{1}{2}\omega^{2}\}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
