@@ -971,7 +971,7 @@ c_{2}\triangleq\sigma_{X}^{2}=E[(x-\mu_{x})^{2}]=E[X^{2}]-\mu_{X}^{2}
 
 Moments do not always exist.
  For example, Cauthy distribution does not have that.
- Some properties  
+ Some properties 
 \begin_inset Formula $Var[X+a]=Var[X]$
 \end_inset
 
@@ -1105,6 +1105,122 @@ Central Limit Theorem.
 
 \begin_layout Subsection
 Random Vectors
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(\ubar X\leq\ubar x)=P(X_{1}\leq x_{1},\ldots,X_{N}\leq x_{N})\quad f_{\ubar X}(\ubar x)=\frac{\partial^{N}F_{\ubar X}(\ubar x)}{\partial x_{1}\ldots\partial x_{N}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Function of Rand Vectors.
+
+\series default
+ 
+\begin_inset Formula $y_{i}=g_{i}(x_{1},\ldots,x_{n})$
+\end_inset
+
+, 
+\begin_inset Formula $x_{i}=\phi_{i}(y_{1},\ldots)$
+\end_inset
+
+.
+ Root formula 
+\begin_inset Formula $f_{\ubar Y}(\ubar y)=\sum_{r=1}^{R}f_{\ubar X}(\ubar x^{r})\frac{1}{|J_{r}|},\,s.t.\,\ubar y=\ubar g(\ubar x^{r})$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\frac{\partial x}{\partial y}=\begin{vmatrix}\frac{\partial\phi_{1}}{\partial y_{1}} & \cdots & \frac{\partial\phi_{n}}{\partial y_{1}}\\
+\vdots &  & \vdots\\
+\frac{\partial\phi_{1}}{\partial y_{n}} & \cdots & \frac{\partial\phi_{n}}{\partial y_{n}}
+\end{vmatrix}=\begin{vmatrix}\frac{\partial g_{1}}{\partial y_{1}} & \cdots & \frac{\partial g_{n}}{\partial y_{1}}\\
+\vdots &  & \vdots\\
+\frac{\partial g_{1}}{\partial y_{n}} & \cdots & \frac{\partial g_{n}}{\partial y_{n}}
+\end{vmatrix}^{-1}=|J|^{-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\ubar X=[X_{1},\ldots,X_{N}]^{T}$
+\end_inset
+
+, Mean 
+\begin_inset Formula $E[\ubar X]=[\mu_{1},\ldots,\mu_{N}]^{N}=\ubar\mu_{X}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\mu_{i}=E[X_{i}]=\int_{-\infty}^{+\infty}\cdots\int_{-\infty}^{+\infty}x_{i}f_{\ubar X}dx_{1}\cdots dx_{N}=\int_{-\infty}^{+\infty}x_{i}f_{X_{i}}dx_{i}$
+\end_inset
+
+.
+ Covariance 
+\begin_inset Formula $\mathbb{K}=E[(\ubar X-\mu_{X})(\ubar X-\mu_{X})^{T}]\in\mathbb{R}^{N}$
+\end_inset
+
+.
+ The correlation matrix 
+\begin_inset Formula $\bm{R}=E[XX^{T}]=\mathbb{K}+\mu_{X}\mu_{X}^{T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Covariance Matrix.
+
+\series default
+ 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ is positive semi-definite, i.e., 
+\begin_inset Formula $z^{T}\mathbb{K}z\geq0$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ is symmetric.
+ 
+\begin_inset Formula $\mathbb{K}=U\Lambda U^{T}$
+\end_inset
+
+ where 
+\begin_inset Formula $U^{T}U=I$
+\end_inset
+
+ and any eivenvalue
+\begin_inset Formula $\lambda_{i}\geq0$
+\end_inset
+
+, 
+\begin_inset Formula $\forall i=1,\ldots,N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Whitening Transform.
 \end_layout
 
 \begin_layout Subsection
