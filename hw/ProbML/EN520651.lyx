@@ -1003,6 +1003,63 @@ Joint Moments.
 Uncorrelatedness is weaker than independence.
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+Moment Generating Functions.
+
+\series default
+ 
+\begin_inset Formula $M_{X}(S)=E[e^{SX}]$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+\frac{d^{r}}{dS^{r}}M_{X}(S)\Big|_{S=0}=\int_{-\infty}^{+\infty}x^{r}f_{X}(x)dx\triangleq E[X^{r}]=m_{r}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Weak Law of Large Numbers.
+
+\series default
+ Let 
+\begin_inset Formula $X_{1},\ldots,X_{N}\sim i.i.d$
+\end_inset
+
+ with mean 
+\begin_inset Formula $\mu_{X}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{X}^{2}<\infty$
+\end_inset
+
+.
+ The mean estimator 
+\begin_inset Formula $\hat{\mu}_{X}=\frac{1}{N}\sum_{i=1}^{N}X_{i}$
+\end_inset
+
+ satisfies 
+\begin_inset Formula $P(|\hat{\mu}_{X}-\mu_{X}|\geq\delta)\leq\frac{\sigma_{X}^{2}}{N\delta^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Central Limite Theorem.
+ 
+\end_layout
+
 \begin_layout Subsection
 Random Vectors
 \end_layout
