@@ -779,6 +779,68 @@ Continuous RV.
 \begin_layout Standard
 Method II.
  Root Formula.
+ 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ are the roots of 
+\begin_inset Formula $y=g(x)$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+f_{Y}(y)\approx\sum_{i=1}^{N}f_{X}(x_{i})\big|\frac{dx_{i}}{d_{y}}\big|\rightarrow\sum_{i=1}^{N}f_{X}(x_{i})\frac{1}{|g'(x_{i})|}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Multivariate Function.
+
+\series default
+ We cannot derive a root formula for 
+\begin_inset Formula $Z=g(X,Y)$
+\end_inset
+
+.
+ We use direct computation: 
+\begin_inset Formula $F_{Z}(z)=P(Z\leq z)=P(g(X,Y)\leq z)=\iint_{C_{Z}}f_{XY}(x,y)dxdy$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $f_{Z}(z)=\frac{d}{dz}F_{Z}(z)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Sum of Independent RVs
+\series default
+.
+ 
+\begin_inset Formula $Z=X+Y$
+\end_inset
+
+.
+ Convolution:
+\begin_inset Formula 
+\[
+f_{Z}(z)=\int_{-\infty}^{+\infty}f_{Y}(y)f_{X}(z-y)dy=\int_{-\infty}^{+\infty}f_{X}(x)f_{Y}(z-y)dx
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
