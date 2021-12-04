@@ -1221,6 +1221,66 @@ Covariance Matrix.
 
 \begin_layout Standard
 Whitening Transform.
+ 
+\begin_inset Formula $\ubar X\sim f_{\ubar X}$
+\end_inset
+
+ with 
+\begin_inset Formula $\mu_{x}=0$
+\end_inset
+
+ and PD covariance 
+\begin_inset Formula $\mathbb{K}_{X}=U\Lambda U^{T}$
+\end_inset
+
+.
+ Find a linear transformation 
+\begin_inset Formula $\ubar y=C\ubar x$
+\end_inset
+
+ so that 
+\begin_inset Formula $\mathbb{K}_{Y}=I$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\mathbb{K}_{Y}=E[YY^{T}]=E[CXX^{T}C^{T}]=C\mathbb{K}_{X}C^{T}=I$
+\end_inset
+
+, and hence 
+\begin_inset Formula $C=\Lambda^{-\frac{1}{2}}U^{T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Multivariate Gaussian.
+
+\series default
+ 
+\begin_inset Formula 
+\[
+f_{\ubar X}(\ubar x)=\frac{1}{(2\pi)^{n/2}|\mathbb{K}_{X}|^{1/2}}\exp\{-\frac{1}{2}(\ubar x-\mu_{x})^{T}\mathbb{K}_{X}^{-1}(\ubar x-\mu_{X})\}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $y=Ax$
+\end_inset
+
+ is also gaussian w/ 
+\begin_inset Formula $\mu_{Y}=A\mu_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{K}_{Y}=A\mathbb{K}_{X}A^{T}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
