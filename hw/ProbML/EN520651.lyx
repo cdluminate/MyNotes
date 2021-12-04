@@ -827,12 +827,22 @@ Multivariate Function.
 Sum of Independent RVs
 \series default
 .
+ Special case of multivar.
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are independent.
  
 \begin_inset Formula $Z=X+Y$
 \end_inset
 
 .
- Convolution:
+ Convolution for PDF:
 \begin_inset Formula 
 \[
 f_{Z}(z)=\int_{-\infty}^{+\infty}f_{Y}(y)f_{X}(z-y)dy=\int_{-\infty}^{+\infty}f_{X}(x)f_{Y}(z-y)dx
@@ -845,6 +855,152 @@ f_{Z}(z)=\int_{-\infty}^{+\infty}f_{Y}(y)f_{X}(z-y)dy=\int_{-\infty}^{+\infty}f_
 
 \begin_layout Subsection
 Moment Generating Functions
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Expectation.
+
+\series default
+ 1st order raw moment.
+ For discrete RV 
+\begin_inset Formula $E[X]=\sum_{-\infty}^{+\infty}x\cdot P_{X}(x)$
+\end_inset
+
+.
+ For continuous RV 
+\begin_inset Formula $E[X]=\int_{-\infty}^{+\infty}x\cdot f_{X}(x)dx$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $Y=g(X)$
+\end_inset
+
+, 
+\begin_inset Formula $E[Y]=\int_{-\infty}^{+\infty}g(x)f_{X}dx$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $Z=g(X,Y)$
+\end_inset
+
+, 
+\begin_inset Formula $E[Z]=\iint_{-\infty}^{+\infty}g(x,y)f_{XY}dxdy$
+\end_inset
+
+.
+ 
+\bar under
+Properties:
+\bar default
+ (1) 
+\begin_inset Formula $E[X+Y]=E[X]+E[Y]$
+\end_inset
+
+; (2) 
+\begin_inset Formula $E[XY]=E[X]E[Y]$
+\end_inset
+
+ for independent 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Conditional Expect.
+
+\series default
+ 
+\begin_inset Formula $E[Y|X=x]=\int_{-\infty}^{+\infty}yf_{Y|X}(y|x)dy$
+\end_inset
+
+.
+ Law of iterated expectations 
+\begin_inset Formula $E[Y]=E_{X}[E_{Y|X}[Y|X]]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+High Order Moments.
+
+\series default
+ The 
+\begin_inset Formula $r^{th}$
+\end_inset
+
+ moment of 
+\begin_inset Formula $X$
+\end_inset
+
+ is 
+\begin_inset Formula $m_{r}=E[X^{r}]=\int_{-\infty}^{+\infty}x^{r}f_{X}(x)dx$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $r^{th}$
+\end_inset
+
+ central moment is 
+\begin_inset Formula $c_{r}=E[(x-\mu_{x})^{r}]=\int_{-\infty}^{+\infty}(x-\mu_{x})^{r}f_{X}(x)dx$
+\end_inset
+
+.
+ Most notably, the variance is defined as 
+\begin_inset Formula 
+\[
+c_{2}\triangleq\sigma_{X}^{2}=E[(x-\mu_{x})^{2}]=E[X^{2}]-\mu_{X}^{2}
+\]
+
+\end_inset
+
+Moments do not always exist.
+ For example, Cauthy distribution does not have that.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Joint Moments.
+
+\series default
+ The 
+\begin_inset Formula $(i,j)^{th}$
+\end_inset
+
+ joint and joint central moments are 
+\begin_inset Formula $m_{ij}=E[X^{i}Y^{j}]$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{ij}=E[(X-\mu_{X})^{i}(Y-\mu_{Y})^{j}]$
+\end_inset
+
+.
+ The covariance is
+\begin_inset Formula 
+\[
+\sigma_{XY}=Cov(X,Y)=E[(X-\mu_{X})(Y-\mu_{Y})]=E[XY]-\mu_{X}\mu_{Y}
+\]
+
+\end_inset
+
+Uncorrelatedness is weaker than independence.
 \end_layout
 
 \begin_layout Subsection
