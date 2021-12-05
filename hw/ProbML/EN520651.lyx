@@ -1287,6 +1287,150 @@ f_{\ubar X}(\ubar x)=\frac{1}{(2\pi)^{n/2}|\mathbb{K}_{X}|^{1/2}}\exp\{-\frac{1}
 Bayesian Hypothesis Testing
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+Bayesian Hypothesis Testing.
+
+\series default
+ Observation vector 
+\begin_inset Formula $\ubar y$
+\end_inset
+
+, unknown state of the world 
+\begin_inset Formula $H$
+\end_inset
+
+, prior 
+\begin_inset Formula $P_{H}(H_{m})$
+\end_inset
+
+, likelihood 
+\begin_inset Formula $P_{\ubar Y|H}(\ubar y,H_{m})$
+\end_inset
+
+, posterior 
+\begin_inset Formula $P_{H|Y}(H_{m}|y)$
+\end_inset
+
+.
+ From Bayes rule,
+\begin_inset Formula 
+\[
+P_{H|Y}(H_{m}|y)=\frac{P_{H}(H_{m})P_{Y|H}(y|H_{m})}{\sum_{m'}P_{H}(H_{m'})P_{Y|H}(y|H_{m'})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Binary Hypothesis Testing.
+
+\series default
+ 
+\begin_inset Formula $H\in\{H_{0},H_{1}\}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P_{H}(H_{0})\triangleq P_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $H_{0}:P_{Y|H}(y|H_{0})$
+\end_inset
+
+.
+ A decision rule 
+\begin_inset Formula $\hat{H}(\cdot)$
+\end_inset
+
+ maps observation 
+\begin_inset Formula $\ubar y$
+\end_inset
+
+ onto a hypothesis 
+\begin_inset Formula $H\in\{H_{0},H_{1}\}$
+\end_inset
+
+.
+ Cost function 
+\begin_inset Formula $c_{ij}\triangleq\tilde{C}(H_{j},H_{i})$
+\end_inset
+
+ where 
+\begin_inset Formula $H_{j}$
+\end_inset
+
+ true state, 
+\begin_inset Formula $H_{i}$
+\end_inset
+
+ our guess.
+ A cost function is valid when 
+\begin_inset Formula $c_{01}>c_{11}$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{10}>c_{00}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Likelihood Ratio Test (LRT).
+
+\series default
+ Minimize 
+\begin_inset Formula $\phi(\hat{H})=E_{Y,H}[\tilde{C}(H,\hat{H}(y))]=E_{Y}[E_{H|Y}[\tilde{C}(H,\hat{H}(y))|Y=y]]$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+L(y)\triangleq\frac{P_{Y|H}(y|H_{1})}{P_{Y|H}(y|H_{0})}\gtrless_{(H_{0})}^{(H_{1})}\frac{P_{0}(c_{10}-c_{00})}{P_{1}(c_{01}-c_{11})}\triangleq\eta
+\]
+
+\end_inset
+
+MAP decision rule: symmetric cost 
+\begin_inset Formula $c_{00}=c_{11}=0$
+\end_inset
+
+, 
+\begin_inset Formula $c_{01}=c_{10}=1$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P_{1}P(y|H_{1})\gtrless_{(H_{0})}^{(H_{1})}P_{0}P(y|H_{0})$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $P(H_{1}|y)\gtrless_{(H_{0})}^{(H_{1})}P(H_{0}|y)$
+\end_inset
+
+.
+ ML decision rule: symmetric cost and 
+\begin_inset Formula $P_{0}=P_{1}=\frac{1}{2}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P(y|H_{1})\gtrless_{(H_{0})}^{(H_{1})}P(y|H_{0})$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsection
 NonBayesian Hypothesis Testing
 \end_layout
