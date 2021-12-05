@@ -1429,10 +1429,47 @@ MAP decision rule: symmetric cost
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Subsection
 NonBayesian Hypothesis Testing
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Classical Hypothesis Testing.
+
+\series default
+ 
+\begin_inset Formula $L(y)\triangleq\frac{P(y|H_{1})}{P(y|H_{0})}\gtrless_{(H_{0})}^{(H_{1})}\eta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Operating Characteristics.
+
+\series default
+ 
+\begin_inset Formula $P_{D}=P(\hat{H}(y)=H_{1}|H_{1})=\int_{y_{1}}P(y|H_{1})dy$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P_{F}=P(\hat{H}(y)=H_{1}|H_{0})=\int_{y_{1}}P(y|H_{0})dy$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+ROC.
+ 
 \end_layout
 
 \begin_layout Subsection
