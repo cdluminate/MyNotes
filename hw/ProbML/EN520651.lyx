@@ -3122,11 +3122,11 @@ K-Means
 Mixture Model
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 EM Algorithm
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Deterministic Approximations
 \end_layout
 
@@ -3238,7 +3238,7 @@ Variational Methods
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Stochastic Approximations
 \end_layout
 
@@ -3365,15 +3365,15 @@ Rejection Sampling
 Markov-Chain Monte Carlo (MCMC)
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Approximations Continued
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Markov Chains and HMMs
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 HMMs Continued
 \end_layout
 
@@ -3457,7 +3457,7 @@ p(\bm{q},\bm{y})=p(q_{0})\prod_{t=0}^{T-1}p(q_{t+1}|q_{t})\prod_{t=0}^{T}p(y_{t}
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Kalman Filtering
 \end_layout
 
@@ -3466,7 +3466,7 @@ Graphical Models -> (Discrete states from ML perspective) -> HMMs; Graphical
  Models -> (Continuous states from SP perspective) -> Kalman Filter.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Conjugate Priors
 \end_layout
 
@@ -3528,8 +3528,78 @@ Dirichlet Distribution.
  
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Gaussian Processes
+\end_layout
+
+\begin_layout Standard
+Problem setup.
+ 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ input feature.
+ 
+\begin_inset Formula $Y_{i}=f(X_{i})$
+\end_inset
+
+ output value.
+ 
+\begin_inset Formula $f(\cdot)$
+\end_inset
+
+ is an unknown function.
+ Goal: given 
+\begin_inset Formula $D=\{(x_{i},y_{i})\}$
+\end_inset
+
+ predict output 
+\begin_inset Formula $y_{\ast}$
+\end_inset
+
+ for new 
+\begin_inset Formula $x_{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Prediction.
+
+\series default
+ (1) Infer the posterior distribution of 
+\begin_inset Formula $f(x)$
+\end_inset
+
+; (2) marginalize over 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ to obtain 
+\begin_inset Formula $y_{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+P(Y_{*}|X_{1:N},Y_{1:N},X_{*}) & =\int P(f(x),y_{*}|X_{1:N},Y_{1:N},X_{*})df(x)\\
+ & =\int P(f(x)|X_{1:N},Y_{1:N})P(Y_{*}|f(x),X_{*})df(x)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Gaussian Process.
+ 
 \end_layout
 
 \begin_layout Subsection
