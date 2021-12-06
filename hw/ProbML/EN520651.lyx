@@ -3314,8 +3314,62 @@ Graphical Models -> (Discrete states from ML perspective) -> HMMs; Graphical
 Conjugate Priors
 \end_layout
 
-\begin_layout Section
-Dirichlet Process Priors
+\begin_layout Subsection
+Dirichlet Process
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Probability Simplex.
+
+\series default
+ Categorical 
+\begin_inset Formula $Z\in\{1,\ldots,K\}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P_{Z}=[P_{Z}(1),\ldots,P_{Z}(K)]^{T}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $P_{Z}(k)\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $\sum P_{Z}(k)=1$
+\end_inset
+
+.
+ It lies on an affine hyperplane of dimension 
+\begin_inset Formula $(K-1)$
+\end_inset
+
+ known as probability simplex.
+ More 
+\begin_inset Quotes eld
+\end_inset
+
+uniform
+\begin_inset Quotes erd
+\end_inset
+
+ distributions lie at the center, while 
+\begin_inset Quotes eld
+\end_inset
+
+skewed
+\begin_inset Quotes erd
+\end_inset
+
+ distribution concentrate on edges or at vertices.
+\end_layout
+
+\begin_layout Standard
+Dirichlet Distribution.
+ 
 \end_layout
 
 \begin_layout Section
