@@ -1640,9 +1640,9 @@ Problem Setting.
  is required to build and evaluate this estimator, so
 \begin_inset Formula 
 \begin{align*}
-\hat{x}(\cdot) & =\arg\min_{f(\cdot)}E_{XY}[\tilde{C}(X,f(Y))]\\
+\hat{x}(\cdot) & =\arg\min_{f(\cdot)}E_{XY}[\tilde{C}(x,f(y))]\\
  & =\arg\min_{a}\int_{-\infty}^{\infty}C(x,a)P_{X|Y}(x|y)dx\\
- & =\arg\min_{a}E_{X|Y}[C(X,a)|Y=y]
+ & =\arg\min_{a}E_{X|Y}[C(x,a)|Y=y]
 \end{align*}
 
 \end_inset
@@ -1731,7 +1731,7 @@ The
 \series bold
 Bayes Least Squares
 \series default
-:
+ (BLS):
 \end_layout
 
 \begin_layout Standard
@@ -1833,11 +1833,85 @@ is unbiased,
 .
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Linear Least Squares Estimation
 \end_layout
 
-\begin_layout Section
+\begin_layout Standard
+The previous estimators require complete characterization of 
+\begin_inset Formula $P_{X}$
+\end_inset
+
+ and 
+\begin_inset Formula $P_{Y|X}$
+\end_inset
+
+, and posterior is difficult to compute.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Linear Least-Squares Estimation.
+\series default
+
+\begin_inset Formula 
+\[
+\hat{x}_{LLS}=\arg\min_{f(\cdot)}E_{XY}[\|x-f(y)\|^{2}]\ s.t.\ f(y)=\mathbb{A}\ubar y+\ubar d
+\]
+
+\end_inset
+
+A linear estimator 
+\begin_inset Formula $\hat{x}(y)$
+\end_inset
+
+ is LLS iff unbiased and orthogonal to data:
+\begin_inset Formula 
+\[
+E_{XY}[\hat{x}(y)-x]=0\quad E_{XY}[(\hat{x}(y)-x)y^{T}]=0_{N\times N}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Constructing LLS.
+
+\series default
+ Use defintion if moment unavailable.
+\begin_inset Formula 
+\[
+\hat{x}_{LLS}(\ubar y)=\ubar\mu_{X}+\Lambda_{XY}\Lambda_{Y}^{-1}(\ubar y-\ubar\mu_{Y})
+\]
+
+\end_inset
+
+Error covariance 
+\begin_inset Formula $\Lambda_{LLS}=\Lambda_{X}-\Lambda_{XY}\Lambda_{Y}^{-1}\Lambda_{XY}^{T}$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are jointly Gaussian, 
+\begin_inset Formula $\hat{x}_{LLS}=\hat{x}_{BLS}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
 NonBayesian Parameter Estimation
 \end_layout
 
