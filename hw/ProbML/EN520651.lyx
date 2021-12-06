@@ -1757,61 +1757,80 @@ We plug the cost into the optimization problem, then derive the internal
 
 \end_layout
 
-\begin_layout Subsection
-Performance Characeteristics
-\end_layout
-
 \begin_layout Standard
-In this subsection we use vector by default.
-\end_layout
 
-\begin_layout Itemize
+\series bold
+Performance Characeteristics.
+
+\series default
+ Vector by default.
+ 
+\bar under
 Error.
+
+\bar default
  Given an instance 
 \begin_inset Formula $x$
 \end_inset
 
-,
-\begin_inset Formula 
-\[
-e(x,y)=\hat{x}(y)-x
-\]
-
+, 
+\begin_inset Formula $e(x,y)=\hat{x}(y)-x$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Itemize
+.
+ 
+\bar under
 Bias
-\begin_inset Formula 
-\[
-b=E_{XY}[e(x,y)]=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}e(x,y)P_{x,y}dxdy
-\]
-
+\bar default
+ 
+\begin_inset Formula $b=E_{XY}[e(x,y)]=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}e(x,y)P_{x,y}dxdy$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Itemize
+.
+ 
+\bar under
 Variance
-\begin_inset Formula 
-\[
-\Lambda_{e}=E_{xy}\{[e(x,y)-b][e(x,y)-b]^{T}\}
-\]
-
+\bar default
+ 
+\begin_inset Formula $\Lambda_{e}=E_{xy}\{[e(x,y)-b][e(x,y)-b]^{T}\}$
 \end_inset
 
-
-\begin_inset Formula 
-\[
-MSE=E_{xy}[e(x,y)e(x,y)^{T}]=\Lambda_{e}+bb^{T}
-\]
-
+.
+ 
+\begin_inset Formula $MSE=E_{xy}[e(x,y)e(x,y)^{T}]=\Lambda_{e}+bb^{T}$
 \end_inset
 
+.
+ (1) 
+\series bold
 
+\begin_inset Formula $\hat{x}_{BLS}(y)$
+\end_inset
+
+ 
+\series default
+is unbiased, 
+\begin_inset Formula $b=0$
+\end_inset
+
+.
+ (2) 
+\begin_inset Formula $\hat{x}=\hat{x}_{BLS}$
+\end_inset
+
+ iff 
+\begin_inset Formula $e(x,y)$
+\end_inset
+
+ is orthogobal to any function of 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula $E_{XY}[(\hat{x}(y)-x)g^{T}(y)]=0$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
