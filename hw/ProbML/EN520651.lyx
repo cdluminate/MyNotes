@@ -1446,7 +1446,8 @@ Classical Hypothesis Testing.
 \begin_inset Formula $L(y)\triangleq\frac{P(y|H_{1})}{P(y|H_{0})}\gtrless_{(H_{0})}^{(H_{1})}\eta$
 \end_inset
 
-
+.
+ This is the generalization of the Bayesian case.
 \end_layout
 
 \begin_layout Standard
@@ -1468,12 +1469,129 @@ Operating Characteristics.
 \end_layout
 
 \begin_layout Standard
+
+\series bold
 ROC.
+
+\series default
+ 
+\begin_inset Formula $P_{F}$
+\end_inset
+
+-
+\begin_inset Formula $P_{D}$
+\end_inset
+
+ curve.
+ Axes limits 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\eta=0$
+\end_inset
+
+ (upper right corner), 
+\begin_inset Formula $\eta\rightarrow\infty$
+\end_inset
+
+ (lower left corner).
+ Mototonically non-decreasing in 
+\begin_inset Formula $\eta$
+\end_inset
+
+.
+ Lies above the diagonal.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Neyman-Pearson HT.
+
+\series default
+ 
+\begin_inset Formula $\max_{\hat{H}(\cdot)}P_{D}\ s.t.\ P_{F}\leq\alpha$
+\end_inset
+
+.
+ The optimal solution can be expressed as LRT, where 
+\begin_inset Formula $\eta=\lambda$
+\end_inset
+
+ such that 
+\begin_inset Formula $P_{F}=\alpha$
+\end_inset
+
+.
+ It is intersection of ROC w/ 
+\begin_inset Formula $P_{F}=\alpha$
+\end_inset
+
+ line.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Randomized Decision Rule
+\series default
+ for discrete-valued data.
+ 
+\begin_inset Formula $\eta_{i+1}>\eta_{i}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P_{D}=p\cdot P_{D}(\eta_{i})+(1-p)P_{D}(\eta_{i+1})$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P_{F}=p\cdot P_{F}(\eta_{i})+(1-p)P_{F}(\eta_{i+1})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Efficient Frontier for LRT.
+
+\series default
+ The achievable 
+\begin_inset Formula $(P_{F},P_{D})$
+\end_inset
+
+ operating points.
+ On efficient frontier, (1) the 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ and 
+\begin_inset Formula $(1,1)$
+\end_inset
+
+ points always lie here; (2) 
+\begin_inset Formula $P_{D}\geq P_{F}$
+\end_inset
+
+; (3) is concave (randomized decision should not beat NP); (4) 
+\begin_inset Formula $\frac{dP_{D}}{dP_{F}}=\eta$
+\end_inset
+
+.
  
 \end_layout
 
 \begin_layout Subsection
-Minmax Decision Theory
+Minmax Hypothesis Testing
+\end_layout
+
+\begin_layout Standard
+TODO
 \end_layout
 
 \begin_layout Subsection
