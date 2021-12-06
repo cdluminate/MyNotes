@@ -1952,6 +1952,162 @@ Vector Parameters
 Exponential Families
 \end_layout
 
+\begin_layout Standard
+A parameterized family of distributions 
+\begin_inset Formula $\{Pr(\cdot;x),x\in\mathcal{X}\}$
+\end_inset
+
+ over the alphabet 
+\begin_inset Formula $\mathcal{Y}$
+\end_inset
+
+ is a one-parameter exponential family if it can be written as
+\begin_inset Formula 
+\[
+P_{Y}(y;x)=\exp\{\lambda(x)t(y)-\alpha(x)+\beta(y)\}\ \forall x\in\mathcal{X},y\in\mathcal{Y}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Construction.
+
+\series default
+ I.
+ Geometric mean, 
+\begin_inset Formula $p_{1}(y)$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{2}(y)$
+\end_inset
+
+ strictly positive on 
+\begin_inset Formula $\mathcal{Y}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P_{Y}(y;x)=\frac{1}{Z(x)}p_{1}(y)^{x}p_{2}(y)^{1-x},\ x\in\mathcal{X}=[0,1]$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $\log P_{Y}(y;x)=x\log(\frac{p_{1}(y)}{p_{2}(y)})+\log p_{2}(y)-\log Z(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+II.
+ Tilting based on distribution 
+\begin_inset Formula $q(y)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P_{Y}(y;x)=q(y)e^{xy}/Z(x)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\log P_{Y}(y;x)=xy+\log q(y)-\log Z(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Moment Generation.
+
+\series default
+ A linear exponential family has 
+\begin_inset Formula $\lambda(x)=x$
+\end_inset
+
+.
+ (1) 
+\begin_inset Formula $\alpha'(x)=E_{Y}[t(Y)]$
+\end_inset
+
+; (2) 
+\begin_inset Formula $\alpha''(x)=Var[t(Y)]$
+\end_inset
+
+; (3) 
+\begin_inset Formula $J_{Y}(x)=Var[t(Y)]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Efficient Estimators.
+
+\series default
+ If 
+\begin_inset Formula $\hat{x}_{eff}$
+\end_inset
+
+ exists, then 
+\begin_inset Formula $P_{Y}(y;x)$
+\end_inset
+
+ is a member of an exponential family with 
+\begin_inset Formula $\lambda(x)=\int^{x}J_{Y}(u)du$
+\end_inset
+
+ and 
+\begin_inset Formula $t(y)=\hat{x}_{ML}(y)=\hat{x}_{eff}(y)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Conjugate Priors.
+ Let 
+\begin_inset Formula $Q=\{q(\cdot;\theta):\theta\in\Theta\subset\mathbb{R}^{K}\}$
+\end_inset
+
+ be a family of distributions based on 
+\begin_inset Formula $K$
+\end_inset
+
+ parameters 
+\begin_inset Formula $\theta=[\theta_{1},\ldots,\theta_{K}]^{T}$
+\end_inset
+
+ such that 
+\begin_inset Formula $q(x;\theta)$
+\end_inset
+
+ is continuously invertible in 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $Q$
+\end_inset
+
+ is a conjugate prior family for 
+\begin_inset Formula $P_{Y|X}$
+\end_inset
+
+ 
+\end_layout
+
 \begin_layout Subsection
 Directed Graphical Models
 \end_layout
