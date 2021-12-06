@@ -3598,8 +3598,152 @@ P(Y_{*}|X_{1:N},Y_{1:N},X_{*}) & =\int P(f(x),y_{*}|X_{1:N},Y_{1:N},X_{*})df(x)\
 \end_layout
 
 \begin_layout Standard
+
+\series bold
 Gaussian Process.
+
+\series default
+ Prior for 
+\begin_inset Formula $f(\cdot)$
+\end_inset
+
+ w/o explicit parametrization.
+ The distribution 
+\begin_inset Formula $P(\cdot)$
+\end_inset
+
+ over 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ is a Gaussian Process if for any finite 
+\begin_inset Formula $\{x_{1},\ldots,x_{N}\}$
+\end_inset
+
+ the vector 
+\begin_inset Formula $f=[f(x_{1}),\ldots,f(x_{N})]^{T}$
+\end_inset
+
+ is Gaussian.
  
+\begin_inset Formula $\mu=[E[f(x_{1}),\ldots]=[\mu(x_{1}),\ldots]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\mathbb{K}=E[(f-\mu)(f-\mu)^{T}]$
+\end_inset
+
+ (
+\begin_inset Formula $K_{ij}=K(x_{i},x_{j})$
+\end_inset
+
+ PSD kernel Fn.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+GP Regression.
+
+\series default
+ 
+\begin_inset Formula $f(\cdot)\sim GP(\mu(x),K(x,x'))$
+\end_inset
+
+.
+ (1) Noise free observations 
+\begin_inset Formula $Y_{i}=f(x_{i})\triangleq f_{i}$
+\end_inset
+
+, training data 
+\begin_inset Formula $D=\{(x_{1},f_{1}),\ldots,(x_{N},f_{N})\}$
+\end_inset
+
+.
+ New observation 
+\begin_inset Formula $x_{*}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f=[f(x_{1}),\ldots]^{T}=[f_{1},\ldots]^{T}\sim\mathcal{N}(\mu,\mathbb{K})$
+\end_inset
+
+.
+ 
+\begin_inset Formula $[f,f(x_{*})=f_{*}]^{T}\sim\mathcal{N}([\mu,\mu_{*}]^{T},[\mathbb{K},k_{*};k_{*}^{T},k'_{*}])$
+\end_inset
+
+ where 
+\begin_inset Formula $\mathbb{K}=K(x_{1:N},x_{1:N})$
+\end_inset
+
+, 
+\begin_inset Formula $k_{*}=K(x_{1:N},x_{*})$
+\end_inset
+
+, 
+\begin_inset Formula $k_{*}^{\prime}=K(x_{*},x_{*})$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P(f_{*}|x_{*},D)\sim\mathcal{N}(m,\sigma^{2})$
+\end_inset
+
+ where 
+\begin_inset Formula $m=E[f_{*}]+\Lambda_{*f}^{T}\Lambda_{f}^{-1}(f-\mu)=\mu_{*}+k_{*}^{T}\mathbb{K}^{-1}(f-\mu)$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma^{2}=k_{*}'-k_{*}^{T}\mathbb{K}^{-1}k_{*}$
+\end_inset
+
+.
+ Now, we 
+\begin_inset Formula $x_{1}^{*},\ldots,x_{M}^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $[f,f_{*}]\sim\mathcal{N}([\mu,\mu_{*}]^{T},[\mathbb{K},\mathbb{K_{*}};\mathbb{K}_{*}^{T},\mathbb{K}_{*}^{\prime}])$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P(f|x_{1}^{*},\ldots,x_{M}^{*},D)=\mathcal{N}(f_{*},m,\Sigma)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $m=\mu_{*}+\mathbb{K}_{*}^{T}\mathbb{K}^{-1}(f-\mu)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\Sigma=K_{*}^{\prime}-K_{*}^{T}K^{-1}K_{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(2) Noisy observations.
+ TODO
+\end_layout
+
+\begin_layout Standard
+RBF Kernel.
+ 
+\begin_inset Formula $K(x,x')=\beta\exp\{-\frac{1}{2r^{2}}\|x-x'\|_{F}^{2}\}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $D=\{(x_{i},y_{i}),i=1,\ldots,N\}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
