@@ -2255,7 +2255,11 @@ Efficient Estimators.
 \end_layout
 
 \begin_layout Standard
+
+\series bold
 Conjugate Priors.
+
+\series default
  Let 
 \begin_inset Formula $Q=\{q(\cdot;\theta):\theta\in\Theta\subset\mathbb{R}^{K}\}$
 \end_inset
@@ -2285,7 +2289,11 @@ Conjugate Priors.
 \begin_inset Formula $P_{Y|X}$
 \end_inset
 
- 
+ if 
+\begin_inset Formula $P_{X}(\cdot)\in Q\rightarrow P_{X|Y}(\cdot|y)\in Q$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -4015,8 +4023,88 @@ f_{X}(x)=\frac{\mu^{x}}{x!}e^{-\mu},x=0,1,2,\ldots
 
 \end_layout
 
-\begin_layout Section
-References
+\begin_layout Subsection
+B.
+ Useful Tricks
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(AB)^{-1}=B^{-1}A^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A$
+\end_inset
+
+ PSD means 
+\begin_inset Formula $x\in R^{n}\notin\{0\}$
+\end_inset
+
+, 
+\begin_inset Formula $x^{T}Ax\geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E[Ax]=AE[x]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Var[Ax]=AVar[x]A^{T}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E[tr(AB)]=tr(E[AB])$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\det|\alpha A|=\alpha^{n}A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $tr(AB)=tr(BA)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|Cov(x,y)|\leq\sqrt{Var(x)Var(y)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Gaussian Integral 
+\begin_inset Formula $\int_{-\infty}^{+\infty}e^{-x^{2}}dx=\sqrt{\pi}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int_{-\infty}^{+\infty}ae^{-\frac{(x-b)^{2}}{2c^{2}}}dx=ac\sqrt{2\pi}$
+\end_inset
+
+.
 \end_layout
 
 \end_body
