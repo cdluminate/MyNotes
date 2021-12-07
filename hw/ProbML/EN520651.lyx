@@ -1915,6 +1915,127 @@ Error covariance
 NonBayesian Parameter Estimation
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula $Y$
+\end_inset
+
+ is parameterized by 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $P_{Y|X}(y|x)\rightarrow P_{Y}(y;x)$
+\end_inset
+
+.
+ An estimator is valid if it does not depend explicitly on the parameter
+ we are trying to estimate.
+ We want to minimize MSE, i.e., 
+\begin_inset Formula $tr(e(y)e(y)^{T})=\Lambda_{e}(x)+b_{\hat{x}}b_{\hat{x}}^{T}$
+\end_inset
+
+.
+ Estimator 
+\begin_inset Formula $\hat{x}(y)$
+\end_inset
+
+ is unbiased if 
+\series bold
+
+\begin_inset Formula $b_{x}(x)=0$
+\end_inset
+
+
+\series default
+.
+ 
+\begin_inset Formula $\Lambda_{e}(x)=\Lambda_{\hat{x}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Minimum Variance Unbiased Estimators.
+
+\series default
+ 
+\begin_inset Formula 
+\[
+\hat{x}_{MVU}(y)=\arg\min_{\hat{x}\in\mathcal{A}}\lambda_{\hat{x}}(x)=\arg\min_{\hat{x}\in\mathcal{A}}E_{Y}[e^{2}(y)]\ \forall x
+\]
+
+\end_inset
+
+where admissible estimators 
+\begin_inset Formula $\mathcal{A}=\{\hat{x}(\cdot)$
+\end_inset
+
+: valid and unbiased
+\begin_inset Formula $\}$
+\end_inset
+
+.
+ It might not exist.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Cramer-Rao Bound (CRB).
+
+\series default
+ Score function 
+\begin_inset Formula $S(y;x)=\frac{\partial}{\partial x}\ln P_{Y}(y;x)$
+\end_inset
+
+.
+ Fisher Information 
+\begin_inset Formula $J_{Y}(x)=E_{Y}[S^{2}(y;x)]=-E_{Y}[-\frac{\partial^{2}}{\partial x^{2}}\ln P_{Y}(y;x)]$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\hat{x}(\cdot)$
+\end_inset
+
+ is valid and unbiased, then 
+\begin_inset Formula $\lambda_{\hat{x}}\geq\frac{1}{J_{Y}(x)}\ \forall x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Efficient Estimators.
+
+\series default
+ 
+\begin_inset Formula $\hat{x}(y)=x+\frac{1}{J_{Y}(x)}\frac{\partial}{\partial x}\ln P_{Y}(y;x)$
+\end_inset
+
+.
+ (1) 
+\begin_inset Formula $\hat{x}_{eff}(y)$
+\end_inset
+
+ is guaranteed to be unbiased.
+ (2) if 
+\begin_inset Formula $\hat{x}_{eff}$
+\end_inset
+
+ exists and is valid, then it is unique.
+ (3) if 
+\begin_inset Formula $\hat{x}_{eff}(y)$
+\end_inset
+
+ exists, then it meets CRB and is MVU.
+\end_layout
+
 \begin_layout Subsection
 Maximum Likelihood Estimation
 \end_layout
