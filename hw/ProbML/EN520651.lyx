@@ -3212,6 +3212,14 @@ and the corresponding
 \end_inset
 
 .
+\begin_inset Formula 
+\[
+E_{Z|Y}[\ell(y,z;\theta)]=\sum_{n=1}^{N}\sum_{k=1}^{K}E[z_{n}^{k}](\log\pi_{k}+\log p_{k}(y_{n};\theta_{k}))
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3303,15 +3311,7 @@ Gaussian Mixture.
 \end_layout
 
 \begin_layout Subsection
-K-Means
-\end_layout
-
-\begin_layout Subsection
-Mixture Model
-\end_layout
-
-\begin_layout Subsection
-EM Algorithm
+Generalized Mixture Model 
 \end_layout
 
 \begin_layout Subsection
