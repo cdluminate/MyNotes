@@ -3225,7 +3225,7 @@ E_{Z|Y}[\ell(y,z;\theta)]=\sum_{n=1}^{N}\sum_{k=1}^{K}E[z_{n}^{k}](\log\pi_{k}+\
 \begin_layout Standard
 
 \series bold
-Clustering (EM) Algorithm.
+Clustering Algorithm.
 
 \series default
  Step (E): find posterior 
@@ -3312,6 +3312,67 @@ Gaussian Mixture.
 
 \begin_layout Subsection
 Generalized Mixture Model 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Setup.
+
+\series default
+ Observed data 
+\begin_inset Formula $y\in\mathcal{Y}$
+\end_inset
+
+, unknown (deterministic) parameters 
+\begin_inset Formula $x\in\mathcal{X}$
+\end_inset
+
+, latent/hidden random variables 
+\begin_inset Formula $z\in\mathcal{Z}$
+\end_inset
+
+.
+ Objective: 
+\begin_inset Formula $\hat{x}=\arg\max_{x}\log P_{Y}(y;x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Jensen's Inequality.
+\series default
+
+\begin_inset Formula 
+\[
+\log(\lambda z_{1}+(1-\lambda)z_{2})\geqslant\lambda\log(z_{1})+(1-\lambda)\log(z_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Construct Lower Bound.
+
+\series default
+ Introduce 
+\begin_inset Formula $q(z|y)$
+\end_inset
+
+ an arbitrary distribution.
+ 
+\begin_inset Formula $\ell(y;x)=\log P_{Y}(y;x)=\log(\sum_{z}P_{Y,Z}(y,z;x))=\log(\sum_{z}q(z|y)\frac{P_{Y,Z}(y,z;x)}{q(z|y)})\geqslant\sum_{z}q(z|y)\log(\frac{P_{Y,Z}(y,z;x)}{q(z|y)})\triangleq\mathcal{L}(q,x)$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Subsection
