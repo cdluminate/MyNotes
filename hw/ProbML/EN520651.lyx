@@ -1993,7 +1993,7 @@ Cramer-Rao Bound (CRB).
 
 .
  Fisher Information 
-\begin_inset Formula $J_{Y}(x)=E_{Y}[S^{2}(y;x)]=-E_{Y}[-\frac{\partial^{2}}{\partial x^{2}}\ln P_{Y}(y;x)]$
+\begin_inset Formula $J_{Y}(x)=E_{Y}[S^{2}(y;x)]=-E_{Y}[\frac{\partial^{2}}{\partial x^{2}}\ln P_{Y}(y;x)]$
 \end_inset
 
 .
@@ -2041,7 +2041,7 @@ Maximum Likelihood Estimation
 \end_layout
 
 \begin_layout Standard
-Convenient proxy for efficient estimator with nice properties.
+Proxy for efficient estimator with nice properties:
 \begin_inset Formula 
 \[
 \hat{x}_{ML}(y)=\arg\max_{x\in\mathcal{X}}P_{Y}(y;x)
@@ -2049,24 +2049,83 @@ Convenient proxy for efficient estimator with nice properties.
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-The ML estimator is simpler to compute or numerically approximate.
+ML estimator is simpler to compute or numerically approximate.
  Meanwhile, it is intuitive because picking 
 \begin_inset Formula $x$
 \end_inset
 
- that gives you the largest chance of observing the data 
+ that gives you the largest chance of observing data 
 \begin_inset Formula $Y=y$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\hat{x}_{eff}(y)$
+\end_inset
+
+ exists, then it equals 
+\begin_inset Formula $\hat{x}_{ML}(y)$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Subsection
-Vector Parameters
+\begin_layout Standard
+
+\series bold
+Invertible Mapping.
+
+\series default
+ 
+\begin_inset Formula $\theta=g(x)\rightarrow\hat{\theta}_{ML}(y)=g(\hat{x}_{ML}(y))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Vector Parameters.
+
+\series default
+ Score function 
+\begin_inset Formula $\vec{S}_{\vec{Y}}(\vec{x)}=[\frac{\partial\log P_{Y}(\vec{y};x)}{\partial x_{1}},\ldots,\frac{\partial\log P_{Y}(\vec{y};x)}{\partial x_{N}}]$
+\end_inset
+
+.
+ Fisher information 
+\begin_inset Formula $J_{\vec{Y}}(\vec{x})=E_{Y}[\vec{S}_{Y}(\vec{x})^{T}\vec{S}_{Y}(\vec{x})]$
+\end_inset
+
+.
+ CRB: Covariance matrix 
+\begin_inset Formula $\Lambda_{\hat{x}}(x)$
+\end_inset
+
+ of any unbiased estimator satisfies the following inequality: 
+\begin_inset Formula $\Lambda_{\hat{x}(x)}\geq J_{Y}^{-1}(x)\leftrightarrow(\Lambda_{\hat{x}(x)}-J_{Y}^{-1}(x))$
+\end_inset
+
+ is PSD.
+ (1) 
+\begin_inset Formula $J_{Y}(x)=-E_{Y}[\frac{\partial^{2}}{\partial x^{2}}\ln P_{Y}(y;x)]$
+\end_inset
+
+; (2) 
+\begin_inset Formula $\hat{x}_{eff}(y)$
+\end_inset
+
+ exists if it can be expressed 
+\begin_inset Formula $\hat{x}_{eff}(y)=x+J_{Y}^{-1}(x)[\frac{\partial}{\partial x}\ln P_{Y}(y;x)]^{T}$
+\end_inset
+
+; (3) if 
+\begin_inset Formula $\hat{x}_{eff}(y)$
+\end_inset
+
+ exists, then it is the ML estimator.
+ 
 \end_layout
 
 \begin_layout Subsection
