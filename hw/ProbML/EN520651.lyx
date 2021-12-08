@@ -3501,8 +3501,8 @@ close
 .
 \end_layout
 
-\begin_layout Subsection
-DL Divergence
+\begin_layout Standard
+KL Divergence
 \end_layout
 
 \begin_layout Standard
@@ -3542,7 +3542,7 @@ According to Gibb's inequality, we have
 .
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
 Laplace's Method
 \end_layout
 
@@ -3565,7 +3565,7 @@ P_{X|Y}(x|y)\approx\mathcal{N}(x;\hat{x}_{MAP}(y),\hat{\sigma}^{2}(y))
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
 Variational Methods
 \end_layout
 
