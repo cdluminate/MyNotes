@@ -3502,10 +3502,11 @@ close
 \end_layout
 
 \begin_layout Standard
-KL Divergence
-\end_layout
 
-\begin_layout Standard
+\series bold
+KL Divergence.
+ 
+\series default
 Given a true distribution 
 \begin_inset Formula $p(\cdot)$
 \end_inset
@@ -3522,10 +3523,6 @@ D(p\|q)=E_{p}[\log\frac{p(x)}{q(x)}]=\sum_{x\in\mathcal{X}}p(x)\log\frac{p(x)}{q
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 According to Gibb's inequality, we have 
 \begin_inset Formula $D(p\|q)=E_{p}[\log p(x)]-E_{p}[\log q(x)]\geq0$
 \end_inset
