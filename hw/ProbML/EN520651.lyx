@@ -3523,7 +3523,11 @@ D(p\|q)=E_{p}[\log\frac{p(x)}{q(x)}]=\sum_{x\in\mathcal{X}}p(x)\log\frac{p(x)}{q
 
 \end_inset
 
-According to Gibb's inequality, we have 
+Gibb's inequality 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ 
 \begin_inset Formula $D(p\|q)=E_{p}[\log p(x)]-E_{p}[\log q(x)]\geq0$
 \end_inset
 
@@ -3534,6 +3538,16 @@ According to Gibb's inequality, we have
 
 , 
 \begin_inset Formula $D(p\|q)=0$
+\end_inset
+
+.
+ Besides, 
+\begin_inset Formula $D(p\|q)\neq D(q\|p)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $I(X,Y)=D(P_{XY}\|P_{X}P_{Y})$
 \end_inset
 
 .
