@@ -3375,6 +3375,38 @@ Construct Lower Bound.
  
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+EM Algorithm.
+
+\series default
+ Coordinate ascent on 
+\begin_inset Formula $q(\cdot|y)$
+\end_inset
+
+ and 
+\begin_inset Formula $x$
+\end_inset
+
+ at 
+\begin_inset Formula $(t+1)^{st}$
+\end_inset
+
+ iteration.
+ E-step 
+\begin_inset Formula $q^{(t+1)}=\arg\max_{q(\cdot)}\mathcal{L}(q,x^{(t)})$
+\end_inset
+
+.
+ M-step 
+\begin_inset Formula $x^{(t+1)}=\arg\max_{x}\mathcal{L}(q^{(t+1)},x)$
+\end_inset
+
+.
+ Step order can be switched depending on initialization.
+\end_layout
+
 \begin_layout Subsection
 Deterministic Approximations
 \end_layout
