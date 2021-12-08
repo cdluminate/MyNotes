@@ -3407,6 +3407,68 @@ EM Algorithm.
  Step order can be switched depending on initialization.
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+M-Step.
+
+\series default
+ 
+\begin_inset Formula $x^{(t+1)}=\arg\max_{x}\sum_{z}q^{(t+1)}(z|y)[\log P(y,z;x)-\log q^{(t+1)}(z|y)]$
+\end_inset
+
+ 
+\begin_inset Formula $=\arg\max_{x}\sum_{z}q^{(t+1)}(z|y)\log P(y,z;x)=\arg\max_{x}E_{q^{(t+1)}}[\log P(y,z|x)]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+E-Step.
+
+\series default
+ 
+\begin_inset Formula $\mathcal{L}(q,x^{(t)})=\sum_{z}q(z|y)\log(\frac{p_{Y}(y;x^{(t)})p_{Z|Y}(z|y;x^{(t)})}{q(z|y)})=\sum_{z}q(z|y)\log(p_{Y}(y;x^{(t)}))+\sum_{z}q(z|y)\log(\frac{p_{Z|Y}(z|y;x^{(t)})}{q(z|y)})$
+\end_inset
+
+.
+ The left item 
+\begin_inset Formula $=\log P_{Y}(y;x^{(t)})\sum_{z}q(z|y)=\ell(y;x^{(t)})$
+\end_inset
+
+.
+ Gibb's Inequality: 
+\begin_inset Formula $E_{p}[\log p(z)]\geqslant E_{q}[\log p(z)]$
+\end_inset
+
+ with equality iff 
+\begin_inset Formula $p(z)=q(z)$
+\end_inset
+
+.
+ So right item 
+\begin_inset Formula $<0$
+\end_inset
+
+ unless 
+\begin_inset Formula $q(z|y)=p(z|y;x^{(t)})$
+\end_inset
+
+.
+ So the solution is 
+\begin_inset Formula $q^{(t+1)}(z|y)=P_{Z|Y}(z|y;x^{(t)})$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathcal{L}(q^{(t+1)},x^{(t)})=\log P_{Y}(y;x^{(t)})$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsection
 Deterministic Approximations
 \end_layout
