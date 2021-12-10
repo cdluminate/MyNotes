@@ -4004,8 +4004,77 @@ Extended Kalman Filter.
 \end_layout
 
 \begin_layout Standard
+
+\series bold
 Conjugate Priors.
+
+\series default
+ (successive belief revision).
+ Let 
+\begin_inset Formula $Q=\{q(\cdot;\theta);\theta\in\mathbb{R}^{K}\}$
+\end_inset
+
+ denote a family of distributions specified by some dimension 
+\begin_inset Formula $K$
+\end_inset
+
+.
  
+\begin_inset Formula $Q$
+\end_inset
+
+ is a conjugate prior family for the above iid model if 
+\begin_inset Formula $\forall y\in\mathcal{Y}$
+\end_inset
+
+, 
+\begin_inset Formula $p_{X}(\cdot)\in Q\rightarrow P_{X|Y}(\cdot|y)\in Q$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\mathcal{X}$
+\end_inset
+
+ is finite, then a conjugate prior family always exists.
+ Namely 
+\begin_inset Formula $q(\cdot)$
+\end_inset
+
+ is categorical of dimension 
+\begin_inset Formula $|\mathcal{X}|$
+\end_inset
+
+.
+ Suppose data is coming sequentially,
+\begin_inset Formula 
+\[
+p_{X|Y_{1}}=\frac{p_{X}p_{Y_{1}|X}}{\int_{x}P_{X}P_{Y_{1}|X}dx}\quad P_{X|Y_{1},Y_{2}}=\frac{p_{X|Y_{1}}p_{Y_{2}|X,Y_{1}}}{\int_{x}p_{X|Y_{1}}p_{Y_{2}|X,Y_{1}}dx}
+\]
+
+\end_inset
+
+The 
+\begin_inset Formula $X$
+\end_inset
+
+ separates 
+\begin_inset Formula $Y_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $Y_{2}$
+\end_inset
+
+ so 
+\begin_inset Formula $Y_{1}$
+\end_inset
+
+ can be removed from terms involving 
+\begin_inset Formula $Y_{2}$
+\end_inset
+
+ from above right side Eq.
 \end_layout
 
 \begin_layout Subsection
@@ -4371,6 +4440,23 @@ f_{X}(x)=\frac{\mu^{x}}{x!}e^{-\mu},x=0,1,2,\ldots
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+(6) Beta 
+\begin_inset Formula $B(\alpha,\beta)=\frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}$
+\end_inset
+
+ where 
+\begin_inset Formula $\Gamma(z)=\int_{0}^{\infty}u^{z-1}e^{-u}du$
+\end_inset
+
+, namely 
+\begin_inset Formula $\Gamma(z+1)=z\Gamma(z)$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Subsection
