@@ -4131,8 +4131,108 @@ skewed
 \end_layout
 
 \begin_layout Standard
+
+\series bold
 Dirichlet Distribution.
+
+\series default
+ Continuous-valued distribution w/ support over 
+\begin_inset Formula $P_{K}$
+\end_inset
+
+.
  
+\begin_inset Formula $X=[x_{1},\ldots,x_{K}]^{T}$
+\end_inset
+
+, 
+\begin_inset Formula $\forall x_{k}\geq0$
+\end_inset
+
+, 
+\begin_inset Formula $\sum_{k}x_{k}=1$
+\end_inset
+
+; 
+\begin_inset Formula $\alpha=[\alpha_{1},\ldots,\alpha_{K}]^{T}$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha_{k}\geq0$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{align*}
+Dir(X;\alpha)=\frac{1}{B(\alpha)}\prod_{k=1}^{K}x_{k}^{\alpha_{k}-1}\quad & B(\alpha)=\frac{\prod_{k=1}^{K}\Gamma(\alpha_{k})}{\Gamma(\sum_{k}\alpha_{k})}\\
+\Gamma(\alpha)=\int_{0}^{\infty}x^{\alpha-1}e^{-x}dx\quad & \Gamma(\alpha+1)=\alpha\Gamma(\alpha)
+\end{align*}
+
+\end_inset
+
+We define 
+\begin_inset Formula $\alpha_{0}=\sum_{k}\alpha_{k}$
+\end_inset
+
+ which controls the strength or 
+\begin_inset Quotes eld
+\end_inset
+
+concentration
+\begin_inset Quotes erd
+\end_inset
+
+ of the distribution.
+ Ratio among 
+\begin_inset Formula $\{\alpha_{1},\ldots,\alpha_{K}\}$
+\end_inset
+
+ controls peak location.
+ 
+\begin_inset Formula $E[x_{k}]=\frac{\alpha_{k}}{\alpha_{0}}$
+\end_inset
+
+; 
+\begin_inset Formula $Var(x_{k})=\frac{\alpha_{k}(\alpha_{0}-\alpha_{k})}{\alpha_{0}^{2}(\alpha_{0}+1)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Multinomial Conjugacy.
+ 
+\begin_inset Formula $p_{X}(x;\alpha)=Dir(x;\alpha)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Z\in\{1,\ldots,K\}$
+\end_inset
+
+ and 
+\begin_inset Formula $P(z=k|x)=x_{k}$
+\end_inset
+
+, 
+\begin_inset Formula $p(z|x)=\prod_{k}(x_{k})^{z_{k}}$
+\end_inset
+
+.
+ Observe iid 
+\begin_inset Formula $z_{N}$
+\end_inset
+
+, 
+\begin_inset Formula $p(x,z)=p_{X}(x;\alpha)\prod_{k}p(z_{i}|x)$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $p(x|z)=Dir(x;\{\alpha_{k}+\sum_{i=1}^{N}z_{i}^{k}\}_{k})$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
