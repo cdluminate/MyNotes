@@ -244,12 +244,13 @@ p_{X|\lambda}(x|\lambda) & =\lambda e^{-\lambda x}u(x)\\
 p_{\lambda,X_{1}}(\lambda,x_{1}) & =G(\lambda;\alpha,\beta)\cdot p_{X|\lambda}(x_{1}|\lambda)\\
  & =\frac{\beta^{\alpha}}{\Gamma(\alpha)}\lambda^{\alpha-1}e^{-\lambda\beta}\cdot\lambda e^{-\lambda x_{1}}u(x_{1})\\
  & =\frac{\beta^{\alpha}}{\Gamma(\alpha)}\lambda^{\alpha}e^{-\lambda(\beta+x_{1})}\ \lambda>0,x_{1}>0\\
-p_{\lambda|X}(\lambda|x_{1}) & =\frac{p(\lambda,x_{1})}{p_{X}(x_{1})}\\
+p_{\lambda|X}(\lambda|x_{1}) & =\frac{p(\lambda,x_{1})}{p_{X}(x_{1})}=G(\lambda;\alpha+1,\beta+x_{1})\\
 p(\lambda,x_{1},x_{2}) & =p(\lambda,x_{1})p(x_{2}|\lambda,x_{1})\\
  & =p(\lambda,x_{1})p(x_{2}|\lambda)\\
  & =\frac{\beta^{\alpha}}{\Gamma(\alpha)}\lambda^{\alpha+1}e^{-\lambda(\beta+x_{1}+x_{2})}\ \lambda>0,x_{i}>0\\
-p(\lambda|x_{1},x_{2}) & =\frac{p(\lambda,x_{1},x_{2})}{p(x_{1},x_{2})}\\
-p_{\lambda,X_{1},X_{2}}(\lambda,x_{1},x_{2},\ldots,x_{N}) & =\frac{\beta^{\alpha}}{\Gamma(\alpha)}\lambda^{\alpha+(N-1)}e^{-\lambda(\beta+\sum_{i=1}^{N}x_{i})}\ \lambda>0,x_{1}>0
+p(\lambda|x_{1},x_{2}) & =\frac{p(\lambda,x_{1},x_{2})}{p(x_{1},x_{2})}=G(\lambda;\alpha+2,\beta+x_{1}+x_{2})\\
+p_{\lambda,X_{1},X_{2}}(\lambda,x_{1},x_{2},\ldots,x_{N}) & =\frac{\beta^{\alpha}}{\Gamma(\alpha)}\lambda^{\alpha+(N-1)}e^{-\lambda(\beta+\sum_{i=1}^{N}x_{i})}\ \lambda>0,x_{1}>0\\
+ & =G(\lambda;\alpha+N,\beta+\sum_{i=1}^{N}x_{i})
 \end{align*}
 
 \end_inset
