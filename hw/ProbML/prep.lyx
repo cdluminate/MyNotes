@@ -128,6 +128,36 @@ HMMs.
 
 \begin_layout Standard
 Dirichlet process.
+ GMM model (bayesian extension).
+ DP.
+ Sampling...
+ 
+\begin_inset Formula $\pi_{k}$
+\end_inset
+
+ using stick breaking.
+ 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+ using 
+\begin_inset Formula $G_{0}$
+\end_inset
+
+.
+ Chinese restaurant process (CRP) (important but not for exam).
+ 
+\end_layout
+
+\begin_layout Standard
+Approximation.
+ deterministic (laplace method).
+ 
+\begin_inset Formula $p_{o}(x)=p_{o}(\hat{x})e^{-\frac{1}{2}(x...)}$
+\end_inset
+
+.
+ HW7.3 (a).
 \end_layout
 
 \end_body
