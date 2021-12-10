@@ -4241,6 +4241,68 @@ Multinomial Conjugacy.
  parameter.
 \end_layout
 
+\begin_layout Standard
+Dir Process Mixture Model.
+ 
+\begin_inset Formula $P(\theta_{k};\lambda)\triangleq H(\theta_{k})$
+\end_inset
+
+.
+ 
+\begin_inset Formula $G(\theta)=\sum_{k=1}^{K}x_{k}\delta_{\theta_{k}}(\theta)$
+\end_inset
+
+, 
+\begin_inset Formula $X\sim Dir(\frac{\alpha}{K},\ldots,\frac{\alpha}{K})$
+\end_inset
+
+.
+ 
+\begin_inset Formula $G(\cdot)$
+\end_inset
+
+ is mixture of delta funcs centered on 
+\begin_inset Formula $\{\theta_{k}\}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Pr(\bar{\theta}_{i}=\theta_{k})=x_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Dir Process.
+ Distribution over probability measures 
+\begin_inset Formula $G:\theta\mapsto R^{+}$
+\end_inset
+
+ defined by 
+\begin_inset Formula $[G(T_{1}),\ldots,G(T_{K})]^{T}\sim Dir(\alpha H(T_{1}),\ldots,\alpha H(T_{K}))$
+\end_inset
+
+ for any partition 
+\begin_inset Formula $\{T_{1},\ldots,T_{K}\}$
+\end_inset
+
+ of parameter domain 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ Denote 
+\begin_inset Formula $G\sim DP(\alpha,H)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Extend Dirichlet Conjugacy.
+\end_layout
+
 \begin_layout Subsection
 Gaussian Processes
 \end_layout
