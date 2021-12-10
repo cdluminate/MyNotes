@@ -5,6 +5,10 @@
 \save_transient_properties true
 \origin unavailable
 \textclass article
+\begin_preamble
+\usepackage{microtype}
+\usepackage[margin=1in]{geometry}
+\end_preamble
 \use_default_options true
 \maintain_unincluded_children false
 \language english
@@ -29,6 +33,7 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
+\spacing single
 \use_hyperref false
 \papersize default
 \use_geometry false
@@ -44,6 +49,7 @@
 \use_package undertilde 1
 \cite_engine basic
 \cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -77,6 +83,60 @@
 
 \begin_layout Title
 HW #9
+\end_layout
+
+\begin_layout Author
+Mo Zhou <mzhou32@jhu.edu>
+\end_layout
+
+\begin_layout Section
+Problem 9.1
+\end_layout
+
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Formula $p(x_{t}|y_{1:t-1})$
+\end_inset
+
+ is still a Gaussian.
+ Namely 
+\begin_inset Formula $p(x_{t}|y_{1:t-1})=\mathcal{N}(\mu_{t}^{\prime},\Sigma_{t}^{\prime})$
+\end_inset
+
+ is the prediction step, where:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\mu_{t}^{\prime} & =E[x_{t}]\\
+ & =A_{t}\hat{\mu}_{t-1}+B_{t}E[y_{t-1}]+E[\epsilon_{t}]\\
+ & =A_{t}\hat{\mu}_{t-1}+B_{t}C_{t-1}\hat{\mu}_{t-1}+B_{t}E[\delta_{t}]\\
+ & =(A_{t}+B_{t}C_{t-1})\hat{\mu}_{t-1}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\Sigma_{t}^{\prime} & =E[(x_{t}-\mu_{t}^{\prime})(x_{t}-\mu_{t}^{\prime})^{T}]\\
+ & =E[\{(A_{t}+B_{t}C_{t-1})(x_{t-1}-\hat{\mu}_{t-1})+\epsilon_{t}+B_{t}\delta_{t}\}\{(A_{t}+B_{t}C_{t-1})(x_{t-1}-\hat{\mu}_{t-1})+\epsilon_{t}+B_{t}\delta_{t}\}^{T}]\\
+ & =E[\{(A_{t}+B_{t}C_{t-1})(x_{t-1}-\hat{\mu}_{t-1})\}\{(A_{t}+B_{t}C_{t-1})(x_{t-1}-\hat{\mu}_{t-1})\}^{T}]+E[\epsilon_{t}\epsilon_{t}^{T}]+B_{t}E[\delta_{t}\delta_{t}^{T}]B_{t}^{T}\\
+ & =(A_{t}+B_{t}C_{t-1})E[(x_{t-1}-\hat{\mu}_{t-1})(x_{t-1}-\hat{\mu}_{t-1})^{T}](A_{t}+B_{t}C_{t-1})^{T}+Q_{t}+B_{t}R_{t}B_{t}^{T}\\
+ & =(A_{t}+B_{t}C_{t-1})\hat{\Sigma}_{t-1}(A_{t}+B_{t}C_{t-1})^{T}+Q_{t}+B_{t}R_{t}B_{t}^{T}
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
