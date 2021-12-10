@@ -139,6 +139,100 @@ The
 
 \end_layout
 
+\begin_layout Subsection
+(b)
+\end_layout
+
+\begin_layout Standard
+For Gaussians, BLS=LLS=
+\begin_inset Formula $\hat{\mu}_{t}$
+\end_inset
+
+, which means
+\begin_inset Formula 
+\begin{align*}
+\hat{\mu}_{t} & =\mu_{t}^{\prime}+\Lambda_{XY}\Lambda_{Y}^{-1}(y_{t}-E[y_{t}])
+\end{align*}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{align*}
+E[y_{t}] & =C_{t}\mu_{t}^{\prime}\\
+\Lambda_{XY} & =E[(x_{t}-\mu_{t}^{\prime})(y_{t}-E[y_{t}])^{T}]\\
+ & =E[(x_{t}-\mu_{t}^{\prime})(C_{t}x_{t}+\delta_{t}-C_{t}\mu_{t}^{\prime})^{T}]\\
+ & =E[(x_{t}-\mu_{t}^{\prime})(x_{t}-\mu_{t}^{\prime})^{T}]C_{t}^{T}\\
+ & =\Sigma_{t}^{\prime}C_{t}^{T}\\
+\Lambda_{Y} & =E[(y_{t}-E[y_{t}])(y_{t}-E[y_{t}])^{T}]\\
+ & =E[(C_{t}x_{t}+\delta_{t}-C_{t}\mu_{t}^{\prime})(C_{t}x_{t}+\delta_{t}-C_{t}\mu_{t}^{\prime})^{T}]\\
+ & =C_{t}E[(x_{t}-\mu_{t}^{\prime})(x_{t}-\mu_{t}^{\prime})^{T}]C_{t}^{T}+E[\delta_{t}\delta_{t}^{T}]\\
+ & =C_{t}\Sigma_{t}^{\prime}C_{t}^{T}+R_{t}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So
+\begin_inset Formula 
+\[
+\hat{\mu}_{t}=\mu_{t}^{\prime}+\Sigma_{t}^{\prime}C_{t}^{T}[C_{t}\Sigma_{t}^{\prime}C_{t}^{T}+R_{t}]^{-1}(y_{t}-C_{t}\hat{\mu}_{t-1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We let
+\begin_inset Formula 
+\[
+K_{t}=\Sigma_{t}^{\prime}C_{t}^{T}[C_{t}\Sigma_{t}^{\prime}C_{t}^{T}+R_{t}]^{-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then
+\begin_inset Formula 
+\[
+\hat{\mu}_{t}=\mu_{t}^{\prime}+K_{t}(y_{t}-C_{t}\hat{\mu}_{t-1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And 
+\begin_inset Formula 
+\begin{align*}
+\hat{\Sigma}_{t} & =\Sigma_{t}^{\prime}-\Lambda_{XY}\Lambda_{Y}^{-1}\Lambda_{XY}^{T}\\
+ & =\Sigma_{t}^{\prime}-K_{t}(\Sigma_{t}^{\prime}C_{t}^{T})^{T}\\
+ & =(I-K_{t}C_{t})\Sigma_{t}^{\prime}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And 
+\begin_inset Formula $p(x_{t}|y_{1:t})=\mathcal{N}(\hat{\mu}_{t},\hat{\Sigma}_{t})$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Section
 Problem 9.4
 \end_layout
