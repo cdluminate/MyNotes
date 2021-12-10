@@ -234,6 +234,27 @@ And
 \end_layout
 
 \begin_layout Section
+Problem 9.2
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+p_{X|\lambda}(x|\lambda) & =\lambda e^{-\lambda x}u(x)\\
+p_{\lambda,X_{1}}(\lambda,x_{1}) & =G(\lambda;\alpha,\beta)\cdot p_{X|\lambda}(x_{1}|\lambda)\\
+ & =\frac{\beta^{\alpha}}{\Gamma(\alpha)}\lambda^{\alpha-1}e^{-\lambda\beta}\cdot\lambda e^{-\lambda x_{1}}u(x_{1})\\
+ & =\frac{\beta^{\alpha}}{\Gamma(\alpha)}\lambda^{\alpha}e^{-\lambda(\beta+x_{1})}u(x_{1})\\
+ & =G(\lambda;\alpha+1,\beta+x_{1})\\
+p_{\lambda|X}(\lambda|x) & =\frac{p(\lambda,x)}{p_{X}(x)}=\frac{G(\lambda;\alpha,\beta)\cdot p_{X|\lambda}(x|\lambda)}{p_{X}(x)}\\
+p_{\lambda,X_{1},X_{2}}(\lambda,x_{1},x_{2},\ldots,x_{N}) & =G(\lambda;\alpha+N,\beta+\sum_{i=1}^{N}x_{i})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Problem 9.4
 \end_layout
 
