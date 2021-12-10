@@ -4363,8 +4363,9 @@ Prediction.
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-P(Y_{*}|X_{1:N},Y_{1:N},X_{*}) & =\int P(f(x),y_{*}|X_{1:N},Y_{1:N},X_{*})df(x)\\
- & =\int P(f(x)|X_{1:N},Y_{1:N})P(Y_{*}|f(x),X_{*})df(x)
+ & P(Y_{*}|X_{1:N},Y_{1:N},X_{*})\\
+= & \int P(f(x),Y_{*}|X_{1:N},Y_{1:N},X_{*})df(x)\\
+= & \int P(f(x)|X_{1:N},Y_{1:N})P(Y_{*}|f(x),X_{*})df(x)
 \end{align*}
 
 \end_inset
@@ -4463,7 +4464,7 @@ GP Regression.
 \end_inset
 
 .
- 
+ Posterior 
 \begin_inset Formula $P(f_{*}|x_{*},D)\sim\mathcal{N}(m,\sigma^{2})$
 \end_inset
 
@@ -4476,7 +4477,7 @@ GP Regression.
 \end_inset
 
 .
- Now, we 
+ Generalize to multiple testing points 
 \begin_inset Formula $x_{1}^{*},\ldots,x_{M}^{*}$
 \end_inset
 
@@ -4486,7 +4487,7 @@ GP Regression.
 
 .
  
-\begin_inset Formula $P(f|x_{1}^{*},\ldots,x_{M}^{*},D)=\mathcal{N}(f_{*},m,\Sigma)$
+\begin_inset Formula $P(f|x_{1}^{*},\ldots,x_{M}^{*},D)=\mathcal{N}(f_{*};m,\Sigma)$
 \end_inset
 
 .
@@ -4505,6 +4506,12 @@ GP Regression.
 \begin_layout Standard
 (2) Noisy observations.
  TODO
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Kernel Function.
 \end_layout
 
 \begin_layout Standard
