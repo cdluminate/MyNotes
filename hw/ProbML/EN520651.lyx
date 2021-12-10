@@ -4200,7 +4200,11 @@ concentration
 \end_layout
 
 \begin_layout Standard
+
+\series bold
 Multinomial Conjugacy.
+
+\series default
  
 \begin_inset Formula $p_{X}(x;\alpha)=Dir(x;\alpha)$
 \end_inset
@@ -4233,6 +4237,8 @@ Multinomial Conjugacy.
 \end_inset
 
 .
+ Observing data changes both the center and concentration of underlying
+ parameter.
 \end_layout
 
 \begin_layout Subsection
