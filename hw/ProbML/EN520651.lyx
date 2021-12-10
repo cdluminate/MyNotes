@@ -3646,7 +3646,7 @@ q(x)>0\ \forall\ x\in\mathcal{X}\ s.t.\ p(x)>0
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Importance Sampling
 \end_layout
 
@@ -3711,28 +3711,24 @@ w(x_{i})=\frac{p_{0}(x_{i})}{q_{0}(x_{i})}
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Rejection Sampling
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Markov-Chain Monte Carlo (MCMC)
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Approximations Continued
 \end_layout
 
 \begin_layout Subsection
-Markov Chains and HMMs
+Hidden Markov Models
 \end_layout
 
-\begin_layout Subsection
-HMMs Continued
-\end_layout
-
-\begin_layout Subsection
-Graphical Model
+\begin_layout Standard
+Graphical Models -> (Discrete states from ML perspective) -> HMMs; 
 \end_layout
 
 \begin_layout Standard
@@ -3816,12 +3812,200 @@ Kalman Filtering
 \end_layout
 
 \begin_layout Standard
-Graphical Models -> (Discrete states from ML perspective) -> HMMs; Graphical
- Models -> (Continuous states from SP perspective) -> Kalman Filter.
+Graphical Models -> (Continuous states from SP perspective) -> Kalman Filter
+ (Tracking / Online Learning).
 \end_layout
 
-\begin_layout Subsection
-Conjugate Priors
+\begin_layout Standard
+
+\series bold
+Kalman Filtering.
+
+\series default
+ Vector 
+\begin_inset Formula $x_{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+ are true and measured position at time 
+\begin_inset Formula $t$
+\end_inset
+
+ respectively.
+ 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+ is driving input, deterministic and known.
+\begin_inset Formula 
+\begin{align*}
+x_{t} & =A_{t}x_{t-1}+B_{t}u_{t}+\mathcal{E}_{t} & \mathcal{E}_{t}\sim iid\ \mathcal{N}(0,Q_{t})\\
+y_{t} & =C_{t}x_{t}+D_{t}u_{t}+\delta_{t} & \delta_{t}\sim iid\ \mathcal{N}(0,R_{t})
+\end{align*}
+
+\end_inset
+
+(1) Predict (prime): compute 
+\begin_inset Formula $p(x_{t}|y_{1:t-1},u_{1:t};\theta)$
+\end_inset
+
+ 
+\begin_inset Formula $\sim\mathcal{N}$
+\end_inset
+
+(
+\begin_inset Formula $\mu_{t}^{\prime}$
+\end_inset
+
+, 
+\begin_inset Formula $\Sigma_{t}^{\prime}$
+\end_inset
+
+).
+ 
+\begin_inset Formula $\mu_{t}^{\prime}=E[x_{t}]=A_{t}\hat{\mu}_{t-1}+B_{t}\mu_{t}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\Sigma_{t}^{\prime}=E[(x_{t}-\mu_{t}^{\prime})(x_{t}-\mu_{t}^{\prime})^{T}]=A_{t}\hat{\Sigma}_{t-1}A_{t}^{T}+Q_{t}$
+\end_inset
+
+.
+ (2) Refine to 
+\begin_inset Formula $p(\hat{x}_{t}|y_{1:t};\theta)$
+\end_inset
+
+ (hat).
+ For Gaussians, BLS=LLS=
+\begin_inset Formula $\hat{\mu}_{t}$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $\hat{\mu}_{t}=\mu_{t}^{\prime}+\Lambda_{XY}\Lambda_{Y}^{-1}(y_{t}-E[y_{t}])$
+\end_inset
+
+, where 
+\begin_inset Formula $E[y_{t}]=C_{t}\mu_{t}^{\prime}+D_{t}u_{t}$
+\end_inset
+
+, 
+\begin_inset Formula $\Lambda_{Y}=C_{t}\Sigma_{t}^{\prime}C_{t}^{T}+R_{t}$
+\end_inset
+
+, 
+\begin_inset Formula $\Lambda_{XY}=\Sigma_{t}^{\prime}C_{t}^{T}$
+\end_inset
+
+.
+ Let Kalman Gain Matrix be 
+\begin_inset Formula $\mathbb{K}_{t}=\Sigma_{t}^{\prime}C_{t}^{T}[C_{t}\Sigma_{t}^{\prime}C_{t}^{T}+R_{t}]^{-1}$
+\end_inset
+
+, and residual 
+\begin_inset Formula $r_{t}=y_{t}-C_{t}\hat{\mu}_{t-1}-D_{t}u_{t}$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $\hat{\mu}_{t}=\mu_{t}^{\prime}+\mathbb{K}_{t}r_{t}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\hat{\Sigma}_{t}=\Sigma_{t}^{\prime}-\Lambda_{XY}\Lambda_{Y}^{-1}\Lambda_{XY}^{-1}=(I-\mathbb{K}_{t}C_{t})\Sigma_{t}^{\prime}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Extended Kalman Filter.
+
+\series default
+ Non-linear function 
+\begin_inset Formula $g(\cdots)$
+\end_inset
+
+ and 
+\begin_inset Formula $h(\cdots)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $x_{t}=g(x_{t-1},u_{t})+\mathcal{E}_{t}$
+\end_inset
+
+, 
+\begin_inset Formula $y_{t}=h(x_{t},u_{t})+\delta_{t}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\{x_{t},y_{t}\}$
+\end_inset
+
+ are nolonger jointly Gaussian, but we can linearly approximate.
+ (1) Let Jacobian 
+\begin_inset Formula $G_{ij}=\frac{\partial g_{i}(x,u)}{\partial x_{j}}$
+\end_inset
+
+ and 
+\begin_inset Formula $G_{t}=G|_{x=\hat{\mu_{t-1}}}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{t}\approx g(\hat{\mu}_{t-1},u_{t})+G_{t}(x_{t-1}-\hat{\mu}_{t-1})+\mathcal{E}_{t}$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $\mu_{t}^{\prime}=g(\hat{\mu}_{t-1},u_{t})$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\Sigma_{t}^{\prime}=G_{t}\hat{\Sigma}_{t}G_{t}^{T}+Q_{t}$
+\end_inset
+
+.
+ (2) Let Jacobian 
+\begin_inset Formula $H_{ij}=\frac{\partial h_{i}(x,u)}{\partial x_{j}}$
+\end_inset
+
+ and 
+\begin_inset Formula $H_{t}=H_{x=\mu_{t}^{\prime}}$
+\end_inset
+
+, 
+\begin_inset Formula $y_{t}\approx h(\mu_{t}^{\prime},u_{t})+H_{t}(x_{t}-\mu_{t}^{\prime})+\delta_{t}$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $\mathbb{K}_{t}=\Sigma_{t}^{\prime}H_{t}^{T}(H_{t}\Sigma_{t}^{\prime}H_{t}^{T}+R_{t})^{-1}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\mu}_{t}=\mu_{t}^{\prime}+\mathbb{K}_{t}(y_{t}-h(\mu_{t}^{\prime},u_{t}))$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\Sigma}_{t}=(I=\mathbb{K}_{t}H_{t})\Sigma_{t}^{\prime}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Conjugate Priors.
+ 
 \end_layout
 
 \begin_layout Subsection
