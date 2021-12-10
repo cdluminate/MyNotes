@@ -3898,7 +3898,7 @@ y_{t} & =C_{t}x_{t}+D_{t}u_{t}+\delta_{t} & \delta_{t}\sim iid\ \mathcal{N}(0,R_
 \end_inset
 
 , 
-\begin_inset Formula $\Lambda_{XY}=\Sigma_{t}^{\prime}C_{t}^{T}$
+\begin_inset Formula $\Lambda_{XY}=E[(x_{t}-\mu_{t}^{\prime})(y-E[y_{t}])^{T}]=\Sigma_{t}^{\prime}C_{t}^{T}$
 \end_inset
 
 .
@@ -3917,7 +3917,7 @@ y_{t} & =C_{t}x_{t}+D_{t}u_{t}+\delta_{t} & \delta_{t}\sim iid\ \mathcal{N}(0,R_
 
 .
  
-\begin_inset Formula $\hat{\Sigma}_{t}=\Sigma_{t}^{\prime}-\Lambda_{XY}\Lambda_{Y}^{-1}\Lambda_{XY}^{-1}=(I-\mathbb{K}_{t}C_{t})\Sigma_{t}^{\prime}$
+\begin_inset Formula $\hat{\Sigma}_{t}=\Sigma_{t}^{\prime}-\Lambda_{XY}\Lambda_{Y}^{-1}\Lambda_{XY}^{T}=(I-\mathbb{K}_{t}C_{t})\Sigma_{t}^{\prime}$
 \end_inset
 
 .
