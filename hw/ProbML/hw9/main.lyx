@@ -240,17 +240,20 @@ Problem 9.2
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-p_{X|\lambda}(x|\lambda) & =\lambda e^{-\lambda x}u(x)\\
+Prior\quad G(\lambda;\alpha,\beta) & =\frac{\beta^{\alpha}}{\Gamma(\alpha)}\lambda^{\alpha-1}e^{-\lambda\beta}\\
+Likelihood\quad p_{X|\lambda}(x|\lambda) & =\lambda e^{-\lambda x}u(x)\\
 p_{\lambda,X_{1}}(\lambda,x_{1}) & =G(\lambda;\alpha,\beta)\cdot p_{X|\lambda}(x_{1}|\lambda)\\
  & =\frac{\beta^{\alpha}}{\Gamma(\alpha)}\lambda^{\alpha-1}e^{-\lambda\beta}\cdot\lambda e^{-\lambda x_{1}}u(x_{1})\\
  & =\frac{\beta^{\alpha}}{\Gamma(\alpha)}\lambda^{\alpha}e^{-\lambda(\beta+x_{1})}\ \lambda>0,x_{1}>0\\
-p_{\lambda|X}(\lambda|x_{1}) & =\frac{p(\lambda,x_{1})}{p_{X}(x_{1})}=G(\lambda;\alpha+1,\beta+x_{1})\\
+ & \propto p(\lambda|x_{1})=\frac{p(\lambda,x_{1})}{p_{X}(x_{1})}\\
+p_{\lambda|X}(\lambda|x_{1}) & =G(\lambda;\alpha+1,\beta+x_{1})\\
 p(\lambda,x_{1},x_{2}) & =p(\lambda,x_{1})p(x_{2}|\lambda,x_{1})\\
  & =p(\lambda,x_{1})p(x_{2}|\lambda)\\
  & =\frac{\beta^{\alpha}}{\Gamma(\alpha)}\lambda^{\alpha+1}e^{-\lambda(\beta+x_{1}+x_{2})}\ \lambda>0,x_{i}>0\\
-p(\lambda|x_{1},x_{2}) & =\frac{p(\lambda,x_{1},x_{2})}{p(x_{1},x_{2})}=G(\lambda;\alpha+2,\beta+x_{1}+x_{2})\\
-p_{\lambda,X_{1},X_{2}}(\lambda,x_{1},x_{2},\ldots,x_{N}) & =\frac{\beta^{\alpha}}{\Gamma(\alpha)}\lambda^{\alpha+(N-1)}e^{-\lambda(\beta+\sum_{i=1}^{N}x_{i})}\ \lambda>0,x_{1}>0\\
- & =G(\lambda;\alpha+N,\beta+\sum_{i=1}^{N}x_{i})
+ & \propto p(\lambda|x_{1},x_{2})=\frac{p(\lambda,x_{1},x_{2})}{p(x_{1},x_{2})}\\
+p(\lambda|x_{1},x_{2}) & =G(\lambda;\alpha+2,\beta+x_{1}+x_{2})\\
+p_{\lambda,X_{1},X_{2}}(\lambda,x_{1},x_{2},\ldots,x_{N}) & =\frac{\beta^{\alpha}}{\Gamma(\alpha)}\lambda^{(\alpha+N)-1}e^{-\lambda(\beta+\sum_{i=1}^{N}x_{i})}\ \lambda>0,x_{1}>0\\
+p(\lambda|x_{1},\ldots,x_{N};\alpha,\beta) & =G(\lambda;\alpha+N,\beta+\sum_{i=1}^{N}x_{i})
 \end{align*}
 
 \end_inset
@@ -318,6 +321,53 @@ When
  After observing the data, the posterior distribution's peak will slightly
  move towards the center of triangular, and the distribution will be more
  concentrated.
+\end_layout
+
+\begin_layout Subsection
+(d)
+\end_layout
+
+\begin_layout Standard
+(i) When concentration 
+\begin_inset Formula $\alpha\rightarrow0$
+\end_inset
+
+, the likely cluster assignments for 
+\begin_inset Formula $Y_{1},\ldots,Y_{N}$
+\end_inset
+
+ are all the same class.
+ There will be only 
+\begin_inset Formula $1$
+\end_inset
+
+ class.
+\end_layout
+
+\begin_layout Standard
+(ii) when 
+\begin_inset Formula $\alpha\rightarrow\infty$
+\end_inset
+
+, each of the observations 
+\begin_inset Formula $Y_{1},\ldots,Y_{N}$
+\end_inset
+
+ will be assigned a different class individually.
+ Namely there will be 
+\begin_inset Formula $N$
+\end_inset
+
+ classes.
+\end_layout
+
+\begin_layout Standard
+(iii) geometrically we discover 
+\begin_inset Formula $3$
+\end_inset
+
+ classes from the observation, with cluster centers being 1.15, 1.85, and
+ 2.55 respectively.
 \end_layout
 
 \begin_layout Section
