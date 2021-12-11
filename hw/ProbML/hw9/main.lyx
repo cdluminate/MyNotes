@@ -259,6 +259,68 @@ p_{\lambda,X_{1},X_{2}}(\lambda,x_{1},x_{2},\ldots,x_{N}) & =\frac{\beta^{\alpha
 \end_layout
 
 \begin_layout Section
+Problem 9.3
+\end_layout
+
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename fig1.svg
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(b)
+\end_layout
+
+\begin_layout Standard
+The observed data has three clusters, where each cluster contains 4 samples.
+ The posterior 
+\begin_inset Formula $p(\pi|y;\alpha)$
+\end_inset
+
+ is also Dir due to conjugacy.
+ On the probability simplex: (1) peak not moved; (2) the distribution is
+ more concentrated.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename fig2.svg
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(c)
+\end_layout
+
+\begin_layout Standard
+When 
+\begin_inset Formula $\alpha=[1,1,20]^{T}$
+\end_inset
+
+, the likelihood distribution's peak will move towards 
+\begin_inset Formula $\delta_{3}$
+\end_inset
+
+.
+ After observing the data, the posterior distribution's peak will slightly
+ move towards the center of triangular, and the distribution will be more
+ concentrated.
+\end_layout
+
+\begin_layout Section
 Problem 9.4
 \end_layout
 
