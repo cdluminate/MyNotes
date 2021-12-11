@@ -242,8 +242,8 @@ Problem 9.2
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-Prior\quad G(\lambda;\alpha,\beta) & =\frac{\beta^{\alpha}}{\Gamma(\alpha)}\lambda^{\alpha-1}e^{-\lambda\beta}\\
-Likelihood\quad p_{X|\lambda}(x|\lambda) & =\lambda e^{-\lambda x}u(x)\\
+Prior\quad\quad G(\lambda;\alpha,\beta) & =\frac{\beta^{\alpha}}{\Gamma(\alpha)}\lambda^{\alpha-1}e^{-\lambda\beta}\\
+Likelihood\quad\quad p_{X|\lambda}(x|\lambda) & =\lambda e^{-\lambda x}u(x)\\
 p_{\lambda,X_{1}}(\lambda,x_{1}) & =G(\lambda;\alpha,\beta)\cdot p_{X|\lambda}(x_{1}|\lambda)\\
  & =\frac{\beta^{\alpha}}{\Gamma(\alpha)}\lambda^{\alpha-1}e^{-\lambda\beta}\cdot\lambda e^{-\lambda x_{1}}u(x_{1})\\
  & =\frac{\beta^{\alpha}}{\Gamma(\alpha)}\lambda^{\alpha}e^{-\lambda(\beta+x_{1})}\ \lambda>0,x_{1}>0\\
@@ -489,11 +489,15 @@ end{tikzpicture}%
 \end_layout
 
 \begin_layout Standard
+We can figure it out by marginalizing the joint distribution.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
 p(\theta,y_{1},\ldots,y_{N};\sigma^{2},\gamma^{2}) & =\mathcal{N}(\theta;0,\sigma^{2})\prod_{i=1}^{N}\mathcal{N}(y_{i};\theta,\gamma^{2})\\
  & =\frac{1}{\sqrt{2\pi\sigma^{2}}}\exp\{-\frac{1}{2}(\frac{\theta}{\sigma})^{2}\}\prod_{i=1}^{N}\frac{1}{\sqrt{2\pi\gamma^{2}}}\exp\{-\frac{1}{2}(\frac{y_{i}-\theta}{\gamma})^{2}\}\\
-p(y_{1},\ldots,y_{N};\sigma^{2},\gamma^{2}) & =\int_{-\infty}^{\infty}p(\theta,y_{1},\ldots,y_{N};\sigma^{2},\gamma^{2})d\theta
+ & =\frac{1}{\sqrt{2\pi\sigma^{2}}}\frac{1}{(2\pi\gamma^{2})^{N/2}}\exp\Big\{-\frac{1}{2}(\frac{\theta}{\sigma})^{2}+\frac{1}{2}\sum_{i=1}^{N}(\frac{y_{i}-\theta}{\gamma})^{2}\Big\}
 \end{align*}
 
 \end_inset
@@ -502,6 +506,24 @@ p(y_{1},\ldots,y_{N};\sigma^{2},\gamma^{2}) & =\int_{-\infty}^{\infty}p(\theta,y
 \end_layout
 
 \begin_layout Standard
+Then we marginalize 
+\begin_inset Formula $\theta$
+\end_inset
+
+ as follows
+\begin_inset Formula 
+\begin{align*}
+p(y_{1},\ldots,y_{N};\sigma^{2},\gamma^{2}) & =\int_{-\infty}^{\infty}p(\theta,y_{1},\ldots,y_{N};\sigma^{2},\gamma^{2})d\theta\\
+ & =\int_{-\infty}^{\infty}\frac{1}{\sqrt{2\pi\sigma^{2}}}\frac{1}{(2\pi\gamma^{2})^{N/2}}\exp\Big\{-\frac{1}{2}(\frac{\theta}{\sigma})^{2}+\frac{1}{2}\sum_{i=1}^{N}(\frac{y_{i}-\theta}{\gamma})^{2}\Big\} d\theta\\
+ & =
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 (a.iii)
 \end_layout
 
@@ -516,8 +538,8 @@ p(y_{N+1}|y_{1},\ldots,y_{N}) & =\frac{p(y_{1},\ldots,y_{N},y_{N+1})}{p(y_{1},\l
 
 \end_layout
 
-\begin_layout Standard
-(b.i)
+\begin_layout Section
+Problem 9.5
 \end_layout
 
 \end_body
