@@ -4492,7 +4492,7 @@ Gaussian Process.
 \begin_inset Formula $\mathbb{K}=E[(f-\mu)(f-\mu)^{T}]$
 \end_inset
 
- (
+ with 
 \begin_inset Formula $K_{ij}=K(x_{i},x_{j})$
 \end_inset
 
@@ -4530,7 +4530,7 @@ GP Regression.
 
 .
  
-\begin_inset Formula $[f,f(x_{*})=f_{*}]^{T}\sim\mathcal{N}([\mu,\mu_{*}]^{T},[\mathbb{K},k_{*};k_{*}^{T},k'_{*}])$
+\begin_inset Formula $[f,f(x_{*})=f_{*}]^{T}\sim\mathcal{N}([\mu,\mu_{*}]^{T},[\mathbb{K},k_{*};k_{*}^{T},k_{*}^{\prime}])$
 \end_inset
 
  where 
@@ -4587,27 +4587,67 @@ GP Regression.
 
 \begin_layout Standard
 (2) Noisy observations.
- TODO
+ 
+\begin_inset Formula $Y_{i}=f(x_{i})+\epsilon_{i}$
+\end_inset
+
+, where 
+\begin_inset Formula $\epsilon_{i}\sim iid\ \mathcal{N}(0,\sigma_{y}^{2})$
+\end_inset
+
+.
+ 
+\begin_inset Formula $E[Y_{i}]=\mu_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $Cov(Y_{i},Y_{j})=K(x_{i},x_{j})+\sigma_{Y}^{2}\delta_{ij}$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $Cov(Y_{1:N})=K+\sigma_{Y}^{2}I\triangleq K_{Y}$
+\end_inset
+
+.
+ Single observation 
+\begin_inset Formula $[Y_{1:N},f_{*}]^{T}\sim\mathcal{N}([\mu,\mu_{*}]^{T},[K_{Y},k_{*};k_{*}^{T},k_{*}^{\prime}])$
+\end_inset
+
+.
+ 
+\begin_inset Formula $p(f_{*}|x_{*},D)=\mathcal{N}(f_{*};m,\sigma^{2})$
+\end_inset
+
+ where 
+\begin_inset Formula $m=\mu_{*}+k_{*}^{T}K_{Y}^{-1}(y-\mu)$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma^{2}=k_{*}^{\prime}-k_{*}^{T}K_{Y}^{-1}k_{*}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
 Kernel Function.
-\end_layout
-
-\begin_layout Standard
-RBF Kernel.
+ 
+\series default
+(prediction performance).
+ RBF Kernel.
  
 \begin_inset Formula $K(x,x')=\beta\exp\{-\frac{1}{2r^{2}}\|x-x'\|_{F}^{2}\}$
 \end_inset
 
 .
- 
-\begin_inset Formula $D=\{(x_{i},y_{i}),i=1,\ldots,N\}$
+ Or generalized form 
+\begin_inset Formula $K(x,x')=\beta\exp\{-\frac{1}{2r^{2}}(x-x')^{T}M(x-x')\}$
 \end_inset
 
-.
+ which can emphasize certain directions in data.
 \end_layout
 
 \begin_layout Subsection
