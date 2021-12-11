@@ -115,7 +115,7 @@ JHU ECE EN 520.651 2021 Fall
 
 \series bold
 M.
- Zhou / Simplified Course Notes
+ Zhou / Simplified Course Notes / Cheatsheet
 \end_layout
 
 \begin_layout Subsection
@@ -1591,7 +1591,33 @@ Minmax Hypothesis Testing
 \end_layout
 
 \begin_layout Standard
-TODO
+Setup.
+ Adversarial game w/ cost but w/o priors
+\begin_inset Formula 
+\[
+\hat{H}_{M}(\cdot)=\arg\min_{f(\cdot)}[\max_{p=Pr(H=H_{1})\in[0,1]}E_{Y,H}[\tilde{C}(H,f(Y))]]
+\]
+
+\end_inset
+
+The class of 
+\begin_inset Formula $f(\cdot)$
+\end_inset
+
+ is restricted to LRTs, 
+\begin_inset Formula $\hat{H}_{B}(y,q)=H_{1}\cdot\mathbf{1}\{\mathcal{L}(y)>\frac{1-q}{q}\frac{c_{10}-c_{00}}{c_{01}-c_{11}}\}+H_{0}\{o.w.\}$
+\end_inset
+
+.
+ The solution is
+\begin_inset Formula 
+\[
+P_{D}(q^{*})=\frac{c_{01}-c_{00}}{c_{01}-c_{11}}-P_{F}(q^{*})[\frac{c_{10}-c_{00}}{c_{01}-c_{11}}]
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
