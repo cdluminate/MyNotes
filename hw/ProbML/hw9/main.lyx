@@ -8,6 +8,8 @@
 \begin_preamble
 \usepackage{microtype}
 \usepackage[margin=1in]{geometry}
+\usepackage{tikz}
+\usetikzlibrary[arrows,shapes,snakes,backgrounds,bayesnet]
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -374,11 +376,115 @@ When
 Problem 9.4
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
 (a.i)
 \end_layout
 
 \begin_layout Standard
+There should be squares enclosing parameters 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma^{2}$
+\end_inset
+
+, but I did not figure out how to do that with tikz-bayesnet in LaTeX.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[thick]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[latent] (theta) {$
+\backslash
+theta$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[obs,below=of theta] (Yi) {$Y_i$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[rectangle,right=of theta] (sigma) {$
+\backslash
+sigma^2$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[rectangle,right=of Yi] (gamma) {$
+\backslash
+gamma^2$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+plate {p1} {(Yi)} {N};
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+plate {p2} {(Xk)(p1)} {K};
+\end_layout
+
+\begin_layout Plain Layout
+
+R
+\backslash
+draw[->,>=latex] (sigma) -- (theta);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->,>=latex] (gamma) -- (Yi);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->,>=latex] (theta) -- (Yi);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 (a.ii)
 \end_layout
 
