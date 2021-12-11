@@ -4244,9 +4244,14 @@ Multinomial Conjugacy.
 \begin_layout Standard
 
 \series bold
-Dir Process Mixture Model.
+Dirichlet Process.
 
 \series default
+ Denote 
+\begin_inset Formula $G\sim DP(\alpha,H)$
+\end_inset
+
+.
  
 \begin_inset Formula $P(\theta_{k};\lambda)\triangleq H(\theta_{k})$
 \end_inset
@@ -4280,11 +4285,7 @@ Dir Process Mixture Model.
 \end_inset
 
  clusters.
-\end_layout
-
-\begin_layout Standard
-Dir Process.
- Distribution over probability measures 
+ Dir process is Distribution over probability measures 
 \begin_inset Formula $G:\theta\mapsto R^{+}$
 \end_inset
 
@@ -4301,19 +4302,65 @@ Dir Process.
 \end_inset
 
 .
- Denote 
-\begin_inset Formula $G\sim DP(\alpha,H)$
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Extend Dirichlet Conjugacy.
+
+\series default
+ 
+\begin_inset Formula $X\sim Dir(\alpha_{1},\ldots,\alpha_{K})$
+\end_inset
+
+, 
+\begin_inset Formula $Z_{i}\sim Multi(x)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $x|z_{1}\ldots z_{n}\sim Dir(\alpha_{1}+N_{1},\ldots,\alpha_{k}+N_{k})$
+\end_inset
+
+.
+ And 
+\begin_inset Formula $G|\bar{\theta}_{1},\ldots,\bar{\theta}_{N},\alpha,H\sim DP(\alpha+N,\frac{1}{\alpha+N}(\alpha H+\sum_{i=0}^{N}\delta_{\bar{\theta}_{i}}))$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-Extend Dirichlet Conjugacy.
+
+\series bold
+Stick-Breaking Construction.
+
+\series default
+ Infinite sequence of mixture weights 
+\begin_inset Formula $X=\{x_{k}\}_{k=1}^{\infty}$
+\end_inset
+
+, 
+\begin_inset Formula $\beta_{k}\sim Beta(1,\alpha)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $x_{k}=\beta_{k}(1-\sum_{i=1}^{k-1}x_{i})$
+\end_inset
+
+.
+ This is denoted as 
+\begin_inset Formula $X\sim GEM(\alpha)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
-Gaussian Processes
+Gaussian Processes 
 \end_layout
 
 \begin_layout Standard
