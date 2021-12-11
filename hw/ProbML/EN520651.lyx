@@ -4242,18 +4242,22 @@ Multinomial Conjugacy.
 \end_layout
 
 \begin_layout Standard
+
+\series bold
 Dir Process Mixture Model.
+
+\series default
  
 \begin_inset Formula $P(\theta_{k};\lambda)\triangleq H(\theta_{k})$
+\end_inset
+
+, 
+\begin_inset Formula $X\sim Dir(\frac{\alpha}{K},\ldots,\frac{\alpha}{K})$
 \end_inset
 
 .
  
 \begin_inset Formula $G(\theta)=\sum_{k=1}^{K}x_{k}\delta_{\theta_{k}}(\theta)$
-\end_inset
-
-, 
-\begin_inset Formula $X\sim Dir(\frac{\alpha}{K},\ldots,\frac{\alpha}{K})$
 \end_inset
 
 .
@@ -4271,6 +4275,11 @@ Dir Process Mixture Model.
 \end_inset
 
 .
+ Sampling will always result in 
+\begin_inset Formula $K$
+\end_inset
+
+ clusters.
 \end_layout
 
 \begin_layout Standard
