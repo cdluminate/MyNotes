@@ -326,7 +326,7 @@ e_{8}
 \end_layout
 
 \begin_layout Standard
-For the second problem, we need 
+For the second question, we need 
 \begin_inset Formula $8$
 \end_inset
 
@@ -389,6 +389,8 @@ Problem 3
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 Formulate the classical shape from shading problem using the variational
  approach assuming that depth values are available at an arbitrary number
  of points.
@@ -396,6 +398,174 @@ Formulate the classical shape from shading problem using the variational
  Discretize the Euler equation and derive an iterative equation for estimating
  depth.
  State the assumptions you have made.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $i$
+\end_inset
+
+ be the angle between the normal and the illumination source, 
+\begin_inset Formula $j$
+\end_inset
+
+ be the angle between the viewer and the source, and 
+\begin_inset Formula $e=i+j$
+\end_inset
+
+, the angle between the viewer and the normal.
+ Let 
+\begin_inset Formula $z(x,y)$
+\end_inset
+
+ be the 3D depth map.
+ Let 
+\begin_inset Formula $p=\frac{\partial z(x,y)}{\partial x}$
+\end_inset
+
+ and 
+\begin_inset Formula $q=\frac{\partial z(x,y)}{\partial y}$
+\end_inset
+
+.
+ Then the surface normal is given by 
+\begin_inset Formula $[p,q,-1]^{T}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $[p_{s},q_{s},-1]^{T}$
+\end_inset
+
+ be the vector that points in the direction of the source, and the vector
+ 
+\begin_inset Formula $[0,0,-1]^{T}$
+\end_inset
+
+ be the vector in the direction of the viewers.
+ 
+\end_layout
+
+\begin_layout Standard
+The relationship between 
+\begin_inset Formula $(p,q)$
+\end_inset
+
+ and intensity at 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+, namely the image irradiance equation 
+\begin_inset Formula $E(x,y)$
+\end_inset
+
+ is written as
+\begin_inset Formula 
+\[
+E(x,y)=R(p,q)=\cos(i)=\frac{1+pp_{s}+qq_{s}}{\sqrt{1+p^{2}+q^{2}}\sqrt{1+p_{s}^{2}+q_{s}^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Given 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $q$
+\end_inset
+
+, a set of equations is needed to determine 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ In the case of shape from shading, we need the second partials in the Euler
+ Lagrange equations to be constrained for the solution to be smooth.
+ Hence, the functional should be
+\begin_inset Formula 
+\[
+I_{3}(p,q)=\iint_{\Omega}F(x,y,p,q,p_{x},p_{y},q_{x},q_{y})dxdy
+\]
+
+\end_inset
+
+with corresponding Euler-Lagrange equations
+\begin_inset Formula 
+\[
+F_{p}-\frac{\partial}{\partial x}F_{p_{x}}-\frac{\partial}{\partial x}F_{p_{y}}=0\qquad F_{q}-\frac{\partial}{\partial x}F_{q_{x}}-\frac{\partial}{\partial x}F_{q_{y}}=0
+\]
+
+\end_inset
+
+And this is a non-linear PDE.
+ We now discretize this problem.
+ Let 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ be the spacing between picture cells.
+ Consider an elementary square path with lower left hand corner 
+\begin_inset Formula $(i,j)$
+\end_inset
+
+, where 
+\begin_inset Formula $i$
+\end_inset
+
+ corresponds to 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $j$
+\end_inset
+
+ corresponds to 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Then, the integral is approximated by the slope along each of the four
+ segments
+\begin_inset Formula 
+\[
+e_{ij}=\frac{\epsilon}{2}[p_{i,j}+p_{i+1,j}+q_{i+1,j}+q_{i+1,j+1}-p_{i+1,j+1}-p_{i,j+1}-q_{i,j+1}-q_{i,j}]
+\]
+
+\end_inset
+
+Then we solve the following minimization problem
+\begin_inset Formula 
+\[
+\min\epsilon^{2}\sum_{i=1}^{n}\sum_{j=1}^{m}(E_{ij}-R(p_{ij},q_{ij}))^{2}+\frac{\lambda}{\epsilon^{2}}\sum_{i=1}^{n-1}\sum_{j=1}^{m-1}e_{ij}^{2}
+\]
+
+\end_inset
+
+and obtain the following iterative formulation
+\begin_inset Formula 
+\begin{align*}
+p_{ij}^{k+1} & =\bar{p}_{ij}^{k}-\tilde{q}_{ij}^{k}+\frac{\epsilon^{2}}{\lambda}(E_{ij}-R(p_{ij}^{k},q_{ij}^{k}))R_{p}(p_{ij}^{k},q_{ij}^{k})\\
+q_{ij}^{k+1} & =\bar{q}_{ij}^{k}-\tilde{p}_{ij}^{k}+\frac{\epsilon^{2}}{\lambda}(E_{ij}-R(p_{ij}^{k},q_{ij}^{k}))R_{q}(p_{ij}^{k},q_{ij}^{k})
+\end{align*}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{align*}
+\bar{p}_{ij} & =\frac{1}{4}[(p_{i+1,j+1}-2p_{i+1,j}+p_{i+1,j-1})+2(p_{i,j+1}+p_{i,j-1})+(p_{i-1,j+1}-2p_{i-1,j}+p_{i-1,j-1})]\\
+\bar{q}_{ij} & =\frac{1}{4}[(q_{i+1,j+1}-2q_{i+1,j}+q_{i+1,j-1})+2(q_{i,j+1}+q_{i,j-1})+(q_{i-1,j+1}-2q_{i-1,j}+q_{i-1,j-1})]
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
