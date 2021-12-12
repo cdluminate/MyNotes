@@ -1106,7 +1106,7 @@ Diagonal Matrix
 
 \begin_layout Plain Layout
 
->> z1 = V(:,3)
+>> z1 = V(:,2)
 \end_layout
 
 \begin_layout Plain Layout
@@ -1120,116 +1120,7 @@ z1 =
 
 \begin_layout Plain Layout
 
-  -0.6414
-\end_layout
-
-\begin_layout Plain Layout
-
-   0.2977
-\end_layout
-
-\begin_layout Plain Layout
-
   -0.2977
-\end_layout
-
-\begin_layout Plain Layout
-
-   0.6414
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
->> A * z1
-\end_layout
-
-\begin_layout Plain Layout
-
-ans =
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-  -0.8750
-\end_layout
-
-\begin_layout Plain Layout
-
-   0.4061
-\end_layout
-
-\begin_layout Plain Layout
-
-  -0.4061
-\end_layout
-
-\begin_layout Plain Layout
-
-   0.8750
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
->> lambda(3,3)*z1
-\end_layout
-
-\begin_layout Plain Layout
-
-ans =
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-  -0.8750
-\end_layout
-
-\begin_layout Plain Layout
-
-   0.4061
-\end_layout
-
-\begin_layout Plain Layout
-
-  -0.4061
-\end_layout
-
-\begin_layout Plain Layout
-
-   0.8750
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
->> z1
-\end_layout
-
-\begin_layout Plain Layout
-
-z1 =
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -1239,55 +1130,12 @@ z1 =
 
 \begin_layout Plain Layout
 
-   0.2977
-\end_layout
-
-\begin_layout Plain Layout
-
-  -0.2977
-\end_layout
-
-\begin_layout Plain Layout
-
    0.6414
 \end_layout
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\begin_layout Plain Layout
-
->> y1 = D^(1/2) * z1
-\end_layout
-
-\begin_layout Plain Layout
-
-y1 =
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-  -1.6969
-\end_layout
-
-\begin_layout Plain Layout
-
-   0.6657
-\end_layout
-
-\begin_layout Plain Layout
-
-  -0.6657
-\end_layout
-
-\begin_layout Plain Layout
-
-   1.6969
+   0.2977
 \end_layout
 
 \end_inset
@@ -1297,24 +1145,20 @@ y1 =
 
 \begin_layout Standard
 Namely, the second smallest eigen vector is 
-\begin_inset Formula $z_{1}=[-0.64,0.29,-0.29,0.64]$
+\begin_inset Formula $z_{1}=[-0.29,-0.64,0.64,0.29]$
 \end_inset
 
 .
- The corresponding vector 
-\begin_inset Formula $y_{1}=[-1.69,0.66,-0.66,1.69]$
-\end_inset
-
-.
- And the corresponding indicator vector is 
-\begin_inset Formula $\text{sign}(y_{1})=[-1,1,-1,1]$
+ The corresponding indicator vector is 
+\begin_inset Formula $\text{sign}(D^{\frac{1}{2}}y_{1})=[-1,-1,1,1]$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-This means the resulting groupping is {A1, B1} and {A2, B2}.
+This means the resulting groupping is {A1, A2} and {B1, B2}, which matches
+ the given ground-truth grouping.
 \end_layout
 
 \end_body
