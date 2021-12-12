@@ -123,11 +123,223 @@ Derive an algorithm for estimating R and T.
  How many points are needed for producing a solution?
 \end_layout
 
+\begin_layout Standard
+Let translation vector 
+\begin_inset Formula $T=[\Delta x,\Delta y,\Delta z]^{T}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $(n_{1},n_{2},n_{3})$
+\end_inset
+
+ be the axis of rotation, and 
+\begin_inset Formula $\phi_{i}=n_{i}\theta$
+\end_inset
+
+ be the angle of rotation.
+ The rotation matrix 
+\begin_inset Formula $R$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+R=\begin{bmatrix}n_{1}^{2}+(1-n_{1}^{2})\cos\theta & n_{1}n_{2}(1-\cos\theta)-n_{3}\sin\theta & n_{1}n_{2}(1-\cos\theta)+n_{2}\sin\theta\\
+n_{1}n_{2}(1-\cos\theta)+n_{3}\sin\theta & n_{2}^{2}+(1-n_{2}^{2})\cos\theta & n_{2}n_{3}(1-\cos\theta)-n_{1}\sin\theta\\
+n_{1}n_{3}(1-\cos\theta)-n_{2}\sin\theta & n_{2}n_{3}(1-\cos\theta)+n_{1}\sin\theta & n_{3}^{2}+(1-n_{3}^{2})\cos\theta
+\end{bmatrix}=\begin{bmatrix}r_{1} & r_{2} & r_{3}\\
+r_{4} & r_{5} & r_{6}\\
+r_{7} & r_{8} & r_{9}
+\end{bmatrix}
+\]
+
+\end_inset
+
+Relating the two equations, we have
+\begin_inset Formula 
+\[
+X^{\prime}=\frac{x^{\prime}}{z^{\prime}}=\frac{(r_{1}X+r_{2}Y+r_{3})z+\Delta x}{(r_{7}X+r_{8}Y+r_{9})z+\Delta z}\qquad Y^{\prime}=\frac{(r_{4}X+r_{5}Y+r_{6})z+\Delta x}{(r_{7}X+r_{8}Y+r_{9})z+\Delta z}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can get 
+\begin_inset Formula $z$
+\end_inset
+
+ from these two equations and equate them.
+ With this result, we can transform the the problem into 
+\begin_inset Formula 
+\[
+[X^{\prime},Y^{\prime},1]E\begin{bmatrix}X\\
+Y\\
+1
+\end{bmatrix}=0
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\[
+E=\begin{bmatrix}\Delta zr_{4}-\Delta yr_{7} & \Delta zr_{5}-\Delta yr_{8} & \Delta zr_{6}-\Delta yr_{9}\\
+\Delta xr_{7}-\Delta zr_{1} & \Delta xr_{8}-\Delta zr_{2} & \Delta xr_{9}-\Delta zr_{3}\\
+\Delta yr_{1}-\Delta xr_{4} & \Delta yr_{2}-\Delta xr_{5} & \Delta yr_{3}-\Delta xr_{6}
+\end{bmatrix}=\begin{bmatrix}e_{1} & e_{2} & e_{3}\\
+e_{4} & e_{5} & e_{6}\\
+e_{7} & e_{8} & e_{9}
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After normalizing the matrix 
+\begin_inset Formula $E$
+\end_inset
+
+ such that 
+\begin_inset Formula $e_{9}=1$
+\end_inset
+
+, we have 
+\begin_inset Formula $8$
+\end_inset
+
+ parameters.
+ Then we perform SVD on the matrix 
+\begin_inset Formula $E=U\Lambda V^{T}$
+\end_inset
+
+.
+ In this case, there are two solutions for 
+\begin_inset Formula $R$
+\end_inset
+
+, namely
+\begin_inset Formula 
+\[
+R=U\begin{bmatrix}0 & -1\\
+1 & 0\\
+ &  & s
+\end{bmatrix}V^{T}=U\begin{bmatrix}0 & 1\\
+-1 & 0\\
+ &  & s
+\end{bmatrix}V^{T}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $s=\det(U)\det(V)$
+\end_inset
+
+.
+ There is only one solution for the translation vector:
+\begin_inset Formula 
+\[
+\begin{bmatrix}\Delta x\\
+\Delta y\\
+\Delta z
+\end{bmatrix}=\alpha\begin{bmatrix}\phi_{1}^{T}\phi_{2}/\phi_{2}^{T}\phi_{3}\\
+\phi_{1}^{T}\phi_{2}/\phi_{1}^{T}\phi_{3}\\
+1
+\end{bmatrix}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+ is the 
+\begin_inset Formula $i$
+\end_inset
+
+-th row of the matrix 
+\begin_inset Formula $E$
+\end_inset
+
+, and 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is a scaling factor.
+ The 
+\begin_inset Formula $Z$
+\end_inset
+
+ can be obtained from the equations above.
+\end_layout
+
+\begin_layout Standard
+Next, in order to obtain the matrix 
+\begin_inset Formula $E$
+\end_inset
+
+, we need 
+\begin_inset Formula $8$
+\end_inset
+
+ image point correspondences, then we have
+\begin_inset Formula 
+\[
+\begin{bmatrix}X_{1}X_{1}^{\prime} & X_{1}^{\prime}Y_{1} & X_{1}^{\prime} & Y_{1}^{\prime}X_{1} & Y_{1}^{\prime}Y_{1} & Y_{1}^{\prime} & X_{1} & Y_{1}\\
+X_{2}X_{2}^{\prime} & X_{2}^{\prime}Y_{2} & X_{2}^{\prime} & Y_{2}^{\prime}X_{2} & Y_{2}^{\prime}Y_{2} & Y_{2}^{\prime} & X_{2} & Y_{2}\\
+X_{3}X_{3}^{\prime} & X_{3}^{\prime}Y_{3} & X_{3}^{\prime} & Y_{3}^{\prime}X_{3} & Y_{3}^{\prime}Y_{3} & Y_{3}^{\prime} & X_{3} & Y_{3}\\
+X_{4}X_{4}^{\prime} & X_{4}^{\prime}Y_{4} & X_{4}^{\prime} & Y_{4}^{\prime}X_{4} & Y_{4}^{\prime}Y_{4} & Y_{4}^{\prime} & X_{4} & Y_{4}\\
+X_{5}X_{5}^{\prime} & X_{5}^{\prime}Y_{5} & X_{5}^{\prime} & Y_{5}^{\prime}X_{5} & Y_{5}^{\prime}Y_{5} & Y_{5}^{\prime} & X_{5} & Y_{5}\\
+X_{6}X_{6}^{\prime} & X_{6}^{\prime}Y_{6} & X_{6}^{\prime} & Y_{6}^{\prime}X_{6} & Y_{6}^{\prime}Y_{6} & Y_{6}^{\prime} & X_{6} & Y_{6}\\
+X_{7}X_{7}^{\prime} & X_{7}^{\prime}Y_{7} & X_{7}^{\prime} & Y_{7}^{\prime}X_{7} & Y_{7}^{\prime}Y_{7} & Y_{7}^{\prime} & X_{7} & Y_{7}\\
+X_{8}X_{8}^{\prime} & X_{8}^{\prime}Y_{8} & X_{8}^{\prime} & Y_{8}^{\prime}X_{8} & Y_{8}^{\prime}Y_{8} & Y_{8}^{\prime} & X_{8} & Y_{8}
+\end{bmatrix}\begin{bmatrix}e_{1}\\
+e_{2}\\
+e_{3}\\
+e_{4}\\
+e_{5}\\
+e_{6}\\
+e_{7}\\
+e_{8}
+\end{bmatrix}=\begin{bmatrix}-1\\
+-1\\
+-1\\
+-1\\
+-1\\
+-1\\
+-1\\
+-1
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For the second problem, we need 
+\begin_inset Formula $8$
+\end_inset
+
+ points.
+\end_layout
+
 \begin_layout Section
 Problem 2
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 In edge-based stereo methods, edges in the left image are matched with edges
  in the right image to obtain disparity measurements.
  In this problem, we limit ourselves to matching along a single epipolar
@@ -135,6 +347,8 @@ In edge-based stereo methods, edges in the left image are matched with edges
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 a.
  Suppose there are n edges in each image along an epipolar line.
  If each edge has a unique match in the other image, how many different
@@ -143,6 +357,8 @@ a.
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 b.
  Now add the constraint that edges must be ordered the same way in both
  images.
@@ -150,6 +366,8 @@ b.
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 c.
  Now let the right image have m edges (m < n).
  Then n – m of the left edges will be matched with the “null edge”.
@@ -158,6 +376,8 @@ c.
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 d.
  Repeat part (c) for the case in which the edges are ordered the same way
  in both images.
