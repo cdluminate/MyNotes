@@ -346,42 +346,90 @@ In edge-based stereo methods, edges in the left image are matched with edges
  line, thus reducing the problem to one of matching in one dimension.
 \end_layout
 
+\begin_layout Subsection
+a
+\end_layout
+
 \begin_layout Standard
 
 \bar under
-a.
- Suppose there are n edges in each image along an epipolar line.
+Suppose there are n edges in each image along an epipolar line.
  If each edge has a unique match in the other image, how many different
  mappings are there? Do not include the constraints that edges must be ordered
  the same way in both images.
 \end_layout
 
 \begin_layout Standard
+Since each edge has a unique match, the number of possible edge matches
+ is not 
+\begin_inset Formula $n^{n}$
+\end_inset
 
-\bar under
-b.
- Now add the constraint that edges must be ordered the same way in both
- images.
- If every edge has a unique match, how many different mappings are there?
+, but the number of permutations 
+\begin_inset Formula $n!$
+\end_inset
+
+ instead.
+\end_layout
+
+\begin_layout Subsection
+b
 \end_layout
 
 \begin_layout Standard
 
 \bar under
-c.
- Now let the right image have m edges (m < n).
+Now add the constraint that edges must be ordered the same way in both images.
+ If every edge has a unique match, how many different mappings are there?
+\end_layout
+
+\begin_layout Standard
+In this case there will be only 
+\begin_inset Formula $2$
+\end_inset
+
+ possible mappings.
+\end_layout
+
+\begin_layout Subsection
+c
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Now let the right image have m edges (m < n).
  Then n – m of the left edges will be matched with the “null edge”.
  How many different mapping are there if we do not require that order be
  preserved?
 \end_layout
 
 \begin_layout Standard
+Without preserving the order and the unique matching constraint, the number
+ of possible mappings is 
+\begin_inset Formula $n^{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+d
+\end_layout
+
+\begin_layout Standard
 
 \bar under
-d.
- Repeat part (c) for the case in which the edges are ordered the same way
+Repeat part (c) for the case in which the edges are ordered the same way
  in both images.
- 
+\end_layout
+
+\begin_layout Standard
+It will be 
+\begin_inset Formula $2\times(_{n-m}^{n})=2\times\frac{n!}{(n-m)!(n-(n-m))!}=2\times\frac{n!}{(n-m)!m!}$
+\end_inset
+
+ possible mappings.
 \end_layout
 
 \begin_layout Section
