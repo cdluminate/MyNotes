@@ -1220,7 +1220,11 @@ Covariance Matrix.
 \end_layout
 
 \begin_layout Standard
+
+\series bold
 Whitening Transform.
+
+\series default
  
 \begin_inset Formula $\ubar X\sim f_{\ubar X}$
 \end_inset
@@ -1389,7 +1393,7 @@ Likelihood Ratio Test (LRT).
 
 \series default
  Minimize 
-\begin_inset Formula $\phi(\hat{H})=E_{Y,H}[\tilde{C}(H,\hat{H}(y))]=E_{Y}[E_{H|Y}[\tilde{C}(H,\hat{H}(y))|Y=y]]$
+\begin_inset Formula $\phi(\hat{H})=E_{Y,H}[\tilde{C}(H,\hat{H}(y))]=E_{Y}[E_{H|Y}[\tilde{C}(H,\hat{H}(y))|Y=y]]=\sum_{y}p_{Y}(y)E_{H|Y}[\tilde{C}(H,\hat{H}(y))|Y=y]$
 \end_inset
 
 .
@@ -1433,7 +1437,7 @@ MAP decision rule: symmetric cost
 \end_layout
 
 \begin_layout Subsection
-NonBayesian Hypothesis Testing
+NonBayesian Hypothe sis Testing
 \end_layout
 
 \begin_layout Standard
@@ -4835,6 +4839,15 @@ Gaussian Integral
 
 \begin_layout Standard
 \begin_inset Formula $\int_{-\infty}^{+\infty}ae^{-\frac{(x-b)^{2}}{2c^{2}}}dx=ac\sqrt{2\pi}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Integral by parts.
+ 
+\begin_inset Formula $\int udv=uv-\int vdu$
 \end_inset
 
 .
