@@ -3499,6 +3499,19 @@ E-Step.
 .
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+MAP Estimation.
+
+\series default
+ 
+\begin_inset Formula $\hat{x}_{MAP}(y)=\arg\max_{x}p(x|y)=\arg\max_{x}\frac{p(x,y)}{p(y)}=\arg\max_{x}p(x,y)$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsection
 Deterministic Approximations
 \end_layout
