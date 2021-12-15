@@ -1616,7 +1616,7 @@ The class of
  The solution is
 \begin_inset Formula 
 \[
-P_{D}(q^{*})=\frac{c_{01}-c_{00}}{c_{01}-c_{11}}-P_{F}(q^{*})[\frac{c_{10}-c_{00}}{c_{01}-c_{11}}]
+P_{D}(q^{*})=\frac{c_{10}-c_{00}}{c_{01}-c_{11}}-P_{F}(q^{*})[\frac{c_{10}-c_{00}}{c_{01}-c_{11}}]
 \]
 
 \end_inset
