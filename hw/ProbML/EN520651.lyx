@@ -3224,16 +3224,16 @@ P(Y_{1},\ldots,Y_{N},Z_{1},\ldots,Z_{N};\theta)=\prod_{n}\prod_{k}[\pi_{k}p_{k}(
 \end_inset
 
 and the corresponding 
-\begin_inset Formula $\ell(\ubar Y,\ubar Z;\theta)$
+\begin_inset Formula $\ell_{c}(\ubar Y,\ubar Z;\theta)$
 \end_inset
 
  is easier to optimize as the summation inside log has been eliminated.
  Then we want to maximize the lower bound of 
-\begin_inset Formula $\ell(\ubar y,\theta)$
+\begin_inset Formula $\ell_{c}(\ubar y,\theta)$
 \end_inset
 
 , namely 
-\begin_inset Formula $E_{Z|Y}[\ell(\ubar y,\ubar z;\theta)]$
+\begin_inset Formula $E_{Z|Y}[\ell_{c}(\ubar y,\ubar z;\theta)]$
 \end_inset
 
 .
@@ -3244,7 +3244,7 @@ and the corresponding
 .
 \begin_inset Formula 
 \[
-E_{Z|Y}[\ell(y,z;\theta)]=\sum_{n=1}^{N}\sum_{k=1}^{K}E[z_{n}^{k}](\log\pi_{k}+\log p_{k}(y_{n};\theta_{k}))
+E_{Z|Y}[\ell_{c}(y,z;\theta)]=\sum_{n=1}^{N}\sum_{k=1}^{K}E[z_{n}^{k}](\log\pi_{k}+\log p_{k}(y_{n};\theta_{k}))
 \]
 
 \end_inset
