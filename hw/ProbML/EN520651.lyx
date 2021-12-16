@@ -3771,30 +3771,15 @@ Hidden Markov Models
 \end_layout
 
 \begin_layout Standard
-Graphical Models -> (Discrete states from ML perspective) -> HMMs; 
+Graphical Models -> (Discrete states from ML perspective) -> HMMs; Parametrizati
+on for Homogeneous HMM does not depend on time.
 \end_layout
 
 \begin_layout Standard
-Parametrization for Homogeneous HMM; doesw not depend on time.
-\end_layout
-
-\begin_layout Standard
-Binary indicator vector
+Binary indicator vector and initial state probabilities
 \begin_inset Formula 
 \[
-q_{t}=[q_{t}^{1},\ldots,q_{t}^{M}]^{T}\qquad
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Initial state probabilities
-\begin_inset Formula 
-\[
-\pi=[\pi^{1},\ldots,\pi^{M}]^{T}\qquad p(q_{0}^{i}=1)=\pi^{i}
+q_{t}=[q_{t}^{1},\ldots,q_{t}^{M}]^{T}\qquad\pi=[\pi^{1},\ldots,\pi^{M}]^{T}\qquad p(q_{0}^{i}=1)=\pi^{i}
 \]
 
 \end_inset
@@ -3827,19 +3812,21 @@ a_{ij}=p(q_{t+1}=j|q_{t}=i)
 \end_layout
 
 \begin_layout Standard
-Likelihood
-\begin_inset Formula 
-\[
-p(y_{t}|q_{t};\eta)
-\]
-
+With 
+\begin_inset Formula $q$
 \end_inset
 
+ as hidden state, we observe 
+\begin_inset Formula $y$
+\end_inset
 
-\end_layout
+ .
+ The likelihood is 
+\begin_inset Formula $p(y_{t}|q_{t};\eta)$
+\end_inset
 
-\begin_layout Standard
-So the joint density of HMM is
+.
+ And the joint density of HMM is
 \begin_inset Formula 
 \[
 p(\bm{q},\bm{y})=p(q_{0})\prod_{t=0}^{T-1}p(q_{t+1}|q_{t})\prod_{t=0}^{T}p(y_{t}|q_{t};\eta)
