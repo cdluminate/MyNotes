@@ -2158,6 +2158,15 @@ Vector Parameters.
  
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+Misc.
+
+\series default
+ MAP estimator maximizes the joint distribution.
+\end_layout
+
 \begin_layout Subsection
 Exponential Families
 \end_layout
