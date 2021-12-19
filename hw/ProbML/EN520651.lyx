@@ -3546,7 +3546,7 @@ close
 \begin_inset Quotes erd
 \end_inset
 
- to 
+ to posterior 
 \begin_inset Formula $P_{X|Y}(\cdot|y)$
 \end_inset
 
@@ -3606,7 +3606,27 @@ Gibb's inequality
 \end_layout
 
 \begin_layout Standard
-Laplace's Method
+
+\series bold
+Laplace's Method.
+\series default
+
+\begin_inset Formula 
+\[
+\hat{P}_{X}(x)=\frac{\hat{P}_{0}(x)}{Z_{\hat{P}}}=P_{0}(x)\exp\{-\frac{1}{2}J(\hat{x})(x-\hat{x})^{2}\}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $-J(\hat{x})=\frac{d^{2}}{dx^{2}}\log P_{0}(x)|_{x=\hat{x}}$
+\end_inset
+
+ is the observed fisher info, partition function 
+\begin_inset Formula $Z_{p}=P_{0}(x)\sqrt{2\pi(1/J(\hat{x}))}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -3625,11 +3645,22 @@ P_{X|Y}(x|y)\approx\mathcal{N}(x;\hat{x}_{MAP}(y),\hat{\sigma}^{2}(y))
 
 \end_inset
 
+The empirical fisher info is 
+\begin_inset Formula $J_{Y=y}(\hat{x}_{MAP}(y))$
+\end_inset
 
+.
+ For large dataset use 
+\begin_inset Formula $\hat{x}_{ML}$
+\end_inset
+
+ instead.
 \end_layout
 
 \begin_layout Standard
-Variational Methods
+
+\series bold
+Variational Methods.
 \end_layout
 
 \begin_layout Standard
@@ -3641,7 +3672,11 @@ Variational Methods
 
 \end_inset
 
+And variational free energy is 
+\begin_inset Formula $\mathcal{FE}=D(q||p_{XY})$
+\end_inset
 
+.
 \end_layout
 
 \begin_layout Subsection
