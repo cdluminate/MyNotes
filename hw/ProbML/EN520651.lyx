@@ -4810,7 +4810,15 @@ A.
 \begin_inset Formula $X\sim\mathcal{N}(x;\mu,\sigma^{2})$
 \end_inset
 
- (Continuous RV)
+ (Continuous RV), 
+\begin_inset Formula $E[X]=\mu$
+\end_inset
+
+, 
+\begin_inset Formula $Var[X]=\sigma^{2}$
+\end_inset
+
+
 \begin_inset Formula 
 \[
 f_{X}(x)=\frac{1}{\sqrt{2\pi\sigma^{2}}}\exp\{-\frac{1}{2}\frac{(x-\mu)^{2}}{\sigma^{2}}\}
@@ -4826,7 +4834,15 @@ f_{X}(x)=\frac{1}{\sqrt{2\pi\sigma^{2}}}\exp\{-\frac{1}{2}\frac{(x-\mu)^{2}}{\si
 \begin_inset Formula $X\sim Unf(x;[a,b])$
 \end_inset
 
- (Continuous)
+ (Continuous), 
+\begin_inset Formula $E[X]=\frac{a+b}{2}$
+\end_inset
+
+, 
+\begin_inset Formula $Var[X]=\frac{(b-a)^{2}}{12}$
+\end_inset
+
+.
 \begin_inset Formula 
 \[
 f_{X}(x)=\frac{1}{b-a}\mathbb{I}\{x\in[a,b]\}+0\mathbb{I}\{x\notin[a,b]\}
@@ -4842,11 +4858,15 @@ f_{X}(x)=\frac{1}{b-a}\mathbb{I}\{x\in[a,b]\}+0\mathbb{I}\{x\notin[a,b]\}
 \begin_inset Formula $X\sim Exp(x;\lambda)$
 \end_inset
 
- (Continuous, Sometimes use 
-\begin_inset Formula $\lambda=1/\mu$
+ (Continuous), 
+\begin_inset Formula $E[X]=1/\lambda$
 \end_inset
 
-)
+, 
+\begin_inset Formula $Var[X]=1/\lambda^{2}$
+\end_inset
+
+.
 \begin_inset Formula 
 \[
 f_{X}(x)=\lambda e^{-\lambda x}u(x)
@@ -4862,7 +4882,15 @@ f_{X}(x)=\lambda e^{-\lambda x}u(x)
 \begin_inset Formula $X\sim B(x;p)$
 \end_inset
 
- (discrete RV)
+ (discrete RV), 
+\begin_inset Formula $E[X]=p$
+\end_inset
+
+, 
+\begin_inset Formula $Var[X]=p(1-p)$
+\end_inset
+
+.
 \begin_inset Formula 
 \[
 f_{X}(x)=p^{x}(1-p)^{1-x}
@@ -4878,7 +4906,15 @@ f_{X}(x)=p^{x}(1-p)^{1-x}
 \begin_inset Formula $X\sim Poisson(x;\mu)$
 \end_inset
 
- (discrete)
+ (discrete), 
+\begin_inset Formula $E[X]=\mu$
+\end_inset
+
+, 
+\begin_inset Formula $Var[X]=\mu$
+\end_inset
+
+.
 \begin_inset Formula 
 \[
 f_{X}(x)=\frac{\mu^{x}}{x!}e^{-\mu},x=0,1,2,\ldots
@@ -4904,11 +4940,27 @@ f_{X}(x)=\frac{\mu^{x}}{x!}e^{-\mu},x=0,1,2,\ldots
 
 .
  
+\begin_inset Formula $E[X]=\frac{\alpha}{\alpha+\beta}$
+\end_inset
+
+, 
+\begin_inset Formula $Var[X]=\frac{\alpha\beta}{(\alpha+\beta)^{2}(\alpha+\beta+1)}$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+f_{X}(x)=\frac{x^{\alpha-1}(1-x)^{\beta-1}}{B(\alpha,\beta)}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
 B.
- Useful Tricks
+ Tricks
 \end_layout
 
 \begin_layout Standard
