@@ -3893,6 +3893,11 @@ Markov-Chain Monte Carlo (MCMC).
 \end_inset
 
 .
+ State transition probability is hence 
+\begin_inset Formula $q(\cdot;x_{n})\alpha(x_{n};x)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -5046,6 +5051,14 @@ Gaussian Integral
 Integral by parts.
  
 \begin_inset Formula $\int udv=uv-\int vdu$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+steady markov: 
+\begin_inset Formula $\pi=A\pi$
 \end_inset
 
 .
