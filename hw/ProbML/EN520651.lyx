@@ -3988,6 +3988,101 @@ p(\bm{q},\bm{y})=p(q_{0})\prod_{t=0}^{T-1}p(q_{t+1}|q_{t})\prod_{t=0}^{T}p(y_{t}
 
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+Inference.
+
+\series default
+ Assume parameters 
+\begin_inset Formula $\{\pi,A,\eta\}$
+\end_inset
+
+ are known.
+ For a given sequence 
+\begin_inset Formula $\ubar q$
+\end_inset
+
+, we compute 
+\begin_inset Formula $p(\ubar q|\ubar y)$
+\end_inset
+
+.
+ This can be simplified to computing 
+\begin_inset Formula $p(q_{t}|\ubar y)=\frac{p(q_{t})p(\ubar y|q_{t})}{p(\ubar y)}=\frac{p(y_{0},\ldots,y_{t},q_{t})p(y_{t+1},\ldots,y_{T}|q_{t})}{p(\ubar y)}$
+\end_inset
+
+ where 
+\begin_inset Formula $\alpha(q_{t})=p(y_{0},\ldots,y_{t},q_{t})$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta(q_{t})=p(y_{t+1},\ldots,y_{T}|q_{t})$
+\end_inset
+
+.
+ Partition function 
+\begin_inset Formula $p(\ubar y)=\sum_{q_{t}}\alpha(q_{t})\beta(q_{t})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Forward Recursion.
+
+\bar default
+ 
+\begin_inset Formula $\alpha(q_{t+1})=\sum_{q_{t}}\alpha(q_{t})a_{q_{t+1},q_{t}}p(y_{t+1}|q_{t+1})$
+\end_inset
+
+, starting from 
+\begin_inset Formula $\alpha(q_{0})=p(y_{0},q_{0})=\pi_{q_{0}}p(y_{0}|q_{0})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Backward Recursion.
+
+\bar default
+ 
+\begin_inset Formula $\beta(q_{t})=\sum_{q_{t+1}}\beta(q_{t+1})a_{q_{t+1},q_{t}}p(y_{t+1}|q_{t+1})$
+\end_inset
+
+, starting from 
+\begin_inset Formula $\beta(q_{T})=[1,\ldots,1]^{T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Parameter Estimation.
+
+\bar default
+ 
+\begin_inset Formula $\hat{\theta}=\{\hat{A},\hat{\pi},\hat{\eta}\}=\arg\max_{A,\pi,\eta}\log\sum_{q_{0}}\cdots\sum_{q_{T}}\pi_{q_{0}}\prod_{t=0}^{T-1}a_{q_{t+1},q_{t}}\prod_{t=0}^{T}p(y_{t}|q_{t};\eta)$
+\end_inset
+
+.
+ E-step.
+ 
+\begin_inset Formula $E_{q|y;\theta^{(p)}}[\log p(q,y)]$
+\end_inset
+
+.
+ M-step.
+ update parameters based on statistics.
+\end_layout
+
 \begin_layout Subsection
 Kalman Filtering
 \end_layout
