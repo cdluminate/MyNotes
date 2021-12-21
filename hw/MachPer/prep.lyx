@@ -305,5 +305,10 @@ Normalized Cut
 Notes pp121-124; Notes simple example; PAMI paper
 \end_layout
 
+\begin_layout Standard
+graph, cut, association, normalized cut, normalized association, computation
+ of the optimal partition.
+\end_layout
+
 \end_body
 \end_document
