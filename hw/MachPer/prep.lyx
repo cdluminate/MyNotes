@@ -331,6 +331,26 @@ Multi-Camera based Structure Estimation
 \begin_layout Standard
 stereo.
  Notes pp116.
+ Paper PAMI grimson.
+\end_layout
+
+\begin_layout Standard
+disparity.
+\end_layout
+
+\begin_layout Standard
+Marr-Pogio model of human stereo: feature point based matching system.
+ Steps: (1) image filtering.
+ (2) symbolic features (zero-crossing).
+ (3) matching.
+ (a) feature point matching.
+ (b) continuity.
+ (c) control strategy.
+ (d) vertical disparity.
+\end_layout
+
+\begin_layout Standard
+8-point algorithm.
 \end_layout
 
 \begin_layout Subsection
