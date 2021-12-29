@@ -1,0 +1,958 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage{times}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+EN 520.665 Final
+\end_layout
+
+\begin_layout Author
+Mo Zhou <mzhou32@jhu.edu>
+\end_layout
+
+\begin_layout Section
+Q1
+\end_layout
+
+\begin_layout Standard
+The camera projection matrix is
+\begin_inset Formula 
+\[
+P=\begin{bmatrix}\alpha_{x} & \gamma & u_{0} & 0\\
+0 & \alpha_{y} & v_{0} & 0\\
+0 & 0 & 1 & 0
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And the camera center is 
+\begin_inset Formula $C=[x_{w},y_{w},z_{w},1]^{T}=[0,0,0,1]^{T}$
+\end_inset
+
+, so 
+\begin_inset Formula 
+\[
+PC=\begin{bmatrix}\alpha_{x} & \gamma & u_{0} & 0\\
+0 & \alpha_{y} & v_{0} & 0\\
+0 & 0 & 1 & 0
+\end{bmatrix}\begin{bmatrix}0\\
+0\\
+0\\
+1
+\end{bmatrix}=\begin{bmatrix}0\\
+0\\
+0
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Q2
+\end_layout
+
+\begin_layout Standard
+The method of interest is Tomasi-Kanade Factorization for estimating shape
+ from motion.
+ The question mentions the scenario when 
+\begin_inset Quotes eld
+\end_inset
+
+some (feature) points are not seen in some views
+\begin_inset Quotes erd
+\end_inset
+
+, which is exactly the case of occlusion discussed in the original paper
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Shape and Motion from image streams under orthography: a factorization method
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Sequences with appearing and disappearing features result in a measurement
+ matrix 
+\begin_inset Formula $W$
+\end_inset
+
+ which is only partially filled in.
+ Hence the original factorization method cannot be directly applied.
+ In this case, we can hallucinate the unknown entries of 
+\begin_inset Formula $W$
+\end_inset
+
+ by projecting the computed 3-dimenstional feature corrdinates onto the
+ computed camera positions.
+ The details can be found in Section.
+ 5 
+\begin_inset Quotes eld
+\end_inset
+
+Occlusions
+\begin_inset Quotes erd
+\end_inset
+
+ from the paper.
+\end_layout
+
+\begin_layout Standard
+Concretely, Assume 
+\begin_inset Formula $W$
+\end_inset
+
+ is a 8x4 matrix.
+ For noise-free images, the full motion and shape solution can be found
+ in either of the two following ways: (1) row-wise extension: factor 
+\begin_inset Formula $W_{6\times4}$
+\end_inset
+
+ to find a partial motion and full shape solution, and propagate it to include
+ motion for the remaining frame.
+ (2) column-wise extension: factor 
+\begin_inset Formula $W_{8\times3}$
+\end_inset
+
+ to find a full motion and partial shape solution, and propagate it to include
+ the remaining feature point.
+\end_layout
+
+\begin_layout Section
+Q3
+\end_layout
+
+\begin_layout Standard
+We have 
+\begin_inset Formula $R=ap+bq+c$
+\end_inset
+
+.
+ We need to show that 
+\begin_inset Formula $z^{\prime}=f(x,y)+g(bx-ay)$
+\end_inset
+
+ will give rise to the same image.
+\end_layout
+
+\begin_layout Standard
+First the partial derivatives 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $q$
+\end_inset
+
+ are respectively
+\begin_inset Formula 
+\[
+p=\frac{\partial z^{\prime}}{\partial x}=\frac{\partial f}{\partial x}+\frac{\partial g}{\partial x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+q=\frac{\partial z^{\prime}}{\partial y}=\frac{\partial f}{\partial y}+\frac{\partial g}{\partial y}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So 
+\begin_inset Formula 
+\begin{align*}
+R & =ap+bq+c\\
+ & =a\frac{\partial f}{\partial x}+a\frac{\partial g}{\partial x}+b\frac{\partial f}{\partial y}+b\frac{\partial g}{\partial y}+c
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We let 
+\begin_inset Formula $u=bx+ay$
+\end_inset
+
+.
+ Then we have
+\begin_inset Formula 
+\begin{align*}
+p & =\frac{\partial f}{\partial x}+\frac{\partial g}{\partial x}=\frac{\partial f}{\partial x}+\frac{\partial g}{\partial u}\cdot b\\
+q & =\frac{\partial f}{\partial y}+\frac{\partial g}{\partial y}=\frac{\partial f}{\partial y}+\frac{\partial g}{\partial u}\cdot(-a)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Plugging this into the equation of 
+\begin_inset Formula $R$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{align*}
+R & =ap+bq+c\\
+ & =a\frac{\partial f}{\partial x}+a\frac{\partial g}{\partial x}+b\frac{\partial f}{\partial y}+b\frac{\partial g}{\partial y}+c\\
+ & =a\frac{\partial f}{\partial x}+ab\frac{\partial g}{\partial u}+b\frac{\partial f}{\partial y}-ab\frac{\partial g}{\partial u}+c\\
+ & =a\frac{\partial f}{\partial x}+b\frac{\partial f}{\partial y}+c
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which is the same result for 
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+.
+ It has the same sillhouette.
+\end_layout
+
+\begin_layout Section
+Q4
+\end_layout
+
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+We have 
+\begin_inset Formula $L=D-W$
+\end_inset
+
+.
+ We need to show 
+\begin_inset Formula $f^{T}Lf=\frac{1}{2}\sum_{i=1}^{n}w_{ij}(f_{i}-f_{j})^{2}$
+\end_inset
+
+ for any vector 
+\begin_inset Formula $f\in R^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $f=[f_{1},f_{2},\ldots,f_{n}]^{T}$
+\end_inset
+
+, then the left side of the equation in question equals
+\begin_inset Formula 
+\begin{align*}
+ & f^{T}Lf\\
+= & \sum_{i=1}^{n}\sum_{j=1}^{n}L_{ij}f_{i}f_{j}\\
+= & \sum_{i=1}^{n}\sum_{j=1}^{n}(D_{ij}-W_{ij})f_{i}f_{j}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We know that 
+\begin_inset Formula $D_{ij}=0$
+\end_inset
+
+ when 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+, and 
+\begin_inset Formula $W_{ij}=0$
+\end_inset
+
+ when 
+\begin_inset Formula $i=j$
+\end_inset
+
+.
+ We also know that 
+\begin_inset Formula $D_{ii}=\sum_{j}W_{ij}$
+\end_inset
+
+ So the nested sum can be expanded into
+\begin_inset Formula 
+\begin{align*}
+ & \sum_{i=1}^{n}\sum_{j=1}^{n}(D_{ij}-W_{ij})f_{i}f_{j}\\
+= & \sum_{i=1}^{n}[D_{ii}f_{i}f_{i}-\sum_{j=1\neq i}^{n}w_{ij}f_{i}f_{j}]\\
+= & \sum_{i=1}^{n}[(\sum_{j=1\neq i}^{n}w_{ij})f_{i}^{2}-\sum_{j=1\neq i}^{n}w_{ij}f_{i}f_{j}]\\
+= & \sum_{i=1}^{n}[\sum_{j=1\neq i}^{n}w_{ij}f_{i}(f_{i}-f_{j})]\\
+\text{(due to symmetry between i and j)}= & \sum_{j=1}^{n}[\sum_{i=1\neq j}^{n}w_{ji}f_{j}(f_{j}-f_{i})]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $W$
+\end_inset
+
+ is a symmetric matrix, namely 
+\begin_inset Formula $w_{ij}=w_{ji}$
+\end_inset
+
+, we can write
+\begin_inset Formula 
+\begin{align*}
+2f^{T}Lf & =\sum_{i=1}^{n}[\sum_{j=1\neq i}^{n}w_{ij}f_{i}(f_{i}-f_{j})]+\sum_{j=1}^{n}[\sum_{i=1\neq j}^{n}w_{ji}f_{j}(f_{j}-f_{i})]\\
+ & =\sum_{i=1}^{n}[\sum_{j=1\neq i}^{n}w_{ij}(f_{i}^{2}-f_{ij}+f_{j}^{2}-f_{ij})]\\
+ & =\sum_{i=1}^{n}[\sum_{j=1\neq i}^{n}w_{ij}(f_{i}^{2}-2f_{ij}+f_{j}^{2})]\\
+f^{T}Lf & =\frac{1}{2}\sum_{i=1}^{n}[\sum_{j=1\neq i}^{n}w_{ij}(f_{i}^{2}-2f_{ij}+f_{j}^{2})]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $w_{ij}=0$
+\end_inset
+
+ when 
+\begin_inset Formula $i=j$
+\end_inset
+
+, we can change the sum from 
+\begin_inset Formula $j=1\neq i$
+\end_inset
+
+ to 
+\begin_inset Formula $n$
+\end_inset
+
+ into simply the sum from 
+\begin_inset Formula $j=1$
+\end_inset
+
+ to 
+\begin_inset Formula $n$
+\end_inset
+
+, i.e.
+\begin_inset Formula 
+\[
+f^{T}Lf=\frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}w_{ij}(f_{i}^{2}-2f_{ij}+f_{j}^{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The right side of the equation in question:
+\begin_inset Formula 
+\begin{align*}
+ & \frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}w_{ij}(f_{i}-f_{j})^{2}\\
+= & \frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}w_{ij}[f_{i}^{2}-2f_{i}f_{j}+f_{j}^{2}]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So the left side equals the right side.
+\end_layout
+
+\begin_layout Subsection
+(b)
+\end_layout
+
+\begin_layout Standard
+To show 
+\begin_inset Formula $L$
+\end_inset
+
+ is symmetric, namely we need to show 
+\begin_inset Formula $L^{T}=L$
+\end_inset
+
+.
+ First, we already know that The matrix 
+\begin_inset Formula $D$
+\end_inset
+
+ is diagonal.
+ And The weight matrix 
+\begin_inset Formula $W$
+\end_inset
+
+ is symmetric.
+ Then we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+L^{T}=(D-W)^{T}=(D^{T}-W^{T})=(D-W)=L
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To show that 
+\begin_inset Formula $L$
+\end_inset
+
+ is positive semi-definite, we need to show 
+\begin_inset Formula $x^{T}Lx\geq0$
+\end_inset
+
+ for any vector 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{align*}
+x^{T}Lx & =x^{T}Dx-x^{T}Wx
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Formula $D$
+\end_inset
+
+ is a diagonal matrix with non-negative diagonal values, so 
+\begin_inset Formula $x^{T}Dx=\sum_{i}D_{ii}x_{i}^{2}\geq0$
+\end_inset
+
+.
+ Hence, to show 
+\begin_inset Formula $x^{T}Lx\geq0$
+\end_inset
+
+, we need to show 
+\begin_inset Formula $x^{T}Dx\geq x^{T}Wx$
+\end_inset
+
+ instead.
+ This means to show 
+\begin_inset Formula $\sum_{i}D_{ii}x_{i}^{2}-\sum_{j\neq i}w_{ij}x_{i}x_{j}>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Wait, let's directly use the conclusion from question (a), that
+\begin_inset Formula 
+\[
+x^{T}Lx=\frac{1}{2}\sum_{i}\sum_{j}w_{ij}[f_{i}-f_{j}]^{2}\geq0
+\]
+
+\end_inset
+
+because 
+\begin_inset Formula $w_{ij}>=0$
+\end_inset
+
+, 
+\begin_inset Formula $[f_{i}-f_{j}]^{2}\geq0$
+\end_inset
+
+.
+ Hence, matrix 
+\begin_inset Formula $L$
+\end_inset
+
+ is semi-positive definite.
+\end_layout
+
+\begin_layout Subsection
+(c)
+\end_layout
+
+\begin_layout Standard
+The smallest eivenvalue 
+\begin_inset Formula $0$
+\end_inset
+
+ corresponds to the one-vector:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+L=(D-W)=\begin{bmatrix}\sum_{j}w_{1j} & -w_{12} & ... & -w_{1n}\\
+-w_{21} & \sum_{j}w_{2j} & ... & -w_{2n}\\
+... & ... & ... & ...\\
+-w_{n1} & ... & ... & \sum_{j}w_{nj}
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can see the sum of each row is 0.
+ namely
+\begin_inset Formula 
+\[
+L\bm{1}=\bm{0}=\bm{0}\cdot\bm{1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So matrix 
+\begin_inset Formula $L$
+\end_inset
+
+ has 
+\begin_inset Formula $0$
+\end_inset
+
+ as one of its eivenvalues.
+ Due to 
+\begin_inset Formula $L$
+\end_inset
+
+ being positive semi-definite, all its eigenvalues are greater or equal
+ to 0.
+ Hence 
+\begin_inset Formula $0$
+\end_inset
+
+ is also its smallest eigenvalue.
+\end_layout
+
+\begin_layout Subsection
+(d)
+\end_layout
+
+\begin_layout Standard
+According to definition of semi-positive definite matrix, all eigen values
+ must be greater or equal to 
+\begin_inset Formula $0$
+\end_inset
+
+ for 
+\begin_inset Formula $L$
+\end_inset
+
+, i.e.
+\begin_inset Formula 
+\[
+\lambda_{i}\geq0\quad\forall i=1,\ldots,n
+\]
+
+\end_inset
+
+ From (c) we know the eigensystem has the smallest eigenvalue of 
+\begin_inset Formula $0$
+\end_inset
+
+, namely
+\begin_inset Formula 
+\[
+0=\min_{i}\lambda_{i}
+\]
+
+\end_inset
+
+then the rest eigenvalues will be greater or equal to it.
+ Hence 
+\begin_inset Formula $0=\lambda_{1}\leq\lambda_{2}\leq\cdots\leq\lambda_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Q5
+\end_layout
+
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+We Need two of such cameras.
+ 
+\end_layout
+
+\begin_layout Standard
+Assume there are two rays emitted from the two cameras to the same point
+ on the object (i.e., intersection point of two 3-d lines in 3-d space).
+ Then the intersection point is already unique in terms of the 3d location.
+\end_layout
+
+\begin_layout Standard
+Reference: page 116-120 of the course note.
+\end_layout
+
+\begin_layout Subsection
+(b)
+\end_layout
+
+\begin_layout Standard
+Assume point X locates on the object.
+ With the two cameras, we can firstly estimate the depth (or distance) between
+ the camera as 
+\begin_inset Formula $d$
+\end_inset
+
+ (page 116-117 of course note).
+ Then we assume the camera horizon aligns with the world horizon.
+ The atltitude 
+\begin_inset Formula $(z)$
+\end_inset
+
+ can be calculated through similar triangles from the vertical displacement
+ of point X and distance 
+\begin_inset Formula $d$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ coordinates of point X can be determined similarly.
+ Then 
+\begin_inset Formula $(x,y,z)$
+\end_inset
+
+ is the location of point X.
+\end_layout
+
+\begin_layout Section
+Q6
+\end_layout
+
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+The input size is (64, 64, 8) in HWC order, namely (8, 64, 64) in CHW order.
+ The convolution layer has 32 kernels with size 3 and zero padding.
+\end_layout
+
+\begin_layout Standard
+The output width is hence 
+\begin_inset Formula $64-3+1=62$
+\end_inset
+
+.
+ So the output size is (32, 62, 62) in (channel, height, width) i.e.
+ CHW order.
+\end_layout
+
+\begin_layout Standard
+There are 32 convolution kernels of size (8,3,3), as well as a bias of size
+ (32).
+ Number of weights is 
+\begin_inset Formula $32*8*3*3=2304$
+\end_inset
+
+.
+ So the number of parameters is 
+\begin_inset Formula $2304+32=2336$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+(b)
+\end_layout
+
+\begin_layout Standard
+The input of the pooling layer is (32, 62, 62).
+ The pooling is max pooling with window size 2 and stride 2.
+\end_layout
+
+\begin_layout Standard
+The output width is hence 
+\begin_inset Formula $62/2=31$
+\end_inset
+
+.
+ The output size is (32, 31, 31).
+\end_layout
+
+\begin_layout Standard
+There is no parameter in pooling layer.
+ It's 0.
+\end_layout
+
+\begin_layout Subsection
+(c)
+\end_layout
+
+\begin_layout Standard
+Batch norm does not change the shape of the input.
+\end_layout
+
+\begin_layout Standard
+The output size is unchanged, (32, 31, 31).
+\end_layout
+
+\begin_layout Standard
+The parameters are used for affine transformation.
+ It's 
+\begin_inset Formula $31*31*2=1922$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+(d)
+\end_layout
+
+\begin_layout Standard
+The input shape is (3, 16, 16) in CHW order.
+\end_layout
+
+\begin_layout Standard
+We design the convolution layer with 4 kernels (namely output channel is
+ 4) with shape (3, 5, 5) and zero padding.
+ 
+\end_layout
+
+\begin_layout Standard
+The hyperparameters are the kernel and the bias term.
+ The number of parameters in kernel is 
+\begin_inset Formula $4*3*5*5=4*75=300$
+\end_inset
+
+.
+ The number of bias pamraters is 4.
+ 
+\end_layout
+
+\begin_layout Standard
+In this case the output size will be (4, 12, 12).
+ 
+\end_layout
+
+\begin_layout Subsection
+(e)
+\end_layout
+
+\begin_layout Standard
+The input shape of the max-pooling layer is (4,12,12).
+ 
+\end_layout
+
+\begin_layout Standard
+We design the max-pooling layer with 2x2 pooling window and a stride of
+ 2.
+\end_layout
+
+\begin_layout Standard
+The output size will be (4, 6, 6).
+\end_layout
+
+\begin_layout Standard
+There is no parameter in this layer.
+\end_layout
+
+\begin_layout Subsection
+(f)
+\end_layout
+
+\begin_layout Standard
+The input shape of this fully connected layer is (4, 6, 6).
+ The output dimension must be 10 since we are doing 10-class classification.
+ The input has to be flattened into a vector before feeding into this layer.
+\end_layout
+
+\begin_layout Standard
+We design the fully-connected layer with weight matrix of size 
+\begin_inset Formula $(4*6*6,10)=(144,10)$
+\end_inset
+
+.
+ There is no bias term.
+\end_layout
+
+\begin_layout Standard
+There are 144*10=1440 parameters (just reaching the boundary given by question).
+\end_layout
+
+\begin_layout Standard
+The output size is (10).
+\end_layout
+
+\begin_layout Subsection
+(g)
+\end_layout
+
+\begin_layout Standard
+(1) scaling slightly: 
+\bar under
+Feasible
+\bar default
+.
+ In real world scenarios the scale of the written digit may slightly differ.
+ The augmentation data will not go beyond the data domain.
+\end_layout
+
+\begin_layout Standard
+(2) flipping:
+\bar under
+ Infeasible
+\bar default
+.
+ People will not write mirrored numbers or upside-down numbers.
+ Such augmentation results in irregular samples, not covered by the original
+ data domain.
+\end_layout
+
+\begin_layout Standard
+(3) rotating: 
+\bar under
+Infeasible
+\bar default
+.
+ Slight rotation may be good, but 90 or 180 degrees will result in irregular
+ samples, and will not benefit generalization.
+\end_layout
+
+\begin_layout Standard
+(4) shearing slightly: 
+\bar under
+Feasible.
+
+\bar default
+ People sometimes write sheared digits.
+\end_layout
+
+\end_body
+\end_document
