@@ -7,7 +7,7 @@
 
 \score{
 {
-\tempo 4 = 100
+\tempo 4 = 240
 
 e' d' c' d'
 e' e' e'2
