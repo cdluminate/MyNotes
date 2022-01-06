@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="Face &amp; DML" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1641242886360" STYLE="oval">
 <font SIZE="18"/>
-<hook NAME="MapStyle" zoom="1.948">
+<hook NAME="MapStyle" zoom="1.61">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -66,6 +66,18 @@
 <hook NAME="AutomaticEdgeColor" COUNTER="4" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Face" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_153988282" CREATED="1641242964517" MODIFIED="1641243078822">
 <edge COLOR="#00ff00"/>
+<node TEXT="Dataset" ID="ID_180339389" CREATED="1641503238612" MODIFIED="1641503240267">
+<node TEXT="Casia webface" ID="ID_229244818" CREATED="1641503245897" MODIFIED="1641503250481">
+<node TEXT="Learning Face Representation from Scratch" ID="ID_1940194677" CREATED="1641503251609" MODIFIED="1641512945845">
+<icon BUILTIN="checked"/>
+<font ITALIC="true"/>
+<node TEXT="no large scale dataset publically available, so propose semi-automatical way to collect face images" ID="ID_1189323012" CREATED="1641512559678" MODIFIED="1641512648637"/>
+<node TEXT="CASIA-WebFace contains 1e4 subjects and 5e5 images." ID="ID_265616413" CREATED="1641512655754" MODIFIED="1641512691077"/>
+<node TEXT="use a 11-layer CNN to learn discriminative feature. simply a multi-class classification baseline" ID="ID_1930071035" CREATED="1641512691353" MODIFIED="1641512932004"/>
+<node TEXT="evaluate accuracy on LFW and YTF" ID="ID_421884912" CREATED="1641512706845" MODIFIED="1641512714431"/>
+</node>
+</node>
+</node>
 <node TEXT="Multi-Class Classification" ID="ID_1466249430" CREATED="1641243301668" MODIFIED="1641243308757">
 <node TEXT="SphereFace" ID="ID_312670993" CREATED="1641251036526" MODIFIED="1641251039003"/>
 <node TEXT="CosFace" ID="ID_704538771" CREATED="1641251030859" MODIFIED="1641251034812"/>
