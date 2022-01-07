@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="5" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="11" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1641520995586">
 <edge COLOR="#00ffff"/>
 <font NAME="Gentium"/>
@@ -84,6 +84,42 @@
 <node TEXT="2. gradually migrate the notes from the private mm&apos;s." ID="ID_1159004725" CREATED="1641520874706" MODIFIED="1641520995596">
 <font NAME="Gentium"/>
 </node>
+</node>
+<node TEXT="symbol definitions" ID="ID_107155097" CREATED="1641521217140" MODIFIED="1641521224034">
+<node TEXT=" I have read this paper (published)" ID="ID_1116629927" CREATED="1641521225706" MODIFIED="1641524141636">
+<icon BUILTIN="checked"/>
+</node>
+<node TEXT=" this paper is a TODO" ID="ID_1381101491" CREATED="1641521235679" MODIFIED="1641521246931">
+<icon BUILTIN="unchecked"/>
+</node>
+<node TEXT=" in doubt in details" ID="ID_420094020" CREATED="1641521248004" MODIFIED="1641521262966">
+<icon BUILTIN="help"/>
+</node>
+<node TEXT=" Very good paper" ID="ID_78304803" CREATED="1641521263664" MODIFIED="1641521279357">
+<icon BUILTIN="bookmark"/>
+</node>
+<node TEXT=" Consider the removal" ID="ID_1712139759" CREATED="1641522205670" MODIFIED="1641522214983">
+<icon BUILTIN="button_cancel"/>
+</node>
+<node TEXT=" this is a preprint" ID="ID_504737720" CREATED="1641523236144" MODIFIED="1641523246157">
+<icon BUILTIN="pencil"/>
+</node>
+<node TEXT=" Paper Tag" ID="ID_961819152" CREATED="1641524318246" MODIFIED="1641524325129">
+<icon BUILTIN="password"/>
+</node>
+</node>
+<node TEXT="browse history" ID="ID_1769952352" CREATED="1641521397167" MODIFIED="1641521457619">
+<node TEXT="arxiv" ID="ID_555001851" CREATED="1641521435482" MODIFIED="1641521437032">
+<node TEXT="2022" OBJECT="java.lang.Long|2022" ID="ID_1490488610" CREATED="1641521399876" MODIFIED="1641521403819">
+<node TEXT="jan7-jan3 ok" ID="ID_1174903687" CREATED="1641521404620" MODIFIED="1641521425197"/>
+</node>
+</node>
+<node TEXT="cvpr" ID="ID_1240053621" CREATED="1641521439738" MODIFIED="1641521441281"/>
+<node TEXT="iccv" ID="ID_436661845" CREATED="1641521441682" MODIFIED="1641521442528"/>
+<node TEXT="eccv" ID="ID_536802877" CREATED="1641521443344" MODIFIED="1641521444206"/>
+<node TEXT="neurips" ID="ID_301924831" CREATED="1641521444597" MODIFIED="1641521447221"/>
+<node TEXT="iclr" ID="ID_1738325130" CREATED="1641521447460" MODIFIED="1641521448466"/>
+<node TEXT="aaai" ID="ID_583291215" CREATED="1641521448752" MODIFIED="1641521449740"/>
 </node>
 </node>
 <node TEXT="Face" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_153988282" CREATED="1641242964517" MODIFIED="1641520995596">
@@ -185,14 +221,70 @@
 </node>
 <node TEXT="Loss Functions" ID="ID_1262041414" CREATED="1641520453737" MODIFIED="1641520995604">
 <font NAME="Gentium"/>
-<node TEXT="Triplet" ID="ID_430004220" CREATED="1641242977534" MODIFIED="1641520995604">
-<font NAME="Gentium"/>
-</node>
+<node TEXT="?" ID="ID_1898475549" CREATED="1641524460135" MODIFIED="1641524461416">
 <node TEXT="LiftStructure" ID="ID_362567920" CREATED="1641242980713" MODIFIED="1641520995605">
 <font NAME="Gentium"/>
 </node>
 <node TEXT="Multi-Similarity" ID="ID_1503083507" CREATED="1641242994307" MODIFIED="1641520995605">
 <font NAME="Gentium"/>
+</node>
+</node>
+<node TEXT="Proxy-based" ID="ID_879816648" CREATED="1641524445335" MODIFIED="1641524448649"/>
+<node TEXT="Triplet-based" ID="ID_1287246293" CREATED="1641524449462" MODIFIED="1641524453006">
+<node TEXT="Triplet" ID="ID_430004220" CREATED="1641242977534" MODIFIED="1641520995604">
+<font NAME="Gentium"/>
+</node>
+</node>
+<node TEXT="Classification-based" ID="ID_336668153" CREATED="1641524453412" MODIFIED="1641524456368"/>
+</node>
+</node>
+<node TEXT="Adversarial Attack" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_234014270" CREATED="1641521502446" MODIFIED="1641521522173">
+<edge COLOR="#00007c"/>
+<font NAME="Gentium"/>
+<node TEXT="White-Box Attack" ID="ID_449007607" CREATED="1641522449462" MODIFIED="1641522453928"/>
+<node TEXT="Black-Box Attack" ID="ID_1336427131" CREATED="1641522444757" MODIFIED="1641522449005"/>
+<node TEXT="Universal Perturbation" ID="ID_883577858" CREATED="1641522438698" MODIFIED="1641522443789">
+<node TEXT="on distinctive properties of universal perturbations" ID="ID_224581737" CREATED="1641522458794" MODIFIED="1641522470572">
+<icon BUILTIN="unchecked"/>
+<node TEXT="madry" ID="ID_224316307" CREATED="1641522472062" MODIFIED="1641522473486"/>
+</node>
+</node>
+<node TEXT="Backdoor Attack" ID="ID_1179347773" CREATED="1641524571169" MODIFIED="1641524576554"/>
+</node>
+<node TEXT="Adversarial Defense" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1641521522175">
+<edge COLOR="#007c00"/>
+<font NAME="Gentium"/>
+<node TEXT="patch Detection" ID="ID_1544755494" CREATED="1641523388190" MODIFIED="1641523402992">
+<node TEXT="on the real world adversarial robustness of real-time semantic segmentation models for autonomous driving" ID="ID_621290194" CREATED="1641523393314" MODIFIED="1641523426222">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="adversarial example detection" ID="ID_983985712" CREATED="1641523884091" MODIFIED="1641523889706">
+<node TEXT="(survey) towards understanding and harnessing the effect of image transformation in adversarial deteciton" ID="ID_1343762323" CREATED="1641523891006" MODIFIED="1641523914261">
+<icon BUILTIN="pencil"/>
+<node TEXT="via image transformations" ID="ID_1033635622" CREATED="1641523928903" MODIFIED="1641523932870"/>
+<node TEXT="this paper creates ensemble of transformations" ID="ID_446066363" CREATED="1641523933774" MODIFIED="1641523943924"/>
+</node>
+</node>
+</node>
+<node TEXT="NEW" POSITION="left" ID="ID_140802448" CREATED="1641523222163" MODIFIED="1641523223600">
+<edge COLOR="#7c007c"/>
+<node TEXT="quantum capsule networks" ID="ID_1165020573" CREATED="1641523224758" MODIFIED="1641523259186">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Semantic Segmentation" POSITION="left" ID="ID_710086984" CREATED="1641524074732" MODIFIED="1641524079818">
+<edge COLOR="#007c7c"/>
+<node TEXT="towards unsupervised open world semantic segmentation" ID="ID_886126595" CREATED="1641524113165" MODIFIED="1641524125507">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Self-Supervised Learning" POSITION="left" ID="ID_195659803" CREATED="1641524220091" MODIFIED="1641524227121">
+<edge COLOR="#7c7c00"/>
+<node TEXT="Single-modal" ID="ID_1411825413" CREATED="1641524228092" MODIFIED="1641524231227"/>
+<node TEXT="multi-modal" ID="ID_510544100" CREATED="1641524231440" MODIFIED="1641524233873">
+<node TEXT="sound and visual representation learning with multiple pretraining tasks" ID="ID_1372709479" CREATED="1641524234751" MODIFIED="1641524246105">
+<icon BUILTIN="pencil"/>
 </node>
 </node>
 </node>
