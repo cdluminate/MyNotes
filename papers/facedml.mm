@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="Face &amp; DML" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1641242886360" STYLE="oval">
 <font SIZE="18"/>
-<hook NAME="MapStyle" zoom="1.61">
+<hook NAME="MapStyle" zoom="0.909">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -71,17 +71,37 @@
 <node TEXT="Learning Face Representation from Scratch" ID="ID_1940194677" CREATED="1641503251609" MODIFIED="1641512945845">
 <icon BUILTIN="checked"/>
 <font ITALIC="true"/>
-<node TEXT="no large scale dataset publically available, so propose semi-automatical way to collect face images" ID="ID_1189323012" CREATED="1641512559678" MODIFIED="1641512648637"/>
+<node TEXT="no large scale dataset publically available, so propose semi-automatical way to collect face images" ID="ID_1189323012" CREATED="1641512559678" MODIFIED="1641512648637">
 <node TEXT="CASIA-WebFace contains 1e4 subjects and 5e5 images." ID="ID_265616413" CREATED="1641512655754" MODIFIED="1641512691077"/>
+</node>
 <node TEXT="use a 11-layer CNN to learn discriminative feature. simply a multi-class classification baseline" ID="ID_1930071035" CREATED="1641512691353" MODIFIED="1641512932004"/>
 <node TEXT="evaluate accuracy on LFW and YTF" ID="ID_421884912" CREATED="1641512706845" MODIFIED="1641512714431"/>
 </node>
 </node>
 </node>
 <node TEXT="Multi-Class Classification" ID="ID_1466249430" CREATED="1641243301668" MODIFIED="1641243308757">
+<node TEXT="Center Loss" ID="ID_1925391381" CREATED="1641519035510" MODIFIED="1641519038315"/>
 <node TEXT="SphereFace" ID="ID_312670993" CREATED="1641251036526" MODIFIED="1641251039003"/>
 <node TEXT="CosFace" ID="ID_704538771" CREATED="1641251030859" MODIFIED="1641251034812"/>
-<node TEXT="ArcFace" ID="ID_970043870" CREATED="1641242901225" MODIFIED="1641242969613"/>
+<node TEXT="ArcFace: additive angular margin loss for deep face recognition" ID="ID_970043870" CREATED="1641242901225" MODIFIED="1641519595576">
+<icon BUILTIN="checked"/>
+<node TEXT="the two tracks of face recognition are multi-class classifier and embedding learning" ID="ID_611518023" CREATED="1641519055619" MODIFIED="1641519085926">
+<node TEXT="problem for classification" ID="ID_1895607582" CREATED="1641519117849" MODIFIED="1641519123187">
+<node TEXT="size of linear layer linearly increases with identity number" ID="ID_1714580233" CREATED="1641519128504" MODIFIED="1641519154219"/>
+<node TEXT="learned features not discriminative enough in open-set setting" ID="ID_645674933" CREATED="1641519155123" MODIFIED="1641519174007"/>
+</node>
+<node TEXT="problem for embedding" ID="ID_1624119885" CREATED="1641519123374" MODIFIED="1641519126218">
+<node TEXT="combinatorial explosion in triplets. increase number of iterations" ID="ID_167265516" CREATED="1641519176112" MODIFIED="1641519234584"/>
+<node TEXT="semi-hard sample mining is difficult for effective training" ID="ID_1816861001" CREATED="1641519234769" MODIFIED="1641519246412"/>
+</node>
+</node>
+<node TEXT="united formulation for sphereface, cosface and arcface" ID="ID_1920762886" CREATED="1641519314414" MODIFIED="1641519330701">
+<node TEXT="\latex $$L_4=-\frac{1}{N}\sum_{i=1}^N \log \frac{&#xa;\exp(s\cos(m_1 \theta_{y_i} + m_2 )-m_3)&#xa;}{&#xa;\sum_j \exp(s\cos(m_1 \theta_{j} + m_2 )-m_3)&#xa;}$$" ID="ID_407559158" CREATED="1641519332807" MODIFIED="1641519471227"/>
+<node TEXT="sphere face: multiplicative angular margin m_1" ID="ID_1612863665" CREATED="1641519483413" MODIFIED="1641519537527"/>
+<node TEXT="arcface: additive angular margin m2" ID="ID_479788384" CREATED="1641519516270" MODIFIED="1641519549578"/>
+<node TEXT="cosface: additive cosine margin m3" ID="ID_1469158039" CREATED="1641519549998" MODIFIED="1641519556793"/>
+</node>
+</node>
 </node>
 <node TEXT="Embedding Learning" ID="ID_290828706" CREATED="1641243309778" MODIFIED="1641243314600">
 <node TEXT="FaceNet" ID="ID_466452383" CREATED="1641242953447" MODIFIED="1641242968884"/>
