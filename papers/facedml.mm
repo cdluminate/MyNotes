@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="Face &amp; DML" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1641242886360" STYLE="oval">
 <font SIZE="18"/>
-<hook NAME="MapStyle" zoom="0.909">
+<hook NAME="MapStyle" zoom="1.21">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -101,6 +101,7 @@
 <node TEXT="arcface: additive angular margin m2" ID="ID_479788384" CREATED="1641519516270" MODIFIED="1641519549578"/>
 <node TEXT="cosface: additive cosine margin m3" ID="ID_1469158039" CREATED="1641519549998" MODIFIED="1641519556793"/>
 </node>
+<node TEXT="https://github.com/deepinsight/insightface/tree/master/recognition/arcface_torch" ID="ID_1831504394" CREATED="1641519654585" MODIFIED="1641519656226"/>
 </node>
 </node>
 <node TEXT="Embedding Learning" ID="ID_290828706" CREATED="1641243309778" MODIFIED="1641243314600">
@@ -109,9 +110,15 @@
 </node>
 <node TEXT="DML" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_464750159" CREATED="1641242970936" MODIFIED="1641243085858">
 <edge COLOR="#ff00ff"/>
+<node TEXT="Survey" ID="ID_1192003468" CREATED="1641520461677" MODIFIED="1641520466264">
+<node TEXT="revisiting ICML" ID="ID_367259996" CREATED="1641520468517" MODIFIED="1641520484230"/>
+<node TEXT="reality ECCV" ID="ID_1508631828" CREATED="1641520470652" MODIFIED="1641520475949"/>
+</node>
+<node TEXT="Loss Functions" ID="ID_1262041414" CREATED="1641520453737" MODIFIED="1641520457282">
 <node TEXT="Triplet" ID="ID_430004220" CREATED="1641242977534" MODIFIED="1641242980178"/>
 <node TEXT="LiftStructure" ID="ID_362567920" CREATED="1641242980713" MODIFIED="1641242993798"/>
 <node TEXT="Multi-Similarity" ID="ID_1503083507" CREATED="1641242994307" MODIFIED="1641243003074"/>
+</node>
 </node>
 </node>
 </map>
