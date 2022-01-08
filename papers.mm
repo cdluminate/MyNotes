@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="11" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="15" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1641520995586">
 <edge COLOR="#00ffff"/>
 <font NAME="Gentium"/>
@@ -75,6 +75,8 @@
 <node TEXT="starting from scratch again." ID="ID_531358300" CREATED="1641520859492" MODIFIED="1641520995589">
 <font NAME="Gentium"/>
 </node>
+<node TEXT="Copyright (C) 2021-2022 Mo Zhou" ID="ID_1535888258" CREATED="1641673010735" MODIFIED="1641673016816"/>
+<node TEXT="CC-BY-SA-4.0 License" ID="ID_726858210" CREATED="1641673017130" MODIFIED="1641673022764"/>
 </node>
 <node TEXT="Policy for this document" ID="ID_288232758" CREATED="1641520783594" MODIFIED="1641520995590">
 <font NAME="Gentium"/>
@@ -89,20 +91,20 @@
 <node TEXT=" I have read this paper (published)" ID="ID_1116629927" CREATED="1641521225706" MODIFIED="1641524141636">
 <icon BUILTIN="checked"/>
 </node>
+<node TEXT=" I have skimmed this paper (preprint)" ID="ID_504737720" CREATED="1641523236144" MODIFIED="1641679124582">
+<icon BUILTIN="pencil"/>
+</node>
 <node TEXT=" this paper is a TODO" ID="ID_1381101491" CREATED="1641521235679" MODIFIED="1641521246931">
 <icon BUILTIN="unchecked"/>
 </node>
 <node TEXT=" in doubt in details" ID="ID_420094020" CREATED="1641521248004" MODIFIED="1641521262966">
 <icon BUILTIN="help"/>
 </node>
-<node TEXT=" Very good paper" ID="ID_78304803" CREATED="1641521263664" MODIFIED="1641521279357">
+<node TEXT=" Very good+Important paper" ID="ID_78304803" CREATED="1641521263664" MODIFIED="1641679080458">
 <icon BUILTIN="bookmark"/>
 </node>
-<node TEXT=" Consider the removal" ID="ID_1712139759" CREATED="1641522205670" MODIFIED="1641522214983">
+<node TEXT=" Consider for removal from this map" ID="ID_1712139759" CREATED="1641522205670" MODIFIED="1641679143123">
 <icon BUILTIN="button_cancel"/>
-</node>
-<node TEXT=" this is a preprint" ID="ID_504737720" CREATED="1641523236144" MODIFIED="1641523246157">
-<icon BUILTIN="pencil"/>
 </node>
 <node TEXT=" Paper Tag" ID="ID_961819152" CREATED="1641524318246" MODIFIED="1641524325129">
 <icon BUILTIN="password"/>
@@ -243,12 +245,13 @@
 <font NAME="Gentium"/>
 <node TEXT="White-Box Attack" ID="ID_449007607" CREATED="1641522449462" MODIFIED="1641522453928"/>
 <node TEXT="Black-Box Attack" ID="ID_1336427131" CREATED="1641522444757" MODIFIED="1641522449005"/>
+<node TEXT="Patch/Visible Attack" ID="ID_1333081920" CREATED="1641673351616" MODIFIED="1641673361482"/>
 <node TEXT="Universal Perturbation" ID="ID_883577858" CREATED="1641522438698" MODIFIED="1641522443789">
-<node TEXT="on distinctive properties of universal perturbations" ID="ID_224581737" CREATED="1641522458794" MODIFIED="1641522470572">
+<node TEXT="on distinctive properties of universal perturbations (madry)" ID="ID_224581737" CREATED="1641522458794" MODIFIED="1641679153053">
 <icon BUILTIN="unchecked"/>
-<node TEXT="madry" ID="ID_224316307" CREATED="1641522472062" MODIFIED="1641522473486"/>
 </node>
 </node>
+<node TEXT="Transferrability" ID="ID_142248765" CREATED="1641678368814" MODIFIED="1641678372373"/>
 <node TEXT="Backdoor Attack" ID="ID_1179347773" CREATED="1641524571169" MODIFIED="1641524576554"/>
 </node>
 <node TEXT="Adversarial Defense" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1641521522175">
@@ -266,12 +269,29 @@
 <node TEXT="this paper creates ensemble of transformations" ID="ID_446066363" CREATED="1641523933774" MODIFIED="1641523943924"/>
 </node>
 </node>
+<node TEXT="Defense" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1641678576006">
+<node TEXT="madry" ID="ID_882830443" CREATED="1641678605757" MODIFIED="1641678609404"/>
+<node TEXT="trades" ID="ID_932779241" CREATED="1641678609578" MODIFIED="1641678612580"/>
+<node TEXT="rethinking feature uncertainty in stochastic neural networks for adversarial robustness" ID="ID_829421687" CREATED="1641678579615" MODIFIED="1641678600199">
+<icon BUILTIN="pencil"/>
+<node TEXT="good performance" ID="ID_1343393281" CREATED="1641678601770" MODIFIED="1641678604282"/>
+</node>
+</node>
 </node>
 <node TEXT="NEW" POSITION="left" ID="ID_140802448" CREATED="1641523222163" MODIFIED="1641523223600">
 <edge COLOR="#7c007c"/>
 <node TEXT="quantum capsule networks" ID="ID_1165020573" CREATED="1641523224758" MODIFIED="1641523259186">
 <icon BUILTIN="pencil"/>
 </node>
+</node>
+<node TEXT="Cross-modal retrieval" POSITION="left" ID="ID_1473743837" CREATED="1641672972980" MODIFIED="1641672977254">
+<edge COLOR="#ff0000"/>
+</node>
+<node TEXT="Object Detection" POSITION="left" ID="ID_1865480883" CREATED="1641678685374" MODIFIED="1641678688534">
+<edge COLOR="#00ff00"/>
+</node>
+<node TEXT="Phrase Grounding" POSITION="left" ID="ID_1291850400" CREATED="1641678692848" MODIFIED="1641678696532">
+<edge COLOR="#ff00ff"/>
 </node>
 <node TEXT="Semantic Segmentation" POSITION="left" ID="ID_710086984" CREATED="1641524074732" MODIFIED="1641524079818">
 <edge COLOR="#007c7c"/>
