@@ -109,6 +109,9 @@
 <node TEXT=" Paper Tag" ID="ID_961819152" CREATED="1641524318246" MODIFIED="1641524325129">
 <icon BUILTIN="password"/>
 </node>
+<node TEXT="My Thoughts" ID="ID_1201449199" CREATED="1641743757646" MODIFIED="1641743763188">
+<icon BUILTIN="button_ok"/>
+</node>
 </node>
 <node TEXT="browse history" ID="ID_1769952352" CREATED="1641521397167" MODIFIED="1641521457619">
 <node TEXT="arxiv" ID="ID_555001851" CREATED="1641521435482" MODIFIED="1641521437032">
@@ -247,8 +250,25 @@
 <node TEXT="Black-Box Attack" ID="ID_1336427131" CREATED="1641522444757" MODIFIED="1641522449005"/>
 <node TEXT="Patch/Visible Attack" ID="ID_1333081920" CREATED="1641673351616" MODIFIED="1641673361482"/>
 <node TEXT="Universal Perturbation" ID="ID_883577858" CREATED="1641522438698" MODIFIED="1641522443789">
-<node TEXT="on distinctive properties of universal perturbations (madry)" ID="ID_224581737" CREATED="1641522458794" MODIFIED="1641679153053">
-<icon BUILTIN="unchecked"/>
+<node TEXT="on distinctive properties of universal perturbations (madry)" ID="ID_224581737" CREATED="1641522458794" MODIFIED="1641743879665">
+<icon BUILTIN="pencil"/>
+<node TEXT="targeted UAP via PGD, compared to standard targeted attack" ID="ID_358135140" CREATED="1641743454798" MODIFIED="1641743500936">
+<node TEXT="semantic locality" ID="ID_895004329" CREATED="1641743464407" MODIFIED="1641743681600">
+<node TEXT="signal concerntrated in local regions that are most salient to humans" ID="ID_119777514" CREATED="1641743682744" MODIFIED="1641743700574"/>
+</node>
+<node TEXT="spatial invariance" ID="ID_596707615" CREATED="1641743672916" MODIFIED="1641743676882">
+<node TEXT="still effective after translations" ID="ID_290717161" CREATED="1641743703086" MODIFIED="1641743714870">
+<node TEXT="relevant to equivariant transformation property of cnns." ID="ID_1322848785" CREATED="1641743769223" MODIFIED="1641743790756">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+</node>
+<node TEXT="less signal for generalization" ID="ID_832224960" CREATED="1641743481199" MODIFIED="1641743491198">
+<node TEXT="may have reached some boundary during optimization, hence the change of behavior" ID="ID_1379890976" CREATED="1641743909288" MODIFIED="1641743938814">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+</node>
 </node>
 </node>
 <node TEXT="Transferrability" ID="ID_142248765" CREATED="1641678368814" MODIFIED="1641678372373"/>
@@ -269,9 +289,16 @@
 <node TEXT="this paper creates ensemble of transformations" ID="ID_446066363" CREATED="1641523933774" MODIFIED="1641523943924"/>
 </node>
 </node>
-<node TEXT="Defense" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1641678576006">
+<node TEXT="Adversarial Training" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1641743568907">
 <node TEXT="madry" ID="ID_882830443" CREATED="1641678605757" MODIFIED="1641678609404"/>
 <node TEXT="trades" ID="ID_932779241" CREATED="1641678609578" MODIFIED="1641678612580"/>
+</node>
+<node TEXT="Certified Robustness" ID="ID_636878532" CREATED="1641743555483" MODIFIED="1641743560049">
+<node TEXT="Certified robustness to adversarial examples with differential privacy" ID="ID_1254880785" CREATED="1641743598637" MODIFIED="1641743613648">
+<icon BUILTIN="unchecked"/>
+</node>
+</node>
+<node TEXT="Misc" ID="ID_1332546973" CREATED="1641743569630" MODIFIED="1641743574898">
 <node TEXT="rethinking feature uncertainty in stochastic neural networks for adversarial robustness" ID="ID_829421687" CREATED="1641678579615" MODIFIED="1641678600199">
 <icon BUILTIN="pencil"/>
 <node TEXT="good performance" ID="ID_1343393281" CREATED="1641678601770" MODIFIED="1641678604282"/>
