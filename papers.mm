@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="DL&amp;CV" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1641520995584" STYLE="oval">
 <font NAME="Gentium" SIZE="18"/>
-<hook NAME="MapStyle" zoom="1.17">
+<hook NAME="MapStyle" zoom="1.416">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="19" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="20" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1641520995586">
 <edge COLOR="#00ffff"/>
 <font NAME="Gentium"/>
@@ -109,13 +109,14 @@
 <node TEXT=" Paper Tag" ID="ID_961819152" CREATED="1641524318246" MODIFIED="1641524325129">
 <icon BUILTIN="password"/>
 </node>
-<node TEXT="My Thoughts" ID="ID_1201449199" CREATED="1641743757646" MODIFIED="1641743763188">
+<node TEXT="My Thoughts" ID="ID_1201449199" CREATED="1641743757646" MODIFIED="1642368052082">
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
 <node TEXT="browse history" ID="ID_1769952352" CREATED="1641521397167" MODIFIED="1641521457619">
 <node TEXT="arxiv" ID="ID_555001851" CREATED="1641521435482" MODIFIED="1641521437032">
 <node TEXT="2022" OBJECT="java.lang.Long|2022" ID="ID_1490488610" CREATED="1641521399876" MODIFIED="1641521403819">
+<node TEXT="jan 14 ok" ID="ID_18090536" CREATED="1642368648797" MODIFIED="1642368656369"/>
 <node TEXT="jan7-jan3 ok" ID="ID_1174903687" CREATED="1641521404620" MODIFIED="1641521425197"/>
 </node>
 </node>
@@ -282,6 +283,18 @@
 </node>
 <node TEXT="Transferrability" ID="ID_142248765" CREATED="1641678368814" MODIFIED="1641678372373"/>
 <node TEXT="Backdoor Attack" ID="ID_1179347773" CREATED="1641524571169" MODIFIED="1641524576554"/>
+<node TEXT="Other tasks" ID="ID_334377652" CREATED="1642368415652" MODIFIED="1642368428495">
+<node TEXT="facial recognition" ID="ID_1806006397" CREATED="1642368429380" MODIFIED="1642368434372">
+<node TEXT="Similarity-based Gray-box Adversarial Attack Against Deep Face Recognition" ID="ID_272220220" CREATED="1642368773041" MODIFIED="1642368776146">
+<icon BUILTIN="checked"/>
+<node TEXT="gray-box attack method" ID="ID_1072955941" CREATED="1642368915986" MODIFIED="1642368921963"/>
+<node TEXT="minimize l2 dist" ID="ID_128968953" CREATED="1642369095672" MODIFIED="1642369098770"/>
+<node TEXT="not necessary for robustnesss evaluatio for face recogn" ID="ID_907195191" CREATED="1642368922155" MODIFIED="1642368946500">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+</node>
+</node>
 </node>
 <node TEXT="Adversarial Defense" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1641521522175">
 <edge COLOR="#007c00"/>
@@ -300,17 +313,40 @@
 </node>
 <node TEXT="Adversarial Training" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1641743568907">
 <node TEXT="madry" ID="ID_882830443" CREATED="1641678605757" MODIFIED="1641678609404"/>
-<node TEXT="trades" ID="ID_932779241" CREATED="1641678609578" MODIFIED="1641678612580"/>
+<node TEXT="trades" ID="ID_932779241" CREATED="1641678609578" MODIFIED="1641678612580">
+<node TEXT="theoretically principled trade-off between robustness and accuracy, ICML, 2019" ID="ID_1065469295" CREATED="1642369441439" MODIFIED="1642369468485">
+<icon BUILTIN="bookmark"/>
+</node>
+</node>
+<node TEXT="gairat" ID="ID_1795824577" CREATED="1642369428185" MODIFIED="1642369431503">
+<node TEXT="geometry-aware instance-reweighted adversarial training, iclr, 2020" ID="ID_255113727" CREATED="1642369496991" MODIFIED="1642369522587">
+<icon BUILTIN="bookmark"/>
+</node>
+</node>
 </node>
 <node TEXT="Certified Robustness" ID="ID_636878532" CREATED="1641743555483" MODIFIED="1641743560049">
 <node TEXT="Certified robustness to adversarial examples with differential privacy" ID="ID_1254880785" CREATED="1641743598637" MODIFIED="1641743613648">
 <icon BUILTIN="unchecked"/>
 </node>
 </node>
-<node TEXT="Misc" ID="ID_1332546973" CREATED="1641743569630" MODIFIED="1641743574898">
+<node TEXT="Misc analysis" ID="ID_1332546973" CREATED="1641743569630" MODIFIED="1642370250526">
 <node TEXT="rethinking feature uncertainty in stochastic neural networks for adversarial robustness" ID="ID_829421687" CREATED="1641678579615" MODIFIED="1641678600199">
 <icon BUILTIN="pencil"/>
 <node TEXT="good performance" ID="ID_1343393281" CREATED="1641678601770" MODIFIED="1641678604282"/>
+</node>
+<node TEXT="adversarial feature selection against evasion attacks" ID="ID_977262344" CREATED="1642370251827" MODIFIED="1642370266767">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Other Tasks" ID="ID_270183131" CREATED="1642369248777" MODIFIED="1642369252399">
+<node TEXT="Image denoise" ID="ID_688438108" CREATED="1642369253403" MODIFIED="1642369258012">
+<node TEXT="Towards adversarially robust deep image denoising" ID="ID_912787227" CREATED="1642369258886" MODIFIED="1642369271962">
+<icon BUILTIN="pencil"/>
+<node TEXT="present observation-based zero-mean attack" ID="ID_948789581" CREATED="1642369294389" MODIFIED="1642369302053"/>
+<node TEXT="present hybrid adversarial training" ID="ID_409590623" CREATED="1642369302455" MODIFIED="1642369331464">
+<node TEXT="using augmented data" ID="ID_632082886" CREATED="1642369349160" MODIFIED="1642369354932"/>
+</node>
+</node>
 </node>
 </node>
 </node>
@@ -417,7 +453,9 @@
 </node>
 <node TEXT="Multi-modal" ID="ID_1057831059" CREATED="1641926441766" MODIFIED="1641926444123">
 <node TEXT="cross-modal retrieval" ID="ID_1379594505" CREATED="1641926459577" MODIFIED="1641926462949">
-<node TEXT="vision+language" ID="ID_1099368741" CREATED="1641926445830" MODIFIED="1641926448768"/>
+<node TEXT="text-based video retrieval" ID="ID_1099368741" CREATED="1641926445830" MODIFIED="1642113691495"/>
+<node TEXT="sketch-based image retrieval" ID="ID_1863175490" CREATED="1642113691669" MODIFIED="1642113697265"/>
+<node TEXT="image-text retrieval" ID="ID_588466366" CREATED="1642113697443" MODIFIED="1642113701449"/>
 </node>
 <node TEXT="cross-modal self-supervised learning" ID="ID_1349108098" CREATED="1641926463256" MODIFIED="1641926470033"/>
 </node>
@@ -467,6 +505,14 @@
 </node>
 <node TEXT="Phrase Grounding" POSITION="left" ID="ID_1291850400" CREATED="1641678692848" MODIFIED="1641678696532">
 <edge COLOR="#ff00ff"/>
+</node>
+<node TEXT="3D PCL" POSITION="left" ID="ID_1051502826" CREATED="1642368000978" MODIFIED="1642368004184">
+<edge COLOR="#7c007c"/>
+<node TEXT="3D Segmentation" ID="ID_151472986" CREATED="1642368007648" MODIFIED="1642368086127">
+<node TEXT="PartNet: A Large-scale Benchmark for Fine-grained and&#xa;Hierarchical Part-level 3D Object Understanding" ID="ID_710662729" CREATED="1642368019890" MODIFIED="1642368030041">
+<icon BUILTIN="unchecked"/>
+</node>
+</node>
 </node>
 <node TEXT="Semantic Segmentation" POSITION="left" ID="ID_710086984" CREATED="1641524074732" MODIFIED="1641524079818">
 <edge COLOR="#007c7c"/>
