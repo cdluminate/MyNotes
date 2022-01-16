@@ -1,8 +1,8 @@
 <map version="freeplane 1.7.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="DL&amp;CV" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1641520995584" STYLE="oval">
+<node TEXT="{M,R,D}L" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1642370412083" STYLE="oval">
 <font NAME="Gentium" SIZE="18"/>
-<hook NAME="MapStyle" zoom="1.416">
+<hook NAME="MapStyle" zoom="1.714">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -24,13 +24,13 @@
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="styles.topic" COLOR="#18898b" STYLE="fork">
-<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+<font NAME="Gentium" SIZE="10" BOLD="true"/>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.subtopic" COLOR="#cc3300" STYLE="fork">
-<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+<font NAME="Gentium" SIZE="10" BOLD="true"/>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.subsubtopic" COLOR="#669900">
-<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+<font NAME="Gentium" SIZE="10" BOLD="true"/>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.important">
 <icon BUILTIN="yes"/>
@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="20" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="22" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1641520995586">
 <edge COLOR="#00ffff"/>
 <font NAME="Gentium"/>
@@ -526,6 +526,56 @@
 <node TEXT="multi-modal" ID="ID_510544100" CREATED="1641524231440" MODIFIED="1641524233873">
 <node TEXT="sound and visual representation learning with multiple pretraining tasks" ID="ID_1372709479" CREATED="1641524234751" MODIFIED="1641524246105">
 <icon BUILTIN="pencil"/>
+</node>
+</node>
+</node>
+<node TEXT="Detection" POSITION="left" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1642371100491">
+<font NAME="Gentium" SIZE="10" BOLD="false"/>
+<edge COLOR="#7c7c00"/>
+<node TEXT="Main" ID="ID_602285743" CREATED="1590025482391" MODIFIED="1590025486305">
+<node TEXT="R-CNN" ID="ID_1685978685" CREATED="1578733403630" MODIFIED="1587526865053">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="Fast R-CNN" ID="ID_694782039" CREATED="1578733411700" MODIFIED="1587526865053">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="Faster R-CNN" ID="ID_642482113" CREATED="1578733414892" MODIFIED="1587526865053">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="SSD" ID="ID_164154080" CREATED="1578733432308" MODIFIED="1587526865054">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="YOLO" ID="ID_1721203552" CREATED="1578733429892" MODIFIED="1587526865054">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="2004.10934: YOLOv4: optimal speed and accuracy of object detection" ID="ID_1418219399" CREATED="1587731285906" MODIFIED="1587731405695">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node TEXT="Mask R-CNN" ID="ID_365573714" CREATED="1578733418308" MODIFIED="1587526865054">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="2005.09973: dynamic refinement network for oriented and densely packed object detection" ID="ID_1703277358" CREATED="1590025459045" MODIFIED="1590025479923"/>
+<node TEXT="2012.03544: end to end object detection with fully convolutional network" ID="ID_1523511969" CREATED="1607496830511" MODIFIED="1607496848085"/>
+<node TEXT="2012.03519: fine-trained dynamic head for object detection" ID="ID_70012465" CREATED="1607496916818" MODIFIED="1607496930453"/>
+<node TEXT="2012: Implicit Feature Pyramid Network for Object Detection" ID="ID_659232211" CREATED="1610428420327" MODIFIED="1610428428770">
+<node TEXT="Jian Sun" ID="ID_1833196048" CREATED="1610428429754" MODIFIED="1610428432093"/>
+</node>
+</node>
+<node TEXT="Long-tail" ID="ID_234088557" CREATED="1590798731797" MODIFIED="1590798734352">
+<node TEXT="2003.05176: Equalization Loss for Long-Tailed Object Recognition (CVPR20)" ID="ID_731786534" CREATED="1590798735443" MODIFIED="1590798753647">
+<icon BUILTIN="button_ok"/>
+<node TEXT="improvement over mask rcnn" ID="ID_532045701" CREATED="1590798821368" MODIFIED="1590798828465"/>
+</node>
+<node TEXT="CVPR21: Adaptive Class Suppression Loss for Long-Tail Object Detection" ID="ID_1259869264" CREATED="1617622572423" MODIFIED="1617622580480">
+<node TEXT="existing methods usually divide the whole categories into several groups and treat each group with different strategies" ID="ID_1294091078" CREATED="1617622648162" MODIFIED="1617622669345">
+<node TEXT="breaking the limitation of manual grouping" ID="ID_1252367187" CREATED="1617622670643" MODIFIED="1617622683444"/>
+</node>
+</node>
+</node>
+<node TEXT="Details" ID="ID_1132582902" CREATED="1590798725625" MODIFIED="1590798728684"/>
+<node TEXT="Applications" ID="ID_485359212" CREATED="1590025512498" MODIFIED="1590025514523">
+<node TEXT="Retailing" ID="ID_725089971" CREATED="1588391641383" MODIFIED="1588391642960">
+<node TEXT="2003.08230: rethinking object detection in retail stores" ID="ID_524544258" CREATED="1588391644632" MODIFIED="1588391661192"/>
 </node>
 </node>
 </node>
