@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="{M,R,D}L" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1642394353464" STYLE="oval">
 <font NAME="Gentium" SIZE="18"/>
-<hook NAME="MapStyle" zoom="1.416">
+<hook NAME="MapStyle" zoom="1.17">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -98,6 +98,9 @@
 </node>
 <node TEXT=" in doubt in details" ID="ID_420094020" CREATED="1641521248004" MODIFIED="1641521262966">
 <icon BUILTIN="help"/>
+</node>
+<node TEXT=" insight" ID="ID_188358894" CREATED="1642449409015" MODIFIED="1642449417941">
+<icon BUILTIN="yes"/>
 </node>
 <node TEXT=" Very good+Important paper" ID="ID_78304803" CREATED="1641521263664" MODIFIED="1641679080458">
 <icon BUILTIN="bookmark"/>
@@ -386,7 +389,7 @@
 <node TEXT="https://robustbench.github.io/" ID="ID_1384233314" CREATED="1642431450079" MODIFIED="1642431451028"/>
 </node>
 </node>
-<node TEXT="Madry" ID="ID_882830443" CREATED="1641678605757" MODIFIED="1642438883218">
+<node TEXT="PGD/AT" ID="ID_882830443" CREATED="1641678605757" MODIFIED="1642441194136">
 <node TEXT="Towards deep learning models resistant to adversarial attacks" ID="ID_634512701" CREATED="1642438883995" MODIFIED="1642438897524">
 <icon BUILTIN="bookmark"/>
 <icon BUILTIN="checked"/>
@@ -398,21 +401,69 @@
 </node>
 </node>
 </node>
-<node TEXT="mart" ID="ID_6479998" CREATED="1642438310728" MODIFIED="1642438334625">
+<node TEXT="TRADES" ID="ID_932779241" CREATED="1641678609578" MODIFIED="1642441197254">
+<node TEXT="theoretically principled trade-off between robustness and accuracy, ICML, 2019" ID="ID_1065469295" CREATED="1642369441439" MODIFIED="1642438333145">
+<icon BUILTIN="bookmark"/>
+<node TEXT="commonly used baseline" ID="ID_108968911" CREATED="1642449381855" MODIFIED="1642449388727">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+</node>
+<node TEXT="AT Enhance" ID="ID_820322296" CREATED="1642449280058" MODIFIED="1642449298853">
+<node TEXT="GAIRAT" ID="ID_1795824577" CREATED="1642369428185" MODIFIED="1642441201215">
+<node TEXT="geometry-aware instance-reweighted adversarial training, iclr, 2020" ID="ID_255113727" CREATED="1642369496991" MODIFIED="1642441263816">
+<icon BUILTIN="unchecked"/>
+</node>
+</node>
+<node TEXT="MART" ID="ID_6479998" CREATED="1642438310728" MODIFIED="1642441191254">
 <node TEXT="improving adversarial robustness requires revisiting misclassified examples" ID="ID_466710053" CREATED="1642438315292" MODIFIED="1642438341586">
 <icon BUILTIN="unchecked"/>
 </node>
 </node>
-<node TEXT="trades" ID="ID_932779241" CREATED="1641678609578" MODIFIED="1642438333144">
-<node TEXT="theoretically principled trade-off between robustness and accuracy, ICML, 2019" ID="ID_1065469295" CREATED="1642369441439" MODIFIED="1642438333145">
-<icon BUILTIN="bookmark"/>
+<node TEXT="ATF" ID="ID_661752358" CREATED="1642449331181" MODIFIED="1642449334606"/>
+<node TEXT="FBF" ID="ID_761176936" CREATED="1642449341180" MODIFIED="1642449345704"/>
+<node TEXT="R-MGM" ID="ID_1819761584" CREATED="1642449346090" MODIFIED="1642449349702"/>
+<node TEXT="GAT" ID="ID_1630974602" CREATED="1642449350297" MODIFIED="1642449352427"/>
+<node TEXT="NuAT" ID="ID_769833360" CREATED="1642449307525" MODIFIED="1642449312169">
+<node TEXT="Towards Efficient and Effective Adversarial Training" ID="ID_1131130428" CREATED="1642449452500" MODIFIED="1642449454891">
+<icon BUILTIN="checked"/>
+<node TEXT="nips21" ID="ID_694522660" CREATED="1642449458075" MODIFIED="1642449460409"/>
+<node TEXT="nuclear-norm attack, single or two step" ID="ID_1355334878" CREATED="1642449462884" MODIFIED="1642449487212"/>
+<node TEXT="ref: nuclear norm / trace norm" ID="ID_794259512" CREATED="1642449487562" MODIFIED="1642450088267">
+<node TEXT="amount of rank-1 matrices needed to reconstruct X." ID="ID_534466284" CREATED="1642450121797" MODIFIED="1642450134497"/>
+<node TEXT="https://mathoverflow.net/questions/278013/what-is-the-intuition-for-the-trace-norm-nuclear-norm" ID="ID_1243321985" CREATED="1642450093241" MODIFIED="1642450093241" LINK="https://mathoverflow.net/questions/278013/what-is-the-intuition-for-the-trace-norm-nuclear-norm"/>
+<node TEXT="https://encyclopediaofmath.org/wiki/Nuclear_norm" ID="ID_1804499957" CREATED="1642450239653" MODIFIED="1642450239653" LINK="https://encyclopediaofmath.org/wiki/Nuclear_norm"/>
+<node TEXT="https://en.wikipedia.org/wiki/Matrix_norm" ID="ID_252928450" CREATED="1642450331560" MODIFIED="1642450331560" LINK="https://en.wikipedia.org/wiki/Matrix_norm">
+<node TEXT="Spectrum norm" ID="ID_1885026507" CREATED="1642454275615" MODIFIED="1642454282395">
+<node TEXT="norm induced by p-norm" ID="ID_1777624265" CREATED="1642454340598" MODIFIED="1642454351392"/>
+<node TEXT="\latex $$\|A\|_2==\sqrt{\lambda_\max(A^* A)}=\sigma_{max}(A)\leq \|A\|_F$$" ID="ID_526468254" CREATED="1642454283503" MODIFIED="1642454516305"/>
+</node>
+<node TEXT="Frobenius Norm" ID="ID_541944385" CREATED="1642454352691" MODIFIED="1642454364815">
+<node TEXT="entry-wise norm" ID="ID_515709247" CREATED="1642454365986" MODIFIED="1642454377303"/>
+<node TEXT="\latex $$\|A\|_F=\sqrt{\sum_i \sum_j |a_{ij}|^2} = \sqrt{Tr(A^*A)} = \sqrt{\sum_i^{\min(m,n)} \sigma_i^2(A)}$$" ID="ID_590705211" CREATED="1642454377531" MODIFIED="1642454469092"/>
+</node>
+<node TEXT="Nuclear/trace norm" ID="ID_331647121" CREATED="1642454546563" MODIFIED="1642454552498">
+<node TEXT="is a Schattern norm" ID="ID_511441612" CREATED="1642454553455" MODIFIED="1642454666915">
+<node TEXT="p-norm operating on singular value vector of a matrix" ID="ID_955840719" CREATED="1642454561278" MODIFIED="1642454576825"/>
+<node TEXT="\latex $$\|A\|_p = \Big(\sum_i \sigma_i^p(A)\Big)^{1/p}$$" ID="ID_740352297" CREATED="1642454600205" MODIFIED="1642454655969"/>
+</node>
+<node TEXT="\latex $$\|A\|_* = Tr(\sqrt{A^* A}) = \sum_i^{\min(m,n)} \sigma_i(A)$$" ID="ID_1940588690" CREATED="1642454577885" MODIFIED="1642454717653"/>
+<node TEXT="is a convex envelope of the rank function rank(A) -- often used in search of low rank matrices" ID="ID_1518781099" CREATED="1642454776478" MODIFIED="1642454805477"/>
 </node>
 </node>
-<node TEXT="gairat" ID="ID_1795824577" CREATED="1642369428185" MODIFIED="1642369431503">
-<node TEXT="geometry-aware instance-reweighted adversarial training, iclr, 2020" ID="ID_255113727" CREATED="1642369496991" MODIFIED="1642369522587">
-<icon BUILTIN="bookmark"/>
 </node>
 </node>
+</node>
+</node>
+<node TEXT="AT Speed" ID="ID_1548520614" CREATED="1642441206809" MODIFIED="1642449303630">
+<node TEXT="FAT" ID="ID_10759055" CREATED="1642441224672" MODIFIED="1642441227155">
+<node TEXT="adversarial training for free!" ID="ID_902115687" CREATED="1642441227881" MODIFIED="1642441234942">
+<icon BUILTIN="checked"/>
+<node TEXT="reuse computed gradients" ID="ID_540017524" CREATED="1642448873312" MODIFIED="1642448880329"/>
+</node>
+</node>
+</node>
+<node TEXT="STAGE" ID="ID_1718770068" CREATED="1642441254968" MODIFIED="1642441256543"/>
 <node TEXT="not-famous" ID="ID_1872674435" CREATED="1642431357219" MODIFIED="1642431364579">
 <node TEXT="parl: enhancing diversity of ensemble networks to resist adversarial attacks via pairwise adversarially robust loss function" ID="ID_1007028628" CREATED="1642431798570" MODIFIED="1642432009766">
 <icon BUILTIN="pencil"/>
@@ -488,6 +539,14 @@
 <node TEXT="present hybrid adversarial training" ID="ID_409590623" CREATED="1642369302455" MODIFIED="1642369331464">
 <node TEXT="using augmented data" ID="ID_632082886" CREATED="1642369349160" MODIFIED="1642369354932"/>
 </node>
+</node>
+</node>
+<node TEXT="Multi-Task learning" ID="ID_1182441257" CREATED="1642442091094" MODIFIED="1642442094613">
+<node TEXT="Adversarial Robustness in Multi-Task Learning: Promises and Illusions" ID="ID_429718797" CREATED="1642442095758" MODIFIED="1642442212412">
+<icon BUILTIN="checked"/>
+<node TEXT="AAAI22" ID="ID_1679691953" CREATED="1642442198116" MODIFIED="1642442200599"/>
+<node TEXT="blindly adding auxiliary tasks or weighing the tasks provides a false sense of robustness." ID="ID_459008675" CREATED="1642442206193" MODIFIED="1642442252721"/>
+<node TEXT="the choice of the task to incorporate in the loss function are important factors that can be leveraged to yield more robust models" ID="ID_1336811666" CREATED="1642442253918" MODIFIED="1642442277862"/>
 </node>
 </node>
 </node>
