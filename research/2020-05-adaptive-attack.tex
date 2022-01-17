@@ -1,0 +1,241 @@
+\documentclass[12,times]{beamer}
+\usefonttheme[onlymath]{serif}
+\usetheme{Berkeley}
+\usepackage{comment}
+
+\title{Adaptive Adversarial Attack}
+\author{Mo Zhou}
+\date{\today}
+
+\begin{document}
+	
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{comment}
+\begin{frame}
+	\begin{columns}
+		\column{0.5\textwidth}{left column}
+		\column{0.5\textwidth}{right column}
+	\end{columns}
+	\begin{block}{Block title}
+		content 
+	\end{block}
+	\pause
+	\begin{alertblock}{alert}
+		test
+	\end{alertblock}
+	\pause
+	\begin{exampleblock}{example}
+		test
+	\end{exampleblock}
+\end{frame}
+\end{comment}
+
+\begin{frame}
+	\tableofcontents
+\end{frame}
+
+\section{Attacks}
+
+\subsection{PGD}
+\begin{frame}{PGD}
+	Projected Gradient Descent (Madry et.al. 2017)
+	$$ x_{i+1} = \text{\tt Proj}_B(x_i + \alpha \cdot g) $$
+	$$ \text{for } g = \arg\max_{\|v\|_p \leq 1} v^T \nabla_{x_i} L(x_i,y) $$
+	\begin{itemize}
+		\item Iterative, Gradient
+		\item Maximize loss (gradient ascent)
+	\end{itemize}
+\end{frame}
+
+\subsection{C\&W}
+\begin{frame}{C\&W}
+	Carlini \& Wagner (2017)
+	$$ \max_{x'} L(x', y) - \lambda \cdot \|x'-x\|_p $$
+	\begin{itemize}
+		\item Gradient
+		\item Maximize loss while minimizing $\ell_p$ norm of the perturbation
+	\end{itemize}
+\end{frame}
+
+\subsection{BPDA}
+\begin{frame}{BPDA}
+	Backward Pass Differentiable Approximation (2018)
+	$$ \text{Network } f(x) = f^n \circ f^{n-1} \circ \cdots \circ f^1(x) $$
+	Learn a differentiable function $g(x)$ to approximate the non-differentiable component $f^i(x)$: $g(x)\approx f^i(x)$ 
+	$$\nabla_x f^n \circ \cdots \circ f^{i+1} \circ g(x) \circ f^{i-1} \circ \cdots \circ f^1(x) $$
+	\begin{itemize}
+		\item Breaks gradient masking (methods that invalidate the gradient)
+		\item Can be plugged into any gradient-based method
+	\end{itemize}
+\end{frame}
+
+\subsection{EOT}
+\begin{frame}{EOT}
+	Expectation Over Transformation (2018).
+	
+	Given a randomized classifier $f_r(x)$ ($r$ denotes the internal randomness), we can compute
+	$$ \nabla_x \mathbb{E}_r [f_r(x)] 
+	= \mathbb{E}_r[\nabla_x f_r(x)]
+	\approx \frac{1}{n} \sum_{t=1}^n \nabla_x f_{r_i}(x)$$
+	\begin{itemize}
+		\item Expectation of the gradient
+		\item Breaks randomization method
+	\end{itemize}
+\end{frame}
+
+\section{Defenses}
+
+\subsection{k-WTA}
+\begin{frame}{k-winners take all}
+	Replace ReLU activation function with k-WTA function:
+	$$ \phi_k (y)_j = \left\{ 
+	\begin{aligned}
+	y_j,& y_j\in \{\text{top}_k(y)\}\\
+	0,& \text{else}
+	\end{aligned}\right.
+	$$
+	\begin{itemize}
+		\item Gradient masking with discontinuous activation function
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	But we can estimate the local gradient:
+$$ g(x) = \frac{2}{\sigma M} \sum_{j=0}^{M/2}
+[ \nabla_x L_{CE}(f(x+\delta), y) +
+\nabla_x L_{CE}(f(x-\delta), y)] $$
+where $\delta \sim \mathcal{N}(\mu = 0,\sigma^2)$
+and $L_{CE}$ denotes cross-entropy loss.
+
+\textbullet~ Sometimes score-based or decision-based method can be even better than gradient-based methods.
+
+\textbullet~ Existence of such defense goes against common wisdom.
+\end{frame}
+
+\subsection{TOAO}
+\begin{frame}{The odds are odd}
+	A statistical test for detecting adversarial examples, based on the distribution of logit calues.
+	$$ \Delta_{y,i}(x) = z(x)_i - z(x)_y, ~i\neq y$$
+	The defense checks whether these logit differences are robust to random noise:
+	$$ \bar{\Delta}_{y,i} = \mathbb{E}_{\delta \sim \mathcal{N}}
+	[\Delta_{y,i} (x+\delta) - \Delta_{y,i}(x)]$$
+	And input is rejected as adversarial if we have $\bar{\Delta}_{y,i}(x)
+	> \tau_{y,i}$.
+	
+	\textbullet~ Misconception: peculiarities of adversarial examples
+	created by standards attacks can be used to detect {\it all} adversarial
+	examples.
+\end{frame}
+
+\begin{frame}
+	$$\bar{\Delta}_{y,i}(x) = \underbrace{\mathbb{E}_{\delta \sim \mathcal{N}}
+	[ z(x+\delta)_i - z(x+\delta)_y ]}_{s_1} + 
+	\overbrace{(z(x)_y - z(x)_i)}^{s_2} $$
+	
+	(1) The model robustness to noise for adv example $\geq$ that for a benign image.
+	
+	(2) Confidence for adv example $\leq$ that for a benign image.
+	
+	Reducing $s_2$ with a random benign $x_t$ using Feature Adversary:
+	 $$ \|z(x') - z(x_t)\|_2^2 $$
+	
+	$s_1$ can be directly used in the attack objective. (stronger)
+	
+	\textbullet~ Adv examples from existing attacks are usually abnormally close to decision boundary (C\&W) or have abnormally high confidence (PGD).
+\end{frame}
+
+\subsection{GBZ}
+\begin{frame}{GBZ}
+	VAE (generative) for detection. Let $\eta$ be an unobserved latent vairable.
+	$$ p(x,y,\eta) = p(\eta)p(y|\eta)p(x|\eta) $$
+	$\vec{\mu},\vec{\sigma} = \text{Enc}(x,k)$,
+	$\eta \leftarrow \mathcal{N}(\vec{\mu}, \vec{\sigma}\cdot I)$,
+	$x^\ast = \text{Dec}_1(\eta)$,
+	$y^\ast = \text{Dec}_2(\eta)$,
+	$\text{score}_i = -L_\text{recons} - L_\text{CE} + p_\text{prior}
+	 - p_\text{posterior} $
+	 
+	 \textbullet~ Inputs with high KL-divergence between $f(x)$ and the mean probability
+	 vectors from training inputs of the same class will be rejected.
+\end{frame}
+
+\begin{frame}
+	\textbullet~ Align the models decoded logits $y^\ast = \text{Dec}_2(\eta)$
+	to those produced on a clean input from a different class, using Feature Adversary. (99\% success rate)
+	
+	\textbullet~ Minimize $L(x') = \|\Phi(x') - \Phi(x_t)\|_2^2 $ ($\Phi$ is VGG). (100\% success rate)
+	
+	\begin{itemize}
+		\item Decompose the contributions of individual steps of a complex model.
+		\item Feature adversaries are useful for jointly evading a 
+		classifier and detector.
+	\end{itemize}
+\end{frame}
+
+\subsection{RSFT}
+\begin{frame}{Robust Sparse Fourier Transform}
+	\textbullet~ Defend against $L_0$ attacks in frequency domain.
+	
+	\textbullet~ "Compressing" each image by projecting to the
+	top-k coefficients of the discrete cosine transform, inverting that to recover an approximate image, and then classifying the recovered image.
+	
+	\textbullet~ Broken by $L_0$ C\&W without modification.
+\end{frame}
+
+\subsection{RSCE}
+\begin{frame}{Rethinking Softmax Cross Entropy}
+	* New loss function \textrightarrow training 
+	\textrightarrow increase robustness.
+	
+	* Presents the Max-Mahalanobis center (MMC) loss, defined as
+	$$ L_{MMC}(g(x),y) = \frac{1}{2} \| g(x) - \mu_y \|_2 $$
+	where $g(x)$ is the output features that do not correspond to classes, and $$f(x)=\arg\min_{1\leq i \leq K}
+	\|g(x)-\mu_i \|_2$$
+	
+	* Broken by Feature-adversary like attack: 
+	$$L(x) = \|g(x) - \mu_i \|_2^2 $$
+	
+\end{frame}
+
+\subsection{ECC}
+\begin{frame}{Error Correcting Codes}
+	* Ensemble -> sufficient diversity -> redundancy as error correcting code.
+	
+	* Attacking the model with the same set of parameters but
+	slightly modified architecture, to bypass numerical stability issues introduced by the original architecture
+	that may cause gradient masking.
+\end{frame}
+
+\subsection{ED}
+\begin{frame}{Ensemble Diversity}
+	* Ensemble \textrightarrow additional regularization
+	\textrightarrow diversity.
+	
+	$$ L(x,y) = -\alpha\mathcal{H}(f(x)) 
+	- \beta \text{Vol}^2(\{f_m^{\backslash y} (x)\})
+	+ \sum_{m}^M L_{CE}(f_m(x), y)$$
+	
+	* Not encouraging gradient masking. No sign other than
+	the change of the training objective. The standard
+	gradient-based attacks should work.
+	
+	* Broken by PGD with more iteration steps. The combination
+	of PGD + B\&B can further decrease the accuracy.
+\end{frame} 
+
+\section{Future Work}
+
+\subsection{Defense Detection}
+
+\subsection{NeuroSki}
+
+\section{References}
+
+\begin{frame}{Thanks!}
+\end{frame}
+
+\end{document}
