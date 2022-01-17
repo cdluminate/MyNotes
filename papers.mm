@@ -350,7 +350,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Special: Task Taxonomy (mixed discriminative and generative)" FOLDED="true" POSITION="left" ID="ID_1450110344" CREATED="1641925800258" MODIFIED="1641927022566">
+<node TEXT="Special: Task Taxonomy (mixed discriminative and generative)" POSITION="left" ID="ID_1450110344" CREATED="1641925800258" MODIFIED="1641927022566">
 <edge COLOR="#00007c"/>
 <node TEXT="Natural Image" ID="ID_815470893" CREATED="1641925558374" MODIFIED="1641925561230">
 <node TEXT="Decision+Readonly" ID="ID_1393092303" CREATED="1641925736067" MODIFIED="1641925762903">
