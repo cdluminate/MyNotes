@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="{M,R,D}L" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1642394353464" STYLE="oval">
 <font NAME="Gentium" SIZE="18"/>
-<hook NAME="MapStyle" zoom="2.074">
+<hook NAME="MapStyle" zoom="2.281">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -64,9 +64,8 @@
 </map_styles>
 </hook>
 <hook NAME="AutomaticEdgeColor" COUNTER="63" RULE="ON_BRANCH_CREATION"/>
-<node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1641520995586">
+<node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1642395333050">
 <edge COLOR="#00ffff"/>
-<font NAME="Gentium"/>
 <node TEXT="what&apos;s this" ID="ID_34209772" CREATED="1641520840738" MODIFIED="1641520995587">
 <font NAME="Gentium"/>
 <node TEXT="Personal notes for regular paper reading." ID="ID_1963538377" CREATED="1641520844766" MODIFIED="1641520995588">
@@ -144,9 +143,9 @@
 <font NAME="Gentium"/>
 <node TEXT="Casia webface" ID="ID_229244818" CREATED="1641503245897" MODIFIED="1641520995597">
 <font NAME="Gentium"/>
-<node TEXT="Learning Face Representation from Scratch" ID="ID_1940194677" CREATED="1641503251609" MODIFIED="1641520995568">
+<node TEXT="Learning Face Representation from Scratch" ID="ID_1940194677" CREATED="1641503251609" MODIFIED="1642395357411">
 <icon BUILTIN="checked"/>
-<font NAME="Gentium" ITALIC="true"/>
+<font NAME="Gentium" ITALIC="false"/>
 <node TEXT="no large scale dataset publically available, so propose semi-automatical way to collect face images" ID="ID_1189323012" CREATED="1641512559678" MODIFIED="1641520995597">
 <font NAME="Gentium"/>
 <node TEXT="CASIA-WebFace contains 1e4 subjects and 5e5 images." ID="ID_265616413" CREATED="1641512655754" MODIFIED="1641520995598">
@@ -253,9 +252,8 @@
 <node TEXT="Classification-based" ID="ID_336668153" CREATED="1641524453412" MODIFIED="1641524456368"/>
 </node>
 </node>
-<node TEXT="Adversarial Attack" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_234014270" CREATED="1641521502446" MODIFIED="1641521522173">
+<node TEXT="Adversarial Attack" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_234014270" CREATED="1641521502446" MODIFIED="1642395263213">
 <edge COLOR="#00007c"/>
-<font NAME="Gentium"/>
 <node TEXT="White-Box Attack" ID="ID_449007607" CREATED="1641522449462" MODIFIED="1641522453928"/>
 <node TEXT="Black-Box Attack" ID="ID_1336427131" CREATED="1641522444757" MODIFIED="1641522449005"/>
 <node TEXT="Patch/Visible Attack" ID="ID_1333081920" CREATED="1641673351616" MODIFIED="1641673361482"/>
@@ -284,7 +282,7 @@
 <node TEXT="Transferrability" ID="ID_142248765" CREATED="1641678368814" MODIFIED="1641678372373"/>
 <node TEXT="Backdoor Attack" ID="ID_1179347773" CREATED="1641524571169" MODIFIED="1641524576554"/>
 </node>
-<node TEXT="Intersection Attack" POSITION="right" ID="ID_289026488" CREATED="1642394705442" MODIFIED="1642394709502">
+<node TEXT="Intersection Attack" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_289026488" CREATED="1642394705442" MODIFIED="1642395223967">
 <edge COLOR="#00007c"/>
 <node TEXT="facial recognition" ID="ID_1806006397" CREATED="1642368429380" MODIFIED="1642368434372">
 <node TEXT="Similarity-based Gray-box Adversarial Attack Against Deep Face Recognition" ID="ID_272220220" CREATED="1642368773041" MODIFIED="1642368776146">
