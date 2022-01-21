@@ -142,6 +142,104 @@
 </node>
 </node>
 </node>
+<node TEXT="Special: Surveys" LOCALIZED_STYLE_REF="default" POSITION="right" ID="ID_1805920002" CREATED="1608010101067" MODIFIED="1642394049747">
+<icon BUILTIN="info"/>
+<font SIZE="10" BOLD="true"/>
+<edge COLOR="#ff0000"/>
+<node TEXT="Deep Learning Book" ID="ID_1914998592" CREATED="1624456582801" MODIFIED="1624456586327">
+<node TEXT="watermelon book" ID="ID_947925241" CREATED="1624456592513" MODIFIED="1624456596605"/>
+<node TEXT="flower book" ID="ID_1860750475" CREATED="1624456587361" MODIFIED="1624456591909"/>
+<node TEXT="2106.11342: dive into deep learning (mxnet)" ID="ID_313730253" CREATED="1624456597805" MODIFIED="1624456609850"/>
+</node>
+<node TEXT="Object Detection" ID="ID_1186488032" CREATED="1619334735508" MODIFIED="1619334741761">
+<node TEXT="PAMI: Weakly Supervised Object Localization and Detection: A Survey" ID="ID_550381811" CREATED="1619334770549" MODIFIED="1619334777124"/>
+</node>
+<node TEXT="Scene" ID="ID_282839696" CREATED="1612166497534" MODIFIED="1612166501051">
+<node TEXT="2101.10531&#xa; Deep Learning for Scene Classification: A Survey" ID="ID_1588464638" CREATED="1612166502020" MODIFIED="1612166508755"/>
+</node>
+<node TEXT="Visual Transformer" ID="ID_84446787" CREATED="1608871011262" MODIFIED="1608871014226">
+<node TEXT="2012.12556&#xa; A Survey on Visual Transformer" ID="ID_843960911" CREATED="1608871015499" MODIFIED="1608871032690"/>
+<node TEXT="2101: Transformers in Vision: A Survey" ID="ID_1959303133" CREATED="1610425958283" MODIFIED="1610425966435"/>
+</node>
+<node TEXT="Vision+Language" ID="ID_1299391859" CREATED="1608879468011" MODIFIED="1612168631733">
+<node TEXT="Pretrain" ID="ID_974958355" CREATED="1612168632729" MODIFIED="1612168636919">
+<node TEXT="2012.08673&#xa;A Closer Look at the Robustness of Vision-and-Language Pre-trained Models" ID="ID_1936309513" CREATED="1608879475108" MODIFIED="1608879486030"/>
+</node>
+<node TEXT="Synthesis" ID="ID_740746900" CREATED="1612168639832" MODIFIED="1612168644090">
+<node TEXT="2101: Adversarial Text-to-Image Synthesis: A Review" ID="ID_1737346805" CREATED="1612168645539" MODIFIED="1612168656457">
+<node TEXT="2101.09983" OBJECT="java.lang.Double|2101.09983" ID="ID_1020253434" CREATED="1615357806562" MODIFIED="1615357813054"/>
+</node>
+</node>
+</node>
+<node TEXT="CBIR" ID="ID_1563320081" CREATED="1608010115823" MODIFIED="1608010118602">
+<node TEXT="2012.00641: a decade survey of content based image retrieval using deep learning" ID="ID_1139748621" CREATED="1608010120162" MODIFIED="1608010139085">
+<node TEXT="largely about Hashing for image retrieval" ID="ID_1180040190" CREATED="1608010444517" MODIFIED="1608010466937"/>
+</node>
+<node TEXT="Deep Image Retrieval: A Survey" ID="ID_1660691658" CREATED="1615357376521" MODIFIED="1615357382065">
+<node TEXT="arXiv:2101.11282" ID="ID_899732298" CREATED="1615357388159" MODIFIED="1615357389285"/>
+</node>
+</node>
+<node TEXT="Action Recognition" ID="ID_921645625" CREATED="1608010505808" MODIFIED="1608010509558">
+<node TEXT="1901.09403: spatio-temporal action recognition: a survey" ID="ID_1374293575" CREATED="1608010511105" MODIFIED="1608010526886">
+<node TEXT="action localization" ID="ID_1731862850" CREATED="1608010591950" MODIFIED="1608010595047"/>
+</node>
+</node>
+<node TEXT="3D Segmentation" ID="ID_1110326685" CREATED="1615349107777" MODIFIED="1619334746208">
+<node TEXT="Deep Learning based 3D Segmentation: A Survey" ID="ID_463010697" CREATED="1615349115021" MODIFIED="1615349120270">
+<node TEXT="arXiv:2103.05423" ID="ID_1980243362" CREATED="1615349120519" MODIFIED="1615349126853"/>
+</node>
+</node>
+<node TEXT="Anomaly Detection" ID="ID_170137859" CREATED="1618846931941" MODIFIED="1618846936621">
+<node TEXT="2004.05993: a survey of single-scene video anomaly deteciton" ID="ID_462688942" CREATED="1618846926868" MODIFIED="1618846929066"/>
+</node>
+<node TEXT="Attack &amp; Defense" ID="ID_717280196" CREATED="1619444021946" MODIFIED="1619444028124">
+<font BOLD="true"/>
+<node TEXT="Benchmarking Adversarial Robustness on Image Classification" ID="ID_379885724" CREATED="1642726545073" MODIFIED="1642726549438">
+<icon BUILTIN="checked"/>
+<icon BUILTIN="bookmark"/>
+</node>
+<node TEXT="2104: Deep Learning-Based Autonomous Driving Systems: A Survey of Attacks and Defenses" ID="ID_1290703897" CREATED="1619444030107" MODIFIED="1619444042107">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node TEXT="RobFR: Benchmarking Adversarial Robustness on Face Recognition" ID="ID_765372057" CREATED="1642726609490" MODIFIED="1642726640122">
+<icon BUILTIN="pencil"/>
+<icon BUILTIN="bookmark"/>
+</node>
+</node>
+<node TEXT="Deep Metric Learning" ID="ID_912819287" CREATED="1582857189653" MODIFIED="1624367754251">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="2002.08473: revisiting training strategies and generalization performance in deep metric learning" FOLDED="true" ID="ID_585062864" CREATED="1582857197676" MODIFIED="1642726573200">
+<icon BUILTIN="checked"/>
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="revisit most widely used DML objective functions" ID="ID_1601875277" CREATED="1582857225897" MODIFIED="1587526865066">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="study parameter choices and batch sampling" ID="ID_1014314628" CREATED="1582857260610" MODIFIED="1587526865067">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="propose simple, yet effective training regularization method" ID="ID_1639876989" CREATED="1582857276291" MODIFIED="1587526865068">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="randomly perform a switch operation within tuples by exchanging negative samples x_n with the positive x_p in a given ranking loss formulation with fixed probability." ID="ID_1882096693" CREATED="1582859272250" MODIFIED="1587526865069">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="this regularization pushes the samples of the same class apart, thus enabling a DML model to capture extra non-balel discriminative features. Simultaneously, this process dampens the compression included by strong discriminative training signals." ID="ID_31907685" CREATED="1582859349016" MODIFIED="1587526865070">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="conclusions" ID="ID_1270249032" CREATED="1582858876452" MODIFIED="1587526865071">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="Generalization performance in DML exhibits strong inverse correlation to the decay of the singulra value spectrum of a learned representation." ID="ID_256125729" CREATED="1582858880428" MODIFIED="1587526865071">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="A Metric Learning Reality Check" ID="ID_894569151" CREATED="1622801160347" MODIFIED="1642726570132">
+<icon BUILTIN="checked"/>
+<node TEXT="flaws in experimental methodology" ID="ID_506127366" CREATED="1622801174483" MODIFIED="1622801197501"/>
+<node TEXT="actual improvements over time have been marginal at best" ID="ID_116707694" CREATED="1622801198120" MODIFIED="1622801209887"/>
+</node>
+</node>
+</node>
 <node TEXT="Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_98760508" CREATED="1642438760894" MODIFIED="1642438768351">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Convolutional" ID="ID_1179702035" CREATED="1642438769906" MODIFIED="1642438778652">
@@ -382,7 +480,6 @@
     </h1>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="WACV22" ID="ID_953336901" CREATED="1642440751686" MODIFIED="1642440753515"/>
 </node>
@@ -554,7 +651,6 @@
     </h1>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
@@ -744,96 +840,6 @@
 <node TEXT="model quantization" ID="ID_1774512840" CREATED="1641926950553" MODIFIED="1641926953829"/>
 <node TEXT="model pruning" ID="ID_1980120655" CREATED="1641926955306" MODIFIED="1641926957193"/>
 <node TEXT="multi-task learning" ID="ID_1359280064" CREATED="1641928781014" MODIFIED="1641928784138"/>
-</node>
-</node>
-<node TEXT="Special: Surveys" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="left" ID="ID_1805920002" CREATED="1608010101067" MODIFIED="1642394049747">
-<icon BUILTIN="info"/>
-<font SIZE="10" BOLD="true"/>
-<edge COLOR="#ff0000"/>
-<node TEXT="Deep Learning Book" ID="ID_1914998592" CREATED="1624456582801" MODIFIED="1624456586327">
-<node TEXT="watermelon book" ID="ID_947925241" CREATED="1624456592513" MODIFIED="1624456596605"/>
-<node TEXT="flower book" ID="ID_1860750475" CREATED="1624456587361" MODIFIED="1624456591909"/>
-<node TEXT="2106.11342: dive into deep learning (mxnet)" ID="ID_313730253" CREATED="1624456597805" MODIFIED="1624456609850"/>
-</node>
-<node TEXT="Object Detection" ID="ID_1186488032" CREATED="1619334735508" MODIFIED="1619334741761">
-<node TEXT="PAMI: Weakly Supervised Object Localization and Detection: A Survey" ID="ID_550381811" CREATED="1619334770549" MODIFIED="1619334777124"/>
-</node>
-<node TEXT="Scene" ID="ID_282839696" CREATED="1612166497534" MODIFIED="1612166501051">
-<node TEXT="2101.10531&#xa; Deep Learning for Scene Classification: A Survey" ID="ID_1588464638" CREATED="1612166502020" MODIFIED="1612166508755"/>
-</node>
-<node TEXT="Visual Transformer" ID="ID_84446787" CREATED="1608871011262" MODIFIED="1608871014226">
-<node TEXT="2012.12556&#xa; A Survey on Visual Transformer" ID="ID_843960911" CREATED="1608871015499" MODIFIED="1608871032690"/>
-<node TEXT="2101: Transformers in Vision: A Survey" ID="ID_1959303133" CREATED="1610425958283" MODIFIED="1610425966435"/>
-</node>
-<node TEXT="Vision+Language" ID="ID_1299391859" CREATED="1608879468011" MODIFIED="1612168631733">
-<node TEXT="Pretrain" ID="ID_974958355" CREATED="1612168632729" MODIFIED="1612168636919">
-<node TEXT="2012.08673&#xa;A Closer Look at the Robustness of Vision-and-Language Pre-trained Models" ID="ID_1936309513" CREATED="1608879475108" MODIFIED="1608879486030"/>
-</node>
-<node TEXT="Synthesis" ID="ID_740746900" CREATED="1612168639832" MODIFIED="1612168644090">
-<node TEXT="2101: Adversarial Text-to-Image Synthesis: A Review" ID="ID_1737346805" CREATED="1612168645539" MODIFIED="1612168656457">
-<node TEXT="2101.09983" OBJECT="java.lang.Double|2101.09983" ID="ID_1020253434" CREATED="1615357806562" MODIFIED="1615357813054"/>
-</node>
-</node>
-</node>
-<node TEXT="CBIR" ID="ID_1563320081" CREATED="1608010115823" MODIFIED="1608010118602">
-<node TEXT="2012.00641: a decade survey of content based image retrieval using deep learning" ID="ID_1139748621" CREATED="1608010120162" MODIFIED="1608010139085">
-<node TEXT="largely about Hashing for image retrieval" ID="ID_1180040190" CREATED="1608010444517" MODIFIED="1608010466937"/>
-</node>
-<node TEXT="Deep Image Retrieval: A Survey" ID="ID_1660691658" CREATED="1615357376521" MODIFIED="1615357382065">
-<node TEXT="arXiv:2101.11282" ID="ID_899732298" CREATED="1615357388159" MODIFIED="1615357389285"/>
-</node>
-</node>
-<node TEXT="Action Recognition" ID="ID_921645625" CREATED="1608010505808" MODIFIED="1608010509558">
-<node TEXT="1901.09403: spatio-temporal action recognition: a survey" ID="ID_1374293575" CREATED="1608010511105" MODIFIED="1608010526886">
-<node TEXT="action localization" ID="ID_1731862850" CREATED="1608010591950" MODIFIED="1608010595047"/>
-</node>
-</node>
-<node TEXT="3D Segmentation" ID="ID_1110326685" CREATED="1615349107777" MODIFIED="1619334746208">
-<node TEXT="Deep Learning based 3D Segmentation: A Survey" ID="ID_463010697" CREATED="1615349115021" MODIFIED="1615349120270">
-<node TEXT="arXiv:2103.05423" ID="ID_1980243362" CREATED="1615349120519" MODIFIED="1615349126853"/>
-</node>
-</node>
-<node TEXT="Anomaly Detection" ID="ID_170137859" CREATED="1618846931941" MODIFIED="1618846936621">
-<node TEXT="2004.05993: a survey of single-scene video anomaly deteciton" ID="ID_462688942" CREATED="1618846926868" MODIFIED="1618846929066"/>
-</node>
-<node TEXT="Attack &amp; Defense" ID="ID_717280196" CREATED="1619444021946" MODIFIED="1619444028124">
-<font BOLD="true"/>
-<node TEXT="2104: Deep Learning-Based Autonomous Driving Systems: A Survey of Attacks and Defenses" ID="ID_1290703897" CREATED="1619444030107" MODIFIED="1619444042107">
-<icon BUILTIN="messagebox_warning"/>
-</node>
-</node>
-<node TEXT="Deep Metric Learning" ID="ID_912819287" CREATED="1582857189653" MODIFIED="1624367754251">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="2002.08473: revisiting training strategies and generalization performance in deep metric learning" ID="ID_585062864" CREATED="1582857197676" MODIFIED="1587526865066">
-<icon BUILTIN="button_ok"/>
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="revisit most widely used DML objective functions" ID="ID_1601875277" CREATED="1582857225897" MODIFIED="1587526865066">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="study parameter choices and batch sampling" ID="ID_1014314628" CREATED="1582857260610" MODIFIED="1587526865067">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="propose simple, yet effective training regularization method" ID="ID_1639876989" CREATED="1582857276291" MODIFIED="1587526865068">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="randomly perform a switch operation within tuples by exchanging negative samples x_n with the positive x_p in a given ranking loss formulation with fixed probability." ID="ID_1882096693" CREATED="1582859272250" MODIFIED="1587526865069">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="this regularization pushes the samples of the same class apart, thus enabling a DML model to capture extra non-balel discriminative features. Simultaneously, this process dampens the compression included by strong discriminative training signals." ID="ID_31907685" CREATED="1582859349016" MODIFIED="1587526865070">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="conclusions" ID="ID_1270249032" CREATED="1582858876452" MODIFIED="1587526865071">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="Generalization performance in DML exhibits strong inverse correlation to the decay of the singulra value spectrum of a learned representation." ID="ID_256125729" CREATED="1582858880428" MODIFIED="1587526865071">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="A Metric Learning Reality Check" ID="ID_894569151" CREATED="1622801160347" MODIFIED="1622801167278">
-<icon BUILTIN="button_ok"/>
-<node TEXT="flaws in experimental methodology" ID="ID_506127366" CREATED="1622801174483" MODIFIED="1622801197501"/>
-<node TEXT="actual improvements over time have been marginal at best" ID="ID_116707694" CREATED="1622801198120" MODIFIED="1622801209887"/>
-</node>
 </node>
 </node>
 <node TEXT="Machine Learning" POSITION="left" ID="ID_1123557953" CREATED="1642430639041" MODIFIED="1642430641511">
