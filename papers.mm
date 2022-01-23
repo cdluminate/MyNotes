@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="{M,R,D}L" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1642394353464" STYLE="oval">
 <font NAME="Gentium" SIZE="18"/>
-<hook NAME="MapStyle" zoom="1.17">
+<hook NAME="MapStyle" zoom="1.416">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -121,8 +121,11 @@
 <node TEXT="browse history" ID="ID_1769952352" CREATED="1641521397167" MODIFIED="1641521457619">
 <node TEXT="arxiv" ID="ID_555001851" CREATED="1641521435482" MODIFIED="1641521437032">
 <node TEXT="2022" OBJECT="java.lang.Long|2022" ID="ID_1490488610" CREATED="1641521399876" MODIFIED="1641521403819">
+<node TEXT="Weekly batch" ID="ID_1917473385" CREATED="1642949144502" MODIFIED="1642949169400">
+<node TEXT="jan 21 ok" ID="ID_478019013" CREATED="1642949108689" MODIFIED="1642949111895"/>
 <node TEXT="jan 14 ok" ID="ID_18090536" CREATED="1642368648797" MODIFIED="1642368656369"/>
-<node TEXT="jan7-jan3 ok" ID="ID_1174903687" CREATED="1641521404620" MODIFIED="1641521425197"/>
+<node TEXT="jan 7-jan3 ok" ID="ID_1174903687" CREATED="1641521404620" MODIFIED="1642949114964"/>
+</node>
 </node>
 </node>
 <node TEXT="cvpr" ID="ID_1240053621" CREATED="1641521439738" MODIFIED="1641521441281"/>
@@ -142,9 +145,8 @@
 </node>
 </node>
 </node>
-<node TEXT="Special: Surveys" LOCALIZED_STYLE_REF="default" POSITION="right" ID="ID_1805920002" CREATED="1608010101067" MODIFIED="1642394049747">
+<node TEXT="Special: Surveys" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1805920002" CREATED="1608010101067" MODIFIED="1642953023254">
 <icon BUILTIN="info"/>
-<font SIZE="10" BOLD="true"/>
 <edge COLOR="#ff0000"/>
 <node TEXT="Deep Learning Book" ID="ID_1914998592" CREATED="1624456582801" MODIFIED="1624456586327">
 <node TEXT="watermelon book" ID="ID_947925241" CREATED="1624456592513" MODIFIED="1624456596605"/>
@@ -206,8 +208,8 @@
 <icon BUILTIN="bookmark"/>
 </node>
 </node>
-<node TEXT="Deep Metric Learning" ID="ID_912819287" CREATED="1582857189653" MODIFIED="1624367754251">
-<font NAME="Gentium" BOLD="false"/>
+<node TEXT="Deep Metric Learning" ID="ID_912819287" CREATED="1582857189653" MODIFIED="1642953053152">
+<font NAME="Gentium" BOLD="true"/>
 <node TEXT="2002.08473: revisiting training strategies and generalization performance in deep metric learning" FOLDED="true" ID="ID_585062864" CREATED="1582857197676" MODIFIED="1642726573200">
 <icon BUILTIN="checked"/>
 <font NAME="Gentium" BOLD="false"/>
@@ -240,9 +242,10 @@
 </node>
 </node>
 </node>
-<node TEXT="Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_98760508" CREATED="1642438760894" MODIFIED="1642438768351">
+<node TEXT="Classification" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_98760508" CREATED="1642438760894" MODIFIED="1642438768351">
 <edge COLOR="#7c7c00"/>
-<node TEXT="Convolutional" ID="ID_1179702035" CREATED="1642438769906" MODIFIED="1642438778652">
+<node TEXT="Convolutional" ID="ID_1179702035" CREATED="1642438769906" MODIFIED="1642953059318">
+<font BOLD="true"/>
 <node TEXT="ResNet" ID="ID_878740142" CREATED="1642438787982" MODIFIED="1642438789557"/>
 <node TEXT="WideResNet" ID="ID_758079042" CREATED="1642438822215" MODIFIED="1642438825478">
 <node TEXT="Wide residual networks" ID="ID_1046817230" CREATED="1642438826280" MODIFIED="1642438829049">
@@ -251,10 +254,24 @@
 </node>
 </node>
 </node>
-<node TEXT="Transformer" ID="ID_1624253019" CREATED="1642438779008" MODIFIED="1642438781272"/>
-<node TEXT="Loss Function" ID="ID_1059926176" CREATED="1642438781602" MODIFIED="1642438785478"/>
+<node TEXT="Transformer" ID="ID_1624253019" CREATED="1642438779008" MODIFIED="1642953058542">
+<font BOLD="true"/>
+<node TEXT="Swin Transformer" ID="ID_1570724775" CREATED="1642949632420" MODIFIED="1642949639526"/>
 </node>
-<node TEXT="Face Recognition" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_153988282" CREATED="1641242964517" MODIFIED="1642456756940">
+<node TEXT="Loss Function" ID="ID_1059926176" CREATED="1642438781602" MODIFIED="1642438785478">
+<node TEXT="Cross Entropy" ID="ID_172299886" CREATED="1642949643007" MODIFIED="1642949645738"/>
+<node TEXT="Focal Loss" ID="ID_1903164178" CREATED="1642949645934" MODIFIED="1642949648015"/>
+</node>
+<node TEXT="Explain" ID="ID_765602224" CREATED="1642952846679" MODIFIED="1642953011867">
+<font BOLD="false"/>
+<node TEXT="What can we learn from misclassified ImageNet&#xa;images?" ID="ID_1435212181" CREATED="1642952852302" MODIFIED="1642952861609">
+<icon BUILTIN="pencil"/>
+<node TEXT="misclassifications are rarely across superclasses, but mainly among subclasses with a superclass" ID="ID_426581992" CREATED="1642952902122" MODIFIED="1642952932522"/>
+<node TEXT="ensemble networks trained each only on subclasses of a given superclass perform better than the same network trained on all subclasses of all superclasses" ID="ID_1950788253" CREATED="1642952937590" MODIFIED="1642952961617"/>
+</node>
+</node>
+</node>
+<node TEXT="Face Recognition" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_153988282" CREATED="1641242964517" MODIFIED="1642456756940">
 <edge COLOR="#00ff00"/>
 <font NAME="Gentium"/>
 <node TEXT="Dataset" ID="ID_180339389" CREATED="1641503238612" MODIFIED="1641520995596">
@@ -276,6 +293,22 @@
 </node>
 </node>
 </node>
+<node TEXT="webface260m" ID="ID_1589368342" CREATED="1642953447155" MODIFIED="1642953451237">
+<node TEXT="WebFace260M: A Benchmark Unveiling the Power of Million-Scale Deep Face Recognition CVPR21" ID="ID_982203647" CREATED="1642953498775" MODIFIED="1642953558370">
+<icon BUILTIN="bookmark"/>
+<icon BUILTIN="unchecked"/>
+<node TEXT="webface260m noisy" ID="ID_165220438" CREATED="1642953571444" MODIFIED="1642953577010"/>
+<node TEXT="webface42m cleaned" ID="ID_1437922589" CREATED="1642953577195" MODIFIED="1642953580844">
+<node TEXT="still GPU unfriendly" ID="ID_856230850" CREATED="1642953879711" MODIFIED="1642953884075"/>
+</node>
+<node TEXT="webface12m (30%)" ID="ID_1426062574" CREATED="1642953859522" MODIFIED="1642953864180"/>
+<node TEXT="webface4m (10%)" ID="ID_1864465016" CREATED="1642953864416" MODIFIED="1642953870493">
+<node TEXT="looks slightly friendly" ID="ID_1191849266" CREATED="1642953871189" MODIFIED="1642953913872"/>
+<node TEXT="we can only start here" ID="ID_1943833487" CREATED="1642953914888" MODIFIED="1642953918594"/>
+</node>
+</node>
+<node TEXT="https://www.face-benchmark.org/index.html" ID="ID_16909553" CREATED="1642953463291" MODIFIED="1642953463291" LINK="https://www.face-benchmark.org/index.html"/>
+</node>
 </node>
 <node TEXT="Multi-Class Classification" ID="ID_1466249430" CREATED="1641243301668" MODIFIED="1641520995599">
 <font NAME="Gentium"/>
@@ -285,11 +318,13 @@
 <node TEXT="SphereFace" ID="ID_312670993" CREATED="1641251036526" MODIFIED="1641520995600">
 <font NAME="Gentium"/>
 </node>
-<node TEXT="CosFace" ID="ID_704538771" CREATED="1641251030859" MODIFIED="1641520995600">
+<node TEXT="CosFace" ID="ID_704538771" CREATED="1641251030859" MODIFIED="1642953952990">
+<icon BUILTIN="bookmark"/>
 <font NAME="Gentium"/>
 </node>
-<node TEXT="ArcFace: additive angular margin loss for deep face recognition" ID="ID_970043870" CREATED="1641242901225" MODIFIED="1641520995600">
+<node TEXT="ArcFace: additive angular margin loss for deep face recognition 2019" ID="ID_970043870" CREATED="1641242901225" MODIFIED="1642953945231">
 <icon BUILTIN="checked"/>
+<icon BUILTIN="bookmark"/>
 <font NAME="Gentium"/>
 <node TEXT="the two tracks of face recognition are multi-class classifier and embedding learning" ID="ID_611518023" CREATED="1641519055619" MODIFIED="1641520995601">
 <font NAME="Gentium"/>
@@ -331,6 +366,22 @@
 <font NAME="Gentium"/>
 </node>
 </node>
+<node TEXT="ArcFace Extension" ID="ID_1324013539" CREATED="1642950760442" MODIFIED="1642950766638">
+<node TEXT="KappaFace: Adaptive Additive Angular Margin Loss for Deep Face Recognition" ID="ID_1118636562" CREATED="1642950767435" MODIFIED="1642950783515">
+<icon BUILTIN="pencil"/>
+<node TEXT="looks fair" ID="ID_1297020447" CREATED="1642951154422" MODIFIED="1642951157854"/>
+<node TEXT="adaptive margin." ID="ID_1051061321" CREATED="1642951148542" MODIFIED="1642951154038"/>
+<node TEXT="von Mises-Fisher distribution" ID="ID_1463580715" CREATED="1642951187531" MODIFIED="1642951195717"/>
+<node TEXT="Final Eq.15" ID="ID_704402950" CREATED="1642951232067" MODIFIED="1642951250251"/>
+</node>
+<node TEXT="ArcFace-SCF: Spherical confidence learning for face recognition. (CVPR 2021)" ID="ID_1651655230" CREATED="1642951059696" MODIFIED="1642951075607">
+<icon BUILTIN="unchecked"/>
+</node>
+</node>
+<node TEXT="Curricularface: adaptive curriculum learning loss for deep face recognition. CVPR2020" ID="ID_1026306137" CREATED="1642950986727" MODIFIED="1642953955842">
+<icon BUILTIN="unchecked"/>
+<icon BUILTIN="bookmark"/>
+</node>
 </node>
 <node TEXT="Embedding Learning" ID="ID_290828706" CREATED="1641243309778" MODIFIED="1641520995604">
 <font NAME="Gentium"/>
@@ -370,7 +421,7 @@
 <node TEXT="Classification-based" ID="ID_336668153" CREATED="1641524453412" MODIFIED="1641524456368"/>
 </node>
 </node>
-<node TEXT="Adversarial Attack" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_234014270" CREATED="1641521502446" MODIFIED="1642395263213">
+<node TEXT="Adversarial Attack" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_234014270" CREATED="1641521502446" MODIFIED="1642395263213">
 <edge COLOR="#00007c"/>
 <node TEXT="White-Box Attack" ID="ID_449007607" CREATED="1641522449462" MODIFIED="1641522453928">
 <node TEXT="L-BFGS" ID="ID_1011268115" CREATED="1642438696428" MODIFIED="1642438699395"/>
@@ -433,7 +484,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Intersection Attack" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_289026488" CREATED="1642394705442" MODIFIED="1642395223967">
+<node TEXT="Intersection Attack" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_289026488" CREATED="1642394705442" MODIFIED="1642395223967">
 <edge COLOR="#00007c"/>
 <node TEXT="Face Recog" ID="ID_1806006397" CREATED="1642368429380" MODIFIED="1642440731768">
 <node TEXT="Similarity-based Gray-box Adversarial Attack Against Deep Face Recognition" ID="ID_272220220" CREATED="1642368773041" MODIFIED="1642368776146">
@@ -482,6 +533,25 @@
 </html>
 </richcontent>
 <node TEXT="WACV22" ID="ID_953336901" CREATED="1642440751686" MODIFIED="1642440753515"/>
+</node>
+</node>
+<node TEXT="Trajectory Prediction" ID="ID_1501279328" CREATED="1642953386986" MODIFIED="1642953390557">
+<node ID="ID_1380187352" CREATED="1642953399320" MODIFIED="1642953401824">
+<icon BUILTIN="pencil"/>
+<richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    On Adversarial Robustness of Trajectory Prediction for Autonomous Vehicles
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="misguiding title" ID="ID_974407250" CREATED="1642953418674" MODIFIED="1642953424787"/>
+<node TEXT="only presents attack to perturb trajectory" ID="ID_1226515884" CREATED="1642953425024" MODIFIED="1642953431087"/>
 </node>
 </node>
 </node>
@@ -653,6 +723,25 @@
 </html>
 </richcontent>
 </node>
+</node>
+<node TEXT="Spectrum" ID="ID_445945127" CREATED="1642951664771" MODIFIED="1642951667615">
+<node TEXT="Spectral Norm Regularization for Improving the&#xa;Generalizability of Deep Learning" ID="ID_1829634212" CREATED="1642951668899" MODIFIED="1642952085512">
+<icon BUILTIN="unchecked"/>
+<icon BUILTIN="bookmark"/>
+<icon BUILTIN="pencil"/>
+<node TEXT="must read" ID="ID_570092991" CREATED="1642952052911" MODIFIED="1642952054401"/>
+</node>
+<node TEXT="Adversarial Training is a Form of Data-dependent&#xa;Operator Norm Regularization" ID="ID_1007318317" CREATED="1642951686137" MODIFIED="1642951692337">
+<icon BUILTIN="unchecked"/>
+<icon BUILTIN="bookmark"/>
+<node TEXT="must read" ID="ID_326204906" CREATED="1642951699453" MODIFIED="1642951701325"/>
+</node>
+</node>
+</node>
+<node TEXT="Generative Replacement" ID="ID_814019873" CREATED="1642953253003" MODIFIED="1642953259726">
+<node TEXT="Adversarially Robust Classification by Conditional Generative Model Inversion" ID="ID_811483312" CREATED="1642953266238" MODIFIED="1642953325665">
+<icon BUILTIN="pencil"/>
+<icon BUILTIN="button_cancel"/>
 </node>
 </node>
 <node TEXT="Certified Robustness" ID="ID_636878532" CREATED="1641743555483" MODIFIED="1641743560049">
