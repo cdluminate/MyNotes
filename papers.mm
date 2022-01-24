@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="{M,R,D}L" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1642394353464" STYLE="oval">
 <font NAME="Gentium" SIZE="18"/>
-<hook NAME="MapStyle" zoom="1.416">
+<hook NAME="MapStyle" zoom="2.281">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="66" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="79" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1642395333050">
 <edge COLOR="#00ffff"/>
 <node TEXT="what&apos;s this" ID="ID_34209772" CREATED="1641520840738" MODIFIED="1641520995587">
@@ -157,7 +157,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Special: Surveys" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1805920002" CREATED="1608010101067" MODIFIED="1642953023254">
+<node TEXT="Special: Surveys" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1805920002" CREATED="1608010101067" MODIFIED="1642953023254">
 <icon BUILTIN="info"/>
 <edge COLOR="#ff0000"/>
 <node TEXT="Deep Learning Book" ID="ID_1914998592" CREATED="1624456582801" MODIFIED="1624456586327">
@@ -254,7 +254,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Classification" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_98760508" CREATED="1642438760894" MODIFIED="1642438768351">
+<node TEXT="Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_98760508" CREATED="1642438760894" MODIFIED="1642438768351">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Convolutional" ID="ID_1179702035" CREATED="1642438769906" MODIFIED="1642953059318">
 <font BOLD="true"/>
@@ -283,7 +283,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Face Recognition" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_153988282" CREATED="1641242964517" MODIFIED="1642456756940">
+<node TEXT="Face Recognition" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_153988282" CREATED="1641242964517" MODIFIED="1642456756940">
 <edge COLOR="#00ff00"/>
 <font NAME="Gentium"/>
 <node TEXT="Dataset" ID="ID_180339389" CREATED="1641503238612" MODIFIED="1641520995596">
@@ -433,8 +433,9 @@
 <node TEXT="Classification-based" ID="ID_336668153" CREATED="1641524453412" MODIFIED="1641524456368"/>
 </node>
 </node>
-<node TEXT="Adversarial Attack" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_234014270" CREATED="1641521502446" MODIFIED="1642395263213">
-<edge COLOR="#00007c"/>
+<node TEXT="Adversarial Attack" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_234014270" CREATED="1641521502446" MODIFIED="1642965733159">
+<edge COLOR="#ff0000"/>
+<node TEXT="Classification" ID="ID_1677974371" CREATED="1642965631248" MODIFIED="1642965636802">
 <node TEXT="White-Box Attack" ID="ID_449007607" CREATED="1641522449462" MODIFIED="1641522453928">
 <node TEXT="L-BFGS" ID="ID_1011268115" CREATED="1642438696428" MODIFIED="1642438699395"/>
 <node TEXT="FGSM" ID="ID_1740870459" CREATED="1642438691608" MODIFIED="1642438694832">
@@ -474,7 +475,6 @@
 </node>
 </node>
 <node TEXT="Transferrability" ID="ID_142248765" CREATED="1641678368814" MODIFIED="1641678372373"/>
-<node TEXT="Backdoor Attack" ID="ID_1179347773" CREATED="1641524571169" MODIFIED="1641524576554"/>
 <node TEXT="Model Inversion" ID="ID_137802922" CREATED="1642456768941" MODIFIED="1642456773626">
 <node TEXT="Exploiting Explanations for Model Inversion Attacks" ID="ID_1411419993" CREATED="1642456774974" MODIFIED="1642456783648">
 <icon BUILTIN="unchecked"/>
@@ -496,9 +496,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Intersection Attack" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_289026488" CREATED="1642394705442" MODIFIED="1642395223967">
-<edge COLOR="#00007c"/>
-<node TEXT="Face Recog" ID="ID_1806006397" CREATED="1642368429380" MODIFIED="1642440731768">
+<node TEXT="Face Recog" ID="ID_1806006397" CREATED="1642368429380" MODIFIED="1642965654306">
 <node TEXT="Similarity-based Gray-box Adversarial Attack Against Deep Face Recognition" ID="ID_272220220" CREATED="1642368773041" MODIFIED="1642368776146">
 <icon BUILTIN="checked"/>
 <node TEXT="Conf: FG" ID="ID_231749207" CREATED="1642428474587" MODIFIED="1642428477815"/>
@@ -528,7 +526,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Object Det" ID="ID_601426743" CREATED="1642440732047" MODIFIED="1642440736572">
+<node TEXT="Object Det" ID="ID_601426743" CREATED="1642440732047" MODIFIED="1642965657103">
 <node ID="ID_1033919012" CREATED="1642440745175" MODIFIED="1642440749146">
 <icon BUILTIN="unchecked"/>
 <richcontent TYPE="NODE">
@@ -547,7 +545,7 @@
 <node TEXT="WACV22" ID="ID_953336901" CREATED="1642440751686" MODIFIED="1642440753515"/>
 </node>
 </node>
-<node TEXT="Trajectory Prediction" ID="ID_1501279328" CREATED="1642953386986" MODIFIED="1642953390557">
+<node TEXT="Trajectory Prediction" ID="ID_1501279328" CREATED="1642953386986" MODIFIED="1642965658792">
 <node ID="ID_1380187352" CREATED="1642953399320" MODIFIED="1642953401824">
 <icon BUILTIN="pencil"/>
 <richcontent TYPE="NODE">
@@ -560,16 +558,33 @@
     On Adversarial Robustness of Trajectory Prediction for Autonomous Vehicles
   </body>
 </html>
-
 </richcontent>
 <node TEXT="misguiding title" ID="ID_974407250" CREATED="1642953418674" MODIFIED="1642953424787"/>
 <node TEXT="only presents attack to perturb trajectory" ID="ID_1226515884" CREATED="1642953425024" MODIFIED="1642953431087"/>
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Defense" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1641521522175">
-<edge COLOR="#007c00"/>
+<node TEXT="Adversarial Defense" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1642965722931">
+<edge COLOR="#0000ff"/>
 <font NAME="Gentium"/>
+<node TEXT="Classification" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1642965543414">
+<node TEXT="STAGE" ID="ID_219354908" CREATED="1642438393211" MODIFIED="1642438397420">
+<node TEXT="adversarial robustness against the union of multiple perturbation models" ID="ID_1452347285" CREATED="1642438398542" MODIFIED="1642438414351">
+<icon BUILTIN="unchecked"/>
+</node>
+<node TEXT="adversarial training and robustness for multiple perturbations" ID="ID_1832278453" CREATED="1642438422719" MODIFIED="1642438435302">
+<icon BUILTIN="unchecked"/>
+</node>
+</node>
+<node TEXT="Misc analysis" ID="ID_1332546973" CREATED="1641743569630" MODIFIED="1642370250526">
+<node TEXT="rethinking feature uncertainty in stochastic neural networks for adversarial robustness" ID="ID_829421687" CREATED="1641678579615" MODIFIED="1641678600199">
+<icon BUILTIN="pencil"/>
+<node TEXT="good performance" ID="ID_1343393281" CREATED="1641678601770" MODIFIED="1641678604282"/>
+</node>
+<node TEXT="adversarial feature selection against evasion attacks" ID="ID_977262344" CREATED="1642370251827" MODIFIED="1642370266767">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
 <node TEXT="patch Detection" ID="ID_1544755494" CREATED="1641523388190" MODIFIED="1641523402992">
 <node TEXT="on the real world adversarial robustness of real-time semantic segmentation models for autonomous driving" ID="ID_621290194" CREATED="1641523393314" MODIFIED="1641523426222">
 <icon BUILTIN="pencil"/>
@@ -582,7 +597,7 @@
 <node TEXT="this paper creates ensemble of transformations" ID="ID_446066363" CREATED="1641523933774" MODIFIED="1641523943924"/>
 </node>
 </node>
-<node TEXT="Adversarial Training" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1641743568907">
+<node TEXT="Adversarial Training" FOLDED="true" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1641743568907">
 <node TEXT="META" ID="ID_249187535" CREATED="1642431443297" MODIFIED="1642431444704">
 <node TEXT="references" ID="ID_178248607" CREATED="1642431445724" MODIFIED="1642431449341">
 <node TEXT="https://robustbench.github.io/" ID="ID_1384233314" CREATED="1642431450079" MODIFIED="1642431451028"/>
@@ -757,6 +772,7 @@
 </node>
 </node>
 <node TEXT="Certified Robustness" ID="ID_636878532" CREATED="1641743555483" MODIFIED="1641743560049">
+<node TEXT="https://github.com/AI-secure/Provable-Training-and-Verification-Approaches-Towards-Robust-Neural-Networks" ID="ID_1591662337" CREATED="1642964261893" MODIFIED="1642964261893" LINK="https://github.com/AI-secure/Provable-Training-and-Verification-Approaches-Towards-Robust-Neural-Networks"/>
 <node TEXT="Certified robustness to adversarial examples with differential privacy" ID="ID_1254880785" CREATED="1641743598637" MODIFIED="1641743613648">
 <icon BUILTIN="unchecked"/>
 </node>
@@ -766,27 +782,8 @@
 <icon BUILTIN="unchecked"/>
 </node>
 </node>
-<node TEXT="Misc analysis" ID="ID_1332546973" CREATED="1641743569630" MODIFIED="1642370250526">
-<node TEXT="rethinking feature uncertainty in stochastic neural networks for adversarial robustness" ID="ID_829421687" CREATED="1641678579615" MODIFIED="1641678600199">
-<icon BUILTIN="pencil"/>
-<node TEXT="good performance" ID="ID_1343393281" CREATED="1641678601770" MODIFIED="1641678604282"/>
 </node>
-<node TEXT="adversarial feature selection against evasion attacks" ID="ID_977262344" CREATED="1642370251827" MODIFIED="1642370266767">
-<icon BUILTIN="pencil"/>
-</node>
-</node>
-<node TEXT="STAGE" ID="ID_219354908" CREATED="1642438393211" MODIFIED="1642438397420">
-<node TEXT="adversarial robustness against the union of multiple perturbation models" ID="ID_1452347285" CREATED="1642438398542" MODIFIED="1642438414351">
-<icon BUILTIN="unchecked"/>
-</node>
-<node TEXT="adversarial training and robustness for multiple perturbations" ID="ID_1832278453" CREATED="1642438422719" MODIFIED="1642438435302">
-<icon BUILTIN="unchecked"/>
-</node>
-</node>
-</node>
-<node TEXT="Intersection Defense" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_159862152" CREATED="1642394680699" MODIFIED="1642394700113">
-<edge COLOR="#00ffff"/>
-<node TEXT="Image denoise" ID="ID_688438108" CREATED="1642369253403" MODIFIED="1642369258012">
+<node TEXT="Image Denoising" ID="ID_688438108" CREATED="1642369253403" MODIFIED="1642965597652">
 <node TEXT="Towards adversarially robust deep image denoising" ID="ID_912787227" CREATED="1642369258886" MODIFIED="1642369271962">
 <icon BUILTIN="pencil"/>
 <node TEXT="present observation-based zero-mean attack" ID="ID_948789581" CREATED="1642369294389" MODIFIED="1642369302053"/>
@@ -795,12 +792,59 @@
 </node>
 </node>
 </node>
-<node TEXT="Multi-Task learning" ID="ID_1182441257" CREATED="1642442091094" MODIFIED="1642442094613">
+<node TEXT="Multi-Task learning" ID="ID_1182441257" CREATED="1642442091094" MODIFIED="1642965600653">
 <node TEXT="Adversarial Robustness in Multi-Task Learning: Promises and Illusions" ID="ID_429718797" CREATED="1642442095758" MODIFIED="1642442212412">
 <icon BUILTIN="checked"/>
 <node TEXT="AAAI22" ID="ID_1679691953" CREATED="1642442198116" MODIFIED="1642442200599"/>
 <node TEXT="blindly adding auxiliary tasks or weighing the tasks provides a false sense of robustness." ID="ID_459008675" CREATED="1642442206193" MODIFIED="1642442252721"/>
 <node TEXT="the choice of the task to incorporate in the loss function are important factors that can be leveraged to yield more robust models" ID="ID_1336811666" CREATED="1642442253918" MODIFIED="1642442277862"/>
+</node>
+</node>
+</node>
+<node TEXT="Backdoor Attack &amp; Defense" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1279237598" CREATED="1642964328030" MODIFIED="1642965522277">
+<edge COLOR="#ff0000"/>
+<node TEXT="Attack" ID="ID_481030829" CREATED="1642965505734" MODIFIED="1642965507796">
+<node TEXT="Federated Learning (FL)" ID="ID_63486999" CREATED="1642964624292" MODIFIED="1642964972961">
+<node TEXT="Attack of the Tails:&#xa;Yes, You Really Can Backdoor Federated Learning" ID="ID_1636233737" CREATED="1642964633771" MODIFIED="1642964637902">
+<icon BUILTIN="checked"/>
+<node TEXT="NIPS20" ID="ID_315153104" CREATED="1642964641665" MODIFIED="1642964643166"/>
+<node TEXT="there are already many attacks and defenses in FL" ID="ID_1297351488" CREATED="1642964663241" MODIFIED="1642964670655"/>
+<node TEXT="this paper breaks the sota defense" ID="ID_1011383288" CREATED="1642964675173" MODIFIED="1642964680787"/>
+<node TEXT="susceptible to attack. defense remains open problem" ID="ID_92977436" CREATED="1642964925932" MODIFIED="1642964939810"/>
+</node>
+<node ID="ID_124537533" CREATED="1642965130724" MODIFIED="1642965135500">
+<icon BUILTIN="pencil"/>
+<richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    Backdoor Attacks on Federated Learning with Lottery Ticket Hypothesis
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="21.09" OBJECT="java.lang.Double|21.09" ID="ID_874215275" CREATED="1642965148120" MODIFIED="1642965212458"/>
+</node>
+<node TEXT="DBA: Distributed Backdoor Attacks against Federated Learning" ID="ID_1786745650" CREATED="1642965312934" MODIFIED="1642965322325">
+<icon BUILTIN="unchecked"/>
+<node TEXT="iclr21" ID="ID_1366820704" CREATED="1642965323484" MODIFIED="1642965326580"/>
+</node>
+</node>
+</node>
+<node TEXT="Defense" ID="ID_1943792971" CREATED="1642964418531" MODIFIED="1642965511845">
+<node TEXT="Federated Learning (FL)" ID="ID_1134675768" CREATED="1642965172314" MODIFIED="1642965518360">
+<node TEXT="Mitigating Backdoor Attacks in Federated Learning" ID="ID_709693725" CREATED="1642965179275" MODIFIED="1642965184157">
+<icon BUILTIN="pencil"/>
+<node TEXT="20.11" OBJECT="java.lang.Double|20.11" ID="ID_839247018" CREATED="1642965197783" MODIFIED="1642965208595"/>
+<node TEXT="Performance too good to be true?" ID="ID_813710886" CREATED="1642965276263" MODIFIED="1642965282360"/>
+</node>
+<node TEXT="Certifiably Robust Federated Learning against Backdoor Attacks" ID="ID_741627861" CREATED="1642965359811" MODIFIED="1642965362229">
+<icon BUILTIN="unchecked"/>
+<node TEXT="icml21" ID="ID_359293148" CREATED="1642965364960" MODIFIED="1642965369038"/>
+</node>
 </node>
 </node>
 </node>
