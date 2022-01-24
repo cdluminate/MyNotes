@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="{M,R,D}L" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1642394353464" STYLE="oval">
 <font NAME="Gentium" SIZE="18"/>
-<hook NAME="MapStyle" zoom="2.281">
+<hook NAME="MapStyle" zoom="1.558">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -564,10 +564,10 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Defense" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1642965722931">
+<node TEXT="Adversarial Defense" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1642965722931">
 <edge COLOR="#0000ff"/>
 <font NAME="Gentium"/>
-<node TEXT="Classification" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1642965543414">
+<node TEXT="Classification Task" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1643035532082">
 <node TEXT="STAGE" ID="ID_219354908" CREATED="1642438393211" MODIFIED="1642438397420">
 <node TEXT="adversarial robustness against the union of multiple perturbation models" ID="ID_1452347285" CREATED="1642438398542" MODIFIED="1642438414351">
 <icon BUILTIN="unchecked"/>
@@ -756,12 +756,12 @@
 <icon BUILTIN="unchecked"/>
 <icon BUILTIN="bookmark"/>
 <icon BUILTIN="pencil"/>
-<node TEXT="must read" ID="ID_570092991" CREATED="1642952052911" MODIFIED="1642952054401"/>
+<node TEXT="TODO" ID="ID_570092991" CREATED="1642952052911" MODIFIED="1643035652112"/>
 </node>
 <node TEXT="Adversarial Training is a Form of Data-dependent&#xa;Operator Norm Regularization" ID="ID_1007318317" CREATED="1642951686137" MODIFIED="1642951692337">
 <icon BUILTIN="unchecked"/>
 <icon BUILTIN="bookmark"/>
-<node TEXT="must read" ID="ID_326204906" CREATED="1642951699453" MODIFIED="1642951701325"/>
+<node TEXT="TODO" ID="ID_326204906" CREATED="1642951699453" MODIFIED="1643035654618"/>
 </node>
 </node>
 </node>
@@ -775,6 +775,11 @@
 <node TEXT="https://github.com/AI-secure/Provable-Training-and-Verification-Approaches-Towards-Robust-Neural-Networks" ID="ID_1591662337" CREATED="1642964261893" MODIFIED="1642964261893" LINK="https://github.com/AI-secure/Provable-Training-and-Verification-Approaches-Towards-Robust-Neural-Networks"/>
 <node TEXT="Certified robustness to adversarial examples with differential privacy" ID="ID_1254880785" CREATED="1641743598637" MODIFIED="1641743613648">
 <icon BUILTIN="unchecked"/>
+</node>
+<node TEXT="SoK: Certified Robustness for Deep Neural Networks" ID="ID_386941316" CREATED="1643035546515" MODIFIED="1643035632494">
+<icon BUILTIN="pencil"/>
+<icon BUILTIN="bookmark"/>
+<node TEXT="TODO" ID="ID_703331117" CREATED="1643035647341" MODIFIED="1643035649305"/>
 </node>
 </node>
 <node TEXT="Benchmark" ID="ID_855034612" CREATED="1642431513665" MODIFIED="1642431518164">
@@ -798,53 +803,6 @@
 <node TEXT="AAAI22" ID="ID_1679691953" CREATED="1642442198116" MODIFIED="1642442200599"/>
 <node TEXT="blindly adding auxiliary tasks or weighing the tasks provides a false sense of robustness." ID="ID_459008675" CREATED="1642442206193" MODIFIED="1642442252721"/>
 <node TEXT="the choice of the task to incorporate in the loss function are important factors that can be leveraged to yield more robust models" ID="ID_1336811666" CREATED="1642442253918" MODIFIED="1642442277862"/>
-</node>
-</node>
-</node>
-<node TEXT="Backdoor Attack &amp; Defense" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1279237598" CREATED="1642964328030" MODIFIED="1642965522277">
-<edge COLOR="#ff0000"/>
-<node TEXT="Attack" ID="ID_481030829" CREATED="1642965505734" MODIFIED="1642965507796">
-<node TEXT="Federated Learning (FL)" ID="ID_63486999" CREATED="1642964624292" MODIFIED="1642964972961">
-<node TEXT="Attack of the Tails:&#xa;Yes, You Really Can Backdoor Federated Learning" ID="ID_1636233737" CREATED="1642964633771" MODIFIED="1642964637902">
-<icon BUILTIN="checked"/>
-<node TEXT="NIPS20" ID="ID_315153104" CREATED="1642964641665" MODIFIED="1642964643166"/>
-<node TEXT="there are already many attacks and defenses in FL" ID="ID_1297351488" CREATED="1642964663241" MODIFIED="1642964670655"/>
-<node TEXT="this paper breaks the sota defense" ID="ID_1011383288" CREATED="1642964675173" MODIFIED="1642964680787"/>
-<node TEXT="susceptible to attack. defense remains open problem" ID="ID_92977436" CREATED="1642964925932" MODIFIED="1642964939810"/>
-</node>
-<node ID="ID_124537533" CREATED="1642965130724" MODIFIED="1642965135500">
-<icon BUILTIN="pencil"/>
-<richcontent TYPE="NODE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    Backdoor Attacks on Federated Learning with Lottery Ticket Hypothesis
-  </body>
-</html>
-
-</richcontent>
-<node TEXT="21.09" OBJECT="java.lang.Double|21.09" ID="ID_874215275" CREATED="1642965148120" MODIFIED="1642965212458"/>
-</node>
-<node TEXT="DBA: Distributed Backdoor Attacks against Federated Learning" ID="ID_1786745650" CREATED="1642965312934" MODIFIED="1642965322325">
-<icon BUILTIN="unchecked"/>
-<node TEXT="iclr21" ID="ID_1366820704" CREATED="1642965323484" MODIFIED="1642965326580"/>
-</node>
-</node>
-</node>
-<node TEXT="Defense" ID="ID_1943792971" CREATED="1642964418531" MODIFIED="1642965511845">
-<node TEXT="Federated Learning (FL)" ID="ID_1134675768" CREATED="1642965172314" MODIFIED="1642965518360">
-<node TEXT="Mitigating Backdoor Attacks in Federated Learning" ID="ID_709693725" CREATED="1642965179275" MODIFIED="1642965184157">
-<icon BUILTIN="pencil"/>
-<node TEXT="20.11" OBJECT="java.lang.Double|20.11" ID="ID_839247018" CREATED="1642965197783" MODIFIED="1642965208595"/>
-<node TEXT="Performance too good to be true?" ID="ID_813710886" CREATED="1642965276263" MODIFIED="1642965282360"/>
-</node>
-<node TEXT="Certifiably Robust Federated Learning against Backdoor Attacks" ID="ID_741627861" CREATED="1642965359811" MODIFIED="1642965362229">
-<icon BUILTIN="unchecked"/>
-<node TEXT="icml21" ID="ID_359293148" CREATED="1642965364960" MODIFIED="1642965369038"/>
-</node>
 </node>
 </node>
 </node>
@@ -5545,6 +5503,59 @@
 <node TEXT="Domain Adaptation" ID="ID_1898156399" CREATED="1624371195889" MODIFIED="1624371199524">
 <node TEXT="2103.07503: cross-domain similarity learning for face recognition in unseen domains" ID="ID_1504784041" CREATED="1624371201605" MODIFIED="1624371226979">
 <icon BUILTIN="button_ok"/>
+</node>
+</node>
+</node>
+<node TEXT="Backdoor Attack &amp; Defense" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_1279237598" CREATED="1642964328030" MODIFIED="1642965522277">
+<edge COLOR="#ff0000"/>
+<node TEXT="Attack" ID="ID_481030829" CREATED="1642965505734" MODIFIED="1642965507796">
+<node TEXT="Federated Learning (FL)" ID="ID_63486999" CREATED="1642964624292" MODIFIED="1642964972961">
+<node TEXT="Attack of the Tails:&#xa;Yes, You Really Can Backdoor Federated Learning" ID="ID_1636233737" CREATED="1642964633771" MODIFIED="1642964637902">
+<icon BUILTIN="checked"/>
+<node TEXT="NIPS20" ID="ID_315153104" CREATED="1642964641665" MODIFIED="1642964643166"/>
+<node TEXT="there are already many attacks and defenses in FL" ID="ID_1297351488" CREATED="1642964663241" MODIFIED="1642964670655"/>
+<node TEXT="this paper breaks the sota defense" ID="ID_1011383288" CREATED="1642964675173" MODIFIED="1642964680787"/>
+<node TEXT="susceptible to attack. defense remains open problem" ID="ID_92977436" CREATED="1642964925932" MODIFIED="1642964939810"/>
+</node>
+<node ID="ID_124537533" CREATED="1642965130724" MODIFIED="1642965135500">
+<icon BUILTIN="pencil"/>
+<richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    Backdoor Attacks on Federated Learning with Lottery Ticket Hypothesis
+  </body>
+</html>
+</richcontent>
+<node TEXT="21.09" OBJECT="java.lang.Double|21.09" ID="ID_874215275" CREATED="1642965148120" MODIFIED="1642965212458"/>
+</node>
+<node TEXT="DBA: Distributed Backdoor Attacks against Federated Learning" ID="ID_1786745650" CREATED="1642965312934" MODIFIED="1642965322325">
+<icon BUILTIN="unchecked"/>
+<node TEXT="iclr21" ID="ID_1366820704" CREATED="1642965323484" MODIFIED="1642965326580"/>
+</node>
+</node>
+</node>
+<node TEXT="Defense" ID="ID_1943792971" CREATED="1642964418531" MODIFIED="1642965511845">
+<node TEXT="Federated Learning (FL)" ID="ID_1134675768" CREATED="1642965172314" MODIFIED="1642965518360">
+<node TEXT="Mitigating Backdoor Attacks in Federated Learning" ID="ID_709693725" CREATED="1642965179275" MODIFIED="1642965184157">
+<icon BUILTIN="pencil"/>
+<node TEXT="20.11" OBJECT="java.lang.Double|20.11" ID="ID_839247018" CREATED="1642965197783" MODIFIED="1642965208595"/>
+<node TEXT="Performance too good to be true?" ID="ID_813710886" CREATED="1642965276263" MODIFIED="1642965282360"/>
+</node>
+<node TEXT="Certifiably Robust Federated Learning against Backdoor Attacks" ID="ID_741627861" CREATED="1642965359811" MODIFIED="1642965362229">
+<icon BUILTIN="unchecked"/>
+<node TEXT="icml21" ID="ID_359293148" CREATED="1642965364960" MODIFIED="1642965369038"/>
+</node>
+<node TEXT="FederatedReverse: A Detection and Defense Method Against Backdoor Attacks in Federated Learning" ID="ID_1755199424" CREATED="1643036656254" MODIFIED="1643036673341">
+<icon BUILTIN="unchecked"/>
+</node>
+<node TEXT="Defending against Backdoors in Federated Learning with Robust Learning Rate AAAI21" ID="ID_1421685316" CREATED="1643036746252" MODIFIED="1643036830465">
+<icon BUILTIN="unchecked"/>
+<node TEXT="at high level, our defense is based on carefully adjusting the aggregation server&apos;s learning rate, per dimension and per round, based on the sign infirmation of agents&apos; updates" ID="ID_735008317" CREATED="1643036783427" MODIFIED="1643036817264"/>
+</node>
 </node>
 </node>
 </node>
