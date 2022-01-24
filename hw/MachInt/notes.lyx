@@ -83,7 +83,7 @@
 \begin_body
 
 \begin_layout Title
-Machine Intelligence 2022 Spring Course Notes
+Rama Machine Intelligence 2022 Spring Course Notes
 \end_layout
 
 \begin_layout Author
@@ -91,7 +91,116 @@ M Zhou
 \end_layout
 
 \begin_layout Section
-Outline
+Misc and History
+\end_layout
+
+\begin_layout Standard
+Why Machine Intel instead of Artifical Intel? Coverage: traditional AI.
+ The past AI models are interpretable, however deep learning (working like
+ blackbox) does not.
+ Bias of deep learning models.
+\end_layout
+
+\begin_layout Standard
+Lessons learned from the brain: memory and simulation are key to decision
+ making.
+\end_layout
+
+\begin_layout Standard
+Definition of AI.
+ Narrow AI v.s.
+ General AI.
+\end_layout
+
+\begin_layout Standard
+Issues with current 
+\begin_inset Quotes eld
+\end_inset
+
+AI
+\begin_inset Quotes erd
+\end_inset
+
+ approaches: data hungry, black box, generalizability (domain shift), vulnerabil
+ity, bias, fairness, privacy.
+ May these lead to AI winters?
+\end_layout
+
+\begin_layout Standard
+LeCun 89 LeNet
+\end_layout
+
+\begin_layout Subsection
+COMPUTING MACHINERY AND INTELLIGENCE.
+ Alan Turing
+\end_layout
+
+\begin_layout Subsection
+Turing’s Imitation Game: a discussion with the benefit of hind-sight
+\end_layout
+
+\begin_layout Subsection
+Stuart Russell & Peter Norvig, AI: A Modern Approach
+\end_layout
+
+\begin_layout Section
+Intelligent Agents
+\end_layout
+
+\begin_layout Section
+Problem Solving by Searching
+\end_layout
+
+\begin_layout Section
+Adversarial search and games
+\end_layout
+
+\begin_layout Section
+Constraint satisfaction problems
+\end_layout
+
+\begin_layout Section
+Probablistic reasoning
+\end_layout
+
+\begin_layout Section
+Dynamic bayesian networks and associated inference algorithms
+\end_layout
+
+\begin_layout Section
+Optimal sequential decisions
+\end_layout
+
+\begin_layout Section
+Markov decision processes
+\end_layout
+
+\begin_layout Section
+Partially observed Markov decision processes
+\end_layout
+
+\begin_layout Section
+Deep learning
+\end_layout
+
+\begin_layout Section
+GANs
+\end_layout
+
+\begin_layout Section
+Robustness to adversarial attacks
+\end_layout
+
+\begin_layout Section
+Deep fakes
+\end_layout
+
+\begin_layout Section
+Fair and ethical AI
+\end_layout
+
+\begin_layout Section
+Safety of AI systems and applications in engineering and medicine
 \end_layout
 
 \end_body
