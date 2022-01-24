@@ -254,7 +254,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_98760508" CREATED="1642438760894" MODIFIED="1642438768351">
+<node TEXT="Classification" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_98760508" CREATED="1642438760894" MODIFIED="1642438768351">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Convolutional" ID="ID_1179702035" CREATED="1642438769906" MODIFIED="1642953059318">
 <font BOLD="true"/>
@@ -273,6 +273,26 @@
 <node TEXT="Loss Function" ID="ID_1059926176" CREATED="1642438781602" MODIFIED="1642438785478">
 <node TEXT="Cross Entropy" ID="ID_172299886" CREATED="1642949643007" MODIFIED="1642949645738"/>
 <node TEXT="Focal Loss" ID="ID_1903164178" CREATED="1642949645934" MODIFIED="1642949648015"/>
+</node>
+<node TEXT="Data Augmentation" ID="ID_1121776606" CREATED="1643057931229" MODIFIED="1643057946544">
+<node ID="ID_1264772918" CREATED="1643057954153" MODIFIED="1643057958105">
+<icon BUILTIN="unchecked"/>
+<richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    On Feature Normalization and Data Augmentation
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="cvpr21" ID="ID_109505516" CREATED="1643057959966" MODIFIED="1643057961249"/>
+<node TEXT="the moments are often removed (e.g. mean and stdev)" ID="ID_776849456" CREATED="1643057961500" MODIFIED="1643057991230"/>
+<node TEXT="but moments extracted from instance normalization and positional normalization can roughly capture style and shape information of an image" ID="ID_1102689926" CREATED="1643057991834" MODIFIED="1643058019401"/>
+</node>
 </node>
 <node TEXT="Explain" ID="ID_765602224" CREATED="1642952846679" MODIFIED="1642953011867">
 <font BOLD="false"/>
