@@ -287,7 +287,6 @@
     On Feature Normalization and Data Augmentation
   </body>
 </html>
-
 </richcontent>
 <node TEXT="cvpr21" ID="ID_109505516" CREATED="1643057959966" MODIFIED="1643057961249"/>
 <node TEXT="the moments are often removed (e.g. mean and stdev)" ID="ID_776849456" CREATED="1643057961500" MODIFIED="1643057991230"/>
@@ -584,7 +583,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Defense" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1642965722931">
+<node TEXT="Adversarial Defense" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1642965722931">
 <edge COLOR="#0000ff"/>
 <font NAME="Gentium"/>
 <node TEXT="Classification Task" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1643035532082">
@@ -807,6 +806,9 @@
 <icon BUILTIN="unchecked"/>
 </node>
 </node>
+</node>
+<node TEXT="Generalization" ID="ID_125075162" CREATED="1643058798944" MODIFIED="1643058803223">
+<node TEXT="Cihang xie" ID="ID_1667513983" CREATED="1643058809140" MODIFIED="1643058811907"/>
 </node>
 <node TEXT="Image Denoising" ID="ID_688438108" CREATED="1642369253403" MODIFIED="1642965597652">
 <node TEXT="Towards adversarially robust deep image denoising" ID="ID_912787227" CREATED="1642369258886" MODIFIED="1642369271962">
@@ -5529,6 +5531,9 @@
 <node TEXT="Backdoor Attack &amp; Defense" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_1279237598" CREATED="1642964328030" MODIFIED="1642965522277">
 <edge COLOR="#ff0000"/>
 <node TEXT="Attack" ID="ID_481030829" CREATED="1642965505734" MODIFIED="1642965507796">
+<node TEXT="Classification" ID="ID_1068695249" CREATED="1643059216060" MODIFIED="1643059221252">
+<node TEXT="* Madry" ID="ID_684891535" CREATED="1643059222128" MODIFIED="1643059229315"/>
+</node>
 <node TEXT="Federated Learning (FL)" ID="ID_63486999" CREATED="1642964624292" MODIFIED="1642964972961">
 <node TEXT="Attack of the Tails:&#xa;Yes, You Really Can Backdoor Federated Learning" ID="ID_1636233737" CREATED="1642964633771" MODIFIED="1642964637902">
 <icon BUILTIN="checked"/>
