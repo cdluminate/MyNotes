@@ -302,7 +302,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Face Recognition" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_153988282" CREATED="1641242964517" MODIFIED="1642456756940">
+<node TEXT="Face Recognition" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_153988282" CREATED="1641242964517" MODIFIED="1642456756940">
 <edge COLOR="#00ff00"/>
 <font NAME="Gentium"/>
 <node TEXT="Dataset" ID="ID_180339389" CREATED="1641503238612" MODIFIED="1641520995596">
@@ -418,6 +418,27 @@
 <font NAME="Gentium"/>
 <node TEXT="FaceNet" ID="ID_466452383" CREATED="1641242953447" MODIFIED="1641520995604">
 <font NAME="Gentium"/>
+</node>
+</node>
+<node TEXT="STAGE" ID="ID_1110446588" CREATED="1643132611953" MODIFIED="1643132613438">
+<node TEXT="Rethinking feature discrimination and polymerization for large-scale recognition" ID="ID_952906687" CREATED="1643132616302" MODIFIED="1643132624041">
+<icon BUILTIN="unchecked"/>
+</node>
+<node TEXT="L2-constrained softmax loss for discriminative face verification" ID="ID_1859004489" CREATED="1643132643711" MODIFIED="1643132824906">
+<icon BUILTIN="unchecked"/>
+</node>
+<node TEXT="Deepface: Closing the gap to human-level performance in face verification" ID="ID_380808482" CREATED="1643132687451" MODIFIED="1643132826578">
+<icon BUILTIN="unchecked"/>
+</node>
+<node TEXT=" Deep learning face representation from predicting 10,000 classes" ID="ID_743085930" CREATED="1643132700263" MODIFIED="1643132828298">
+<icon BUILTIN="unchecked"/>
+</node>
+<node TEXT="Large-Margin Softmax Loss for Convolutional Neural Networks" ID="ID_1455743436" CREATED="1643132782704" MODIFIED="1643132830122">
+<icon BUILTIN="unchecked"/>
+</node>
+<node TEXT="A discriminative feature learning approach for deep face recognition" ID="ID_531526310" CREATED="1643132817470" MODIFIED="1643132831906">
+<icon BUILTIN="unchecked"/>
+<node TEXT="center loss" ID="ID_485839035" CREATED="1643132819959" MODIFIED="1643132822269"/>
 </node>
 </node>
 </node>
