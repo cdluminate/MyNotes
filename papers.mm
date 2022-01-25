@@ -440,6 +440,9 @@
 <icon BUILTIN="unchecked"/>
 <node TEXT="center loss" ID="ID_485839035" CREATED="1643132819959" MODIFIED="1643132822269"/>
 </node>
+<node TEXT="Range loss for deep face recognition with long-tail" ID="ID_1684893432" CREATED="1643133019948" MODIFIED="1643133022451">
+<icon BUILTIN="unchecked"/>
+</node>
 </node>
 </node>
 <node TEXT="Deep Metric Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_464750159" CREATED="1641242970936" MODIFIED="1642456761439">
