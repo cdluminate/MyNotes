@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="{M,R,D}L" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1642394353464" STYLE="oval">
 <font NAME="Gentium" SIZE="18"/>
-<hook NAME="MapStyle" zoom="1.558">
+<hook NAME="MapStyle" zoom="2.074">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -642,18 +642,18 @@
 <node TEXT="this paper creates ensemble of transformations" ID="ID_446066363" CREATED="1641523933774" MODIFIED="1641523943924"/>
 </node>
 </node>
-<node TEXT="Adversarial Training" FOLDED="true" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1641743568907">
-<node TEXT="META" ID="ID_249187535" CREATED="1642431443297" MODIFIED="1642431444704">
-<node TEXT="references" ID="ID_178248607" CREATED="1642431445724" MODIFIED="1642431449341">
+<node TEXT="Adversarial Training" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1641743568907">
+<node TEXT="references" ID="ID_178248607" CREATED="1642431445724" MODIFIED="1643412272232">
+<icon BUILTIN="info"/>
 <node TEXT="https://robustbench.github.io/" ID="ID_1384233314" CREATED="1642431450079" MODIFIED="1642431451028"/>
 </node>
-</node>
 <node TEXT="FGSM/AT" ID="ID_1386316101" CREATED="1642455770819" MODIFIED="1642455773280">
+<node TEXT="Explaining and harnessing adversarial examples." ID="ID_444955732" CREATED="1642455817682" MODIFIED="1642455817682">
 <node TEXT="see Attack/FGSM" ID="ID_1699730646" CREATED="1642455774488" MODIFIED="1642455811066"/>
-<node TEXT="Explaining and harnessing adversarial examples." ID="ID_444955732" CREATED="1642455817682" MODIFIED="1642455817682"/>
+</node>
 </node>
 <node TEXT="RFGSM/AT" ID="ID_775433299" CREATED="1642455858471" MODIFIED="1642455865293">
-<node TEXT="Ensemble adversarial&#xa;training: Attacks and defenses." ID="ID_850120172" CREATED="1642455866806" MODIFIED="1642455872856">
+<node TEXT="Ensemble adversarial training: Attacks and defenses." ID="ID_850120172" CREATED="1642455866806" MODIFIED="1643412222998">
 <icon BUILTIN="unchecked"/>
 </node>
 </node>
@@ -669,13 +669,27 @@
 </node>
 </node>
 </node>
-<node TEXT="TRADES" ID="ID_932779241" CREATED="1641678609578" MODIFIED="1642441197254">
+<node TEXT="TRADES/AT" ID="ID_932779241" CREATED="1641678609578" MODIFIED="1643412167174">
 <node TEXT="theoretically principled trade-off between robustness and accuracy, ICML, 2019" ID="ID_1065469295" CREATED="1642369441439" MODIFIED="1642456049849">
 <icon BUILTIN="bookmark"/>
 <icon BUILTIN="unchecked"/>
 <node TEXT="commonly used baseline" ID="ID_108968911" CREATED="1642449381855" MODIFIED="1642449388727">
 <icon BUILTIN="button_ok"/>
 </node>
+</node>
+</node>
+<node TEXT="Curriculum AT" ID="ID_373950173" CREATED="1643412302659" MODIFIED="1643412307668">
+<node TEXT="Curriculum Adversarial Training" ID="ID_285117304" CREATED="1643412309119" MODIFIED="1643413743828">
+<icon BUILTIN="checked"/>
+<node TEXT="ijcai18" ID="ID_1417853528" CREATED="1643412317231" MODIFIED="1643412322551"/>
+<node TEXT="gradually increase attack strengths, namely increase PGD steps. each strengths trains for 1 epoch." ID="ID_1208154605" CREATED="1643413745409" MODIFIED="1643413812902"/>
+</node>
+</node>
+<node TEXT="AWP/AT" ID="ID_1537290479" CREATED="1642456071529" MODIFIED="1643412240326">
+<node TEXT="Adversarial weight perturbation helps robust generalization." ID="ID_1348938152" CREATED="1642456074788" MODIFIED="1643412228699">
+<icon BUILTIN="unchecked"/>
+<icon BUILTIN="bookmark"/>
+<node TEXT="SOTA" ID="ID_431363817" CREATED="1643412245745" MODIFIED="1643412247800"/>
 </node>
 </node>
 <node TEXT="AT Enhance" ID="ID_820322296" CREATED="1642449280058" MODIFIED="1642449298853">
@@ -689,6 +703,7 @@
 <node TEXT="GAIRAT" ID="ID_1795824577" CREATED="1642369428185" MODIFIED="1642441201215">
 <node TEXT="geometry-aware instance-reweighted adversarial training, iclr, 2020" ID="ID_255113727" CREATED="1642369496991" MODIFIED="1642441263816">
 <icon BUILTIN="unchecked"/>
+<node TEXT="iclr20" ID="ID_1152586640" CREATED="1643412171827" MODIFIED="1643412174065"/>
 </node>
 </node>
 <node TEXT="MART" ID="ID_6479998" CREATED="1642438310728" MODIFIED="1642441191254">
@@ -703,11 +718,6 @@
 </node>
 <node TEXT="R-MGM" ID="ID_1819761584" CREATED="1642449346090" MODIFIED="1642449349702">
 <node TEXT="Regularizer to mitigate gradient masking effect during&#xa;single-step adversarial training." ID="ID_1809245170" CREATED="1642455983073" MODIFIED="1642455989167">
-<icon BUILTIN="unchecked"/>
-</node>
-</node>
-<node TEXT="AWP" ID="ID_1537290479" CREATED="1642456071529" MODIFIED="1642456074016">
-<node TEXT="Adversarial weight perturbation helps robust generalization." ID="ID_1348938152" CREATED="1642456074788" MODIFIED="1642456078089">
 <icon BUILTIN="unchecked"/>
 </node>
 </node>
