@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="{M,R,D}L" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1642394353464" STYLE="oval">
 <font NAME="Gentium" SIZE="18"/>
-<hook NAME="MapStyle" zoom="2.074">
+<hook NAME="MapStyle" zoom="1.714">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="79" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="80" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1642395333050">
 <edge COLOR="#00ffff"/>
 <node TEXT="what&apos;s this" ID="ID_34209772" CREATED="1641520840738" MODIFIED="1641520995587">
@@ -122,6 +122,7 @@
 <node TEXT="arXiv" ID="ID_555001851" CREATED="1641521435482" MODIFIED="1642954134722">
 <node TEXT="2022" OBJECT="java.lang.Long|2022" ID="ID_1490488610" CREATED="1641521399876" MODIFIED="1641521403819">
 <node TEXT="Weekly batch" ID="ID_1917473385" CREATED="1642949144502" MODIFIED="1642949169400">
+<node TEXT="feb 6 ok" ID="ID_127471972" CREATED="1644179265598" MODIFIED="1644179268478"/>
 <node TEXT="jan 21 ok" ID="ID_478019013" CREATED="1642949108689" MODIFIED="1642949111895"/>
 <node TEXT="jan 14 ok" ID="ID_18090536" CREATED="1642368648797" MODIFIED="1642368656369"/>
 <node TEXT="jan 7-jan3 ok" ID="ID_1174903687" CREATED="1641521404620" MODIFIED="1642949114964"/>
@@ -256,7 +257,425 @@
 </node>
 </node>
 </node>
-<node TEXT="Classification" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_98760508" CREATED="1642438760894" MODIFIED="1642438768351">
+<node TEXT="Adversarial Attack" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_234014270" CREATED="1641521502446" MODIFIED="1642965733159">
+<edge COLOR="#ff0000"/>
+<node TEXT="Classification" ID="ID_1677974371" CREATED="1642965631248" MODIFIED="1642965636802">
+<node TEXT="White-Box Attack" ID="ID_449007607" CREATED="1641522449462" MODIFIED="1641522453928">
+<node TEXT="L-BFGS" ID="ID_1011268115" CREATED="1642438696428" MODIFIED="1642438699395"/>
+<node TEXT="FGSM" ID="ID_1740870459" CREATED="1642438691608" MODIFIED="1642438694832">
+<node TEXT="Explaining and harnessing adversarial examples." ID="ID_522955177" CREATED="1642455794565" MODIFIED="1642455799174">
+<icon BUILTIN="checked"/>
+<icon BUILTIN="bookmark"/>
+</node>
+</node>
+<node TEXT="BIM" ID="ID_1136553892" CREATED="1642438700519" MODIFIED="1642438706658"/>
+<node TEXT="PGD" ID="ID_375244598" CREATED="1642438708674" MODIFIED="1642438710492">
+<node TEXT="Madry (link defense)" ID="ID_605228331" CREATED="1642438862673" MODIFIED="1642438872953"/>
+</node>
+<node TEXT="MIM" ID="ID_378587323" CREATED="1642438707408" MODIFIED="1642438708204"/>
+</node>
+<node TEXT="Black-Box Attack" ID="ID_1336427131" CREATED="1641522444757" MODIFIED="1641522449005">
+<node TEXT="SparseEvo" ID="ID_1859620243" CREATED="1644181137459" MODIFIED="1644181140152">
+<node TEXT="Query Efficient Decision Based Sparse Attacks Against Black-Box Deep Learning Models" ID="ID_985376596" CREATED="1644181086023" MODIFIED="1644181150855">
+<icon BUILTIN="unchecked"/>
+<node TEXT="ICLR22" ID="ID_1001676990" CREATED="1644181090717" MODIFIED="1644181096398"/>
+</node>
+</node>
+</node>
+<node TEXT="Patch/Visible Attack" ID="ID_1333081920" CREATED="1641673351616" MODIFIED="1641673361482"/>
+<node TEXT="Universal Perturbation" ID="ID_883577858" CREATED="1641522438698" MODIFIED="1641522443789">
+<node TEXT="on distinctive properties of universal perturbations (madry)" ID="ID_224581737" CREATED="1641522458794" MODIFIED="1641743879665">
+<icon BUILTIN="pencil"/>
+<node TEXT="targeted UAP via PGD, compared to standard targeted attack" ID="ID_358135140" CREATED="1641743454798" MODIFIED="1641743500936">
+<node TEXT="semantic locality" ID="ID_895004329" CREATED="1641743464407" MODIFIED="1641743681600">
+<node TEXT="signal concerntrated in local regions that are most salient to humans" ID="ID_119777514" CREATED="1641743682744" MODIFIED="1641743700574"/>
+</node>
+<node TEXT="spatial invariance" ID="ID_596707615" CREATED="1641743672916" MODIFIED="1641743676882">
+<node TEXT="still effective after translations" ID="ID_290717161" CREATED="1641743703086" MODIFIED="1641743714870">
+<node TEXT="relevant to equivariant transformation property of cnns." ID="ID_1322848785" CREATED="1641743769223" MODIFIED="1641743790756">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+</node>
+<node TEXT="less signal for generalization" ID="ID_832224960" CREATED="1641743481199" MODIFIED="1641743491198">
+<node TEXT="may have reached some boundary during optimization, hence the change of behavior" ID="ID_1379890976" CREATED="1641743909288" MODIFIED="1641743938814">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Transferrability" ID="ID_142248765" CREATED="1641678368814" MODIFIED="1641678372373"/>
+<node TEXT="Model Inversion" ID="ID_137802922" CREATED="1642456768941" MODIFIED="1642456773626">
+<node TEXT="Exploiting Explanations for Model Inversion Attacks" ID="ID_1411419993" CREATED="1642456774974" MODIFIED="1642456783648">
+<icon BUILTIN="unchecked"/>
+<node TEXT="iccv21" ID="ID_588513264" CREATED="1642456785239" MODIFIED="1642456786804"/>
+<node TEXT="attackers can construct sensitive information (such as faces) merely from model predictions" ID="ID_111964935" CREATED="1642456788665" MODIFIED="1642456829436"/>
+</node>
+</node>
+<node TEXT="Similar Topics" ID="ID_34273182" CREATED="1642456460265" MODIFIED="1642456463434">
+<node TEXT="deep dream" ID="ID_272877404" CREATED="1642456464214" MODIFIED="1642456469283">
+<node TEXT="max all activation" ID="ID_174456830" CREATED="1642456470094" MODIFIED="1642456479075"/>
+</node>
+<node TEXT="gan inversion" ID="ID_873322690" CREATED="1642456480231" MODIFIED="1642456490208">
+<node TEXT="looking for the desired latent" ID="ID_1283661620" CREATED="1642456491378" MODIFIED="1642456502325"/>
+</node>
+</node>
+<node TEXT="STAGE" ID="ID_1760709543" CREATED="1642438720562" MODIFIED="1642438722150">
+<node TEXT="Boosting adversarial attacks with momentum" ID="ID_75324346" CREATED="1642438722774" MODIFIED="1642438725961">
+<icon BUILTIN="unchecked"/>
+</node>
+</node>
+</node>
+<node TEXT="Face Recog" ID="ID_1806006397" CREATED="1642368429380" MODIFIED="1642965654306">
+<node TEXT="Similarity-based Gray-box Adversarial Attack Against Deep Face Recognition" ID="ID_272220220" CREATED="1642368773041" MODIFIED="1642368776146">
+<icon BUILTIN="checked"/>
+<node TEXT="Conf: FG" ID="ID_231749207" CREATED="1642428474587" MODIFIED="1642428477815"/>
+<node TEXT="gray-box attack method" ID="ID_1072955941" CREATED="1642368915986" MODIFIED="1642368921963"/>
+<node TEXT="minimize l2 dist" ID="ID_128968953" CREATED="1642369095672" MODIFIED="1642369098770"/>
+<node TEXT="not necessary for robustnesss evaluatio for face recogn" ID="ID_907195191" CREATED="1642368922155" MODIFIED="1642368946500">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node TEXT="Simulated adversarial testing of face recognition models" ID="ID_1458951372" CREATED="1642429229718" MODIFIED="1642429249738">
+<icon BUILTIN="pencil"/>
+<node TEXT="cihang, alan y" ID="ID_1913955946" CREATED="1642429240276" MODIFIED="1642429245178"/>
+<node TEXT="difference" ID="ID_465366439" CREATED="1642430507464" MODIFIED="1642430509506">
+<node TEXT="find the region of adversarial latent vector, instead of find merely one isolated adversarial latent vector" ID="ID_512231452" CREATED="1642430511694" MODIFIED="1642430566964"/>
+</node>
+<node TEXT="I. explore semantic image manifold. test algorithms using simulators in adversarial manner. test data is synthesized" ID="ID_1598940219" CREATED="1642429255498" MODIFIED="1642430016205">
+<node TEXT="simulator generated data are easier to control compared to sampling from inaccessible distribution p(x,y|psi)" ID="ID_399773417" CREATED="1642429597192" MODIFIED="1642429625957"/>
+<node TEXT="adversarial parameters are found through REINFORCE rule" ID="ID_1243692238" CREATED="1642429908977" MODIFIED="1642429930358"/>
+</node>
+<node TEXT="II. find adversarial regions as opposed to the typical adversarial points in regular adversarial examples" ID="ID_262923196" CREATED="1642429337071" MODIFIED="1642430021419"/>
+<node TEXT="experiments" ID="ID_693341535" CREATED="1642430344587" MODIFIED="1642430346783">
+<node TEXT="CASIA train LFW test" ID="ID_450618483" CREATED="1642430347795" MODIFIED="1642430354141"/>
+<node TEXT="Resnet50 with CosFace" ID="ID_1824197744" CREATED="1642430360674" MODIFIED="1642430371554"/>
+</node>
+<node TEXT="can this be used in adv def for face?" ID="ID_1655776817" CREATED="1642430586222" MODIFIED="1642430601307">
+<icon BUILTIN="help"/>
+</node>
+</node>
+</node>
+<node TEXT="Object Det" ID="ID_601426743" CREATED="1642440732047" MODIFIED="1642965657103">
+<node ID="ID_1033919012" CREATED="1642440745175" MODIFIED="1642440749146">
+<icon BUILTIN="unchecked"/>
+<richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <h1 class="title mathjax">
+      ADC: Adversarial attacks against object Detection that evade Context consistency checks
+    </h1>
+  </body>
+</html>
+</richcontent>
+<node TEXT="WACV22" ID="ID_953336901" CREATED="1642440751686" MODIFIED="1642440753515"/>
+</node>
+</node>
+<node TEXT="Trajectory Prediction" ID="ID_1501279328" CREATED="1642953386986" MODIFIED="1642965658792">
+<node ID="ID_1380187352" CREATED="1642953399320" MODIFIED="1642953401824">
+<icon BUILTIN="pencil"/>
+<richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    On Adversarial Robustness of Trajectory Prediction for Autonomous Vehicles
+  </body>
+</html>
+</richcontent>
+<node TEXT="misguiding title" ID="ID_974407250" CREATED="1642953418674" MODIFIED="1642953424787"/>
+<node TEXT="only presents attack to perturb trajectory" ID="ID_1226515884" CREATED="1642953425024" MODIFIED="1642953431087"/>
+</node>
+</node>
+<node TEXT="Tracking" ID="ID_404459343" CREATED="1644181489904" MODIFIED="1644181494136"/>
+</node>
+<node TEXT="Adversarial Defense" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1642965722931">
+<edge COLOR="#0000ff"/>
+<font NAME="Gentium"/>
+<node TEXT="Classification Task" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1643035532082">
+<node TEXT="STAGE" ID="ID_219354908" CREATED="1642438393211" MODIFIED="1642438397420">
+<node TEXT="adversarial robustness against the union of multiple perturbation models" ID="ID_1452347285" CREATED="1642438398542" MODIFIED="1642438414351">
+<icon BUILTIN="unchecked"/>
+</node>
+<node TEXT="adversarial training and robustness for multiple perturbations" ID="ID_1832278453" CREATED="1642438422719" MODIFIED="1642438435302">
+<icon BUILTIN="unchecked"/>
+</node>
+</node>
+<node TEXT="Robustness analysis" ID="ID_1332546973" CREATED="1641743569630" MODIFIED="1644179361424">
+<node TEXT="rethinking feature uncertainty in stochastic neural networks for adversarial robustness" ID="ID_829421687" CREATED="1641678579615" MODIFIED="1641678600199">
+<icon BUILTIN="pencil"/>
+<node TEXT="good performance" ID="ID_1343393281" CREATED="1641678601770" MODIFIED="1641678604282"/>
+</node>
+<node TEXT="adversarial feature selection against evasion attacks" ID="ID_977262344" CREATED="1642370251827" MODIFIED="1642370266767">
+<icon BUILTIN="pencil"/>
+</node>
+<node TEXT="adversarial examples are features, not bugs" ID="ID_1358699566" CREATED="1644179365321" MODIFIED="1644179630861">
+<icon BUILTIN="checked"/>
+<icon BUILTIN="bookmark"/>
+<node TEXT="madry" ID="ID_790867985" CREATED="1644179621610" MODIFIED="1644179623393"/>
+</node>
+<node TEXT="FINDING BIOLOGICAL PLAUSIBILITY FOR ADVERSARIALLY ROBUST FEATURES VIA METAMERIC TASKS" ID="ID_876129354" CREATED="1644179632853" MODIFIED="1644179995411">
+<icon BUILTIN="bookmark"/>
+<icon BUILTIN="unchecked"/>
+<node TEXT="ICLR22" ID="ID_1345745634" CREATED="1644179644121" MODIFIED="1644179645620"/>
+<node TEXT="adversarially robust representations capture peripheral computation better than non-robust representations" ID="ID_1873265753" CREATED="1644179653393" MODIFIED="1644179681284"/>
+<node TEXT="robust representations capture peripheral computation similar to current state-of-the-art texture peripheral vision models" ID="ID_180695247" CREATED="1644179681505" MODIFIED="1644179704075"/>
+<node TEXT="support the idea that localized texture summary statistic representations may drive human invariance to adversarial perturbations and that the incorporation of such representations in DNNs could give rise to useful properties like adversarial robustness" ID="ID_1448992825" CREATED="1644179707291" MODIFIED="1644179745688"/>
+</node>
+</node>
+<node TEXT="Patch Detection" ID="ID_1544755494" CREATED="1641523388190" MODIFIED="1644180812163">
+<node TEXT="on the real world adversarial robustness of real-time semantic segmentation models for autonomous driving" ID="ID_621290194" CREATED="1641523393314" MODIFIED="1641523426222">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Perturbation Detection" ID="ID_983985712" CREATED="1641523884091" MODIFIED="1644180825581">
+<node TEXT="(survey) towards understanding and harnessing the effect of image transformation in adversarial deteciton" ID="ID_1343762323" CREATED="1641523891006" MODIFIED="1641523914261">
+<icon BUILTIN="pencil"/>
+<node TEXT="via image transformations" ID="ID_1033635622" CREATED="1641523928903" MODIFIED="1641523932870"/>
+<node TEXT="this paper creates ensemble of transformations" ID="ID_446066363" CREATED="1641523933774" MODIFIED="1641523943924"/>
+</node>
+</node>
+<node TEXT="Adversarial Training" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1641743568907">
+<node TEXT="references" ID="ID_178248607" CREATED="1642431445724" MODIFIED="1643412272232">
+<icon BUILTIN="info"/>
+<node TEXT="https://robustbench.github.io/" ID="ID_1384233314" CREATED="1642431450079" MODIFIED="1642431451028"/>
+</node>
+<node TEXT="FGSM/AT" ID="ID_1386316101" CREATED="1642455770819" MODIFIED="1642455773280">
+<node TEXT="Explaining and harnessing adversarial examples." ID="ID_444955732" CREATED="1642455817682" MODIFIED="1642455817682">
+<node TEXT="see Attack/FGSM" ID="ID_1699730646" CREATED="1642455774488" MODIFIED="1642455811066"/>
+</node>
+</node>
+<node TEXT="RFGSM/AT" ID="ID_775433299" CREATED="1642455858471" MODIFIED="1642455865293">
+<node TEXT="Ensemble adversarial training: Attacks and defenses." ID="ID_850120172" CREATED="1642455866806" MODIFIED="1643412222998">
+<icon BUILTIN="unchecked"/>
+</node>
+</node>
+<node TEXT="PGD/AT" ID="ID_882830443" CREATED="1641678605757" MODIFIED="1642441194136">
+<node TEXT="Towards deep learning models resistant to adversarial attacks" ID="ID_634512701" CREATED="1642438883995" MODIFIED="1642438897524">
+<icon BUILTIN="bookmark"/>
+<icon BUILTIN="checked"/>
+<node TEXT="Very good paper." ID="ID_1535465318" CREATED="1642438919685" MODIFIED="1642438926372">
+<icon BUILTIN="button_ok"/>
+</node>
+<node TEXT="Baseline AT for defense." ID="ID_1889052826" CREATED="1642438905163" MODIFIED="1642438916299">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+</node>
+<node TEXT="TRADES/AT" ID="ID_932779241" CREATED="1641678609578" MODIFIED="1643412167174">
+<node TEXT="theoretically principled trade-off between robustness and accuracy, ICML, 2019" ID="ID_1065469295" CREATED="1642369441439" MODIFIED="1642456049849">
+<icon BUILTIN="bookmark"/>
+<icon BUILTIN="unchecked"/>
+<node TEXT="commonly used baseline" ID="ID_108968911" CREATED="1642449381855" MODIFIED="1642449388727">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+</node>
+<node TEXT="AT Enhance" ID="ID_820322296" CREATED="1642449280058" MODIFIED="1642449298853">
+<node TEXT="Curriculum AT" ID="ID_373950173" CREATED="1643412302659" MODIFIED="1643412307668">
+<node TEXT="Curriculum Adversarial Training" ID="ID_285117304" CREATED="1643412309119" MODIFIED="1643413743828">
+<icon BUILTIN="checked"/>
+<node TEXT="ijcai18" ID="ID_1417853528" CREATED="1643412317231" MODIFIED="1643412322551"/>
+<node TEXT="gradually increase attack strengths, namely increase PGD steps. each strengths trains for 1 epoch." ID="ID_1208154605" CREATED="1643413745409" MODIFIED="1643413812902"/>
+</node>
+</node>
+<node TEXT="GAT" ID="ID_1630974602" CREATED="1642449350297" MODIFIED="1642449352427">
+<node TEXT="Guided Adversarial Attack for Evaluating and Enhancing Adversarial Defenses." ID="ID_392784781" CREATED="1642456004328" MODIFIED="1642456013081">
+<icon BUILTIN="unchecked"/>
+<icon BUILTIN="bookmark"/>
+<node TEXT="nips20" ID="ID_670378629" CREATED="1642456026381" MODIFIED="1642456030253"/>
+</node>
+</node>
+<node TEXT="AWP/AT" ID="ID_1537290479" CREATED="1642456071529" MODIFIED="1643412240326">
+<node TEXT="Adversarial weight perturbation helps robust generalization." ID="ID_1348938152" CREATED="1642456074788" MODIFIED="1643412228699">
+<icon BUILTIN="unchecked"/>
+<icon BUILTIN="bookmark"/>
+<node TEXT="SOTA" ID="ID_431363817" CREATED="1643412245745" MODIFIED="1643412247800"/>
+</node>
+</node>
+<node TEXT="GAIRAT" ID="ID_1795824577" CREATED="1642369428185" MODIFIED="1642441201215">
+<node TEXT="geometry-aware instance-reweighted adversarial training, iclr, 2020" ID="ID_255113727" CREATED="1642369496991" MODIFIED="1642441263816">
+<icon BUILTIN="unchecked"/>
+<node TEXT="iclr20" ID="ID_1152586640" CREATED="1643412171827" MODIFIED="1643412174065"/>
+</node>
+</node>
+<node TEXT="MART" ID="ID_6479998" CREATED="1642438310728" MODIFIED="1642441191254">
+<node TEXT="improving adversarial robustness requires revisiting misclassified examples" ID="ID_466710053" CREATED="1642438315292" MODIFIED="1642438341586">
+<icon BUILTIN="unchecked"/>
+</node>
+</node>
+<node TEXT="FBF" ID="ID_761176936" CREATED="1642449341180" MODIFIED="1642449345704">
+<node TEXT="Fast is better than free: Revisiting adversarial training." ID="ID_336860717" CREATED="1642455952378" MODIFIED="1642455958511">
+<icon BUILTIN="unchecked"/>
+</node>
+</node>
+<node TEXT="R-MGM" ID="ID_1819761584" CREATED="1642449346090" MODIFIED="1642449349702">
+<node TEXT="Regularizer to mitigate gradient masking effect during&#xa;single-step adversarial training." ID="ID_1809245170" CREATED="1642455983073" MODIFIED="1642455989167">
+<icon BUILTIN="unchecked"/>
+</node>
+</node>
+<node TEXT="NuAT" ID="ID_769833360" CREATED="1642449307525" MODIFIED="1642449312169">
+<node TEXT="Towards Efficient and Effective Adversarial Training" ID="ID_1131130428" CREATED="1642449452500" MODIFIED="1642456091513">
+<icon BUILTIN="help"/>
+<icon BUILTIN="unchecked"/>
+<node TEXT="nips21" ID="ID_694522660" CREATED="1642449458075" MODIFIED="1642449460409"/>
+<node TEXT="nuclear-norm attack, single or two step" ID="ID_1355334878" CREATED="1642449462884" MODIFIED="1642449487212">
+<node TEXT="why use nuclear norm?" ID="ID_676092258" CREATED="1642455675450" MODIFIED="1642455681173">
+<icon BUILTIN="help"/>
+</node>
+</node>
+<node TEXT="adversarial training with nuclear-attack" ID="ID_1804260096" CREATED="1642455687824" MODIFIED="1642455695307">
+<node TEXT="like TRADES" ID="ID_1339501480" CREATED="1642456101810" MODIFIED="1642456112106"/>
+</node>
+<node TEXT="ref: nuclear norm / trace norm" ID="ID_794259512" CREATED="1642449487562" MODIFIED="1642450088267">
+<node TEXT="amount of rank-1 matrices needed to reconstruct X." ID="ID_534466284" CREATED="1642450121797" MODIFIED="1642450134497"/>
+<node TEXT="https://mathoverflow.net/questions/278013/what-is-the-intuition-for-the-trace-norm-nuclear-norm" ID="ID_1243321985" CREATED="1642450093241" MODIFIED="1642450093241" LINK="https://mathoverflow.net/questions/278013/what-is-the-intuition-for-the-trace-norm-nuclear-norm"/>
+<node TEXT="https://encyclopediaofmath.org/wiki/Nuclear_norm" ID="ID_1804499957" CREATED="1642450239653" MODIFIED="1642450239653" LINK="https://encyclopediaofmath.org/wiki/Nuclear_norm"/>
+<node TEXT="https://en.wikipedia.org/wiki/Matrix_norm" ID="ID_252928450" CREATED="1642450331560" MODIFIED="1642450331560" LINK="https://en.wikipedia.org/wiki/Matrix_norm">
+<node TEXT="Spectrum norm" ID="ID_1885026507" CREATED="1642454275615" MODIFIED="1642454282395">
+<node TEXT="norm induced by p-norm" ID="ID_1777624265" CREATED="1642454340598" MODIFIED="1642454351392"/>
+<node TEXT="\latex $$\|A\|_2==\sqrt{\lambda_\max(A^* A)}=\sigma_{max}(A)\leq \|A\|_F$$" ID="ID_526468254" CREATED="1642454283503" MODIFIED="1642454516305"/>
+</node>
+<node TEXT="Frobenius Norm" ID="ID_541944385" CREATED="1642454352691" MODIFIED="1642454364815">
+<node TEXT="entry-wise norm" ID="ID_515709247" CREATED="1642454365986" MODIFIED="1642454377303"/>
+<node TEXT="\latex $$\|A\|_F=\sqrt{\sum_i \sum_j |a_{ij}|^2} = \sqrt{Tr(A^*A)} = \sqrt{\sum_i^{\min(m,n)} \sigma_i^2(A)}$$" ID="ID_590705211" CREATED="1642454377531" MODIFIED="1642454469092"/>
+</node>
+<node TEXT="Nuclear/trace norm" ID="ID_331647121" CREATED="1642454546563" MODIFIED="1642454552498">
+<node TEXT="is a Schattern norm" ID="ID_511441612" CREATED="1642454553455" MODIFIED="1642454666915">
+<node TEXT="p-norm operating on singular value vector of a matrix" ID="ID_955840719" CREATED="1642454561278" MODIFIED="1642454576825"/>
+<node TEXT="\latex $$\|A\|_p = \Big(\sum_i \sigma_i^p(A)\Big)^{1/p}$$" ID="ID_740352297" CREATED="1642454600205" MODIFIED="1642454655969"/>
+</node>
+<node TEXT="\latex $$\|A\|_* = Tr(\sqrt{A^* A}) = \sum_i^{\min(m,n)} \sigma_i(A)$$" ID="ID_1940588690" CREATED="1642454577885" MODIFIED="1642454717653"/>
+<node TEXT="is a convex envelope of the rank function rank(A) -- often used in search of low rank matrices" ID="ID_1518781099" CREATED="1642454776478" MODIFIED="1642454805477"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="AT Speed" ID="ID_1548520614" CREATED="1642441206809" MODIFIED="1642449303630">
+<node TEXT="FreeAT (ATF, FAT)" ID="ID_10759055" CREATED="1642441224672" MODIFIED="1642455921912">
+<node TEXT="adversarial training for free!" ID="ID_902115687" CREATED="1642441227881" MODIFIED="1642455925752">
+<icon BUILTIN="checked"/>
+<icon BUILTIN="bookmark"/>
+<node TEXT="reuse computed gradients" ID="ID_540017524" CREATED="1642448873312" MODIFIED="1642448880329"/>
+</node>
+</node>
+<node TEXT="N-FGSM" ID="ID_642231872" CREATED="1644180261664" MODIFIED="1644180264879">
+<node TEXT="Make Some Noise: Reliable and Efficient Single-Step Adversarial Training" ID="ID_1929010940" CREATED="1644180270961" MODIFIED="1644180274378">
+<icon BUILTIN="pencil"/>
+<node TEXT="likely ICML submission" ID="ID_1360008454" CREATED="1644180275949" MODIFIED="1644180283810"/>
+</node>
+</node>
+</node>
+<node TEXT="STAGE" ID="ID_1718770068" CREATED="1642441254968" MODIFIED="1642441256543"/>
+<node TEXT="not-famous" ID="ID_1872674435" CREATED="1642431357219" MODIFIED="1642431364579">
+<node TEXT="parl: enhancing diversity of ensemble networks to resist adversarial attacks via pairwise adversarially robust loss function" ID="ID_1007028628" CREATED="1642431798570" MODIFIED="1642432009766">
+<icon BUILTIN="pencil"/>
+<node TEXT="diverging layer-wise gradient direction among ensembled models in cosine similarity" ID="ID_1230731010" CREATED="1642431821906" MODIFIED="1642432005710">
+<icon BUILTIN="button_ok"/>
+</node>
+<node TEXT="interesting idea. but storytelling needs improvement" ID="ID_925466018" CREATED="1642432015284" MODIFIED="1642432041217"/>
+<node TEXT="problematic evaluation" ID="ID_899908589" CREATED="1642432187766" MODIFIED="1642432191269"/>
+</node>
+<node TEXT="mutual adversarial training: learning together is better than going alone" ID="ID_1562045490" CREATED="1642432441196" MODIFIED="1642432454531">
+<icon BUILTIN="pencil"/>
+<node TEXT="JHU Rama" ID="ID_918917928" CREATED="1642432456076" MODIFIED="1642439049709"/>
+<node TEXT="knowledge distillation" ID="ID_1194675877" CREATED="1642439037294" MODIFIED="1642439040646"/>
+<node TEXT="two students learn from each other" ID="ID_967309274" CREATED="1642439040809" MODIFIED="1642439045439"/>
+</node>
+</node>
+</node>
+<node TEXT="Generative Replacement" ID="ID_814019873" CREATED="1642953253003" MODIFIED="1642953259726">
+<node TEXT="Adversarially Robust Classification by Conditional Generative Model Inversion" ID="ID_811483312" CREATED="1642953266238" MODIFIED="1642953325665">
+<icon BUILTIN="pencil"/>
+<icon BUILTIN="button_cancel"/>
+</node>
+</node>
+<node TEXT="Certified Robustness" ID="ID_636878532" CREATED="1641743555483" MODIFIED="1641743560049">
+<node TEXT="https://github.com/AI-secure/Provable-Training-and-Verification-Approaches-Towards-Robust-Neural-Networks" ID="ID_1591662337" CREATED="1642964261893" MODIFIED="1642964261893" LINK="https://github.com/AI-secure/Provable-Training-and-Verification-Approaches-Towards-Robust-Neural-Networks"/>
+<node TEXT="Lipschitz Continuity" ID="ID_1215971796" CREATED="1642440618858" MODIFIED="1642440627281">
+<node TEXT="Activation function" ID="ID_958488576" CREATED="1642440628351" MODIFIED="1642440653680">
+<node ID="ID_240078001" CREATED="1642440660898" MODIFIED="1642440669751">
+<icon BUILTIN="unchecked"/>
+<richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <h1 http-equiv="content-type" content="text/html; charset=utf-8" class="title mathjax">
+      Sorting out Lipschitz function approximation
+    </h1>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="Spectrum" ID="ID_445945127" CREATED="1642951664771" MODIFIED="1642951667615">
+<node TEXT="Spectral Norm Regularization for Improving the&#xa;Generalizability of Deep Learning" ID="ID_1829634212" CREATED="1642951668899" MODIFIED="1642952085512">
+<icon BUILTIN="unchecked"/>
+<icon BUILTIN="bookmark"/>
+<icon BUILTIN="pencil"/>
+<node TEXT="TODO" ID="ID_570092991" CREATED="1642952052911" MODIFIED="1643035652112"/>
+</node>
+<node TEXT="Adversarial Training is a Form of Data-dependent&#xa;Operator Norm Regularization" ID="ID_1007318317" CREATED="1642951686137" MODIFIED="1642951692337">
+<icon BUILTIN="unchecked"/>
+<icon BUILTIN="bookmark"/>
+<node TEXT="TODO" ID="ID_326204906" CREATED="1642951699453" MODIFIED="1643035654618"/>
+</node>
+</node>
+</node>
+<node TEXT="Certified robustness to adversarial examples with differential privacy" ID="ID_1254880785" CREATED="1641743598637" MODIFIED="1641743613648">
+<icon BUILTIN="unchecked"/>
+</node>
+<node TEXT="SoK: Certified Robustness for Deep Neural Networks" ID="ID_386941316" CREATED="1643035546515" MODIFIED="1643035632494">
+<icon BUILTIN="pencil"/>
+<icon BUILTIN="bookmark"/>
+<node TEXT="TODO" ID="ID_703331117" CREATED="1643035647341" MODIFIED="1643035649305"/>
+</node>
+</node>
+<node TEXT="Benchmark" ID="ID_855034612" CREATED="1642431513665" MODIFIED="1642431518164">
+<node TEXT="robustbench: a standardized adversarial robustness benchmark" ID="ID_1489423550" CREATED="1642431521917" MODIFIED="1642431542194">
+<icon BUILTIN="unchecked"/>
+</node>
+</node>
+</node>
+<node TEXT="Face Recognition" ID="ID_1083375375" CREATED="1643132265039" MODIFIED="1643132268914">
+<node TEXT="RobFR" ID="ID_956441703" CREATED="1643132279319" MODIFIED="1643132284675">
+<node TEXT="https://github.com/ShawnXYang/Face-Robustness-Benchmark" ID="ID_232276308" CREATED="1643132270554" MODIFIED="1643132270554" LINK="https://github.com/ShawnXYang/Face-Robustness-Benchmark"/>
+</node>
+</node>
+<node TEXT="Generalization" ID="ID_125075162" CREATED="1643058798944" MODIFIED="1643058803223">
+<node TEXT="Cihang xie" ID="ID_1667513983" CREATED="1643058809140" MODIFIED="1643058811907"/>
+</node>
+<node TEXT="Image Denoising" ID="ID_688438108" CREATED="1642369253403" MODIFIED="1642965597652">
+<node TEXT="Towards adversarially robust deep image denoising" ID="ID_912787227" CREATED="1642369258886" MODIFIED="1642369271962">
+<icon BUILTIN="pencil"/>
+<node TEXT="present observation-based zero-mean attack" ID="ID_948789581" CREATED="1642369294389" MODIFIED="1642369302053"/>
+<node TEXT="present hybrid adversarial training" ID="ID_409590623" CREATED="1642369302455" MODIFIED="1642369331464">
+<node TEXT="using augmented data" ID="ID_632082886" CREATED="1642369349160" MODIFIED="1642369354932"/>
+</node>
+</node>
+</node>
+<node TEXT="Multi-Task learning" ID="ID_1182441257" CREATED="1642442091094" MODIFIED="1642965600653">
+<node TEXT="Adversarial Robustness in Multi-Task Learning: Promises and Illusions" ID="ID_429718797" CREATED="1642442095758" MODIFIED="1642442212412">
+<icon BUILTIN="checked"/>
+<node TEXT="AAAI22" ID="ID_1679691953" CREATED="1642442198116" MODIFIED="1642442200599"/>
+<node TEXT="blindly adding auxiliary tasks or weighing the tasks provides a false sense of robustness." ID="ID_459008675" CREATED="1642442206193" MODIFIED="1642442252721"/>
+<node TEXT="the choice of the task to incorporate in the loss function are important factors that can be leveraged to yield more robust models" ID="ID_1336811666" CREATED="1642442253918" MODIFIED="1642442277862"/>
+</node>
+</node>
+</node>
+<node TEXT="Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_98760508" CREATED="1642438760894" MODIFIED="1642438768351">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Convolutional" ID="ID_1179702035" CREATED="1642438769906" MODIFIED="1642953059318">
 <font BOLD="true"/>
@@ -304,7 +723,38 @@
 </node>
 </node>
 </node>
-<node TEXT="Face Recognition" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_153988282" CREATED="1641242964517" MODIFIED="1642456756940">
+<node TEXT="Deep Metric Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_464750159" CREATED="1641242970936" MODIFIED="1642456761439">
+<edge COLOR="#ff00ff"/>
+<font NAME="Gentium"/>
+<node TEXT="Survey" ID="ID_1192003468" CREATED="1641520461677" MODIFIED="1641520995604">
+<font NAME="Gentium"/>
+<node TEXT="revisiting ICML" ID="ID_367259996" CREATED="1641520468517" MODIFIED="1641520995604">
+<font NAME="Gentium"/>
+</node>
+<node TEXT="reality ECCV" ID="ID_1508631828" CREATED="1641520470652" MODIFIED="1641520995604">
+<font NAME="Gentium"/>
+</node>
+</node>
+<node TEXT="Loss Functions" ID="ID_1262041414" CREATED="1641520453737" MODIFIED="1641520995604">
+<font NAME="Gentium"/>
+<node TEXT="?" ID="ID_1898475549" CREATED="1641524460135" MODIFIED="1641524461416">
+<node TEXT="LiftStructure" ID="ID_362567920" CREATED="1641242980713" MODIFIED="1641520995605">
+<font NAME="Gentium"/>
+</node>
+<node TEXT="Multi-Similarity" ID="ID_1503083507" CREATED="1641242994307" MODIFIED="1641520995605">
+<font NAME="Gentium"/>
+</node>
+</node>
+<node TEXT="Proxy-based" ID="ID_879816648" CREATED="1641524445335" MODIFIED="1641524448649"/>
+<node TEXT="Triplet-based" ID="ID_1287246293" CREATED="1641524449462" MODIFIED="1641524453006">
+<node TEXT="Triplet" ID="ID_430004220" CREATED="1641242977534" MODIFIED="1641520995604">
+<font NAME="Gentium"/>
+</node>
+</node>
+<node TEXT="Classification-based" ID="ID_336668153" CREATED="1641524453412" MODIFIED="1641524456368"/>
+</node>
+</node>
+<node TEXT="Face Recognition" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_153988282" CREATED="1641242964517" MODIFIED="1642456756940">
 <edge COLOR="#00ff00"/>
 <font NAME="Gentium"/>
 <node TEXT="Dataset" ID="ID_180339389" CREATED="1641503238612" MODIFIED="1641520995596">
@@ -444,428 +894,6 @@
 </node>
 <node TEXT="Range loss for deep face recognition with long-tail" ID="ID_1684893432" CREATED="1643133019948" MODIFIED="1643133022451">
 <icon BUILTIN="unchecked"/>
-</node>
-</node>
-</node>
-<node TEXT="Deep Metric Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_464750159" CREATED="1641242970936" MODIFIED="1642456761439">
-<edge COLOR="#ff00ff"/>
-<font NAME="Gentium"/>
-<node TEXT="Survey" ID="ID_1192003468" CREATED="1641520461677" MODIFIED="1641520995604">
-<font NAME="Gentium"/>
-<node TEXT="revisiting ICML" ID="ID_367259996" CREATED="1641520468517" MODIFIED="1641520995604">
-<font NAME="Gentium"/>
-</node>
-<node TEXT="reality ECCV" ID="ID_1508631828" CREATED="1641520470652" MODIFIED="1641520995604">
-<font NAME="Gentium"/>
-</node>
-</node>
-<node TEXT="Loss Functions" ID="ID_1262041414" CREATED="1641520453737" MODIFIED="1641520995604">
-<font NAME="Gentium"/>
-<node TEXT="?" ID="ID_1898475549" CREATED="1641524460135" MODIFIED="1641524461416">
-<node TEXT="LiftStructure" ID="ID_362567920" CREATED="1641242980713" MODIFIED="1641520995605">
-<font NAME="Gentium"/>
-</node>
-<node TEXT="Multi-Similarity" ID="ID_1503083507" CREATED="1641242994307" MODIFIED="1641520995605">
-<font NAME="Gentium"/>
-</node>
-</node>
-<node TEXT="Proxy-based" ID="ID_879816648" CREATED="1641524445335" MODIFIED="1641524448649"/>
-<node TEXT="Triplet-based" ID="ID_1287246293" CREATED="1641524449462" MODIFIED="1641524453006">
-<node TEXT="Triplet" ID="ID_430004220" CREATED="1641242977534" MODIFIED="1641520995604">
-<font NAME="Gentium"/>
-</node>
-</node>
-<node TEXT="Classification-based" ID="ID_336668153" CREATED="1641524453412" MODIFIED="1641524456368"/>
-</node>
-</node>
-<node TEXT="Adversarial Attack" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_234014270" CREATED="1641521502446" MODIFIED="1642965733159">
-<edge COLOR="#ff0000"/>
-<node TEXT="Classification" ID="ID_1677974371" CREATED="1642965631248" MODIFIED="1642965636802">
-<node TEXT="White-Box Attack" ID="ID_449007607" CREATED="1641522449462" MODIFIED="1641522453928">
-<node TEXT="L-BFGS" ID="ID_1011268115" CREATED="1642438696428" MODIFIED="1642438699395"/>
-<node TEXT="FGSM" ID="ID_1740870459" CREATED="1642438691608" MODIFIED="1642438694832">
-<node TEXT="Explaining and harnessing adversarial examples." ID="ID_522955177" CREATED="1642455794565" MODIFIED="1642455799174">
-<icon BUILTIN="checked"/>
-<icon BUILTIN="bookmark"/>
-</node>
-</node>
-<node TEXT="BIM" ID="ID_1136553892" CREATED="1642438700519" MODIFIED="1642438706658"/>
-<node TEXT="PGD" ID="ID_375244598" CREATED="1642438708674" MODIFIED="1642438710492">
-<node TEXT="Madry (link defense)" ID="ID_605228331" CREATED="1642438862673" MODIFIED="1642438872953"/>
-</node>
-<node TEXT="MIM" ID="ID_378587323" CREATED="1642438707408" MODIFIED="1642438708204"/>
-</node>
-<node TEXT="Black-Box Attack" ID="ID_1336427131" CREATED="1641522444757" MODIFIED="1641522449005"/>
-<node TEXT="Patch/Visible Attack" ID="ID_1333081920" CREATED="1641673351616" MODIFIED="1641673361482"/>
-<node TEXT="Universal Perturbation" ID="ID_883577858" CREATED="1641522438698" MODIFIED="1641522443789">
-<node TEXT="on distinctive properties of universal perturbations (madry)" ID="ID_224581737" CREATED="1641522458794" MODIFIED="1641743879665">
-<icon BUILTIN="pencil"/>
-<node TEXT="targeted UAP via PGD, compared to standard targeted attack" ID="ID_358135140" CREATED="1641743454798" MODIFIED="1641743500936">
-<node TEXT="semantic locality" ID="ID_895004329" CREATED="1641743464407" MODIFIED="1641743681600">
-<node TEXT="signal concerntrated in local regions that are most salient to humans" ID="ID_119777514" CREATED="1641743682744" MODIFIED="1641743700574"/>
-</node>
-<node TEXT="spatial invariance" ID="ID_596707615" CREATED="1641743672916" MODIFIED="1641743676882">
-<node TEXT="still effective after translations" ID="ID_290717161" CREATED="1641743703086" MODIFIED="1641743714870">
-<node TEXT="relevant to equivariant transformation property of cnns." ID="ID_1322848785" CREATED="1641743769223" MODIFIED="1641743790756">
-<icon BUILTIN="button_ok"/>
-</node>
-</node>
-</node>
-<node TEXT="less signal for generalization" ID="ID_832224960" CREATED="1641743481199" MODIFIED="1641743491198">
-<node TEXT="may have reached some boundary during optimization, hence the change of behavior" ID="ID_1379890976" CREATED="1641743909288" MODIFIED="1641743938814">
-<icon BUILTIN="button_ok"/>
-</node>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="Transferrability" ID="ID_142248765" CREATED="1641678368814" MODIFIED="1641678372373"/>
-<node TEXT="Model Inversion" ID="ID_137802922" CREATED="1642456768941" MODIFIED="1642456773626">
-<node TEXT="Exploiting Explanations for Model Inversion Attacks" ID="ID_1411419993" CREATED="1642456774974" MODIFIED="1642456783648">
-<icon BUILTIN="unchecked"/>
-<node TEXT="iccv21" ID="ID_588513264" CREATED="1642456785239" MODIFIED="1642456786804"/>
-<node TEXT="attackers can construct sensitive information (such as faces) merely from model predictions" ID="ID_111964935" CREATED="1642456788665" MODIFIED="1642456829436"/>
-</node>
-</node>
-<node TEXT="Similar Topics" ID="ID_34273182" CREATED="1642456460265" MODIFIED="1642456463434">
-<node TEXT="deep dream" ID="ID_272877404" CREATED="1642456464214" MODIFIED="1642456469283">
-<node TEXT="max all activation" ID="ID_174456830" CREATED="1642456470094" MODIFIED="1642456479075"/>
-</node>
-<node TEXT="gan inversion" ID="ID_873322690" CREATED="1642456480231" MODIFIED="1642456490208">
-<node TEXT="looking for the desired latent" ID="ID_1283661620" CREATED="1642456491378" MODIFIED="1642456502325"/>
-</node>
-</node>
-<node TEXT="STAGE" ID="ID_1760709543" CREATED="1642438720562" MODIFIED="1642438722150">
-<node TEXT="Boosting adversarial attacks with momentum" ID="ID_75324346" CREATED="1642438722774" MODIFIED="1642438725961">
-<icon BUILTIN="unchecked"/>
-</node>
-</node>
-</node>
-<node TEXT="Face Recog" ID="ID_1806006397" CREATED="1642368429380" MODIFIED="1642965654306">
-<node TEXT="Similarity-based Gray-box Adversarial Attack Against Deep Face Recognition" ID="ID_272220220" CREATED="1642368773041" MODIFIED="1642368776146">
-<icon BUILTIN="checked"/>
-<node TEXT="Conf: FG" ID="ID_231749207" CREATED="1642428474587" MODIFIED="1642428477815"/>
-<node TEXT="gray-box attack method" ID="ID_1072955941" CREATED="1642368915986" MODIFIED="1642368921963"/>
-<node TEXT="minimize l2 dist" ID="ID_128968953" CREATED="1642369095672" MODIFIED="1642369098770"/>
-<node TEXT="not necessary for robustnesss evaluatio for face recogn" ID="ID_907195191" CREATED="1642368922155" MODIFIED="1642368946500">
-<icon BUILTIN="button_ok"/>
-</node>
-</node>
-<node TEXT="Simulated adversarial testing of face recognition models" ID="ID_1458951372" CREATED="1642429229718" MODIFIED="1642429249738">
-<icon BUILTIN="pencil"/>
-<node TEXT="cihang, alan y" ID="ID_1913955946" CREATED="1642429240276" MODIFIED="1642429245178"/>
-<node TEXT="difference" ID="ID_465366439" CREATED="1642430507464" MODIFIED="1642430509506">
-<node TEXT="find the region of adversarial latent vector, instead of find merely one isolated adversarial latent vector" ID="ID_512231452" CREATED="1642430511694" MODIFIED="1642430566964"/>
-</node>
-<node TEXT="I. explore semantic image manifold. test algorithms using simulators in adversarial manner. test data is synthesized" ID="ID_1598940219" CREATED="1642429255498" MODIFIED="1642430016205">
-<node TEXT="simulator generated data are easier to control compared to sampling from inaccessible distribution p(x,y|psi)" ID="ID_399773417" CREATED="1642429597192" MODIFIED="1642429625957"/>
-<node TEXT="adversarial parameters are found through REINFORCE rule" ID="ID_1243692238" CREATED="1642429908977" MODIFIED="1642429930358"/>
-</node>
-<node TEXT="II. find adversarial regions as opposed to the typical adversarial points in regular adversarial examples" ID="ID_262923196" CREATED="1642429337071" MODIFIED="1642430021419"/>
-<node TEXT="experiments" ID="ID_693341535" CREATED="1642430344587" MODIFIED="1642430346783">
-<node TEXT="CASIA train LFW test" ID="ID_450618483" CREATED="1642430347795" MODIFIED="1642430354141"/>
-<node TEXT="Resnet50 with CosFace" ID="ID_1824197744" CREATED="1642430360674" MODIFIED="1642430371554"/>
-</node>
-<node TEXT="can this be used in adv def for face?" ID="ID_1655776817" CREATED="1642430586222" MODIFIED="1642430601307">
-<icon BUILTIN="help"/>
-</node>
-</node>
-</node>
-<node TEXT="Object Det" ID="ID_601426743" CREATED="1642440732047" MODIFIED="1642965657103">
-<node ID="ID_1033919012" CREATED="1642440745175" MODIFIED="1642440749146">
-<icon BUILTIN="unchecked"/>
-<richcontent TYPE="NODE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <h1 class="title mathjax">
-      ADC: Adversarial attacks against object Detection that evade Context consistency checks
-    </h1>
-  </body>
-</html>
-</richcontent>
-<node TEXT="WACV22" ID="ID_953336901" CREATED="1642440751686" MODIFIED="1642440753515"/>
-</node>
-</node>
-<node TEXT="Trajectory Prediction" ID="ID_1501279328" CREATED="1642953386986" MODIFIED="1642965658792">
-<node ID="ID_1380187352" CREATED="1642953399320" MODIFIED="1642953401824">
-<icon BUILTIN="pencil"/>
-<richcontent TYPE="NODE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    On Adversarial Robustness of Trajectory Prediction for Autonomous Vehicles
-  </body>
-</html>
-</richcontent>
-<node TEXT="misguiding title" ID="ID_974407250" CREATED="1642953418674" MODIFIED="1642953424787"/>
-<node TEXT="only presents attack to perturb trajectory" ID="ID_1226515884" CREATED="1642953425024" MODIFIED="1642953431087"/>
-</node>
-</node>
-</node>
-<node TEXT="Adversarial Defense" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1642965722931">
-<edge COLOR="#0000ff"/>
-<font NAME="Gentium"/>
-<node TEXT="Classification Task" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1643035532082">
-<node TEXT="STAGE" ID="ID_219354908" CREATED="1642438393211" MODIFIED="1642438397420">
-<node TEXT="adversarial robustness against the union of multiple perturbation models" ID="ID_1452347285" CREATED="1642438398542" MODIFIED="1642438414351">
-<icon BUILTIN="unchecked"/>
-</node>
-<node TEXT="adversarial training and robustness for multiple perturbations" ID="ID_1832278453" CREATED="1642438422719" MODIFIED="1642438435302">
-<icon BUILTIN="unchecked"/>
-</node>
-</node>
-<node TEXT="Misc analysis" ID="ID_1332546973" CREATED="1641743569630" MODIFIED="1642370250526">
-<node TEXT="rethinking feature uncertainty in stochastic neural networks for adversarial robustness" ID="ID_829421687" CREATED="1641678579615" MODIFIED="1641678600199">
-<icon BUILTIN="pencil"/>
-<node TEXT="good performance" ID="ID_1343393281" CREATED="1641678601770" MODIFIED="1641678604282"/>
-</node>
-<node TEXT="adversarial feature selection against evasion attacks" ID="ID_977262344" CREATED="1642370251827" MODIFIED="1642370266767">
-<icon BUILTIN="pencil"/>
-</node>
-</node>
-<node TEXT="patch Detection" ID="ID_1544755494" CREATED="1641523388190" MODIFIED="1641523402992">
-<node TEXT="on the real world adversarial robustness of real-time semantic segmentation models for autonomous driving" ID="ID_621290194" CREATED="1641523393314" MODIFIED="1641523426222">
-<icon BUILTIN="pencil"/>
-</node>
-</node>
-<node TEXT="adversarial example detection" ID="ID_983985712" CREATED="1641523884091" MODIFIED="1641523889706">
-<node TEXT="(survey) towards understanding and harnessing the effect of image transformation in adversarial deteciton" ID="ID_1343762323" CREATED="1641523891006" MODIFIED="1641523914261">
-<icon BUILTIN="pencil"/>
-<node TEXT="via image transformations" ID="ID_1033635622" CREATED="1641523928903" MODIFIED="1641523932870"/>
-<node TEXT="this paper creates ensemble of transformations" ID="ID_446066363" CREATED="1641523933774" MODIFIED="1641523943924"/>
-</node>
-</node>
-<node TEXT="Adversarial Training" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1641743568907">
-<node TEXT="references" ID="ID_178248607" CREATED="1642431445724" MODIFIED="1643412272232">
-<icon BUILTIN="info"/>
-<node TEXT="https://robustbench.github.io/" ID="ID_1384233314" CREATED="1642431450079" MODIFIED="1642431451028"/>
-</node>
-<node TEXT="FGSM/AT" ID="ID_1386316101" CREATED="1642455770819" MODIFIED="1642455773280">
-<node TEXT="Explaining and harnessing adversarial examples." ID="ID_444955732" CREATED="1642455817682" MODIFIED="1642455817682">
-<node TEXT="see Attack/FGSM" ID="ID_1699730646" CREATED="1642455774488" MODIFIED="1642455811066"/>
-</node>
-</node>
-<node TEXT="RFGSM/AT" ID="ID_775433299" CREATED="1642455858471" MODIFIED="1642455865293">
-<node TEXT="Ensemble adversarial training: Attacks and defenses." ID="ID_850120172" CREATED="1642455866806" MODIFIED="1643412222998">
-<icon BUILTIN="unchecked"/>
-</node>
-</node>
-<node TEXT="PGD/AT" ID="ID_882830443" CREATED="1641678605757" MODIFIED="1642441194136">
-<node TEXT="Towards deep learning models resistant to adversarial attacks" ID="ID_634512701" CREATED="1642438883995" MODIFIED="1642438897524">
-<icon BUILTIN="bookmark"/>
-<icon BUILTIN="checked"/>
-<node TEXT="Very good paper." ID="ID_1535465318" CREATED="1642438919685" MODIFIED="1642438926372">
-<icon BUILTIN="button_ok"/>
-</node>
-<node TEXT="Baseline AT for defense." ID="ID_1889052826" CREATED="1642438905163" MODIFIED="1642438916299">
-<icon BUILTIN="button_ok"/>
-</node>
-</node>
-</node>
-<node TEXT="TRADES/AT" ID="ID_932779241" CREATED="1641678609578" MODIFIED="1643412167174">
-<node TEXT="theoretically principled trade-off between robustness and accuracy, ICML, 2019" ID="ID_1065469295" CREATED="1642369441439" MODIFIED="1642456049849">
-<icon BUILTIN="bookmark"/>
-<icon BUILTIN="unchecked"/>
-<node TEXT="commonly used baseline" ID="ID_108968911" CREATED="1642449381855" MODIFIED="1642449388727">
-<icon BUILTIN="button_ok"/>
-</node>
-</node>
-</node>
-<node TEXT="Curriculum AT" ID="ID_373950173" CREATED="1643412302659" MODIFIED="1643412307668">
-<node TEXT="Curriculum Adversarial Training" ID="ID_285117304" CREATED="1643412309119" MODIFIED="1643413743828">
-<icon BUILTIN="checked"/>
-<node TEXT="ijcai18" ID="ID_1417853528" CREATED="1643412317231" MODIFIED="1643412322551"/>
-<node TEXT="gradually increase attack strengths, namely increase PGD steps. each strengths trains for 1 epoch." ID="ID_1208154605" CREATED="1643413745409" MODIFIED="1643413812902"/>
-</node>
-</node>
-<node TEXT="AWP/AT" ID="ID_1537290479" CREATED="1642456071529" MODIFIED="1643412240326">
-<node TEXT="Adversarial weight perturbation helps robust generalization." ID="ID_1348938152" CREATED="1642456074788" MODIFIED="1643412228699">
-<icon BUILTIN="unchecked"/>
-<icon BUILTIN="bookmark"/>
-<node TEXT="SOTA" ID="ID_431363817" CREATED="1643412245745" MODIFIED="1643412247800"/>
-</node>
-</node>
-<node TEXT="AT Enhance" ID="ID_820322296" CREATED="1642449280058" MODIFIED="1642449298853">
-<node TEXT="GAT" ID="ID_1630974602" CREATED="1642449350297" MODIFIED="1642449352427">
-<node TEXT="Guided Adversarial Attack for Evaluating and Enhancing Adversarial Defenses." ID="ID_392784781" CREATED="1642456004328" MODIFIED="1642456013081">
-<icon BUILTIN="unchecked"/>
-<icon BUILTIN="bookmark"/>
-<node TEXT="nips20" ID="ID_670378629" CREATED="1642456026381" MODIFIED="1642456030253"/>
-</node>
-</node>
-<node TEXT="GAIRAT" ID="ID_1795824577" CREATED="1642369428185" MODIFIED="1642441201215">
-<node TEXT="geometry-aware instance-reweighted adversarial training, iclr, 2020" ID="ID_255113727" CREATED="1642369496991" MODIFIED="1642441263816">
-<icon BUILTIN="unchecked"/>
-<node TEXT="iclr20" ID="ID_1152586640" CREATED="1643412171827" MODIFIED="1643412174065"/>
-</node>
-</node>
-<node TEXT="MART" ID="ID_6479998" CREATED="1642438310728" MODIFIED="1642441191254">
-<node TEXT="improving adversarial robustness requires revisiting misclassified examples" ID="ID_466710053" CREATED="1642438315292" MODIFIED="1642438341586">
-<icon BUILTIN="unchecked"/>
-</node>
-</node>
-<node TEXT="FBF" ID="ID_761176936" CREATED="1642449341180" MODIFIED="1642449345704">
-<node TEXT="Fast is better than free: Revisiting adversarial training." ID="ID_336860717" CREATED="1642455952378" MODIFIED="1642455958511">
-<icon BUILTIN="unchecked"/>
-</node>
-</node>
-<node TEXT="R-MGM" ID="ID_1819761584" CREATED="1642449346090" MODIFIED="1642449349702">
-<node TEXT="Regularizer to mitigate gradient masking effect during&#xa;single-step adversarial training." ID="ID_1809245170" CREATED="1642455983073" MODIFIED="1642455989167">
-<icon BUILTIN="unchecked"/>
-</node>
-</node>
-<node TEXT="NuAT" ID="ID_769833360" CREATED="1642449307525" MODIFIED="1642449312169">
-<node TEXT="Towards Efficient and Effective Adversarial Training" ID="ID_1131130428" CREATED="1642449452500" MODIFIED="1642456091513">
-<icon BUILTIN="help"/>
-<icon BUILTIN="unchecked"/>
-<node TEXT="nips21" ID="ID_694522660" CREATED="1642449458075" MODIFIED="1642449460409"/>
-<node TEXT="nuclear-norm attack, single or two step" ID="ID_1355334878" CREATED="1642449462884" MODIFIED="1642449487212">
-<node TEXT="why use nuclear norm?" ID="ID_676092258" CREATED="1642455675450" MODIFIED="1642455681173">
-<icon BUILTIN="help"/>
-</node>
-</node>
-<node TEXT="adversarial training with nuclear-attack" ID="ID_1804260096" CREATED="1642455687824" MODIFIED="1642455695307">
-<node TEXT="like TRADES" ID="ID_1339501480" CREATED="1642456101810" MODIFIED="1642456112106"/>
-</node>
-<node TEXT="ref: nuclear norm / trace norm" ID="ID_794259512" CREATED="1642449487562" MODIFIED="1642450088267">
-<node TEXT="amount of rank-1 matrices needed to reconstruct X." ID="ID_534466284" CREATED="1642450121797" MODIFIED="1642450134497"/>
-<node TEXT="https://mathoverflow.net/questions/278013/what-is-the-intuition-for-the-trace-norm-nuclear-norm" ID="ID_1243321985" CREATED="1642450093241" MODIFIED="1642450093241" LINK="https://mathoverflow.net/questions/278013/what-is-the-intuition-for-the-trace-norm-nuclear-norm"/>
-<node TEXT="https://encyclopediaofmath.org/wiki/Nuclear_norm" ID="ID_1804499957" CREATED="1642450239653" MODIFIED="1642450239653" LINK="https://encyclopediaofmath.org/wiki/Nuclear_norm"/>
-<node TEXT="https://en.wikipedia.org/wiki/Matrix_norm" ID="ID_252928450" CREATED="1642450331560" MODIFIED="1642450331560" LINK="https://en.wikipedia.org/wiki/Matrix_norm">
-<node TEXT="Spectrum norm" ID="ID_1885026507" CREATED="1642454275615" MODIFIED="1642454282395">
-<node TEXT="norm induced by p-norm" ID="ID_1777624265" CREATED="1642454340598" MODIFIED="1642454351392"/>
-<node TEXT="\latex $$\|A\|_2==\sqrt{\lambda_\max(A^* A)}=\sigma_{max}(A)\leq \|A\|_F$$" ID="ID_526468254" CREATED="1642454283503" MODIFIED="1642454516305"/>
-</node>
-<node TEXT="Frobenius Norm" ID="ID_541944385" CREATED="1642454352691" MODIFIED="1642454364815">
-<node TEXT="entry-wise norm" ID="ID_515709247" CREATED="1642454365986" MODIFIED="1642454377303"/>
-<node TEXT="\latex $$\|A\|_F=\sqrt{\sum_i \sum_j |a_{ij}|^2} = \sqrt{Tr(A^*A)} = \sqrt{\sum_i^{\min(m,n)} \sigma_i^2(A)}$$" ID="ID_590705211" CREATED="1642454377531" MODIFIED="1642454469092"/>
-</node>
-<node TEXT="Nuclear/trace norm" ID="ID_331647121" CREATED="1642454546563" MODIFIED="1642454552498">
-<node TEXT="is a Schattern norm" ID="ID_511441612" CREATED="1642454553455" MODIFIED="1642454666915">
-<node TEXT="p-norm operating on singular value vector of a matrix" ID="ID_955840719" CREATED="1642454561278" MODIFIED="1642454576825"/>
-<node TEXT="\latex $$\|A\|_p = \Big(\sum_i \sigma_i^p(A)\Big)^{1/p}$$" ID="ID_740352297" CREATED="1642454600205" MODIFIED="1642454655969"/>
-</node>
-<node TEXT="\latex $$\|A\|_* = Tr(\sqrt{A^* A}) = \sum_i^{\min(m,n)} \sigma_i(A)$$" ID="ID_1940588690" CREATED="1642454577885" MODIFIED="1642454717653"/>
-<node TEXT="is a convex envelope of the rank function rank(A) -- often used in search of low rank matrices" ID="ID_1518781099" CREATED="1642454776478" MODIFIED="1642454805477"/>
-</node>
-</node>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="AT Speed" ID="ID_1548520614" CREATED="1642441206809" MODIFIED="1642449303630">
-<node TEXT="FreeAT (ATF, FAT)" ID="ID_10759055" CREATED="1642441224672" MODIFIED="1642455921912">
-<node TEXT="adversarial training for free!" ID="ID_902115687" CREATED="1642441227881" MODIFIED="1642455925752">
-<icon BUILTIN="checked"/>
-<icon BUILTIN="bookmark"/>
-<node TEXT="reuse computed gradients" ID="ID_540017524" CREATED="1642448873312" MODIFIED="1642448880329"/>
-</node>
-</node>
-</node>
-<node TEXT="STAGE" ID="ID_1718770068" CREATED="1642441254968" MODIFIED="1642441256543"/>
-<node TEXT="not-famous" ID="ID_1872674435" CREATED="1642431357219" MODIFIED="1642431364579">
-<node TEXT="parl: enhancing diversity of ensemble networks to resist adversarial attacks via pairwise adversarially robust loss function" ID="ID_1007028628" CREATED="1642431798570" MODIFIED="1642432009766">
-<icon BUILTIN="pencil"/>
-<node TEXT="diverging layer-wise gradient direction among ensembled models in cosine similarity" ID="ID_1230731010" CREATED="1642431821906" MODIFIED="1642432005710">
-<icon BUILTIN="button_ok"/>
-</node>
-<node TEXT="interesting idea. but storytelling needs improvement" ID="ID_925466018" CREATED="1642432015284" MODIFIED="1642432041217"/>
-<node TEXT="problematic evaluation" ID="ID_899908589" CREATED="1642432187766" MODIFIED="1642432191269"/>
-</node>
-<node TEXT="mutual adversarial training: learning together is better than going alone" ID="ID_1562045490" CREATED="1642432441196" MODIFIED="1642432454531">
-<icon BUILTIN="pencil"/>
-<node TEXT="JHU Rama" ID="ID_918917928" CREATED="1642432456076" MODIFIED="1642439049709"/>
-<node TEXT="knowledge distillation" ID="ID_1194675877" CREATED="1642439037294" MODIFIED="1642439040646"/>
-<node TEXT="two students learn from each other" ID="ID_967309274" CREATED="1642439040809" MODIFIED="1642439045439"/>
-</node>
-</node>
-</node>
-<node TEXT="Lipschitz Continuity" ID="ID_1215971796" CREATED="1642440618858" MODIFIED="1642440627281">
-<node TEXT="Activation function" ID="ID_958488576" CREATED="1642440628351" MODIFIED="1642440653680">
-<node ID="ID_240078001" CREATED="1642440660898" MODIFIED="1642440669751">
-<icon BUILTIN="unchecked"/>
-<richcontent TYPE="NODE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <h1 http-equiv="content-type" content="text/html; charset=utf-8" class="title mathjax">
-      Sorting out Lipschitz function approximation
-    </h1>
-  </body>
-</html>
-</richcontent>
-</node>
-</node>
-<node TEXT="Spectrum" ID="ID_445945127" CREATED="1642951664771" MODIFIED="1642951667615">
-<node TEXT="Spectral Norm Regularization for Improving the&#xa;Generalizability of Deep Learning" ID="ID_1829634212" CREATED="1642951668899" MODIFIED="1642952085512">
-<icon BUILTIN="unchecked"/>
-<icon BUILTIN="bookmark"/>
-<icon BUILTIN="pencil"/>
-<node TEXT="TODO" ID="ID_570092991" CREATED="1642952052911" MODIFIED="1643035652112"/>
-</node>
-<node TEXT="Adversarial Training is a Form of Data-dependent&#xa;Operator Norm Regularization" ID="ID_1007318317" CREATED="1642951686137" MODIFIED="1642951692337">
-<icon BUILTIN="unchecked"/>
-<icon BUILTIN="bookmark"/>
-<node TEXT="TODO" ID="ID_326204906" CREATED="1642951699453" MODIFIED="1643035654618"/>
-</node>
-</node>
-</node>
-<node TEXT="Generative Replacement" ID="ID_814019873" CREATED="1642953253003" MODIFIED="1642953259726">
-<node TEXT="Adversarially Robust Classification by Conditional Generative Model Inversion" ID="ID_811483312" CREATED="1642953266238" MODIFIED="1642953325665">
-<icon BUILTIN="pencil"/>
-<icon BUILTIN="button_cancel"/>
-</node>
-</node>
-<node TEXT="Certified Robustness" ID="ID_636878532" CREATED="1641743555483" MODIFIED="1641743560049">
-<node TEXT="https://github.com/AI-secure/Provable-Training-and-Verification-Approaches-Towards-Robust-Neural-Networks" ID="ID_1591662337" CREATED="1642964261893" MODIFIED="1642964261893" LINK="https://github.com/AI-secure/Provable-Training-and-Verification-Approaches-Towards-Robust-Neural-Networks"/>
-<node TEXT="Certified robustness to adversarial examples with differential privacy" ID="ID_1254880785" CREATED="1641743598637" MODIFIED="1641743613648">
-<icon BUILTIN="unchecked"/>
-</node>
-<node TEXT="SoK: Certified Robustness for Deep Neural Networks" ID="ID_386941316" CREATED="1643035546515" MODIFIED="1643035632494">
-<icon BUILTIN="pencil"/>
-<icon BUILTIN="bookmark"/>
-<node TEXT="TODO" ID="ID_703331117" CREATED="1643035647341" MODIFIED="1643035649305"/>
-</node>
-</node>
-<node TEXT="Benchmark" ID="ID_855034612" CREATED="1642431513665" MODIFIED="1642431518164">
-<node TEXT="robustbench: a standardized adversarial robustness benchmark" ID="ID_1489423550" CREATED="1642431521917" MODIFIED="1642431542194">
-<icon BUILTIN="unchecked"/>
-</node>
-</node>
-</node>
-<node TEXT="Face Recognition" ID="ID_1083375375" CREATED="1643132265039" MODIFIED="1643132268914">
-<node TEXT="RobFR" ID="ID_956441703" CREATED="1643132279319" MODIFIED="1643132284675">
-<node TEXT="https://github.com/ShawnXYang/Face-Robustness-Benchmark" ID="ID_232276308" CREATED="1643132270554" MODIFIED="1643132270554" LINK="https://github.com/ShawnXYang/Face-Robustness-Benchmark"/>
-</node>
-</node>
-<node TEXT="Generalization" ID="ID_125075162" CREATED="1643058798944" MODIFIED="1643058803223">
-<node TEXT="Cihang xie" ID="ID_1667513983" CREATED="1643058809140" MODIFIED="1643058811907"/>
-</node>
-<node TEXT="Image Denoising" ID="ID_688438108" CREATED="1642369253403" MODIFIED="1642965597652">
-<node TEXT="Towards adversarially robust deep image denoising" ID="ID_912787227" CREATED="1642369258886" MODIFIED="1642369271962">
-<icon BUILTIN="pencil"/>
-<node TEXT="present observation-based zero-mean attack" ID="ID_948789581" CREATED="1642369294389" MODIFIED="1642369302053"/>
-<node TEXT="present hybrid adversarial training" ID="ID_409590623" CREATED="1642369302455" MODIFIED="1642369331464">
-<node TEXT="using augmented data" ID="ID_632082886" CREATED="1642369349160" MODIFIED="1642369354932"/>
-</node>
-</node>
-</node>
-<node TEXT="Multi-Task learning" ID="ID_1182441257" CREATED="1642442091094" MODIFIED="1642965600653">
-<node TEXT="Adversarial Robustness in Multi-Task Learning: Promises and Illusions" ID="ID_429718797" CREATED="1642442095758" MODIFIED="1642442212412">
-<icon BUILTIN="checked"/>
-<node TEXT="AAAI22" ID="ID_1679691953" CREATED="1642442198116" MODIFIED="1642442200599"/>
-<node TEXT="blindly adding auxiliary tasks or weighing the tasks provides a false sense of robustness." ID="ID_459008675" CREATED="1642442206193" MODIFIED="1642442252721"/>
-<node TEXT="the choice of the task to incorporate in the loss function are important factors that can be leveraged to yield more robust models" ID="ID_1336811666" CREATED="1642442253918" MODIFIED="1642442277862"/>
 </node>
 </node>
 </node>
@@ -1047,9 +1075,15 @@
 <icon BUILTIN="pencil"/>
 </node>
 </node>
-<node TEXT="Self-Supervised Learning" POSITION="left" ID="ID_195659803" CREATED="1641524220091" MODIFIED="1641524227121">
+<node TEXT="Self-Supervised Learning (SSL)" POSITION="left" ID="ID_195659803" CREATED="1641524220091" MODIFIED="1644181748534">
 <edge COLOR="#7c7c00"/>
-<node TEXT="Single-modal" ID="ID_1411825413" CREATED="1641524228092" MODIFIED="1641524231227"/>
+<node TEXT="Single-modal" ID="ID_1411825413" CREATED="1641524228092" MODIFIED="1641524231227">
+<node TEXT="masked image model" ID="ID_1443895759" CREATED="1644181757032" MODIFIED="1644181760040">
+<node TEXT="Adversarial Masking for Self-Supervised Learning" ID="ID_161503963" CREATED="1644181760956" MODIFIED="1644181769832">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+</node>
 <node TEXT="multi-modal" ID="ID_510544100" CREATED="1641524231440" MODIFIED="1641524233873">
 <node TEXT="sound and visual representation learning with multiple pretraining tasks" ID="ID_1372709479" CREATED="1641524234751" MODIFIED="1641524246105">
 <icon BUILTIN="pencil"/>
@@ -1452,6 +1486,7 @@
 <node TEXT="a bit similar to cross-modal alignment" ID="ID_867737025" CREATED="1608871591299" MODIFIED="1608871600207"/>
 </node>
 <node TEXT="2012.11807&#xa;Learning Disentangled Semantic Representation for Domain Adaptation" ID="ID_1101645023" CREATED="1608871972133" MODIFIED="1608871978855"/>
+<node TEXT="Auto-Transfer: Learning to Route Transferrable Representations ICLR22" ID="ID_275822091" CREATED="1644180783785" MODIFIED="1644180796263"/>
 </node>
 <node TEXT="Classification" FOLDED="true" POSITION="left" ID="ID_1412187905" CREATED="1576825420762" MODIFIED="1642394210491">
 <font NAME="Gentium" SIZE="10" BOLD="false"/>
@@ -4498,7 +4533,7 @@
 <node TEXT="2101: Neural Architecture Search via Combinatorial Multi-Armed Bandit" ID="ID_1528572141" CREATED="1610424093363" MODIFIED="1610424103413"/>
 <node TEXT="Contrastive Neural Architecture Search with Neural Architecture Comparators (cvpr21)" ID="ID_866640575" CREATED="1615348935373" MODIFIED="1615348942277"/>
 </node>
-<node TEXT="NAS + Other" FOLDED="true" ID="ID_1734029148" CREATED="1589771343435" MODIFIED="1589771346550">
+<node TEXT="NAS + Other" ID="ID_1734029148" CREATED="1589771343435" MODIFIED="1589771346550">
 <node TEXT="other=SISR" ID="ID_12673974" CREATED="1589771348054" MODIFIED="1589771353001">
 <node TEXT="2003.04619: hierarchical neural architecture search for single image super-resolution" ID="ID_1727215487" CREATED="1589771353984" MODIFIED="1589771370713"/>
 </node>
@@ -4510,35 +4545,6 @@
 </node>
 <node TEXT="otehr=captioning" ID="ID_341214713" CREATED="1608876510692" MODIFIED="1608876515099">
 <node TEXT="2012.09742&#xa;AutoCaption: Image Captioning with Neural Architecture Search" ID="ID_1588438121" CREATED="1608876515864" MODIFIED="1608876526467"/>
-</node>
-</node>
-</node>
-<node TEXT="Comp. Graphics" FOLDED="true" POSITION="left" ID="ID_1845175765" CREATED="1617625449130" MODIFIED="1642394274175">
-<edge COLOR="#00ff00"/>
-<node TEXT="inverse rendering" ID="ID_975840127" CREATED="1617625483759" MODIFIED="1617625487797">
-<node TEXT="cvpr21: PhySG: Inverse Rendering with Spherical Gaussians for Physics-based Material Editing and Relighting" ID="ID_267756549" CREATED="1617625488628" MODIFIED="1617625497787"/>
-</node>
-</node>
-<node TEXT="Audio" FOLDED="true" POSITION="left" ID="ID_789906200" CREATED="1582860036574" MODIFIED="1642394263550">
-<font NAME="Gentium" BOLD="false"/>
-<edge COLOR="#ff0000"/>
-<node TEXT="Automatic Speech Recognition (ASR)" ID="ID_622081536" CREATED="1582860041419" MODIFIED="1587526865228">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="listen, attend, and spell (LAS)" ID="ID_1823905300" CREATED="1588299271705" MODIFIED="1633708742807">
-<icon BUILTIN="button_ok"/>
-</node>
-<node TEXT="2004.14840: multiresolution and multimodal speech recognition with transformers (ACL20)" ID="ID_835181823" CREATED="1588299279941" MODIFIED="1588299296870"/>
-</node>
-<node TEXT="speaker identity" ID="ID_579157041" CREATED="1582860051176" MODIFIED="1587526865228">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="2002.08742: disengangled speech embedding using cross-modal self-supervision" ID="ID_1985835454" CREATED="1582860067637" MODIFIED="1587526865229">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: unsupervised representation learning -- speaker identity" ID="ID_1756907917" CREATED="1582887316244" MODIFIED="1587526865229">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: self-supervised learning that exploits cross-modal synchrony between faces and audio in video" ID="ID_1296604680" CREATED="1582887345600" MODIFIED="1587526865230">
-<font NAME="Gentium" BOLD="false"/>
-</node>
 </node>
 </node>
 </node>
@@ -4703,6 +4709,16 @@
 <edge COLOR="#007c00"/>
 <node TEXT="2106.10410 Deep Generative Learning via Schr &#x308;odinger Bridge" ID="ID_1481005194" CREATED="1624457232722" MODIFIED="1624457250506">
 <icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node TEXT="Single-Modal Retrieval" FOLDED="true" POSITION="left" ID="ID_1856423782" CREATED="1644181245825" MODIFIED="1644181255013">
+<edge COLOR="#00ff00"/>
+<node TEXT="Learning Super-Features for Image Retrieval" ID="ID_829824427" CREATED="1644181270753" MODIFIED="1644181364623">
+<icon BUILTIN="checked"/>
+<node TEXT="ICLR22" ID="ID_1211217354" CREATED="1644181278285" MODIFIED="1644181280219"/>
+<node TEXT="not DML" ID="ID_1043681772" CREATED="1644181273835" MODIFIED="1644181275311"/>
+<node TEXT="combine local and global features" ID="ID_1751979954" CREATED="1644181344128" MODIFIED="1644181349980"/>
+<node TEXT="existing methods suffer from problems in the use of local features" ID="ID_111945206" CREATED="1644181350883" MODIFIED="1644181360186"/>
 </node>
 </node>
 <node TEXT="Cross-Modal Retrieval" FOLDED="true" POSITION="left" ID="ID_22749108" CREATED="1576988430324" MODIFIED="1642431082632">
@@ -5569,11 +5585,15 @@
 </node>
 </node>
 </node>
-<node TEXT="Backdoor Attack &amp; Defense" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_1279237598" CREATED="1642964328030" MODIFIED="1642965522277">
+<node TEXT="Backdoor Attack &amp; Defense" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="left" ID="ID_1279237598" CREATED="1642964328030" MODIFIED="1642965522277">
 <edge COLOR="#ff0000"/>
 <node TEXT="Attack" ID="ID_481030829" CREATED="1642965505734" MODIFIED="1642965507796">
 <node TEXT="Classification" ID="ID_1068695249" CREATED="1643059216060" MODIFIED="1643059221252">
-<node TEXT="* Madry" ID="ID_684891535" CREATED="1643059222128" MODIFIED="1643059229315"/>
+<node TEXT="* Madry backdoor" ID="ID_684891535" CREATED="1643059222128" MODIFIED="1644181613323"/>
+<node TEXT="Imperceptible and Multi-channel Backdoor Attack against Deep Neural Networks" ID="ID_1408798505" CREATED="1644181613544" MODIFIED="1644181621740">
+<icon BUILTIN="pencil"/>
+<node TEXT="exploiting DCT steganography" ID="ID_645033989" CREATED="1644181646727" MODIFIED="1644181655902"/>
+</node>
 </node>
 <node TEXT="Federated Learning (FL)" ID="ID_63486999" CREATED="1642964624292" MODIFIED="1642964972961">
 <node TEXT="Attack of the Tails:&#xa;Yes, You Really Can Backdoor Federated Learning" ID="ID_1636233737" CREATED="1642964633771" MODIFIED="1642964637902">
@@ -5601,6 +5621,13 @@
 <node TEXT="DBA: Distributed Backdoor Attacks against Federated Learning" ID="ID_1786745650" CREATED="1642965312934" MODIFIED="1642965322325">
 <icon BUILTIN="unchecked"/>
 <node TEXT="iclr21" ID="ID_1366820704" CREATED="1642965323484" MODIFIED="1642965326580"/>
+</node>
+</node>
+<node TEXT="Tracking" ID="ID_633333846" CREATED="1644181581603" MODIFIED="1644181584344">
+<node TEXT="Few-Shot Backdoor Attacks on Visual Object Tracking" ID="ID_1944039915" CREATED="1644181500877" MODIFIED="1644181516065">
+<icon BUILTIN="checked"/>
+<node TEXT="ICLR22" ID="ID_1379553453" CREATED="1644181502731" MODIFIED="1644181504177"/>
+<node TEXT="extension of backdoor" ID="ID_1434989681" CREATED="1644181504456" MODIFIED="1644181513607"/>
 </node>
 </node>
 </node>
