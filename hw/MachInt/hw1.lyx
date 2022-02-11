@@ -186,5 +186,167 @@ Agents with goals.
  It has to maximize the efficiency of the network routes and robustness.
 \end_layout
 
+\begin_layout Section
+Can the following tasks be solved by computer?
+\end_layout
+
+\begin_layout Itemize
+a.
+ Playing a decent game of table tennis (Ping-Pong).
+ 
+\begin_inset Newline newline
+\end_inset
+
+No.
+ The current robots (actuators) cannot perform high-speed and accurate moves
+ to play ping-pong.
+ Meanwhile, it's still hard for the current AI systems (both in terms of
+ hardware and software) to perform real-time computation for such sport.
+ It will be a long time before the two problems can be addressed.
+\end_layout
+
+\begin_layout Itemize
+b.
+ Driving in the center of Cairo, Egypt.
+ 
+\begin_inset Newline newline
+\end_inset
+
+No.
+ There are complicated local conventions such as four short honks followed
+ by a long one.
+ However, it should be feasible with complicated engineering to incorporate
+ these rules into the automobile system.
+\begin_inset Newline newline
+\end_inset
+
+See https://www.news24.com/wheels/news/gear_and_tech/driverless-cars-might-follow-
+the-rules-of-the-road-but-what-about-the-language-of-driving-20180119
+\end_layout
+
+\begin_layout Itemize
+c.
+ Driving in Victorville, California.
+\begin_inset Newline newline
+\end_inset
+
+Yes.
+ There are already experiments according to news report.
+\begin_inset Newline newline
+\end_inset
+
+https://www.reuters.com/article/idUSIndia-30310720071104
+\end_layout
+
+\begin_layout Itemize
+d.
+ Buying a week’s worth of groceries at the market.
+ 
+\begin_inset Newline newline
+\end_inset
+
+No.
+ Navigation in the market is already difficult enough for the current state-of-t
+he-art.
+\end_layout
+
+\begin_layout Itemize
+e.
+ Buying a week’s worth of groceries on the Web.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Yes.
+ For example, Amazon Alexa is already able to shop online given instructions.
+\end_layout
+
+\begin_layout Itemize
+f.
+ Playing a decent game of bridge at a competitive level.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Yes.
+ The environment is static, deterministic, sequential, discrete, and multi-agent.
+ It is feasible to devise the logic to play this game.
+\end_layout
+
+\begin_layout Itemize
+g.
+ Discovering and proving new mathematical theorems.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Partly Yes.
+ Proving theorems using AI is possible, see 
+\begin_inset Quotes eld
+\end_inset
+
+Generative Language Modeling for Automated Theorem Proving
+\begin_inset Quotes erd
+\end_inset
+
+, https://arxiv.org/abs/2009.03393
+\begin_inset Newline newline
+\end_inset
+
+However discovering new theorem is still not feasible.
+\end_layout
+
+\begin_layout Itemize
+h.
+ Writing an intentionally funny story.
+ 
+\begin_inset Newline newline
+\end_inset
+
+No.
+ Although currently large language models like GPT can generate stories,
+ the resulting stories are not necessarily fun or logically sensible.
+\end_layout
+
+\begin_layout Itemize
+i.
+ Giving competent legal advice in a specialized area of law.
+ 
+\begin_inset Newline newline
+\end_inset
+
+No.
+ The current AI systems can be used to assist human, but not to give competent
+ advice.
+\begin_inset Newline newline
+\end_inset
+
+https://emerj.com/ai-sector-overviews/ai-in-law-legal-practice-current-applicatio
+ns/
+\end_layout
+
+\begin_layout Itemize
+j.
+ Translating spoken English into spoken Swedish in real time.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Yes.
+ Youtube is already able to automatically add transcripts for videos and
+ translate them in real-time as subtitle.
+\end_layout
+
+\begin_layout Itemize
+k.
+ Performing a complex surgical operation.
+ 
+\begin_inset Newline newline
+\end_inset
+
+No.
+ AI can only assist human, and cannot do it alone.
+\end_layout
+
 \end_body
 \end_document
