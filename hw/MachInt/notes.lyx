@@ -264,6 +264,70 @@ Going Big?
 Intelligent Agents
 \end_layout
 
+\begin_layout Standard
+An agent is a computer system that is capable of independent action on behalf
+ of its user or owner (figure out what needs to be done to satisfy design
+ objectives, rather than constantly being told).
+\end_layout
+
+\begin_layout Standard
+A multiagent system is one that consists of a number of agents, which interact
+ with one-another.
+ TO successfully interact, they will require the ability to cooperate, coordinat
+e, and negotiate with each other, much as people do.
+\end_layout
+
+\begin_layout Standard
+Two key problems: agent design, and society design.
+\end_layout
+
+\begin_layout Standard
+An 
+\series bold
+agent
+\series default
+ should strive to 
+\begin_inset Quotes eld
+\end_inset
+
+do the right thing
+\begin_inset Quotes erd
+\end_inset
+
+, based on what it can perceive and the actions it can perform.
+ The right action is the one that will casue the agent to be most successful.
+ Performance measure in this case is an objective criterion for success
+ of an agent's behavior.
+\end_layout
+
+\begin_layout Standard
+For each possible percept sequence, a 
+\series bold
+rational agent
+\series default
+ should select an action that maximizes its performance measure (in expectation)
+ given the evidence provided by the percept sequence and whatever build-in
+ knowledge the agent has.
+\end_layout
+
+\begin_layout Subsection
+Agents
+\end_layout
+
+\begin_layout Standard
+An agent perceives tis environment via sensors and acts upon that environment
+ through its actuators.
+\end_layout
+
+\begin_layout Subsection
+Characterizing Task Environment
+\end_layout
+
+\begin_layout Standard
+PEAS: performance measure, environment, actuators, sensors.
+ This is a qualitative setting.
+\end_layout
+
 \begin_layout Section
 Problem Solving by Searching
 \end_layout
