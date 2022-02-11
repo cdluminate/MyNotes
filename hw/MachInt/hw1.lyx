@@ -348,5 +348,75 @@ No.
  AI can only assist human, and cannot do it alone.
 \end_layout
 
+\begin_layout Section
+missionaries and cannibals
+\end_layout
+
+\begin_layout Subsection
+a
+\end_layout
+
+\begin_layout Standard
+This is a search problem.
+ The formulation is as follows:
+\end_layout
+
+\begin_layout Itemize
+We define the state space using a pair of tokens, e.g.
+ (MMMCCCB,) means the boat, three missionaries and three cannibals are on
+ the same side of river as the initial state.
+ The comma separates tokens on different sides of the river.
+\end_layout
+
+\begin_layout Itemize
+The successor function is the boat.
+ It ships one or two people across the river.
+\end_layout
+
+\begin_layout Itemize
+The goal test is whether the search problem reached its ending state (,MMMCCCB)
+\end_layout
+
+\begin_layout Itemize
+The solution of the search problem is to find the sequence (path) which
+ transforms the initial state (MMMCCCB,) into the ending state (,MMMCCCB).
+\end_layout
+
+\begin_layout Standard
+And there are some restrictions on the search problem:
+\end_layout
+
+\begin_layout Itemize
+The boat cannot move itself over the river.
+\end_layout
+
+\begin_layout Itemize
+The number of token 
+\begin_inset Quotes eld
+\end_inset
+
+C
+\begin_inset Quotes erd
+\end_inset
+
+ on each side cannot be larger than the number of token 
+\begin_inset Quotes eld
+\end_inset
+
+M
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+b
+\end_layout
+
+\begin_layout Subsection
+c
+\end_layout
+
 \end_body
 \end_document
