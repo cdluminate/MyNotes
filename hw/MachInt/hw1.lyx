@@ -107,71 +107,83 @@ today
 \end_layout
 
 \begin_layout Section
-PEAS Description of Task Environment
+PEAS Description of Task Environment and Characterization
 \end_layout
 
 \begin_layout Subsection
 Playing Soccer
 \end_layout
 
-\begin_layout Itemize
-Performance Measure: fast, obey the game rule, and win goals.
-\end_layout
-
-\begin_layout Itemize
-Environment: soccer field.
-\end_layout
-
-\begin_layout Itemize
-Actuators: robot arms and foots.
-\end_layout
-
-\begin_layout Itemize
-Sensors: cameras, LIDAR, speedometor.
+\begin_layout Standard
+Partially observable, stochastic, sequential, dynamic, continuous, multi-agent.
 \end_layout
 
 \begin_layout Subsection
 Knitting a Sweater
 \end_layout
 
-\begin_layout Itemize
-Performance Measure: fast, accurate, product in good shape.
-\end_layout
-
-\begin_layout Itemize
-Environment: desk.
-\end_layout
-
-\begin_layout Itemize
-Actuators: needle, workbench
-\end_layout
-
-\begin_layout Itemize
-Sensors: cameras, pressure sensors.
+\begin_layout Standard
+Fully observable, deterministic, sequential, static, continuous, single
+ agent.
 \end_layout
 
 \begin_layout Subsection
 Bidding on an item at an Auction
 \end_layout
 
-\begin_layout Itemize
-Performance Measure: accurate, follow the auction procedure.
-\end_layout
-
-\begin_layout Itemize
-Environment: auction hall
-\end_layout
-
-\begin_layout Itemize
-Actuators: speaker, auction hammer
-\end_layout
-
-\begin_layout Itemize
-Sensors: cameras, microphone
+\begin_layout Standard
+Partially observable, deterministic, sequential, static, discrete, single
+ agent.
 \end_layout
 
 \begin_layout Section
 To What Extent Are They AI Instances
+\end_layout
+
+\begin_layout Subsection
+Supermarket bar code scanners
+\end_layout
+
+\begin_layout Standard
+Simple reflex agents.
+ It does not need past states.
+\end_layout
+
+\begin_layout Subsection
+Web search engines
+\end_layout
+
+\begin_layout Standard
+Agents with goals.
+ Search engines maximizes the relevance between returned results and the
+ user query.
+\end_layout
+
+\begin_layout Subsection
+Voice-activated telephone menus
+\end_layout
+
+\begin_layout Standard
+Agents with memory.
+ It has to memorize the owner's voice print.
+\end_layout
+
+\begin_layout Subsection
+Spelling and grammar correction features in word
+\end_layout
+
+\begin_layout Standard
+Table-driven agents.
+ Spelling and grammar can be dealt with simply tables.
+\end_layout
+
+\begin_layout Subsection
+internet routing algorithms that respond dynamically
+\end_layout
+
+\begin_layout Standard
+Agents with goals.
+ It has to maximize the efficiency of the network routes and robustness.
 \end_layout
 
 \end_body

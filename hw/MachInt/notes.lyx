@@ -328,6 +328,38 @@ PEAS: performance measure, environment, actuators, sensors.
  This is a qualitative setting.
 \end_layout
 
+\begin_layout Subsection
+Task environments
+\end_layout
+
+\begin_layout Enumerate
+fully observable or partially observable
+\end_layout
+
+\begin_layout Enumerate
+deterministic or stochastic
+\end_layout
+
+\begin_layout Enumerate
+episodic or sequential
+\end_layout
+
+\begin_layout Enumerate
+static or dynamic (does it change while the agent is thinking)
+\end_layout
+
+\begin_layout Enumerate
+discrete or continuous
+\end_layout
+
+\begin_layout Enumerate
+single agent or multi-agent
+\end_layout
+
+\begin_layout Enumerate
+
+\end_layout
+
 \begin_layout Section
 Problem Solving by Searching
 \end_layout
