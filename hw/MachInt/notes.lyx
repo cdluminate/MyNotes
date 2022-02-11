@@ -356,8 +356,41 @@ discrete or continuous
 single agent or multi-agent
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Subsection
+Agent Types
+\end_layout
 
+\begin_layout Description
+table-driven-agents use a percept sequence/action table in memory to find
+ the enxt action.
+ implemented by a large lookup table
+\end_layout
+
+\begin_layout Description
+simple-refelx-agents based on condition-action rules, implemeneted with
+ an appropriate production system.
+ they are steateless devices which do not have memory of past world states.
+\end_layout
+
+\begin_layout Description
+agents-with-memory model-based reflex agents.
+ they have internal state, which is used to keep track of past states of
+ the world
+\end_layout
+
+\begin_layout Description
+agents-with-goals are agents that, in addition to state information, have
+ goal information that describes desirable situations.
+ agents of this kind take future events into consideration
+\end_layout
+
+\begin_layout Description
+utility-based-agents base their decisions on classis axiomatic utility theory
+ in order to act rationally
+\end_layout
+
+\begin_layout Description
+learning-agents they have the ability to improve performance through learning
 \end_layout
 
 \begin_layout Section
