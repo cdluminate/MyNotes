@@ -110,29 +110,29 @@ today
 PEAS Description of Task Environment and Characterization
 \end_layout
 
-\begin_layout Subsection
-Playing Soccer
-\end_layout
+\begin_layout Itemize
 
-\begin_layout Standard
+\series bold
+Playing-Soccer 
+\series default
 Partially observable, stochastic, sequential, dynamic, continuous, multi-agent.
 \end_layout
 
-\begin_layout Subsection
-Knitting a Sweater
-\end_layout
+\begin_layout Itemize
 
-\begin_layout Standard
-Fully observable, deterministic, sequential, static, continuous, single
+\series bold
+Knitting-a-Sweater
+\series default
+ Fully observable, deterministic, sequential, static, continuous, single
  agent.
 \end_layout
 
-\begin_layout Subsection
-Bidding on an item at an Auction
-\end_layout
+\begin_layout Itemize
 
-\begin_layout Standard
-Partially observable, deterministic, sequential, static, discrete, single
+\series bold
+Bidding-on-an-item-at-an-Auction
+\series default
+ Partially observable, deterministic, sequential, static, discrete, single
  agent.
 \end_layout
 
@@ -140,48 +140,48 @@ Partially observable, deterministic, sequential, static, discrete, single
 To What Extent Are They AI Instances
 \end_layout
 
-\begin_layout Subsection
-Supermarket bar code scanners
-\end_layout
+\begin_layout Itemize
 
-\begin_layout Standard
+\series bold
+Supermarket bar code scanners: 
+\series default
 Simple reflex agents.
  It does not need past states.
 \end_layout
 
-\begin_layout Subsection
-Web search engines
-\end_layout
+\begin_layout Itemize
 
-\begin_layout Standard
+\series bold
+Web search engines: 
+\series default
 Agents with goals.
  Search engines maximizes the relevance between returned results and the
  user query.
 \end_layout
 
-\begin_layout Subsection
-Voice-activated telephone menus
-\end_layout
+\begin_layout Itemize
 
-\begin_layout Standard
+\series bold
+Voice-activated telephone menus: 
+\series default
 Agents with memory.
  It has to memorize the owner's voice print.
 \end_layout
 
-\begin_layout Subsection
-Spelling and grammar correction features in word
-\end_layout
+\begin_layout Itemize
 
-\begin_layout Standard
-Table-driven agents.
+\series bold
+Spelling and grammar correction features in word:
+\series default
+ Table-driven agents.
  Spelling and grammar can be dealt with simply tables.
 \end_layout
 
-\begin_layout Subsection
-internet routing algorithms that respond dynamically
-\end_layout
+\begin_layout Itemize
 
-\begin_layout Standard
+\series bold
+Internet routing algorithms that respond dynamically: 
+\series default
 Agents with goals.
  It has to maximize the efficiency of the network routes and robustness.
 \end_layout
