@@ -130,17 +130,134 @@ ity, bias, fairness, privacy.
 LeCun 89 LeNet
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Enumerate
 COMPUTING MACHINERY AND INTELLIGENCE.
  Alan Turing
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Enumerate
 Turing’s Imitation Game: a discussion with the benefit of hind-sight
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Enumerate
 Stuart Russell & Peter Norvig, AI: A Modern Approach
+\end_layout
+
+\begin_layout Subsection
+What is AI
+\end_layout
+
+\begin_layout Standard
+Rational decisions.
+\end_layout
+
+\begin_layout Enumerate
+Rational: maximally achieving pre-defined goals
+\end_layout
+
+\begin_layout Enumerate
+Rationality only concerns what decisions are made, not the thought process
+ behind them
+\end_layout
+
+\begin_layout Enumerate
+goals are expressed in terms of the utility of outcomes
+\end_layout
+
+\begin_layout Enumerate
+being rational means maximizing your expected utility
+\end_layout
+
+\begin_layout Standard
+Brain – good at making rational decisions, but not perfect.
+ Memory and simulation are key to decision making.
+\end_layout
+
+\begin_layout Standard
+Game Agents.
+ (deep blue 1997).
+ Reinforcement learning.
+\end_layout
+
+\begin_layout Standard
+simulated agents.
+ robotics.
+ human-ai interaction.
+ tools for predictions and dicisions.
+ natural language.
+\end_layout
+
+\begin_layout Standard
+Definition of AI.
+ 
+\end_layout
+
+\begin_layout Standard
+AI history.
+\end_layout
+
+\begin_layout Subsection
+Directions in AI
+\end_layout
+
+\begin_layout Standard
+Search: problem solving, game strategies, browsers (search engine)
+\end_layout
+
+\begin_layout Standard
+Language: natural language processing, language understanding
+\end_layout
+
+\begin_layout Standard
+Vision: computer vision.
+\end_layout
+
+\begin_layout Standard
+Expertise: expert systems, recommenders.
+\end_layout
+
+\begin_layout Subsection
+Connectionism
+\end_layout
+
+\begin_layout Standard
+Increasingly dominant.
+\end_layout
+
+\begin_layout Subsection
+Issues with current AI
+\end_layout
+
+\begin_layout Enumerate
+Data Hungry.
+\end_layout
+
+\begin_layout Enumerate
+Black box.
+\end_layout
+
+\begin_layout Enumerate
+Generalizability.
+\end_layout
+
+\begin_layout Enumerate
+Vulnerability.
+\end_layout
+
+\begin_layout Enumerate
+Bias, Fairness.
+\end_layout
+
+\begin_layout Enumerate
+Privacy.
+\end_layout
+
+\begin_layout Enumerate
+Explainability.
+\end_layout
+
+\begin_layout Enumerate
+Going Big?
 \end_layout
 
 \begin_layout Section
