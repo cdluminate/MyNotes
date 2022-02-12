@@ -84,7 +84,7 @@
 \begin_body
 
 \begin_layout Title
-Rama Machine Intelligence 2022 Spring Course Notes
+Rama | Machine Intelligence 2022 Spring Course Notes
 \end_layout
 
 \begin_layout Author
@@ -783,6 +783,21 @@ other variations of A*: (1) beam search.
  to DFS.
  (3) recursive best-first search.
  (4) branch and bound.
+\end_layout
+
+\begin_layout Standard
+most of the work in solving hard search problems optimally is in comuing
+ up with admissible heuristics.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Summary:
+\series default
+ A* uses both backward costs and (esimates of) forward costs.
+ A* is optimal with admissible or consistent heuristics.
+ Heuristic design is the key: ofen use relaxed problems
 \end_layout
 
 \begin_layout Section
