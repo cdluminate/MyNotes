@@ -531,5 +531,97 @@ Prove or Counterexample
 ded DFS.
 \end_layout
 
+\begin_layout Standard
+3.
+ True.
+ A* search considers forward (estinated) cost 
+\begin_inset Formula $h(n)$
+\end_inset
+
+ and backward (cumulative) cost 
+\begin_inset Formula $g(n)$
+\end_inset
+
+ simultaneously.
+ A* degenerates into UCS when only 
+\begin_inset Formula $g(n)$
+\end_inset
+
+ is considered by assigning weight 
+\begin_inset Formula $w=0$
+\end_inset
+
+ to 
+\begin_inset Formula $h(n)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Weighted A Star
+\end_layout
+
+\begin_layout Standard
+Q1.
+ For 
+\begin_inset Formula $w\in[0,2]$
+\end_inset
+
+, this is complete.
+\end_layout
+
+\begin_layout Standard
+Q2.
+ Assumping 
+\begin_inset Formula $h(\cdot)$
+\end_inset
+
+ is admissible, the function becomes optimal with 
+\begin_inset Formula $w=1.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Q3.
+ When 
+\begin_inset Formula $w=0$
+\end_inset
+
+, we have 
+\begin_inset Formula $f(n)=2g(n)$
+\end_inset
+
+, which means the weighted A* degenerates into UCS.
+ When 
+\begin_inset Formula $w=1$
+\end_inset
+
+, we have 
+\begin_inset Formula $f(n)=g(n)+h(n)$
+\end_inset
+
+, which means the weighted A* becomes the standard A*.
+ When 
+\begin_inset Formula $w=2$
+\end_inset
+
+, we have 
+\begin_inset Formula $f(n)=h(n)$
+\end_inset
+
+, which means A* degenerates into greedy best-first search.
+\end_layout
+
+\begin_layout Section
+Invent a Heuristic Function
+\end_layout
+
+\begin_layout Section
+Number of Combinations
+\end_layout
+
 \end_body
 \end_document
