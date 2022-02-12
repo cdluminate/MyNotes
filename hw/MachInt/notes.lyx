@@ -397,6 +397,78 @@ learning-agents they have the ability to improve performance through learning
 Problem Solving by Searching
 \end_layout
 
+\begin_layout Subsection
+running time of an algorithm
+\end_layout
+
+\begin_layout Standard
+The big O notation
+\end_layout
+
+\begin_layout Subsection
+search problem
+\end_layout
+
+\begin_layout Standard
+A search problem consists of (1) a state space; (2) a successor function;
+ (3) a start state and a goal test;
+\end_layout
+
+\begin_layout Standard
+A solution is a sequence of actions (a plan) which transforms the start
+ state to a goal state.
+\end_layout
+
+\begin_layout Standard
+example: the 8-puzzle 
+\begin_inset Quotes eld
+\end_inset
+
+sliding tile puzzle
+\begin_inset Quotes erd
+\end_inset
+
+, TSP, VLSI layout, robot navigation, protein design, etc.
+\end_layout
+
+\begin_layout Subsection
+state space graph and search tree
+\end_layout
+
+\begin_layout Standard
+each state only occurs once in graph.
+\end_layout
+
+\begin_layout Standard
+general tree search algorithm.
+ imoprtant aspects: fringe, expansion, exploration strategy.
+\end_layout
+
+\begin_layout Standard
+depth-first search.
+ DFS
+\end_layout
+
+\begin_layout Standard
+breadth-first search.
+ BFS
+\end_layout
+
+\begin_layout Standard
+cost sensitive search.
+ uniform cost search (UCS)
+\end_layout
+
+\begin_layout Standard
+search heuristic: a function that estimates how close a state is to a goal
+\end_layout
+
+\begin_layout Standard
+iterative deepening search.
+ (IDS) is the perferred uniformed search method when there is a large search
+ space and the depth of the solution is not known.
+\end_layout
+
 \begin_layout Section
 Adversarial search and games
 \end_layout
