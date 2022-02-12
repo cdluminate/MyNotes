@@ -454,6 +454,62 @@ Because people's intuition does not follow the clearly defined mathematical
 True or False
 \end_layout
 
+\begin_layout Itemize
+a.
+ True.
+ With an admissible heuristic, A* is optimal.
+ In that case, DFS will always expands more nodes than A* does.
+\end_layout
+
+\begin_layout Itemize
+b.
+ True.
+ 
+\begin_inset Formula $h(n)=0\leq h^{*}(n)$
+\end_inset
+
+, which satisfies the definition of admissible heuristics.
+ In this case A* only relies on 
+\begin_inset Formula $g(n)$
+\end_inset
+
+, namely the cumulative cost from the start to node 
+\begin_inset Formula $n$
+\end_inset
+
+, and the algorithm degenerates into UCS.
+\end_layout
+
+\begin_layout Itemize
+c.
+ False.
+ A* can be still useful when problems are appropriately transformed (or
+ approximiated) into discrete form.
+\end_layout
+
+\begin_layout Itemize
+d.
+ True.
+ BFS will not be trapped in loops like DFS does.
+\end_layout
+
+\begin_layout Itemize
+e.
+ True.
+ Manhattan distance in this case is the shortest distance between square
+ A and square B ignoring the obstacles.
+ Hence, Manhattan distance is the lower bound of the true cost 
+\begin_inset Formula $h^{*}(n)$
+\end_inset
+
+.
+ Namely, we have 
+\begin_inset Formula $h(n)\leq h^{*}(n)$
+\end_inset
+
+, which means Manhattan distance is admissible.
+\end_layout
+
 \begin_layout Section
 Prove or Counterexample
 \end_layout
