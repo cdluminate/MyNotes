@@ -454,5 +454,26 @@ Because people's intuition does not follow the clearly defined mathematical
 True or False
 \end_layout
 
+\begin_layout Section
+Prove or Counterexample
+\end_layout
+
+\begin_layout Standard
+1.
+ True.
+ BFS is a special case of UCS.
+ Because when the costs for every node is the same, UCS degenerates into
+ BFS.
+ In this case, the cost contour exactly matches BFS's searching tier-by-tier
+ order.
+\end_layout
+
+\begin_layout Standard
+2.
+ True.
+ In the worst case, best-first (greedy) tree search degenerates into a badly-gui
+ded DFS.
+\end_layout
+
 \end_body
 \end_document

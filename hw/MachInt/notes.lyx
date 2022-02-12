@@ -513,6 +513,15 @@ iterative deepening search.
  get DFS's space advantage with BFS's time/shallow-solution advantages.
  Run DFS with depth limit 1, if no solution run DFS w/ depth limit 2, and
  so on.
+ time 
+\begin_inset Formula $O(b^{d})$
+\end_inset
+
+, space 
+\begin_inset Formula $O(bd)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -527,12 +536,42 @@ uniform cost search (UCS)
 \end_layout
 
 \begin_layout Standard
-search heuristic: a function that estimates how close a state is to a goal.
+
+\series bold
+search heuristic
+\series default
+: a function that estimates how close a state is to a goal.
+ specific to particular search problem.
 \end_layout
 
 \begin_layout Standard
-Greedy search: expand a node that you think is closest to a goal state.
+
+\series bold
+Greedy best-first search:
+\series default
+ expand a node that you think is closest to a goal state.
+ best-first may take you straght to the wrong goal.
  May easily fall into local optimum.
+ evaluates heuristic function at node 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ GBF search expands the node that appears to have shortest path to goal,
+ with a hope that these nodes may lead to solution quickly.
+ This is similar to DFS, which prefers to follow a single path to goal (guided
+ by the heuristic).
+ It is not complete (may fall in loops).
+ Time 
+\begin_inset Formula $O(b^{m})$
+\end_inset
+
+, Space 
+\begin_inset Formula $O(b^{m})$
+\end_inset
+
+.
+ not optimal
 \end_layout
 
 \begin_layout Standard
@@ -635,6 +674,10 @@ general tree search
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+A* (a star) search
 \end_layout
 
 \begin_layout Section
