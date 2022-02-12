@@ -680,6 +680,111 @@ general tree search
 A* (a star) search
 \end_layout
 
+\begin_layout Standard
+idea: avoid expanding paths that are already expensive.
+ Specifically, evluate function 
+\begin_inset Formula $f(n)=g(n)+h(n)$
+\end_inset
+
+ at node 
+\begin_inset Formula $n$
+\end_inset
+
+, where 
+\begin_inset Formula $g(n)$
+\end_inset
+
+ is the cumulative cost to reach 
+\begin_inset Formula $n$
+\end_inset
+
+, 
+\begin_inset Formula $h(n)$
+\end_inset
+
+ is the heuristic (estimated cost) from 
+\begin_inset Formula $n$
+\end_inset
+
+ to goal, 
+\begin_inset Formula $f(\cdot)$
+\end_inset
+
+ is the total cost.
+\end_layout
+
+\begin_layout Standard
+It is combination of UCS (backward cost 
+\begin_inset Formula $g(n)$
+\end_inset
+
+) and Greedy (forward cost 
+\begin_inset Formula $h(n)$
+\end_inset
+
+).
+ A star combines both.
+\end_layout
+
+\begin_layout Standard
+Under some reasonable conditions for the heuristics, A* is complete and
+ optimal.
+\end_layout
+
+\begin_layout Standard
+Widely used in e.g.
+ google maps.
+\end_layout
+
+\begin_layout Standard
+heuristics admissibility: 
+\begin_inset Formula $h(n)\leq h^{*}(n)$
+\end_inset
+
+, the heuristics is always less or equal to the true cost.
+\end_layout
+
+\begin_layout Standard
+heuristic consistency: 
+\begin_inset Formula $f(n)$
+\end_inset
+
+ non-decreasing along any path.
+ this is a stronger condition than admissibility.
+ A consistent heuristic is also admissible.
+\end_layout
+
+\begin_layout Standard
+We can use weighted A* search with 
+\begin_inset Formula $f(n)=g(n)+wh(n)$
+\end_inset
+
+ where 
+\begin_inset Formula $1<w<\infty$
+\end_inset
+
+.
+ A* degenerates into uniform cost with 
+\begin_inset Formula $w=0$
+\end_inset
+
+, or greedy best-first with 
+\begin_inset Formula $w\rightarrow\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+other variations of A*: (1) beam search.
+ keeps only the k nodes with the best f-scores discarding any other expanded
+ nodes.
+ (2) iterative deepening A* search similar to iterative deepening search
+ to DFS.
+ (3) recursive best-first search.
+ (4) branch and bound.
+\end_layout
+
 \begin_layout Section
 Adversarial search and games
 \end_layout
