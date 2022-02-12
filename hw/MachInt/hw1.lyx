@@ -410,12 +410,48 @@ M
 .
 \end_layout
 
+\begin_layout Standard
+\begin_inset Graphics
+	filename drawing1.svg
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The complete state space is shown in the diagram above.
+\end_layout
+
 \begin_layout Subsection
 b
 \end_layout
 
+\begin_layout Standard
+Actually by listing the whole state space using BFS, the solution is derived
+ meanwhile, because there are always one valid choice for each step after
+ removing the options that leads to invalid state or loops.
+ So the solution is shown in the diagram above.
+\end_layout
+
+\begin_layout Standard
+It is indeed a good idea to check for repeated states in order to avoid
+ loops when searching for the path.
+\end_layout
+
 \begin_layout Subsection
 c
+\end_layout
+
+\begin_layout Standard
+Because people's intuition does not follow the clearly defined mathematical
+ notations.
+ Besides, there involves loops during the search process.
+\end_layout
+
+\begin_layout Section
+True or False
 \end_layout
 
 \end_body
