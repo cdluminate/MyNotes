@@ -8,7 +8,8 @@
 \begin_preamble
 \usepackage{microtype}
 \usepackage[margin=1in]{geometry}
-\usepackage{gentium}
+%\usepackage{gentium}
+\usepackage{times}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -445,28 +446,195 @@ general tree search algorithm.
 \end_layout
 
 \begin_layout Standard
+
+\series bold
 depth-first search.
  DFS
+\series default
+.
+ strategy: expand a deepest node first.
+ implementation: fringe is a LIFO stack.
+ branching factor 
+\begin_inset Formula $b$
+\end_inset
+
+, maximum depth 
+\begin_inset Formula $m$
+\end_inset
+
+, the number of nodes in the entire tree is 
+\begin_inset Formula $O(b^{m})$
+\end_inset
+
+.
+ It takes time 
+\begin_inset Formula $O(b^{m})$
+\end_inset
+
+, space of fringe 
+\begin_inset Formula $O(bm)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
+
+\series bold
 breadth-first search.
- BFS
+ BFS.
+ 
+\series default
+strategy: expand a shallowest node frist.
+ implementation: fringe is a FIFO queue.
+ shallowest solution depth 
+\begin_inset Formula $s$
+\end_inset
+
+, it takes time 
+\begin_inset Formula $O(b^{s})$
+\end_inset
+
+, fringe takes space 
+\begin_inset Formula $O(b^{s})$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-cost sensitive search.
- uniform cost search (UCS)
-\end_layout
 
-\begin_layout Standard
-search heuristic: a function that estimates how close a state is to a goal
-\end_layout
-
-\begin_layout Standard
+\series bold
 iterative deepening search.
- (IDS) is the perferred uniformed search method when there is a large search
- space and the depth of the solution is not known.
+ (IDS)
+\series default
+ is the perferred uniformed search method when there is a large search space
+ and the depth of the solution is not known.
+ get DFS's space advantage with BFS's time/shallow-solution advantages.
+ Run DFS with depth limit 1, if no solution run DFS w/ depth limit 2, and
+ so on.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+uniform cost search (UCS)
+\series default
+.
+ strategy expand a cheapest node first.
+ implementation: fringe is a priority queue (priority: cumulative cost).
+ This is optimal according to A*.
+\end_layout
+
+\begin_layout Standard
+search heuristic: a function that estimates how close a state is to a goal.
+\end_layout
+
+\begin_layout Standard
+Greedy search: expand a node that you think is closest to a goal state.
+ May easily fall into local optimum.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+fun tree-search(problem, strategy) returns solution, or failure
+\end_layout
+
+\begin_layout Plain Layout
+
+	init search tree using initial state of $problem
+\end_layout
+
+\begin_layout Plain Layout
+
+	loop
+\end_layout
+
+\begin_layout Plain Layout
+
+		if there are no candidates for expansion; then
+\end_layout
+
+\begin_layout Plain Layout
+
+			return failure
+\end_layout
+
+\begin_layout Plain Layout
+
+		endif
+\end_layout
+
+\begin_layout Plain Layout
+
+		choose a leaf node for expansion according to $strategy
+\end_layout
+
+\begin_layout Plain Layout
+
+		if the node contains a goal state; then
+\end_layout
+
+\begin_layout Plain Layout
+
+			return corresponding solution
+\end_layout
+
+\begin_layout Plain Layout
+
+		else
+\end_layout
+
+\begin_layout Plain Layout
+
+			expand node and add resulting nodes to search tree
+\end_layout
+
+\begin_layout Plain Layout
+
+		endif
+\end_layout
+
+\begin_layout Plain Layout
+
+	end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+general tree search
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
