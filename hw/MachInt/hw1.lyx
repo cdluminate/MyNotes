@@ -73,6 +73,7 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\listings_params "basicstyle={\ttfamily}"
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -621,6 +622,205 @@ Invent a Heuristic Function
 
 \begin_layout Section
 Number of Combinations
+\end_layout
+
+\begin_layout Standard
+The exact number of possible combinations is 
+\begin_inset Formula $518,918,400$
+\end_inset
+
+, as calculated using a python program shown in Algorithm 1.
+\end_layout
+
+\begin_layout Standard
+First, if we ignore the order of objects stacked at any position, we have
+ 
+\begin_inset Formula $9^{8}$
+\end_inset
+
+ possible cases from 
+\begin_inset Formula $(0,0,0,0,0,0,0,0)$
+\end_inset
+
+ to 
+\begin_inset Formula $(8,8,8,8,8,8,8,8)$
+\end_inset
+
+, where each of the 8 numbers indicates the location 
+\begin_inset Formula $(\in\{0,...,8\})$
+\end_inset
+
+ of the corresponding object.
+ Hence, in Algorithm 1, we start from traversing through these cases using
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|it.product(...)|
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For each case, we have 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|locs|
+\end_layout
+
+\end_inset
+
+ as the 
+\begin_inset Formula $8$
+\end_inset
+
+-element location vector, based on which we can calculate possible cases
+ of arrangements.
+ The 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|Counter|
+\end_layout
+
+\end_inset
+
+ class calculates the number of objects occurred in the same place, and
+ the product of the factorials of the tallies will be the total possible
+ cases based on the single branch of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|it.product(...)|
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Using PyPy3 (python with JIT), this program can give us the results within
+ several seconds despite of the time complexity.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+import math
+\end_layout
+
+\begin_layout Plain Layout
+
+import operator as op
+\end_layout
+
+\begin_layout Plain Layout
+
+import functools as ft
+\end_layout
+
+\begin_layout Plain Layout
+
+import itertools as it
+\end_layout
+
+\begin_layout Plain Layout
+
+import collections
+\end_layout
+
+\begin_layout Plain Layout
+
+OBJS=8
+\end_layout
+
+\begin_layout Plain Layout
+
+LOCS=9
+\end_layout
+
+\begin_layout Plain Layout
+
+total=0
+\end_layout
+
+\begin_layout Plain Layout
+
+for locs in it.product(range(LOCS), repeat=OBJS):
+\end_layout
+
+\begin_layout Plain Layout
+
+    c = collections.Counter(locs)
+\end_layout
+
+\begin_layout Plain Layout
+
+    total += ft.reduce(op.mul, (math.factorial(x) for x in c.values()))
+\end_layout
+
+\begin_layout Plain Layout
+
+print(total)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Python Code for Question 9.
+ Run with PyPy3 instead of cpython for speed up.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
