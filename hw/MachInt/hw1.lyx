@@ -620,6 +620,31 @@ Q3.
 Invent a Heuristic Function
 \end_layout
 
+\begin_layout Standard
+Recall that an admissible heuristic 
+\begin_inset Formula $h(n)$
+\end_inset
+
+ should be always 
+\begin_inset Formula $\leq h^{*}(n)$
+\end_inset
+
+.
+ Thus, a non-admissible heuristic 
+\begin_inset Formula $h^{\#}(n)$
+\end_inset
+
+ that 
+\begin_inset Quotes eld
+\end_inset
+
+sometimes overestimates
+\begin_inset Quotes erd
+\end_inset
+
+ can be designed based on an admissible heuristic.
+\end_layout
+
 \begin_layout Section
 Number of Combinations
 \end_layout
