@@ -750,7 +750,86 @@ From the question we know that
 \end_inset
 
  sometimes overestimates.
+ Since A* evaluates both the forward (heuristic) cost 
+\begin_inset Formula $h(n)$
+\end_inset
+
+ and backward (cumulative) cost 
+\begin_inset Formula $g(n)$
+\end_inset
+
+ at every node 
+\begin_inset Formula $n$
+\end_inset
+
+ as 
+\begin_inset Formula $f(n)=h(n)+g(n)$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{align*}
+f(n)= & h(n)+g(n)\\
+\leq & h^{*}(n)+g(n)+c
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The backward (cumulative) cost is the summation of the true cost 
+\begin_inset Formula $h^{*}(\cdot)$
+\end_inset
+
+ of the previous nodes long the path to 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $\hat{n}$
+\end_inset
+
+ is a node along the path towards the optimal solution.
+ When the heristic gives us the worst estimate as 
+\begin_inset Formula $h(\hat{n})=h^{*}(\hat{n})+c$
+\end_inset
+
+ along the path towards the optimal solution, the greedy nature of A* means
+ it will select another sub-optinal path containing node 
+\begin_inset Formula $n$
+\end_inset
+
+ because 
+\begin_inset Formula $h(n)<h(\hat{n})+c$
+\end_inset
+
+.
+ However, once the cumulative cost 
+\begin_inset Formula $g(n)$
+\end_inset
+
+ is larger than the optimal cost by 
+\begin_inset Formula $c$
+\end_inset
+
+, namely 
+\begin_inset Formula $g(n)>h^{*}(\hat{n})+c$
+\end_inset
+
+, the algorithm will fall back to expand the the path from 
+\begin_inset Formula $\hat{n}$
+\end_inset
+
+.
+ Thus, the excessive cost will be always controled to be less or equal to
  
+\begin_inset Formula $c$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
