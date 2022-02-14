@@ -643,6 +643,114 @@ sometimes overestimates
 \end_inset
 
  can be designed based on an admissible heuristic.
+ A typical admissible heuristic is the Manhattan distance (summary of Manhattan
+ distances to the goal state of each element in the matrix).
+ In case of Manhattan distance, the maximum value of distance will not exceed
+ 8 times of the maximum Manhattan of a single element, namely 
+\begin_inset Formula $8\times4=32$
+\end_inset
+
+.
+ Thus, a intuitive way to make the heuristic 
+\begin_inset Quotes eld
+\end_inset
+
+sometimes overestimate
+\begin_inset Quotes erd
+\end_inset
+
+ is to add a random number within 
+\begin_inset Formula $[0,32]$
+\end_inset
+
+ based on the Manhattan distance.
+ Thus, sometimes overestimation could happen because 
+\begin_inset Formula $h^{*}(n)<32$
+\end_inset
+
+, i.e., we design the following heuristic function, 
+\begin_inset Formula 
+\[
+h^{\#}(n)=\text{Manhattan}(n)+\text{Random}_{[0,32]}().
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Proposition 1: This function sometimes lead to suboptimal solutions.
+
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+For example, there are three nodes A, B, C to expand, and the ground-truth
+ optimal path includes A.
+ When the evaluation of 
+\begin_inset Formula $h(A)=\text{Manhattan}(n)+32$
+\end_inset
+
+, namely a very large random number is sampled and 
+\begin_inset Formula $h(A)>h(B)$
+\end_inset
+
+, 
+\begin_inset Formula $h(A)>h(C)$
+\end_inset
+
+, the A* algorithm will turn to sub-optimal choices B or C according to
+ 
+\begin_inset Formula $h(B)$
+\end_inset
+
+ and 
+\begin_inset Formula $h(C)$
+\end_inset
+
+ based on its greedy nature.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Proposition 2: If 
+\begin_inset Formula $h(n)$
+\end_inset
+
+ never overestimates by more than 
+\begin_inset Formula $c$
+\end_inset
+
+, A* using 
+\begin_inset Formula $h(\cdot)$
+\end_inset
+
+ returns a solution whose cost exceeds that of the optimal solution by no
+ more than 
+\begin_inset Formula $c$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+From the question we know that 
+\begin_inset Formula $h(n)\leq h^{*}(n)+c$
+\end_inset
+
+ even if 
+\begin_inset Formula $h(n)$
+\end_inset
+
+ sometimes overestimates.
+ 
 \end_layout
 
 \begin_layout Section
