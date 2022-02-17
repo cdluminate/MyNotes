@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="81" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="82" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1642395333050">
 <edge COLOR="#00ffff"/>
 <node TEXT="what&apos;s this" ID="ID_34209772" CREATED="1641520840738" MODIFIED="1641520995587">
@@ -339,7 +339,7 @@
 </node>
 <node TEXT="Simulated adversarial testing of face recognition models" ID="ID_1458951372" CREATED="1642429229718" MODIFIED="1642429249738">
 <icon BUILTIN="pencil"/>
-<node TEXT="cihang, alan y" ID="ID_1913955946" CREATED="1642429240276" MODIFIED="1642429245178"/>
+<node TEXT="cihang, Alan Yuille" ID="ID_1913955946" CREATED="1642429240276" MODIFIED="1645107632871"/>
 <node TEXT="difference" ID="ID_465366439" CREATED="1642430507464" MODIFIED="1642430509506">
 <node TEXT="find the region of adversarial latent vector, instead of find merely one isolated adversarial latent vector" ID="ID_512231452" CREATED="1642430511694" MODIFIED="1642430566964"/>
 </node>
@@ -355,6 +355,16 @@
 <node TEXT="can this be used in adv def for face?" ID="ID_1655776817" CREATED="1642430586222" MODIFIED="1642430601307">
 <icon BUILTIN="help"/>
 </node>
+</node>
+<node TEXT="Towards Assessing and Characterizing the Semantic&#xa;Robustness of Face Recognition" ID="ID_883936286" CREATED="1645109210847" MODIFIED="1645109221519">
+<icon BUILTIN="pencil"/>
+<node TEXT="insufficient evaluation but should read" ID="ID_1755819921" CREATED="1645109222870" MODIFIED="1645109231608"/>
+<node TEXT="find identity-preserving variants of the face such that an FRM fails to recognize the images beloning to the same identity" ID="ID_1953905907" CREATED="1645110345005" MODIFIED="1645110368636">
+<node TEXT="direction and magnitude constrained perturbations in the latent space of stylegan" ID="ID_1745093670" CREATED="1645110399067" MODIFIED="1645110411795"/>
+</node>
+<node TEXT="characterize semantic robustness of an FTM" ID="ID_860864962" CREATED="1645110413123" MODIFIED="1645110426406"/>
+<node TEXT="combine with certification technique" ID="ID_1167140711" CREATED="1645110426782" MODIFIED="1645110663756"/>
+<node TEXT="does not provide a clear defense method" ID="ID_796969338" CREATED="1645110665095" MODIFIED="1645110670209"/>
 </node>
 </node>
 <node TEXT="Object Det" ID="ID_601426743" CREATED="1642440732047" MODIFIED="1642965657103">
@@ -374,6 +384,13 @@
 </html>
 </richcontent>
 <node TEXT="WACV22" ID="ID_953336901" CREATED="1642440751686" MODIFIED="1642440753515"/>
+</node>
+<node TEXT="Adversarial Attack and Defense of YOLO Detectors&#xa;in Autonomous Driving Scenarios" ID="ID_1277005384" CREATED="1645107484732" MODIFIED="1645107492888">
+<icon BUILTIN="pencil"/>
+<node TEXT="most of existing works use classification or localization loss, ignoring the objectiveness part" ID="ID_589021392" CREATED="1645107514735" MODIFIED="1645107541606"/>
+<node TEXT="objectness vulnerability" ID="ID_1207230656" CREATED="1645107584853" MODIFIED="1645107591319"/>
+<node TEXT="objectness-aware defense method" ID="ID_241119548" CREATED="1645107591525" MODIFIED="1645107598028"/>
+<node TEXT="this paper is shallow. we should be able to do more" ID="ID_1122816208" CREATED="1645107543802" MODIFIED="1645107608352"/>
 </node>
 </node>
 <node TEXT="Trajectory Prediction" ID="ID_1501279328" CREATED="1642953386986" MODIFIED="1642965658792">
@@ -440,6 +457,14 @@
 <icon BUILTIN="pencil"/>
 <node TEXT="via image transformations" ID="ID_1033635622" CREATED="1641523928903" MODIFIED="1641523932870"/>
 <node TEXT="this paper creates ensemble of transformations" ID="ID_446066363" CREATED="1641523933774" MODIFIED="1641523943924"/>
+</node>
+<node TEXT="Adversarial Detection without Model Information" ID="ID_1367926726" CREATED="1645108452079" MODIFIED="1645108457127">
+<icon BUILTIN="pencil"/>
+<node TEXT="attack detection that assumes model unavailable" ID="ID_854336755" CREATED="1645108496480" MODIFIED="1645108529519">
+<icon BUILTIN="clanbomber"/>
+</node>
+<node TEXT="standalone detector independent of the underlying model" ID="ID_1195494420" CREATED="1645108458713" MODIFIED="1645108481695"/>
+<node TEXT="energy distribution=based adversarial deteciton" ID="ID_1662739452" CREATED="1645108807054" MODIFIED="1645108816218"/>
 </node>
 </node>
 <node TEXT="Adversarial Training" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1641743568907">
@@ -675,7 +700,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Classification" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_98760508" CREATED="1642438760894" MODIFIED="1642438768351">
+<node TEXT="Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_98760508" CREATED="1642438760894" MODIFIED="1642438768351">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Convolutional" ID="ID_1179702035" CREATED="1642438769906" MODIFIED="1642953059318">
 <font BOLD="true"/>
@@ -4261,6 +4286,13 @@
 <node TEXT="2012.09036&#xa;Improved StyleGAN Embedding: Where are the Good Latents?" ID="ID_1195062919" CREATED="1608879346483" MODIFIED="1608879350891"/>
 <node TEXT="2103.03243 Anycost GANs for Interactive Image Synthesis and Editing (cvpr21)" ID="ID_1065575004" CREATED="1615296747093" MODIFIED="1615296755894">
 <node TEXT="elastic resolution + computation reduction" ID="ID_1366331350" CREATED="1615296878773" MODIFIED="1615296919734"/>
+</node>
+</node>
+<node TEXT="Diffusion Models" POSITION="left" ID="ID_543295574" CREATED="1645111157251" MODIFIED="1645111160424">
+<edge COLOR="#00ffff"/>
+<node TEXT="https://lilianweng.github.io/lil-log/2021/07/11/diffusion-models.html" ID="ID_626991727" CREATED="1645111188223" MODIFIED="1645111188223" LINK="https://lilianweng.github.io/lil-log/2021/07/11/diffusion-models.html"/>
+<node TEXT="Diffusion Models Beat GANs on Image Synthesis" ID="ID_1871658132" CREATED="1645111161757" MODIFIED="1645111172504">
+<icon BUILTIN="pencil"/>
 </node>
 </node>
 <node TEXT="Image Translation" FOLDED="true" POSITION="left" ID="ID_357087353" CREATED="1578730821872" MODIFIED="1642394370987">
