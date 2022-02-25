@@ -600,5 +600,194 @@ What are super-pixels? Briefly describe the SLIC algorithm.
  What are the advantages of representing an image in terms of super-pixels?
 \end_layout
 
+\begin_layout Section
+Lecture 5
+\end_layout
+
+\begin_layout Subsection
+Q1
+\end_layout
+
+\begin_layout Standard
+What is the Mumford and Shah model for image segmentation?
+\end_layout
+
+\begin_layout Subsection
+Q2
+\end_layout
+
+\begin_layout Standard
+What is convexity? What is the steepest descent algorithm? Why is convexity
+ important for steepest descent?
+\end_layout
+
+\begin_layout Subsection
+Q3
+\end_layout
+
+\begin_layout Standard
+What is the Rudin-Osher-Fatemi, or total variation, model? Why is it more
+ practically useful than the weak membrane model? Why is it less effective
+ than dictionary methods for denoising images?
+\end_layout
+
+\begin_layout Subsection
+Q4
+\end_layout
+
+\begin_layout Standard
+What is variational bounding and CCCP? How do they compare to steepest descent?
+ How do they guarantee that each iteration decreases the cost?
+\end_layout
+
+\begin_layout Subsection
+Q5
+\end_layout
+
+\begin_layout Standard
+What forms do the histograms of derivative operators of images normally
+ take?
+\end_layout
+
+\begin_layout Section
+Lecture 6
+\end_layout
+
+\begin_layout Subsection
+Q1
+\end_layout
+
+\begin_layout Standard
+Briefly describe statistical edge detection.
+ What cues are used for detecting edges?
+\end_layout
+
+\begin_layout Subsection
+Q2
+\end_layout
+
+\begin_layout Standard
+How is this formulated as a classification learning task using groundtruth
+ data? What image features can be used?
+\end_layout
+
+\begin_layout Subsection
+Q3
+\end_layout
+
+\begin_layout Standard
+What is the log-likelihood tests? What happens if the image feature is a
+ single cue like the derivative of the image intensity?
+\end_layout
+
+\begin_layout Subsection
+Q4
+\end_layout
+
+\begin_layout Standard
+Why is a statistical approach useful if edge detection requires using multiple
+ cues?
+\end_layout
+
+\begin_layout Subsection
+Q5
+\end_layout
+
+\begin_layout Standard
+How does this relate to Bayes Decision Theory? Which is worse for edge detection
+, false positives or false negatives? How do the prior and loss function
+ contribute to the threshold?
+\end_layout
+
+\begin_layout Subsection
+Q6
+\end_layout
+
+\begin_layout Standard
+Give an example of another visual task that can the same approach be applied
+ to?
+\end_layout
+
+\begin_layout Section
+Lecture 7
+\end_layout
+
+\begin_layout Subsection
+Q1
+\end_layout
+
+\begin_layout Standard
+How does regression relate to decision theory?
+\end_layout
+
+\begin_layout Subsection
+Q2
+\end_layout
+
+\begin_layout Standard
+What is binary, or logistic, regression? How can this be be learnt from
+ data? Does this require solving a convex or non-convex optimization problem?
+ What algorithms can be used to solve it?
+\end_layout
+
+\begin_layout Subsection
+Q3
+\end_layout
+
+\begin_layout Standard
+How does logistic regression relate to multi-level perceptrons and deep
+ networks? What are the main similarities and the biggest differences?
+\end_layout
+
+\begin_layout Section
+Lecture 8
+\end_layout
+
+\begin_layout Subsection
+Q1
+\end_layout
+
+\begin_layout Standard
+Explain how the output of a deep network can be expressed as a composition
+ of operations at different layers.
+\end_layout
+
+\begin_layout Subsection
+Q2
+\end_layout
+
+\begin_layout Standard
+What is the loss function? Is it usually a convex or concave function? Can
+ the loss function contain terms at different levels of the hierarchy?
+\end_layout
+
+\begin_layout Subsection
+Q3
+\end_layout
+
+\begin_layout Standard
+Why is it important the outputs are differentiable functions of the weights.
+ What is steepest descent? What is stochastic gradient descent? Explain
+ how the derivatives with respect to the weights can be computed by backpropagat
+ion.
+\end_layout
+
+\begin_layout Subsection
+Q4
+\end_layout
+
+\begin_layout Standard
+What are convolutional layers? What is pooling? What are the advantages
+ of ReLU as compared to sigmoid functions for the non-linearities?
+\end_layout
+
+\begin_layout Subsection
+Q5
+\end_layout
+
+\begin_layout Standard
+Give three examples of different types of deep networks.
+\end_layout
+
 \end_body
 \end_document
