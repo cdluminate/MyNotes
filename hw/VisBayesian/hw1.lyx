@@ -261,8 +261,111 @@ Since Images are shift-invariant, namely
 Q4
 \end_layout
 
+\begin_layout Standard
+
+\bar under
+How can we represent images in terms of a linear combination of over-complete
+ basis functions by imposing a sparsity constraint?
+\end_layout
+
+\begin_layout Standard
+We impose L-1 sparsity on the optimization problem for finding the coefficients:
+\begin_inset Formula 
+\[
+E[\bm{a}]=\sum_{x}\Big\{ I(x)-\sum_{i}a_{i}b_{i}(x)\Big\}^{2}+\lambda\sum_{i}\big|a_{i}\big|
+\]
+
+\end_inset
+
+Then the solution is 
+\begin_inset Formula $\hat{\bm{a}}=\arg\min E[\bm{a}]$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsection
 Q5
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+What is the miracle of sparsity? Describe L1 sparsity and show, for a simple
+ example, how it results in a sparse representation.
+\end_layout
+
+\begin_layout Standard
+Consider encoding an input 
+\begin_inset Formula $y$
+\end_inset
+
+ given 
+\begin_inset Formula $2N$
+\end_inset
+
+ bases functions 
+\begin_inset Formula $\{\bar{b}_{i}\}$
+\end_inset
+
+ with minimum 
+\begin_inset Formula $a=\sum_{i}\bar{a}_{i}$
+\end_inset
+
+, the set
+\begin_inset Formula 
+\[
+\{y:\|y-\sum_{i}\bar{a}_{i}\bar{b}_{i}\|\quad s.t.\ \sum_{i}\bar{a}_{i}=a\}
+\]
+
+\end_inset
+
+specifies the convex hull of the bases with radius 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ Then, for an input data 
+\begin_inset Formula $y$
+\end_inset
+
+ where 
+\begin_inset Formula $|y|=1$
+\end_inset
+
+, solving for 
+\begin_inset Formula $\bar{a}_{i}$
+\end_inset
+
+ corresponds to finding the closest point 
+\begin_inset Formula $y_{p}$
+\end_inset
+
+ on the convex hull.
+ When sparsity is enforced, the radius 
+\begin_inset Formula $a$
+\end_inset
+
+ of the convex hull will also be penalized.
+ Hence, 
+\begin_inset Formula $y$
+\end_inset
+
+ is projected to a point 
+\begin_inset Formula $y_{p}$
+\end_inset
+
+ on the boundary of the convex hull.
+\end_layout
+
+\begin_layout Standard
+With an increasing 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, the penalty for the radius of the convex hull also increases, and hence
+ causing the radius to get smaller.
+ In this case, more bases will have zero coefficients.
 \end_layout
 
 \begin_layout Subsection
