@@ -372,5 +372,132 @@ With an increasing
 Q6
 \end_layout
 
+\begin_layout Standard
+
+\bar under
+Discuss the relative advantages of Principal Component Analysis and Sparse
+ Coding for face recognition.
+\end_layout
+
+\begin_layout Standard
+In case of face recognition, faces can be aligned to remove shift-invariance,
+ and the PCA bases will not be sinusoids.
+ PCA is also fast and accurate.
+\end_layout
+
+\begin_layout Standard
+Sparse Coding requires less space to store the representation of images.
+\end_layout
+
+\begin_layout Section
+Lecture 3
+\end_layout
+
+\begin_layout Subsection
+Q1
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+What is the k-means algorithm? What are the means, the assignment variable,
+ and k? What are its convergence properties? What are the advantages of
+ k-means++?
+\end_layout
+
+\begin_layout Standard
+K-means algorithm represents each image by one basis function only.
+ In other words, K-means algorithm finds the centers of clusters in the
+ given image dataset.
+\end_layout
+
+\begin_layout Standard
+The means are the centers of clusters.
+ The assignment variable is the cluster index assignments for the data.
+ The 
+\begin_inset Formula $k$
+\end_inset
+
+ is a hyper-parameter specifying the number of clusters.
+\end_layout
+
+\begin_layout Standard
+According to 
+\begin_inset Quotes eld
+\end_inset
+
+Convergence Properties of the K-Means Algorithms
+\begin_inset Quotes erd
+\end_inset
+
+ of Yoshua Bengio, K-means algorithm can be described either as a gradient
+ descent algorithm or by slightly extending the mathematics of the EM algorithm
+ to this hard threshold case.
+ K-means algorithm actually minimizes the quantization error using the very
+ fast newton algorithm.
+\end_layout
+
+\begin_layout Standard
+K-means++ can avoid some poor clusterings found by the standard K-means
+ algorithm.
+\end_layout
+
+\begin_layout Subsection
+Q2
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+How can k-means be used to learn a set of dictionary elements for image
+ patches?
+\end_layout
+
+\begin_layout Standard
+Mini-Epitomes, as an extended K-means algorithm can be used to learn dictionary
+ for image patches.
+ The steps are as follows:
+\end_layout
+
+\begin_layout Enumerate
+Select mini-epitome 
+\begin_inset Formula $k$
+\end_inset
+
+ with probability 
+\begin_inset Formula $P(l_{i}=k)=\pi_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Select position 
+\begin_inset Formula $p$
+\end_inset
+
+ within epitome uniformly.
+\end_layout
+
+\begin_layout Enumerate
+Generate the patch 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ as 
+\begin_inset Formula $P(x_{i}|l_{i},p_{i})=\mathcal{N}(x_{i};\alpha_{i}T_{p_{i}}\mu_{l_{i}},\sigma^{2}I)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Q3
+\end_layout
+
+\begin_layout Subsection
+Q4
+\end_layout
+
 \end_body
 \end_document
