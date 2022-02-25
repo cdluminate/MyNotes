@@ -687,7 +687,65 @@ Q1
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 What is the Mumford and Shah model for image segmentation?
+\end_layout
+
+\begin_layout Standard
+Mumford and Shah formulated the image segmentation of a domain 
+\begin_inset Formula $D$
+\end_inset
+
+ as the minimization of a functional 
+\begin_inset Formula $E[J,B]$
+\end_inset
+
+.
+ The input 
+\begin_inset Formula $I$
+\end_inset
+
+ is an image.
+ The output 
+\begin_inset Formula $(\hat{J},\hat{B})=\arg\min E[J,B]$
+\end_inset
+
+ is a smoothed image 
+\begin_inset Formula $\hat{J}$
+\end_inset
+
+ and the position 
+\begin_inset Formula $\hat{B}$
+\end_inset
+
+ of the boundaries that separates 
+\begin_inset Formula $D$
+\end_inset
+
+ into subdomains 
+\begin_inset Formula $D=\cup D_{i}$
+\end_inset
+
+, with 
+\begin_inset Formula $D_{i}\cap D_{j}=0$
+\end_inset
+
+ for 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+.
+ Specifically,
+\begin_inset Formula 
+\begin{align*}
+E[J,B] & =C\int d\vec{x}(I(\vec{x})-J(\vec{x}))^{2}\\
+ & +A\int_{D/B}\vec{\nabla}J(\vec{x})\cdot\vec{\nabla}J(\vec{x})d\vec{x}+B\int_{B}ds
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -695,8 +753,59 @@ Q2
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 What is convexity? What is the steepest descent algorithm? Why is convexity
  important for steepest descent?
+\end_layout
+
+\begin_layout Standard
+An energy functional (or function) 
+\begin_inset Formula $E[J;I]$
+\end_inset
+
+ is convex if for all 
+\begin_inset Formula $0\leq\alpha\leq1$
+\end_inset
+
+ and any 
+\begin_inset Formula $J_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $J_{2}$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+\alpha E[J_{1};I]+(1-\alpha)E[J_{2};I]\geq E[\alpha_{1}J_{1}+(1-\alpha_{1})J_{2}].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Steepest descent algorithm updates 
+\begin_inset Formula $J$
+\end_inset
+
+ in the direction of the gradient 
+\begin_inset Formula $-\frac{\partial E}{\partial J}$
+\end_inset
+
+, which is guaranteed to reduce the energy.
+\end_layout
+
+\begin_layout Standard
+Convexity is important because in this case 
+\begin_inset Formula $E[J]$
+\end_inset
+
+ has a unique minimum (which is global) and steepest descent is guaranteed
+ to find it.
 \end_layout
 
 \begin_layout Subsection
@@ -704,9 +813,32 @@ Q3
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 What is the Rudin-Osher-Fatemi, or total variation, model? Why is it more
  practically useful than the weak membrane model? Why is it less effective
  than dictionary methods for denoising images?
+\end_layout
+
+\begin_layout Standard
+The Rudin-Osher-Fatemi model takes the form:
+\begin_inset Formula 
+\[
+E[J;I]=\int_{D}|\vec{\nabla}J|d\vec{x}+\frac{\lambda}{2}\int_{D}(J(\vec{x})-I(\vec{x}))^{2}d\vec{x}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is more practical because it is convex.
+\end_layout
+
+\begin_layout Standard
+It is less effective than dictionary methods for denoising images because
+ the later method is able to capture longer-range interactions.
 \end_layout
 
 \begin_layout Subsection
@@ -714,8 +846,94 @@ Q4
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 What is variational bounding and CCCP? How do they compare to steepest descent?
  How do they guarantee that each iteration decreases the cost?
+\end_layout
+
+\begin_layout Standard
+Steepest descent needs to be discretized in time to be implemented by computers.
+ The update equation has to be converted into a discrete update rule: 
+\begin_inset Formula $x_{t+1}=x_{t}-\eta\nabla f(x(t))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Based on this, variational bounding proceeds by obtaining a sequence of
+ bounding functions 
+\begin_inset Formula $E_{B}(x,x_{n})$
+\end_inset
+
+ where 
+\begin_inset Formula $E_{B}(x,x_{n})\geq E(x)$
+\end_inset
+
+ for 
+\begin_inset Formula $\forall x,x_{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $E_{B}(x_{n},x_{n})=E(x_{n})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A special case of this is CCCP.
+ The function 
+\begin_inset Formula $E(x)$
+\end_inset
+
+ is decomposed into a concave 
+\begin_inset Formula $E_{c}(x)$
+\end_inset
+
+ and a convex part 
+\begin_inset Formula $E_{v}(x)$
+\end_inset
+
+ so that 
+\begin_inset Formula $E(x)=E_{c}(x)+E_{v}(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The steepest descent can be derived as a special case of CCCP.
+ Let 
+\begin_inset Formula 
+\[
+E(x)=E(x)+\frac{\lambda}{2}|x|^{2}-\frac{\lambda}{2}|x|^{2},
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula $E(x)+\frac{\lambda}{2}|x|^{2}$
+\end_inset
+
+ is convex, while 
+\begin_inset Formula $-\frac{\lambda}{2}|x|^{2}$
+\end_inset
+
+ is concave.
+\end_layout
+
+\begin_layout Standard
+CCCP is guaranteed to decrease the energy with the update rule
+\begin_inset Formula 
+\[
+\nabla E_{v}(x_{n+1})=-\nabla E_{c}(x_{n}).
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -723,8 +941,30 @@ Q5
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 What forms do the histograms of derivative operators of images normally
  take?
+\end_layout
+
+\begin_layout Standard
+The histogram of derivative has a Laplacian distribution form
+\begin_inset Formula 
+\[
+p(x)=\frac{1}{Z(k)}\exp\{-k|x|\}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $k$
+\end_inset
+
+ is a positive constant and 
+\begin_inset Formula $Z(k)$
+\end_inset
+
+ normalizes the distribution.
 \end_layout
 
 \begin_layout Section
