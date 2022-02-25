@@ -560,8 +560,44 @@ Lecture 4
 Q1
 \end_layout
 
+\begin_layout Standard
+
+\bar under
+What is the Expectation-Maximization (EM) algorithm? How can EM be applied
+ to learning a mixture of Gaussian distributions? Describe why the EM algorithm
+ converges.
+\end_layout
+
+\begin_layout Standard
+EM algorithm is a way to estimate parameters 
+\begin_inset Formula $\theta$
+\end_inset
+
+ of a model 
+\begin_inset Formula $P(x|h,\theta)$
+\end_inset
+
+ if some variables 
+\begin_inset Formula $x$
+\end_inset
+
+ can be observed, but the others 
+\begin_inset Formula $h$
+\end_inset
+
+ are hidden.
+ 
+\end_layout
+
 \begin_layout Subsection
 Q2
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+What are super-pixels? Briefly describe the SLIC algorithm.
+ What are the advantages of representing an image in terms of super-pixels?
 \end_layout
 
 \end_body
