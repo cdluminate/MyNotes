@@ -586,7 +586,41 @@ EM algorithm is a way to estimate parameters
 \end_inset
 
  are hidden.
- 
+\end_layout
+
+\begin_layout Standard
+To apply the EM to learn a mixture of Gaussian, we first introduce a new
+ variable 
+\begin_inset Formula $q(h)$
+\end_inset
+
+ which is a distribution over the hidden variables.
+ Then we define the free energy function
+\begin_inset Formula 
+\[
+F(\theta,q)=-\log p(x|\theta)+\sum hq(h)\log\frac{q(h)}{p(h|x,\theta)}.
+\]
+
+\end_inset
+
+And EM algorithm consists of minimizing 
+\begin_inset Formula $F(\theta,q)$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\theta$
+\end_inset
+
+ and 
+\begin_inset Formula $q(\cdot)$
+\end_inset
+
+ alternatively.
+\end_layout
+
+\begin_layout Standard
+EM algorithm converges to a local optimum (with zero gradient) because every
+ step of the updates is increasing the lower bound.
 \end_layout
 
 \begin_layout Subsection
@@ -598,6 +632,50 @@ Q2
 \bar under
 What are super-pixels? Briefly describe the SLIC algorithm.
  What are the advantages of representing an image in terms of super-pixels?
+\end_layout
+
+\begin_layout Standard
+Super-pixels are image decomposition as non-overlapping subregions, hwere
+ the intensity/texture properties are roughly homogeneous within each subreagion.
+\end_layout
+
+\begin_layout Standard
+The procedure of SLIC algorithm is as follows:
+\end_layout
+
+\begin_layout Enumerate
+Initialize K clusters in grid positions
+\end_layout
+
+\begin_layout Enumerate
+Move K clusters to lowest gradient positions
+\end_layout
+
+\begin_layout Enumerate
+Assign each pixel to a cluster center
+\end_layout
+
+\begin_layout Enumerate
+Recalculate the centers as the average labxy vector of all the pixels belonging
+ to each cluster
+\end_layout
+
+\begin_layout Enumerate
+Iterate untill convergence
+\end_layout
+
+\begin_layout Enumerate
+Fix disconnected segments.
+\end_layout
+
+\begin_layout Standard
+Super-pixels are important for representing images because they can be used
+ to specify the location and sizes of objects in images for initializing
+ object classification of deep neural networks.
+ Besides, superpixels are unsupervised, which is suitable for cases where
+ data annotation is hard to obtain.
+ Lastly, there are neuroscience theories that the goal of every vision is
+ to break images up into pseudo-objects which is in the spirit of super-pixels.
 \end_layout
 
 \begin_layout Section
