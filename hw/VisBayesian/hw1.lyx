@@ -440,6 +440,8 @@ Convergence Properties of the K-Means Algorithms
 \begin_layout Standard
 K-means++ can avoid some poor clusterings found by the standard K-means
  algorithm.
+ Meanwhile, it achieves both higher speed and accuracy compared to standard
+ K-means.
 \end_layout
 
 \begin_layout Subsection
@@ -495,8 +497,71 @@ Generate the patch
 Q3
 \end_layout
 
+\begin_layout Standard
+
+\bar under
+What is a mixture of Gaussian distribution? And how does k-means relate
+ to a mixture of Gaussian distributions?
+\end_layout
+
+\begin_layout Standard
+Natural data is hard to represent with a single Gaussian distribution.
+ A mixture of Gaussian is the weighted sum of a series of Gaussians with
+ different mean and variance.
+\end_layout
+
+\begin_layout Standard
+K-means can be interpreted as a mixture of Gaussian with zero variance.
+ Namely, mixture of Gaussian is a softer version of K-means, where the parameter
+s of Gaussians can be found through the EM algorithm.
+\end_layout
+
 \begin_layout Subsection
 Q4
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+What are mini-epitones? How do they deal with shift-invariance? What algorithm
+ is used to learn them? How well can they represent images?
+\end_layout
+
+\begin_layout Standard
+Mini-epitomes is a generative model for the raw intensity of image patches.
+\end_layout
+
+\begin_layout Standard
+Shift-invariance is achieved by sampling patches from mini-epitomes that
+ minimizes reconstruction error.
+ Hence, the epitomes can be invariant to, e.g., patches with the same pattern
+ but different position, and are less redundant.
+\end_layout
+
+\begin_layout Standard
+The algorithms used to learn them are Expectation-Maximization (EM) for
+ parameter refinement, and epitomic K-means++ for diverse dictionary initializat
+ion.
+\end_layout
+
+\begin_layout Standard
+Images can be represented by the histogram-based encoding tailored to the
+ epitomic representation.
+ Based on the evaluation results on PASCAL VOC 2007 datasets, the mini-epitome
+ method can achieve the same level of image classification accuracy with
+ significantly smaller dictionary size compared to SIFT bag-of-words method.
+\end_layout
+
+\begin_layout Section
+Lecture 4
+\end_layout
+
+\begin_layout Subsection
+Q1
+\end_layout
+
+\begin_layout Subsection
+Q2
 \end_layout
 
 \end_body
