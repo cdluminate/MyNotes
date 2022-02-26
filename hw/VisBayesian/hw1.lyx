@@ -976,8 +976,37 @@ Q1
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 Briefly describe statistical edge detection.
  What cues are used for detecting edges?
+\end_layout
+
+\begin_layout Standard
+Consider a statistical approach where we have an annotated dataset where
+ pixels 
+\begin_inset Formula $x$
+\end_inset
+
+ are labelled as edge or non-edge.
+ For any filter 
+\begin_inset Formula $\phi(\cdot)$
+\end_inset
+
+ we can learn probability distributions 
+\begin_inset Formula $P(\phi\cdot I(x)|x_{on-edge})$
+\end_inset
+
+ and 
+\begin_inset Formula $P(\phi\cdot I(X)|x_{off-edge})$
+\end_inset
+
+.
+ Then edge detection can be formulated as log-likelihood ratio test.
+\end_layout
+
+\begin_layout Standard
+Cues including filters are used for edge detection.
 \end_layout
 
 \begin_layout Subsection
@@ -985,8 +1014,36 @@ Q2
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 How is this formulated as a classification learning task using groundtruth
  data? What image features can be used?
+\end_layout
+
+\begin_layout Standard
+For any filter 
+\begin_inset Formula $\phi(\cdot)$
+\end_inset
+
+ we can learn probability distributions 
+\begin_inset Formula $P(\phi\cdot I(x)|x_{on-edge})$
+\end_inset
+
+ and 
+\begin_inset Formula $P(\phi\cdot I(X)|x_{off-edge})$
+\end_inset
+
+.
+ The log-likelihood ratio test based on the two probabilities is a binary
+ classification rule.
+\end_layout
+
+\begin_layout Standard
+Features like simple derivative filter (i.e., 
+\begin_inset Formula $\nabla I(x)$
+\end_inset
+
+) can be used.
 \end_layout
 
 \begin_layout Subsection
@@ -994,8 +1051,31 @@ Q3
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 What is the log-likelihood tests? What happens if the image feature is a
  single cue like the derivative of the image intensity?
+\end_layout
+
+\begin_layout Standard
+A point 
+\begin_inset Formula $x$
+\end_inset
+
+ is labeled as edge if 
+\begin_inset Formula 
+\[
+\log\frac{P(\phi\cdot I(x)|x_{\text{on-edge}})}{P(\phi\cdot I(X)|x_{\text{off-edge}})}>T.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When image feature is a single cue (the derivative of the image intensity),
+ the log-likelihood is equivalent to simply thresholding the gradient.
 \end_layout
 
 \begin_layout Subsection
@@ -1003,8 +1083,16 @@ Q4
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 Why is a statistical approach useful if edge detection requires using multiple
  cues?
+\end_layout
+
+\begin_layout Standard
+The statistical approach gives a natural way to combine different edge detectors.
+ The result of the combination is superior to simply putting thresholds
+ on the individual edge detectors.
 \end_layout
 
 \begin_layout Subsection
@@ -1012,9 +1100,26 @@ Q5
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 How does this relate to Bayes Decision Theory? Which is worse for edge detection
 , false positives or false negatives? How do the prior and loss function
  contribute to the threshold?
+\end_layout
+
+\begin_layout Standard
+The log-likelihood ratio test is a part of Bayes Decision Theory.
+\end_layout
+
+\begin_layout Standard
+Whehter false positive or false negatives are worse depends on context and
+ higher level information, and there is no hard decisions on this problem.
+\end_layout
+
+\begin_layout Standard
+Loss function are used to learn the likelihoods in the ratio test.
+ When the two cases have the equal prior, the ratio test can be converted
+ to use posterior instead.
 \end_layout
 
 \begin_layout Subsection
@@ -1022,8 +1127,16 @@ Q6
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 Give an example of another visual task that can the same approach be applied
  to?
+\end_layout
+
+\begin_layout Standard
+Semantic segmentation.
+ But this only worked for homogeneous segmentation classes like sky and
+ water, but not for inhomogeneous classes like cars and airplanes.
 \end_layout
 
 \begin_layout Section
