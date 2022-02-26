@@ -1109,6 +1109,15 @@ How does this relate to Bayes Decision Theory? Which is worse for edge detection
 
 \begin_layout Standard
 The log-likelihood ratio test is a part of Bayes Decision Theory.
+ Bayes decision theory can specify the optimal way to estimate 
+\begin_inset Formula $y$
+\end_inset
+
+ from input 
+\begin_inset Formula $x$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1148,7 +1157,17 @@ Q1
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 How does regression relate to decision theory?
+\end_layout
+
+\begin_layout Standard
+Regression is to learn the distribution 
+\begin_inset Formula $P(y|x)$
+\end_inset
+
+ directly.
 \end_layout
 
 \begin_layout Subsection
@@ -1156,9 +1175,44 @@ Q2
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 What is binary, or logistic, regression? How can this be be learnt from
  data? Does this require solving a convex or non-convex optimization problem?
  What algorithms can be used to solve it?
+\end_layout
+
+\begin_layout Standard
+Logistic regression specifies a conditional probability distribution
+\begin_inset Formula 
+\[
+P(y|x)=\frac{\exp\{y(w^{T}x+w_{0})\}}{\exp\{w^{T}x+w_{0}\}+\exp\{-w^{T}x+w_{0}\}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The parameters can be estimated from the training dataset 
+\begin_inset Formula $\{(x_{n},y_{n})|n=1,\ldots,n\}$
+\end_inset
+
+ by
+\begin_inset Formula 
+\[
+(w^{*},w_{0}^{*})=\arg\min\Big\{-\sum_{n=1}^{N}\log P(y_{n}|x_{n})\Big\}
+\]
+
+\end_inset
+
+which can be performed by gradient descent.
+\end_layout
+
+\begin_layout Standard
+It does not require convexity for the problem to be solved since gradient
+ descent is used as the optimization algorithm.
 \end_layout
 
 \begin_layout Subsection
@@ -1166,8 +1220,27 @@ Q3
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 How does logistic regression relate to multi-level perceptrons and deep
  networks? What are the main similarities and the biggest differences?
+\end_layout
+
+\begin_layout Standard
+Multi-layer perceptrons and deep networks can be adopted to solve the logistic
+ regression problem.
+\end_layout
+
+\begin_layout Standard
+The similarities are: (1) using the same loss function and the same optimization
+ problem framework; (2) differentiable.
+\end_layout
+
+\begin_layout Standard
+Differences: (1) deep neural networks may have a larger scale (in terms
+ of number of parameters and number of layers) than multi-layer perceptron;
+ (2) deep neural networks may involve other types of network layers such
+ as convolution.
 \end_layout
 
 \begin_layout Section
