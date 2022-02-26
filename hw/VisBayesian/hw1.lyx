@@ -1252,8 +1252,28 @@ Q1
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 Explain how the output of a deep network can be expressed as a composition
  of operations at different layers.
+\end_layout
+
+\begin_layout Standard
+For example, the output of a neural network is 
+\begin_inset Formula $O=\text{ReLU(}W_{3}H_{2})$
+\end_inset
+
+, where 
+\begin_inset Formula $H_{2}=\text{ReLU}(W_{2}H_{1})$
+\end_inset
+
+, and 
+\begin_inset Formula $H_{1}=\text{ReLU}(W_{1}I)$
+\end_inset
+
+.
+ This is a combination of three affine transformation layers with ReLU activatio
+n.
 \end_layout
 
 \begin_layout Subsection
@@ -1261,8 +1281,26 @@ Q2
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 What is the loss function? Is it usually a convex or concave function? Can
  the loss function contain terms at different levels of the hierarchy?
+\end_layout
+
+\begin_layout Standard
+Loss function measures the discrepancy between the neural network output
+ and the expected output.
+ To train the deep network, we need to compute the derivatives of the loss
+ funciton with respect to the model parameters.
+\end_layout
+
+\begin_layout Standard
+The loss function is a non-convex function of model parameters.
+\end_layout
+
+\begin_layout Standard
+The loss function can contain terms at different levels of the hierarchy
+ as long as the function is differentiable.
 \end_layout
 
 \begin_layout Subsection
@@ -1270,10 +1308,65 @@ Q3
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 Why is it important the outputs are differentiable functions of the weights.
  What is steepest descent? What is stochastic gradient descent? Explain
  how the derivatives with respect to the weights can be computed by backpropagat
 ion.
+\end_layout
+
+\begin_layout Standard
+Gradient can be computed for differentiable functions.
+ Updating the model parameters for solving the loss function optimization
+ problem requires gradient descent, which depends on gradient.
+ Hence, the outputs (and the loss) should be differentiable functions of
+ the model parameters.
+\end_layout
+
+\begin_layout Standard
+Steepest descent is the gradient descent at the batch mode:
+\begin_inset Formula 
+\[
+W_{t+1}=W_{t}-\eta_{t}\frac{1}{N}\sum_{n=1}^{N}L(O(W,I_{n}),T_{n}).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Stochastic Gradient Descent (SGD) is a variant of steepest descent in the
+ online learning manner.
+ Specifically, at each time step, an example or a subset 
+\begin_inset Formula $X$
+\end_inset
+
+ of samples (of size 
+\begin_inset Formula $M,$
+\end_inset
+
+and 
+\begin_inset Formula $M<N$
+\end_inset
+
+) is randomly selected, and
+\begin_inset Formula 
+\[
+W_{t+1}=W_{t}-\eta_{t}\frac{1}{M}\sum_{I_{n}\in X}\frac{\partial}{\partial W}L(O(W,I_{n}),T_{n})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The derivatives of the loss function with respect to the weights can be
+ computed by backpropagation because of the chain rule for differentiation.
+ Back-propagation is in fact the reverse mode automatic differentiation,
+ which relys on the chain rule.
 \end_layout
 
 \begin_layout Subsection
@@ -1281,8 +1374,27 @@ Q4
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 What are convolutional layers? What is pooling? What are the advantages
  of ReLU as compared to sigmoid functions for the non-linearities?
+\end_layout
+
+\begin_layout Standard
+Convolution layers are linear layers, which apply a small convolution filter
+ across the whole input.
+\end_layout
+
+\begin_layout Standard
+Pooling (i.e., max pooling) is an operation to downsample the input feature
+ map in a deep neural networks.
+\end_layout
+
+\begin_layout Standard
+ReLU activation does not suffer from gradient saturation like sigmoid functions
+ does.
+ Besides, ReLU is simple and fast to compute, and the models can better
+ generalize.
 \end_layout
 
 \begin_layout Subsection
@@ -1290,7 +1402,25 @@ Q5
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 Give three examples of different types of deep networks.
+\end_layout
+
+\begin_layout Standard
+AlexNet is the milestone work that triggered the revolution of deep neural
+ networks in computer vision.
+\end_layout
+
+\begin_layout Standard
+ResNet is the most prevelant backbone neural network for a wide range of
+ vision tasks nowdays.
+ It servers as a very important baseline.
+\end_layout
+
+\begin_layout Standard
+Swin-Transforer is a new type of deep network based on the attention mechanism
+ instead of traditional convolutional architectures.
 \end_layout
 
 \end_body
