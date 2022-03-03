@@ -249,6 +249,87 @@ E True.
 Six Linear Spots Labeled 1 to 6
 \end_layout
 
+\begin_layout Standard
+To formulate this problem as CSP, we have:
+\end_layout
+
+\begin_layout Description
+Variables We use uppercase initials as the abbreviations of the characters,
+ i.e., 
+\begin_inset Formula $V=\{M,D,B,S,T,G\}$
+\end_inset
+
+.
+ We will use subscript to index these variables.
+ Namely, 
+\begin_inset Formula $V_{1}=M$
+\end_inset
+
+, 
+\begin_inset Formula $V_{2}=D$
+\end_inset
+
+, etc.
+\end_layout
+
+\begin_layout Description
+Domains Their possible values are 
+\begin_inset Formula $\{1,2,3,4,5,6\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Constraints 
+\end_layout
+
+\begin_layout Enumerate
+Only one character can occupy a position at a time.
+ Namely 
+\begin_inset Formula $V_{i}\neq V_{j}$
+\end_inset
+
+ for any 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+B locates between M and D, namely 
+\begin_inset Formula $M<B<D$
+\end_inset
+
+ or 
+\begin_inset Formula $D<B<M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+S and T are next to each other, namely 
+\begin_inset Formula $|S-T|=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+G takes an end.
+ Namely, 
+\begin_inset Formula $G=1$
+\end_inset
+
+ or 
+\begin_inset Formula $G=6$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Section
 Minimum Number of Leaves that Must be Explored
 \end_layout
