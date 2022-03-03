@@ -260,7 +260,11 @@ In the minimum case, only the children of the first node will be explored
 \begin_inset Formula $X_{D}$
 \end_inset
 
- be the minimum number of leaves, we have
+ be the minimum number of leaves till depth 
+\begin_inset Formula $D$
+\end_inset
+
+, we have
 \begin_inset Formula 
 \begin{align*}
 X_{1}= & B\\
@@ -272,7 +276,7 @@ X_{D}= & DB-D+1
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Section
