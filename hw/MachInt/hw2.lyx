@@ -278,6 +278,16 @@ Domains Their possible values are
 \end_inset
 
 .
+ Actually the maximum search space size is the number of permutations of
+ 
+\begin_inset Formula $[1,2,3,4,5,6]$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $6!$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Description
@@ -393,20 +403,133 @@ C False.
 Ali, Bo, Cleo, and Dallas
 \end_layout
 
-\begin_layout Description
-A
+\begin_layout Subsection
+A: CSP Constraints
 \end_layout
 
-\begin_layout Description
-B
+\begin_layout Enumerate
+Cleo will not order sushi translates into 
+\begin_inset Formula $C\neq S$
+\end_inset
+
+, or equivalently 
+\begin_inset Formula $C\in\{P,Q,R\}$
+\end_inset
+
+.
 \end_layout
 
-\begin_layout Description
-C
+\begin_layout Enumerate
+Ali and Bo will order different dishes, namely 
+\begin_inset Formula $A\neq B$
+\end_inset
+
+.
 \end_layout
 
-\begin_layout Description
-D
+\begin_layout Enumerate
+Bo like carbs, namely 
+\begin_inset Formula $B\in\{P,R\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Cleo wants to order unique food.
+ 
+\begin_inset Formula $C\neq B$
+\end_inset
+
+, 
+\begin_inset Formula $C\neq D$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Cleo and Ali are twins and orders the same: 
+\begin_inset Formula $A=C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Dallas dislikes quesadillas, 
+\begin_inset Formula $D\neq P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+B: Backtracking Search
+\end_layout
+
+\begin_layout Standard
+The question requires us to traverse the variables and the domain in alphabetica
+l order.
+ Given that the standard backtrack is a DFS algorithm, we have the following
+ steps:
+\end_layout
+
+\begin_layout Enumerate
+Initialize empty assignments 
+\begin_inset Formula $\{\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $A=P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B=R$
+\end_inset
+
+ due to 
+\begin_inset Formula $A=P$
+\end_inset
+
+ and constraint 2, constraint 3.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $C=P$
+\end_inset
+
+ due to constraint 5.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $D=Q$
+\end_inset
+
+ due to constraint 6.
+\end_layout
+
+\begin_layout Standard
+So the final assignments are 
+\begin_inset Formula $\{A=P,B=R,C=P,D=Q\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+C: What Values will Be Eliminated?
+\end_layout
+
+\begin_layout Subsection
+D: Local Search with Min-conflicts Algorithm
 \end_layout
 
 \end_body
