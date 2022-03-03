@@ -120,6 +120,44 @@ Game Tree Down to Depth 2
 
 \end_layout
 
+\begin_layout Subsection
+Mark Evaluations of All Positions at Depth 2
+\end_layout
+
+\begin_layout Standard
+The evaluation function at nonterminal positions is 
+\begin_inset Formula 
+\[
+E(s)=3X_{2}(s)+X_{1}(s)-(3O_{2}(s)+O_{1}(s)).
+\]
+
+\end_inset
+
+However, in our tree of depth 2, the 
+\begin_inset Formula $X_{2}(s)$
+\end_inset
+
+ and 
+\begin_inset Formula $O_{2}(s)$
+\end_inset
+
+ terms will always be zero.
+ Hence the function is simplified as
+\begin_inset Formula 
+\[
+E(s)=X_{1}(s)-O_{1}(s).
+\]
+
+\end_inset
+
+ See figure above for the evaluations based on such simplified function.
+ Note, the evaluations are highlighted in 
+\color red
+RED
+\color inherit
+ color.
+\end_layout
+
 \begin_layout Section
 True or False Related to Local Search
 \end_layout
