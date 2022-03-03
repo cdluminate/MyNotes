@@ -98,6 +98,28 @@ Game Plying: Tic-tac-toe
 Approximately how many games of tic-tac-toe are there?
 \end_layout
 
+\begin_layout Standard
+There are 
+\begin_inset Formula $9!=362880$
+\end_inset
+
+ possible games.
+\end_layout
+
+\begin_layout Subsection
+Game Tree Down to Depth 2
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename tictactoe.svg
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 True or False Related to Local Search
 \end_layout
