@@ -1,0 +1,1218 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 1122.5197 793.70081"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="tictactoe.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.8924008"
+     inkscape:cx="813.7811"
+     inkscape:cy="482.98437"
+     inkscape:window-width="1920"
+     inkscape:window-height="1025"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:snap-global="false" />
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path900" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       inkscape:label="GridCartesian:X3:Y3"
+       transform="matrix(1.4814261,0,0,1.4814261,595.21668,64.113794)"
+       id="g10645"
+       style="stroke-width:0.675025">
+      <g
+         inkscape:label="MajorXGridlines"
+         id="g10635"
+         style="stroke-width:0.675025">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.675025"
+           d="M 18.8976,0 V 56.6929"
+           inkscape:label="MajorXDiv1"
+           id="path10631" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.675025"
+           d="M 37.7953,0 V 56.6929"
+           inkscape:label="MajorXDiv2"
+           id="path10633" />
+      </g>
+      <g
+         inkscape:label="MajorYGridlines"
+         id="g10641"
+         style="stroke-width:0.675025">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.675025"
+           d="M 0,18.8976 H 56.6929"
+           inkscape:label="MajorYDiv1"
+           id="path10637" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.675025"
+           d="M 0,37.7953 H 56.6929"
+           inkscape:label="MajorYDiv2"
+           id="path10639" />
+      </g>
+      <rect
+         x="0"
+         y="0"
+         width="56.692913"
+         height="56.692913"
+         style="fill:none;stroke:#000000;stroke-width:0.675025"
+         inkscape:label="Border"
+         id="rect10643" />
+    </g>
+    <g
+       id="g15522"
+       transform="translate(91.355774,42.856665)">
+      <g
+         inkscape:label="GridCartesian:X3:Y3"
+         transform="matrix(1.4814261,0,0,1.4814261,223.02856,228.92205)"
+         id="g10645-3"
+         style="stroke-width:0.675025">
+        <g
+           inkscape:label="MajorXGridlines"
+           id="g10635-6"
+           style="stroke-width:0.675025">
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 18.8976,0 V 56.6929"
+             inkscape:label="MajorXDiv1"
+             id="path10631-7" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 37.7953,0 V 56.6929"
+             inkscape:label="MajorXDiv2"
+             id="path10633-5" />
+        </g>
+        <g
+           inkscape:label="MajorYGridlines"
+           id="g10641-3"
+           style="stroke-width:0.675025">
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 0,18.8976 H 56.6929"
+             inkscape:label="MajorYDiv1"
+             id="path10637-5" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 0,37.7953 H 56.6929"
+             inkscape:label="MajorYDiv2"
+             id="path10639-6" />
+        </g>
+        <rect
+           x="0"
+           y="0"
+           width="56.692913"
+           height="56.692913"
+           style="fill:none;stroke:#000000;stroke-width:0.675025"
+           inkscape:label="Border"
+           id="rect10643-2" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:32.6229px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.999997"
+         x="226.52979"
+         y="255.24289"
+         id="text13196"><tspan
+           sodipodi:role="line"
+           id="tspan13194"
+           x="226.52979"
+           y="255.24289"
+           style="stroke-width:0.999997">X</tspan></text>
+    </g>
+    <g
+       id="g15916"
+       transform="translate(93.313614,38.923255)">
+      <g
+         inkscape:label="GridCartesian:X3:Y3"
+         transform="matrix(1.4814261,0,0,1.4814261,499.85327,232.85546)"
+         id="g10645-9"
+         style="stroke-width:0.675025">
+        <g
+           inkscape:label="MajorXGridlines"
+           id="g10635-1"
+           style="stroke-width:0.675025">
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 18.8976,0 V 56.6929"
+             inkscape:label="MajorXDiv1"
+             id="path10631-2" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 37.7953,0 V 56.6929"
+             inkscape:label="MajorXDiv2"
+             id="path10633-7" />
+        </g>
+        <g
+           inkscape:label="MajorYGridlines"
+           id="g10641-0"
+           style="stroke-width:0.675025">
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 0,18.8976 H 56.6929"
+             inkscape:label="MajorYDiv1"
+             id="path10637-9" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 0,37.7953 H 56.6929"
+             inkscape:label="MajorYDiv2"
+             id="path10639-3" />
+        </g>
+        <rect
+           x="0"
+           y="0"
+           width="56.692913"
+           height="56.692913"
+           style="fill:none;stroke:#000000;stroke-width:0.675025"
+           inkscape:label="Border"
+           id="rect10643-6" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:32.6229px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.999997"
+         x="530.67456"
+         y="258.98126"
+         id="text13196-2"><tspan
+           sodipodi:role="line"
+           id="tspan13194-3"
+           x="530.67456"
+           y="258.98126"
+           style="stroke-width:0.999997">X</tspan></text>
+    </g>
+    <g
+       id="g15916-2"
+       transform="translate(14.33859,197.06277)">
+      <g
+         inkscape:label="GridCartesian:X3:Y3"
+         transform="matrix(1.4814261,0,0,1.4814261,499.85327,232.85546)"
+         id="g10645-9-5"
+         style="stroke-width:0.675025">
+        <g
+           inkscape:label="MajorXGridlines"
+           id="g10635-1-4"
+           style="stroke-width:0.675025">
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 18.8976,0 V 56.6929"
+             inkscape:label="MajorXDiv1"
+             id="path10631-2-7" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 37.7953,0 V 56.6929"
+             inkscape:label="MajorXDiv2"
+             id="path10633-7-4" />
+        </g>
+        <g
+           inkscape:label="MajorYGridlines"
+           id="g10641-0-4"
+           style="stroke-width:0.675025">
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 0,18.8976 H 56.6929"
+             inkscape:label="MajorYDiv1"
+             id="path10637-9-3" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 0,37.7953 H 56.6929"
+             inkscape:label="MajorYDiv2"
+             id="path10639-3-0" />
+        </g>
+        <rect
+           x="0"
+           y="0"
+           width="56.692913"
+           height="56.692913"
+           style="fill:none;stroke:#000000;stroke-width:0.675025"
+           inkscape:label="Border"
+           id="rect10643-6-7" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:32.6229px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.999997"
+         x="530.67456"
+         y="258.98126"
+         id="text13196-2-8"><tspan
+           sodipodi:role="line"
+           id="tspan13194-3-6"
+           x="530.67456"
+           y="258.98126"
+           style="stroke-width:0.999997">X</tspan></text>
+    </g>
+    <g
+       id="g15916-8"
+       transform="translate(186.79522,197.7712)">
+      <g
+         inkscape:label="GridCartesian:X3:Y3"
+         transform="matrix(1.4814261,0,0,1.4814261,499.85327,232.85546)"
+         id="g10645-9-8"
+         style="stroke-width:0.675025">
+        <g
+           inkscape:label="MajorXGridlines"
+           id="g10635-1-43"
+           style="stroke-width:0.675025">
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 18.8976,0 V 56.6929"
+             inkscape:label="MajorXDiv1"
+             id="path10631-2-1" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 37.7953,0 V 56.6929"
+             inkscape:label="MajorXDiv2"
+             id="path10633-7-49" />
+        </g>
+        <g
+           inkscape:label="MajorYGridlines"
+           id="g10641-0-2"
+           style="stroke-width:0.675025">
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 0,18.8976 H 56.6929"
+             inkscape:label="MajorYDiv1"
+             id="path10637-9-0" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 0,37.7953 H 56.6929"
+             inkscape:label="MajorYDiv2"
+             id="path10639-3-6" />
+        </g>
+        <rect
+           x="0"
+           y="0"
+           width="56.692913"
+           height="56.692913"
+           style="fill:none;stroke:#000000;stroke-width:0.675025"
+           inkscape:label="Border"
+           id="rect10643-6-8" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:32.6229px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.999997"
+         x="530.67456"
+         y="258.98126"
+         id="text13196-2-9"><tspan
+           sodipodi:role="line"
+           id="tspan13194-3-2"
+           x="530.67456"
+           y="258.98126"
+           style="stroke-width:0.999997">X</tspan></text>
+    </g>
+    <g
+       id="g15546"
+       transform="translate(91.355834,30.974775)">
+      <g
+         inkscape:label="GridCartesian:X3:Y3"
+         transform="matrix(1.4814261,0,0,1.4814261,780.59359,240.80394)"
+         id="g10645-0"
+         style="stroke-width:0.675025">
+        <g
+           inkscape:label="MajorXGridlines"
+           id="g10635-62"
+           style="stroke-width:0.675025">
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 18.8976,0 V 56.6929"
+             inkscape:label="MajorXDiv1"
+             id="path10631-6" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 37.7953,0 V 56.6929"
+             inkscape:label="MajorXDiv2"
+             id="path10633-1" />
+        </g>
+        <g
+           inkscape:label="MajorYGridlines"
+           id="g10641-8"
+           style="stroke-width:0.675025">
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 0,18.8976 H 56.6929"
+             inkscape:label="MajorYDiv1"
+             id="path10637-7" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 0,37.7953 H 56.6929"
+             inkscape:label="MajorYDiv2"
+             id="path10639-9" />
+        </g>
+        <rect
+           x="0"
+           y="0"
+           width="56.692913"
+           height="56.692913"
+           style="fill:none;stroke:#000000;stroke-width:0.675025"
+           inkscape:label="Border"
+           id="rect10643-20" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:32.6229px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.999997"
+         x="811.6828"
+         y="295.23129"
+         id="text13196-7"><tspan
+           sodipodi:role="line"
+           id="tspan13194-5"
+           x="811.6828"
+           y="295.23129"
+           style="stroke-width:0.999997">X</tspan></text>
+    </g>
+    <g
+       id="g15546-5"
+       transform="translate(191.44389,179.51091)">
+      <g
+         inkscape:label="GridCartesian:X3:Y3"
+         transform="matrix(1.4814261,0,0,1.4814261,780.59359,240.80394)"
+         id="g10645-0-6"
+         style="stroke-width:0.675025">
+        <g
+           inkscape:label="MajorXGridlines"
+           id="g10635-62-1"
+           style="stroke-width:0.675025">
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 18.8976,0 V 56.6929"
+             inkscape:label="MajorXDiv1"
+             id="path10631-6-1" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 37.7953,0 V 56.6929"
+             inkscape:label="MajorXDiv2"
+             id="path10633-1-5" />
+        </g>
+        <g
+           inkscape:label="MajorYGridlines"
+           id="g10641-8-9"
+           style="stroke-width:0.675025">
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 0,18.8976 H 56.6929"
+             inkscape:label="MajorYDiv1"
+             id="path10637-7-8" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 0,37.7953 H 56.6929"
+             inkscape:label="MajorYDiv2"
+             id="path10639-9-4" />
+        </g>
+        <rect
+           x="0"
+           y="0"
+           width="56.692913"
+           height="56.692913"
+           style="fill:none;stroke:#000000;stroke-width:0.675025"
+           inkscape:label="Border"
+           id="rect10643-20-8" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:32.6229px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.999997"
+         x="811.6828"
+         y="295.23129"
+         id="text13196-7-1"><tspan
+           sodipodi:role="line"
+           id="tspan13194-5-0"
+           x="811.6828"
+           y="295.23129"
+           style="stroke-width:0.999997">X</tspan></text>
+    </g>
+    <g
+       id="g15546-3"
+       transform="translate(189.53169,331.39814)">
+      <g
+         inkscape:label="GridCartesian:X3:Y3"
+         transform="matrix(1.4814261,0,0,1.4814261,780.59359,240.80394)"
+         id="g10645-0-0"
+         style="stroke-width:0.675025">
+        <g
+           inkscape:label="MajorXGridlines"
+           id="g10635-62-4"
+           style="stroke-width:0.675025">
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 18.8976,0 V 56.6929"
+             inkscape:label="MajorXDiv1"
+             id="path10631-6-4" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 37.7953,0 V 56.6929"
+             inkscape:label="MajorXDiv2"
+             id="path10633-1-4" />
+        </g>
+        <g
+           inkscape:label="MajorYGridlines"
+           id="g10641-8-4"
+           style="stroke-width:0.675025">
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 0,18.8976 H 56.6929"
+             inkscape:label="MajorYDiv1"
+             id="path10637-7-7" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 0,37.7953 H 56.6929"
+             inkscape:label="MajorYDiv2"
+             id="path10639-9-6" />
+        </g>
+        <rect
+           x="0"
+           y="0"
+           width="56.692913"
+           height="56.692913"
+           style="fill:none;stroke:#000000;stroke-width:0.675025"
+           inkscape:label="Border"
+           id="rect10643-20-3" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:32.6229px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.999997"
+         x="811.6828"
+         y="295.23129"
+         id="text13196-7-17"><tspan
+           sodipodi:role="line"
+           id="tspan13194-5-5"
+           x="811.6828"
+           y="295.23129"
+           style="stroke-width:0.999997">X</tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.88976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="m 636.97262,160.27217 -274.97181,97.9671"
+       id="path895" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.88976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="M 636.81816,160.9945 V 264.85075"
+       id="path1165" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="M 637.47454,160.60562 912.27139,263.17423"
+       id="path1280" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="17.055988"
+       y="118.34959"
+       id="text2800"><tspan
+         sodipodi:role="line"
+         id="tspan2798"
+         x="17.055988"
+         y="118.34959">Initial State</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="16.182695"
+       y="325.17438"
+       id="text4710"><tspan
+         sodipodi:role="line"
+         id="tspan4708"
+         x="16.182695"
+         y="325.17438">X's 1st Step</tspan></text>
+    <g
+       id="g7014"
+       transform="translate(-63.227265,97.065941)">
+      <g
+         id="g15522-3"
+         transform="translate(-51.973812,199.19182)">
+        <g
+           inkscape:label="GridCartesian:X3:Y3"
+           transform="matrix(1.4814261,0,0,1.4814261,223.02856,228.92205)"
+           id="g10645-3-6"
+           style="stroke-width:0.675025">
+          <g
+             inkscape:label="MajorXGridlines"
+             id="g10635-6-7"
+             style="stroke-width:0.675025">
+            <path
+               style="fill:none;stroke:#000000;stroke-width:0.675025"
+               d="M 18.8976,0 V 56.6929"
+               inkscape:label="MajorXDiv1"
+               id="path10631-7-5" />
+            <path
+               style="fill:none;stroke:#000000;stroke-width:0.675025"
+               d="M 37.7953,0 V 56.6929"
+               inkscape:label="MajorXDiv2"
+               id="path10633-5-3" />
+          </g>
+          <g
+             inkscape:label="MajorYGridlines"
+             id="g10641-3-5"
+             style="stroke-width:0.675025">
+            <path
+               style="fill:none;stroke:#000000;stroke-width:0.675025"
+               d="M 0,18.8976 H 56.6929"
+               inkscape:label="MajorYDiv1"
+               id="path10637-5-6" />
+            <path
+               style="fill:none;stroke:#000000;stroke-width:0.675025"
+               d="M 0,37.7953 H 56.6929"
+               inkscape:label="MajorYDiv2"
+               id="path10639-6-2" />
+          </g>
+          <rect
+             x="0"
+             y="0"
+             width="56.692913"
+             height="56.692913"
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             inkscape:label="Border"
+             id="rect10643-2-9" />
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:32.6229px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.999997"
+           x="226.52979"
+           y="255.24289"
+           id="text13196-1"><tspan
+             sodipodi:role="line"
+             id="tspan13194-2"
+             x="226.52979"
+             y="255.24289"
+             style="stroke-width:0.999997">X</tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+         x="200.62738"
+         y="452.81592"
+         id="text6484"><tspan
+           sodipodi:role="line"
+           id="tspan6482"
+           x="200.62738"
+           y="452.81592">o</tspan></text>
+    </g>
+    <g
+       id="g7044"
+       transform="translate(-58.940297,74.330776)">
+      <g
+         id="g15522-3-79"
+         transform="translate(-55.266522,345.7576)">
+        <g
+           inkscape:label="GridCartesian:X3:Y3"
+           transform="matrix(1.4814261,0,0,1.4814261,223.02856,228.92205)"
+           id="g10645-3-6-2"
+           style="stroke-width:0.675025">
+          <g
+             inkscape:label="MajorXGridlines"
+             id="g10635-6-7-0"
+             style="stroke-width:0.675025">
+            <path
+               style="fill:none;stroke:#000000;stroke-width:0.675025"
+               d="M 18.8976,0 V 56.6929"
+               inkscape:label="MajorXDiv1"
+               id="path10631-7-5-2" />
+            <path
+               style="fill:none;stroke:#000000;stroke-width:0.675025"
+               d="M 37.7953,0 V 56.6929"
+               inkscape:label="MajorXDiv2"
+               id="path10633-5-3-3" />
+          </g>
+          <g
+             inkscape:label="MajorYGridlines"
+             id="g10641-3-5-7"
+             style="stroke-width:0.675025">
+            <path
+               style="fill:none;stroke:#000000;stroke-width:0.675025"
+               d="M 0,18.8976 H 56.6929"
+               inkscape:label="MajorYDiv1"
+               id="path10637-5-6-5" />
+            <path
+               style="fill:none;stroke:#000000;stroke-width:0.675025"
+               d="M 0,37.7953 H 56.6929"
+               inkscape:label="MajorYDiv2"
+               id="path10639-6-2-9" />
+          </g>
+          <rect
+             x="0"
+             y="0"
+             width="56.692913"
+             height="56.692913"
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             inkscape:label="Border"
+             id="rect10643-2-9-2" />
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:32.6229px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.999997"
+           x="226.52979"
+           y="255.24289"
+           id="text13196-1-2"><tspan
+             sodipodi:role="line"
+             id="tspan13194-2-89"
+             x="226.52979"
+             y="255.24289"
+             style="stroke-width:0.999997">X</tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+         x="225.18533"
+         y="599.11249"
+         id="text6484-7"><tspan
+           sodipodi:role="line"
+           id="tspan6482-6"
+           x="225.18533"
+           y="599.11249">o</tspan></text>
+    </g>
+    <g
+       id="g7059"
+       transform="translate(-55.766579,77.316556)">
+      <g
+         id="g15522-3-7"
+         transform="translate(72.464289,342.77182)">
+        <g
+           inkscape:label="GridCartesian:X3:Y3"
+           transform="matrix(1.4814261,0,0,1.4814261,223.02856,228.92205)"
+           id="g10645-3-6-0"
+           style="stroke-width:0.675025">
+          <g
+             inkscape:label="MajorXGridlines"
+             id="g10635-6-7-9"
+             style="stroke-width:0.675025">
+            <path
+               style="fill:none;stroke:#000000;stroke-width:0.675025"
+               d="M 18.8976,0 V 56.6929"
+               inkscape:label="MajorXDiv1"
+               id="path10631-7-5-3" />
+            <path
+               style="fill:none;stroke:#000000;stroke-width:0.675025"
+               d="M 37.7953,0 V 56.6929"
+               inkscape:label="MajorXDiv2"
+               id="path10633-5-3-6" />
+          </g>
+          <g
+             inkscape:label="MajorYGridlines"
+             id="g10641-3-5-0"
+             style="stroke-width:0.675025">
+            <path
+               style="fill:none;stroke:#000000;stroke-width:0.675025"
+               d="M 0,18.8976 H 56.6929"
+               inkscape:label="MajorYDiv1"
+               id="path10637-5-6-6" />
+            <path
+               style="fill:none;stroke:#000000;stroke-width:0.675025"
+               d="M 0,37.7953 H 56.6929"
+               inkscape:label="MajorYDiv2"
+               id="path10639-6-2-2" />
+          </g>
+          <rect
+             x="0"
+             y="0"
+             width="56.692913"
+             height="56.692913"
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             inkscape:label="Border"
+             id="rect10643-2-9-6" />
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:32.6229px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.999997"
+           x="226.52979"
+           y="255.24289"
+           id="text13196-1-1"><tspan
+             sodipodi:role="line"
+             id="tspan13194-2-8"
+             x="226.52979"
+             y="255.24289"
+             style="stroke-width:0.999997">X</tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+         x="325.46039"
+         y="625.61389"
+         id="text6484-5"><tspan
+           sodipodi:role="line"
+           id="tspan6482-69"
+           x="325.46039"
+           y="625.61389">o</tspan></text>
+    </g>
+    <g
+       id="g7074"
+       transform="translate(-58.940296,77.348996)">
+      <g
+         id="g15522-3-73"
+         transform="translate(206.54255,342.73938)">
+        <g
+           inkscape:label="GridCartesian:X3:Y3"
+           transform="matrix(1.4814261,0,0,1.4814261,223.02856,228.92205)"
+           id="g10645-3-6-6"
+           style="stroke-width:0.675025">
+          <g
+             inkscape:label="MajorXGridlines"
+             id="g10635-6-7-1"
+             style="stroke-width:0.675025">
+            <path
+               style="fill:none;stroke:#000000;stroke-width:0.675025"
+               d="M 18.8976,0 V 56.6929"
+               inkscape:label="MajorXDiv1"
+               id="path10631-7-5-29" />
+            <path
+               style="fill:none;stroke:#000000;stroke-width:0.675025"
+               d="M 37.7953,0 V 56.6929"
+               inkscape:label="MajorXDiv2"
+               id="path10633-5-3-31" />
+          </g>
+          <g
+             inkscape:label="MajorYGridlines"
+             id="g10641-3-5-9"
+             style="stroke-width:0.675025">
+            <path
+               style="fill:none;stroke:#000000;stroke-width:0.675025"
+               d="M 0,18.8976 H 56.6929"
+               inkscape:label="MajorYDiv1"
+               id="path10637-5-6-4" />
+            <path
+               style="fill:none;stroke:#000000;stroke-width:0.675025"
+               d="M 0,37.7953 H 56.6929"
+               inkscape:label="MajorYDiv2"
+               id="path10639-6-2-7" />
+          </g>
+          <rect
+             x="0"
+             y="0"
+             width="56.692913"
+             height="56.692913"
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             inkscape:label="Border"
+             id="rect10643-2-9-8" />
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:32.6229px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.999997"
+           x="226.52979"
+           y="255.24289"
+           id="text13196-1-4"><tspan
+             sodipodi:role="line"
+             id="tspan13194-2-5"
+             x="226.52979"
+             y="255.24289"
+             style="stroke-width:0.999997">X</tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+         x="487.83636"
+         y="624.7077"
+         id="text6484-3"><tspan
+           sodipodi:role="line"
+           id="tspan6482-7"
+           x="487.83636"
+           y="624.7077">o</tspan></text>
+    </g>
+    <g
+       id="g7029"
+       transform="translate(-61.753486,92.052222)">
+      <g
+         id="g15522-3-0"
+         transform="translate(208.60117,204.20554)">
+        <g
+           inkscape:label="GridCartesian:X3:Y3"
+           transform="matrix(1.4814261,0,0,1.4814261,223.02856,228.92205)"
+           id="g10645-3-6-3"
+           style="stroke-width:0.675025">
+          <g
+             inkscape:label="MajorXGridlines"
+             id="g10635-6-7-6"
+             style="stroke-width:0.675025">
+            <path
+               style="fill:none;stroke:#000000;stroke-width:0.675025"
+               d="M 18.8976,0 V 56.6929"
+               inkscape:label="MajorXDiv1"
+               id="path10631-7-5-1" />
+            <path
+               style="fill:none;stroke:#000000;stroke-width:0.675025"
+               d="M 37.7953,0 V 56.6929"
+               inkscape:label="MajorXDiv2"
+               id="path10633-5-3-0" />
+          </g>
+          <g
+             inkscape:label="MajorYGridlines"
+             id="g10641-3-5-6"
+             style="stroke-width:0.675025">
+            <path
+               style="fill:none;stroke:#000000;stroke-width:0.675025"
+               d="M 0,18.8976 H 56.6929"
+               inkscape:label="MajorYDiv1"
+               id="path10637-5-6-3" />
+            <path
+               style="fill:none;stroke:#000000;stroke-width:0.675025"
+               d="M 0,37.7953 H 56.6929"
+               inkscape:label="MajorYDiv2"
+               id="path10639-6-2-20" />
+          </g>
+          <rect
+             x="0"
+             y="0"
+             width="56.692913"
+             height="56.692913"
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             inkscape:label="Border"
+             id="rect10643-2-9-61" />
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:32.6229px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.999997"
+           x="226.52979"
+           y="255.24289"
+           id="text13196-1-5"><tspan
+             sodipodi:role="line"
+             id="tspan13194-2-54"
+             x="226.52979"
+             y="255.24289"
+             style="stroke-width:0.999997">X</tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+         x="489.65067"
+         y="513.62512"
+         id="text6484-4"><tspan
+           sodipodi:role="line"
+           id="tspan6482-5"
+           x="489.65067"
+           y="513.62512">o</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+         x="577.65216"
+         y="363.61197"
+         id="text6484-4-4"><tspan
+           sodipodi:role="line"
+           id="tspan6482-5-8"
+           x="577.65216"
+           y="363.61197">o</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+         x="579.33002"
+         y="504.01096"
+         id="text6484-4-9"><tspan
+           sodipodi:role="line"
+           id="tspan6482-5-3"
+           x="579.33002"
+           y="504.01096">o</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="-737.24237"
+       y="45.712292"
+       id="text7892"
+       transform="rotate(-90)"><tspan
+         sodipodi:role="line"
+         id="tspan7890"
+         x="-737.24237"
+         y="45.712292">O's 1st Step</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.88976382;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend);stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 355.54079,368.82393 c 0,0 -71.44792,193.58582 -152.91615,197.62479"
+       id="path8662" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.88976382;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend);stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 353.6939,368.71234 c 0,0 -103.23641,236.2135 -153.32246,275.1467"
+       id="path8697" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.88976382;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend);stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 355.06341,370.01359 c 0,0 -105.97388,214.4399 -74.39844,270.73182"
+       id="path8699" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.88976382;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend);stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 354.49846,370.06217 c 0,0 -134.77517,213.92393 9.17039,274.12756"
+       id="path8767" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.88976382;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend);stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 348.8808,370.89993 c 0,0 -90.74876,191.58088 11.24448,196.66036"
+       id="path8802" />
+    <g
+       id="g15916-6"
+       transform="translate(15.33198,311.00363)">
+      <g
+         inkscape:label="GridCartesian:X3:Y3"
+         transform="matrix(1.4814261,0,0,1.4814261,499.85327,232.85546)"
+         id="g10645-9-6"
+         style="stroke-width:0.675025">
+        <g
+           inkscape:label="MajorXGridlines"
+           id="g10635-1-49"
+           style="stroke-width:0.675025">
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 18.8976,0 V 56.6929"
+             inkscape:label="MajorXDiv1"
+             id="path10631-2-5" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 37.7953,0 V 56.6929"
+             inkscape:label="MajorXDiv2"
+             id="path10633-7-0" />
+        </g>
+        <g
+           inkscape:label="MajorYGridlines"
+           id="g10641-0-48"
+           style="stroke-width:0.675025">
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 0,18.8976 H 56.6929"
+             inkscape:label="MajorYDiv1"
+             id="path10637-9-7" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 0,37.7953 H 56.6929"
+             inkscape:label="MajorYDiv2"
+             id="path10639-3-1" />
+        </g>
+        <rect
+           x="0"
+           y="0"
+           width="56.692913"
+           height="56.692913"
+           style="fill:none;stroke:#000000;stroke-width:0.675025"
+           inkscape:label="Border"
+           id="rect10643-6-72" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:32.6229px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.999997"
+         x="530.67456"
+         y="258.98126"
+         id="text13196-2-7"><tspan
+           sodipodi:role="line"
+           id="tspan13194-3-22"
+           x="530.67456"
+           y="258.98126"
+           style="stroke-width:0.999997">X</tspan></text>
+    </g>
+    <g
+       id="g15916-61"
+       transform="translate(98.384443,425.82539)">
+      <g
+         inkscape:label="GridCartesian:X3:Y3"
+         transform="matrix(1.4814261,0,0,1.4814261,499.85327,232.85546)"
+         id="g10645-9-0"
+         style="stroke-width:0.675025">
+        <g
+           inkscape:label="MajorXGridlines"
+           id="g10635-1-6"
+           style="stroke-width:0.675025">
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 18.8976,0 V 56.6929"
+             inkscape:label="MajorXDiv1"
+             id="path10631-2-15" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 37.7953,0 V 56.6929"
+             inkscape:label="MajorXDiv2"
+             id="path10633-7-9" />
+        </g>
+        <g
+           inkscape:label="MajorYGridlines"
+           id="g10641-0-49"
+           style="stroke-width:0.675025">
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 0,18.8976 H 56.6929"
+             inkscape:label="MajorYDiv1"
+             id="path10637-9-09" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 0,37.7953 H 56.6929"
+             inkscape:label="MajorYDiv2"
+             id="path10639-3-17" />
+        </g>
+        <rect
+           x="0"
+           y="0"
+           width="56.692913"
+           height="56.692913"
+           style="fill:none;stroke:#000000;stroke-width:0.675025"
+           inkscape:label="Border"
+           id="rect10643-6-71" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:32.6229px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.999997"
+         x="530.67456"
+         y="258.98126"
+         id="text13196-2-1"><tspan
+           sodipodi:role="line"
+           id="tspan13194-3-5"
+           x="530.67456"
+           y="258.98126"
+           style="stroke-width:0.999997">X</tspan></text>
+    </g>
+    <g
+       id="g15916-9"
+       transform="translate(188.92773,312.69608)">
+      <g
+         inkscape:label="GridCartesian:X3:Y3"
+         transform="matrix(1.4814261,0,0,1.4814261,499.85327,232.85546)"
+         id="g10645-9-7"
+         style="stroke-width:0.675025">
+        <g
+           inkscape:label="MajorXGridlines"
+           id="g10635-1-7"
+           style="stroke-width:0.675025">
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 18.8976,0 V 56.6929"
+             inkscape:label="MajorXDiv1"
+             id="path10631-2-6" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 37.7953,0 V 56.6929"
+             inkscape:label="MajorXDiv2"
+             id="path10633-7-7" />
+        </g>
+        <g
+           inkscape:label="MajorYGridlines"
+           id="g10641-0-3"
+           style="stroke-width:0.675025">
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 0,18.8976 H 56.6929"
+             inkscape:label="MajorYDiv1"
+             id="path10637-9-6" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.675025"
+             d="M 0,37.7953 H 56.6929"
+             inkscape:label="MajorYDiv2"
+             id="path10639-3-5" />
+        </g>
+        <rect
+           x="0"
+           y="0"
+           width="56.692913"
+           height="56.692913"
+           style="fill:none;stroke:#000000;stroke-width:0.675025"
+           inkscape:label="Border"
+           id="rect10643-6-6" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:32.6229px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.999997"
+         x="530.67456"
+         y="258.98126"
+         id="text13196-2-3"><tspan
+           sodipodi:role="line"
+           id="tspan13194-3-9"
+           x="530.67456"
+           y="258.98126"
+           style="stroke-width:0.999997">X</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="600.03235"
+       y="739.94281"
+       id="text6484-4-90"><tspan
+         sodipodi:role="line"
+         id="tspan6482-5-88"
+         x="600.03235"
+         y="739.94281">o</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="973.58344"
+       y="445.17535"
+       id="text6484-4-90-9"><tspan
+         sodipodi:role="line"
+         id="tspan6482-5-88-6"
+         x="973.58344"
+         y="445.17535">o</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="716.11438"
+       y="483.95581"
+       id="text6484-4-5"><tspan
+         sodipodi:role="line"
+         id="tspan6482-5-0"
+         x="716.11438"
+         y="483.95581">o</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="718.56946"
+       y="626.35217"
+       id="text6484-4-96"><tspan
+         sodipodi:role="line"
+         id="tspan6482-5-38"
+         x="718.56946"
+         y="626.35217">o</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.88976382;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#Arrow1Lend)"
+       d="m 632.49838,365.4335 c 0,0 9.18379,103.86887 -28.1406,110.31361"
+       id="path9730" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.88976382;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#Arrow1Lend)"
+       d="m 632.06129,365.90423 c 0,0 17.33407,215.40037 -21.11627,223.41622"
+       id="path9732" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.88976382;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#Arrow1Lend)"
+       d="m 632.16902,370.77807 c 0,0 13.54714,200.00504 5.78241,278.36591"
+       id="path9802" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.88976382;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#Arrow1Lend)"
+       d="m 632.14315,370.89515 c 0,0 -0.23538,196.86458 46.22474,217.08784"
+       id="path9804" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.88976382;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#Arrow1Lend)"
+       d="m 633.42881,369.61549 c 0,0 -6.34973,98.73652 43.44423,104.83177"
+       id="path9806" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="971.86182"
+       y="625.01447"
+       id="text6484-4-90-2"><tspan
+         sodipodi:role="line"
+         id="tspan6482-5-88-1"
+         x="971.86182"
+         y="625.01447">o</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.88976382;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#Arrow1Lend)"
+       d="m 915.8546,363.47474 c 0,0 -0.95758,86.03765 48.77211,98.88915"
+       id="path12384" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.88976382;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#Arrow1Lend)"
+       d="m 913.7105,364.75687 c 0,0 0.2428,247.97467 49.47258,246.73845"
+       id="path12386" />
+  </g>
+</svg>
