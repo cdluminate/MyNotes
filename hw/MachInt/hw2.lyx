@@ -525,7 +525,54 @@ So the final assignments are
 \end_layout
 
 \begin_layout Subsection
-C: What Values will Be Eliminated?
+C: What Values will Be Eliminated with Forward Checking?
+\end_layout
+
+\begin_layout Standard
+If we let 
+\begin_inset Formula $A=P$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Enumerate
+then 
+\begin_inset Formula $B=P$
+\end_inset
+
+ will be eliminated due to constraint 2.
+ And now 
+\begin_inset Formula $B\in\{R\}$
+\end_inset
+
+ due to constraint 3.
+\end_layout
+
+\begin_layout Enumerate
+then 
+\begin_inset Formula $C\neq P$
+\end_inset
+
+ will be eliminated due to constarint 5.
+ And now 
+\begin_inset Formula $C\in\{P\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+then nothing will be eliminated for 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ And now 
+\begin_inset Formula $D\in\{Q,R,S\}$
+\end_inset
+
+ due to constraint 6.
 \end_layout
 
 \begin_layout Subsection
