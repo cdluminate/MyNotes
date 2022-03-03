@@ -117,6 +117,9 @@ Game Tree Down to Depth 2
  Using the minimax algorithm, mark on your tree the backed-up values for
  the positions at depths 1 and 0 and use those values to choose the best
  starting move
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename tictactoe.svg
 	special width=\linewidth
