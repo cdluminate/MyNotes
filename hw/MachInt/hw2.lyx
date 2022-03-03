@@ -252,6 +252,29 @@ Six Linear Spots Labeled 1 to 6
 Minimum Number of Leaves that Must be Explored
 \end_layout
 
+\begin_layout Standard
+In the minimum case, only the children of the first node will be explored
+ at each layer.
+ Only one child node will be examined for the rest nodes at the same layer.
+ Let 
+\begin_inset Formula $X_{D}$
+\end_inset
+
+ be the minimum number of leaves, we have
+\begin_inset Formula 
+\begin{align*}
+X_{1}= & B\\
+X_{2}= & B+X_{1}-1=2B-1\\
+X_{3}= & B+X_{2}-1=3B-2\\
+\ldots\\
+X_{D}= & DB-D+1
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 True or False Related to Alpha-Beta Pruning
 \end_layout
