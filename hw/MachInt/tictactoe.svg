@@ -24,8 +24,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.3381294"
-     inkscape:cx="504.43551"
-     inkscape:cy="571.69357"
+     inkscape:cx="504.43552"
+     inkscape:cy="272.76884"
      inkscape:window-width="1920"
      inkscape:window-height="1025"
      inkscape:window-x="0"
@@ -1337,32 +1337,42 @@
     <text
        xml:space="preserve"
        style="font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;fill:#0000ff"
-       x="358.12799"
-       y="369.19159"
-       id="text7708"><tspan
+       x="362.49493"
+       y="378.87338"
+       id="text1845"><tspan
          sodipodi:role="line"
-         id="tspan7706"
-         x="358.12799"
-         y="369.19159">3</tspan></text>
+         id="tspan1843"
+         x="362.49493"
+         y="378.87338">-1</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;fill:#0000ff"
-       x="649.20374"
-       y="372.7836"
-       id="text7708-3"><tspan
+       x="651.5368"
+       y="374.86053"
+       id="text2893"><tspan
          sodipodi:role="line"
-         id="tspan7706-6"
-         x="649.20374"
-         y="372.7836">4</tspan></text>
+         id="tspan2891"
+         x="651.5368"
+         y="374.86053">0</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;fill:#0000ff"
-       x="926.06287"
-       y="369.15823"
-       id="text7708-3-7"><tspan
+       x="651.55884"
+       y="161.79468"
+       id="text2893-36"><tspan
          sodipodi:role="line"
-         id="tspan7706-6-5"
-         x="926.06287"
-         y="369.15823">4</tspan></text>
+         id="tspan2891-7"
+         x="651.55884"
+         y="161.79468">0</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;fill:#0000ff"
+       x="930.2431"
+       y="374.95203"
+       id="text2893-3"><tspan
+         sodipodi:role="line"
+         id="tspan2891-6"
+         x="930.2431"
+         y="374.95203">0</tspan></text>
   </g>
 </svg>

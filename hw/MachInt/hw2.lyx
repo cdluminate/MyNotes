@@ -200,6 +200,11 @@ Unfortunately this arrangement will have no branch pruned because the minimum
 \end_inset
 
  will be seen at the beginning.
+ So no later child node will refresh that 
+\begin_inset Formula $-1$
+\end_inset
+
+ score, and hence no branch will be pruned.
 \end_layout
 
 \begin_layout Section
@@ -276,7 +281,7 @@ X_{D}= & DB-D+1
 
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Section
