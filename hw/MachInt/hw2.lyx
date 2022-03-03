@@ -579,5 +579,51 @@ then nothing will be eliminated for
 D: Local Search with Min-conflicts Algorithm
 \end_layout
 
+\begin_layout Standard
+Given the initial assignment 
+\begin_inset Formula $\{A=P,B=P,C=P,D=P\}$
+\end_inset
+
+, we need to choose the value for 
+\begin_inset Formula $B$
+\end_inset
+
+ that violates the least number of conditions.
+\end_layout
+
+\begin_layout Standard
+Currently 
+\begin_inset Formula $B$
+\end_inset
+
+ violates constraint {1,4}.
+ It poses two conflicts.
+\end_layout
+
+\begin_layout Standard
+For variable 
+\begin_inset Formula $B$
+\end_inset
+
+, value 
+\begin_inset Formula $Q$
+\end_inset
+
+ violates constraint {3}, value 
+\begin_inset Formula $R$
+\end_inset
+
+ violates no constraint, and value 
+\begin_inset Formula $S$
+\end_inset
+
+ violates constraint {3}.
+ Thus, value 
+\begin_inset Formula $R$
+\end_inset
+
+ minimizes the number of conflicts to zero.
+\end_layout
+
 \end_body
 \end_document
