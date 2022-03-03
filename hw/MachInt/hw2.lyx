@@ -165,7 +165,7 @@ RED
 \end_layout
 
 \begin_layout Subsection
-Min-Max Algorithm
+Minimax Algorithm
 \end_layout
 
 \begin_layout Standard
@@ -289,15 +289,27 @@ True or False Related to Alpha-Beta Pruning
 \end_layout
 
 \begin_layout Description
-A
+A False.
+ The pruning has no effect on minimax value computed for the root.
+ With pruning, we are still searching for the solution within the set of
+ search paths of minimax search.
+ Thus, the search space of Alpha-Beta pruning is a subset of that of minimax
+ search, and hence Alpha-Beta pruning is bounded by minimax search.
 \end_layout
 
 \begin_layout Description
-B
+B False.
+ If the children of the first node are the largest ones, then pruning must
+ happen during the traversal of the rest nodes.
+ In contrast, if the smallest child occurs at the first node, then no branch
+ will be pruned because no children can refresh that minimum number.
 \end_layout
 
 \begin_layout Description
-C
+C False.
+ With branch pruning, alpha-beta is much more efficient than the minimax
+ search.
+ Time complexity drops in this case.
 \end_layout
 
 \begin_layout Section
