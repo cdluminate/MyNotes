@@ -23,14 +23,14 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.4731002"
-     inkscape:cx="615.09169"
-     inkscape:cy="255.75977"
-     inkscape:window-width="960"
+     inkscape:zoom="1.3381294"
+     inkscape:cx="504.43551"
+     inkscape:cy="571.69357"
+     inkscape:window-width="1920"
      inkscape:window-height="1025"
-     inkscape:window-x="960"
+     inkscape:window-x="0"
      inkscape:window-y="27"
-     inkscape:window-maximized="0"
+     inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
      inkscape:snap-global="false" />
   <defs
@@ -1334,5 +1334,35 @@
          id="tspan40014"
          x="1000.4546"
          y="672.9552">0</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;fill:#0000ff"
+       x="358.12799"
+       y="369.19159"
+       id="text7708"><tspan
+         sodipodi:role="line"
+         id="tspan7706"
+         x="358.12799"
+         y="369.19159">3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;fill:#0000ff"
+       x="649.20374"
+       y="372.7836"
+       id="text7708-3"><tspan
+         sodipodi:role="line"
+         id="tspan7706-6"
+         x="649.20374"
+         y="372.7836">4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;fill:#0000ff"
+       x="926.06287"
+       y="369.15823"
+       id="text7708-3-7"><tspan
+         sodipodi:role="line"
+         id="tspan7706-6-5"
+         x="926.06287"
+         y="369.15823">4</tspan></text>
   </g>
 </svg>

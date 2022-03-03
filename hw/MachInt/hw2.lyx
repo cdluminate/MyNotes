@@ -104,6 +104,8 @@ There are
 \end_inset
 
  possible games.
+ But considering symmetric games, the actual numbers will be smaller than
+ this.
 \end_layout
 
 \begin_layout Subsection
@@ -111,6 +113,10 @@ Game Tree Down to Depth 2
 \end_layout
 
 \begin_layout Standard
+4.
+ Using the minimax algorithm, mark on your tree the backed-up values for
+ the positions at depths 1 and 0 and use those values to choose the best
+ starting move
 \begin_inset Graphics
 	filename tictactoe.svg
 	special width=\linewidth
@@ -156,6 +162,44 @@ E(s)=X_{1}(s)-O_{1}(s).
 RED
 \color inherit
  color.
+\end_layout
+
+\begin_layout Subsection
+Min-Max Algorithm
+\end_layout
+
+\begin_layout Standard
+X aims at maximizing the value, while O aims at minimizing the value.
+ The backed-up values are highlighed in 
+\color blue
+BLUE
+\color inherit
+ color.
+ The best move for X is to play at the center position, or the center of
+ an edge.
+\end_layout
+
+\begin_layout Subsection
+Alpha-Beta Pruning
+\end_layout
+
+\begin_layout Standard
+Nodes that would not be evaluated in case of alpha-beta pruning are enclosed
+ by 
+\color green
+GREEN
+\color inherit
+ circles.
+ Note, we traverse these nodes from left to right, upper to lower.
+\end_layout
+
+\begin_layout Standard
+Unfortunately this arrangement will have no branch pruned because the minimum
+ value 
+\begin_inset Formula $-1$
+\end_inset
+
+ will be seen at the beginning.
 \end_layout
 
 \begin_layout Section
