@@ -94,20 +94,94 @@ Mo Zhou <mzhou32@jhu.edu>
 Game Plying: Tic-tac-toe
 \end_layout
 
-\begin_layout Standard
-We define 
-\begin_inset Formula $X_{n}$
-\end_inset
-
- as 
-\end_layout
-
 \begin_layout Subsection
 Approximately how many games of tic-tac-toe are there?
 \end_layout
 
 \begin_layout Section
-True or False
+True or False Related to Local Search
+\end_layout
+
+\begin_layout Description
+A False.
+ Hill-climbing algorithm is incomplete.
+ When it gets stuck at a local optimum, it will not be able to escape even
+ if we have enough time.
+\end_layout
+
+\begin_layout Description
+B False.
+ Due to the greedy nature of local search, it will never reach the global
+ optimum two steps away, as long as the neighbor state has a worse score
+ than the current state.
+ It will not go beyond any worse state compared to the current one.
+\end_layout
+
+\begin_layout Description
+C False.
+ Even if we have stochastic ascending steps, it may still stuck at local
+ optimum and return the corresponding result.
+\end_layout
+
+\begin_layout Description
+D True.
+ Gradient descent can lead us to at least local optimum points.
+ But note that, the score may not peak due to the fixed step size (e.g., the
+ optimal state 1.5 is unreachable from state 1.0 with fixed step size 1.0).
+ Secondly, first-order gradient descent method suffers from saddle point
+ problems in optimization.
+ If the two concerns does not matter, then the answer is true.
+\end_layout
+
+\begin_layout Description
+E True.
+ This is guaranteed in optimization theory.
+ But for convex problems, we usually have analytical solutions which are
+ much more efficient than gradient-based iterative methods.
+\end_layout
+
+\begin_layout Section
+Six Linear Spots Labeled 1 to 6
+\end_layout
+
+\begin_layout Section
+Minimum Number of Leaves that Must be Explored
+\end_layout
+
+\begin_layout Section
+True or False Related to Alpha-Beta Pruning
+\end_layout
+
+\begin_layout Description
+A
+\end_layout
+
+\begin_layout Description
+B
+\end_layout
+
+\begin_layout Description
+C
+\end_layout
+
+\begin_layout Section
+Ali, Bo, Cleo, and Dallas
+\end_layout
+
+\begin_layout Description
+A
+\end_layout
+
+\begin_layout Description
+B
+\end_layout
+
+\begin_layout Description
+C
+\end_layout
+
+\begin_layout Description
+D
 \end_layout
 
 \end_body
