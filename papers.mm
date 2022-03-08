@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="82" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="83" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1642395333050">
 <edge COLOR="#00ffff"/>
 <node TEXT="what&apos;s this" ID="ID_34209772" CREATED="1641520840738" MODIFIED="1641520995587">
@@ -413,7 +413,31 @@
 </node>
 <node TEXT="Tracking" ID="ID_404459343" CREATED="1644181489904" MODIFIED="1644181494136"/>
 </node>
-<node TEXT="Adversarial Defense" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1642965722931">
+<node TEXT="Attack Detection" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1244682927" CREATED="1646761472294" MODIFIED="1646761521946">
+<edge COLOR="#7c0000"/>
+<node TEXT="Vulnerability Analysis" ID="ID_784781441" CREATED="1646761495607" MODIFIED="1646761500195"/>
+<node TEXT="Patch Detection" ID="ID_1544755494" CREATED="1641523388190" MODIFIED="1644180812163">
+<node TEXT="on the real world adversarial robustness of real-time semantic segmentation models for autonomous driving" ID="ID_621290194" CREATED="1641523393314" MODIFIED="1641523426222">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Perturbation Detection" ID="ID_983985712" CREATED="1641523884091" MODIFIED="1644180825581">
+<node TEXT="(survey) towards understanding and harnessing the effect of image transformation in adversarial deteciton" ID="ID_1343762323" CREATED="1641523891006" MODIFIED="1641523914261">
+<icon BUILTIN="pencil"/>
+<node TEXT="via image transformations" ID="ID_1033635622" CREATED="1641523928903" MODIFIED="1641523932870"/>
+<node TEXT="this paper creates ensemble of transformations" ID="ID_446066363" CREATED="1641523933774" MODIFIED="1641523943924"/>
+</node>
+<node TEXT="Adversarial Detection without Model Information" ID="ID_1367926726" CREATED="1645108452079" MODIFIED="1645108457127">
+<icon BUILTIN="pencil"/>
+<node TEXT="attack detection that assumes model unavailable" ID="ID_854336755" CREATED="1645108496480" MODIFIED="1645108529519">
+<icon BUILTIN="clanbomber"/>
+</node>
+<node TEXT="standalone detector independent of the underlying model" ID="ID_1195494420" CREATED="1645108458713" MODIFIED="1645108481695"/>
+<node TEXT="energy distribution=based adversarial deteciton" ID="ID_1662739452" CREATED="1645108807054" MODIFIED="1645108816218"/>
+</node>
+</node>
+</node>
+<node TEXT="Adversarial Defense" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1642965722931">
 <edge COLOR="#0000ff"/>
 <font NAME="Gentium"/>
 <node TEXT="Classification Task" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1643035532082">
@@ -445,26 +469,6 @@
 <node TEXT="adversarially robust representations capture peripheral computation better than non-robust representations" ID="ID_1873265753" CREATED="1644179653393" MODIFIED="1644179681284"/>
 <node TEXT="robust representations capture peripheral computation similar to current state-of-the-art texture peripheral vision models" ID="ID_180695247" CREATED="1644179681505" MODIFIED="1644179704075"/>
 <node TEXT="support the idea that localized texture summary statistic representations may drive human invariance to adversarial perturbations and that the incorporation of such representations in DNNs could give rise to useful properties like adversarial robustness" ID="ID_1448992825" CREATED="1644179707291" MODIFIED="1644179745688"/>
-</node>
-</node>
-<node TEXT="Patch Detection" ID="ID_1544755494" CREATED="1641523388190" MODIFIED="1644180812163">
-<node TEXT="on the real world adversarial robustness of real-time semantic segmentation models for autonomous driving" ID="ID_621290194" CREATED="1641523393314" MODIFIED="1641523426222">
-<icon BUILTIN="pencil"/>
-</node>
-</node>
-<node TEXT="Perturbation Detection" ID="ID_983985712" CREATED="1641523884091" MODIFIED="1644180825581">
-<node TEXT="(survey) towards understanding and harnessing the effect of image transformation in adversarial deteciton" ID="ID_1343762323" CREATED="1641523891006" MODIFIED="1641523914261">
-<icon BUILTIN="pencil"/>
-<node TEXT="via image transformations" ID="ID_1033635622" CREATED="1641523928903" MODIFIED="1641523932870"/>
-<node TEXT="this paper creates ensemble of transformations" ID="ID_446066363" CREATED="1641523933774" MODIFIED="1641523943924"/>
-</node>
-<node TEXT="Adversarial Detection without Model Information" ID="ID_1367926726" CREATED="1645108452079" MODIFIED="1645108457127">
-<icon BUILTIN="pencil"/>
-<node TEXT="attack detection that assumes model unavailable" ID="ID_854336755" CREATED="1645108496480" MODIFIED="1645108529519">
-<icon BUILTIN="clanbomber"/>
-</node>
-<node TEXT="standalone detector independent of the underlying model" ID="ID_1195494420" CREATED="1645108458713" MODIFIED="1645108481695"/>
-<node TEXT="energy distribution=based adversarial deteciton" ID="ID_1662739452" CREATED="1645108807054" MODIFIED="1645108816218"/>
 </node>
 </node>
 <node TEXT="Adversarial Training" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1641743568907">
@@ -503,7 +507,20 @@
 </node>
 </node>
 </node>
-<node TEXT="AT Enhance" ID="ID_820322296" CREATED="1642449280058" MODIFIED="1642449298853">
+<node TEXT="AWP" ID="ID_1537290479" CREATED="1642456071529" MODIFIED="1646671285402">
+<icon BUILTIN="bookmark"/>
+<node TEXT="Adversarial weight perturbation helps robust generalization." ID="ID_1348938152" CREATED="1642456074788" MODIFIED="1643412228699">
+<icon BUILTIN="unchecked"/>
+<icon BUILTIN="bookmark"/>
+<node TEXT="SOTA" ID="ID_431363817" CREATED="1643412245745" MODIFIED="1643412247800"/>
+</node>
+</node>
+<node TEXT="ALP" ID="ID_181360875" CREATED="1646671293886" MODIFIED="1646671296189">
+<node TEXT="Adversarial logit paring" FOLDED="true" ID="ID_510147065" CREATED="1646671297160" MODIFIED="1646671312531">
+<icon BUILTIN="unchecked"/>
+<node TEXT="Ian goodfellow" ID="ID_469721326" CREATED="1646671305592" MODIFIED="1646671309168"/>
+</node>
+</node>
 <node TEXT="Curriculum AT" ID="ID_373950173" CREATED="1643412302659" MODIFIED="1643412307668">
 <node TEXT="Curriculum Adversarial Training" ID="ID_285117304" CREATED="1643412309119" MODIFIED="1643413743828">
 <icon BUILTIN="checked"/>
@@ -518,32 +535,10 @@
 <node TEXT="nips20" ID="ID_670378629" CREATED="1642456026381" MODIFIED="1642456030253"/>
 </node>
 </node>
-<node TEXT="AWP/AT" ID="ID_1537290479" CREATED="1642456071529" MODIFIED="1643412240326">
-<node TEXT="Adversarial weight perturbation helps robust generalization." ID="ID_1348938152" CREATED="1642456074788" MODIFIED="1643412228699">
-<icon BUILTIN="unchecked"/>
-<icon BUILTIN="bookmark"/>
-<node TEXT="SOTA" ID="ID_431363817" CREATED="1643412245745" MODIFIED="1643412247800"/>
-</node>
-</node>
 <node TEXT="GAIRAT" ID="ID_1795824577" CREATED="1642369428185" MODIFIED="1642441201215">
 <node TEXT="geometry-aware instance-reweighted adversarial training, iclr, 2020" ID="ID_255113727" CREATED="1642369496991" MODIFIED="1642441263816">
 <icon BUILTIN="unchecked"/>
 <node TEXT="iclr20" ID="ID_1152586640" CREATED="1643412171827" MODIFIED="1643412174065"/>
-</node>
-</node>
-<node TEXT="MART" ID="ID_6479998" CREATED="1642438310728" MODIFIED="1642441191254">
-<node TEXT="improving adversarial robustness requires revisiting misclassified examples" ID="ID_466710053" CREATED="1642438315292" MODIFIED="1642438341586">
-<icon BUILTIN="unchecked"/>
-</node>
-</node>
-<node TEXT="FBF" ID="ID_761176936" CREATED="1642449341180" MODIFIED="1642449345704">
-<node TEXT="Fast is better than free: Revisiting adversarial training." ID="ID_336860717" CREATED="1642455952378" MODIFIED="1642455958511">
-<icon BUILTIN="unchecked"/>
-</node>
-</node>
-<node TEXT="R-MGM" ID="ID_1819761584" CREATED="1642449346090" MODIFIED="1642449349702">
-<node TEXT="Regularizer to mitigate gradient masking effect during&#xa;single-step adversarial training." ID="ID_1809245170" CREATED="1642455983073" MODIFIED="1642455989167">
-<icon BUILTIN="unchecked"/>
 </node>
 </node>
 <node TEXT="NuAT" ID="ID_769833360" CREATED="1642449307525" MODIFIED="1642449312169">
@@ -583,6 +578,20 @@
 </node>
 </node>
 </node>
+</node>
+<node TEXT="R-MGM" ID="ID_1819761584" CREATED="1642449346090" MODIFIED="1642449349702">
+<node TEXT="Regularizer to mitigate gradient masking effect during&#xa;single-step adversarial training." ID="ID_1809245170" CREATED="1642455983073" MODIFIED="1642455989167">
+<icon BUILTIN="unchecked"/>
+</node>
+</node>
+<node TEXT="FBF" ID="ID_761176936" CREATED="1642449341180" MODIFIED="1642449345704">
+<node TEXT="Fast is better than free: Revisiting adversarial training." ID="ID_336860717" CREATED="1642455952378" MODIFIED="1642455958511">
+<icon BUILTIN="unchecked"/>
+</node>
+</node>
+<node TEXT="MART" ID="ID_6479998" CREATED="1642438310728" MODIFIED="1642441191254">
+<node TEXT="improving adversarial robustness requires revisiting misclassified examples" ID="ID_466710053" CREATED="1642438315292" MODIFIED="1642438341586">
+<icon BUILTIN="unchecked"/>
 </node>
 </node>
 <node TEXT="AT Speed" ID="ID_1548520614" CREATED="1642441206809" MODIFIED="1642449303630">
