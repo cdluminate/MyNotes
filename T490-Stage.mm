@@ -63,7 +63,21 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="3" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="6" RULE="ON_BRANCH_CREATION"/>
+<node TEXT="Contrastive Learning" POSITION="right" ID="ID_213839121" CREATED="1646937421326" MODIFIED="1646937424335">
+<edge COLOR="#00ffff"/>
+<node TEXT="BatchFormer: Learning to Explore Sample Relationships for Robust Representation Learning" ID="ID_1047906963" CREATED="1646937425094" MODIFIED="1646937435486">
+<icon BUILTIN="unchecked"/>
+<node TEXT="cvpr22" ID="ID_1302140754" CREATED="1646937436755" MODIFIED="1646937438057"/>
+</node>
+</node>
+<node TEXT="Explanation" POSITION="right" ID="ID_1535392614" CREATED="1646937960988" MODIFIED="1646937967458">
+<edge COLOR="#7c0000"/>
+<node TEXT="Do Explanations Explain? Model Knows Best" ID="ID_1458677290" CREATED="1646937968275" MODIFIED="1646937983298">
+<icon BUILTIN="checked"/>
+<node TEXT="CVPR22" ID="ID_164811359" CREATED="1646937985052" MODIFIED="1646937987156"/>
+</node>
+</node>
 <node TEXT="Backdoor Attack" POSITION="right" ID="ID_621969120" CREATED="1646928896139" MODIFIED="1646928902737">
 <edge COLOR="#ff0000"/>
 <node TEXT="Automobile" ID="ID_1807292891" CREATED="1646928903901" MODIFIED="1646928910994">
@@ -108,6 +122,15 @@
 <node TEXT="does not report adversarial example strength" ID="ID_1516966777" CREATED="1646934922811" MODIFIED="1646934935894">
 <icon BUILTIN="button_cancel"/>
 </node>
+</node>
+</node>
+</node>
+<node TEXT="Privacy" POSITION="right" ID="ID_545030493" CREATED="1646937276323" MODIFIED="1646937278744">
+<edge COLOR="#ff00ff"/>
+<node TEXT="Model Inversion" ID="ID_1887850078" CREATED="1646937279593" MODIFIED="1646937283019">
+<node TEXT="Label-Only Model Inversion Attacks via Boundary Repulsion" ID="ID_1711729671" CREATED="1646937292008" MODIFIED="1646937298623">
+<icon BUILTIN="checked"/>
+<font ITALIC="false"/>
 </node>
 </node>
 </node>
