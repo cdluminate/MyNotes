@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="{M,R,D}L" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1642394353464" STYLE="oval">
 <font NAME="Gentium" SIZE="18"/>
-<hook NAME="MapStyle" zoom="1.714">
+<hook NAME="MapStyle" zoom="1.064">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -122,6 +122,7 @@
 <node TEXT="arXiv" ID="ID_555001851" CREATED="1641521435482" MODIFIED="1642954134722">
 <node TEXT="2022" OBJECT="java.lang.Long|2022" ID="ID_1490488610" CREATED="1641521399876" MODIFIED="1641521403819">
 <node TEXT="Weekly batch" ID="ID_1917473385" CREATED="1642949144502" MODIFIED="1642949169400">
+<node TEXT="mar 5 ok" ID="ID_738405241" CREATED="1646924914848" MODIFIED="1646924917070"/>
 <node TEXT="feb 6 ok" ID="ID_127471972" CREATED="1644179265598" MODIFIED="1644179268478"/>
 <node TEXT="jan 21 ok" ID="ID_478019013" CREATED="1642949108689" MODIFIED="1642949111895"/>
 <node TEXT="jan 14 ok" ID="ID_18090536" CREATED="1642368648797" MODIFIED="1642368656369"/>
@@ -130,6 +131,9 @@
 </node>
 </node>
 <node TEXT="CVPR" ID="ID_1240053621" CREATED="1641521439738" MODIFIED="1642954136648">
+<node TEXT="2022" OBJECT="java.lang.Long|2022" ID="ID_1290012760" CREATED="1646924932979" MODIFIED="1646924934382">
+<node TEXT="TODO" ID="ID_726647901" CREATED="1646924935622" MODIFIED="1646924937856"/>
+</node>
 <node TEXT="2021" OBJECT="java.lang.Long|2021" ID="ID_1246146016" CREATED="1642954104588" MODIFIED="1642954106947">
 <node TEXT="TODO" ID="ID_609674727" CREATED="1642954107744" MODIFIED="1642954109015"/>
 </node>
@@ -141,10 +145,16 @@
 </node>
 <node TEXT="list stored in chrome, WIP" ID="ID_23203732" CREATED="1641929165306" MODIFIED="1642954165230"/>
 </node>
+<node TEXT="2019" OBJECT="java.lang.Long|2019" ID="ID_886460557" CREATED="1646924942307" MODIFIED="1646924943938">
+<node TEXT="TODO" ID="ID_443194080" CREATED="1646924948431" MODIFIED="1646924949472"/>
+</node>
 </node>
 <node TEXT="ECCV" ID="ID_536802877" CREATED="1641521443344" MODIFIED="1642954140158">
 <node TEXT="2020" OBJECT="java.lang.Long|2020" ID="ID_314203344" CREATED="1642954114529" MODIFIED="1642954115862">
 <node TEXT="TODO" ID="ID_1908132768" CREATED="1642954116649" MODIFIED="1642954117576"/>
+</node>
+<node TEXT="2018" OBJECT="java.lang.Long|2018" ID="ID_1513907030" CREATED="1646924952108" MODIFIED="1646924953701">
+<node TEXT="TODO" ID="ID_388311225" CREATED="1646924954493" MODIFIED="1646924958076"/>
 </node>
 </node>
 <node TEXT="NeurIPS" ID="ID_301924831" CREATED="1641521444597" MODIFIED="1642954144776"/>
@@ -688,9 +698,6 @@
 <node TEXT="https://github.com/ShawnXYang/Face-Robustness-Benchmark" ID="ID_232276308" CREATED="1643132270554" MODIFIED="1643132270554" LINK="https://github.com/ShawnXYang/Face-Robustness-Benchmark"/>
 </node>
 </node>
-<node TEXT="Generalization" ID="ID_125075162" CREATED="1643058798944" MODIFIED="1643058803223">
-<node TEXT="Cihang xie" ID="ID_1667513983" CREATED="1643058809140" MODIFIED="1643058811907"/>
-</node>
 <node TEXT="Image Denoising" ID="ID_688438108" CREATED="1642369253403" MODIFIED="1642965597652">
 <node TEXT="Towards adversarially robust deep image denoising" ID="ID_912787227" CREATED="1642369258886" MODIFIED="1642369271962">
 <icon BUILTIN="pencil"/>
@@ -706,6 +713,16 @@
 <node TEXT="AAAI22" ID="ID_1679691953" CREATED="1642442198116" MODIFIED="1642442200599"/>
 <node TEXT="blindly adding auxiliary tasks or weighing the tasks provides a false sense of robustness." ID="ID_459008675" CREATED="1642442206193" MODIFIED="1642442252721"/>
 <node TEXT="the choice of the task to incorporate in the loss function are important factors that can be leveraged to yield more robust models" ID="ID_1336811666" CREATED="1642442253918" MODIFIED="1642442277862"/>
+</node>
+</node>
+<node TEXT="Robust Generalization" ID="ID_125075162" CREATED="1643058798944" MODIFIED="1646923470890">
+<node TEXT="Cihang xie" ID="ID_1667513983" CREATED="1643058809140" MODIFIED="1643058811907"/>
+<node TEXT="JHXY papers" ID="ID_360388475" CREATED="1646923800655" MODIFIED="1646923804350"/>
+<node TEXT="RDA: Robust Domain Adaptation via Fourier Adversarial Attacking" ID="ID_1835144084" CREATED="1646923479664" MODIFIED="1646923763844">
+<icon BUILTIN="unchecked"/>
+<node TEXT="iccv21" ID="ID_1579318074" CREATED="1646923481418" MODIFIED="1646923482999"/>
+<node TEXT="mitigate overfitting through adversarial attacks" ID="ID_559638588" CREATED="1646923815035" MODIFIED="1646923824471"/>
+<node TEXT="propose fourier adversarial attacking for large magnitude perturbations" ID="ID_263843885" CREATED="1646923826789" MODIFIED="1646923848760"/>
 </node>
 </node>
 </node>
@@ -1172,6 +1189,13 @@
 <node TEXT="sound and visual representation learning with multiple pretraining tasks" ID="ID_1372709479" CREATED="1641524234751" MODIFIED="1641524246105">
 <icon BUILTIN="pencil"/>
 </node>
+</node>
+</node>
+<node TEXT="Contrastive Learning" POSITION="left" ID="ID_1556051530" CREATED="1646924377310" MODIFIED="1646924380498">
+<edge COLOR="#7c0000"/>
+<node TEXT="Self-Damaging Contrastive Learning" ID="ID_374319956" CREATED="1646924383175" MODIFIED="1646924388224">
+<node TEXT="icml21" ID="ID_1688743346" CREATED="1646924391163" MODIFIED="1646924393200"/>
+<node TEXT="create a dynamic self-competitor model to contrast with the target model, which is a pruned version of the latter. during training, contrasting the two models will lead to adaptive online mining of the most easily forgotten samples for the current target model, and implicitly emphasize them more in the contrastive loss" ID="ID_1977443801" CREATED="1646924393453" MODIFIED="1646924451450"/>
 </node>
 </node>
 <node TEXT=" Obj Detection" FOLDED="true" POSITION="left" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1645045297736">
@@ -1804,7 +1828,7 @@
 <node TEXT="2004.06130 SpeedNet: Learning the Speediness in Videos (cvpr20 oral)" ID="ID_1079666394" CREATED="1590803923362" MODIFIED="1590803941887"/>
 </node>
 </node>
-<node TEXT="Comp. Linguistics" POSITION="left" ID="ID_865579939" CREATED="1610008291436" MODIFIED="1642394269419">
+<node TEXT="Comp. Linguistics" FOLDED="true" POSITION="left" ID="ID_865579939" CREATED="1610008291436" MODIFIED="1642394269419">
 <edge COLOR="#0000ff"/>
 <node TEXT="Language representation" ID="ID_1139506578" CREATED="1583319666984" MODIFIED="1587526864977">
 <font NAME="Gentium" BOLD="false"/>
@@ -4280,7 +4304,7 @@
 <node TEXT="RobRank" ID="ID_990446170" CREATED="1636485853836" MODIFIED="1636485855800"/>
 <node TEXT="RobDML" ID="ID_1927729885" CREATED="1636485850581" MODIFIED="1636485852952"/>
 </node>
-<node TEXT="GAN Inverstion" POSITION="left" ID="ID_1643977837" CREATED="1608014251316" MODIFIED="1642394381732">
+<node TEXT="GAN Inverstion" FOLDED="true" POSITION="left" ID="ID_1643977837" CREATED="1608014251316" MODIFIED="1642394381732">
 <edge COLOR="#0000ff"/>
 <node TEXT="2004.00049: in-domain gan inversion for real image editing" ID="ID_789901011" CREATED="1608014256819" MODIFIED="1608014290154">
 <icon BUILTIN="bookmark"/>
@@ -5607,7 +5631,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Backdoor Attack &amp; Defense" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="left" ID="ID_1279237598" CREATED="1642964328030" MODIFIED="1642965522277">
+<node TEXT="Backdoor Attack &amp; Defense" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_1279237598" CREATED="1642964328030" MODIFIED="1642965522277">
 <edge COLOR="#ff0000"/>
 <node TEXT="Attack" ID="ID_481030829" CREATED="1642965505734" MODIFIED="1642965507796">
 <node TEXT="Classification" ID="ID_1068695249" CREATED="1643059216060" MODIFIED="1643059221252">
@@ -5670,6 +5694,11 @@
 <node TEXT="Defending against Backdoors in Federated Learning with Robust Learning Rate AAAI21" ID="ID_1421685316" CREATED="1643036746252" MODIFIED="1643036830465">
 <icon BUILTIN="unchecked"/>
 <node TEXT="at high level, our defense is based on carefully adjusting the aggregation server&apos;s learning rate, per dimension and per round, based on the sign infirmation of agents&apos; updates" ID="ID_735008317" CREATED="1643036783427" MODIFIED="1643036817264"/>
+</node>
+</node>
+<node TEXT="Filtering" ID="ID_1962822246" CREATED="1646924812678" MODIFIED="1646924814463">
+<node TEXT="Towards Effective and Robust Neural Trojan Defenses via Input Filtering" ID="ID_199989646" CREATED="1646924820093" MODIFIED="1646924826803">
+<icon BUILTIN="pencil"/>
 </node>
 </node>
 </node>
