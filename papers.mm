@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="83" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="85" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1642395333050">
 <edge COLOR="#00ffff"/>
 <node TEXT="what&apos;s this" ID="ID_34209772" CREATED="1641520840738" MODIFIED="1641520995587">
@@ -501,7 +501,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Defense" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1642965722931">
+<node TEXT="Adversarial Defense" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1642965722931">
 <edge COLOR="#0000ff"/>
 <font NAME="Gentium"/>
 <node TEXT="Classification Task" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1643035532082">
@@ -5117,6 +5117,10 @@
 <node TEXT="Variant: Continual Learning" ID="ID_131519106" CREATED="1619336659546" MODIFIED="1619336666539">
 <node TEXT="CVPR21w: Continual learning in cross-modal retrieval" ID="ID_834969689" CREATED="1619336667454" MODIFIED="1619336675662"/>
 </node>
+<node TEXT="Cross-Modal Common Representation Learning with Triplet Loss Functions" ID="ID_1827284412" CREATED="1646944290551" MODIFIED="1646944296357">
+<icon BUILTIN="pencil"/>
+<node TEXT="fair" ID="ID_1712372002" CREATED="1646944300395" MODIFIED="1646944304415"/>
+</node>
 </node>
 <node TEXT="Segmentation" FOLDED="true" POSITION="left" ID="ID_1791688507" CREATED="1607496654173" MODIFIED="1642394216358">
 <edge COLOR="#ff00ff"/>
@@ -5813,6 +5817,17 @@
 <node TEXT="Wukong: 100 Million Large-scale Chinese Cross-modal Pre-training Dataset and A Foundation Framework" ID="ID_579762046" CREATED="1646945599992" MODIFIED="1646945607267">
 <icon BUILTIN="pencil"/>
 </node>
+</node>
+<node TEXT="Model Inversion (Privacy)" POSITION="left" ID="ID_1887850078" CREATED="1646937279593" MODIFIED="1647049260904">
+<edge COLOR="#007c00"/>
+<node TEXT="Label-Only Model Inversion Attacks via Boundary Repulsion" ID="ID_1711729671" CREATED="1646937292008" MODIFIED="1646937298623">
+<icon BUILTIN="checked"/>
+<font ITALIC="false"/>
+</node>
+<node TEXT="Do Gradient Inversion Attacks Make Federated Learning Unsafe?" ID="ID_539563592" CREATED="1646948139524" MODIFIED="1646948148268">
+<icon BUILTIN="unchecked"/>
+</node>
+<node TEXT="Assessing Privacy Risks from Feature Vector Reconstruction Attacks" ID="ID_456202389" CREATED="1646948272071" MODIFIED="1646948274903"/>
 </node>
 </node>
 </map>
