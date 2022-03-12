@@ -501,7 +501,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Defense" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1642965722931">
+<node TEXT="Adversarial Defense" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1642965722931">
 <edge COLOR="#0000ff"/>
 <font NAME="Gentium"/>
 <node TEXT="Classification Task" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1643035532082">
@@ -563,7 +563,7 @@
 </node>
 </node>
 <node TEXT="ALP" ID="ID_181360875" CREATED="1646671293886" MODIFIED="1646671296189">
-<node TEXT="Adversarial logit paring" FOLDED="true" ID="ID_510147065" CREATED="1646671297160" MODIFIED="1646671312531">
+<node TEXT="Adversarial logit paring" ID="ID_510147065" CREATED="1646671297160" MODIFIED="1646671312531">
 <icon BUILTIN="unchecked"/>
 <node TEXT="Ian goodfellow" ID="ID_469721326" CREATED="1646671305592" MODIFIED="1646671309168"/>
 </node>
@@ -641,23 +641,28 @@
 <icon BUILTIN="unchecked"/>
 </node>
 </node>
-<node TEXT="AT Speed" ID="ID_1548520614" CREATED="1642441206809" MODIFIED="1642449303630">
-<node TEXT="FreeAT (ATF, FAT)" ID="ID_10759055" CREATED="1642441224672" MODIFIED="1642455921912">
-<node TEXT="adversarial training for free!" ID="ID_902115687" CREATED="1642441227881" MODIFIED="1642455925752">
+<node TEXT="Reverse Cross Entropy" ID="ID_1881427141" CREATED="1646933225738" MODIFIED="1646933231428">
+<node TEXT="Towards Robust Detection of Adversarial Examples" ID="ID_1202072415" CREATED="1646933239848" MODIFIED="1646933245962">
 <icon BUILTIN="checked"/>
-<icon BUILTIN="bookmark"/>
-<node TEXT="reuse computed gradients" ID="ID_540017524" CREATED="1642448873312" MODIFIED="1642448880329"/>
+<node TEXT="jun zhu" ID="ID_1172403521" CREATED="1646933241345" MODIFIED="1646933242767"/>
+<node TEXT="reverse cross entropy" ID="ID_1181285418" CREATED="1646933414379" MODIFIED="1646933418556">
+<node TEXT="\latex $L_{CE}^\lambda (x,y)=L_{CE}(x,y)-\lambda R_y^T \log F(x)$" ID="ID_406004386" CREATED="1646934270616" MODIFIED="1646934299584"/>
+</node>
+<node TEXT="thresholding detect" ID="ID_1860751625" CREATED="1646933418741" MODIFIED="1646933426947"/>
+<node TEXT="does not report adversarial example strength" ID="ID_1516966777" CREATED="1646934922811" MODIFIED="1646934935894">
+<icon BUILTIN="button_cancel"/>
 </node>
 </node>
-<node TEXT="N-FGSM" ID="ID_642231872" CREATED="1644180261664" MODIFIED="1644180264879">
-<node TEXT="Make Some Noise: Reliable and Efficient Single-Step Adversarial Training" ID="ID_1929010940" CREATED="1644180270961" MODIFIED="1644180274378">
-<icon BUILTIN="pencil"/>
-<node TEXT="likely ICML submission" ID="ID_1360008454" CREATED="1644180275949" MODIFIED="1644180283810"/>
+</node>
+<node TEXT="SCORE" ID="ID_1726030577" CREATED="1647050867575" MODIFIED="1647050869829">
+<node TEXT="Robustness and Accuracy Could Be Reconcilable by (Proper) Definition" ID="ID_143797849" CREATED="1647050872362" MODIFIED="1647050887235">
+<icon BUILTIN="unchecked"/>
+<node TEXT="jun zhu" ID="ID_832929345" CREATED="1647050889158" MODIFIED="1647050891004"/>
+<node TEXT="not significant improvement, but looks good" ID="ID_534685146" CREATED="1647050891181" MODIFIED="1647050914976"/>
+<node TEXT="SCORE facilitates the reconsciliation between robustness and accuracy, while distilling the worst-case uncertainty via robust optimization" ID="ID_1733911794" CREATED="1647050950453" MODIFIED="1647051074167"/>
 </node>
 </node>
-</node>
-<node TEXT="STAGE" ID="ID_1718770068" CREATED="1642441254968" MODIFIED="1642441256543"/>
-<node TEXT="not-famous" ID="ID_1872674435" CREATED="1642431357219" MODIFIED="1642431364579">
+<node TEXT="not-famous" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1872674435" CREATED="1642431357219" MODIFIED="1647050857744">
 <node TEXT="parl: enhancing diversity of ensemble networks to resist adversarial attacks via pairwise adversarially robust loss function" ID="ID_1007028628" CREATED="1642431798570" MODIFIED="1642432009766">
 <icon BUILTIN="pencil"/>
 <node TEXT="diverging layer-wise gradient direction among ensembled models in cosine similarity" ID="ID_1230731010" CREATED="1642431821906" MODIFIED="1642432005710">
@@ -673,16 +678,18 @@
 <node TEXT="two students learn from each other" ID="ID_967309274" CREATED="1642439040809" MODIFIED="1642439045439"/>
 </node>
 </node>
-<node TEXT="Reverse Cross Entropy" ID="ID_1881427141" CREATED="1646933225738" MODIFIED="1646933231428">
-<node TEXT="Towards Robust Detection of Adversarial Examples" ID="ID_1202072415" CREATED="1646933239848" MODIFIED="1646933245962">
+<node TEXT="AT Speed" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1548520614" CREATED="1642441206809" MODIFIED="1647050848253">
+<node TEXT="FreeAT (ATF, FAT)" ID="ID_10759055" CREATED="1642441224672" MODIFIED="1642455921912">
+<node TEXT="adversarial training for free!" ID="ID_902115687" CREATED="1642441227881" MODIFIED="1642455925752">
 <icon BUILTIN="checked"/>
-<node TEXT="jun zhu" ID="ID_1172403521" CREATED="1646933241345" MODIFIED="1646933242767"/>
-<node TEXT="reverse cross entropy" ID="ID_1181285418" CREATED="1646933414379" MODIFIED="1646933418556">
-<node TEXT="\latex $L_{CE}^\lambda (x,y)=L_{CE}(x,y)-\lambda R_y^T \log F(x)$" ID="ID_406004386" CREATED="1646934270616" MODIFIED="1646934299584"/>
+<icon BUILTIN="bookmark"/>
+<node TEXT="reuse computed gradients" ID="ID_540017524" CREATED="1642448873312" MODIFIED="1642448880329"/>
 </node>
-<node TEXT="thresholding detect" ID="ID_1860751625" CREATED="1646933418741" MODIFIED="1646933426947"/>
-<node TEXT="does not report adversarial example strength" ID="ID_1516966777" CREATED="1646934922811" MODIFIED="1646934935894">
-<icon BUILTIN="button_cancel"/>
+</node>
+<node TEXT="N-FGSM" ID="ID_642231872" CREATED="1644180261664" MODIFIED="1644180264879">
+<node TEXT="Make Some Noise: Reliable and Efficient Single-Step Adversarial Training" ID="ID_1929010940" CREATED="1644180270961" MODIFIED="1644180274378">
+<icon BUILTIN="pencil"/>
+<node TEXT="likely ICML submission" ID="ID_1360008454" CREATED="1644180275949" MODIFIED="1644180283810"/>
 </node>
 </node>
 </node>
