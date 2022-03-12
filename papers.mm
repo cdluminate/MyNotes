@@ -501,7 +501,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Defense" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1642965722931">
+<node TEXT="Adversarial Defense" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1642965722931">
 <edge COLOR="#0000ff"/>
 <font NAME="Gentium"/>
 <node TEXT="Classification Task" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1643035532082">
@@ -775,6 +775,22 @@
 <node TEXT="propose fourier adversarial attacking for large magnitude perturbations" ID="ID_263843885" CREATED="1646923826789" MODIFIED="1646923848760"/>
 </node>
 </node>
+<node TEXT="Metric Learning" ID="ID_1143755367" CREATED="1647049132954" MODIFIED="1647049136257">
+<node TEXT="advrank" ID="ID_1017741041" CREATED="1647049164274" MODIFIED="1647049167723"/>
+<node TEXT="robrank" ID="ID_633151094" CREATED="1647049167959" MODIFIED="1647049169163"/>
+<node TEXT="robdml" ID="ID_442150394" CREATED="1647049171530" MODIFIED="1647049172680"/>
+</node>
+<node TEXT="Deepfake Detection" ID="ID_1986728438" CREATED="1646948353156" MODIFIED="1646948357613">
+<node TEXT="Towards Adversarially Robust Deepfake Detection: An Ensemble Approach" ID="ID_1602704665" CREATED="1646948358406" MODIFIED="1646948364713">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Openset Recognition" ID="ID_417719416" CREATED="1646947995726" MODIFIED="1646948002223">
+<node TEXT="Open-set Adversarial Defense with Clean-Adversarial Mutual Learning" ID="ID_109010590" CREATED="1646948002881" MODIFIED="1646948362746">
+<icon BUILTIN="unchecked"/>
+<node TEXT="IJCV" ID="ID_1364434112" CREATED="1646948008562" MODIFIED="1646948010165"/>
+</node>
+</node>
 </node>
 <node TEXT="Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_98760508" CREATED="1642438760894" MODIFIED="1642438768351">
 <edge COLOR="#7c7c00"/>
@@ -861,10 +877,41 @@
 </node>
 <node TEXT="Loss Function" ID="ID_1059926176" CREATED="1642438781602" MODIFIED="1642438785478">
 <node TEXT="Cross Entropy" ID="ID_172299886" CREATED="1642949643007" MODIFIED="1642949645738"/>
-<node TEXT="Focal Loss" ID="ID_1903164178" CREATED="1642949645934" MODIFIED="1642949648015"/>
+<node TEXT="Focal Loss" ID="ID_1080205774" CREATED="1582943123957" MODIFIED="1587526865020">
+<icon BUILTIN="button_ok"/>
+<font NAME="Gentium" BOLD="false"/>
+</node>
 <node TEXT="Relational Surrogate Loss Learning" ID="ID_1946575254" CREATED="1646942717232" MODIFIED="1646942719745">
 <icon BUILTIN="unchecked"/>
 <node TEXT="ICLR22" ID="ID_206379015" CREATED="1646942721247" MODIFIED="1646942722686"/>
+</node>
+<node TEXT="2002.09437: calibrating deep neural networks using focal loss" ID="ID_1015553994" CREATED="1582942837140" MODIFIED="1587526865020">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: analysis on focal loss" ID="ID_1741336699" CREATED="1582943021519" MODIFIED="1587526864918">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="why: miscalibration -- mismatch between a network&apos;s prediction and confidence" ID="ID_408342363" CREATED="1582943050142" MODIFIED="1587526865021">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="how: experiment and analysis" ID="ID_1293300308" CREATED="1582943078917" MODIFIED="1587526865021">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="1. focal loss + temprature scaling (distillation?) yields best model" ID="ID_1334742972" CREATED="1582943088656" MODIFIED="1587526865022">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="2004.09805: AMC-Loss: Angular Margin contrastive loss for improved explainability in image classificatoin" ID="ID_47403602" CREATED="1587527702351" MODIFIED="1587527731932">
+<node TEXT="Auxiliary losses like center loss, contrastive loss, and triplet loss do not take into account the intrinsic angular distribution exhibited by the low- and high-level feature representations" ID="ID_344420536" CREATED="1587527746821" MODIFIED="1587527801702"/>
+</node>
+<node TEXT="2004.11362: supervised contrastive learning" ID="ID_1359274675" CREATED="1587733099040" MODIFIED="1587733132435">
+<icon BUILTIN="button_ok"/>
+<icon BUILTIN="idea"/>
+<node TEXT="inspiration from self-supervised learning" ID="ID_321932978" CREATED="1587733116442" MODIFIED="1587733126175"/>
+<node TEXT="modify batch contrastive loss" ID="ID_1727969225" CREATED="1587733150878" MODIFIED="1587733158022"/>
+</node>
+<node TEXT="2104: Orthogonal Projection Loss" ID="ID_1777245204" CREATED="1619588465371" MODIFIED="1619588478176">
+<icon BUILTIN="button_ok"/>
+<node TEXT="orthogonal restriction" ID="ID_1997736262" CREATED="1619588556419" MODIFIED="1619588564023"/>
 </node>
 </node>
 <node TEXT="Data Augmentation" ID="ID_1121776606" CREATED="1643057931229" MODIFIED="1643057946544">
@@ -5139,42 +5186,6 @@
 <node TEXT="2004.00626 Background Matting: The World is Your Green Screen (cvpr20)" ID="ID_1311753286" CREATED="1590805662549" MODIFIED="1590805676803"/>
 </node>
 </node>
-<node TEXT="Classify Loss" FOLDED="true" POSITION="left" ID="ID_1334856015" CREATED="1582942821476" MODIFIED="1642394203571">
-<font NAME="Gentium" BOLD="false"/>
-<edge COLOR="#0000ff"/>
-<node TEXT="Focal Loss" ID="ID_1080205774" CREATED="1582943123957" MODIFIED="1587526865020">
-<icon BUILTIN="button_ok"/>
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="2002.09437: calibrating deep neural networks using focal loss" ID="ID_1015553994" CREATED="1582942837140" MODIFIED="1587526865020">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: analysis on focal loss" ID="ID_1741336699" CREATED="1582943021519" MODIFIED="1587526864918">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: miscalibration -- mismatch between a network&apos;s prediction and confidence" ID="ID_408342363" CREATED="1582943050142" MODIFIED="1587526865021">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: experiment and analysis" ID="ID_1293300308" CREATED="1582943078917" MODIFIED="1587526865021">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="1. focal loss + temprature scaling (distillation?) yields best model" ID="ID_1334742972" CREATED="1582943088656" MODIFIED="1587526865022">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="2004.09805: AMC-Loss: Angular Margin contrastive loss for improved explainability in image classificatoin" ID="ID_47403602" CREATED="1587527702351" MODIFIED="1587527731932">
-<node TEXT="Auxiliary losses like center loss, contrastive loss, and triplet loss do not take into account the intrinsic angular distribution exhibited by the low- and high-level feature representations" ID="ID_344420536" CREATED="1587527746821" MODIFIED="1587527801702"/>
-</node>
-<node TEXT="2004.11362: supervised contrastive learning" ID="ID_1359274675" CREATED="1587733099040" MODIFIED="1587733132435">
-<icon BUILTIN="button_ok"/>
-<icon BUILTIN="idea"/>
-<node TEXT="inspiration from self-supervised learning" ID="ID_321932978" CREATED="1587733116442" MODIFIED="1587733126175"/>
-<node TEXT="modify batch contrastive loss" ID="ID_1727969225" CREATED="1587733150878" MODIFIED="1587733158022"/>
-</node>
-<node TEXT="2104: Orthogonal Projection Loss" ID="ID_1777245204" CREATED="1619588465371" MODIFIED="1619588478176">
-<icon BUILTIN="button_ok"/>
-<node TEXT="orthogonal restriction" ID="ID_1997736262" CREATED="1619588556419" MODIFIED="1619588564023"/>
-</node>
-</node>
 <node TEXT="Reinforcement Learning" POSITION="left" ID="ID_687208999" CREATED="1642431117901" MODIFIED="1642431123908">
 <edge COLOR="#007c7c"/>
 <node TEXT="Gameplay" ID="ID_1651563029" CREATED="1642431125004" MODIFIED="1642431126898">
@@ -5229,7 +5240,7 @@
 <node TEXT="2101: Unsupervised Domain Adaptation of Black-Box Source Models" ID="ID_1885176581" CREATED="1610422307004" MODIFIED="1610422319037"/>
 </node>
 </node>
-<node TEXT="Open Set Recog" FOLDED="true" POSITION="left" ID="ID_323999523" CREATED="1634132952545" MODIFIED="1642394180046">
+<node TEXT="Open Set Recog" POSITION="left" ID="ID_323999523" CREATED="1634132952545" MODIFIED="1642394180046">
 <edge COLOR="#7c007c"/>
 <node TEXT="Open-Set Recognition: A Good Closed-Set Classifier is All You Need" ID="ID_1603928418" CREATED="1634132957520" MODIFIED="1634132962452">
 <node TEXT="vgg group" ID="ID_419228120" CREATED="1634132963805" MODIFIED="1634132966497"/>
