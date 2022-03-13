@@ -199,13 +199,13 @@ And to figure out the possibility that an alien arrived at night is friendly,
  According to Bayes formula, we have
 \begin_inset Formula 
 \[
-P(F|N)=\frac{P(N|F)P(F)}{P(N)}=\frac{P(N|F)P(F)}{P(N|F)+P(N|H)}=\frac{0.1\times0.75}{0.1+1.0}\approx0.068
+P(F|N)=\frac{P(N|F)P(F)}{P(N)}=\frac{P(N|F)P(F)}{P(N|F)P(F)+P(N|H)P(H)}=\frac{0.1\times0.75}{0.1\times0.75+1.0\times0.25}\approx0.231
 \]
 
 \end_inset
 
 Namely there's only 
-\begin_inset Formula $6.8\%$
+\begin_inset Formula $23.1\%$
 \end_inset
 
  chance that the alien is friendly.
