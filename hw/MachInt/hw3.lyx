@@ -216,6 +216,8 @@ Q2
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 After your yearly checkup, the doctor has bad news and good news.
  The bad news is that you tested positive for a serious disease and that
  the test is 99% accurate (i.e., the probability of testing positive when
@@ -225,6 +227,42 @@ After your yearly checkup, the doctor has bad news and good news.
  people of your age.
  Why is it good news that the disease is rare? What are the chances that
  you actually have the disease?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+P(\text{+positive}|\text{+disease}) & =0.99\\
+P(\text{-positive}|\text{-disease}) & =0.99\\
+P(\text{+disease}) & =0.0001\\
+P(\text{-disease}) & =0.9999
+\end{align*}
+
+\end_inset
+
+According to the Bayes rule, we have the posterior
+\begin_inset Formula 
+\begin{align*}
+P(\text{+disease}|\text{+positive}) & =\frac{P(\text{+positive}|\text{+disease})P(\text{+disease})}{P(\text{+positive})}\\
+ & =\frac{P(\text{+positive}|\text{+disease})P(\text{+disease})}{P(\text{+positive}|\text{+disease})P(\text{+disease})+P(\text{+positive}|\text{-disease})P(\text{-disease})}\\
+ & =\frac{0.99\times0.0001}{0.99\times0.0001+0.01\times0.9999}\\
+ & \approx0.0098
+\end{align*}
+
+\end_inset
+
+which means the chance that we have the disease is 
+\begin_inset Formula $0.98\%$
+\end_inset
+
+.
+ The news that the disease is rare is a good news because the 
+\begin_inset Formula $P(\text{+disease})$
+\end_inset
+
+ is a part of the numerator.
+ The lesser the probability is, the lesser the probability is that we really
+ have the disease.
 \end_layout
 
 \begin_layout Section
