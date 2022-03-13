@@ -95,10 +95,120 @@ Q1
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 Aliens can be friendly or not; 75% are friendly.
  Friendly aliens arrive during the day 90% of the time, while unfriendly
  ones always arrive at night.
  If an alien arrives at night, how likely is it to be friendly?
+\end_layout
+
+\begin_layout Standard
+Denote 
+\begin_inset Quotes eld
+\end_inset
+
+Friendly
+\begin_inset Quotes erd
+\end_inset
+
+ as 
+\begin_inset Quotes eld
+\end_inset
+
+F
+\begin_inset Quotes erd
+\end_inset
+
+, otherwise 
+\begin_inset Quotes eld
+\end_inset
+
+Hostile
+\begin_inset Quotes erd
+\end_inset
+
+ (
+\begin_inset Quotes eld
+\end_inset
+
+H
+\begin_inset Quotes erd
+\end_inset
+
+).
+ We also Denote 
+\begin_inset Quotes eld
+\end_inset
+
+Day
+\begin_inset Quotes erd
+\end_inset
+
+ as 
+\begin_inset Quotes eld
+\end_inset
+
+D
+\begin_inset Quotes erd
+\end_inset
+
+, and 
+\begin_inset Quotes eld
+\end_inset
+
+Night
+\begin_inset Quotes erd
+\end_inset
+
+ as 
+\begin_inset Quotes eld
+\end_inset
+
+N
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Then we have the priors,
+\begin_inset Formula 
+\begin{align*}
+P(F) & =0.75\\
+P(H) & =1-P(F)=0.25
+\end{align*}
+
+\end_inset
+
+as well as the likelihoods,
+\begin_inset Formula 
+\begin{align*}
+P(D|F) & =0.9\\
+P(N|F) & =1-P(D|F)=0.1\\
+P(D|H) & =0.0\\
+P(N|H) & =1.0
+\end{align*}
+
+\end_inset
+
+And to figure out the possibility that an alien arrived at night is friendly,
+ we need to calculate the posterior 
+\begin_inset Formula $P(F|N)$
+\end_inset
+
+.
+ According to Bayes formula, we have
+\begin_inset Formula 
+\[
+P(F|N)=\frac{P(N|F)P(F)}{P(N)}=\frac{P(N|F)P(F)}{P(N|F)+P(N|H)}=\frac{0.1\times0.75}{0.1+1.0}\approx0.068
+\]
+
+\end_inset
+
+Namely there's only 
+\begin_inset Formula $6.8\%$
+\end_inset
+
+ chance that the alien is friendly.
 \end_layout
 
 \begin_layout Section
