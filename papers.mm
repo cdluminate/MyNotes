@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="87" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="88" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1642395333050">
 <edge COLOR="#00ffff"/>
 <node TEXT="what&apos;s this" ID="ID_34209772" CREATED="1641520840738" MODIFIED="1641520995587">
@@ -456,6 +456,14 @@
 <node TEXT="robust representations capture peripheral computation similar to current state-of-the-art texture peripheral vision models" ID="ID_180695247" CREATED="1644179681505" MODIFIED="1644179704075"/>
 <node TEXT="support the idea that localized texture summary statistic representations may drive human invariance to adversarial perturbations and that the incorporation of such representations in DNNs could give rise to useful properties like adversarial robustness" ID="ID_1448992825" CREATED="1644179707291" MODIFIED="1644179745688"/>
 </node>
+<node TEXT="Overparametrization improves robustness against adversarial attacks: A replication study" ID="ID_1930796846" CREATED="1647265255669" MODIFIED="1647265266564">
+<icon BUILTIN="pencil"/>
+<node TEXT="overparameterization is not enough" ID="ID_908075250" CREATED="1647265269687" MODIFIED="1647265276771"/>
+<node TEXT="smarter architecture seems inevitable" ID="ID_1927769443" CREATED="1647265276973" MODIFIED="1647265283779"/>
+<node TEXT="but the abstract does not talk about loss and generalization" ID="ID_638811091" CREATED="1647265284038" MODIFIED="1647265313609">
+<icon BUILTIN="button_cancel"/>
+</node>
+</node>
 </node>
 <node TEXT="Patch Detection" ID="ID_1544755494" CREATED="1641523388190" MODIFIED="1644180812163">
 <node TEXT="on the real world adversarial robustness of real-time semantic segmentation models for autonomous driving" ID="ID_621290194" CREATED="1641523393314" MODIFIED="1641523426222">
@@ -503,10 +511,8 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Defense" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1642965722931">
-<edge COLOR="#0000ff"/>
-<font NAME="Gentium"/>
-<node TEXT="Classification Task" FOLDED="true" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1643035532082">
+<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
+<edge COLOR="#7c7c00"/>
 <node TEXT="STAGE" ID="ID_219354908" CREATED="1642438393211" MODIFIED="1642438397420">
 <node TEXT="adversarial robustness against the union of multiple perturbation models" ID="ID_1452347285" CREATED="1642438398542" MODIFIED="1642438414351">
 <icon BUILTIN="unchecked"/>
@@ -679,6 +685,11 @@
 <node TEXT="knowledge distillation" ID="ID_1194675877" CREATED="1642439037294" MODIFIED="1642439040646"/>
 <node TEXT="two students learn from each other" ID="ID_967309274" CREATED="1642439040809" MODIFIED="1642439045439"/>
 </node>
+<node TEXT="Learning Representations Robust to Group Shifts and Adversarial Examples" ID="ID_746174260" CREATED="1647265385913" MODIFIED="1647265392954">
+<icon BUILTIN="pencil"/>
+<node TEXT="combine with domain shift countermeasure" ID="ID_1565911703" CREATED="1647265394863" MODIFIED="1647265404217"/>
+<node TEXT="distributional robust optimization" ID="ID_1633450540" CREATED="1647265404647" MODIFIED="1647265414284"/>
+</node>
 </node>
 <node TEXT="AT Speed" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1548520614" CREATED="1642441206809" MODIFIED="1647050848253">
 <node TEXT="FreeAT (ATF, FAT)" ID="ID_10759055" CREATED="1642441224672" MODIFIED="1642455921912">
@@ -751,7 +762,18 @@
 <node TEXT="not adv attack, but there is smooth constraint" ID="ID_1894803830" CREATED="1646943416298" MODIFIED="1646943426597"/>
 </node>
 </node>
+<node TEXT="Distillation" ID="ID_1398688048" CREATED="1647265149729" MODIFIED="1647265152310">
+<node TEXT="Transferring Adversarial Robustness Through Robust Representation Matching" ID="ID_1195174599" CREATED="1647265153085" MODIFIED="1647265159703">
+<icon BUILTIN="unchecked"/>
+<node TEXT="USENIX22" ID="ID_492775537" CREATED="1647265161385" MODIFIED="1647265163646"/>
+<node TEXT="adversarial trianing is too slow" ID="ID_282502797" CREATED="1647265173521" MODIFIED="1647265180634"/>
+<node TEXT="student learns the robust representations from the teacher network" ID="ID_640049187" CREATED="1647265180865" MODIFIED="1647265202101"/>
 </node>
+</node>
+</node>
+<node TEXT="Adversarial Defense: Intersection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1647265134040">
+<edge COLOR="#0000ff"/>
+<font NAME="Gentium"/>
 <node TEXT="Face Recognition" ID="ID_1083375375" CREATED="1643132265039" MODIFIED="1643132268914">
 <node TEXT="RobFR" ID="ID_956441703" CREATED="1643132279319" MODIFIED="1643132284675">
 <node TEXT="https://github.com/ShawnXYang/Face-Robustness-Benchmark" ID="ID_232276308" CREATED="1643132270554" MODIFIED="1643132270554" LINK="https://github.com/ShawnXYang/Face-Robustness-Benchmark"/>
@@ -798,6 +820,12 @@
 <node TEXT="Open-set Adversarial Defense with Clean-Adversarial Mutual Learning" ID="ID_109010590" CREATED="1646948002881" MODIFIED="1646948362746">
 <icon BUILTIN="unchecked"/>
 <node TEXT="IJCV" ID="ID_1364434112" CREATED="1646948008562" MODIFIED="1646948010165"/>
+</node>
+</node>
+<node TEXT="Unsupervised Domain Adaptation" ID="ID_1641764072" CREATED="1647265453252" MODIFIED="1647265458995">
+<node TEXT="Exploring Adversarially Robust Training for Unsupervised Domain Adaptation" ID="ID_1050578370" CREATED="1647265459656" MODIFIED="1647265470596">
+<icon BUILTIN="pencil"/>
+<node TEXT="Vishal" ID="ID_707250183" CREATED="1647265465095" MODIFIED="1647265466451"/>
 </node>
 </node>
 </node>
@@ -1256,6 +1284,80 @@
 </node>
 </node>
 </node>
+<node TEXT="Net Arch Search" FOLDED="true" POSITION="left" ID="ID_1465080986" CREATED="1576827705751" MODIFIED="1642394285342">
+<font NAME="Gentium" SIZE="10" BOLD="false"/>
+<edge COLOR="#00ffff"/>
+<node TEXT="Lottery (winning ticket hypothesis)" ID="ID_157689053" CREATED="1589771412424" MODIFIED="1589771423223"/>
+<node TEXT="NAS + General" ID="ID_345720050" CREATED="1589771335033" MODIFIED="1610423263436">
+<node TEXT="1912.09640 ATOMNAS: FINE-GRAINED END TO END NEURAL ARCHITECTURE SEARCH (iclr20)" ID="ID_551298402" CREATED="1591523824249" MODIFIED="1591523859249"/>
+<node TEXT="2001.01431: deeper insights into weight sharing in neural architecture search" ID="ID_788581693" CREATED="1578641715823" MODIFIED="1587526865297">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="as training every child model from scratch is very time-consuming, recent works leverage weight-sharing to speed up the model evaluation procedure" ID="ID_210487548" CREATED="1578641819751" MODIFIED="1587526865299">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="these approaches greatly reduce computation by maintaining a single copy of weights on the super-net and share the weights among every child model" ID="ID_320246153" CREATED="1578641854870" MODIFIED="1587526865306">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="weight-sharing has no theoretical guarantee and its impact has not been well studied before" ID="ID_1082606016" CREATED="1578641968342" MODIFIED="1587526865308">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="comprehensive and reveal the impact of weight-sharing" ID="ID_575085259" CREATED="1578641994032" MODIFIED="1587526865308">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="1. best-performing models from different runes or even from consecutive epoches within the same run have significant variance" ID="ID_806597637" CREATED="1578642011022" MODIFIED="1587526865309">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="2. even with high variance, we can extract valuable information from training the super-net with shared weight s" ID="ID_1259033553" CREATED="1578642053527" MODIFIED="1587526865310">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="3. inference between child models is a main factor that induces high variance" ID="ID_824472334" CREATED="1578642091423" MODIFIED="1587526865312">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="4. properly reducing the degree of weight sharing could effectively reduce variance" ID="ID_1319017164" CREATED="1578642112783" MODIFIED="1587526865312">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="2002.07376: picking winning tickets before training by preserving gradient flow" ID="ID_285121795" CREATED="1582337040844" MODIFIED="1587526865313">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: prune networks at initialization" ID="ID_242187066" CREATED="1582337065578" MODIFIED="1587526865314">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="why: overparameterization has been shown to benefit both the optimization and generalization of neural networks, but large networks are resource hungry at both training and test time." ID="ID_982652785" CREATED="1582337086688" MODIFIED="1587526865315">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="how: simple but effective pruning criterion termed Gradient Signal Preservation (GraSP)" ID="ID_456233465" CREATED="1582337135230" MODIFIED="1587526865316">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="2002.08104: neural networks on random graphs" ID="ID_1492714029" CREATED="1583370632367" MODIFIED="1587526865316">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: evaluation of neural networks with architectures corresponding to random graphs of various types" ID="ID_189291229" CREATED="1583370645715" MODIFIED="1587526865317">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="2004.05020: ModuleNet: Knowledge-inherited Neural Architecture search" ID="ID_1957978051" CREATED="1587029726858" MODIFIED="1587526865318">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="1912.12522 NASEVALUATION IS FRUSTRATINGLY HARD (ICLR20)" ID="ID_1102573147" CREATED="1591523757273" MODIFIED="1591523776195"/>
+<node TEXT="2101: Unchain the Search Space with Hierarchical Differentiable Architecture Search" ID="ID_770027754" CREATED="1610423275136" MODIFIED="1610423282492"/>
+<node TEXT="2101: Neural Architecture Search via Combinatorial Multi-Armed Bandit" ID="ID_1528572141" CREATED="1610424093363" MODIFIED="1610424103413"/>
+<node TEXT="Contrastive Neural Architecture Search with Neural Architecture Comparators (cvpr21)" ID="ID_866640575" CREATED="1615348935373" MODIFIED="1615348942277"/>
+</node>
+<node TEXT="NAS + Other" ID="ID_1734029148" CREATED="1589771343435" MODIFIED="1589771346550">
+<node TEXT="other=SISR" ID="ID_12673974" CREATED="1589771348054" MODIFIED="1589771353001">
+<node TEXT="2003.04619: hierarchical neural architecture search for single image super-resolution" ID="ID_1727215487" CREATED="1589771353984" MODIFIED="1589771370713"/>
+</node>
+<node TEXT="other=modality" ID="ID_621571662" CREATED="1589771456800" MODIFIED="1589771460809">
+<node TEXT="2004.12070: deep multimodal neural architecture search" ID="ID_1501292654" CREATED="1588072764031" MODIFIED="1588072782358"/>
+</node>
+<node TEXT="other=multitask" ID="ID_1291820834" CREATED="1590975521172" MODIFIED="1590975526893">
+<node TEXT="2003.14058 MTL-NAS: Task-Agnostic Neural Architecture Search towards General-Purpose Multi-Task Learning (cvpr20)" ID="ID_755508472" CREATED="1590975527584" MODIFIED="1590975541542"/>
+</node>
+<node TEXT="otehr=captioning" ID="ID_341214713" CREATED="1608876510692" MODIFIED="1608876515099">
+<node TEXT="2012.09742&#xa;AutoCaption: Image Captioning with Neural Architecture Search" ID="ID_1588438121" CREATED="1608876515864" MODIFIED="1608876526467"/>
+</node>
+</node>
+</node>
 <node TEXT=" Object Detection" FOLDED="true" POSITION="left" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1647264593943">
 <font NAME="Gentium" SIZE="10" BOLD="false"/>
 <edge COLOR="#7c7c00"/>
@@ -1313,6 +1415,36 @@
 <icon BUILTIN="button_ok"/>
 <icon BUILTIN="idea"/>
 <node TEXT="ordinal regression" ID="ID_1337834731" CREATED="1588068727223" MODIFIED="1588068730887"/>
+</node>
+</node>
+<node TEXT="Privacy ML" FOLDED="true" POSITION="left" ID="ID_1174539463" CREATED="1590802979023" MODIFIED="1647265584135">
+<edge COLOR="#7c0000"/>
+<node TEXT="Encrypt / Decrypt" ID="ID_892914237" CREATED="1590803103499" MODIFIED="1590803111112">
+<node TEXT="2004.05523 DeepEDN: A Deep Learning-based Image Encryption and Decryption Network for Internet of Medical Things" ID="ID_779071488" CREATED="1590802983849" MODIFIED="1590802993502"/>
+</node>
+<node TEXT="Membership Inference" ID="ID_1965495393" CREATED="1591523395980" MODIFIED="1591523401694">
+<node TEXT="2001.00071 PrivGAN: Protecting GANs from membership inference attacks at low cos" ID="ID_370428646" CREATED="1591523402373" MODIFIED="1591523413026"/>
+</node>
+<node TEXT="Physical Mail" ID="ID_1223992131" CREATED="1608872127823" MODIFIED="1608872130574">
+<node TEXT="2012.11803&#xa; Modeling Deep Learning Based Privacy Attacks on Physical Mail" ID="ID_924300325" CREATED="1608872131773" MODIFIED="1608872140902"/>
+</node>
+<node TEXT="Forensics" ID="ID_135402985" CREATED="1618846988345" MODIFIED="1618846991727">
+<node TEXT="2003.06951: camera tarce erasing (CVPR20)" ID="ID_586456534" CREATED="1585108821256" MODIFIED="1587526865295">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="camera trace is a unique noise produced in digital imaging process" ID="ID_703034002" CREATED="1585108844004" MODIFIED="1587526865296">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="Model Inversion (Privacy)" ID="ID_1887850078" CREATED="1646937279593" MODIFIED="1647265571606">
+<node TEXT="Label-Only Model Inversion Attacks via Boundary Repulsion" ID="ID_1711729671" CREATED="1646937292008" MODIFIED="1646937298623">
+<icon BUILTIN="checked"/>
+<font ITALIC="false"/>
+</node>
+<node TEXT="Do Gradient Inversion Attacks Make Federated Learning Unsafe?" ID="ID_539563592" CREATED="1646948139524" MODIFIED="1646948148268">
+<icon BUILTIN="unchecked"/>
+</node>
+<node TEXT="Assessing Privacy Risks from Feature Vector Reconstruction Attacks" ID="ID_456202389" CREATED="1646948272071" MODIFIED="1646948274903"/>
 </node>
 </node>
 <node TEXT="Semantic Segmentation" FOLDED="true" POSITION="left" ID="ID_710086984" CREATED="1641524074732" MODIFIED="1641524079818">
@@ -1854,26 +1986,6 @@
 </node>
 <node TEXT="how: projecting anomalous data on a autoencoder-learned normal data manifold, by using gradient descent on an energy derived from the autoencoder&apos;s loss function" ID="ID_274601515" CREATED="1583372917335" MODIFIED="1587526865289">
 <font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="Privacy" FOLDED="true" POSITION="left" ID="ID_1174539463" CREATED="1590802979023" MODIFIED="1642394293140">
-<edge COLOR="#7c0000"/>
-<node TEXT="Encrypt / Decrypt" ID="ID_892914237" CREATED="1590803103499" MODIFIED="1590803111112">
-<node TEXT="2004.05523 DeepEDN: A Deep Learning-based Image Encryption and Decryption Network for Internet of Medical Things" ID="ID_779071488" CREATED="1590802983849" MODIFIED="1590802993502"/>
-</node>
-<node TEXT="Membership Inference" ID="ID_1965495393" CREATED="1591523395980" MODIFIED="1591523401694">
-<node TEXT="2001.00071 PrivGAN: Protecting GANs from membership inference attacks at low cos" ID="ID_370428646" CREATED="1591523402373" MODIFIED="1591523413026"/>
-</node>
-<node TEXT="Physical Mail" ID="ID_1223992131" CREATED="1608872127823" MODIFIED="1608872130574">
-<node TEXT="2012.11803&#xa; Modeling Deep Learning Based Privacy Attacks on Physical Mail" ID="ID_924300325" CREATED="1608872131773" MODIFIED="1608872140902"/>
-</node>
-<node TEXT="Forensics" ID="ID_135402985" CREATED="1618846988345" MODIFIED="1618846991727">
-<node TEXT="2003.06951: camera tarce erasing (CVPR20)" ID="ID_586456534" CREATED="1585108821256" MODIFIED="1587526865295">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="camera trace is a unique noise produced in digital imaging process" ID="ID_703034002" CREATED="1585108844004" MODIFIED="1587526865296">
-<font NAME="Gentium" BOLD="false"/>
-</node>
 </node>
 </node>
 </node>
@@ -4497,80 +4609,6 @@
 </node>
 </node>
 </node>
-<node TEXT="Net Arch Search" FOLDED="true" POSITION="left" ID="ID_1465080986" CREATED="1576827705751" MODIFIED="1642394285342">
-<font NAME="Gentium" SIZE="10" BOLD="false"/>
-<edge COLOR="#00ffff"/>
-<node TEXT="Lottery (winning ticket hypothesis)" ID="ID_157689053" CREATED="1589771412424" MODIFIED="1589771423223"/>
-<node TEXT="NAS + General" FOLDED="true" ID="ID_345720050" CREATED="1589771335033" MODIFIED="1610423263436">
-<node TEXT="1912.09640 ATOMNAS: FINE-GRAINED END TO END NEURAL ARCHITECTURE SEARCH (iclr20)" ID="ID_551298402" CREATED="1591523824249" MODIFIED="1591523859249"/>
-<node TEXT="2001.01431: deeper insights into weight sharing in neural architecture search" ID="ID_788581693" CREATED="1578641715823" MODIFIED="1587526865297">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="as training every child model from scratch is very time-consuming, recent works leverage weight-sharing to speed up the model evaluation procedure" ID="ID_210487548" CREATED="1578641819751" MODIFIED="1587526865299">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="these approaches greatly reduce computation by maintaining a single copy of weights on the super-net and share the weights among every child model" ID="ID_320246153" CREATED="1578641854870" MODIFIED="1587526865306">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="weight-sharing has no theoretical guarantee and its impact has not been well studied before" ID="ID_1082606016" CREATED="1578641968342" MODIFIED="1587526865308">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="comprehensive and reveal the impact of weight-sharing" ID="ID_575085259" CREATED="1578641994032" MODIFIED="1587526865308">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="1. best-performing models from different runes or even from consecutive epoches within the same run have significant variance" ID="ID_806597637" CREATED="1578642011022" MODIFIED="1587526865309">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="2. even with high variance, we can extract valuable information from training the super-net with shared weight s" ID="ID_1259033553" CREATED="1578642053527" MODIFIED="1587526865310">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="3. inference between child models is a main factor that induces high variance" ID="ID_824472334" CREATED="1578642091423" MODIFIED="1587526865312">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="4. properly reducing the degree of weight sharing could effectively reduce variance" ID="ID_1319017164" CREATED="1578642112783" MODIFIED="1587526865312">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="2002.07376: picking winning tickets before training by preserving gradient flow" ID="ID_285121795" CREATED="1582337040844" MODIFIED="1587526865313">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: prune networks at initialization" ID="ID_242187066" CREATED="1582337065578" MODIFIED="1587526865314">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: overparameterization has been shown to benefit both the optimization and generalization of neural networks, but large networks are resource hungry at both training and test time." ID="ID_982652785" CREATED="1582337086688" MODIFIED="1587526865315">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: simple but effective pruning criterion termed Gradient Signal Preservation (GraSP)" ID="ID_456233465" CREATED="1582337135230" MODIFIED="1587526865316">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="2002.08104: neural networks on random graphs" ID="ID_1492714029" CREATED="1583370632367" MODIFIED="1587526865316">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: evaluation of neural networks with architectures corresponding to random graphs of various types" ID="ID_189291229" CREATED="1583370645715" MODIFIED="1587526865317">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="2004.05020: ModuleNet: Knowledge-inherited Neural Architecture search" ID="ID_1957978051" CREATED="1587029726858" MODIFIED="1587526865318">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="1912.12522 NASEVALUATION IS FRUSTRATINGLY HARD (ICLR20)" ID="ID_1102573147" CREATED="1591523757273" MODIFIED="1591523776195"/>
-<node TEXT="2101: Unchain the Search Space with Hierarchical Differentiable Architecture Search" ID="ID_770027754" CREATED="1610423275136" MODIFIED="1610423282492"/>
-<node TEXT="2101: Neural Architecture Search via Combinatorial Multi-Armed Bandit" ID="ID_1528572141" CREATED="1610424093363" MODIFIED="1610424103413"/>
-<node TEXT="Contrastive Neural Architecture Search with Neural Architecture Comparators (cvpr21)" ID="ID_866640575" CREATED="1615348935373" MODIFIED="1615348942277"/>
-</node>
-<node TEXT="NAS + Other" ID="ID_1734029148" CREATED="1589771343435" MODIFIED="1589771346550">
-<node TEXT="other=SISR" ID="ID_12673974" CREATED="1589771348054" MODIFIED="1589771353001">
-<node TEXT="2003.04619: hierarchical neural architecture search for single image super-resolution" ID="ID_1727215487" CREATED="1589771353984" MODIFIED="1589771370713"/>
-</node>
-<node TEXT="other=modality" ID="ID_621571662" CREATED="1589771456800" MODIFIED="1589771460809">
-<node TEXT="2004.12070: deep multimodal neural architecture search" ID="ID_1501292654" CREATED="1588072764031" MODIFIED="1588072782358"/>
-</node>
-<node TEXT="other=multitask" ID="ID_1291820834" CREATED="1590975521172" MODIFIED="1590975526893">
-<node TEXT="2003.14058 MTL-NAS: Task-Agnostic Neural Architecture Search towards General-Purpose Multi-Task Learning (cvpr20)" ID="ID_755508472" CREATED="1590975527584" MODIFIED="1590975541542"/>
-</node>
-<node TEXT="otehr=captioning" ID="ID_341214713" CREATED="1608876510692" MODIFIED="1608876515099">
-<node TEXT="2012.09742&#xa;AutoCaption: Image Captioning with Neural Architecture Search" ID="ID_1588438121" CREATED="1608876515864" MODIFIED="1608876526467"/>
-</node>
-</node>
-</node>
 <node TEXT="3D / PCL" FOLDED="true" POSITION="left" ID="ID_1606327696" CREATED="1583132559918" MODIFIED="1642394252391">
 <font NAME="Gentium" SIZE="10" BOLD="false"/>
 <edge COLOR="#007c7c"/>
@@ -5665,7 +5703,7 @@
 </node>
 </node>
 </node>
-<node TEXT="DL Explanation" FOLDED="true" POSITION="left" ID="ID_1535392614" CREATED="1646937960988" MODIFIED="1647048559238">
+<node TEXT="Explanation DL" FOLDED="true" POSITION="left" ID="ID_1535392614" CREATED="1646937960988" MODIFIED="1647265555244">
 <edge COLOR="#7c0000"/>
 <node TEXT="Do Explanations Explain? Model Knows Best" ID="ID_1458677290" CREATED="1646937968275" MODIFIED="1646937983298">
 <icon BUILTIN="checked"/>
@@ -5683,17 +5721,6 @@
 <node TEXT="Wukong: 100 Million Large-scale Chinese Cross-modal Pre-training Dataset and A Foundation Framework" ID="ID_579762046" CREATED="1646945599992" MODIFIED="1646945607267">
 <icon BUILTIN="pencil"/>
 </node>
-</node>
-<node TEXT="Model Inversion (Privacy)" FOLDED="true" POSITION="left" ID="ID_1887850078" CREATED="1646937279593" MODIFIED="1647049260904">
-<edge COLOR="#007c00"/>
-<node TEXT="Label-Only Model Inversion Attacks via Boundary Repulsion" ID="ID_1711729671" CREATED="1646937292008" MODIFIED="1646937298623">
-<icon BUILTIN="checked"/>
-<font ITALIC="false"/>
-</node>
-<node TEXT="Do Gradient Inversion Attacks Make Federated Learning Unsafe?" ID="ID_539563592" CREATED="1646948139524" MODIFIED="1646948148268">
-<icon BUILTIN="unchecked"/>
-</node>
-<node TEXT="Assessing Privacy Risks from Feature Vector Reconstruction Attacks" ID="ID_456202389" CREATED="1646948272071" MODIFIED="1646948274903"/>
 </node>
 </node>
 </map>
