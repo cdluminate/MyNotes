@@ -400,11 +400,62 @@ Q4
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 For the HMM example discussed in the class, consider the output sequence
  O1= Red, O2= Blue, O3 = Yellow.
  Calculate the probability of P (O1, O2, O3/ HMM parameters).
  Also calculate the sequence of state transitions that gave rise to the
  observed sequence given above.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ be the HMM parameters, and 
+\begin_inset Formula $\odot$
+\end_inset
+
+ be the element wise multiplication.
+ With the help of matlab we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\alpha_{1} & =\pi\odot B_{:,1}=\begin{bmatrix}0.15\\
+0.04\\
+0.12
+\end{bmatrix}\\
+\alpha_{2} & =A\pi\odot B_{:,2}=\begin{bmatrix}0.066\\
+0.222\\
+0.032
+\end{bmatrix}\\
+\alpha_{3} & =A^{2}\pi\odot B_{:,4}=\begin{bmatrix}0.339\\
+0.357\\
+0.099
+\end{bmatrix}
+\end{align*}
+
+\end_inset
+
+Then 
+\begin_inset Formula $P(O_{1}=R,O_{2}=B,O_{3}=Y)$
+\end_inset
+
+ can be calculated by marginalizing the states.
+ With matlab code sum(p .* B(:,1)) * sum(A * p .* B(:,2)) * sum(A * A * p
+ .* B(:,4)), we have
+\begin_inset Formula 
+\begin{align*}
+P(O_{1}=R,O_{2}=B,O_{3}=Y) & =(\sum\alpha_{1})(\sum\alpha_{2})(\sum\alpha_{3})\\
+ & \approx0.016814
+\end{align*}
+
+\end_inset
+
  
 \end_layout
 
