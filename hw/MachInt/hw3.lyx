@@ -270,6 +270,8 @@ Q3
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 Consider the Bayesian alarm network discussed in the class.
 \end_layout
 
@@ -279,8 +281,59 @@ a.
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 If no evidence is observed, are Burglary and Earthquake independent? Prove
  this from the numerical semantics and from the topological semantics.
+\end_layout
+
+\begin_layout Standard
+According to Bayes' Ball algorithm, when we cannot observe 
+\begin_inset Quotes eld
+\end_inset
+
+Alarm
+\begin_inset Quotes erd
+\end_inset
+
+, the B and E are independent.
+ Because
+\begin_inset Formula 
+\begin{align*}
+P(A,B,E) & =P(B)P(E)P(A|B,E)\\
+P(B,E) & =\sum_{A}P(A,B,E)=P(B)P(E)
+\end{align*}
+
+\end_inset
+
+which means B and E are marginally independent.
+\end_layout
+
+\begin_layout Standard
+From the numerical perspective, we have
+\begin_inset Formula 
+\begin{align*}
+P(B=t)P(E=t) & =0.001\times0.002\\
+\sum_{A}P(A,B=t,E=t) & =P(A=t)P(B,E|A=t)+P(A=f)P(B,E|A=f)\\
+ & =P(B=t)P(E=t)=0.001\times0.002
+\end{align*}
+
+\end_inset
+
+Similarly, we will also have 
+\begin_inset Formula $P(B=t,E=f)=P(B=t)P(E=f)$
+\end_inset
+
+, 
+\begin_inset Formula $P(B=f,E=t)=P(B=f)P(E=t)$
+\end_inset
+
+, 
+\begin_inset Formula $P(B=f,E=f)=P(B=f)P(E=f)$
+\end_inset
+
+.
+ This means B and E are marginally independent.
 \end_layout
 
 \begin_layout Subsection
@@ -289,9 +342,57 @@ b.
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 If we observe Alarmtrue, are Burglary and Earthquake independent? Justify
  your answer by calculating whether the probabilities involved satisfy the
  definition of conditional independence.
+\end_layout
+
+\begin_layout Standard
+According to Bayes' Ball algorithm, when we can observe 
+\begin_inset Quotes eld
+\end_inset
+
+Alarm
+\begin_inset Quotes erd
+\end_inset
+
+, the B and E are conditionally dependent.
+\begin_inset Formula 
+\begin{align*}
+P(B,E|A) & =\frac{P(A,B,E)}{P(A)}\\
+ & =P(B)P(E)\frac{P(A|B,E)}{P(A)}\neq P(B|A)P(E|A)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From the numerical perspective, we need to demonstrate that 
+\begin_inset Formula $P(B|A,E)\neq P(B|A)$
+\end_inset
+
+ or 
+\begin_inset Formula $P(B,E|A)\neq P(B|A)P(E|A)$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{align*}
+P(+B,+E|+A) & =\frac{P(+A|+B,+E)}{P(+A)P(+B,+E)}\\
+P(+A|+B,+E) & =0.95\\
+P(+A) & =\sum_{B,E}P(+A|B,E)P(B)P(E)\\
+P(+B|+A) & =\frac{\sum_{E}P(+A,+B,E)}{P(+A)}=\frac{\sum_{E}P(+A|+B,E)P(+B)P(E)}{P(+A)}\\
+P(+B|+A)P(+E|+A) & =\frac{\sum_{E}P(+A|+B,E)P(+B)P(E)}{P(+A)}\frac{\sum_{B}P(+A|B,+E)P(B)P(+E)}{P(+A)}\\
+P(+B,+E|+A) & \neq P(+B|+A)P(+E|+A)
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
