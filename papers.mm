@@ -913,10 +913,11 @@
 </node>
 </node>
 <node TEXT="Loss Function" ID="ID_1059926176" CREATED="1642438781602" MODIFIED="1642438785478">
-<node TEXT="Cross Entropy" ID="ID_172299886" CREATED="1642949643007" MODIFIED="1642949645738"/>
+<node TEXT="Cross Entropy (Softmax + NLL)" ID="ID_172299886" CREATED="1642949643007" MODIFIED="1647265748825"/>
 <node TEXT="Focal Loss" ID="ID_1080205774" CREATED="1582943123957" MODIFIED="1587526865020">
 <icon BUILTIN="button_ok"/>
 <font NAME="Gentium" BOLD="false"/>
+<node TEXT="works well when there is imbalance in the number of training samples in each class, such as in long-tail cases" ID="ID_573374922" CREATED="1647265757735" MODIFIED="1647265781110"/>
 </node>
 <node TEXT="Relational Surrogate Loss Learning" ID="ID_1946575254" CREATED="1646942717232" MODIFIED="1646942719745">
 <icon BUILTIN="unchecked"/>
@@ -950,6 +951,10 @@
 <icon BUILTIN="button_ok"/>
 <node TEXT="orthogonal restriction" ID="ID_1997736262" CREATED="1619588556419" MODIFIED="1619588564023"/>
 </node>
+<node TEXT="Cyclical Focal Loss" ID="ID_478118261" CREATED="1647265797112" MODIFIED="1647265803109">
+<icon BUILTIN="pencil"/>
+<node TEXT="extension to focal loss" ID="ID_942111109" CREATED="1647265807566" MODIFIED="1647265821995"/>
+</node>
 </node>
 <node TEXT="Data Augmentation" ID="ID_1121776606" CREATED="1643057931229" MODIFIED="1643057946544">
 <node ID="ID_1264772918" CREATED="1643057954153" MODIFIED="1643057958105">
@@ -972,11 +977,6 @@
 </node>
 <node TEXT="Explain" ID="ID_765602224" CREATED="1642952846679" MODIFIED="1642953011867">
 <font BOLD="false"/>
-<node TEXT="What can we learn from misclassified ImageNet&#xa;images?" ID="ID_1435212181" CREATED="1642952852302" MODIFIED="1642952861609">
-<icon BUILTIN="pencil"/>
-<node TEXT="misclassifications are rarely across superclasses, but mainly among subclasses with a superclass" ID="ID_426581992" CREATED="1642952902122" MODIFIED="1642952932522"/>
-<node TEXT="ensemble networks trained each only on subclasses of a given superclass perform better than the same network trained on all subclasses of all superclasses" ID="ID_1950788253" CREATED="1642952937590" MODIFIED="1642952961617"/>
-</node>
 </node>
 </node>
 <node TEXT="Deep Metric Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_464750159" CREATED="1641242970936" MODIFIED="1642456761439">
@@ -5709,6 +5709,11 @@
 <icon BUILTIN="checked"/>
 <node TEXT="CVPR22" ID="ID_164811359" CREATED="1646937985052" MODIFIED="1646937987156"/>
 <node TEXT="one peculiar observation is that these explanations (attributions) point to different features as being important" ID="ID_1757747697" CREATED="1646942060828" MODIFIED="1646942079638"/>
+</node>
+<node TEXT="What can we learn from misclassified ImageNet&#xa;images?" ID="ID_1435212181" CREATED="1642952852302" MODIFIED="1642952861609">
+<icon BUILTIN="pencil"/>
+<node TEXT="misclassifications are rarely across superclasses, but mainly among subclasses with a superclass" ID="ID_426581992" CREATED="1642952902122" MODIFIED="1642952932522"/>
+<node TEXT="ensemble networks trained each only on subclasses of a given superclass perform better than the same network trained on all subclasses of all superclasses" ID="ID_1950788253" CREATED="1642952937590" MODIFIED="1642952961617"/>
 </node>
 </node>
 <node TEXT="Vision-Language Pretraining" FOLDED="true" POSITION="left" ID="ID_1438251706" CREATED="1646945591468" MODIFIED="1646945596520">
