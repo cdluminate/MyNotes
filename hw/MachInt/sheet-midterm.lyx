@@ -348,8 +348,95 @@ A* Search.
  is optimal.
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+heuristics admissibility.
+
+\series default
+ 
+\begin_inset Formula $h(n)\leq h^{*}(n)$
+\end_inset
+
+ always less or equal than the true cost.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+heuristics consistency.
+
+\series default
+ 
+\begin_inset Formula $f(n)$
+\end_inset
+
+ non decreasing.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+creating admissible heuristics.
+ 
+\series default
+relaxed problem.
+ 
+\end_layout
+
 \begin_layout Section
-Adversarial Games
+Adversarial Games (Chap.
+ 5)
+\end_layout
+
+\begin_layout Standard
+Hill-climbing search / greedy local search.
+\end_layout
+
+\begin_layout Standard
+Simulated Annealing.
+ (an example of MCMC sampling)
+\end_layout
+
+\begin_layout Standard
+Local beam search.
+ Keep track of K states rather than just one.
+ 
+\end_layout
+
+\begin_layout Standard
+Genetic algorithms.
+\end_layout
+
+\begin_layout Standard
+Minimax algorithm (implemented as DFS).
+ deep look ahead (no efficient).
+ good heuristic function (not dealing with delayed effects).
+ compute each node's minimax value: the best achievable utility against
+ a rational adversary.
+ time 
+\begin_inset Formula $O(b^{d})$
+\end_inset
+
+, space 
+\begin_inset Formula $O(bd)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Minimax pruning.
+ alpha-best pruning, where a is known best for MAX, b is the known best
+ for MIN so far.
+\end_layout
+
+\begin_layout Standard
+Evaluation function and backing up values.
+\end_layout
+
+\begin_layout Standard
+Expectimax search.
 \end_layout
 
 \begin_layout Section
