@@ -135,7 +135,7 @@ Searching with a search tree.
 \begin_layout Standard
 
 \series bold
-depth first search
+DFS: depth first search
 \series default
  maintains a LIFO stack.
  number of nodes 
@@ -164,7 +164,7 @@ depth first search
 \begin_layout Standard
 
 \series bold
-breadth first search
+BFS: breadth first search
 \series default
  maintainers a FIFO queue.
  Let depth of the shallowest solution be 
@@ -193,10 +193,98 @@ breadth first search
 \begin_layout Standard
 
 \series bold
-iterative deepening.
+cost-sensitive sesarch.
+
+\series default
+ introducing costs to the tree.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+UCS: uniform cost search.
+
+\series default
+ expand cheapest node first.
+ fringe is priority queue with cumulative cost.
+ if solution costs 
+\begin_inset Formula $C$
+\end_inset
+
+ and arc costs at least 
+\begin_inset Formula $e$
+\end_inset
+
+, then the 
+\begin_inset Quotes eld
+\end_inset
+
+effective depth
+\begin_inset Quotes erd
+\end_inset
+
+ is roughly 
+\begin_inset Formula $C/e$
+\end_inset
+
+.
+ Which means the time comlexity will be 
+\begin_inset Formula $O(b^{C/e})$
+\end_inset
+
+.
+ fringe takes 
+\begin_inset Formula $O(b^{C/e})$
+\end_inset
+
+ time complexity, roughly the last tier.
+ if we assume the best solution has a finite cost and arc is positive, UCS
+ is complete.
+ UCS is optimal (can be proven using A*).
+ The bad: UCS explores option in every direction and has no information
+ about goal location.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+search heurisitics.
+
+\series default
+ estimates how close a state is to a goal.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+GS: greedy search.
+
+\series default
+ expand nodes based on heuristics.
+ may strightly take you to wrong goal.
+ in worst case will look like a badly guided DFS.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+IDS: iterative deepening search.
 
 \series default
  combine advantages of DFS and BFS.
+ IDS is preferred for large search space where the depth of solution is
+ not known.
+ complete.
+ time 
+\begin_inset Formula $O(db^{1}+(d-1)b^{2}+\ldots+b^{d})=O(b^{d})$
+\end_inset
+
+, space 
+\begin_inset Formula $O(bd)$
+\end_inset
+
+.
+ optimal if step costs are identical.
 \end_layout
 
 \begin_layout Section
