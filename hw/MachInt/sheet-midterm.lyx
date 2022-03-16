@@ -476,7 +476,8 @@ structure.
 \end_layout
 
 \begin_layout Section
-Bayes Net
+Bayes Net (Chap.
+ 13)
 \end_layout
 
 \begin_layout Standard
@@ -527,7 +528,8 @@ inference by enumeration.
 \end_layout
 
 \begin_layout Section
-HMM
+HMM (Chap.
+ 14)
 \end_layout
 
 \end_body
