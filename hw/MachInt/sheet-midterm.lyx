@@ -597,5 +597,19 @@ forward probability variable
 .
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula $P(O|\lambda)=\sum_{i=1}^{N}\alpha_{T}(i)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\beta_{t}(i)=P(o_{t+1}o_{t+2}\ldots o_{T}|q_{t}=s_{i},\lambda)$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document
