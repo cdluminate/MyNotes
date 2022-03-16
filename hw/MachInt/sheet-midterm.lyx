@@ -287,6 +287,67 @@ IDS: iterative deepening search.
  optimal if step costs are identical.
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+Greedy BFS.
+
+\series default
+ evaluation function at node 
+\begin_inset Formula $n$
+\end_inset
+
+ is 
+\begin_inset Formula $f(n)=h(n)$
+\end_inset
+
+ where 
+\begin_inset Formula $h$
+\end_inset
+
+ is the heuristic function.
+ complete when there is no loop.
+ time 
+\begin_inset Formula $O(b^{d})$
+\end_inset
+
+.
+ space 
+\begin_inset Formula $O(b^{d})$
+\end_inset
+
+.
+ not optimal.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+A* Search.
+
+\series default
+ evaluation function at node 
+\begin_inset Formula $n$
+\end_inset
+
+ is 
+\begin_inset Formula $f(n)=g(n)+h(n)$
+\end_inset
+
+ where 
+\begin_inset Formula $g$
+\end_inset
+
+ is the cumulative cost till 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Is the combination of UCS and Greedy BFS.
+ complete, time sub-exponential, space often exponential.
+ is optimal.
+\end_layout
+
 \begin_layout Section
 Adversarial Games
 \end_layout
