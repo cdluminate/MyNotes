@@ -443,6 +443,38 @@ Expectimax search.
 CSP
 \end_layout
 
+\begin_layout Standard
+CSP: a set of vars, set of possible values and set of constraints.
+\end_layout
+
+\begin_layout Standard
+backtrack search.
+ DFS with (1) one variable at a time; (2) check constraints as you go.
+\end_layout
+
+\begin_layout Standard
+filtering: forward checking.
+ track remaining legal values and terminate when any variable has no legal
+ value.
+\end_layout
+
+\begin_layout Standard
+arc consistency.
+ for every value x of X there is some allowed y.
+\end_layout
+
+\begin_layout Standard
+k-consistency.
+\end_layout
+
+\begin_layout Standard
+ordering.
+\end_layout
+
+\begin_layout Standard
+structure.
+\end_layout
+
 \begin_layout Section
 Bayes Net
 \end_layout
