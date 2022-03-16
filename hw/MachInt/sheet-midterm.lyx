@@ -479,6 +479,53 @@ structure.
 Bayes Net
 \end_layout
 
+\begin_layout Standard
+random variables
+\end_layout
+
+\begin_layout Standard
+joint and marginal distributions
+\end_layout
+
+\begin_layout Standard
+conditional distribution
+\end_layout
+
+\begin_layout Standard
+product rule, chain rule, bayes' rule
+\end_layout
+
+\begin_layout Standard
+inference: compute a desired probability from other known probabilities.
+ e.g.
+ conditional from joint.
+\end_layout
+
+\begin_layout Standard
+independence: p(x,y)=p(x)p(y) or p(x|y)=p(x)
+\end_layout
+
+\begin_layout Standard
+conditinal independence
+\end_layout
+
+\begin_layout Standard
+bayes nets (graphical model).
+\end_layout
+
+\begin_layout Standard
+bayes net inference.
+ (normalization trick for 
+\begin_inset Formula $P(B|j,m)=\alpha P(B,j,m)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+inference by enumeration.
+\end_layout
+
 \begin_layout Section
 HMM
 \end_layout
