@@ -84,7 +84,119 @@
 \begin_body
 
 \begin_layout Section
-Search
+Search (Chap.
+ 3)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Space and temporal complexity.
+
+\series default
+ Drop lower order terms and constant factors.
+ Definition of P, NP, NP-Complete, NP-Hard.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Search problem.
+
+\series default
+ state space, successor function with action and costs, start state and
+ goal test.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+State space graph.
+
+\series default
+ each state occurs only once.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Search tree.
+
+\series default
+ a node is an entire path.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Searching with a search tree.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+depth first search
+\series default
+ maintains a LIFO stack.
+ number of nodes 
+\begin_inset Formula $O(b^{d})$
+\end_inset
+
+ where 
+\begin_inset Formula $b$
+\end_inset
+
+ is breadth and 
+\begin_inset Formula $d$
+\end_inset
+
+ is depth.
+ fringe takes 
+\begin_inset Formula $O(bd)$
+\end_inset
+
+ space.
+ it is complete only if there is no cycles.
+ it finds the leftmost solution regardless of depth or cost, and is not
+ optinal.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+breadth first search
+\series default
+ maintainers a FIFO queue.
+ Let depth of the shallowest solution be 
+\begin_inset Formula $d$
+\end_inset
+
+.
+ Then search time 
+\begin_inset Formula $O(b^{d})$
+\end_inset
+
+.
+ firinge takes 
+\begin_inset Formula $O(b^{d})$
+\end_inset
+
+ space.
+ it is complete becaause 
+\begin_inset Formula $d$
+\end_inset
+
+ only exists if solution exists.
+ it is optimal only if all costs are 1.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+iterative deepening.
+
+\series default
+ combine advantages of DFS and BFS.
 \end_layout
 
 \begin_layout Section
