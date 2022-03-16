@@ -1,0 +1,706 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage[margin=1in]{geometry}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Midterm
+\end_layout
+
+\begin_layout Author
+Mo Zhou <mzhou32@jhu.edu>
+\end_layout
+
+\begin_layout Section
+Problem 1
+\end_layout
+
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+BFS given constant costs is a special form of UCS (uniform cost search).
+ Since UCS is optimal, and BFS goes along the tree along with the tier-wise
+ contour, once we reach an solution it will be optimal and the shortest
+ path.
+\end_layout
+
+\begin_layout Subsection
+(b)
+\end_layout
+
+\begin_layout Standard
+When there are varying costs, BFS may fall into sub-optimal paths since
+ it neglects the cost.
+ It may ends at a short-path solution with high cumulative cost, and is
+ unable to reach a long-path solution with low cumulative cost.
+ In other words, the nature that BFS neglects the contour of cumulative
+ cost makes it prone to fall into suboptimal results.
+\end_layout
+
+\begin_layout Section
+Problem 2
+\end_layout
+
+\begin_layout Standard
+Initial state 
+\begin_inset Formula $S_{0}$
+\end_inset
+
+ is [1,none,3;4,2,6;7,5,8].
+\end_layout
+
+\begin_layout Standard
+Goal state 
+\begin_inset Formula $S^{*}$
+\end_inset
+
+ is [1,2,3;4,5,6;7,8,none].
+\end_layout
+
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $h_{1}(S_{0})=4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(b)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $h_{2}(S_{0})=3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Problem 3
+\end_layout
+
+\begin_layout Standard
+We denote Burglary as B, Earthquake as E, Alarm as A, John-calls as J, and
+ Mary-calls as M.
+ Plus sign as the prefix to the abbreviation means 
+\begin_inset Quotes eld
+\end_inset
+
+true
+\begin_inset Quotes erd
+\end_inset
+
+.
+ For example, +B means B=true.
+\end_layout
+
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+The P(Alarm) is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+P(A) & =\sum_{B}\sum_{E}P(A,B,E)\\
+ & =\sum_{B}\sum_{E}P(A|B,E)P(B)P(E)\\
+ & =P(+B)P(+E)P(A|+B,+E)+P(-B)P(-E)P(A|-B,-E)\\
+ & +P(+B)P(-E)P(A|+B,-E)+P(-B)P(+E)P(A|-B,+E)\\
+P(+A) & =0.001\times0.002\times0.95+0.999\times0.998\times0.001\\
+ & +0.001\times0.998\times0.94+0.999\times0.002\times0.29\\
+ & =\\
+P(-A) & =1-P(+A)\\
+ & =
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Subsequently, P(John calls) can P(Marry calls) are
+\begin_inset Formula 
+\begin{align*}
+P(J) & =\sum_{A}P(J,A)=\sum_{A}P(J|A)P(A)\\
+ & =P(J|+A)P(+A)+P(J|-A)P(-A)\\
+ & =\\
+P(M) & =\sum_{A}P(M,A)=\sum_{A}P(M|A)P(A)\\
+ & =P(M|+A)P(+A)+P(M|-A)P(-A)\\
+ & =
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(b)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+P(M|B) & =P(M,B)/P(B)\\
+ & =\sum_{A}\sum_{E}P(M,A,B,E)/P(B)\\
+ & =\sum_{A}\sum_{E}P(M|A)P(A|B,E)P(B)P(E)/P(B)\\
+ & =\sum_{A}\sum_{E}P(M|A)P(A|B,E)P(E)\\
+P(+M|+B) & =\sum_{A}\sum_{E}P(+M|A)P(A|+B,E)P(E)\\
+ & =
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(c)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+P(B|M) & =\frac{P(M|B)P(B)}{P(M)}\\
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(d)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+P(A|J,M) & =\alpha P(A,J,M)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+P(B|J,M) & =\alpha P(B,J,M)\\
+ & =\alpha\sum_{E,A}P(B,E,A,J,M)\\
+ & =\alpha\sum_{E,A}P(B)P(E)P(A|B,E)P(J|A)P(M|A)\\
+ & =\alpha[0.00059224,0.0014919]\\
+ & =[0.284,0.716]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Problem 4
+\end_layout
+
+\begin_layout Standard
+The observation sequence 
+\begin_inset Formula $O_{1}O_{2}O_{3}$
+\end_inset
+
+ is 
+\begin_inset Formula $G,B,Y$
+\end_inset
+
+, which is numerically 
+\begin_inset Formula $2,3,4$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+We have N=3, M=4, T=3.
+ We then perform the forward process according to
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+P(O|\lambda) & =\sum_{i=1}^{N}\alpha_{T}(i)\\
+\alpha_{1}(i) & =\pi_{i}b_{i}(o_{1})\quad1\leq i\leq N\\
+\alpha_{t+1}(j) & =[\sum_{i=1}^{N}\alpha_{t}(i)a_{ij}]b_{j}(o_{t+1})\quad1\leq t\leq T-1,j\leq j\leq N
+\end{align*}
+
+\end_inset
+
+namely
+\begin_inset Formula 
+\begin{align*}
+\alpha_{1}(1) & =\pi_{1}b_{1}(2)=(0.3)(0.2)=0.06\\
+\alpha_{1}(2) & =\pi_{2}b_{2}(2)=(0.4)(0.6)=0.24\\
+\alpha_{1}(3) & =\pi_{3}b_{3}(2)=(0.3)(0.1)=0.03
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+then
+\begin_inset Formula 
+\begin{align*}
+\alpha_{2}(1) & =(\sum_{i=1}^{3}\alpha_{1}(i)a_{i1})b_{1}(3)=\\
+\alpha_{2}(2) & =(\sum_{i=1}^{3}\alpha_{1}(i)a_{i2})b_{2}(3)=\\
+\alpha_{2}(3) & =(\sum_{i=1}^{3}\alpha_{1}(i)a_{i3})b_{3}(3)=
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(b)
+\end_layout
+
+\begin_layout Standard
+We use the Viterbi algorithm.
+ First we define
+\begin_inset Formula 
+\[
+\delta_{t}(i)=\max_{q_{1},q_{2},\ldots,q_{t-1}}P(q_{1}q_{2}\ldots q_{t}=s_{i},o_{1},o_{2}\ldots o_{t}|\lambda)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then we initialize as
+\begin_inset Formula 
+\[
+\delta_{1}=\pi_{i}b_{i}(o_{1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then do recursion
+\begin_inset Formula 
+\begin{align*}
+\delta_{t}(j) & =\max_{1\leq i\leq N}[\delta_{t-1}(i)a_{ij}]b_{j}(o_{t})\\
+\psi_{t}(j) & =\arg\max_{1\leq i\leq N}[\delta_{t-1}(i)a_{ij}]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and terminates at
+\begin_inset Formula 
+\[
+P^{*}=\max_{1\leq i\leq N}[\delta_{T}(i)]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+q_{T}^{*}=\arg\max_{1\leq i\leq N}[\delta_{T}(i)]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and the optimal state sequence is
+\begin_inset Formula 
+\[
+q_{t}^{*}=\psi_{t+1}(q_{t+1}^{*})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Problem 5
+\end_layout
+
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+Assume the size of the large rectangle is 
+\begin_inset Formula $H\times W$
+\end_inset
+
+.
+ There are 
+\begin_inset Formula $N$
+\end_inset
+
+ smaller rectangles, and their shapes are 
+\begin_inset Formula $H_{i}\times W_{i}$
+\end_inset
+
+ located at 
+\begin_inset Formula $(x_{i},y_{i})$
+\end_inset
+
+ within the 
+\begin_inset Formula $H\times W$
+\end_inset
+
+ area.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Constants:
+\series default
+ 
+\begin_inset Formula $H,W,H_{i},W_{i},N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Variables:
+\series default
+ And the position 
+\begin_inset Formula $(x_{i},y_{i})$
+\end_inset
+
+ of the 
+\begin_inset Formula $i$
+\end_inset
+
+-th small rectangle.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Possible-Values:
+\series default
+ 
+\begin_inset Formula $x_{i}\in[0,W-W_{i}]$
+\end_inset
+
+, 
+\begin_inset Formula $y_{i}\in[0,H-H_{i}]$
+\end_inset
+
+.
+ Because the small rectangle cannot exceed the boundary of large rectangle.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Constraint-1:
+\series default
+ For any 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+, 
+\begin_inset Formula $x_{i}\notin[x_{j},x_{j}+W_{j}]$
+\end_inset
+
+, and 
+\begin_inset Formula $y_{j}\notin[y_{j},y_{j}+H_{j}]$
+\end_inset
+
+.
+ This means no-overlap.
+\end_layout
+
+\begin_layout Subsection
+(b)
+\end_layout
+
+\begin_layout Standard
+There are 
+\begin_inset Formula $M$
+\end_inset
+
+ professors (
+\begin_inset Formula $P_{m}$
+\end_inset
+
+) and 
+\begin_inset Formula $N$
+\end_inset
+
+ classrooms (
+\begin_inset Formula $C_{n}$
+\end_inset
+
+), and 
+\begin_inset Formula $K$
+\end_inset
+
+ lectures (classes) 
+\begin_inset Formula $L_{k}$
+\end_inset
+
+ with corresponding time slot 
+\begin_inset Formula $[t_{k,start},t_{k,end}]$
+\end_inset
+
+.
+ Each professor has a set 
+\begin_inset Formula $S_{m}$
+\end_inset
+
+ that they can teach.
+\end_layout
+
+\begin_layout Standard
+Constants: 
+\begin_inset Formula $M$
+\end_inset
+
+, 
+\begin_inset Formula $N$
+\end_inset
+
+, 
+\begin_inset Formula $K$
+\end_inset
+
+, 
+\begin_inset Formula $L_{k}$
+\end_inset
+
+, 
+\begin_inset Formula $S_{m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Variables: 
+\begin_inset Formula $t_{k,start}$
+\end_inset
+
+, 
+\begin_inset Formula $t_{k,end}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Possible-Values: 
+\end_layout
+
+\begin_layout Standard
+Constraint-1: 
+\end_layout
+
+\begin_layout Subsection
+(c)
+\end_layout
+
+\begin_layout Standard
+There are 
+\begin_inset Formula $N$
+\end_inset
+
+ cities 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ where 
+\begin_inset Formula $n=1,...,N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Variables:
+\series default
+ 
+\begin_inset Formula $f_{i,j}^{(k)}$
+\end_inset
+
+ which means whether to go from 
+\begin_inset Formula $i$
+\end_inset
+
+ to 
+\begin_inset Formula $j$
+\end_inset
+
+ at time step 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Possible-Values:
+\series default
+ 0 or 1.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Constraint-1:
+\series default
+ only go from one place to another at a time.
+ 
+\begin_inset Formula $\sum_{i,j}f_{i,j}^{(k)}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Constraint-2:
+\series default
+ does not stay.
+ 
+\begin_inset Formula $f_{i,i}^{(k)}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Constraint-3:
+\series default
+ visit all cities.
+ 
+\begin_inset Formula $\sum_{k,i,j}f_{i,j}^{(k)}=N$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
