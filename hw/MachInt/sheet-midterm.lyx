@@ -532,5 +532,70 @@ HMM (Chap.
  14)
 \end_layout
 
+\begin_layout Standard
+factor notation.
+\end_layout
+
+\begin_layout Standard
+conditional independence
+\end_layout
+
+\begin_layout Standard
+d-separation.
+\end_layout
+
+\begin_layout Standard
+markov chain.
+\end_layout
+
+\begin_layout Standard
+hidden markov model.
+\end_layout
+
+\begin_layout Standard
+inference tasks: (1) filtering: 
+\begin_inset Formula $P(X_{t}|e_{1:t})$
+\end_inset
+
+; (2) prediction 
+\begin_inset Formula $P(X_{t+k}|e_{1:t})$
+\end_inset
+
+; (3) smoothing 
+\begin_inset Formula $P(X_{k}|e_{1:t})$
+\end_inset
+
+ for 
+\begin_inset Formula $0\leq k<t$
+\end_inset
+
+; (4) most likely explanation 
+\begin_inset Formula $\arg\max_{x_{1:t}}P(x_{1:t}|e_{1:t})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+filtering algorithm.
+ 
+\begin_inset Formula $P(X_{t+1}|e_{1:t+1})=g(e_{t+1},P(X_{t}|e_{1:t}))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Viterbi algorithm for best path (max).
+\end_layout
+
+\begin_layout Standard
+forward probability variable 
+\begin_inset Formula $\alpha_{t}(i)=P(o_{1}o_{2}\ldots o_{t},q_{t}=s_{i}|\lambda)$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document
