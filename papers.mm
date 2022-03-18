@@ -344,10 +344,16 @@
 </node>
 <node TEXT="Adversarial Attack: Intersection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1335351832" CREATED="1647263319144" MODIFIED="1647263375425">
 <edge COLOR="#7c007c"/>
-<node TEXT="multi-label prediction" ID="ID_1211679974" CREATED="1647568084959" MODIFIED="1647568101192">
+<node TEXT="multi-label prediction" ID="ID_1211679974" CREATED="1647568084959" MODIFIED="1647568893432">
+<icon BUILTIN="button_ok"/>
 <node TEXT="tkml-ap: adversarial attacks to top-k multi-label learning" ID="ID_768468346" CREATED="1647568102113" MODIFIED="1647568115332">
 <icon BUILTIN="unchecked"/>
 <node TEXT="iccv21" ID="ID_1410742901" CREATED="1647568116971" MODIFIED="1647568120084"/>
+<node TEXT="actually this looks like relevant with adversarial ranking" ID="ID_418002134" CREATED="1647568897864" MODIFIED="1647568911643"/>
+<node TEXT="it defines targeted and untargeted attack in the multi-class scenario" ID="ID_296403052" CREATED="1647568917772" MODIFIED="1647568929416"/>
+<node TEXT="the nature that the method recognizes top-k predictions is the same as deep ranking" ID="ID_738164770" CREATED="1647568934059" MODIFIED="1647568963511">
+<icon BUILTIN="yes"/>
+</node>
 </node>
 </node>
 <node TEXT="Face Recog" ID="ID_1806006397" CREATED="1642368429380" MODIFIED="1642965654306">
