@@ -233,6 +233,9 @@
 <icon BUILTIN="pencil"/>
 <icon BUILTIN="bookmark"/>
 </node>
+<node TEXT="2018.00401: advances in adversarial attacks and defenses in computer vision: a survey" ID="ID_493255704" CREATED="1647567861740" MODIFIED="1647567881439">
+<icon BUILTIN="pencil"/>
+</node>
 </node>
 <node TEXT="Deep Metric Learning" ID="ID_912819287" CREATED="1582857189653" MODIFIED="1642953053152">
 <font NAME="Gentium" BOLD="true"/>
@@ -341,6 +344,12 @@
 </node>
 <node TEXT="Adversarial Attack: Intersection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1335351832" CREATED="1647263319144" MODIFIED="1647263375425">
 <edge COLOR="#7c007c"/>
+<node TEXT="multi-label prediction" ID="ID_1211679974" CREATED="1647568084959" MODIFIED="1647568101192">
+<node TEXT="tkml-ap: adversarial attacks to top-k multi-label learning" ID="ID_768468346" CREATED="1647568102113" MODIFIED="1647568115332">
+<icon BUILTIN="unchecked"/>
+<node TEXT="iccv21" ID="ID_1410742901" CREATED="1647568116971" MODIFIED="1647568120084"/>
+</node>
+</node>
 <node TEXT="Face Recog" ID="ID_1806006397" CREATED="1642368429380" MODIFIED="1642965654306">
 <node TEXT="Similarity-based Gray-box Adversarial Attack Against Deep Face Recognition" ID="ID_272220220" CREATED="1642368773041" MODIFIED="1642368776146">
 <icon BUILTIN="checked"/>
@@ -523,6 +532,13 @@
 </node>
 </node>
 </node>
+<node TEXT="Insersection" ID="ID_1915167711" CREATED="1647567802364" MODIFIED="1647567805237">
+<node TEXT="semantic segmentation" ID="ID_561284915" CREATED="1647567812114" MODIFIED="1647567819386">
+<node TEXT="tiggering failures; out of distribution detection by learning from local adversarial attacks in semgnatic segmentation" ID="ID_1480297231" CREATED="1647567820168" MODIFIED="1647567841158">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+</node>
 </node>
 <node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
 <edge COLOR="#7c7c00"/>
@@ -543,7 +559,7 @@
 </node>
 <node TEXT="Adaptive Attack (Madry)" ID="ID_103436605" CREATED="1647265946214" MODIFIED="1647265951989"/>
 </node>
-<node TEXT="Adversarial Training" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1641743568907">
+<node TEXT="Adversarial Training" FOLDED="true" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1641743568907">
 <node TEXT="references" ID="ID_178248607" CREATED="1642431445724" MODIFIED="1643412272232">
 <icon BUILTIN="info"/>
 <node TEXT="https://robustbench.github.io/" ID="ID_1384233314" CREATED="1642431450079" MODIFIED="1642431451028"/>
@@ -741,6 +757,12 @@
 <node TEXT="Adversarially Robust Classification by Conditional Generative Model Inversion" ID="ID_811483312" CREATED="1642953266238" MODIFIED="1642953325665">
 <icon BUILTIN="pencil"/>
 <icon BUILTIN="button_cancel"/>
+</node>
+</node>
+<node TEXT="Reconstruct / Revert" ID="ID_855700329" CREATED="1647567976256" MODIFIED="1647567982930">
+<node TEXT="delving into deep image prior for adversarial defense: a novel reconstruction based defense framework" ID="ID_1101165014" CREATED="1647567984454" MODIFIED="1647568005112">
+<icon BUILTIN="unchecked"/>
+<node TEXT="acm mm" ID="ID_1121719140" CREATED="1647568006277" MODIFIED="1647568007837"/>
 </node>
 </node>
 <node TEXT="Activation Intervene" ID="ID_1088268480" CREATED="1647266487705" MODIFIED="1647266501053">
