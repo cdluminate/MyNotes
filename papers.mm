@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="{M,R,D}L" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1642394353464" STYLE="oval">
 <font NAME="Gentium" SIZE="18"/>
-<hook NAME="MapStyle" zoom="1.17">
+<hook NAME="MapStyle" zoom="1.416">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="88" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="89" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1642395333050">
 <edge COLOR="#00ffff"/>
 <node TEXT="what&apos;s this" ID="ID_34209772" CREATED="1641520840738" MODIFIED="1641520995587">
@@ -428,6 +428,14 @@
 </node>
 <node TEXT="Remote Sensing" ID="ID_1273414088" CREATED="1647267114318" MODIFIED="1647267117431">
 <node TEXT="Universal adversarial perturbation for remote sensing images" ID="ID_16084759" CREATED="1647267118151" MODIFIED="1647267125456">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="unsupervised" ID="ID_1306713728" CREATED="1647567664211" MODIFIED="1647567667715">
+<node TEXT="shaoyuan has one" ID="ID_1775536369" CREATED="1647567668516" MODIFIED="1647567688192">
+<icon BUILTIN="pencil"/>
+</node>
+<node TEXT="on the robustness of domain adaption to adversarial attacks" ID="ID_1358706166" CREATED="1647567673533" MODIFIED="1647567685949">
 <icon BUILTIN="pencil"/>
 </node>
 </node>
@@ -1203,6 +1211,17 @@
 </node>
 </node>
 </node>
+<node TEXT="Action Recognition" FOLDED="true" POSITION="left" ID="ID_941361807" CREATED="1647567341551" MODIFIED="1647567345392">
+<edge COLOR="#ff0000"/>
+<node TEXT="Architecture" ID="ID_694731282" CREATED="1647567346659" MODIFIED="1647567355095">
+<node TEXT="non-local neural networks" ID="ID_595201499" CREATED="1647567356067" MODIFIED="1647567369739">
+<icon BUILTIN="checked"/>
+<node TEXT="CVPR18" ID="ID_556242427" CREATED="1647567364801" MODIFIED="1647567366157"/>
+<node TEXT="kaiming he" ID="ID_598417815" CREATED="1647567408886" MODIFIED="1647567410210"/>
+<node TEXT="deal with long-range dependency problem that the traditional CNN is not very good at" ID="ID_883791225" CREATED="1647567373082" MODIFIED="1647567395434"/>
+</node>
+</node>
+</node>
 <node TEXT="Backdoor Attack &amp; Defense" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="left" ID="ID_1279237598" CREATED="1642964328030" MODIFIED="1642965522277">
 <edge COLOR="#ff0000"/>
 <node TEXT="Attack" ID="ID_481030829" CREATED="1642965505734" MODIFIED="1642965507796">
@@ -1211,6 +1230,9 @@
 <node TEXT="Imperceptible and Multi-channel Backdoor Attack against Deep Neural Networks" ID="ID_1408798505" CREATED="1644181613544" MODIFIED="1644181621740">
 <icon BUILTIN="pencil"/>
 <node TEXT="exploiting DCT steganography" ID="ID_645033989" CREATED="1644181646727" MODIFIED="1644181655902"/>
+</node>
+<node TEXT="Poison Ink: Robust and Invisible Backdoor Attack" ID="ID_216800788" CREATED="1647567532543" MODIFIED="1647567536305">
+<icon BUILTIN="pencil"/>
 </node>
 </node>
 <node TEXT="Federated Learning (FL)" ID="ID_63486999" CREATED="1642964624292" MODIFIED="1642964972961">
@@ -1590,6 +1612,11 @@
 <icon BUILTIN="unchecked"/>
 <node TEXT="CVPR22w" ID="ID_1710159890" CREATED="1647266815467" MODIFIED="1647266817920"/>
 <node TEXT="adversarially trained nets are vulnerable to inversion attack" ID="ID_1271286519" CREATED="1647266824910" MODIFIED="1647266840002"/>
+</node>
+</node>
+<node TEXT="model watermark" ID="ID_854641187" CREATED="1647567587011" MODIFIED="1647567593099">
+<node TEXT="exloring structure consistency for deep model watermarking" ID="ID_489056739" CREATED="1647567594240" MODIFIED="1647567607226">
+<icon BUILTIN="pencil"/>
 </node>
 </node>
 </node>
