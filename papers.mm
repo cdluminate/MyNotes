@@ -496,16 +496,8 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
+<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
 <edge COLOR="#7c7c00"/>
-<node TEXT="STAGE" ID="ID_219354908" CREATED="1642438393211" MODIFIED="1648173382480">
-<node TEXT="adversarial robustness against the union of multiple perturbation models" ID="ID_1452347285" CREATED="1642438398542" MODIFIED="1648173382479">
-<icon BUILTIN="unchecked"/>
-</node>
-<node TEXT="adversarial training and robustness for multiple perturbations" ID="ID_1832278453" CREATED="1642438422719" MODIFIED="1642438435302">
-<icon BUILTIN="unchecked"/>
-</node>
-</node>
 <node TEXT="Survey" ID="ID_1556055508" CREATED="1648173325254" MODIFIED="1648173329845">
 <icon BUILTIN="info"/>
 <node TEXT="Benchmarking Adversarial Robustness on Image Classification" ID="ID_379885724" CREATED="1642726545073" MODIFIED="1642726549438">
@@ -519,7 +511,8 @@
 <icon BUILTIN="pencil"/>
 </node>
 </node>
-<node TEXT="Benchmark" ID="ID_855034612" CREATED="1642431513665" MODIFIED="1642431518164">
+<node TEXT="Benchmark" ID="ID_855034612" CREATED="1642431513665" MODIFIED="1648180915383">
+<font BOLD="true"/>
 <node TEXT="robustbench: a standardized adversarial robustness benchmark" ID="ID_1489423550" CREATED="1642431521917" MODIFIED="1642431542194">
 <icon BUILTIN="unchecked"/>
 </node>
@@ -722,6 +715,14 @@
 </node>
 </node>
 </node>
+<node TEXT="STAGE" ID="ID_219354908" CREATED="1642438393211" MODIFIED="1648173382480">
+<node TEXT="adversarial robustness against the union of multiple perturbation models" ID="ID_1452347285" CREATED="1642438398542" MODIFIED="1648173382479">
+<icon BUILTIN="unchecked"/>
+</node>
+<node TEXT="adversarial training and robustness for multiple perturbations" ID="ID_1832278453" CREATED="1642438422719" MODIFIED="1642438435302">
+<icon BUILTIN="unchecked"/>
+</node>
+</node>
 </node>
 <node TEXT="Analysis on Adversarial Training" ID="ID_1446204242" CREATED="1648174101608" MODIFIED="1648174109263">
 <font BOLD="true"/>
@@ -808,6 +809,12 @@
 <node TEXT="USENIX22" ID="ID_492775537" CREATED="1647265161385" MODIFIED="1647265163646"/>
 <node TEXT="adversarial trianing is too slow" ID="ID_282502797" CREATED="1647265173521" MODIFIED="1647265180634"/>
 <node TEXT="student learns the robust representations from the teacher network" ID="ID_640049187" CREATED="1647265180865" MODIFIED="1647265202101"/>
+</node>
+</node>
+<node TEXT="Patch Defense" ID="ID_1143099045" CREATED="1648180904182" MODIFIED="1648180907628">
+<node TEXT="Towards Practical Certifiable Patch Defense with Vision Transformer" ID="ID_881632170" CREATED="1648180952088" MODIFIED="1648180959464">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_379980426" CREATED="1648180955529" MODIFIED="1648180957199"/>
 </node>
 </node>
 </node>
@@ -1627,6 +1634,27 @@
 <node TEXT="Applications" ID="ID_485359212" CREATED="1590025512498" MODIFIED="1590025514523">
 <node TEXT="Retailing" ID="ID_725089971" CREATED="1588391641383" MODIFIED="1588391642960">
 <node TEXT="2003.08230: rethinking object detection in retail stores" ID="ID_524544258" CREATED="1588391644632" MODIFIED="1588391661192"/>
+</node>
+</node>
+</node>
+<node TEXT="Open Set Recognition" FOLDED="true" POSITION="left" ID="ID_323999523" CREATED="1634132952545" MODIFIED="1647267889167">
+<edge COLOR="#7c007c"/>
+<node TEXT="Open-Set Recognition: A Good Closed-Set Classifier is All You Need" ID="ID_1603928418" CREATED="1634132957520" MODIFIED="1634132962452">
+<node TEXT="vgg group" ID="ID_419228120" CREATED="1634132963805" MODIFIED="1634132966497"/>
+<node TEXT="arxiv" ID="ID_1399907050" CREATED="1634132966842" MODIFIED="1634132967732"/>
+</node>
+<node TEXT="PMAL: Open Set Recognition via Robust Prototype Mining" ID="ID_1567699679" CREATED="1648174626207" MODIFIED="1648174710258">
+<icon BUILTIN="unchecked"/>
+<icon BUILTIN="idea"/>
+<node TEXT="AAAI21" ID="ID_1093847305" CREATED="1648174632155" MODIFIED="1648174634120"/>
+<node TEXT="Open-Set is somewhat similar to deep metric learning variant" ID="ID_162349135" CREATED="1648174806913" MODIFIED="1648174820515"/>
+<node TEXT="besides recognizing predefined classes, the system needs to reject the unknowns" ID="ID_1080431228" CREATED="1648174634902" MODIFIED="1648174647137"/>
+<node TEXT="prototype learning is a potential manner to handle the problem as its ability to improve intra-class compactness of representations is much needed in discrimination between the known and the unknowns" ID="ID_1737399656" CREATED="1648174672305" MODIFIED="1648174703066"/>
+<node TEXT="using mining strategy to avoid inteference of noise" ID="ID_879408251" CREATED="1648174763868" MODIFIED="1648174797459">
+<icon BUILTIN="yes"/>
+</node>
+<node TEXT="can we borrow these to face recognition?" ID="ID_290608270" CREATED="1648174835615" MODIFIED="1648174856270">
+<icon BUILTIN="help"/>
 </node>
 </node>
 </node>
@@ -3246,14 +3274,6 @@
 <node TEXT="2004.00626 Background Matting: The World is Your Green Screen (cvpr20)" ID="ID_1311753286" CREATED="1590805662549" MODIFIED="1590805676803"/>
 </node>
 </node>
-<node TEXT="Reinforcement Learning" POSITION="left" ID="ID_687208999" CREATED="1642431117901" MODIFIED="1642431123908">
-<edge COLOR="#007c7c"/>
-<node TEXT="Gameplay" ID="ID_1651563029" CREATED="1642431125004" MODIFIED="1642431126898">
-<node TEXT="counter-strike deathmatch with large-scale behavioural cloning" ID="ID_1896222170" CREATED="1642431128005" MODIFIED="1642431149994">
-<icon BUILTIN="pencil"/>
-</node>
-</node>
-</node>
 <node TEXT="Learning" FOLDED="true" POSITION="left" ID="ID_876811772" CREATED="1583309966895" MODIFIED="1642394191143">
 <font NAME="Gentium" SIZE="10" BOLD="false"/>
 <edge COLOR="#7c7c00"/>
@@ -3298,27 +3318,6 @@
 </node>
 <node TEXT="unsup domain adaptation" ID="ID_108358759" CREATED="1610422300921" MODIFIED="1610422305959">
 <node TEXT="2101: Unsupervised Domain Adaptation of Black-Box Source Models" ID="ID_1885176581" CREATED="1610422307004" MODIFIED="1610422319037"/>
-</node>
-</node>
-<node TEXT="Open Set Recognition" FOLDED="true" POSITION="left" ID="ID_323999523" CREATED="1634132952545" MODIFIED="1647267889167">
-<edge COLOR="#7c007c"/>
-<node TEXT="Open-Set Recognition: A Good Closed-Set Classifier is All You Need" ID="ID_1603928418" CREATED="1634132957520" MODIFIED="1634132962452">
-<node TEXT="vgg group" ID="ID_419228120" CREATED="1634132963805" MODIFIED="1634132966497"/>
-<node TEXT="arxiv" ID="ID_1399907050" CREATED="1634132966842" MODIFIED="1634132967732"/>
-</node>
-<node TEXT="PMAL: Open Set Recognition via Robust Prototype Mining" ID="ID_1567699679" CREATED="1648174626207" MODIFIED="1648174710258">
-<icon BUILTIN="unchecked"/>
-<icon BUILTIN="idea"/>
-<node TEXT="AAAI21" ID="ID_1093847305" CREATED="1648174632155" MODIFIED="1648174634120"/>
-<node TEXT="Open-Set is somewhat similar to deep metric learning variant" ID="ID_162349135" CREATED="1648174806913" MODIFIED="1648174820515"/>
-<node TEXT="besides recognizing predefined classes, the system needs to reject the unknowns" ID="ID_1080431228" CREATED="1648174634902" MODIFIED="1648174647137"/>
-<node TEXT="prototype learning is a potential manner to handle the problem as its ability to improve intra-class compactness of representations is much needed in discrimination between the known and the unknowns" ID="ID_1737399656" CREATED="1648174672305" MODIFIED="1648174703066"/>
-<node TEXT="using mining strategy to avoid inteference of noise" ID="ID_879408251" CREATED="1648174763868" MODIFIED="1648174797459">
-<icon BUILTIN="yes"/>
-</node>
-<node TEXT="can we borrow these to face recognition?" ID="ID_290608270" CREATED="1648174835615" MODIFIED="1648174856270">
-<icon BUILTIN="help"/>
-</node>
 </node>
 </node>
 <node TEXT="Intersection Defense" FOLDED="true" POSITION="left" ID="ID_1275267930" CREATED="1622799700597" MODIFIED="1642394158922">
