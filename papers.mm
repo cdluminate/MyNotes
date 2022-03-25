@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="{M,R,D}L" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1642394353464" STYLE="oval">
 <font NAME="Gentium" SIZE="18"/>
-<hook NAME="MapStyle" zoom="1.416">
+<hook NAME="MapStyle" zoom="1.287">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -171,7 +171,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Special: Surveys" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1805920002" CREATED="1608010101067" MODIFIED="1642953023254">
+<node TEXT="Misc: Surveys" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1805920002" CREATED="1608010101067" MODIFIED="1648173434868">
 <icon BUILTIN="info"/>
 <edge COLOR="#ff0000"/>
 <node TEXT="Deep Learning Book" ID="ID_1914998592" CREATED="1624456582801" MODIFIED="1624456586327">
@@ -219,56 +219,6 @@
 </node>
 <node TEXT="Anomaly Detection" ID="ID_170137859" CREATED="1618846931941" MODIFIED="1618846936621">
 <node TEXT="2004.05993: a survey of single-scene video anomaly deteciton" ID="ID_462688942" CREATED="1618846926868" MODIFIED="1618846929066"/>
-</node>
-<node TEXT="Attack &amp; Defense" ID="ID_717280196" CREATED="1619444021946" MODIFIED="1619444028124">
-<font BOLD="true"/>
-<node TEXT="Benchmarking Adversarial Robustness on Image Classification" ID="ID_379885724" CREATED="1642726545073" MODIFIED="1642726549438">
-<icon BUILTIN="checked"/>
-<icon BUILTIN="bookmark"/>
-</node>
-<node TEXT="2104: Deep Learning-Based Autonomous Driving Systems: A Survey of Attacks and Defenses" ID="ID_1290703897" CREATED="1619444030107" MODIFIED="1619444042107">
-<icon BUILTIN="messagebox_warning"/>
-</node>
-<node TEXT="RobFR: Benchmarking Adversarial Robustness on Face Recognition" ID="ID_765372057" CREATED="1642726609490" MODIFIED="1642726640122">
-<icon BUILTIN="pencil"/>
-<icon BUILTIN="bookmark"/>
-</node>
-<node TEXT="2018.00401: advances in adversarial attacks and defenses in computer vision: a survey" ID="ID_493255704" CREATED="1647567861740" MODIFIED="1647567881439">
-<icon BUILTIN="pencil"/>
-</node>
-</node>
-<node TEXT="Deep Metric Learning" ID="ID_912819287" CREATED="1582857189653" MODIFIED="1642953053152">
-<font NAME="Gentium" BOLD="true"/>
-<node TEXT="2002.08473: revisiting training strategies and generalization performance in deep metric learning" FOLDED="true" ID="ID_585062864" CREATED="1582857197676" MODIFIED="1642726573200">
-<icon BUILTIN="checked"/>
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="revisit most widely used DML objective functions" ID="ID_1601875277" CREATED="1582857225897" MODIFIED="1587526865066">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="study parameter choices and batch sampling" ID="ID_1014314628" CREATED="1582857260610" MODIFIED="1587526865067">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="propose simple, yet effective training regularization method" ID="ID_1639876989" CREATED="1582857276291" MODIFIED="1587526865068">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="randomly perform a switch operation within tuples by exchanging negative samples x_n with the positive x_p in a given ranking loss formulation with fixed probability." ID="ID_1882096693" CREATED="1582859272250" MODIFIED="1587526865069">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="this regularization pushes the samples of the same class apart, thus enabling a DML model to capture extra non-balel discriminative features. Simultaneously, this process dampens the compression included by strong discriminative training signals." ID="ID_31907685" CREATED="1582859349016" MODIFIED="1587526865070">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="conclusions" ID="ID_1270249032" CREATED="1582858876452" MODIFIED="1587526865071">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="Generalization performance in DML exhibits strong inverse correlation to the decay of the singulra value spectrum of a learned representation." ID="ID_256125729" CREATED="1582858880428" MODIFIED="1587526865071">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="A Metric Learning Reality Check" ID="ID_894569151" CREATED="1622801160347" MODIFIED="1642726570132">
-<icon BUILTIN="checked"/>
-<node TEXT="flaws in experimental methodology" ID="ID_506127366" CREATED="1622801174483" MODIFIED="1622801197501"/>
-<node TEXT="actual improvements over time have been marginal at best" ID="ID_116707694" CREATED="1622801198120" MODIFIED="1622801209887"/>
-</node>
 </node>
 </node>
 <node TEXT="Adversarial Attack: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_234014270" CREATED="1641521502446" MODIFIED="1647263386358">
@@ -548,12 +498,25 @@
 </node>
 <node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
 <edge COLOR="#7c7c00"/>
-<node TEXT="STAGE" ID="ID_219354908" CREATED="1642438393211" MODIFIED="1642438397420">
-<node TEXT="adversarial robustness against the union of multiple perturbation models" ID="ID_1452347285" CREATED="1642438398542" MODIFIED="1642438414351">
+<node TEXT="STAGE" ID="ID_219354908" CREATED="1642438393211" MODIFIED="1648173382480">
+<node TEXT="adversarial robustness against the union of multiple perturbation models" ID="ID_1452347285" CREATED="1642438398542" MODIFIED="1648173382479">
 <icon BUILTIN="unchecked"/>
 </node>
 <node TEXT="adversarial training and robustness for multiple perturbations" ID="ID_1832278453" CREATED="1642438422719" MODIFIED="1642438435302">
 <icon BUILTIN="unchecked"/>
+</node>
+</node>
+<node TEXT="Survey" ID="ID_1556055508" CREATED="1648173325254" MODIFIED="1648173329845">
+<icon BUILTIN="info"/>
+<node TEXT="Benchmarking Adversarial Robustness on Image Classification" ID="ID_379885724" CREATED="1642726545073" MODIFIED="1642726549438">
+<icon BUILTIN="checked"/>
+<icon BUILTIN="bookmark"/>
+</node>
+<node TEXT="2104: Deep Learning-Based Autonomous Driving Systems: A Survey of Attacks and Defenses" ID="ID_1290703897" CREATED="1619444030107" MODIFIED="1619444042107">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node TEXT="2018.00401: advances in adversarial attacks and defenses in computer vision: a survey" ID="ID_493255704" CREATED="1647567861740" MODIFIED="1647567881439">
+<icon BUILTIN="pencil"/>
 </node>
 </node>
 <node TEXT="Benchmark" ID="ID_855034612" CREATED="1642431513665" MODIFIED="1642431518164">
@@ -565,7 +528,8 @@
 </node>
 <node TEXT="Adaptive Attack (Madry)" ID="ID_103436605" CREATED="1647265946214" MODIFIED="1647265951989"/>
 </node>
-<node TEXT="Adversarial Training" FOLDED="true" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1641743568907">
+<node TEXT="Adversarial Training" FOLDED="true" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1648174116710">
+<font BOLD="true"/>
 <node TEXT="references" ID="ID_178248607" CREATED="1642431445724" MODIFIED="1643412272232">
 <icon BUILTIN="info"/>
 <node TEXT="https://robustbench.github.io/" ID="ID_1384233314" CREATED="1642431450079" MODIFIED="1642431451028"/>
@@ -759,6 +723,14 @@
 </node>
 </node>
 </node>
+<node TEXT="Analysis on Adversarial Training" ID="ID_1446204242" CREATED="1648174101608" MODIFIED="1648174109263">
+<font BOLD="true"/>
+<node TEXT="What Do Adversarially trained Neural Networks Focus: A Fourier Domain-based Study" ID="ID_1576821107" CREATED="1648174139824" MODIFIED="1648174144917">
+<icon BUILTIN="pencil"/>
+<node TEXT="the difference mainly distribute in the low frequency region" ID="ID_1463528486" CREATED="1648174164987" MODIFIED="1648174174874"/>
+<node TEXT="this looks like rejected CVPR paper" ID="ID_929525842" CREATED="1648174183328" MODIFIED="1648174192162"/>
+</node>
+</node>
 <node TEXT="Generative Replacement" ID="ID_814019873" CREATED="1642953253003" MODIFIED="1642953259726">
 <node TEXT="Adversarially Robust Classification by Conditional Generative Model Inversion" ID="ID_811483312" CREATED="1642953266238" MODIFIED="1642953325665">
 <icon BUILTIN="pencil"/>
@@ -843,6 +815,10 @@
 <edge COLOR="#0000ff"/>
 <font NAME="Gentium"/>
 <node TEXT="Face Recognition" ID="ID_1083375375" CREATED="1643132265039" MODIFIED="1643132268914">
+<node TEXT="RobFR: Benchmarking Adversarial Robustness on Face Recognition" ID="ID_765372057" CREATED="1642726609490" MODIFIED="1642726640122">
+<icon BUILTIN="pencil"/>
+<icon BUILTIN="bookmark"/>
+</node>
 <node TEXT="RobFR" ID="ID_956441703" CREATED="1643132279319" MODIFIED="1643132284675">
 <node TEXT="https://github.com/ShawnXYang/Face-Robustness-Benchmark" ID="ID_232276308" CREATED="1643132270554" MODIFIED="1643132270554" LINK="https://github.com/ShawnXYang/Face-Robustness-Benchmark"/>
 </node>
@@ -1056,13 +1032,39 @@
 <node TEXT="Deep Metric Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_464750159" CREATED="1641242970936" MODIFIED="1642456761439">
 <edge COLOR="#ff00ff"/>
 <font NAME="Gentium"/>
-<node TEXT="Survey" ID="ID_1192003468" CREATED="1641520461677" MODIFIED="1641520995604">
+<node TEXT="Survey" ID="ID_1192003468" CREATED="1641520461677" MODIFIED="1648175016651">
+<icon BUILTIN="info"/>
 <font NAME="Gentium"/>
-<node TEXT="revisiting ICML" ID="ID_367259996" CREATED="1641520468517" MODIFIED="1641520995604">
-<font NAME="Gentium"/>
+<node TEXT="2002.08473: revisiting training strategies and generalization performance in deep metric learning" ID="ID_585062864" CREATED="1582857197676" MODIFIED="1642726573200">
+<icon BUILTIN="checked"/>
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="revisit most widely used DML objective functions" ID="ID_1601875277" CREATED="1582857225897" MODIFIED="1587526865066">
+<font NAME="Gentium" BOLD="false"/>
 </node>
-<node TEXT="reality ECCV" ID="ID_1508631828" CREATED="1641520470652" MODIFIED="1641520995604">
-<font NAME="Gentium"/>
+<node TEXT="study parameter choices and batch sampling" ID="ID_1014314628" CREATED="1582857260610" MODIFIED="1587526865067">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="propose simple, yet effective training regularization method" ID="ID_1639876989" CREATED="1582857276291" MODIFIED="1587526865068">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="randomly perform a switch operation within tuples by exchanging negative samples x_n with the positive x_p in a given ranking loss formulation with fixed probability." ID="ID_1882096693" CREATED="1582859272250" MODIFIED="1587526865069">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="this regularization pushes the samples of the same class apart, thus enabling a DML model to capture extra non-balel discriminative features. Simultaneously, this process dampens the compression included by strong discriminative training signals." ID="ID_31907685" CREATED="1582859349016" MODIFIED="1587526865070">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="conclusions" ID="ID_1270249032" CREATED="1582858876452" MODIFIED="1587526865071">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="Generalization performance in DML exhibits strong inverse correlation to the decay of the singulra value spectrum of a learned representation." ID="ID_256125729" CREATED="1582858880428" MODIFIED="1587526865071">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="A Metric Learning Reality Check" ID="ID_894569151" CREATED="1622801160347" MODIFIED="1648175016653">
+<icon BUILTIN="checked"/>
+<node TEXT="ECCV20" ID="ID_606475431" CREATED="1648173389648" MODIFIED="1648173392107"/>
+<node TEXT="flaws in experimental methodology" ID="ID_506127366" CREATED="1622801174483" MODIFIED="1622801197501"/>
+<node TEXT="actual improvements over time have been marginal at best" ID="ID_116707694" CREATED="1622801198120" MODIFIED="1622801209887"/>
 </node>
 </node>
 <node TEXT="Loss Functions" ID="ID_1262041414" CREATED="1641520453737" MODIFIED="1641520995604">
@@ -1075,13 +1077,42 @@
 <font NAME="Gentium"/>
 </node>
 </node>
-<node TEXT="Proxy-based" ID="ID_879816648" CREATED="1641524445335" MODIFIED="1641524448649"/>
-<node TEXT="Triplet-based" ID="ID_1287246293" CREATED="1641524449462" MODIFIED="1641524453006">
+<node TEXT="Language Guidance" ID="ID_1378629774" CREATED="1648175946093" MODIFIED="1648175949975">
+<node TEXT="Integrating Language Guidance into Vision-based Deep Metric Learning" ID="ID_430933197" CREATED="1648175953686" MODIFIED="1648175965810">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_1619280443" CREATED="1648175968437" MODIFIED="1648175970177"/>
+<node TEXT="incorporates CLIP" ID="ID_1036654181" CREATED="1648175971072" MODIFIED="1648175974568"/>
+<node TEXT="relevant to cross modal retrieval" ID="ID_174450250" CREATED="1648176008155" MODIFIED="1648176014577"/>
+</node>
+</node>
+<node TEXT="Proxy-based" ID="ID_879816648" CREATED="1641524445335" MODIFIED="1648174881472">
+<font BOLD="true"/>
+<node TEXT="ProxyAnchor" ID="ID_219040076" CREATED="1648175402677" MODIFIED="1648175404916"/>
+<node TEXT="ProxyNCA" ID="ID_1083149893" CREATED="1648175267078" MODIFIED="1648175270261"/>
+<node TEXT="SoftTriplet" ID="ID_1233815845" CREATED="1648175406007" MODIFIED="1648175409028"/>
+<node TEXT="NIR" ID="ID_1355356333" CREATED="1648175262641" MODIFIED="1648175264469">
+<node TEXT="Non-isotropy Regularization for Proxy-based Deep Metric Learning" ID="ID_600017005" CREATED="1648175115791" MODIFIED="1648175119219">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_465005643" CREATED="1648175120835" MODIFIED="1648175124398">
+<node TEXT="google" ID="ID_836335995" CREATED="1648175127003" MODIFIED="1648175128157"/>
+<node TEXT="brings minor but clear improvements" ID="ID_1261363441" CREATED="1648175526275" MODIFIED="1648175541699"/>
+</node>
+<node TEXT="existing proxy-methods solely optimize for sample proxy distance. Given the inherent non-bijectiveness of used distance functions, this can induce locally isotropic sample distributions, leading to crucial semantic context being missed due to difficulties resolving local structures and intraclass relation between samples" ID="ID_372034559" CREATED="1648175542683" MODIFIED="1648175608867"/>
+<node TEXT="NIR normalization can be used as a plugin" ID="ID_1894248115" CREATED="1648175617817" MODIFIED="1648175629956"/>
+</node>
+</node>
+</node>
+<node TEXT="Triplet-based" ID="ID_1287246293" CREATED="1641524449462" MODIFIED="1648174882328">
+<font BOLD="true"/>
 <node TEXT="Triplet" ID="ID_430004220" CREATED="1641242977534" MODIFIED="1641520995604">
 <font NAME="Gentium"/>
 </node>
+<node TEXT="Quadruplet" ID="ID_1293728558" CREATED="1648174903893" MODIFIED="1648174906573"/>
 </node>
-<node TEXT="Classification-based" ID="ID_336668153" CREATED="1641524453412" MODIFIED="1641524456368"/>
+<node TEXT="Group-based?" ID="ID_1077517569" CREATED="1648174921948" MODIFIED="1648174930515"/>
+<node TEXT="Classification-based" ID="ID_336668153" CREATED="1641524453412" MODIFIED="1648174884961">
+<font BOLD="true"/>
+</node>
 </node>
 </node>
 <node TEXT="Face Recognition" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_153988282" CREATED="1641242964517" MODIFIED="1642456756940">
@@ -3269,11 +3300,25 @@
 <node TEXT="2101: Unsupervised Domain Adaptation of Black-Box Source Models" ID="ID_1885176581" CREATED="1610422307004" MODIFIED="1610422319037"/>
 </node>
 </node>
-<node TEXT="Open Set Recognition" POSITION="left" ID="ID_323999523" CREATED="1634132952545" MODIFIED="1647267889167">
+<node TEXT="Open Set Recognition" FOLDED="true" POSITION="left" ID="ID_323999523" CREATED="1634132952545" MODIFIED="1647267889167">
 <edge COLOR="#7c007c"/>
 <node TEXT="Open-Set Recognition: A Good Closed-Set Classifier is All You Need" ID="ID_1603928418" CREATED="1634132957520" MODIFIED="1634132962452">
 <node TEXT="vgg group" ID="ID_419228120" CREATED="1634132963805" MODIFIED="1634132966497"/>
 <node TEXT="arxiv" ID="ID_1399907050" CREATED="1634132966842" MODIFIED="1634132967732"/>
+</node>
+<node TEXT="PMAL: Open Set Recognition via Robust Prototype Mining" ID="ID_1567699679" CREATED="1648174626207" MODIFIED="1648174710258">
+<icon BUILTIN="unchecked"/>
+<icon BUILTIN="idea"/>
+<node TEXT="AAAI21" ID="ID_1093847305" CREATED="1648174632155" MODIFIED="1648174634120"/>
+<node TEXT="Open-Set is somewhat similar to deep metric learning variant" ID="ID_162349135" CREATED="1648174806913" MODIFIED="1648174820515"/>
+<node TEXT="besides recognizing predefined classes, the system needs to reject the unknowns" ID="ID_1080431228" CREATED="1648174634902" MODIFIED="1648174647137"/>
+<node TEXT="prototype learning is a potential manner to handle the problem as its ability to improve intra-class compactness of representations is much needed in discrimination between the known and the unknowns" ID="ID_1737399656" CREATED="1648174672305" MODIFIED="1648174703066"/>
+<node TEXT="using mining strategy to avoid inteference of noise" ID="ID_879408251" CREATED="1648174763868" MODIFIED="1648174797459">
+<icon BUILTIN="yes"/>
+</node>
+<node TEXT="can we borrow these to face recognition?" ID="ID_290608270" CREATED="1648174835615" MODIFIED="1648174856270">
+<icon BUILTIN="help"/>
+</node>
 </node>
 </node>
 <node TEXT="Intersection Defense" FOLDED="true" POSITION="left" ID="ID_1275267930" CREATED="1622799700597" MODIFIED="1642394158922">
