@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="89" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="91" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1642395333050">
 <edge COLOR="#00ffff"/>
 <node TEXT="what&apos;s this" ID="ID_34209772" CREATED="1641520840738" MODIFIED="1641520995587">
@@ -122,12 +122,7 @@
 <node TEXT="arXiv" ID="ID_555001851" CREATED="1641521435482" MODIFIED="1642954134722">
 <node TEXT="2022" OBJECT="java.lang.Long|2022" ID="ID_1490488610" CREATED="1641521399876" MODIFIED="1641521403819">
 <node TEXT="Weekly batch" ID="ID_1917473385" CREATED="1642949144502" MODIFIED="1642949169400">
-<node TEXT="mar 12 ok" ID="ID_296746878" CREATED="1647263281903" MODIFIED="1647263289445"/>
-<node TEXT="mar 5 ok" ID="ID_738405241" CREATED="1646924914848" MODIFIED="1646924917070"/>
-<node TEXT="feb 6 ok" ID="ID_127471972" CREATED="1644179265598" MODIFIED="1644179268478"/>
-<node TEXT="jan 21 ok" ID="ID_478019013" CREATED="1642949108689" MODIFIED="1642949111895"/>
-<node TEXT="jan 14 ok" ID="ID_18090536" CREATED="1642368648797" MODIFIED="1642368656369"/>
-<node TEXT="jan 7-jan3 ok" ID="ID_1174903687" CREATED="1641521404620" MODIFIED="1642949114964"/>
+<node TEXT="mar 26 ok" ID="ID_1396833753" CREATED="1648335707656" MODIFIED="1648335711303"/>
 </node>
 </node>
 </node>
@@ -164,10 +159,11 @@
 <node TEXT="ICML" ID="ID_8273996" CREATED="1642954123777" MODIFIED="1642954125427"/>
 <node TEXT="ACL" ID="ID_126154590" CREATED="1642954126358" MODIFIED="1642954130606"/>
 <node TEXT="researchers of interest" ID="ID_855888271" CREATED="1641929219444" MODIFIED="1641929229750">
-<node TEXT="alexandar madry" ID="ID_303512197" CREATED="1641929236490" MODIFIED="1641929240329"/>
-<node TEXT="alan yuille" ID="ID_362725284" CREATED="1641929240578" MODIFIED="1641929244968"/>
-<node TEXT="jun zhu" ID="ID_586060874" CREATED="1643133067259" MODIFIED="1643133069611"/>
-<node TEXT="nicolas carlini" ID="ID_323304377" CREATED="1643133070053" MODIFIED="1643133079060"/>
+<node TEXT="Alexandar Madry" ID="ID_303512197" CREATED="1641929236490" MODIFIED="1648335746889"/>
+<node TEXT="Alan Yuille" ID="ID_362725284" CREATED="1641929240578" MODIFIED="1648335761283"/>
+<node TEXT="Jun Zhu" ID="ID_586060874" CREATED="1643133067259" MODIFIED="1648335764547"/>
+<node TEXT="Nicolas Carlini" ID="ID_323304377" CREATED="1643133070053" MODIFIED="1648335753367"/>
+<node TEXT="Ian Goodfellow" ID="ID_1353458379" CREATED="1648335753716" MODIFIED="1648335756288"/>
 </node>
 </node>
 </node>
@@ -292,7 +288,7 @@
 <node TEXT="Universal Adversarial Examples in Remote Sensing: Methodology and Benchmark" ID="ID_1566703454" CREATED="1646945260207" MODIFIED="1646945261393"/>
 </node>
 </node>
-<node TEXT="Adversarial Attack: Intersection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1335351832" CREATED="1647263319144" MODIFIED="1647263375425">
+<node TEXT="Adversarial Attack: Intersection" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1335351832" CREATED="1647263319144" MODIFIED="1647263375425">
 <edge COLOR="#7c007c"/>
 <node TEXT="multi-label prediction" ID="ID_1211679974" CREATED="1647568084959" MODIFIED="1647568893432">
 <icon BUILTIN="button_ok"/>
@@ -389,6 +385,11 @@
 <node TEXT="objectness vulnerability" ID="ID_1207230656" CREATED="1645107584853" MODIFIED="1645107591319"/>
 <node TEXT="objectness-aware defense method" ID="ID_241119548" CREATED="1645107591525" MODIFIED="1645107598028"/>
 <node TEXT="this paper is shallow. we should be able to do more" ID="ID_1122816208" CREATED="1645107543802" MODIFIED="1645107608352"/>
+</node>
+</node>
+<node TEXT="Optical Flow" ID="ID_1641858386" CREATED="1648337319711" MODIFIED="1648337322554">
+<node TEXT="A Perturbation Constrained Adversarial Attack for Evaluating the Robustness of Optical Flow" ID="ID_1358848955" CREATED="1648337323536" MODIFIED="1648337328267">
+<icon BUILTIN="pencil"/>
 </node>
 </node>
 <node TEXT="Remote Sensing" ID="ID_1273414088" CREATED="1647267114318" MODIFIED="1647267117431">
@@ -496,7 +497,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
+<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_1556055508" CREATED="1648173325254" MODIFIED="1648173329845">
 <icon BUILTIN="info"/>
@@ -730,6 +731,14 @@
 <icon BUILTIN="pencil"/>
 <node TEXT="the difference mainly distribute in the low frequency region" ID="ID_1463528486" CREATED="1648174164987" MODIFIED="1648174174874"/>
 <node TEXT="this looks like rejected CVPR paper" ID="ID_929525842" CREATED="1648174183328" MODIFIED="1648174192162"/>
+</node>
+</node>
+<node TEXT="Architecture" ID="ID_678438754" CREATED="1648336299559" MODIFIED="1648336302516">
+<node TEXT="Enhancing Classifier Conservativeness and Robustness by Polynomiality" ID="ID_1098684448" CREATED="1648336306289" MODIFIED="1648336446986">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_1434170291" CREATED="1648336449172" MODIFIED="1648336451497"/>
+<node TEXT="change softmax function into softRmax" ID="ID_1077545148" CREATED="1648336452007" MODIFIED="1648336460004"/>
+<node TEXT="robustness without gradient obfuscation or gradient masking" ID="ID_1071224180" CREATED="1648336465198" MODIFIED="1648336477406"/>
 </node>
 </node>
 <node TEXT="Generative Replacement" ID="ID_814019873" CREATED="1642953253003" MODIFIED="1642953259726">
@@ -1294,7 +1303,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Backdoor Attack &amp; Defense" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="left" ID="ID_1279237598" CREATED="1642964328030" MODIFIED="1642965522277">
+<node TEXT="Backdoor Attack &amp; Defense" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="left" ID="ID_1279237598" CREATED="1642964328030" MODIFIED="1648336230488">
 <edge COLOR="#ff0000"/>
 <node TEXT="Attack" ID="ID_481030829" CREATED="1642965505734" MODIFIED="1642965507796">
 <node TEXT="Classification" ID="ID_1068695249" CREATED="1643059216060" MODIFIED="1643059221252">
@@ -1448,6 +1457,18 @@
 <node TEXT="significantly speedup inference and made it more practical" ID="ID_1736885770" CREATED="1647264863514" MODIFIED="1647264895412"/>
 </node>
 </node>
+<node TEXT="Dimension Reduction" FOLDED="true" POSITION="left" ID="ID_703196004" CREATED="1648336542877" MODIFIED="1648336545945">
+<edge COLOR="#00ff00"/>
+<node TEXT="PCA" ID="ID_279239785" CREATED="1648336547244" MODIFIED="1648336549636"/>
+<node TEXT="t-SNE" ID="ID_372306146" CREATED="1648336550147" MODIFIED="1648336553078"/>
+<node TEXT="h-NNE" ID="ID_530951729" CREATED="1648336553298" MODIFIED="1648336598952">
+<node TEXT="Hierarchical Nearest Neighbor Graph Embedding for Efficient Dimensionality&#xa;Reduction" ID="ID_1074126704" CREATED="1648336600093" MODIFIED="1648336616328">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_1719348477" CREATED="1648336618438" MODIFIED="1648336619839"/>
+<node TEXT="no-optimization" ID="ID_708278320" CREATED="1648336626204" MODIFIED="1648336628663"/>
+</node>
+</node>
+</node>
 <node TEXT="Domain Adaptation" FOLDED="true" POSITION="left" ID="ID_1179225618" CREATED="1582887416803" MODIFIED="1642394196054">
 <font NAME="Gentium" BOLD="false"/>
 <edge COLOR="#ff0000"/>
@@ -1509,6 +1530,16 @@
 <node TEXT="Fine-Tuning can Distort Pretrained Features and Underperform Out-of-Distribution" ID="ID_1001645107" CREATED="1647264390521" MODIFIED="1647264398367">
 <icon BUILTIN="unchecked"/>
 <node TEXT="ICLR22" ID="ID_248597371" CREATED="1647264392555" MODIFIED="1647264395025"/>
+</node>
+</node>
+<node TEXT="Facial Expression" FOLDED="true" POSITION="left" ID="ID_1665603625" CREATED="1648335974432" MODIFIED="1648336221787">
+<edge COLOR="#0000ff"/>
+<node TEXT="Towards Semi-Supervised Deep Facial Expression Recognition with An Adaptive Confidence Margin" ID="ID_1230150992" CREATED="1648335980975" MODIFIED="1648336159200">
+<icon BUILTIN="unchecked"/>
+<font ITALIC="false"/>
+<node TEXT="CVPR22" ID="ID_1243722840" CREATED="1648336163039" MODIFIED="1648336170532"/>
+<node TEXT="semi-supervised" ID="ID_1980840722" CREATED="1648336171391" MODIFIED="1648336176030"/>
+<node TEXT="better leverage unlabeled data" ID="ID_316244842" CREATED="1648336176523" MODIFIED="1648336184906"/>
 </node>
 </node>
 <node TEXT="Machine Learning" FOLDED="true" POSITION="left" ID="ID_1123557953" CREATED="1642430639041" MODIFIED="1642430641511">
@@ -1664,13 +1695,22 @@
 </node>
 </node>
 </node>
-<node TEXT="Ordinal Regression" FOLDED="true" POSITION="left" ID="ID_408572005" CREATED="1576825445602" MODIFIED="1647264584581">
+<node TEXT="Ordinal Regression" POSITION="left" ID="ID_408572005" CREATED="1576825445602" MODIFIED="1647264584581">
 <font NAME="Gentium" SIZE="10" BOLD="false"/>
 <edge COLOR="#00ffff"/>
+<node TEXT="OR-CNN" ID="ID_646788311" CREATED="1648336827721" MODIFIED="1648336832137"/>
 <node TEXT="2004.12260: learning to autofocus (CVPR20)" ID="ID_1326141945" CREATED="1588068686019" MODIFIED="1588068859199">
 <icon BUILTIN="button_ok"/>
 <icon BUILTIN="idea"/>
 <node TEXT="ordinal regression" ID="ID_1337834731" CREATED="1588068727223" MODIFIED="1588068730887"/>
+</node>
+<node TEXT="Learning probabilistic ordinal embeddings for&#xa;uncertainty-aware regression." ID="ID_131283044" CREATED="1648337155121" MODIFIED="1648337161044">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR21" ID="ID_230574498" CREATED="1648337163491" MODIFIED="1648337165185"/>
+</node>
+<node TEXT="Moving Window Regression: A Novel Approach to Ordinal Regression" ID="ID_728124155" CREATED="1648336835391" MODIFIED="1648336844125">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_360837902" CREATED="1648336845156" MODIFIED="1648336846512"/>
 </node>
 </node>
 <node TEXT="Privacy ML" FOLDED="true" POSITION="left" ID="ID_1174539463" CREATED="1590802979023" MODIFIED="1647265584135">
@@ -1960,7 +2000,8 @@
 <node TEXT="-------------------------------------------------------------------------------------------------" POSITION="left" ID="ID_1156109860" CREATED="1647264433260" MODIFIED="1647264435598">
 <edge COLOR="#007c7c"/>
 </node>
-<node TEXT="Classification" FOLDED="true" POSITION="left" ID="ID_1412187905" CREATED="1576825420762" MODIFIED="1642394210491">
+<node TEXT="Classification" FOLDED="true" POSITION="left" ID="ID_1412187905" CREATED="1576825420762" MODIFIED="1648335928432">
+<icon BUILTIN="clanbomber"/>
 <font NAME="Gentium" SIZE="10" BOLD="false"/>
 <edge COLOR="#00ff00"/>
 <node TEXT="Regularization" FOLDED="true" ID="ID_988535058" CREATED="1583203860700" MODIFIED="1587526864992">
@@ -2122,7 +2163,8 @@
 </node>
 </node>
 </node>
-<node TEXT="Face / ReID" FOLDED="true" POSITION="left" ID="ID_764967541" CREATED="1576824448954" MODIFIED="1642394232405">
+<node TEXT="Face / ReID" FOLDED="true" POSITION="left" ID="ID_764967541" CREATED="1576824448954" MODIFIED="1648335926319">
+<icon BUILTIN="clanbomber"/>
 <font NAME="Gentium" SIZE="10" BOLD="false"/>
 <edge COLOR="#00007c"/>
 <node TEXT="Face Recognition" ID="ID_1959392251" CREATED="1576824686204" MODIFIED="1618846679952">
@@ -2236,23 +2278,6 @@
 <node TEXT="Vehicle ReID" ID="ID_1487169938" CREATED="1590803654764" MODIFIED="1590803659017">
 <node TEXT="2004.06305: VehicleNet: Learning Robust Visual Representation for Vehicle Re-identification" ID="ID_1381154777" CREATED="1590803659717" MODIFIED="1590803671137"/>
 <node TEXT="2004.06271: The Devil is in the Details: Self-Supervised Attention for Vehicle Re-Identification" ID="ID_1878470047" CREATED="1590803731542" MODIFIED="1590803743255"/>
-</node>
-</node>
-<node TEXT="Anomaly Detection" FOLDED="true" POSITION="left" ID="ID_559771371" CREATED="1583309308976" MODIFIED="1642394279775">
-<font NAME="Gentium" SIZE="10" BOLD="false"/>
-<edge COLOR="#ff00ff"/>
-<node TEXT="2002.03734: iterative energy-based projection on a normal data manifold for anomaly localization (ICLR20)" ID="ID_29672609" CREATED="1583372648604" MODIFIED="1587526865286">
-<icon BUILTIN="idea"/>
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: anomaly detection" ID="ID_426724744" CREATED="1583372890261" MODIFIED="1587526865287">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: autoencoder is widely used for unsupervised anomaly localization; however, local defects added to a normal image can deteriorate the whole reconstruction" ID="ID_56032561" CREATED="1583372895623" MODIFIED="1587526865288">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: projecting anomalous data on a autoencoder-learned normal data manifold, by using gradient descent on an energy derived from the autoencoder&apos;s loss function" ID="ID_274601515" CREATED="1583372917335" MODIFIED="1587526865289">
-<font NAME="Gentium" BOLD="false"/>
-</node>
 </node>
 </node>
 <node TEXT="Graph + Network" FOLDED="true" POSITION="left" ID="ID_761259864" CREATED="1576828654767" MODIFIED="1642394331459">
