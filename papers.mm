@@ -63,8 +63,9 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="91" RULE="ON_BRANCH_CREATION"/>
-<node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1642395333050">
+<hook NAME="AutomaticEdgeColor" COUNTER="92" RULE="ON_BRANCH_CREATION"/>
+<node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1648337505775">
+<icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
 <node TEXT="what&apos;s this" ID="ID_34209772" CREATED="1641520840738" MODIFIED="1641520995587">
 <font NAME="Gentium"/>
@@ -167,8 +168,8 @@
 </node>
 </node>
 </node>
-<node TEXT="Misc: Surveys" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1805920002" CREATED="1608010101067" MODIFIED="1648173434868">
-<icon BUILTIN="info"/>
+<node TEXT="Misc: Surveys" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1805920002" CREATED="1608010101067" MODIFIED="1648337561524">
+<icon BUILTIN="mindmap"/>
 <edge COLOR="#ff0000"/>
 <node TEXT="Deep Learning Book" ID="ID_1914998592" CREATED="1624456582801" MODIFIED="1624456586327">
 <node TEXT="watermelon book" ID="ID_947925241" CREATED="1624456592513" MODIFIED="1624456596605"/>
@@ -288,7 +289,7 @@
 <node TEXT="Universal Adversarial Examples in Remote Sensing: Methodology and Benchmark" ID="ID_1566703454" CREATED="1646945260207" MODIFIED="1646945261393"/>
 </node>
 </node>
-<node TEXT="Adversarial Attack: Intersection" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1335351832" CREATED="1647263319144" MODIFIED="1647263375425">
+<node TEXT="Adversarial Attack: Intersection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1335351832" CREATED="1647263319144" MODIFIED="1647263375425">
 <edge COLOR="#7c007c"/>
 <node TEXT="multi-label prediction" ID="ID_1211679974" CREATED="1647568084959" MODIFIED="1647568893432">
 <icon BUILTIN="button_ok"/>
@@ -1292,6 +1293,168 @@
 </node>
 </node>
 </node>
+<node TEXT="3D + PCL" FOLDED="true" POSITION="left" ID="ID_1606327696" CREATED="1583132559918" MODIFIED="1648337968599">
+<font NAME="Gentium" SIZE="10" BOLD="false"/>
+<edge COLOR="#007c7c"/>
+<node TEXT="Dataset" ID="ID_750669130" CREATED="1583137147235" MODIFIED="1587526865232">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="PartNet: A large scale benchmark for fine-grained and hierarchical part-level 3D object understanding" ID="ID_367911268" CREATED="1583137156179" MODIFIED="1587526865232">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: large-scale dataset of 3D objects annotated with fine-trained, instance-level, and hierarchical 3D part information." ID="ID_1810204510" CREATED="1583137993707" MODIFIED="1587526865232">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="why: 3d part recognition: fine-rained semantic segmentation, hierarchical semantic segmentation, and instance segmentation" ID="ID_447922824" CREATED="1583141336957" MODIFIED="1587526865233">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="generic" ID="ID_67683623" CREATED="1608878793211" MODIFIED="1608878794674">
+<node TEXT="2012.09688&#xa;PCT: Point Cloud Transformer" ID="ID_760061240" CREATED="1608878795342" MODIFIED="1608878805569"/>
+<node TEXT="2012.09164 Point Transformer" ID="ID_1856683145" CREATED="1608879617939" MODIFIED="1608880161951">
+<icon BUILTIN="bookmark"/>
+<node TEXT="self-attention network to PCL" ID="ID_1162420612" CREATED="1608880164884" MODIFIED="1608880172010"/>
+</node>
+</node>
+<node TEXT="classification" ID="ID_1683843111" CREATED="1583132565754" MODIFIED="1610426338023">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="PointNet: deep learning on Point Sets for 3D classification and segmentation (2017)" ID="ID_535445133" CREATED="1583132578641" MODIFIED="1587526865234">
+<icon BUILTIN="button_ok"/>
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: 3d classification and segmentation" ID="ID_369477718" CREATED="1583132646461" MODIFIED="1587526865235">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="why: previous works transform such data to regular 3D voxel grids or collections of images" ID="ID_509541120" CREATED="1583132656157" MODIFIED="1587526865236">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="renders data unecessarily voluminous and causes issues" ID="ID_1650499462" CREATED="1583132774211" MODIFIED="1587526865237">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="how: novel type of neural network" ID="ID_1582863497" CREATED="1583132794431" MODIFIED="1587526865238">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="directly consumes 3d point cloud" ID="ID_904651994" CREATED="1583132807372" MODIFIED="1587526865238">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="respects the permutation invariance of point in the input" ID="ID_80693188" CREATED="1583132818955" MODIFIED="1587526865239">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="Detail" ID="ID_592119659" CREATED="1583132853503" MODIFIED="1587526865239">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="properties of point set" ID="ID_923628661" CREATED="1583133482219" MODIFIED="1587526865239">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="1. unordered" ID="ID_59901348" CREATED="1583133494060" MODIFIED="1587526865240">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="2. interaction among points" ID="ID_905514121" CREATED="1583133498167" MODIFIED="1587526865240">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="3. invariance under transformations" ID="ID_932819479" CREATED="1583133522841" MODIFIED="1587526865241">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="e.g. translation and rotation" ID="ID_1003384585" CREATED="1583133566689" MODIFIED="1587526865241">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="regularize transformation to be close to orthogonal matrix" ID="ID_1980629096" CREATED="1583133585186" MODIFIED="1587526865242">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="An orthogonal transformation will not lose information in the input, thus is desired" ID="ID_285705617" CREATED="1583133597956" MODIFIED="1587526865242">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="PointNet++: deep hierarchical feature learning on point sets in a metric space (NIPS)" ID="ID_1305155138" CREATED="1583133688195" MODIFIED="1587526865243">
+<icon BUILTIN="button_ok"/>
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: 3d classification and segmentation" ID="ID_1391695258" CREATED="1583136577356" MODIFIED="1587526865244">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="why: pointnet does not capture local structures induced by the metric space points live in" ID="ID_1734373925" CREATED="1583136583902" MODIFIED="1587526865245">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="how: introduce a hierarchical neural network that applies pointnet recursively on a nested partitioning of the input point set; propoes novel set learning layers to adaptively combine features from multiple scales" ID="ID_574546543" CREATED="1583136619272" MODIFIED="1587526865246">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="2002.10876: PointAugment: an auto-agumentation framework for point cloud classification (CVPR2020)" ID="ID_1995300558" CREATED="1583310893208" MODIFIED="1587526865246">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: regularization in PCL classification" ID="ID_682948316" CREATED="1583310928954" MODIFIED="1587526865247">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="why: regularization" ID="ID_1191365248" CREATED="1583311604535" MODIFIED="1587526865248">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="how: sample-aware and takes adversarial learning stategy to jointly optimize the augmentor and the classifier" ID="ID_1638101526" CREATED="1583311614272" MODIFIED="1587526865248">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="augmentor can learn samples that best fit the classifier" ID="ID_1705315529" CREATED="1583311657637" MODIFIED="1587526865249">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="EllipsoidNet: Ellipsoid Representation for Point Cloud Classification andSegmentation (cvpr21)" ID="ID_1008449076" CREATED="1615297913979" MODIFIED="1615297923495">
+<node TEXT="new 2d representation" ID="ID_1336906720" CREATED="1615297924304" MODIFIED="1615297941283"/>
+</node>
+</node>
+<node TEXT="Semgentation" ID="ID_98283900" CREATED="1610426338878" MODIFIED="1610426343353">
+<node TEXT="2003.05593:Learning to Segment 3D Point Clouds in 2D Image Space (cvpr20 oral)" ID="ID_1194509251" CREATED="1590748289620" MODIFIED="1590748552801"/>
+<node TEXT="2003.14032 PolarNet: An Improved Grid Representation for Online LiDAR Point Clouds Semantic Segmentation (cvpr20)" ID="ID_273525175" CREATED="1590806996838" MODIFIED="1590807009853"/>
+<node TEXT="2012.10217&#xa;SegGroup: Seg-Level Supervision for 3D Instance and Semantic Segmentation" ID="ID_746665270" CREATED="1608872980932" MODIFIED="1608873093023"/>
+<node TEXT="2101: Boundary-Aware Geometric Encoding for Semantic Segmentation of Point Clouds (AAAI21)" ID="ID_18229318" CREATED="1610426385894" MODIFIED="1610426427874"/>
+</node>
+<node TEXT="Shape + PCL" ID="ID_692723578" CREATED="1587978723669" MODIFIED="1587978729471">
+<node TEXT="2004.09411: shape-oriented convolutional neural network for point cloud analysis (AAAI20)" ID="ID_648541054" CREATED="1587978730554" MODIFIED="1587978867499"/>
+<node TEXT="2004.04242: deep manifold prior" ID="ID_1198757401" CREATED="1589766955822" MODIFIED="1589766965285"/>
+<node TEXT="2005.08144: high-dimentsional convolutional networks for geometric pattern recognition" ID="ID_551842404" CREATED="1590025587186" MODIFIED="1590025610132"/>
+</node>
+<node TEXT="Depth" ID="ID_1948167092" CREATED="1617622791190" MODIFIED="1617622792504">
+<node TEXT="Depth Estimation" ID="ID_310201956" CREATED="1583313577977" MODIFIED="1587526865249">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="2002.12319: semantically-guided representation learning for self-supervised monocular depth" ID="ID_123925389" CREATED="1583319217945" MODIFIED="1587526865249">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: depth estimation" ID="ID_512544818" CREATED="1583319382866" MODIFIED="1587526865250">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="how: leverage more directly semantic structure to guide geometric representation learning" ID="ID_1129284074" CREATED="1583319389083" MODIFIED="1587526865251">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="Depth Representation" ID="ID_940024603" CREATED="1617622797830" MODIFIED="1617622801976">
+<node TEXT="CVPR21: S2R-DepthNet: Learning a Generalizable Depth-specific Structural Representation" ID="ID_339705407" CREATED="1617622803213" MODIFIED="1617622810654"/>
+</node>
+</node>
+<node TEXT="Motion Prediction" ID="ID_1468545131" CREATED="1585273931386" MODIFIED="1587526865251">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="2003.06594: collaborative motion prediction via neural motion message passing (CVPR20)" ID="ID_922645949" CREATED="1585273939963" MODIFIED="1587526865251">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="model the interaction among traffic actors, which could cooperate with each other to avoid collisions or form groups" ID="ID_1866499715" CREATED="1585273974008" MODIFIED="1587526865252">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="Social GAN: Socially Acceptable Trajectories&#xa;with Generative Adversarial Networks (cvpr20)" ID="ID_707374796" CREATED="1592546647558" MODIFIED="1592546660119"/>
+</node>
+<node TEXT="Tracking" ID="ID_1225202497" CREATED="1590746031233" MODIFIED="1590746035544">
+<node TEXT="2005.13888: P2B: Point-to-Box Network for 3D Object Tracking in Point Clouds (cvpr20 oral)" ID="ID_247548698" CREATED="1590746036605" MODIFIED="1590746049896"/>
+</node>
+<node TEXT="2D-&gt;3D / Reconstruction" ID="ID_85275942" CREATED="1587974524881" MODIFIED="1587975275112">
+<node TEXT="3D portrait" ID="ID_1817633511" CREATED="1587974528844" MODIFIED="1587974534327">
+<node TEXT="2004.11598: Deep 3D portrait from a single image" ID="ID_788527202" CREATED="1587974536965" MODIFIED="1587974549308">
+<node TEXT="unsupervised" ID="ID_588496742" CREATED="1587974550811" MODIFIED="1587974553381"/>
+</node>
+</node>
+</node>
+<node TEXT="Unsupervised" ID="ID_1108189941" CREATED="1590749952334" MODIFIED="1590749956189">
+<node TEXT="2004.01176: Learning Unsupervised Hierarchical Part Decomposition of 3D Objects from a Single RGB Image (cvpr20)" ID="ID_953085415" CREATED="1590749956974" MODIFIED="1590749967809"/>
+</node>
+<node TEXT="Object Detection" ID="ID_359173144" CREATED="1634062757685" MODIFIED="1648337996840">
+<node TEXT="Voxel Transformer for 3D Object Detection" ID="ID_1112299622" CREATED="1634062767074" MODIFIED="1634062773616"/>
+</node>
+<node TEXT="Interpolation" ID="ID_687015313" CREATED="1648337997035" MODIFIED="1648338000713">
+<node TEXT="IDEA-Net: Dynamic 3D Point Cloud Interpolation via Deep Embedding Alignment" ID="ID_1606213792" CREATED="1648338005697" MODIFIED="1648338009130">
+<node TEXT="CVPR22" ID="ID_80360502" CREATED="1648338010355" MODIFIED="1648338011775"/>
+</node>
+</node>
+</node>
 <node TEXT="Action Recognition" FOLDED="true" POSITION="left" ID="ID_941361807" CREATED="1647567341551" MODIFIED="1647567345392">
 <edge COLOR="#ff0000"/>
 <node TEXT="Architecture" ID="ID_694731282" CREATED="1647567346659" MODIFIED="1647567355095">
@@ -1441,6 +1604,13 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
+</node>
+</node>
+<node TEXT="Dataset Distillation" POSITION="left" ID="ID_265073126" CREATED="1648338075798" MODIFIED="1648338078957">
+<edge COLOR="#ff00ff"/>
+<node TEXT="Dataset Distillation by Matching Training Trajectories" ID="ID_1232754909" CREATED="1648338079783" MODIFIED="1648338088477">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_951175501" CREATED="1648338090454" MODIFIED="1648338092141"/>
 </node>
 </node>
 <node TEXT="Diffusion Models" FOLDED="true" POSITION="left" ID="ID_543295574" CREATED="1645111157251" MODIFIED="1645111160424">
@@ -1695,7 +1865,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Ordinal Regression" POSITION="left" ID="ID_408572005" CREATED="1576825445602" MODIFIED="1647264584581">
+<node TEXT="Ordinal Regression" FOLDED="true" POSITION="left" ID="ID_408572005" CREATED="1576825445602" MODIFIED="1647264584581">
 <font NAME="Gentium" SIZE="10" BOLD="false"/>
 <edge COLOR="#00ffff"/>
 <node TEXT="OR-CNN" ID="ID_646788311" CREATED="1648336827721" MODIFIED="1648336832137"/>
@@ -1750,6 +1920,12 @@
 <node TEXT="model watermark" ID="ID_854641187" CREATED="1647567587011" MODIFIED="1647567593099">
 <node TEXT="exloring structure consistency for deep model watermarking" ID="ID_489056739" CREATED="1647567594240" MODIFIED="1647567607226">
 <icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Differential Privacy" ID="ID_1268713155" CREATED="1648337762797" MODIFIED="1648337766246">
+<node TEXT="Mixed Differential Privacy in Computer Vision" ID="ID_1969874071" CREATED="1648337767049" MODIFIED="1648337770249">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_1404369978" CREATED="1648337773035" MODIFIED="1648337774527"/>
 </node>
 </node>
 </node>
@@ -2336,7 +2512,7 @@
 <node TEXT="USENIX22" ID="ID_1148613248" CREATED="1647267021829" MODIFIED="1647267024253"/>
 </node>
 </node>
-<node TEXT="Method" ID="ID_1812140643" CREATED="1589767913067" MODIFIED="1590805530334">
+<node TEXT="Create" ID="ID_1812140643" CREATED="1589767913067" MODIFIED="1648338593271">
 <node TEXT="2005.05535: deepfacelab: a simple flexible and extensible face swapping framework" ID="ID_1258022523" CREATED="1589767931055" MODIFIED="1589767949771"/>
 <node TEXT="2004.07165 A recurrent cycle consistency loss for progressive face-to-face synthesis (FG 2020 oral)" ID="ID_1521921331" CREATED="1590805531639" MODIFIED="1590805549067"/>
 </node>
@@ -2351,11 +2527,14 @@
 <node TEXT="multi-attentional" ID="ID_634769208" CREATED="1615298789067" MODIFIED="1615298801115"/>
 </node>
 <node TEXT="CVPR21: Improving the Efficiency and Robustness of Deepfakes Detection through Precise Geometric Features" ID="ID_1786812758" CREATED="1619337614061" MODIFIED="1619337626336"/>
-<node TEXT="multi-modality" ID="ID_692707786" CREATED="1646942308628" MODIFIED="1646942311937">
+<node TEXT="Self-supervised Learning of Adversarial Example: Towards Good Generalizations for Deepfake Detection" ID="ID_1441114547" CREATED="1648338608774" MODIFIED="1648338611335">
+<node TEXT="CVPR22" ID="ID_409760991" CREATED="1648338612963" MODIFIED="1648338614477"/>
+</node>
+</node>
+<node TEXT="multi-modality detection" ID="ID_692707786" CREATED="1646942308628" MODIFIED="1648338606487">
 <node TEXT="Voice-Face Homogeneity Tells Deepfake" ID="ID_153357596" CREATED="1646942317853" MODIFIED="1646942325559">
 <icon BUILTIN="unchecked"/>
 <node TEXT="CVPR22" ID="ID_725170575" CREATED="1646942319120" MODIFIED="1646942321768"/>
-</node>
 </node>
 </node>
 <node TEXT="Anti-detection" ID="ID_201818852" CREATED="1590804657624" MODIFIED="1590804660720">
@@ -2818,163 +2997,6 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-</node>
-</node>
-<node TEXT="3D / PCL" FOLDED="true" POSITION="left" ID="ID_1606327696" CREATED="1583132559918" MODIFIED="1642394252391">
-<font NAME="Gentium" SIZE="10" BOLD="false"/>
-<edge COLOR="#007c7c"/>
-<node TEXT="Dataset" ID="ID_750669130" CREATED="1583137147235" MODIFIED="1587526865232">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="PartNet: A large scale benchmark for fine-grained and hierarchical part-level 3D object understanding" ID="ID_367911268" CREATED="1583137156179" MODIFIED="1587526865232">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: large-scale dataset of 3D objects annotated with fine-trained, instance-level, and hierarchical 3D part information." ID="ID_1810204510" CREATED="1583137993707" MODIFIED="1587526865232">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: 3d part recognition: fine-rained semantic segmentation, hierarchical semantic segmentation, and instance segmentation" ID="ID_447922824" CREATED="1583141336957" MODIFIED="1587526865233">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="generic" ID="ID_67683623" CREATED="1608878793211" MODIFIED="1608878794674">
-<node TEXT="2012.09688&#xa;PCT: Point Cloud Transformer" ID="ID_760061240" CREATED="1608878795342" MODIFIED="1608878805569"/>
-<node TEXT="2012.09164 Point Transformer" ID="ID_1856683145" CREATED="1608879617939" MODIFIED="1608880161951">
-<icon BUILTIN="bookmark"/>
-<node TEXT="self-attention network to PCL" ID="ID_1162420612" CREATED="1608880164884" MODIFIED="1608880172010"/>
-</node>
-</node>
-<node TEXT="classification" ID="ID_1683843111" CREATED="1583132565754" MODIFIED="1610426338023">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="PointNet: deep learning on Point Sets for 3D classification and segmentation (2017)" ID="ID_535445133" CREATED="1583132578641" MODIFIED="1587526865234">
-<icon BUILTIN="button_ok"/>
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: 3d classification and segmentation" ID="ID_369477718" CREATED="1583132646461" MODIFIED="1587526865235">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: previous works transform such data to regular 3D voxel grids or collections of images" ID="ID_509541120" CREATED="1583132656157" MODIFIED="1587526865236">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="renders data unecessarily voluminous and causes issues" ID="ID_1650499462" CREATED="1583132774211" MODIFIED="1587526865237">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="how: novel type of neural network" ID="ID_1582863497" CREATED="1583132794431" MODIFIED="1587526865238">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="directly consumes 3d point cloud" ID="ID_904651994" CREATED="1583132807372" MODIFIED="1587526865238">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="respects the permutation invariance of point in the input" ID="ID_80693188" CREATED="1583132818955" MODIFIED="1587526865239">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="Detail" ID="ID_592119659" CREATED="1583132853503" MODIFIED="1587526865239">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="properties of point set" ID="ID_923628661" CREATED="1583133482219" MODIFIED="1587526865239">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="1. unordered" ID="ID_59901348" CREATED="1583133494060" MODIFIED="1587526865240">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="2. interaction among points" ID="ID_905514121" CREATED="1583133498167" MODIFIED="1587526865240">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="3. invariance under transformations" ID="ID_932819479" CREATED="1583133522841" MODIFIED="1587526865241">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="e.g. translation and rotation" ID="ID_1003384585" CREATED="1583133566689" MODIFIED="1587526865241">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="regularize transformation to be close to orthogonal matrix" ID="ID_1980629096" CREATED="1583133585186" MODIFIED="1587526865242">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="An orthogonal transformation will not lose information in the input, thus is desired" ID="ID_285705617" CREATED="1583133597956" MODIFIED="1587526865242">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="PointNet++: deep hierarchical feature learning on point sets in a metric space (NIPS)" ID="ID_1305155138" CREATED="1583133688195" MODIFIED="1587526865243">
-<icon BUILTIN="button_ok"/>
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: 3d classification and segmentation" ID="ID_1391695258" CREATED="1583136577356" MODIFIED="1587526865244">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: pointnet does not capture local structures induced by the metric space points live in" ID="ID_1734373925" CREATED="1583136583902" MODIFIED="1587526865245">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: introduce a hierarchical neural network that applies pointnet recursively on a nested partitioning of the input point set; propoes novel set learning layers to adaptively combine features from multiple scales" ID="ID_574546543" CREATED="1583136619272" MODIFIED="1587526865246">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="2002.10876: PointAugment: an auto-agumentation framework for point cloud classification (CVPR2020)" ID="ID_1995300558" CREATED="1583310893208" MODIFIED="1587526865246">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: regularization in PCL classification" ID="ID_682948316" CREATED="1583310928954" MODIFIED="1587526865247">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: regularization" ID="ID_1191365248" CREATED="1583311604535" MODIFIED="1587526865248">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: sample-aware and takes adversarial learning stategy to jointly optimize the augmentor and the classifier" ID="ID_1638101526" CREATED="1583311614272" MODIFIED="1587526865248">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="augmentor can learn samples that best fit the classifier" ID="ID_1705315529" CREATED="1583311657637" MODIFIED="1587526865249">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="EllipsoidNet: Ellipsoid Representation for Point Cloud Classification andSegmentation (cvpr21)" ID="ID_1008449076" CREATED="1615297913979" MODIFIED="1615297923495">
-<node TEXT="new 2d representation" ID="ID_1336906720" CREATED="1615297924304" MODIFIED="1615297941283"/>
-</node>
-</node>
-<node TEXT="Semgentation" ID="ID_98283900" CREATED="1610426338878" MODIFIED="1610426343353">
-<node TEXT="2003.05593:Learning to Segment 3D Point Clouds in 2D Image Space (cvpr20 oral)" ID="ID_1194509251" CREATED="1590748289620" MODIFIED="1590748552801"/>
-<node TEXT="2003.14032 PolarNet: An Improved Grid Representation for Online LiDAR Point Clouds Semantic Segmentation (cvpr20)" ID="ID_273525175" CREATED="1590806996838" MODIFIED="1590807009853"/>
-<node TEXT="2012.10217&#xa;SegGroup: Seg-Level Supervision for 3D Instance and Semantic Segmentation" ID="ID_746665270" CREATED="1608872980932" MODIFIED="1608873093023"/>
-<node TEXT="2101: Boundary-Aware Geometric Encoding for Semantic Segmentation of Point Clouds (AAAI21)" ID="ID_18229318" CREATED="1610426385894" MODIFIED="1610426427874"/>
-</node>
-<node TEXT="Shape + PCL" ID="ID_692723578" CREATED="1587978723669" MODIFIED="1587978729471">
-<node TEXT="2004.09411: shape-oriented convolutional neural network for point cloud analysis (AAAI20)" ID="ID_648541054" CREATED="1587978730554" MODIFIED="1587978867499"/>
-<node TEXT="2004.04242: deep manifold prior" ID="ID_1198757401" CREATED="1589766955822" MODIFIED="1589766965285"/>
-<node TEXT="2005.08144: high-dimentsional convolutional networks for geometric pattern recognition" ID="ID_551842404" CREATED="1590025587186" MODIFIED="1590025610132"/>
-</node>
-<node TEXT="Depth" ID="ID_1948167092" CREATED="1617622791190" MODIFIED="1617622792504">
-<node TEXT="Depth Estimation" ID="ID_310201956" CREATED="1583313577977" MODIFIED="1587526865249">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="2002.12319: semantically-guided representation learning for self-supervised monocular depth" ID="ID_123925389" CREATED="1583319217945" MODIFIED="1587526865249">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: depth estimation" ID="ID_512544818" CREATED="1583319382866" MODIFIED="1587526865250">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: leverage more directly semantic structure to guide geometric representation learning" ID="ID_1129284074" CREATED="1583319389083" MODIFIED="1587526865251">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="Depth Representation" ID="ID_940024603" CREATED="1617622797830" MODIFIED="1617622801976">
-<node TEXT="CVPR21: S2R-DepthNet: Learning a Generalizable Depth-specific Structural Representation" ID="ID_339705407" CREATED="1617622803213" MODIFIED="1617622810654"/>
-</node>
-</node>
-<node TEXT="Motion Prediction" ID="ID_1468545131" CREATED="1585273931386" MODIFIED="1587526865251">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="2003.06594: collaborative motion prediction via neural motion message passing (CVPR20)" ID="ID_922645949" CREATED="1585273939963" MODIFIED="1587526865251">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="model the interaction among traffic actors, which could cooperate with each other to avoid collisions or form groups" ID="ID_1866499715" CREATED="1585273974008" MODIFIED="1587526865252">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="Social GAN: Socially Acceptable Trajectories&#xa;with Generative Adversarial Networks (cvpr20)" ID="ID_707374796" CREATED="1592546647558" MODIFIED="1592546660119"/>
-</node>
-<node TEXT="Tracking" ID="ID_1225202497" CREATED="1590746031233" MODIFIED="1590746035544">
-<node TEXT="2005.13888: P2B: Point-to-Box Network for 3D Object Tracking in Point Clouds (cvpr20 oral)" ID="ID_247548698" CREATED="1590746036605" MODIFIED="1590746049896"/>
-</node>
-<node TEXT="2D-&gt;3D / Reconstruction" ID="ID_85275942" CREATED="1587974524881" MODIFIED="1587975275112">
-<node TEXT="3D portrait" ID="ID_1817633511" CREATED="1587974528844" MODIFIED="1587974534327">
-<node TEXT="2004.11598: Deep 3D portrait from a single image" ID="ID_788527202" CREATED="1587974536965" MODIFIED="1587974549308">
-<node TEXT="unsupervised" ID="ID_588496742" CREATED="1587974550811" MODIFIED="1587974553381"/>
-</node>
-</node>
-</node>
-<node TEXT="Unsupervised" ID="ID_1108189941" CREATED="1590749952334" MODIFIED="1590749956189">
-<node TEXT="2004.01176: Learning Unsupervised Hierarchical Part Decomposition of 3D Objects from a Single RGB Image (cvpr20)" ID="ID_953085415" CREATED="1590749956974" MODIFIED="1590749967809"/>
-</node>
-<node TEXT="Obj Det" ID="ID_359173144" CREATED="1634062757685" MODIFIED="1634062764395">
-<node TEXT="Voxel Transformer for 3D Object Detection" ID="ID_1112299622" CREATED="1634062767074" MODIFIED="1634062773616"/>
 </node>
 </node>
 <node TEXT="GAN Generate" FOLDED="true" POSITION="left" ID="ID_176549857" CREATED="1624457228132" MODIFIED="1642394239449">
