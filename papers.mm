@@ -241,6 +241,25 @@
 <node TEXT="Madry (link defense)" ID="ID_605228331" CREATED="1642438862673" MODIFIED="1642438872953"/>
 </node>
 <node TEXT="MIM" ID="ID_378587323" CREATED="1642438707408" MODIFIED="1642438708204"/>
+<node TEXT="ADI" ID="ID_583399730" CREATED="1648412574268" MODIFIED="1648412663362">
+<font BOLD="true"/>
+<node TEXT="Practical Evaluation of Adversarial Robustness via Adaptive Auto Attack" ID="ID_634188978" CREATED="1648412612950" MODIFIED="1648413714227">
+<icon BUILTIN="unchecked"/>
+<icon BUILTIN="bookmark"/>
+<node TEXT="CVPR22" ID="ID_820470690" CREATED="1648412624240" MODIFIED="1648412626126">
+<node TEXT="good summary of defense methods" ID="ID_1700525729" CREATED="1648413694208" MODIFIED="1648413733242">
+<icon BUILTIN="info"/>
+<font BOLD="false"/>
+</node>
+<node TEXT="refers AA" ID="ID_1108613680" CREATED="1648412707708" MODIFIED="1648412710406"/>
+<node TEXT="refers Lafeat" ID="ID_482513425" CREATED="1648412710624" MODIFIED="1648412714332"/>
+</node>
+<node TEXT="against many existing defense methods" ID="ID_298410983" CREATED="1648412626421" MODIFIED="1648413645064"/>
+<node TEXT="only cifar10 and cifar100" ID="ID_1704582608" CREATED="1648413776618" MODIFIED="1648413786192">
+<node TEXT="the state-of-the-art adversarial training cannot be done for ILSVRC2012 within acceptable cost." ID="ID_1985501665" CREATED="1648413787064" MODIFIED="1648413820906"/>
+</node>
+</node>
+</node>
 </node>
 <node TEXT="Black-Box Attack" ID="ID_1336427131" CREATED="1641522444757" MODIFIED="1641522449005">
 <node TEXT="SparseEvo" ID="ID_1859620243" CREATED="1644181137459" MODIFIED="1644181140152">
@@ -527,6 +546,21 @@
 <icon BUILTIN="bookmark"/>
 <icon BUILTIN="unchecked"/>
 <node TEXT="ICML17" ID="ID_539936003" CREATED="1646943246293" MODIFIED="1646943248413"/>
+</node>
+</node>
+</node>
+<node TEXT="Stateful Detection" ID="ID_1068348614" CREATED="1648414793478" MODIFIED="1648414796793">
+<node TEXT="Stateful Detection of Black-Box Adversarial Attacks" ID="ID_1178344926" CREATED="1648414797685" MODIFIED="1648414805968">
+<icon BUILTIN="unchecked"/>
+<node TEXT="Carlini" ID="ID_715758266" CREATED="1648414806983" MODIFIED="1648414809938"/>
+<node TEXT="against black-box attack" ID="ID_1703138784" CREATED="1648414811125" MODIFIED="1648414819549"/>
+<node TEXT="(1) detect the creation procedure of black-box adversarial example" ID="ID_1999897527" CREATED="1648414821952" MODIFIED="1648415232585">
+<node TEXT="keep track of past queries" ID="ID_980520047" CREATED="1648414939811" MODIFIED="1648414944678"/>
+</node>
+<node TEXT="(2) query blinding, attack against such stateful detection" ID="ID_1504202166" CREATED="1648415221209" MODIFIED="1648415250259">
+<node TEXT="So poor, is this endless?" ID="ID_821120263" CREATED="1648415251804" MODIFIED="1648415883495">
+<icon BUILTIN="info"/>
+</node>
 </node>
 </node>
 </node>
