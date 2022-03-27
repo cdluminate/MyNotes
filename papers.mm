@@ -250,25 +250,10 @@
 </node>
 </node>
 </node>
-<node TEXT="Patch/Visible Attack" ID="ID_1333081920" CREATED="1641673351616" MODIFIED="1641673361482"/>
-<node TEXT="Model Inversion" ID="ID_137802922" CREATED="1642456768941" MODIFIED="1642456773626">
-<node TEXT="Exploiting Explanations for Model Inversion Attacks" ID="ID_1411419993" CREATED="1642456774974" MODIFIED="1642456783648">
-<icon BUILTIN="unchecked"/>
-<node TEXT="iccv21" ID="ID_588513264" CREATED="1642456785239" MODIFIED="1642456786804"/>
-<node TEXT="attackers can construct sensitive information (such as faces) merely from model predictions" ID="ID_111964935" CREATED="1642456788665" MODIFIED="1642456829436"/>
-</node>
-</node>
-<node TEXT="Similar Topics" ID="ID_34273182" CREATED="1642456460265" MODIFIED="1642456463434">
-<node TEXT="deep dream" ID="ID_272877404" CREATED="1642456464214" MODIFIED="1642456469283">
-<node TEXT="max all activation" ID="ID_174456830" CREATED="1642456470094" MODIFIED="1642456479075"/>
-</node>
-<node TEXT="gan inversion" ID="ID_873322690" CREATED="1642456480231" MODIFIED="1642456490208">
-<node TEXT="looking for the desired latent" ID="ID_1283661620" CREATED="1642456491378" MODIFIED="1642456502325"/>
-</node>
-</node>
-<node TEXT="STAGE" ID="ID_1760709543" CREATED="1642438720562" MODIFIED="1642438722150">
-<node TEXT="Boosting adversarial attacks with momentum" ID="ID_75324346" CREATED="1642438722774" MODIFIED="1642438725961">
-<icon BUILTIN="unchecked"/>
+<node TEXT="Transferrability" ID="ID_142248765" CREATED="1641678368814" MODIFIED="1641678372373">
+<node TEXT="An Intermediate-level Attack Framework on The Basis of Linear Regression" ID="ID_1499876765" CREATED="1648342305622" MODIFIED="1648342307756">
+<icon BUILTIN="pencil"/>
+<node TEXT="ECCV extension" ID="ID_1206816090" CREATED="1648342309374" MODIFIED="1648342312215"/>
 </node>
 </node>
 <node TEXT="Universal Perturbation" ID="ID_883577858" CREATED="1641522438698" MODIFIED="1641522443789">
@@ -293,10 +278,34 @@
 </node>
 </node>
 </node>
-<node TEXT="Transferrability" ID="ID_142248765" CREATED="1641678368814" MODIFIED="1641678372373">
-<node TEXT="An Intermediate-level Attack Framework on The Basis of Linear Regression" ID="ID_1499876765" CREATED="1648342305622" MODIFIED="1648342307756">
-<icon BUILTIN="pencil"/>
-<node TEXT="ECCV extension" ID="ID_1206816090" CREATED="1648342309374" MODIFIED="1648342312215"/>
+<node TEXT="No-Box Attack" ID="ID_571284137" CREATED="1648396305541" MODIFIED="1648396309532">
+<node TEXT="Practical No-box Adversarial Attacks with Training-free Hybrid Image Transformation" ID="ID_1643901069" CREATED="1648396360998" MODIFIED="1648396366599">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_768388055" CREATED="1648396367815" MODIFIED="1648396370562"/>
+</node>
+</node>
+<node TEXT="Patch/Visible Attack" ID="ID_1333081920" CREATED="1641673351616" MODIFIED="1641673361482"/>
+<node TEXT="Other Perceptual Bound" ID="ID_1927729677" CREATED="1648396670489" MODIFIED="1648396693602">
+<node TEXT="Frequency-driven Imperceptible Adversarial Attack on Semantic Similarity" ID="ID_914839874" CREATED="1648396694653" MODIFIED="1648396695806">
+<node TEXT="CVPR22" ID="ID_703502731" CREATED="1648396703382" MODIFIED="1648396705165"/>
+<node TEXT="attack image representation" ID="ID_679359515" CREATED="1648396714359" MODIFIED="1648396718170"/>
+<node TEXT="the formulations are very similar to DML attack..." ID="ID_1021723891" CREATED="1648396793827" MODIFIED="1648396809947">
+<icon BUILTIN="yes"/>
+</node>
+</node>
+</node>
+<node TEXT="Model Inversion" ID="ID_137802922" CREATED="1642456768941" MODIFIED="1642456773626"/>
+<node TEXT="Similar Topics" ID="ID_34273182" CREATED="1642456460265" MODIFIED="1642456463434">
+<node TEXT="deep dream" ID="ID_272877404" CREATED="1642456464214" MODIFIED="1642456469283">
+<node TEXT="max all activation" ID="ID_174456830" CREATED="1642456470094" MODIFIED="1642456479075"/>
+</node>
+<node TEXT="gan inversion" ID="ID_873322690" CREATED="1642456480231" MODIFIED="1642456490208">
+<node TEXT="looking for the desired latent" ID="ID_1283661620" CREATED="1642456491378" MODIFIED="1642456502325"/>
+</node>
+</node>
+<node TEXT="STAGE" ID="ID_1760709543" CREATED="1642438720562" MODIFIED="1642438722150">
+<node TEXT="Boosting adversarial attacks with momentum" ID="ID_75324346" CREATED="1642438722774" MODIFIED="1642438725961">
+<icon BUILTIN="unchecked"/>
 </node>
 </node>
 </node>
@@ -345,6 +354,10 @@
 <node TEXT="characterize semantic robustness of an FTM" ID="ID_860864962" CREATED="1645110413123" MODIFIED="1645110426406"/>
 <node TEXT="combine with certification technique" ID="ID_1167140711" CREATED="1645110426782" MODIFIED="1645110663756"/>
 <node TEXT="does not provide a clear defense method" ID="ID_796969338" CREATED="1645110665095" MODIFIED="1645110670209"/>
+</node>
+<node TEXT="Controllable Evaluation and Generation of Physical Adversarial Patch on Face Recognition" ID="ID_32522158" CREATED="1648396439382" MODIFIED="1648396442110">
+<icon BUILTIN="pencil"/>
+<node TEXT="Jun Zhu" ID="ID_343713912" CREATED="1648396443230" MODIFIED="1648396463845"/>
 </node>
 </node>
 <node TEXT="Multi-label Prediction" ID="ID_1211679974" CREATED="1647568084959" MODIFIED="1648388483965">
@@ -1987,6 +2000,11 @@
 </node>
 <node TEXT="transformer inversion" ID="ID_423330045" CREATED="1648387195131" MODIFIED="1648387198487"/>
 </node>
+<node TEXT="Exploiting Explanations for Model Inversion Attacks" ID="ID_1411419993" CREATED="1642456774974" MODIFIED="1642456783648">
+<icon BUILTIN="unchecked"/>
+<node TEXT="iccv21" ID="ID_588513264" CREATED="1642456785239" MODIFIED="1642456786804"/>
+<node TEXT="attackers can construct sensitive information (such as faces) merely from model predictions" ID="ID_111964935" CREATED="1642456788665" MODIFIED="1642456829436"/>
+</node>
 </node>
 <node TEXT="model watermark" ID="ID_854641187" CREATED="1647567587011" MODIFIED="1647567593099">
 <node TEXT="exloring structure consistency for deep model watermarking" ID="ID_489056739" CREATED="1647567594240" MODIFIED="1647567607226">
@@ -2010,10 +2028,24 @@
 <node TEXT="CVPR22" ID="ID_366650528" CREATED="1648342540556" MODIFIED="1648342541821"/>
 </node>
 </node>
+<node TEXT="Vision-Language Pretraining" FOLDED="true" POSITION="left" ID="ID_1438251706" CREATED="1646945591468" MODIFIED="1646945596520">
+<edge COLOR="#00ff00"/>
+<node TEXT="CLIP" ID="ID_410734693" CREATED="1646945598394" MODIFIED="1646945599795">
+<node TEXT="CLIP and adversarial robustness?" ID="ID_484691074" CREATED="1647048643037" MODIFIED="1647048648456"/>
+</node>
+<node TEXT="ALIGN" ID="ID_883337544" CREATED="1646945681124" MODIFIED="1646945684050"/>
+<node TEXT="FILIP" ID="ID_712868502" CREATED="1646945686665" MODIFIED="1646945695226"/>
+<node TEXT="Wukong: 100 Million Large-scale Chinese Cross-modal Pre-training Dataset and A Foundation Framework" ID="ID_579762046" CREATED="1646945599992" MODIFIED="1646945607267">
+<icon BUILTIN="pencil"/>
+</node>
+<node TEXT="Conditional Prompt Learning for Vision-Language Models" ID="ID_1017315336" CREATED="1648394772288" MODIFIED="1648394773329">
+<node TEXT="CVPR22" ID="ID_1728549709" CREATED="1648394774156" MODIFIED="1648394775509"/>
+</node>
+</node>
 <node TEXT="-------------------------------------------------------------------------------------------------" POSITION="left" ID="ID_1156109860" CREATED="1647264433260" MODIFIED="1647264435598">
 <edge COLOR="#007c7c"/>
 </node>
-<node TEXT="Self-Supervised Learning (SSL)" POSITION="left" ID="ID_195659803" CREATED="1641524220091" MODIFIED="1644181748534">
+<node TEXT="Self-Supervised Learning (SSL)" FOLDED="true" POSITION="left" ID="ID_195659803" CREATED="1641524220091" MODIFIED="1644181748534">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Self-supervised learning has two major forms, GANs and contrastive learning" ID="ID_1689550023" CREATED="1647264534821" MODIFIED="1647264549612">
 <icon BUILTIN="info"/>
@@ -3921,17 +3953,6 @@
 <icon BUILTIN="pencil"/>
 <node TEXT="misclassifications are rarely across superclasses, but mainly among subclasses with a superclass" ID="ID_426581992" CREATED="1642952902122" MODIFIED="1642952932522"/>
 <node TEXT="ensemble networks trained each only on subclasses of a given superclass perform better than the same network trained on all subclasses of all superclasses" ID="ID_1950788253" CREATED="1642952937590" MODIFIED="1642952961617"/>
-</node>
-</node>
-<node TEXT="Vision-Language Pretraining" FOLDED="true" POSITION="left" ID="ID_1438251706" CREATED="1646945591468" MODIFIED="1646945596520">
-<edge COLOR="#00ff00"/>
-<node TEXT="CLIP" ID="ID_410734693" CREATED="1646945598394" MODIFIED="1646945599795">
-<node TEXT="CLIP and adversarial robustness?" ID="ID_484691074" CREATED="1647048643037" MODIFIED="1647048648456"/>
-</node>
-<node TEXT="ALIGN" ID="ID_883337544" CREATED="1646945681124" MODIFIED="1646945684050"/>
-<node TEXT="FILIP" ID="ID_712868502" CREATED="1646945686665" MODIFIED="1646945695226"/>
-<node TEXT="Wukong: 100 Million Large-scale Chinese Cross-modal Pre-training Dataset and A Foundation Framework" ID="ID_579762046" CREATED="1646945599992" MODIFIED="1646945607267">
-<icon BUILTIN="pencil"/>
 </node>
 </node>
 <node FOLDED="true" POSITION="left" ID="ID_742784641" CREATED="1558004886033" MODIFIED="1642394387258" COLOR="#ff0000"><richcontent TYPE="NODE">
