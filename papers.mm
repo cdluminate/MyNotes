@@ -218,7 +218,7 @@
 <node TEXT="2004.05993: a survey of single-scene video anomaly deteciton" ID="ID_462688942" CREATED="1618846926868" MODIFIED="1618846929066"/>
 </node>
 </node>
-<node TEXT="Adversarial Attack: Classification" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_234014270" CREATED="1641521502446" MODIFIED="1647263386358">
+<node TEXT="Adversarial Attack: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_234014270" CREATED="1641521502446" MODIFIED="1647263386358">
 <edge COLOR="#ff0000"/>
 <node TEXT="White-Box Attack L-0 (sparse)" ID="ID_306012557" CREATED="1648343689366" MODIFIED="1648343702121">
 <node TEXT="AutoAdversary: A Pixel Pruning Method for Sparse Adversarial Attack" ID="ID_1047746457" CREATED="1648343806032" MODIFIED="1648343808769">
@@ -354,25 +354,6 @@
 <node TEXT="does not provide a clear defense method" ID="ID_796969338" CREATED="1645110665095" MODIFIED="1645110670209"/>
 </node>
 </node>
-<node TEXT="Tracking" ID="ID_404459343" CREATED="1644181489904" MODIFIED="1644181494136"/>
-<node TEXT="Trajectory Prediction" ID="ID_1501279328" CREATED="1642953386986" MODIFIED="1642965658792">
-<node ID="ID_1380187352" CREATED="1642953399320" MODIFIED="1642953401824">
-<icon BUILTIN="pencil"/>
-<richcontent TYPE="NODE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    On Adversarial Robustness of Trajectory Prediction for Autonomous Vehicles
-  </body>
-</html>
-</richcontent>
-<node TEXT="misguiding title" ID="ID_974407250" CREATED="1642953418674" MODIFIED="1642953424787"/>
-<node TEXT="only presents attack to perturb trajectory" ID="ID_1226515884" CREATED="1642953425024" MODIFIED="1642953431087"/>
-</node>
-</node>
 <node TEXT="Object Detection" ID="ID_601426743" CREATED="1642440732047" MODIFIED="1647267114123">
 <node ID="ID_1033919012" CREATED="1642440745175" MODIFIED="1642440749146">
 <icon BUILTIN="unchecked"/>
@@ -404,13 +385,42 @@
 <icon BUILTIN="pencil"/>
 </node>
 </node>
+<node TEXT="Physical Camouflage" ID="ID_1126075389" CREATED="1648386898418" MODIFIED="1648386902958">
+<node TEXT="DTA: Physical Camouflage Attacks using Differentiable Transformation Network" ID="ID_302511187" CREATED="1648386903940" MODIFIED="1648386911287">
+<node TEXT="CVPR22" ID="ID_408964136" CREATED="1648386913260" MODIFIED="1648386914842"/>
+</node>
+</node>
+<node TEXT="Physical Optical Attack" ID="ID_853398766" CREATED="1648388159738" MODIFIED="1648388167426">
+<node TEXT="Shadows can be Dangerous: Stealthy and Effective Physical-world Adversarial Attack by Natural Phenomenon" ID="ID_1311407087" CREATED="1648388169624" MODIFIED="1648388171162">
+<node TEXT="CVPR22" ID="ID_823769725" CREATED="1648388172796" MODIFIED="1648388174205"/>
+</node>
+</node>
 <node TEXT="Remote Sensing" ID="ID_1273414088" CREATED="1647267114318" MODIFIED="1647267117431">
 <node TEXT="Universal adversarial perturbation for remote sensing images" ID="ID_16084759" CREATED="1647267118151" MODIFIED="1647267125456">
 <icon BUILTIN="pencil"/>
 </node>
 <node TEXT="Universal Adversarial Examples in Remote Sensing: Methodology and Benchmark" ID="ID_1566703454" CREATED="1646945260207" MODIFIED="1646945261393"/>
 </node>
-<node TEXT="unsupervised" ID="ID_1306713728" CREATED="1647567664211" MODIFIED="1647567667715">
+<node TEXT="Tracking" ID="ID_404459343" CREATED="1644181489904" MODIFIED="1644181494136"/>
+<node TEXT="Trajectory Prediction" ID="ID_1501279328" CREATED="1642953386986" MODIFIED="1642965658792">
+<node ID="ID_1380187352" CREATED="1642953399320" MODIFIED="1642953401824">
+<icon BUILTIN="pencil"/>
+<richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    On Adversarial Robustness of Trajectory Prediction for Autonomous Vehicles
+  </body>
+</html>
+</richcontent>
+<node TEXT="misguiding title" ID="ID_974407250" CREATED="1642953418674" MODIFIED="1642953424787"/>
+<node TEXT="only presents attack to perturb trajectory" ID="ID_1226515884" CREATED="1642953425024" MODIFIED="1642953431087"/>
+</node>
+</node>
+<node TEXT="Unsupervised" ID="ID_1306713728" CREATED="1647567664211" MODIFIED="1648386875575">
 <node TEXT="shaoyuan has one" ID="ID_1775536369" CREATED="1647567668516" MODIFIED="1647567688192">
 <icon BUILTIN="pencil"/>
 </node>
@@ -1876,10 +1886,12 @@
 </node>
 </node>
 </node>
-<node TEXT="Details" ID="ID_1132582902" CREATED="1590798725625" MODIFIED="1590798728684"/>
-<node TEXT="Applications" ID="ID_485359212" CREATED="1590025512498" MODIFIED="1590025514523">
 <node TEXT="Retailing" ID="ID_725089971" CREATED="1588391641383" MODIFIED="1588391642960">
 <node TEXT="2003.08230: rethinking object detection in retail stores" ID="ID_524544258" CREATED="1588391644632" MODIFIED="1588391661192"/>
+</node>
+<node TEXT="Camouflaged" ID="ID_1233579435" CREATED="1648388054502" MODIFIED="1648388062210">
+<node TEXT="Zoom In and Out: A Mixed-scale Triplet Network&#xa;for Camouflaged Object Detection" ID="ID_290360895" CREATED="1648388067795" MODIFIED="1648388070326">
+<node TEXT="CVPR22" ID="ID_1320931684" CREATED="1648388071940" MODIFIED="1648388074017"/>
 </node>
 </node>
 </node>
@@ -1955,6 +1967,13 @@
 <node TEXT="CVPR22w" ID="ID_1710159890" CREATED="1647266815467" MODIFIED="1647266817920"/>
 <node TEXT="adversarially trained nets are vulnerable to inversion attack" ID="ID_1271286519" CREATED="1647266824910" MODIFIED="1647266840002"/>
 </node>
+<node TEXT="GradViT: Gradient Inversion of Vision Transformers" ID="ID_619347180" CREATED="1648387184629" MODIFIED="1648387190460">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_227494600" CREATED="1648387192118" MODIFIED="1648387193540">
+<node TEXT="NVIDIA" ID="ID_739150767" CREATED="1648387416314" MODIFIED="1648387417986"/>
+</node>
+<node TEXT="transformer inversion" ID="ID_423330045" CREATED="1648387195131" MODIFIED="1648387198487"/>
+</node>
 </node>
 <node TEXT="model watermark" ID="ID_854641187" CREATED="1647567587011" MODIFIED="1647567593099">
 <node TEXT="exloring structure consistency for deep model watermarking" ID="ID_489056739" CREATED="1647567594240" MODIFIED="1647567607226">
@@ -1968,7 +1987,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Semantic Segmentation" POSITION="left" ID="ID_710086984" CREATED="1641524074732" MODIFIED="1641524079818">
+<node TEXT="Semantic Segmentation" FOLDED="true" POSITION="left" ID="ID_710086984" CREATED="1641524074732" MODIFIED="1641524079818">
 <edge COLOR="#007c7c"/>
 <node TEXT="towards unsupervised open world semantic segmentation" ID="ID_886126595" CREATED="1641524113165" MODIFIED="1641524125507">
 <icon BUILTIN="pencil"/>
@@ -1977,6 +1996,9 @@
 <icon BUILTIN="unchecked"/>
 <node TEXT="CVPR22" ID="ID_366650528" CREATED="1648342540556" MODIFIED="1648342541821"/>
 </node>
+</node>
+<node TEXT="-------------------------------------------------------------------------------------------------" POSITION="left" ID="ID_1156109860" CREATED="1647264433260" MODIFIED="1647264435598">
+<edge COLOR="#007c7c"/>
 </node>
 <node TEXT="Self-Supervised Learning (SSL)" FOLDED="true" POSITION="left" ID="ID_195659803" CREATED="1641524220091" MODIFIED="1644181748534">
 <edge COLOR="#7c7c00"/>
@@ -2215,9 +2237,6 @@
 <node TEXT="2005.14169: self-supervised modal and view invariant feature learning" ID="ID_939413624" CREATED="1590743132226" MODIFIED="1590743147677"/>
 <node TEXT="2012.13089&#xa; P4Contrast: Contrastive Learning with Pairs of Point-Pixel Pairs for RGB-D Scene Understanding" ID="ID_1359907490" CREATED="1608871275332" MODIFIED="1608871286097"/>
 </node>
-</node>
-<node TEXT="-------------------------------------------------------------------------------------------------" POSITION="left" ID="ID_1156109860" CREATED="1647264433260" MODIFIED="1647264435598">
-<edge COLOR="#007c7c"/>
 </node>
 <node TEXT="Image Segmentation" FOLDED="true" POSITION="left" ID="ID_1791688507" CREATED="1607496654173" MODIFIED="1648342510870">
 <edge COLOR="#ff00ff"/>
