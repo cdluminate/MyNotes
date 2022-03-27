@@ -302,16 +302,9 @@
 </node>
 <node TEXT="Adversarial Attack: Intersection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1335351832" CREATED="1647263319144" MODIFIED="1647263375425">
 <edge COLOR="#7c007c"/>
-<node TEXT="multi-label prediction" ID="ID_1211679974" CREATED="1647568084959" MODIFIED="1647568893432">
-<icon BUILTIN="button_ok"/>
-<node TEXT="tkml-ap: adversarial attacks to top-k multi-label learning" ID="ID_768468346" CREATED="1647568102113" MODIFIED="1647568115332">
-<icon BUILTIN="unchecked"/>
-<node TEXT="iccv21" ID="ID_1410742901" CREATED="1647568116971" MODIFIED="1647568120084"/>
-<node TEXT="actually this looks like relevant with adversarial ranking" ID="ID_418002134" CREATED="1647568897864" MODIFIED="1647568911643"/>
-<node TEXT="it defines targeted and untargeted attack in the multi-class scenario" ID="ID_296403052" CREATED="1647568917772" MODIFIED="1647568929416"/>
-<node TEXT="the nature that the method recognizes top-k predictions is the same as deep ranking" ID="ID_738164770" CREATED="1647568934059" MODIFIED="1647568963511">
-<icon BUILTIN="yes"/>
-</node>
+<node TEXT="3D PCL" ID="ID_1616919715" CREATED="1648388494887" MODIFIED="1648388497545">
+<node TEXT="Shape-invariant 3D Adversarial Point Clouds" ID="ID_1106915267" CREATED="1648388498393" MODIFIED="1648388503330">
+<node TEXT="CVPR22" ID="ID_1406333374" CREATED="1648388505250" MODIFIED="1648388506538"/>
 </node>
 </node>
 <node TEXT="Face Recog" ID="ID_1806006397" CREATED="1642368429380" MODIFIED="1642965654306">
@@ -352,6 +345,18 @@
 <node TEXT="characterize semantic robustness of an FTM" ID="ID_860864962" CREATED="1645110413123" MODIFIED="1645110426406"/>
 <node TEXT="combine with certification technique" ID="ID_1167140711" CREATED="1645110426782" MODIFIED="1645110663756"/>
 <node TEXT="does not provide a clear defense method" ID="ID_796969338" CREATED="1645110665095" MODIFIED="1645110670209"/>
+</node>
+</node>
+<node TEXT="Multi-label Prediction" ID="ID_1211679974" CREATED="1647568084959" MODIFIED="1648388483965">
+<icon BUILTIN="button_ok"/>
+<node TEXT="tkml-ap: adversarial attacks to top-k multi-label learning" ID="ID_768468346" CREATED="1647568102113" MODIFIED="1647568115332">
+<icon BUILTIN="unchecked"/>
+<node TEXT="iccv21" ID="ID_1410742901" CREATED="1647568116971" MODIFIED="1647568120084"/>
+<node TEXT="actually this looks like relevant with adversarial ranking" ID="ID_418002134" CREATED="1647568897864" MODIFIED="1647568911643"/>
+<node TEXT="it defines targeted and untargeted attack in the multi-class scenario" ID="ID_296403052" CREATED="1647568917772" MODIFIED="1647568929416"/>
+<node TEXT="the nature that the method recognizes top-k predictions is the same as deep ranking" ID="ID_738164770" CREATED="1647568934059" MODIFIED="1647568963511">
+<icon BUILTIN="yes"/>
+</node>
 </node>
 </node>
 <node TEXT="Object Detection" ID="ID_601426743" CREATED="1642440732047" MODIFIED="1647267114123">
@@ -879,7 +884,11 @@
 <node TEXT="the choice of the task to incorporate in the loss function are important factors that can be leveraged to yield more robust models" ID="ID_1336811666" CREATED="1642442253918" MODIFIED="1642442277862"/>
 </node>
 </node>
-<node TEXT="Robust Generalization" ID="ID_125075162" CREATED="1643058798944" MODIFIED="1646923470890">
+<node TEXT="Robust Generalization" ID="ID_125075162" CREATED="1643058798944" MODIFIED="1648388366403">
+<font BOLD="true"/>
+<node TEXT="Generalize better with adversarial attack / adversarial trianing" ID="ID_1604216423" CREATED="1648388384439" MODIFIED="1648388398758">
+<icon BUILTIN="info"/>
+</node>
 <node TEXT="Cihang xie" ID="ID_1667513983" CREATED="1643058809140" MODIFIED="1643058811907"/>
 <node TEXT="JHXY papers" ID="ID_360388475" CREATED="1646923800655" MODIFIED="1646923804350"/>
 <node TEXT="RDA: Robust Domain Adaptation via Fourier Adversarial Attacking" ID="ID_1835144084" CREATED="1646923479664" MODIFIED="1646923763844">
@@ -887,6 +896,10 @@
 <node TEXT="iccv21" ID="ID_1579318074" CREATED="1646923481418" MODIFIED="1646923482999"/>
 <node TEXT="mitigate overfitting through adversarial attacks" ID="ID_559638588" CREATED="1646923815035" MODIFIED="1646923824471"/>
 <node TEXT="propose fourier adversarial attacking for large magnitude perturbations" ID="ID_263843885" CREATED="1646923826789" MODIFIED="1646923848760"/>
+</node>
+<node TEXT="ART-Point: Improving Rotation Robustness of Point Cloud Classifiers via Adversarial Rotation" ID="ID_893797795" CREATED="1648388362842" MODIFIED="1648388378080">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_685246872" CREATED="1648388379291" MODIFIED="1648388380602"/>
 </node>
 </node>
 <node TEXT="Reinforcement Learning" ID="ID_628850521" CREATED="1647267813992" MODIFIED="1647267819607">
@@ -2000,7 +2013,7 @@
 <node TEXT="-------------------------------------------------------------------------------------------------" POSITION="left" ID="ID_1156109860" CREATED="1647264433260" MODIFIED="1647264435598">
 <edge COLOR="#007c7c"/>
 </node>
-<node TEXT="Self-Supervised Learning (SSL)" FOLDED="true" POSITION="left" ID="ID_195659803" CREATED="1641524220091" MODIFIED="1644181748534">
+<node TEXT="Self-Supervised Learning (SSL)" POSITION="left" ID="ID_195659803" CREATED="1641524220091" MODIFIED="1644181748534">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Self-supervised learning has two major forms, GANs and contrastive learning" ID="ID_1689550023" CREATED="1647264534821" MODIFIED="1647264549612">
 <icon BUILTIN="info"/>
@@ -2165,6 +2178,9 @@
 <node TEXT="2012.09962 Information-Preserving Contrastive Learning for Self-Supervised Representations" ID="ID_34214238" CREATED="1608873535652" MODIFIED="1608873549183"/>
 <node TEXT="2104: Solving Inefficiency of Self-supervised Representation Learning" ID="ID_181911350" CREATED="1619335582053" MODIFIED="1619335593237"/>
 <node TEXT="Compressive Visual Representations" ID="ID_1029907368" CREATED="1637078797486" MODIFIED="1637078798398"/>
+<node TEXT="Selective-Supervised Contrastive Learning with Noisy Labels" ID="ID_1783068898" CREATED="1648388675713" MODIFIED="1648388676964">
+<node TEXT="CVPR22" ID="ID_243171848" CREATED="1648388678752" MODIFIED="1648388680202"/>
+</node>
 </node>
 <node TEXT="Self-sup/Unsup ^contrastive" ID="ID_1338043497" CREATED="1587525929533" MODIFIED="1608873579210">
 <font NAME="Gentium" BOLD="false"/>
