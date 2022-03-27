@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="92" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="94" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1648337505775">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -218,9 +218,17 @@
 <node TEXT="2004.05993: a survey of single-scene video anomaly deteciton" ID="ID_462688942" CREATED="1618846926868" MODIFIED="1618846929066"/>
 </node>
 </node>
-<node TEXT="Adversarial Attack: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_234014270" CREATED="1641521502446" MODIFIED="1647263386358">
+<node TEXT="Adversarial Attack: Classification" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_234014270" CREATED="1641521502446" MODIFIED="1647263386358">
 <edge COLOR="#ff0000"/>
-<node TEXT="White-Box Attack" ID="ID_449007607" CREATED="1641522449462" MODIFIED="1641522453928">
+<node TEXT="White-Box Attack L-0 (sparse)" ID="ID_306012557" CREATED="1648343689366" MODIFIED="1648343702121">
+<node TEXT="AutoAdversary: A Pixel Pruning Method for Sparse Adversarial Attack" ID="ID_1047746457" CREATED="1648343806032" MODIFIED="1648343808769">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="White-Box Attack L-2" ID="ID_533624659" CREATED="1648342393597" MODIFIED="1648342397511">
+<node TEXT="C&amp;W" ID="ID_172679490" CREATED="1648342400405" MODIFIED="1648342402908"/>
+</node>
+<node TEXT="White-Box Attack L-inf" ID="ID_449007607" CREATED="1641522449462" MODIFIED="1648342393200">
 <node TEXT="L-BFGS" ID="ID_1011268115" CREATED="1642438696428" MODIFIED="1642438699395"/>
 <node TEXT="FGSM" ID="ID_1740870459" CREATED="1642438691608" MODIFIED="1642438694832">
 <node TEXT="Explaining and harnessing adversarial examples." ID="ID_522955177" CREATED="1642455794565" MODIFIED="1642455799174">
@@ -286,7 +294,10 @@
 </node>
 </node>
 <node TEXT="Transferrability" ID="ID_142248765" CREATED="1641678368814" MODIFIED="1641678372373">
-<node TEXT="Universal Adversarial Examples in Remote Sensing: Methodology and Benchmark" ID="ID_1566703454" CREATED="1646945260207" MODIFIED="1646945261393"/>
+<node TEXT="An Intermediate-level Attack Framework on The Basis of Linear Regression" ID="ID_1499876765" CREATED="1648342305622" MODIFIED="1648342307756">
+<icon BUILTIN="pencil"/>
+<node TEXT="ECCV extension" ID="ID_1206816090" CREATED="1648342309374" MODIFIED="1648342312215"/>
+</node>
 </node>
 </node>
 <node TEXT="Adversarial Attack: Intersection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1335351832" CREATED="1647263319144" MODIFIED="1647263375425">
@@ -397,6 +408,7 @@
 <node TEXT="Universal adversarial perturbation for remote sensing images" ID="ID_16084759" CREATED="1647267118151" MODIFIED="1647267125456">
 <icon BUILTIN="pencil"/>
 </node>
+<node TEXT="Universal Adversarial Examples in Remote Sensing: Methodology and Benchmark" ID="ID_1566703454" CREATED="1646945260207" MODIFIED="1646945261393"/>
 </node>
 <node TEXT="unsupervised" ID="ID_1306713728" CREATED="1647567664211" MODIFIED="1647567667715">
 <node TEXT="shaoyuan has one" ID="ID_1775536369" CREATED="1647567668516" MODIFIED="1647567688192">
@@ -1092,7 +1104,7 @@
 </node>
 <node TEXT="Loss Functions" ID="ID_1262041414" CREATED="1641520453737" MODIFIED="1641520995604">
 <font NAME="Gentium"/>
-<node TEXT="?" ID="ID_1898475549" CREATED="1641524460135" MODIFIED="1641524461416">
+<node TEXT="Group-based?" ID="ID_1898475549" CREATED="1641524460135" MODIFIED="1648342703726">
 <node TEXT="LiftStructure" ID="ID_362567920" CREATED="1641242980713" MODIFIED="1641520995605">
 <font NAME="Gentium"/>
 </node>
@@ -1132,9 +1144,16 @@
 </node>
 <node TEXT="Quadruplet" ID="ID_1293728558" CREATED="1648174903893" MODIFIED="1648174906573"/>
 </node>
-<node TEXT="Group-based?" ID="ID_1077517569" CREATED="1648174921948" MODIFIED="1648174930515"/>
 <node TEXT="Classification-based" ID="ID_336668153" CREATED="1641524453412" MODIFIED="1648174884961">
 <font BOLD="true"/>
+</node>
+<node TEXT="Hyperbolic" ID="ID_1875171674" CREATED="1648342666602" MODIFIED="1648342670818">
+<node TEXT="Hyperbolic Vision Transformers: Combining Improvements in Metric Learning" ID="ID_10937222" CREATED="1648342671777" MODIFIED="1648342675156">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_1214282304" CREATED="1648342678953" MODIFIED="1648342680507"/>
+<node TEXT="(1) hyperbolic embedding" ID="ID_258527249" CREATED="1648342781429" MODIFIED="1648342791655"/>
+<node TEXT="(2) incorporate transformers" ID="ID_1951501276" CREATED="1648342792051" MODIFIED="1648342798988"/>
+</node>
 </node>
 </node>
 </node>
@@ -1572,9 +1591,19 @@
 </node>
 </node>
 </node>
+<node TEXT="Capsule Network" FOLDED="true" POSITION="left" ID="ID_1447197719" CREATED="1648341702034" MODIFIED="1648341707064">
+<edge COLOR="#00ffff"/>
+<node TEXT="HP-Capsule: Unsupervised Face Part Discovery by Hierarchical Parsing Capsule Network" ID="ID_1960737685" CREATED="1648341745946" MODIFIED="1648341753103">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_76112470" CREATED="1648341754220" MODIFIED="1648341755486"/>
+<node TEXT="capsule networks are designed to present the objects by a set of parts and their relationships, which provide an insight into the procedure of visual perception" ID="ID_1555851286" CREATED="1648341756627" MODIFIED="1648341784222">
+<icon BUILTIN="info"/>
+</node>
+</node>
+</node>
 <node TEXT="Comp. Linguistics" FOLDED="true" POSITION="left" ID="ID_865579939" CREATED="1610008291436" MODIFIED="1642394269419">
 <edge COLOR="#0000ff"/>
-<node TEXT="Language representation" ID="ID_1139506578" CREATED="1583319666984" MODIFIED="1587526864977">
+<node TEXT="Language Representation" ID="ID_1139506578" CREATED="1583319666984" MODIFIED="1648343280371">
 <font NAME="Gentium" BOLD="false"/>
 <node TEXT="ELMo" ID="ID_1144092497" CREATED="1583321768820" MODIFIED="1587526864978">
 <font NAME="Gentium" BOLD="false"/>
@@ -1606,7 +1635,8 @@
 </node>
 </node>
 </node>
-<node TEXT="Dataset Distillation" POSITION="left" ID="ID_265073126" CREATED="1648338075798" MODIFIED="1648338078957">
+<node TEXT="Dataset Distillation" FOLDED="true" POSITION="left" ID="ID_265073126" CREATED="1648338075798" MODIFIED="1648343254704">
+<icon BUILTIN="idea"/>
 <edge COLOR="#ff00ff"/>
 <node TEXT="Dataset Distillation by Matching Training Trajectories" ID="ID_1232754909" CREATED="1648338079783" MODIFIED="1648338088477">
 <icon BUILTIN="unchecked"/>
@@ -1710,6 +1740,15 @@
 <node TEXT="CVPR22" ID="ID_1243722840" CREATED="1648336163039" MODIFIED="1648336170532"/>
 <node TEXT="semi-supervised" ID="ID_1980840722" CREATED="1648336171391" MODIFIED="1648336176030"/>
 <node TEXT="better leverage unlabeled data" ID="ID_316244842" CREATED="1648336176523" MODIFIED="1648336184906"/>
+</node>
+</node>
+<node TEXT="Image Compression" FOLDED="true" POSITION="left" ID="ID_1511931365" CREATED="1648343124472" MODIFIED="1648343127424">
+<edge COLOR="#7c0000"/>
+<node TEXT="ELIC: Efficient Learned Image Compression with&#xa;Unevenly Grouped Space-Channel Contextual Adaptive Coding" ID="ID_391462928" CREATED="1648343132187" MODIFIED="1648343146503">
+<node TEXT="CVPR22" ID="ID_1107484924" CREATED="1648343143028" MODIFIED="1648343144450"/>
+</node>
+<node TEXT="Unified Multivariate Gaussian Mixture for Efficient Neural Image Compression" ID="ID_525288991" CREATED="1648343235650" MODIFIED="1648343236782">
+<node TEXT="CVPR22" ID="ID_1065954996" CREATED="1648343238753" MODIFIED="1648343240041"/>
 </node>
 </node>
 <node TEXT="Machine Learning" FOLDED="true" POSITION="left" ID="ID_1123557953" CREATED="1642430639041" MODIFIED="1642430641511">
@@ -1929,10 +1968,14 @@
 </node>
 </node>
 </node>
-<node TEXT="Semantic Segmentation" FOLDED="true" POSITION="left" ID="ID_710086984" CREATED="1641524074732" MODIFIED="1641524079818">
+<node TEXT="Semantic Segmentation" POSITION="left" ID="ID_710086984" CREATED="1641524074732" MODIFIED="1641524079818">
 <edge COLOR="#007c7c"/>
 <node TEXT="towards unsupervised open world semantic segmentation" ID="ID_886126595" CREATED="1641524113165" MODIFIED="1641524125507">
 <icon BUILTIN="pencil"/>
+</node>
+<node TEXT="Tree Energy Loss: Towards Sparsely Annotated Semantic Segmentation" ID="ID_1072029066" CREATED="1648342536462" MODIFIED="1648342539439">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_366650528" CREATED="1648342540556" MODIFIED="1648342541821"/>
 </node>
 </node>
 <node TEXT="Self-Supervised Learning (SSL)" FOLDED="true" POSITION="left" ID="ID_195659803" CREATED="1641524220091" MODIFIED="1644181748534">
@@ -2175,6 +2218,74 @@
 </node>
 <node TEXT="-------------------------------------------------------------------------------------------------" POSITION="left" ID="ID_1156109860" CREATED="1647264433260" MODIFIED="1647264435598">
 <edge COLOR="#007c7c"/>
+</node>
+<node TEXT="Image Segmentation" FOLDED="true" POSITION="left" ID="ID_1791688507" CREATED="1607496654173" MODIFIED="1648342510870">
+<edge COLOR="#ff00ff"/>
+<node TEXT="Semantic Segmentation" ID="ID_1927721844" CREATED="1578733352755" MODIFIED="1587526865045">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="1505.04597: U-Net: convolutional networks for biomedical image segmentation (U-Net)" ID="ID_1662911562" CREATED="1578733451101" MODIFIED="1587526865046">
+<icon BUILTIN="button_ok"/>
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: segmentation" ID="ID_525154704" CREATED="1578733494076" MODIFIED="1587526865046">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="how" ID="ID_564416828" CREATED="1578733499940" MODIFIED="1587526865046">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="training strategy that relies on strong use of data augmentation" ID="ID_1775116489" CREATED="1578733508732" MODIFIED="1587526865046">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="architecture: contracting path to capture context and a symmetric expanding path that enables precise localization" ID="ID_1230729181" CREATED="1578733542669" MODIFIED="1587526865047">
+<icon BUILTIN="wizard"/>
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="1912.08193 PointRend: Image Segmentation as Rendering (kaiming)" ID="ID_1360164242" CREATED="1591524011593" MODIFIED="1591524026866">
+<icon BUILTIN="button_ok"/>
+</node>
+<node TEXT="2012.05007: group-wise semantic mining for weakly supervised semantic segmentation" ID="ID_871835183" CREATED="1607580365071" MODIFIED="1607580381423">
+<node TEXT="input images are represented as graph nodes, and the underlying relations between a pair of images are characterized by an efficient co-attention mechnism" ID="ID_701602240" CREATED="1607580528072" MODIFIED="1607580553437"/>
+</node>
+<node TEXT="2101: Rethinking Semantic Segmentation from a Sequence-to-Sequence Perspective with Transformers" ID="ID_782123948" CREATED="1610424579200" MODIFIED="1610424586216"/>
+<node TEXT="Multi-Source Domain Adaptation with Collaborative Learning for Semantic Segmentation (cvpr21)" ID="ID_1873517908" CREATED="1615358252825" MODIFIED="1615358259859">
+<node TEXT="arXiv:2103.04717" ID="ID_1286107433" CREATED="1615358260849" MODIFIED="1615358265830"/>
+</node>
+</node>
+<node TEXT="Weakly supervised semantic segmentation" ID="ID_898901373" CREATED="1617621463991" MODIFIED="1617621470599">
+<node TEXT="CVPR21: Background-Aware Pooling and Noise-Aware Loss for Weakly-Supervised Semantic Segmentation" ID="ID_438120929" CREATED="1617621471500" MODIFIED="1617621479134">
+<node TEXT="bounding boxes do not specify object boundaries" ID="ID_630389636" CREATED="1617622064739" MODIFIED="1617622078587">
+<node TEXT="background-aware pooling, focusing more on aggregating foreground features, for high quality pseudo segmentation labels" ID="ID_1930311428" CREATED="1617622086378" MODIFIED="1617622241077"/>
+</node>
+<node TEXT="noisy label especially at object boundaries" ID="ID_1470006065" CREATED="1617622216454" MODIFIED="1617622256519">
+<node TEXT="noise-aware loss, less susceptible to incorrect labels" ID="ID_707624454" CREATED="1617622261098" MODIFIED="1617622288020"/>
+</node>
+</node>
+</node>
+<node TEXT="Instance Segmentation" ID="ID_1417928999" CREATED="1578733356683" MODIFIED="1587526865048">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="Mask R-CNN" ID="ID_1460418401" CREATED="1590805638982" MODIFIED="1590805641615"/>
+<node TEXT="2003.13954 FGN: Fully Guided Network for Few-Shot Instance Segmentation (cvpr20)" ID="ID_1454655339" CREATED="1590975022052" MODIFIED="1590975029134"/>
+<node TEXT="2012.07177&#xa;Simple Copy-Paste is a Strong Data Augmentation Method for Instance Segmentation" ID="ID_792173050" CREATED="1608880556971" MODIFIED="1608880566837"/>
+</node>
+<node TEXT="Saliency detection" ID="ID_795389078" CREATED="1608011036212" MODIFIED="1617622498533">
+<node TEXT="2007.11782: accurate rgb-d salient object detection via collaborative learning" ID="ID_160234591" CREATED="1608013525975" MODIFIED="1608013547848"/>
+</node>
+<node TEXT="Alpha/Background Matting" ID="ID_656375396" CREATED="1585103359561" MODIFIED="1590805658076">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="2003.07711: F, B, Alpha Matting (ECCV20 submitted)" ID="ID_98155221" CREATED="1585103366049" MODIFIED="1587526865049">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: estimating opacity mask for objects" ID="ID_40944389" CREATED="1585103398418" MODIFIED="1587526865049">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="why: existing networks only predict the alpha matte" ID="ID_349450024" CREATED="1585103433174" MODIFIED="1587526865050">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="how: a low-cost modification to alpha matting networks" ID="ID_688016212" CREATED="1585103410787" MODIFIED="1587526865051">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="2004.00626 Background Matting: The World is Your Green Screen (cvpr20)" ID="ID_1311753286" CREATED="1590805662549" MODIFIED="1590805676803"/>
+</node>
 </node>
 <node TEXT="Classification" FOLDED="true" POSITION="left" ID="ID_1412187905" CREATED="1576825420762" MODIFIED="1648335928432">
 <icon BUILTIN="clanbomber"/>
@@ -3257,74 +3368,6 @@
 <node TEXT="Cross-Modal Common Representation Learning with Triplet Loss Functions" ID="ID_1827284412" CREATED="1646944290551" MODIFIED="1646944296357">
 <icon BUILTIN="pencil"/>
 <node TEXT="fair" ID="ID_1712372002" CREATED="1646944300395" MODIFIED="1646944304415"/>
-</node>
-</node>
-<node TEXT="Segmentation" FOLDED="true" POSITION="left" ID="ID_1791688507" CREATED="1607496654173" MODIFIED="1642394216358">
-<edge COLOR="#ff00ff"/>
-<node TEXT="Semantic Segmentation" ID="ID_1927721844" CREATED="1578733352755" MODIFIED="1587526865045">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="1505.04597: U-Net: convolutional networks for biomedical image segmentation (U-Net)" ID="ID_1662911562" CREATED="1578733451101" MODIFIED="1587526865046">
-<icon BUILTIN="button_ok"/>
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: segmentation" ID="ID_525154704" CREATED="1578733494076" MODIFIED="1587526865046">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how" ID="ID_564416828" CREATED="1578733499940" MODIFIED="1587526865046">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="training strategy that relies on strong use of data augmentation" ID="ID_1775116489" CREATED="1578733508732" MODIFIED="1587526865046">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="architecture: contracting path to capture context and a symmetric expanding path that enables precise localization" ID="ID_1230729181" CREATED="1578733542669" MODIFIED="1587526865047">
-<icon BUILTIN="wizard"/>
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="1912.08193 PointRend: Image Segmentation as Rendering (kaiming)" ID="ID_1360164242" CREATED="1591524011593" MODIFIED="1591524026866">
-<icon BUILTIN="button_ok"/>
-</node>
-<node TEXT="2012.05007: group-wise semantic mining for weakly supervised semantic segmentation" ID="ID_871835183" CREATED="1607580365071" MODIFIED="1607580381423">
-<node TEXT="input images are represented as graph nodes, and the underlying relations between a pair of images are characterized by an efficient co-attention mechnism" ID="ID_701602240" CREATED="1607580528072" MODIFIED="1607580553437"/>
-</node>
-<node TEXT="2101: Rethinking Semantic Segmentation from a Sequence-to-Sequence Perspective with Transformers" ID="ID_782123948" CREATED="1610424579200" MODIFIED="1610424586216"/>
-<node TEXT="Multi-Source Domain Adaptation with Collaborative Learning for Semantic Segmentation (cvpr21)" ID="ID_1873517908" CREATED="1615358252825" MODIFIED="1615358259859">
-<node TEXT="arXiv:2103.04717" ID="ID_1286107433" CREATED="1615358260849" MODIFIED="1615358265830"/>
-</node>
-</node>
-<node TEXT="Weakly supervised semantic segmentation" ID="ID_898901373" CREATED="1617621463991" MODIFIED="1617621470599">
-<node TEXT="CVPR21: Background-Aware Pooling and Noise-Aware Loss for Weakly-Supervised Semantic Segmentation" ID="ID_438120929" CREATED="1617621471500" MODIFIED="1617621479134">
-<node TEXT="bounding boxes do not specify object boundaries" ID="ID_630389636" CREATED="1617622064739" MODIFIED="1617622078587">
-<node TEXT="background-aware pooling, focusing more on aggregating foreground features, for high quality pseudo segmentation labels" ID="ID_1930311428" CREATED="1617622086378" MODIFIED="1617622241077"/>
-</node>
-<node TEXT="noisy label especially at object boundaries" ID="ID_1470006065" CREATED="1617622216454" MODIFIED="1617622256519">
-<node TEXT="noise-aware loss, less susceptible to incorrect labels" ID="ID_707624454" CREATED="1617622261098" MODIFIED="1617622288020"/>
-</node>
-</node>
-</node>
-<node TEXT="Instance Segmentation" ID="ID_1417928999" CREATED="1578733356683" MODIFIED="1587526865048">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="Mask R-CNN" ID="ID_1460418401" CREATED="1590805638982" MODIFIED="1590805641615"/>
-<node TEXT="2003.13954 FGN: Fully Guided Network for Few-Shot Instance Segmentation (cvpr20)" ID="ID_1454655339" CREATED="1590975022052" MODIFIED="1590975029134"/>
-<node TEXT="2012.07177&#xa;Simple Copy-Paste is a Strong Data Augmentation Method for Instance Segmentation" ID="ID_792173050" CREATED="1608880556971" MODIFIED="1608880566837"/>
-</node>
-<node TEXT="Saliency detection" ID="ID_795389078" CREATED="1608011036212" MODIFIED="1617622498533">
-<node TEXT="2007.11782: accurate rgb-d salient object detection via collaborative learning" ID="ID_160234591" CREATED="1608013525975" MODIFIED="1608013547848"/>
-</node>
-<node TEXT="Alpha/Background Matting" ID="ID_656375396" CREATED="1585103359561" MODIFIED="1590805658076">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="2003.07711: F, B, Alpha Matting (ECCV20 submitted)" ID="ID_98155221" CREATED="1585103366049" MODIFIED="1587526865049">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: estimating opacity mask for objects" ID="ID_40944389" CREATED="1585103398418" MODIFIED="1587526865049">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: existing networks only predict the alpha matte" ID="ID_349450024" CREATED="1585103433174" MODIFIED="1587526865050">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: a low-cost modification to alpha matting networks" ID="ID_688016212" CREATED="1585103410787" MODIFIED="1587526865051">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="2004.00626 Background Matting: The World is Your Green Screen (cvpr20)" ID="ID_1311753286" CREATED="1590805662549" MODIFIED="1590805676803"/>
 </node>
 </node>
 <node TEXT="Learning" FOLDED="true" POSITION="left" ID="ID_876811772" CREATED="1583309966895" MODIFIED="1642394191143">
