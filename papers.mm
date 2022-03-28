@@ -468,7 +468,8 @@
 </node>
 <node TEXT="Attack Detection &amp; Vul Analysis" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1244682927" CREATED="1646761472294" MODIFIED="1647048997914">
 <edge COLOR="#7c0000"/>
-<node TEXT="Survey" ID="ID_532349138" CREATED="1646943062780" MODIFIED="1646943065197">
+<node TEXT="Survey" ID="ID_532349138" CREATED="1646943062780" MODIFIED="1648419467256">
+<font BOLD="true"/>
 <node TEXT="Adversarial Example Detection for DNN Models: A Review and Experimental Comparison" ID="ID_1054333884" CREATED="1646943075067" MODIFIED="1646943080350">
 <icon BUILTIN="bookmark"/>
 <icon BUILTIN="pencil"/>
@@ -509,7 +510,8 @@
 <icon BUILTIN="pencil"/>
 </node>
 </node>
-<node TEXT="Perturbation Detection" ID="ID_983985712" CREATED="1641523884091" MODIFIED="1644180825581">
+<node TEXT="Perturbation Detection" ID="ID_983985712" CREATED="1641523884091" MODIFIED="1648419471576">
+<font BOLD="true"/>
 <node TEXT="(survey) towards understanding and harnessing the effect of image transformation in adversarial deteciton" ID="ID_1343762323" CREATED="1641523891006" MODIFIED="1641523914261">
 <icon BUILTIN="pencil"/>
 <node TEXT="via image transformations" ID="ID_1033635622" CREATED="1641523928903" MODIFIED="1641523932870"/>
@@ -522,6 +524,15 @@
 </node>
 <node TEXT="standalone detector independent of the underlying model" ID="ID_1195494420" CREATED="1645108458713" MODIFIED="1645108481695"/>
 <node TEXT="energy distribution=based adversarial deteciton" ID="ID_1662739452" CREATED="1645108807054" MODIFIED="1645108816218"/>
+</node>
+<node TEXT="Adversarial Examples Are Not Easily Detected:&#xa;Bypassing Ten Detection Methods" ID="ID_817758062" CREATED="1648419488457" MODIFIED="1648419545494">
+<icon BUILTIN="bookmark"/>
+<icon BUILTIN="unchecked"/>
+<font BOLD="true"/>
+<node TEXT="AISec" ID="ID_1277352211" CREATED="1648419525486" MODIFIED="1648419528313">
+<node TEXT="Nicolas Carlini" ID="ID_1594367861" CREATED="1648419537256" MODIFIED="1648419540889"/>
+<node TEXT="Survey paper" ID="ID_1477052281" CREATED="1648419528531" MODIFIED="1648419534734"/>
+</node>
 </node>
 <node TEXT="multimodal" ID="ID_141398745" CREATED="1646929096139" MODIFIED="1647048804971">
 <node TEXT="Detecting Adversarial Perturbations in Multi-Task Perception" ID="ID_274457308" CREATED="1646929102998" MODIFIED="1646932772460">
@@ -585,6 +596,10 @@
 </node>
 <node TEXT="2018.00401: advances in adversarial attacks and defenses in computer vision: a survey" ID="ID_493255704" CREATED="1647567861740" MODIFIED="1647567881439">
 <icon BUILTIN="pencil"/>
+</node>
+<node TEXT="Unsolved Problems in ML Safety" ID="ID_1337188738" CREATED="1648422756392" MODIFIED="1648422764907">
+<icon BUILTIN="unchecked"/>
+<node TEXT="Carlini" ID="ID_1564104070" CREATED="1648422765982" MODIFIED="1648422768150"/>
 </node>
 </node>
 <node TEXT="Benchmark" ID="ID_855034612" CREATED="1642431513665" MODIFIED="1648180915383">
@@ -1614,6 +1629,10 @@
 <node TEXT="Indiscriminate Poisoning Attacks on Unsupervised Contrastive Learning" ID="ID_103472433" CREATED="1647267739350" MODIFIED="1647267743429">
 <icon BUILTIN="pencil"/>
 </node>
+<node TEXT="Poisoning and Backdooring Contrastive Learning" ID="ID_199714317" CREATED="1648425561210" MODIFIED="1648425562006">
+<node TEXT="Carlini" ID="ID_1124457398" CREATED="1648425564654" MODIFIED="1648425567024"/>
+<node TEXT="CLIP" ID="ID_653822881" CREATED="1648425569833" MODIFIED="1648425571800"/>
+</node>
 </node>
 </node>
 <node TEXT="Defense" ID="ID_1943792971" CREATED="1642964418531" MODIFIED="1642965511845">
@@ -1994,13 +2013,16 @@
 <node TEXT="CVPR22" ID="ID_360837902" CREATED="1648336845156" MODIFIED="1648336846512"/>
 </node>
 </node>
-<node TEXT="Privacy ML" FOLDED="true" POSITION="left" ID="ID_1174539463" CREATED="1590802979023" MODIFIED="1647265584135">
+<node TEXT="Privacy ML" POSITION="left" ID="ID_1174539463" CREATED="1590802979023" MODIFIED="1647265584135">
 <edge COLOR="#7c0000"/>
 <node TEXT="Encrypt / Decrypt" ID="ID_892914237" CREATED="1590803103499" MODIFIED="1590803111112">
 <node TEXT="2004.05523 DeepEDN: A Deep Learning-based Image Encryption and Decryption Network for Internet of Medical Things" ID="ID_779071488" CREATED="1590802983849" MODIFIED="1590802993502"/>
 </node>
 <node TEXT="Membership Inference" ID="ID_1965495393" CREATED="1591523395980" MODIFIED="1591523401694">
 <node TEXT="2001.00071 PrivGAN: Protecting GANs from membership inference attacks at low cos" ID="ID_370428646" CREATED="1591523402373" MODIFIED="1591523413026"/>
+<node TEXT="Label-only membership inference attacks" ID="ID_1310996729" CREATED="1648422783790" MODIFIED="1648422789621">
+<node TEXT="Carlini" ID="ID_1163854114" CREATED="1648422791804" MODIFIED="1648422793928"/>
+</node>
 </node>
 <node TEXT="Physical Mail" ID="ID_1223992131" CREATED="1608872127823" MODIFIED="1608872130574">
 <node TEXT="2012.11803&#xa; Modeling Deep Learning Based Privacy Attacks on Physical Mail" ID="ID_924300325" CREATED="1608872131773" MODIFIED="1608872140902"/>
@@ -2038,6 +2060,13 @@
 <icon BUILTIN="unchecked"/>
 <node TEXT="iccv21" ID="ID_588513264" CREATED="1642456785239" MODIFIED="1642456786804"/>
 <node TEXT="attackers can construct sensitive information (such as faces) merely from model predictions" ID="ID_111964935" CREATED="1642456788665" MODIFIED="1642456829436"/>
+</node>
+<node TEXT="WHEN MACHINE LEARNING ISN&#x2019;T PRIVATE" ID="ID_1244120972" CREATED="1648419587624" MODIFIED="1648419588530">
+<node TEXT="USENIX" ID="ID_105372756" CREATED="1648419590393" MODIFIED="1648419592312"/>
+<node TEXT="Carlini" ID="ID_901631564" CREATED="1648419592553" MODIFIED="1648419594517"/>
+</node>
+<node TEXT="Counterfactual Memorization in&#xa;Neural Language Models" ID="ID_426897548" CREATED="1648425614069" MODIFIED="1648425614886">
+<node TEXT="Carlini" ID="ID_1948661446" CREATED="1648425616141" MODIFIED="1648425617588"/>
 </node>
 </node>
 <node TEXT="model watermark" ID="ID_854641187" CREATED="1647567587011" MODIFIED="1647567593099">
