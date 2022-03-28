@@ -249,15 +249,161 @@ What is the core idea of mean field theory (MFT)? How can MFT be used to
  the Kullback-Leibler divergence and how is it used in mean field theory?
 \end_layout
 
+\begin_layout Description
+Core-Idea of MFT is to find a distribution 
+\begin_inset Formula $Q(\bm{x})$
+\end_inset
+
+ which approximates 
+\begin_inset Formula $P(\bm{x})$
+\end_inset
+
+ and for which 
+\begin_inset Formula $\hat{\bm{x}}=\arg\max Q(\bm{x})$
+\end_inset
+
+ can be estimated, instead of directly estimating 
+\begin_inset Formula $\hat{\bm{x}}=\arg\max P(\bm{x})$
+\end_inset
+
+.
+ The distribution should be factorizable so it will be easy to find the
+ argmax: 
+\begin_inset Formula $Q(\bm{x})=\prod_{i\in W}q_{i}(x_{i})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Convert.
+ The mean field free energies are functions of continuous variables (since
+ discrete variables have been replaced by continuous probability distributions),
+ which enables us to compute gradients of the gree energy.
+ This allows us to use steepest descent algorithms and its many variants.
+\end_layout
+
+\begin_layout Description
+KL-Divergence.
+ 
+\begin_inset Formula 
+\[
+D_{KL}(Q||P)=\sum_{x}Q(x)\log\frac{Q(x)}{P(x)}
+\]
+
+\end_inset
+
+measures the divergence between the estimated 
+\begin_inset Formula $Q$
+\end_inset
+
+ and 
+\begin_inset Formula $P$
+\end_inset
+
+.
+ It is equivalent to the free energy plus the lower bound 
+\begin_inset Formula $D_{KL}(Q||P)=F_{MFT}(Q)+\log Z$
+\end_inset
+
+.
+ And the free energy can be minimized using gradiengt methods.
+\end_layout
+
 \begin_layout Subsection
 What is the MFT free energy? Is it convex or not? What strategy can be used
  to improve performance if it is not convex?
+\end_layout
+
+\begin_layout Description
+MFT free energy is
+\begin_inset Formula 
+\[
+F_{MFT}(\bm{q})=\sum_{ij}\sum_{x_{i},x_{j}}q_{i}(x_{i})q_{j}(x_{j})\psi_{ij}(x_{i},x_{j})+\sum_{i\in W}\sum_{x_{i}}q_{i}(x_{i})\phi_{i}(x_{i},\bm{z})+\sum_{i\in W}\sum_{x_{i}}q_{i}(x_{i})\log q_{i}(x_{i})
+\]
+
+\end_inset
+
+which is equivalent to the KL divergence between 
+\begin_inset Formula $Q$
+\end_inset
+
+ and 
+\begin_inset Formula $P$
+\end_inset
+
+ plus a lower bound 
+\begin_inset Formula $\log Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Convex.
+ MFT free energy is monotically decreasing, but not necessarily convex,
+ because 
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial F_{MFT}}{\partial t} & =\sum_{i}\frac{\partial F_{MFT}}{\partial q_{i}}\frac{dq_{i}}{dt}=-\sum_{i}\{\frac{\partial F_{MFT}}{\partial q_{i}}\}^{2}\\
+\frac{\partial F_{MFT}}{\partial t^{2}} & =-2\sum_{i}(\frac{\partial F_{MFT}}{\partial q_{i}}\frac{\partial F_{MFT}}{\partial q_{i}\partial t})
+\end{align*}
+
+\end_inset
+
+and the second order derivative is not always greater or equal than zero.
+ The concavity depends on 
+\begin_inset Formula $\psi_{ij}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+If-not-convex.
+ We can add an extra term 
+\begin_inset Formula $\lambda\sum q_{i}^{2}$
+\end_inset
+
+ to ensure convexity.
 \end_layout
 
 \begin_layout Subsection
 Specify an MFT algorithm.
  What conditions guarantee that an MFT algorithm converges to a local minimum
  of the free energy?
+\end_layout
+
+\begin_layout Description
+
+\series bold
+MFT-Algorithm.
+
+\series default
+ A algorithm based on discrete approximation is 
+\begin_inset Formula 
+\[
+q_{i}^{t+1}=q_{i}^{t}-\Delta\frac{\partial F_{MFT}}{\partial q_{i}}
+\]
+
+\end_inset
+
+There is also a class of discrete iterative algorithms in the 
+\begin_inset Formula $q^{t+1}=f(q^{t})$
+\end_inset
+
+ form.
+ Algorithms can be derived using variational bounding and CCCP.
+\end_layout
+
+\begin_layout Description
+Condition.
+ An MFT algorithm is guaranteed to converge at a local minimum as long as
+ 
+\begin_inset Formula $F_{MFT}(q^{t+1})\leq F_{MFT}(q^{t})$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
