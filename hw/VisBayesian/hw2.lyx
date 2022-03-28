@@ -198,6 +198,38 @@ Describe a Markov Random Field (MRF).
  What is the Markov condition?
 \end_layout
 
+\begin_layout Description
+MRF is a model specified by a distribution 
+\begin_inset Formula $P(\bm{x}|\bm{z})$
+\end_inset
+
+ defined over discrete-valued random variables 
+\begin_inset Formula $\bm{x}=\{x_{i}|i\in W\}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+P(\bm{x}|\bm{z})=\frac{1}{Z(\bm{z})}\exp\big\{-\sum_{i\in W}\phi_{i}(x_{i},\bm{z})-\sum_{i\in W}\sum_{j\in N(i)}\psi_{ij}(x_{i},x_{j})\big\}
+\]
+
+\end_inset
+
+And the goal of MRF is to estimate the properties of the distribution such
+ as the MAP estimator and the marginals.
+\end_layout
+
+\begin_layout Description
+Markov-Condition.
+ A variable is conditionally indepedent of all other variables given its
+ neighbors, namely 
+\begin_inset Formula $x_{i}\perp x_{W\backslash N(i)}|x_{N(i)}$
+\end_inset
+
+.
+ This is also called the local markov property.
+\end_layout
+
 \begin_layout Subsection
 Give two examples of MRFs from the course.
 \end_layout
