@@ -411,6 +411,12 @@ Condition.
 When can MFT be applied to MRF’s with long range interactions efficiently?
 \end_layout
 
+\begin_layout Standard
+When the optimization problem is defined over discrete variables, or a mixture
+ of discrete and continuous variables, MFT can be efficiently applied to
+ MRF.
+\end_layout
+
 \begin_layout Subsection
 What is Deterministic Annealing? What is its justification? Is it guaranteed
  to converge to a global optimum?
@@ -476,6 +482,82 @@ Lec 11
 Describe the belief propagation algorithm? What are the messages and how
  do they relate to the marginal probabilities? Under what conditions is
  it guaranteed to converge to the correct solution?
+\end_layout
+
+\begin_layout Description
+Belief-Propagation.
+ BP is defined in terms of messages 
+\begin_inset Formula $m_{ij}(x_{j})$
+\end_inset
+
+ from 
+\begin_inset Formula $i$
+\end_inset
+
+ to 
+\begin_inset Formula $j$
+\end_inset
+
+, and is specified by the sum-product update rule
+\begin_inset Formula 
+\[
+m_{ij}^{t+1}(x_{j})=\sum_{x_{i}}\exp\{-\psi_{ij}(x_{i},x_{j})-\phi_{i}(x_{i})\}\prod_{k\neq j}m_{ki}^{t}(x_{i})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Messages.
+ The 
+\begin_inset Formula $m_{ij}^{t}(x_{j})$
+\end_inset
+
+ is the message that node 
+\begin_inset Formula $i$
+\end_inset
+
+ passes to node 
+\begin_inset Formula $j$
+\end_inset
+
+ to affect state 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Description
+Marginal.
+ The unary and binary pseudomarginals are related to the messages by:
+\begin_inset Formula 
+\begin{align*}
+b_{i}^{t}(x_{i}) & \propto\exp\{-\phi_{i}(x_{i})\}\prod_{k}m_{kj}^{t}(x_{j})\\
+b_{kj}^{t}(x_{k},x_{j}) & \propto\exp\{-\psi_{kj}(x_{k},x_{j})-\phi_{k}(x_{k})-\phi_{j}(x_{j})\}\times\prod_{\tau\neq j}m_{\tau k}^{t}(x_{k})\prod_{l\neq k}m_{lj}^{t}(x_{j})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Guarantee.
+ The admissibility constraint and the consistency constraints:
+\begin_inset Formula 
+\begin{align*}
+\frac{\prod_{ij}b_{ij}(x_{i},x_{j})}{\prod_{i}b_{i}(x_{i})^{n_{i}-1}} & \propto\exp\{-\sum_{ij}\psi_{ij}(x_{i},x_{j})-\sum_{i}\phi(x_{i})\}\propto P(x)\\
+\sum_{x_{j}}b_{ij}(x_{i},x_{j}) & =b_{i}(x_{i})\\
+\sum_{x_{i}}b_{ij}(x_{i},x_{j}) & =b_{j}(x_{i})
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
