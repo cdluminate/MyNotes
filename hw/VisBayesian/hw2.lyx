@@ -11,6 +11,9 @@
 \usepackage{times}
 \end_preamble
 \use_default_options true
+\begin_modules
+customHeadersFooters
+\end_modules
 \maintain_unincluded_children false
 \language english
 \language_package default
@@ -72,7 +75,7 @@
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 1
-\paperpagestyle default
+\paperpagestyle fancy
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -99,9 +102,95 @@ What is semantic segmentation? How can Deep Networks be used for it? How
  can it be improved by using Markov Random Fields?
 \end_layout
 
+\begin_layout Description
+Semantic-Segmentation assigns a label to all pixels in the image.
+\end_layout
+
+\begin_layout Description
+DNNs can be used for it based on training datasets with per-pixel annotation.
+ Partial-annotation is also acceptable because it could be formulated by
+ an EM algorithm.
+\end_layout
+
+\begin_layout Description
+MRFs can improve semantic segmentation because DNNs ignore the spetial context
+ while giving esitimates for the class labels for each pixel.
+ In contrast, the spetial context (or temporal context) can be modeled with
+ Markov Random Fields.
+\end_layout
+
 \begin_layout Subsection
 What is a Gibbs distribution? What us the energy function? What is the normaliza
 tion constant?
+\end_layout
+
+\begin_layout Description
+Gibbs-distribution.
+ A kind of probability function, also called Boltzmann distribution.
+\begin_inset Formula 
+\[
+P(\bm{x})=\frac{\exp(-E(\bm{x}))}{\sum_{x}\exp(-E(\bm{x}))}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\bm{x}$
+\end_inset
+
+ is a vector input, 
+\begin_inset Formula $E(\cdot)$
+\end_inset
+
+ is the energy function.
+\end_layout
+
+\begin_layout Description
+Energy-Function.
+ 
+\begin_inset Formula 
+\[
+E(\bm{x})=\sum_{i\in W}\phi_{i}(x_{i})+\sum_{i\in W}\sum_{j\in N(i)}\psi_{ij}(x_{i},x_{j})
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+ is the unary potentials (unary evidence), and 
+\begin_inset Formula $\psi_{ij}$
+\end_inset
+
+ is the pairwise potentials (context terms), 
+\begin_inset Formula $i$
+\end_inset
+
+ is the pixels of the image 
+\begin_inset Formula $W$
+\end_inset
+
+, and 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is the pixel label.
+ The 
+\begin_inset Formula $N(i)$
+\end_inset
+
+ is the neighborhood of pixel 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Normalization-Constant.
+ The normalization constant ensures the function sums to one in order to
+ be a probablistic distribution.
 \end_layout
 
 \begin_layout Subsection
