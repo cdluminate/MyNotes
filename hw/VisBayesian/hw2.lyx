@@ -234,6 +234,11 @@ Markov-Condition.
 Give two examples of MRFs from the course.
 \end_layout
 
+\begin_layout Standard
+CRFs are special cases of MRF.
+ There are Grid CRF and Fully-connected CRF in the course notes as example.
+\end_layout
+
 \begin_layout Section
 Lec 10
 \end_layout
