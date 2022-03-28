@@ -1,0 +1,297 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage{times}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+HW#2
+\end_layout
+
+\begin_layout Author
+Mo Zhou <mzhou32@jhu.edu>
+\end_layout
+
+\begin_layout Standard
+Lec 9
+\end_layout
+
+\begin_layout Standard
+1.
+ What is semantic segmentation? How can Deep Networks be used for it? How
+\end_layout
+
+\begin_layout Standard
+can it be improved by using Markov Random Fields/
+\end_layout
+
+\begin_layout Standard
+2.
+ What is a Gibbs distribution? What us the energy function? What is the
+ normal-
+\end_layout
+
+\begin_layout Standard
+ization constant?
+\end_layout
+
+\begin_layout Standard
+3.
+ Describe a Markov Random Field (MRF).
+ What is the Markov condition?
+\end_layout
+
+\begin_layout Standard
+4.
+ Give two examples of MRFs from the course.
+\end_layout
+
+\begin_layout Standard
+Lec 10
+\end_layout
+
+\begin_layout Standard
+1.
+ What is the core idea of mean field theory (MFT)? How can MFT be used to
+\end_layout
+
+\begin_layout Standard
+convert a discrete optimization problem into a continuous one? What is the
+\end_layout
+
+\begin_layout Standard
+Kullback-Leibler divergence and how is it used in mean field theory?
+\end_layout
+
+\begin_layout Standard
+2.
+ What is the MFT free energy? Is it convex or not? What strategy can be
+ used to
+\end_layout
+
+\begin_layout Standard
+improve performance if it is not convex?
+\end_layout
+
+\begin_layout Standard
+3.
+ Specify an MFT algorithm.
+ What conditions guarantee that an MFT algorithm
+\end_layout
+
+\begin_layout Standard
+converges to a local minimum of the free energy?
+\end_layout
+
+\begin_layout Standard
+4.
+ When can MFT be applied to MRF’s with long range interactions efficiently?
+\end_layout
+
+\begin_layout Standard
+5.
+ What is Deterministic Annealing? What is its justification? Is it guaranteed
+ to
+\end_layout
+
+\begin_layout Standard
+converge to a global optimum?
+\end_layout
+
+\begin_layout Standard
+Lec 11
+\end_layout
+
+\begin_layout Standard
+1.
+ Describe the belief propagation algorithm? What are the messages and how
+ do
+\end_layout
+
+\begin_layout Standard
+they relate to the marginal probabilities? Under what conditions is it guarantee
+d
+\end_layout
+
+\begin_layout Standard
+to converge to the correct solution?
+\end_layout
+
+\begin_layout Standard
+2.
+ What is the Bethe free energy and how does it relate to belief propagation?
+ How
+\end_layout
+
+\begin_layout Standard
+can the messages in belief propagation be justified?
+\end_layout
+
+\begin_layout Standard
+3.
+ Under what conditions does the Bethe free energy reduce to the MFT free
+ en-
+\end_layout
+
+\begin_layout Standard
+ergy?
+\end_layout
+
+\begin_layout Standard
+Lec 12
+\end_layout
+
+\begin_layout Standard
+1.
+ What are the advantages of formulating probability distributions in terms
+ of
+\end_layout
+
+\begin_layout Standard
+graphs?
+\end_layout
+
+\begin_layout Standard
+2.
+ What is the dynamic programming algorithm? For what class of problems does
+\end_layout
+
+\begin_layout Standard
+dynamic programming apply? For these problems, how does it reduce the com-
+\end_layout
+
+\begin_layout Standard
+plexity of computation?
+\end_layout
+
+\begin_layout Standard
+3.
+ What is the difference between direct and indirect influence?
+\end_layout
+
+\begin_layout Standard
+4.
+ What are Stochastic Grammars? What are AND/OR graphs?
+\end_layout
+
+\begin_layout Standard
+Lec 13
+\end_layout
+
+\begin_layout Standard
+1.
+ What is the correspondence problem in binocular stereo? What is the disparity
+\end_layout
+
+\begin_layout Standard
+and how does it relate to depth?
+\end_layout
+
+\begin_layout Standard
+2.
+ How can be stereo be formulated in terms of a Markov Random Field (MRF)?
+\end_layout
+
+\begin_layout Standard
+and what are the properties of that MRF?
+\end_layout
+
+\begin_layout Standard
+3.
+ What is the epipolar line constraint, and how does it simplify the corresponden
+ce
+\end_layout
+
+\begin_layout Standard
+problem? What inference algorithm can be used to solve it? What inference
+\end_layout
+
+\begin_layout Standard
+algorithm can be used if the epipolar line constraint is not used?
+\end_layout
+
+\begin_layout Standard
+4.
+ Why is Belief Propagation a sensible algorithm to use for binocular stereo?
+\end_layout
+
+\end_body
+\end_document
