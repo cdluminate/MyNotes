@@ -237,6 +237,7 @@ Give two examples of MRFs from the course.
 \begin_layout Standard
 CRFs are special cases of MRF.
  There are Grid CRF and Fully-connected CRF in the course notes as example.
+ Line process is also an MRF formulation of the weak-membrane model.
 \end_layout
 
 \begin_layout Section
@@ -413,6 +414,58 @@ When can MFT be applied to MRF’s with long range interactions efficiently?
 \begin_layout Subsection
 What is Deterministic Annealing? What is its justification? Is it guaranteed
  to converge to a global optimum?
+\end_layout
+
+\begin_layout Description
+Deterministic-Annealing is a continuation method which can improve mean
+ field theory.
+ This specifies a family of free energy functions 
+\begin_inset Formula $F(\cdot,T)$
+\end_inset
+
+ parameterized by temperature 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Justification.
+ The fixed value 
+\begin_inset Formula $T=1$
+\end_inset
+
+ corresponds to the problem that we want to solve.
+ And the key idea is that the energy functions get more convex as 
+\begin_inset Formula $T$
+\end_inset
+
+ increases.
+ So the algorithm finds a minimum of 
+\begin_inset Formula $F(\cdot,T)$
+\end_inset
+
+ for large 
+\begin_inset Formula $T$
+\end_inset
+
+ and gives it initial conditions for minimizing 
+\begin_inset Formula $F(\cdot,T)$
+\end_inset
+
+ at smaller 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Guarantee.
+ There is no guarantee that deterministic annealing will converge to the
+ global optimum.
+ But empirically it yields good results.
 \end_layout
 
 \begin_layout Section
