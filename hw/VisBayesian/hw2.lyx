@@ -90,207 +90,124 @@ HW#2
 Mo Zhou <mzhou32@jhu.edu>
 \end_layout
 
-\begin_layout Standard
+\begin_layout Section
 Lec 9
 \end_layout
 
-\begin_layout Standard
-1.
- What is semantic segmentation? How can Deep Networks be used for it? How
+\begin_layout Subsection
+What is semantic segmentation? How can Deep Networks be used for it? How
+ can it be improved by using Markov Random Fields?
 \end_layout
 
-\begin_layout Standard
-can it be improved by using Markov Random Fields/
+\begin_layout Subsection
+What is a Gibbs distribution? What us the energy function? What is the normaliza
+tion constant?
 \end_layout
 
-\begin_layout Standard
-2.
- What is a Gibbs distribution? What us the energy function? What is the
- normal-
-\end_layout
-
-\begin_layout Standard
-ization constant?
-\end_layout
-
-\begin_layout Standard
-3.
- Describe a Markov Random Field (MRF).
+\begin_layout Subsection
+Describe a Markov Random Field (MRF).
  What is the Markov condition?
 \end_layout
 
-\begin_layout Standard
-4.
- Give two examples of MRFs from the course.
+\begin_layout Subsection
+Give two examples of MRFs from the course.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Section
 Lec 10
 \end_layout
 
-\begin_layout Standard
-1.
- What is the core idea of mean field theory (MFT)? How can MFT be used to
+\begin_layout Subsection
+What is the core idea of mean field theory (MFT)? How can MFT be used to
+ convert a discrete optimization problem into a continuous one? What is
+ the Kullback-Leibler divergence and how is it used in mean field theory?
 \end_layout
 
-\begin_layout Standard
-convert a discrete optimization problem into a continuous one? What is the
+\begin_layout Subsection
+What is the MFT free energy? Is it convex or not? What strategy can be used
+ to improve performance if it is not convex?
 \end_layout
 
-\begin_layout Standard
-Kullback-Leibler divergence and how is it used in mean field theory?
+\begin_layout Subsection
+Specify an MFT algorithm.
+ What conditions guarantee that an MFT algorithm converges to a local minimum
+ of the free energy?
 \end_layout
 
-\begin_layout Standard
-2.
- What is the MFT free energy? Is it convex or not? What strategy can be
- used to
+\begin_layout Subsection
+When can MFT be applied to MRF’s with long range interactions efficiently?
 \end_layout
 
-\begin_layout Standard
-improve performance if it is not convex?
+\begin_layout Subsection
+What is Deterministic Annealing? What is its justification? Is it guaranteed
+ to converge to a global optimum?
 \end_layout
 
-\begin_layout Standard
-3.
- Specify an MFT algorithm.
- What conditions guarantee that an MFT algorithm
-\end_layout
-
-\begin_layout Standard
-converges to a local minimum of the free energy?
-\end_layout
-
-\begin_layout Standard
-4.
- When can MFT be applied to MRF’s with long range interactions efficiently?
-\end_layout
-
-\begin_layout Standard
-5.
- What is Deterministic Annealing? What is its justification? Is it guaranteed
- to
-\end_layout
-
-\begin_layout Standard
-converge to a global optimum?
-\end_layout
-
-\begin_layout Standard
+\begin_layout Section
 Lec 11
 \end_layout
 
-\begin_layout Standard
-1.
- Describe the belief propagation algorithm? What are the messages and how
- do
+\begin_layout Subsection
+Describe the belief propagation algorithm? What are the messages and how
+ do they relate to the marginal probabilities? Under what conditions is
+ it guaranteed to converge to the correct solution?
 \end_layout
 
-\begin_layout Standard
-they relate to the marginal probabilities? Under what conditions is it guarantee
-d
+\begin_layout Subsection
+What is the Bethe free energy and how does it relate to belief propagation?
+ How can the messages in belief propagation be justified?
 \end_layout
 
-\begin_layout Standard
-to converge to the correct solution?
+\begin_layout Subsection
+Under what conditions does the Bethe free energy reduce to the MFT free
+ energy?
 \end_layout
 
-\begin_layout Standard
-2.
- What is the Bethe free energy and how does it relate to belief propagation?
- How
-\end_layout
-
-\begin_layout Standard
-can the messages in belief propagation be justified?
-\end_layout
-
-\begin_layout Standard
-3.
- Under what conditions does the Bethe free energy reduce to the MFT free
- en-
-\end_layout
-
-\begin_layout Standard
-ergy?
-\end_layout
-
-\begin_layout Standard
+\begin_layout Section
 Lec 12
 \end_layout
 
-\begin_layout Standard
-1.
- What are the advantages of formulating probability distributions in terms
- of
+\begin_layout Subsection
+What are the advantages of formulating probability distributions in terms
+ of graphs?
 \end_layout
 
-\begin_layout Standard
-graphs?
+\begin_layout Subsection
+What is the dynamic programming algorithm? For what class of problems does
+ dynamic programming apply? For these problems, how does it reduce the complexit
+y of computation?
 \end_layout
 
-\begin_layout Standard
-2.
- What is the dynamic programming algorithm? For what class of problems does
+\begin_layout Subsection
+What is the difference between direct and indirect influence?
 \end_layout
 
-\begin_layout Standard
-dynamic programming apply? For these problems, how does it reduce the com-
+\begin_layout Subsection
+What are Stochastic Grammars? What are AND/OR graphs?
 \end_layout
 
-\begin_layout Standard
-plexity of computation?
-\end_layout
-
-\begin_layout Standard
-3.
- What is the difference between direct and indirect influence?
-\end_layout
-
-\begin_layout Standard
-4.
- What are Stochastic Grammars? What are AND/OR graphs?
-\end_layout
-
-\begin_layout Standard
+\begin_layout Section
 Lec 13
 \end_layout
 
-\begin_layout Standard
-1.
- What is the correspondence problem in binocular stereo? What is the disparity
+\begin_layout Subsection
+What is the correspondence problem in binocular stereo? What is the disparity
+ and how does it relate to depth?
 \end_layout
 
-\begin_layout Standard
-and how does it relate to depth?
+\begin_layout Subsection
+How can be stereo be formulated in terms of a Markov Random Field (MRF)?
+ and what are the properties of that MRF?
 \end_layout
 
-\begin_layout Standard
-2.
- How can be stereo be formulated in terms of a Markov Random Field (MRF)?
+\begin_layout Subsection
+What is the epipolar line constraint, and how does it simplify the correspondenc
+e problem? What inference algorithm can be used to solve it? What inference
+ algorithm can be used if the epipolar line constraint is not used?
 \end_layout
 
-\begin_layout Standard
-and what are the properties of that MRF?
-\end_layout
-
-\begin_layout Standard
-3.
- What is the epipolar line constraint, and how does it simplify the corresponden
-ce
-\end_layout
-
-\begin_layout Standard
-problem? What inference algorithm can be used to solve it? What inference
-\end_layout
-
-\begin_layout Standard
-algorithm can be used if the epipolar line constraint is not used?
-\end_layout
-
-\begin_layout Standard
-4.
- Why is Belief Propagation a sensible algorithm to use for binocular stereo?
+\begin_layout Subsection
+Why is Belief Propagation a sensible algorithm to use for binocular stereo?
 \end_layout
 
 \end_body
