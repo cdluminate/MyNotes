@@ -645,10 +645,79 @@ What are the advantages of formulating probability distributions in terms
  of graphs?
 \end_layout
 
+\begin_layout Standard
+Graphical models is a formal language for describing probability distributions
+ with simplified (and compact) representation and simplified reasoning,
+ which represents statistical dependencies that exist among a set of variables
+ graphically.
+ Furthermore, it is helpful for undersantding the structure ofd the data
+ described by the distributions, and enables transferring distributions
+ from one domain to another.
+ It also makes it easier to perform inference and to do learning.
+\end_layout
+
 \begin_layout Subsection
 What is the dynamic programming algorithm? For what class of problems does
  dynamic programming apply? For these problems, how does it reduce the complexit
 y of computation?
+\end_layout
+
+\begin_layout Description
+Dynamic-Programming.
+ Intuitively, DP explots the 
+\begin_inset Quotes eld
+\end_inset
+
+linear structure
+\begin_inset Quotes erd
+\end_inset
+
+ to break problems down into subcomponents.
+ More technically, suppose we want to minimize 
+\begin_inset Formula 
+\[
+\phi(x_{1},\ldots,x_{N})=\phi_{12}(x_{1},x_{2})+\phi_{23}(x_{2},x_{3})+\cdots+\phi_{N-1N}(x_{N-1},x_{N})
+\]
+
+\end_inset
+
+and in general, for each 
+\begin_inset Formula $x_{m}$
+\end_inset
+
+, and DP is to iteratively compute
+\begin_inset Formula 
+\[
+h_{m}(x_{m})=\min_{x_{m-1}}\{h_{m-1}(x_{m-1})+\phi_{m-1m}(x_{m-1},x_{m})\}
+\]
+
+\end_inset
+
+which revocvers the shortest path for the problem.
+ 
+\end_layout
+
+\begin_layout Description
+Class-of-Problem.
+ DP can be applied to any graph without closed loops.
+ 
+\end_layout
+
+\begin_layout Description
+Complexity.
+ DP only needs roughly 
+\begin_inset Formula $k^{2}N$
+\end_inset
+
+ operations instead of considering the total 
+\begin_inset Formula $k^{N}$
+\end_inset
+
+ possible states of the 
+\begin_inset Formula $\phi(x_{1},\ldots,x_{N})$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
