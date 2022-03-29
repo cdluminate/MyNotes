@@ -630,6 +630,12 @@ Under what conditions does the Bethe free energy reduce to the MFT free
  energy?
 \end_layout
 
+\begin_layout Standard
+Bethe Free energy appears to be better than the mean field theory free energy
+ because it includes pairwise pseudo-marginal distributions and reduces
+ to the MFT free energy if these are replaced by the product of unary marginals.
+\end_layout
+
 \begin_layout Section
 Lec 12
 \end_layout
