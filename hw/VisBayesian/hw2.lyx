@@ -565,6 +565,66 @@ What is the Bethe free energy and how does it relate to belief propagation?
  How can the messages in belief propagation be justified?
 \end_layout
 
+\begin_layout Description
+Bethe-Free-Energy differs from the MFT free energy by including the pairwise
+ pseudo-marginals 
+\begin_inset Formula $b_{ij}(x_{i},x_{j})$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+F[b;\lambda] & =\sum_{ij}\sum_{x_{i},x_{j}}b_{ij}(x_{i},x_{j})\psi_{ij}(x_{i},x_{j})+\sum_{i}\sum_{x_{i}}b_{i}(x_{i})\phi_{i}(x_{i})\\
+ & +\sum_{ij}\sum_{x_{i},x_{j}}b_{ij}(x_{i},x_{j})\log b_{ij}(x_{i},x_{j})-\sum_{i}(n_{i}-1)\sum_{x_{i}}b_{i}(x_{i})\log b_{i}(x_{i})
+\end{align*}
+
+\end_inset
+
+but we must also impose consistency and normalization constraints which
+ we impose by Lagrange multipliers 
+\begin_inset Formula $\{\lambda_{ij}(x_{j})\}$
+\end_inset
+
+ and 
+\begin_inset Formula $\{\gamma_{i}\}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\sum_{i,j}\sum_{x_{j}}\lambda_{ij}(x_{j})\{\sum_{x_{i}}b_{ij}(x_{i},x_{j})-b_{j}(x_{j})\}+\sum_{i,j}\sum_{x_{i}}\lambda_{ji}(x_{i})\{\sum_{x_{j}}b_{ij}(x_{i},x_{j})-b_{i}(x_{i})\}+\sum_{i}\gamma_{i}\{\sum_{x_{i}}b_{i}(x_{i})-1\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Relation-to-BP.
+ It can be shown that the extrema of the Bethe free energy also obey the
+ admissibility and consistency constraints.
+ Hnece, the fixed points of belief propagation must correspond to extrema
+ of the Bethe free energy.
+\end_layout
+
+\begin_layout Description
+Messages-in-BP.
+ We can identify the messages with a function of the 
+\begin_inset Formula $\lambda$
+\end_inset
+
+'s:
+\begin_inset Formula 
+\[
+\lambda_{ji}(x_{i})=-\sum_{k\in N(i)/j}\log m_{ki}(x_{i})
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Under what conditions does the Bethe free energy reduce to the MFT free
  energy?
