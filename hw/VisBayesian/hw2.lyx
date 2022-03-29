@@ -724,8 +724,53 @@ Complexity.
 What is the difference between direct and indirect influence?
 \end_layout
 
+\begin_layout Standard
+According to Judea Pearl, 
+\begin_inset Quotes eld
+\end_inset
+
+Direct and Indirect Eects
+\begin_inset Quotes erd
+\end_inset
+
+, the direct effect of one event on another can be defined and measured
+ by holding constant all intermediate variables between the two.
+ Indirect effects present conceptual and practical difficulties, because
+ they cannot be isolated by holding certain variables constant.
+ 
+\end_layout
+
 \begin_layout Subsection
 What are Stochastic Grammars? What are AND/OR graphs?
+\end_layout
+
+\begin_layout Description
+PCFG.
+ A probabilistic context free grammar (PCFG) is a context-free grammar that
+ associates a probability with each of its production rules.
+ The joint probability of a sentence and its parse tree is the product of
+ hte probabilities of the production rules used to generate the sentence.
+\end_layout
+
+\begin_layout Description
+Stochastic-Context-Free-Grammar is a graphical model with variable topology
+ and variable number of nodes.
+ For example, Probabilities can be assigned to rules, and there will be
+ probability distribution over the structure.
+\end_layout
+
+\begin_layout Description
+AND/OR-Graph.
+ Is graphical models involving AND node or OR node.
+ The OR nodes acts as 
+\begin_inset Quotes eld
+\end_inset
+
+switch variables
+\begin_inset Quotes erd
+\end_inset
+
+, and graph topology changes when we select the switch.
 \end_layout
 
 \begin_layout Section
