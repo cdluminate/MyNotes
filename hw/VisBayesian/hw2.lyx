@@ -782,9 +782,94 @@ What is the correspondence problem in binocular stereo? What is the disparity
  and how does it relate to depth?
 \end_layout
 
+\begin_layout Description
+Correspondence.
+ The correspondence problem between the epipolar lines between the two images,
+ as well as the correspondence problem of the points.
+\end_layout
+
+\begin_layout Description
+Disparity-Depth.
+ Disparity is when point 
+\begin_inset Formula $i$
+\end_inset
+
+ in the left image matches point 
+\begin_inset Formula $i+d_{i}$
+\end_inset
+
+ in the right image.
+ This case is called 
+\begin_inset Formula $\{d_{i}\}$
+\end_inset
+
+-disparity.
+ Estimating disparity 
+\begin_inset Formula $\{d_{i}\}$
+\end_inset
+
+ determines depth.
+ If matching is known, depth is estimated by trigonometry.
+\end_layout
+
 \begin_layout Subsection
 How can be stereo be formulated in terms of a Markov Random Field (MRF)?
  and what are the properties of that MRF?
+\end_layout
+
+\begin_layout Description
+Stereo-MRF.
+ The energy function can be
+\begin_inset Formula 
+\[
+E[\{d_{i}\}]=\sum_{i}\phi(d_{i},I_{L},I_{R})+\sum_{i}\psi(d_{i},d_{i+1})
+\]
+
+\end_inset
+
+where the left term is data cue (e.g.
+ 
+\begin_inset Formula $|F(I_{L})_{i}-F(I_{R})_{i+d_{i}}|$
+\end_inset
+
+), and the left term is the weak smoothness constraint (e.g.
+ 
+\begin_inset Formula $K(d_{i}-d_{i+1})$
+\end_inset
+
+.
+ And 
+\begin_inset Formula $F(I_{L})_{i}$
+\end_inset
+
+ is image feature computated on left image 
+\begin_inset Formula $I_{L}$
+\end_inset
+
+ at position 
+\begin_inset Formula $i$
+\end_inset
+
+ (e.g.
+ derivative filters, smoothing filters), while 
+\begin_inset Formula $F(I_{R})_{i+d_{i}}$
+\end_inset
+
+ is the image feature computed on right image 
+\begin_inset Formula $I_{R}$
+\end_inset
+
+ at position 
+\begin_inset Formula $i+d_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Property.
+ It needs weak smootnhess of disparity to resolve matching ambiguities.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -793,8 +878,94 @@ e problem? What inference algorithm can be used to solve it? What inference
  algorithm can be used if the epipolar line constraint is not used?
 \end_layout
 
+\begin_layout Description
+Epipolar-Constraint.
+ The geometry means that a point in the left eye can only match to points
+ on one line in the right eye.
+ 
+\end_layout
+
+\begin_layout Description
+Simplify.
+ Then stereo matching is a 1-D problem if the epipolar geometry is known
+ (for calibrated cameras).
+\end_layout
+
+\begin_layout Description
+Inference.
+ Can use dynamic programming to solve it, while restricting the disparity
+ 
+\begin_inset Formula $d_{i}$
+\end_inset
+
+ to take a finite set of 
+\begin_inset Formula $k$
+\end_inset
+
+-values.
+ 
+\end_layout
+
+\begin_layout Description
+Not-used.
+ When some features are visible in one camera only, the half-occluded points
+ cannot be matched.
+ Better stereo algorithms that enforce weak smoothness across the epipolar
+ lines can be used.
+ In this case, 
+\begin_inset Formula 
+\[
+E[\{d_{i,j}\}]=\sum_{i,j}\phi(d_{i,j},I_{L},I_{R})+A\sum_{i,j}\psi(d_{i,j},d_{i+1,j})+B\sum_{i,j}\psi(d_{i,j},d_{i,j+1})
+\]
+
+\end_inset
+
+where the the second term is the along-epipolar-line smoothness constraint,
+ while the third term is the across-epipolar-line constraint.
+\end_layout
+
 \begin_layout Subsection
 Why is Belief Propagation a sensible algorithm to use for binocular stereo?
+\end_layout
+
+\begin_layout Standard
+Binocular stereo is a typical application of MRF, where the input involves
+ the input images from left and right cameras 
+\begin_inset Formula $z=(z^{L},z^{R})$
+\end_inset
+
+, and the output is a set of disparities 
+\begin_inset Formula $x$
+\end_inset
+
+ which specify the relative displacements between corresponding pixels in
+ the two images and hence determine the depth.
+ 
+\end_layout
+
+\begin_layout Standard
+For binocular stereo, we can set
+\begin_inset Formula 
+\[
+\phi(x_{i},z^{L},z^{R})=|f(z^{L})_{i}-f(z^{R})_{i+x_{i}}|
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $f(\cdot)$
+\end_inset
+
+ takes small values at the disparities 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ for which the filter responses are similar on two images.
+ The pairwise potentials impose prior assumptions about the local context
+ of the labels and disparities.
+ These models typically assume that neighboring pixels will tend to have
+ similar disparities.
+ 
 \end_layout
 
 \end_body
