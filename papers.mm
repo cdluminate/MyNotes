@@ -540,6 +540,7 @@
 <node TEXT="2. Demonstrate white-attacks fail" ID="ID_1694047411" CREATED="1648665579993" MODIFIED="1648665666179"/>
 <node TEXT="3. report false positive and true positive rates" ID="ID_1637052213" CREATED="1648665657349" MODIFIED="1648665675604"/>
 <node TEXT="4. evaluate on more than mnist" ID="ID_455842538" CREATED="1648665693439" MODIFIED="1648665699725"/>
+<node TEXT="5. release source code" ID="ID_1002874751" CREATED="1648665763729" MODIFIED="1648665766866"/>
 </node>
 </node>
 <node TEXT="(survey) towards understanding and harnessing the effect of image transformation in adversarial deteciton" ID="ID_1343762323" CREATED="1641523891006" MODIFIED="1641523914261">
