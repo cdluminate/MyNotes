@@ -527,6 +527,20 @@
 </node>
 <node TEXT="(1) existing detection method may be defeated by constructing new loss functions" ID="ID_724192900" CREATED="1648656899060" MODIFIED="1648656912594"/>
 <node TEXT="(2) propose simple guidelines for future defenses" ID="ID_861779297" CREATED="1648657000829" MODIFIED="1648657010332"/>
+<node TEXT="Lessions" ID="ID_1067229954" CREATED="1648665420828" MODIFIED="1648665568192">
+<node TEXT="1. randomization can increase required distortion" ID="ID_792584835" CREATED="1648665426182" MODIFIED="1648665436275">
+<node TEXT="dropout randomization is the best in this paper" ID="ID_1709429014" CREATED="1648665448053" MODIFIED="1648665457804"/>
+</node>
+<node TEXT="2. mnist properties may not hold on CIFAR" ID="ID_1360586844" CREATED="1648665495235" MODIFIED="1648665505886"/>
+<node TEXT="3. detection neural networks can be bypassed" ID="ID_1115669678" CREATED="1648665514991" MODIFIED="1648665521028"/>
+<node TEXT="4. operating on raw pixel values is ineffective" ID="ID_1296076819" CREATED="1648665536389" MODIFIED="1648665546679"/>
+</node>
+<node TEXT="Recommendations" ID="ID_679129702" CREATED="1648665568474" MODIFIED="1648665572240">
+<node TEXT="1. Evaluate using strong attack" ID="ID_344062231" CREATED="1648665573221" MODIFIED="1648665662667"/>
+<node TEXT="2. Demonstrate white-attacks fail" ID="ID_1694047411" CREATED="1648665579993" MODIFIED="1648665666179"/>
+<node TEXT="3. report false positive and true positive rates" ID="ID_1637052213" CREATED="1648665657349" MODIFIED="1648665675604"/>
+<node TEXT="4. evaluate on more than mnist" ID="ID_455842538" CREATED="1648665693439" MODIFIED="1648665699725"/>
+</node>
 </node>
 <node TEXT="(survey) towards understanding and harnessing the effect of image transformation in adversarial deteciton" ID="ID_1343762323" CREATED="1641523891006" MODIFIED="1641523914261">
 <icon BUILTIN="pencil"/>
@@ -590,7 +604,17 @@
 </node>
 </node>
 </node>
-<node TEXT="Normalization Detection" ID="ID_1539034569" CREATED="1648664881502" MODIFIED="1648664887878"/>
+<node TEXT="Normalization Detection" ID="ID_1539034569" CREATED="1648664881502" MODIFIED="1648664887878">
+<node TEXT="IMPORT carlini" ID="ID_27852271" CREATED="1648664933116" MODIFIED="1648664936568"/>
+<node TEXT="Dropout Randomization" ID="ID_281350781" CREATED="1648664937076" MODIFIED="1648664941720">
+<node TEXT="MNIST, CIFAR" ID="ID_1747484271" CREATED="1648664975552" MODIFIED="1648664981432"/>
+<node TEXT="Good on CIFAR, compromised by adaptive attack" ID="ID_1034874853" CREATED="1648664986734" MODIFIED="1648665176916"/>
+<node TEXT="Artifact paper: Bayesian neural network uncertainty" ID="ID_364687895" CREATED="1648665020349" MODIFIED="1648665038968"/>
+</node>
+<node TEXT="Mean Blur" ID="ID_209409612" CREATED="1648665280089" MODIFIED="1648665283471">
+<node TEXT="not effective defense" ID="ID_211180311" CREATED="1648665373510" MODIFIED="1648665376601"/>
+</node>
+</node>
 <node TEXT="Generative" ID="ID_749214969" CREATED="1648662472104" MODIFIED="1648664890578">
 <node TEXT="MagNet" ID="ID_1799454115" CREATED="1648662475591" MODIFIED="1648662478523">
 <node TEXT="MagNet: a Two-Pronged Defense against Adversarial Examples" ID="ID_114840212" CREATED="1648662479642" MODIFIED="1648662488083">
