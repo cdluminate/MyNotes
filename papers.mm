@@ -274,6 +274,10 @@
 <icon BUILTIN="pencil"/>
 <node TEXT="ECCV extension" ID="ID_1206816090" CREATED="1648342309374" MODIFIED="1648342312215"/>
 </node>
+<node TEXT="A Little Robustness Goes a Long Way: Leveraging&#xa;Robust Features for Targeted Transfer Attacks" ID="ID_1979578221" CREATED="1648648406841" MODIFIED="1648648407761">
+<node TEXT="NIPS21" ID="ID_79033966" CREATED="1648648423018" MODIFIED="1648648435131"/>
+<node TEXT="training the source classifiers to be &apos;slightly robust&apos; -- that is, robust to small magnitude adversarial examples -- substantially improves the transferability of class-targeted and representation-targeted adversarial attacks, even between architectures as different as convolutional neural networks and transformers" ID="ID_1089875092" CREATED="1648648464236" MODIFIED="1648648612665"/>
+</node>
 </node>
 <node TEXT="Universal Perturbation" ID="ID_883577858" CREATED="1641522438698" MODIFIED="1641522443789">
 <node TEXT="on distinctive properties of universal perturbations (madry)" ID="ID_224581737" CREATED="1641522458794" MODIFIED="1641743879665">
@@ -602,7 +606,7 @@
 <node TEXT="Carlini" ID="ID_1564104070" CREATED="1648422765982" MODIFIED="1648422768150"/>
 </node>
 </node>
-<node TEXT="Benchmark" ID="ID_855034612" CREATED="1642431513665" MODIFIED="1648180915383">
+<node TEXT="Benchmark/Evaluation" ID="ID_855034612" CREATED="1642431513665" MODIFIED="1648648692799">
 <font BOLD="true"/>
 <node TEXT="robustbench: a standardized adversarial robustness benchmark" ID="ID_1489423550" CREATED="1642431521917" MODIFIED="1642431542194">
 <icon BUILTIN="unchecked"/>
@@ -611,6 +615,11 @@
 <icon BUILTIN="pencil"/>
 </node>
 <node TEXT="Adaptive Attack (Madry)" ID="ID_103436605" CREATED="1647265946214" MODIFIED="1647265951989"/>
+<node TEXT="Indicators of Attack Failure: Debugging and Improving Optimization of Adversarial Examples" ID="ID_9324905" CREATED="1648649410710" MODIFIED="1648649413156">
+<icon BUILTIN="pencil"/>
+<node TEXT="Nicolas" ID="ID_904426365" CREATED="1648649414535" MODIFIED="1648649419800"/>
+<node TEXT="looks like NIPS preprint" ID="ID_1531408097" CREATED="1648649433839" MODIFIED="1648649442378"/>
+</node>
 </node>
 <node TEXT="Adversarial Training" FOLDED="true" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1648174116710">
 <font BOLD="true"/>
@@ -900,6 +909,14 @@
 <icon BUILTIN="unchecked"/>
 <node TEXT="SIGGRAPH" ID="ID_913247296" CREATED="1646943412096" MODIFIED="1646943415898"/>
 <node TEXT="not adv attack, but there is smooth constraint" ID="ID_1894803830" CREATED="1646943416298" MODIFIED="1646943426597"/>
+</node>
+<node TEXT="STN" ID="ID_221776785" CREATED="1648650992243" MODIFIED="1648650993535">
+<node TEXT="Certified Adversarial Robustness with Additive Noise" ID="ID_501466420" CREATED="1648650110741" MODIFIED="1648650112904">
+<icon BUILTIN="unchecked"/>
+<node TEXT="NIPS19" ID="ID_1553192760" CREATED="1648650113913" MODIFIED="1648650116040"/>
+<node TEXT="mnist, cifar10, imagenet" ID="ID_1012705291" CREATED="1648650116321" MODIFIED="1648650120446"/>
+<node TEXT="(1) add gaussian noise" ID="ID_1869835989" CREATED="1648650121136" MODIFIED="1648650989490"/>
+</node>
 </node>
 </node>
 <node TEXT="Distillation" ID="ID_1398688048" CREATED="1647265149729" MODIFIED="1647265152310">
@@ -2020,7 +2037,7 @@
 <node TEXT="CVPR22" ID="ID_360837902" CREATED="1648336845156" MODIFIED="1648336846512"/>
 </node>
 </node>
-<node TEXT="Privacy ML" POSITION="left" ID="ID_1174539463" CREATED="1590802979023" MODIFIED="1647265584135">
+<node TEXT="Privacy ML" FOLDED="true" POSITION="left" ID="ID_1174539463" CREATED="1590802979023" MODIFIED="1647265584135">
 <edge COLOR="#7c0000"/>
 <node TEXT="Encrypt / Decrypt" ID="ID_892914237" CREATED="1590803103499" MODIFIED="1590803111112">
 <node TEXT="2004.05523 DeepEDN: A Deep Learning-based Image Encryption and Decryption Network for Internet of Medical Things" ID="ID_779071488" CREATED="1590802983849" MODIFIED="1590802993502"/>
