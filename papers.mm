@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="101" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="102" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1648337505775">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -504,6 +504,16 @@
 </node>
 <node TEXT="on the robustness of domain adaption to adversarial attacks" ID="ID_1358706166" CREATED="1647567673533" MODIFIED="1647567685949">
 <icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Deep Fake Detector" ID="ID_123845244" CREATED="1649106133977" MODIFIED="1649106141182">
+<node TEXT="Exploring Frequency Adversarial Attacks for Face Forgery Detection" ID="ID_1469136743" CREATED="1649106141942" MODIFIED="1649106147499">
+<node TEXT="CVPR22" ID="ID_381395410" CREATED="1649106206179" MODIFIED="1649106207558"/>
+</node>
+</node>
+<node TEXT="Derain" ID="ID_690819450" CREATED="1649106593249" MODIFIED="1649106595511">
+<node TEXT="Towards Robust Rain Removal Against Adversarial Attacks: A Comprehensive Benchmark Analysis and Beyond" ID="ID_1582771617" CREATED="1649106596203" MODIFIED="1649106604716">
+<node TEXT="CVPR22" ID="ID_1289469191" CREATED="1649106606171" MODIFIED="1649106607363"/>
 </node>
 </node>
 </node>
@@ -1533,6 +1543,11 @@
 <icon BUILTIN="unchecked"/>
 <icon BUILTIN="bookmark"/>
 </node>
+<node TEXT="Efficiency" ID="ID_783283599" CREATED="1649105830242" MODIFIED="1649105832685">
+<node TEXT="Killing Two Birds with One Stone:Efficient and Robust Training of Face Recognition CNNs by Partial FC" ID="ID_556846223" CREATED="1649105833331" MODIFIED="1649105842171">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
 </node>
 <node TEXT="Presentation Attack" ID="ID_1220965554" CREATED="1647263407466" MODIFIED="1647263410801">
 <node TEXT="A Comprehensive Evaluation on Multi-channel Biometric Face Presentation Attack Detection" ID="ID_416818544" CREATED="1647263412576" MODIFIED="1647263436771">
@@ -1771,6 +1786,14 @@
 </node>
 </node>
 <node TEXT="2004.00626 Background Matting: The World is Your Green Screen (cvpr20)" ID="ID_1311753286" CREATED="1590805662549" MODIFIED="1590805676803"/>
+</node>
+<node TEXT="AR/VR Demands" FOLDED="true" POSITION="left" ID="ID_598464569" CREATED="1649106345613" MODIFIED="1649106350552">
+<edge COLOR="#00ff00"/>
+<node TEXT="Relighting" ID="ID_147972340" CREATED="1649106351568" MODIFIED="1649106353702">
+<node TEXT="Face Relighting with Geometrically Consistent Shadows" ID="ID_1062796447" CREATED="1649106354508" MODIFIED="1649106359170">
+<node TEXT="CVPR22" ID="ID_1173806280" CREATED="1649106360283" MODIFIED="1649106361411"/>
+</node>
+</node>
 </node>
 <node TEXT="Backdoor Attack &amp; Defense" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="left" ID="ID_1279237598" CREATED="1642964328030" MODIFIED="1648336230488">
 <edge COLOR="#ff0000"/>
