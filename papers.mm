@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="102" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="103" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1648337505775">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -1948,6 +1948,10 @@
 </node>
 </node>
 </node>
+</node>
+<node TEXT="Continual Learning" FOLDED="true" POSITION="left" ID="ID_28623311" CREATED="1649110273675" MODIFIED="1649110277766">
+<edge COLOR="#ff00ff"/>
+<node TEXT="Probing Representation Forgetting in Supervised and Unsupervised Continual Learning" ID="ID_73452629" CREATED="1649110278617" MODIFIED="1649110284775"/>
 </node>
 <node TEXT="Contrastive Learning Image" FOLDED="true" POSITION="left" ID="ID_1556051530" CREATED="1646924377310" MODIFIED="1649102780269">
 <edge COLOR="#7c007c"/>
