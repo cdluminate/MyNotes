@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="100" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="101" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1648337505775">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -1309,6 +1309,11 @@
 <node TEXT="but moments extracted from instance normalization and positional normalization can roughly capture style and shape information of an image" ID="ID_1102689926" CREATED="1643057991834" MODIFIED="1643058019401"/>
 </node>
 </node>
+<node TEXT="Long-Tail" ID="ID_314928185" CREATED="1649104418933" MODIFIED="1649104421848">
+<node TEXT="Nested Collaborative Learning for Long-Tailed Visual Recognition" ID="ID_908771433" CREATED="1649104478693" MODIFIED="1649104479517">
+<node TEXT="CVPR22" ID="ID_1585249354" CREATED="1649104480327" MODIFIED="1649104481946"/>
+</node>
+</node>
 <node TEXT="Explain" ID="ID_765602224" CREATED="1642952846679" MODIFIED="1642953011867">
 <font BOLD="false"/>
 </node>
@@ -1751,6 +1756,22 @@
 </node>
 </node>
 </node>
+<node TEXT="Alpha Matting" FOLDED="true" POSITION="left" ID="ID_1289342378" CREATED="1649104749744" MODIFIED="1649104752541">
+<edge COLOR="#0000ff"/>
+<node TEXT="2003.07711: F, B, Alpha Matting (ECCV20 submitted)" ID="ID_98155221" CREATED="1585103366049" MODIFIED="1587526865049">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: estimating opacity mask for objects" ID="ID_40944389" CREATED="1585103398418" MODIFIED="1587526865049">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="why: existing networks only predict the alpha matte" ID="ID_349450024" CREATED="1585103433174" MODIFIED="1587526865050">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="how: a low-cost modification to alpha matting networks" ID="ID_688016212" CREATED="1585103410787" MODIFIED="1587526865051">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="2004.00626 Background Matting: The World is Your Green Screen (cvpr20)" ID="ID_1311753286" CREATED="1590805662549" MODIFIED="1590805676803"/>
+</node>
 <node TEXT="Backdoor Attack &amp; Defense" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="left" ID="ID_1279237598" CREATED="1642964328030" MODIFIED="1648336230488">
 <edge COLOR="#ff0000"/>
 <node TEXT="Attack" ID="ID_481030829" CREATED="1642965505734" MODIFIED="1642965507796">
@@ -1903,6 +1924,34 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
+</node>
+</node>
+<node TEXT="Contrastive Learning Image" FOLDED="true" POSITION="left" ID="ID_1556051530" CREATED="1646924377310" MODIFIED="1649102780269">
+<edge COLOR="#7c007c"/>
+<node TEXT="Self-Damaging Contrastive Learning" ID="ID_374319956" CREATED="1646924383175" MODIFIED="1646924388224">
+<node TEXT="icml21" ID="ID_1688743346" CREATED="1646924391163" MODIFIED="1646924393200"/>
+<node TEXT="create a dynamic self-competitor model to contrast with the target model, which is a pruned version of the latter. during training, contrasting the two models will lead to adaptive online mining of the most easily forgotten samples for the current target model, and implicitly emphasize them more in the contrastive loss" ID="ID_1977443801" CREATED="1646924393453" MODIFIED="1646924451450"/>
+</node>
+<node TEXT="BatchFormer: Learning to Explore Sample Relationships for Robust Representation Learning" ID="ID_1047906963" CREATED="1646937425094" MODIFIED="1646937435486">
+<icon BUILTIN="unchecked"/>
+<node TEXT="cvpr22" ID="ID_1302140754" CREATED="1646937436755" MODIFIED="1646937438057"/>
+</node>
+<node TEXT="Adversarial Masking for Self-Supervised Learning" ID="ID_161503963" CREATED="1644181760956" MODIFIED="1644181769832">
+<icon BUILTIN="pencil"/>
+</node>
+<node TEXT="Self-Supervised Image Representation Learning with Geometric Set Consistency" ID="ID_504378487" CREATED="1649104770916" MODIFIED="1649104771843">
+<node TEXT="CVPR22" ID="ID_1149198306" CREATED="1649104772859" MODIFIED="1649104773959"/>
+<node TEXT="under the guidance of 3D geometric consistency" ID="ID_1279411864" CREATED="1649104781206" MODIFIED="1649104789146"/>
+</node>
+</node>
+<node TEXT="Contrastive Learning Video" FOLDED="true" POSITION="left" ID="ID_1516905874" CREATED="1649102713240" MODIFIED="1649102717961">
+<edge COLOR="#007c00"/>
+<node TEXT="sound and visual representation learning with multiple pretraining tasks" ID="ID_1372709479" CREATED="1641524234751" MODIFIED="1641524246105">
+<icon BUILTIN="pencil"/>
+</node>
+<node TEXT="Frame-wise Action Representations for Long Videos via Sequence Contrastive Learning" ID="ID_1235235307" CREATED="1649102802918" MODIFIED="1649102803748">
+<node TEXT="CVPR22" ID="ID_1379516385" CREATED="1649102806472" MODIFIED="1649102807610"/>
+<node TEXT="Sequence contrastive learning" ID="ID_413817863" CREATED="1649102807882" MODIFIED="1649102813865"/>
 </node>
 </node>
 <node TEXT="Dataset Distillation" FOLDED="true" POSITION="left" ID="ID_265073126" CREATED="1648338075798" MODIFIED="1648343254704">
@@ -2070,6 +2119,12 @@
 </node>
 <node TEXT="Instance Segmentation" FOLDED="true" POSITION="left" ID="ID_1759449865" CREATED="1649104217760" MODIFIED="1649104221244">
 <edge COLOR="#7c7c00"/>
+<node TEXT="Main" ID="ID_1417928999" CREATED="1578733356683" MODIFIED="1649104710111">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="Mask R-CNN" ID="ID_1460418401" CREATED="1590805638982" MODIFIED="1590805641615"/>
+<node TEXT="2003.13954 FGN: Fully Guided Network for Few-Shot Instance Segmentation (cvpr20)" ID="ID_1454655339" CREATED="1590975022052" MODIFIED="1590975029134"/>
+<node TEXT="2012.07177&#xa;Simple Copy-Paste is a Strong Data Augmentation Method for Instance Segmentation" ID="ID_792173050" CREATED="1608880556971" MODIFIED="1608880566837"/>
+</node>
 <node TEXT="Descriptors" ID="ID_1696499735" CREATED="1649104065329" MODIFIED="1649104223403">
 <node TEXT="Contour" ID="ID_395676166" CREATED="1649104068494" MODIFIED="1649104069863">
 <node TEXT="Eigencontours: Novel Contour Descriptors Based on Low-Rank Approximation" ID="ID_362471390" CREATED="1649104078004" MODIFIED="1649104078579">
@@ -2338,12 +2393,52 @@
 </node>
 <node TEXT="Semantic Segmentation" FOLDED="true" POSITION="left" ID="ID_710086984" CREATED="1641524074732" MODIFIED="1641524079818">
 <edge COLOR="#007c7c"/>
-<node TEXT="towards unsupervised open world semantic segmentation" ID="ID_886126595" CREATED="1641524113165" MODIFIED="1641524125507">
-<icon BUILTIN="pencil"/>
+<node TEXT="Main" ID="ID_1927721844" CREATED="1578733352755" MODIFIED="1649104722464">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="1505.04597: U-Net: convolutional networks for biomedical image segmentation (U-Net)" ID="ID_1662911562" CREATED="1578733451101" MODIFIED="1587526865046">
+<icon BUILTIN="button_ok"/>
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: segmentation" ID="ID_525154704" CREATED="1578733494076" MODIFIED="1587526865046">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="how" ID="ID_564416828" CREATED="1578733499940" MODIFIED="1587526865046">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="training strategy that relies on strong use of data augmentation" ID="ID_1775116489" CREATED="1578733508732" MODIFIED="1587526865046">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="architecture: contracting path to capture context and a symmetric expanding path that enables precise localization" ID="ID_1230729181" CREATED="1578733542669" MODIFIED="1587526865047">
+<icon BUILTIN="wizard"/>
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="1912.08193 PointRend: Image Segmentation as Rendering (kaiming)" ID="ID_1360164242" CREATED="1591524011593" MODIFIED="1591524026866">
+<icon BUILTIN="button_ok"/>
+</node>
+<node TEXT="2012.05007: group-wise semantic mining for weakly supervised semantic segmentation" ID="ID_871835183" CREATED="1607580365071" MODIFIED="1607580381423">
+<node TEXT="input images are represented as graph nodes, and the underlying relations between a pair of images are characterized by an efficient co-attention mechnism" ID="ID_701602240" CREATED="1607580528072" MODIFIED="1607580553437"/>
+</node>
+<node TEXT="2101: Rethinking Semantic Segmentation from a Sequence-to-Sequence Perspective with Transformers" ID="ID_782123948" CREATED="1610424579200" MODIFIED="1610424586216"/>
+<node TEXT="Multi-Source Domain Adaptation with Collaborative Learning for Semantic Segmentation (cvpr21)" ID="ID_1873517908" CREATED="1615358252825" MODIFIED="1615358259859">
+<node TEXT="arXiv:2103.04717" ID="ID_1286107433" CREATED="1615358260849" MODIFIED="1615358265830"/>
 </node>
 <node TEXT="Tree Energy Loss: Towards Sparsely Annotated Semantic Segmentation" ID="ID_1072029066" CREATED="1648342536462" MODIFIED="1648342539439">
 <icon BUILTIN="unchecked"/>
 <node TEXT="CVPR22" ID="ID_366650528" CREATED="1648342540556" MODIFIED="1648342541821"/>
+</node>
+<node TEXT="towards unsupervised open world semantic segmentation" ID="ID_886126595" CREATED="1641524113165" MODIFIED="1641524125507">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Weakly supervised semantic segmentation" ID="ID_898901373" CREATED="1617621463991" MODIFIED="1617621470599">
+<node TEXT="CVPR21: Background-Aware Pooling and Noise-Aware Loss for Weakly-Supervised Semantic Segmentation" ID="ID_438120929" CREATED="1617621471500" MODIFIED="1617621479134">
+<node TEXT="bounding boxes do not specify object boundaries" ID="ID_630389636" CREATED="1617622064739" MODIFIED="1617622078587">
+<node TEXT="background-aware pooling, focusing more on aggregating foreground features, for high quality pseudo segmentation labels" ID="ID_1930311428" CREATED="1617622086378" MODIFIED="1617622241077"/>
+</node>
+<node TEXT="noisy label especially at object boundaries" ID="ID_1470006065" CREATED="1617622216454" MODIFIED="1617622256519">
+<node TEXT="noise-aware loss, less susceptible to incorrect labels" ID="ID_707624454" CREATED="1617622261098" MODIFIED="1617622288020"/>
+</node>
+</node>
 </node>
 </node>
 <node TEXT="Vision-Language Pretraining" FOLDED="true" POSITION="left" ID="ID_1438251706" CREATED="1646945591468" MODIFIED="1646945596520">
@@ -2362,30 +2457,6 @@
 </node>
 <node TEXT="-------------------------------------------------------------------------------------------------" POSITION="left" ID="ID_1156109860" CREATED="1647264433260" MODIFIED="1647264435598">
 <edge COLOR="#007c7c"/>
-</node>
-<node TEXT="Contrastive Learning Image" FOLDED="true" POSITION="left" ID="ID_1556051530" CREATED="1646924377310" MODIFIED="1649102780269">
-<edge COLOR="#7c007c"/>
-<node TEXT="Self-Damaging Contrastive Learning" ID="ID_374319956" CREATED="1646924383175" MODIFIED="1646924388224">
-<node TEXT="icml21" ID="ID_1688743346" CREATED="1646924391163" MODIFIED="1646924393200"/>
-<node TEXT="create a dynamic self-competitor model to contrast with the target model, which is a pruned version of the latter. during training, contrasting the two models will lead to adaptive online mining of the most easily forgotten samples for the current target model, and implicitly emphasize them more in the contrastive loss" ID="ID_1977443801" CREATED="1646924393453" MODIFIED="1646924451450"/>
-</node>
-<node TEXT="BatchFormer: Learning to Explore Sample Relationships for Robust Representation Learning" ID="ID_1047906963" CREATED="1646937425094" MODIFIED="1646937435486">
-<icon BUILTIN="unchecked"/>
-<node TEXT="cvpr22" ID="ID_1302140754" CREATED="1646937436755" MODIFIED="1646937438057"/>
-</node>
-<node TEXT="Adversarial Masking for Self-Supervised Learning" ID="ID_161503963" CREATED="1644181760956" MODIFIED="1644181769832">
-<icon BUILTIN="pencil"/>
-</node>
-</node>
-<node TEXT="Contrastive Learning Video" FOLDED="true" POSITION="left" ID="ID_1516905874" CREATED="1649102713240" MODIFIED="1649102717961">
-<edge COLOR="#007c00"/>
-<node TEXT="sound and visual representation learning with multiple pretraining tasks" ID="ID_1372709479" CREATED="1641524234751" MODIFIED="1641524246105">
-<icon BUILTIN="pencil"/>
-</node>
-<node TEXT="Frame-wise Action Representations for Long Videos via Sequence Contrastive Learning" ID="ID_1235235307" CREATED="1649102802918" MODIFIED="1649102803748">
-<node TEXT="CVPR22" ID="ID_1379516385" CREATED="1649102806472" MODIFIED="1649102807610"/>
-<node TEXT="Sequence contrastive learning" ID="ID_413817863" CREATED="1649102807882" MODIFIED="1649102813865"/>
-</node>
 </node>
 <node FOLDED="true" POSITION="left" ID="ID_950327353" CREATED="1583319653266" MODIFIED="1647264659801"><richcontent TYPE="NODE">
 
@@ -2598,74 +2669,6 @@
 <node TEXT="PCL Representation" ID="ID_965391199" CREATED="1590743125097" MODIFIED="1608871105532">
 <node TEXT="2005.14169: self-supervised modal and view invariant feature learning" ID="ID_939413624" CREATED="1590743132226" MODIFIED="1590743147677"/>
 <node TEXT="2012.13089&#xa; P4Contrast: Contrastive Learning with Pairs of Point-Pixel Pairs for RGB-D Scene Understanding" ID="ID_1359907490" CREATED="1608871275332" MODIFIED="1608871286097"/>
-</node>
-</node>
-<node TEXT="Image Segmentation" FOLDED="true" POSITION="left" ID="ID_1791688507" CREATED="1607496654173" MODIFIED="1648342510870">
-<edge COLOR="#ff00ff"/>
-<node TEXT="Semantic Segmentation" ID="ID_1927721844" CREATED="1578733352755" MODIFIED="1587526865045">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="1505.04597: U-Net: convolutional networks for biomedical image segmentation (U-Net)" ID="ID_1662911562" CREATED="1578733451101" MODIFIED="1587526865046">
-<icon BUILTIN="button_ok"/>
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: segmentation" ID="ID_525154704" CREATED="1578733494076" MODIFIED="1587526865046">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how" ID="ID_564416828" CREATED="1578733499940" MODIFIED="1587526865046">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="training strategy that relies on strong use of data augmentation" ID="ID_1775116489" CREATED="1578733508732" MODIFIED="1587526865046">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="architecture: contracting path to capture context and a symmetric expanding path that enables precise localization" ID="ID_1230729181" CREATED="1578733542669" MODIFIED="1587526865047">
-<icon BUILTIN="wizard"/>
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="1912.08193 PointRend: Image Segmentation as Rendering (kaiming)" ID="ID_1360164242" CREATED="1591524011593" MODIFIED="1591524026866">
-<icon BUILTIN="button_ok"/>
-</node>
-<node TEXT="2012.05007: group-wise semantic mining for weakly supervised semantic segmentation" ID="ID_871835183" CREATED="1607580365071" MODIFIED="1607580381423">
-<node TEXT="input images are represented as graph nodes, and the underlying relations between a pair of images are characterized by an efficient co-attention mechnism" ID="ID_701602240" CREATED="1607580528072" MODIFIED="1607580553437"/>
-</node>
-<node TEXT="2101: Rethinking Semantic Segmentation from a Sequence-to-Sequence Perspective with Transformers" ID="ID_782123948" CREATED="1610424579200" MODIFIED="1610424586216"/>
-<node TEXT="Multi-Source Domain Adaptation with Collaborative Learning for Semantic Segmentation (cvpr21)" ID="ID_1873517908" CREATED="1615358252825" MODIFIED="1615358259859">
-<node TEXT="arXiv:2103.04717" ID="ID_1286107433" CREATED="1615358260849" MODIFIED="1615358265830"/>
-</node>
-</node>
-<node TEXT="Weakly supervised semantic segmentation" ID="ID_898901373" CREATED="1617621463991" MODIFIED="1617621470599">
-<node TEXT="CVPR21: Background-Aware Pooling and Noise-Aware Loss for Weakly-Supervised Semantic Segmentation" ID="ID_438120929" CREATED="1617621471500" MODIFIED="1617621479134">
-<node TEXT="bounding boxes do not specify object boundaries" ID="ID_630389636" CREATED="1617622064739" MODIFIED="1617622078587">
-<node TEXT="background-aware pooling, focusing more on aggregating foreground features, for high quality pseudo segmentation labels" ID="ID_1930311428" CREATED="1617622086378" MODIFIED="1617622241077"/>
-</node>
-<node TEXT="noisy label especially at object boundaries" ID="ID_1470006065" CREATED="1617622216454" MODIFIED="1617622256519">
-<node TEXT="noise-aware loss, less susceptible to incorrect labels" ID="ID_707624454" CREATED="1617622261098" MODIFIED="1617622288020"/>
-</node>
-</node>
-</node>
-<node TEXT="Instance Segmentation" ID="ID_1417928999" CREATED="1578733356683" MODIFIED="1587526865048">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="Mask R-CNN" ID="ID_1460418401" CREATED="1590805638982" MODIFIED="1590805641615"/>
-<node TEXT="2003.13954 FGN: Fully Guided Network for Few-Shot Instance Segmentation (cvpr20)" ID="ID_1454655339" CREATED="1590975022052" MODIFIED="1590975029134"/>
-<node TEXT="2012.07177&#xa;Simple Copy-Paste is a Strong Data Augmentation Method for Instance Segmentation" ID="ID_792173050" CREATED="1608880556971" MODIFIED="1608880566837"/>
-</node>
-<node TEXT="Saliency detection" ID="ID_795389078" CREATED="1608011036212" MODIFIED="1617622498533">
-<node TEXT="2007.11782: accurate rgb-d salient object detection via collaborative learning" ID="ID_160234591" CREATED="1608013525975" MODIFIED="1608013547848"/>
-</node>
-<node TEXT="Alpha/Background Matting" ID="ID_656375396" CREATED="1585103359561" MODIFIED="1590805658076">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="2003.07711: F, B, Alpha Matting (ECCV20 submitted)" ID="ID_98155221" CREATED="1585103366049" MODIFIED="1587526865049">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: estimating opacity mask for objects" ID="ID_40944389" CREATED="1585103398418" MODIFIED="1587526865049">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: existing networks only predict the alpha matte" ID="ID_349450024" CREATED="1585103433174" MODIFIED="1587526865050">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: a low-cost modification to alpha matting networks" ID="ID_688016212" CREATED="1585103410787" MODIFIED="1587526865051">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="2004.00626 Background Matting: The World is Your Green Screen (cvpr20)" ID="ID_1311753286" CREATED="1590805662549" MODIFIED="1590805676803"/>
 </node>
 </node>
 <node TEXT="Classification" FOLDED="true" POSITION="left" ID="ID_1412187905" CREATED="1576825420762" MODIFIED="1648335928432">
