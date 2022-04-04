@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="{M,R,D}L" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1642394353464" STYLE="oval">
 <font NAME="Gentium" SIZE="18"/>
-<hook NAME="MapStyle" zoom="1.287">
+<hook NAME="MapStyle" zoom="1.714">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="94" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="100" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1648337505775">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -217,6 +217,11 @@
 <node TEXT="Anomaly Detection" ID="ID_170137859" CREATED="1618846931941" MODIFIED="1618846936621">
 <node TEXT="2004.05993: a survey of single-scene video anomaly deteciton" ID="ID_462688942" CREATED="1618846926868" MODIFIED="1618846929066"/>
 </node>
+<node TEXT="Self-supervised learning" ID="ID_324088622" CREATED="1649102747207" MODIFIED="1649102756220">
+<node TEXT="Self-supervised learning has two major forms, GANs and contrastive learning" ID="ID_1689550023" CREATED="1647264534821" MODIFIED="1647264549612">
+<icon BUILTIN="info"/>
+</node>
+</node>
 </node>
 <node TEXT="Adversarial Attack: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_234014270" CREATED="1641521502446" MODIFIED="1647263386358">
 <edge COLOR="#ff0000"/>
@@ -268,6 +273,12 @@
 <node TEXT="ICLR22" ID="ID_1001676990" CREATED="1644181090717" MODIFIED="1644181096398"/>
 </node>
 </node>
+<node TEXT="w/ Transfer Prior" ID="ID_1448999389" CREATED="1649101767532" MODIFIED="1649101771379">
+<node TEXT="Boosting Black-Box Adversarial Attacks with Meta Learning" ID="ID_460302765" CREATED="1649101772257" MODIFIED="1649101787420">
+<icon BUILTIN="pencil"/>
+<node TEXT="Jian Sun" ID="ID_475582790" CREATED="1649101788945" MODIFIED="1649101790751"/>
+</node>
+</node>
 </node>
 <node TEXT="Transferrability" ID="ID_142248765" CREATED="1641678368814" MODIFIED="1641678372373">
 <node TEXT="An Intermediate-level Attack Framework on The Basis of Linear Regression" ID="ID_1499876765" CREATED="1648342305622" MODIFIED="1648342307756">
@@ -317,7 +328,25 @@
 </node>
 </node>
 </node>
-<node TEXT="Model Inversion" ID="ID_137802922" CREATED="1642456768941" MODIFIED="1642456773626"/>
+<node TEXT="Unlearnable Example" ID="ID_1890366930" CREATED="1649095313088" MODIFIED="1649095318895">
+<font BOLD="true"/>
+<node TEXT="Robust unlearnable examples: protecting data against adversarial learning" ID="ID_392399956" CREATED="1649095319935" MODIFIED="1649095344087">
+<icon BUILTIN="checked"/>
+<node TEXT="ICLR22" ID="ID_1589305797" CREATED="1649095339570" MODIFIED="1649095341010"/>
+<node TEXT="error-minimizing adversarial noise" ID="ID_1448281536" CREATED="1649095393720" MODIFIED="1649095401533"/>
+<node TEXT="review" ID="ID_73581907" CREATED="1649100911953" MODIFIED="1649100912822">
+<node TEXT="(1) empirical risk minimization" ID="ID_594500293" CREATED="1649100900456" MODIFIED="1649100959262">
+<node TEXT="\latex $$\min_\theta l(f(x),y)$$" ID="ID_20275117" CREATED="1649100915748" MODIFIED="1649100934109"/>
+</node>
+<node TEXT="(2) adversarial training" ID="ID_1991971720" CREATED="1649100939238" MODIFIED="1649100963483">
+<node TEXT="\latex $$\min_\theta \max_\delta l(f(x+\delta),y)$$" ID="ID_1965646229" CREATED="1649100964243" MODIFIED="1649101001179"/>
+</node>
+<node TEXT="(3) unlearnable examples" ID="ID_1142926687" CREATED="1649101007631" MODIFIED="1649101011820">
+<node TEXT="\latex $$\min_\theta \min_\delta l(f(x+\delta), y)$$" ID="ID_528317138" CREATED="1649101013646" MODIFIED="1649101038012"/>
+</node>
+</node>
+</node>
+</node>
 <node TEXT="Similar Topics" ID="ID_34273182" CREATED="1642456460265" MODIFIED="1642456463434">
 <node TEXT="deep dream" ID="ID_272877404" CREATED="1642456464214" MODIFIED="1642456469283">
 <node TEXT="max all activation" ID="ID_174456830" CREATED="1642456470094" MODIFIED="1642456479075"/>
@@ -420,6 +449,14 @@
 <node TEXT="objectness-aware defense method" ID="ID_241119548" CREATED="1645107591525" MODIFIED="1645107598028"/>
 <node TEXT="this paper is shallow. we should be able to do more" ID="ID_1122816208" CREATED="1645107543802" MODIFIED="1645107608352"/>
 </node>
+<node TEXT="Zero-Query Transfer Attacks on Context-Aware Object Detectors" ID="ID_1964614404" CREATED="1649103537343" MODIFIED="1649103547351">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_1857001452" CREATED="1649103548773" MODIFIED="1649103551178"/>
+<node TEXT="attack against context consistency check" ID="ID_188156799" CREATED="1649103566818" MODIFIED="1649103573102"/>
+<node TEXT="can we use context check in self supervised learning?" ID="ID_283009755" CREATED="1649103599961" MODIFIED="1649103619338">
+<icon BUILTIN="help"/>
+</node>
+</node>
 </node>
 <node TEXT="Optical Flow" ID="ID_1641858386" CREATED="1648337319711" MODIFIED="1648337322554">
 <node TEXT="A Perturbation Constrained Adversarial Attack for Evaluating the Robustness of Optical Flow" ID="ID_1358848955" CREATED="1648337323536" MODIFIED="1648337328267">
@@ -470,7 +507,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Attack Detection &amp; Vul Analysis" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1244682927" CREATED="1646761472294" MODIFIED="1647048997914">
+<node TEXT="Attack Detection &amp; Vul Analysis" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1244682927" CREATED="1646761472294" MODIFIED="1647048997914">
 <edge COLOR="#7c0000"/>
 <node TEXT="Survey" ID="ID_532349138" CREATED="1646943062780" MODIFIED="1648419467256">
 <font BOLD="true"/>
@@ -701,10 +738,13 @@
 <node TEXT="looks like NIPS preprint" ID="ID_1531408097" CREATED="1648649433839" MODIFIED="1648649442378"/>
 </node>
 </node>
-<node TEXT="Adversarial Training" FOLDED="true" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1648174116710">
+<node TEXT="Adversarial Training" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1648174116710">
 <font BOLD="true"/>
-<node TEXT="references" ID="ID_178248607" CREATED="1642431445724" MODIFIED="1643412272232">
-<icon BUILTIN="info"/>
+<node TEXT="Survey" ID="ID_178248607" CREATED="1642431445724" MODIFIED="1649101870385">
+<icon BUILTIN="mindmap"/>
+<node TEXT="A Survey of Robust Adversarial Training in Pattern Recognition: Fundamental, Theory, and Methodologies" ID="ID_1309339078" CREATED="1649101873071" MODIFIED="1649101883052">
+<icon BUILTIN="pencil"/>
+</node>
 <node TEXT="https://robustbench.github.io/" ID="ID_1384233314" CREATED="1642431450079" MODIFIED="1642431451028"/>
 </node>
 <node TEXT="FGSM/AT" ID="ID_1386316101" CREATED="1642455770819" MODIFIED="1642455773280">
@@ -1024,13 +1064,23 @@
 <node TEXT="Adversarial Defense: Intersection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1647265134040">
 <edge COLOR="#0000ff"/>
 <font NAME="Gentium"/>
-<node TEXT="Face Recognition" ID="ID_1083375375" CREATED="1643132265039" MODIFIED="1643132268914">
+<node TEXT="Face Recognition" ID="ID_1083375375" CREATED="1643132265039" MODIFIED="1649102907633">
+<font BOLD="true"/>
 <node TEXT="RobFR: Benchmarking Adversarial Robustness on Face Recognition" ID="ID_765372057" CREATED="1642726609490" MODIFIED="1642726640122">
 <icon BUILTIN="pencil"/>
 <icon BUILTIN="bookmark"/>
 </node>
 <node TEXT="RobFR" ID="ID_956441703" CREATED="1643132279319" MODIFIED="1643132284675">
 <node TEXT="https://github.com/ShawnXYang/Face-Robustness-Benchmark" ID="ID_232276308" CREATED="1643132270554" MODIFIED="1643132270554" LINK="https://github.com/ShawnXYang/Face-Robustness-Benchmark"/>
+</node>
+<node TEXT="Powerful Physical Adversarial Examples Against Practical Face Recognition Systems" ID="ID_1220714793" CREATED="1649102916078" MODIFIED="1649102921474">
+<icon BUILTIN="unchecked"/>
+<node TEXT="WACV22" ID="ID_1744027013" CREATED="1649102922446" MODIFIED="1649102925180"/>
+<node TEXT="physical face attack" ID="ID_624278487" CREATED="1649102935226" MODIFIED="1649102939514"/>
+</node>
+<node TEXT="Face Verification Bypass" ID="ID_1487209530" CREATED="1649103065074" MODIFIED="1649103067123">
+<icon BUILTIN="pencil"/>
+<node TEXT="looks like course project" ID="ID_683520176" CREATED="1649103068291" MODIFIED="1649103072896"/>
 </node>
 </node>
 <node TEXT="Image Denoising" ID="ID_688438108" CREATED="1642369253403" MODIFIED="1642965597652">
@@ -1094,6 +1144,11 @@
 <node TEXT="Exploring Adversarially Robust Training for Unsupervised Domain Adaptation" ID="ID_1050578370" CREATED="1647265459656" MODIFIED="1647265470596">
 <icon BUILTIN="pencil"/>
 <node TEXT="Vishal" ID="ID_707250183" CREATED="1647265465095" MODIFIED="1647265466451"/>
+</node>
+</node>
+<node TEXT="3D/PCL" ID="ID_259895259" CREATED="1649103944879" MODIFIED="1649103947165">
+<node TEXT="Robust Structured Declarative Classifiers for 3D Point Clouds: Defending Adversarial Attacks with Implicit Gradients" ID="ID_1085580757" CREATED="1649103947887" MODIFIED="1649103955450">
+<icon BUILTIN="pencil"/>
 </node>
 </node>
 </node>
@@ -1178,6 +1233,11 @@
 <icon BUILTIN="unchecked"/>
 <icon BUILTIN="bookmark"/>
 <node TEXT="iccv21 best paper" ID="ID_1559238235" CREATED="1645044840627" MODIFIED="1645044844407"/>
+</node>
+</node>
+<node TEXT="Acceleration / Efficiency" ID="ID_870822946" CREATED="1649101702095" MODIFIED="1649101708626">
+<node TEXT="Automated Progressive Learning for Efficient Training of Vision Transformers" ID="ID_375053278" CREATED="1649101709513" MODIFIED="1649101715507">
+<node TEXT="CVPR22" ID="ID_1580181622" CREATED="1649101716937" MODIFIED="1649101718166"/>
 </node>
 </node>
 </node>
@@ -1345,6 +1405,17 @@
 </node>
 </node>
 </node>
+<node TEXT="w/ Graph" ID="ID_1539093308" CREATED="1649102316384" MODIFIED="1649102319359">
+<node TEXT="AVSL" ID="ID_1818687879" CREATED="1649102378417" MODIFIED="1649102381099">
+<node TEXT="Attributable Visual Similarity Learning" ID="ID_1493044485" CREATED="1649102320359" MODIFIED="1649102337908">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_858349431" CREATED="1649102328579" MODIFIED="1649102329874"/>
+<node TEXT="CUB, Cars, SOP" ID="ID_596571641" CREATED="1649102341554" MODIFIED="1649102372902">
+<node TEXT="" ID="ID_1789373764" CREATED="1649102362284" MODIFIED="1649102362284"/>
+</node>
+</node>
+</node>
+</node>
 </node>
 <node TEXT="Face Recognition" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_153988282" CREATED="1641242964517" MODIFIED="1642456756940">
 <edge COLOR="#00ff00"/>
@@ -1469,6 +1540,9 @@
 <node TEXT="(1) network architecture extension for adapting multi-channel" ID="ID_1875690409" CREATED="1647263523083" MODIFIED="1647263560530"/>
 <node TEXT="(2) preprocessing of input data" ID="ID_438813602" CREATED="1647263563617" MODIFIED="1647263571988"/>
 </node>
+<node TEXT="Style-Guided Domain Adaptation for Face Presentation Attack Detection" ID="ID_31042759" CREATED="1649101964446" MODIFIED="1649101974147">
+<icon BUILTIN="pencil"/>
+</node>
 </node>
 <node TEXT="Embedding Learning" ID="ID_290828706" CREATED="1641243309778" MODIFIED="1641520995604">
 <font NAME="Gentium"/>
@@ -1501,7 +1575,7 @@
 </node>
 </node>
 </node>
-<node TEXT="3D + PCL" FOLDED="true" POSITION="left" ID="ID_1606327696" CREATED="1583132559918" MODIFIED="1648337968599">
+<node TEXT="3D + PCL Recog" FOLDED="true" POSITION="left" ID="ID_1606327696" CREATED="1583132559918" MODIFIED="1649103272801">
 <font NAME="Gentium" SIZE="10" BOLD="false"/>
 <edge COLOR="#007c7c"/>
 <node TEXT="Dataset" ID="ID_750669130" CREATED="1583137147235" MODIFIED="1587526865232">
@@ -1656,6 +1730,9 @@
 </node>
 <node TEXT="Object Detection" ID="ID_359173144" CREATED="1634062757685" MODIFIED="1648337996840">
 <node TEXT="Voxel Transformer for 3D Object Detection" ID="ID_1112299622" CREATED="1634062767074" MODIFIED="1634062773616"/>
+<node TEXT="LiDAR Snowfall Simulation for Robust 3D Object Detection" ID="ID_1716092506" CREATED="1649103277309" MODIFIED="1649103282821">
+<node TEXT="CVPR22" ID="ID_685730559" CREATED="1649103284187" MODIFIED="1649103285288"/>
+</node>
 </node>
 <node TEXT="Interpolation" ID="ID_687015313" CREATED="1648337997035" MODIFIED="1648338000713">
 <node TEXT="IDEA-Net: Dynamic 3D Point Cloud Interpolation via Deep Embedding Alignment" ID="ID_1606213792" CREATED="1648338005697" MODIFIED="1648338009130">
@@ -1836,6 +1913,53 @@
 <node TEXT="CVPR22" ID="ID_951175501" CREATED="1648338090454" MODIFIED="1648338092141"/>
 </node>
 </node>
+<node TEXT="DeepFake" FOLDED="true" POSITION="left" ID="ID_81253926" CREATED="1587729755009" MODIFIED="1642394342542">
+<edge COLOR="#007c7c"/>
+<node TEXT="Dataset" ID="ID_1886590251" CREATED="1615347464586" MODIFIED="1615347466780">
+<node TEXT="ForgeryNet: A Versatile Benchmark for Comprehensive Forgery Analysis (cvpr21)" ID="ID_1435934248" CREATED="1615347467706" MODIFIED="1615347479218"/>
+</node>
+<node TEXT="Survey" ID="ID_1081735994" CREATED="1587729760036" MODIFIED="1587729764469">
+<node TEXT="2004.11138: the creation and detection of deepfakes: a survey" ID="ID_229656376" CREATED="1587729766371" MODIFIED="1587729930927">
+<icon BUILTIN="button_ok"/>
+</node>
+<node TEXT="2004.12626: preliminary forensics analysis of deepfake images" ID="ID_913965" CREATED="1588068509056" MODIFIED="1588068524708"/>
+<node TEXT="Seeing is Living? Rethinking the Security of Facial Liveness Verification in the Deepfake Era" ID="ID_461047989" CREATED="1647267019291" MODIFIED="1647267027027">
+<icon BUILTIN="unchecked"/>
+<node TEXT="USENIX22" ID="ID_1148613248" CREATED="1647267021829" MODIFIED="1647267024253"/>
+</node>
+</node>
+<node TEXT="Create" ID="ID_1812140643" CREATED="1589767913067" MODIFIED="1648338593271">
+<node TEXT="2005.05535: deepfacelab: a simple flexible and extensible face swapping framework" ID="ID_1258022523" CREATED="1589767931055" MODIFIED="1589767949771"/>
+<node TEXT="2004.07165 A recurrent cycle consistency loss for progressive face-to-face synthesis (FG 2020 oral)" ID="ID_1521921331" CREATED="1590805531639" MODIFIED="1590805549067"/>
+</node>
+<node TEXT="Detection" ID="ID_1897134747" CREATED="1588389497295" MODIFIED="1619337612320">
+<node TEXT="2003.08685: leveraging frequency analysis for deep fake image recognition" ID="ID_252600993" CREATED="1588389509200" MODIFIED="1588389530379">
+<node TEXT="frequency analysis" ID="ID_818362087" CREATED="1588389590906" MODIFIED="1588389598678"/>
+</node>
+<node TEXT="2003.08645: detecting deepfakes with metric learning" ID="ID_1878482148" CREATED="1588389618001" MODIFIED="1588389634521"/>
+<node TEXT="2005.05632: detecting cnn-generated facial images in real-world scenarios (CVPR20w)" ID="ID_1299699785" CREATED="1589767828944" MODIFIED="1589767856220"/>
+<node TEXT="Multi-attentional Deepfake Detection (cvpr21)" ID="ID_781694096" CREATED="1615298559426" MODIFIED="1615298567054">
+<node TEXT="bincls -&gt; fine-grained cls" ID="ID_1081064126" CREATED="1615298568075" MODIFIED="1615298788725"/>
+<node TEXT="multi-attentional" ID="ID_634769208" CREATED="1615298789067" MODIFIED="1615298801115"/>
+</node>
+<node TEXT="CVPR21: Improving the Efficiency and Robustness of Deepfakes Detection through Precise Geometric Features" ID="ID_1786812758" CREATED="1619337614061" MODIFIED="1619337626336"/>
+<node TEXT="Self-supervised Learning of Adversarial Example: Towards Good Generalizations for Deepfake Detection" ID="ID_1441114547" CREATED="1648338608774" MODIFIED="1648338611335">
+<node TEXT="CVPR22" ID="ID_409760991" CREATED="1648338612963" MODIFIED="1648338614477"/>
+</node>
+<node TEXT="ObjectFormer for Image Manipulation Detection and Localization" ID="ID_926927385" CREATED="1649102118496" MODIFIED="1649102119754">
+<node TEXT="CVPR22" ID="ID_1894520939" CREATED="1649102122404" MODIFIED="1649102123634"/>
+</node>
+</node>
+<node TEXT="multi-modality detection" ID="ID_692707786" CREATED="1646942308628" MODIFIED="1648338606487">
+<node TEXT="Voice-Face Homogeneity Tells Deepfake" ID="ID_153357596" CREATED="1646942317853" MODIFIED="1646942325559">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_725170575" CREATED="1646942319120" MODIFIED="1646942321768"/>
+</node>
+</node>
+<node TEXT="Anti-detection" ID="ID_201818852" CREATED="1590804657624" MODIFIED="1590804660720">
+<node TEXT="2004.00622 Evading Deepfake-Image Detectors with White- and Black-Box Attacks" ID="ID_609816375" CREATED="1590804661430" MODIFIED="1590804670862"/>
+</node>
+</node>
 <node TEXT="Diffusion Models" FOLDED="true" POSITION="left" ID="ID_543295574" CREATED="1645111157251" MODIFIED="1645111160424">
 <edge COLOR="#00ffff"/>
 <node TEXT="https://lilianweng.github.io/lil-log/2021/07/11/diffusion-models.html" ID="ID_626991727" CREATED="1645111188223" MODIFIED="1645111188223" LINK="https://lilianweng.github.io/lil-log/2021/07/11/diffusion-models.html"/>
@@ -1944,12 +2068,29 @@
 <node TEXT="CVPR22" ID="ID_1065954996" CREATED="1648343238753" MODIFIED="1648343240041"/>
 </node>
 </node>
+<node TEXT="Instance Segmentation" FOLDED="true" POSITION="left" ID="ID_1759449865" CREATED="1649104217760" MODIFIED="1649104221244">
+<edge COLOR="#7c7c00"/>
+<node TEXT="Descriptors" ID="ID_1696499735" CREATED="1649104065329" MODIFIED="1649104223403">
+<node TEXT="Contour" ID="ID_395676166" CREATED="1649104068494" MODIFIED="1649104069863">
+<node TEXT="Eigencontours: Novel Contour Descriptors Based on Low-Rank Approximation" ID="ID_362471390" CREATED="1649104078004" MODIFIED="1649104078579">
+<node TEXT="CVPR22" ID="ID_642950560" CREATED="1649104080637" MODIFIED="1649104081863"/>
+<node TEXT="contour is one of the most important object descriptiors, along with texture and color" ID="ID_961927899" CREATED="1649104082894" MODIFIED="1649104097966"/>
+</node>
+</node>
+</node>
+</node>
 <node TEXT="Machine Learning" FOLDED="true" POSITION="left" ID="ID_1123557953" CREATED="1642430639041" MODIFIED="1642430641511">
 <edge COLOR="#7c007c"/>
 <node TEXT="Gaussian Process" ID="ID_1656444615" CREATED="1642430730867" MODIFIED="1642430733848">
 <node TEXT="deep neural networks as point estimates for deep gaussian processes" ID="ID_1084429400" CREATED="1642430711652" MODIFIED="1642430742869">
 <icon BUILTIN="unchecked"/>
 </node>
+</node>
+</node>
+<node TEXT="Multimodal Learning" FOLDED="true" POSITION="left" ID="ID_423909848" CREATED="1649104367617" MODIFIED="1649104370772">
+<edge COLOR="#ff0000"/>
+<node TEXT="Balanced Multimodal Learning via On-the-fly Gradient Modulation" ID="ID_1018564287" CREATED="1649104376663" MODIFIED="1649104377816">
+<node TEXT="CVPR22" ID="ID_735774105" CREATED="1649104378958" MODIFIED="1649104379977"/>
 </node>
 </node>
 <node TEXT="Net Arch Search" FOLDED="true" POSITION="left" ID="ID_1465080986" CREATED="1576827705751" MODIFIED="1642394285342">
@@ -2058,6 +2199,11 @@
 <node TEXT="Jian Sun" ID="ID_1833196048" CREATED="1610428429754" MODIFIED="1610428432093"/>
 </node>
 </node>
+<node TEXT="Performance Metric" ID="ID_898832267" CREATED="1649101258896" MODIFIED="1649101263049">
+<node TEXT="Optimal Correction Cost for Object Detection Evaluation" ID="ID_1091207762" CREATED="1649101264499" MODIFIED="1649101269915">
+<node TEXT="CVPR22" ID="ID_607658609" CREATED="1649101272943" MODIFIED="1649101274253"/>
+</node>
+</node>
 <node TEXT="Long-tail" ID="ID_234088557" CREATED="1590798731797" MODIFIED="1590798734352">
 <node TEXT="2003.05176: Equalization Loss for Long-Tailed Object Recognition (CVPR20)" ID="ID_731786534" CREATED="1590798735443" MODIFIED="1590798753647">
 <icon BUILTIN="button_ok"/>
@@ -2075,6 +2221,11 @@
 <node TEXT="Camouflaged" ID="ID_1233579435" CREATED="1648388054502" MODIFIED="1648388062210">
 <node TEXT="Zoom In and Out: A Mixed-scale Triplet Network&#xa;for Camouflaged Object Detection" ID="ID_290360895" CREATED="1648388067795" MODIFIED="1648388070326">
 <node TEXT="CVPR22" ID="ID_1320931684" CREATED="1648388071940" MODIFIED="1648388074017"/>
+</node>
+</node>
+<node TEXT="w/ Pretrained" ID="ID_713615493" CREATED="1649102563690" MODIFIED="1649102570371">
+<node TEXT="Learning to Prompt for Open-Vocabulary Object Detection with Vision-Language Model" ID="ID_1568893151" CREATED="1649102571287" MODIFIED="1649102577177">
+<node TEXT="CVPR22" ID="ID_863951710" CREATED="1649102578216" MODIFIED="1649102579357"/>
 </node>
 </node>
 </node>
@@ -2212,18 +2363,8 @@
 <node TEXT="-------------------------------------------------------------------------------------------------" POSITION="left" ID="ID_1156109860" CREATED="1647264433260" MODIFIED="1647264435598">
 <edge COLOR="#007c7c"/>
 </node>
-<node TEXT="Self-Supervised Learning (SSL)" FOLDED="true" POSITION="left" ID="ID_195659803" CREATED="1641524220091" MODIFIED="1644181748534">
-<edge COLOR="#7c7c00"/>
-<node TEXT="Self-supervised learning has two major forms, GANs and contrastive learning" ID="ID_1689550023" CREATED="1647264534821" MODIFIED="1647264549612">
-<icon BUILTIN="info"/>
-</node>
-<node TEXT="Single-modal" ID="ID_1411825413" CREATED="1641524228092" MODIFIED="1641524231227">
-<node TEXT="masked image model" ID="ID_1443895759" CREATED="1644181757032" MODIFIED="1644181760040">
-<node TEXT="Adversarial Masking for Self-Supervised Learning" ID="ID_161503963" CREATED="1644181760956" MODIFIED="1644181769832">
-<icon BUILTIN="pencil"/>
-</node>
-</node>
-<node TEXT="Contrastive Learning" ID="ID_1556051530" CREATED="1646924377310" MODIFIED="1647264496817">
+<node TEXT="Contrastive Learning Image" FOLDED="true" POSITION="left" ID="ID_1556051530" CREATED="1646924377310" MODIFIED="1649102780269">
+<edge COLOR="#7c007c"/>
 <node TEXT="Self-Damaging Contrastive Learning" ID="ID_374319956" CREATED="1646924383175" MODIFIED="1646924388224">
 <node TEXT="icml21" ID="ID_1688743346" CREATED="1646924391163" MODIFIED="1646924393200"/>
 <node TEXT="create a dynamic self-competitor model to contrast with the target model, which is a pruned version of the latter. during training, contrasting the two models will lead to adaptive online mining of the most easily forgotten samples for the current target model, and implicitly emphasize them more in the contrastive loss" ID="ID_1977443801" CREATED="1646924393453" MODIFIED="1646924451450"/>
@@ -2232,12 +2373,18 @@
 <icon BUILTIN="unchecked"/>
 <node TEXT="cvpr22" ID="ID_1302140754" CREATED="1646937436755" MODIFIED="1646937438057"/>
 </node>
+<node TEXT="Adversarial Masking for Self-Supervised Learning" ID="ID_161503963" CREATED="1644181760956" MODIFIED="1644181769832">
+<icon BUILTIN="pencil"/>
 </node>
 </node>
-<node TEXT="multi-modal" ID="ID_510544100" CREATED="1641524231440" MODIFIED="1641524233873">
+<node TEXT="Contrastive Learning Video" FOLDED="true" POSITION="left" ID="ID_1516905874" CREATED="1649102713240" MODIFIED="1649102717961">
+<edge COLOR="#007c00"/>
 <node TEXT="sound and visual representation learning with multiple pretraining tasks" ID="ID_1372709479" CREATED="1641524234751" MODIFIED="1641524246105">
 <icon BUILTIN="pencil"/>
 </node>
+<node TEXT="Frame-wise Action Representations for Long Videos via Sequence Contrastive Learning" ID="ID_1235235307" CREATED="1649102802918" MODIFIED="1649102803748">
+<node TEXT="CVPR22" ID="ID_1379516385" CREATED="1649102806472" MODIFIED="1649102807610"/>
+<node TEXT="Sequence contrastive learning" ID="ID_413817863" CREATED="1649102807882" MODIFIED="1649102813865"/>
 </node>
 </node>
 <node FOLDED="true" POSITION="left" ID="ID_950327353" CREATED="1583319653266" MODIFIED="1647264659801"><richcontent TYPE="NODE">
@@ -2842,50 +2989,6 @@
 </node>
 <node TEXT="GCN" ID="ID_1722177383" CREATED="1601902008395" MODIFIED="1601902010750"/>
 </node>
-<node TEXT="DeepFake" FOLDED="true" POSITION="left" ID="ID_81253926" CREATED="1587729755009" MODIFIED="1642394342542">
-<edge COLOR="#007c7c"/>
-<node TEXT="Dataset" ID="ID_1886590251" CREATED="1615347464586" MODIFIED="1615347466780">
-<node TEXT="ForgeryNet: A Versatile Benchmark for Comprehensive Forgery Analysis (cvpr21)" ID="ID_1435934248" CREATED="1615347467706" MODIFIED="1615347479218"/>
-</node>
-<node TEXT="Survey" ID="ID_1081735994" CREATED="1587729760036" MODIFIED="1587729764469">
-<node TEXT="2004.11138: the creation and detection of deepfakes: a survey" ID="ID_229656376" CREATED="1587729766371" MODIFIED="1587729930927">
-<icon BUILTIN="button_ok"/>
-</node>
-<node TEXT="2004.12626: preliminary forensics analysis of deepfake images" ID="ID_913965" CREATED="1588068509056" MODIFIED="1588068524708"/>
-<node TEXT="Seeing is Living? Rethinking the Security of Facial Liveness Verification in the Deepfake Era" ID="ID_461047989" CREATED="1647267019291" MODIFIED="1647267027027">
-<icon BUILTIN="unchecked"/>
-<node TEXT="USENIX22" ID="ID_1148613248" CREATED="1647267021829" MODIFIED="1647267024253"/>
-</node>
-</node>
-<node TEXT="Create" ID="ID_1812140643" CREATED="1589767913067" MODIFIED="1648338593271">
-<node TEXT="2005.05535: deepfacelab: a simple flexible and extensible face swapping framework" ID="ID_1258022523" CREATED="1589767931055" MODIFIED="1589767949771"/>
-<node TEXT="2004.07165 A recurrent cycle consistency loss for progressive face-to-face synthesis (FG 2020 oral)" ID="ID_1521921331" CREATED="1590805531639" MODIFIED="1590805549067"/>
-</node>
-<node TEXT="Detection" ID="ID_1897134747" CREATED="1588389497295" MODIFIED="1619337612320">
-<node TEXT="2003.08685: leveraging frequency analysis for deep fake image recognition" ID="ID_252600993" CREATED="1588389509200" MODIFIED="1588389530379">
-<node TEXT="frequency analysis" ID="ID_818362087" CREATED="1588389590906" MODIFIED="1588389598678"/>
-</node>
-<node TEXT="2003.08645: detecting deepfakes with metric learning" ID="ID_1878482148" CREATED="1588389618001" MODIFIED="1588389634521"/>
-<node TEXT="2005.05632: detecting cnn-generated facial images in real-world scenarios (CVPR20w)" ID="ID_1299699785" CREATED="1589767828944" MODIFIED="1589767856220"/>
-<node TEXT="Multi-attentional Deepfake Detection (cvpr21)" ID="ID_781694096" CREATED="1615298559426" MODIFIED="1615298567054">
-<node TEXT="bincls -&gt; fine-grained cls" ID="ID_1081064126" CREATED="1615298568075" MODIFIED="1615298788725"/>
-<node TEXT="multi-attentional" ID="ID_634769208" CREATED="1615298789067" MODIFIED="1615298801115"/>
-</node>
-<node TEXT="CVPR21: Improving the Efficiency and Robustness of Deepfakes Detection through Precise Geometric Features" ID="ID_1786812758" CREATED="1619337614061" MODIFIED="1619337626336"/>
-<node TEXT="Self-supervised Learning of Adversarial Example: Towards Good Generalizations for Deepfake Detection" ID="ID_1441114547" CREATED="1648338608774" MODIFIED="1648338611335">
-<node TEXT="CVPR22" ID="ID_409760991" CREATED="1648338612963" MODIFIED="1648338614477"/>
-</node>
-</node>
-<node TEXT="multi-modality detection" ID="ID_692707786" CREATED="1646942308628" MODIFIED="1648338606487">
-<node TEXT="Voice-Face Homogeneity Tells Deepfake" ID="ID_153357596" CREATED="1646942317853" MODIFIED="1646942325559">
-<icon BUILTIN="unchecked"/>
-<node TEXT="CVPR22" ID="ID_725170575" CREATED="1646942319120" MODIFIED="1646942321768"/>
-</node>
-</node>
-<node TEXT="Anti-detection" ID="ID_201818852" CREATED="1590804657624" MODIFIED="1590804660720">
-<node TEXT="2004.00622 Evading Deepfake-Image Detectors with White- and Black-Box Attacks" ID="ID_609816375" CREATED="1590804661430" MODIFIED="1590804670862"/>
-</node>
-</node>
 <node TEXT="Image Editing" FOLDED="true" POSITION="left" ID="ID_65977927" CREATED="1576830540818" MODIFIED="1642394376414">
 <font NAME="Gentium" BOLD="false"/>
 <edge COLOR="#ff0000"/>
@@ -3363,6 +3466,7 @@
 <node TEXT="Cross-Modal Retrieval" FOLDED="true" POSITION="left" ID="ID_22749108" CREATED="1576988430324" MODIFIED="1642431082632">
 <font NAME="Gentium" BOLD="false"/>
 <edge COLOR="#7c0000"/>
+<node TEXT="Image-Text" ID="ID_22916358" CREATED="1649103179989" MODIFIED="1649103183136">
 <node TEXT="Unifying ..." ID="ID_1819265540" CREATED="1586240031907" MODIFIED="1587526865103">
 <font NAME="Gentium" BOLD="false"/>
 </node>
@@ -3586,22 +3690,28 @@
 <node TEXT="2010.01666: multi-modal retrieval using graph neural networks" ID="ID_1676547166" CREATED="1608010937162" MODIFIED="1608010981920">
 <node TEXT="no comparison; inclined to qualitative evaluations" ID="ID_288207961" CREATED="1608010983165" MODIFIED="1608010996471"/>
 </node>
-<node TEXT="Variant: Cross-lingual" ID="ID_1275207266" CREATED="1607576963588" MODIFIED="1619336623631">
+<node TEXT="Cross-Modal Common Representation Learning with Triplet Loss Functions" ID="ID_1827284412" CREATED="1646944290551" MODIFIED="1646944296357">
+<icon BUILTIN="pencil"/>
+<node TEXT="fair" ID="ID_1712372002" CREATED="1646944300395" MODIFIED="1646944304415"/>
+</node>
+</node>
+<node TEXT="Cross-lingual" ID="ID_1275207266" CREATED="1607576963588" MODIFIED="1649103229953">
 <node TEXT="2012.05107: towards zero-shot cross-lingual image retrieval" ID="ID_33321188" CREATED="1607576975335" MODIFIED="1607576995999">
 <icon BUILTIN="button_ok"/>
 <node TEXT="multi-modal representations using cross-lingual pre-training on the text side" ID="ID_761823260" CREATED="1607577008171" MODIFIED="1607577023025"/>
 <node TEXT="objective function which tightens the text embedding clusters by pushing dissimilar texts from each other" ID="ID_278870167" CREATED="1607577035945" MODIFIED="1607577055909"/>
 </node>
 </node>
-<node TEXT="Variant: Audio-Image" ID="ID_1999112869" CREATED="1619443906882" MODIFIED="1619443911700">
+<node TEXT="Audio-Image" ID="ID_1999112869" CREATED="1619443906882" MODIFIED="1649103236875">
 <node TEXT="Talk, Don&apos;t Write: A Study of Direct Speech-Based Image Retrieval" ID="ID_1895575295" CREATED="1619443912720" MODIFIED="1619443918857"/>
+</node>
+<node TEXT="Video-Text" ID="ID_387413475" CREATED="1649103145467" MODIFIED="1649103148698">
+<node TEXT="X-Pool: Cross-Modal Language-Video Attention for Text-Video Retrieval" ID="ID_363825595" CREATED="1649103154257" MODIFIED="1649103155281">
+<node TEXT="CVPR22" ID="ID_1553240026" CREATED="1649103156491" MODIFIED="1649103158193"/>
+</node>
 </node>
 <node TEXT="Variant: Continual Learning" ID="ID_131519106" CREATED="1619336659546" MODIFIED="1619336666539">
 <node TEXT="CVPR21w: Continual learning in cross-modal retrieval" ID="ID_834969689" CREATED="1619336667454" MODIFIED="1619336675662"/>
-</node>
-<node TEXT="Cross-Modal Common Representation Learning with Triplet Loss Functions" ID="ID_1827284412" CREATED="1646944290551" MODIFIED="1646944296357">
-<icon BUILTIN="pencil"/>
-<node TEXT="fair" ID="ID_1712372002" CREATED="1646944300395" MODIFIED="1646944304415"/>
 </node>
 </node>
 <node TEXT="Learning" FOLDED="true" POSITION="left" ID="ID_876811772" CREATED="1583309966895" MODIFIED="1642394191143">
