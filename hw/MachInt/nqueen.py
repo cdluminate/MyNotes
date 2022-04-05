@@ -5,6 +5,17 @@ from collections import Counter
 from rich.progress import track
 c = rich.get_console()
 
+
+def cbdump(v: list) -> str:
+    '''
+    Construct a textural representation of the checkboard.
+    '''
+    n = len(v)
+    rows = [['Q ' if v[i]==j else '. ' for j in range(n)] for i in range(n)]
+    rows = '\n'.join([''.join(row) for row in rows])
+    return rows
+
+
 def isvalid(v: list, n: int = None, debug: bool = False) -> bool:
     '''
     Tells whether the given vector `v` is a valid solution for n-queen.
@@ -48,16 +59,6 @@ def test_validate():
     sol = [x-1 for x in [1,2,3,4,5,6,7,8]]
     c.print(cbdump(sol))
     assert(not isvalid(sol, debug=True))
-
-
-def cbdump(v: list) -> str:
-    '''
-    Construct a textural representation of the checkboard.
-    '''
-    n = len(v)
-    rows = [['Q ' if v[i]==j else '. ' for j in range(n)] for i in range(n)]
-    rows = '\n'.join([''.join(row) for row in rows])
-    return rows
 
 
 def solve_nqueen_dfs(n: int):
