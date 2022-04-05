@@ -67,16 +67,16 @@ def solve_nqueen_dfs(n: int):
     '''
     def _solve_nqueen_dfs(v: list, n: int):
         '''
-        recursive worker function for solve_nqueen_dfs.
-        validate solution when reached the leaf node
+        recursive worker function
         '''
         cursor = len(v)
-        # recursion boundary
+        # recursion boundary: validate solution
         if cursor == n:
             if isvalid(v):
                 return v
             else:
                 return False
+        # not yet reached at leaf node
         else:
             for i in range(n):
                 v.append(i)
@@ -88,24 +88,57 @@ def solve_nqueen_dfs(n: int):
     return _solve_nqueen_dfs([], n)
 
 
+def solve_nqueen_backtrack(n: int):
+    '''
+    backtrack depth-first search for n-queen
+    '''
+    def _solve_nqueen_backtrack(v: list, n: int):
+        '''
+        recursive worker function
+        '''
+        cursor = len(v)
+        # recursion boundary: validate solution
+        if cursor == n:
+            if isvalid(v):
+                return v
+            else:
+                return False
+        # not yet reached at leaf node
+        else:
+            for i in range(n):
+                v.append(i)
+                if not isvalid(v):
+                    v.pop()
+                else:
+                    ret = _solve_nqueen_backtrack(v, n)
+                    if ret:
+                        return ret
+                    else:
+                        v.pop()
+    return _solve_nqueen_backtrack([], n)
+
+
 def benchmark_nqueen(n: int):
     '''
     benchmark differnt solvers and make plot
     '''
-    solvers = [solve_nqueen_dfs]
+    solvers = [solve_nqueen_dfs,
+            solve_nqueen_backtrack]
     elapsed = []
-    for solver in solvers:
+    print('Elapsed time:')
+    for (i, solver) in enumerate(solvers):
         tm_start = time.time()
         sol = solver(n)
         tm_end = time.time()
+        print(cbdump(sol))
         elapsed.append(tm_end - tm_start)
-    print('Elapsed time:')
-    for i in range(len(solvers)):
         print(f'[{i}]', solvers[i].__name__, elapsed[i])
+    # FIXME: cprofile analysis
 
 
 if __name__ == '__main__':
     #test_validate()
     #v = solve_nqueen_dfs(8)
+    #v = solve_nqueen_backtrack(8)
     #c.print(cbdump(v))
     benchmark_nqueen(8)
