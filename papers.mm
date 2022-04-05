@@ -289,6 +289,9 @@
 <node TEXT="NIPS21" ID="ID_79033966" CREATED="1648648423018" MODIFIED="1648648435131"/>
 <node TEXT="training the source classifiers to be &apos;slightly robust&apos; -- that is, robust to small magnitude adversarial examples -- substantially improves the transferability of class-targeted and representation-targeted adversarial attacks, even between architectures as different as convolutional neural networks and transformers" ID="ID_1089875092" CREATED="1648648464236" MODIFIED="1648648612665"/>
 </node>
+<node TEXT="Improving Adversarial Transferability with Spatial Momentum" ID="ID_1876738977" CREATED="1649124088574" MODIFIED="1649124101366">
+<icon BUILTIN="pencil"/>
+</node>
 </node>
 <node TEXT="Universal Perturbation" ID="ID_883577858" CREATED="1641522438698" MODIFIED="1641522443789">
 <node TEXT="on distinctive properties of universal perturbations (madry)" ID="ID_224581737" CREATED="1641522458794" MODIFIED="1641743879665">
@@ -318,7 +321,17 @@
 <node TEXT="CVPR22" ID="ID_768388055" CREATED="1648396367815" MODIFIED="1648396370562"/>
 </node>
 </node>
-<node TEXT="Patch/Visible Attack" ID="ID_1333081920" CREATED="1641673351616" MODIFIED="1641673361482"/>
+<node TEXT="Patch/Visible Attack" ID="ID_1333081920" CREATED="1641673351616" MODIFIED="1641673361482">
+<node TEXT="Give Me Your Attention: Dot-Product Attention Considered Harmful for Adversarial Patch Robustness" ID="ID_423751219" CREATED="1649124175641" MODIFIED="1649124183001">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_293805346" CREATED="1649124183794" MODIFIED="1649124185031"/>
+<node TEXT="attention mechanism and patch" ID="ID_121363818" CREATED="1649124255059" MODIFIED="1649124259848"/>
+<node TEXT="(1) dot-product attention can be the source of a major vulnerability when confronted with adversarial patch attacks" ID="ID_1806672118" CREATED="1649124285021" MODIFIED="1649124304827"/>
+<node TEXT="(2) provide a theoretical understanding of this vulnerability" ID="ID_1107915502" CREATED="1649124305511" MODIFIED="1649124323794"/>
+<node TEXT="(3) novel objective which targets this vulnerability explicily" ID="ID_419084162" CREATED="1649124324606" MODIFIED="1649124352752"/>
+<node TEXT="(4) effective on imagenet classification (ViT) and object detection (DETR)" ID="ID_317968833" CREATED="1649124356646" MODIFIED="1649124381822"/>
+</node>
+</node>
 <node TEXT="Other Perceptual Bound" ID="ID_1927729677" CREATED="1648396670489" MODIFIED="1648396693602">
 <node TEXT="Frequency-driven Imperceptible Adversarial Attack on Semantic Similarity" ID="ID_914839874" CREATED="1648396694653" MODIFIED="1648396695806">
 <node TEXT="CVPR22" ID="ID_703502731" CREATED="1648396703382" MODIFIED="1648396705165"/>
@@ -711,6 +724,11 @@
 <node TEXT="tiggering failures; out of distribution detection by learning from local adversarial attacks in semgnatic segmentation" ID="ID_1480297231" CREATED="1647567820168" MODIFIED="1647567841158">
 <icon BUILTIN="pencil"/>
 </node>
+</node>
+</node>
+<node TEXT="Robust Feature + Generation" ID="ID_537346870" CREATED="1649110439088" MODIFIED="1649110447665">
+<node TEXT="A Unified Contrastive Energy-based Model for Understanding the Generative Ability of Adversarial Training" ID="ID_1489690701" CREATED="1649110448973" MODIFIED="1649110454724">
+<node TEXT="ICLR22" ID="ID_1060364838" CREATED="1649110455536" MODIFIED="1649110459173"/>
 </node>
 </node>
 </node>
