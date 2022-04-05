@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="103" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="105" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1648337505775">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -288,6 +288,10 @@
 <icon BUILTIN="pencil"/>
 <node TEXT="Jian Sun" ID="ID_475582790" CREATED="1649101788945" MODIFIED="1649101790751"/>
 </node>
+<node TEXT="Query-Efficient Black-box Adversarial Attacks Guided by a Transfer-based Prior" ID="ID_1219696767" CREATED="1649130199200" MODIFIED="1649130203653">
+<icon BUILTIN="unchecked"/>
+<node TEXT="TPAMI" ID="ID_1416975086" CREATED="1649130204615" MODIFIED="1649130207674"/>
+</node>
 </node>
 </node>
 <node TEXT="Transferrability" ID="ID_142248765" CREATED="1641678368814" MODIFIED="1641678372373">
@@ -301,6 +305,11 @@
 </node>
 <node TEXT="Improving Adversarial Transferability with Spatial Momentum" ID="ID_1876738977" CREATED="1649124088574" MODIFIED="1649124101366">
 <icon BUILTIN="pencil"/>
+</node>
+<node TEXT="Improving the Transferability of Targeted Adversarial Examples through Object-Based Diverse Input" ID="ID_1431448231" CREATED="1649127313699" MODIFIED="1649127316657">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_1200375451" CREATED="1649127317584" MODIFIED="1649127319119"/>
+<node TEXT="3D render" ID="ID_1435099598" CREATED="1649127319398" MODIFIED="1649127321736"/>
 </node>
 </node>
 <node TEXT="Universal Perturbation" ID="ID_883577858" CREATED="1641522438698" MODIFIED="1641522443789">
@@ -583,6 +592,15 @@
 <node TEXT="but the abstract does not talk about loss and generalization" ID="ID_638811091" CREATED="1647265284038" MODIFIED="1647265313609">
 <icon BUILTIN="button_cancel"/>
 </node>
+</node>
+<node TEXT="On the Properties of Adversarially-Trained CNNs" ID="ID_682274955" CREATED="1649127468447" MODIFIED="1649127475029">
+<icon BUILTIN="pencil"/>
+<node TEXT="(1) feature maps in AT models are more dense and activate more frequently compared to natural models" ID="ID_701621821" CREATED="1649127480694" MODIFIED="1649127499308"/>
+<node TEXT="(2) feature maps in AT models are more redundant than in natural models, thus reducing the effective number of channels in hidden layers" ID="ID_780256294" CREATED="1649127500149" MODIFIED="1649127525663"/>
+<node TEXT="(3) latent space of AT model offers representations with different degrees of robustness" ID="ID_647914246" CREATED="1649127525859" MODIFIED="1649127550766">
+<node TEXT="This confirms the fact that AT preserves extra information about the input that is ignored by the robust classifier" ID="ID_381951281" CREATED="1649127551562" MODIFIED="1649127570752"/>
+</node>
+<node TEXT="(4) color bias of AT models and point out subtle failure modes that may undermine the deployment of robust models in practice" ID="ID_1720778162" CREATED="1649127657702" MODIFIED="1649127679045"/>
 </node>
 </node>
 <node TEXT="Patch Detection" ID="ID_1544755494" CREATED="1641523388190" MODIFIED="1644180812163">
@@ -1259,6 +1277,18 @@
 <node TEXT="2003.13866: Dataless Model Selection with the Deep Frame Potential (cvpr20 oral)" ID="ID_1001428483" CREATED="1590749590119" MODIFIED="1590749604523">
 <node TEXT="Manual network Architecture search" ID="ID_906467454" CREATED="1590749906309" MODIFIED="1590749914137"/>
 </node>
+<node TEXT="RepLKNet" ID="ID_1993802123" CREATED="1649130309608" MODIFIED="1649130316321">
+<font BOLD="true"/>
+<node TEXT="Scaling Up Your Kernels to 31x31: Revisiting Large Kernel Design in CNNs" ID="ID_303103818" CREATED="1649130250951" MODIFIED="1649130256171">
+<node TEXT="CVPR22" ID="ID_1730768826" CREATED="1649130257812" MODIFIED="1649130259170">
+<node TEXT="Jian Sun" ID="ID_1653020634" CREATED="1649130409044" MODIFIED="1649130411134">
+<node TEXT="Xiangyu Zhang" ID="ID_1209636585" CREATED="1649130422447" MODIFIED="1649130425362"/>
+</node>
+</node>
+<node TEXT="shrink the performance gap to swin transformer using CNN" ID="ID_738786023" CREATED="1649130342676" MODIFIED="1649130358342"/>
+<node TEXT="in contrast to small-kernel CNNs, large-kernel CNNs have much larger effective receptive fields and higher shape bias rather than texture bias." ID="ID_739960812" CREATED="1649130317521" MODIFIED="1649130382485"/>
+</node>
+</node>
 </node>
 </node>
 <node TEXT="Transformer" ID="ID_1624253019" CREATED="1642438779008" MODIFIED="1642953058542">
@@ -1351,6 +1381,9 @@
 <node TEXT="cvpr21" ID="ID_109505516" CREATED="1643057959966" MODIFIED="1643057961249"/>
 <node TEXT="the moments are often removed (e.g. mean and stdev)" ID="ID_776849456" CREATED="1643057961500" MODIFIED="1643057991230"/>
 <node TEXT="but moments extracted from instance normalization and positional normalization can roughly capture style and shape information of an image" ID="ID_1102689926" CREATED="1643057991834" MODIFIED="1643058019401"/>
+</node>
+<node TEXT="Deep AutoAugment" ID="ID_1383049991" CREATED="1649130129509" MODIFIED="1649130129980">
+<node TEXT="ICLR22" ID="ID_1196117385" CREATED="1649130131526" MODIFIED="1649130135185"/>
 </node>
 </node>
 <node TEXT="Long-Tail" ID="ID_314928185" CREATED="1649104418933" MODIFIED="1649104421848">
@@ -2157,6 +2190,12 @@
 <node TEXT="Fine-Tuning can Distort Pretrained Features and Underperform Out-of-Distribution" ID="ID_1001645107" CREATED="1647264390521" MODIFIED="1647264398367">
 <icon BUILTIN="unchecked"/>
 <node TEXT="ICLR22" ID="ID_248597371" CREATED="1647264392555" MODIFIED="1647264395025"/>
+</node>
+<node TEXT="Adaptive Domain Adaptation" ID="ID_926597894" CREATED="1649130053250" MODIFIED="1649130058744">
+<node TEXT="Learning Distinctive Margin toward Active Domain Adaptation" ID="ID_1937782410" CREATED="1649130059707" MODIFIED="1649130060490">
+<node TEXT="CVPR22" ID="ID_1742639409" CREATED="1649130061738" MODIFIED="1649130063012"/>
+<node TEXT="similar to SVM" ID="ID_1059316080" CREATED="1649130063284" MODIFIED="1649130069027"/>
+</node>
 </node>
 </node>
 <node TEXT="Facial Expression" FOLDED="true" POSITION="left" ID="ID_1665603625" CREATED="1648335974432" MODIFIED="1648336221787">
