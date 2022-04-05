@@ -62,31 +62,29 @@ def cbdump(v: list) -> str:
 
 def solve_nqueen_dfs(n: int):
     '''
-    Naive n-queen solver in dfs, brute-force.
+    Naive n-queen solver in dfs, brute-force permutation method.
     '''
-    return _solve_nqueen_dfs([], n)
-
-
-def _solve_nqueen_dfs(v: list, n: int):
-    '''
-    recursive worker function for solve_nqueen_dfs.
-    validate solution when reached the leaf node
-    '''
-    cursor = len(v)
-    # recursion boundary
-    if cursor == n:
-        if isvalid(v):
-            return v
-        else:
-            return False
-    else:
-        for i in range(n):
-            v.append(i)
-            ret = _solve_nqueen_dfs(v, n)
-            if ret:
-                return ret
+    def _solve_nqueen_dfs(v: list, n: int):
+        '''
+        recursive worker function for solve_nqueen_dfs.
+        validate solution when reached the leaf node
+        '''
+        cursor = len(v)
+        # recursion boundary
+        if cursor == n:
+            if isvalid(v):
+                return v
             else:
-                v.pop()
+                return False
+        else:
+            for i in range(n):
+                v.append(i)
+                ret = _solve_nqueen_dfs(v, n)
+                if ret:
+                    return ret
+                else:
+                    v.pop()
+    return _solve_nqueen_dfs([], n)
 
 
 def benchmark_nqueen(n: int):
