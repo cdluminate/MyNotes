@@ -775,7 +775,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
+<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_1556055508" CREATED="1648173325254" MODIFIED="1648173329845">
 <icon BUILTIN="info"/>
@@ -1050,6 +1050,11 @@
 <node TEXT="delving into deep image prior for adversarial defense: a novel reconstruction based defense framework" ID="ID_1101165014" CREATED="1647567984454" MODIFIED="1647568005112">
 <icon BUILTIN="unchecked"/>
 <node TEXT="acm mm" ID="ID_1121719140" CREATED="1647568006277" MODIFIED="1647568007837"/>
+</node>
+<node TEXT="Reverse Engineering of Imperceptible Adversarial Image Perturbations" ID="ID_715406747" CREATED="1649178389420" MODIFIED="1649178397390">
+<node TEXT="ICLR22" ID="ID_154190135" CREATED="1649181964456" MODIFIED="1649181966990">
+<node TEXT="Yifan Gong" ID="ID_1397398867" CREATED="1649181968859" MODIFIED="1649181973066"/>
+</node>
 </node>
 </node>
 <node TEXT="Activation Intervene" ID="ID_1088268480" CREATED="1647266487705" MODIFIED="1647266501053">
