@@ -155,11 +155,10 @@ def test_attack_score():
 
 def solve_nqueen_hill(n: int, numretry: int = 10):
     '''
-    Hill-climbing search / Greedy local search.
+    Hill-climbing (steepest) search / Greedy local search.
     We want to minimize attack_score starting from a random guess.
     '''
     def _solve_nqueen_hill(v: list, n: int, debug: bool = False):
-        MAXITER = n
         def _action_score(v: list, act: tuple) -> int:
             '''
             evaluate the score after performing the action
@@ -167,7 +166,7 @@ def solve_nqueen_hill(n: int, numretry: int = 10):
             tmp = v.copy()
             tmp[act[0]], tmp[act[1]] = tmp[act[1]], tmp[act[0]]
             return attack_score(tmp)
-        for iteration in range(MAXITER):
+        for iteration in range(n):
             # evaluate the current attack_score
             current_score = attack_score(v)
             if debug:
@@ -202,6 +201,57 @@ def solve_nqueen_hill(n: int, numretry: int = 10):
     return None
 
 
+def solve_nqueen_simanneal(n: int, numretry: int = 10):
+    '''
+    Simulated Annealing, another local search method.
+    '''
+    def _solve_nqueen_simanneal(v: list, n: int, maxiter: int = 1000,
+            debug: bool = False):
+        def _action_score(v: list, act: tuple) -> int:
+            '''
+            evaluate the score after performing the action
+            '''
+            tmp = v.copy()
+            tmp[act[0]], tmp[act[1]] = tmp[act[1]], tmp[act[0]]
+            return attack_score(tmp)
+        for iteration in range(maxiter):
+            # evaluate the current attack_score
+            current_score = attack_score(v)
+            if debug:
+                print('iter', iteration, 'currernt score', current_score)
+            # evaluate 
+            act = random.choice(list(it.combinations(range(n), 2)))
+            score = _action_score(v, act)
+            # is there any better solution?
+            if score < current_score:
+                # take the action
+                v[act[0]], v[act[1]] = v[act[1]], v[act[0]]
+                if debug:
+                    print('swapped', act, 'and the result is', v)
+                current_score = score
+            else:
+                # stuck at local minima, we try to jump out
+                threshold = iteration / maxiter
+                if random.random() >= threshold:
+                    v[act[0]], v[act[1]] = v[act[1]], v[act[0]]
+                    if debug:
+                        print('annealing', act, 'and the result is', v)
+        return v, current_score
+    # initliaze with a random guess
+    # we use a fixed random guess to ensure reproducibility
+    for itry in range(numretry):
+        v = list(range(n))
+        random.shuffle(v)
+        print('trial', itry, 'starts with', v)
+        sol, score = _solve_nqueen_simanneal(v, n, 1000, False)
+        if score > 0:
+            print('trial', itry, 'stuck in local minima')
+        else:
+            return v
+    return None
+
+
+
 def benchmark_nqueen(n: int):
     '''
     benchmark differnt solvers and make plot
@@ -225,6 +275,7 @@ if __name__ == '__main__':
     #test_attack_score()
     #v = solve_nqueen_dfs(8)
     #v = solve_nqueen_backtrack(8)
-    v = solve_nqueen_hill(8)
+    #v = solve_nqueen_hill(8)
+    v = solve_nqueen_simanneal(8)
     c.print(cbdump(v))
     #benchmark_nqueen(8)
