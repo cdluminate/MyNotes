@@ -1,9 +1,13 @@
 #!/usr/bin/pypy3
 import time
+import itertools as it
+import functools as ft
+import random
 import rich
 from collections import Counter
 from rich.progress import track
 c = rich.get_console()
+random.seed(1)
 
 
 def cbdump(v: list) -> str:
@@ -49,16 +53,17 @@ def isvalid(v: list, n: int = None, debug: bool = False) -> bool:
     return True
 
 
-def test_validate():
+def test_isvalid():
     sol = [x-1 for x in [5,3,1,7,2,8,6,4]]
-    c.print(cbdump(sol))
+    #c.print(cbdump(sol))
     assert(isvalid(sol, debug=True))
     sol = [x-1 for x in [1,1,1,1,1,1,1,1]]
-    c.print(cbdump(sol))
+    #c.print(cbdump(sol))
     assert(not isvalid(sol, debug=True))
     sol = [x-1 for x in [1,2,3,4,5,6,7,8]]
-    c.print(cbdump(sol))
+    #c.print(cbdump(sol))
     assert(not isvalid(sol, debug=True))
+    return True
 
 
 def solve_nqueen_dfs(n: int):
@@ -108,6 +113,7 @@ def solve_nqueen_backtrack(n: int):
             for i in range(n):
                 v.append(i)
                 if not isvalid(v):
+                    # prune the search sub tree
                     v.pop()
                 else:
                     ret = _solve_nqueen_backtrack(v, n)
@@ -116,6 +122,84 @@ def solve_nqueen_backtrack(n: int):
                     else:
                         v.pop()
     return _solve_nqueen_backtrack([], n)
+
+
+def attack_score(v: list) -> int:
+    '''
+    Gives an attack score for the complete or partial solution v.
+    This function is a variant to the previous `isvalid(...)` function.
+    When attack_score(...) reached at 0, the given solution is valid.
+    '''
+    attacks = 0
+    # helper function for counting diagonal attack
+    def _diag_attack(_v: list) -> int:
+        c = Counter(i - _v[i] for i in range(len(_v)))
+        return sum(max(count-1,0) for count in c.values())
+    # type1: column attack
+    attacks += sum(max(x-1, 0) for x in Counter(v).values())
+    # type2: diagonal attack
+    attacks += _diag_attack(v)
+    attacks += _diag_attack(list(reversed(v)))
+    return attacks
+
+
+def test_attack_score():
+    sol = [x-1 for x in [5,3,1,7,2,8,6,4]]
+    assert(attack_score(sol) == 0)
+    sol = [x-1 for x in [1,1,1,1,1,1,1,1]]
+    assert(attack_score(sol) == 7)
+    sol = [x-1 for x in [1,2,3,4,5,6,7,8]]
+    assert(attack_score(sol) == 7)
+    return True
+
+
+def solve_nqueen_hill(n: int, numretry: int = 10):
+    '''
+    Hill-climbing search / Greedy local search.
+    We want to minimize attack_score starting from a random guess.
+    '''
+    def _solve_nqueen_hill(v: list, n: int, debug: bool = False):
+        MAXITER = n
+        def _action_score(v: list, act: tuple) -> int:
+            '''
+            evaluate the score after performing the action
+            '''
+            tmp = v.copy()
+            tmp[act[0]], tmp[act[1]] = tmp[act[1]], tmp[act[0]]
+            return attack_score(tmp)
+        for iteration in range(MAXITER):
+            # evaluate the current attack_score
+            current_score = attack_score(v)
+            if debug:
+                print('iter', iteration, 'currernt score', current_score)
+            # evaluate 
+            action_scores = [(action, _action_score(v, action))
+                    for action in it.combinations(range(n), 2)]
+            action_scores.sort(key=lambda x: x[1])  # smallest goes to top
+            if debug:
+                print(action_scores)
+            # is there any better solution?
+            if action_scores[0][1] < current_score:
+                # take the action
+                act = action_scores[0][0]
+                v[act[0]], v[act[1]] = v[act[1]], v[act[0]]
+                print('swapped', act, 'and the result is', v)
+                current_score = action_scores[0][1]
+            else:
+                break
+        return v, current_score
+    # initliaze with a random guess
+    # we use a fixed random guess to ensure reproducibility
+    for itry in range(numretry):
+        v = list(range(n))
+        random.shuffle(v)
+        print('trial', itry, 'starts with', v)
+        sol, score = _solve_nqueen_hill(v, n, False)
+        if score > 0:
+            print('trial', itry, 'stuck in local minima')
+        else:
+            return v
+    return None
 
 
 def benchmark_nqueen(n: int):
@@ -137,8 +221,10 @@ def benchmark_nqueen(n: int):
 
 
 if __name__ == '__main__':
-    #test_validate()
+    #test_isvalid()
+    #test_attack_score()
     #v = solve_nqueen_dfs(8)
     #v = solve_nqueen_backtrack(8)
-    #c.print(cbdump(v))
-    benchmark_nqueen(8)
+    v = solve_nqueen_hill(8)
+    c.print(cbdump(v))
+    #benchmark_nqueen(8)
