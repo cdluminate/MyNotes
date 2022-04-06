@@ -3,6 +3,7 @@ import time
 import itertools as it
 import functools as ft
 import random
+import math
 import rich
 from collections import Counter
 from rich.progress import track
@@ -188,7 +189,7 @@ def solve_nqueen_hill(n: int, numretry: int = 10):
                 break
         return v, current_score
     # initliaze with a random guess
-    # we use a fixed random guess to ensure reproducibility
+    # we use a fixed random seed to ensure reproducibility
     for itry in range(numretry):
         v = list(range(n))
         random.shuffle(v)
@@ -238,7 +239,7 @@ def solve_nqueen_simanneal(n: int, numretry: int = 10):
                         print('annealing', act, 'and the result is', v)
         return v, current_score
     # initliaze with a random guess
-    # we use a fixed random guess to ensure reproducibility
+    # we use a fixed random seed to ensure reproducibility
     for itry in range(numretry):
         v = list(range(n))
         random.shuffle(v)
@@ -251,13 +252,66 @@ def solve_nqueen_simanneal(n: int, numretry: int = 10):
     return None
 
 
+def solve_nqueen_beam(n: int, numretry: int = 10, sbeam: int = 5):
+    '''
+    Greedy local beam search. It is not k-start hill climbing.
+    sbeam is size of beam. default to 3.
+    '''
+    def _solve_nqueen_beam(beam: list, n: int, debug: bool = False):
+        '''
+        beam is a list of solutions.
+        '''
+        def _take_action(v: list, act: tuple) -> int:
+            tmp = v.copy()
+            tmp[act[0]], tmp[act[1]] = tmp[act[1]], tmp[act[0]]
+            return tmp, attack_score(tmp)
+        for iteration in range(n):
+            # evaluate the current attack_score
+            current_score = min(attack_score(v) for v in beam)
+            if debug:
+                print('iter', iteration, 'currernt score', current_score)
+            # evaluate steepest step for every item in beam
+            candidates = []
+            for v in beam:
+                candidates.extend([_take_action(v, action)
+                    for action in it.combinations(range(n), 2)])
+            candidates.sort(key=lambda x: x[1])  # smallest goes to top
+            if debug:
+                print(candidates[:sbeam])
+            # is there any better solution?
+            if candidates[0][1] < current_score:
+                # take the action
+                beam = [x[0] for x in candidates[:sbeam]]
+                current_score = candidates[0][1]
+            else:
+                break
+        return beam, current_score
+    # initliaze with a random guess
+    # we use a fixed random seed to ensure reproducibility
+    for itry in range(numretry):
+        beam = [list(range(n)) for _ in range(sbeam)]
+        for i in range(sbeam):
+            random.shuffle(beam[i])
+        print('trial', itry, 'starts with', beam)
+        sol, score = _solve_nqueen_beam(beam, n, True)
+        if score > 0:
+            print('trial', itry, 'stuck in local minima')
+        else:
+            return sol[0]
+    return None
+
 
 def benchmark_nqueen(n: int):
     '''
     benchmark differnt solvers and make plot
     '''
-    solvers = [solve_nqueen_dfs,
-            solve_nqueen_backtrack]
+    solvers = [
+            solve_nqueen_dfs,
+            solve_nqueen_backtrack,
+            solve_nqueen_hill,
+            solve_nqueen_simanneal,
+            solve_nqueen_beam,
+            ]
     elapsed = []
     print('Elapsed time:')
     for (i, solver) in enumerate(solvers):
@@ -267,7 +321,10 @@ def benchmark_nqueen(n: int):
         print(cbdump(sol))
         elapsed.append(tm_end - tm_start)
         print(f'[{i}]', solvers[i].__name__, elapsed[i])
-    # FIXME: cprofile analysis
+    import matplotlib.pyplot as plt
+    plt.bar([x.__name__ for x in solvers], [math.log(1000*x) for x in elapsed])
+    plt.xticks(rotation=30)
+    plt.show()
 
 
 if __name__ == '__main__':
@@ -276,6 +333,8 @@ if __name__ == '__main__':
     #v = solve_nqueen_dfs(8)
     #v = solve_nqueen_backtrack(8)
     #v = solve_nqueen_hill(8)
-    v = solve_nqueen_simanneal(8)
-    c.print(cbdump(v))
-    #benchmark_nqueen(8)
+    #v = solve_nqueen_simanneal(8)
+    #v = solve_nqueen_beam(8)
+    #c.print(cbdump(v))
+    #print(isvalid(v), attack_score(v))
+    benchmark_nqueen(8)
