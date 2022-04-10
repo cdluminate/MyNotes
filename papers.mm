@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="106" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="107" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1648337505775">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -321,6 +321,10 @@
 <node TEXT="CVPR22" ID="ID_968904429" CREATED="1649623306891" MODIFIED="1649623309747"/>
 <node TEXT="extend top-1 attack to top-k attack for better transferrabilityh" ID="ID_586491602" CREATED="1649623325184" MODIFIED="1649623339168"/>
 </node>
+<node TEXT="DST: Dynamic Substitute Training for Data-free Black-box Attack" ID="ID_179730775" CREATED="1649629766682" MODIFIED="1649629770207">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_420518291" CREATED="1649629771272" MODIFIED="1649629774362"/>
+</node>
 </node>
 <node TEXT="Universal Perturbation" ID="ID_883577858" CREATED="1641522438698" MODIFIED="1641522443789">
 <node TEXT="on distinctive properties of universal perturbations (madry)" ID="ID_224581737" CREATED="1641522458794" MODIFIED="1641743879665">
@@ -519,6 +523,9 @@
 <node TEXT="Shadows can be Dangerous: Stealthy and Effective Physical-world Adversarial Attack by Natural Phenomenon" ID="ID_1311407087" CREATED="1648388169624" MODIFIED="1648388171162">
 <node TEXT="CVPR22" ID="ID_823769725" CREATED="1648388172796" MODIFIED="1648388174205"/>
 </node>
+<node TEXT="Adversarial Neon Beam: Robust Physical-World Adversarial Attack to DNNs" ID="ID_445644352" CREATED="1649628227588" MODIFIED="1649628234096">
+<icon BUILTIN="pencil"/>
+</node>
 </node>
 <node TEXT="Remote Sensing" ID="ID_1273414088" CREATED="1647267114318" MODIFIED="1647267117431">
 <node TEXT="Universal adversarial perturbation for remote sensing images" ID="ID_16084759" CREATED="1647267118151" MODIFIED="1647267125456">
@@ -570,7 +577,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Attack Detection &amp; Vul Analysis" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1244682927" CREATED="1646761472294" MODIFIED="1647048997914">
+<node TEXT="Attack Detection &amp; Vul Analysis" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1244682927" CREATED="1646761472294" MODIFIED="1647048997914">
 <edge COLOR="#7c0000"/>
 <node TEXT="Survey" ID="ID_532349138" CREATED="1646943062780" MODIFIED="1648419467256">
 <font BOLD="true"/>
@@ -616,6 +623,10 @@
 <node TEXT="This confirms the fact that AT preserves extra information about the input that is ignored by the robust classifier" ID="ID_381951281" CREATED="1649127551562" MODIFIED="1649127570752"/>
 </node>
 <node TEXT="(4) color bias of AT models and point out subtle failure modes that may undermine the deployment of robust models in practice" ID="ID_1720778162" CREATED="1649127657702" MODIFIED="1649127679045"/>
+</node>
+<node TEXT="Adversarial Robustness through the Lens of Convolutional Filters" ID="ID_1169357550" CREATED="1649633031581" MODIFIED="1649633034132">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22w" ID="ID_1187196788" CREATED="1649633034956" MODIFIED="1649633037261"/>
 </node>
 </node>
 <node TEXT="Patch Detection" ID="ID_1544755494" CREATED="1641523388190" MODIFIED="1644180812163">
@@ -1233,6 +1244,11 @@
 <node TEXT="CVPR22" ID="ID_685246872" CREATED="1648388379291" MODIFIED="1648388380602"/>
 </node>
 </node>
+<node TEXT="Generative" ID="ID_1297276236" CREATED="1649630202035" MODIFIED="1649630208049">
+<node TEXT="Adversarially robust segmentation models learn perceptually-aligned gradients" ID="ID_1579052965" CREATED="1649630171570" MODIFIED="1649630175331">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
 <node TEXT="Reinforcement Learning" ID="ID_628850521" CREATED="1647267813992" MODIFIED="1647267819607">
 <node TEXT="SOUND ADVERSARIAL AUDIO-VISUAL NAVIGATION" ID="ID_1280103442" CREATED="1647267824706" MODIFIED="1647267830036">
 <icon BUILTIN="unchecked"/>
@@ -1445,12 +1461,15 @@
 <node TEXT="CVPR22" ID="ID_1585249354" CREATED="1649104480327" MODIFIED="1649104481946"/>
 </node>
 </node>
-<node TEXT="Explain" ID="ID_765602224" CREATED="1642952846679" MODIFIED="1642953011867">
-<font BOLD="false"/>
-</node>
 <node TEXT="Semi-Supervised" ID="ID_831162860" CREATED="1649168478733" MODIFIED="1649168482062">
 <node TEXT="SimMatch: Semi-supervised Learning with Similarity Matching" ID="ID_1319700790" CREATED="1649168482746" MODIFIED="1649168490533">
 <node TEXT="CVPR22" ID="ID_1919676331" CREATED="1649168491873" MODIFIED="1649168493259"/>
+</node>
+</node>
+<node TEXT="Few-Shot" ID="ID_186985544" CREATED="1649628667512" MODIFIED="1649628669364">
+<node TEXT="Matching Feature Sets for Few-Shot Image Classification" ID="ID_1191271272" CREATED="1649628671810" MODIFIED="1649628677111">
+<node TEXT="CVPR22" ID="ID_471448143" CREATED="1649628678874" MODIFIED="1649628680449"/>
+<node TEXT="a set-based representation intrinsitically builds a richer representation of images from the base classes, which can subsequently better transfer to the few-shot classes." ID="ID_1034599613" CREATED="1649628688797" MODIFIED="1649628722058"/>
 </node>
 </node>
 </node>
@@ -1500,6 +1519,12 @@
 </node>
 <node TEXT="Multi-Similarity" ID="ID_1503083507" CREATED="1641242994307" MODIFIED="1641520995605">
 <font NAME="Gentium"/>
+</node>
+<node TEXT="The Group Loss++: A deeper look into group loss for deep metric learning" ID="ID_1054572484" CREATED="1649630904421" MODIFIED="1649630909296">
+<icon BUILTIN="unchecked"/>
+<icon BUILTIN="bookmark"/>
+<node TEXT="TPAMI22" ID="ID_284202166" CREATED="1649630912115" MODIFIED="1649630915767"/>
+<node TEXT="must read for the next dml defense" ID="ID_284287769" CREATED="1649630920598" MODIFIED="1649630927648"/>
 </node>
 </node>
 <node TEXT="Language Guidance" ID="ID_1378629774" CREATED="1648175946093" MODIFIED="1648175949975">
@@ -1668,6 +1693,16 @@
 <node TEXT="Curricularface: adaptive curriculum learning loss for deep face recognition. CVPR2020" ID="ID_1026306137" CREATED="1642950986727" MODIFIED="1642953955842">
 <icon BUILTIN="unchecked"/>
 <icon BUILTIN="bookmark"/>
+</node>
+<node TEXT="AdaFace" ID="ID_1721671990" CREATED="1649628757671" MODIFIED="1649628776836">
+<icon BUILTIN="bookmark"/>
+<icon BUILTIN="unchecked"/>
+<node TEXT="AdaFace: Quality Adaptive Margin for Face Recognition" ID="ID_419790283" CREATED="1649628760371" MODIFIED="1649628761250">
+<node TEXT="CVPR22" ID="ID_1909513529" CREATED="1649628762396" MODIFIED="1649628763820">
+<node TEXT="Oral" ID="ID_405483472" CREATED="1649628765388" MODIFIED="1649628766520"/>
+</node>
+<node TEXT="we propose a new loss function that emphasizes samples of different difficulties based on their image quality" ID="ID_1401366888" CREATED="1649629032892" MODIFIED="1649629048086"/>
+</node>
 </node>
 <node TEXT="Efficiency" ID="ID_783283599" CREATED="1649105830242" MODIFIED="1649105832685">
 <node TEXT="Killing Two Birds with One Stone:Efficient and Robust Training of Face Recognition CNNs by Partial FC" ID="ID_556846223" CREATED="1649105833331" MODIFIED="1649105842171">
@@ -2288,6 +2323,12 @@
 <node TEXT="CVPR22" ID="ID_1065954996" CREATED="1648343238753" MODIFIED="1648343240041"/>
 </node>
 </node>
+<node TEXT="Image Retrieval" FOLDED="true" POSITION="left" ID="ID_1006799943" CREATED="1649630594458" MODIFIED="1649630598110">
+<edge COLOR="#007c00"/>
+<node TEXT="Correlation Verification for Image Retrieval" ID="ID_1013972134" CREATED="1649630600849" MODIFIED="1649630693321">
+<node TEXT="CVPR22" ID="ID_1345324489" CREATED="1649630694449" MODIFIED="1649630695940"/>
+</node>
+</node>
 <node TEXT="Instance Segmentation" FOLDED="true" POSITION="left" ID="ID_1759449865" CREATED="1649104217760" MODIFIED="1649104221244">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Main" ID="ID_1417928999" CREATED="1578733356683" MODIFIED="1649104710111">
@@ -2429,6 +2470,9 @@
 <node TEXT="2012.03519: fine-trained dynamic head for object detection" ID="ID_70012465" CREATED="1607496916818" MODIFIED="1607496930453"/>
 <node TEXT="2012: Implicit Feature Pyramid Network for Object Detection" ID="ID_659232211" CREATED="1610428420327" MODIFIED="1610428428770">
 <node TEXT="Jian Sun" ID="ID_1833196048" CREATED="1610428429754" MODIFIED="1610428432093"/>
+</node>
+<node TEXT="R(Det)^2: Randomized Decision Routing for Object Detection" ID="ID_1075041282" CREATED="1649628031567" MODIFIED="1649628032450">
+<node TEXT="CVPR22" ID="ID_1565974246" CREATED="1649628035054" MODIFIED="1649628038569"/>
 </node>
 </node>
 <node TEXT="Performance Metric" ID="ID_898832267" CREATED="1649101258896" MODIFIED="1649101263049">
