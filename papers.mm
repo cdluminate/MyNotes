@@ -1160,6 +1160,12 @@
 <node TEXT="student learns the robust representations from the teacher network" ID="ID_640049187" CREATED="1647265180865" MODIFIED="1647265202101"/>
 </node>
 </node>
+<node TEXT="Late Fusion" ID="ID_1556837406" CREATED="1649633628459" MODIFIED="1649633630829">
+<node TEXT="Training-Free Robust Multimodal Learning via Sample-Wise Jacobian Regularization" ID="ID_266079583" CREATED="1649633640001" MODIFIED="1649633641760">
+<icon BUILTIN="pencil"/>
+<node TEXT="looks like rejected ECCV" ID="ID_1470248094" CREATED="1649633642769" MODIFIED="1649633646853"/>
+</node>
+</node>
 <node TEXT="Patch Defense" ID="ID_1143099045" CREATED="1648180904182" MODIFIED="1648180907628">
 <node TEXT="Towards Practical Certifiable Patch Defense with Vision Transformer" ID="ID_881632170" CREATED="1648180952088" MODIFIED="1648180959464">
 <icon BUILTIN="unchecked"/>
@@ -1171,6 +1177,11 @@
 <node TEXT="derandomized smoothing with vision transformer" ID="ID_1531792988" CREATED="1648260239300" MODIFIED="1648260251088"/>
 <node TEXT="reconstruct the architecture of the ViT" ID="ID_919736557" CREATED="1648260337506" MODIFIED="1648260350021"/>
 <node TEXT="significant certified performance increase" ID="ID_1314933884" CREATED="1648260356330" MODIFIED="1648260367449"/>
+</node>
+</node>
+<node TEXT="Pruning" ID="ID_391041991" CREATED="1649633795729" MODIFIED="1649633798101">
+<node TEXT="Masking Adversarial Damage: Finding Adversarial Saliency for Robust and Sparse Network" ID="ID_688752599" CREATED="1649633799104" MODIFIED="1649633804914">
+<node TEXT="CVPR22" ID="ID_717543729" CREATED="1649633805807" MODIFIED="1649633807168"/>
 </node>
 </node>
 </node>
