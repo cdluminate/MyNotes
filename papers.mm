@@ -579,13 +579,6 @@
 </node>
 <node TEXT="Attack Detection &amp; Vul Analysis" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1244682927" CREATED="1646761472294" MODIFIED="1647048997914">
 <edge COLOR="#7c0000"/>
-<node TEXT="Survey" ID="ID_532349138" CREATED="1646943062780" MODIFIED="1648419467256">
-<font BOLD="true"/>
-<node TEXT="Adversarial Example Detection for DNN Models: A Review and Experimental Comparison" ID="ID_1054333884" CREATED="1646943075067" MODIFIED="1646943080350">
-<icon BUILTIN="bookmark"/>
-<icon BUILTIN="pencil"/>
-</node>
-</node>
 <node TEXT="Vulnerability Analysis" ID="ID_1332546973" CREATED="1641743569630" MODIFIED="1647048986674">
 <node TEXT="rethinking feature uncertainty in stochastic neural networks for adversarial robustness" ID="ID_829421687" CREATED="1641678579615" MODIFIED="1641678600199">
 <icon BUILTIN="pencil"/>
@@ -637,6 +630,10 @@
 <node TEXT="Perturbation Detection" ID="ID_983985712" CREATED="1641523884091" MODIFIED="1648419471576">
 <font BOLD="true"/>
 <node TEXT="Survey" ID="ID_554475000" CREATED="1648651800359" MODIFIED="1648651802931">
+<node TEXT="Adversarial Example Detection for DNN Models: A Review and Experimental Comparison" ID="ID_1054333884" CREATED="1646943075067" MODIFIED="1646943080350">
+<icon BUILTIN="bookmark"/>
+<icon BUILTIN="pencil"/>
+</node>
 <node TEXT="Adversarial Examples Are Not Easily Detected:&#xa;Bypassing Ten Detection Methods" ID="ID_817758062" CREATED="1648419488457" MODIFIED="1648419545494">
 <icon BUILTIN="bookmark"/>
 <icon BUILTIN="unchecked"/>
@@ -713,6 +710,21 @@
 <node TEXT="invalid for CIFAR" ID="ID_238408726" CREATED="1648664588486" MODIFIED="1648664592948"/>
 </node>
 </node>
+<node TEXT="Feature-Based" ID="ID_628359288" CREATED="1649724361261" MODIFIED="1649724365751">
+<node TEXT="NSS" ID="ID_1395988491" CREATED="1649724367111" MODIFIED="1649724368337">
+<node TEXT="Detection of Adversarial Examples in Deep Neural&#xa;Networks with Natural Scene Statistics" ID="ID_1655435367" CREATED="1649724369180" MODIFIED="1649724389592">
+<icon BUILTIN="unchecked"/>
+<node TEXT="IJCNN 20" ID="ID_180199044" CREATED="1649724390960" MODIFIED="1649724397382">
+<node TEXT="CIFAR10" ID="ID_1361259835" CREATED="1649724414765" MODIFIED="1649724416754">
+<node TEXT="100% det" ID="ID_1047349689" CREATED="1649724424103" MODIFIED="1649724425980"/>
+</node>
+<node TEXT="ImageNet" ID="ID_366409223" CREATED="1649724416947" MODIFIED="1649724418668">
+<node TEXT="100% det" ID="ID_241413881" CREATED="1649724419737" MODIFIED="1649724421863"/>
+</node>
+</node>
+</node>
+</node>
+</node>
 <node TEXT="Uncertainty" ID="ID_124855505" CREATED="1648664606485" MODIFIED="1649721720157">
 <node TEXT="Detecting Adversarial Samples from Artifacts" ID="ID_378405709" CREATED="1646943244582" MODIFIED="1648651864607">
 <icon BUILTIN="idea"/>
@@ -733,6 +745,14 @@
 <node TEXT="invalid for CIFAR (C&amp;W)" ID="ID_1523903995" CREATED="1648664612425" MODIFIED="1649721739387">
 <icon BUILTIN="button_cancel"/>
 <node TEXT="Carlini" ID="ID_1261642556" CREATED="1649721735265" MODIFIED="1649721737050"/>
+</node>
+</node>
+<node TEXT="mutual information" ID="ID_1242119314" CREATED="1649722533818" MODIFIED="1649722536571">
+<node TEXT="Understanding Measures of Uncertainty for Adversarial Example Detection" ID="ID_383293634" CREATED="1649722538116" MODIFIED="1649722553172">
+<node TEXT="UAI 2018" ID="ID_1815193457" CREATED="1649722554158" MODIFIED="1649722556824">
+<node TEXT="no-topconf" ID="ID_297677658" CREATED="1649722569121" MODIFIED="1649722571381"/>
+<node TEXT="want to skip" ID="ID_539424882" CREATED="1649723336786" MODIFIED="1649723339342"/>
+</node>
 </node>
 </node>
 </node>
