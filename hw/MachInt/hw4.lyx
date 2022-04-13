@@ -1,0 +1,259 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{times}
+\usepackage{microtype}
+\usepackage[margin=1in]{geometry}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+EN 520.650 HW#4
+\end_layout
+
+\begin_layout Author
+Mo Zhou
+\begin_inset Newline newline
+\end_inset
+
+<mzhou32@jhu.edu>
+\end_layout
+
+\begin_layout Section
+Undiscounted MDP
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Consider an undiscounted MDP having three states, (1, 2, 3), with rewards −1, −2
+, 0, respectively.
+ State 3 is a terminal state.
+ In states 1 and 2 there are two possible actions: a and b.
+ The transition model is as follows:
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+- In state 1, action a moves the agent to state 2 with probability 0.6 and
+ makes the agent stay put with probability 0.4.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+- In state 2, action a moves the agent to state 1 with probability 0.6 and
+ makes the agent stay put with probability 0.24
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+- In either state 1 or state 2, action b moves the agent to state 3 with
+ probability 0.2 and makes the agent stay put with probability 0.8.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Answer the following questions:
+\end_layout
+
+\begin_layout Subsection
+Q1
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+What can be determined qualitatively about the optimal policy in states
+ 1 and 2?
+\end_layout
+
+\begin_layout Subsection
+Q2
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Apply policy iteration, showing each step in full, to determine the optimal
+ policy and the values of states 1 and 2.
+ Assume that the initial policy has action b in both states.
+\end_layout
+
+\begin_layout Subsection
+Q3
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+What happens to policy iteration if the initial policy has action a in both
+ states? Does discounting help? Does the optimal policy depend on the discount
+ factor?
+\end_layout
+
+\begin_layout Section
+Object Detectors
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Compare and contrast the various CNN-based object detectors using the following
+ metrics: number of parameters, training and test times, performance on
+ ImageNet dataset.
+\end_layout
+
+\begin_layout Section
+Dropout & Network Architecture Search
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Discuss methods for dropout and searching for the best neural architecture.
+\end_layout
+
+\begin_layout Section
+Back-Propagation
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+For the neural network shown below with initial weights indicated in the
+ figure, calculate the next values of w7 and w3 assuming a single input
+ i1=0.05, i2=0.10 with corresponding outputs o1=0.01 and o2=0.99.
+ Hint: Follow the calculations done in class on 10/06/2021!
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename h4p1.png
+	special width=0.5\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Figure for Question 4.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
