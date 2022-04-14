@@ -483,7 +483,7 @@ And the new MEU
 \begin{align*}
 \pi_{1}(s_{1}) & =\arg\max_{A\in\{a,b\}}\begin{cases}
 [0.4,0.6,0][-1,-2,0]^{T}=-1.6 & A=a\\{}
-[0.8,0.2,0][-1,-2,0]^{T}=-1.2 & A=b
+[0.8,0,0.2][-1,-2,0]^{T}=-0.8 & A=b
 \end{cases}=b\\
 \pi_{1}(s_{2}) & =\arg\max_{A\in\{a,b\}}\begin{cases}
 [0.6,0.4,0][-1,-2,0]^{T}=-1.4 & A=a\\{}
@@ -496,14 +496,35 @@ And the new MEU
 We continue with step 2 since there was MEU change.
 \begin_inset Formula 
 \begin{align*}
-U^{2}(s_{1}) & =-1+[0,0.8,0.2][-1,-2,0]^{T}=-1-1.6=-2.6\\
+U^{2}(s_{1}) & =-1+[0.8,0,0.2][-1,-2,0]^{T}=-1-0.8=-1.8\\
 U^{2}(s_{2}) & =-2+[0.6,0.4,0][-1,-2,0]^{T}=-2-1.4=-3.4\\
 U^{2}(s_{3}) & =0
 \end{align*}
 
 \end_inset
 
+And
+\begin_inset Formula 
+\begin{align*}
+\pi_{2}(s_{1}) & =\arg\max\begin{cases}
+[0.4,0.6,0][-1.8,-3.4,0]^{T}=-2.76 & A=a\\{}
+[0.8,0,0.2][-1.8,-3.4,0]^{T}=-1.44 & A=b
+\end{cases}=b\\
+\pi_{2}(s_{2}) & =\arg\max\begin{cases}
+[0.6,0.4,0][-1.8,-3.4,0]^{T}=-2.44 & A=a\\{}
+[0,0.8,0.2][-1.8,-3.4,0]^{T}=-2.72 & A=b
+\end{cases}=a
+\end{align*}
 
+\end_inset
+
+Now NEU does not change.
+ PI Algorithm stops here.
+ We get 
+\begin_inset Formula $\pi^{*}(s_{1})=b,\pi^{*}(s_{2})=a$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
