@@ -73,6 +73,7 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\listings_params "basicstyle={\ttfamily},frame=shadowbox"
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -129,12 +130,6 @@ Consider an undiscounted MDP having three states, (1, 2, 3), with rewards −1,
  probability 0.2 and makes the agent stay put with probability 0.8.
 \end_layout
 
-\begin_layout Standard
-
-\bar under
-Answer the following questions:
-\end_layout
-
 \begin_layout Subsection
 Q1
 \end_layout
@@ -144,6 +139,303 @@ Q1
 \bar under
 What can be determined qualitatively about the optimal policy in states
  1 and 2?
+\end_layout
+
+\begin_layout Standard
+We have three states 
+\begin_inset Formula $s_{1},s_{2},s_{3}$
+\end_inset
+
+, each with a reward 
+\begin_inset Formula $r_{1}=-1,r_{2}=-2,r_{3}=0$
+\end_inset
+
+ respectively.
+ There are two actions 
+\begin_inset Formula $A\in\{a,b\}$
+\end_inset
+
+ for the policy 
+\begin_inset Formula $\pi$
+\end_inset
+
+.
+ The MDP is discounted, which means 
+\begin_inset Formula $\gamma=1$
+\end_inset
+
+, and we will omit this discount constant for convenience.
+ Since 
+\begin_inset Formula 
+\[
+\pi(s)=\arg\max_{A\in\{a,b\}}\sum_{s'}P(s'|s,A)U(s'),
+\]
+
+\end_inset
+
+we have
+\begin_inset Formula 
+\begin{align*}
+\pi(s_{1}) & =\arg\max_{A\in\{a,b\}}\begin{cases}
+0.4U(s_{1})+0.6U(s_{2}) & A=a\\
+0.8U(s_{1})+0.2U(s_{3}) & A=b
+\end{cases}\\
+\pi(s_{2}) & =\arg\max_{A\in\{a,b\}}\begin{cases}
+0.6U(s_{1})+0.4U(s_{2}) & A=a\\
+0.8U(s_{2})+0.2U(s_{3}) & A=b
+\end{cases}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then we find utilites according to Value Iteration algorithm
+\begin_inset Formula 
+\[
+U^{(t+1)}(s)=R(s)+\gamma\max_{A\in\{a,b\}}\sum_{s'}P(s'|s,A)U^{(t)}(s').
+\]
+
+\end_inset
+
+So we have a zero unitily initilization, and the first step of VI is
+\begin_inset Formula 
+\begin{align*}
+U^{(1)}(s_{1}) & =-1+\max\begin{cases}
+0.4U^{(0)}(s_{1})+0.6U^{(0)}(s_{2})=0 & A=a\\
+0.8U^{(0)}(s_{1})+0.2U^{(0)}(s_{3})=0 & A=b
+\end{cases}=-1\\
+U^{(1)}(s_{2}) & =-2+\max\begin{cases}
+0.6U^{(0)}(s_{1})+0.4U^{(0)}(s_{2})=0 & A=a\\
+0.8U^{(0)}(s_{2})+0.2U^{(0)}(s_{3})=0 & A=b
+\end{cases}=-2\\
+U^{(1)}(s_{3}) & =0
+\end{align*}
+
+\end_inset
+
+Then the second step of VI is
+\begin_inset Formula 
+\begin{align*}
+U^{(2)}(s_{1}) & =-1+\max\begin{cases}
+0.4U^{(1)}(s_{1})+0.6U^{(1)}(s_{2})=-0.4-1.2=-1.6 & A=a\\
+0.8U^{(1)}(s_{1})+0.2U^{(1)}(s_{3})=-0.8 & A=b
+\end{cases}=-1.8\\
+U^{(2)}(s_{2}) & =-2+\max\begin{cases}
+0.6U^{(1)}(s_{1})+0.4U^{(1)}(s_{2})=-0.6-0.8=-1.4 & A=a\\
+0.8U^{(1)}(s_{2})+0.2U^{(1)}(s_{3})=-1.6 & A=b
+\end{cases}=-3.4\\
+U^{(2)}(s_{3}) & =0
+\end{align*}
+
+\end_inset
+
+The third step of VI is ....
+ OK, I give up manual computation.
+ Let's write some Julia code and compute it:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+uk = [0.,0.,0.]
+\end_layout
+
+\begin_layout Plain Layout
+
+println("Initial U", uk);
+\end_layout
+
+\begin_layout Plain Layout
+
+for iter = 1:100
+\end_layout
+
+\begin_layout Plain Layout
+
+    uk1 = -1 + max(0.4*uk[1] + 0.6*uk[2],
+\end_layout
+
+\begin_layout Plain Layout
+
+                   0.8*uk[1] + 0.2*uk[3])
+\end_layout
+
+\begin_layout Plain Layout
+
+    uk2 = -2 + max(0.6*uk[1] + 0.4*uk[2],
+\end_layout
+
+\begin_layout Plain Layout
+
+                   0.8*uk[2] + 0.2*uk[3])
+\end_layout
+
+\begin_layout Plain Layout
+
+    uk3 = 0
+\end_layout
+
+\begin_layout Plain Layout
+
+    uk[:] = [uk1, uk2, uk3]
+\end_layout
+
+\begin_layout Plain Layout
+
+    println(iter, uk)
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The result suggests that the utility is converging after 100 iterations:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Initial U[0.0, 0.0, 0.0]
+\end_layout
+
+\begin_layout Plain Layout
+
+1[-1.0, -2.0, 0.0]
+\end_layout
+
+\begin_layout Plain Layout
+
+2[-1.8, -3.4, 0.0]
+\end_layout
+
+\begin_layout Plain Layout
+
+3[-2.4400000000000004, -4.44, 0.0]
+\end_layout
+
+\begin_layout Plain Layout
+
+4[-2.9520000000000004, -5.24, 0.0]
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+96[-4.999999997513385, -8.33333332960341, 0.0]
+\end_layout
+
+\begin_layout Plain Layout
+
+97[-4.999999998010708, -8.333333330349394, 0.0]
+\end_layout
+
+\begin_layout Plain Layout
+
+98[-4.999999998408566, -8.333333330946182, 0.0]
+\end_layout
+
+\begin_layout Plain Layout
+
+99[-4.999999998726853, -8.333333331423614, 0.0]
+\end_layout
+
+\begin_layout Plain Layout
+
+100[-4.999999998981483, -8.333333331805557, 0.0]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+That means 
+\begin_inset Formula $U(s_{1})\approx-5.0,U(s_{2})\approx-8.3,U(s_{3})\approx0$
+\end_inset
+
+.
+ We can plug these values back into
+\begin_inset Formula 
+\begin{align*}
+\pi(s_{1}) & =\arg\max_{A\in\{a,b\}}\begin{cases}
+0.4U(s_{1})+0.6U(s_{2})=-6.98 & A=a\\
+0.8U(s_{1})+0.2U(s_{3})=-4.0 & A=b
+\end{cases}=b\\
+\pi(s_{2}) & =\arg\max_{A\in\{a,b\}}\begin{cases}
+0.6U(s_{1})+0.4U(s_{2})=-6.32 & A=a\\
+0.8U(s_{2})+0.2U(s_{3})=-6.64 & A=b
+\end{cases}=a
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Namely, the optimal policy for the two states are 
+\begin_inset Formula $\pi^{*}(s_{1})=b$
+\end_inset
+
+, and 
+\begin_inset Formula $\pi^{*}(s_{2})=a$
+\end_inset
+
+.
+ This makes sense, because 
+\begin_inset Formula $s_{1}$
+\end_inset
+
+ has less penalty than 
+\begin_inset Formula $s_{2}$
+\end_inset
+
+, so once we cannot reach the terminal state, we should stay at 
+\begin_inset Formula $s_{1}$
+\end_inset
+
+ as long as possible.
+ Thus, when we start from 
+\begin_inset Formula $s_{1}$
+\end_inset
+
+, we tend to choose action b, either stay or teminate.
+ If we start from 
+\series bold
+
+\begin_inset Formula $s_{2}$
+\end_inset
+
+
+\series default
+, we tend to take action a and move to 
+\begin_inset Formula $s_{1}$
+\end_inset
+
+ to avoid great penalty once we cannot terminate this process quickly.
 \end_layout
 
 \begin_layout Subsection
