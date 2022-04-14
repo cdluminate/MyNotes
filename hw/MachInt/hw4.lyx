@@ -450,6 +450,62 @@ Apply policy iteration, showing each step in full, to determine the optimal
  Assume that the initial policy has action b in both states.
 \end_layout
 
+\begin_layout Standard
+In Policy Iteration algorithm, we initialize 
+\begin_inset Formula $\pi_{0}(s_{1})=b$
+\end_inset
+
+, and 
+\begin_inset Formula $\pi_{0}(s_{2})=b$
+\end_inset
+
+.
+ Initial 
+\begin_inset Formula $U^{0}=[0,0,0]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+At step 1, we have new utilities
+\begin_inset Formula 
+\begin{align*}
+U^{1}(s_{1}) & =-1+[0,0.8,0.2][0,0,0]^{T}=-1\\
+U^{1}(s_{2}) & =-2+[0.8,0,0.2][0,0,0]^{T}=-2\\
+U^{1}(s_{3}) & =0
+\end{align*}
+
+\end_inset
+
+And the new MEU
+\begin_inset Formula 
+\begin{align*}
+\pi_{1}(s_{1}) & =\arg\max_{A\in\{a,b\}}\begin{cases}
+[0.4,0.6,0][-1,-2,0]^{T}=-1.6 & A=a\\{}
+[0.8,0.2,0][-1,-2,0]^{T}=-1.2 & A=b
+\end{cases}=b\\
+\pi_{1}(s_{2}) & =\arg\max_{A\in\{a,b\}}\begin{cases}
+[0.6,0.4,0][-1,-2,0]^{T}=-1.4 & A=a\\{}
+[0,0.8,0.2][-1,-2,0]^{T}=-1.6 & A=b
+\end{cases}=a
+\end{align*}
+
+\end_inset
+
+We continue with step 2 since there was MEU change.
+\begin_inset Formula 
+\begin{align*}
+U^{2}(s_{1}) & =-1+[0,0.8,0.2][-1,-2,0]^{T}=-1-1.6=-2.6\\
+U^{2}(s_{2}) & =-2+[0.6,0.4,0][-1,-2,0]^{T}=-2-1.4=-3.4\\
+U^{2}(s_{3}) & =0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Q3
 \end_layout
