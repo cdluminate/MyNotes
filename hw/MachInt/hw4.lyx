@@ -750,6 +750,13 @@ Compare and contrast the various CNN-based object detectors using the following
 \end_layout
 
 \begin_layout Standard
+Generally the existing models use a backbone trained on ImageNet, then evaluate
+ on MS-COCO dataset.
+ Object detection results from ILSVRC are seldom reported in the papers,
+ and I don't know why.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float table
 placement h
 wide false
@@ -775,9 +782,8 @@ centering
 
 
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="5">
+<lyxtabular version="3" rows="6" columns="4">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -787,7 +793,7 @@ centering
 \begin_inset Text
 
 \begin_layout Plain Layout
-Detector
+Detector (Backbone)
 \end_layout
 
 \end_inset
@@ -805,16 +811,7 @@ Number of Params
 \begin_inset Text
 
 \begin_layout Plain Layout
-Training Time
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Test Time
+Time
 \end_layout
 
 \end_inset
@@ -823,54 +820,7 @@ Test Time
 \begin_inset Text
 
 \begin_layout Plain Layout
-ILSVRC mAP
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+MS-COCO mAP@0.5
 \end_layout
 
 \end_inset
@@ -890,7 +840,7 @@ Faster R-CNN (VGG-16) [1]
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+138M
 \end_layout
 
 \end_inset
@@ -899,16 +849,7 @@ Faster R-CNN (VGG-16) [1]
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+-
 \end_layout
 
 \end_inset
@@ -917,7 +858,7 @@ Faster R-CNN (VGG-16) [1]
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+41.5
 \end_layout
 
 \end_inset
@@ -937,7 +878,7 @@ Faster R-CNN (ResNet-101) [1]
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+44.5M
 \end_layout
 
 \end_inset
@@ -946,16 +887,7 @@ Faster R-CNN (ResNet-101) [1]
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+-
 \end_layout
 
 \end_inset
@@ -964,7 +896,83 @@ Faster R-CNN (ResNet-101) [1]
 \begin_inset Text
 
 \begin_layout Plain Layout
+48.4
+\end_layout
 
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RetinaNet-101-800 (ResNet-101) [3][4]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+44.5M
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+198ms
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+57.5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+YOLOv3 (DarkNet-53) [3]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+51ms (TitanX)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+57.9
 \end_layout
 
 \end_inset
@@ -975,7 +983,7 @@ Faster R-CNN (ResNet-101) [1]
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+SSD513 (ResNet-101-SSD) [3,5]
 \end_layout
 
 \end_inset
@@ -984,7 +992,7 @@ Faster R-CNN (ResNet-101) [1]
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+44.5M
 \end_layout
 
 \end_inset
@@ -993,16 +1001,7 @@ Faster R-CNN (ResNet-101) [1]
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+125
 \end_layout
 
 \end_inset
@@ -1011,7 +1010,7 @@ Faster R-CNN (ResNet-101) [1]
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+51.9
 \end_layout
 
 \end_inset
@@ -1052,6 +1051,18 @@ References:
 \begin_layout Standard
 [2] Faster R-CNN https://papers.nips.cc/paper/2015/file/14bfa6bb14875e45bba028a21e
 d38046-Paper.pdf
+\end_layout
+
+\begin_layout Standard
+[3] Yolov3: https://pjreddie.com/media/files/papers/YOLOv3.pdf
+\end_layout
+
+\begin_layout Standard
+[4] RetinaNet (focal loss): https://arxiv.org/pdf/1708.02002.pdf
+\end_layout
+
+\begin_layout Standard
+[5] SSD: https://arxiv.org/pdf/1512.02325.pdf
 \end_layout
 
 \begin_layout Section
