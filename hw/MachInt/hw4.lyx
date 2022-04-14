@@ -754,6 +754,7 @@ Generally the existing models use a backbone trained on ImageNet, then evaluate
  on MS-COCO dataset.
  Object detection results from ILSVRC are seldom reported in the papers,
  and I don't know why.
+ Here are some extra detectors beyond the Feifei Li's slides:
 \end_layout
 
 \begin_layout Standard
@@ -1078,6 +1079,107 @@ Discuss methods for dropout and searching for the best neural architecture.
  networks.)
 \end_layout
 
+\begin_layout Standard
+I still don't quite understand the question even after explaination.
+ So I'll answer to every possible meaning here.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Regularization Methods.
+
+\series default
+ Methods like dropout are indended to regularize the model, which is meanwhile
+ battling against overfitting, and reduce the generalization gap between
+ training and validation dataset.
+ Other regularization methods includes Batch Normalization, which is introduced
+ in BN-Inception paper.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Search For the Best Neural Architecture.
+
+\series default
+ In the literature, there are two ways to search for the best neural network
+ architecture: automatic search (Network Architecture Search, NAS), and
+ manual search (traditional ILSVRC classification papers like AlexNet, ResNet,
+ etc).
+ On the otherhand, the use of attention mechanism gradually raised the CV
+ community's interest in vision Transformers, such as Swin-Transformer.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Dropout Methods
+\series default
+ (https://towardsdatascience.com/12-main-dropout-methods-mathematical-and-visual-
+explanation-58cdc2112293).
+ Here are some dropout methods for example:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+Standard Dropout
+\series default
+.
+ The standard dropout is proposed by Hinton.
+ For each layer in each iteration of training, each neuron has a probability
+ to be omitted (namely it outputs 0).
+ This can be implemented as multiplying a 0-1 mask on the layer output.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+DropConnect.
+
+\series default
+ Does not apply dropout directly on the neurons, but on the weights and
+ bias linking these neurons.
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+StandOut.
+
+\series default
+ Different from standard Dropout, it has adaptive dropout probability instead
+ of a constant one.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Path for Manual Neural Architecture Search:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+AlexNet: Extended convolutional neural networks to adapt to ILSVRC inputs.
+ The baseline network to compare with later networks.
+\end_layout
+
+\begin_layout Enumerate
+Inception-BN: Introduce BatchNormalization to accelerate convergence during
+ training and generalization.
+\end_layout
+
+\begin_layout Enumerate
+ResNet: CNNs with too many layers are too hard to train.
+ This paper intorduced residual connections inside a deep neural network,
+ which makes training a much deeper network more stable.
+\end_layout
+
+\end_deeper
 \begin_layout Section
 Back-Propagation
 \end_layout
