@@ -1,0 +1,302 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{times}
+\usepackage{microtype}
+\usepackage[margin=1in]{geometry}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+HW #3
+\end_layout
+
+\begin_layout Author
+Mo Zhou
+\begin_inset Newline newline
+\end_inset
+
+<mzhou32@jhu.edu>
+\end_layout
+
+\begin_layout Section
+Exponential Models with Hidden Variables
+\end_layout
+
+\begin_layout Subsection
+Q1
+\end_layout
+
+\begin_layout Standard
+What is an exponential model with hidden variables? What are the potentials,
+ the parameters, and the normalization term Z?.
+ What are the derivatives of Z with respect to the parameters of the exponential
+ model? How can the EM algorithm be used for doing maximum likelihood estimation
+ for an exponential model with hidden variables?
+\end_layout
+
+\begin_layout Subsection
+Q2
+\end_layout
+
+\begin_layout Standard
+Now suppose that the exponential model can be expressed as a probability
+ distribution on variables defined on a graph.
+ How can the EM computations be done if the graph has no closed loops? What
+ if the graph has closed loops? Does the EM algorithm attempt to make the
+ statistics of the data equal to the expected statistics of the model?
+\end_layout
+
+\begin_layout Subsection
+Q3
+\end_layout
+
+\begin_layout Standard
+Describe how a Hidden Markov Model (HMM) can be expressed as an exponential
+ model with hidden variables? Does this correspond to a graph with closed
+ loops? What inference algorithms are used?
+\end_layout
+
+\begin_layout Section
+Lighting Models
+\end_layout
+
+\begin_layout Subsection
+Q1
+\end_layout
+
+\begin_layout Standard
+What is the Lambertian lighting model? What is the albedo? What is the Generaliz
+ed Bas Relief (GBR) ambiguity?How does it relate to the ambiguity between
+ convex and concave shapes? What are cast and attached shadows? Does the
+ GBR hold for cast and attached shadows?
+\end_layout
+
+\begin_layout Subsection
+Q2
+\end_layout
+
+\begin_layout Standard
+What is photometric stereo? How can it be formulated in terms of Singular
+ Value Decomposition? What are the ambiguities?
+\end_layout
+
+\begin_layout Subsection
+Q3
+\end_layout
+
+\begin_layout Standard
+How many bases are required to describe the image of an object if shadows
+ are ignored? How can principal component analysis (PCA) be used to estimate
+ the number of bases? What theory predicts the number of bases for convex
+ objects? And how many bases are predicted?
+\end_layout
+
+\begin_layout Section
+AdaBoost
+\end_layout
+
+\begin_layout Subsection
+Q1
+\end_layout
+
+\begin_layout Standard
+What is a weak classifier? What is a strong classifier?
+\end_layout
+
+\begin_layout Subsection
+Q2
+\end_layout
+
+\begin_layout Standard
+What function does AdaBoost minimize? What is its relationship to the loss
+ function for binary classification? How does the update rule correspond
+ to weighting missclassified samples more highly? Can a weak classifier
+ be selected twice by AdaBoost?
+\end_layout
+
+\begin_layout Subsection
+Q3
+\end_layout
+
+\begin_layout Standard
+What are cascades? How are they used for face and text detection? What types
+ of image features and weak classifiers are used by AdaBoost to perform
+ face detection? What types of features are used by AdaBoost to perform
+ text detection?
+\end_layout
+
+\begin_layout Section
+Support Vector Machines
+\end_layout
+
+\begin_layout Subsection
+Q1
+\end_layout
+
+\begin_layout Standard
+What is the margin of an SVM? How does SVM deal with non-separable data?
+ What is the primal formulation of SVM? How does the SVM objective function
+ relate to the empirical risk? What term helps prevent over-fitting to the
+ training data? What is the hinge loss? How does learning an SVM differ
+ from learning Gaussian distributions for the positive and negative data
+ examples and then applying the log-likelihood rule?
+\end_layout
+
+\begin_layout Subsection
+Q2
+\end_layout
+
+\begin_layout Standard
+What is a kernel? How does it relate to feature vectors? What type of kernel
+ makes an SVM behave like a nearest neighbor classifier?
+\end_layout
+
+\begin_layout Subsection
+Q3
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+The primal formulation is given by $ L_p(
+\backslash
+vec a, b, 
+\backslash
+{z_i
+\backslash
+}; 
+\backslash
+{
+\backslash
+alpha_i, 
+\backslash
+mu_i
+\backslash
+}) = (1/2) |
+\backslash
+vec a|^2 + 
+\backslash
+gamma 
+\backslash
+sum _{i=1}^m z_i - 
+\backslash
+sum _{i=1}^m 
+\backslash
+alpha _i 
+\backslash
+{ y_i (
+\backslash
+vec a 
+\backslash
+cdot 
+\backslash
+vec x_i + b) - (1 -z_i)
+\backslash
+} - 
+\backslash
+sum _{i=1}^m 
+\backslash
+mu _i z_i.$ Explain the meaning of all the terms and variables in this equation.
+ What constraints do the variables satisfy?  Calculate the form of the solution
+ $
+\backslash
+vec a$ by minimizing $L_p$ with respect to $
+\backslash
+vec a$.
+ What are the support vectors? How can the dual formulation be obtained
+ by eliminating $
+\backslash
+vec a, b, 
+\backslash
+{z_i
+\backslash
+}$ from $L_p$.
+ How can the primal problem be solved by exploiting the dual formulation?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
