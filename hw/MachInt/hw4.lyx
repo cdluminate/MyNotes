@@ -539,6 +539,203 @@ What happens to policy iteration if the initial policy has action a in both
  factor?
 \end_layout
 
+\begin_layout Standard
+Let's directly do the PI algorithm again with Julia:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+# step 1 (a)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+julia> u1s1 = -1 .+ [0.4 0.6 0.] * [0.
+ 0.
+ 0.]'
+\end_layout
+
+\begin_layout Plain Layout
+
+1×1 Matrix{Float64}:
+\end_layout
+
+\begin_layout Plain Layout
+
+ -1.0
+\end_layout
+
+\begin_layout Plain Layout
+
+julia> u1s2 = -2 .+ [0.6 0.4 0.] * [0.
+ 0.
+ 0.]'
+\end_layout
+
+\begin_layout Plain Layout
+
+1×1 Matrix{Float64}:
+\end_layout
+
+\begin_layout Plain Layout
+
+ -2.0
+\end_layout
+
+\begin_layout Plain Layout
+
+julia> u1s3 = 0
+\end_layout
+
+\begin_layout Plain Layout
+
+0
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# step 1 (b)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+julia> [0.4 0.6 0.] * [-1.
+ -2.
+ 0.]'
+\end_layout
+
+\begin_layout Plain Layout
+
+1×1 Matrix{Float64}:
+\end_layout
+
+\begin_layout Plain Layout
+
+ -1.6
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+julia> [0.8 0.0 0.2] * [-1.
+ -2.
+ 0.]'
+\end_layout
+
+\begin_layout Plain Layout
+
+1×1 Matrix{Float64}:
+\end_layout
+
+\begin_layout Plain Layout
+
+ -0.8
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# pi_1 (s_1) = b (changed)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+julia> [0.6 0.4 0.] * [-1 -2.
+ 0.]'
+\end_layout
+
+\begin_layout Plain Layout
+
+1×1 Matrix{Float64}:
+\end_layout
+
+\begin_layout Plain Layout
+
+ -1.4
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+julia> [0.
+ 0.8 0.2] * [-1.
+ -2.
+ 0.]'
+\end_layout
+
+\begin_layout Plain Layout
+
+1×1 Matrix{Float64}:
+\end_layout
+
+\begin_layout Plain Layout
+
+ -1.6
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# pi_1 (s_2) = a
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As we see, even if the initial policy is initialized with action a, the
+ NEU will be changed into 
+\begin_inset Formula $\pi_{1}(s_{1})=b,\pi_{1}(s_{2})=a$
+\end_inset
+
+, which is a converging solution.
+ Different initialization did not affect the result.
+\end_layout
+
+\begin_layout Standard
+Discounting constant 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is irrelevant here.
+ The optimal policy does not depend on discount factor here.
+\end_layout
+
 \begin_layout Section
 Object Detectors
 \end_layout
