@@ -1159,13 +1159,19 @@ StandOut.
 \begin_layout Enumerate
 
 \series bold
-Path for Manual Neural Architecture Search:
+Path for Neural Architecture Search:
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
 AlexNet: Extended convolutional neural networks to adapt to ILSVRC inputs.
  The baseline network to compare with later networks.
+\end_layout
+
+\begin_layout Enumerate
+VGG: Better convolution architecture with adjusted kernel sizes and channel
+ sizes.
+ Difficult to train.
 \end_layout
 
 \begin_layout Enumerate
@@ -1177,6 +1183,23 @@ Inception-BN: Introduce BatchNormalization to accelerate convergence during
 ResNet: CNNs with too many layers are too hard to train.
  This paper intorduced residual connections inside a deep neural network,
  which makes training a much deeper network more stable.
+\end_layout
+
+\begin_layout Enumerate
+DenseNet: Add dense connections between layers, based on observation that
+ shorter connections betwene layers close to the input and output can be
+ substantially deeper, more accurate and efficient to train.
+\end_layout
+
+\begin_layout Enumerate
+MnasNet / ShuffleNet: Standard imagenet backbone are hard to deploy on mobile
+ machines.
+ These networks are carefully designed to be small in size and efficient
+ to compute on mobile devices.
+\end_layout
+
+\begin_layout Enumerate
+EfficientNet: Leverage automatic neural architecture search.
 \end_layout
 
 \end_deeper
