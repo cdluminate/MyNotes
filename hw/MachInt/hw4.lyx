@@ -825,5 +825,646 @@ Figure for Question 4.
 
 \end_layout
 
+\begin_layout Standard
+I personally prefer to use matrix form instead of scalar form of a neural
+ network.
+ Albeit scalar form is better for people to derive forward pass and gradient
+ formulations, scalar notations will encourage us to write low performance
+ code when implementing a deep learning framework from scratch.
+ So let's write something different from the material that we have.
+\end_layout
+
+\begin_layout Standard
+Denote the input as 
+\begin_inset Formula $I=\begin{bmatrix}i_{1}\\
+i_{2}
+\end{bmatrix}$
+\end_inset
+
+, the the hidden layer as 
+\begin_inset Formula $H=\begin{bmatrix}h_{1}\\
+h_{2}
+\end{bmatrix}$
+\end_inset
+
+, the output as 
+\begin_inset Formula $O=\begin{bmatrix}o_{1}\\
+o_{2}
+\end{bmatrix}$
+\end_inset
+
+, the weight matrices for the first and second layer as 
+\begin_inset Formula $W_{1}=\begin{bmatrix}w_{1} & w_{2}\\
+w_{3} & w_{4}
+\end{bmatrix}$
+\end_inset
+
+ and 
+\begin_inset Formula $W_{2}=\begin{bmatrix}w_{5} & w_{6}\\
+w_{7} & w_{8}
+\end{bmatrix}$
+\end_inset
+
+, respectively.
+ We also denote pre-activation outputs using symbols with a hat, e.g.
+ 
+\begin_inset Formula $H=\sigma(\hat{H})$
+\end_inset
+
+.
+ The matrix form of the neural network is
+\begin_inset Formula 
+\begin{align*}
+O & =\sigma(W_{2}H+b_{2})\\
+H & =\sigma(W_{1}I+b_{1})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And the loss function is MSE
+\begin_inset Formula 
+\[
+l=\frac{1}{2}(O_{GT}-O)^{T}(O_{GT}-O)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Following the computation graph.
+ If we denote the gradient of the loss function with respect to one step's
+ output as 
+\begin_inset Formula $\delta$
+\end_inset
+
+, we can find the gradients for updating the parameters:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial l}{\partial O} & =O-O_{GT}\\
+\frac{\partial l}{\partial\hat{O}} & =O\odot(1-O)\odot\delta\\
+\frac{\partial l}{\partial W_{2}} & =\delta H^{T}\\
+\frac{\partial l}{\partial H} & =W_{2}^{T}\delta\\
+\frac{\partial l}{\partial\hat{H}} & =H\odot(1-H)\odot\delta\\
+\frac{\partial l}{\partial W_{1}} & =\delta I^{T}
+\end{align*}
+
+\end_inset
+
+Note, the symbol 
+\begin_inset Formula $\odot$
+\end_inset
+
+ means element-wise product.
+ Then let's throw the numerical stuff for the forward, backward, and update
+ steps to matlab.
+\end_layout
+
+\begin_layout Standard
+First let's define the sigmoid function:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function y = sigmoid(x)
+\end_layout
+
+\begin_layout Plain Layout
+
+  y = 1 ./ (1 + exp(-x));
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And we write the following matlab code for the three steps:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+clear;
+\end_layout
+
+\begin_layout Plain Layout
+
+I = [0.05; 0.10];
+\end_layout
+
+\begin_layout Plain Layout
+
+W1 = [0.15, 0.20; 0.25, 0.30];
+\end_layout
+
+\begin_layout Plain Layout
+
+b1 = 0.35;
+\end_layout
+
+\begin_layout Plain Layout
+
+W2 = [0.40, 0.45; 0.50, 0.55];
+\end_layout
+
+\begin_layout Plain Layout
+
+b2 = 0.60;
+\end_layout
+
+\begin_layout Plain Layout
+
+O_GT = [0.01; 0.99];
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+disp('forward layer 1');
+\end_layout
+
+\begin_layout Plain Layout
+
+H_ = W1 * I + b1
+\end_layout
+
+\begin_layout Plain Layout
+
+H = sigmoid(H_)
+\end_layout
+
+\begin_layout Plain Layout
+
+disp('forward layer 2');
+\end_layout
+
+\begin_layout Plain Layout
+
+O_ = W2 * H + b2
+\end_layout
+
+\begin_layout Plain Layout
+
+O = sigmoid(O_)
+\end_layout
+
+\begin_layout Plain Layout
+
+disp('MSE loss');
+\end_layout
+
+\begin_layout Plain Layout
+
+loss = sum((O - O_GT).^2)/2
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+disp('backward pass layer 2');
+\end_layout
+
+\begin_layout Plain Layout
+
+gO = O - O_GT
+\end_layout
+
+\begin_layout Plain Layout
+
+gO_ = O .* (1 - O) .* gO
+\end_layout
+
+\begin_layout Plain Layout
+
+gW2 = gO_ * H'
+\end_layout
+
+\begin_layout Plain Layout
+
+gH = W2' * gO_
+\end_layout
+
+\begin_layout Plain Layout
+
+gH_ = H .* (1 - H) .* gH
+\end_layout
+
+\begin_layout Plain Layout
+
+gW1 = gH_ * I'
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+lr = 0.5;
+\end_layout
+
+\begin_layout Plain Layout
+
+fprintf('learning rate is %f
+\backslash
+n', lr);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+disp('update parameters');
+\end_layout
+
+\begin_layout Plain Layout
+
+W1 = W1 - lr * gW1
+\end_layout
+
+\begin_layout Plain Layout
+
+W2 = W2 - lr * gW2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And the output is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+forward layer 1
+\end_layout
+
+\begin_layout Plain Layout
+
+H_ =
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.3775
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.3925
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+H =
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.5933
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.5969
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+forward layer 2
+\end_layout
+
+\begin_layout Plain Layout
+
+O_ =
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   1.1059
+\end_layout
+
+\begin_layout Plain Layout
+
+   1.2249
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+O =
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.7514
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.7729
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+MSE loss
+\end_layout
+
+\begin_layout Plain Layout
+
+loss = 0.2984
+\end_layout
+
+\begin_layout Plain Layout
+
+backward pass layer 2
+\end_layout
+
+\begin_layout Plain Layout
+
+gO =
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.7414
+\end_layout
+
+\begin_layout Plain Layout
+
+  -0.2171
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+gO_ =
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.138499
+\end_layout
+
+\begin_layout Plain Layout
+
+  -0.038098
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+gW2 =
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.082167   0.082668
+\end_layout
+
+\begin_layout Plain Layout
+
+  -0.022603  -0.022740
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+gH =
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.036350
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.041370
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+gH_ =
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   8.7714e-03
+\end_layout
+
+\begin_layout Plain Layout
+
+   9.9543e-03
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+gW1 =
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   4.3857e-04   8.7714e-04
+\end_layout
+
+\begin_layout Plain Layout
+
+   4.9771e-04   9.9543e-04
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+learning rate is 0.500000
+\end_layout
+
+\begin_layout Plain Layout
+
+update parameters
+\end_layout
+
+\begin_layout Plain Layout
+
+W1 =
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.1498   0.1996
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.2498   0.2995
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+W2 =
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.3589   0.4087
+\end_layout
+
+\begin_layout Plain Layout
+
+   0.5113   0.5614
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+>>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+That means the new 
+\begin_inset Formula $w_{3}=0.2498$
+\end_inset
+
+, and the new 
+\begin_inset Formula $w_{7}=0.5113$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document
