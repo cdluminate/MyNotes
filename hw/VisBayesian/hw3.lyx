@@ -1141,6 +1141,11 @@ Different-From-Gaussian.
  while Gaussian ML classification learns Gaussian distributions instead.
  SVM is trained using optimization methods different than EM algorithm for
  estimating the Gaussian distributions.
+ Besides, in SVM, the classifier depends only on the support vectors, the
+ other data points do not matter.
+ This is intuitively reasonable – the classifier must pay close attention
+ to the data that is difficult to classify – the data near the boundary.
+ This differes from the probabilistic approach.
 \end_layout
 
 \begin_layout Subsection
@@ -1394,6 +1399,41 @@ where the
 
 \begin_layout Description
 Form-of-Solution.
+ There is no analytic solution for these variables, but we can use analytic
+ techniques to get some understanding of their properties:
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial L_{p}}{\partial\vec{a}}=0 & \Rightarrow\hat{\vec{a}}=\sum_{i}\alpha_{i}y_{i}\vec{x}_{i}\\
+\frac{\partial L_{p}}{\partial b}=0 & \Rightarrow\sum_{i}\alpha_{i}y_{i}=0\\
+\frac{\partial L_{p}}{\partial z_{i}}=0 & \Rightarrow\alpha_{i}=\gamma-\hat{\mu}_{i}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Support-Vector.
+ The classifier is 
+\begin_inset Formula $sign\langle\hat{\vec{a}}\cdot\vec{x}+\hat{b}\rangle=sign\langle\sum_{i}\alpha_{i}y_{i}\vec{x}_{i}\cdot\vec{x}+b\rangle$
+\end_inset
+
+.
+ Given that the solution depends only on the vectors 
+\begin_inset Formula $\vec{x}_{i}$
+\end_inset
+
+ for which 
+\begin_inset Formula $\alpha_{i}\neq0$
+\end_inset
+
+, we call them support vectors.
+ 
+\end_layout
+
+\begin_layout Description
+Dual-Formulation.
  
 \end_layout
 
