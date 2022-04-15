@@ -640,6 +640,13 @@ five
  theory on a sphere) and showing that only a limited number were neede.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 AdaBoost
 \end_layout
@@ -650,6 +657,17 @@ Q1
 
 \begin_layout Standard
 What is a weak classifier? What is a strong classifier?
+\end_layout
+
+\begin_layout Description
+Weak-Classifier.
+ A (binary) classifier that is only slightly more accurate than random classific
+ation.
+\end_layout
+
+\begin_layout Description
+Strong-Classifier.
+ A classifier that achieves arbitrarily good accuracy.
 \end_layout
 
 \begin_layout Subsection
@@ -663,6 +681,116 @@ What function does AdaBoost minimize? What is its relationship to the loss
  be selected twice by AdaBoost?
 \end_layout
 
+\begin_layout Description
+AdaBoost.
+ AdaBoost is a method for combining many weak classifiers to make a strong
+ classifier.
+ Given a set of weak classifiers 
+\begin_inset Formula $\{\phi_{\mu}(x):\mu=1,\ldots,M\}$
+\end_inset
+
+, labelled data 
+\begin_inset Formula $X=\{(x^{i},y^{i}):i=1,\ldots,N\}$
+\end_inset
+
+ with 
+\begin_inset Formula $y^{i}\in\{\pm1\}$
+\end_inset
+
+.
+ The output of AdaBoost is a strong classifier 
+\begin_inset Formula $S(x)=\text{sign}(\sum_{\mu=1}^{M}\lambda_{\mu}\phi_{\mu}(x))$
+\end_inset
+
+, where the 
+\begin_inset Formula $\{\lambda_{\mu}\}$
+\end_inset
+
+ are weights to be learned.
+ The function AdaBoost wants to minimize is the empirical risk.
+\end_layout
+
+\begin_layout Description
+Loss-Function.
+ The empirical risk of AdaBoost is a weighted sum of the binary classification
+ loss functions, parameterized by 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Description
+Update-Rule.
+ For each weak classifier 
+\begin_inset Formula $\phi_{\mu}(\cdot)$
+\end_inset
+
+, we deivice the data into two sets (i) 
+\begin_inset Formula $W_{\mu}^{+}=\{i:y^{i}\phi_{\mu}(x^{i})=1\}$
+\end_inset
+
+, namely the set of data which 
+\begin_inset Formula $\phi_{\mu}(\cdot)$
+\end_inset
+
+ classifies correctly; (ii) 
+\begin_inset Formula $W_{\mu}^{-}=\{i:y^{i}\phi_{\mu}(x^{i})=-1\}$
+\end_inset
+
+, namely the set of data which it gets wrong.
+ Then at each time step 
+\begin_inset Formula $t$
+\end_inset
+
+, we define a set of 
+\begin_inset Quotes eld
+\end_inset
+
+weights
+\begin_inset Quotes erd
+\end_inset
+
+ for the training data:
+\begin_inset Formula 
+\[
+D_{i}^{t}=\frac{\exp\{-y^{i}\sum_{\mu=1}^{M}\lambda_{\mu}^{t}\phi_{\mu}(x^{i})\}}{\sum_{i=1}^{N}\exp\{-y^{i}\sum_{\mu=1}^{M}\lambda_{\mu}^{t}\phi_{\mu}(x^{i})\}}
+\]
+
+\end_inset
+
+These weights are all positive and sum to 1, i.e., 
+\begin_inset Formula $\sum_{i}D_{i}^{t}=1$
+\end_inset
+
+.
+ At 
+\begin_inset Formula $t=0$
+\end_inset
+
+, all the weights take value 
+\begin_inset Formula $1/N$
+\end_inset
+
+.
+ Otherwise, the weights are largest for the data which is incorrectly classified
+ by the classifer 
+\begin_inset Formula $\text{sign}(\sum_{\mu=1}^{M}\lambda_{\mu}^{t}\phi_{\mu}(x))$
+\end_inset
+
+ (our current estimate of the strong classifier) and smallest for those
+ which are correctly classified (to see this, look at the sign of the exponent).
+ These weights are a way to take into account the weak classifiers we have
+ already selected and the weights we have assigned them when we try to add
+ a new classifier.
+\end_layout
+
+\begin_layout Description
+Select-Twice.
+ No, a weak classifier cannot be selected twise.
+\end_layout
+
 \begin_layout Subsection
 Q3
 \end_layout
@@ -672,6 +800,44 @@ What are cascades? How are they used for face and text detection? What types
  of image features and weak classifiers are used by AdaBoost to perform
  face detection? What types of features are used by AdaBoost to perform
  text detection?
+\end_layout
+
+\begin_layout Description
+Cascades.
+ Simple, boosted classifiers can reject many of negative sub-windows while
+ detecting all positive instances.
+ Series of such simple classifiers can achieve good detection performance
+ while eliminating the need for further processing of negative sub-windows.
+\end_layout
+
+\begin_layout Description
+Feature-Face.
+ For face recognition, simple features are used.
+ There are 3 rectangular feature types: (1) two-rectangle feature type (horizont
+al or vertical), (2) three-rectangle feature type, (3) four-rectangle feature
+ type.
+ Using a 24x24 pixel base detection window, with all the possible combination
+ of horizontal and vertical location and scale of these feature types, the
+ full set of features has 49,396 features.
+ The motivation behind using regtangular features, as opposed to more expressive
+ steerable filters is due to their extrreme computational efficiency.
+\end_layout
+
+\begin_layout Description
+Features-Text.
+ The features used for text detection is different from those used in face
+ detection.
+ There are multiple sets of features used for this purpose: (1) 1-st order
+ derivatives for the image data; (2) histogram of intensity and gradient;
+ (3) edge linking features (using statistics of the length of the linked
+ edges).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
