@@ -857,6 +857,292 @@ What is the margin of an SVM? How does SVM deal with non-separable data?
  examples and then applying the log-likelihood rule?
 \end_layout
 
+\begin_layout Description
+SVM.
+ Support Vector Machine is a modern approach to linear separation.
+ Suppose we have data 
+\begin_inset Formula $\{(\vec{x}_{u},y_{u}):u=1,\ldots,N\}$
+\end_inset
+
+ where 
+\begin_inset Formula $y_{u}\in\{-1,1\}$
+\end_inset
+
+.
+ We define a hyperplane 
+\begin_inset Formula $\langle\vec{x}:\vec{x}\cdot\vec{a}+b=0\rangle$
+\end_inset
+
+, where 
+\begin_inset Formula $|\vec{a}|=1$
+\end_inset
+
+.
+ The signed distance of a point 
+\begin_inset Formula $\vec{x}$
+\end_inset
+
+ to the plane is then 
+\begin_inset Formula $\vec{a}\cdot\vec{x}+b$
+\end_inset
+
+.
+ If we project the line 
+\begin_inset Formula $\vec{x}(\vec{\lambda})=\vec{x}+\lambda\vec{a}$
+\end_inset
+
+, it hits plane when 
+\begin_inset Formula $\vec{a}\cdot(\vec{x}+\lambda\vec{a})=-b$
+\end_inset
+
+.
+ Follows that 
+\begin_inset Formula $\lambda=-(\vec{a}\cdot\vec{x}+b)/|\vec{a}|^{2}$
+\end_inset
+
+, and if 
+\begin_inset Formula $|\vec{a}|=1$
+\end_inset
+
+, then 
+\begin_inset Formula $\lambda=-(\vec{a}\cdot\vec{x}+b)$
+\end_inset
+
+.
+ In SVM we seek a classifier with biggest margin:
+\begin_inset Formula 
+\[
+\max_{\vec{a},b,|\vec{a}|=1}C\qquad s.t.\quad y_{u}(\vec{x}_{u}\cdot\vec{a}+b)\geq C,\ \forall u\geq1\ldots N
+\]
+
+\end_inset
+
+Namely, the positive examples are at least distance 
+\begin_inset Formula $C$
+\end_inset
+
+ (margin) above the plane, and negative examples are at least 
+\begin_inset Formula $C$
+\end_inset
+
+ below the plane.
+ Having a large margin is good for generalization because there is less
+ chance of an accidental alignment.
+\end_layout
+
+\begin_layout Description
+Non-seperable-data.
+ Perfect separation is not always possible.
+ Let's allow for some data points to be misclassified.
+ We define the slack variables 
+\begin_inset Formula $\{z_{1,}\ldots,z_{n}\}$
+\end_inset
+
+ allowing data points to move in direction 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+, so that they are on the right side of the margin.
+ Then the criterion is
+\begin_inset Formula 
+\[
+\max_{\vec{a},b,|\vec{a}|=1}C\qquad s.t.\quad y_{u}(\vec{x}_{u}\cdot\vec{a}+b)\geq C(q-z_{u}),\quad\forall u\in\{1,N\}\quad s.t.\quad z_{u}\geq0,\quad\forall u
+\]
+
+\end_inset
+
+Alternatively, 
+\begin_inset Formula $y_{u}\{(\vec{x}_{u}+Cz_{u}\vec{a})\cdot\vec{a}+b\}\geq C$
+\end_inset
+
+, which is like moving 
+\begin_inset Formula $\vec{x}_{u}$
+\end_inset
+
+ to 
+\begin_inset Formula $\vec{x}_{u}+z_{u}\vec{a}$
+\end_inset
+
+.
+ But, we must pay a penalty for using slack variables.
+ For example, a penalty 
+\begin_inset Formula $\sum_{u=1}^{N}z_{u}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $z_{u}=0$
+\end_inset
+
+, then the data point is correctly classified and is past hte margin.
+ If 
+\begin_inset Formula $z_{u}>0$
+\end_inset
+
+, then wthe data is on the wrong side of the margin, and so had to be removed.
+\end_layout
+
+\begin_layout Description
+Primal-Formulation.
+ Here the task is to esimate several quantities simultaneously: (1) the
+ plane 
+\begin_inset Formula $\vec{a},b$
+\end_inset
+
+; (2) the margin 
+\begin_inset Formula $C$
+\end_inset
+
+; (3) the slack variables 
+\begin_inset Formula $\{z_{u}\}$
+\end_inset
+
+.
+ We need a criterion that maximizes the margin and minimizes the amount
+ of slack variables used.
+ We absorb 
+\begin_inset Formula $C$
+\end_inset
+
+ into 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ by 
+\begin_inset Formula $\vec{a}\rightarrow a/c$
+\end_inset
+
+ and remove the constraint 
+\begin_inset Formula $|\vec{a}|=1$
+\end_inset
+
+.
+ Hnece, 
+\begin_inset Formula $C=1/|\vec{a}|$
+\end_inset
+
+.
+ Then, the max-margin criterion of SVM is
+\begin_inset Formula 
+\begin{align*}
+\min & \frac{1}{2}\sum\vec{a}\cdot\vec{a}+\gamma\sum_{u}z_{u}\\
+s.t. & y_{u}(\vec{x}_{u}\cdot\vec{a}+b)\geq1-z_{u}\quad\forall uz_{u}\geq0
+\end{align*}
+
+\end_inset
+
+First, we need to solve the quadratic primal problem using Lagrange multipliers:
+\begin_inset Formula 
+\[
+L_{p}(\vec{a},b,z;\alpha,\tau)=\frac{1}{2}\vec{a}\cdot\vec{a}+\gamma\sum_{u}z_{u}-\sum_{u}\alpha_{u}\{y_{u}(\vec{x}_{u}\cdot\vec{a}+b)-(1-z_{u})\}-\sum_{u}\tau_{u}z_{u}
+\]
+
+\end_inset
+
+where the 
+\begin_inset Formula $\{\alpha_{u}\}$
+\end_inset
+
+ and 
+\begin_inset Formula $\{\tau_{u}\}$
+\end_inset
+
+ are Lagrange parameters needed to enforce the inequality constraints.
+\end_layout
+
+\begin_layout Description
+Empirical-Risk/overfit/hinge.
+ Suppose we look at the primal function 
+\begin_inset Formula $L_{p}$
+\end_inset
+
+.
+ Consider the constraint 
+\begin_inset Formula $y_{u}(\vec{x}\cdot\vec{a}+b)-1>0$
+\end_inset
+
+.
+ If this constraint is satisfied, then it is best to set the slack variable
+ 
+\begin_inset Formula $z_{u}=0$
+\end_inset
+
+, because otherwise we pay a penalty 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ for it.
+ If the constraint is not satisfied, then we set the slack variable to be
+ 
+\begin_inset Formula $z_{u}=1-y_{u}(\vec{x}_{u}\cdot\vec{a})$
+\end_inset
+
+ because this is the smallest value of the slack variable which satisfies
+ the constraint.
+ We can summarize this by paying a hinge loss penalty 
+\begin_inset Formula $\max\{0,1-y_{u}(\vec{x}_{u}\cdot\vec{a}+b)\}$
+\end_inset
+
+.
+ 
+\bar under
+The hinge loss is 
+\begin_inset Formula $\max\{0,\cdot\}$
+\end_inset
+
+.
+
+\bar default
+ If the constraint is satisfied, then the maximum is 0, but if not, the
+ maximum is 
+\begin_inset Formula $1-y_{u}(\vec{x_{u}}\cdot\vec{a})$
+\end_inset
+
+, which is minimum value of the slack variable (to make the constraint satisfied.
+).
+ This gives an energy function:
+\begin_inset Formula 
+\[
+L(\vec{a},b)=\frac{1}{2}\vec{a}\cdot\vec{a}+\gamma\sum_{u}\max\{0,1-y_{u}(\vec{x}_{u}\cdot\vec{a}+b)\}
+\]
+
+\end_inset
+
+Note that the hinge loss is a convex loss function.
+ So we can re-express the max-margin criterion as the sum of the empirical
+ risk (with hinge los function):
+\begin_inset Formula 
+\[
+\frac{L_{p}}{\gamma N}=\frac{1}{2\gamma N}\big|\vec{a}\big|^{2}+\frac{1}{N}\sum_{u=1}^{N}\max\big\{0,1-y_{u}(\vec{x}_{u}\cdot\vec{a}+b)\big\}
+\]
+
+\end_inset
+
+The first term is a regularizer.
+ It penalizes decision rules 
+\begin_inset Formula $\hat{y}(\vec{x})=\text{sign}(\vec{x}\cdot\vec{a}+b)$
+\end_inset
+
+ which have large 
+\begin_inset Formula $|\vec{a}|$
+\end_inset
+
+.
+ This is done in order to help generalization (
+\bar under
+namely the first term helps reduce overfitting
+\bar default
+).
+\end_layout
+
+\begin_layout Description
+Different-From-Gaussian.
+ SVM learns a optimal classification hyperplane with max-margin criterion,
+ while Gaussian ML classification learns Gaussian distributions instead.
+ SVM is trained using optimization methods different than EM algorithm for
+ estimating the Gaussian distributions.
+\end_layout
+
 \begin_layout Subsection
 Q2
 \end_layout
