@@ -559,6 +559,87 @@ How many bases are required to describe the image of an object if shadows
  objects? And how many bases are predicted?
 \end_layout
 
+\begin_layout Description
+Shadows-Ignored.
+ The linear Lambertian model (i.e.
+ ignoring shadows) implies that the image of an object lies in a three-dimension
+al space.
+ This implies that the image can be modeled as
+\begin_inset Formula 
+\[
+I(\vec{x})=\sum_{i=1}^{3}\alpha_{i}e_{i}(\vec{x})
+\]
+
+\end_inset
+
+ Analysis shows that the first five eigenvectors typically contain 90 percent
+ of the energy (sum of all the eigenvalues).
+\end_layout
+
+\begin_layout Description
+PCA.
+ The linear model can be investigated empirically by taking photographs
+ of an object from different lighting conditions.
+ To get a series of images 
+\begin_inset Formula $\{I^{\mu}(\vec{x})\}$
+\end_inset
+
+.
+ We can then compute the correlation matrix
+\begin_inset Formula 
+\[
+K(\vec{x},\vec{x}')=\frac{1}{N}\sum_{\mu=1}^{N}I^{\mu}(\vec{x})I^{\mu}(\vec{x}')
+\]
+
+\end_inset
+
+Then calculate the eigenvectors and eigenvalues
+\begin_inset Formula 
+\[
+\sum_{\vec{x}'}K(\vec{x},\vec{x}')e(\vec{x}')=\lambda e(\vec{x})
+\]
+
+\end_inset
+
+This analysis shows that the first five eigenvectors typically contain 90
+ percent of the energy (sum of all eigenvalues).
+ This plots
+\begin_inset Formula 
+\[
+\frac{\sum_{i=1}^{n}\lambda_{i}}{\sum_{i=1}^{N}\lambda_{i}}
+\]
+
+\end_inset
+
+as a function of 
+\begin_inset Formula $n$
+\end_inset
+
+ where 
+\begin_inset Formula $N$
+\end_inset
+
+ is the total number of eigenvalues.
+\end_layout
+
+\begin_layout Description
+Theory.
+ Independently done in the computer vision community by Basri and Jacobs,
+ and in the computer graphics community by Ramamoothi and Hanrahan – showed
+ that for convex objects 
+\bar under
+nine
+\bar default
+ eigenvectors captured much for the intensity variations, and if the lightingwas
+ restricted to come from the frontal hemisphere then only 
+\bar under
+five
+\bar default
+ were needed.
+ These theoretical studies where done by using spherical harmonics (fourier
+ theory on a sphere) and showing that only a limited number were neede.
+\end_layout
+
 \begin_layout Section
 AdaBoost
 \end_layout
