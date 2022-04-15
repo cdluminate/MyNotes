@@ -1152,6 +1152,34 @@ What is a kernel? How does it relate to feature vectors? What type of kernel
  makes an SVM behave like a nearest neighbor classifier?
 \end_layout
 
+\begin_layout Description
+Kernel.
+ Kernel function 
+\begin_inset Formula $\phi(x)$
+\end_inset
+
+ maps feature vector 
+\begin_inset Formula $x$
+\end_inset
+
+ into a higher-dimensional feature space.
+\end_layout
+
+\begin_layout Description
+Nearest-Neighbor.
+ SVM using the RBF kernel is similar to the K-nearest neighbor classifier.
+ The decision boundary for 1-NN algorithm is the union of the Voronoi cells
+ of each training instance.
+ As for SVM, when RBF kernel is used while there is no regularization, the
+ decision boundary will also be an approximation of the union of the Voronoi
+ cells.
+\end_layout
+
+\begin_layout Description
+Reference: https://stats.stackexchange.com/questions/26792/svm-using-rbf-and-neare
+st-neighbor-classification-method
+\end_layout
+
 \begin_layout Subsection
 Q3
 \end_layout
