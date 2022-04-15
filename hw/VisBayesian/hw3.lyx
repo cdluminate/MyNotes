@@ -395,6 +395,61 @@ Albedo.
  total solar radiation and measured on a scale from 0 to 1.
 \end_layout
 
+\begin_layout Description
+GBR.
+ There is ambiguity in the estimation of shape from multiple images with
+ unknown lighting and fixed viewpoint.
+ The GBR ambiguity assumes that objects have Lambertian reflectance functions
+ but allows for shadows (cast and attached) and multiple light sources (but
+ no interflections).
+ GBR includes the convex versus concave amgiguity and the bas-relief ambiguity
+ as special cases and is of practical importance for photometric stereo.
+ Given a surface 
+\begin_inset Formula $z(x,y)$
+\end_inset
+
+, the surfaces related linearly to 
+\begin_inset Formula $z$
+\end_inset
+
+ are
+\begin_inset Formula 
+\begin{align*}
+\tilde{z}(x,y) & =ax+by+cz(x,y)\\
+G=\begin{bmatrix}1 & 0 & 0\\
+0 & 1 & 0\\
+a & b & c
+\end{bmatrix} & \qquad G^{-1}=\frac{1}{c}\begin{bmatrix}c & 0 & 0\\
+0 & c & 0\\
+-a & -b & 1
+\end{bmatrix}
+\end{align*}
+
+\end_inset
+
+They form a sub-group of 
+\begin_inset Formula $GL(3)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Convex-Concave.
+ There is a well-known preceptual ambiguity – it is impossible to distinguish
+ between a convex object lit from above and a concave object lit from below.
+ Humans resolve this ambiguity by tending to perceive objects to be convex.
+ Thus, the linear model must be modified to account for shadows.
+\end_layout
+
+\begin_layout Description
+Shadows.
+ There are two types of shadows: (i) attached shadows, and (ii) cast shadows
+ (where light source is occluded).
+ The cast shadows are more challenging.
+ GBR holds for cast and attached shadows.
+\end_layout
+
 \begin_layout Subsection
 Q2
 \end_layout
