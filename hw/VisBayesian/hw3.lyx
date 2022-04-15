@@ -1307,5 +1307,95 @@ $L_p$
  How can the primal problem be solved by exploiting the dual formulation?
 \end_layout
 
+\begin_layout Description
+Notations-Constraints.
+ The primal formulation is
+\begin_inset Formula 
+\[
+L_{p}(\vec{a},b,\{z_{i}\};\{\alpha_{i},\mu_{i}\})=(1/2)|\vec{a}|^{2}+\gamma\sum_{i=1}^{m}z_{i}-\sum_{i=1}^{m}\alpha_{i}\{y_{i}(\vec{a}\cdot\vec{x}_{i}+b)-(1-z_{i})\}-\sum_{i=1}^{m}\mu_{i}z_{i}
+\]
+
+\end_inset
+
+where the 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ is the normal vector of the classification hyperplane, and 
+\begin_inset Formula $|\vec{a}|=1$
+\end_inset
+
+; 
+\begin_inset Formula $b$
+\end_inset
+
+ is the constant offset of the classification hyperplane; so that 
+\begin_inset Formula $\vec{x}\cdot\vec{a}$
+\end_inset
+
+ is the vertical distance between point 
+\begin_inset Formula $\vec{x}$
+\end_inset
+
+ and the hyperplane, and 
+\begin_inset Formula $\vec{x}\cdot\vec{a}+b=0$
+\end_inset
+
+ means the point 
+\begin_inset Formula $\vec{x}$
+\end_inset
+
+ lies on the classification hyperplane.
+ The data is 
+\begin_inset Formula $\{(\vec{x}_{i},y_{i}):i=1,\ldots,m\}$
+\end_inset
+
+, where 
+\begin_inset Formula $y_{i}\in\{-1,1\}$
+\end_inset
+
+ and 
+\begin_inset Formula $m$
+\end_inset
+
+ is the dataset size.
+ The 
+\begin_inset Formula $\{z_{i}\}$
+\end_inset
+
+ are the slack variables and 
+\begin_inset Formula $z_{i}\geq0$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is a hyper-parameter to be tuned manually.
+ The 
+\begin_inset Formula $\{\alpha_{i}\}$
+\end_inset
+
+ and 
+\begin_inset Formula $\{\mu_{i}\}$
+\end_inset
+
+ are Lagrange parameters for the Lagrangian multiplier, and 
+\begin_inset Formula $\alpha_{i}\geq0$
+\end_inset
+
+, 
+\begin_inset Formula $\mu_{i}\geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Form-of-Solution.
+ 
+\end_layout
+
 \end_body
 \end_document
