@@ -1157,12 +1157,13 @@ Q3
 \end_layout
 
 \begin_layout Standard
+The primal formulation is given by 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-The primal formulation is given by $ L_p(
+$ L_p(
 \backslash
 vec a, b, 
 \backslash
@@ -1200,27 +1201,82 @@ vec x_i + b) - (1 -z_i)
 \backslash
 sum _{i=1}^m 
 \backslash
-mu _i z_i.$ Explain the meaning of all the terms and variables in this equation.
+mu _i z_i.$
+\end_layout
+
+\end_inset
+
+ Explain the meaning of all the terms and variables in this equation.
  What constraints do the variables satisfy?  Calculate the form of the solution
- $
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
 \backslash
-vec a$ by minimizing $L_p$ with respect to $
+vec a$
+\end_layout
+
+\end_inset
+
+ by minimizing 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$L_p$
+\end_layout
+
+\end_inset
+
+ with respect to 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
 \backslash
-vec a$.
+vec a$
+\end_layout
+
+\end_inset
+
+.
  What are the support vectors? How can the dual formulation be obtained
- by eliminating $
+ by eliminating 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
 \backslash
 vec a, b, 
 \backslash
 {z_i
 \backslash
-}$ from $L_p$.
- How can the primal problem be solved by exploiting the dual formulation?
+}$
 \end_layout
 
 \end_inset
 
+ from 
+\begin_inset ERT
+status open
 
+\begin_layout Plain Layout
+
+$L_p$
+\end_layout
+
+\end_inset
+
+.
+ How can the primal problem be solved by exploiting the dual formulation?
 \end_layout
 
 \end_body
