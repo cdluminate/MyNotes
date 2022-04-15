@@ -326,6 +326,22 @@ Describe how a Hidden Markov Model (HMM) can be expressed as an exponential
  loops? What inference algorithms are used?
 \end_layout
 
+\begin_layout Description
+HMM.
+ Almost every named distribution can be expressed as an exponential distribution.
+ So exponential model with hidden variables is a generalization of the Hidden
+ Markov Models.
+ HMM correspond to a graph without closed loop.
+ Inference algorithm is DP (dynamic programming).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Lighting Models
 \end_layout
