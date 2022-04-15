@@ -110,6 +110,131 @@ What is an exponential model with hidden variables? What are the potentials,
  for an exponential model with hidden variables?
 \end_layout
 
+\begin_layout Description
+Exponential-Distribution.
+ The general form of an exponential distribution is
+\begin_inset Formula 
+\[
+p(\bm{x}|\bm{\lambda})=\frac{1}{Z[\bm{\lambda}]}\exp\{\bm{\lambda}\cdot\bm{\phi}(\bm{x})\}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $Z[\bm{\lambda}]$
+\end_inset
+
+ is the normalization factor, 
+\begin_inset Formula $\bm{\lambda}=(\lambda_{1},\lambda_{2},\ldots,\lambda_{M})$
+\end_inset
+
+ are the parameters and 
+\begin_inset Formula 
+\[
+\bm{\phi}(\bm{x})=(\phi_{1}(\bm{x}),\phi_{2}(\bm{x}),\ldots,\phi_{M}(\bm{x}))
+\]
+
+\end_inset
+
+ are the statistics (potential).
+ Accordingly, an exponential model w/ hidden variables is
+\begin_inset Formula 
+\[
+p(\bm{d},\bm{h}|\bm{\lambda})=\frac{1}{Z[\bm{\lambda}]}\exp\{\bm{\lambda}\cdot\bm{\phi}(\bm{d},\bm{h})\}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $Z[\bm{\lambda}]=\sum_{\bm{d,h}}\exp\{\bm{\lambda\cdot\phi}(\bm{d,h})\}$
+\end_inset
+
+ is the normalization term.
+ The parameters are 
+\begin_inset Formula 
+\[
+\bm{\lambda}=(\lambda_{1},\lambda_{2},\ldots,\lambda_{M},\mu_{1},\mu_{2},\ldots,\mu_{M-1}).
+\]
+
+\end_inset
+
+The potentials are 
+\begin_inset Formula 
+\[
+\bm{\phi(d,h)}=(\phi(d_{i},h_{i})_{i=1,\ldots,M},\psi(h_{i},h_{i+1})_{i=1,\ldots,M-1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Derivatives.
+ The derivates of 
+\begin_inset Formula $Z$
+\end_inset
+
+ w.r.t.
+ the parameters is
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial\bm{\lambda}}\log Z[\bm{\lambda}] & =\frac{\partial}{\partial\bm{\lambda}}\log\sum_{\bm{h,d}}\exp\{\bm{\lambda\cdot\phi}(\bm{h,d})\}\\
+ & =\frac{1}{\sum_{\bm{h,d}}\exp\{\bm{\lambda\cdot\phi}(\bm{h,d})\}}\sum_{\bm{h,d}}\bm{\phi}(\bm{h,d})\cdot\exp\{\bm{\lambda\cdot\phi}(\bm{h,d})\}\\
+ & =\sum_{\bm{h,d}}p(\bm{h,d}|\bm{\lambda})\cdot\bm{\phi}(\bm{h,d})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+EM-Algorithm-MLE.
+ Given the dataset 
+\begin_inset Formula $D=\{\bm{d}^{m}:m=1,\ldots,M\}$
+\end_inset
+
+, we want to find the MLE
+\begin_inset Formula 
+\[
+\hat{\bm{\lambda}=\arg\max_{\lambda}\prod_{m=1}^{M}p(\bm{d}^{m}|\bm{\lambda})=\arg\max_{\lambda}\prod_{m=1}^{M}\sum_{\bm{h}^{m}}p(\bm{d}^{m},\bm{h}^{m}|\bm{\lambda})}.
+\]
+
+\end_inset
+
+To solve this, we introduce distrinution 
+\begin_inset Formula $Q_{m}(\bm{h}^{m})$
+\end_inset
+
+, and the free energy can be expressed as
+\begin_inset Formula 
+\[
+F[\bm{\lambda}:\{Q_{m}(\bm{h}^{m})\}]=\sum_{m-1}^{M}\Big\{-\log p(\bm{d}^{m}|\bm{\lambda})+\sum_{\bm{h}^{m}}Q_{m}(\bm{h}^{m})\log\frac{Q_{m}(\bm{h}^{m})}{p(\bm{h}^{m}|\bm{d}^{m},\bm{\lambda})}\Big\}
+\]
+
+\end_inset
+
+Then the EM algorithm minimizes free energy w.r.t 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and the 
+\begin_inset Formula $\{Q_{m}(\cdot)\}$
+\end_inset
+
+ alternatively:
+\begin_inset Formula 
+\begin{align*}
+\bm{\lambda}^{t+1} & =\arg\min_{\lambda}F[\bm{\lambda}:\{Q_{m}^{t}(\cdot)\}]=\arg\min_{\lambda}\big\{-\sum_{\bm{h}^{m}}Q_{m}^{t}(\bm{h}^{m})\log p(\bm{h}^{m},\bm{d}^{m}|\bm{\lambda})\big\}\\
+Q_{m}^{t+1}(\bm{h}^{m}) & =p(\bm{h}^{m}|\bm{d}^{m},\bm{\lambda}^{t})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Q2
 \end_layout
