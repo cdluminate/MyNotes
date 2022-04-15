@@ -247,6 +247,75 @@ Now suppose that the exponential model can be expressed as a probability
  statistics of the data equal to the expected statistics of the model?
 \end_layout
 
+\begin_layout Description
+EM-Computations.
+ When there is no closed loop in the graph, we can compute
+\begin_inset Formula 
+\begin{align*}
+P(\bm{h}^{m}|\bm{d}^{m},\bm{\lambda}^{t}) & =\frac{P(\bm{h}^{m},\bm{d}^{m}|\bm{\lambda}^{t})}{P(\bm{d}^{m}|\bm{\lambda}^{t})}\\
+P(\bm{d}^{m}|\bm{\lambda}^{t}) & =\frac{1}{Z[\bm{\lambda}]}\sum_{\bm{h}^{m}}\exp\{\bm{\lambda}\cdot\bm{\phi}(\bm{d}^{m},\bm{h}^{m})\}
+\end{align*}
+
+\end_inset
+
+If the graph has closed loop, it can be approximated by BP (sum-product).
+\end_layout
+
+\begin_layout Description
+Statics-Equal.
+ For the update rule for 
+\begin_inset Formula $\bm{\lambda}^{t+1}$
+\end_inset
+
+, we can convert the problem into minimizing
+\begin_inset Formula 
+\[
+G(\bm{\lambda})=-\sum_{m=1}^{M}Q_{m}^{t}(\bm{h}^{m})\cdot\bm{\lambda}\cdot\bm{\phi}(\bm{h}^{m},\bm{d}^{m})-\sum_{m=1}^{M}\log Z[\bm{\lambda}].
+\]
+
+\end_inset
+
+And the function 
+\begin_inset Formula $G(\bm{\lambda})$
+\end_inset
+
+ is a convex function of 
+\begin_inset Formula $\bm{\lambda}$
+\end_inset
+
+, because 
+\begin_inset Formula $\log Z[\cdot]$
+\end_inset
+
+ is convex.
+ Hence, the global minimum 
+\begin_inset Formula $\hat{\bm{\lambda}}$
+\end_inset
+
+ occurs at the zero-gradient point where 
+\begin_inset Formula $\partial G(\bm{\hat{\lambda}})/\partial\bm{\lambda}=0$
+\end_inset
+
+, namely
+\begin_inset Formula 
+\[
+\frac{1}{M}\sum_{m=1}^{M}Q_{m}^{t}(\bm{h}^{m})\bm{\phi}(\bm{h}^{m},\bm{d}^{m})=\sum_{\bm{h,d}}\bm{\phi}(\bm{h},\bm{d})P(\bm{h},\bm{d}|\bm{\lambda})
+\]
+
+\end_inset
+
+which is exactly when the expected statistics w.r.t.
+ data 
+\begin_inset Formula $\bm{d}^{m}$
+\end_inset
+
+ and 
+\begin_inset Formula $Q_{m}(\cdot)$
+\end_inset
+
+ equals the expected statistics of the model.
+\end_layout
+
 \begin_layout Subsection
 Q3
 \end_layout
