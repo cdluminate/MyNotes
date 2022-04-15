@@ -352,9 +352,47 @@ Q1
 
 \begin_layout Standard
 What is the Lambertian lighting model? What is the albedo? What is the Generaliz
-ed Bas Relief (GBR) ambiguity?How does it relate to the ambiguity between
+ed Bas Relief (GBR) ambiguity? How does it relate to the ambiguity between
  convex and concave shapes? What are cast and attached shadows? Does the
  GBR hold for cast and attached shadows?
+\end_layout
+
+\begin_layout Description
+Lambertian-Model.
+ The Lambertian reflectance model is the simplest way to model how images
+ are generated from three dimensional objects illuminated by various light
+ sources.
+ The linear Lambertian model is
+\begin_inset Formula 
+\[
+I(\vec{x})=a(\vec{x})\vec{n}(\vec{x})\cdot\vec{s}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $I(\vec{x})$
+\end_inset
+
+ is the image, 
+\begin_inset Formula $a(\vec{x})$
+\end_inset
+
+ is the albedo, 
+\begin_inset Formula $\vec{n}(\vec{x})$
+\end_inset
+
+ is the surface normal, 
+\begin_inset Formula $\vec{s}$
+\end_inset
+
+ is the light source.
+\end_layout
+
+\begin_layout Description
+Albedo.
+ It is the measure of the diffuse reflection of solar radiation out of the
+ total solar radiation and measured on a scale from 0 to 1.
 \end_layout
 
 \begin_layout Subsection
@@ -364,6 +402,95 @@ Q2
 \begin_layout Standard
 What is photometric stereo? How can it be formulated in terms of Singular
  Value Decomposition? What are the ambiguities?
+\end_layout
+
+\begin_layout Description
+Photometric-Stereo.
+ Given several images of a Lambertian object under varying lighting, assuming
+ single directional source, we have 
+\begin_inset Formula 
+\begin{align*}
+M & =LS\\
+\begin{bmatrix}I_{11} & \cdots & I_{1p}\\
+\vdots &  & \vdots\\
+I_{f1} & \cdots & I_{fp}
+\end{bmatrix}_{f\times p} & =\begin{bmatrix}l_{1x} & l_{1y} & l_{1z}\\
+ & \vdots\\
+l_{fx} & l_{fy} & l_{fz}
+\end{bmatrix}_{f\times3}\begin{bmatrix}n_{x1} &  & n_{xp}\\
+n_{y1} & \cdots & n_{yp}\\
+n_{z1} &  & n_{zp}
+\end{bmatrix}_{3\times p}
+\end{align*}
+
+\end_inset
+
+We can solve for 
+\begin_inset Formula $S$
+\end_inset
+
+ if 
+\begin_inset Formula $L$
+\end_inset
+
+ is known (Woodham).
+ This algorithm can be extended to more complex reflection models (if known)
+ through the use of a lookup table.
+\end_layout
+
+\begin_layout Description
+Factorization.
+ We can use SVD to find a rank 3 approximation for
+\begin_inset Formula 
+\[
+M=U\Sigma V^{T}
+\]
+
+\end_inset
+
+So we define 
+\begin_inset Formula $\Sigma_{3}=\text{diag}(\sigma_{1},\sigma_{2},\sigma_{3})$
+\end_inset
+
+, where 
+\begin_inset Formula $\sigma_{1},\sigma_{2},\sigma_{3}$
+\end_inset
+
+ are the largest singular values of 
+\begin_inset Formula $M$
+\end_inset
+
+, and
+\begin_inset Formula 
+\[
+\hat{L}=U\sqrt{\Sigma_{3}},\quad\hat{S}=\sqrt{\Sigma_{3}}V^{T},\quad M\approx\hat{L}\hat{S}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Ambiguity.
+ Factorization is not unique, since
+\begin_inset Formula 
+\[
+\hat{M}=(\hat{L}A^{-1})(A\hat{S})
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $A$
+\end_inset
+
+ is 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ invertible.
+ However, we can reduce such ambiguity by imposing intergrability.
 \end_layout
 
 \begin_layout Subsection
