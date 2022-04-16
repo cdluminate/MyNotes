@@ -1434,7 +1434,55 @@ Support-Vector.
 
 \begin_layout Description
 Dual-Formulation.
+ We can solve the problem more easily in the dual formulation, which is
+ a function of Lagrange multipliers only:
+\begin_inset Formula 
+\[
+L_{p}=\sum_{i}\alpha_{i}-\frac{1}{2}\sum_{i,j}\alpha_{i}\alpha_{j}y_{i}y_{j}\vec{x}_{i}\vec{x}_{j}\quad s.t.\quad0\leq\alpha_{i}\leq\tau,\sum_{i}\alpha_{i}y_{i}=0
+\]
+
+\end_inset
+
+We start from rewriting it as
+\begin_inset Formula 
+\[
+L_{p}=-\frac{1}{2}\vec{a}\cdot\vec{a}+\sum_{i}\alpha_{i}+\vec{a}\cdot(\vec{a}-\sum_{i}\alpha_{i}y_{i}\vec{x}_{i})+\sum_{i}z_{i}(\gamma-\tau_{i}-\alpha_{i})-b\sum_{i}\alpha_{i}y_{i}
+\]
+
+\end_inset
+
+Then we extremize w.r.t.
  
+\begin_inset Formula $\vec{a},b,\{z_{i}\}$
+\end_inset
+
+.
+ The result is
+\begin_inset Formula 
+\[
+\hat{\vec{a}}=\sum_{i}\alpha_{i}y_{i}\vec{x}_{i}\qquad\sum_{i}\alpha_{i}y_{i}=0\qquad\gamma-\tau_{i}-\alpha_{i}=0
+\]
+
+\end_inset
+
+Substituting back into 
+\begin_inset Formula $L_{p}$
+\end_inset
+
+ gives
+\begin_inset Formula 
+\[
+L_{p}=-\frac{1}{2}\sum_{i,j}\alpha_{i}\alpha_{j}y_{i}y_{j}\vec{x}_{i}\vec{x}_{j}+\sum_{i}\alpha_{i}
+\]
+
+\end_inset
+
+which has to be maximized w.r.t.
+ 
+\begin_inset Formula $\{\alpha_{i}\}$
+\end_inset
+
+.
 \end_layout
 
 \end_body
