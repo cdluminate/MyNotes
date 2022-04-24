@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="107" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="108" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1648337505775">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -123,7 +123,7 @@
 <node TEXT="arXiv" ID="ID_555001851" CREATED="1641521435482" MODIFIED="1642954134722">
 <node TEXT="2022" OBJECT="java.lang.Long|2022" ID="ID_1490488610" CREATED="1641521399876" MODIFIED="1641521403819">
 <node TEXT="Weekly batch" ID="ID_1917473385" CREATED="1642949144502" MODIFIED="1642949169400">
-<node TEXT="mar 26 ok" ID="ID_1396833753" CREATED="1648335707656" MODIFIED="1648335711303"/>
+<node TEXT="apr 23 ok" ID="ID_800380579" CREATED="1650825804133" MODIFIED="1650825807379"/>
 </node>
 </node>
 </node>
@@ -155,7 +155,11 @@
 </node>
 </node>
 <node TEXT="NeurIPS" ID="ID_301924831" CREATED="1641521444597" MODIFIED="1642954144776"/>
-<node TEXT="ICLR" ID="ID_1738325130" CREATED="1641521447460" MODIFIED="1642954147510"/>
+<node TEXT="ICLR" ID="ID_1738325130" CREATED="1641521447460" MODIFIED="1642954147510">
+<node TEXT="2022" OBJECT="java.lang.Long|2022" ID="ID_814285036" CREATED="1650825816095" MODIFIED="1650825819933">
+<node TEXT="TODO" ID="ID_944733876" CREATED="1650825820715" MODIFIED="1650825821778"/>
+</node>
+</node>
 <node TEXT="AAAI" ID="ID_583291215" CREATED="1641521448752" MODIFIED="1642954149324"/>
 <node TEXT="ICML" ID="ID_8273996" CREATED="1642954123777" MODIFIED="1642954125427"/>
 <node TEXT="ACL" ID="ID_126154590" CREATED="1642954126358" MODIFIED="1642954130606"/>
@@ -333,6 +337,20 @@
 <node TEXT="DST: Dynamic Substitute Training for Data-free Black-box Attack" ID="ID_179730775" CREATED="1649629766682" MODIFIED="1649629770207">
 <icon BUILTIN="unchecked"/>
 <node TEXT="CVPR22" ID="ID_420518291" CREATED="1649629771272" MODIFIED="1649629774362"/>
+</node>
+<node TEXT="Transfer Attacks Revisited: A Large-Scale Empirical Study in Real Computer Vision Settings" ID="ID_1399088132" CREATED="1650831700735" MODIFIED="1650831706979">
+<icon BUILTIN="bookmark"/>
+<icon BUILTIN="unchecked"/>
+<node TEXT="SP22" ID="ID_610392713" CREATED="1650831707957" MODIFIED="1650831712625"/>
+<node TEXT="Conclusion" ID="ID_956796677" CREATED="1650831780208" MODIFIED="1650831782210">
+<node TEXT="(1) simple surrogates do not necessarily improve real transfer attacks" ID="ID_1804759456" CREATED="1650831722896" MODIFIED="1650831735286"/>
+<node TEXT="(2) no dominant surrogate architecture is found in real transfer attacks" ID="ID_247305534" CREATED="1650831735586" MODIFIED="1650831746160"/>
+<node TEXT="(3) it is the gap between posterior rather than the gap between logit that increases transferability." ID="ID_1921463457" CREATED="1650831748628" MODIFIED="1650831776660"/>
+</node>
+<node TEXT="Problem" ID="ID_646666901" CREATED="1650831786179" MODIFIED="1650831788586">
+<node TEXT="(1) model similarity is not a well-defined concept" ID="ID_442639715" CREATED="1650831789291" MODIFIED="1650831812917"/>
+<node TEXT="(2) l2 norm of perturbation can geenrate high transferrability without use of gradient and is a more powerful source than l-infty norm" ID="ID_434192622" CREATED="1650831813567" MODIFIED="1650831836316"/>
+</node>
 </node>
 </node>
 <node TEXT="Universal Perturbation" ID="ID_883577858" CREATED="1641522438698" MODIFIED="1641522443789">
@@ -1267,28 +1285,6 @@
 <node TEXT="Robustness at the representation level" ID="ID_1452405899" CREATED="1649169266414" MODIFIED="1649169273770"/>
 </node>
 </node>
-<node TEXT="Image Denoising" ID="ID_688438108" CREATED="1642369253403" MODIFIED="1642965597652">
-<node TEXT="Towards adversarially robust deep image denoising" ID="ID_912787227" CREATED="1642369258886" MODIFIED="1642369271962">
-<icon BUILTIN="pencil"/>
-<node TEXT="present observation-based zero-mean attack" ID="ID_948789581" CREATED="1642369294389" MODIFIED="1642369302053"/>
-<node TEXT="present hybrid adversarial training" ID="ID_409590623" CREATED="1642369302455" MODIFIED="1642369331464">
-<node TEXT="using augmented data" ID="ID_632082886" CREATED="1642369349160" MODIFIED="1642369354932"/>
-</node>
-</node>
-</node>
-<node TEXT="Object Detection" ID="ID_1293793866" CREATED="1649169048366" MODIFIED="1649169051401">
-<node TEXT="Defending From Physically-Realizable Adversarial Attacks Through Internal Over-Activation Analysis" ID="ID_1601765509" CREATED="1649169051973" MODIFIED="1649169053897">
-<icon BUILTIN="pencil"/>
-</node>
-</node>
-<node TEXT="Multi-Task learning" ID="ID_1182441257" CREATED="1642442091094" MODIFIED="1642965600653">
-<node TEXT="Adversarial Robustness in Multi-Task Learning: Promises and Illusions" ID="ID_429718797" CREATED="1642442095758" MODIFIED="1642442212412">
-<icon BUILTIN="checked"/>
-<node TEXT="AAAI22" ID="ID_1679691953" CREATED="1642442198116" MODIFIED="1642442200599"/>
-<node TEXT="blindly adding auxiliary tasks or weighing the tasks provides a false sense of robustness." ID="ID_459008675" CREATED="1642442206193" MODIFIED="1642442252721"/>
-<node TEXT="the choice of the task to incorporate in the loss function are important factors that can be leveraged to yield more robust models" ID="ID_1336811666" CREATED="1642442253918" MODIFIED="1642442277862"/>
-</node>
-</node>
 <node TEXT="Robust Generalization" ID="ID_125075162" CREATED="1643058798944" MODIFIED="1648388366403">
 <font BOLD="true"/>
 <node TEXT="Generalize better with adversarial attack / adversarial trianing" ID="ID_1604216423" CREATED="1648388384439" MODIFIED="1648388398758">
@@ -1310,6 +1306,28 @@
 <icon BUILTIN="unchecked"/>
 <icon BUILTIN="messagebox_warning"/>
 <node TEXT="ICLR22, Alan" ID="ID_706047055" CREATED="1650809057964" MODIFIED="1650809065353"/>
+</node>
+</node>
+<node TEXT="Image Denoising" ID="ID_688438108" CREATED="1642369253403" MODIFIED="1642965597652">
+<node TEXT="Towards adversarially robust deep image denoising" ID="ID_912787227" CREATED="1642369258886" MODIFIED="1642369271962">
+<icon BUILTIN="pencil"/>
+<node TEXT="present observation-based zero-mean attack" ID="ID_948789581" CREATED="1642369294389" MODIFIED="1642369302053"/>
+<node TEXT="present hybrid adversarial training" ID="ID_409590623" CREATED="1642369302455" MODIFIED="1642369331464">
+<node TEXT="using augmented data" ID="ID_632082886" CREATED="1642369349160" MODIFIED="1642369354932"/>
+</node>
+</node>
+</node>
+<node TEXT="Object Detection" ID="ID_1293793866" CREATED="1649169048366" MODIFIED="1649169051401">
+<node TEXT="Defending From Physically-Realizable Adversarial Attacks Through Internal Over-Activation Analysis" ID="ID_1601765509" CREATED="1649169051973" MODIFIED="1649169053897">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Multi-Task learning" ID="ID_1182441257" CREATED="1642442091094" MODIFIED="1642965600653">
+<node TEXT="Adversarial Robustness in Multi-Task Learning: Promises and Illusions" ID="ID_429718797" CREATED="1642442095758" MODIFIED="1642442212412">
+<icon BUILTIN="checked"/>
+<node TEXT="AAAI22" ID="ID_1679691953" CREATED="1642442198116" MODIFIED="1642442200599"/>
+<node TEXT="blindly adding auxiliary tasks or weighing the tasks provides a false sense of robustness." ID="ID_459008675" CREATED="1642442206193" MODIFIED="1642442252721"/>
+<node TEXT="the choice of the task to incorporate in the loss function are important factors that can be leveraged to yield more robust models" ID="ID_1336811666" CREATED="1642442253918" MODIFIED="1642442277862"/>
 </node>
 </node>
 <node TEXT="Generative" ID="ID_1297276236" CREATED="1649630202035" MODIFIED="1649630208049">
@@ -1798,6 +1816,18 @@
 </node>
 <node TEXT="Style-Guided Domain Adaptation for Face Presentation Attack Detection" ID="ID_31042759" CREATED="1649101964446" MODIFIED="1649101974147">
 <icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Key Point" ID="ID_1651017374" CREATED="1650830438788" MODIFIED="1650830442804">
+<node TEXT="Not All Tokens Are Equal: Human-centric Visual Analysis via&#xa;Token Clustering Transformer" ID="ID_1267200711" CREATED="1650830443573" MODIFIED="1650830471615">
+<icon BUILTIN="bookmark"/>
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_256081483" CREATED="1650830472906" MODIFIED="1650830474075"/>
+<node TEXT="Important" ID="ID_1925146044" CREATED="1650830479672" MODIFIED="1650830501355">
+<icon BUILTIN="info"/>
+<font BOLD="true"/>
+</node>
+<node TEXT="token clustering" ID="ID_1084636872" CREATED="1650830509672" MODIFIED="1650830512102"/>
 </node>
 </node>
 <node TEXT="Embedding Learning" ID="ID_290828706" CREATED="1641243309778" MODIFIED="1641520995604">
@@ -2415,7 +2445,7 @@
 <node TEXT="Cross-Modal Retrieval" FOLDED="true" POSITION="left" ID="ID_22749108" CREATED="1576988430324" MODIFIED="1642431082632">
 <font NAME="Gentium" BOLD="false"/>
 <edge COLOR="#7c0000"/>
-<node TEXT="Image-Text" FOLDED="true" ID="ID_22916358" CREATED="1649103179989" MODIFIED="1649103183136">
+<node TEXT="Image-Text" ID="ID_22916358" CREATED="1649103179989" MODIFIED="1649103183136">
 <node TEXT="Unifying ..." ID="ID_1819265540" CREATED="1586240031907" MODIFIED="1587526865103">
 <font NAME="Gentium" BOLD="false"/>
 </node>
@@ -2818,6 +2848,11 @@
 <node TEXT="similar to SVM" ID="ID_1059316080" CREATED="1649130063284" MODIFIED="1649130069027"/>
 </node>
 </node>
+<node TEXT="Unsupervised Domain Adaptation" ID="ID_1180792051" CREATED="1650824963676" MODIFIED="1650824970144">
+<node TEXT="Safe Self-Refinement for Transformer-based Domain Adaptation" ID="ID_1500347419" CREATED="1650824973786" MODIFIED="1650824979577">
+<node TEXT="CVPR22" ID="ID_439499097" CREATED="1650824980672" MODIFIED="1650824982140"/>
+</node>
+</node>
 </node>
 <node TEXT="Facial Expression" FOLDED="true" POSITION="left" ID="ID_1665603625" CREATED="1648335974432" MODIFIED="1648336221787">
 <edge COLOR="#0000ff"/>
@@ -3157,6 +3192,16 @@
 <node TEXT="Mixed Differential Privacy in Computer Vision" ID="ID_1969874071" CREATED="1648337767049" MODIFIED="1648337770249">
 <icon BUILTIN="unchecked"/>
 <node TEXT="CVPR22" ID="ID_1404369978" CREATED="1648337773035" MODIFIED="1648337774527"/>
+</node>
+</node>
+</node>
+<node TEXT="Representation Learning" FOLDED="true" POSITION="left" ID="ID_714759247" CREATED="1650825914367" MODIFIED="1650825919915">
+<edge COLOR="#7c007c"/>
+<node TEXT="Survey" ID="ID_1775463249" CREATED="1650825920877" MODIFIED="1650825925562">
+<icon BUILTIN="info"/>
+<node TEXT="Empirical Evaluation and Theoretical Analysis for Representation Learning: A Survey" ID="ID_704481907" CREATED="1650825926968" MODIFIED="1650825934945">
+<node TEXT="IJCAI survey 2022" ID="ID_210152171" CREATED="1650825935831" MODIFIED="1650825944162"/>
+<node TEXT="generic representation learning, involving both CV and CL" ID="ID_1395139495" CREATED="1650825945439" MODIFIED="1650825953912"/>
 </node>
 </node>
 </node>
