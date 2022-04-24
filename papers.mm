@@ -577,7 +577,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Attack Detection &amp; Vul Analysis" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1244682927" CREATED="1646761472294" MODIFIED="1647048997914">
+<node TEXT="Attack Detection &amp; Vul Analysis" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1244682927" CREATED="1646761472294" MODIFIED="1647048997914">
 <edge COLOR="#7c0000"/>
 <node TEXT="Vulnerability Analysis" ID="ID_1332546973" CREATED="1641743569630" MODIFIED="1647048986674">
 <node TEXT="rethinking feature uncertainty in stochastic neural networks for adversarial robustness" ID="ID_829421687" CREATED="1641678579615" MODIFIED="1641678600199">
@@ -1296,6 +1296,11 @@
 <icon BUILTIN="unchecked"/>
 <node TEXT="CVPR22" ID="ID_685246872" CREATED="1648388379291" MODIFIED="1648388380602"/>
 </node>
+<node TEXT="Fast AdvProp" ID="ID_868830173" CREATED="1650809050717" MODIFIED="1650809092623">
+<icon BUILTIN="unchecked"/>
+<icon BUILTIN="messagebox_warning"/>
+<node TEXT="ICLR22, Alan" ID="ID_706047055" CREATED="1650809057964" MODIFIED="1650809065353"/>
+</node>
 </node>
 <node TEXT="Generative" ID="ID_1297276236" CREATED="1649630202035" MODIFIED="1649630208049">
 <node TEXT="Adversarially robust segmentation models learn perceptually-aligned gradients" ID="ID_1579052965" CREATED="1649630171570" MODIFIED="1649630175331">
@@ -1332,9 +1337,7 @@
 </node>
 <node TEXT="Deep Metric Learning" ID="ID_818044827" CREATED="1649169031775" MODIFIED="1649169036193">
 <font BOLD="true"/>
-<node TEXT="advrank" ID="ID_1017741041" CREATED="1647049164274" MODIFIED="1647049167723"/>
-<node TEXT="robrank" ID="ID_633151094" CREATED="1647049167959" MODIFIED="1647049169163"/>
-<node TEXT="robdml" ID="ID_442150394" CREATED="1647049171530" MODIFIED="1647049172680"/>
+<node TEXT="see Track: AdvRank" ID="ID_442150394" CREATED="1647049171530" MODIFIED="1650810568792"/>
 </node>
 </node>
 <node TEXT="Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_98760508" CREATED="1642438760894" MODIFIED="1642438768351">
@@ -1809,6 +1812,184 @@
 </node>
 </node>
 </node>
+<node TEXT="Track: AdvRank" FOLDED="true" POSITION="right" ID="ID_67713290" CREATED="1561352085890" MODIFIED="1642394393230">
+<icon BUILTIN="idea"/>
+<font NAME="Gentium" SIZE="10" BOLD="true"/>
+<edge COLOR="#ff00ff"/>
+<node TEXT="1806.04425: Ranking Robustness Under Ad" ID="ID_562405105" CREATED="1561555589182" MODIFIED="1636485900673">
+<icon BUILTIN="button_cancel"/>
+<font NAME="Gentium" SIZE="10"/>
+<node TEXT="document manipulation for candidate attack" ID="ID_1231428087" CREATED="1561555592821" MODIFIED="1587728924172">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="mainly analysis robustness" ID="ID_55534459" CREATED="1561555648216" MODIFIED="1587728924173">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="manual documentation manipulation instead of automatic adversarial example generation" ID="ID_798730521" CREATED="1561555609750" MODIFIED="1587728924174">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="targets at RankSVM and LambdaMART models instead of neural networks" ID="ID_255349278" CREATED="1561555658663" MODIFIED="1587728924175">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+</node>
+<node TEXT="1808.03908: Adversarial Personalized Rank" ID="ID_83109239" CREATED="1561555800953" MODIFIED="1636485894233">
+<icon BUILTIN="button_cancel"/>
+<font NAME="Gentium" SIZE="10"/>
+<node TEXT="recommendation system" ID="ID_1396811583" CREATED="1561555811711" MODIFIED="1587728924177">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="enhance robustness of a recommender model with adversarial training (adv examples)" ID="ID_527243554" CREATED="1561555835768" MODIFIED="1587728924178">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="APR on Matrix Factorization" ID="ID_662100047" CREATED="1561556113144" MODIFIED="1587728924179">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+</node>
+<node TEXT="1809: AdvBox: FaceNet Attack" ID="ID_1888665729" CREATED="1561556172335" MODIFIED="1636485887561">
+<icon BUILTIN="button_cancel"/>
+<font NAME="Gentium" SIZE="10"/>
+<node TEXT="query attack" ID="ID_1680208164" CREATED="1561556180000" MODIFIED="1587728924182">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="https://github.com/advboxes/AdvBox/blob/master/applications/face_recogn" ID="ID_951928489" CREATED="1561556196446" MODIFIED="1587728924182" LINK="https://github.com/advboxes/AdvBox/blob/master/applications/face_recogn">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="\latex $L=\sqrt{\sum (E-E_t)^2}" ID="ID_79735084" CREATED="1561556315382" MODIFIED="1587728924183">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+</node>
+<node TEXT="1812.00552: Universal Perturbation Attack Against Image Retrieval" ID="ID_1919220467" CREATED="1561556406527" MODIFIED="1587728924183">
+<font NAME="Gentium" SIZE="10"/>
+<node TEXT="directly attacks triplet ranking loss function" ID="ID_491701428" CREATED="1561556424133" MODIFIED="1587728924185">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="but what if the triplet fell into the zero-gradient region" ID="ID_839129884" CREATED="1561556433741" MODIFIED="1587728924186">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="using PGD+momentum for optimization" ID="ID_948653721" CREATED="1561556446589" MODIFIED="1587728924187">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="studies query attack" ID="ID_1697473744" CREATED="1561556462589" MODIFIED="1587728924188">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+</node>
+<node TEXT="2019-ICMR: Who&#x2019;s Afraid of Adversarial Queries?" ID="ID_1703113745" CREATED="1561556482168" MODIFIED="1636485880766">
+<icon BUILTIN="button_cancel"/>
+<font NAME="Gentium" SIZE="10"/>
+<node TEXT="query attack" ID="ID_1123142555" CREATED="1561556568742" MODIFIED="1587728924189">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="\latex $\max ||f(x)-f(x+v)||_2^2$" ID="ID_1830202115" CREATED="1561556572709" MODIFIED="1587728924190">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="aims at image retrieval and didn&apos;t mention embedding learning" ID="ID_1516625397" CREATED="1561556595981" MODIFIED="1587728924190">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+</node>
+<node TEXT="1907: unsupervised adversarial attacks on deep feature-based retrieval with GAN" ID="ID_9436679" CREATED="1588230731425" MODIFIED="1588230756582">
+<node TEXT="generate adversarial perturbation with GAN" ID="ID_1151385661" CREATED="1588230816064" MODIFIED="1588230824347"/>
+</node>
+<node TEXT="1812.00552: Universal Perturbation Attack Against Image Retrieval (iccv19)" ID="ID_1472505886" CREATED="1573474834671" MODIFIED="1587728924195">
+<icon BUILTIN="messagebox_warning"/>
+<font NAME="Gentium" SIZE="10"/>
+<node TEXT="what: universal perturbation for untargeted attack" ID="ID_1954548078" CREATED="1573474853539" MODIFIED="1587728924196">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="how: currupts pairwise or listwise ranking" ID="ID_1847715376" CREATED="1573474863063" MODIFIED="1587728924197">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="untargeted, focusing on fooling" ID="ID_665084129" CREATED="1573475747222" MODIFIED="1587728924198">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+</node>
+<node TEXT="1901.10650: Metric Attack and Defense for Person Re-identificatio" ID="ID_490211267" CREATED="1592543067606" MODIFIED="1636485967109">
+<icon BUILTIN="messagebox_warning"/>
+<icon BUILTIN="button_cancel"/>
+<font BOLD="true"/>
+<node TEXT="Song Bai" ID="ID_692240773" CREATED="1636485956725" MODIFIED="1636485961987"/>
+<node TEXT="attack the metric in person reID" ID="ID_34707268" CREATED="1592543081709" MODIFIED="1592543098277"/>
+<node TEXT="push (untargeted) and pull (targeted)" ID="ID_1286430581" CREATED="1592543098573" MODIFIED="1592543112360"/>
+</node>
+<node TEXT="1908.09613: targeted mismatch adversarial attack (iccv19)" ID="ID_671271001" CREATED="1573471637067" MODIFIED="1636486108618">
+<icon BUILTIN="messagebox_warning"/>
+<icon BUILTIN="button_ok"/>
+<font NAME="Gentium" SIZE="10"/>
+<node TEXT="what: targeted mismatch" ID="ID_1563475526" CREATED="1573471664345" MODIFIED="1587728924192">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="how: distance objective" ID="ID_688655227" CREATED="1573472458185" MODIFIED="1587728924193">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="not systematic enough" ID="ID_205991126" CREATED="1573472480708" MODIFIED="1587728924194">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="THIS is a threat to us" ID="ID_988648076" CREATED="1573472496549" MODIFIED="1587728924195">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+</node>
+<node TEXT="Advpattern (iccv19)" ID="ID_932771683" CREATED="1576809427350" MODIFIED="1587728924198">
+<icon BUILTIN="messagebox_warning"/>
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="ours: Adversarial Ranking Attack and Defense (arxiv 2002.11293)" ID="ID_933056745" CREATED="1576809387016" MODIFIED="1592543327861">
+<icon BUILTIN="button_ok"/>
+<font NAME="Gentium" SIZE="10" BOLD="true"/>
+<node TEXT="ECCV2020" ID="ID_1213034229" CREATED="1576809470567" MODIFIED="1610427018812">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+</node>
+<node TEXT="2004.04199: transferable, controllable, and inconspicious adversarial attacks on person re-identification with deep-misranking (CVPR20)" ID="ID_693496331" CREATED="1590743469098" MODIFIED="1590743579415">
+<icon BUILTIN="button_ok"/>
+<node TEXT="person reID" ID="ID_548309734" CREATED="1590743636274" MODIFIED="1590743640590"/>
+<node TEXT="use triplet form attack objective" ID="ID_1324326527" CREATED="1590743509489" MODIFIED="1590743528991"/>
+<node TEXT="untargeted" ID="ID_862183953" CREATED="1590743529382" MODIFIED="1590743531961"/>
+<node TEXT="learning-to-mis-rank" ID="ID_172715084" CREATED="1590805595723" MODIFIED="1590805600800"/>
+</node>
+<node TEXT="Vulnerability of Person Re Identification Models to Metric Adversarial Attacks (cvpr20w)" ID="ID_666911505" CREATED="1592544846016" MODIFIED="1620715760339">
+<icon BUILTIN="button_ok"/>
+<icon BUILTIN="messagebox_warning"/>
+<node TEXT="self metric attack" ID="ID_1983736472" CREATED="1592544863127" MODIFIED="1592544870094">
+<node TEXT="maximum shift distance" ID="ID_1843892614" CREATED="1592544925404" MODIFIED="1592544929867"/>
+<node TEXT="untargeted" ID="ID_1551966366" CREATED="1592544982949" MODIFIED="1592544984988"/>
+</node>
+<node TEXT="furthest negative attack" ID="ID_165661813" CREATED="1592544870439" MODIFIED="1592544877498">
+<node TEXT="push from orig, pull from furthest cluster" ID="ID_765025792" CREATED="1592545364041" MODIFIED="1592545375413"/>
+<node TEXT="disturb the ranking" ID="ID_225845829" CREATED="1592544987176" MODIFIED="1592544995331"/>
+<node TEXT="untargeted" ID="ID_1161241988" CREATED="1592544996728" MODIFIED="1592544998361"/>
+</node>
+<node TEXT="adversarial training for metric" ID="ID_881036760" CREATED="1592544877759" MODIFIED="1592544885179"/>
+</node>
+<node TEXT="2012.14057: PERSONRE IDENTIFICATION WITH ADVERSARIAL TRIPLET EMBEDDING" ID="ID_974503367" CREATED="1610427222890" MODIFIED="1620715752859">
+<icon BUILTIN="messagebox_warning"/>
+<node TEXT="not peer reviewed" ID="ID_911035452" CREATED="1610427251959" MODIFIED="1610427256067"/>
+<node TEXT="\latex l_\text{triplet}(\tilde{a}, p, n)" ID="ID_1528343305" CREATED="1610427320982" MODIFIED="1610427368752"/>
+<node TEXT="better reid performance? weird" ID="ID_912255527" CREATED="1610427378471" MODIFIED="1610427386018"/>
+</node>
+<node TEXT="2103.02927 QAIR: Practical Query-efficient Black-Box Attacks for Image Retrieval" ID="ID_1939119283" CREATED="1615294198999" MODIFIED="1620715422259">
+<icon BUILTIN="messagebox_warning"/>
+<icon BUILTIN="button_ok"/>
+<node TEXT="query-based attack against image retrieval to subvert the top-k retrieval" ID="ID_788475675" CREATED="1615294409842" MODIFIED="1615294424860">
+<node TEXT="random incorrect result" ID="ID_1404780182" CREATED="1615294426968" MODIFIED="1615294439236"/>
+</node>
+<node TEXT="gradient optimization + a relevance-based loss" ID="ID_1805130536" CREATED="1615294463470" MODIFIED="1615294478666">
+<node TEXT="uses RGF (random gradient free)" ID="ID_1977339570" CREATED="1615294685532" MODIFIED="1615294698319"/>
+</node>
+<node TEXT="recursive model stealing method" ID="ID_334621555" CREATED="1615294479086" MODIFIED="1615294494768">
+<node TEXT="provides transfer prior" ID="ID_1010296679" CREATED="1615294496388" MODIFIED="1615294503336"/>
+</node>
+<node TEXT="stealing and attack is separated steps: what if we treat it as a multi-arm bandit?" ID="ID_1679102936" CREATED="1615294783533" MODIFIED="1615294824361">
+<icon BUILTIN="idea"/>
+<node TEXT="explore and exploit" ID="ID_645430104" CREATED="1615294813742" MODIFIED="1615294819339"/>
+</node>
+</node>
+<node TEXT="RobRank: adversarial attack and defense in deep ranking" ID="ID_990446170" CREATED="1636485853836" MODIFIED="1650810489070">
+<font BOLD="true"/>
+</node>
+<node TEXT="RobDML: Enhancing Adversarial Robustness for Deep Metric Learning" ID="ID_1927729885" CREATED="1636485850581" MODIFIED="1650810510794">
+<font BOLD="true"/>
+<node TEXT="CVPR22" ID="ID_1223380826" CREATED="1650810506474" MODIFIED="1650810507766"/>
+</node>
+</node>
 <node TEXT="3D + PCL Recog" FOLDED="true" POSITION="left" ID="ID_1606327696" CREATED="1583132559918" MODIFIED="1649103272801">
 <font NAME="Gentium" SIZE="10" BOLD="false"/>
 <edge COLOR="#007c7c"/>
@@ -2207,6 +2388,265 @@
 <node TEXT="Sequence contrastive learning" ID="ID_413817863" CREATED="1649102807882" MODIFIED="1649102813865"/>
 </node>
 </node>
+<node TEXT="Cross-Modal Retrieval" FOLDED="true" POSITION="left" ID="ID_22749108" CREATED="1576988430324" MODIFIED="1642431082632">
+<font NAME="Gentium" BOLD="false"/>
+<edge COLOR="#7c0000"/>
+<node TEXT="Image-Text" FOLDED="true" ID="ID_22916358" CREATED="1649103179989" MODIFIED="1649103183136">
+<node TEXT="Unifying ..." ID="ID_1819265540" CREATED="1586240031907" MODIFIED="1587526865103">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="VSE++" ID="ID_612993504" CREATED="1586240024674" MODIFIED="1587526865105">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="sota" ID="ID_516293267" CREATED="1586240099321" MODIFIED="1587526865106">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="flickr30k" ID="ID_546511377" CREATED="1586240101669" MODIFIED="1587526865106">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="s-i: 52.9" ID="ID_550891352" CREATED="1586240111612" MODIFIED="1587526865106">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="i-s: 39.6" ID="ID_884008793" CREATED="1586240112874" MODIFIED="1587526865106">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="ms-coco" ID="ID_613323924" CREATED="1586240106613" MODIFIED="1587526865106">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="1k" ID="ID_1421179749" CREATED="1586240136945" MODIFIED="1587526865106">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="s-i: 64.6" ID="ID_1633553206" CREATED="1586240142100" MODIFIED="1587526865106">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="i-s: 52.0" ID="ID_1077994917" CREATED="1586240148569" MODIFIED="1587526865106">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="5k" ID="ID_1512427449" CREATED="1586240138622" MODIFIED="1587526865106">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="s-i: 41.3" ID="ID_1725968697" CREATED="1586240155222" MODIFIED="1587526865106">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="i-s: 30.3" ID="ID_481195263" CREATED="1586240162060" MODIFIED="1587526865107">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="SS" ID="ID_1699285095" CREATED="1587025688098" MODIFIED="1587526865107">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="SCAN (ECCV18): stacked cross attention for image-text matching" ID="ID_1439311497" CREATED="1583370940211" MODIFIED="1587526865107">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: image-text matching" ID="ID_645118810" CREATED="1586239421227" MODIFIED="1587526865108">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="why: simply aggregates the similarity of all possible pairs of regions and words without attending differentially to more and less important words or regions" ID="ID_1265894543" CREATED="1586239425245" MODIFIED="1587526865110">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="how: discover full latent alignment using both image regions and words in a sentence as contect and infer image-text similarity" ID="ID_1636622031" CREATED="1586239793548" MODIFIED="1587526865120">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="sota" ID="ID_845468264" CREATED="1586239941699" MODIFIED="1587526865121">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="flickr30k" ID="ID_217483876" CREATED="1586239945220" MODIFIED="1587526865121">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="s-i: 67.4" ID="ID_1486644891" CREATED="1586239975412" MODIFIED="1587526865121">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="i-s: 48.6" ID="ID_1708382186" CREATED="1586240008708" MODIFIED="1587526865121">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="mscoco" ID="ID_140444515" CREATED="1586239949723" MODIFIED="1587526865122">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="1k" ID="ID_1577581954" CREATED="1586240056672" MODIFIED="1587526865122">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="s-i: 72.7" ID="ID_10874274" CREATED="1586240060731" MODIFIED="1587526865122">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="i-s: 58.8" ID="ID_1159300585" CREATED="1586240075534" MODIFIED="1587526865122">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="5k" ID="ID_1654579943" CREATED="1586240057954" MODIFIED="1587526865122">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="s-i: 50.4" ID="ID_1519119507" CREATED="1586240081649" MODIFIED="1587526865122">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="i-s: 38.6" ID="ID_590281563" CREATED="1586240089142" MODIFIED="1587526865122">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="(IJCAI-19 RDAN): Multi-level visua;-semantic alighments with relation-wise dual attention network for image and text matching" ID="ID_1620531353" CREATED="1583370943434" MODIFIED="1587526865122">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: image-text matching" ID="ID_1600229973" CREATED="1586241116612" MODIFIED="1587526865124">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="why: abstract workds such as actions" ID="ID_182389430" CREATED="1586241120623" MODIFIED="1587526865125">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="how: RDAN model" ID="ID_210476871" CREATED="1586241159657" MODIFIED="1587526865126">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="sota" ID="ID_975868300" CREATED="1586240949378" MODIFIED="1587526865126">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="flickr30k" ID="ID_1658409783" CREATED="1586240952468" MODIFIED="1587526865126">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="s-i: 68.1" ID="ID_1999984019" CREATED="1586240956592" MODIFIED="1587526865126">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="i-s: 54.1" ID="ID_1298566819" CREATED="1586240968485" MODIFIED="1587526865126">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="mscoco" ID="ID_984904686" CREATED="1586240980411" MODIFIED="1587526865126">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="1k" ID="ID_783199489" CREATED="1586241018437" MODIFIED="1587526865126">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="s-i: 74.6" ID="ID_1273929468" CREATED="1586240983982" MODIFIED="1587526865126">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="i-s: 61.6" ID="ID_1540729136" CREATED="1586240991529" MODIFIED="1587526865126">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="1907.09748: (PFAN): Position Focused Attention Network for Image-Text Matching" ID="ID_470316208" CREATED="1583370946887" MODIFIED="1587526865126">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: image-text matching" ID="ID_428335848" CREATED="1586240188876" MODIFIED="1587526865128">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="how: PFAN to investigate the object position clue to enhance visual-text joint-embedding learning" ID="ID_1835652632" CREATED="1586240194100" MODIFIED="1587526865129">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="sota" ID="ID_1110318065" CREATED="1586240329549" MODIFIED="1587526865129">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="flickr30k" ID="ID_689076008" CREATED="1586240331929" MODIFIED="1587526865129">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="s-i: 70.0" ID="ID_770808018" CREATED="1586240337972" MODIFIED="1587526865130">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="i-s: 50.4" ID="ID_1485095872" CREATED="1586240347463" MODIFIED="1587526865130">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="mscoco" ID="ID_1563565673" CREATED="1586240334413" MODIFIED="1587526865130">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="1k" ID="ID_48740691" CREATED="1586240355540" MODIFIED="1587526865130">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="s-i: 76.5" ID="ID_947149652" CREATED="1586240361408" MODIFIED="1587526865130">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="i-s: 61.6" ID="ID_522407065" CREATED="1586240366364" MODIFIED="1587526865130">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="1909.02701: VSRN: visual semantic reasoning for image-text matching (ICCV19)" ID="ID_761207430" CREATED="1587527540837" MODIFIED="1587527570936"/>
+<node TEXT="1911.07528: Ladder Loss" ID="ID_879911839" CREATED="1609680873410" MODIFIED="1609680889225">
+<icon BUILTIN="bookmark"/>
+<font BOLD="true"/>
+<node TEXT="1904.09626: deep metric learning beyond binary supervision" ID="ID_1691858159" CREATED="1609681031569" MODIFIED="1609681049923"/>
+</node>
+<node TEXT="2002.10016: deep multimodal image-text embeddings for automatic cross-media retrieval" ID="ID_1544665375" CREATED="1583309899207" MODIFIED="1587526865130">
+<icon BUILTIN="button_cancel"/>
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: image-text retrieval" ID="ID_546012275" CREATED="1583309919471" MODIFIED="1587526865131">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="the author is having fun" ID="ID_1862649220" CREATED="1583309936837" MODIFIED="1587526865132">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="2002.08510: expressing objects just like words: recurrent visual embedding for image-text matching" ID="ID_18086236" CREATED="1583370893620" MODIFIED="1587526865133">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: image-text matching" ID="ID_869083995" CREATED="1583371002035" MODIFIED="1587526865133">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="why: existing works ignore the connections between the objects that are semantically related; these objectis may collectively determine whether the image corresponds to a text or not" ID="ID_1942940677" CREATED="1583371027768" MODIFIED="1587526865135">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="how: propose a dual path recurrent neural network which processes images and sentences symmetrically by recurrent neural networks" ID="ID_327990430" CREATED="1583371074343" MODIFIED="1587526865136">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="2003.03772: IMRAM: iterative matching with recurrent attention memory for cross-modal image-text retrieval (CVPR20)" ID="ID_1607556695" CREATED="1589849966539" MODIFIED="1589850001017">
+<icon BUILTIN="button_ok"/>
+<icon BUILTIN="bookmark"/>
+<node TEXT="sota" ID="ID_645097460" CREATED="1589850066064" MODIFIED="1589850069372"/>
+<node TEXT="f30k" ID="ID_952774624" CREATED="1589850089969" MODIFIED="1589850092250">
+<node TEXT="74, 79" ID="ID_943817756" CREATED="1589850094969" MODIFIED="1589850105582"/>
+</node>
+<node TEXT="coco" ID="ID_897203196" CREATED="1589850092464" MODIFIED="1589850093338">
+<node TEXT="76, 61" ID="ID_1993874426" CREATED="1589850107320" MODIFIED="1589850115454"/>
+</node>
+</node>
+<node TEXT="2004.09144: transformer reasoning network for image-text matching and retrieval" ID="ID_1179239931" CREATED="1587527423924" MODIFIED="1587527513062">
+<icon BUILTIN="button_cancel"/>
+</node>
+<node TEXT="2004.12070: hyperref MMNas" ID="ID_883213530" CREATED="1588074737070" MODIFIED="1589849965229">
+<icon BUILTIN="messagebox_warning"/>
+<node TEXT="f30k" ID="ID_924866619" CREATED="1588074753608" MODIFIED="1588074755550">
+<node TEXT="78.3 / 60.7" ID="ID_1428749887" CREATED="1588074757897" MODIFIED="1588074771032"/>
+</node>
+<node TEXT="maybe the new SOTA. Apr. 2020" ID="ID_544717570" CREATED="1588074809536" MODIFIED="1588074816258"/>
+</node>
+<node TEXT="2005.09801: fashionBERT: text and image matching with adaptive loss for cross-modal retrieval" ID="ID_1184415285" CREATED="1590025829965" MODIFIED="1590025860526">
+<node TEXT="no eval on f30k or coco" ID="ID_27965399" CREATED="1590025862784" MODIFIED="1590025868262"/>
+</node>
+<node TEXT="BFAN: Focus your attention:A bidirectional focal attention network for image-text match (ACM MM)" ID="ID_321497763" CREATED="1590802159181" MODIFIED="1590802206958"/>
+<node TEXT="2003.03669: Adaptive Offline Quintuplet Loss for Image-Text Matching" ID="ID_177378639" CREATED="1590748813000" MODIFIED="1590748827292">
+<node TEXT="f30k: 73 / 54" ID="ID_112288869" CREATED="1590802112238" MODIFIED="1590802125493"/>
+<node TEXT="coco: 77 / 96" ID="ID_613186739" CREATED="1590802125927" MODIFIED="1590802145018"/>
+</node>
+<node TEXT="2004.01095: MCEN: Bridging Cross-Modal Gap between Cooking Recipes and Dish Images with Latent Variable Model (cvpr20)" ID="ID_576418454" CREATED="1590749993141" MODIFIED="1590750006537"/>
+<node TEXT="2004.00277 Graph Structured Network for Image-Text Matching (cvpr20)" ID="ID_1616725398" CREATED="1590806554894" MODIFIED="1590806586098">
+<icon BUILTIN="button_ok"/>
+<node TEXT="f30K: 76 / 57" ID="ID_1331739001" CREATED="1590806678424" MODIFIED="1590806686909"/>
+<node TEXT="coco: 78 / 63" ID="ID_290191269" CREATED="1590806687324" MODIFIED="1590806696701"/>
+<node TEXT="sota May 2020" ID="ID_1480141631" CREATED="1590806725154" MODIFIED="1590806728113"/>
+</node>
+<node TEXT="2010.01666: multi-modal retrieval using graph neural networks" ID="ID_1676547166" CREATED="1608010937162" MODIFIED="1608010981920">
+<node TEXT="no comparison; inclined to qualitative evaluations" ID="ID_288207961" CREATED="1608010983165" MODIFIED="1608010996471"/>
+</node>
+<node TEXT="Cross-Modal Common Representation Learning with Triplet Loss Functions" ID="ID_1827284412" CREATED="1646944290551" MODIFIED="1646944296357">
+<icon BUILTIN="pencil"/>
+<node TEXT="fair" ID="ID_1712372002" CREATED="1646944300395" MODIFIED="1646944304415"/>
+</node>
+</node>
+<node TEXT="Image-Recipe" ID="ID_552619459" CREATED="1650809005463" MODIFIED="1650809008428">
+<node TEXT="Transformer Decoders with MultiModal Regularization for Cross-Modal Food Retrieval" ID="ID_778443774" CREATED="1650809009512" MODIFIED="1650809016539">
+<node TEXT="CVPR22w" ID="ID_253625686" CREATED="1650809019210" MODIFIED="1650809021151"/>
+</node>
+</node>
+<node TEXT="Cross-lingual" ID="ID_1275207266" CREATED="1607576963588" MODIFIED="1649103229953">
+<node TEXT="2012.05107: towards zero-shot cross-lingual image retrieval" ID="ID_33321188" CREATED="1607576975335" MODIFIED="1607576995999">
+<icon BUILTIN="button_ok"/>
+<node TEXT="multi-modal representations using cross-lingual pre-training on the text side" ID="ID_761823260" CREATED="1607577008171" MODIFIED="1607577023025"/>
+<node TEXT="objective function which tightens the text embedding clusters by pushing dissimilar texts from each other" ID="ID_278870167" CREATED="1607577035945" MODIFIED="1607577055909"/>
+</node>
+</node>
+<node TEXT="Audio-Image" ID="ID_1999112869" CREATED="1619443906882" MODIFIED="1649103236875">
+<node TEXT="Talk, Don&apos;t Write: A Study of Direct Speech-Based Image Retrieval" ID="ID_1895575295" CREATED="1619443912720" MODIFIED="1619443918857"/>
+</node>
+<node TEXT="Video-Text" ID="ID_387413475" CREATED="1649103145467" MODIFIED="1649103148698">
+<node TEXT="X-Pool: Cross-Modal Language-Video Attention for Text-Video Retrieval" ID="ID_363825595" CREATED="1649103154257" MODIFIED="1649103155281">
+<node TEXT="CVPR22" ID="ID_1553240026" CREATED="1649103156491" MODIFIED="1649103158193"/>
+</node>
+<node TEXT="Disentangled Representation Learning for Text-Video Retrieval" ID="ID_1578456483" CREATED="1649168592201" MODIFIED="1649168592807">
+<node TEXT="ECCV22" ID="ID_1572394517" CREATED="1649168594046" MODIFIED="1649168598874"/>
+</node>
+</node>
+<node TEXT="Variant: Continual Learning" ID="ID_131519106" CREATED="1619336659546" MODIFIED="1619336666539">
+<node TEXT="CVPR21w: Continual learning in cross-modal retrieval" ID="ID_834969689" CREATED="1619336667454" MODIFIED="1619336675662"/>
+</node>
+</node>
 <node TEXT="Dataset Distillation" FOLDED="true" POSITION="left" ID="ID_265073126" CREATED="1648338075798" MODIFIED="1648343254704">
 <icon BUILTIN="idea"/>
 <edge COLOR="#ff00ff"/>
@@ -2367,6 +2807,23 @@
 <node TEXT="better leverage unlabeled data" ID="ID_316244842" CREATED="1648336176523" MODIFIED="1648336184906"/>
 </node>
 </node>
+<node TEXT="GAN Inverstion" FOLDED="true" POSITION="left" ID="ID_1643977837" CREATED="1608014251316" MODIFIED="1642394381732">
+<edge COLOR="#0000ff"/>
+<node TEXT="2004.00049: in-domain gan inversion for real image editing" ID="ID_789901011" CREATED="1608014256819" MODIFIED="1608014290154">
+<icon BUILTIN="bookmark"/>
+</node>
+<node TEXT="2007.06600: closed-form factorization of latent semantics in GANs" ID="ID_190477062" CREATED="1624973853281" MODIFIED="1624973903147">
+<icon BUILTIN="bookmark"/>
+<icon BUILTIN="button_ok"/>
+<icon BUILTIN="launch"/>
+<node TEXT="I like this paper" ID="ID_807310527" CREATED="1624973921489" MODIFIED="1624973924563"/>
+<node TEXT="SeFa" ID="ID_485890930" CREATED="1624974410069" MODIFIED="1624974411493"/>
+</node>
+<node TEXT="2012.09036&#xa;Improved StyleGAN Embedding: Where are the Good Latents?" ID="ID_1195062919" CREATED="1608879346483" MODIFIED="1608879350891"/>
+<node TEXT="2103.03243 Anycost GANs for Interactive Image Synthesis and Editing (cvpr21)" ID="ID_1065575004" CREATED="1615296747093" MODIFIED="1615296755894">
+<node TEXT="elastic resolution + computation reduction" ID="ID_1366331350" CREATED="1615296878773" MODIFIED="1615296919734"/>
+</node>
+</node>
 <node TEXT="Image Compression" FOLDED="true" POSITION="left" ID="ID_1511931365" CREATED="1648343124472" MODIFIED="1648343127424">
 <edge COLOR="#7c0000"/>
 <node TEXT="ELIC: Efficient Learned Image Compression with&#xa;Unevenly Grouped Space-Channel Contextual Adaptive Coding" ID="ID_391462928" CREATED="1648343132187" MODIFIED="1648343146503">
@@ -2380,6 +2837,13 @@
 <edge COLOR="#007c00"/>
 <node TEXT="Correlation Verification for Image Retrieval" ID="ID_1013972134" CREATED="1649630600849" MODIFIED="1649630693321">
 <node TEXT="CVPR22" ID="ID_1345324489" CREATED="1649630694449" MODIFIED="1649630695940"/>
+</node>
+<node TEXT="Learning Super-Features for Image Retrieval" ID="ID_829824427" CREATED="1644181270753" MODIFIED="1644181364623">
+<icon BUILTIN="checked"/>
+<node TEXT="ICLR22" ID="ID_1211217354" CREATED="1644181278285" MODIFIED="1644181280219"/>
+<node TEXT="not DML" ID="ID_1043681772" CREATED="1644181273835" MODIFIED="1644181275311"/>
+<node TEXT="combine local and global features" ID="ID_1751979954" CREATED="1644181344128" MODIFIED="1644181349980"/>
+<node TEXT="existing methods suffer from problems in the use of local features" ID="ID_111945206" CREATED="1644181350883" MODIFIED="1644181360186"/>
 </node>
 </node>
 <node TEXT="Instance Segmentation" FOLDED="true" POSITION="left" ID="ID_1759449865" CREATED="1649104217760" MODIFIED="1649104221244">
@@ -3354,196 +3818,6 @@
 <node TEXT="2004.14326: seeing voices and hearing voices: learning discriminative embeddings using cross-modal self-supervisoin" ID="ID_538501606" CREATED="1588216764991" MODIFIED="1588216790938"/>
 </node>
 </node>
-<node TEXT="Track: AdvRank" FOLDED="true" POSITION="left" ID="ID_67713290" CREATED="1561352085890" MODIFIED="1642394393230">
-<icon BUILTIN="idea"/>
-<font NAME="Gentium" SIZE="10" BOLD="true"/>
-<edge COLOR="#ff00ff"/>
-<node TEXT="1806.04425: Ranking Robustness Under Ad" ID="ID_562405105" CREATED="1561555589182" MODIFIED="1636485900673">
-<icon BUILTIN="button_cancel"/>
-<font NAME="Gentium" SIZE="10"/>
-<node TEXT="document manipulation for candidate attack" ID="ID_1231428087" CREATED="1561555592821" MODIFIED="1587728924172">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="mainly analysis robustness" ID="ID_55534459" CREATED="1561555648216" MODIFIED="1587728924173">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="manual documentation manipulation instead of automatic adversarial example generation" ID="ID_798730521" CREATED="1561555609750" MODIFIED="1587728924174">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="targets at RankSVM and LambdaMART models instead of neural networks" ID="ID_255349278" CREATED="1561555658663" MODIFIED="1587728924175">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-</node>
-<node TEXT="1808.03908: Adversarial Personalized Rank" ID="ID_83109239" CREATED="1561555800953" MODIFIED="1636485894233">
-<icon BUILTIN="button_cancel"/>
-<font NAME="Gentium" SIZE="10"/>
-<node TEXT="recommendation system" ID="ID_1396811583" CREATED="1561555811711" MODIFIED="1587728924177">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="enhance robustness of a recommender model with adversarial training (adv examples)" ID="ID_527243554" CREATED="1561555835768" MODIFIED="1587728924178">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="APR on Matrix Factorization" ID="ID_662100047" CREATED="1561556113144" MODIFIED="1587728924179">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-</node>
-<node TEXT="1809: AdvBox: FaceNet Attack" ID="ID_1888665729" CREATED="1561556172335" MODIFIED="1636485887561">
-<icon BUILTIN="button_cancel"/>
-<font NAME="Gentium" SIZE="10"/>
-<node TEXT="query attack" ID="ID_1680208164" CREATED="1561556180000" MODIFIED="1587728924182">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="https://github.com/advboxes/AdvBox/blob/master/applications/face_recogn" ID="ID_951928489" CREATED="1561556196446" MODIFIED="1587728924182" LINK="https://github.com/advboxes/AdvBox/blob/master/applications/face_recogn">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="\latex $L=\sqrt{\sum (E-E_t)^2}" ID="ID_79735084" CREATED="1561556315382" MODIFIED="1587728924183">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-</node>
-<node TEXT="1812.00552: Universal Perturbation Attack Against Image Retrieval" ID="ID_1919220467" CREATED="1561556406527" MODIFIED="1587728924183">
-<font NAME="Gentium" SIZE="10"/>
-<node TEXT="directly attacks triplet ranking loss function" ID="ID_491701428" CREATED="1561556424133" MODIFIED="1587728924185">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="but what if the triplet fell into the zero-gradient region" ID="ID_839129884" CREATED="1561556433741" MODIFIED="1587728924186">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="using PGD+momentum for optimization" ID="ID_948653721" CREATED="1561556446589" MODIFIED="1587728924187">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="studies query attack" ID="ID_1697473744" CREATED="1561556462589" MODIFIED="1587728924188">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-</node>
-<node TEXT="2019-ICMR: Who&#x2019;s Afraid of Adversarial Queries?" ID="ID_1703113745" CREATED="1561556482168" MODIFIED="1636485880766">
-<icon BUILTIN="button_cancel"/>
-<font NAME="Gentium" SIZE="10"/>
-<node TEXT="query attack" ID="ID_1123142555" CREATED="1561556568742" MODIFIED="1587728924189">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="\latex $\max ||f(x)-f(x+v)||_2^2$" ID="ID_1830202115" CREATED="1561556572709" MODIFIED="1587728924190">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="aims at image retrieval and didn&apos;t mention embedding learning" ID="ID_1516625397" CREATED="1561556595981" MODIFIED="1587728924190">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-</node>
-<node TEXT="1907: unsupervised adversarial attacks on deep feature-based retrieval with GAN" ID="ID_9436679" CREATED="1588230731425" MODIFIED="1588230756582">
-<node TEXT="generate adversarial perturbation with GAN" ID="ID_1151385661" CREATED="1588230816064" MODIFIED="1588230824347"/>
-</node>
-<node TEXT="1812.00552: Universal Perturbation Attack Against Image Retrieval (iccv19)" ID="ID_1472505886" CREATED="1573474834671" MODIFIED="1587728924195">
-<icon BUILTIN="messagebox_warning"/>
-<font NAME="Gentium" SIZE="10"/>
-<node TEXT="what: universal perturbation for untargeted attack" ID="ID_1954548078" CREATED="1573474853539" MODIFIED="1587728924196">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="how: currupts pairwise or listwise ranking" ID="ID_1847715376" CREATED="1573474863063" MODIFIED="1587728924197">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="untargeted, focusing on fooling" ID="ID_665084129" CREATED="1573475747222" MODIFIED="1587728924198">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-</node>
-<node TEXT="1901.10650: Metric Attack and Defense for Person Re-identificatio" ID="ID_490211267" CREATED="1592543067606" MODIFIED="1636485967109">
-<icon BUILTIN="messagebox_warning"/>
-<icon BUILTIN="button_cancel"/>
-<font BOLD="true"/>
-<node TEXT="Song Bai" ID="ID_692240773" CREATED="1636485956725" MODIFIED="1636485961987"/>
-<node TEXT="attack the metric in person reID" ID="ID_34707268" CREATED="1592543081709" MODIFIED="1592543098277"/>
-<node TEXT="push (untargeted) and pull (targeted)" ID="ID_1286430581" CREATED="1592543098573" MODIFIED="1592543112360"/>
-</node>
-<node TEXT="1908.09613: targeted mismatch adversarial attack (iccv19)" ID="ID_671271001" CREATED="1573471637067" MODIFIED="1636486108618">
-<icon BUILTIN="messagebox_warning"/>
-<icon BUILTIN="button_ok"/>
-<font NAME="Gentium" SIZE="10"/>
-<node TEXT="what: targeted mismatch" ID="ID_1563475526" CREATED="1573471664345" MODIFIED="1587728924192">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="how: distance objective" ID="ID_688655227" CREATED="1573472458185" MODIFIED="1587728924193">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="not systematic enough" ID="ID_205991126" CREATED="1573472480708" MODIFIED="1587728924194">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="THIS is a threat to us" ID="ID_988648076" CREATED="1573472496549" MODIFIED="1587728924195">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-</node>
-<node TEXT="Advpattern (iccv19)" ID="ID_932771683" CREATED="1576809427350" MODIFIED="1587728924198">
-<icon BUILTIN="messagebox_warning"/>
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="ours: Adversarial Ranking Attack and Defense (arxiv 2002.11293)" ID="ID_933056745" CREATED="1576809387016" MODIFIED="1592543327861">
-<icon BUILTIN="button_ok"/>
-<font NAME="Gentium" SIZE="10" BOLD="true"/>
-<node TEXT="ECCV2020" ID="ID_1213034229" CREATED="1576809470567" MODIFIED="1610427018812">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-</node>
-<node TEXT="2004.04199: transferable, controllable, and inconspicious adversarial attacks on person re-identification with deep-misranking (CVPR20)" ID="ID_693496331" CREATED="1590743469098" MODIFIED="1590743579415">
-<icon BUILTIN="button_ok"/>
-<node TEXT="person reID" ID="ID_548309734" CREATED="1590743636274" MODIFIED="1590743640590"/>
-<node TEXT="use triplet form attack objective" ID="ID_1324326527" CREATED="1590743509489" MODIFIED="1590743528991"/>
-<node TEXT="untargeted" ID="ID_862183953" CREATED="1590743529382" MODIFIED="1590743531961"/>
-<node TEXT="learning-to-mis-rank" ID="ID_172715084" CREATED="1590805595723" MODIFIED="1590805600800"/>
-</node>
-<node TEXT="Vulnerability of Person Re Identification Models to Metric Adversarial Attacks (cvpr20w)" ID="ID_666911505" CREATED="1592544846016" MODIFIED="1620715760339">
-<icon BUILTIN="button_ok"/>
-<icon BUILTIN="messagebox_warning"/>
-<node TEXT="self metric attack" ID="ID_1983736472" CREATED="1592544863127" MODIFIED="1592544870094">
-<node TEXT="maximum shift distance" ID="ID_1843892614" CREATED="1592544925404" MODIFIED="1592544929867"/>
-<node TEXT="untargeted" ID="ID_1551966366" CREATED="1592544982949" MODIFIED="1592544984988"/>
-</node>
-<node TEXT="furthest negative attack" ID="ID_165661813" CREATED="1592544870439" MODIFIED="1592544877498">
-<node TEXT="push from orig, pull from furthest cluster" ID="ID_765025792" CREATED="1592545364041" MODIFIED="1592545375413"/>
-<node TEXT="disturb the ranking" ID="ID_225845829" CREATED="1592544987176" MODIFIED="1592544995331"/>
-<node TEXT="untargeted" ID="ID_1161241988" CREATED="1592544996728" MODIFIED="1592544998361"/>
-</node>
-<node TEXT="adversarial training for metric" ID="ID_881036760" CREATED="1592544877759" MODIFIED="1592544885179"/>
-</node>
-<node TEXT="2012.14057: PERSONRE IDENTIFICATION WITH ADVERSARIAL TRIPLET EMBEDDING" ID="ID_974503367" CREATED="1610427222890" MODIFIED="1620715752859">
-<icon BUILTIN="messagebox_warning"/>
-<node TEXT="not peer reviewed" ID="ID_911035452" CREATED="1610427251959" MODIFIED="1610427256067"/>
-<node TEXT="\latex l_\text{triplet}(\tilde{a}, p, n)" ID="ID_1528343305" CREATED="1610427320982" MODIFIED="1610427368752"/>
-<node TEXT="better reid performance? weird" ID="ID_912255527" CREATED="1610427378471" MODIFIED="1610427386018"/>
-</node>
-<node TEXT="2103.02927 QAIR: Practical Query-efficient Black-Box Attacks for Image Retrieval" ID="ID_1939119283" CREATED="1615294198999" MODIFIED="1620715422259">
-<icon BUILTIN="messagebox_warning"/>
-<icon BUILTIN="button_ok"/>
-<node TEXT="query-based attack against image retrieval to subvert the top-k retrieval" ID="ID_788475675" CREATED="1615294409842" MODIFIED="1615294424860">
-<node TEXT="random incorrect result" ID="ID_1404780182" CREATED="1615294426968" MODIFIED="1615294439236"/>
-</node>
-<node TEXT="gradient optimization + a relevance-based loss" ID="ID_1805130536" CREATED="1615294463470" MODIFIED="1615294478666">
-<node TEXT="uses RGF (random gradient free)" ID="ID_1977339570" CREATED="1615294685532" MODIFIED="1615294698319"/>
-</node>
-<node TEXT="recursive model stealing method" ID="ID_334621555" CREATED="1615294479086" MODIFIED="1615294494768">
-<node TEXT="provides transfer prior" ID="ID_1010296679" CREATED="1615294496388" MODIFIED="1615294503336"/>
-</node>
-<node TEXT="stealing and attack is separated steps: what if we treat it as a multi-arm bandit?" ID="ID_1679102936" CREATED="1615294783533" MODIFIED="1615294824361">
-<icon BUILTIN="idea"/>
-<node TEXT="explore and exploit" ID="ID_645430104" CREATED="1615294813742" MODIFIED="1615294819339"/>
-</node>
-</node>
-<node TEXT="RobRank" ID="ID_990446170" CREATED="1636485853836" MODIFIED="1636485855800"/>
-<node TEXT="RobDML" ID="ID_1927729885" CREATED="1636485850581" MODIFIED="1636485852952"/>
-</node>
-<node TEXT="GAN Inverstion" FOLDED="true" POSITION="left" ID="ID_1643977837" CREATED="1608014251316" MODIFIED="1642394381732">
-<edge COLOR="#0000ff"/>
-<node TEXT="2004.00049: in-domain gan inversion for real image editing" ID="ID_789901011" CREATED="1608014256819" MODIFIED="1608014290154">
-<icon BUILTIN="bookmark"/>
-</node>
-<node TEXT="2007.06600: closed-form factorization of latent semantics in GANs" ID="ID_190477062" CREATED="1624973853281" MODIFIED="1624973903147">
-<icon BUILTIN="bookmark"/>
-<icon BUILTIN="button_ok"/>
-<icon BUILTIN="launch"/>
-<node TEXT="I like this paper" ID="ID_807310527" CREATED="1624973921489" MODIFIED="1624973924563"/>
-<node TEXT="SeFa" ID="ID_485890930" CREATED="1624974410069" MODIFIED="1624974411493"/>
-</node>
-<node TEXT="2012.09036&#xa;Improved StyleGAN Embedding: Where are the Good Latents?" ID="ID_1195062919" CREATED="1608879346483" MODIFIED="1608879350891"/>
-<node TEXT="2103.03243 Anycost GANs for Interactive Image Synthesis and Editing (cvpr21)" ID="ID_1065575004" CREATED="1615296747093" MODIFIED="1615296755894">
-<node TEXT="elastic resolution + computation reduction" ID="ID_1366331350" CREATED="1615296878773" MODIFIED="1615296919734"/>
-</node>
-</node>
 <node TEXT="Image Translation" FOLDED="true" POSITION="left" ID="ID_357087353" CREATED="1578730821872" MODIFIED="1642394370987">
 <font NAME="Gentium" BOLD="false"/>
 <edge COLOR="#7c7c00"/>
@@ -3740,270 +4014,6 @@
 <edge COLOR="#007c00"/>
 <node TEXT="2106.10410 Deep Generative Learning via Schr &#x308;odinger Bridge" ID="ID_1481005194" CREATED="1624457232722" MODIFIED="1624457250506">
 <icon BUILTIN="button_ok"/>
-</node>
-</node>
-<node TEXT="Single-Modal Retrieval" FOLDED="true" POSITION="left" ID="ID_1856423782" CREATED="1644181245825" MODIFIED="1644181255013">
-<edge COLOR="#00ff00"/>
-<node TEXT="Learning Super-Features for Image Retrieval" ID="ID_829824427" CREATED="1644181270753" MODIFIED="1644181364623">
-<icon BUILTIN="checked"/>
-<node TEXT="ICLR22" ID="ID_1211217354" CREATED="1644181278285" MODIFIED="1644181280219"/>
-<node TEXT="not DML" ID="ID_1043681772" CREATED="1644181273835" MODIFIED="1644181275311"/>
-<node TEXT="combine local and global features" ID="ID_1751979954" CREATED="1644181344128" MODIFIED="1644181349980"/>
-<node TEXT="existing methods suffer from problems in the use of local features" ID="ID_111945206" CREATED="1644181350883" MODIFIED="1644181360186"/>
-</node>
-</node>
-<node TEXT="Cross-Modal Retrieval" FOLDED="true" POSITION="left" ID="ID_22749108" CREATED="1576988430324" MODIFIED="1642431082632">
-<font NAME="Gentium" BOLD="false"/>
-<edge COLOR="#7c0000"/>
-<node TEXT="Image-Text" ID="ID_22916358" CREATED="1649103179989" MODIFIED="1649103183136">
-<node TEXT="Unifying ..." ID="ID_1819265540" CREATED="1586240031907" MODIFIED="1587526865103">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="VSE++" ID="ID_612993504" CREATED="1586240024674" MODIFIED="1587526865105">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="sota" ID="ID_516293267" CREATED="1586240099321" MODIFIED="1587526865106">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="flickr30k" ID="ID_546511377" CREATED="1586240101669" MODIFIED="1587526865106">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="s-i: 52.9" ID="ID_550891352" CREATED="1586240111612" MODIFIED="1587526865106">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="i-s: 39.6" ID="ID_884008793" CREATED="1586240112874" MODIFIED="1587526865106">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="ms-coco" ID="ID_613323924" CREATED="1586240106613" MODIFIED="1587526865106">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="1k" ID="ID_1421179749" CREATED="1586240136945" MODIFIED="1587526865106">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="s-i: 64.6" ID="ID_1633553206" CREATED="1586240142100" MODIFIED="1587526865106">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="i-s: 52.0" ID="ID_1077994917" CREATED="1586240148569" MODIFIED="1587526865106">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="5k" ID="ID_1512427449" CREATED="1586240138622" MODIFIED="1587526865106">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="s-i: 41.3" ID="ID_1725968697" CREATED="1586240155222" MODIFIED="1587526865106">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="i-s: 30.3" ID="ID_481195263" CREATED="1586240162060" MODIFIED="1587526865107">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="SS" ID="ID_1699285095" CREATED="1587025688098" MODIFIED="1587526865107">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="SCAN (ECCV18): stacked cross attention for image-text matching" ID="ID_1439311497" CREATED="1583370940211" MODIFIED="1587526865107">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: image-text matching" ID="ID_645118810" CREATED="1586239421227" MODIFIED="1587526865108">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: simply aggregates the similarity of all possible pairs of regions and words without attending differentially to more and less important words or regions" ID="ID_1265894543" CREATED="1586239425245" MODIFIED="1587526865110">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: discover full latent alignment using both image regions and words in a sentence as contect and infer image-text similarity" ID="ID_1636622031" CREATED="1586239793548" MODIFIED="1587526865120">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="sota" ID="ID_845468264" CREATED="1586239941699" MODIFIED="1587526865121">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="flickr30k" ID="ID_217483876" CREATED="1586239945220" MODIFIED="1587526865121">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="s-i: 67.4" ID="ID_1486644891" CREATED="1586239975412" MODIFIED="1587526865121">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="i-s: 48.6" ID="ID_1708382186" CREATED="1586240008708" MODIFIED="1587526865121">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="mscoco" ID="ID_140444515" CREATED="1586239949723" MODIFIED="1587526865122">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="1k" ID="ID_1577581954" CREATED="1586240056672" MODIFIED="1587526865122">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="s-i: 72.7" ID="ID_10874274" CREATED="1586240060731" MODIFIED="1587526865122">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="i-s: 58.8" ID="ID_1159300585" CREATED="1586240075534" MODIFIED="1587526865122">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="5k" ID="ID_1654579943" CREATED="1586240057954" MODIFIED="1587526865122">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="s-i: 50.4" ID="ID_1519119507" CREATED="1586240081649" MODIFIED="1587526865122">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="i-s: 38.6" ID="ID_590281563" CREATED="1586240089142" MODIFIED="1587526865122">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="(IJCAI-19 RDAN): Multi-level visua;-semantic alighments with relation-wise dual attention network for image and text matching" ID="ID_1620531353" CREATED="1583370943434" MODIFIED="1587526865122">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: image-text matching" ID="ID_1600229973" CREATED="1586241116612" MODIFIED="1587526865124">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: abstract workds such as actions" ID="ID_182389430" CREATED="1586241120623" MODIFIED="1587526865125">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: RDAN model" ID="ID_210476871" CREATED="1586241159657" MODIFIED="1587526865126">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="sota" ID="ID_975868300" CREATED="1586240949378" MODIFIED="1587526865126">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="flickr30k" ID="ID_1658409783" CREATED="1586240952468" MODIFIED="1587526865126">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="s-i: 68.1" ID="ID_1999984019" CREATED="1586240956592" MODIFIED="1587526865126">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="i-s: 54.1" ID="ID_1298566819" CREATED="1586240968485" MODIFIED="1587526865126">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="mscoco" ID="ID_984904686" CREATED="1586240980411" MODIFIED="1587526865126">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="1k" ID="ID_783199489" CREATED="1586241018437" MODIFIED="1587526865126">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="s-i: 74.6" ID="ID_1273929468" CREATED="1586240983982" MODIFIED="1587526865126">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="i-s: 61.6" ID="ID_1540729136" CREATED="1586240991529" MODIFIED="1587526865126">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="1907.09748: (PFAN): Position Focused Attention Network for Image-Text Matching" ID="ID_470316208" CREATED="1583370946887" MODIFIED="1587526865126">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: image-text matching" ID="ID_428335848" CREATED="1586240188876" MODIFIED="1587526865128">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: PFAN to investigate the object position clue to enhance visual-text joint-embedding learning" ID="ID_1835652632" CREATED="1586240194100" MODIFIED="1587526865129">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="sota" ID="ID_1110318065" CREATED="1586240329549" MODIFIED="1587526865129">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="flickr30k" ID="ID_689076008" CREATED="1586240331929" MODIFIED="1587526865129">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="s-i: 70.0" ID="ID_770808018" CREATED="1586240337972" MODIFIED="1587526865130">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="i-s: 50.4" ID="ID_1485095872" CREATED="1586240347463" MODIFIED="1587526865130">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="mscoco" ID="ID_1563565673" CREATED="1586240334413" MODIFIED="1587526865130">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="1k" ID="ID_48740691" CREATED="1586240355540" MODIFIED="1587526865130">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="s-i: 76.5" ID="ID_947149652" CREATED="1586240361408" MODIFIED="1587526865130">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="i-s: 61.6" ID="ID_522407065" CREATED="1586240366364" MODIFIED="1587526865130">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="1909.02701: VSRN: visual semantic reasoning for image-text matching (ICCV19)" ID="ID_761207430" CREATED="1587527540837" MODIFIED="1587527570936"/>
-<node TEXT="1911.07528: Ladder Loss" ID="ID_879911839" CREATED="1609680873410" MODIFIED="1609680889225">
-<icon BUILTIN="bookmark"/>
-<font BOLD="true"/>
-<node TEXT="1904.09626: deep metric learning beyond binary supervision" ID="ID_1691858159" CREATED="1609681031569" MODIFIED="1609681049923"/>
-</node>
-<node TEXT="2002.10016: deep multimodal image-text embeddings for automatic cross-media retrieval" ID="ID_1544665375" CREATED="1583309899207" MODIFIED="1587526865130">
-<icon BUILTIN="button_cancel"/>
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: image-text retrieval" ID="ID_546012275" CREATED="1583309919471" MODIFIED="1587526865131">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="the author is having fun" ID="ID_1862649220" CREATED="1583309936837" MODIFIED="1587526865132">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="2002.08510: expressing objects just like words: recurrent visual embedding for image-text matching" ID="ID_18086236" CREATED="1583370893620" MODIFIED="1587526865133">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: image-text matching" ID="ID_869083995" CREATED="1583371002035" MODIFIED="1587526865133">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: existing works ignore the connections between the objects that are semantically related; these objectis may collectively determine whether the image corresponds to a text or not" ID="ID_1942940677" CREATED="1583371027768" MODIFIED="1587526865135">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: propose a dual path recurrent neural network which processes images and sentences symmetrically by recurrent neural networks" ID="ID_327990430" CREATED="1583371074343" MODIFIED="1587526865136">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="2003.03772: IMRAM: iterative matching with recurrent attention memory for cross-modal image-text retrieval (CVPR20)" ID="ID_1607556695" CREATED="1589849966539" MODIFIED="1589850001017">
-<icon BUILTIN="button_ok"/>
-<icon BUILTIN="bookmark"/>
-<node TEXT="sota" ID="ID_645097460" CREATED="1589850066064" MODIFIED="1589850069372"/>
-<node TEXT="f30k" ID="ID_952774624" CREATED="1589850089969" MODIFIED="1589850092250">
-<node TEXT="74, 79" ID="ID_943817756" CREATED="1589850094969" MODIFIED="1589850105582"/>
-</node>
-<node TEXT="coco" ID="ID_897203196" CREATED="1589850092464" MODIFIED="1589850093338">
-<node TEXT="76, 61" ID="ID_1993874426" CREATED="1589850107320" MODIFIED="1589850115454"/>
-</node>
-</node>
-<node TEXT="2004.09144: transformer reasoning network for image-text matching and retrieval" ID="ID_1179239931" CREATED="1587527423924" MODIFIED="1587527513062">
-<icon BUILTIN="button_cancel"/>
-</node>
-<node TEXT="2004.12070: hyperref MMNas" ID="ID_883213530" CREATED="1588074737070" MODIFIED="1589849965229">
-<icon BUILTIN="messagebox_warning"/>
-<node TEXT="f30k" ID="ID_924866619" CREATED="1588074753608" MODIFIED="1588074755550">
-<node TEXT="78.3 / 60.7" ID="ID_1428749887" CREATED="1588074757897" MODIFIED="1588074771032"/>
-</node>
-<node TEXT="maybe the new SOTA. Apr. 2020" ID="ID_544717570" CREATED="1588074809536" MODIFIED="1588074816258"/>
-</node>
-<node TEXT="2005.09801: fashionBERT: text and image matching with adaptive loss for cross-modal retrieval" ID="ID_1184415285" CREATED="1590025829965" MODIFIED="1590025860526">
-<node TEXT="no eval on f30k or coco" ID="ID_27965399" CREATED="1590025862784" MODIFIED="1590025868262"/>
-</node>
-<node TEXT="BFAN: Focus your attention:A bidirectional focal attention network for image-text match (ACM MM)" ID="ID_321497763" CREATED="1590802159181" MODIFIED="1590802206958"/>
-<node TEXT="2003.03669: Adaptive Offline Quintuplet Loss for Image-Text Matching" ID="ID_177378639" CREATED="1590748813000" MODIFIED="1590748827292">
-<node TEXT="f30k: 73 / 54" ID="ID_112288869" CREATED="1590802112238" MODIFIED="1590802125493"/>
-<node TEXT="coco: 77 / 96" ID="ID_613186739" CREATED="1590802125927" MODIFIED="1590802145018"/>
-</node>
-<node TEXT="2004.01095: MCEN: Bridging Cross-Modal Gap between Cooking Recipes and Dish Images with Latent Variable Model (cvpr20)" ID="ID_576418454" CREATED="1590749993141" MODIFIED="1590750006537"/>
-<node TEXT="2004.00277 Graph Structured Network for Image-Text Matching (cvpr20)" ID="ID_1616725398" CREATED="1590806554894" MODIFIED="1590806586098">
-<icon BUILTIN="button_ok"/>
-<node TEXT="f30K: 76 / 57" ID="ID_1331739001" CREATED="1590806678424" MODIFIED="1590806686909"/>
-<node TEXT="coco: 78 / 63" ID="ID_290191269" CREATED="1590806687324" MODIFIED="1590806696701"/>
-<node TEXT="sota May 2020" ID="ID_1480141631" CREATED="1590806725154" MODIFIED="1590806728113"/>
-</node>
-<node TEXT="2010.01666: multi-modal retrieval using graph neural networks" ID="ID_1676547166" CREATED="1608010937162" MODIFIED="1608010981920">
-<node TEXT="no comparison; inclined to qualitative evaluations" ID="ID_288207961" CREATED="1608010983165" MODIFIED="1608010996471"/>
-</node>
-<node TEXT="Cross-Modal Common Representation Learning with Triplet Loss Functions" ID="ID_1827284412" CREATED="1646944290551" MODIFIED="1646944296357">
-<icon BUILTIN="pencil"/>
-<node TEXT="fair" ID="ID_1712372002" CREATED="1646944300395" MODIFIED="1646944304415"/>
-</node>
-</node>
-<node TEXT="Cross-lingual" ID="ID_1275207266" CREATED="1607576963588" MODIFIED="1649103229953">
-<node TEXT="2012.05107: towards zero-shot cross-lingual image retrieval" ID="ID_33321188" CREATED="1607576975335" MODIFIED="1607576995999">
-<icon BUILTIN="button_ok"/>
-<node TEXT="multi-modal representations using cross-lingual pre-training on the text side" ID="ID_761823260" CREATED="1607577008171" MODIFIED="1607577023025"/>
-<node TEXT="objective function which tightens the text embedding clusters by pushing dissimilar texts from each other" ID="ID_278870167" CREATED="1607577035945" MODIFIED="1607577055909"/>
-</node>
-</node>
-<node TEXT="Audio-Image" ID="ID_1999112869" CREATED="1619443906882" MODIFIED="1649103236875">
-<node TEXT="Talk, Don&apos;t Write: A Study of Direct Speech-Based Image Retrieval" ID="ID_1895575295" CREATED="1619443912720" MODIFIED="1619443918857"/>
-</node>
-<node TEXT="Video-Text" ID="ID_387413475" CREATED="1649103145467" MODIFIED="1649103148698">
-<node TEXT="X-Pool: Cross-Modal Language-Video Attention for Text-Video Retrieval" ID="ID_363825595" CREATED="1649103154257" MODIFIED="1649103155281">
-<node TEXT="CVPR22" ID="ID_1553240026" CREATED="1649103156491" MODIFIED="1649103158193"/>
-</node>
-<node TEXT="Disentangled Representation Learning for Text-Video Retrieval" ID="ID_1578456483" CREATED="1649168592201" MODIFIED="1649168592807">
-<node TEXT="ECCV22" ID="ID_1572394517" CREATED="1649168594046" MODIFIED="1649168598874"/>
-</node>
-</node>
-<node TEXT="Variant: Continual Learning" ID="ID_131519106" CREATED="1619336659546" MODIFIED="1619336666539">
-<node TEXT="CVPR21w: Continual learning in cross-modal retrieval" ID="ID_834969689" CREATED="1619336667454" MODIFIED="1619336675662"/>
 </node>
 </node>
 <node TEXT="Learning" FOLDED="true" POSITION="left" ID="ID_876811772" CREATED="1583309966895" MODIFIED="1642394191143">
