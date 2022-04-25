@@ -851,7 +851,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
+<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_1556055508" CREATED="1648173325254" MODIFIED="1648173329845">
 <icon BUILTIN="info"/>
@@ -1079,6 +1079,13 @@
 <icon BUILTIN="pencil"/>
 <icon BUILTIN="clanbomber"/>
 <node TEXT="TODO" ID="ID_570405579" CREATED="1649623639892" MODIFIED="1649623641049"/>
+</node>
+<node TEXT="CASE-AWARE ADVERSARIAL TRAINING" ID="ID_1910807724" CREATED="1650842491224" MODIFIED="1650842493899">
+<icon BUILTIN="pencil"/>
+<node TEXT="Being selective to adversarial examples" ID="ID_1633971899" CREATED="1650842499542" MODIFIED="1650842511975">
+<icon BUILTIN="idea"/>
+</node>
+<node TEXT="evaluation of this paper is problematic but the idea sounds." ID="ID_1579650742" CREATED="1650842522949" MODIFIED="1650842534822"/>
 </node>
 </node>
 <node TEXT="AT Speed" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1548520614" CREATED="1642441206809" MODIFIED="1647050848253">
@@ -2783,6 +2790,13 @@
 <node TEXT="Domain Adaptation" FOLDED="true" POSITION="left" ID="ID_1179225618" CREATED="1582887416803" MODIFIED="1642394196054">
 <font NAME="Gentium" BOLD="false"/>
 <edge COLOR="#ff0000"/>
+<node TEXT="Concept" ID="ID_276280133" CREATED="1650832531233" MODIFIED="1650832534030">
+<icon BUILTIN="info"/>
+<node TEXT="domain adaptation" ID="ID_1897127261" CREATED="1650832537525" MODIFIED="1650832545079">
+<node TEXT="input distribution p(x) changes between training and test" ID="ID_1783851732" CREATED="1650832546158" MODIFIED="1650832566190"/>
+<node TEXT="transfer learning posterior p(y|x) changes between training and test" ID="ID_542172298" CREATED="1650832567330" MODIFIED="1650832588622"/>
+</node>
+</node>
 <node TEXT="Openset" ID="ID_652345966" CREATED="1587030820215" MODIFIED="1587526864981">
 <font NAME="Gentium" BOLD="false"/>
 <node TEXT="2004.04388: Towards Inheritable Models for Open-Set Domain Adaptation (CVPR20)" ID="ID_882848776" CREATED="1587030828036" MODIFIED="1587526864982">
@@ -2841,6 +2855,9 @@
 <node TEXT="Fine-Tuning can Distort Pretrained Features and Underperform Out-of-Distribution" ID="ID_1001645107" CREATED="1647264390521" MODIFIED="1647264398367">
 <icon BUILTIN="unchecked"/>
 <node TEXT="ICLR22" ID="ID_248597371" CREATED="1647264392555" MODIFIED="1647264395025"/>
+</node>
+<node TEXT="Does Robustness on ImageNet Transfer to Downstream Tasks?" ID="ID_442746527" CREATED="1650842399693" MODIFIED="1650842400541">
+<node TEXT="CVPR22" ID="ID_391235371" CREATED="1650842401650" MODIFIED="1650842402914"/>
 </node>
 <node TEXT="Adaptive Domain Adaptation" ID="ID_926597894" CREATED="1649130053250" MODIFIED="1649130058744">
 <node TEXT="Learning Distinctive Margin toward Active Domain Adaptation" ID="ID_1937782410" CREATED="1649130059707" MODIFIED="1649130060490">
