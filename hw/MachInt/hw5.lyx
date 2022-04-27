@@ -725,5 +725,21 @@ What is the best way to combine the performance of deep learning methods
  and the interpretability of older methods?
 \end_layout
 
+\begin_layout Standard
+From the framework point of view, deep learning methods can be incorporated
+ into traditional methods to learn some very complication probability distributi
+ons or conditional distributions.
+\end_layout
+
+\begin_layout Standard
+To better interpret deep learning methods themselves, we can incorporate
+ knowledge graphs into the networks.
+ Essentially, this means to augment deep learning methods with more semantics
+ such as knowledge graph entities or embeddings for people to understand
+ the network internals.
+ Besides, we can also augment input features and domains with semantics
+ to support interpretable transfer learning.
+\end_layout
+
 \end_body
 \end_document
