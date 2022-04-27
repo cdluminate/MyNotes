@@ -323,7 +323,205 @@ Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization
 \end_layout
 
 \begin_layout Standard
-For a fully-convolutional architecture, CAM is a special ca se of Grad-CAM.
+Grad-CAM generalizes CAM for a wide variety of CNN-based architectures.
+ Recall that CAM produces a localization map for an image classification
+ CNN with a specific kind of architecture where global average pooled convolutio
+nal feature maps are fed directly into softmax.
+ Specifically, let the penultimate layer produce 
+\begin_inset Formula $K$
+\end_inset
+
+ feature maps, 
+\begin_inset Formula $A^{k}\in\mathbb{R}^{u\times v}$
+\end_inset
+
+, with each element indexed by 
+\begin_inset Formula $i,j$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $A_{ij}^{k}$
+\end_inset
+
+ refers to the activation at location 
+\begin_inset Formula $(i,j)$
+\end_inset
+
+ of the feature map 
+\begin_inset Formula $A^{k}$
+\end_inset
+
+.
+ These feature maps are then spatially pooled using Global Average Pooling
+ (GAP) and linearly transformed to produce a score 
+\begin_inset Formula $Y^{c}$
+\end_inset
+
+ for each class 
+\begin_inset Formula $c$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+Y^{c}=\sum_{k}w_{k}^{c}\frac{1}{Z}\sum_{i}\sum_{j}A_{ij}^{k}\qquad(3)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $w_{k}^{c}$
+\end_inset
+
+ class feature weights.
+ Let us define 
+\begin_inset Formula $F^{k}$
+\end_inset
+
+ to be the global average pooled output,
+\begin_inset Formula 
+\[
+F^{k}=\frac{1}{Z}\sum_{i}\sum_{j}A_{ij}^{k}.\qquad(4)
+\]
+
+\end_inset
+
+CAM computes the final score by
+\begin_inset Formula 
+\[
+Y^{c}=\sum_{k}w_{k}^{c}\cdot F^{k},\qquad(5)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $w_{k}^{c}$
+\end_inset
+
+ is the weight connecting the 
+\begin_inset Formula $k^{th}$
+\end_inset
+
+ feature map with the 
+\begin_inset Formula $c^{th}$
+\end_inset
+
+ class.
+ Taking the gradient of the score for class 
+\begin_inset Formula $c(Y^{c})$
+\end_inset
+
+ with respect to the feature map 
+\begin_inset Formula $F^{k}$
+\end_inset
+
+, we will get
+\begin_inset Formula 
+\[
+\frac{\partial Y^{c}}{\partial F^{k}}=\big(\frac{\partial Y^{c}}{\partial A_{ij}^{k}}\big)/\big(\frac{\partial F^{k}}{\partial A_{ij}^{k}}).\qquad(6)
+\]
+
+\end_inset
+
+Taking partial derivative of Eq.
+ (4) w.r.t.
+ 
+\begin_inset Formula $A_{ij}^{k}$
+\end_inset
+
+, we can see that 
+\begin_inset Formula $\frac{\partial F^{k}}{\partial A_{ij}^{k}}=\frac{1}{Z}$
+\end_inset
+
+.
+ Substituting this in Eq.
+ (6), we get
+\begin_inset Formula 
+\[
+\frac{\partial Y^{c}}{\partial F^{k}}=\frac{\partial Y^{c}}{\partial A_{ij}^{k}}\cdot Z
+\]
+
+\end_inset
+
+From Eq.
+ (5) we get that 
+\begin_inset Formula $\frac{\partial Y^{c}}{\partial F^{k}}=w_{k}^{c}$
+\end_inset
+
+.
+ Hence,
+\begin_inset Formula 
+\[
+w_{k}^{c}=Z\cdot\frac{\partial Y^{c}}{\partial A_{ij}^{k}}
+\]
+
+\end_inset
+
+Summing both sides of Eq.
+ (8) over all pixels 
+\begin_inset Formula $(i,j)$
+\end_inset
+
+, we get
+\begin_inset Formula 
+\[
+\sum_{i}\sum_{j}w_{k}^{c}=\sum_{i}\sum_{j}Z\cdot\frac{\partial Y^{c}}{\partial A_{ij}^{k}}
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $Z$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{k}^{c}$
+\end_inset
+
+ do not depend on 
+\begin_inset Formula $(i,j)$
+\end_inset
+
+, rewriting this as
+\begin_inset Formula 
+\[
+Zw_{k}^{c}=Z\sum_{i}\sum_{j}\frac{\partial Y^{c}}{\partial A_{ij}^{k}}
+\]
+
+\end_inset
+
+Note that 
+\begin_inset Formula $Z$
+\end_inset
+
+ is the number of pixels in the feature map (or 
+\begin_inset Formula $Z=\sum_{i}\sum_{j}\bm{1}$
+\end_inset
+
+).
+ Thus, we can re-order terms and see that
+\begin_inset Formula 
+\[
+w_{k}^{c}=\sum_{i}\sum_{j}\frac{\partial Y^{c}}{\partial A_{ij}^{k}}
+\]
+
+\end_inset
+
+Up to a proportionality constant 
+\begin_inset Formula $(1/Z)$
+\end_inset
+
+ that gets normliazed-out during visualization, the expression for 
+\begin_inset Formula $w_{k}^{c}$
+\end_inset
+
+ s identical to 
+\begin_inset Formula $\alpha_{k}^{c}$
+\end_inset
+
+ used by Grad-CAM.
+ Thus, Grad-CAM is a strict generalization of CAM.
 \end_layout
 
 \begin_layout Section
