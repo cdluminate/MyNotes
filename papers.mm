@@ -227,7 +227,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Attack: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_234014270" CREATED="1641521502446" MODIFIED="1647263386358">
+<node TEXT="Adversarial Attack: Classification" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_234014270" CREATED="1641521502446" MODIFIED="1647263386358">
 <edge COLOR="#ff0000"/>
 <node TEXT="Survey" ID="ID_1901553164" CREATED="1650817865364" MODIFIED="1650817870013">
 <icon BUILTIN="info"/>
@@ -352,6 +352,13 @@
 <node TEXT="(2) l2 norm of perturbation can geenrate high transferrability without use of gradient and is a more powerful source than l-infty norm" ID="ID_434192622" CREATED="1650831813567" MODIFIED="1650831836316"/>
 </node>
 </node>
+<node TEXT="A Little Robustness Goes a Long Way: Leveraging&#xa;Robust Features for Targeted Transfer Attacks" ID="ID_1498468142" CREATED="1651096866911" MODIFIED="1651096879515">
+<icon BUILTIN="bookmark"/>
+<icon BUILTIN="unchecked"/>
+<node TEXT="NIPS21" ID="ID_1710470826" CREATED="1651096897602" MODIFIED="1651096901122"/>
+<node TEXT="(1) targeted adversarial examples -- optimized to be classified as a chosen target class tend to be less transferable between architecutres" ID="ID_743139998" CREATED="1651096901839" MODIFIED="1651096923673"/>
+<node TEXT="(2) training the source classifier to be slightly robust substantially improves the transferability of class-targeted and representation-targeted adversarial attacks, even between architectures as different as convolutional and transformers." ID="ID_708495525" CREATED="1651096923943" MODIFIED="1651096970776"/>
+</node>
 </node>
 <node TEXT="Universal Perturbation" ID="ID_883577858" CREATED="1641522438698" MODIFIED="1641522443789">
 <node TEXT="on distinctive properties of universal perturbations (madry)" ID="ID_224581737" CREATED="1641522458794" MODIFIED="1641743879665">
@@ -439,7 +446,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Attack: Intersection" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1335351832" CREATED="1647263319144" MODIFIED="1647263375425">
+<node TEXT="Adversarial Attack: Intersection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1335351832" CREATED="1647263319144" MODIFIED="1647263375425">
 <edge COLOR="#7c007c"/>
 <node TEXT="3D PCL" ID="ID_1616919715" CREATED="1648388494887" MODIFIED="1648388497545">
 <node TEXT="Shape-invariant 3D Adversarial Point Clouds" ID="ID_1106915267" CREATED="1648388498393" MODIFIED="1648388503330">
@@ -456,9 +463,9 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node TEXT="Simulated adversarial testing of face recognition models" ID="ID_1458951372" CREATED="1642429229718" MODIFIED="1651092520208">
-<icon BUILTIN="unchecked"/>
+<node TEXT="Simulated adversarial testing of face recognition models" ID="ID_1458951372" CREATED="1642429229718" MODIFIED="1651093847174">
 <icon BUILTIN="bookmark"/>
+<icon BUILTIN="checked"/>
 <node TEXT="CVPR22, cihang, Alan Yuille" ID="ID_1913955946" CREATED="1642429240276" MODIFIED="1651092512917"/>
 <node TEXT="difference" ID="ID_465366439" CREATED="1642430507464" MODIFIED="1642430509506">
 <node TEXT="find the region of adversarial latent vector, instead of find merely one isolated adversarial latent vector" ID="ID_512231452" CREATED="1642430511694" MODIFIED="1642430566964"/>
@@ -608,6 +615,13 @@
 </node>
 <node TEXT="Attack Detection &amp; Vul Analysis" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1244682927" CREATED="1646761472294" MODIFIED="1647048997914">
 <edge COLOR="#7c0000"/>
+<node TEXT="Attack Signature" ID="ID_822623830" CREATED="1651096591068" MODIFIED="1651096596793">
+<font BOLD="true"/>
+<node TEXT="Identification of Attack-Specific Signatures in Adversarial Examples" ID="ID_1517932797" CREATED="1651096604936" MODIFIED="1651096617795">
+<icon BUILTIN="pencil"/>
+<node TEXT="Rama" ID="ID_83793265" CREATED="1651096619569" MODIFIED="1651096620790"/>
+</node>
+</node>
 <node TEXT="Vulnerability Analysis" ID="ID_1332546973" CREATED="1641743569630" MODIFIED="1647048986674">
 <node TEXT="rethinking feature uncertainty in stochastic neural networks for adversarial robustness" ID="ID_829421687" CREATED="1641678579615" MODIFIED="1641678600199">
 <icon BUILTIN="pencil"/>
@@ -3519,7 +3533,7 @@
 <node TEXT="2012.13089&#xa; P4Contrast: Contrastive Learning with Pairs of Point-Pixel Pairs for RGB-D Scene Understanding" ID="ID_1359907490" CREATED="1608871275332" MODIFIED="1608871286097"/>
 </node>
 </node>
-<node TEXT="Classification" POSITION="left" ID="ID_1412187905" CREATED="1576825420762" MODIFIED="1648335928432">
+<node TEXT="Classification" FOLDED="true" POSITION="left" ID="ID_1412187905" CREATED="1576825420762" MODIFIED="1648335928432">
 <icon BUILTIN="clanbomber"/>
 <font NAME="Gentium" SIZE="10" BOLD="false"/>
 <edge COLOR="#00ff00"/>
