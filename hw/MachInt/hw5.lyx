@@ -99,6 +99,67 @@ Discuss the mode collapse issue in GANs and propose a solution to mitigate
  this problem.
 \end_layout
 
+\begin_layout Description
+Mode-Collapse.
+ Mode collapse is the most severe form of non-convergence issue in GANs.
+ It means
+\begin_inset Formula 
+\[
+\min_{G}\max_{D}V(G,D)\neq\max_{D}\min_{G}V(G,D),
+\]
+
+\end_inset
+
+where GAN converges to correct distribution when 
+\begin_inset Formula $D$
+\end_inset
+
+ is in inner loop; while GAN places all mass on most likely point when 
+\begin_inset Formula $G$
+\end_inset
+
+ is in inner loop.
+ Besides, other GAN losses also yield mode collapse, and Reverse KL loss
+ perfers to fit as many modes as the model can represent and no more – it
+ does not prefer fewer modes in general.
+ In practice, GANs often seem to collapse to far fewer modes than the model
+ can represent.
+ As a result, mode collpase causes low output diversity.
+\end_layout
+
+\begin_layout Description
+Solution.
+ To mitigate mode collapse, we need to prevent the generator from broadening
+ its scope by preventing it from optimizing for a single fixed discriminator.
+ Possible solutions include:
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+(1) Wasserstein loss.
+ It alleviates mode collapse training the discriminator to optimality without
+ worrying about vanishing gradients.
+ If the discriminator does not get stuck in local minima, it learns to reject
+ the outputs that the generator stabilizes on.
+ So the generator has to output differently.
+\end_layout
+
+\begin_layout Description
+(2) Unrolled GANs.
+ We back-propagate through k updates of the discriminator to prevent mode
+ collapse.
+ Namely, we use a generator loss function that incorporates not only the
+ current discriminator's classifications, but also the outputs of future
+ discriminator versions.
+ So the generator can't over-optimize for a single discriminator.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Reference.
+ https://developers.google.com/machine-learning/gan/problems
+\end_layout
+
 \begin_layout Section
 Consider a Generative Adversarial Network (GAN) which successfully produces
  images of apples.
