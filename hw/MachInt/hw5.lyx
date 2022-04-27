@@ -259,32 +259,71 @@ Which of the following is a non-iterative method to generate adversarial
  examples? 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Enumerate
 (i) Non-Saturating Cost Method
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Enumerate
 (ii) Input Optimization Method 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Enumerate
 (iii) Adversarial Training 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Enumerate
 (iv) Logit Pairing 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Enumerate
 (v) Fast Gradient Sign Method
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Enumerate
 (vi) Real-time Cryptographic Dropout Method
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+The answer is (v) FGSM.
+
+\bar default
+ FGSM is named 
+\begin_inset Quotes eld
+\end_inset
+
+Fast
+\begin_inset Quotes erd
+\end_inset
+
+ Gradient Sign Method because it's a single-step method.
+ FGSM is much faster than its iterative variants including BIM, PGD, MIM,
+ and APGD.
+ However, FGSM cannot better exploit the landscape of the loss function
+ to more effectively compromise the neural network.
 \end_layout
 
 \begin_layout Section
 Prove that Class Activation Map method is a special case of GRAD-CAM.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+This question corresponds to the section 3.1 in paper 
+\begin_inset Quotes eld
+\end_inset
+
+Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For a fully-convolutional architecture, CAM is a special ca se of Grad-CAM.
 \end_layout
 
 \begin_layout Section
