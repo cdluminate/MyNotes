@@ -439,7 +439,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Attack: Intersection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1335351832" CREATED="1647263319144" MODIFIED="1647263375425">
+<node TEXT="Adversarial Attack: Intersection" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1335351832" CREATED="1647263319144" MODIFIED="1647263375425">
 <edge COLOR="#7c007c"/>
 <node TEXT="3D PCL" ID="ID_1616919715" CREATED="1648388494887" MODIFIED="1648388497545">
 <node TEXT="Shape-invariant 3D Adversarial Point Clouds" ID="ID_1106915267" CREATED="1648388498393" MODIFIED="1648388503330">
@@ -456,9 +456,10 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node TEXT="Simulated adversarial testing of face recognition models" ID="ID_1458951372" CREATED="1642429229718" MODIFIED="1642429249738">
-<icon BUILTIN="pencil"/>
-<node TEXT="cihang, Alan Yuille" ID="ID_1913955946" CREATED="1642429240276" MODIFIED="1645107632871"/>
+<node TEXT="Simulated adversarial testing of face recognition models" ID="ID_1458951372" CREATED="1642429229718" MODIFIED="1651092520208">
+<icon BUILTIN="unchecked"/>
+<icon BUILTIN="bookmark"/>
+<node TEXT="CVPR22, cihang, Alan Yuille" ID="ID_1913955946" CREATED="1642429240276" MODIFIED="1651092512917"/>
 <node TEXT="difference" ID="ID_465366439" CREATED="1642430507464" MODIFIED="1642430509506">
 <node TEXT="find the region of adversarial latent vector, instead of find merely one isolated adversarial latent vector" ID="ID_512231452" CREATED="1642430511694" MODIFIED="1642430566964"/>
 </node>
@@ -851,7 +852,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
+<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_1556055508" CREATED="1648173325254" MODIFIED="1648173329845">
 <icon BUILTIN="info"/>
@@ -889,7 +890,7 @@
 <node TEXT="(*) more data (either via additional datasets or data augmentation) benefits both OOD accuracy and adversarial robustness" ID="ID_1656697967" CREATED="1649169411884" MODIFIED="1649169438165"/>
 </node>
 </node>
-<node TEXT="Adversarial Training" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1648174116710">
+<node TEXT="Adversarial Training" FOLDED="true" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1648174116710">
 <font BOLD="true"/>
 <node TEXT="Survey" ID="ID_178248607" CREATED="1642431445724" MODIFIED="1649101870385">
 <icon BUILTIN="mindmap"/>
@@ -1297,7 +1298,6 @@
 <node TEXT="Generalize better with adversarial attack / adversarial trianing" ID="ID_1604216423" CREATED="1648388384439" MODIFIED="1648388398758">
 <icon BUILTIN="info"/>
 </node>
-<node TEXT="Cihang xie" ID="ID_1667513983" CREATED="1643058809140" MODIFIED="1643058811907"/>
 <node TEXT="JHXY papers" ID="ID_360388475" CREATED="1646923800655" MODIFIED="1646923804350"/>
 <node TEXT="RDA: Robust Domain Adaptation via Fourier Adversarial Attacking" ID="ID_1835144084" CREATED="1646923479664" MODIFIED="1646923763844">
 <icon BUILTIN="unchecked"/>
@@ -1309,9 +1309,14 @@
 <icon BUILTIN="unchecked"/>
 <node TEXT="CVPR22" ID="ID_685246872" CREATED="1648388379291" MODIFIED="1648388380602"/>
 </node>
-<node TEXT="Fast AdvProp" ID="ID_868830173" CREATED="1650809050717" MODIFIED="1650809092623">
+<node TEXT="AdvProp" ID="ID_465753517" CREATED="1651092418089" MODIFIED="1651092439619">
 <icon BUILTIN="unchecked"/>
-<icon BUILTIN="messagebox_warning"/>
+<icon BUILTIN="bookmark"/>
+<node TEXT="Cihang xie" ID="ID_1667513983" CREATED="1643058809140" MODIFIED="1643058811907"/>
+</node>
+<node TEXT="Fast AdvProp" ID="ID_868830173" CREATED="1650809050717" MODIFIED="1651092436063">
+<icon BUILTIN="unchecked"/>
+<icon BUILTIN="bookmark"/>
 <node TEXT="ICLR22, Alan" ID="ID_706047055" CREATED="1650809057964" MODIFIED="1650809065353"/>
 </node>
 </node>
@@ -3514,7 +3519,7 @@
 <node TEXT="2012.13089&#xa; P4Contrast: Contrastive Learning with Pairs of Point-Pixel Pairs for RGB-D Scene Understanding" ID="ID_1359907490" CREATED="1608871275332" MODIFIED="1608871286097"/>
 </node>
 </node>
-<node TEXT="Classification" FOLDED="true" POSITION="left" ID="ID_1412187905" CREATED="1576825420762" MODIFIED="1648335928432">
+<node TEXT="Classification" POSITION="left" ID="ID_1412187905" CREATED="1576825420762" MODIFIED="1648335928432">
 <icon BUILTIN="clanbomber"/>
 <font NAME="Gentium" SIZE="10" BOLD="false"/>
 <edge COLOR="#00ff00"/>
