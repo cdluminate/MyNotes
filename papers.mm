@@ -227,7 +227,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Attack: Classification" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_234014270" CREATED="1641521502446" MODIFIED="1647263386358">
+<node TEXT="Adversarial Attack: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_234014270" CREATED="1641521502446" MODIFIED="1647263386358">
 <edge COLOR="#ff0000"/>
 <node TEXT="Survey" ID="ID_1901553164" CREATED="1650817865364" MODIFIED="1650817870013">
 <icon BUILTIN="info"/>
@@ -895,7 +895,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
+<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_1556055508" CREATED="1648173325254" MODIFIED="1648173329845">
 <icon BUILTIN="info"/>
@@ -933,7 +933,7 @@
 <node TEXT="(*) more data (either via additional datasets or data augmentation) benefits both OOD accuracy and adversarial robustness" ID="ID_1656697967" CREATED="1649169411884" MODIFIED="1649169438165"/>
 </node>
 </node>
-<node TEXT="Adversarial Training" FOLDED="true" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1648174116710">
+<node TEXT="Adversarial Training" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1648174116710">
 <font BOLD="true"/>
 <node TEXT="Survey" ID="ID_178248607" CREATED="1642431445724" MODIFIED="1649101870385">
 <icon BUILTIN="mindmap"/>
@@ -1144,6 +1144,14 @@
 <node TEXT="Make Some Noise: Reliable and Efficient Single-Step Adversarial Training" ID="ID_1929010940" CREATED="1644180270961" MODIFIED="1644180274378">
 <icon BUILTIN="pencil"/>
 <node TEXT="likely ICML submission" ID="ID_1360008454" CREATED="1644180275949" MODIFIED="1644180283810"/>
+</node>
+</node>
+</node>
+<node TEXT="AT Component" ID="ID_1828896049" CREATED="1651334135030" MODIFIED="1651334137719">
+<node TEXT="BN" ID="ID_1742983557" CREATED="1651334138530" MODIFIED="1651334141052">
+<node TEXT="On Fragile Features and Batch Normalization in Adversarial Training" ID="ID_1511392255" CREATED="1651334141871" MODIFIED="1651334150112">
+<icon BUILTIN="pencil"/>
+<node TEXT="adversarially fine-tuning just the BN layers can result in non-trivial adversarial robustness" ID="ID_1271377052" CREATED="1651334160028" MODIFIED="1651334176964"/>
 </node>
 </node>
 </node>
