@@ -895,7 +895,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
+<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_1556055508" CREATED="1648173325254" MODIFIED="1648173329845">
 <icon BUILTIN="info"/>
@@ -1208,41 +1208,11 @@
 </node>
 </node>
 </node>
-<node TEXT="Certified Robustness / Regularization" ID="ID_636878532" CREATED="1641743555483" MODIFIED="1647048962177">
+<node TEXT="Certified Robustness" ID="ID_636878532" CREATED="1641743555483" MODIFIED="1651777660583">
+<node TEXT="closely related to lipschitz" ID="ID_334887545" CREATED="1651777670185" MODIFIED="1651777679545">
+<icon BUILTIN="info"/>
+</node>
 <node TEXT="https://github.com/AI-secure/Provable-Training-and-Verification-Approaches-Towards-Robust-Neural-Networks" ID="ID_1591662337" CREATED="1642964261893" MODIFIED="1642964261893" LINK="https://github.com/AI-secure/Provable-Training-and-Verification-Approaches-Towards-Robust-Neural-Networks"/>
-<node TEXT="Lipschitz Continuity" ID="ID_1215971796" CREATED="1642440618858" MODIFIED="1642440627281">
-<node TEXT="Activation function" ID="ID_958488576" CREATED="1642440628351" MODIFIED="1642440653680">
-<node ID="ID_240078001" CREATED="1642440660898" MODIFIED="1642440669751">
-<icon BUILTIN="unchecked"/>
-<richcontent TYPE="NODE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <h1 http-equiv="content-type" content="text/html; charset=utf-8" class="title mathjax">
-      Sorting out Lipschitz function approximation
-    </h1>
-  </body>
-</html>
-</richcontent>
-</node>
-</node>
-<node TEXT="Spectrum" ID="ID_445945127" CREATED="1642951664771" MODIFIED="1642951667615">
-<node TEXT="Spectral Norm Regularization for Improving the&#xa;Generalizability of Deep Learning" ID="ID_1829634212" CREATED="1642951668899" MODIFIED="1642952085512">
-<icon BUILTIN="unchecked"/>
-<icon BUILTIN="bookmark"/>
-<icon BUILTIN="pencil"/>
-<node TEXT="TODO" ID="ID_570092991" CREATED="1642952052911" MODIFIED="1643035652112"/>
-</node>
-<node TEXT="Adversarial Training is a Form of Data-dependent&#xa;Operator Norm Regularization" ID="ID_1007318317" CREATED="1642951686137" MODIFIED="1642951692337">
-<icon BUILTIN="unchecked"/>
-<icon BUILTIN="bookmark"/>
-<node TEXT="TODO" ID="ID_326204906" CREATED="1642951699453" MODIFIED="1643035654618"/>
-</node>
-</node>
-</node>
 <node TEXT="Certified robustness to adversarial examples with differential privacy" ID="ID_1254880785" CREATED="1641743598637" MODIFIED="1641743613648">
 <icon BUILTIN="unchecked"/>
 </node>
@@ -1264,6 +1234,46 @@
 <node TEXT="(1) add gaussian noise" ID="ID_1869835989" CREATED="1648650121136" MODIFIED="1648650989490"/>
 </node>
 </node>
+</node>
+<node TEXT="Lipschitz Continuity" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1417870490" CREATED="1625980031432" MODIFIED="1651777687994">
+<node TEXT="\latex $\|f(x)-f(y)\|_2 \leq L\|x-y\|_2$" ID="ID_351458712" CREATED="1630681515797" MODIFIED="1630693004280">
+<node TEXT="L is called a lipschits constant" ID="ID_520258832" CREATED="1630693008693" MODIFIED="1630693015027"/>
+</node>
+<node TEXT="2018.12905: Lipschitz Continuity Guided Knowledge Distillation" ID="ID_467025696" CREATED="1630529969683" MODIFIED="1630529994985">
+<icon BUILTIN="button_ok"/>
+<node TEXT="lipschitz for neural network layers" ID="ID_759478799" CREATED="1630530162719" MODIFIED="1630530173957"/>
+<node TEXT="transmitting matrix to replace SVD" ID="ID_1292515182" CREATED="1630530175016" MODIFIED="1630530183947"/>
+<node TEXT="algorithm for calculating spectrum norm" ID="ID_664382898" CREATED="1630530237104" MODIFIED="1630530246050"/>
+</node>
+<node TEXT="Lipschitz regularity of deep neural networks:&#xa;analysis and efficient estimation" ID="ID_438196866" CREATED="1634059421008" MODIFIED="1634059422560">
+<node TEXT="neurips" ID="ID_1164705869" CREATED="1634059426554" MODIFIED="1634059429951"/>
+</node>
+<node TEXT="SPECTRAL NORMALIZATION&#xa;FOR GENERATIVE ADVERSARIAL NETWORKS" ID="ID_1088164268" CREATED="1634059490998" MODIFIED="1634059492177"/>
+<node TEXT="Exploring Generalization in Deep Learning" ID="ID_655518249" CREATED="1634060117942" MODIFIED="1634060119262"/>
+<node TEXT="Distance-Based Classification with Lipschitz Functions" ID="ID_1705105058" CREATED="1634060148717" MODIFIED="1634060149837"/>
+<node TEXT="Spectrally-normalized margin bounds for neural networks" ID="ID_930449787" CREATED="1634060189330" MODIFIED="1634060190422"/>
+<node TEXT="EVALUATING THE ROBUSTNESS OF NEURAL NETWORKS: AN EXTREME VALUE THEORY APPROACH" ID="ID_506599121" CREATED="1634060341499" MODIFIED="1634060342665"/>
+<node TEXT="Certified Defense via Latent Space Randomized&#xa;Smoothing with Orthogonal Encoders" ID="ID_1726121628" CREATED="1636487843145" MODIFIED="1636487844553"/>
+<node TEXT="CLIP: Cheap Lipschitz Training&#xa;of Neural Networks&#xa;?" ID="ID_357548656" CREATED="1637078913169" MODIFIED="1637078917089">
+<icon BUILTIN="button_ok"/>
+</node>
+<node TEXT="Operator Norm regularization" ID="ID_1797178017" CREATED="1642951664771" MODIFIED="1651777720629">
+<node TEXT="Spectrum norm is p=2 operator norm" ID="ID_1314274250" CREATED="1651777638137" MODIFIED="1651777646397">
+<icon BUILTIN="info"/>
+</node>
+<node TEXT="Spectral Norm Regularization for Improving the&#xa;Generalizability of Deep Learning" ID="ID_619307983" CREATED="1642951668899" MODIFIED="1642952085512">
+<icon BUILTIN="unchecked"/>
+<icon BUILTIN="bookmark"/>
+<icon BUILTIN="pencil"/>
+<node TEXT="must read" ID="ID_680142634" CREATED="1642952052911" MODIFIED="1642952054401"/>
+</node>
+<node TEXT="Adversarial Training is a Form of Data-dependent&#xa;Operator Norm Regularization" ID="ID_180723104" CREATED="1642951686137" MODIFIED="1642951692337">
+<icon BUILTIN="unchecked"/>
+<icon BUILTIN="bookmark"/>
+<node TEXT="must read" ID="ID_1563948349" CREATED="1642951699453" MODIFIED="1642951701325"/>
+</node>
+</node>
+<node TEXT="Local Linearization" ID="ID_1233851547" CREATED="1651777730897" MODIFIED="1651777734332">
 <node TEXT="LLR" ID="ID_1146656651" CREATED="1649718768395" MODIFIED="1649718769633">
 <node TEXT="Adversarial Robustness through Local Linearization" ID="ID_618965152" CREATED="1649718772985" MODIFIED="1649719241554">
 <icon BUILTIN="bookmark"/>
@@ -1277,7 +1287,28 @@
 </node>
 </node>
 <node TEXT="faster than standard AT" ID="ID_741473848" CREATED="1649718806757" MODIFIED="1649718813463"/>
-<node TEXT="actually local lipschitz regularization" ID="ID_252839524" CREATED="1649718787519" MODIFIED="1649718796640"/>
+<node TEXT="actually local lipschitz regularization" ID="ID_252839524" CREATED="1649718787519" MODIFIED="1651777694752">
+<font BOLD="true"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Activation function" ID="ID_958488576" CREATED="1642440628351" MODIFIED="1642440653680">
+<node ID="ID_240078001" CREATED="1642440660898" MODIFIED="1642440669751">
+<icon BUILTIN="unchecked"/>
+<richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <h1 http-equiv="content-type" content="text/html; charset=utf-8" class="title mathjax">
+      Sorting out Lipschitz function approximation
+    </h1>
+  </body>
+</html>
+</richcontent>
 </node>
 </node>
 </node>
