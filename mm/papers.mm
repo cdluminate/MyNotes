@@ -725,6 +725,11 @@
 <icon BUILTIN="unchecked"/>
 <node TEXT="CVPR22w" ID="ID_1187196788" CREATED="1649633034956" MODIFIED="1649633037261"/>
 </node>
+<node TEXT="+Bias" ID="ID_273337616" CREATED="1651955397842" MODIFIED="1651955400204">
+<node TEXT="Holistic Approach to Measure Sample-level Adversarial Vulnerability&#xa;and its Utility in Building Trustworthy Systems" ID="ID_1380608765" CREATED="1651955401029" MODIFIED="1651955407542">
+<node TEXT="CVPR22w" ID="ID_808643348" CREATED="1651955408814" MODIFIED="1651955410645"/>
+</node>
+</node>
 </node>
 <node TEXT="Patch Detection" ID="ID_1544755494" CREATED="1641523388190" MODIFIED="1644180812163">
 <node TEXT="on the real world adversarial robustness of real-time semantic segmentation models for autonomous driving" ID="ID_621290194" CREATED="1641523393314" MODIFIED="1641523426222">
@@ -1729,14 +1734,15 @@
 </node>
 </node>
 </node>
-<node TEXT="Deep Metric Learning" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_464750159" CREATED="1641242970936" MODIFIED="1642456761439">
+<node TEXT="Deep Metric Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_464750159" CREATED="1641242970936" MODIFIED="1642456761439">
 <edge COLOR="#ff00ff"/>
 <font NAME="Gentium"/>
 <node TEXT="Survey" ID="ID_1192003468" CREATED="1641520461677" MODIFIED="1648175016651">
 <icon BUILTIN="info"/>
 <font NAME="Gentium"/>
-<node TEXT="2002.08473: revisiting training strategies and generalization performance in deep metric learning" ID="ID_585062864" CREATED="1582857197676" MODIFIED="1642726573200">
+<node TEXT="2002.08473: revisiting training strategies and generalization performance in deep metric learning" ID="ID_585062864" CREATED="1582857197676" MODIFIED="1651955230479">
 <icon BUILTIN="checked"/>
+<icon BUILTIN="bookmark"/>
 <font NAME="Gentium" BOLD="false"/>
 <node TEXT="revisit most widely used DML objective functions" ID="ID_1601875277" CREATED="1582857225897" MODIFIED="1587526865066">
 <font NAME="Gentium" BOLD="false"/>
@@ -1760,15 +1766,22 @@
 </node>
 </node>
 </node>
-<node TEXT="A Metric Learning Reality Check" ID="ID_894569151" CREATED="1622801160347" MODIFIED="1648175016653">
+<node TEXT="A Metric Learning Reality Check" ID="ID_894569151" CREATED="1622801160347" MODIFIED="1651955232297">
 <icon BUILTIN="checked"/>
+<icon BUILTIN="bookmark"/>
 <node TEXT="ECCV20" ID="ID_606475431" CREATED="1648173389648" MODIFIED="1648173392107"/>
 <node TEXT="flaws in experimental methodology" ID="ID_506127366" CREATED="1622801174483" MODIFIED="1622801197501"/>
 <node TEXT="actual improvements over time have been marginal at best" ID="ID_116707694" CREATED="1622801198120" MODIFIED="1622801209887"/>
 </node>
-<node TEXT="Do Different Deep Metric Learning Losses Lead to Similar Learned Features?" ID="ID_1616573694" CREATED="1651953803779" MODIFIED="1651953811008">
+<node TEXT="Do Different Deep Metric Learning Losses Lead to Similar Learned Features?" ID="ID_1616573694" CREATED="1651953803779" MODIFIED="1651955233765">
 <icon BUILTIN="unchecked"/>
+<icon BUILTIN="bookmark"/>
 <node TEXT="ICCV21" ID="ID_454000109" CREATED="1651953811961" MODIFIED="1651953813423"/>
+<node TEXT="Is the follow-up of the above two" ID="ID_405385083" CREATED="1651954108419" MODIFIED="1651954115324"/>
+<node TEXT="(1) ranking based and classification based losses guide the network to learn different features" ID="ID_262045487" CREATED="1651955243876" MODIFIED="1651955265916"/>
+<node TEXT="(2) losses pay attention on seemingly undesired properties such as the car&apos;s color or the sun evevation" ID="ID_1063365417" CREATED="1651955266308" MODIFIED="1651955290112">
+<node TEXT="deep learning not learning the correct representation" ID="ID_399149197" CREATED="1651955294943" MODIFIED="1651955310166"/>
+</node>
 </node>
 </node>
 <node TEXT="Loss Functions" ID="ID_1262041414" CREATED="1641520453737" MODIFIED="1641520995604">
@@ -1844,6 +1857,12 @@
 <node TEXT="(1) hyperbolic embedding" ID="ID_258527249" CREATED="1648342781429" MODIFIED="1648342791655"/>
 <node TEXT="(2) incorporate transformers" ID="ID_1951501276" CREATED="1648342792051" MODIFIED="1648342798988"/>
 </node>
+</node>
+</node>
+<node TEXT="Unsupervised" ID="ID_306535149" CREATED="1651955198172" MODIFIED="1651955202355">
+<node TEXT="Self-Taught Metric Learning without Labels" ID="ID_1409325339" CREATED="1651955203092" MODIFIED="1651955220215">
+<icon BUILTIN="unchecked"/>
+<node TEXT="ICCV21" ID="ID_1413045773" CREATED="1651955211477" MODIFIED="1651955214565"/>
 </node>
 </node>
 <node TEXT="w/ Graph" ID="ID_1539093308" CREATED="1649102316384" MODIFIED="1649102319359">
