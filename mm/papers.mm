@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="108" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="110" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1648337505775">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -1328,7 +1328,6 @@
     A Closer Look at Accuracy vs. Robustness
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
@@ -1730,7 +1729,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Deep Metric Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_464750159" CREATED="1641242970936" MODIFIED="1642456761439">
+<node TEXT="Deep Metric Learning" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_464750159" CREATED="1641242970936" MODIFIED="1642456761439">
 <edge COLOR="#ff00ff"/>
 <font NAME="Gentium"/>
 <node TEXT="Survey" ID="ID_1192003468" CREATED="1641520461677" MODIFIED="1648175016651">
@@ -1766,6 +1765,10 @@
 <node TEXT="ECCV20" ID="ID_606475431" CREATED="1648173389648" MODIFIED="1648173392107"/>
 <node TEXT="flaws in experimental methodology" ID="ID_506127366" CREATED="1622801174483" MODIFIED="1622801197501"/>
 <node TEXT="actual improvements over time have been marginal at best" ID="ID_116707694" CREATED="1622801198120" MODIFIED="1622801209887"/>
+</node>
+<node TEXT="Do Different Deep Metric Learning Losses Lead to Similar Learned Features?" ID="ID_1616573694" CREATED="1651953803779" MODIFIED="1651953811008">
+<icon BUILTIN="unchecked"/>
+<node TEXT="ICCV21" ID="ID_454000109" CREATED="1651953811961" MODIFIED="1651953813423"/>
 </node>
 </node>
 <node TEXT="Loss Functions" ID="ID_1262041414" CREATED="1641520453737" MODIFIED="1641520995604">
@@ -2420,6 +2423,11 @@
 <node TEXT="deal with long-range dependency problem that the traditional CNN is not very good at" ID="ID_883791225" CREATED="1647567373082" MODIFIED="1647567395434"/>
 </node>
 </node>
+<node TEXT="Framework" ID="ID_164836852" CREATED="1651953412715" MODIFIED="1651953414547">
+<node TEXT="Cross-modal Representation Learning for Zero-shot Action Recognition" ID="ID_1630052458" CREATED="1651953420845" MODIFIED="1651953421503">
+<node TEXT="CVPR22, Microsoft" ID="ID_125282230" CREATED="1651953423268" MODIFIED="1651953426559"/>
+</node>
+</node>
 </node>
 <node TEXT="Alpha Matting" FOLDED="true" POSITION="left" ID="ID_1289342378" CREATED="1649104749744" MODIFIED="1649104752541">
 <edge COLOR="#0000ff"/>
@@ -2641,6 +2649,9 @@
 <node TEXT="Frame-wise Action Representations for Long Videos via Sequence Contrastive Learning" ID="ID_1235235307" CREATED="1649102802918" MODIFIED="1649102803748">
 <node TEXT="CVPR22" ID="ID_1379516385" CREATED="1649102806472" MODIFIED="1649102807610"/>
 <node TEXT="Sequence contrastive learning" ID="ID_413817863" CREATED="1649102807882" MODIFIED="1649102813865"/>
+</node>
+<node TEXT="CenterCLIP: Token Clustering for Efficient Text-Video Retrieval" ID="ID_391932937" CREATED="1651952987924" MODIFIED="1651952988800">
+<node TEXT="SIGIR" ID="ID_787589457" CREATED="1651952989777" MODIFIED="1651952991331"/>
 </node>
 </node>
 <node TEXT="Cross-Modal Retrieval" FOLDED="true" POSITION="left" ID="ID_22749108" CREATED="1576988430324" MODIFIED="1642431082632">
@@ -3092,6 +3103,19 @@
 <node TEXT="elastic resolution + computation reduction" ID="ID_1366331350" CREATED="1615296878773" MODIFIED="1615296919734"/>
 </node>
 </node>
+<node TEXT="Graph Network" FOLDED="true" POSITION="left" ID="ID_753946836" CREATED="1582940931218" MODIFIED="1651953060730">
+<font NAME="Gentium" BOLD="false"/>
+<edge COLOR="#7c7c00"/>
+<node TEXT="GNN" ID="ID_1274111681" CREATED="1651953050512" MODIFIED="1651953052009">
+<node TEXT="2002.05544: superpixel image classification with graph attention networks" ID="ID_332176668" CREATED="1583375009739" MODIFIED="1587526865279">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="Second-Order Pooling for Graph Neural Networks (tpami20)" ID="ID_445336652" CREATED="1615351166321" MODIFIED="1615351177272">
+<node TEXT="pooling method" ID="ID_564494170" CREATED="1615351183774" MODIFIED="1615351187164"/>
+</node>
+</node>
+<node TEXT="GCN" ID="ID_1722177383" CREATED="1601902008395" MODIFIED="1601902010750"/>
+</node>
 <node TEXT="Image Compression" FOLDED="true" POSITION="left" ID="ID_1511931365" CREATED="1648343124472" MODIFIED="1648343127424">
 <edge COLOR="#7c0000"/>
 <node TEXT="ELIC: Efficient Learned Image Compression with&#xa;Unevenly Grouped Space-Channel Contextual Adaptive Coding" ID="ID_391462928" CREATED="1648343132187" MODIFIED="1648343146503">
@@ -3143,6 +3167,9 @@
 <edge COLOR="#00007c"/>
 <node TEXT="Interspace Pruning: Using Adaptive Filter Representations to Improve Training of Sparse CNNs" ID="ID_1136994469" CREATED="1649171035811" MODIFIED="1649171042670">
 <node TEXT="CVPR22" ID="ID_1181157881" CREATED="1649171043941" MODIFIED="1649171045542"/>
+</node>
+<node TEXT="Leaner and Faster: Two-Stage Model Compression for Lightweight&#xa;Text-Image Retrieval" ID="ID_880443205" CREATED="1651953324409" MODIFIED="1651953325391">
+<node TEXT="NAACL" ID="ID_854685267" CREATED="1651953326299" MODIFIED="1651953329267"/>
 </node>
 </node>
 <node TEXT="Multimodal Learning" FOLDED="true" POSITION="left" ID="ID_423909848" CREATED="1649104367617" MODIFIED="1649104370772">
@@ -3406,13 +3433,51 @@
 </node>
 </node>
 </node>
-<node TEXT="Representation Learning" FOLDED="true" POSITION="left" ID="ID_714759247" CREATED="1650825914367" MODIFIED="1650825919915">
+<node TEXT="Self-Supervised Learning" FOLDED="true" POSITION="left" ID="ID_714759247" CREATED="1650825914367" MODIFIED="1651953578841">
 <edge COLOR="#7c007c"/>
 <node TEXT="Survey" ID="ID_1775463249" CREATED="1650825920877" MODIFIED="1650825925562">
 <icon BUILTIN="info"/>
 <node TEXT="Empirical Evaluation and Theoretical Analysis for Representation Learning: A Survey" ID="ID_704481907" CREATED="1650825926968" MODIFIED="1650825934945">
 <node TEXT="IJCAI survey 2022" ID="ID_210152171" CREATED="1650825935831" MODIFIED="1650825944162"/>
 <node TEXT="generic representation learning, involving both CV and CL" ID="ID_1395139495" CREATED="1650825945439" MODIFIED="1650825953912"/>
+</node>
+</node>
+<node TEXT="Image" ID="ID_1689929083" CREATED="1651953560888" MODIFIED="1651953563600"/>
+<node TEXT="Video" ID="ID_846495733" CREATED="1651953564450" MODIFIED="1651953566383">
+<node TEXT="TransRank: Self-supervised Video Representation Learning&#xa;via Ranking-based Transformation Recognition" ID="ID_746328177" CREATED="1651953611730" MODIFIED="1651953612644">
+<node TEXT="CVPR22" ID="ID_516236195" CREATED="1651953613554" MODIFIED="1651953614875"/>
+</node>
+<node TEXT="In Defense of Image Pre-Training for&#xa;Spatiotemporal Recognition" ID="ID_889274972" CREATED="1651953774184" MODIFIED="1651953776596">
+<icon BUILTIN="pencil"/>
+<node TEXT="cihang xie" ID="ID_1074268195" CREATED="1651953777761" MODIFIED="1651953779253"/>
+</node>
+</node>
+</node>
+<node TEXT="Scene Graph" FOLDED="true" POSITION="left" ID="ID_691684807" CREATED="1582940936028" MODIFIED="1651953021589">
+<font NAME="Gentium" BOLD="false"/>
+<edge COLOR="#007c7c"/>
+<node TEXT="Generation" ID="ID_1992268449" CREATED="1582940945725" MODIFIED="1590024968949">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="1912.07414 Learning Canonical Representations forScene Graph to Image Generation" ID="ID_1230724059" CREATED="1591523975753" MODIFIED="1591523987076"/>
+<node TEXT="2002.11949: unbiased scene graph generalization from biased training" ID="ID_1016607145" CREATED="1582940950980" MODIFIED="1587526865280">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: scene graph generation (SGG)" ID="ID_1614294683" CREATED="1582940994088" MODIFIED="1587526865281">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="why: collapsing diversity hurts downstream tasks due to the training bias. However, debiasing is not trivial because traditional methods call tell good bias and bad bias" ID="ID_476245187" CREATED="1582941002281" MODIFIED="1587526865282">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="how: draw counterfactual causality from the trained graph" ID="ID_538665732" CREATED="1582941507255" MODIFIED="1587526865283">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="2005.08230: graph density-aware losses for novel compositions in scene graph generation (CVPR20)" ID="ID_168569159" CREATED="1590024970199" MODIFIED="1590024994252"/>
+<node TEXT="Exploiting Edge-Oriented Reasoning for 3D Point-based Scene Graph Analysis (cvpr21)" ID="ID_110979499" CREATED="1615348622406" MODIFIED="1615348629899"/>
+<node TEXT="Probabilistic Modeling of Semantic Ambiguity for Scene Graph Generation (cvpr21)" ID="ID_1895253076" CREATED="1615351040893" MODIFIED="1615351048231"/>
+</node>
+<node TEXT="Image Retrieval" ID="ID_1768896" CREATED="1610425686042" MODIFIED="1610425689498">
+<node TEXT="2012: Image-to-Image Retrieval by Learning Similarity between Scene Graphs (AAAI21)" ID="ID_1384437389" CREATED="1610425690361" MODIFIED="1610425706901">
+<icon BUILTIN="button_ok"/>
 </node>
 </node>
 </node>
@@ -3495,7 +3560,9 @@
 <node TEXT="-------------------------------------------------------------------------------------------------" POSITION="left" ID="ID_1156109860" CREATED="1647264433260" MODIFIED="1647264435598">
 <edge COLOR="#007c7c"/>
 </node>
-<node FOLDED="true" POSITION="left" ID="ID_950327353" CREATED="1583319653266" MODIFIED="1647264659801"><richcontent TYPE="NODE">
+<node FOLDED="true" POSITION="left" ID="ID_950327353" CREATED="1583319653266" MODIFIED="1651953012174">
+<icon BUILTIN="clanbomber"/>
+<richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -3987,47 +4054,6 @@
 <node TEXT="2004.06305: VehicleNet: Learning Robust Visual Representation for Vehicle Re-identification" ID="ID_1381154777" CREATED="1590803659717" MODIFIED="1590803671137"/>
 <node TEXT="2004.06271: The Devil is in the Details: Self-Supervised Attention for Vehicle Re-Identification" ID="ID_1878470047" CREATED="1590803731542" MODIFIED="1590803743255"/>
 </node>
-</node>
-<node TEXT="Graph + Network" FOLDED="true" POSITION="left" ID="ID_761259864" CREATED="1576828654767" MODIFIED="1642394331459">
-<font NAME="Gentium" SIZE="10" BOLD="false"/>
-<edge COLOR="#007c00"/>
-<node TEXT="Graph Neural Network" ID="ID_753946836" CREATED="1582940931218" MODIFIED="1587526865279">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="2002.05544: superpixel image classification with graph attention networks" ID="ID_332176668" CREATED="1583375009739" MODIFIED="1587526865279">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="Second-Order Pooling for Graph Neural Networks (tpami20)" ID="ID_445336652" CREATED="1615351166321" MODIFIED="1615351177272">
-<node TEXT="pooling method" ID="ID_564494170" CREATED="1615351183774" MODIFIED="1615351187164"/>
-</node>
-</node>
-<node TEXT="Scene Graph" ID="ID_691684807" CREATED="1582940936028" MODIFIED="1587526865280">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="Generation" ID="ID_1992268449" CREATED="1582940945725" MODIFIED="1590024968949">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="1912.07414 Learning Canonical Representations forScene Graph to Image Generation" ID="ID_1230724059" CREATED="1591523975753" MODIFIED="1591523987076"/>
-<node TEXT="2002.11949: unbiased scene graph generalization from biased training" ID="ID_1016607145" CREATED="1582940950980" MODIFIED="1587526865280">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: scene graph generation (SGG)" ID="ID_1614294683" CREATED="1582940994088" MODIFIED="1587526865281">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: collapsing diversity hurts downstream tasks due to the training bias. However, debiasing is not trivial because traditional methods call tell good bias and bad bias" ID="ID_476245187" CREATED="1582941002281" MODIFIED="1587526865282">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: draw counterfactual causality from the trained graph" ID="ID_538665732" CREATED="1582941507255" MODIFIED="1587526865283">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="2005.08230: graph density-aware losses for novel compositions in scene graph generation (CVPR20)" ID="ID_168569159" CREATED="1590024970199" MODIFIED="1590024994252"/>
-<node TEXT="Exploiting Edge-Oriented Reasoning for 3D Point-based Scene Graph Analysis (cvpr21)" ID="ID_110979499" CREATED="1615348622406" MODIFIED="1615348629899"/>
-<node TEXT="Probabilistic Modeling of Semantic Ambiguity for Scene Graph Generation (cvpr21)" ID="ID_1895253076" CREATED="1615351040893" MODIFIED="1615351048231"/>
-</node>
-<node TEXT="Image Retrieval" ID="ID_1768896" CREATED="1610425686042" MODIFIED="1610425689498">
-<node TEXT="2012: Image-to-Image Retrieval by Learning Similarity between Scene Graphs (AAAI21)" ID="ID_1384437389" CREATED="1610425690361" MODIFIED="1610425706901">
-<icon BUILTIN="button_ok"/>
-</node>
-</node>
-</node>
-<node TEXT="GCN" ID="ID_1722177383" CREATED="1601902008395" MODIFIED="1601902010750"/>
 </node>
 <node TEXT="Image Editing" FOLDED="true" POSITION="left" ID="ID_65977927" CREATED="1576830540818" MODIFIED="1642394376414">
 <font NAME="Gentium" BOLD="false"/>
