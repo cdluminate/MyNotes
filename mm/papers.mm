@@ -937,7 +937,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
+<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_1556055508" CREATED="1648173325254" MODIFIED="1648173329845">
 <icon BUILTIN="info"/>
@@ -964,7 +964,12 @@
 <node TEXT="Critical Checkpoints for Evaluating Defence Models Against Adversarial Attack and Robustness" ID="ID_1207828835" CREATED="1647265940241" MODIFIED="1647265957212">
 <icon BUILTIN="pencil"/>
 </node>
-<node TEXT="Adaptive Attack (Madry)" ID="ID_103436605" CREATED="1647265946214" MODIFIED="1647265951989"/>
+<node TEXT="Adaptive Attack (Madry)" ID="ID_103436605" CREATED="1647265946214" MODIFIED="1652387977589">
+<icon BUILTIN="bookmark"/>
+<node TEXT="On Adaptive Attacks to Adversarial Example Defenses" ID="ID_1260395980" CREATED="1652387971803" MODIFIED="1652387973366">
+<node TEXT="NIPS20" ID="ID_1453499811" CREATED="1652387978973" MODIFIED="1652387980434"/>
+</node>
+</node>
 <node TEXT="Indicators of Attack Failure: Debugging and Improving Optimization of Adversarial Examples" ID="ID_9324905" CREATED="1648649410710" MODIFIED="1648649413156">
 <icon BUILTIN="pencil"/>
 <node TEXT="Nicolas" ID="ID_904426365" CREATED="1648649414535" MODIFIED="1648649419800"/>
@@ -973,6 +978,11 @@
 <node TEXT="Generalized but not Robust? Comparing the Effects of Data Modification Methods on Out-of-Domain Generalization and Adversarial Robustness" ID="ID_24875098" CREATED="1649169406619" MODIFIED="1649169407241">
 <node TEXT="ACL2022" ID="ID_714251955" CREATED="1649169409162" MODIFIED="1649169411614"/>
 <node TEXT="(*) more data (either via additional datasets or data augmentation) benefits both OOD accuracy and adversarial robustness" ID="ID_1656697967" CREATED="1649169411884" MODIFIED="1649169438165"/>
+</node>
+<node TEXT="Evaluating the Adversarial Robustness of Adaptive Test-time Defenses" ID="ID_1955950293" CREATED="1652387947046" MODIFIED="1652387994467">
+<icon BUILTIN="pencil"/>
+<node TEXT="Hein" ID="ID_608720289" CREATED="1652387983225" MODIFIED="1652387986565"/>
+<node TEXT="imitates adaptive attack paper" ID="ID_1487728187" CREATED="1652387986758" MODIFIED="1652387992706"/>
 </node>
 </node>
 <node TEXT="Adversarial Training" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1648174116710">
@@ -988,10 +998,10 @@
 <node TEXT="Explaining and harnessing adversarial examples." ID="ID_444955732" CREATED="1642455817682" MODIFIED="1642455817682">
 <node TEXT="see Attack/FGSM" ID="ID_1699730646" CREATED="1642455774488" MODIFIED="1642455811066"/>
 </node>
-</node>
 <node TEXT="RFGSM/AT" ID="ID_775433299" CREATED="1642455858471" MODIFIED="1642455865293">
 <node TEXT="Ensemble adversarial training: Attacks and defenses." ID="ID_850120172" CREATED="1642455866806" MODIFIED="1643412222998">
 <icon BUILTIN="unchecked"/>
+</node>
 </node>
 </node>
 <node TEXT="PGD/AT" ID="ID_882830443" CREATED="1641678605757" MODIFIED="1642441194136">
@@ -1006,12 +1016,26 @@
 </node>
 </node>
 </node>
+<node TEXT="Curriculum AT" ID="ID_373950173" CREATED="1643412302659" MODIFIED="1643412307668">
+<node TEXT="Curriculum Adversarial Training" ID="ID_285117304" CREATED="1643412309119" MODIFIED="1643413743828">
+<icon BUILTIN="checked"/>
+<node TEXT="ijcai18" ID="ID_1417853528" CREATED="1643412317231" MODIFIED="1643412322551"/>
+<node TEXT="gradually increase attack strengths, namely increase PGD steps. each strengths trains for 1 epoch." ID="ID_1208154605" CREATED="1643413745409" MODIFIED="1643413812902"/>
+</node>
+</node>
 <node TEXT="TRADES/AT" ID="ID_932779241" CREATED="1641678609578" MODIFIED="1643412167174">
-<node TEXT="theoretically principled trade-off between robustness and accuracy, ICML, 2019" ID="ID_1065469295" CREATED="1642369441439" MODIFIED="1642456049849">
+<node TEXT="theoretically principled trade-off between robustness and accuracy" ID="ID_1065469295" CREATED="1642369441439" MODIFIED="1652386047710">
 <icon BUILTIN="bookmark"/>
 <icon BUILTIN="unchecked"/>
+<node TEXT="ICML19" ID="ID_1723695982" CREATED="1652386039599" MODIFIED="1652386042121"/>
 <node TEXT="commonly used baseline" ID="ID_108968911" CREATED="1642449381855" MODIFIED="1642449388727">
 <icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node TEXT="TRADES+RST" ID="ID_293580920" CREATED="1652386032991" MODIFIED="1652386075191">
+<node TEXT="Understanding and Mitigating the Tradeoff Between Robustness and Accuracy" ID="ID_77099741" CREATED="1652386056406" MODIFIED="1652386064221">
+<icon BUILTIN="unchecked"/>
+<node TEXT="ICML20" ID="ID_75040895" CREATED="1652386065166" MODIFIED="1652386067542"/>
 </node>
 </node>
 </node>
@@ -1034,11 +1058,10 @@
 <node TEXT="Ian goodfellow" ID="ID_469721326" CREATED="1646671305592" MODIFIED="1646671309168"/>
 </node>
 </node>
-<node TEXT="Curriculum AT" ID="ID_373950173" CREATED="1643412302659" MODIFIED="1643412307668">
-<node TEXT="Curriculum Adversarial Training" ID="ID_285117304" CREATED="1643412309119" MODIFIED="1643413743828">
-<icon BUILTIN="checked"/>
-<node TEXT="ijcai18" ID="ID_1417853528" CREATED="1643412317231" MODIFIED="1643412322551"/>
-<node TEXT="gradually increase attack strengths, namely increase PGD steps. each strengths trains for 1 epoch." ID="ID_1208154605" CREATED="1643413745409" MODIFIED="1643413812902"/>
+<node TEXT="ADT" ID="ID_1571902293" CREATED="1652388120851" MODIFIED="1652388122352">
+<node TEXT="Adversarial Distributional Training for&#xa;Robust Deep Learning" ID="ID_1936320095" CREATED="1652388167238" MODIFIED="1652388169372">
+<icon BUILTIN="unchecked"/>
+<node TEXT="NIPS20" ID="ID_635784608" CREATED="1652388170184" MODIFIED="1652388178843"/>
 </node>
 </node>
 <node TEXT="GAT" ID="ID_1630974602" CREATED="1642449350297" MODIFIED="1642449352427">
@@ -1047,11 +1070,11 @@
 <icon BUILTIN="bookmark"/>
 <node TEXT="nips20" ID="ID_670378629" CREATED="1642456026381" MODIFIED="1642456030253"/>
 </node>
-</node>
 <node TEXT="GAIRAT" ID="ID_1795824577" CREATED="1642369428185" MODIFIED="1642441201215">
 <node TEXT="geometry-aware instance-reweighted adversarial training, iclr, 2020" ID="ID_255113727" CREATED="1642369496991" MODIFIED="1642441263816">
 <icon BUILTIN="unchecked"/>
 <node TEXT="iclr20" ID="ID_1152586640" CREATED="1643412171827" MODIFIED="1643412174065"/>
+</node>
 </node>
 </node>
 <node TEXT="NuAT" ID="ID_769833360" CREATED="1642449307525" MODIFIED="1642449312169">
@@ -1218,6 +1241,11 @@
 <node TEXT="the difference mainly distribute in the low frequency region" ID="ID_1463528486" CREATED="1648174164987" MODIFIED="1648174174874"/>
 <node TEXT="this looks like rejected CVPR paper" ID="ID_929525842" CREATED="1648174183328" MODIFIED="1648174192162"/>
 </node>
+<node TEXT="On the Loss Landscape of Adversarial Training:&#xa;Identifying Challenges and How to Overcome Them" ID="ID_1573445654" CREATED="1652385704648" MODIFIED="1652385714625">
+<icon BUILTIN="unchecked"/>
+<node TEXT="NIPS20" ID="ID_489847666" CREATED="1652385716393" MODIFIED="1652385718449"/>
+<node TEXT="local Lipschitz" ID="ID_1085120369" CREATED="1652385719423" MODIFIED="1652385723167"/>
+</node>
 </node>
 <node TEXT="Architecture" ID="ID_678438754" CREATED="1648336299559" MODIFIED="1648336302516">
 <node TEXT="Enhancing Classifier Conservativeness and Robustness by Polynomiality" ID="ID_1098684448" CREATED="1648336306289" MODIFIED="1648336446986">
@@ -1225,6 +1253,12 @@
 <node TEXT="CVPR22" ID="ID_1434170291" CREATED="1648336449172" MODIFIED="1648336451497"/>
 <node TEXT="change softmax function into softRmax" ID="ID_1077545148" CREATED="1648336452007" MODIFIED="1648336460004"/>
 <node TEXT="robustness without gradient obfuscation or gradient masking" ID="ID_1071224180" CREATED="1648336465198" MODIFIED="1648336477406"/>
+</node>
+</node>
+<node TEXT="Additional Data" ID="ID_1095198265" CREATED="1652386462667" MODIFIED="1652386465399">
+<node TEXT="Unlabeled Data Improves Adversarial Robustness" ID="ID_743548425" CREATED="1652386466043" MODIFIED="1652386493938">
+<icon BUILTIN="unchecked"/>
+<node TEXT="NIPS19" ID="ID_759747469" CREATED="1652386494843" MODIFIED="1652386496590"/>
 </node>
 </node>
 <node TEXT="Generative Replacement" ID="ID_814019873" CREATED="1642953253003" MODIFIED="1642953259726">
@@ -1459,6 +1493,24 @@
 <icon BUILTIN="info"/>
 </node>
 <node TEXT="JHXY papers" ID="ID_360388475" CREATED="1646923800655" MODIFIED="1646923804350"/>
+<node TEXT="LDS + VirtualAT" ID="ID_698882884" CREATED="1651779358642" MODIFIED="1652386374188">
+<node TEXT="Distributional Smoothing with Virtual Adversarial Training" ID="ID_938557766" CREATED="1651779356728" MODIFIED="1651779367519">
+<icon BUILTIN="unchecked"/>
+<node TEXT="semi-supervised" ID="ID_1433077149" CREATED="1651779379379" MODIFIED="1651779382415"/>
+<node TEXT="similar to adversarial training" ID="ID_803563320" CREATED="1651779371287" MODIFIED="1651779378875"/>
+</node>
+</node>
+<node TEXT="VAT" ID="ID_696619029" CREATED="1652386387000" MODIFIED="1652386393651">
+<node TEXT="Virtual Adversarial Training:&#xa;A Regularization Method for Supervised and&#xa;Semi-Supervised Learning" ID="ID_1462427172" CREATED="1652386394575" MODIFIED="1652386396842">
+<icon BUILTIN="unchecked"/>
+<node TEXT="TPAMI 17" ID="ID_143646316" CREATED="1652386397643" MODIFIED="1652386403583"/>
+</node>
+</node>
+<node TEXT="Disentangling Adversarial Robustness and Generalization" ID="ID_761696774" CREATED="1652386633645" MODIFIED="1652386636131">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR19" ID="ID_1805008376" CREATED="1652386636930" MODIFIED="1652386638697"/>
+<node TEXT="Hein" ID="ID_938433112" CREATED="1652386638888" MODIFIED="1652386641774"/>
+</node>
 <node TEXT="RDA: Robust Domain Adaptation via Fourier Adversarial Attacking" ID="ID_1835144084" CREATED="1646923479664" MODIFIED="1646923763844">
 <icon BUILTIN="unchecked"/>
 <node TEXT="iccv21" ID="ID_1579318074" CREATED="1646923481418" MODIFIED="1646923482999"/>
@@ -1478,13 +1530,6 @@
 <icon BUILTIN="unchecked"/>
 <icon BUILTIN="bookmark"/>
 <node TEXT="ICLR22, Alan" ID="ID_706047055" CREATED="1650809057964" MODIFIED="1650809065353"/>
-</node>
-<node TEXT="LDS / VirtualAT" ID="ID_698882884" CREATED="1651779358642" MODIFIED="1651779422834">
-<node TEXT="Distributional Smoothing with Virtual Adversarial Training" ID="ID_938557766" CREATED="1651779356728" MODIFIED="1651779367519">
-<icon BUILTIN="unchecked"/>
-<node TEXT="semi-supervised" ID="ID_1433077149" CREATED="1651779379379" MODIFIED="1651779382415"/>
-<node TEXT="similar to adversarial training" ID="ID_803563320" CREATED="1651779371287" MODIFIED="1651779378875"/>
-</node>
 </node>
 </node>
 <node TEXT="Text Classifiation" ID="ID_1972370487" CREATED="1652383484193" MODIFIED="1652383511660">
