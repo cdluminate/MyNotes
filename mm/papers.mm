@@ -766,6 +766,9 @@
 <node TEXT="on the real world adversarial robustness of real-time semantic segmentation models for autonomous driving" ID="ID_621290194" CREATED="1641523393314" MODIFIED="1641523426222">
 <icon BUILTIN="pencil"/>
 </node>
+<node TEXT="Detecting Localized Adversarial Examples: A&#xa;Generic Approach using Critical Region Analysis" ID="ID_655405044" CREATED="1652413130650" MODIFIED="1652413138859">
+<icon BUILTIN="pencil"/>
+</node>
 </node>
 <node TEXT="Perturbation Detection" ID="ID_983985712" CREATED="1641523884091" MODIFIED="1648419471576">
 <font BOLD="true"/>
@@ -817,10 +820,23 @@
 <node TEXT="energy distribution=based adversarial deteciton" ID="ID_1662739452" CREATED="1645108807054" MODIFIED="1645108816218"/>
 </node>
 </node>
-<node TEXT="Adversarial training" ID="ID_768588565" CREATED="1652412536553" MODIFIED="1652412539702">
+<node TEXT="Adversarial Training or Retraining" ID="ID_768588565" CREATED="1652412536553" MODIFIED="1652413286663">
 <node TEXT="GAT: Generative Adversarial Training for Adversarial Example Detection and Classification" ID="ID_413614979" CREATED="1652412540423" MODIFIED="1652412546610">
 <node TEXT="ICLR20" ID="ID_271924058" CREATED="1652412547571" MODIFIED="1652412549279"/>
-<node TEXT="requires adversarial training" ID="ID_777620833" CREATED="1652412549476" MODIFIED="1652412553308"/>
+<node TEXT="requires adversarial training" ID="ID_777620833" CREATED="1652412549476" MODIFIED="1652413423892">
+<icon BUILTIN="button_cancel"/>
+</node>
+</node>
+<node TEXT="Towards Robust Detection of Adversarial Examples" ID="ID_1959698185" CREATED="1652413287689" MODIFIED="1652413300238">
+<node TEXT="NIPS18" ID="ID_1664966334" CREATED="1652413301007" MODIFIED="1652413302735">
+<node TEXT="Jun Zhu" ID="ID_240279502" CREATED="1652413413727" MODIFIED="1652413417521"/>
+</node>
+<node TEXT="requires re-training and loss change" ID="ID_41551698" CREATED="1652413302922" MODIFIED="1652413426655">
+<icon BUILTIN="button_cancel"/>
+</node>
+<node TEXT="lacks Imagenet eval" ID="ID_229245948" CREATED="1652413311127" MODIFIED="1652413403270">
+<icon BUILTIN="button_cancel"/>
+</node>
 </node>
 </node>
 <node TEXT="Secondary Classification" ID="ID_414846675" CREATED="1648658663751" MODIFIED="1648664859598">
@@ -913,12 +929,11 @@
 <node TEXT="Carlini" ID="ID_1261642556" CREATED="1649721735265" MODIFIED="1649721737050"/>
 </node>
 </node>
-<node TEXT="mutual information" ID="ID_1242119314" CREATED="1649722533818" MODIFIED="1649722536571">
 <node TEXT="Understanding Measures of Uncertainty for Adversarial Example Detection" ID="ID_383293634" CREATED="1649722538116" MODIFIED="1649722553172">
-<node TEXT="UAI 2018" ID="ID_1815193457" CREATED="1649722554158" MODIFIED="1649722556824">
+<node TEXT="UAI 2018" ID="ID_1815193457" CREATED="1649722554158" MODIFIED="1649722556824"/>
 <node TEXT="no-topconf" ID="ID_297677658" CREATED="1649722569121" MODIFIED="1649722571381"/>
-<node TEXT="want to skip" ID="ID_539424882" CREATED="1649723336786" MODIFIED="1649723339342"/>
-</node>
+<node TEXT="The Roc curves in figure 14 are questionable... the curve does down by the diagonal... which seems definitely wrong" ID="ID_1518418746" CREATED="1652413581283" MODIFIED="1652413613340">
+<icon BUILTIN="button_cancel"/>
 </node>
 </node>
 </node>
