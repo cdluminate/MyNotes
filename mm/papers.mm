@@ -877,11 +877,26 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
+<node TEXT="SafetyNet: Detecting and Rejecting Adversarial Examples Robustly" ID="ID_1884696344" CREATED="1652470624026" MODIFIED="1652470633327">
+<node TEXT="ICCV17" ID="ID_1573395527" CREATED="1652470634144" MODIFIED="1652470636095"/>
+<node TEXT="consistency after modifying input" ID="ID_607783434" CREATED="1652470636372" MODIFIED="1652470646727"/>
+<node TEXT="should compare with advtrace" ID="ID_1908802534" CREATED="1652470647682" MODIFIED="1652470652455">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
 <node TEXT="The Odds are Odd:&#xa;A Statistical Test for Detecting Adversarial Examples" ID="ID_480115952" CREATED="1652417603321" MODIFIED="1652417604467">
 <node TEXT="ICML19" ID="ID_1571604665" CREATED="1652417606554" MODIFIED="1652417609800"/>
 <node TEXT="has imagenet evaluation" ID="ID_875485912" CREATED="1652417610867" MODIFIED="1652417613767"/>
 <node TEXT="can correct label" ID="ID_414060962" CREATED="1652417613979" MODIFIED="1652417616919"/>
 <node TEXT="should compare with advtrace" ID="ID_115871974" CREATED="1652417617273" MODIFIED="1652417623494">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node TEXT="Detection of Adversarial Examples in Deep Neural&#xa;Networks with Natural Scene Statistics" ID="ID_758313134" CREATED="1652466658885" MODIFIED="1652466659678">
+<node TEXT="IJCNN 20" ID="ID_1854245339" CREATED="1652466660910" MODIFIED="1652466686440"/>
+<node TEXT="Natural Scene Statistics (NSS)" ID="ID_1882366566" CREATED="1652466719297" MODIFIED="1652466755378"/>
+<node TEXT="100 detection accuracy" ID="ID_1468405551" CREATED="1652466916518" MODIFIED="1652466921631"/>
+<node TEXT="should compare with advtrace" ID="ID_1867289169" CREATED="1652467013216" MODIFIED="1652467019152">
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
