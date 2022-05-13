@@ -957,7 +957,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
+<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_1556055508" CREATED="1648173325254" MODIFIED="1648173329845">
 <icon BUILTIN="info"/>
@@ -2825,49 +2825,6 @@
 <edge COLOR="#ff00ff"/>
 <node TEXT="Probing Representation Forgetting in Supervised and Unsupervised Continual Learning" ID="ID_73452629" CREATED="1649110278617" MODIFIED="1649110284775"/>
 </node>
-<node TEXT="Contrastive Learning Image" FOLDED="true" POSITION="left" ID="ID_1556051530" CREATED="1646924377310" MODIFIED="1649102780269">
-<edge COLOR="#7c007c"/>
-<node TEXT="Self-Damaging Contrastive Learning" ID="ID_374319956" CREATED="1646924383175" MODIFIED="1646924388224">
-<node TEXT="icml21" ID="ID_1688743346" CREATED="1646924391163" MODIFIED="1646924393200"/>
-<node TEXT="create a dynamic self-competitor model to contrast with the target model, which is a pruned version of the latter. during training, contrasting the two models will lead to adaptive online mining of the most easily forgotten samples for the current target model, and implicitly emphasize them more in the contrastive loss" ID="ID_1977443801" CREATED="1646924393453" MODIFIED="1646924451450"/>
-</node>
-<node TEXT="BatchFormer: Learning to Explore Sample Relationships for Robust Representation Learning" ID="ID_1047906963" CREATED="1646937425094" MODIFIED="1646937435486">
-<icon BUILTIN="unchecked"/>
-<node TEXT="cvpr22" ID="ID_1302140754" CREATED="1646937436755" MODIFIED="1646937438057"/>
-</node>
-<node TEXT="Adversarial Masking for Self-Supervised Learning" ID="ID_161503963" CREATED="1644181760956" MODIFIED="1644181769832">
-<icon BUILTIN="pencil"/>
-</node>
-<node TEXT="Self-Supervised Image Representation Learning with Geometric Set Consistency" ID="ID_504378487" CREATED="1649104770916" MODIFIED="1649104771843">
-<node TEXT="CVPR22" ID="ID_1149198306" CREATED="1649104772859" MODIFIED="1649104773959"/>
-<node TEXT="under the guidance of 3D geometric consistency" ID="ID_1279411864" CREATED="1649104781206" MODIFIED="1649104789146"/>
-</node>
-<node TEXT="Rethinking Minimal Sufficient Representation in Contrastive Learning" ID="ID_1841880552" CREATED="1649167986341" MODIFIED="1649167986833">
-<node TEXT="CVPR22" ID="ID_724279159" CREATED="1649167988007" MODIFIED="1649167990006"/>
-<node TEXT="since all supervision information for one view comes from the other view, contrastive learning approximately obtains the manimal sufficient representation which contains the shared information and eliminates the non-shared information between views" ID="ID_257277147" CREATED="1649167993722" MODIFIED="1649168038621"/>
-<node TEXT="consifering the diversity of the down stream tasks, it cannot be guaranteeed that all ttask-relevant information is shared betwen views" ID="ID_1688262861" CREATED="1649168038849" MODIFIED="1649168055121"/>
-</node>
-<node TEXT="Unified Contrastive Learning in Image-Text-Label Space" ID="ID_520382759" CREATED="1649623175917" MODIFIED="1649623182532">
-<icon BUILTIN="unchecked"/>
-<node TEXT="CVPR22" ID="ID_1550402425" CREATED="1649623178078" MODIFIED="1649623179606"/>
-</node>
-<node TEXT="On the Importance of Asymmetry for Siamese Representation Learning" ID="ID_1127640615" CREATED="1649624328307" MODIFIED="1649624329557">
-<node TEXT="CVPR22" ID="ID_123639312" CREATED="1649624332043" MODIFIED="1649624333693"/>
-</node>
-</node>
-<node TEXT="Contrastive Learning Video" FOLDED="true" POSITION="left" ID="ID_1516905874" CREATED="1649102713240" MODIFIED="1649102717961">
-<edge COLOR="#007c00"/>
-<node TEXT="sound and visual representation learning with multiple pretraining tasks" ID="ID_1372709479" CREATED="1641524234751" MODIFIED="1641524246105">
-<icon BUILTIN="pencil"/>
-</node>
-<node TEXT="Frame-wise Action Representations for Long Videos via Sequence Contrastive Learning" ID="ID_1235235307" CREATED="1649102802918" MODIFIED="1649102803748">
-<node TEXT="CVPR22" ID="ID_1379516385" CREATED="1649102806472" MODIFIED="1649102807610"/>
-<node TEXT="Sequence contrastive learning" ID="ID_413817863" CREATED="1649102807882" MODIFIED="1649102813865"/>
-</node>
-<node TEXT="CenterCLIP: Token Clustering for Efficient Text-Video Retrieval" ID="ID_391932937" CREATED="1651952987924" MODIFIED="1651952988800">
-<node TEXT="SIGIR" ID="ID_787589457" CREATED="1651952989777" MODIFIED="1651952991331"/>
-</node>
-</node>
 <node TEXT="Cross-Modal Retrieval" FOLDED="true" POSITION="left" ID="ID_22749108" CREATED="1576988430324" MODIFIED="1642431082632">
 <font NAME="Gentium" BOLD="false"/>
 <edge COLOR="#7c0000"/>
@@ -3671,8 +3628,49 @@
 <node TEXT="generic representation learning, involving both CV and CL" ID="ID_1395139495" CREATED="1650825945439" MODIFIED="1650825953912"/>
 </node>
 </node>
-<node TEXT="Image" ID="ID_1689929083" CREATED="1651953560888" MODIFIED="1651953563600"/>
-<node TEXT="Video" ID="ID_846495733" CREATED="1651953564450" MODIFIED="1651953566383">
+<node TEXT="Contrastive Learning Image" ID="ID_1556051530" CREATED="1646924377310" MODIFIED="1652404146054">
+<node TEXT="Self-Damaging Contrastive Learning" ID="ID_374319956" CREATED="1646924383175" MODIFIED="1646924388224">
+<node TEXT="icml21" ID="ID_1688743346" CREATED="1646924391163" MODIFIED="1646924393200"/>
+<node TEXT="create a dynamic self-competitor model to contrast with the target model, which is a pruned version of the latter. during training, contrasting the two models will lead to adaptive online mining of the most easily forgotten samples for the current target model, and implicitly emphasize them more in the contrastive loss" ID="ID_1977443801" CREATED="1646924393453" MODIFIED="1646924451450"/>
+</node>
+<node TEXT="BatchFormer: Learning to Explore Sample Relationships for Robust Representation Learning" ID="ID_1047906963" CREATED="1646937425094" MODIFIED="1646937435486">
+<icon BUILTIN="unchecked"/>
+<node TEXT="cvpr22" ID="ID_1302140754" CREATED="1646937436755" MODIFIED="1646937438057"/>
+</node>
+<node TEXT="Adversarial Masking for Self-Supervised Learning" ID="ID_161503963" CREATED="1644181760956" MODIFIED="1644181769832">
+<icon BUILTIN="pencil"/>
+</node>
+<node TEXT="Self-Supervised Image Representation Learning with Geometric Set Consistency" ID="ID_504378487" CREATED="1649104770916" MODIFIED="1649104771843">
+<node TEXT="CVPR22" ID="ID_1149198306" CREATED="1649104772859" MODIFIED="1649104773959"/>
+<node TEXT="under the guidance of 3D geometric consistency" ID="ID_1279411864" CREATED="1649104781206" MODIFIED="1649104789146"/>
+</node>
+<node TEXT="Rethinking Minimal Sufficient Representation in Contrastive Learning" ID="ID_1841880552" CREATED="1649167986341" MODIFIED="1649167986833">
+<node TEXT="CVPR22" ID="ID_724279159" CREATED="1649167988007" MODIFIED="1649167990006"/>
+<node TEXT="since all supervision information for one view comes from the other view, contrastive learning approximately obtains the manimal sufficient representation which contains the shared information and eliminates the non-shared information between views" ID="ID_257277147" CREATED="1649167993722" MODIFIED="1649168038621"/>
+<node TEXT="consifering the diversity of the down stream tasks, it cannot be guaranteeed that all ttask-relevant information is shared betwen views" ID="ID_1688262861" CREATED="1649168038849" MODIFIED="1649168055121"/>
+</node>
+<node TEXT="Unified Contrastive Learning in Image-Text-Label Space" ID="ID_520382759" CREATED="1649623175917" MODIFIED="1649623182532">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_1550402425" CREATED="1649623178078" MODIFIED="1649623179606"/>
+</node>
+<node TEXT="On the Importance of Asymmetry for Siamese Representation Learning" ID="ID_1127640615" CREATED="1649624328307" MODIFIED="1649624329557">
+<node TEXT="CVPR22" ID="ID_123639312" CREATED="1649624332043" MODIFIED="1649624333693"/>
+</node>
+<node TEXT="Use All The Labels: A Hierarchical Multi-Label Contrastive Learning Framework" ID="ID_1062716650" CREATED="1652404192259" MODIFIED="1652404192706">
+<node TEXT="CVPR22" ID="ID_1803319439" CREATED="1652404193774" MODIFIED="1652404194847"/>
+</node>
+</node>
+<node TEXT="Contrastive Learning Video" ID="ID_1516905874" CREATED="1649102713240" MODIFIED="1652404149496">
+<node TEXT="sound and visual representation learning with multiple pretraining tasks" ID="ID_1372709479" CREATED="1641524234751" MODIFIED="1641524246105">
+<icon BUILTIN="pencil"/>
+</node>
+<node TEXT="Frame-wise Action Representations for Long Videos via Sequence Contrastive Learning" ID="ID_1235235307" CREATED="1649102802918" MODIFIED="1649102803748">
+<node TEXT="CVPR22" ID="ID_1379516385" CREATED="1649102806472" MODIFIED="1649102807610"/>
+<node TEXT="Sequence contrastive learning" ID="ID_413817863" CREATED="1649102807882" MODIFIED="1649102813865"/>
+</node>
+<node TEXT="CenterCLIP: Token Clustering for Efficient Text-Video Retrieval" ID="ID_391932937" CREATED="1651952987924" MODIFIED="1651952988800">
+<node TEXT="SIGIR" ID="ID_787589457" CREATED="1651952989777" MODIFIED="1651952991331"/>
+</node>
 <node TEXT="TransRank: Self-supervised Video Representation Learning&#xa;via Ranking-based Transformation Recognition" ID="ID_746328177" CREATED="1651953611730" MODIFIED="1651953612644">
 <node TEXT="CVPR22" ID="ID_516236195" CREATED="1651953613554" MODIFIED="1651953614875"/>
 </node>
