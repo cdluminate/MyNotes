@@ -370,6 +370,13 @@
 <node TEXT="(1) targeted adversarial examples -- optimized to be classified as a chosen target class tend to be less transferable between architecutres" ID="ID_743139998" CREATED="1651096901839" MODIFIED="1651096923673"/>
 <node TEXT="(2) training the source classifier to be slightly robust substantially improves the transferability of class-targeted and representation-targeted adversarial attacks, even between architectures as different as convolutional and transformers." ID="ID_708495525" CREATED="1651096923943" MODIFIED="1651096970776"/>
 </node>
+<node TEXT="Boosting Adversarial Transferability of MLP-Mixer" ID="ID_1647127268" CREATED="1652401331014" MODIFIED="1652401333518">
+<icon BUILTIN="pencil"/>
+<node TEXT="2022" OBJECT="java.lang.Long|2022" ID="ID_1517117653" CREATED="1652401337780" MODIFIED="1652401340254"/>
+</node>
+<node TEXT="Improving the Transferability of Adversarial Examples with Restructure Embedded Patches" ID="ID_257547251" CREATED="1652403432218" MODIFIED="1652403434112">
+<icon BUILTIN="pencil"/>
+</node>
 </node>
 <node TEXT="Universal Perturbation" ID="ID_883577858" CREATED="1641522438698" MODIFIED="1641522443789">
 <node TEXT="on distinctive properties of universal perturbations (madry)" ID="ID_224581737" CREATED="1641522458794" MODIFIED="1641743879665">
@@ -505,13 +512,17 @@
 <node TEXT="CVPR22" ID="ID_1406333374" CREATED="1648388505250" MODIFIED="1648388506538"/>
 </node>
 </node>
-<node TEXT="Cross-Modal Retrieval (Hashing)" ID="ID_1507222099" CREATED="1651105161638" MODIFIED="1651105184400">
+<node TEXT="Hashing" ID="ID_1507222099" CREATED="1651105161638" MODIFIED="1652400526012">
 <node TEXT="Cross-Modal Learning with Adversarial Samples" ID="ID_1336939841" CREATED="1651105185270" MODIFIED="1651105204976">
 <icon BUILTIN="unchecked"/>
 <node TEXT="NIPS19, Xidian" ID="ID_134983511" CREATED="1651105192313" MODIFIED="1651105196409"/>
 <node TEXT="similar to advrank" ID="ID_792191213" CREATED="1651105196662" MODIFIED="1651105202706">
 <icon BUILTIN="info"/>
 </node>
+</node>
+<node TEXT="You See What I Want You to See: Exploring Targeted Black-Box Transferability&#xa;Attack for Hash-based Image Retrieval Systems" ID="ID_610972112" CREATED="1652400527266" MODIFIED="1652400535340">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR21" ID="ID_1602396229" CREATED="1652400536589" MODIFIED="1652400538627"/>
 </node>
 </node>
 <node TEXT="Face Recog" ID="ID_1806006397" CREATED="1642368429380" MODIFIED="1642965654306">
@@ -559,6 +570,26 @@
 <node TEXT="Jun Zhu" ID="ID_343713912" CREATED="1648396443230" MODIFIED="1648396463845"/>
 </node>
 </node>
+<node TEXT="Action Recognition" ID="ID_1024637428" CREATED="1652385248018" MODIFIED="1652385250882">
+<node TEXT="BASAR:Black-box Attack on Skeletal Action Recognition" ID="ID_1522399852" CREATED="1652385251738" MODIFIED="1652385257416">
+<node TEXT="CVPR21" ID="ID_1922762713" CREATED="1652385260947" MODIFIED="1652385263160"/>
+</node>
+<node TEXT="Finding Achilles&apos; Heel: Adversarial Attack on Multi-modal Action Recognition" ID="ID_1543219948" CREATED="1652390538680" MODIFIED="1652390539616"/>
+</node>
+<node TEXT="Deep Fake" ID="ID_123845244" CREATED="1649106133977" MODIFIED="1652403031256">
+<node TEXT="Exploring Frequency Adversarial Attacks for Face Forgery Detection" ID="ID_1469136743" CREATED="1649106141942" MODIFIED="1649106147499">
+<node TEXT="CVPR22" ID="ID_381395410" CREATED="1649106206179" MODIFIED="1649106207558"/>
+</node>
+<node TEXT="2004.00622 Evading Deepfake-Image Detectors with White- and Black-Box Attacks" ID="ID_609816375" CREATED="1590804661430" MODIFIED="1590804670862"/>
+<node TEXT="Restricted Black-box Adversarial Attack Against DeepFake Face Swapping" ID="ID_514211440" CREATED="1652403059016" MODIFIED="1652403067240">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Derain" ID="ID_690819450" CREATED="1649106593249" MODIFIED="1649106595511">
+<node TEXT="Towards Robust Rain Removal Against Adversarial Attacks: A Comprehensive Benchmark Analysis and Beyond" ID="ID_1582771617" CREATED="1649106596203" MODIFIED="1649106604716">
+<node TEXT="CVPR22" ID="ID_1289469191" CREATED="1649106606171" MODIFIED="1649106607363"/>
+</node>
+</node>
 <node TEXT="Multi-label Prediction" ID="ID_1211679974" CREATED="1647568084959" MODIFIED="1648388483965">
 <icon BUILTIN="button_ok"/>
 <node TEXT="tkml-ap: adversarial attacks to top-k multi-label learning" ID="ID_768468346" CREATED="1647568102113" MODIFIED="1647568115332">
@@ -570,12 +601,6 @@
 <icon BUILTIN="yes"/>
 </node>
 </node>
-</node>
-<node TEXT="Action Recognition" ID="ID_1024637428" CREATED="1652385248018" MODIFIED="1652385250882">
-<node TEXT="BASAR:Black-box Attack on Skeletal Action Recognition" ID="ID_1522399852" CREATED="1652385251738" MODIFIED="1652385257416">
-<node TEXT="CVPR21" ID="ID_1922762713" CREATED="1652385260947" MODIFIED="1652385263160"/>
-</node>
-<node TEXT="Finding Achilles&apos; Heel: Adversarial Attack on Multi-modal Action Recognition" ID="ID_1543219948" CREATED="1652390538680" MODIFIED="1652390539616"/>
 </node>
 <node TEXT="Object Detection" ID="ID_601426743" CREATED="1642440732047" MODIFIED="1647267114123">
 <node ID="ID_1033919012" CREATED="1642440745175" MODIFIED="1642440749146">
@@ -635,6 +660,12 @@
 </node>
 <node TEXT="Universal Adversarial Examples in Remote Sensing: Methodology and Benchmark" ID="ID_1566703454" CREATED="1646945260207" MODIFIED="1646945261393"/>
 </node>
+<node TEXT="Sponge Attack" ID="ID_579695162" CREATED="1649126139602" MODIFIED="1649126143868">
+<node TEXT="Energy-Latency Attacks via Sponge Poisoning" ID="ID_1762498833" CREATED="1649126144627" MODIFIED="1649126153017">
+<icon BUILTIN="pencil"/>
+<node TEXT="increase energy consumption" ID="ID_1483642661" CREATED="1649126154047" MODIFIED="1649126161988"/>
+</node>
+</node>
 <node TEXT="Tracking" ID="ID_404459343" CREATED="1644181489904" MODIFIED="1644181494136"/>
 <node TEXT="Trajectory Prediction" ID="ID_1501279328" CREATED="1642953386986" MODIFIED="1642965658792">
 <node ID="ID_1380187352" CREATED="1642953399320" MODIFIED="1642953401824">
@@ -665,23 +696,6 @@
 </node>
 <node TEXT="on the robustness of domain adaption to adversarial attacks" ID="ID_1358706166" CREATED="1647567673533" MODIFIED="1647567685949">
 <icon BUILTIN="pencil"/>
-</node>
-</node>
-<node TEXT="Deep Fake Detector" ID="ID_123845244" CREATED="1649106133977" MODIFIED="1649106141182">
-<node TEXT="Exploring Frequency Adversarial Attacks for Face Forgery Detection" ID="ID_1469136743" CREATED="1649106141942" MODIFIED="1649106147499">
-<node TEXT="CVPR22" ID="ID_381395410" CREATED="1649106206179" MODIFIED="1649106207558"/>
-</node>
-<node TEXT="2004.00622 Evading Deepfake-Image Detectors with White- and Black-Box Attacks" ID="ID_609816375" CREATED="1590804661430" MODIFIED="1590804670862"/>
-</node>
-<node TEXT="Derain" ID="ID_690819450" CREATED="1649106593249" MODIFIED="1649106595511">
-<node TEXT="Towards Robust Rain Removal Against Adversarial Attacks: A Comprehensive Benchmark Analysis and Beyond" ID="ID_1582771617" CREATED="1649106596203" MODIFIED="1649106604716">
-<node TEXT="CVPR22" ID="ID_1289469191" CREATED="1649106606171" MODIFIED="1649106607363"/>
-</node>
-</node>
-<node TEXT="Sponge Attack" ID="ID_579695162" CREATED="1649126139602" MODIFIED="1649126143868">
-<node TEXT="Energy-Latency Attacks via Sponge Poisoning" ID="ID_1762498833" CREATED="1649126144627" MODIFIED="1649126153017">
-<icon BUILTIN="pencil"/>
-<node TEXT="increase energy consumption" ID="ID_1483642661" CREATED="1649126154047" MODIFIED="1649126161988"/>
 </node>
 </node>
 </node>
@@ -943,7 +957,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
+<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_1556055508" CREATED="1648173325254" MODIFIED="1648173329845">
 <icon BUILTIN="info"/>
@@ -1324,6 +1338,13 @@
 <icon BUILTIN="bookmark"/>
 <node TEXT="ICLR22, Alan" ID="ID_706047055" CREATED="1650809057964" MODIFIED="1650809065353"/>
 </node>
+<node TEXT="Adversarial Fine-tune with Dynamically Regulated Adversary" ID="ID_1310517906" CREATED="1652403651966" MODIFIED="1652403654504">
+<icon BUILTIN="pencil"/>
+<node TEXT="preserve accuracy" ID="ID_414891468" CREATED="1652403655341" MODIFIED="1652403660297"/>
+<node TEXT="useful for robface project" ID="ID_1879091584" CREATED="1652403660508" MODIFIED="1652403674344">
+<icon BUILTIN="info"/>
+</node>
+</node>
 </node>
 <node TEXT="Certified Robustness" ID="ID_636878532" CREATED="1641743555483" MODIFIED="1651777660583">
 <node TEXT="Survey" ID="ID_1129138903" CREATED="1652390979779" MODIFIED="1652391000611">
@@ -1557,6 +1578,10 @@
 <node TEXT="CVPR22, Rama" ID="ID_791015543" CREATED="1651106462507" MODIFIED="1651106466241"/>
 <node TEXT="Object Detection" ID="ID_913953101" CREATED="1651106467157" MODIFIED="1651106469805"/>
 </node>
+<node TEXT="Certified Patch Robustness via Smoothed&#xa;Vision Transformers" ID="ID_1393882387" CREATED="1652400808342" MODIFIED="1652400810377">
+<icon BUILTIN="unchecked"/>
+<node TEXT="Madry" ID="ID_863710066" CREATED="1652400811169" MODIFIED="1652400813869"/>
+</node>
 </node>
 <node TEXT="Pruning" ID="ID_391041991" CREATED="1649633795729" MODIFIED="1649633798101">
 <node TEXT="Masking Adversarial Damage: Finding Adversarial Saliency for Robust and Sparse Network" ID="ID_688752599" CREATED="1649633799104" MODIFIED="1649633804914">
@@ -1623,6 +1648,10 @@
 <node TEXT="Object Detection" ID="ID_1293793866" CREATED="1649169048366" MODIFIED="1649169051401">
 <node TEXT="Defending From Physically-Realizable Adversarial Attacks Through Internal Over-Activation Analysis" ID="ID_1601765509" CREATED="1649169051973" MODIFIED="1649169053897">
 <icon BUILTIN="pencil"/>
+</node>
+<node TEXT="Defending Against Person Hiding Adversarial Patch Attack with a Universal White Frame" ID="ID_1354705736" CREATED="1652403552952" MODIFIED="1652403560360">
+<icon BUILTIN="pencil"/>
+<node TEXT="rejected by NIPS21" ID="ID_1706619708" CREATED="1652403561081" MODIFIED="1652403565159"/>
 </node>
 </node>
 <node TEXT="Multi-Task learning" ID="ID_1182441257" CREATED="1642442091094" MODIFIED="1642965600653">
@@ -1775,6 +1804,9 @@
 <node TEXT="CVPR22" ID="ID_1580181622" CREATED="1649101716937" MODIFIED="1649101718166"/>
 </node>
 </node>
+<node TEXT="Adaptive Split-Fusion Transformer" ID="ID_315100861" CREATED="1652401232769" MODIFIED="1652401236117">
+<icon BUILTIN="pencil"/>
+</node>
 </node>
 <node TEXT="Capsule Net" ID="ID_1659335587" CREATED="1645045179791" MODIFIED="1645045184178">
 <node TEXT="quantum capsule networks" ID="ID_1165020573" CREATED="1641523224758" MODIFIED="1641523259186">
@@ -1825,28 +1857,6 @@
 <node TEXT="extension to focal loss" ID="ID_942111109" CREATED="1647265807566" MODIFIED="1647265821995"/>
 </node>
 </node>
-<node TEXT="Data Augmentation" ID="ID_1121776606" CREATED="1643057931229" MODIFIED="1643057946544">
-<node ID="ID_1264772918" CREATED="1643057954153" MODIFIED="1643057958105">
-<icon BUILTIN="unchecked"/>
-<richcontent TYPE="NODE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    On Feature Normalization and Data Augmentation
-  </body>
-</html>
-</richcontent>
-<node TEXT="cvpr21" ID="ID_109505516" CREATED="1643057959966" MODIFIED="1643057961249"/>
-<node TEXT="the moments are often removed (e.g. mean and stdev)" ID="ID_776849456" CREATED="1643057961500" MODIFIED="1643057991230"/>
-<node TEXT="but moments extracted from instance normalization and positional normalization can roughly capture style and shape information of an image" ID="ID_1102689926" CREATED="1643057991834" MODIFIED="1643058019401"/>
-</node>
-<node TEXT="Deep AutoAugment" ID="ID_1383049991" CREATED="1649130129509" MODIFIED="1649130129980">
-<node TEXT="ICLR22" ID="ID_1196117385" CREATED="1649130131526" MODIFIED="1649130135185"/>
-</node>
-</node>
 <node TEXT="Long-Tail" ID="ID_314928185" CREATED="1649104418933" MODIFIED="1649104421848">
 <node TEXT="Nested Collaborative Learning for Long-Tailed Visual Recognition" ID="ID_908771433" CREATED="1649104478693" MODIFIED="1649104479517">
 <node TEXT="CVPR22" ID="ID_1585249354" CREATED="1649104480327" MODIFIED="1649104481946"/>
@@ -1872,9 +1882,41 @@
 </node>
 </node>
 <node TEXT="Regularization" ID="ID_277201350" CREATED="1652383343786" MODIFIED="1652383346875">
+<node TEXT="Data Augmentation" ID="ID_1121776606" CREATED="1643057931229" MODIFIED="1643057946544">
+<node ID="ID_1264772918" CREATED="1643057954153" MODIFIED="1643057958105">
+<icon BUILTIN="unchecked"/>
+<richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    On Feature Normalization and Data Augmentation
+  </body>
+</html>
+</richcontent>
+<node TEXT="cvpr21" ID="ID_109505516" CREATED="1643057959966" MODIFIED="1643057961249"/>
+<node TEXT="the moments are often removed (e.g. mean and stdev)" ID="ID_776849456" CREATED="1643057961500" MODIFIED="1643057991230"/>
+<node TEXT="but moments extracted from instance normalization and positional normalization can roughly capture style and shape information of an image" ID="ID_1102689926" CREATED="1643057991834" MODIFIED="1643058019401"/>
+</node>
+<node TEXT="Deep AutoAugment" ID="ID_1383049991" CREATED="1649130129509" MODIFIED="1649130129980">
+<node TEXT="ICLR22" ID="ID_1196117385" CREATED="1649130131526" MODIFIED="1649130135185"/>
+</node>
+</node>
+<node TEXT="Regularization" ID="ID_1344390864" CREATED="1652401123503" MODIFIED="1652401127762">
 <node TEXT="Regularizing Neural Networks via Adversarial Model Perturbation" ID="ID_321938074" CREATED="1652383357338" MODIFIED="1652383359351">
 <icon BUILTIN="unchecked"/>
 <node TEXT="CVPR21" ID="ID_1992628429" CREATED="1652383360278" MODIFIED="1652383361397"/>
+</node>
+</node>
+<node TEXT="Natural Corruption" ID="ID_28401889" CREATED="1652401091594" MODIFIED="1652401143417">
+<node TEXT="Deeper Insights into ViTs Robustness towards&#xa;Common Corruptions" ID="ID_567021160" CREATED="1652401144086" MODIFIED="1652401168378">
+<icon BUILTIN="pencil"/>
+</node>
+<node TEXT="Understanding The Robustness in Vision Transformers" ID="ID_255240365" CREATED="1652403100297" MODIFIED="1652403107057">
+<icon BUILTIN="pencil"/>
+</node>
 </node>
 </node>
 </node>
@@ -2038,6 +2080,30 @@
 <node TEXT="Face Identification by default." ID="ID_1812222459" CREATED="1651184495295" MODIFIED="1651184504310">
 <icon BUILTIN="info"/>
 </node>
+<node TEXT="?" ID="ID_1110446588" CREATED="1643132611953" MODIFIED="1652403477029">
+<node TEXT="Rethinking feature discrimination and polymerization for large-scale recognition" ID="ID_952906687" CREATED="1643132616302" MODIFIED="1643132624041">
+<icon BUILTIN="unchecked"/>
+</node>
+<node TEXT="L2-constrained softmax loss for discriminative face verification" ID="ID_1859004489" CREATED="1643132643711" MODIFIED="1643132824906">
+<icon BUILTIN="unchecked"/>
+</node>
+<node TEXT="Deepface: Closing the gap to human-level performance in face verification" ID="ID_380808482" CREATED="1643132687451" MODIFIED="1643132826578">
+<icon BUILTIN="unchecked"/>
+</node>
+<node TEXT=" Deep learning face representation from predicting 10,000 classes" ID="ID_743085930" CREATED="1643132700263" MODIFIED="1643132828298">
+<icon BUILTIN="unchecked"/>
+</node>
+<node TEXT="Large-Margin Softmax Loss for Convolutional Neural Networks" ID="ID_1455743436" CREATED="1643132782704" MODIFIED="1643132830122">
+<icon BUILTIN="unchecked"/>
+</node>
+<node TEXT="A discriminative feature learning approach for deep face recognition" ID="ID_531526310" CREATED="1643132817470" MODIFIED="1643132831906">
+<icon BUILTIN="unchecked"/>
+<node TEXT="center loss" ID="ID_485839035" CREATED="1643132819959" MODIFIED="1643132822269"/>
+</node>
+<node TEXT="Range loss for deep face recognition with long-tail" ID="ID_1684893432" CREATED="1643133019948" MODIFIED="1643133022451">
+<icon BUILTIN="unchecked"/>
+</node>
+</node>
 <node TEXT="Dataset" ID="ID_180339389" CREATED="1641503238612" MODIFIED="1641520995596">
 <font NAME="Gentium"/>
 <node TEXT="Train" ID="ID_1770192462" CREATED="1651184251978" MODIFIED="1651184253253">
@@ -2198,21 +2264,6 @@
 </node>
 </node>
 <node TEXT="Face Verification" ID="ID_33628603" CREATED="1651184509665" MODIFIED="1651184513925"/>
-<node TEXT="Presentation Attack" ID="ID_1220965554" CREATED="1647263407466" MODIFIED="1647263410801">
-<node TEXT="A Comprehensive Evaluation on Multi-channel Biometric Face Presentation Attack Detection" ID="ID_416818544" CREATED="1647263412576" MODIFIED="1647263436771">
-<icon BUILTIN="pencil"/>
-<node TEXT="NOT adversarial" ID="ID_1648225673" CREATED="1647263438995" MODIFIED="1647263589913">
-<icon BUILTIN="yes"/>
-<font BOLD="false"/>
-</node>
-<node TEXT="multi-channel system can improve robustness" ID="ID_19551169" CREATED="1647263447220" MODIFIED="1647263454911"/>
-<node TEXT="(1) network architecture extension for adapting multi-channel" ID="ID_1875690409" CREATED="1647263523083" MODIFIED="1647263560530"/>
-<node TEXT="(2) preprocessing of input data" ID="ID_438813602" CREATED="1647263563617" MODIFIED="1647263571988"/>
-</node>
-<node TEXT="Style-Guided Domain Adaptation for Face Presentation Attack Detection" ID="ID_31042759" CREATED="1649101964446" MODIFIED="1649101974147">
-<icon BUILTIN="pencil"/>
-</node>
-</node>
 <node TEXT="Key Point" ID="ID_1651017374" CREATED="1650830438788" MODIFIED="1650830442804">
 <node TEXT="Not All Tokens Are Equal: Human-centric Visual Analysis via&#xa;Token Clustering Transformer" ID="ID_1267200711" CREATED="1650830443573" MODIFIED="1650830471615">
 <icon BUILTIN="bookmark"/>
@@ -2227,31 +2278,6 @@
 </node>
 <node TEXT="Bias" ID="ID_1657534476" CREATED="1651188079795" MODIFIED="1651188082281"/>
 <node TEXT="Privacy" ID="ID_191145216" CREATED="1651188082570" MODIFIED="1651188086484"/>
-<node TEXT="Security: spoof" ID="ID_674827498" CREATED="1651188088631" MODIFIED="1651188129672"/>
-<node TEXT="STAGE" ID="ID_1110446588" CREATED="1643132611953" MODIFIED="1643132613438">
-<node TEXT="Rethinking feature discrimination and polymerization for large-scale recognition" ID="ID_952906687" CREATED="1643132616302" MODIFIED="1643132624041">
-<icon BUILTIN="unchecked"/>
-</node>
-<node TEXT="L2-constrained softmax loss for discriminative face verification" ID="ID_1859004489" CREATED="1643132643711" MODIFIED="1643132824906">
-<icon BUILTIN="unchecked"/>
-</node>
-<node TEXT="Deepface: Closing the gap to human-level performance in face verification" ID="ID_380808482" CREATED="1643132687451" MODIFIED="1643132826578">
-<icon BUILTIN="unchecked"/>
-</node>
-<node TEXT=" Deep learning face representation from predicting 10,000 classes" ID="ID_743085930" CREATED="1643132700263" MODIFIED="1643132828298">
-<icon BUILTIN="unchecked"/>
-</node>
-<node TEXT="Large-Margin Softmax Loss for Convolutional Neural Networks" ID="ID_1455743436" CREATED="1643132782704" MODIFIED="1643132830122">
-<icon BUILTIN="unchecked"/>
-</node>
-<node TEXT="A discriminative feature learning approach for deep face recognition" ID="ID_531526310" CREATED="1643132817470" MODIFIED="1643132831906">
-<icon BUILTIN="unchecked"/>
-<node TEXT="center loss" ID="ID_485839035" CREATED="1643132819959" MODIFIED="1643132822269"/>
-</node>
-<node TEXT="Range loss for deep face recognition with long-tail" ID="ID_1684893432" CREATED="1643133019948" MODIFIED="1643133022451">
-<icon BUILTIN="unchecked"/>
-</node>
-</node>
 </node>
 <node TEXT="Track: AdvRank" FOLDED="true" POSITION="right" ID="ID_67713290" CREATED="1561352085890" MODIFIED="1642394393230">
 <icon BUILTIN="idea"/>
