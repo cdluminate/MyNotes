@@ -102,6 +102,223 @@ Q1
 Q2
 \end_layout
 
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+Assume input 
+\begin_inset Formula $x$
+\end_inset
+
+ (vector), weight 
+\begin_inset Formula $W_{l}$
+\end_inset
+
+ (matrix) and bias 
+\begin_inset Formula $b_{l}$
+\end_inset
+
+ (vector) for the 
+\begin_inset Formula $l$
+\end_inset
+
+-th layer, and activation function 
+\begin_inset Formula $\sigma(\cdot)$
+\end_inset
+
+.
+ We denote the pre-activation layer output as 
+\begin_inset Formula $y_{l}$
+\end_inset
+
+ (vector), and the post-activation layer output as 
+\begin_inset Formula $z_{l}$
+\end_inset
+
+, namely 
+\begin_inset Formula $z_{l}=\sigma(y_{l})$
+\end_inset
+
+.
+ There are in total 
+\begin_inset Formula $L$
+\end_inset
+
+ layers, and index 
+\begin_inset Formula $l\in\{1,\ldots,L\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Then, the forward pass of the network can be described asz
+\begin_inset Formula 
+\begin{align*}
+y_{1} & =W_{1}x+b_{1}\\
+z_{1} & =\sigma(y_{1})\\
+y_{2} & =W_{2}z_{1}+b_{2}\\
+z_{2} & =\sigma(y_{2})\\
+ & \ldots\\
+y_{l} & =W_{l}z_{l-1}+b_{l}\\
+z_{l} & =\sigma(y_{l})\\
+ & \ldots\\
+y_{L} & =W_{L}z_{L-1}+b_{L}\\
+z_{L} & =\sigma(y_{L})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now 
+\begin_inset Formula $z_{L}$
+\end_inset
+
+ is the network output.
+ If it is trained using cross-entropy loss as a classifier, then the maximum
+ element in vector 
+\begin_inset Formula $z_{L}$
+\end_inset
+
+ after softmax normalization corresponds to the predicted class.
+\end_layout
+
+\begin_layout Subsection
+(b)
+\end_layout
+
+\begin_layout Standard
+Assume batch size 1.
+ Then layer 1 has matrix-vector product 
+\begin_inset Formula $W_{1}x$
+\end_inset
+
+ with complexity 
+\begin_inset Formula $O(dd_{1})$
+\end_inset
+
+, which involves 
+\begin_inset Formula $d\times d_{1}$
+\end_inset
+
+ multiplications, and 
+\begin_inset Formula $d_{1}$
+\end_inset
+
+ additions.
+ The bias term involves 
+\begin_inset Formula $d_{1}$
+\end_inset
+
+ additions.
+ The activation step has complexity 
+\begin_inset Formula $O(d_{1})$
+\end_inset
+
+ as well since it is element wise.
+ So in total there will be 
+\begin_inset Formula $dd_{1}+d_{1}d_{2}+\ldots+d_{l-1}d_{l}$
+\end_inset
+
+ multiplications, and matrix-matrix (in larger batch size) or matrix-vector
+ (when batch size 1) multiplication is the dominating computation operation.
+ 
+\end_layout
+
+\begin_layout Subsection
+(c)
+\end_layout
+
+\begin_layout Standard
+We apply chain rule for the formulation.
+ Assume cost function 
+\begin_inset Formula $J$
+\end_inset
+
+.
+ We propagate the gradient with chain rule in reversed order compared to
+ the forward process.
+ Assume 
+\begin_inset Formula $\partial J/\partial z_{L}$
+\end_inset
+
+ is known, then
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial J}{\partial y_{L}} & =\frac{\partial J}{\partial z_{L}}\cdot\frac{\partial z_{L}}{\partial y_{L}}=\frac{\partial J}{\partial z_{L}}\cdot\sigma'(y_{L})\\
+\frac{\partial J}{\partial z_{L-1}} & =\frac{\partial J}{\partial y_{L}}\cdot\frac{\partial y_{L}}{\partial z_{L-1}}=W_{L}^{T}\cdot\frac{\partial J}{\partial y_{L}}\\
+\frac{\partial J}{\partial W_{L}} & =\frac{\partial J}{\partial y_{L}}\cdot\frac{\partial y_{L}}{\partial W_{L}}=\frac{\partial J}{\partial y_{L}}\cdot z_{L-1}^{T}\\
+\frac{\partial J}{\partial b_{L}} & =\frac{\partial J}{\partial y_{L}}\\
+ & ...\\
+\frac{\partial J}{\partial W_{1}} & =\frac{\partial J}{\partial y_{1}}\cdot\frac{\partial y_{1}}{\partial W_{1}}=\frac{\partial J}{\partial y_{1}}\cdot x^{T}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+With the chain rule all the formulations in all layers are more or less
+ alike.
+ In the equation 
+\begin_inset Formula $\sigma'(x)$
+\end_inset
+
+ is the derivative of activation function 
+\begin_inset Formula $\sigma(x)$
+\end_inset
+
+.
+ In the ReLU case, it is 
+\begin_inset Formula $\sigma'(x)=x$
+\end_inset
+
+ when 
+\begin_inset Formula $x>=0$
+\end_inset
+
+, or 
+\begin_inset Formula $\sigma'(x)=0$
+\end_inset
+
+ when 
+\begin_inset Formula $x<0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+(d)
+\end_layout
+
+\begin_layout Standard
+Generally backward computation is more expensive than forward pass.
+ Because in this case we compute twice as many as matrix multiplications,
+ one for the gradient with respect to the weights 
+\begin_inset Formula $W_{l}$
+\end_inset
+
+, and one for the gradient with respect to 
+\begin_inset Formula $z_{l}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{l}$
+\end_inset
+
+, which is to be propagated.
+ With a similar conclusion in answer to question (b), matrix multiplication
+ is still the dominating operation.
+ Matrix multiplication is the performance bottleneck in practice as well.
+ Element-wise operations do not really contribute much complexity.
+\end_layout
+
 \begin_layout Section
 Q3
 \end_layout
