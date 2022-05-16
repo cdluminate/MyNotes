@@ -94,5 +94,192 @@ Mo Zhou
 mzhou32@jhu.edu
 \end_layout
 
+\begin_layout Section
+Q1
+\end_layout
+
+\begin_layout Section
+Q2
+\end_layout
+
+\begin_layout Section
+Q3
+\end_layout
+
+\begin_layout Section
+Q4
+\end_layout
+
+\begin_layout Section
+Q5
+\end_layout
+
+\begin_layout Subsection
+(a) True / false about attack
+\end_layout
+
+\begin_layout Itemize
+(i) is true.
+ Adversarial examples has transferrability.
+\end_layout
+
+\begin_layout Itemize
+(ii) is false.
+ FGSM is called 
+\begin_inset Quotes eld
+\end_inset
+
+fast
+\begin_inset Quotes erd
+\end_inset
+
+ because it's single-step.
+\end_layout
+
+\begin_layout Itemize
+(iii) is false.
+ Dropout is effective regularization, but not effective defense.
+ Stronger attacks such as adaptive attack will be able to penetrate such
+ countermeasure.
+\end_layout
+
+\begin_layout Itemize
+(iv) is true.
+ Most of the discussed attacks are white-box attacks.
+ However, black box attacks are also possible, such as transferrability-based
+ attacks (TI-FGSM and DI-FGSM), score-based black box attacks (e.g.
+ Natural Evolution Strategy), and query-based attacks.
+\end_layout
+
+\begin_layout Subsection
+(b) FGSM calculation
+\end_layout
+
+\begin_layout Standard
+FGSM is a single step attack.
+ Given
+\begin_inset Formula 
+\begin{align*}
+x & =[1,2,3]^{T}\\
+\partial J\partial x & =[0.5,-0.5,1]^{T}\\
+\epsilon & =0.01
+\end{align*}
+
+\end_inset
+
+we have a single step projected gradient ascent as
+\begin_inset Formula 
+\begin{align*}
+x^{*} & =x+\epsilon\cdot\text{sign}(\partial J/\partial x)\\
+ & =x+0.01[1,-1,1]^{T}\\
+ & =[1,2,3]^{T}+[0.01,-0.01,0.01]^{T}\\
+ & =[1.01,1.99,3.01]^{T}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+(c) FGSM statement
+\end_layout
+
+\begin_layout Standard
+The statement is false.
+ According to Ian Goodfellow in FGSM paper, actually when the dimension
+ of 
+\begin_inset Formula $x$
+\end_inset
+
+ is higher, the required 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ is lower.
+ Assume mean value 
+\begin_inset Formula $\mu$
+\end_inset
+
+ for a layer input, mean weight 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ for the layer, and dimensionality 
+\begin_inset Formula $d$
+\end_inset
+
+.
+ The expected activation is 
+\begin_inset Formula $\mu\sigma d$
+\end_inset
+
+.
+ When a perturbation is added to the linear layer, the activation has been
+ bumped by 
+\begin_inset Formula $\epsilon\mu\sigma d$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $d$
+\end_inset
+
+ is large enough, 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ does not have to be large to create a huge activation bump.
+\end_layout
+
+\begin_layout Subsection
+(c) GAN (there is a typo in question numbering)
+\end_layout
+
+\begin_layout Standard
+We should use (B) non-saturating cost, in order to avoid making discriminator
+ 
+\begin_inset Formula $D$
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+too smart
+\begin_inset Quotes erd
+\end_inset
+
+, and thus maintain a relatively good balance between generator 
+\begin_inset Formula $G$
+\end_inset
+
+ and discriminator 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ In this case, generator 
+\begin_inset Formula $G$
+\end_inset
+
+ can still learn even when distriminator successfully rejects all generator
+ samples.
+\end_layout
+
+\begin_layout Subsection
+(d) GAN loss
+\end_layout
+
+\begin_layout Standard
+For GAN, the equilibrium is a saddle point of the discriminator loss.
+ This is reflected in the training process as both discriminator and generator
+ are simultaneously learning, and still maintains a similar loss.
+\end_layout
+
+\begin_layout Section
+Q6
+\end_layout
+
 \end_body
 \end_document
