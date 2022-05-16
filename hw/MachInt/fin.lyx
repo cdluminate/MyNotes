@@ -431,6 +431,62 @@ Adam optimizer leverages the historical gradients.
 Q4
 \end_layout
 
+\begin_layout Description
+Mode-Collapse.
+ Mode collapse is the most severe form of non-convergence issue in GANs.
+ It means
+\begin_inset Formula 
+\[
+\min_{G}\max_{D}V(G,D)\neq\max_{D}\min_{G}V(G,D),
+\]
+
+\end_inset
+
+where GAN converges to correct distribution when 
+\begin_inset Formula $D$
+\end_inset
+
+ is in inner loop; while GAN places all mass on most likely point when 
+\begin_inset Formula $G$
+\end_inset
+
+ is in inner loop.
+ Besides, other GAN losses also yield mode collapse, and Reverse KL loss
+ perfers to fit as many modes as the model can represent and no more – it
+ does not prefer fewer modes in general.
+ In practice, GANs often seem to collapse to far fewer modes than the model
+ can represent.
+ As a result, mode collpase causes low output diversity.
+\end_layout
+
+\begin_layout Description
+Solution.
+ To mitigate mode collapse, we need to prevent the generator from broadening
+ its scope by preventing it from optimizing for a single fixed discriminator.
+ Possible solutions include:
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+(1) Wasserstein loss.
+ It alleviates mode collapse training the discriminator to optimality without
+ worrying about vanishing gradients.
+ If the discriminator does not get stuck in local minima, it learns to reject
+ the outputs that the generator stabilizes on.
+ So the generator has to output differently.
+\end_layout
+
+\begin_layout Description
+(2) Unrolled GANs.
+ We back-propagate through k updates of the discriminator to prevent mode
+ collapse.
+ Namely, we use a generator loss function that incorporates not only the
+ current discriminator's classifications, but also the outputs of future
+ discriminator versions.
+ So the generator can't over-optimize for a single discriminator.
+\end_layout
+
+\end_deeper
 \begin_layout Section
 Q5
 \end_layout
@@ -600,6 +656,262 @@ For GAN, the equilibrium is a saddle point of the discriminator loss.
 
 \begin_layout Section
 Q6
+\end_layout
+
+\begin_layout Subsection
+(a) AI bias
+\end_layout
+
+\begin_layout Standard
+For example, for face recognition model, if its training datasets contains
+ more training examples for a specific human race, then it may perform specifica
+lly good for this race, and perform relatively worse for the others.
+\end_layout
+
+\begin_layout Standard
+Adding more data to balance the training set is an intuitive solution, but
+ it may be difficult to take into practice.
+\end_layout
+
+\begin_layout Subsection
+(b) interpretable AI
+\end_layout
+
+\begin_layout Standard
+Take linear support vector machine with 2d input feature as example.
+ We can clearly draw the classification hyperplane, and figure out exactly
+ the data that formed support vectors.
+\end_layout
+
+\begin_layout Standard
+Take decision tree as example.
+ We can clearly follow the tree and describe what feature is the tree using
+ at the current layer, and to what branch does the decision tree go based
+ on what decision rule.
+\end_layout
+
+\begin_layout Standard
+Traditional models are intuitive to interpret, but deep models are not.
+\end_layout
+
+\begin_layout Subsection
+(c) GradCAM is generalization of CAM
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+This question corresponds to the section 3.1 in paper 
+\begin_inset Quotes eld
+\end_inset
+
+Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Grad-CAM generalizes CAM for a wide variety of CNN-based architectures.
+ Recall that CAM produces a localization map for an image classification
+ CNN with a specific kind of architecture where global average pooled convolutio
+nal feature maps are fed directly into softmax.
+ Specifically, let the penultimate layer produce 
+\begin_inset Formula $K$
+\end_inset
+
+ feature maps, 
+\begin_inset Formula $A^{k}\in\mathbb{R}^{u\times v}$
+\end_inset
+
+, with each element indexed by 
+\begin_inset Formula $i,j$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $A_{ij}^{k}$
+\end_inset
+
+ refers to the activation at location 
+\begin_inset Formula $(i,j)$
+\end_inset
+
+ of the feature map 
+\begin_inset Formula $A^{k}$
+\end_inset
+
+.
+ These feature maps are then spatially pooled using Global Average Pooling
+ (GAP) and linearly transformed to produce a score 
+\begin_inset Formula $Y^{c}$
+\end_inset
+
+ for each class 
+\begin_inset Formula $c$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+Y^{c}=\sum_{k}w_{k}^{c}\frac{1}{Z}\sum_{i}\sum_{j}A_{ij}^{k}\qquad(3)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $w_{k}^{c}$
+\end_inset
+
+ class feature weights.
+ Let us define 
+\begin_inset Formula $F^{k}$
+\end_inset
+
+ to be the global average pooled output,
+\begin_inset Formula 
+\[
+F^{k}=\frac{1}{Z}\sum_{i}\sum_{j}A_{ij}^{k}.\qquad(4)
+\]
+
+\end_inset
+
+CAM computes the final score by
+\begin_inset Formula 
+\[
+Y^{c}=\sum_{k}w_{k}^{c}\cdot F^{k},\qquad(5)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $w_{k}^{c}$
+\end_inset
+
+ is the weight connecting the 
+\begin_inset Formula $k^{th}$
+\end_inset
+
+ feature map with the 
+\begin_inset Formula $c^{th}$
+\end_inset
+
+ class.
+ Taking the gradient of the score for class 
+\begin_inset Formula $c(Y^{c})$
+\end_inset
+
+ with respect to the feature map 
+\begin_inset Formula $F^{k}$
+\end_inset
+
+, we will get
+\begin_inset Formula 
+\[
+\frac{\partial Y^{c}}{\partial F^{k}}=\big(\frac{\partial Y^{c}}{\partial A_{ij}^{k}}\big)/\big(\frac{\partial F^{k}}{\partial A_{ij}^{k}}).\qquad(6)
+\]
+
+\end_inset
+
+Taking partial derivative of Eq.
+ (4) w.r.t.
+ 
+\begin_inset Formula $A_{ij}^{k}$
+\end_inset
+
+, we can see that 
+\begin_inset Formula $\frac{\partial F^{k}}{\partial A_{ij}^{k}}=\frac{1}{Z}$
+\end_inset
+
+.
+ Substituting this in Eq.
+ (6), we get
+\begin_inset Formula 
+\[
+\frac{\partial Y^{c}}{\partial F^{k}}=\frac{\partial Y^{c}}{\partial A_{ij}^{k}}\cdot Z
+\]
+
+\end_inset
+
+From Eq.
+ (5) we get that 
+\begin_inset Formula $\frac{\partial Y^{c}}{\partial F^{k}}=w_{k}^{c}$
+\end_inset
+
+.
+ Hence,
+\begin_inset Formula 
+\[
+w_{k}^{c}=Z\cdot\frac{\partial Y^{c}}{\partial A_{ij}^{k}}
+\]
+
+\end_inset
+
+Summing both sides of Eq.
+ (8) over all pixels 
+\begin_inset Formula $(i,j)$
+\end_inset
+
+, we get
+\begin_inset Formula 
+\[
+\sum_{i}\sum_{j}w_{k}^{c}=\sum_{i}\sum_{j}Z\cdot\frac{\partial Y^{c}}{\partial A_{ij}^{k}}
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $Z$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{k}^{c}$
+\end_inset
+
+ do not depend on 
+\begin_inset Formula $(i,j)$
+\end_inset
+
+, rewriting this as
+\begin_inset Formula 
+\[
+Zw_{k}^{c}=Z\sum_{i}\sum_{j}\frac{\partial Y^{c}}{\partial A_{ij}^{k}}
+\]
+
+\end_inset
+
+Note that 
+\begin_inset Formula $Z$
+\end_inset
+
+ is the number of pixels in the feature map (or 
+\begin_inset Formula $Z=\sum_{i}\sum_{j}\bm{1}$
+\end_inset
+
+).
+ Thus, we can re-order terms and see that
+\begin_inset Formula 
+\[
+w_{k}^{c}=\sum_{i}\sum_{j}\frac{\partial Y^{c}}{\partial A_{ij}^{k}}
+\]
+
+\end_inset
+
+Up to a proportionality constant 
+\begin_inset Formula $(1/Z)$
+\end_inset
+
+ that gets normliazed-out during visualization, the expression for 
+\begin_inset Formula $w_{k}^{c}$
+\end_inset
+
+ s identical to 
+\begin_inset Formula $\alpha_{k}^{c}$
+\end_inset
+
+ used by Grad-CAM.
+ Thus, Grad-CAM is a strict generalization of CAM.
 \end_layout
 
 \end_body
