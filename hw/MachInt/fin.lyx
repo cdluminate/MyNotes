@@ -323,6 +323,110 @@ Generally backward computation is more expensive than forward pass.
 Q3
 \end_layout
 
+\begin_layout Subsection
+(a)
+\end_layout
+
+\begin_layout Standard
+True.
+ Once i.i.d, the mean gradient over a batch as an estimation is closer to
+ the mean gradient over the data distribution.
+\end_layout
+
+\begin_layout Subsection
+(b)
+\end_layout
+
+\begin_layout Standard
+Failure of the model to learn indicates failure of generalization.
+ This will happen when the data cluster of the positive examples and the
+ cluster of negative examples are not separateble.
+ It could happen when the data is too noisy, or the data is simply too hard
+ to learn and the extracted features or learned representations failed to
+ catch their differences.
+\end_layout
+
+\begin_layout Subsection
+(c)
+\end_layout
+
+\begin_layout Standard
+In principal, convolution is linear operation, and it is equivalent to a
+ sparse, and tiled matrix multiplication.
+ However, the computational complexity of fully-connected layer is lower
+ than fully-connected, and convolution kernels are smaller than fully-connected
+ weights.
+ Hence, convolution is computaionally efficient, and requires less storage.
+ Besides, convolution also has some good properties like translation invariance
+ (see deep learning book).
+\end_layout
+
+\begin_layout Subsection
+(d)
+\end_layout
+
+\begin_layout Standard
+The question means the network output is 
+\begin_inset Formula 
+\[
+\text{output}=sigmoid(relu(...))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ReLU activation does not propagate gradient with input less than 0.
+ And sigmoid also has two saturation area which lead to very small gradient.
+ Only when the input to ReLU precisely falls into the range from 0 to a
+ small positive number, there will be a gradient.
+ Otherwise, the gradient will just vanish and the network will not learning
+ everything since everywhere is zero (or near-zero) gradient.
+\end_layout
+
+\begin_layout Subsection
+(e)
+\end_layout
+
+\begin_layout Standard
+If I remember correctly, in the deep learning book there is some suggestion
+ on learning rate search.
+ The strategy suggested in the question is not efficient.
+ Usually we do binary search in log scale.
+ For example, we plan with 0.01, 0.1, and 1 at the beginning.
+ Then we use binary search to continue to find an appropriate learning rate
+ that is not leading to diverging loss function, while not being too small.
+\end_layout
+
+\begin_layout Standard
+The suggested learning rate search method is sequential search, which is
+ not efficient compared to binary search.
+\end_layout
+
+\begin_layout Subsection
+(f)
+\end_layout
+
+\begin_layout Enumerate
+Mini-batch gradient descent is feasible in practice.
+ You don't have the kind of hardware that can do gradient update on the
+ whole ImageNet.
+\end_layout
+
+\begin_layout Enumerate
+Mini-batch gradient descent provides statistically more stable gradients
+ than batch-1 stochastic gradient descent, and helps the model to converge
+ faster.
+\end_layout
+
+\begin_layout Enumerate
+Adam optimizer leverages the historical gradients.
+ It can help the model learn faster (with a kind of momemtum effect) and
+ sometimes help the model to escape from local optimum.
+\end_layout
+
 \begin_layout Section
 Q4
 \end_layout
