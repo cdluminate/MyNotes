@@ -98,6 +98,282 @@ mzhou32@jhu.edu
 Q1
 \end_layout
 
+\begin_layout Standard
+OK before answering any question, let's first build the formuations.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+36
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We have an MDP, with 4 states: 
+\begin_inset Formula $s_{1},s_{2},s_{3},s_{4}$
+\end_inset
+
+.
+ There are two actions: left (L) and right (R) and stay (N).
+ Action N has 1 transition probability to the current state.
+ Action L is invalid for 
+\begin_inset Formula $s_{1}$
+\end_inset
+
+.
+ Action R is invalid for 
+\begin_inset Formula $s_{4}$
+\end_inset
+
+.
+ Rewards will only be given when action N happens.
+ Namely, there are only two non-zero rewards: 
+\begin_inset Formula $R(s_{1},N,s_{1})=4$
+\end_inset
+
+, and 
+\begin_inset Formula $R(s_{4},N,s_{4})=36$
+\end_inset
+
+.
+ All other case will lead to zero reward.
+ This means the reward depends on how the agent reached a state.
+\end_layout
+
+\begin_layout Subsection
+value iteration step 1
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $U\triangleq V$
+\end_inset
+
+.
+ The rewards depends on how the agent reached a state.
+ So it's likely that we cannot directly copy the equations from slides.
+ First we have
+\begin_inset Formula 
+\begin{align*}
+U(s^{k}) & =E[\sum_{i=0}^{\infty}\gamma^{i}R(s^{k+i},a,s^{k})]\\
+ & =E[R(s^{k},a,s^{k})+\sum_{i=1}^{\infty}\gamma^{i}R(s^{k+i},a,s^{k})]\\
+ & =E[R(s^{k},a,s^{k})+\gamma\sum_{i=1}^{\infty}\gamma^{i-1}R(s^{k+i},a,s^{k})]\\
+ & =R(s^{k},a,s^{k})+\gamma E[\sum_{i=1}^{\infty}\gamma^{i-1}R(s^{k+i},a,s^{k})]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So our formuation for finding the utility is
+\begin_inset Formula 
+\[
+U(s)=R(s^{k},a,s^{k})+\gamma\max_{a\in\{L,R,N\}}\sum_{s'}P(s'|s,a)U(s')
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $U^{(0)}(s)=0$
+\end_inset
+
+ for any state, and discount 
+\begin_inset Formula $\gamma=0.5$
+\end_inset
+
+, we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+U^{(1)}(s_{1}) & =R(s_{1},a,s_{1})+\gamma\max(0_{\{a=N\}},0_{\{a=R\}})=4\\
+U^{(1)}(s_{2}) & =R(s_{2},a,s_{2})+\gamma\max(0_{\{a=L\}},0_{\{a=R\}},0_{\{a=N\}})=0\\
+U^{(1)}(s_{3}) & =R(s_{3},a,s_{3})+\gamma\max(0_{\{a=L\}},0_{\{a=R\}},0_{\{a=N\}})=0\\
+U^{(1)}(s_{4}) & =R(s_{4},a,s_{4})+\gamma\max(0_{\{a=N\}},0_{\{a=R\}})=36
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The values only hold for 
+\begin_inset Formula $a=N$
+\end_inset
+
+.
+ Other actions will lead to zero utility.
+\end_layout
+
+\begin_layout Standard
+So 
+\begin_inset Formula $V^{(1)}$
+\end_inset
+
+ is namely
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+U^{(1)}=\begin{bmatrix}4 & 0 & 0 & 36\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+value iteration step 2
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+U^{(2)}(s_{1}) & =R(s_{1},a,s_{1})+\gamma\max(4_{\{a=N\}},0_{\{a=R\}})=4+0.5\times4=6\\
+U^{(2)}(s_{2}) & =R(s_{2},a,s_{2})+\gamma\max(0_{\{a=L\}},0_{\{a=R\}},0_{\{a=N\}})=0\\
+U^{(2)}(s_{3}) & =R(s_{3},a,s_{3})+\gamma\max(0_{\{a=L\}},0_{\{a=R\}},0_{\{a=N\}})=0\\
+U^{(2)}(s_{4}) & =R(s_{4},a,s_{4})+\gamma\max(36_{\{a=N\}},0_{\{a=L\}})=36+0.5\times36=54
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So 
+\begin_inset Formula $V^{(2)}$
+\end_inset
+
+ is namely
+\begin_inset Formula 
+\[
+U^{(2)}=\begin{bmatrix}6 & 0 & 0 & 54\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+utility
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $V^{*}$
+\end_inset
+
+ indicates convergence.
+ Thus we have at the 
+\begin_inset Formula $z$
+\end_inset
+
+-th step:
+\begin_inset Formula 
+\begin{align*}
+U^{(z)}(s_{1}) & =U^{(z-1)}(s_{1})=4+\gamma U^{(z-1)}(s_{1})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Solving the equation leads to 
+\begin_inset Formula $U^{(z)}(s_{1})=8$
+\end_inset
+
+.
+ Similarly we will have 
+\begin_inset Formula $U^{(z)}(s_{2})=0$
+\end_inset
+
+, 
+\begin_inset Formula $U^{(z)}(s_{3})=0$
+\end_inset
+
+, and 
+\begin_inset Formula $U^{(z)}(s_{4})=72.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Namely 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+U^{*}=\begin{bmatrix}8 & 0 & 0 & 72\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Q2
 \end_layout
