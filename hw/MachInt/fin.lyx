@@ -809,6 +809,8 @@ fast
  However, black box attacks are also possible, such as transferrability-based
  attacks (TI-FGSM and DI-FGSM), score-based black box attacks (e.g.
  Natural Evolution Strategy), and query-based attacks.
+ These black-box attacks do not require any access to the network parameter,
+ architecture, or gradient.
 \end_layout
 
 \begin_layout Subsection
