@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="111" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="112" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1648337505775">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -383,6 +383,12 @@
 <node TEXT="Enhancing the Transferability via Feature-Momentum Adversarial Attack" ID="ID_1388592764" CREATED="1652404351334" MODIFIED="1652404353003">
 <icon BUILTIN="pencil"/>
 </node>
+<node TEXT="w/ Query Prior" ID="ID_455983940" CREATED="1653340512836" MODIFIED="1653340516865">
+<node TEXT="Enhancing the Transferability of Adversarial&#xa;Examples via a Few Queries" ID="ID_844258032" CREATED="1653340517614" MODIFIED="1653340525088">
+<icon BUILTIN="pencil"/>
+<node TEXT="query prior-based method for fast gradient sign methods and improve their transferability using a few queries" ID="ID_27055622" CREATED="1653340537954" MODIFIED="1653340560913"/>
+</node>
+</node>
 </node>
 <node TEXT="Universal Perturbation" ID="ID_883577858" CREATED="1641522438698" MODIFIED="1641522443789">
 <node TEXT="on distinctive properties of universal perturbations (madry)" ID="ID_224581737" CREATED="1641522458794" MODIFIED="1641743879665">
@@ -641,9 +647,20 @@
 <icon BUILTIN="help"/>
 </node>
 </node>
+<node TEXT="Focused Adversarial Attacks" ID="ID_179464095" CREATED="1653340353581" MODIFIED="1653340355454">
+<icon BUILTIN="pencil"/>
+<node TEXT="sparse attack, faster than FGSM" ID="ID_402598971" CREATED="1653340356303" MODIFIED="1653340363308"/>
+<node TEXT="goal: faster attack against object detection" ID="ID_1848887754" CREATED="1653340363503" MODIFIED="1653340373679"/>
+<node TEXT="paper strength looks fair, not good" ID="ID_1524130980" CREATED="1653340373846" MODIFIED="1653340408518"/>
+</node>
 </node>
 <node TEXT="Optical Flow" ID="ID_1641858386" CREATED="1648337319711" MODIFIED="1648337322554">
 <node TEXT="A Perturbation Constrained Adversarial Attack for Evaluating the Robustness of Optical Flow" ID="ID_1358848955" CREATED="1648337323536" MODIFIED="1648337328267">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Physical Attack" ID="ID_1589020680" CREATED="1653340867790" MODIFIED="1653340870730">
+<node TEXT="Transferable Physical Attack against Object&#xa;Detection with Separable Attention" ID="ID_1658539270" CREATED="1653340871668" MODIFIED="1653340896810">
 <icon BUILTIN="pencil"/>
 </node>
 </node>
@@ -705,7 +722,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Attack Detection &amp; Vul Analysis" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1244682927" CREATED="1646761472294" MODIFIED="1647048997914">
+<node TEXT="Attack Detection &amp; Vul Analysis" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1244682927" CREATED="1646761472294" MODIFIED="1647048997914">
 <edge COLOR="#7c0000"/>
 <node TEXT="Attack Signature" ID="ID_822623830" CREATED="1651096591068" MODIFIED="1651096596793">
 <font BOLD="true"/>
@@ -760,14 +777,6 @@
 <node TEXT="Holistic Approach to Measure Sample-level Adversarial Vulnerability&#xa;and its Utility in Building Trustworthy Systems" ID="ID_1380608765" CREATED="1651955401029" MODIFIED="1651955407542">
 <node TEXT="CVPR22w" ID="ID_808643348" CREATED="1651955408814" MODIFIED="1651955410645"/>
 </node>
-</node>
-</node>
-<node TEXT="Patch Detection" ID="ID_1544755494" CREATED="1641523388190" MODIFIED="1644180812163">
-<node TEXT="on the real world adversarial robustness of real-time semantic segmentation models for autonomous driving" ID="ID_621290194" CREATED="1641523393314" MODIFIED="1641523426222">
-<icon BUILTIN="pencil"/>
-</node>
-<node TEXT="Detecting Localized Adversarial Examples: A&#xa;Generic Approach using Critical Region Analysis" ID="ID_655405044" CREATED="1652413130650" MODIFIED="1652413138859">
-<icon BUILTIN="pencil"/>
 </node>
 </node>
 <node TEXT="Perturbation Detection" ID="ID_983985712" CREATED="1641523884091" MODIFIED="1648419471576">
@@ -917,6 +926,9 @@
 <icon BUILTIN="button_cancel"/>
 </node>
 </node>
+<node TEXT="AdvTrace (ARC)" ID="ID_238529318" CREATED="1653334814022" MODIFIED="1653334818755">
+<node TEXT="pending" ID="ID_358706194" CREATED="1653334821702" MODIFIED="1653334822929"/>
+</node>
 </node>
 <node TEXT="Distribution detection" ID="ID_1738339294" CREATED="1648658654257" MODIFIED="1648664834330">
 <node TEXT="IMPORT-Carlini" ID="ID_1850530096" CREATED="1648664579597" MODIFIED="1648664583858"/>
@@ -1001,6 +1013,17 @@
 </node>
 </node>
 </node>
+<node TEXT="Patch Detection" ID="ID_1544755494" CREATED="1641523388190" MODIFIED="1644180812163">
+<node TEXT="on the real world adversarial robustness of real-time semantic segmentation models for autonomous driving" ID="ID_621290194" CREATED="1641523393314" MODIFIED="1641523426222">
+<icon BUILTIN="pencil"/>
+</node>
+<node TEXT="Detecting Localized Adversarial Examples: A&#xa;Generic Approach using Critical Region Analysis" ID="ID_655405044" CREATED="1652413130650" MODIFIED="1652413138859">
+<icon BUILTIN="pencil"/>
+</node>
+<node TEXT="Constraining the Attack Space of Machine Learning Models&#xa;with Distribution Clamping Preprocessing" ID="ID_713220183" CREATED="1653335222504" MODIFIED="1653335223937">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
 <node TEXT="Stateful Detection" ID="ID_1068348614" CREATED="1648414793478" MODIFIED="1648414796793">
 <node TEXT="Stateful Detection of Black-Box Adversarial Attacks" ID="ID_1178344926" CREATED="1648414797685" MODIFIED="1648414805968">
 <icon BUILTIN="unchecked"/>
@@ -1016,10 +1039,18 @@
 </node>
 </node>
 </node>
-<node TEXT="Insersection" ID="ID_1915167711" CREATED="1647567802364" MODIFIED="1647567805237">
-<node TEXT="semantic segmentation" ID="ID_561284915" CREATED="1647567812114" MODIFIED="1647567819386">
+<node TEXT="Detection Insersection" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1915167711" CREATED="1647567802364" MODIFIED="1653334794296">
+<node TEXT="Semantic Segmentation" ID="ID_561284915" CREATED="1647567812114" MODIFIED="1653334910150">
 <node TEXT="tiggering failures; out of distribution detection by learning from local adversarial attacks in semgnatic segmentation" ID="ID_1480297231" CREATED="1647567820168" MODIFIED="1647567841158">
 <icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="3D / PCL" ID="ID_1810114798" CREATED="1653334910322" MODIFIED="1653334920634">
+<node TEXT="Passive Defense Against 3D Adversarial Point Clouds Through the Lens of 3D Steganalysis" ID="ID_525339571" CREATED="1653334921264" MODIFIED="1653335042189">
+<icon BUILTIN="pencil"/>
+<node TEXT="(passive defense) means detection" ID="ID_1250297296" CREATED="1653335013582" MODIFIED="1653335022026"/>
+<node TEXT="(initiative defense) means adversarial training" ID="ID_705057545" CREATED="1653335026048" MODIFIED="1653335037540"/>
+<node TEXT="manually crafted feature based on point cloud" ID="ID_1685003836" CREATED="1653334983883" MODIFIED="1653335006376"/>
 </node>
 </node>
 </node>
@@ -1029,7 +1060,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
+<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_1556055508" CREATED="1648173325254" MODIFIED="1648173329845">
 <icon BUILTIN="info"/>
@@ -1117,6 +1148,12 @@
 <icon BUILTIN="checked"/>
 <node TEXT="ijcai18" ID="ID_1417853528" CREATED="1643412317231" MODIFIED="1643412322551"/>
 <node TEXT="gradually increase attack strengths, namely increase PGD steps. each strengths trains for 1 epoch." ID="ID_1208154605" CREATED="1643413745409" MODIFIED="1643413812902"/>
+</node>
+</node>
+<node TEXT="Mixup" ID="ID_1982196883" CREATED="1653340978528" MODIFIED="1653340980753">
+<node TEXT="mixup: BEYOND EMPIRICAL RISK MINIMIZATION" ID="ID_680755039" CREATED="1653341121074" MODIFIED="1653341123530">
+<icon BUILTIN="bookmark"/>
+<node TEXT="See topic: robust generalization" ID="ID_728923750" CREATED="1653341125048" MODIFIED="1653341161113"/>
 </node>
 </node>
 <node TEXT="TRADES/AT" ID="ID_932779241" CREATED="1641678609578" MODIFIED="1643412167174">
@@ -1379,6 +1416,16 @@
 <icon BUILTIN="unchecked"/>
 <node TEXT="semi-supervised" ID="ID_1433077149" CREATED="1651779379379" MODIFIED="1651779382415"/>
 <node TEXT="similar to adversarial training" ID="ID_803563320" CREATED="1651779371287" MODIFIED="1651779378875"/>
+</node>
+</node>
+<node TEXT="Mixup" ID="ID_341639872" CREATED="1653341116708" MODIFIED="1653341120353">
+<node TEXT="mixup: BEYOND EMPIRICAL RISK MINIMIZATION" ID="ID_1823327301" CREATED="1653340982218" MODIFIED="1653341043539">
+<icon BUILTIN="unchecked"/>
+<icon BUILTIN="bookmark"/>
+<node TEXT="ICLR18" ID="ID_1371601269" CREATED="1653340992200" MODIFIED="1653340994088"/>
+<node TEXT="train on convex combinations of pairs of examples" ID="ID_1621318087" CREATED="1653341058171" MODIFIED="1653341070073"/>
+<node TEXT="regularize the neural network to favor simple linear behavior in-between training examples" ID="ID_758048869" CREATED="1653341070530" MODIFIED="1653341101596"/>
+<node TEXT="both robustness and generalization" ID="ID_425810368" CREATED="1653341051563" MODIFIED="1653341057149"/>
 </node>
 </node>
 <node TEXT="VAT" ID="ID_696619029" CREATED="1652386387000" MODIFIED="1652386393651">
@@ -3454,6 +3501,17 @@
 <node TEXT="CVPR22" ID="ID_642950560" CREATED="1649104080637" MODIFIED="1649104081863"/>
 <node TEXT="contour is one of the most important object descriptiors, along with texture and color" ID="ID_961927899" CREATED="1649104082894" MODIFIED="1649104097966"/>
 </node>
+</node>
+</node>
+</node>
+<node TEXT="Learning (various kind of learning)" FOLDED="true" POSITION="left" ID="ID_1960604988" CREATED="1653335328313" MODIFIED="1653335336851">
+<edge COLOR="#0000ff"/>
+<node TEXT="Curriculum learning" ID="ID_570972313" CREATED="1653335363534" MODIFIED="1653335368658">
+<node TEXT="LeRaC: Learning Rate Curriculum" ID="ID_623814188" CREATED="1653335369346" MODIFIED="1653335371339">
+<icon BUILTIN="pencil"/>
+<node TEXT="Nicu" ID="ID_957914597" CREATED="1653335372975" MODIFIED="1653335375240"/>
+<node TEXT="different learning rate for each layer of a neural network  to create a data-free curriculum during the initial training epochs" ID="ID_197154943" CREATED="1653335382996" MODIFIED="1653335547811"/>
+<node TEXT="evaluated in vision, language, and audio tasks" ID="ID_1520190800" CREATED="1653335549354" MODIFIED="1653335558233"/>
 </node>
 </node>
 </node>
