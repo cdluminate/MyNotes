@@ -517,7 +517,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Attack: Intersection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1335351832" CREATED="1647263319144" MODIFIED="1647263375425">
+<node TEXT="Adversarial Attack: Intersection" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1335351832" CREATED="1647263319144" MODIFIED="1647263375425">
 <edge COLOR="#7c007c"/>
 <node TEXT="3D PCL" ID="ID_1616919715" CREATED="1648388494887" MODIFIED="1648388497545">
 <node TEXT="Shape-invariant 3D Adversarial Point Clouds" ID="ID_1106915267" CREATED="1648388498393" MODIFIED="1648388503330">
@@ -538,6 +538,12 @@
 </node>
 </node>
 <node TEXT="Face Recog" ID="ID_1806006397" CREATED="1642368429380" MODIFIED="1642965654306">
+<node TEXT="Efficient Decision-based Black-box Adversarial Attacks on Face Recognition" ID="ID_570727643" CREATED="1653344815546" MODIFIED="1653344817360">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR19" ID="ID_965770668" CREATED="1653344818155" MODIFIED="1653344819544">
+<node TEXT="Jun Zhu" ID="ID_1006191510" CREATED="1653344820592" MODIFIED="1653344822678"/>
+</node>
+</node>
 <node TEXT="Similarity-based Gray-box Adversarial Attack Against Deep Face Recognition" ID="ID_272220220" CREATED="1642368773041" MODIFIED="1642368776146">
 <icon BUILTIN="checked"/>
 <node TEXT="Conf: FG" ID="ID_231749207" CREATED="1642428474587" MODIFIED="1642428477815"/>
@@ -1745,7 +1751,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Defense: Intersection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1647265134040">
+<node TEXT="Adversarial Defense: Intersection" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1647265134040">
 <edge COLOR="#0000ff"/>
 <font NAME="Gentium"/>
 <node TEXT="Contrastive Learning" ID="ID_230158987" CREATED="1649169110339" MODIFIED="1649169131686">
@@ -1761,6 +1767,7 @@
 <node TEXT="RobFR: Benchmarking Adversarial Robustness on Face Recognition" ID="ID_765372057" CREATED="1642726609490" MODIFIED="1642726640122">
 <icon BUILTIN="pencil"/>
 <icon BUILTIN="bookmark"/>
+<node TEXT="Jun Zhu" ID="ID_1607267837" CREATED="1653344373315" MODIFIED="1653344375735"/>
 </node>
 <node TEXT="RobFR" ID="ID_956441703" CREATED="1643132279319" MODIFIED="1643132284675">
 <node TEXT="https://github.com/ShawnXYang/Face-Robustness-Benchmark" ID="ID_232276308" CREATED="1643132270554" MODIFIED="1643132270554" LINK="https://github.com/ShawnXYang/Face-Robustness-Benchmark"/>
