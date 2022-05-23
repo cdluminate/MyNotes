@@ -538,8 +538,13 @@
 </node>
 </node>
 <node TEXT="Face Recog" ID="ID_1806006397" CREATED="1642368429380" MODIFIED="1642965654306">
-<node TEXT="Efficient Decision-based Black-box Adversarial Attacks on Face Recognition" ID="ID_570727643" CREATED="1653344815546" MODIFIED="1653344817360">
+<node TEXT="Fast Geometrically-Perturbed Adversarial Faces" ID="ID_1719260635" CREATED="1653346033107" MODIFIED="1653346035039">
 <icon BUILTIN="unchecked"/>
+<node TEXT="WACV19" ID="ID_657441840" CREATED="1653346036610" MODIFIED="1653346038731"/>
+</node>
+<node TEXT="Efficient Decision-based Black-box Adversarial Attacks on Face Recognition" ID="ID_570727643" CREATED="1653344815546" MODIFIED="1653346179682">
+<icon BUILTIN="unchecked"/>
+<icon BUILTIN="bookmark"/>
 <node TEXT="CVPR19" ID="ID_965770668" CREATED="1653344818155" MODIFIED="1653344819544">
 <node TEXT="Jun Zhu" ID="ID_1006191510" CREATED="1653344820592" MODIFIED="1653344822678"/>
 </node>
@@ -586,6 +591,10 @@
 <node TEXT="Controllable Evaluation and Generation of Physical Adversarial Patch on Face Recognition" ID="ID_32522158" CREATED="1648396439382" MODIFIED="1648396442110">
 <icon BUILTIN="pencil"/>
 <node TEXT="Jun Zhu" ID="ID_343713912" CREATED="1648396443230" MODIFIED="1648396463845"/>
+</node>
+<node TEXT="Adv-Makeup: A New Imperceptible and Transferable Attack on Face Recognition" ID="ID_911311182" CREATED="1653346149852" MODIFIED="1653346153509">
+<icon BUILTIN="unchecked"/>
+<node TEXT="IJCAI21" ID="ID_887350670" CREATED="1653346154240" MODIFIED="1653346157975"/>
 </node>
 </node>
 <node TEXT="Action Recognition" ID="ID_1024637428" CREATED="1652385248018" MODIFIED="1652385250882">
@@ -1764,6 +1773,24 @@
 </node>
 <node TEXT="Face Recognition" ID="ID_1083375375" CREATED="1643132265039" MODIFIED="1649102907633">
 <font BOLD="true"/>
+<node TEXT="Detection" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1443434968" CREATED="1653345907954" MODIFIED="1653345915444">
+<node TEXT="Detection of Face Recognition Adversarial Attacks" ID="ID_346233953" CREATED="1653345918259" MODIFIED="1653345947356">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVIU20" ID="ID_172532456" CREATED="1653345948214" MODIFIED="1653345951243"/>
+</node>
+<node TEXT="Metamorphic Adversarial Detection Pipeline for Face Recognition Systems" ID="ID_1636811475" CREATED="1653346055727" MODIFIED="1653346057246">
+<icon BUILTIN="unchecked"/>
+<node TEXT="AAAI22w AdvML" ID="ID_1028512310" CREATED="1653346058111" MODIFIED="1653346064583"/>
+</node>
+</node>
+<node TEXT="Manifold Projection for Adversarial Defense on&#xa;Face Recognition" ID="ID_1296697589" CREATED="1653345866352" MODIFIED="1653345868422">
+<icon BUILTIN="unchecked"/>
+<node TEXT="ECCV20" ID="ID_1113235551" CREATED="1653345869261" MODIFIED="1653345870986"/>
+</node>
+<node TEXT="Defending Black Box Facial Recognition Classifiers Against Adversarial Attacks" ID="ID_45813210" CREATED="1653345885222" MODIFIED="1653345886638">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR20w" ID="ID_1936166131" CREATED="1653345887502" MODIFIED="1653345888921"/>
+</node>
 <node TEXT="RobFR: Benchmarking Adversarial Robustness on Face Recognition" ID="ID_765372057" CREATED="1642726609490" MODIFIED="1642726640122">
 <icon BUILTIN="pencil"/>
 <icon BUILTIN="bookmark"/>
