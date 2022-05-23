@@ -1060,7 +1060,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
+<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_1556055508" CREATED="1648173325254" MODIFIED="1648173329845">
 <icon BUILTIN="info"/>
@@ -1423,7 +1423,9 @@
 <icon BUILTIN="unchecked"/>
 <icon BUILTIN="bookmark"/>
 <node TEXT="ICLR18" ID="ID_1371601269" CREATED="1653340992200" MODIFIED="1653340994088"/>
-<node TEXT="train on convex combinations of pairs of examples" ID="ID_1621318087" CREATED="1653341058171" MODIFIED="1653341070073"/>
+<node TEXT="train on convex combinations of pairs of examples" ID="ID_1621318087" CREATED="1653341058171" MODIFIED="1653341070073">
+<node TEXT="not using adversarial examples" ID="ID_1175610577" CREATED="1653341357474" MODIFIED="1653341361903"/>
+</node>
 <node TEXT="regularize the neural network to favor simple linear behavior in-between training examples" ID="ID_758048869" CREATED="1653341070530" MODIFIED="1653341101596"/>
 <node TEXT="both robustness and generalization" ID="ID_425810368" CREATED="1653341051563" MODIFIED="1653341057149"/>
 </node>
@@ -1480,6 +1482,10 @@
 <node TEXT="useful for robface project" ID="ID_1879091584" CREATED="1652403660508" MODIFIED="1652403674344">
 <icon BUILTIN="info"/>
 </node>
+</node>
+<node TEXT="Robust Representation via Dynamic Feature Aggregation" ID="ID_783913799" CREATED="1653341610547" MODIFIED="1653341620041">
+<icon BUILTIN="pencil"/>
+<node TEXT="follow-up of Mixup ICLR18" ID="ID_1595832943" CREATED="1653341621100" MODIFIED="1653341633977"/>
 </node>
 </node>
 <node TEXT="Certified Robustness" ID="ID_636878532" CREATED="1641743555483" MODIFIED="1651777660583">
