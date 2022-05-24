@@ -517,7 +517,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Attack: Intersection" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1335351832" CREATED="1647263319144" MODIFIED="1647263375425">
+<node TEXT="Adversarial Attack: Intersection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1335351832" CREATED="1647263319144" MODIFIED="1647263375425">
 <edge COLOR="#7c007c"/>
 <node TEXT="3D PCL" ID="ID_1616919715" CREATED="1648388494887" MODIFIED="1648388497545">
 <node TEXT="Shape-invariant 3D Adversarial Point Clouds" ID="ID_1106915267" CREATED="1648388498393" MODIFIED="1648388503330">
@@ -1760,7 +1760,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Defense: Intersection" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1647265134040">
+<node TEXT="Adversarial Defense: Intersection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1647265134040">
 <edge COLOR="#0000ff"/>
 <font NAME="Gentium"/>
 <node TEXT="Contrastive Learning" ID="ID_230158987" CREATED="1649169110339" MODIFIED="1649169131686">
@@ -3902,12 +3902,18 @@
 </node>
 </node>
 </node>
-<node TEXT="Scene Graph" FOLDED="true" POSITION="left" ID="ID_691684807" CREATED="1582940936028" MODIFIED="1651953021589">
+<node TEXT="Scene/Knowledge Graph" POSITION="left" ID="ID_691684807" CREATED="1582940936028" MODIFIED="1653357364861">
 <font NAME="Gentium" BOLD="false"/>
 <edge COLOR="#007c7c"/>
+<node TEXT="SG" ID="ID_62932280" CREATED="1653357372586" MODIFIED="1653357374319">
+<node TEXT="Survey" ID="ID_1665575737" CREATED="1653357500064" MODIFIED="1653357514750">
+<icon BUILTIN="info"/>
+<node TEXT="A Comprehensive Survey of Scene Graphs:&#xa;Generation and Application" ID="ID_1652046589" CREATED="1653357506363" MODIFIED="1653357511441">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
 <node TEXT="Generation" ID="ID_1992268449" CREATED="1582940945725" MODIFIED="1590024968949">
 <font NAME="Gentium" BOLD="false"/>
-<node TEXT="1912.07414 Learning Canonical Representations forScene Graph to Image Generation" ID="ID_1230724059" CREATED="1591523975753" MODIFIED="1591523987076"/>
 <node TEXT="2002.11949: unbiased scene graph generalization from biased training" ID="ID_1016607145" CREATED="1582940950980" MODIFIED="1587526865280">
 <font NAME="Gentium" BOLD="false"/>
 <node TEXT="what: scene graph generation (SGG)" ID="ID_1614294683" CREATED="1582940994088" MODIFIED="1587526865281">
@@ -3924,9 +3930,21 @@
 <node TEXT="Exploiting Edge-Oriented Reasoning for 3D Point-based Scene Graph Analysis (cvpr21)" ID="ID_110979499" CREATED="1615348622406" MODIFIED="1615348629899"/>
 <node TEXT="Probabilistic Modeling of Semantic Ambiguity for Scene Graph Generation (cvpr21)" ID="ID_1895253076" CREATED="1615351040893" MODIFIED="1615351048231"/>
 </node>
+<node TEXT="Inverse Generation" ID="ID_1595445036" CREATED="1653357386274" MODIFIED="1653357388858">
+<node TEXT="1912.07414 Learning Canonical Representations forScene Graph to Image Generation" ID="ID_1230724059" CREATED="1591523975753" MODIFIED="1591523987076"/>
+</node>
 <node TEXT="Image Retrieval" ID="ID_1768896" CREATED="1610425686042" MODIFIED="1610425689498">
 <node TEXT="2012: Image-to-Image Retrieval by Learning Similarity between Scene Graphs (AAAI21)" ID="ID_1384437389" CREATED="1610425690361" MODIFIED="1610425706901">
 <icon BUILTIN="button_ok"/>
+</node>
+</node>
+</node>
+<node TEXT="KG" ID="ID_822456907" CREATED="1653357374701" MODIFIED="1653357375953">
+<node TEXT="Survey" ID="ID_961480222" CREATED="1653357413499" MODIFIED="1653357418188">
+<icon BUILTIN="info"/>
+<node TEXT="Deep Learning on Knowledge Graph for Recommender&#xa;System: A Survey" ID="ID_474794422" CREATED="1653357426923" MODIFIED="1653357430650">
+<icon BUILTIN="pencil"/>
+</node>
 </node>
 </node>
 </node>
