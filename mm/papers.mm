@@ -383,6 +383,10 @@
 <node TEXT="Enhancing the Transferability via Feature-Momentum Adversarial Attack" ID="ID_1388592764" CREATED="1652404351334" MODIFIED="1652404353003">
 <icon BUILTIN="pencil"/>
 </node>
+<node TEXT="Transferable Adversarial Attack based on Integrated Gradients" ID="ID_293565208" CREATED="1653859752677" MODIFIED="1653859764757">
+<icon BUILTIN="unchecked"/>
+<node TEXT="ICLR22" ID="ID_1384165963" CREATED="1653859766828" MODIFIED="1653859768539"/>
+</node>
 <node TEXT="w/ Query Prior" ID="ID_455983940" CREATED="1653340512836" MODIFIED="1653340516865">
 <node TEXT="Enhancing the Transferability of Adversarial&#xa;Examples via a Few Queries" ID="ID_844258032" CREATED="1653340517614" MODIFIED="1653340525088">
 <icon BUILTIN="pencil"/>
@@ -595,6 +599,10 @@
 <node TEXT="Adv-Makeup: A New Imperceptible and Transferable Attack on Face Recognition" ID="ID_911311182" CREATED="1653346149852" MODIFIED="1653346153509">
 <icon BUILTIN="unchecked"/>
 <node TEXT="IJCAI21" ID="ID_887350670" CREATED="1653346154240" MODIFIED="1653346157975"/>
+</node>
+<node TEXT="A Physical-World Adversarial Attack Against&#xa;3D Face Recognition" ID="ID_441242853" CREATED="1653861969866" MODIFIED="1653861976793">
+<icon BUILTIN="pencil"/>
+<node TEXT="submit to NIPS22" ID="ID_1236014188" CREATED="1653861980419" MODIFIED="1653861985760"/>
 </node>
 </node>
 <node TEXT="Action Recognition" ID="ID_1024637428" CREATED="1652385248018" MODIFIED="1652385250882">
@@ -1327,6 +1335,15 @@
 </node>
 <node TEXT="Manifold extension" ID="ID_890151384" CREATED="1652406339560" MODIFIED="1652406342698">
 <node TEXT="Dual Manifold Adversarial Robustness:&#xa;Defense against Lp and non-Lp Adversarial Attacks" ID="ID_206104462" CREATED="1652406343378" MODIFIED="1652406343884"/>
+</node>
+<node TEXT="CoAT" ID="ID_515518089" CREATED="1653862466220" MODIFIED="1653862468210">
+<node TEXT="Collaborative Adversarial Training" ID="ID_526709795" CREATED="1653862488158" MODIFIED="1653862490251">
+<icon BUILTIN="pencil"/>
+<node TEXT="submit NIPS22" ID="ID_498526726" CREATED="1653862491961" MODIFIED="1653862495203"/>
+<node TEXT="min-max v.s. max-min adversarial training" ID="ID_1952682132" CREATED="1653862495447" MODIFIED="1653862599477">
+<icon BUILTIN="info"/>
+</node>
+</node>
 </node>
 <node TEXT="not-famous" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1872674435" CREATED="1642431357219" MODIFIED="1647050857744">
 <node TEXT="parl: enhancing diversity of ensemble networks to resist adversarial attacks via pairwise adversarially robust loss function" ID="ID_1007028628" CREATED="1642431798570" MODIFIED="1642432009766">
@@ -3721,6 +3738,10 @@
 <node TEXT="Zoom In and Out: A Mixed-scale Triplet Network&#xa;for Camouflaged Object Detection" ID="ID_290360895" CREATED="1648388067795" MODIFIED="1648388070326">
 <node TEXT="CVPR22" ID="ID_1320931684" CREATED="1648388071940" MODIFIED="1648388074017"/>
 </node>
+<node TEXT="Deep Gradient Learning for Efficient Camouflaged Object Detection" ID="ID_725347338" CREATED="1653859018444" MODIFIED="1653859019021">
+<node TEXT="Tech report" ID="ID_1702124696" CREATED="1653859022970" MODIFIED="1653859027333"/>
+<node TEXT="Luc Van Gool" ID="ID_513432933" CREATED="1653859028122" MODIFIED="1653859033098"/>
+</node>
 </node>
 <node TEXT="w/ Pretrained" ID="ID_713615493" CREATED="1649102563690" MODIFIED="1649102570371">
 <node TEXT="Learning to Prompt for Open-Vocabulary Object Detection with Vision-Language Model" ID="ID_1568893151" CREATED="1649102571287" MODIFIED="1649102577177">
@@ -3841,13 +3862,17 @@
 </node>
 </node>
 </node>
-<node TEXT="Self-Supervised Learning" FOLDED="true" POSITION="left" ID="ID_714759247" CREATED="1650825914367" MODIFIED="1651953578841">
+<node TEXT="Self-Supervised Learning" POSITION="left" ID="ID_714759247" CREATED="1650825914367" MODIFIED="1651953578841">
 <edge COLOR="#7c007c"/>
 <node TEXT="Survey" ID="ID_1775463249" CREATED="1650825920877" MODIFIED="1650825925562">
 <icon BUILTIN="info"/>
 <node TEXT="Empirical Evaluation and Theoretical Analysis for Representation Learning: A Survey" ID="ID_704481907" CREATED="1650825926968" MODIFIED="1650825934945">
 <node TEXT="IJCAI survey 2022" ID="ID_210152171" CREATED="1650825935831" MODIFIED="1650825944162"/>
 <node TEXT="generic representation learning, involving both CV and CL" ID="ID_1395139495" CREATED="1650825945439" MODIFIED="1650825953912"/>
+</node>
+<node TEXT="Contrastive and Non-Contrastive Self-Supervised Learning Recover Global and Local Spectral Embedding Methods" ID="ID_942127859" CREATED="1653862887759" MODIFIED="1653862889792">
+<icon BUILTIN="unchecked"/>
+<node TEXT="LeCun" ID="ID_1974747100" CREATED="1653862891044" MODIFIED="1653862904638"/>
 </node>
 </node>
 <node TEXT="Contrastive Learning Image" ID="ID_1556051530" CREATED="1646924377310" MODIFIED="1652404146054">
@@ -3902,7 +3927,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Scene/Knowledge Graph" POSITION="left" ID="ID_691684807" CREATED="1582940936028" MODIFIED="1653357364861">
+<node TEXT="Scene/Knowledge Graph" FOLDED="true" POSITION="left" ID="ID_691684807" CREATED="1582940936028" MODIFIED="1653357364861">
 <font NAME="Gentium" BOLD="false"/>
 <edge COLOR="#007c7c"/>
 <node TEXT="SG" ID="ID_62932280" CREATED="1653357372586" MODIFIED="1653357374319">
@@ -5301,13 +5326,32 @@
 </node>
 </node>
 </node>
-<node TEXT="Explainable AI" FOLDED="true" POSITION="left" ID="ID_1535392614" CREATED="1646937960988" MODIFIED="1650817806076">
+<node TEXT="Explainable AI" POSITION="left" ID="ID_1535392614" CREATED="1646937960988" MODIFIED="1650817806076">
 <edge COLOR="#7c0000"/>
+<node TEXT="Survey" ID="ID_796711666" CREATED="1653860071187" MODIFIED="1653860080368">
+<icon BUILTIN="mindmap"/>
+<node TEXT="How explainable are adversarially-robust CNNs?" ID="ID_95726314" CREATED="1653860082056" MODIFIED="1653860092200">
+<icon BUILTIN="pencil"/>
+<node TEXT="submit NIPS22" ID="ID_181101661" CREATED="1653860093733" MODIFIED="1653860102672"/>
+<node TEXT="(1) test accuracy" ID="ID_764666299" CREATED="1653860103071" MODIFIED="1653860111201"/>
+<node TEXT="(2) out-of-distribution accuracy" ID="ID_874751335" CREATED="1653860111347" MODIFIED="1653860117298"/>
+<node TEXT="(3) explainability" ID="ID_362903560" CREATED="1653860117582" MODIFIED="1653860121732"/>
+</node>
+</node>
+<node TEXT="CAM-based" ID="ID_1199847666" CREATED="1651102994318" MODIFIED="1653860066156">
 <node TEXT="Class Activation Map" ID="ID_47285759" CREATED="1651102989796" MODIFIED="1651103008396">
-<node TEXT="CAM" ID="ID_1199847666" CREATED="1651102994318" MODIFIED="1651102997899">
 <node TEXT="Learning Deep Features for Discriminative Localization" ID="ID_675900606" CREATED="1651103009874" MODIFIED="1651103025782">
 <icon BUILTIN="unchecked"/>
 <node TEXT="CVPR, bolei zhou" ID="ID_1929585737" CREATED="1651103017313" MODIFIED="1651103020547"/>
+</node>
+</node>
+</node>
+<node TEXT="Gradient-based" ID="ID_733899372" CREATED="1653860036334" MODIFIED="1653860058567"/>
+<node TEXT="Perturbation-based" ID="ID_174218220" CREATED="1653860058835" MODIFIED="1653860062105">
+<node TEXT="LIME" ID="ID_1481560289" CREATED="1653860346455" MODIFIED="1653860348553">
+<node TEXT="&#x201c;Why Should I Trust You?&#x201d;&#xa;Explaining the Predictions of Any Classifier" ID="ID_674389421" CREATED="1653860349515" MODIFIED="1653860351696">
+<icon BUILTIN="unchecked"/>
+<node TEXT="KDD" ID="ID_706793779" CREATED="1653860352710" MODIFIED="1653860353774"/>
 </node>
 </node>
 </node>
