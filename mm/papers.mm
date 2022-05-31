@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="112" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="115" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1648337505775">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -3699,9 +3699,19 @@
 </node>
 </node>
 </node>
-<node TEXT=" Object Detection" POSITION="left" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1647264593943">
+<node TEXT=" Object Detection" FOLDED="true" POSITION="left" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1647264593943">
 <font NAME="Gentium" SIZE="10" BOLD="false"/>
 <edge COLOR="#7c7c00"/>
+<node TEXT="Survey" ID="ID_674316746" CREATED="1653969587756" MODIFIED="1653969594381">
+<icon BUILTIN="mindmap"/>
+<node TEXT="Speed/accuracy trade-offs for modern convolutional object detectors" ID="ID_1624440628" CREATED="1653969595497" MODIFIED="1653969602273">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR17" ID="ID_1015398329" CREATED="1653969598712" MODIFIED="1653969600650"/>
+</node>
+<node TEXT="&#x201c;Object Detection in 20 Years: A Survey" ID="ID_1224901954" CREATED="1653970416866" MODIFIED="1653970420561">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
 <node TEXT="Single Object" ID="ID_496791759" CREATED="1653966642366" MODIFIED="1653966645907">
 <node TEXT="classification + localization" ID="ID_1090575483" CREATED="1653966655978" MODIFIED="1653966674494">
 <icon BUILTIN="info"/>
@@ -3784,9 +3794,6 @@
 <icon BUILTIN="info"/>
 </node>
 <node TEXT="Focal Loss for Dense Object Detection" ID="ID_1170541692" CREATED="1653969458606" MODIFIED="1653969459467"/>
-</node>
-<node TEXT="Mask R-CNN" ID="ID_365573714" CREATED="1578733418308" MODIFIED="1587526865054">
-<font NAME="Gentium" BOLD="false"/>
 </node>
 <node TEXT="2005.09973: dynamic refinement network for oriented and densely packed object detection" ID="ID_1703277358" CREATED="1590025459045" MODIFIED="1590025479923"/>
 <node TEXT="2012.03544: end to end object detection with fully convolutional network" ID="ID_1523511969" CREATED="1607496830511" MODIFIED="1607496848085"/>
