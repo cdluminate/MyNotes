@@ -3744,18 +3744,46 @@
 <font NAME="Gentium" BOLD="false"/>
 <node TEXT="&#x201c;Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks" ID="ID_1931573471" CREATED="1653968978046" MODIFIED="1653968979831">
 <node TEXT="NIPS15" ID="ID_146741130" CREATED="1653968981601" MODIFIED="1653968983499"/>
+<node TEXT="make CNN do proposals!" ID="ID_427255944" CREATED="1653969118650" MODIFIED="1653969122706"/>
+<node TEXT="This is a two-stage object detector" ID="ID_468294209" CREATED="1653969242963" MODIFIED="1653969251904">
+<node TEXT="(1) run onece per image, backbone network, region proposal network" ID="ID_980955670" CREATED="1653969254660" MODIFIED="1653969268961"/>
+<node TEXT="(2) run once per region, crop features (RoI pool/align), predict object class, predict bbox offset" ID="ID_1958193342" CREATED="1653969269581" MODIFIED="1653969300957"/>
+</node>
 <node TEXT="insert Region Proposal Network (RPN) to predict proposals from features" ID="ID_1070815401" CREATED="1653969029369" MODIFIED="1653969045601"/>
 <node TEXT="otherwise same as fast r-cnn, crop features for each proposal, classify each one" ID="ID_254300656" CREATED="1653969049417" MODIFIED="1653969063714"/>
+<node TEXT="jointly train 4 losses: (1) RPN classify object / not object; (2) RPN regress box coordinates; (3) final classification score; (4) final box coordinates" ID="ID_684665857" CREATED="1653969125783" MODIFIED="1653969154792"/>
+<node TEXT="details" ID="ID_607424425" CREATED="1653969188918" MODIFIED="1653969191130">
+<node TEXT="ignore overlapping proposals with non-max surppression" ID="ID_1142749533" CREATED="1653969193553" MODIFIED="1653969203080"/>
+<node TEXT="how are anchors determined" ID="ID_103448724" CREATED="1653969203318" MODIFIED="1653969207601"/>
+<node TEXT="how do we sample positive / negative samples for training the RPN?" ID="ID_1675106944" CREATED="1653969207819" MODIFIED="1653969220719"/>
+<node TEXT="how to parameterize bounding box regression?" ID="ID_586470331" CREATED="1653969221408" MODIFIED="1653969229044"/>
 </node>
 </node>
-<node TEXT="SSD" ID="ID_164154080" CREATED="1578733432308" MODIFIED="1587526865054">
-<font NAME="Gentium" BOLD="false"/>
 </node>
 <node TEXT="YOLO" ID="ID_1721203552" CREATED="1578733429892" MODIFIED="1587526865054">
 <font NAME="Gentium" BOLD="false"/>
+<node TEXT="single-stage" ID="ID_1839544727" CREATED="1653969374185" MODIFIED="1653969378690">
+<icon BUILTIN="info"/>
+</node>
+<node TEXT="You Only Look Once: Unified, Real-Time Object Detection" ID="ID_1139110120" CREATED="1653969414505" MODIFIED="1653969438295">
+<node TEXT="CVPR16" ID="ID_783494472" CREATED="1653969425013" MODIFIED="1653969426766"/>
+</node>
 <node TEXT="2004.10934: YOLOv4: optimal speed and accuracy of object detection" ID="ID_1418219399" CREATED="1587731285906" MODIFIED="1587731405695">
 <icon BUILTIN="button_ok"/>
 </node>
+</node>
+<node TEXT="SSD" ID="ID_164154080" CREATED="1578733432308" MODIFIED="1653969384449">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="single-stage" ID="ID_1648134672" CREATED="1653969385435" MODIFIED="1653969389693">
+<icon BUILTIN="info"/>
+</node>
+<node TEXT="&#x201c;SSD: Single-Shot MultiBox Detector" ID="ID_1049708950" CREATED="1653969449265" MODIFIED="1653969450040"/>
+</node>
+<node TEXT="RetinaNet" ID="ID_1759579854" CREATED="1653969367052" MODIFIED="1653969369692">
+<node TEXT="single-stage" ID="ID_1813477158" CREATED="1653969395178" MODIFIED="1653969399321">
+<icon BUILTIN="info"/>
+</node>
+<node TEXT="Focal Loss for Dense Object Detection" ID="ID_1170541692" CREATED="1653969458606" MODIFIED="1653969459467"/>
 </node>
 <node TEXT="Mask R-CNN" ID="ID_365573714" CREATED="1578733418308" MODIFIED="1587526865054">
 <font NAME="Gentium" BOLD="false"/>
