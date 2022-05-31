@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="{M,R,D}L" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1642394353464" STYLE="oval">
 <font NAME="Gentium" SIZE="18"/>
-<hook NAME="MapStyle" zoom="1.558">
+<hook NAME="MapStyle" zoom="1.885">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -3833,6 +3833,39 @@
 <node TEXT="Luc Van Gool" ID="ID_513432933" CREATED="1653859028122" MODIFIED="1653859033098"/>
 </node>
 </node>
+<node TEXT="+Graph" LOCALIZED_STYLE_REF="styles.topic" ID="ID_172353625" CREATED="1654032911773" MODIFIED="1654033207459">
+<node TEXT="Comments" ID="ID_80401254" CREATED="1654036997737" MODIFIED="1654037000676">
+<icon BUILTIN="info"/>
+<node TEXT="most of them are within-image graph" ID="ID_647522715" CREATED="1654037001720" MODIFIED="1654037007962"/>
+</node>
+<node TEXT="Object Detection Meets Knowledge Graphs" ID="ID_1547756003" CREATED="1654032915868" MODIFIED="1654033026073">
+<icon BUILTIN="unchecked"/>
+<node TEXT="IJCAI17" ID="ID_153000722" CREATED="1654032927276" MODIFIED="1654032931203"/>
+<node TEXT="integrate knolwedge graph into obj det" ID="ID_1036740780" CREATED="1654032931683" MODIFIED="1654032986128"/>
+<node TEXT="improves obj det using re-optimization process to achieve better consistency w/ background knowledge" ID="ID_28948251" CREATED="1654032986451" MODIFIED="1654033006262"/>
+</node>
+<node TEXT="Efficient graph-based search for object detection" ID="ID_1151290803" CREATED="1654034712663" MODIFIED="1654034715811">
+<icon BUILTIN="unchecked"/>
+<node TEXT="Information Science" ID="ID_1013240628" CREATED="1654034717523" MODIFIED="1654034722196"/>
+<node TEXT="object localization as graph-based search" ID="ID_69948260" CREATED="1654034722833" MODIFIED="1654034741455"/>
+</node>
+<node TEXT="Geometry Auxiliary Salient Object Detection for&#xa;Light Fields via Graph Neural Networks" ID="ID_1134474138" CREATED="1654035137579" MODIFIED="1654035148287">
+<icon BUILTIN="unchecked"/>
+<node TEXT="TIP" ID="ID_1125752869" CREATED="1654035149750" MODIFIED="1654035152529"/>
+</node>
+<node TEXT="GAR: Graph Assisted Reasoning for Object Detection" ID="ID_689692113" CREATED="1654037165027" MODIFIED="1654037165979">
+<node TEXT="WACV20" ID="ID_649864249" CREATED="1654037166918" MODIFIED="1654037171451"/>
+<node TEXT="utlize heterogeneious graph in modeling object-object relations and object-secene relations" ID="ID_163274329" CREATED="1654037171822" MODIFIED="1654037195706"/>
+</node>
+</node>
+<node TEXT="Domain Adaptation" ID="ID_1939871268" CREATED="1654035897051" MODIFIED="1654035900277">
+<node TEXT="Survey" ID="ID_46151502" CREATED="1654035902136" MODIFIED="1654035903656">
+<node TEXT="Unsupervised Domain Adaptation of&#xa;Object Detectors: A Survey" ID="ID_840559711" CREATED="1654035904791" MODIFIED="1654035917646">
+<icon BUILTIN="unchecked"/>
+<node TEXT="Poojan" ID="ID_1665277090" CREATED="1654035921643" MODIFIED="1654035926580"/>
+</node>
+</node>
+</node>
 <node TEXT="w/ Pretrained" ID="ID_713615493" CREATED="1649102563690" MODIFIED="1649102570371">
 <node TEXT="Learning to Prompt for Open-Vocabulary Object Detection with Vision-Language Model" ID="ID_1568893151" CREATED="1649102571287" MODIFIED="1649102577177">
 <node TEXT="CVPR22" ID="ID_863951710" CREATED="1649102578216" MODIFIED="1649102579357"/>
@@ -4065,6 +4098,12 @@
 <node TEXT="Deep Learning on Knowledge Graph for Recommender&#xa;System: A Survey" ID="ID_474794422" CREATED="1653357426923" MODIFIED="1653357430650">
 <icon BUILTIN="pencil"/>
 </node>
+<node TEXT="" ID="ID_993691552" CREATED="1654033772224" MODIFIED="1654033772224"/>
+</node>
+<node TEXT="ConceptNet 5.5: An Open Multilingual Graph of General Knowledge." ID="ID_916824453" CREATED="1654033790966" MODIFIED="1654033793845">
+<icon BUILTIN="unchecked"/>
+<node TEXT="AAAI" ID="ID_599287398" CREATED="1654033795196" MODIFIED="1654033796379"/>
+<node TEXT="contains both positive relation and negative relation" ID="ID_755158262" CREATED="1654033864046" MODIFIED="1654033872607"/>
 </node>
 </node>
 </node>
