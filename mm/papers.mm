@@ -3714,6 +3714,8 @@
 <node TEXT="&#x201c;Object Detection in 20 Years: A Survey" ID="ID_1224901954" CREATED="1653970416866" MODIFIED="1653970420561">
 <icon BUILTIN="pencil"/>
 </node>
+<node TEXT="https://github.com/amusi/awesome-object-detection" ID="ID_1845974464" CREATED="1654041279612" MODIFIED="1654041280016"/>
+<node TEXT="https://github.com/daicoolb/Awesome-Object-Detections" ID="ID_445839046" CREATED="1654041286014" MODIFIED="1654041286616"/>
 </node>
 <node TEXT="Single Object" ID="ID_496791759" CREATED="1653966642366" MODIFIED="1653966645907">
 <node TEXT="classification + localization" ID="ID_1090575483" CREATED="1653966655978" MODIFIED="1653966674494">
@@ -3721,12 +3723,13 @@
 <node TEXT="multitask loss function" ID="ID_1772882616" CREATED="1653966701249" MODIFIED="1653966706002"/>
 <node TEXT="treat localization as a regression problem" ID="ID_155725792" CREATED="1653966687929" MODIFIED="1653966695563"/>
 </node>
-</node>
-<node TEXT="Main (multi-object)" ID="ID_602285743" CREATED="1590025482391" MODIFIED="1653966930740">
 <node TEXT="Region Proposal" ID="ID_29120956" CREATED="1653966976380" MODIFIED="1653967007681">
 <font BOLD="true"/>
 <node TEXT="selective search" ID="ID_259801909" CREATED="1653966983851" MODIFIED="1653966986831"/>
 </node>
+</node>
+<node TEXT="Main (multi-object)" ID="ID_602285743" CREATED="1590025482391" MODIFIED="1653966930740">
+<node TEXT="Two-Stage" ID="ID_981048532" CREATED="1654041315951" MODIFIED="1654041318501">
 <node TEXT="R-CNN" ID="ID_1685978685" CREATED="1578733403630" MODIFIED="1587526865053">
 <font NAME="Gentium" BOLD="false"/>
 <node TEXT="Rich feature hierarchies for accurate object detection and&#xa;semantic segmentation" ID="ID_1703888186" CREATED="1653967033846" MODIFIED="1653967036728">
@@ -3773,6 +3776,7 @@
 </node>
 </node>
 </node>
+</node>
 <node TEXT="Single-Stage" ID="ID_1861902425" CREATED="1654040858813" MODIFIED="1654040862652">
 <node TEXT="YOLO" ID="ID_1721203552" CREATED="1578733429892" MODIFIED="1587526865054">
 <font NAME="Gentium" BOLD="false"/>
@@ -3795,7 +3799,9 @@
 </node>
 </node>
 <node TEXT="CornerNet" ID="ID_1915900664" CREATED="1654041083704" MODIFIED="1654041085648">
-<node TEXT="" ID="ID_1663902876" CREATED="1654041087416" MODIFIED="1654041087416"/>
+<node TEXT="CornerNet: Detecting Objects as Paired Keypoints" ID="ID_1663902876" CREATED="1654041087416" MODIFIED="1654041183192">
+<node TEXT="detecting objects as paired keypoints instead of the anchor boxes" ID="ID_1343226129" CREATED="1654041186237" MODIFIED="1654041223374"/>
+</node>
 </node>
 </node>
 <node TEXT="2005.09973: dynamic refinement network for oriented and densely packed object detection" ID="ID_1703277358" CREATED="1590025459045" MODIFIED="1590025479923"/>
