@@ -3724,14 +3724,29 @@
 <node TEXT="(3) forward each region through convnet (imagenet pretrain)" ID="ID_861934539" CREATED="1653967134894" MODIFIED="1653967163253"/>
 <node TEXT="(4) classify regions with SVMs" ID="ID_1465168127" CREATED="1653967147338" MODIFIED="1653967156142"/>
 <node TEXT="(5) predict corrections to the RoI: 4 nunbers (dx, dy, dw, dh)" ID="ID_1463307661" CREATED="1653967191302" MODIFIED="1653967205442"/>
-<node TEXT="problem: very slow, needs 2k forward passes" ID="ID_819861976" CREATED="1653967211956" MODIFIED="1653967220672"/>
+<node TEXT="problem: very slow, needs 2k forward passes" ID="ID_819861976" CREATED="1653967211956" MODIFIED="1653968815343">
+<icon BUILTIN="button_cancel"/>
+</node>
 </node>
 </node>
 <node TEXT="Fast R-CNN" ID="ID_694782039" CREATED="1578733411700" MODIFIED="1587526865053">
 <font NAME="Gentium" BOLD="false"/>
+<node TEXT="Fast R-CNN" ID="ID_875564281" CREATED="1653968856477" MODIFIED="1653968857857">
+<node TEXT="ICCV2015" ID="ID_1148000703" CREATED="1653968859515" MODIFIED="1653968862266"/>
+<node TEXT="RoIs from conv5 features instead of input image" ID="ID_1499070763" CREATED="1653968864960" MODIFIED="1653968886815"/>
+<node TEXT="per-region network for linear+softmax and linear box offset regression" ID="ID_70173213" CREATED="1653968912707" MODIFIED="1653968929590"/>
+<node TEXT="problem: runtime dominated by region proposals" ID="ID_1662600123" CREATED="1653968955141" MODIFIED="1653968964724">
+<icon BUILTIN="button_cancel"/>
+</node>
+</node>
 </node>
 <node TEXT="Faster R-CNN" ID="ID_642482113" CREATED="1578733414892" MODIFIED="1587526865053">
 <font NAME="Gentium" BOLD="false"/>
+<node TEXT="&#x201c;Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks" ID="ID_1931573471" CREATED="1653968978046" MODIFIED="1653968979831">
+<node TEXT="NIPS15" ID="ID_146741130" CREATED="1653968981601" MODIFIED="1653968983499"/>
+<node TEXT="insert Region Proposal Network (RPN) to predict proposals from features" ID="ID_1070815401" CREATED="1653969029369" MODIFIED="1653969045601"/>
+<node TEXT="otherwise same as fast r-cnn, crop features for each proposal, classify each one" ID="ID_254300656" CREATED="1653969049417" MODIFIED="1653969063714"/>
+</node>
 </node>
 <node TEXT="SSD" ID="ID_164154080" CREATED="1578733432308" MODIFIED="1587526865054">
 <font NAME="Gentium" BOLD="false"/>
