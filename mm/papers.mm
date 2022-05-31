@@ -3837,6 +3837,10 @@
 <node TEXT="Comments" ID="ID_80401254" CREATED="1654036997737" MODIFIED="1654037000676">
 <icon BUILTIN="info"/>
 <node TEXT="most of them are within-image graph" ID="ID_647522715" CREATED="1654037001720" MODIFIED="1654037007962"/>
+<node TEXT="context encoding" ID="ID_490133111" CREATED="1654038438964" MODIFIED="1654038446917"/>
+<node TEXT="relation detection" ID="ID_659067004" CREATED="1654038447649" MODIFIED="1654038450787">
+<node TEXT="this is scene graph" ID="ID_1115446110" CREATED="1654038480342" MODIFIED="1654038483953"/>
+</node>
 </node>
 <node TEXT="Object Detection Meets Knowledge Graphs" ID="ID_1547756003" CREATED="1654032915868" MODIFIED="1654033026073">
 <icon BUILTIN="unchecked"/>
@@ -3856,6 +3860,13 @@
 <node TEXT="GAR: Graph Assisted Reasoning for Object Detection" ID="ID_689692113" CREATED="1654037165027" MODIFIED="1654037165979">
 <node TEXT="WACV20" ID="ID_649864249" CREATED="1654037166918" MODIFIED="1654037171451"/>
 <node TEXT="utlize heterogeneious graph in modeling object-object relations and object-secene relations" ID="ID_163274329" CREATED="1654037171822" MODIFIED="1654037195706"/>
+</node>
+<node TEXT="Spatial-aware Graph Relation Network for Large-scale Object Detection" ID="ID_1154570018" CREATED="1654038023657" MODIFIED="1654038036802">
+<icon BUILTIN="button_ok"/>
+<node TEXT="CVPR19" ID="ID_1826997745" CREATED="1654038025644" MODIFIED="1654038032597"/>
+<node TEXT="proper encode high-order object relation in the detection system without any external knowledge?" ID="ID_77475950" CREATED="1654038032993" MODIFIED="1654038051903"/>
+<node TEXT="recent works try to encode relation by constructing graphs, e.g. using handcraft linguistic knowledge between classes or implicitly learning a fully-connected graph between regions" ID="ID_85464199" CREATED="1654038150487" MODIFIED="1654038177996"/>
+<node TEXT="adaptively discover and incorporate key semantics and spatial relationships for reasoning over each object" ID="ID_704649779" CREATED="1654038219880" MODIFIED="1654038242254"/>
 </node>
 </node>
 <node TEXT="Domain Adaptation" ID="ID_1939871268" CREATED="1654035897051" MODIFIED="1654035900277">
