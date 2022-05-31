@@ -3699,12 +3699,33 @@
 </node>
 </node>
 </node>
-<node TEXT=" Object Detection" FOLDED="true" POSITION="left" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1647264593943">
+<node TEXT=" Object Detection" POSITION="left" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1647264593943">
 <font NAME="Gentium" SIZE="10" BOLD="false"/>
 <edge COLOR="#7c7c00"/>
-<node TEXT="Main" ID="ID_602285743" CREATED="1590025482391" MODIFIED="1590025486305">
+<node TEXT="Single Object" ID="ID_496791759" CREATED="1653966642366" MODIFIED="1653966645907">
+<node TEXT="classification + localization" ID="ID_1090575483" CREATED="1653966655978" MODIFIED="1653966674494">
+<icon BUILTIN="info"/>
+<node TEXT="multitask loss function" ID="ID_1772882616" CREATED="1653966701249" MODIFIED="1653966706002"/>
+<node TEXT="treat localization as a regression problem" ID="ID_155725792" CREATED="1653966687929" MODIFIED="1653966695563"/>
+</node>
+</node>
+<node TEXT="Main (multi-object)" ID="ID_602285743" CREATED="1590025482391" MODIFIED="1653966930740">
+<node TEXT="Region Proposal" ID="ID_29120956" CREATED="1653966976380" MODIFIED="1653967007681">
+<font BOLD="true"/>
+<node TEXT="selective search" ID="ID_259801909" CREATED="1653966983851" MODIFIED="1653966986831"/>
+</node>
 <node TEXT="R-CNN" ID="ID_1685978685" CREATED="1578733403630" MODIFIED="1587526865053">
 <font NAME="Gentium" BOLD="false"/>
+<node TEXT="Rich feature hierarchies for accurate object detection and&#xa;semantic segmentation" ID="ID_1703888186" CREATED="1653967033846" MODIFIED="1653967036728">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR14" ID="ID_829127595" CREATED="1653967037895" MODIFIED="1653967039684"/>
+<node TEXT="(1) regions of interest (RoI), about 2k regions" ID="ID_46978929" CREATED="1653967102809" MODIFIED="1653967231224"/>
+<node TEXT="(2) warped image regions (224x224)" ID="ID_1333604188" CREATED="1653967111674" MODIFIED="1653967133869"/>
+<node TEXT="(3) forward each region through convnet (imagenet pretrain)" ID="ID_861934539" CREATED="1653967134894" MODIFIED="1653967163253"/>
+<node TEXT="(4) classify regions with SVMs" ID="ID_1465168127" CREATED="1653967147338" MODIFIED="1653967156142"/>
+<node TEXT="(5) predict corrections to the RoI: 4 nunbers (dx, dy, dw, dh)" ID="ID_1463307661" CREATED="1653967191302" MODIFIED="1653967205442"/>
+<node TEXT="problem: very slow, needs 2k forward passes" ID="ID_819861976" CREATED="1653967211956" MODIFIED="1653967220672"/>
+</node>
 </node>
 <node TEXT="Fast R-CNN" ID="ID_694782039" CREATED="1578733411700" MODIFIED="1587526865053">
 <font NAME="Gentium" BOLD="false"/>
