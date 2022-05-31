@@ -1408,6 +1408,15 @@
 </node>
 </node>
 </node>
+<node TEXT="AT Overfit" LOCALIZED_STYLE_REF="styles.topic" ID="ID_687044656" CREATED="1653960830953" MODIFIED="1653960839313">
+<node TEXT="Alleviating Robust Overfitting of Adversarial&#xa;Training With Consistency Regularization" ID="ID_1437082697" CREATED="1653960841280" MODIFIED="1653960851290">
+<icon BUILTIN="pencil"/>
+<node TEXT="intersting" ID="ID_499994428" CREATED="1653960852552" MODIFIED="1653960863962">
+<icon BUILTIN="button_ok"/>
+<icon BUILTIN="bookmark"/>
+</node>
+</node>
+</node>
 <node TEXT="AT Component" ID="ID_1828896049" CREATED="1651334135030" MODIFIED="1651334137719">
 <node TEXT="BN" ID="ID_1742983557" CREATED="1651334138530" MODIFIED="1651334141052">
 <node TEXT="On Fragile Features and Batch Normalization in Adversarial Training" ID="ID_1511392255" CREATED="1651334141871" MODIFIED="1651334150112">
@@ -1774,6 +1783,16 @@
 <node TEXT="does not look like generalizing to ImageNet" ID="ID_1853413986" CREATED="1652391241476" MODIFIED="1652391248135"/>
 </node>
 </node>
+</node>
+</node>
+<node TEXT="Gradient Masking" ID="ID_1974024366" CREATED="1653958884756" MODIFIED="1653958902652">
+<icon BUILTIN="button_cancel"/>
+<node TEXT="Gives a false sense of security" ID="ID_1272085922" CREATED="1653958892629" MODIFIED="1653958905823">
+<icon BUILTIN="info"/>
+</node>
+<node TEXT="Gradient Concealment: Free Lunch for Defending Adversarial Attacks" ID="ID_1877086207" CREATED="1653958906716" MODIFIED="1653958923638">
+<icon BUILTIN="pencil"/>
+<node TEXT="NIPS submission" ID="ID_1059311551" CREATED="1653958925818" MODIFIED="1653958928535"/>
 </node>
 </node>
 </node>
@@ -3747,6 +3766,11 @@
 <node TEXT="Learning to Prompt for Open-Vocabulary Object Detection with Vision-Language Model" ID="ID_1568893151" CREATED="1649102571287" MODIFIED="1649102577177">
 <node TEXT="CVPR22" ID="ID_863951710" CREATED="1649102578216" MODIFIED="1649102579357"/>
 </node>
+<node TEXT="Point-Level Region Contrast for Object Detection Pre-Training" ID="ID_1856491732" CREATED="1653960940911" MODIFIED="1653961175752">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22 oral" ID="ID_163602476" CREATED="1653961170705" MODIFIED="1653961173729"/>
+<node TEXT="Yutong Bai" ID="ID_1019437676" CREATED="1653960944623" MODIFIED="1653960947264"/>
+</node>
 </node>
 </node>
 <node TEXT="Open Set Recognition" FOLDED="true" POSITION="left" ID="ID_323999523" CREATED="1634132952545" MODIFIED="1647267889167">
@@ -3862,7 +3886,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Self-Supervised Learning" POSITION="left" ID="ID_714759247" CREATED="1650825914367" MODIFIED="1651953578841">
+<node TEXT="Self-Supervised Learning" FOLDED="true" POSITION="left" ID="ID_714759247" CREATED="1650825914367" MODIFIED="1651953578841">
 <edge COLOR="#7c007c"/>
 <node TEXT="Survey" ID="ID_1775463249" CREATED="1650825920877" MODIFIED="1650825925562">
 <icon BUILTIN="info"/>
