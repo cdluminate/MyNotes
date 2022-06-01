@@ -3776,6 +3776,19 @@
 </node>
 </node>
 </node>
+<node TEXT="light head" ID="ID_395681835" CREATED="1654042036745" MODIFIED="1654042039296">
+<node TEXT="Light-Head R-CNN: In Defense of Two-Stage Object Detector" ID="ID_657637424" CREATED="1654041783299" MODIFIED="1654041785595">
+<icon BUILTIN="unchecked"/>
+<node TEXT="megvii" ID="ID_1173101868" CREATED="1654041787217" MODIFIED="1654041789744"/>
+<node TEXT="as fast as single-stage det" ID="ID_235978506" CREATED="1654041790030" MODIFIED="1654041799352"/>
+</node>
+</node>
+<node TEXT="KL-loss" ID="ID_279892875" CREATED="1654042041942" MODIFIED="1654042048129">
+<node TEXT="Bounding Box Regression with Uncertainty for Accurate Object Detection" ID="ID_19938889" CREATED="1654042050114" MODIFIED="1654042051358">
+<node TEXT="megvii" ID="ID_1507426348" CREATED="1654042053058" MODIFIED="1654042055585"/>
+<node TEXT="bounding box regression loss for learning bounding box transofrmation and localization variance together" ID="ID_1394294758" CREATED="1654042055914" MODIFIED="1654042096019"/>
+</node>
+</node>
 </node>
 <node TEXT="Single-Stage" ID="ID_1861902425" CREATED="1654040858813" MODIFIED="1654040862652">
 <node TEXT="YOLO" ID="ID_1721203552" CREATED="1578733429892" MODIFIED="1587526865054">
