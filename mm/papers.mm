@@ -3808,6 +3808,14 @@
 </node>
 </node>
 <node TEXT="DETR" ID="ID_348406151" CREATED="1654113701876" MODIFIED="1654113703328">
+<node TEXT="End-to-End Object Detection with Transformers" ID="ID_943659149" CREATED="1654116599499" MODIFIED="1654116602844">
+<icon BUILTIN="unchecked"/>
+<node TEXT="ECCV20" ID="ID_929643402" CREATED="1654116605136" MODIFIED="1654116607201">
+<node TEXT="Original DETR" ID="ID_512601926" CREATED="1654116608453" MODIFIED="1654116611476"/>
+</node>
+<node TEXT="views object detection as a direct set prediction problem" ID="ID_1228172560" CREATED="1654116621009" MODIFIED="1654116631233"/>
+<node TEXT="Given a fixed small set of learned object queries, DETR reasons about the relations of the objects and the global image context to directly output the final set of predictions in parallel" ID="ID_1081326563" CREATED="1654116666661" MODIFIED="1654116697158"/>
+</node>
 <node TEXT="Accelerating DETR Convergence via Semantic-Aligned Matching" ID="ID_791729206" CREATED="1654113704418" MODIFIED="1654113727951">
 <icon BUILTIN="button_ok"/>
 <icon BUILTIN="password"/>
