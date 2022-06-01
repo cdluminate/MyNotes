@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="{M,R,D}L" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1642394353464" STYLE="oval">
 <font NAME="Gentium" SIZE="18"/>
-<hook NAME="MapStyle" zoom="1.885">
+<hook NAME="MapStyle" zoom="1.17">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="115" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="116" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1648337505775">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -2525,6 +2525,15 @@
 </node>
 <node TEXT="Bias" ID="ID_1657534476" CREATED="1651188079795" MODIFIED="1651188082281"/>
 <node TEXT="Privacy" ID="ID_191145216" CREATED="1651188082570" MODIFIED="1651188086484"/>
+<node TEXT="Facial Expression" ID="ID_1665603625" CREATED="1648335974432" MODIFIED="1654104074785">
+<node TEXT="Towards Semi-Supervised Deep Facial Expression Recognition with An Adaptive Confidence Margin" ID="ID_1230150992" CREATED="1648335980975" MODIFIED="1648336159200">
+<icon BUILTIN="unchecked"/>
+<font ITALIC="false"/>
+<node TEXT="CVPR22" ID="ID_1243722840" CREATED="1648336163039" MODIFIED="1648336170532"/>
+<node TEXT="semi-supervised" ID="ID_1980840722" CREATED="1648336171391" MODIFIED="1648336176030"/>
+<node TEXT="better leverage unlabeled data" ID="ID_316244842" CREATED="1648336176523" MODIFIED="1648336184906"/>
+</node>
+</node>
 </node>
 <node TEXT="Track: AdvRank" FOLDED="true" POSITION="right" ID="ID_67713290" CREATED="1561352085890" MODIFIED="1642394393230">
 <icon BUILTIN="idea"/>
@@ -2889,22 +2898,6 @@
 <node TEXT="CVPR22, Microsoft" ID="ID_125282230" CREATED="1651953423268" MODIFIED="1651953426559"/>
 </node>
 </node>
-</node>
-<node TEXT="Alpha Matting" FOLDED="true" POSITION="left" ID="ID_1289342378" CREATED="1649104749744" MODIFIED="1649104752541">
-<edge COLOR="#0000ff"/>
-<node TEXT="2003.07711: F, B, Alpha Matting (ECCV20 submitted)" ID="ID_98155221" CREATED="1585103366049" MODIFIED="1587526865049">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: estimating opacity mask for objects" ID="ID_40944389" CREATED="1585103398418" MODIFIED="1587526865049">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: existing networks only predict the alpha matte" ID="ID_349450024" CREATED="1585103433174" MODIFIED="1587526865050">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: a low-cost modification to alpha matting networks" ID="ID_688016212" CREATED="1585103410787" MODIFIED="1587526865051">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="2004.00626 Background Matting: The World is Your Green Screen (cvpr20)" ID="ID_1311753286" CREATED="1590805662549" MODIFIED="1590805676803"/>
 </node>
 <node TEXT="AR/VR Demands" FOLDED="true" POSITION="left" ID="ID_598464569" CREATED="1649106345613" MODIFIED="1649106350552">
 <edge COLOR="#00ff00"/>
@@ -3501,14 +3494,12 @@
 </node>
 </node>
 </node>
-<node TEXT="Facial Expression" FOLDED="true" POSITION="left" ID="ID_1665603625" CREATED="1648335974432" MODIFIED="1648336221787">
-<edge COLOR="#0000ff"/>
-<node TEXT="Towards Semi-Supervised Deep Facial Expression Recognition with An Adaptive Confidence Margin" ID="ID_1230150992" CREATED="1648335980975" MODIFIED="1648336159200">
-<icon BUILTIN="unchecked"/>
-<font ITALIC="false"/>
-<node TEXT="CVPR22" ID="ID_1243722840" CREATED="1648336163039" MODIFIED="1648336170532"/>
-<node TEXT="semi-supervised" ID="ID_1980840722" CREATED="1648336171391" MODIFIED="1648336176030"/>
-<node TEXT="better leverage unlabeled data" ID="ID_316244842" CREATED="1648336176523" MODIFIED="1648336184906"/>
+<node TEXT="Gradient Surgery" FOLDED="true" POSITION="left" ID="ID_1632297675" CREATED="1654104115851" MODIFIED="1654104119730">
+<edge COLOR="#7c0000"/>
+<node TEXT="Gradient Surgery for Multi-Task Learning" ID="ID_686455197" CREATED="1652383922344" MODIFIED="1652383931965">
+<icon BUILTIN="bookmark"/>
+<node TEXT="NIPS20" ID="ID_926576648" CREATED="1652383934990" MODIFIED="1652383936487"/>
+<node TEXT="we propose a form of gradient surgery that projects a task&apos;s gradient onto the normal plane of the gradient of any other task that has a conflicting gradient" ID="ID_1875166652" CREATED="1652383936902" MODIFIED="1652383975982"/>
 </node>
 </node>
 <node TEXT="GAN Inverstion" FOLDED="true" POSITION="left" ID="ID_1643977837" CREATED="1608014251316" MODIFIED="1642394381732">
@@ -3614,14 +3605,6 @@
 <node TEXT="CVPR22" ID="ID_735774105" CREATED="1649104378958" MODIFIED="1649104379977"/>
 </node>
 </node>
-<node TEXT="MultiTask Learning" FOLDED="true" POSITION="left" ID="ID_1771310570" CREATED="1652383917582" MODIFIED="1652383921441">
-<edge COLOR="#ff0000"/>
-<node TEXT="Gradient Surgery for Multi-Task Learning" ID="ID_686455197" CREATED="1652383922344" MODIFIED="1652383931965">
-<icon BUILTIN="bookmark"/>
-<node TEXT="NIPS20" ID="ID_926576648" CREATED="1652383934990" MODIFIED="1652383936487"/>
-<node TEXT="we propose a form of gradient surgery that projects a task&apos;s gradient onto the normal plane of the gradient of any other task that has a conflicting gradient" ID="ID_1875166652" CREATED="1652383936902" MODIFIED="1652383975982"/>
-</node>
-</node>
 <node TEXT="Network Arch Search" FOLDED="true" POSITION="left" ID="ID_1465080986" CREATED="1576827705751" MODIFIED="1650817686281">
 <font NAME="Gentium" SIZE="10" BOLD="false"/>
 <edge COLOR="#00ffff"/>
@@ -3699,7 +3682,7 @@
 </node>
 </node>
 </node>
-<node TEXT=" Object Detection" POSITION="left" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1647264593943">
+<node TEXT=" Object Detection" FOLDED="true" POSITION="left" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1647264593943">
 <font NAME="Gentium" SIZE="10" BOLD="false"/>
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_674316746" CREATED="1653969587756" MODIFIED="1653969594381">
@@ -3707,9 +3690,16 @@
 <node TEXT="two components: (1) backbone (2) decision head" ID="ID_1201790003" CREATED="1654040833681" MODIFIED="1654040844497">
 <icon BUILTIN="info"/>
 </node>
-<node TEXT="Speed/accuracy trade-offs for modern convolutional object detectors" ID="ID_1624440628" CREATED="1653969595497" MODIFIED="1653969602273">
+<node TEXT="Speed/accuracy trade-offs for modern convolutional object detectors" ID="ID_1624440628" CREATED="1653969595497" MODIFIED="1654102461440">
 <icon BUILTIN="unchecked"/>
+<icon BUILTIN="button_ok"/>
+<icon BUILTIN="idea"/>
 <node TEXT="CVPR17" ID="ID_1015398329" CREATED="1653969598712" MODIFIED="1653969600650"/>
+<node TEXT="Three Key metrics for object detection" ID="ID_1848736347" CREATED="1654102597494" MODIFIED="1654102607186">
+<node TEXT="(1) speed" ID="ID_355028441" CREATED="1654102608698" MODIFIED="1654102611883"/>
+<node TEXT="(2) memory" ID="ID_1155234794" CREATED="1654102612164" MODIFIED="1654102614761"/>
+<node TEXT="(3) accuracy" ID="ID_1035220223" CREATED="1654102615605" MODIFIED="1654102617755"/>
+</node>
 </node>
 <node TEXT="&#x201c;Object Detection in 20 Years: A Survey" ID="ID_1224901954" CREATED="1653970416866" MODIFIED="1653970420561">
 <icon BUILTIN="pencil"/>
@@ -3827,6 +3817,10 @@
 <node TEXT="CVPR22" ID="ID_1565974246" CREATED="1649628035054" MODIFIED="1649628038569"/>
 </node>
 </node>
+<node TEXT="?-stage" ID="ID_1254657210" CREATED="1654102722886" MODIFIED="1654102725398">
+<node TEXT="R-FCN" ID="ID_933998506" CREATED="1654102726577" MODIFIED="1654102731989"/>
+<node TEXT="Multibox" ID="ID_1601615722" CREATED="1654102732156" MODIFIED="1654102735317"/>
+</node>
 <node TEXT="Performance Metric" ID="ID_898832267" CREATED="1649101258896" MODIFIED="1649101263049">
 <node TEXT="Optimal Correction Cost for Object Detection Evaluation" ID="ID_1091207762" CREATED="1649101264499" MODIFIED="1649101269915">
 <node TEXT="CVPR22" ID="ID_607658609" CREATED="1649101272943" MODIFIED="1649101274253"/>
@@ -3889,6 +3883,13 @@
 <node TEXT="proper encode high-order object relation in the detection system without any external knowledge?" ID="ID_77475950" CREATED="1654038032993" MODIFIED="1654038051903"/>
 <node TEXT="recent works try to encode relation by constructing graphs, e.g. using handcraft linguistic knowledge between classes or implicitly learning a fully-connected graph between regions" ID="ID_85464199" CREATED="1654038150487" MODIFIED="1654038177996"/>
 <node TEXT="adaptively discover and incorporate key semantics and spatial relationships for reasoning over each object" ID="ID_704649779" CREATED="1654038219880" MODIFIED="1654038242254"/>
+</node>
+</node>
+<node TEXT="+Explain" ID="ID_1974349082" CREATED="1654102261187" MODIFIED="1654102266664">
+<node TEXT="Towards Interpretable R-CNN by Unfolding Latent Structures" ID="ID_444208502" CREATED="1654102267866" MODIFIED="1654102275500">
+<node TEXT="AAAI" ID="ID_1080837170" CREATED="1654102278958" MODIFIED="1654102280193"/>
+<node TEXT="two stagee detectors" ID="ID_48895998" CREATED="1654102385089" MODIFIED="1654102389484"/>
+<node TEXT="unfold latent discriminative part configurations of object instances automatically and simultaneously in detection without using any supervision for part configurations" ID="ID_871717774" CREATED="1654102389682" MODIFIED="1654102419142"/>
 </node>
 </node>
 <node TEXT="Domain Adaptation" ID="ID_1939871268" CREATED="1654035897051" MODIFIED="1654035900277">
@@ -5493,7 +5494,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Explainable AI" POSITION="left" ID="ID_1535392614" CREATED="1646937960988" MODIFIED="1650817806076">
+<node TEXT="Explainable AI" FOLDED="true" POSITION="left" ID="ID_1535392614" CREATED="1646937960988" MODIFIED="1650817806076">
 <edge COLOR="#7c0000"/>
 <node TEXT="Survey" ID="ID_796711666" CREATED="1653860071187" MODIFIED="1653860080368">
 <icon BUILTIN="mindmap"/>
