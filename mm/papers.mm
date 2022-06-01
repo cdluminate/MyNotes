@@ -3682,7 +3682,7 @@
 </node>
 </node>
 </node>
-<node TEXT=" Object Detection" FOLDED="true" POSITION="left" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1647264593943">
+<node TEXT=" Object Detection" POSITION="left" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1647264593943">
 <font NAME="Gentium" SIZE="10" BOLD="false"/>
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_674316746" CREATED="1653969587756" MODIFIED="1653969594381">
@@ -3807,19 +3807,32 @@
 </node>
 </node>
 </node>
-<node TEXT="2005.09973: dynamic refinement network for oriented and densely packed object detection" ID="ID_1703277358" CREATED="1590025459045" MODIFIED="1590025479923"/>
-<node TEXT="2012.03544: end to end object detection with fully convolutional network" ID="ID_1523511969" CREATED="1607496830511" MODIFIED="1607496848085"/>
-<node TEXT="2012.03519: fine-trained dynamic head for object detection" ID="ID_70012465" CREATED="1607496916818" MODIFIED="1607496930453"/>
-<node TEXT="2012: Implicit Feature Pyramid Network for Object Detection" ID="ID_659232211" CREATED="1610428420327" MODIFIED="1610428428770">
-<node TEXT="Jian Sun" ID="ID_1833196048" CREATED="1610428429754" MODIFIED="1610428432093"/>
+<node TEXT="DETR" ID="ID_348406151" CREATED="1654113701876" MODIFIED="1654113703328">
+<node TEXT="Accelerating DETR Convergence via Semantic-Aligned Matching" ID="ID_791729206" CREATED="1654113704418" MODIFIED="1654113727951">
+<icon BUILTIN="button_ok"/>
+<icon BUILTIN="password"/>
+<node TEXT="CVPR22" ID="ID_482773640" CREATED="1654113715107" MODIFIED="1654113717612">
+<node TEXT="important reference" ID="ID_201179671" CREATED="1654115919520" MODIFIED="1654115963617">
+<icon BUILTIN="messagebox_warning"/>
 </node>
-<node TEXT="R(Det)^2: Randomized Decision Routing for Object Detection" ID="ID_1075041282" CREATED="1649628031567" MODIFIED="1649628032450">
-<node TEXT="CVPR22" ID="ID_1565974246" CREATED="1649628035054" MODIFIED="1649628038569"/>
+</node>
+<node TEXT="(1) projects object queries into the same embedding space as encoded image features, where the matching can be accomplished efficiently with alighed semantics" ID="ID_1364346456" CREATED="1654115966118" MODIFIED="1654115993734"/>
+<node TEXT="(2) it explicitly searches salient points with the most discriminative features for sematic-aligned matching, which further speeds up the convergence and boosts detection accuracy as well" ID="ID_1436450513" CREATED="1654115994019" MODIFIED="1654116102749"/>
 </node>
 </node>
 <node TEXT="?-stage" ID="ID_1254657210" CREATED="1654102722886" MODIFIED="1654102725398">
 <node TEXT="R-FCN" ID="ID_933998506" CREATED="1654102726577" MODIFIED="1654102731989"/>
 <node TEXT="Multibox" ID="ID_1601615722" CREATED="1654102732156" MODIFIED="1654102735317"/>
+<node TEXT="R(Det)^2: Randomized Decision Routing for Object Detection" ID="ID_1075041282" CREATED="1649628031567" MODIFIED="1649628032450">
+<node TEXT="CVPR22" ID="ID_1565974246" CREATED="1649628035054" MODIFIED="1649628038569"/>
+</node>
+<node TEXT="2012: Implicit Feature Pyramid Network for Object Detection" ID="ID_659232211" CREATED="1610428420327" MODIFIED="1610428428770">
+<node TEXT="Jian Sun" ID="ID_1833196048" CREATED="1610428429754" MODIFIED="1610428432093"/>
+</node>
+<node TEXT="2012.03519: fine-trained dynamic head for object detection" ID="ID_70012465" CREATED="1607496916818" MODIFIED="1607496930453"/>
+<node TEXT="2005.09973: dynamic refinement network for oriented and densely packed object detection" ID="ID_1703277358" CREATED="1590025459045" MODIFIED="1590025479923"/>
+<node TEXT="2012.03544: end to end object detection with fully convolutional network" ID="ID_1523511969" CREATED="1607496830511" MODIFIED="1607496848085"/>
+</node>
 </node>
 <node TEXT="Performance Metric" ID="ID_898832267" CREATED="1649101258896" MODIFIED="1649101263049">
 <node TEXT="Optimal Correction Cost for Object Detection Evaluation" ID="ID_1091207762" CREATED="1649101264499" MODIFIED="1649101269915">
@@ -3883,6 +3896,28 @@
 <node TEXT="proper encode high-order object relation in the detection system without any external knowledge?" ID="ID_77475950" CREATED="1654038032993" MODIFIED="1654038051903"/>
 <node TEXT="recent works try to encode relation by constructing graphs, e.g. using handcraft linguistic knowledge between classes or implicitly learning a fully-connected graph between regions" ID="ID_85464199" CREATED="1654038150487" MODIFIED="1654038177996"/>
 <node TEXT="adaptively discover and incorporate key semantics and spatial relationships for reasoning over each object" ID="ID_704649779" CREATED="1654038219880" MODIFIED="1654038242254"/>
+</node>
+</node>
+<node TEXT="Few Shot" ID="ID_668526112" CREATED="1654107154750" MODIFIED="1654107158630">
+<node TEXT="Survey" ID="ID_1949018457" CREATED="1654109275101" MODIFIED="1654109286414">
+<icon BUILTIN="mindmap"/>
+<node TEXT="Few-Shot Object Detection: A Survey" ID="ID_344244998" CREATED="1654109370187" MODIFIED="1654110307487">
+<icon BUILTIN="unchecked"/>
+<icon BUILTIN="button_ok"/>
+<node TEXT="TNNLS" ID="ID_1584234500" CREATED="1654109380370" MODIFIED="1654109382028"/>
+</node>
+</node>
+<node TEXT="RepMet: Representative-based metric learning for classification and few-shot object detection" ID="ID_1724270800" CREATED="1654107305896" MODIFIED="1654107322496"/>
+<node TEXT="Meta-DETR: Image-Level Few-Shot Object Detection with Inter-Class Correlation Exploitation" ID="ID_1301763525" CREATED="1654111586432" MODIFIED="1654111593371"/>
+<node TEXT="Meta-DETR: Image-Level Few-Shot Object Detection with&#xa;Inter-Class Correlation Exploitation" ID="ID_442430859" CREATED="1654112608997" MODIFIED="1654113516512">
+<icon BUILTIN="pencil"/>
+<icon BUILTIN="button_ok"/>
+<icon BUILTIN="password"/>
+<node TEXT="leverages inter-class correlation" ID="ID_1662690325" CREATED="1654112618178" MODIFIED="1654112778774">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node TEXT="(1) low-quality region proposals for novel class" ID="ID_1977365883" CREATED="1654112765824" MODIFIED="1654113391873"/>
+<node TEXT="(2) negligence of the inter-class correlation among different classes" ID="ID_1239800997" CREATED="1654113392365" MODIFIED="1654113416745"/>
 </node>
 </node>
 <node TEXT="+Explain" ID="ID_1974349082" CREATED="1654102261187" MODIFIED="1654102266664">
