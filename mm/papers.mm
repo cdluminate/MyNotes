@@ -3693,8 +3693,31 @@
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_674316746" CREATED="1653969587756" MODIFIED="1653969594381">
 <icon BUILTIN="mindmap"/>
+<node TEXT="Concepts" ID="ID_800408475" CREATED="1654537139313" MODIFIED="1654537141235">
 <node TEXT="two components: (1) backbone (2) decision head" ID="ID_1201790003" CREATED="1654040833681" MODIFIED="1654040844497">
 <icon BUILTIN="info"/>
+</node>
+<node TEXT="Single Object" ID="ID_496791759" CREATED="1653966642366" MODIFIED="1653966645907">
+<node TEXT="classification + localization" ID="ID_1090575483" CREATED="1653966655978" MODIFIED="1653966674494">
+<icon BUILTIN="info"/>
+<node TEXT="multitask loss function" ID="ID_1772882616" CREATED="1653966701249" MODIFIED="1653966706002"/>
+<node TEXT="treat localization as a regression problem" ID="ID_155725792" CREATED="1653966687929" MODIFIED="1653966695563"/>
+</node>
+<node TEXT="Region Proposal" ID="ID_29120956" CREATED="1653966976380" MODIFIED="1653967007681">
+<font BOLD="true"/>
+<node TEXT="selective search" ID="ID_259801909" CREATED="1653966983851" MODIFIED="1653966986831"/>
+</node>
+</node>
+<node TEXT="anchor" ID="ID_1115351235" CREATED="1654537149409" MODIFIED="1654537152141">
+<node TEXT="anchor-based" ID="ID_1269525541" CREATED="1654537156118" MODIFIED="1654537158390">
+<node TEXT="uses anchor boxes to create object proposals, and then determine accuracy object regions" ID="ID_1122877591" CREATED="1654537188698" MODIFIED="1654537216246">
+<node TEXT="e.g. faster r-cnn" ID="ID_1646505872" CREATED="1654537232787" MODIFIED="1654537237406"/>
+</node>
+</node>
+<node TEXT="anchor-free" ID="ID_409627003" CREATED="1654537153490" MODIFIED="1654537155812">
+<node TEXT="produces bounding boxes of objects by learning features of several object keypoints" ID="ID_479598217" CREATED="1654537218562" MODIFIED="1654537398389"/>
+</node>
+</node>
 </node>
 <node TEXT="Speed/accuracy trade-offs for modern convolutional object detectors" ID="ID_1624440628" CREATED="1653969595497" MODIFIED="1654102461440">
 <icon BUILTIN="unchecked"/>
@@ -3712,17 +3735,6 @@
 </node>
 <node TEXT="https://github.com/amusi/awesome-object-detection" ID="ID_1845974464" CREATED="1654041279612" MODIFIED="1654041280016"/>
 <node TEXT="https://github.com/daicoolb/Awesome-Object-Detections" ID="ID_445839046" CREATED="1654041286014" MODIFIED="1654041286616"/>
-</node>
-<node TEXT="Single Object" ID="ID_496791759" CREATED="1653966642366" MODIFIED="1653966645907">
-<node TEXT="classification + localization" ID="ID_1090575483" CREATED="1653966655978" MODIFIED="1653966674494">
-<icon BUILTIN="info"/>
-<node TEXT="multitask loss function" ID="ID_1772882616" CREATED="1653966701249" MODIFIED="1653966706002"/>
-<node TEXT="treat localization as a regression problem" ID="ID_155725792" CREATED="1653966687929" MODIFIED="1653966695563"/>
-</node>
-<node TEXT="Region Proposal" ID="ID_29120956" CREATED="1653966976380" MODIFIED="1653967007681">
-<font BOLD="true"/>
-<node TEXT="selective search" ID="ID_259801909" CREATED="1653966983851" MODIFIED="1653966986831"/>
-</node>
 </node>
 <node TEXT="Main (multi-object)" ID="ID_602285743" CREATED="1590025482391" MODIFIED="1653966930740">
 <node TEXT="Two-Stage" ID="ID_981048532" CREATED="1654041315951" MODIFIED="1654041318501">
@@ -3772,6 +3784,7 @@
 </node>
 </node>
 </node>
+<node TEXT="cascade R-CNN" ID="ID_466733439" CREATED="1654537259235" MODIFIED="1654537262357"/>
 <node TEXT="light head" ID="ID_395681835" CREATED="1654042036745" MODIFIED="1654042039296">
 <node TEXT="Light-Head R-CNN: In Defense of Two-Stage Object Detector" ID="ID_657637424" CREATED="1654041783299" MODIFIED="1654041785595">
 <icon BUILTIN="unchecked"/>
@@ -3787,6 +3800,12 @@
 </node>
 </node>
 <node TEXT="Single-Stage" ID="ID_1861902425" CREATED="1654040858813" MODIFIED="1654040862652">
+<node TEXT="SSD" ID="ID_164154080" CREATED="1578733432308" MODIFIED="1653969384449">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="&#x201c;SSD: Single-Shot MultiBox Detector" ID="ID_1049708950" CREATED="1653969449265" MODIFIED="1654041102631">
+<icon BUILTIN="unchecked"/>
+</node>
+</node>
 <node TEXT="YOLO" ID="ID_1721203552" CREATED="1578733429892" MODIFIED="1587526865054">
 <font NAME="Gentium" BOLD="false"/>
 <node TEXT="You Only Look Once: Unified, Real-Time Object Detection" ID="ID_1139110120" CREATED="1653969414505" MODIFIED="1653969438295">
@@ -3794,12 +3813,6 @@
 </node>
 <node TEXT="2004.10934: YOLOv4: optimal speed and accuracy of object detection" ID="ID_1418219399" CREATED="1587731285906" MODIFIED="1587731405695">
 <icon BUILTIN="button_ok"/>
-</node>
-</node>
-<node TEXT="SSD" ID="ID_164154080" CREATED="1578733432308" MODIFIED="1653969384449">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="&#x201c;SSD: Single-Shot MultiBox Detector" ID="ID_1049708950" CREATED="1653969449265" MODIFIED="1654041102631">
-<icon BUILTIN="unchecked"/>
 </node>
 </node>
 <node TEXT="RetinaNet / Focal loss" ID="ID_1759579854" CREATED="1653969367052" MODIFIED="1654040874668">
@@ -3813,7 +3826,8 @@
 </node>
 </node>
 </node>
-<node TEXT="DETR" ID="ID_348406151" CREATED="1654113701876" MODIFIED="1654113703328">
+<node TEXT="DETR Family" ID="ID_348406151" CREATED="1654113701876" MODIFIED="1654537444744">
+<node TEXT="DETR" ID="ID_1443953889" CREATED="1654537437342" MODIFIED="1654537439515">
 <node TEXT="End-to-End Object Detection with Transformers" ID="ID_943659149" CREATED="1654116599499" MODIFIED="1654116602844">
 <icon BUILTIN="unchecked"/>
 <node TEXT="ECCV20" ID="ID_929643402" CREATED="1654116605136" MODIFIED="1654116607201">
@@ -3822,6 +3836,9 @@
 <node TEXT="views object detection as a direct set prediction problem" ID="ID_1228172560" CREATED="1654116621009" MODIFIED="1654116631233"/>
 <node TEXT="Given a fixed small set of learned object queries, DETR reasons about the relations of the objects and the global image context to directly output the final set of predictions in parallel" ID="ID_1081326563" CREATED="1654116666661" MODIFIED="1654116697158"/>
 </node>
+</node>
+<node TEXT="Deformable-DETR" ID="ID_1972419326" CREATED="1654537454518" MODIFIED="1654537458201"/>
+<node TEXT="SAM-DETR" ID="ID_779466914" CREATED="1654537447758" MODIFIED="1654537450433">
 <node TEXT="Accelerating DETR Convergence via Semantic-Aligned Matching" ID="ID_791729206" CREATED="1654113704418" MODIFIED="1654113727951">
 <icon BUILTIN="button_ok"/>
 <icon BUILTIN="password"/>
@@ -3843,6 +3860,11 @@
 <icon BUILTIN="button_cancel"/>
 </node>
 </node>
+</node>
+</node>
+<node TEXT="Anchor-Free" ID="ID_656763814" CREATED="1654537339821" MODIFIED="1654537343833">
+<node TEXT="CenterNet" ID="ID_1103406305" CREATED="1654537355701" MODIFIED="1654537359098"/>
+<node TEXT="FCOS" ID="ID_1640946639" CREATED="1654537359565" MODIFIED="1654537362455"/>
 </node>
 <node TEXT="?-stage" ID="ID_1254657210" CREATED="1654102722886" MODIFIED="1654102725398">
 <node TEXT="R-FCN" ID="ID_933998506" CREATED="1654102726577" MODIFIED="1654102731989"/>
@@ -3887,6 +3909,7 @@
 <node TEXT="(1) contribute dataset" ID="ID_452972049" CREATED="1654536021188" MODIFIED="1654536043774"/>
 <node TEXT="simultaneously obj det and counting" ID="ID_1344037305" CREATED="1654536044092" MODIFIED="1654536050928"/>
 <node TEXT="severe occlusions" ID="ID_1594963685" CREATED="1654536130881" MODIFIED="1654536137147"/>
+<node TEXT="non-maximal suppression makes detection of stack objects fail" ID="ID_1322763272" CREATED="1654536695506" MODIFIED="1654536712202"/>
 <node TEXT="rethink about the definition of object detection in such scenario" ID="ID_901134184" CREATED="1654536239591" MODIFIED="1654536251041"/>
 </node>
 </node>
