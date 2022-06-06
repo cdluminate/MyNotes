@@ -3937,6 +3937,10 @@
 <node TEXT="class-incremental obj det" ID="ID_992304362" CREATED="1654542656739" MODIFIED="1654542669520"/>
 </node>
 </node>
+<node TEXT="Incremental Learning of Object Detectors without Catastrophic Forgetting" ID="ID_99025474" CREATED="1654543263735" MODIFIED="1654543266605">
+<icon BUILTIN="unchecked"/>
+<node TEXT="ICCV17" ID="ID_785901215" CREATED="1654543267568" MODIFIED="1654543270127"/>
+</node>
 </node>
 <node TEXT="Camouflaged" ID="ID_1233579435" CREATED="1648388054502" MODIFIED="1648388062210">
 <node TEXT="Zoom In and Out: A Mixed-scale Triplet Network&#xa;for Camouflaged Object Detection" ID="ID_290360895" CREATED="1648388067795" MODIFIED="1648388070326">
