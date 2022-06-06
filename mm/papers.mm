@@ -3832,6 +3832,16 @@
 </node>
 <node TEXT="(1) projects object queries into the same embedding space as encoded image features, where the matching can be accomplished efficiently with alighed semantics" ID="ID_1364346456" CREATED="1654115966118" MODIFIED="1654115993734"/>
 <node TEXT="(2) it explicitly searches salient points with the most discriminative features for sematic-aligned matching, which further speeds up the convergence and boosts detection accuracy as well" ID="ID_1436450513" CREATED="1654115994019" MODIFIED="1654116102749"/>
+<node TEXT="architecture" ID="ID_1179361880" CREATED="1654534311373" MODIFIED="1654534313277">
+<node TEXT="(1) cnn backbone" ID="ID_490358549" CREATED="1654534314388" MODIFIED="1654534319722"/>
+<node TEXT="(2) set of image features" ID="ID_21183560" CREATED="1654534320597" MODIFIED="1654534323932"/>
+<node TEXT="(3) transformer encoder-decoder" ID="ID_1351155282" CREATED="1654534324446" MODIFIED="1654534333087"/>
+<node TEXT="(4) set of box predictions" ID="ID_1828314310" CREATED="1654534347058" MODIFIED="1654534353311"/>
+<node TEXT="(5) bipartite matching loss" ID="ID_822246340" CREATED="1654534353752" MODIFIED="1654534358882"/>
+</node>
+<node TEXT="suffers from very slow convergence" ID="ID_167943082" CREATED="1654534181486" MODIFIED="1654534188678">
+<icon BUILTIN="button_cancel"/>
+</node>
 </node>
 </node>
 <node TEXT="?-stage" ID="ID_1254657210" CREATED="1654102722886" MODIFIED="1654102725398">
@@ -3863,9 +3873,22 @@
 <node TEXT="breaking the limitation of manual grouping" ID="ID_1252367187" CREATED="1617622670643" MODIFIED="1617622683444"/>
 </node>
 </node>
+<node TEXT="On Model Calibration for Long-Tailed&#xa;Object Detection and Instance Segmentation" ID="ID_1274606029" CREATED="1654535513512" MODIFIED="1654535546274">
+<icon BUILTIN="button_ok"/>
+<icon BUILTIN="idea"/>
+<icon BUILTIN="bookmark"/>
+<node TEXT="NIPS21" ID="ID_329055786" CREATED="1654535522143" MODIFIED="1654535526066"/>
 </node>
-<node TEXT="Retailing" ID="ID_725089971" CREATED="1588391641383" MODIFIED="1588391642960">
-<node TEXT="2003.08230: rethinking object detection in retail stores" ID="ID_524544258" CREATED="1588391644632" MODIFIED="1588391661192"/>
+</node>
+<node TEXT="+Counting" LOCALIZED_STYLE_REF="styles.topic" ID="ID_839202927" CREATED="1654536007788" MODIFIED="1654536066581">
+<node TEXT="2003.08230: rethinking object detection in retail stores" ID="ID_524544258" CREATED="1588391644632" MODIFIED="1654536027331">
+<icon BUILTIN="unchecked"/>
+<node TEXT="AAAI21" ID="ID_52809992" CREATED="1654536018818" MODIFIED="1654536020838"/>
+<node TEXT="(1) contribute dataset" ID="ID_452972049" CREATED="1654536021188" MODIFIED="1654536043774"/>
+<node TEXT="simultaneously obj det and counting" ID="ID_1344037305" CREATED="1654536044092" MODIFIED="1654536050928"/>
+<node TEXT="severe occlusions" ID="ID_1594963685" CREATED="1654536130881" MODIFIED="1654536137147"/>
+<node TEXT="rethink about the definition of object detection in such scenario" ID="ID_901134184" CREATED="1654536239591" MODIFIED="1654536251041"/>
+</node>
 </node>
 <node TEXT="Camouflaged" ID="ID_1233579435" CREATED="1648388054502" MODIFIED="1648388062210">
 <node TEXT="Zoom In and Out: A Mixed-scale Triplet Network&#xa;for Camouflaged Object Detection" ID="ID_290360895" CREATED="1648388067795" MODIFIED="1648388070326">
