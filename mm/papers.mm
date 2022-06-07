@@ -3737,12 +3737,26 @@
 <node TEXT="https://github.com/daicoolb/Awesome-Object-Detections" ID="ID_445839046" CREATED="1654041286014" MODIFIED="1654041286616"/>
 </node>
 <node TEXT="Main (multi-object)" ID="ID_602285743" CREATED="1590025482391" MODIFIED="1653966930740">
+<node TEXT="sliding window" ID="ID_1868839791" CREATED="1654625575193" MODIFIED="1654625578177">
+<node TEXT="Overfeat" ID="ID_498869304" CREATED="1654625580457" MODIFIED="1654625583038">
+<node TEXT="OverFeat:&#xa;Integrated Recognition, Localization and Detection&#xa;using Convolutional Networks" ID="ID_1479745312" CREATED="1654625590470" MODIFIED="1654625601978">
+<icon BUILTIN="unchecked"/>
+<node TEXT="LeCun" ID="ID_1902576979" CREATED="1654625604690" MODIFIED="1654625607394"/>
+<node TEXT="objects of interest vary significantly in size and position within the image" ID="ID_255052424" CREATED="1654626273032" MODIFIED="1654626286105">
+<node TEXT="the first idea is to apply a convnet at multiple locations in the image, in a sliding window fasion, and over multiple scales" ID="ID_446700600" CREATED="1654626264976" MODIFIED="1654626309058"/>
+<node TEXT="the second idea is to train the system to not only produce a distribution over categories for each window, but also ro produce a prediction of the location and size of the bounding box" ID="ID_1963515600" CREATED="1654626313104" MODIFIED="1654626349179"/>
+<node TEXT="the third idea is to accumulate evidence for each category at each location and size" ID="ID_1176158278" CREATED="1654626359431" MODIFIED="1654626376005"/>
+</node>
+</node>
+</node>
+</node>
 <node TEXT="Two-Stage" ID="ID_981048532" CREATED="1654041315951" MODIFIED="1654041318501">
 <node TEXT="R-CNN" ID="ID_1685978685" CREATED="1578733403630" MODIFIED="1587526865053">
 <font NAME="Gentium" BOLD="false"/>
 <node TEXT="Rich feature hierarchies for accurate object detection and&#xa;semantic segmentation" ID="ID_1703888186" CREATED="1653967033846" MODIFIED="1653967036728">
 <icon BUILTIN="unchecked"/>
 <node TEXT="CVPR14" ID="ID_829127595" CREATED="1653967037895" MODIFIED="1653967039684"/>
+<node TEXT="(0) input image" ID="ID_7409288" CREATED="1654624543243" MODIFIED="1654624547279"/>
 <node TEXT="(1) regions of interest (RoI), about 2k regions" ID="ID_46978929" CREATED="1653967102809" MODIFIED="1653967231224"/>
 <node TEXT="(2) warped image regions (224x224)" ID="ID_1333604188" CREATED="1653967111674" MODIFIED="1653967133869"/>
 <node TEXT="(3) forward each region through convnet (imagenet pretrain)" ID="ID_861934539" CREATED="1653967134894" MODIFIED="1653967163253"/>
@@ -4219,14 +4233,15 @@
 </node>
 </node>
 </node>
-<node TEXT="Scene/Knowledge Graph" FOLDED="true" POSITION="left" ID="ID_691684807" CREATED="1582940936028" MODIFIED="1653357364861">
+<node TEXT="Scene/Knowledge Graph" POSITION="left" ID="ID_691684807" CREATED="1582940936028" MODIFIED="1653357364861">
 <font NAME="Gentium" BOLD="false"/>
 <edge COLOR="#007c7c"/>
 <node TEXT="SG" ID="ID_62932280" CREATED="1653357372586" MODIFIED="1653357374319">
 <node TEXT="Survey" ID="ID_1665575737" CREATED="1653357500064" MODIFIED="1653357514750">
 <icon BUILTIN="info"/>
-<node TEXT="A Comprehensive Survey of Scene Graphs:&#xa;Generation and Application" ID="ID_1652046589" CREATED="1653357506363" MODIFIED="1653357511441">
-<icon BUILTIN="pencil"/>
+<node TEXT="A Comprehensive Survey of Scene Graphs:&#xa;Generation and Application" ID="ID_1652046589" CREATED="1653357506363" MODIFIED="1654622118685">
+<icon BUILTIN="unchecked"/>
+<node TEXT="TPAMI" ID="ID_188900375" CREATED="1654622121760" MODIFIED="1654622123512"/>
 </node>
 </node>
 <node TEXT="Generation" ID="ID_1992268449" CREATED="1582940945725" MODIFIED="1590024968949">
