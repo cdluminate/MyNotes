@@ -3760,15 +3760,28 @@
 <node TEXT="Two-Stage" ID="ID_981048532" CREATED="1654041315951" MODIFIED="1654041318501">
 <node TEXT="R-CNN" ID="ID_1685978685" CREATED="1578733403630" MODIFIED="1587526865053">
 <font NAME="Gentium" BOLD="false"/>
-<node TEXT="Rich feature hierarchies for accurate object detection and&#xa;semantic segmentation" ID="ID_1703888186" CREATED="1653967033846" MODIFIED="1653967036728">
-<icon BUILTIN="unchecked"/>
+<node TEXT="Rich feature hierarchies for accurate object detection and&#xa;semantic segmentation" ID="ID_1703888186" CREATED="1653967033846" MODIFIED="1654636348184">
+<icon BUILTIN="checked"/>
 <node TEXT="CVPR14" ID="ID_829127595" CREATED="1653967037895" MODIFIED="1653967039684"/>
 <node TEXT="(0) input image" ID="ID_7409288" CREATED="1654624543243" MODIFIED="1654624547279"/>
-<node TEXT="(1) regions of interest (RoI), about 2k regions" ID="ID_46978929" CREATED="1653967102809" MODIFIED="1653967231224"/>
-<node TEXT="(2) warped image regions (224x224)" ID="ID_1333604188" CREATED="1653967111674" MODIFIED="1653967133869"/>
-<node TEXT="(3) forward each region through convnet (imagenet pretrain)" ID="ID_861934539" CREATED="1653967134894" MODIFIED="1653967163253"/>
-<node TEXT="(4) classify regions with SVMs" ID="ID_1465168127" CREATED="1653967147338" MODIFIED="1653967156142"/>
-<node TEXT="(5) predict corrections to the RoI: 4 nunbers (dx, dy, dw, dh)" ID="ID_1463307661" CREATED="1653967191302" MODIFIED="1653967205442"/>
+<node TEXT="(1) regions of interest (RoI), about 2k regions. this is category independent.  use selective search." ID="ID_46978929" CREATED="1653967102809" MODIFIED="1654634755896"/>
+<node TEXT="(2) warped image regions (224x224)." ID="ID_1333604188" CREATED="1653967111674" MODIFIED="1654634891716"/>
+<node TEXT="(3) forward each region through convnet (imagenet pretrain). 4096 dim from alexnet. alexnet has supervised pretraining on imagenet" ID="ID_861934539" CREATED="1653967134894" MODIFIED="1654635192678"/>
+<node TEXT="(4) classify regions with SVMs. each region with category-specific linear svms" ID="ID_1465168127" CREATED="1653967147338" MODIFIED="1654634048928"/>
+<node TEXT="(5) predict corrections to the RoI: 4 nunbers (dx, dy, dw, dh). there is no such step in r-cnn paper." ID="ID_1463307661" CREATED="1653967191302" MODIFIED="1654635889922">
+<icon BUILTIN="button_cancel"/>
+</node>
+<node TEXT="(6) given all scored regions, apply greedy non-maximum suppression" ID="ID_943985496" CREATED="1654634965790" MODIFIED="1654634998540">
+<node TEXT="that rejects a region if it has an IoU overlap with a higher scoring selected region larger than a learned threshold" ID="ID_823862832" CREATED="1654635027284" MODIFIED="1654635055376"/>
+</node>
+<node TEXT="domain-specific fine-tuning" ID="ID_707995606" CREATED="1654635581283" MODIFIED="1654635585842">
+<node TEXT="continue SGD for CNN using warped region proposals" ID="ID_167403727" CREATED="1654635587403" MODIFIED="1654635611890"/>
+<node TEXT="1000dim classification with random (N+1) dim classification layer, extra class background" ID="ID_1075176095" CREATED="1654635638388" MODIFIED="1654635664908"/>
+<node TEXT="32 positive windows and 96 background windows for 128 batch" ID="ID_1013796328" CREATED="1654635762161" MODIFIED="1654635793115"/>
+</node>
+<node TEXT="svm training per class" ID="ID_689704161" CREATED="1654636133032" MODIFIED="1654636150644">
+<node TEXT="hard negative mining method" ID="ID_468390854" CREATED="1654636136610" MODIFIED="1654636142293"/>
+</node>
 <node TEXT="problem: very slow, needs 2k forward passes" ID="ID_819861976" CREATED="1653967211956" MODIFIED="1653968815343">
 <icon BUILTIN="button_cancel"/>
 </node>
