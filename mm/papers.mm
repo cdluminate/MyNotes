@@ -3743,7 +3743,7 @@
 <node TEXT="https://github.com/amusi/awesome-object-detection" ID="ID_1845974464" CREATED="1654041279612" MODIFIED="1654041280016"/>
 <node TEXT="https://github.com/daicoolb/Awesome-Object-Detections" ID="ID_445839046" CREATED="1654041286014" MODIFIED="1654041286616"/>
 </node>
-<node TEXT="Main (multi-object)" ID="ID_602285743" CREATED="1590025482391" MODIFIED="1653966930740">
+<node TEXT="Main (multi-object)" LOCALIZED_STYLE_REF="styles.topic" ID="ID_602285743" CREATED="1590025482391" MODIFIED="1654637252853">
 <node TEXT="sliding window" ID="ID_1868839791" CREATED="1654625575193" MODIFIED="1654625578177">
 <node TEXT="Overfeat" ID="ID_498869304" CREATED="1654625580457" MODIFIED="1654625583038">
 <node TEXT="OverFeat:&#xa;Integrated Recognition, Localization and Detection&#xa;using Convolutional Networks" ID="ID_1479745312" CREATED="1654625590470" MODIFIED="1654625601978">
@@ -3768,9 +3768,7 @@
 <node TEXT="(2) warped image regions (224x224)." ID="ID_1333604188" CREATED="1653967111674" MODIFIED="1654634891716"/>
 <node TEXT="(3) forward each region through convnet (imagenet pretrain). 4096 dim from alexnet. alexnet has supervised pretraining on imagenet" ID="ID_861934539" CREATED="1653967134894" MODIFIED="1654635192678"/>
 <node TEXT="(4) classify regions with SVMs. each region with category-specific linear svms" ID="ID_1465168127" CREATED="1653967147338" MODIFIED="1654634048928"/>
-<node TEXT="(5) predict corrections to the RoI: 4 nunbers (dx, dy, dw, dh). there is no such step in r-cnn paper." ID="ID_1463307661" CREATED="1653967191302" MODIFIED="1654635889922">
-<icon BUILTIN="button_cancel"/>
-</node>
+<node TEXT="(5) predict corrections to the RoI: 4 nunbers (dx, dy, dw, dh). there is such step in appendix" ID="ID_1463307661" CREATED="1653967191302" MODIFIED="1654636697402"/>
 <node TEXT="(6) given all scored regions, apply greedy non-maximum suppression" ID="ID_943985496" CREATED="1654634965790" MODIFIED="1654634998540">
 <node TEXT="that rejects a region if it has an IoU overlap with a higher scoring selected region larger than a learned threshold" ID="ID_823862832" CREATED="1654635027284" MODIFIED="1654635055376"/>
 </node>
