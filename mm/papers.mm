@@ -3705,7 +3705,14 @@
 </node>
 <node TEXT="Region Proposal" ID="ID_29120956" CREATED="1653966976380" MODIFIED="1653967007681">
 <font BOLD="true"/>
-<node TEXT="selective search" ID="ID_259801909" CREATED="1653966983851" MODIFIED="1653966986831"/>
+<node TEXT="selective search" ID="ID_259801909" CREATED="1653966983851" MODIFIED="1653966986831">
+<node TEXT="Selective Search for Object Recognition" ID="ID_1093229952" CREATED="1654633305594" MODIFIED="1654633326964">
+<icon BUILTIN="unchecked"/>
+<node TEXT="IJCV 2012" ID="ID_949732490" CREATED="1654633328834" MODIFIED="1654633335151"/>
+<node TEXT="like segmentation, use image structure to guide sampling process" ID="ID_348801494" CREATED="1654633356040" MODIFIED="1654633366246"/>
+<node TEXT="like exhaustive search, capture all possible object locations" ID="ID_1469701425" CREATED="1654633366524" MODIFIED="1654633377224"/>
+</node>
+</node>
 </node>
 </node>
 <node TEXT="anchor" ID="ID_1115351235" CREATED="1654537149409" MODIFIED="1654537152141">
