@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="{M,R,D}L" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1642394353464" STYLE="oval">
 <font NAME="Gentium" SIZE="18"/>
-<hook NAME="MapStyle" zoom="1.17">
+<hook NAME="MapStyle" zoom="1.714">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="116" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="117" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Meta" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1648337505775">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -3538,6 +3538,15 @@
 </node>
 </node>
 </node>
+<node TEXT="Hand" POSITION="left" ID="ID_122441475" CREATED="1654709701827" MODIFIED="1654709705705">
+<edge COLOR="#00007c"/>
+<node TEXT="demands" ID="ID_703663547" CREATED="1654709706849" MODIFIED="1654709914841">
+<icon BUILTIN="info"/>
+<node TEXT="AR/VR" ID="ID_1505305751" CREATED="1654709915958" MODIFIED="1654709918820"/>
+<node TEXT="hand sensing from depth camera (pcl?)" ID="ID_541340634" CREATED="1654710135442" MODIFIED="1654710145196"/>
+<node TEXT="semantics &amp; geometry" ID="ID_1873741675" CREATED="1654714638259" MODIFIED="1654714644100"/>
+</node>
+</node>
 <node TEXT="Image Compression" FOLDED="true" POSITION="left" ID="ID_1511931365" CREATED="1648343124472" MODIFIED="1648343127424">
 <edge COLOR="#7c0000"/>
 <node TEXT="ELIC: Efficient Learned Image Compression with&#xa;Unevenly Grouped Space-Channel Contextual Adaptive Coding" ID="ID_391462928" CREATED="1648343132187" MODIFIED="1648343146503">
@@ -3688,7 +3697,7 @@
 </node>
 </node>
 </node>
-<node TEXT=" Object Detection" POSITION="left" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1647264593943">
+<node TEXT=" Object Detection" FOLDED="true" POSITION="left" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1647264593943">
 <font NAME="Gentium" SIZE="10" BOLD="false"/>
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_674316746" CREATED="1653969587756" MODIFIED="1653969594381">
@@ -4251,7 +4260,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Scene/Knowledge Graph" POSITION="left" ID="ID_691684807" CREATED="1582940936028" MODIFIED="1653357364861">
+<node TEXT="Scene/Knowledge Graph" FOLDED="true" POSITION="left" ID="ID_691684807" CREATED="1582940936028" MODIFIED="1653357364861">
 <font NAME="Gentium" BOLD="false"/>
 <edge COLOR="#007c7c"/>
 <node TEXT="SG" ID="ID_62932280" CREATED="1653357372586" MODIFIED="1653357374319">
