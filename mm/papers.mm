@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="{M,R,D}L" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1642394353464" STYLE="oval">
 <font NAME="Gentium" SIZE="18"/>
-<hook NAME="MapStyle" zoom="1.714">
+<hook NAME="MapStyle" zoom="1.17">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -1930,7 +1930,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_98760508" CREATED="1642438760894" MODIFIED="1642438768351">
+<node TEXT="Classification" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_98760508" CREATED="1642438760894" MODIFIED="1642438768351">
 <edge COLOR="#7c7c00"/>
 <node TEXT="MLP" ID="ID_636086784" CREATED="1648181297496" MODIFIED="1648181311232">
 <font BOLD="true"/>
@@ -2164,6 +2164,19 @@
 <node TEXT="Understanding The Robustness in Vision Transformers" ID="ID_255240365" CREATED="1652403100297" MODIFIED="1652403107057">
 <icon BUILTIN="pencil"/>
 </node>
+</node>
+</node>
+<node TEXT="+Bias" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1422488966" CREATED="1654992650483" MODIFIED="1654992655257">
+<node TEXT="ObjectNet" ID="ID_391434947" CREATED="1654992371930" MODIFIED="1654992375508">
+<node TEXT="ObjectNet: A large-scale bias-controlled dataset for pushing the limits of object recognition models" ID="ID_1908177239" CREATED="1654992342905" MODIFIED="1654992353202">
+<node TEXT="NIPS19" ID="ID_1669395331" CREATED="1654992354740" MODIFIED="1654992357406"/>
+<node TEXT="bias in background, rotation, etc" ID="ID_941012212" CREATED="1654992687787" MODIFIED="1654992701442"/>
+</node>
+</node>
+<node TEXT="Undoing the Damage of Dataset Bias" ID="ID_1027986381" CREATED="1654992852826" MODIFIED="1654992853651">
+<node TEXT="ECCV12" ID="ID_1123096961" CREATED="1654992858900" MODIFIED="1654992860413"/>
+<node TEXT="implicit and holistic modeling of bias" ID="ID_1209774874" CREATED="1654992985037" MODIFIED="1654992992752"/>
+<node TEXT="Overall, we find that it is beneficial to explicitly account for bias when&#xa;combining multiple datasets." ID="ID_1735682928" CREATED="1654992860679" MODIFIED="1654992867662"/>
 </node>
 </node>
 </node>
@@ -2876,6 +2889,7 @@
 <node TEXT="LiDAR Snowfall Simulation for Robust 3D Object Detection" ID="ID_1716092506" CREATED="1649103277309" MODIFIED="1649103282821">
 <node TEXT="CVPR22" ID="ID_685730559" CREATED="1649103284187" MODIFIED="1649103285288"/>
 </node>
+<node TEXT="Voxel Field Fusion for 3D Object Detection" ID="ID_677783437" CREATED="1654539147223" MODIFIED="1654539148043"/>
 </node>
 <node TEXT="Interpolation" ID="ID_687015313" CREATED="1648337997035" MODIFIED="1648338000713">
 <node TEXT="IDEA-Net: Dynamic 3D Point Cloud Interpolation via Deep Embedding Alignment" ID="ID_1606213792" CREATED="1648338005697" MODIFIED="1648338009130">
@@ -3974,6 +3988,35 @@
 <node TEXT="node revision" ID="ID_386677377" CREATED="1654727116250" MODIFIED="1654727120606"/>
 <node TEXT="edge revision" ID="ID_1595229570" CREATED="1654727121110" MODIFIED="1654727126405"/>
 </node>
+<node TEXT="+Bias" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1638323157" CREATED="1654992332106" MODIFIED="1654992337975">
+<node TEXT="unary bias" ID="ID_740807651" CREATED="1654993208125" MODIFIED="1654993216331">
+<node TEXT="geographycal" ID="ID_1267403260" CREATED="1654994710874" MODIFIED="1654994714039">
+<node TEXT="Does Object Recognition Work for Everyone?" ID="ID_1417014568" CREATED="1654994715621" MODIFIED="1654994724433">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+</node>
+<node TEXT="binary bias" ID="ID_1042250435" CREATED="1654993216630" MODIFIED="1654993218559">
+<node TEXT="background / object" ID="ID_426912273" CREATED="1654993220658" MODIFIED="1654993224191">
+<node TEXT="Tackling the Background Bias in Sparse Object Detection via Cropped Windows" ID="ID_1448087551" CREATED="1654993225698" MODIFIED="1654993226905">
+<node TEXT="ICCVw21" ID="ID_1414720144" CREATED="1654993229794" MODIFIED="1654993236269"/>
+<node TEXT="background" ID="ID_1931143875" CREATED="1654993240841" MODIFIED="1654993242566"/>
+</node>
+</node>
+<node TEXT="general binary" ID="ID_1865823804" CREATED="1654994072992" MODIFIED="1654994075888">
+<node TEXT="Don&#x2019;t Judge an Object by Its Context: Learning to Overcome Contextual Bias" ID="ID_834860768" CREATED="1654994077221" MODIFIED="1654994086424">
+<icon BUILTIN="bookmark"/>
+<icon BUILTIN="button_ok"/>
+<node TEXT="CVPR20" ID="ID_1300735588" CREATED="1654994080417" MODIFIED="1654994081985"/>
+<node TEXT="leverage co-occurrences between objects and their context to improve recognition accuracy" ID="ID_1091214813" CREATED="1654994126137" MODIFIED="1654994142313"/>
+<node TEXT="fail to detect both when typical co-occurrence patterns are absent" ID="ID_774545509" CREATED="1654994156084" MODIFIED="1654994170073"/>
+<node TEXT="decorrelate category feature from co-occuring context" ID="ID_1699061630" CREATED="1654994183557" MODIFIED="1654994204723"/>
+<node TEXT="feature subspace that explicitly represents categories occuring in the absence of context" ID="ID_916365021" CREATED="1654994205788" MODIFIED="1654994222232"/>
+<node TEXT="joint feature subspace that represents both categories and context" ID="ID_1880361353" CREATED="1654994222460" MODIFIED="1654994235881"/>
+</node>
+</node>
+</node>
+</node>
 <node TEXT="+Continual Learning" LOCALIZED_STYLE_REF="styles.topic" ID="ID_420378764" CREATED="1654539944510" MODIFIED="1654539952773">
 <node TEXT="Survey" ID="ID_1756076666" CREATED="1654540045979" MODIFIED="1654540091722">
 <icon BUILTIN="mindmap"/>
@@ -3998,15 +4041,6 @@
 <node TEXT="Incremental Learning of Object Detectors without Catastrophic Forgetting" ID="ID_99025474" CREATED="1654543263735" MODIFIED="1654543266605">
 <icon BUILTIN="unchecked"/>
 <node TEXT="ICCV17" ID="ID_785901215" CREATED="1654543267568" MODIFIED="1654543270127"/>
-</node>
-</node>
-<node TEXT="Camouflaged" ID="ID_1233579435" CREATED="1648388054502" MODIFIED="1648388062210">
-<node TEXT="Zoom In and Out: A Mixed-scale Triplet Network&#xa;for Camouflaged Object Detection" ID="ID_290360895" CREATED="1648388067795" MODIFIED="1648388070326">
-<node TEXT="CVPR22" ID="ID_1320931684" CREATED="1648388071940" MODIFIED="1648388074017"/>
-</node>
-<node TEXT="Deep Gradient Learning for Efficient Camouflaged Object Detection" ID="ID_725347338" CREATED="1653859018444" MODIFIED="1653859019021">
-<node TEXT="Tech report" ID="ID_1702124696" CREATED="1653859022970" MODIFIED="1653859027333"/>
-<node TEXT="Luc Van Gool" ID="ID_513432933" CREATED="1653859028122" MODIFIED="1653859033098"/>
 </node>
 </node>
 <node TEXT="+Graph" LOCALIZED_STYLE_REF="styles.topic" ID="ID_172353625" CREATED="1654032911773" MODIFIED="1654033207459">
@@ -4070,6 +4104,14 @@
 <node TEXT="(2) negligence of the inter-class correlation among different classes" ID="ID_1239800997" CREATED="1654113392365" MODIFIED="1654113416745"/>
 </node>
 </node>
+<node TEXT="Domain Adaptation" ID="ID_1939871268" CREATED="1654035897051" MODIFIED="1654035900277">
+<node TEXT="Survey" ID="ID_46151502" CREATED="1654035902136" MODIFIED="1654035903656">
+<node TEXT="Unsupervised Domain Adaptation of&#xa;Object Detectors: A Survey" ID="ID_840559711" CREATED="1654035904791" MODIFIED="1654035917646">
+<icon BUILTIN="unchecked"/>
+<node TEXT="Poojan" ID="ID_1665277090" CREATED="1654035921643" MODIFIED="1654035926580"/>
+</node>
+</node>
+</node>
 <node TEXT="+Explain" ID="ID_1974349082" CREATED="1654102261187" MODIFIED="1654102266664">
 <node TEXT="Towards Interpretable R-CNN by Unfolding Latent Structures" ID="ID_444208502" CREATED="1654102267866" MODIFIED="1654102275500">
 <node TEXT="AAAI" ID="ID_1080837170" CREATED="1654102278958" MODIFIED="1654102280193"/>
@@ -4077,12 +4119,13 @@
 <node TEXT="unfold latent discriminative part configurations of object instances automatically and simultaneously in detection without using any supervision for part configurations" ID="ID_871717774" CREATED="1654102389682" MODIFIED="1654102419142"/>
 </node>
 </node>
-<node TEXT="Domain Adaptation" ID="ID_1939871268" CREATED="1654035897051" MODIFIED="1654035900277">
-<node TEXT="Survey" ID="ID_46151502" CREATED="1654035902136" MODIFIED="1654035903656">
-<node TEXT="Unsupervised Domain Adaptation of&#xa;Object Detectors: A Survey" ID="ID_840559711" CREATED="1654035904791" MODIFIED="1654035917646">
-<icon BUILTIN="unchecked"/>
-<node TEXT="Poojan" ID="ID_1665277090" CREATED="1654035921643" MODIFIED="1654035926580"/>
+<node TEXT="Camouflaged" ID="ID_1233579435" CREATED="1648388054502" MODIFIED="1648388062210">
+<node TEXT="Zoom In and Out: A Mixed-scale Triplet Network&#xa;for Camouflaged Object Detection" ID="ID_290360895" CREATED="1648388067795" MODIFIED="1648388070326">
+<node TEXT="CVPR22" ID="ID_1320931684" CREATED="1648388071940" MODIFIED="1648388074017"/>
 </node>
+<node TEXT="Deep Gradient Learning for Efficient Camouflaged Object Detection" ID="ID_725347338" CREATED="1653859018444" MODIFIED="1653859019021">
+<node TEXT="Tech report" ID="ID_1702124696" CREATED="1653859022970" MODIFIED="1653859027333"/>
+<node TEXT="Luc Van Gool" ID="ID_513432933" CREATED="1653859028122" MODIFIED="1653859033098"/>
 </node>
 </node>
 <node TEXT="w/ Pretrained" ID="ID_713615493" CREATED="1649102563690" MODIFIED="1649102570371">
@@ -4094,9 +4137,6 @@
 <node TEXT="CVPR22 oral" ID="ID_163602476" CREATED="1653961170705" MODIFIED="1653961173729"/>
 <node TEXT="Yutong Bai" ID="ID_1019437676" CREATED="1653960944623" MODIFIED="1653960947264"/>
 </node>
-</node>
-<node TEXT="3D / PCL" ID="ID_1301796606" CREATED="1654538079957" MODIFIED="1654538082325">
-<node TEXT="Voxel Field Fusion for 3D Object Detection" ID="ID_677783437" CREATED="1654539147223" MODIFIED="1654539148043"/>
 </node>
 </node>
 <node TEXT="Open Set Recognition" FOLDED="true" POSITION="left" ID="ID_323999523" CREATED="1634132952545" MODIFIED="1647267889167">
