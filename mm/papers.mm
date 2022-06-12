@@ -4112,6 +4112,7 @@
 <node TEXT="adaptively discover and incorporate key semantics and spatial relationships for reasoning over each object" ID="ID_704649779" CREATED="1654038219880" MODIFIED="1654038242254">
 <node TEXT="learn graph structure" ID="ID_321330482" CREATED="1655008077625" MODIFIED="1655008080814"/>
 <node TEXT="implicit relation?" ID="ID_1820747183" CREATED="1655008085478" MODIFIED="1655008088667"/>
+<node TEXT="proposal region as graph node" ID="ID_1860781838" CREATED="1655011651913" MODIFIED="1655011663697"/>
 </node>
 </node>
 <node TEXT="GeoGraph: Graph-based multi-view object&#xa;detection with geometric cues end-to-end" ID="ID_872565394" CREATED="1655006132776" MODIFIED="1655006134113">
