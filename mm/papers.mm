@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="{M,R,D}L" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1642394353464" STYLE="oval">
 <font NAME="Gentium" SIZE="18"/>
-<hook NAME="MapStyle" zoom="1.17">
+<hook NAME="MapStyle" zoom="1.416">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -3767,16 +3767,50 @@
 <node TEXT="https://github.com/daicoolb/Awesome-Object-Detections" ID="ID_445839046" CREATED="1654041286014" MODIFIED="1654041286616"/>
 </node>
 <node TEXT="Main (multi-object)" LOCALIZED_STYLE_REF="styles.topic" ID="ID_602285743" CREATED="1590025482391" MODIFIED="1654637252853">
-<node TEXT="sliding window" ID="ID_1868839791" CREATED="1654625575193" MODIFIED="1654625578177">
+<node TEXT="One-Stage" ID="ID_1861902425" CREATED="1654040858813" MODIFIED="1655005666300">
 <node TEXT="Overfeat" ID="ID_498869304" CREATED="1654625580457" MODIFIED="1654625583038">
 <node TEXT="OverFeat:&#xa;Integrated Recognition, Localization and Detection&#xa;using Convolutional Networks" ID="ID_1479745312" CREATED="1654625590470" MODIFIED="1654625601978">
 <icon BUILTIN="unchecked"/>
 <node TEXT="LeCun" ID="ID_1902576979" CREATED="1654625604690" MODIFIED="1654625607394"/>
+<node TEXT="sliding window" ID="ID_37281947" CREATED="1655005614417" MODIFIED="1655005619111"/>
 <node TEXT="objects of interest vary significantly in size and position within the image" ID="ID_255052424" CREATED="1654626273032" MODIFIED="1654626286105">
 <node TEXT="the first idea is to apply a convnet at multiple locations in the image, in a sliding window fasion, and over multiple scales" ID="ID_446700600" CREATED="1654626264976" MODIFIED="1654626309058"/>
 <node TEXT="the second idea is to train the system to not only produce a distribution over categories for each window, but also ro produce a prediction of the location and size of the bounding box" ID="ID_1963515600" CREATED="1654626313104" MODIFIED="1654626349179"/>
 <node TEXT="the third idea is to accumulate evidence for each category at each location and size" ID="ID_1176158278" CREATED="1654626359431" MODIFIED="1654626376005"/>
 </node>
+</node>
+</node>
+<node TEXT="SSD" ID="ID_164154080" CREATED="1578733432308" MODIFIED="1653969384449">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="anchor-based" ID="ID_1928529639" CREATED="1654720582917" MODIFIED="1654720588478">
+<icon BUILTIN="info"/>
+</node>
+<node TEXT="&#x201c;SSD: Single-Shot MultiBox Detector" ID="ID_1049708950" CREATED="1653969449265" MODIFIED="1654041102631">
+<icon BUILTIN="unchecked"/>
+</node>
+</node>
+<node TEXT="YOLO family" ID="ID_1721203552" CREATED="1578733429892" MODIFIED="1655005648161">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="anchor-based" ID="ID_1857190968" CREATED="1654720592951" MODIFIED="1654720596445">
+<icon BUILTIN="info"/>
+</node>
+<node TEXT="You Only Look Once: Unified, Real-Time Object Detection" ID="ID_1139110120" CREATED="1653969414505" MODIFIED="1653969438295">
+<node TEXT="CVPR16" ID="ID_783494472" CREATED="1653969425013" MODIFIED="1653969426766"/>
+</node>
+<node TEXT="2004.10934: YOLOv4: optimal speed and accuracy of object detection" ID="ID_1418219399" CREATED="1587731285906" MODIFIED="1587731405695">
+<icon BUILTIN="button_ok"/>
+</node>
+<node TEXT="yolov5" ID="ID_1234519247" CREATED="1655005638041" MODIFIED="1655005640983"/>
+<node TEXT="Yolox" ID="ID_198411692" CREATED="1655005633452" MODIFIED="1655005637037"/>
+</node>
+<node TEXT="RetinaNet / Focal loss" ID="ID_1759579854" CREATED="1653969367052" MODIFIED="1654040874668">
+<node TEXT="Focal Loss for Dense Object Detection" ID="ID_1170541692" CREATED="1653969458606" MODIFIED="1654041100242">
+<icon BUILTIN="unchecked"/>
+</node>
+</node>
+<node TEXT="CornerNet" ID="ID_1915900664" CREATED="1654041083704" MODIFIED="1654041085648">
+<node TEXT="CornerNet: Detecting Objects as Paired Keypoints" ID="ID_1663902876" CREATED="1654041087416" MODIFIED="1654041183192">
+<node TEXT="detecting objects as paired keypoints instead of the anchor boxes" ID="ID_1343226129" CREATED="1654041186237" MODIFIED="1654041223374"/>
 </node>
 </node>
 </node>
@@ -3840,6 +3874,7 @@
 </node>
 </node>
 <node TEXT="cascade R-CNN" ID="ID_466733439" CREATED="1654537259235" MODIFIED="1654537262357"/>
+<node TEXT="Sparse R-CNN" ID="ID_1293146506" CREATED="1655005508913" MODIFIED="1655005513160"/>
 <node TEXT="light head" ID="ID_395681835" CREATED="1654042036745" MODIFIED="1654042039296">
 <node TEXT="Light-Head R-CNN: In Defense of Two-Stage Object Detector" ID="ID_657637424" CREATED="1654041783299" MODIFIED="1654041785595">
 <icon BUILTIN="unchecked"/>
@@ -3853,37 +3888,15 @@
 <node TEXT="bounding box regression loss for learning bounding box transofrmation and localization variance together" ID="ID_1394294758" CREATED="1654042055914" MODIFIED="1654042096019"/>
 </node>
 </node>
-</node>
-<node TEXT="Single-Stage" ID="ID_1861902425" CREATED="1654040858813" MODIFIED="1654040862652">
-<node TEXT="SSD" ID="ID_164154080" CREATED="1578733432308" MODIFIED="1653969384449">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="anchor-based" ID="ID_1928529639" CREATED="1654720582917" MODIFIED="1654720588478">
-<icon BUILTIN="info"/>
-</node>
-<node TEXT="&#x201c;SSD: Single-Shot MultiBox Detector" ID="ID_1049708950" CREATED="1653969449265" MODIFIED="1654041102631">
-<icon BUILTIN="unchecked"/>
+<node TEXT="decision tree in decision head" ID="ID_591473877" CREATED="1655005267800" MODIFIED="1655005802137">
+<node TEXT="R(Det)^2: Randomized Decision Routing for Object Detection" ID="ID_1075041282" CREATED="1649628031567" MODIFIED="1649628032450">
+<node TEXT="CVPR22" ID="ID_1565974246" CREATED="1649628035054" MODIFIED="1649628038569">
+<node TEXT="coco2017" ID="ID_890735945" CREATED="1655005966320" MODIFIED="1655005968441">
+<node TEXT="base 37.4" ID="ID_596093253" CREATED="1655005971788" MODIFIED="1655005976010"/>
+<node TEXT="this 41.0" ID="ID_1446849192" CREATED="1655005976376" MODIFIED="1655005979635"/>
 </node>
 </node>
-<node TEXT="YOLO" ID="ID_1721203552" CREATED="1578733429892" MODIFIED="1587526865054">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="anchor-based" ID="ID_1857190968" CREATED="1654720592951" MODIFIED="1654720596445">
-<icon BUILTIN="info"/>
-</node>
-<node TEXT="You Only Look Once: Unified, Real-Time Object Detection" ID="ID_1139110120" CREATED="1653969414505" MODIFIED="1653969438295">
-<node TEXT="CVPR16" ID="ID_783494472" CREATED="1653969425013" MODIFIED="1653969426766"/>
-</node>
-<node TEXT="2004.10934: YOLOv4: optimal speed and accuracy of object detection" ID="ID_1418219399" CREATED="1587731285906" MODIFIED="1587731405695">
-<icon BUILTIN="button_ok"/>
-</node>
-</node>
-<node TEXT="RetinaNet / Focal loss" ID="ID_1759579854" CREATED="1653969367052" MODIFIED="1654040874668">
-<node TEXT="Focal Loss for Dense Object Detection" ID="ID_1170541692" CREATED="1653969458606" MODIFIED="1654041100242">
-<icon BUILTIN="unchecked"/>
-</node>
-</node>
-<node TEXT="CornerNet" ID="ID_1915900664" CREATED="1654041083704" MODIFIED="1654041085648">
-<node TEXT="CornerNet: Detecting Objects as Paired Keypoints" ID="ID_1663902876" CREATED="1654041087416" MODIFIED="1654041183192">
-<node TEXT="detecting objects as paired keypoints instead of the anchor boxes" ID="ID_1343226129" CREATED="1654041186237" MODIFIED="1654041223374"/>
+<node TEXT="soft decision tree at decision head" ID="ID_287995473" CREATED="1655005274461" MODIFIED="1655005312806"/>
 </node>
 </node>
 </node>
@@ -3899,6 +3912,11 @@
 </node>
 </node>
 <node TEXT="Deformable-DETR" ID="ID_1972419326" CREATED="1654537454518" MODIFIED="1654537458201"/>
+<node TEXT="TSP" ID="ID_1904080894" CREATED="1655005538951" MODIFIED="1655005540205">
+<node TEXT="Rethinking transformer-based set prediction for object detection." ID="ID_1084881023" CREATED="1655005546443" MODIFIED="1655005547450">
+<node TEXT="iccv21" ID="ID_351086179" CREATED="1655005550764" MODIFIED="1655005552264"/>
+</node>
+</node>
 <node TEXT="SAM-DETR" ID="ID_779466914" CREATED="1654537447758" MODIFIED="1654537450433">
 <node TEXT="Accelerating DETR Convergence via Semantic-Aligned Matching" ID="ID_791729206" CREATED="1654113704418" MODIFIED="1654113727951">
 <icon BUILTIN="button_ok"/>
@@ -3933,9 +3951,6 @@
 <node TEXT="?-stage" ID="ID_1254657210" CREATED="1654102722886" MODIFIED="1654102725398">
 <node TEXT="R-FCN" ID="ID_933998506" CREATED="1654102726577" MODIFIED="1654102731989"/>
 <node TEXT="Multibox" ID="ID_1601615722" CREATED="1654102732156" MODIFIED="1654102735317"/>
-<node TEXT="R(Det)^2: Randomized Decision Routing for Object Detection" ID="ID_1075041282" CREATED="1649628031567" MODIFIED="1649628032450">
-<node TEXT="CVPR22" ID="ID_1565974246" CREATED="1649628035054" MODIFIED="1649628038569"/>
-</node>
 <node TEXT="2012: Implicit Feature Pyramid Network for Object Detection" ID="ID_659232211" CREATED="1610428420327" MODIFIED="1610428428770">
 <node TEXT="Jian Sun" ID="ID_1833196048" CREATED="1610428429754" MODIFIED="1610428432093"/>
 </node>
@@ -3944,6 +3959,7 @@
 <node TEXT="2012.03544: end to end object detection with fully convolutional network" ID="ID_1523511969" CREATED="1607496830511" MODIFIED="1607496848085"/>
 </node>
 </node>
+<node TEXT="+Plugins" LOCALIZED_STYLE_REF="styles.topic" ID="ID_615796864" CREATED="1655005221697" MODIFIED="1655005228883"/>
 <node TEXT="Performance Metric" ID="ID_898832267" CREATED="1649101258896" MODIFIED="1649101263049">
 <node TEXT="Optimal Correction Cost for Object Detection Evaluation" ID="ID_1091207762" CREATED="1649101264499" MODIFIED="1649101269915">
 <node TEXT="CVPR22" ID="ID_607658609" CREATED="1649101272943" MODIFIED="1649101274253"/>
@@ -3988,7 +4004,7 @@
 <node TEXT="node revision" ID="ID_386677377" CREATED="1654727116250" MODIFIED="1654727120606"/>
 <node TEXT="edge revision" ID="ID_1595229570" CREATED="1654727121110" MODIFIED="1654727126405"/>
 </node>
-<node TEXT="+Bias" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1638323157" CREATED="1654992332106" MODIFIED="1654992337975">
+<node TEXT="+Bias/Context" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1638323157" CREATED="1654992332106" MODIFIED="1655004640534">
 <node TEXT="unary bias" ID="ID_740807651" CREATED="1654993208125" MODIFIED="1654993216331">
 <node TEXT="geographycal" ID="ID_1267403260" CREATED="1654994710874" MODIFIED="1654994714039">
 <node TEXT="Does Object Recognition Work for Everyone?" ID="ID_1417014568" CREATED="1654994715621" MODIFIED="1654994724433">
@@ -4003,7 +4019,8 @@
 <node TEXT="background" ID="ID_1931143875" CREATED="1654993240841" MODIFIED="1654993242566"/>
 </node>
 </node>
-<node TEXT="general binary" ID="ID_1865823804" CREATED="1654994072992" MODIFIED="1654994075888">
+<node TEXT="object/object" ID="ID_1218198281" CREATED="1655004439179" MODIFIED="1655004441670"/>
+<node TEXT="Both" ID="ID_1865823804" CREATED="1654994072992" MODIFIED="1655004436611">
 <node TEXT="Don&#x2019;t Judge an Object by Its Context: Learning to Overcome Contextual Bias" ID="ID_834860768" CREATED="1654994077221" MODIFIED="1654994086424">
 <icon BUILTIN="bookmark"/>
 <icon BUILTIN="button_ok"/>
@@ -4013,6 +4030,15 @@
 <node TEXT="decorrelate category feature from co-occuring context" ID="ID_1699061630" CREATED="1654994183557" MODIFIED="1654994204723"/>
 <node TEXT="feature subspace that explicitly represents categories occuring in the absence of context" ID="ID_916365021" CREATED="1654994205788" MODIFIED="1654994222232"/>
 <node TEXT="joint feature subspace that represents both categories and context" ID="ID_1880361353" CREATED="1654994222460" MODIFIED="1654994235881"/>
+</node>
+<node TEXT="Structure Inference Net: Object Detection Using Scene-Level Context and&#xa;Instance-Level Relationships" ID="ID_202126031" CREATED="1655004425455" MODIFIED="1655004431332">
+<icon BUILTIN="bookmark"/>
+<icon BUILTIN="button_ok"/>
+<node TEXT="CVPR18" ID="ID_1891982204" CREATED="1655004617023" MODIFIED="1655004618616"/>
+<node TEXT="use both, edge effective, edge implicit" ID="ID_759339836" CREATED="1655004619297" MODIFIED="1655004664065"/>
+<node TEXT="structured inference for single image" ID="ID_1811302773" CREATED="1655004708285" MODIFIED="1655004713949"/>
+<node TEXT="graph not representing holistic distribution view" ID="ID_956136005" CREATED="1655004714181" MODIFIED="1655004729810"/>
+<node TEXT="not editable" ID="ID_832075499" CREATED="1655004746040" MODIFIED="1655004748767"/>
 </node>
 </node>
 </node>
@@ -4052,11 +4078,15 @@
 <node TEXT="this is scene graph" ID="ID_1115446110" CREATED="1654038480342" MODIFIED="1654038483953"/>
 </node>
 </node>
-<node TEXT="Object Detection Meets Knowledge Graphs" ID="ID_1547756003" CREATED="1654032915868" MODIFIED="1654033026073">
+<node TEXT="Object Detection Meets Knowledge Graphs" ID="ID_1547756003" CREATED="1654032915868" MODIFIED="1655005139155">
 <icon BUILTIN="unchecked"/>
+<icon BUILTIN="bookmark"/>
 <node TEXT="IJCAI17" ID="ID_153000722" CREATED="1654032927276" MODIFIED="1654032931203"/>
 <node TEXT="integrate knolwedge graph into obj det" ID="ID_1036740780" CREATED="1654032931683" MODIFIED="1654032986128"/>
 <node TEXT="improves obj det using re-optimization process to achieve better consistency w/ background knowledge" ID="ID_28948251" CREATED="1654032986451" MODIFIED="1654033006262"/>
+<node TEXT="relies on external large scale knowledge graph" ID="ID_1396050563" CREATED="1655005047567" MODIFIED="1655005056653"/>
+<node TEXT="re-optimization is similar to automatic calibration?" ID="ID_1417977282" CREATED="1655005093130" MODIFIED="1655005104060"/>
+<node TEXT="editable through external knowledge graph but not straightforward" ID="ID_217778107" CREATED="1655005114417" MODIFIED="1655005128915"/>
 </node>
 <node TEXT="Efficient graph-based search for object detection" ID="ID_1151290803" CREATED="1654034712663" MODIFIED="1654034715811">
 <icon BUILTIN="unchecked"/>
