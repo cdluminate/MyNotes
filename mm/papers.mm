@@ -3821,8 +3821,24 @@
 </node>
 <node TEXT="CornerNet" ID="ID_1915900664" CREATED="1654041083704" MODIFIED="1654041085648">
 <node TEXT="CornerNet: Detecting Objects as Paired Keypoints" ID="ID_1663902876" CREATED="1654041087416" MODIFIED="1654041183192">
+<node TEXT="keypoint-based, anchor free" ID="ID_828843019" CREATED="1655412302523" MODIFIED="1655412808800">
+<icon BUILTIN="info"/>
+</node>
 <node TEXT="detecting objects as paired keypoints instead of the anchor boxes" ID="ID_1343226129" CREATED="1654041186237" MODIFIED="1654041223374"/>
 </node>
+</node>
+<node TEXT="CenterNet" ID="ID_1103406305" CREATED="1654537355701" MODIFIED="1654537359098">
+<node TEXT="CenterNet: Keypoint Triplets for Object Detection" ID="ID_653706233" CREATED="1655412326688" MODIFIED="1655412342540">
+<node TEXT="keypoint-based, anchor free" ID="ID_1518783440" CREATED="1655412344171" MODIFIED="1655412811212">
+<icon BUILTIN="info"/>
+</node>
+<node TEXT="existing method lacks of an additional look into the cropped regions" ID="ID_1404883413" CREATED="1655412391421" MODIFIED="1655412405995"/>
+<node TEXT="detects each object as a triplet, rather than a pair of keypoints" ID="ID_830426442" CREATED="1655412348131" MODIFIED="1655412385880"/>
+</node>
+</node>
+<node TEXT="FreeAnchor: Learning to Match Anchors for Visual&#xa;Object Detection" ID="ID_272596835" CREATED="1655412814672" MODIFIED="1655412815284">
+<node TEXT="NIPS19" ID="ID_1027839650" CREATED="1655412822322" MODIFIED="1655412823849"/>
+<node TEXT="updates hand-crafted anchor assignment to &apos;free&apos; anchor matching by formulating detector training as a maximum likelihood estimation (MLE) procedure" ID="ID_905160337" CREATED="1655412849974" MODIFIED="1655412874741"/>
 </node>
 </node>
 <node TEXT="Two-Stage" ID="ID_981048532" CREATED="1654041315951" MODIFIED="1654041318501">
@@ -3956,7 +3972,6 @@
 <node TEXT="not the same kind of attribute compared with single/two stage" ID="ID_1892639653" CREATED="1654720480496" MODIFIED="1654720512049">
 <icon BUILTIN="info"/>
 </node>
-<node TEXT="CenterNet" ID="ID_1103406305" CREATED="1654537355701" MODIFIED="1654537359098"/>
 <node TEXT="FCOS" ID="ID_1640946639" CREATED="1654537359565" MODIFIED="1654537362455"/>
 </node>
 <node TEXT="?-stage" ID="ID_1254657210" CREATED="1654102722886" MODIFIED="1654102725398">
@@ -4136,13 +4151,14 @@
 <node TEXT="not general detection" ID="ID_1121099245" CREATED="1655006389954" MODIFIED="1655006396360"/>
 </node>
 </node>
-<node TEXT="Few Shot" ID="ID_668526112" CREATED="1654107154750" MODIFIED="1654107158630">
+<node TEXT="Few Shot (FSOD)" ID="ID_668526112" CREATED="1654107154750" MODIFIED="1655413271940">
 <node TEXT="Survey" ID="ID_1949018457" CREATED="1654109275101" MODIFIED="1654109286414">
 <icon BUILTIN="mindmap"/>
 <node TEXT="Few-Shot Object Detection: A Survey" ID="ID_344244998" CREATED="1654109370187" MODIFIED="1654110307487">
 <icon BUILTIN="unchecked"/>
 <icon BUILTIN="button_ok"/>
 <node TEXT="TNNLS" ID="ID_1584234500" CREATED="1654109380370" MODIFIED="1654109382028"/>
+<node TEXT="These methods involve fine-tuning" ID="ID_374933457" CREATED="1655446775953" MODIFIED="1655446781124"/>
 <node TEXT="important reference" ID="ID_1049064853" CREATED="1654118341059" MODIFIED="1654118358939">
 <icon BUILTIN="messagebox_warning"/>
 </node>
@@ -4174,6 +4190,13 @@
 <node TEXT="AAAI" ID="ID_1080837170" CREATED="1654102278958" MODIFIED="1654102280193"/>
 <node TEXT="two stagee detectors" ID="ID_48895998" CREATED="1654102385089" MODIFIED="1654102389484"/>
 <node TEXT="unfold latent discriminative part configurations of object instances automatically and simultaneously in detection without using any supervision for part configurations" ID="ID_871717774" CREATED="1654102389682" MODIFIED="1654102419142"/>
+</node>
+</node>
+<node TEXT="+Openworld" ID="ID_135891946" CREATED="1655446838448" MODIFIED="1655446842315">
+<node TEXT="OW-DETR: Open-world Detection Transformer" ID="ID_360356799" CREATED="1655446843262" MODIFIED="1655446844116">
+<node TEXT="CVPR22" ID="ID_903582988" CREATED="1655446845061" MODIFIED="1655446846529"/>
+<node TEXT="detect a known set of object categories while simultaneously identifying unknown objects" ID="ID_616806391" CREATED="1655446868485" MODIFIED="1655446869285"/>
+<node TEXT="the model must incrementally learn new classes that become known in the next training episodes." ID="ID_1013145496" CREATED="1655446886665" MODIFIED="1655446887118"/>
 </node>
 </node>
 <node TEXT="Camouflaged" ID="ID_1233579435" CREATED="1648388054502" MODIFIED="1648388062210">
