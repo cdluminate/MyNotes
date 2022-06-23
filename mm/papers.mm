@@ -4062,8 +4062,8 @@
 <node TEXT="DETR Family" ID="ID_348406151" CREATED="1654113701876" MODIFIED="1654537444744">
 <node TEXT="DETR" ID="ID_1443953889" CREATED="1654537437342" MODIFIED="1656016862157">
 <icon BUILTIN="bookmark"/>
-<node TEXT="End-to-End Object Detection with Transformers" ID="ID_943659149" CREATED="1654116599499" MODIFIED="1654116602844">
-<icon BUILTIN="unchecked"/>
+<node TEXT="End-to-End Object Detection with Transformers" ID="ID_943659149" CREATED="1654116599499" MODIFIED="1656026504756">
+<icon BUILTIN="checked"/>
 <node TEXT="ECCV20" ID="ID_929643402" CREATED="1654116605136" MODIFIED="1654116607201">
 <node TEXT="Original DETR" ID="ID_512601926" CREATED="1654116608453" MODIFIED="1654116611476"/>
 </node>
@@ -4073,9 +4073,22 @@
 </node>
 <node TEXT="Given a fixed small set of learned object queries, DETR reasons about the relations of the objects and the global image context to directly output the final set of predictions in parallel" ID="ID_1081326563" CREATED="1654116666661" MODIFIED="1656017239372">
 <icon BUILTIN="clanbomber"/>
+<node TEXT="a transformer decoder then takes as input a small fixed number of learned positional embeddings, which we call object queries" ID="ID_1260366658" CREATED="1656023016815" MODIFIED="1656023040364"/>
 </node>
 <node TEXT="(1) a set prediction loss that forces unique matching between predicted and ground-truth boxes" ID="ID_1257955588" CREATED="1656019048613" MODIFIED="1656019063594"/>
 <node TEXT="(2) architecture that predicts a set of objects and models their relation" ID="ID_305160708" CREATED="1656019066546" MODIFIED="1656019110512"/>
+<node TEXT="To optimize for AP, we override the prediction of these slots with the second highest scoring class, using the corresponding confidence. This improves AP by 2 points compared to filtering out empty slots." ID="ID_1495940987" CREATED="1656024754590" MODIFIED="1656024851001">
+<icon BUILTIN="clanbomber"/>
+<node TEXT="NMS improves performance for the predictions from the first decoder" ID="ID_436097642" CREATED="1656025806770" MODIFIED="1656025827551"/>
+<node TEXT="this can be explained by the fact the a single decoding layer of the transformer is not able to compute any cross-correlations between the output elements, and thus it is prone to making multiple predictions for the same object" ID="ID_1899219924" CREATED="1656025829383" MODIFIED="1656025866010"/>
+<node TEXT="in the second and subsequent layers, the self-attention mechanism over the activations allows the model to inhibit duplicate predictions" ID="ID_268496439" CREATED="1656025866350" MODIFIED="1656025889924"/>
+<node TEXT="we observe that the improvement brought by NMS diminishes as depth increases" ID="ID_1587166554" CREATED="1656025908268" MODIFIED="1656025921019"/>
+</node>
+<node TEXT="Training the baseline model for 300 epochs on 16 V100 GPUs takes 3 days, with 4 images per GPU" ID="ID_204589735" CREATED="1656024854176" MODIFIED="1656024874712"/>
+<node TEXT="The transformer components, namely the global self-attention in encoder, FFN, multiple decoder layers, and positional encodings, all significantly contribute to the final object detection performance." ID="ID_942185103" CREATED="1656026227815" MODIFIED="1656026263656"/>
+<node TEXT="suffers from very slow convergence" ID="ID_167943082" CREATED="1654534181486" MODIFIED="1654534188678">
+<icon BUILTIN="button_cancel"/>
+</node>
 </node>
 </node>
 <node TEXT="Deformable-DETR" ID="ID_1972419326" CREATED="1654537454518" MODIFIED="1656016858755">
@@ -4109,9 +4122,6 @@
 <node TEXT="(3) transformer encoder-decoder" ID="ID_1351155282" CREATED="1654534324446" MODIFIED="1654534333087"/>
 <node TEXT="(4) set of box predictions" ID="ID_1828314310" CREATED="1654534347058" MODIFIED="1654534353311"/>
 <node TEXT="(5) bipartite matching loss" ID="ID_822246340" CREATED="1654534353752" MODIFIED="1654534358882"/>
-</node>
-<node TEXT="suffers from very slow convergence" ID="ID_167943082" CREATED="1654534181486" MODIFIED="1654534188678">
-<icon BUILTIN="button_cancel"/>
 </node>
 </node>
 </node>
