@@ -4060,17 +4060,31 @@
 </node>
 </node>
 <node TEXT="DETR Family" ID="ID_348406151" CREATED="1654113701876" MODIFIED="1654537444744">
-<node TEXT="DETR" ID="ID_1443953889" CREATED="1654537437342" MODIFIED="1654537439515">
+<node TEXT="DETR" ID="ID_1443953889" CREATED="1654537437342" MODIFIED="1656016862157">
+<icon BUILTIN="bookmark"/>
 <node TEXT="End-to-End Object Detection with Transformers" ID="ID_943659149" CREATED="1654116599499" MODIFIED="1654116602844">
 <icon BUILTIN="unchecked"/>
 <node TEXT="ECCV20" ID="ID_929643402" CREATED="1654116605136" MODIFIED="1654116607201">
 <node TEXT="Original DETR" ID="ID_512601926" CREATED="1654116608453" MODIFIED="1654116611476"/>
 </node>
 <node TEXT="views object detection as a direct set prediction problem" ID="ID_1228172560" CREATED="1654116621009" MODIFIED="1654116631233"/>
-<node TEXT="Given a fixed small set of learned object queries, DETR reasons about the relations of the objects and the global image context to directly output the final set of predictions in parallel" ID="ID_1081326563" CREATED="1654116666661" MODIFIED="1654116697158"/>
+<node TEXT="parallel decoding, not auto-regressive" ID="ID_1205556112" CREATED="1656017434135" MODIFIED="1656018126686">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node TEXT="Given a fixed small set of learned object queries, DETR reasons about the relations of the objects and the global image context to directly output the final set of predictions in parallel" ID="ID_1081326563" CREATED="1654116666661" MODIFIED="1656017239372">
+<icon BUILTIN="clanbomber"/>
+</node>
+<node TEXT="(1) a set prediction loss that forces unique matching between predicted and ground-truth boxes" ID="ID_1257955588" CREATED="1656019048613" MODIFIED="1656019063594"/>
+<node TEXT="(2) architecture that predicts a set of objects and models their relation" ID="ID_305160708" CREATED="1656019066546" MODIFIED="1656019110512"/>
 </node>
 </node>
-<node TEXT="Deformable-DETR" ID="ID_1972419326" CREATED="1654537454518" MODIFIED="1654537458201"/>
+<node TEXT="Deformable-DETR" ID="ID_1972419326" CREATED="1654537454518" MODIFIED="1656016858755">
+<icon BUILTIN="button_ok"/>
+<icon BUILTIN="bookmark"/>
+<node TEXT="Deformable detr: Deformable transformers for end-to-end object detection" ID="ID_1540012912" CREATED="1656016849673" MODIFIED="1656016850856">
+<node TEXT="ICLR21" ID="ID_1909978045" CREATED="1656016852573" MODIFIED="1656016854548"/>
+</node>
+</node>
 <node TEXT="TSP" ID="ID_1904080894" CREATED="1655005538951" MODIFIED="1655005540205">
 <node TEXT="Rethinking transformer-based set prediction for object detection." ID="ID_1084881023" CREATED="1655005546443" MODIFIED="1655005547450">
 <node TEXT="iccv21" ID="ID_351086179" CREATED="1655005550764" MODIFIED="1655005552264"/>
