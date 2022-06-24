@@ -1,6 +1,6 @@
 <map version="freeplane 1.7.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="{M,R,D}L" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1642394353464" STYLE="oval">
+<node TEXT="{M,R,D}L" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1656028607949" STYLE="oval">
 <font NAME="Gentium" SIZE="18"/>
 <hook NAME="MapStyle" zoom="1.416">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="118" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="119" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1655842831914">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -541,7 +541,7 @@
 <node TEXT="CVPR21" ID="ID_1602396229" CREATED="1652400536589" MODIFIED="1652400538627"/>
 </node>
 </node>
-<node TEXT="Face Recog" ID="ID_1806006397" CREATED="1642368429380" MODIFIED="1642965654306">
+<node TEXT="Face Recog" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1806006397" CREATED="1642368429380" MODIFIED="1656027236721">
 <node TEXT="Fast Geometrically-Perturbed Adversarial Faces" ID="ID_1719260635" CREATED="1653346033107" MODIFIED="1653346035039">
 <icon BUILTIN="unchecked"/>
 <node TEXT="WACV19" ID="ID_657441840" CREATED="1653346036610" MODIFIED="1653346038731"/>
@@ -677,6 +677,11 @@
 <node TEXT="paper strength looks fair, not good" ID="ID_1524130980" CREATED="1653340373846" MODIFIED="1653340408518"/>
 </node>
 </node>
+<node TEXT="Semantic Segmentation" ID="ID_1787214618" CREATED="1656028016019" MODIFIED="1656028018909">
+<node TEXT="Proximal Splitting Adversarial Attacks for Semantic Segmentation" ID="ID_1712900589" CREATED="1656028019529" MODIFIED="1656028021932">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
 <node TEXT="Optical Flow" ID="ID_1641858386" CREATED="1648337319711" MODIFIED="1648337322554">
 <node TEXT="A Perturbation Constrained Adversarial Attack for Evaluating the Robustness of Optical Flow" ID="ID_1358848955" CREATED="1648337323536" MODIFIED="1648337328267">
 <icon BUILTIN="pencil"/>
@@ -742,6 +747,11 @@
 </node>
 <node TEXT="on the robustness of domain adaption to adversarial attacks" ID="ID_1358706166" CREATED="1647567673533" MODIFIED="1647567685949">
 <icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Navigation" ID="ID_67892815" CREATED="1656027242642" MODIFIED="1656027246902">
+<node TEXT="Consistent Attack: Universal Adversarial Perturbation on&#xa;Embodied Vision Navigation" ID="ID_472242787" CREATED="1656027248020" MODIFIED="1656027253385">
+<node TEXT="Jun Zhu" ID="ID_1474238794" CREATED="1656027254365" MODIFIED="1656027256269"/>
 </node>
 </node>
 </node>
@@ -1469,42 +1479,6 @@
 <node TEXT="similar to adversarial training" ID="ID_803563320" CREATED="1651779371287" MODIFIED="1651779378875"/>
 </node>
 </node>
-<node TEXT="Mixup Family" ID="ID_341639872" CREATED="1653341116708" MODIFIED="1655843326502">
-<node TEXT="mixup: Beyond Empirical Risk Minimization" ID="ID_1823327301" CREATED="1653340982218" MODIFIED="1655844019944">
-<icon BUILTIN="unchecked"/>
-<icon BUILTIN="bookmark"/>
-<node TEXT="ICLR18" ID="ID_1371601269" CREATED="1653340992200" MODIFIED="1653340994088"/>
-<node TEXT="train on convex combinations of pairs of examples" ID="ID_1621318087" CREATED="1653341058171" MODIFIED="1653341070073">
-<node TEXT="not using adversarial examples" ID="ID_1175610577" CREATED="1653341357474" MODIFIED="1653341361903"/>
-</node>
-<node TEXT="regularize the neural network to favor simple linear behavior in-between training examples" ID="ID_758048869" CREATED="1653341070530" MODIFIED="1653341101596"/>
-<node TEXT="both robustness and generalization" ID="ID_425810368" CREATED="1653341051563" MODIFIED="1653341057149"/>
-</node>
-<node TEXT="CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features" ID="ID_674388663" CREATED="1655843852130" MODIFIED="1655843852725">
-<node TEXT="ICCV19" ID="ID_387721270" CREATED="1655843857373" MODIFIED="1655843859206"/>
-<node TEXT="augmentation method" ID="ID_1053234738" CREATED="1655843928068" MODIFIED="1655843930935"/>
-<node TEXT="motivation" ID="ID_153506732" CREATED="1655843941004" MODIFIED="1655843942745">
-<node TEXT="regional dropout strategies are questionable" ID="ID_49081001" CREATED="1655843943975" MODIFIED="1655843955775"/>
-</node>
-</node>
-<node TEXT="AdaMixup" ID="ID_1885796793" CREATED="1655843992463" MODIFIED="1655843996727">
-<node TEXT="MixUp as Locally Linear Out-Of-Manifold Regularization" ID="ID_1773743410" CREATED="1655843969220" MODIFIED="1655843969884">
-<node TEXT="AAAI19" ID="ID_690035802" CREATED="1655843970931" MODIFIED="1655844001610"/>
-<node TEXT="not adversarial" ID="ID_358847047" CREATED="1655844002745" MODIFIED="1655844005388"/>
-</node>
-</node>
-<node TEXT="Manifold Mixup: Better Representations by&#xa;Interpolating Hidden States" ID="ID_1230207283" CREATED="1655786446001" MODIFIED="1655787029927">
-<icon BUILTIN="checked"/>
-<node TEXT="ICML19" ID="ID_1425519526" CREATED="1655786481280" MODIFIED="1655786483114">
-<node TEXT="Bengio" ID="ID_1528045016" CREATED="1655786455338" MODIFIED="1655786457513"/>
-</node>
-<node TEXT="mainly for regulairzation, but robustness" ID="ID_1715362768" CREATED="1655786842655" MODIFIED="1655787015599"/>
-<node TEXT="not robust against stronger attacks like PGD" ID="ID_312717470" CREATED="1655787015928" MODIFIED="1655787022426"/>
-</node>
-<node TEXT="Puzzle Mix: Exploiting Saliency and Local Statistics for Optimal Mixup" ID="ID_1754830303" CREATED="1655843459636" MODIFIED="1655843460365">
-<node TEXT="ICML20" ID="ID_1639810099" CREATED="1655843461706" MODIFIED="1655843465586"/>
-</node>
-</node>
 <node TEXT="VAT" ID="ID_696619029" CREATED="1652386387000" MODIFIED="1652386393651">
 <node TEXT="Virtual Adversarial Training:&#xa;A Regularization Method for Supervised and&#xa;Semi-Supervised Learning" ID="ID_1462427172" CREATED="1652386394575" MODIFIED="1652386396842">
 <icon BUILTIN="unchecked"/>
@@ -1723,6 +1697,22 @@
 <node TEXT="change softmax function into softRmax" ID="ID_1077545148" CREATED="1648336452007" MODIFIED="1648336460004"/>
 <node TEXT="robustness without gradient obfuscation or gradient masking" ID="ID_1071224180" CREATED="1648336465198" MODIFIED="1648336477406"/>
 </node>
+<node TEXT="Human Eyes Inspired Recurrent Neural Networks&#xa;are More Robust Against Adversarial Noises" ID="ID_11217862" CREATED="1656028499773" MODIFIED="1656028501322">
+<icon BUILTIN="pencil"/>
+<node TEXT="looks like nips22" ID="ID_1950932097" CREATED="1656028503215" MODIFIED="1656028505969"/>
+</node>
+<node TEXT="Bayesian Learning" ID="ID_680956486" CREATED="1652389099277" MODIFIED="1652389105519">
+<node TEXT="Bayesian Adversarial Learning" ID="ID_1382395834" CREATED="1652389119775" MODIFIED="1652389122328">
+<icon BUILTIN="unchecked"/>
+<node TEXT="NIPS18" ID="ID_1370787734" CREATED="1652389123088" MODIFIED="1652389124598"/>
+</node>
+</node>
+<node TEXT="Late Fusion" ID="ID_1556837406" CREATED="1649633628459" MODIFIED="1649633630829">
+<node TEXT="Training-Free Robust Multimodal Learning via Sample-Wise Jacobian Regularization" ID="ID_266079583" CREATED="1649633640001" MODIFIED="1649633641760">
+<icon BUILTIN="pencil"/>
+<node TEXT="looks like rejected ECCV" ID="ID_1470248094" CREATED="1649633642769" MODIFIED="1649633646853"/>
+</node>
+</node>
 </node>
 <node TEXT="Additional Data or self-supervised" ID="ID_1095198265" CREATED="1652386462667" MODIFIED="1652406991573">
 <node TEXT="Unlabeled Data Improves Adversarial Robustness" ID="ID_743548425" CREATED="1652386466043" MODIFIED="1652386493938">
@@ -1731,12 +1721,6 @@
 </node>
 <node TEXT="Using Multiple Self-Supervised Tasks Improves Model Robustness" ID="ID_1872365850" CREATED="1652406997507" MODIFIED="1652406998193">
 <node TEXT="ICLR22w" ID="ID_180057987" CREATED="1652406998970" MODIFIED="1652407001231"/>
-</node>
-</node>
-<node TEXT="Bayesian Learning" ID="ID_680956486" CREATED="1652389099277" MODIFIED="1652389105519">
-<node TEXT="Bayesian Adversarial Learning" ID="ID_1382395834" CREATED="1652389119775" MODIFIED="1652389122328">
-<icon BUILTIN="unchecked"/>
-<node TEXT="NIPS18" ID="ID_1370787734" CREATED="1652389123088" MODIFIED="1652389124598"/>
 </node>
 </node>
 <node TEXT="Generative Replacement" ID="ID_814019873" CREATED="1642953253003" MODIFIED="1642953259726">
@@ -1775,12 +1759,6 @@
 <node TEXT="student learns the robust representations from the teacher network" ID="ID_640049187" CREATED="1647265180865" MODIFIED="1647265202101"/>
 </node>
 </node>
-<node TEXT="Late Fusion" ID="ID_1556837406" CREATED="1649633628459" MODIFIED="1649633630829">
-<node TEXT="Training-Free Robust Multimodal Learning via Sample-Wise Jacobian Regularization" ID="ID_266079583" CREATED="1649633640001" MODIFIED="1649633641760">
-<icon BUILTIN="pencil"/>
-<node TEXT="looks like rejected ECCV" ID="ID_1470248094" CREATED="1649633642769" MODIFIED="1649633646853"/>
-</node>
-</node>
 <node TEXT="Patch Defense" FOLDED="true" ID="ID_1143099045" CREATED="1648180904182" MODIFIED="1648180907628">
 <node TEXT="Towards Practical Certifiable Patch Defense with Vision Transformer" ID="ID_881632170" CREATED="1648180952088" MODIFIED="1648180959464">
 <icon BUILTIN="unchecked"/>
@@ -1817,6 +1795,12 @@
 <node TEXT="does not look like generalizing to ImageNet" ID="ID_1853413986" CREATED="1652391241476" MODIFIED="1652391248135"/>
 </node>
 </node>
+</node>
+</node>
+<node TEXT="Randomized Ensemble" ID="ID_933940454" CREATED="1656027818422" MODIFIED="1656027822978">
+<node TEXT="Adversarial Vulnerability of Randomized Ensembles" ID="ID_249327756" CREATED="1656027850305" MODIFIED="1656027851459">
+<node TEXT="ICML22" ID="ID_519407052" CREATED="1656027868170" MODIFIED="1656027870745"/>
+<node TEXT="randomized ensemble is not robust" ID="ID_948846408" CREATED="1656027874021" MODIFIED="1656027884178"/>
 </node>
 </node>
 <node TEXT="Gradient Masking" ID="ID_1974024366" CREATED="1653958884756" MODIFIED="1653958902652">
@@ -1964,7 +1948,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_98760508" CREATED="1642438760894" MODIFIED="1642438768351">
+<node TEXT="Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_98760508" CREATED="1642438760894" MODIFIED="1656028607953">
 <edge COLOR="#7c7c00"/>
 <node TEXT="MLP" ID="ID_636086784" CREATED="1648181297496" MODIFIED="1648181311232">
 <font BOLD="true"/>
@@ -2197,6 +2181,42 @@
 </node>
 <node TEXT="Understanding The Robustness in Vision Transformers" ID="ID_255240365" CREATED="1652403100297" MODIFIED="1652403107057">
 <icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Mixup Family" ID="ID_341639872" CREATED="1653341116708" MODIFIED="1655843326502">
+<node TEXT="mixup: Beyond Empirical Risk Minimization" ID="ID_1823327301" CREATED="1653340982218" MODIFIED="1655844019944">
+<icon BUILTIN="unchecked"/>
+<icon BUILTIN="bookmark"/>
+<node TEXT="ICLR18" ID="ID_1371601269" CREATED="1653340992200" MODIFIED="1653340994088"/>
+<node TEXT="train on convex combinations of pairs of examples" ID="ID_1621318087" CREATED="1653341058171" MODIFIED="1653341070073">
+<node TEXT="not using adversarial examples" ID="ID_1175610577" CREATED="1653341357474" MODIFIED="1653341361903"/>
+</node>
+<node TEXT="regularize the neural network to favor simple linear behavior in-between training examples" ID="ID_758048869" CREATED="1653341070530" MODIFIED="1653341101596"/>
+<node TEXT="both robustness and generalization" ID="ID_425810368" CREATED="1653341051563" MODIFIED="1653341057149"/>
+</node>
+<node TEXT="CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features" ID="ID_674388663" CREATED="1655843852130" MODIFIED="1655843852725">
+<node TEXT="ICCV19" ID="ID_387721270" CREATED="1655843857373" MODIFIED="1655843859206"/>
+<node TEXT="augmentation method" ID="ID_1053234738" CREATED="1655843928068" MODIFIED="1655843930935"/>
+<node TEXT="motivation" ID="ID_153506732" CREATED="1655843941004" MODIFIED="1655843942745">
+<node TEXT="regional dropout strategies are questionable" ID="ID_49081001" CREATED="1655843943975" MODIFIED="1655843955775"/>
+</node>
+</node>
+<node TEXT="AdaMixup" ID="ID_1885796793" CREATED="1655843992463" MODIFIED="1655843996727">
+<node TEXT="MixUp as Locally Linear Out-Of-Manifold Regularization" ID="ID_1773743410" CREATED="1655843969220" MODIFIED="1655843969884">
+<node TEXT="AAAI19" ID="ID_690035802" CREATED="1655843970931" MODIFIED="1655844001610"/>
+<node TEXT="not adversarial" ID="ID_358847047" CREATED="1655844002745" MODIFIED="1655844005388"/>
+</node>
+</node>
+<node TEXT="Manifold Mixup: Better Representations by&#xa;Interpolating Hidden States" ID="ID_1230207283" CREATED="1655786446001" MODIFIED="1655787029927">
+<icon BUILTIN="checked"/>
+<node TEXT="ICML19" ID="ID_1425519526" CREATED="1655786481280" MODIFIED="1655786483114">
+<node TEXT="Bengio" ID="ID_1528045016" CREATED="1655786455338" MODIFIED="1655786457513"/>
+</node>
+<node TEXT="mainly for regulairzation, but robustness" ID="ID_1715362768" CREATED="1655786842655" MODIFIED="1655787015599"/>
+<node TEXT="not robust against stronger attacks like PGD" ID="ID_312717470" CREATED="1655787015928" MODIFIED="1655787022426"/>
+</node>
+<node TEXT="Puzzle Mix: Exploiting Saliency and Local Statistics for Optimal Mixup" ID="ID_1754830303" CREATED="1655843459636" MODIFIED="1655843460365">
+<node TEXT="ICML20" ID="ID_1639810099" CREATED="1655843461706" MODIFIED="1655843465586"/>
 </node>
 </node>
 </node>
@@ -3571,7 +3591,7 @@
 <node TEXT="(3) explainability" ID="ID_362903560" CREATED="1653860117582" MODIFIED="1653860121732"/>
 </node>
 </node>
-<node TEXT="CAM-based" ID="ID_1199847666" CREATED="1651102994318" MODIFIED="1653860066156">
+<node TEXT="class activation map" ID="ID_1199847666" CREATED="1651102994318" MODIFIED="1656028150739">
 <node TEXT="Class Activation Map" ID="ID_47285759" CREATED="1651102989796" MODIFIED="1651103008396">
 <node TEXT="Learning Deep Features for Discriminative Localization" ID="ID_675900606" CREATED="1651103009874" MODIFIED="1651103025782">
 <icon BUILTIN="unchecked"/>
@@ -3579,8 +3599,10 @@
 </node>
 </node>
 </node>
-<node TEXT="Gradient-based" ID="ID_733899372" CREATED="1653860036334" MODIFIED="1653860058567"/>
-<node TEXT="Perturbation-based" ID="ID_174218220" CREATED="1653860058835" MODIFIED="1653860062105">
+<node TEXT="gradient w.r.t input" ID="ID_733899372" CREATED="1653860036334" MODIFIED="1656028158789">
+<node TEXT="The Manifold Hypothesis for Gradient-Based Explanations" ID="ID_743176885" CREATED="1656028126607" MODIFIED="1656028127918"/>
+</node>
+<node TEXT="perturbation" ID="ID_174218220" CREATED="1653860058835" MODIFIED="1656028174630">
 <node TEXT="LIME" ID="ID_1481560289" CREATED="1653860346455" MODIFIED="1653860348553">
 <node TEXT="&#x201c;Why Should I Trust You?&#x201d;&#xa;Explaining the Predictions of Any Classifier" ID="ID_674389421" CREATED="1653860349515" MODIFIED="1653860351696">
 <icon BUILTIN="unchecked"/>
@@ -3845,7 +3867,7 @@
 </node>
 </node>
 </node>
-<node TEXT=" Object Detection" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1654720342537">
+<node TEXT=" Object Detection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="left" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1654720342537">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_674316746" CREATED="1653969587756" MODIFIED="1653969594381">
 <icon BUILTIN="mindmap"/>
@@ -3904,7 +3926,7 @@
 <node TEXT="ECCV12" ID="ID_1085442689" CREATED="1655448044932" MODIFIED="1655448047019"/>
 </node>
 </node>
-<node TEXT="Main (multi-object)" LOCALIZED_STYLE_REF="styles.topic" ID="ID_602285743" CREATED="1590025482391" MODIFIED="1654637252853">
+<node TEXT="Main (multi-object)" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_602285743" CREATED="1590025482391" MODIFIED="1654637252853">
 <node TEXT="One-Stage" ID="ID_1861902425" CREATED="1654040858813" MODIFIED="1655005666300">
 <node TEXT="Overfeat" ID="ID_498869304" CREATED="1654625580457" MODIFIED="1654625583038">
 <node TEXT="OverFeat:&#xa;Integrated Recognition, Localization and Detection&#xa;using Convolutional Networks" ID="ID_1479745312" CREATED="1654625590470" MODIFIED="1654625601978">
@@ -4336,11 +4358,15 @@
 </node>
 </node>
 <node TEXT="Domain Adaptation" ID="ID_1939871268" CREATED="1654035897051" MODIFIED="1654035900277">
-<node TEXT="Survey" ID="ID_46151502" CREATED="1654035902136" MODIFIED="1654035903656">
+<node TEXT="Survey" ID="ID_46151502" CREATED="1654035902136" MODIFIED="1656027647941">
+<icon BUILTIN="mindmap"/>
 <node TEXT="Unsupervised Domain Adaptation of&#xa;Object Detectors: A Survey" ID="ID_840559711" CREATED="1654035904791" MODIFIED="1654035917646">
 <icon BUILTIN="unchecked"/>
 <node TEXT="Poojan" ID="ID_1665277090" CREATED="1654035921643" MODIFIED="1654035926580"/>
 </node>
+</node>
+<node TEXT="Learning Domain Adaptive Object Detection with Probabilistic Teacher" ID="ID_933580537" CREATED="1656027638511" MODIFIED="1656027654740">
+<node TEXT="ICML22" ID="ID_849098039" CREATED="1656027659099" MODIFIED="1656027662508"/>
 </node>
 </node>
 <node TEXT="+Explain" ID="ID_1974349082" CREATED="1654102261187" MODIFIED="1654102266664">
@@ -4502,7 +4528,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Self-Supervised Learning" FOLDED="true" POSITION="left" ID="ID_714759247" CREATED="1650825914367" MODIFIED="1651953578841">
+<node TEXT="Self-Supervised Learning" POSITION="left" ID="ID_714759247" CREATED="1650825914367" MODIFIED="1651953578841">
 <edge COLOR="#7c007c"/>
 <node TEXT="Survey" ID="ID_1775463249" CREATED="1650825920877" MODIFIED="1650825925562">
 <icon BUILTIN="info"/>
@@ -4545,6 +4571,11 @@
 </node>
 <node TEXT="Use All The Labels: A Hierarchical Multi-Label Contrastive Learning Framework" ID="ID_1062716650" CREATED="1652404192259" MODIFIED="1652404192706">
 <node TEXT="CVPR22" ID="ID_1803319439" CREATED="1652404193774" MODIFIED="1652404194847"/>
+</node>
+<node TEXT="A Simple Data Mixing Prior for Improving Self-Supervised Learning" ID="ID_45206785" CREATED="1656028557935" MODIFIED="1656028565727">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_1227087202" CREATED="1656028568038" MODIFIED="1656028569367"/>
+<node TEXT="Cihang xie" ID="ID_1409908853" CREATED="1656028634751" MODIFIED="1656028638519"/>
 </node>
 </node>
 <node TEXT="Contrastive Learning Video" ID="ID_1516905874" CREATED="1649102713240" MODIFIED="1652404149496">
@@ -4674,6 +4705,16 @@
 <node TEXT="noise-aware loss, less susceptible to incorrect labels" ID="ID_707624454" CREATED="1617622261098" MODIFIED="1617622288020"/>
 </node>
 </node>
+</node>
+</node>
+<node TEXT="Video Compression" FOLDED="true" POSITION="left" ID="ID_1356152672" CREATED="1656028365896" MODIFIED="1656028368670">
+<edge COLOR="#7c007c"/>
+<node TEXT="Multimedia compression" ID="ID_1218868860" CREATED="1656028370464" MODIFIED="1656028385545">
+<icon BUILTIN="info"/>
+</node>
+<node TEXT="VCT: A Video Compression Transformer" ID="ID_1169737283" CREATED="1656028386394" MODIFIED="1656028395754">
+<icon BUILTIN="pencil"/>
+<node TEXT="looks like NIPS22" ID="ID_506609950" CREATED="1656028396789" MODIFIED="1656028400780"/>
 </node>
 </node>
 <node TEXT="Vision-Language Pretraining" FOLDED="true" POSITION="left" ID="ID_1438251706" CREATED="1646945591468" MODIFIED="1646945596520">
