@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="{M,R,D}L" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1656028607949" STYLE="oval">
 <font NAME="Gentium" SIZE="18"/>
-<hook NAME="MapStyle" zoom="1.416">
+<hook NAME="MapStyle" zoom="2.281">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -3867,7 +3867,7 @@
 </node>
 </node>
 </node>
-<node TEXT=" Object Detection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="left" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1654720342537">
+<node TEXT=" Object Detection" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1654720342537">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_674316746" CREATED="1653969587756" MODIFIED="1653969594381">
 <icon BUILTIN="mindmap"/>
@@ -3926,7 +3926,7 @@
 <node TEXT="ECCV12" ID="ID_1085442689" CREATED="1655448044932" MODIFIED="1655448047019"/>
 </node>
 </node>
-<node TEXT="Main (multi-object)" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_602285743" CREATED="1590025482391" MODIFIED="1654637252853">
+<node TEXT="Main (multi-object)" LOCALIZED_STYLE_REF="styles.topic" ID="ID_602285743" CREATED="1590025482391" MODIFIED="1654637252853">
 <node TEXT="One-Stage" ID="ID_1861902425" CREATED="1654040858813" MODIFIED="1655005666300">
 <node TEXT="Overfeat" ID="ID_498869304" CREATED="1654625580457" MODIFIED="1654625583038">
 <node TEXT="OverFeat:&#xa;Integrated Recognition, Localization and Detection&#xa;using Convolutional Networks" ID="ID_1479745312" CREATED="1654625590470" MODIFIED="1654625601978">
@@ -4116,8 +4116,14 @@
 <node TEXT="Deformable-DETR" ID="ID_1972419326" CREATED="1654537454518" MODIFIED="1656016858755">
 <icon BUILTIN="button_ok"/>
 <icon BUILTIN="bookmark"/>
-<node TEXT="Deformable detr: Deformable transformers for end-to-end object detection" ID="ID_1540012912" CREATED="1656016849673" MODIFIED="1656016850856">
+<node TEXT="Deformable detr: Deformable transformers for end-to-end object detection" ID="ID_1540012912" CREATED="1656016849673" MODIFIED="1656092709675">
+<icon BUILTIN="checked"/>
 <node TEXT="ICLR21" ID="ID_1909978045" CREATED="1656016852573" MODIFIED="1656016854548"/>
+<node TEXT="DETR issue" ID="ID_29267460" CREATED="1656092847020" MODIFIED="1656092849023">
+<node TEXT="(1) long training schedule" ID="ID_1028472236" CREATED="1656092850417" MODIFIED="1656092859037"/>
+<node TEXT="(2) low performance on small object" ID="ID_1495474389" CREATED="1656092866258" MODIFIED="1656092871588"/>
+</node>
+<node TEXT="Deformable attention module to replace the Transformer attention module" ID="ID_1985370389" CREATED="1656093268218" MODIFIED="1656093340415"/>
 </node>
 </node>
 <node TEXT="TSP" ID="ID_1904080894" CREATED="1655005538951" MODIFIED="1655005540205">
@@ -4528,7 +4534,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Self-Supervised Learning" POSITION="left" ID="ID_714759247" CREATED="1650825914367" MODIFIED="1651953578841">
+<node TEXT="Self-Supervised Learning" FOLDED="true" POSITION="left" ID="ID_714759247" CREATED="1650825914367" MODIFIED="1651953578841">
 <edge COLOR="#7c007c"/>
 <node TEXT="Survey" ID="ID_1775463249" CREATED="1650825920877" MODIFIED="1650825925562">
 <icon BUILTIN="info"/>
