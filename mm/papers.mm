@@ -3600,6 +3600,10 @@
 </node>
 </node>
 <node TEXT="gradient w.r.t input" ID="ID_733899372" CREATED="1653860036334" MODIFIED="1656028158789">
+<node TEXT="Grad-CAM" ID="ID_1699913639" CREATED="1656364316838" MODIFIED="1656364339473">
+<icon BUILTIN="bookmark"/>
+<node TEXT="Grad-CAM: Why did you say that?&#xa;Visual Explanations from Deep Networks via Gradient-based Localization" ID="ID_172299995" CREATED="1656364324758" MODIFIED="1656364331599"/>
+</node>
 <node TEXT="The Manifold Hypothesis for Gradient-Based Explanations" ID="ID_743176885" CREATED="1656028126607" MODIFIED="1656028127918"/>
 </node>
 <node TEXT="perturbation" ID="ID_174218220" CREATED="1653860058835" MODIFIED="1656028174630">
