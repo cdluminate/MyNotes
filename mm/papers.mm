@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="{M,R,D}L" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1656028607949" STYLE="oval">
 <font NAME="Gentium" SIZE="18"/>
-<hook NAME="MapStyle" zoom="2.281">
+<hook NAME="MapStyle" zoom="1.714">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -4123,16 +4123,51 @@
 <node TEXT="(1) long training schedule" ID="ID_1028472236" CREATED="1656092850417" MODIFIED="1656092859037"/>
 <node TEXT="(2) low performance on small object" ID="ID_1495474389" CREATED="1656092866258" MODIFIED="1656092871588"/>
 </node>
-<node TEXT="Deformable attention module to replace the Transformer attention module" ID="ID_1985370389" CREATED="1656093268218" MODIFIED="1656093340415"/>
+<node TEXT="Deformable attention module to replace the Transformer attention module" ID="ID_1985370389" CREATED="1656093268218" MODIFIED="1656353336523">
+<icon BUILTIN="password"/>
+</node>
+<node TEXT="use focal loss for bounding box classification" ID="ID_387365132" CREATED="1656353129048" MODIFIED="1656353142522"/>
+<node TEXT="number of object queries from 100 to 300" ID="ID_310837077" CREATED="1656353146058" MODIFIED="1656353156090"/>
+<node TEXT="COCO perf" ID="ID_1539603326" CREATED="1656353544879" MODIFIED="1656353547081">
+<node TEXT="50eph" ID="ID_1298291714" CREATED="1656353547984" MODIFIED="1656353550317">
+<node TEXT="43.8 AP" ID="ID_1308990215" CREATED="1656353550750" MODIFIED="1656353556303"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Up-DETR" ID="ID_888696792" CREATED="1655917276408" MODIFIED="1656355260554">
+<icon BUILTIN="bookmark"/>
+<node TEXT="UP-DETR: Unsupervised Pre-training for Object Detection with Transformers" ID="ID_1440343725" CREATED="1656354907155" MODIFIED="1656354908677">
+<node TEXT="CVPR2021" ID="ID_1213814982" CREATED="1656354894442" MODIFIED="1656354897885"/>
+<node TEXT="self-supervised loss for faster convergence" ID="ID_1543462066" CREATED="1656354392576" MODIFIED="1656354400621"/>
+<node TEXT="Has VOC and COCO" ID="ID_1489452943" CREATED="1656354939015" MODIFIED="1656354942832"/>
+<node TEXT="long pretraining process, relies on imagenet data" ID="ID_1118260475" CREATED="1656355263038" MODIFIED="1656355293904"/>
 </node>
 </node>
 <node TEXT="TSP" ID="ID_1904080894" CREATED="1655005538951" MODIFIED="1655005540205">
 <node TEXT="Rethinking transformer-based set prediction for object detection." ID="ID_1084881023" CREATED="1655005546443" MODIFIED="1655005547450">
 <node TEXT="iccv21" ID="ID_351086179" CREATED="1655005550764" MODIFIED="1655005552264"/>
+<node TEXT="Combine RCNN or FCOS-based methods with DETR" ID="ID_1456045465" CREATED="1656354324985" MODIFIED="1656354339468"/>
+<node TEXT="Deformable DETR, TSP-RCNN, TSP-FCOS only explore local information" ID="ID_296227333" CREATED="1656354353943" MODIFIED="1656354372093"/>
+</node>
+</node>
+<node TEXT="SMCA" ID="ID_1135445113" CREATED="1656353484128" MODIFIED="1656353487184">
+<node TEXT="Fast Convergence of DETR with Spatially Modulated Co-Attention" ID="ID_1598976074" CREATED="1656353488469" MODIFIED="1656353501537">
+<node TEXT="ICCV21" ID="ID_496595559" CREATED="1656353579709" MODIFIED="1656353587714"/>
+<node TEXT="core idea: location-aware co-attention in DETR by constraining co-attention responses to be high near initially estimated bounding box locations" ID="ID_373163481" CREATED="1656353780884" MODIFIED="1656353814944"/>
+<node TEXT="(1) replace the orignal co-attention mechanism in the decoder while keeping other oerations in DETR unchanged" ID="ID_1300513766" CREATED="1656353736153" MODIFIED="1656353754478"/>
+<node TEXT="(2) multi-head and scale-selection attention designs" ID="ID_1767384364" CREATED="1656353755054" MODIFIED="1656353770662"/>
+<node TEXT="COCO perf" ID="ID_1441142151" CREATED="1656353590756" MODIFIED="1656353592342">
+<node TEXT="50 eph" ID="ID_1313192186" CREATED="1656353593367" MODIFIED="1656353596376">
+<node TEXT="43.7 AP" ID="ID_1788231635" CREATED="1656353597665" MODIFIED="1656353600312"/>
+<node TEXT="41.0 AP" ID="ID_899722283" CREATED="1656354760657" MODIFIED="1656354766905">
+<node TEXT="naive version" ID="ID_1498076863" CREATED="1656354767992" MODIFIED="1656354776670"/>
+</node>
+</node>
+</node>
 </node>
 </node>
 <node TEXT="Meta-DETR" ID="ID_1355354517" CREATED="1655917271368" MODIFIED="1655917274134"/>
-<node TEXT="Up-DETR" ID="ID_888696792" CREATED="1655917276408" MODIFIED="1655917279110"/>
 <node TEXT="SAM-DETR" ID="ID_779466914" CREATED="1654537447758" MODIFIED="1654537450433">
 <node TEXT="Accelerating DETR Convergence via Semantic-Aligned Matching" ID="ID_791729206" CREATED="1654113704418" MODIFIED="1654113727951">
 <icon BUILTIN="button_ok"/>
