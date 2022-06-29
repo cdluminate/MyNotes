@@ -3871,7 +3871,7 @@
 </node>
 </node>
 </node>
-<node TEXT=" Object Detection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="left" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1654720342537">
+<node TEXT=" Object Detection" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1654720342537">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_674316746" CREATED="1653969587756" MODIFIED="1653969594381">
 <icon BUILTIN="mindmap"/>
@@ -3930,7 +3930,7 @@
 <node TEXT="ECCV12" ID="ID_1085442689" CREATED="1655448044932" MODIFIED="1655448047019"/>
 </node>
 </node>
-<node TEXT="Main (multi-object)" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_602285743" CREATED="1590025482391" MODIFIED="1654637252853">
+<node TEXT="Main (multi-object)" LOCALIZED_STYLE_REF="styles.topic" ID="ID_602285743" CREATED="1590025482391" MODIFIED="1654637252853">
 <node TEXT="One-Stage" ID="ID_1861902425" CREATED="1654040858813" MODIFIED="1655005666300">
 <node TEXT="Overfeat" ID="ID_498869304" CREATED="1654625580457" MODIFIED="1654625583038">
 <node TEXT="OverFeat:&#xa;Integrated Recognition, Localization and Detection&#xa;using Convolutional Networks" ID="ID_1479745312" CREATED="1654625590470" MODIFIED="1654625601978">
@@ -3972,9 +3972,17 @@
 </node>
 </node>
 </node>
-<node TEXT="RetinaNet / Focal loss" ID="ID_1759579854" CREATED="1653969367052" MODIFIED="1654040874668">
-<node TEXT="Focal Loss for Dense Object Detection" ID="ID_1170541692" CREATED="1653969458606" MODIFIED="1654041100242">
-<icon BUILTIN="unchecked"/>
+<node TEXT="RetinaNet / Focal loss" ID="ID_1759579854" CREATED="1653969367052" MODIFIED="1656534094168">
+<icon BUILTIN="bookmark"/>
+<node TEXT="Focal Loss for Dense Object Detection" ID="ID_1170541692" CREATED="1653969458606" MODIFIED="1656539072338">
+<icon BUILTIN="checked"/>
+<node TEXT="one-stage object detection" ID="ID_184415360" CREATED="1656534099772" MODIFIED="1656534121867"/>
+<node TEXT="there is an extreme imbalance between foreground and background calsses during training (e.g. 1:1000)." ID="ID_1025590275" CREATED="1656534122047" MODIFIED="1656534147327"/>
+<node TEXT="focal loss design" ID="ID_1726054260" CREATED="1656539011741" MODIFIED="1656539014372">
+<node TEXT="prior weight does not tell the difference between hard samples and easy examples" ID="ID_576375253" CREATED="1656539015701" MODIFIED="1656539031673"/>
+<node TEXT="focal loss is a weighted cross-entropy loss with dynamic weights" ID="ID_1149139953" CREATED="1656539032329" MODIFIED="1656539047291"/>
+<node TEXT="there is a focal factor to control the easy sample downweight" ID="ID_195801039" CREATED="1656539049024" MODIFIED="1656539062948"/>
+</node>
 </node>
 </node>
 <node TEXT="CornerNet" ID="ID_1915900664" CREATED="1654041083704" MODIFIED="1654041085648">
