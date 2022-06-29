@@ -3931,7 +3931,7 @@
 </node>
 </node>
 <node TEXT="Main (multi-object)" LOCALIZED_STYLE_REF="styles.topic" ID="ID_602285743" CREATED="1590025482391" MODIFIED="1654637252853">
-<node TEXT="One-Stage" ID="ID_1861902425" CREATED="1654040858813" MODIFIED="1655005666300">
+<node TEXT="One-Stage" FOLDED="true" ID="ID_1861902425" CREATED="1654040858813" MODIFIED="1655005666300">
 <node TEXT="Overfeat" ID="ID_498869304" CREATED="1654625580457" MODIFIED="1654625583038">
 <node TEXT="OverFeat:&#xa;Integrated Recognition, Localization and Detection&#xa;using Convolutional Networks" ID="ID_1479745312" CREATED="1654625590470" MODIFIED="1654625601978">
 <icon BUILTIN="unchecked"/>
@@ -4007,7 +4007,7 @@
 <node TEXT="updates hand-crafted anchor assignment to &apos;free&apos; anchor matching by formulating detector training as a maximum likelihood estimation (MLE) procedure" ID="ID_905160337" CREATED="1655412849974" MODIFIED="1655412874741"/>
 </node>
 </node>
-<node TEXT="Two-Stage" ID="ID_981048532" CREATED="1654041315951" MODIFIED="1654041318501">
+<node TEXT="Two-Stage" FOLDED="true" ID="ID_981048532" CREATED="1654041315951" MODIFIED="1654041318501">
 <node TEXT="R-CNN" ID="ID_1685978685" CREATED="1578733403630" MODIFIED="1587526865053">
 <font NAME="Gentium" BOLD="false"/>
 <node TEXT="Rich feature hierarchies for accurate object detection and&#xa;semantic segmentation" ID="ID_1703888186" CREATED="1653967033846" MODIFIED="1654636348184">
@@ -4180,6 +4180,21 @@
 </node>
 </node>
 <node TEXT="Meta-DETR" ID="ID_1355354517" CREATED="1655917271368" MODIFIED="1655917274134"/>
+<node TEXT="DAB-DETR" ID="ID_1296917474" CREATED="1656542851779" MODIFIED="1656542856341">
+<node TEXT="DAB-DETR: Dynamic&#xa;anchor boxes are better queries for DETR." ID="ID_265851001" CREATED="1656542857629" MODIFIED="1656542858476">
+<node TEXT="ICLR2022" ID="ID_1761218966" CREATED="1656542860981" MODIFIED="1656542862841"/>
+</node>
+</node>
+<node TEXT="DN-DETR" ID="ID_1757462269" CREATED="1656542999649" MODIFIED="1656543001845">
+<node TEXT="DN-DETR: Accelerate DETR Training by Introducing Query DeNoising" ID="ID_43946115" CREATED="1656543003925" MODIFIED="1656543012833">
+<node TEXT="CVPR22" ID="ID_1317808237" CREATED="1656543014950" MODIFIED="1656543016237"/>
+<node TEXT="the slow convergence results from the insability of bipartite graph matching which causes inconsistent optimization goals in early training stages" ID="ID_1191406076" CREATED="1656543025503" MODIFIED="1656543055418"/>
+<node TEXT="apart from Hungarian loss, additionally feed ground-truth bounding boxes with noises into decoder and trains the model to reconstruct the original boxes" ID="ID_1796900584" CREATED="1656543105918" MODIFIED="1656543141078"/>
+<node TEXT="COCO perf" ID="ID_670519811" CREATED="1656543079975" MODIFIED="1656543081428">
+<node TEXT="44.1 AP @ 50eph" ID="ID_1270824552" CREATED="1656543082586" MODIFIED="1656543088156"/>
+</node>
+</node>
+</node>
 <node TEXT="SAM-DETR" ID="ID_779466914" CREATED="1654537447758" MODIFIED="1654537450433">
 <node TEXT="Accelerating DETR Convergence via Semantic-Aligned Matching" ID="ID_791729206" CREATED="1654113704418" MODIFIED="1654113727951">
 <icon BUILTIN="button_ok"/>
