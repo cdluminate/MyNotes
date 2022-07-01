@@ -114,8 +114,12 @@ if __name__ == '__main__':
     ag = argparse.ArgumentParser()
     ag.add_argument('-s', '--svg', type=str, required=True)
     ag.add_argument('-j', '--json', type=str, default=None)
-    ag.add_argument('-v', '--verbose', type=bool, default=True)
+    ag.add_argument('-v', '--verbose', action='store_true')
     ag = ag.parse_args()
-    console.print(ag)
-    
-    parsesvg(ag.svg, ag.verbose)
+    if ag.verbose: console.print(ag)
+
+    j = parsesvg(ag.svg, ag.verbose)
+    if ag.json is not None:
+        with open(ag.json, 'wt') as f:
+            json.dump(j, f)
+        console.print(f'>_< dumped result to {ag.json}')
