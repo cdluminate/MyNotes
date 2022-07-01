@@ -3,4 +3,6 @@ main:
 
 mnist:
 	# preprocess MNIST dataset
-	true
+	python3 -m veccls.mnist burst -s train -d mnist-train
+	python3 -m veccls.mnist burst -s test  -d mnist-test
+
