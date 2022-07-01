@@ -102,11 +102,11 @@ def parsesvg(svg: str, verbose:bool = True) -> list:
         seq.append({'data': data,
             'fill': fill,
             'trans': trans,})
-    console.print('raw sequence', seq)
+    if verbose: console.print('raw sequence', seq)
     seq = postprocess(seq)
-    console.print('after processing', seq)
+    if verbose: console.print('after processing', seq)
     seq = normalize(seq)
-    console.print('after normalize', seq)
+    if verbose: console.print('after normalize', seq)
     return seq
 
 
@@ -119,7 +119,11 @@ if __name__ == '__main__':
     if ag.verbose: console.print(ag)
 
     j = parsesvg(ag.svg, ag.verbose)
+    def convert(o):
+        if isinstance(o, np.int64):
+            return int(o)
+        raise TypeError
     if ag.json is not None:
         with open(ag.json, 'wt') as f:
-            json.dump(j, f)
+            json.dump(j, f, default=convert)
         console.print(f'>_< dumped result to {ag.json}')
