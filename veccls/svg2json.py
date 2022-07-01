@@ -7,11 +7,22 @@ import argparse
 import rich
 console = rich.get_console()
 
+
+def burst_path(path: dict):
+    '''
+    path is dict {data, fill, trans}
+    '''
+    return [path]
+
 def postprocess(seq: str):
     '''
     parse path data according to svg standard 2.0
     '''
-    pass
+    newseq = []
+    newseq.append(seq[0]) # meta data
+    for path in seq[1:]:
+        newseq = newseq + burst_path(path)
+    return newseq
 
 def parsesvg(svg: str, json: str, verbose:bool = True) -> list:
     '''
@@ -36,6 +47,8 @@ def parsesvg(svg: str, json: str, verbose:bool = True) -> list:
             'fill': fill,
             'trans': trans,})
     console.print('raw sequence', seq)
+    seq = postprocess(seq)
+    console.print('after processing', seq)
 
 
 if __name__ == '__main__':
