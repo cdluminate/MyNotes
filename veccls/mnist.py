@@ -1,4 +1,6 @@
 import os
+from PIL import Image
+import PIL.ImageOps
 import argparse
 import torchvision as V
 import matplotlib.pyplot as plt
@@ -9,6 +11,11 @@ console = rich.get_console()
 def mnist_burst(dest: str, split: str):
     '''
     burst mnist dataset into png images
+
+    svg background is white by default in vtracer,
+    and hence the polygons draw the background.
+    We need to invert the color, so that the paths are drawing
+    the foreground object.
     '''
     assert(split in ('train', 'test'))
     if not os.path.exists(dest):
@@ -17,7 +24,8 @@ def mnist_burst(dest: str, split: str):
                             train=True if split=='train' else False)
     for i, (x, y) in enumerate(data):
         fpath = os.path.join(dest, '%05d.png'%i)
-        x.save(fpath)
+        xinv = PIL.ImageOps.invert(x)
+        xinv.save(fpath)
         console.print(fpath)
         print(x, y)
     print(len(data))
