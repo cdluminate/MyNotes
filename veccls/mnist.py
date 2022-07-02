@@ -24,7 +24,8 @@ def mnist_burst(dest: str, split: str):
     if not os.path.exists(dest):
         os.mkdir(dest)
     data = V.datasets.MNIST(root=os.path.expanduser('~/.torch/MNIST'),
-                            train=True if split=='train' else False)
+                            train=True if split=='train' else False,
+                            download=True)
     for i, (x, y) in enumerate(data):
         fpath = os.path.join(dest, '%05d-%1d.png'%(i, y))
         xinv = PIL.ImageOps.invert(x)
