@@ -74,17 +74,17 @@ if __name__ == '__main__':
     import rich
     console = rich.get_console()
 
-    console.print('>_< testing mnist dataset: train')
+    console.print('>_< testing mnist dataset: train (longest)')
     datatrn = MNISTDataset(split='train', longest=True)
     console.print('trn size', len(datatrn))
     console.print('trn[0]', datatrn[0])
 
-    console.print('>_< testing mnist dataset: test')
+    console.print('>_< testing mnist dataset: test (longest)')
     datatst = MNISTDataset(split='test', longest=True)
     console.print('tst size', len(datatst))
     console.print('tst[0]', datatst[0])
 
-    console.print('>_< testing mnist loader: train')
+    console.print('>_< testing mnist loader: test (longest)')
     loadertrn = get_mnist_loader('train', 5, longest=True)
     for (x, y, z) in loadertrn:
         print(x.shape, y.shape, z.tc.shape, z.lens.shape)

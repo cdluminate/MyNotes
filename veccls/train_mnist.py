@@ -53,6 +53,8 @@ if __name__ == '__main__':
     loadertst = mnist_dataset.get_mnist_loader(split='test',
             batch_size=100, longest=True)
 
+    engine.evaluate(model, loadertst,
+            epoch=-1, device=ag.device, logdir=ag.logdir)
     for epoch in range(ag.epochs):
         console.print(f'>_< training epoch {epoch} ...')
 
