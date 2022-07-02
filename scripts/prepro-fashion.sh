@@ -17,7 +17,7 @@ for PNG in ${PNGS[@]}; do
     output=${PNG%.png}.svg
     echo ${input} '->' ${output}
     if ! test -e ${output}; then
-    vtracer --colormode color -f 2 --hierarchical stacked --mode polygon \
+    vtracer --colormode color -f 1 --hierarchical stacked --mode polygon \
         --input ${input} --output ${output} 
     fi
     #json=${PNG%.png}.json
