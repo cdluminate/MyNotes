@@ -83,8 +83,8 @@ def train_one_epoch(model, optim, loader,
                     f'accuracy={acc:.2f} (/100)',
                     )
             if logfile is not None:
-                logfile.write(f'Eph[{epoch}] ({i+1}/{len(loader)})')
-                logfile.write(f'loss={loss.item():.3f}')
+                logfile.write(f'Eph[{epoch}] ({i+1}/{len(loader)}) ')
+                logfile.write(f'loss={loss.item():.3f} ')
                 logfile.write(f'accuracy={acc:.2f} (/100)')
                 logfile.write('\n')
 
@@ -126,9 +126,9 @@ def evaluate(model, loader,
             f'loss={mean_loss:.2f}',
             f'acc={acc:.2f} (/100)')
     if logfile is not None:
-        logfile.write(f'Eph[{epoch}] Evaluation:')
-        logfile.write(f'loss={mean_loss:.2f}')
-        logfile.write(f'acc={acc:.2f} (/100)')
+        logfile.write(f'Eph[{epoch}] Evaluation: ')
+        logfile.write(f'loss={mean_loss:.2f} ')
+        logfile.write(f'acc={acc:.2f} (/100) ')
         logfile.write('\n')
 
 
