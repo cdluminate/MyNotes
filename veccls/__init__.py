@@ -4,4 +4,6 @@ from . import mnist
 from . import svg2json
 from . import vtracer
 from . import batchsvg2json
+from . import models
+from . import engine
 from . import train_mnist
