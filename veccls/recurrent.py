@@ -88,7 +88,12 @@ class HierarchicalRNN(th.nn.Module):
             self.svgrnn = th.nn.LSTM(hidden_size, hidden_size, num_layers)
         self.pathtc = th.nn.Sequential(
                 th.nn.Linear(5, hidden_size),
-                th.nn.ReLU())
+                th.nn.ReLU(),
+                th.nn.Linear(hidden_size, hidden_size),
+                th.nn.ReLU(),
+                th.nn.Linear(hidden_size, hidden_size),
+                th.nn.ReLU(),
+                )
         self.svgfc = th.nn.Linear(hidden_size, num_classes)
         self.num_params = sum(param.numel() for param in self.parameters()
                 if param.requires_grad)
