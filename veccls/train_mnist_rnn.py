@@ -131,7 +131,7 @@ def evaluate(model, loader,
         logfile.write(f'acc={acc:.2f} (/100) ')
         logfile.write('\n')
 
-        state_dict = model.cpu().state_dict()
+        state_dict = {k: v.cpu() for k, v in model.state_dict()}
         ptpath = os.path.join(log, f'model_eph_{epoch}.pt')
         th.save(state_dict, ptpath)
         console.print(f'Model state dictionary dumped to: {ptpath}')
