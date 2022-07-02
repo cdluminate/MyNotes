@@ -4,7 +4,6 @@ import torch as th
 import torch.nn.functional as F
 import rich
 from rich.progress import track
-from . import models
 console = rich.get_console()
 
 

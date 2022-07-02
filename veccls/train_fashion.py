@@ -5,7 +5,7 @@ import torch.nn.functional as F
 from . import fashion_dataset
 import rich
 from rich.progress import track
-from . import models
+from . import recurrent
 from . import engine
 console = rich.get_console()
 
@@ -41,13 +41,13 @@ if __name__ == '__main__':
 
     modelmapping = {
             # only use the longest path. one path per image.
-            'rnn': models.LongestPathRNN,
-            'gru': models.LongestPathRNN,
-            'lstm': models.LongestPathRNN,
+            'rnn': recurrent.LongestPathRNN,
+            'gru': recurrent.LongestPathRNN,
+            'lstm': recurrent.LongestPathRNN,
             # use all paths. number of paths per image is indefinite.
-            'hrnn': models.HierarchicalRNN,
-            'hgru': models.HierarchicalRNN,
-            'hlstm': models.HierarchicalRNN,
+            'hrnn': recurrent.HierarchicalRNN,
+            'hgru': recurrent.HierarchicalRNN,
+            'hlstm': recurrent.HierarchicalRNN,
             }
     model = modelmapping[ag.model_type](ag.model_type,
             ag.input_size, ag.hidden_size, ag.num_layers).to(ag.device)
