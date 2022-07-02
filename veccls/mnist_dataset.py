@@ -1,6 +1,7 @@
 import os
 import torch as th
 import ujson as json
+from easydict import EasyDict
 import torch as th
 from torch.utils.data import Dataset, DataLoader
 from torch.nn.utils.rnn import pad_sequence, pack_padded_sequence
@@ -34,20 +35,27 @@ class MNISTDataset(Dataset):
             path = th.tensor(paths[0]['data']).float()  # (seq len, 2)
             path[:,0] /= float(width)
             path[:,1] /= float(height)
-            return path, label
+            color = paths[0]['fill'].lstrip('#')
+            color = list(int(color[i:i+2], 16)/255. for i in (0, 2, 4))
+            translate = paths[0]['trans']
+            translate[0] /= float(width)
+            translate[1] /= float(height)
+            transcolor = translate + color
+            return path, label, transcolor
         else:
             raise NotImplementedError
 
 def longest_sequence_collate(batch):
-    paths, labels = zip(*batch)
-    pack = sorted(zip(paths, labels),
+    paths, labels, transcolors = zip(*batch)
+    pack = sorted(zip(paths, labels, transcolors),
             key=lambda i: len(i[0]),
             reverse=True)
-    paths, labels = zip(*pack)
+    paths, labels, transcolors = zip(*pack)
     lens = th.tensor([x.shape[0] for x in paths])
     paths = pad_sequence(paths)
     labels = th.tensor(labels)
-    return paths, labels, lens
+    transcolors = th.tensor(transcolors)
+    return paths, labels, EasyDict({'tc': transcolors, 'lens': lens})
 
 def get_mnist_loader(split: str, batch_size: int, longest: bool):
     assert(split in ('train', 'test'))
@@ -79,7 +87,8 @@ if __name__ == '__main__':
     console.print('>_< testing mnist loader: train')
     loadertrn = get_mnist_loader('train', 5, longest=True)
     for (x, y, z) in loadertrn:
-        print(x.shape, y.shape, z.shape)
+        print(x.shape, y.shape, z.tc.shape, z.lens.shape)
         print('labels', y)
-        print('lens', z)
+        print('z.lens', z.lens)
+        print('z.tc', z.tc)
         break

@@ -1,5 +1,6 @@
 import os
 import argparse
+from easydict import EasyDict
 import torch as th
 import torch.nn.functional as F
 from . import mnist_dataset
@@ -24,7 +25,7 @@ def train_one_epoch(model, optim, loader,
     else:
         logfile = None
     for i, (x, y, z) in enumerate(loader):
-        pack = pack_padded_sequence(x, z)
+        pack = pack_padded_sequence(x, z.lens)
         pack = pack.to(device)
         y = y.to(device)
         logits = model(pack)
@@ -66,7 +67,7 @@ def evaluate(model, loader,
     preds = []
     ys = []
     for (x, y, z) in track(loader, description=f'Evaluation ...'):
-        pack = pack_padded_sequence(x, z)
+        pack = pack_padded_sequence(x, z.lens)
         pack = pack.to(device)
         y = y.to(device)
         logits = model(pack)
