@@ -21,8 +21,8 @@ mnist-2:
 	bash scripts/prepro-mnist.sh mnist-train/
 	bash scripts/prepro-mnist.sh mnist-test/
 fashion-2:
-	bash scripts/prepro-mnist.sh fashion-train/
-	bash scripts/prepro-mnist.sh fashion-test/
+	bash scripts/prepro-fashion.sh fashion-train/
+	bash scripts/prepro-fashion.sh fashion-test/
 	
 mnist-3:
 	# step 3: parse svgs into sequence data
