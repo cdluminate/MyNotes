@@ -3,7 +3,7 @@ import argparse
 import torch as th
 import torch.nn.functional as F
 from . import mnist_dataset
-from torch.nn.utils.rnn import pack_padded_sequence, unpack_sequence
+from torch.nn.utils.rnn import pad_sequence, pack_sequence, pack_padded_sequence
 import rich
 from rich.progress import track
 console = rich.get_console()
@@ -114,6 +114,27 @@ class HierarchicalRNN(th.nn.Module):
         else:
             h = hn[-1, ...]
         # [hierarchi 2]: aggregate path representations into svg repres
-        raise NotImplementedError
-
-
+        #print(z.packlens)
+        starts = z.packlens.cumsum(dim=0) - z.packlens
+        ends = z.packlens.cumsum(dim=0)
+        #print('path h.shape', h.shape)
+        pathr = [h[starts[i]:ends[i]] for i in range(len(ends))]
+        #print('pathr shape', len(pathr), [x.shape for x in pathr])
+        #pathr = pad_sequence(pathr)
+        #print(pathr.shape)
+        #packsvg = pack_padded_sequence(pathr, z.packlens, enforce_sorted=False)
+        packsvg = pack_sequence(pathr, enforce_sorted=False)
+        #print(packsvg)
+        packsvg = packsvg.to(device)
+        if self.rnn_type in ('hrnn', 'hgru'):
+            sout, shn = self.svgrnn(packsvg)
+        else:
+            sout, (shn, scn) = self.svgrnn(packsvg)
+        if self.num_layers == 1:
+            hsvg = shn.squeeze(0)
+        else:
+            hsvg = shn[-1, ...]
+        #print(hsvg.shape)
+        # hsvg size: (batch_size, num_hidden)
+        logits = self.svgfc(hsvg)
+        return logits
