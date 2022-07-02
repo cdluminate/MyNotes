@@ -131,7 +131,7 @@ def evaluate(model, loader,
         logfile.write(f'acc={acc:.2f} (/100) ')
         logfile.write('\n')
 
-        state_dict = {k: v.cpu() for k, v in model.state_dict()}
+        state_dict = model.state_dict()
         ptpath = os.path.join(log, f'model_eph_{epoch}.pt')
         th.save(state_dict, ptpath)
         console.print(f'Model state dictionary dumped to: {ptpath}')
@@ -158,7 +158,7 @@ if __name__ == '__main__':
     if not os.path.exists(ag.log):
         os.mkdir(ag.log)
 
-    console.print('[bold white on violet] >_< start training MnistGRU')
+    console.print('[bold white on violet] >_< start training MnistRNN')
 
     model = MnistRNN(ag.rnn_type,
             ag.input_size, ag.hidden_size, ag.num_layers).to(ag.device)
