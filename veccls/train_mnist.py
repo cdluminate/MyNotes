@@ -70,16 +70,19 @@ if __name__ == '__main__':
             longest=False if ag.model_type.startswith('h') else True)
 
     # evaluate before train
+    model.eval()
     engine.evaluate(model, loadertst,
             epoch=-1, device=ag.device, logdir=ag.logdir)
     for epoch in range(ag.epochs):
         console.print(f'>_< training epoch {epoch} ...')
 
         # train one epoch
+        model.train()
         engine.train_one_epoch(model, optim, loadertrn,
                 epoch=epoch, device=ag.device, logdir=ag.logdir)
 
         # evaluate
+        model.eval()
         engine.evaluate(model, loadertst,
                 epoch=epoch, device=ag.device, logdir=ag.logdir)
 
