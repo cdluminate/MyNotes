@@ -61,9 +61,11 @@ if __name__ == '__main__':
     console.print(f'-- Scheduler:', scheduler)
 
     loadertrn = mnist_dataset.get_mnist_loader(split='train',
-            batch_size=128, longest=True)
+            batch_size=128,
+            longest=False if ag.model_type.startswith('h') else True)
     loadertst = mnist_dataset.get_mnist_loader(split='test',
-            batch_size=100, longest=True)
+            batch_size=100,
+            longest=False if ag.model_type.startswith('h') else True)
 
     # evaluate before train
     engine.evaluate(model, loadertst,
