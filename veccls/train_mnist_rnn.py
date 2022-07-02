@@ -1,8 +1,9 @@
 import os
 import argparse
 import torch as th
+import torch.nn.functional as F
 from . import mnist_dataset
-from torch.nn.utils.rnn import pack_padded_sequence
+from torch.nn.utils.rnn import pack_padded_sequence, unpack_sequence
 import rich
 console = rich.get_console()
 
@@ -10,17 +11,23 @@ class MnistRNN(th.nn.Module):
     '''
     GRU model for MNIST classification
     '''
-    def __init__(self, rnn_type, input_size, hidden_size, num_layers):
+    def __init__(self, rnn_type,
+            input_size, hidden_size, num_layers,
+            num_classes: int = 10):
         super(MnistRNN, self).__init__()
         self.rnn_type = rnn_type
         self.input_size = input_size
         self.hidden_size = hidden_size
+        self.num_layers = num_layers
         if rnn_type == 'gru':
             self.rnn = th.nn.GRU(input_size, hidden_size, num_layers)
         elif rnn_type == 'rnn':
             self.rnn = th.nn.RNN(input_size, hidden_size, num_layers)
         elif rnn_type == 'lstm':
             self.rnn = th.nn.LSTM(input_size, hidden_size, num_layers)
+        self.fc = th.nn.Linear(hidden_size, num_classes)
+        self.num_params = sum(param.numel() for param in self.parameters()
+                if param.requires_grad)
     def forward(self, input):
         '''
         input should be pack_padded_sequence result.
@@ -30,18 +37,46 @@ class MnistRNN(th.nn.Module):
             output, hn = self.rnn(input)
         else:
             output, (hn, cn) = self.rnn(input)
-        return output, hn
+        #return output, hn
+        #unpack = unpack_sequence(output)
+        #print([x.shape for x in unpack])
+        #print(hn.shape)
+        if self.num_layers == 1:
+            h = hn.squeeze(0)
+        else:
+            h = hn[-1, ...]
+        # h size: (batch_size, num_hidden)
+        logits = self.fc(h)
+        return logits
 
 
-def train_one_epoch(model, loader):
+def train_one_epoch(model, optim, loader,
+        *,
+        epoch: int = -1,
+        device: str = 'cpu',
+        report_every: int = 10):
     '''
     train for one epoch, literally
     '''
-    for (x, y, z) in loader:
+    for i, (x, y, z) in enumerate(loader):
         pack = pack_padded_sequence(x, z)
-        output, hn = model(pack)
-        print(output.shape, hn.shape)
-        break
+        pack = pack.to(device)
+        y = y.to(device)
+        logits = model(pack)
+        #print(logits.shape, y.shape)
+        loss = F.cross_entropy(logits, y, reduction='mean')
+        optim.zero_grad()
+        loss.backward()
+        optim.step()
+
+        if (i+1)%report_every == 0:
+            pred = logits.max(dim=1)[1]
+            acc = (pred == y).cpu().float().mean().item() * 100
+            console.print(f'Eph[{epoch}] ({i+1}/{len(loader)})',
+                    f'loss={loss.item():.3f}',
+                    f'accuracy={acc:.2f} (/100)',
+                    )
+
 
 def evaluate(model, loader):
     pass
@@ -57,14 +92,17 @@ if __name__ == '__main__':
     # optimizer and training setting
     ag.add_argument('--lr', type=float, default=1e-3)
     ag.add_argument('--epochs', type=int, default=10)
+    ag.add_argument('--device', type=str, default='cpu'
+            if not th.cuda.is_available() else 'cuda')
     ag = ag.parse_args()
     console.print(ag)
 
     console.print('[bold white on violet] >_< start training MnistGRU')
 
     model = MnistRNN(ag.rnn_type,
-            ag.input_size, ag.hidden_size, ag.num_layers)
+            ag.input_size, ag.hidden_size, ag.num_layers).to(ag.device)
     console.print(model)
+    console.print(f'-- Number of parameters:', model.num_params)
     optim = th.optim.Adam(model.parameters(), lr=ag.lr)
 
     loader = mnist_dataset.get_mnist_loader(split='train',
@@ -73,4 +111,5 @@ if __name__ == '__main__':
     for epoch in range(ag.epochs):
         console.print(f'>_< training epoch {epoch}')
 
-        train_one_epoch(model, loader)
+        train_one_epoch(model, optim, loader,
+                epoch=epoch, device=ag.device)
