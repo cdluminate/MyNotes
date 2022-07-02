@@ -58,6 +58,7 @@ def get_mnist_loader(split: str, batch_size: int, longest: bool):
         raise NotImplementedError
     loader = DataLoader(data, batch_size=batch_size,
             shuffle=True if split == 'train' else False,
+            pin_memory=True,
             num_workers=4, collate_fn=collate_fn)
     return loader
 
