@@ -2,8 +2,10 @@
 set -e
 
 if ! command -v vtracer; then
-    echo please download vtracer and put it under $$PATH
-    exit 1
+    echo we automatically download vtracer and put it under ~/bin/
+    mkdir -p ~/bin/
+    wget -c https://github.com/visioncortex/vtracer/releases/download/0.4.0/vtracer-linux -O ~/bin/vtracer
+    chmod +x ~/bin/vtracer
 fi
 
 sp='/-\|'
