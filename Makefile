@@ -35,3 +35,8 @@ mnist-5:
 	-$(RM) -rf mnist-train
 	-$(RM) -rf mnist-test
 	echo -- We use mnist-train.json and mnist-test.json --
+
+# dataloader and model training: mnist-{6...
+mnist-6:
+	# step 6: test dataset class
+	python3 -m veccls.mnist_dataset
