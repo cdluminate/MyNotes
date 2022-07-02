@@ -3,22 +3,26 @@ main:
 
 mnist-all:
 	# full pipeline for reproducing the work
-	$(MAKE) mnist-1
-	$(MAKE) mnist-2
-	$(MAKE) mnist-3
-	$(MAKE) mnist-4
-	$(MAKE) mnist-5
+	for i in $$(seq 1 7); do $(MAKE) mnist-$${i}; done
+fashion-all:
+	for i in $$(seq 1 7); do $(MAKE) mnist-$${i}; done
 
 # preprocess MNIST dataset: mnist-{1,2,3,4,5}
 mnist-1:
 	# step 1: burst binary MNIST blob into png files
 	python3 -m veccls.mnist burst -s train -d mnist-train
 	python3 -m veccls.mnist burst -s test  -d mnist-test
+fashion-1:
+	python3 -m veccls.fashion burst -s train -d fashion-train
+	python3 -m veccls.fashion burst -s test  -d fashion-test
 
 mnist-2:
 	# step 2: trace png files into svgs
 	bash scripts/prepro-mnist.sh mnist-train/
 	bash scripts/prepro-mnist.sh mnist-test/
+fashion-2:
+	bash scripts/prepro-mnist.sh fashion-train/
+	bash scripts/prepro-mnist.sh fashion-test/
 	
 mnist-3:
 	# step 3: parse svgs into sequence data
@@ -40,3 +44,7 @@ mnist-5:
 mnist-6:
 	# step 6: test dataset class
 	python3 -m veccls.mnist_dataset
+
+mnist-7:
+	# step 7: training
+	python3 -m veccls.train_mnist
