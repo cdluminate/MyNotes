@@ -1,7 +1,15 @@
 main:
 	echo HELP
 
-# preprocess MNIST dataset
+mnist-all:
+	# full pipeline for reproducing the work
+	$(MAKE) mnist-1
+	$(MAKE) mnist-2
+	$(MAKE) mnist-3
+	$(MAKE) mnist-4
+	$(MAKE) mnist-5
+
+# preprocess MNIST dataset: mnist-{1,2,3,4,5}
 mnist-1:
 	# step 1: burst binary MNIST blob into png files
 	python3 -m veccls.mnist burst -s train -d mnist-train
