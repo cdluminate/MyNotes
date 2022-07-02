@@ -11,6 +11,7 @@ console = rich.get_console()
 class LongestPathRNN(th.nn.Module):
     '''
     RNN,GRU,LSTM model for image classification
+    this class only uses the longest path in svg
     '''
     def __init__(self, rnn_type,
             input_size, hidden_size, num_layers,
@@ -64,6 +65,34 @@ class LongestPathRNN(th.nn.Module):
         logits = self.fc(h)
         return logits
 
-class HierarchicalRNN(object):
-    def __init__(self):
+class HierarchicalRNN(th.nn.Module):
+    '''
+    this class uses all paths within svg
+    '''
+    def __init__(self, rnn_type,
+            input_size, hidden_size, num_layers,
+            num_classes: int = 10):
+        super(HierarchicalRNN, self).__init__()
+        self.rnn_type = rnn_type
+        self.input_size = input_size
+        self.hidden_size = hidden_size
+        self.num_layers = num_layers
+        if rnn_type == 'gru':
+            self.pathrnn = th.nn.GRU(input_size, hidden_size, num_layers)
+            self.svgrnn = th.nn.GRU(hidden_size, hidden_size, num_layers)
+        elif rnn_type == 'rnn':
+            self.pathrnn = th.nn.RNN(input_size, hidden_size, num_layers)
+            self.svgrnn = th.nn.RNN(hidden_size, hidden_size, num_layers)
+        elif rnn_type == 'lstm':
+            self.pathrnn = th.nn.LSTM(input_size, hidden_size, num_layers)
+            self.svgrnn = th.nn.LSTM(hidden_size, hidden_size, num_layers)
+        self.pathtc = th.nn.Sequential(
+                th.nn.Linear(5, hidden_size),
+                th.nn.ReLU())
+        self.svgfc = th.nn.Linear(hidden_size, num_classes)
+        self.num_params = sum(param.numel() for param in self.parameters()
+                if param.requires_grad)
+    def forward(self, x, y, z, *, device: str='cpu'):
         raise NotImplementedError
+
+
