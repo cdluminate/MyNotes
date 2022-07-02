@@ -27,22 +27,43 @@ class PositionalEncoding(th.nn.Module):
         return self.dropout(x)
 
 class LongestPathTransformer(th.nn.Module):
-    def __init__(self, d_model: int, nhead: int, d_hid: int,
-            nlayers: int, dropout: float = 0.1):
-        self.model_type = 'transformer'
+    def __init__(self, model_type,
+            input_size: int,
+            d_model: int,
+            nhead: int,
+            d_mlp: int,
+            nlayers: int,
+            dropout: float = 0.1):
+        super(LongestPathTransformer, self).__init__()
+        self.model_type = model_type
         self.posenc = PositionalEncoding(d_model=d_model, dropout=dropout)
-        enclayer = th.nn.TransformerEncoderLayer(d_model, nhead, d_hid, dropout)
+        enclayer = th.nn.TransformerEncoderLayer(d_model, nhead, d_mlp, dropout)
         self.transenc = th.nn.TransformerEncoder(enclayer, nlayers)
-        self.encoder = th.nn.Linear(2, d_model)
+        self.encoder = th.nn.Linear(input_size, d_model) # XXX: replace into MLP
         self.d_model = d_model
+
+        self.num_params = sum(param.numel() for param in self.parameters()
+                if param.requires_grad)
     def forward_(self, src: th.Tensor, src_mask: th.Tensor):
         src = self.encoder(src) * math.sqrt(self.d_model)
         src = self.posenc(src)
         output = self.transenc(src, src_mask)
         return output
     def forward(self, x, y, z, *, device: str = 'cpu'):
+        '''
+        x is padded sequence
+        y is labels
+        z is EasyDict, keys:
+            tc: translate and color info
+            lens: sequence lengths
+        '''
+        B = int(x.shape[1])
+        xe = self.encoder(x)
+        print('debug', x.shape)
         raise NotImplementedError
 
+class HierarchicalTransformer(object):
+    ...
 
 if __name__ == '__main__':
     console.rule('>_< testing position encoding')
@@ -50,6 +71,3 @@ if __name__ == '__main__':
     posenc = PositionalEncoding(d_model=32)
     xpe = posenc(x)
     console.print('xpe.shape', xpe.shape)
-
-    console.rule('>_< testing longestpath transformer')
-    lptrans = LongestPathTransformer()
