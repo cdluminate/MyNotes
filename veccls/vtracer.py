@@ -1,4 +1,6 @@
 import os
 import sys
+import shutil
 
-shutil.which('vtracer')
+if __name__ == '__main__':
+    print(shutil.which('vtracer'))
