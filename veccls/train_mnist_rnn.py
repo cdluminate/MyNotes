@@ -56,12 +56,12 @@ def train_one_epoch(model, optim, loader,
         epoch: int = -1,
         device: str = 'cpu',
         report_every: int = 50,
-        log: str = None):
+        logdir: str = None):
     '''
     train for one epoch, literally
     '''
-    if log is not None:
-        logfile = open(os.path.join(log, 'train_log.txt'), 'at')
+    if logdir is not None:
+        logfile = open(os.path.join(logdir, 'train_log.txt'), 'at')
     else:
         logfile = None
     for i, (x, y, z) in enumerate(loader):
@@ -94,13 +94,13 @@ def evaluate(model, loader,
         *,
         epoch: int = -1,
         device: str = 'cpu',
-        log: str = None,
+        logdir: str = None,
         ):
     '''
     evaluate, literally
     '''
-    if log is not None:
-        logfile = open(os.path.join(log, 'evaluate_log.txt'), 'at')
+    if logdir is not None:
+        logfile = open(os.path.join(logdir, 'evaluate_log.txt'), 'at')
     else:
         logfile = None
     losses = []
@@ -132,7 +132,7 @@ def evaluate(model, loader,
         logfile.write('\n')
 
         state_dict = model.state_dict()
-        ptpath = os.path.join(log, f'model_eph_{epoch}.pt')
+        ptpath = os.path.join(logdir, f'model_eph_{epoch}.pt')
         th.save(state_dict, ptpath)
         console.print(f'Model state dictionary dumped to: {ptpath}')
 
@@ -151,12 +151,13 @@ if __name__ == '__main__':
     ag.add_argument('--device', type=str, default='cpu'
             if not th.cuda.is_available() else 'cuda')
     # logging
-    ag.add_argument('--log', type=str, default='train_mnist_rnn_temp')
+    ag.add_argument('--logdir', type=str, default='train_mnist_')
     ag = ag.parse_args()
+    ag.logdir = ag.logdir + ag.rnn_type
     console.print(ag)
 
-    if not os.path.exists(ag.log):
-        os.mkdir(ag.log)
+    if not os.path.exists(ag.logdir):
+        os.mkdir(ag.logdir)
 
     console.print('[bold white on violet] >_< start training MnistRNN')
 
@@ -175,7 +176,7 @@ if __name__ == '__main__':
         console.print(f'>_< training epoch {epoch} ...')
 
         train_one_epoch(model, optim, loadertrn,
-                epoch=epoch, device=ag.device, log=ag.log)
+                epoch=epoch, device=ag.device, logdir=ag.logdir)
 
         evaluate(model, loadertst,
-                epoch=epoch, device=ag.device, log=ag.log)
+                epoch=epoch, device=ag.device, logdir=ag.logdir)
