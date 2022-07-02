@@ -26,6 +26,23 @@ class PositionalEncoding(th.nn.Module):
         x = x + self.pe[:x.size(0)]
         return self.dropout(x)
 
+class LongestPathTransformer(th.nn.Module):
+    def __init__(self, d_model: int, nhead: int, d_hid: int,
+            nlayers: int, dropout: float = 0.1):
+        self.model_type = 'transformer'
+        self.posenc = PositionalEncoding(d_model=d_model, dropout=dropout)
+        enclayer = th.nn.TransformerEncoderLayer(d_model, nhead, d_hid, dropout)
+        self.transenc = th.nn.TransformerEncoder(enclayer, nlayers)
+        self.encoder = th.nn.Linear(2, d_model)
+        self.d_model = d_model
+    def forward_(self, src: th.Tensor, src_mask: th.Tensor):
+        src = self.encoder(src) * math.sqrt(self.d_model)
+        src = self.posenc(src)
+        output = self.transenc(src, src_mask)
+        return output
+    def forward(self, x, y, z, *, device: str = 'cpu'):
+        raise NotImplementedError
+
 
 if __name__ == '__main__':
     console.rule('>_< testing position encoding')
@@ -33,3 +50,6 @@ if __name__ == '__main__':
     posenc = PositionalEncoding(d_model=32)
     xpe = posenc(x)
     console.print('xpe.shape', xpe.shape)
+
+    console.rule('>_< testing longestpath transformer')
+    lptrans = LongestPathTransformer()
