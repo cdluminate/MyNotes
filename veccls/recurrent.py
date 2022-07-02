@@ -22,11 +22,11 @@ class LongestPathRNN(th.nn.Module):
         self.hidden_size = hidden_size
         self.num_layers = num_layers
         if rnn_type == 'gru':
-            self.rnn = th.nn.GRU(input_size, hidden_size, num_layers)
+            self.rnn = th.nn.GRU(hidden_size, hidden_size, num_layers)
         elif rnn_type == 'rnn':
-            self.rnn = th.nn.RNN(input_size, hidden_size, num_layers)
+            self.rnn = th.nn.RNN(hidden_size, hidden_size, num_layers)
         elif rnn_type == 'lstm':
-            self.rnn = th.nn.LSTM(input_size, hidden_size, num_layers)
+            self.rnn = th.nn.LSTM(hidden_size, hidden_size, num_layers)
         self.tc = th.nn.Sequential(
                 th.nn.Linear(5, hidden_size),
                 th.nn.ReLU(),
@@ -36,6 +36,7 @@ class LongestPathRNN(th.nn.Module):
                 th.nn.ReLU(),
                 )
         self.fc = th.nn.Linear(hidden_size, num_classes)
+        self.encoder = th.nn.Linear(input_size, hidden_size)
         self.num_params = sum(param.numel() for param in self.parameters()
                 if param.requires_grad)
     def forward(self, x, y, z, *, device: str = 'cpu'):
@@ -44,6 +45,8 @@ class LongestPathRNN(th.nn.Module):
         see torch.nn.utils.rnn.pack_padded_sequence
         '''
         B = int(x.shape[1])  # batch size. x is already padded sequence
+        x = x.to(device)
+        x = self.encoder(x)
         pack = pack_padded_sequence(x, z.lens)
         pack = pack.to(device)
         y = y.to(device)
