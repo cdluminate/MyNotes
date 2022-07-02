@@ -36,7 +36,7 @@ class LongestPathRNN(th.nn.Module):
                 if param.requires_grad)
     def forward(self, x, y, z, *, device: str = 'cpu'):
         '''
-        input should be pack_padded_sequence result.
+        input should be pad_sequence result. we pack it by ourselves
         see torch.nn.utils.rnn.pack_padded_sequence
         '''
         B = int(x.shape[1])  # batch size. x is already padded sequence
@@ -77,13 +77,13 @@ class HierarchicalRNN(th.nn.Module):
         self.input_size = input_size
         self.hidden_size = hidden_size
         self.num_layers = num_layers
-        if rnn_type == 'gru':
+        if rnn_type == 'hgru':
             self.pathrnn = th.nn.GRU(input_size, hidden_size, num_layers)
             self.svgrnn = th.nn.GRU(hidden_size, hidden_size, num_layers)
-        elif rnn_type == 'rnn':
+        elif rnn_type == 'hrnn':
             self.pathrnn = th.nn.RNN(input_size, hidden_size, num_layers)
             self.svgrnn = th.nn.RNN(hidden_size, hidden_size, num_layers)
-        elif rnn_type == 'lstm':
+        elif rnn_type == 'hlstm':
             self.pathrnn = th.nn.LSTM(input_size, hidden_size, num_layers)
             self.svgrnn = th.nn.LSTM(hidden_size, hidden_size, num_layers)
         self.pathtc = th.nn.Sequential(
@@ -93,6 +93,27 @@ class HierarchicalRNN(th.nn.Module):
         self.num_params = sum(param.numel() for param in self.parameters()
                 if param.requires_grad)
     def forward(self, x, y, z, *, device: str='cpu'):
+        '''
+        x should be padded sequence
+        '''
+        B = int(x.shape[1]) # batch size
+        pack = pack_padded_sequence(x, z.lens, enforce_sorted=False)
+        pack = pack.to(device)
+        y = y.to(device)
+        # [hierarchy 1]: per-path representations
+        assert(hasattr(z, 'tc'))
+        h0 = self.pathtc(z.tc.to(device)).unsqueeze(0)
+        h0 = h0.expand(self.num_layers, B, self.hidden_size).contiguous()
+        if self.rnn_type in ('hrnn', 'hgru'):
+            output, hn = self.pathrnn(pack, h0)
+        else:
+            output, (hn, cn) = self.pathrnn(pack, h0)
+        #print('debug:', hn.shape)
+        if self.num_layers == 1:
+            h = hn.squeeze(0)
+        else:
+            h = hn[-1, ...]
+        # [hierarchi 2]: aggregate path representations into svg repres
         raise NotImplementedError
 
 
