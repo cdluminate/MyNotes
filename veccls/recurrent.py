@@ -30,6 +30,10 @@ class LongestPathRNN(th.nn.Module):
         self.tc = th.nn.Sequential(
                 th.nn.Linear(5, hidden_size),
                 th.nn.ReLU(),
+                th.nn.Linear(hidden_size, hidden_size),
+                th.nn.ReLU(),
+                th.nn.Linear(hidden_size, hidden_size),
+                th.nn.ReLU(),
                 )
         self.fc = th.nn.Linear(hidden_size, num_classes)
         self.num_params = sum(param.numel() for param in self.parameters()
