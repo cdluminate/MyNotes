@@ -55,10 +55,15 @@ def train_one_epoch(model, optim, loader,
         *,
         epoch: int = -1,
         device: str = 'cpu',
-        report_every: int = 50):
+        report_every: int = 50,
+        log: str = None):
     '''
     train for one epoch, literally
     '''
+    if log is not None:
+        logfile = open(os.path.join(log, 'train_log.txt'), 'at')
+    else:
+        logfile = None
     for i, (x, y, z) in enumerate(loader):
         pack = pack_padded_sequence(x, z)
         pack = pack.to(device)
@@ -77,6 +82,12 @@ def train_one_epoch(model, optim, loader,
                     f'loss={loss.item():.3f}',
                     f'accuracy={acc:.2f} (/100)',
                     )
+            if logfile is not None:
+                logfile.write(f'Eph[{epoch}] ({i+1}/{len(loader)})')
+                logfile.write(f'loss={loss.item():.3f}')
+                logfile.write(f'accuracy={acc:.2f} (/100)')
+                logfile.write('\n')
+
 
 @th.no_grad()
 def evaluate(model, loader,
@@ -87,6 +98,10 @@ def evaluate(model, loader,
     '''
     evaluate, literally
     '''
+    if log is not None:
+        logfile = open(os.path.join(log, 'evaluate_log.txt'), 'at')
+    else:
+        logfile = None
     losses = []
     preds = []
     ys = []
@@ -109,6 +124,11 @@ def evaluate(model, loader,
     console.print(f'Eph[{epoch}] Evaluation:',
             f'loss={mean_loss:.2f}',
             f'acc={acc:.2f} (/100)')
+    if logfile is not None:
+        logfile.write(f'Eph[{epoch}] Evaluation:')
+        logfile.write(f'loss={mean_loss:.2f}')
+        logfile.write(f'acc={acc:.2f} (/100)')
+        logfile.write('\n')
 
 
 if __name__ == '__main__':
@@ -124,8 +144,13 @@ if __name__ == '__main__':
     ag.add_argument('--epochs', type=int, default=10)
     ag.add_argument('--device', type=str, default='cpu'
             if not th.cuda.is_available() else 'cuda')
+    # logging
+    ag.add_argument('--log', type=str, default='temp_experiment')
     ag = ag.parse_args()
     console.print(ag)
+
+    if not os.path.exists(ag.log):
+        os.mkdir(ag.log)
 
     console.print('[bold white on violet] >_< start training MnistGRU')
 
@@ -144,7 +169,7 @@ if __name__ == '__main__':
         console.print(f'>_< training epoch {epoch} ...')
 
         train_one_epoch(model, optim, loadertrn,
-                epoch=epoch, device=ag.device)
+                epoch=epoch, device=ag.device, log=ag.log)
 
         evaluate(model, loadertst,
-                epoch=epoch, device=ag.device)
+                epoch=epoch, device=ag.device, log=ag.log)
