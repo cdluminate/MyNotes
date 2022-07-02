@@ -29,8 +29,6 @@ class LongestPathRNN(th.nn.Module):
         self.tc = th.nn.Sequential(
                 th.nn.Linear(5, hidden_size),
                 th.nn.ReLU(),
-                th.nn.Linear(hidden_size, hidden_size),
-                th.nn.ReLU(),
                 )
         self.fc = th.nn.Linear(hidden_size, num_classes)
         self.num_params = sum(param.numel() for param in self.parameters()
@@ -44,8 +42,7 @@ class LongestPathRNN(th.nn.Module):
         if transcolor is None:
             h0 = th.zeros(1, B, self.hidden_size).to(input[0].device)
         else:
-            h0 = th.zeros(1, B, self.hidden_size).to(input[0].device)
-            #h0 = self.tc(transcolor)
+            h0 = self.tc(transcolor).unsqueeze(0)
         if self.rnn_type in ('rnn', 'gru'):
             output, hn = self.rnn(input, h0)
         else:
