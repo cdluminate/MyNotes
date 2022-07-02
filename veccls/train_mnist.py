@@ -6,49 +6,8 @@ from . import mnist_dataset
 from torch.nn.utils.rnn import pack_padded_sequence, unpack_sequence
 import rich
 from rich.progress import track
+from . import models
 console = rich.get_console()
-
-class MnistRNN(th.nn.Module):
-    '''
-    GRU model for MNIST classification
-    '''
-    def __init__(self, rnn_type,
-            input_size, hidden_size, num_layers,
-            num_classes: int = 10):
-        super(MnistRNN, self).__init__()
-        self.rnn_type = rnn_type
-        self.input_size = input_size
-        self.hidden_size = hidden_size
-        self.num_layers = num_layers
-        if rnn_type == 'gru':
-            self.rnn = th.nn.GRU(input_size, hidden_size, num_layers)
-        elif rnn_type == 'rnn':
-            self.rnn = th.nn.RNN(input_size, hidden_size, num_layers)
-        elif rnn_type == 'lstm':
-            self.rnn = th.nn.LSTM(input_size, hidden_size, num_layers)
-        self.fc = th.nn.Linear(hidden_size, num_classes)
-        self.num_params = sum(param.numel() for param in self.parameters()
-                if param.requires_grad)
-    def forward(self, input):
-        '''
-        input should be pack_padded_sequence result.
-        see torch.nn.utils.rnn.pack_padded_sequence
-        '''
-        if self.rnn_type in ('rnn', 'gru'):
-            output, hn = self.rnn(input)
-        else:
-            output, (hn, cn) = self.rnn(input)
-        #return output, hn
-        #unpack = unpack_sequence(output)
-        #print([x.shape for x in unpack])
-        #print(hn.shape)
-        if self.num_layers == 1:
-            h = hn.squeeze(0)
-        else:
-            h = hn[-1, ...]
-        # h size: (batch_size, num_hidden)
-        logits = self.fc(h)
-        return logits
 
 
 def train_one_epoch(model, optim, loader,
@@ -140,7 +99,7 @@ def evaluate(model, loader,
 if __name__ == '__main__':
     ag = argparse.ArgumentParser()
     # RNN settings
-    ag.add_argument('--rnn_type', type=str, default='gru',
+    ag.add_argument('--model_type', type=str, default='gru',
             choices=('rnn', 'gru', 'lstm'))
     ag.add_argument('--input_size', type=int, default=2)
     ag.add_argument('--hidden_size', type=int, default=64)
@@ -153,7 +112,7 @@ if __name__ == '__main__':
     # logging
     ag.add_argument('--logdir', type=str, default='train_mnist_')
     ag = ag.parse_args()
-    ag.logdir = ag.logdir + ag.rnn_type
+    ag.logdir = ag.logdir + ag.model_type
     console.print(ag)
 
     if not os.path.exists(ag.logdir):
@@ -161,7 +120,11 @@ if __name__ == '__main__':
 
     console.print('[bold white on violet] >_< start training MnistRNN')
 
-    model = MnistRNN(ag.rnn_type,
+    modelmapping = {'rnn': models.LongestPathRNN,
+            'gru': models.LongestPathRNN,
+            'lstm': models.LongestPathRNN,
+            }
+    model = modelmapping[ag.model_type](ag.model_type,
             ag.input_size, ag.hidden_size, ag.num_layers).to(ag.device)
     console.print(model)
     console.print(f'-- Number of parameters:', model.num_params)
