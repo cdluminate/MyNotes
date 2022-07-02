@@ -21,3 +21,9 @@ mnist-4:
 	# step 4: collect json files and aggregate into one
 	python3 -m veccls.mnist collect -d mnist-train
 	python3 -m veccls.mnist collect -d mnist-test
+
+mnist-5:
+	# step 5: now we can remove the temporary files
+	-$(RM) -rf mnist-train
+	-$(RM) -rf mnist-test
+	echo -- We use mnist-train.json and mnist-test.json --
