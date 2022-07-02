@@ -40,6 +40,10 @@ class MNISTDataset(Dataset):
 
 def longest_sequence_collate(batch):
     paths, labels = zip(*batch)
+    pack = sorted(zip(paths, labels),
+            key=lambda i: len(i[0]),
+            reverse=True)
+    paths, labels = zip(*pack)
     lens = th.tensor([x.shape[0] for x in paths])
     paths = pad_sequence(paths)
     labels = th.tensor(labels)
@@ -75,4 +79,6 @@ if __name__ == '__main__':
     loadertrn = get_mnist_loader('train', 5, longest=True)
     for (x, y, z) in loadertrn:
         print(x.shape, y.shape, z.shape)
+        print('labels', y)
+        print('lens', z)
         break
