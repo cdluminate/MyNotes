@@ -33,22 +33,25 @@ class LongestPathRNN(th.nn.Module):
         self.fc = th.nn.Linear(hidden_size, num_classes)
         self.num_params = sum(param.numel() for param in self.parameters()
                 if param.requires_grad)
-    def forward(self, input, transcolor=None):
+    def forward(self, x, y, z, *, device: str = 'cpu'):
         '''
         input should be pack_padded_sequence result.
         see torch.nn.utils.rnn.pack_padded_sequence
         '''
-        B = input[1][0]  # batch size
-        if transcolor is None:
-            h0 = th.zeros(1, B, self.hidden_size).to(input[0].device)
+        B = int(x.shape[1])  # batch size. x is already padded sequence
+        pack = pack_padded_sequence(x, z.lens)
+        pack = pack.to(device)
+        y = y.to(device)
+        if not hasattr(z, 'tc'):
+            h0 = th.zeros(1, B, self.hidden_size).to(pack[0].device)
             h0 = h0.expand(self.num_layers, B, self.hidden_size).contiguous()
         else:
-            h0 = self.tc(transcolor).unsqueeze(0)
+            h0 = self.tc(z.tc.to(device)).unsqueeze(0)
             h0 = h0.expand(self.num_layers, B, self.hidden_size).contiguous()
         if self.rnn_type in ('rnn', 'gru'):
-            output, hn = self.rnn(input, h0)
+            output, hn = self.rnn(pack, h0)
         else:
-            output, (hn, cn) = self.rnn(input, h0)
+            output, (hn, cn) = self.rnn(pack, h0)
         #return output, hn
         #unpack = unpack_sequence(output)
         #print([x.shape for x in unpack])

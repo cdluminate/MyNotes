@@ -25,19 +25,16 @@ def train_one_epoch(model, optim, loader,
     else:
         logfile = None
     for i, (x, y, z) in enumerate(loader):
-        pack = pack_padded_sequence(x, z.lens)
-        pack = pack.to(device)
-        y = y.to(device)
-        logits = model(pack)
+        logits = model(x, y, z, device=device)
         #print(logits.shape, y.shape)
-        loss = F.cross_entropy(logits, y, reduction='mean')
+        loss = F.cross_entropy(logits, y.to(device), reduction='mean')
         optim.zero_grad()
         loss.backward()
         optim.step()
 
         if (i)%report_every == 0:
-            pred = logits.max(dim=1)[1]
-            acc = (pred == y).cpu().float().mean().item() * 100
+            pred = logits.max(dim=1)[1].cpu()
+            acc = (pred == y.cpu()).cpu().float().mean().item() * 100
             console.print(f'Eph[{epoch}] ({i+1}/{len(loader)})',
                     f'loss={loss.item():.3f}',
                     f'accuracy={acc:.2f} (/100)',
@@ -67,15 +64,12 @@ def evaluate(model, loader,
     preds = []
     ys = []
     for (x, y, z) in track(loader, description=f'Evaluation ...'):
-        pack = pack_padded_sequence(x, z.lens)
-        pack = pack.to(device)
-        y = y.to(device)
-        logits = model(pack)
-        loss = F.cross_entropy(logits, y, reduction='none')
+        logits = model(x, y, z, device=device)
+        loss = F.cross_entropy(logits, y.to(device), reduction='none')
 
-        losses.append(loss)
-        ys.append(y)
-        preds.append(logits.max(dim=1)[1])
+        losses.append(loss.cpu())
+        ys.append(y.cpu())
+        preds.append(logits.max(dim=1)[1].cpu())
     losses = th.hstack(losses)
     preds = th.hstack(preds)
     ys = th.hstack(ys)
