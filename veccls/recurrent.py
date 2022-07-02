@@ -78,13 +78,13 @@ class HierarchicalRNN(th.nn.Module):
         self.hidden_size = hidden_size
         self.num_layers = num_layers
         if rnn_type == 'hgru':
-            self.pathrnn = th.nn.GRU(input_size, hidden_size, num_layers)
+            self.pathrnn = th.nn.GRU(hidden_size, hidden_size, num_layers)
             self.svgrnn = th.nn.GRU(hidden_size, hidden_size, num_layers)
         elif rnn_type == 'hrnn':
-            self.pathrnn = th.nn.RNN(input_size, hidden_size, num_layers)
+            self.pathrnn = th.nn.RNN(hidden_size, hidden_size, num_layers)
             self.svgrnn = th.nn.RNN(hidden_size, hidden_size, num_layers)
         elif rnn_type == 'hlstm':
-            self.pathrnn = th.nn.LSTM(input_size, hidden_size, num_layers)
+            self.pathrnn = th.nn.LSTM(hidden_size, hidden_size, num_layers)
             self.svgrnn = th.nn.LSTM(hidden_size, hidden_size, num_layers)
         self.pathtc = th.nn.Sequential(
                 th.nn.Linear(5, hidden_size),
@@ -95,6 +95,7 @@ class HierarchicalRNN(th.nn.Module):
                 th.nn.ReLU(),
                 )
         self.svgfc = th.nn.Linear(hidden_size, num_classes)
+        self.encoder = th.nn.Linear(input_size, hidden_size)
         self.num_params = sum(param.numel() for param in self.parameters()
                 if param.requires_grad)
     def forward(self, x, y, z, *, device: str='cpu'):
@@ -102,6 +103,8 @@ class HierarchicalRNN(th.nn.Module):
         x should be padded sequence
         '''
         B = int(x.shape[1]) # batch size
+        x = x.to(device)
+        x = self.encoder(x)
         pack = pack_padded_sequence(x, z.lens, enforce_sorted=False)
         pack = pack.to(device)
         y = y.to(device)
