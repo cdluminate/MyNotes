@@ -1,3 +1,4 @@
 torch
 torchvision
 easydict
+ujson >= 5.3.0
