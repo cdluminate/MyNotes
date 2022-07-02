@@ -2,7 +2,8 @@ import os
 import torch as th
 import ujson as json
 import torch as th
-from torch.utils.data import Dataset
+from torch.utils.data import Dataset, DataLoader
+from torch.nn.utils.rnn import pad_sequence, pack_padded_sequence
 from . import configs
 
 
@@ -33,9 +34,28 @@ class MNISTDataset(Dataset):
             path = th.tensor(paths[0]['data']).float()  # (seq len, 2)
             path[:,0] /= float(width)
             path[:,1] /= float(height)
-            return path, th.tensor(label)
+            return path, label
         else:
             raise NotImplementedError
+
+def longest_sequence_collate(batch):
+    paths, labels = zip(*batch)
+    lens = th.tensor([x.shape[0] for x in paths])
+    paths = pad_sequence(paths)
+    labels = th.tensor(labels)
+    return paths, labels, lens
+
+def get_mnist_loader(split: str, batch_size: int, longest: bool):
+    assert(split in ('train', 'test'))
+    data = MNISTDataset(split=split, longest=longest)
+    if longest:
+        collate_fn = longest_sequence_collate
+    else:
+        raise NotImplementedError
+    loader = DataLoader(data, batch_size=batch_size,
+            shuffle=True if split == 'train' else False,
+            num_workers=4, collate_fn=collate_fn)
+    return loader
 
 if __name__ == '__main__':
     import rich
@@ -50,3 +70,9 @@ if __name__ == '__main__':
     datatst = MNISTDataset(split='test', longest=True)
     console.print('tst size', len(datatst))
     console.print('tst[0]', datatst[0])
+
+    console.print('>_< testing mnist loader: train')
+    loadertrn = get_mnist_loader('train', 5, longest=True)
+    for (x, y, z) in loadertrn:
+        print(x.shape, y.shape, z.shape)
+        break
