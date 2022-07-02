@@ -60,3 +60,7 @@ class LongestPathRNN(th.nn.Module):
         # h size: (batch_size, num_hidden)
         logits = self.fc(h)
         return logits
+
+class HierarchicalRNN(object):
+    def __init__(self):
+        raise NotImplementedError

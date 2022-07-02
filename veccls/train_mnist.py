@@ -26,7 +26,8 @@ if __name__ == '__main__':
     ag.add_argument('--num_layers', type=int, default=3)
     # optimizer and training setting
     ag.add_argument('--lr', type=float, default=1e-3)
-    ag.add_argument('--epochs', type=int, default=10)
+    ag.add_argument('--epochs', type=int, default=16)
+    ag.add_argument('--lr_drop', type=int, default=12)
     ag.add_argument('--device', type=str, default='cpu'
             if not th.cuda.is_available() else 'cuda')
     # logging
@@ -55,19 +56,29 @@ if __name__ == '__main__':
     console.print(model)
     console.print(f'-- Number of parameters:', model.num_params)
     optim = th.optim.Adam(model.parameters(), lr=ag.lr)
+    scheduler = th.optim.lr_scheduler.MultiStepLR(optim,
+            milestones=[ag.lr_drop], gamma=0.1)
+    console.print(f'-- Optimizer:', optim)
+    console.print(f'-- Scheduler:', scheduler)
 
     loadertrn = mnist_dataset.get_mnist_loader(split='train',
             batch_size=128, longest=True)
     loadertst = mnist_dataset.get_mnist_loader(split='test',
             batch_size=100, longest=True)
 
+    # evaluate before train
     engine.evaluate(model, loadertst,
             epoch=-1, device=ag.device, logdir=ag.logdir)
     for epoch in range(ag.epochs):
         console.print(f'>_< training epoch {epoch} ...')
 
+        # train one epoch
         engine.train_one_epoch(model, optim, loadertrn,
                 epoch=epoch, device=ag.device, logdir=ag.logdir)
 
+        # evaluate
         engine.evaluate(model, loadertst,
                 epoch=epoch, device=ag.device, logdir=ag.logdir)
+
+        # adjust learning rate
+        scheduler.step()
