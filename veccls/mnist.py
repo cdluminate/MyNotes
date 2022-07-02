@@ -11,7 +11,8 @@ import rich
 from rich.progress import track
 console = rich.get_console()
 
-def mnist_burst(dest: str, split: str):
+def mnist_burst(dest: str, split: str, *,
+        mnist='mnist'):
     '''
     burst mnist dataset into png images
 
@@ -21,9 +22,16 @@ def mnist_burst(dest: str, split: str):
     the foreground object.
     '''
     assert(split in ('train', 'test'))
+    assert(mnist in ('mnist', 'fashion'))
     if not os.path.exists(dest):
         os.mkdir(dest)
-    data = V.datasets.MNIST(root=os.path.expanduser('~/.torch/MNIST'),
+    if mnist == 'mnist':
+        data = V.datasets.MNIST(root=os.path.expanduser('~/.torch/MNIST'),
+                            train=True if split=='train' else False,
+                            download=True)
+    elif mnist == 'fashion':
+        data = V.datasets.FashionMNIST(
+               root=os.path.expanduser('~/.torch/FashionMNIST'),
                             train=True if split=='train' else False,
                             download=True)
     for i, (x, y) in enumerate(data):
