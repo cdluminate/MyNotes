@@ -16,3 +16,8 @@ mnist-3:
 	# step 3: parse svgs into sequence data
 	python3 -m veccls.batchsvg2json -s mnist-train
 	python3 -m veccls.batchsvg2json -s mnist-test
+
+mnist-4:
+	# step 4: collect json files and aggregate into one
+	python3 -m veccls.mnist collect -d mnist-train
+	python3 -m veccls.mnist collect -d mnist-test
