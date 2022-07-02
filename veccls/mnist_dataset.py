@@ -2,6 +2,7 @@ import os
 import torch as th
 import ujson as json
 from easydict import EasyDict
+import functools as ft
 import torch as th
 from torch.utils.data import Dataset, DataLoader
 from torch.nn.utils.rnn import pad_sequence, pack_padded_sequence
@@ -43,7 +44,23 @@ class MNISTDataset(Dataset):
             transcolor = translate + color
             return path, label, transcolor
         else:
-            raise NotImplementedError
+            path = []
+            tc = []
+            for p in paths:
+                data = th.tensor(p['data']).float() # (seq len, 2)
+                data[:,0] /= float(width)
+                data[:,1] /= float(height)
+                path.append(data)
+                c = p['fill'].lstrip('#')
+                c = list(int(c[i:i+2], 16)/255. for i in (0, 2, 4))
+                translate = p['trans']
+                translate[0] /= float(width)
+                translate[1] /= float(height)
+                transcolor = translate + c
+                tc.append(transcolor)
+            packlen = len(path)
+            #path = pad_sequence(path)
+            return path, label, tc, packlen
 
 def longest_sequence_collate(batch):
     paths, labels, transcolors = zip(*batch)
@@ -59,10 +76,14 @@ def longest_sequence_collate(batch):
 
 def indefinite_sequence_collate(batch):
     paths, labels, transcolors, packlens = zip(*batch)
-    pack = sorted(zip(paths, labels, transcolors, packlens),
-            key=lambda i: len(i[0]),
-            reverse=True)
-    paths, labels, transcolors, packlens = zip(*pack)
+    # don't sort. adjacent paths for single image
+    #pack = sorted(zip(paths, labels, transcolors, packlens),
+    #        key=lambda i: len(i[0]),
+    #        reverse=True)
+    #paths, labels, transcolors, packlens = zip(*pack)
+    paths = ft.reduce(list.__add__, paths)
+    transcolors = ft.reduce(list.__add__, transcolors)
+
     pathlens = th.tensor([x.shape[0] for x in paths])
     paths = pad_sequence(paths)
     labels = th.tensor(labels)
@@ -108,4 +129,19 @@ if __name__ == '__main__':
         print('labels', y)
         print('z.lens', z.lens)
         print('z.tc', z.tc)
+        break
+
+    console.print('>_< testing mnist dataset: test (all)')
+    datatst = MNISTDataset(split='test', longest=False)
+    console.print('tst size', len(datatst))
+    console.print('tst[0]', datatst[0])
+
+    console.print('>_< testing mnist loader: train (all)')
+    loader = get_mnist_loader('train', 5, longest=False)
+    for (x, y, z) in loader:
+        print(x.shape, y.shape, z.tc.shape, z.lens.shape, z.packlens.shape)
+        print('labels', y)
+        print('z.lens', z.lens)
+        print('z.tc', z.tc)
+        print('z.packlens', z.packlens)
         break
