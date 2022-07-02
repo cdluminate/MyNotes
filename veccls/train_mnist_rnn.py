@@ -94,6 +94,7 @@ def evaluate(model, loader,
         *,
         epoch: int = -1,
         device: str = 'cpu',
+        log: str = None,
         ):
     '''
     evaluate, literally
