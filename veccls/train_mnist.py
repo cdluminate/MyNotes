@@ -25,6 +25,7 @@ if __name__ == '__main__':
     ag.add_argument('--num_layers', type=int, default=3)
     # optimizer and training setting
     ag.add_argument('--lr', type=float, default=1e-3)
+    ag.add_argument('--weight_decay', type=float, default=1e-7)
     ag.add_argument('--epochs', type=int, default=16)
     ag.add_argument('--lr_drop', type=int, default=12)
     ag.add_argument('--device', type=str, default='cpu'
@@ -54,7 +55,8 @@ if __name__ == '__main__':
             ag.input_size, ag.hidden_size, ag.num_layers).to(ag.device)
     console.print(model)
     console.print(f'-- Number of parameters:', model.num_params)
-    optim = th.optim.Adam(model.parameters(), lr=ag.lr)
+    optim = th.optim.Adam(model.parameters(),
+        lr=ag.lr, weight_decay=ag.weight_decay)
     scheduler = th.optim.lr_scheduler.MultiStepLR(optim,
             milestones=[ag.lr_drop], gamma=0.1)
     console.print(f'-- Optimizer:', optim)
