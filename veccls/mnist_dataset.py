@@ -57,13 +57,30 @@ def longest_sequence_collate(batch):
     transcolors = th.tensor(transcolors)
     return paths, labels, EasyDict({'tc': transcolors, 'lens': lens})
 
+def indefinite_sequence_collate(batch):
+    paths, labels, transcolors, packlens = zip(*batch)
+    pack = sorted(zip(paths, labels, transcolors, packlens),
+            key=lambda i: len(i[0]),
+            reverse=True)
+    paths, labels, transcolors, packlens = zip(*pack)
+    pathlens = th.tensor([x.shape[0] for x in paths])
+    paths = pad_sequence(paths)
+    labels = th.tensor(labels)
+    transcolors = th.tensor(transcolors)
+    packlens = th.tensor(packlens)
+    edict = EasyDict()
+    edict.tc = transcolors
+    edict.lens = pathlens
+    edict.packlens = packlens
+    return paths, labels, edict
+
 def get_mnist_loader(split: str, batch_size: int, longest: bool):
     assert(split in ('train', 'test'))
     data = MNISTDataset(split=split, longest=longest)
     if longest:
         collate_fn = longest_sequence_collate
     else:
-        raise NotImplementedError
+        collate_fn = indefinite_sequence_collate
     loader = DataLoader(data, batch_size=batch_size,
             shuffle=True if split == 'train' else False,
             pin_memory=True,
