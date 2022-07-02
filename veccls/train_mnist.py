@@ -18,7 +18,9 @@ if __name__ == '__main__':
     ''')
     # RNN settings
     ag.add_argument('--model_type', type=str, default='gru',
-            choices=('rnn', 'gru', 'lstm'))
+            choices=('rnn', 'gru', 'lstm',
+                'hrnn', 'hgru', 'hlstm',
+                ))
     ag.add_argument('--input_size', type=int, default=2)
     ag.add_argument('--hidden_size', type=int, default=64)
     ag.add_argument('--num_layers', type=int, default=3)
@@ -38,9 +40,15 @@ if __name__ == '__main__':
 
     console.print('[bold white on violet] >_< start training MnistRNN')
 
-    modelmapping = {'rnn': models.LongestPathRNN,
+    modelmapping = {
+            # only use the longest path. one path per image.
+            'rnn': models.LongestPathRNN,
             'gru': models.LongestPathRNN,
             'lstm': models.LongestPathRNN,
+            # use all paths. number of paths per image is indefinite.
+            'hrnn': models.HierarchicalRNN,
+            'hgru': models.HierarchicalRNN,
+            'hlstm': models.HierarchicalRNN,
             }
     model = modelmapping[ag.model_type](ag.model_type,
             ag.input_size, ag.hidden_size, ag.num_layers).to(ag.device)
