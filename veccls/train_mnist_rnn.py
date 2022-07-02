@@ -151,7 +151,7 @@ if __name__ == '__main__':
     ag.add_argument('--device', type=str, default='cpu'
             if not th.cuda.is_available() else 'cuda')
     # logging
-    ag.add_argument('--log', type=str, default='temp_experiment')
+    ag.add_argument('--log', type=str, default='train_mnist_rnn_temp')
     ag = ag.parse_args()
     console.print(ag)
 
