@@ -12,7 +12,10 @@ console = rich.get_console()
 
 
 if __name__ == '__main__':
-    ag = argparse.ArgumentParser()
+    ag = argparse.ArgumentParser('''Train an MNIST model, vector graphics!
+    (1) Passing in the color and translate as h0 to RNN slightly improves
+        performance, from 95.5 to 95.8 (model_type=gru), only using longest
+    ''')
     # RNN settings
     ag.add_argument('--model_type', type=str, default='gru',
             choices=('rnn', 'gru', 'lstm'))
