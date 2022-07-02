@@ -143,8 +143,8 @@ if __name__ == '__main__':
     ag.add_argument('--rnn_type', type=str, default='gru',
             choices=('rnn', 'gru', 'lstm'))
     ag.add_argument('--input_size', type=int, default=2)
-    ag.add_argument('--hidden_size', type=int, default=32)
-    ag.add_argument('--num_layers', type=int, default=2)
+    ag.add_argument('--hidden_size', type=int, default=64)
+    ag.add_argument('--num_layers', type=int, default=3)
     # optimizer and training setting
     ag.add_argument('--lr', type=float, default=1e-3)
     ag.add_argument('--epochs', type=int, default=10)
