@@ -26,18 +26,30 @@ class LongestPathRNN(th.nn.Module):
             self.rnn = th.nn.RNN(input_size, hidden_size, num_layers)
         elif rnn_type == 'lstm':
             self.rnn = th.nn.LSTM(input_size, hidden_size, num_layers)
+        self.tc = th.nn.Sequential(
+                th.nn.Linear(5, hidden_size),
+                th.nn.ReLU(),
+                th.nn.Linear(hidden_size, hidden_size),
+                th.nn.ReLU(),
+                )
         self.fc = th.nn.Linear(hidden_size, num_classes)
         self.num_params = sum(param.numel() for param in self.parameters()
                 if param.requires_grad)
-    def forward(self, input):
+    def forward(self, input, transcolor=None):
         '''
         input should be pack_padded_sequence result.
         see torch.nn.utils.rnn.pack_padded_sequence
         '''
-        if self.rnn_type in ('rnn', 'gru'):
-            output, hn = self.rnn(input)
+        B = input[1][0]  # batch size
+        if transcolor is None:
+            h0 = th.zeros(1, B, self.hidden_size).to(input[0].device)
         else:
-            output, (hn, cn) = self.rnn(input)
+            h0 = th.zeros(1, B, self.hidden_size).to(input[0].device)
+            #h0 = self.tc(transcolor)
+        if self.rnn_type in ('rnn', 'gru'):
+            output, hn = self.rnn(input, h0)
+        else:
+            output, (hn, cn) = self.rnn(input, h0)
         #return output, hn
         #unpack = unpack_sequence(output)
         #print([x.shape for x in unpack])
