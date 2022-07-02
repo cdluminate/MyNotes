@@ -41,8 +41,10 @@ class LongestPathRNN(th.nn.Module):
         B = input[1][0]  # batch size
         if transcolor is None:
             h0 = th.zeros(1, B, self.hidden_size).to(input[0].device)
+            h0 = h0.expand(self.num_layers, B, self.hidden_size)
         else:
             h0 = self.tc(transcolor).unsqueeze(0)
+            h0 = h0.expand(self.num_layers, B, self.hidden_size)
         if self.rnn_type in ('rnn', 'gru'):
             output, hn = self.rnn(input, h0)
         else:
