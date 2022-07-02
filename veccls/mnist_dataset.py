@@ -15,14 +15,15 @@ class MNISTDataset(Dataset):
     SVG paths. no raster graphics this time!
     longest means only return one longest path in image
     '''
-    def __init__(self, split:str, longest:bool=False):
+    def __init__(self, split:str, longest:bool=False, *, mnist='mnist'):
         assert(split in ('train', 'test'))
         self.split = split
-        jsonpath = getattr(configs.datasets.mnist, f'jsonpath_{split}')
+        jsonpath = getattr(getattr(configs.datasets, mnist), f'jsonpath_{split}')
         with open(jsonpath, 'rt') as f:
             j = json.load(f)
         self.j = j
         self.longest = longest
+        self._mnist = mnist
     def __len__(self):
         return len(self.j)
     def __getitem__(self, idx):
@@ -95,9 +96,9 @@ def indefinite_sequence_collate(batch):
     edict.packlens = packlens
     return paths, labels, edict
 
-def get_mnist_loader(split: str, batch_size: int, longest: bool):
+def get_mnist_loader(split: str, batch_size: int, longest: bool, *, mnist='mnist'):
     assert(split in ('train', 'test'))
-    data = MNISTDataset(split=split, longest=longest)
+    data = MNISTDataset(split=split, longest=longest, mnist=mnist)
     if longest:
         collate_fn = longest_sequence_collate
     else:
