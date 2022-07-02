@@ -44,7 +44,7 @@ def mnist_collect(src: str):
     for file in track(files):
         with open(file, 'rt') as f:
             j = json.load(f)
-        label = re.match(r'\d+-(\d).json', file).groups()[0]
+        label = re.match(r'.*/\d+-(\d).json', file).groups()[0]
         j[0]['label'] = int(label)
         dataset.append(j)
     with open(src+'.json', 'wt') as f:
