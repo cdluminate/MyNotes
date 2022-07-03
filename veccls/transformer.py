@@ -73,7 +73,7 @@ class LongestPathTransformer(th.nn.Module):
                 if param.requires_grad)
     def gen_mask(self, lens: th.Tensor):
         mask = [[1]*i + [0]*(lens.max().item()-i) for i in lens]
-        mask = th.tensor(mask)
+        mask = th.tensor(mask) #.bool() # nan
         return mask
     def forward(self, x, y, z, *, device: str = 'cpu'):
         '''
@@ -154,7 +154,7 @@ class HierarchicalPathTransformer(th.nn.Module):
                 if param.requires_grad)
     def gen_mask(self, lens: th.Tensor) -> th.Tensor:
         mask = [[1]*i + [0]*(lens.max().item()-i) for i in lens]
-        mask = th.tensor(mask)
+        mask = th.tensor(mask) #.bool() #nan
         return mask
     def forward(self, x, y, z, *, device: str = 'cpu'):
         '''
