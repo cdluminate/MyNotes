@@ -117,7 +117,6 @@ def train_mnist_():
     engine.evaluate(model, loadertst,
             epoch=-1, device=ag.device, logdir=ag.logdir)
     for epoch in range(ag.epochs):
-        console.print(f'>_< training epoch {epoch} ...')
 
         # train one epoch
         model.train()
