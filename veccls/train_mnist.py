@@ -114,7 +114,8 @@ def main_():
     # evaluate before train
     model.eval()
     engine.evaluate(model, loadertst,
-            epoch=-1, device=ag.device, logdir=ag.logdir)
+            epoch=-1, device=ag.device, logdir=ag.logdir,
+            local_rank=ag.local_rank)
     for epoch in range(ag.epochs):
 
         # train one epoch
