@@ -59,7 +59,7 @@ class LongestPathRNN(th.nn.Module):
         if self.rnn_type in ('rnn', 'gru'):
             output, hn = self.rnn(pack, h0)
         else:
-            output, (hn, cn) = self.rnn(pack, h0)
+            output, (hn, cn) = self.rnn(pack, (h0, h0))
         #return output, hn
         #unpack = unpack_sequence(output)
         #print([x.shape for x in unpack])
@@ -122,7 +122,7 @@ class HierarchicalRNN(th.nn.Module):
         if self.rnn_type in ('hrnn', 'hgru'):
             output, hn = self.pathrnn(pack, h0)
         else:
-            output, (hn, cn) = self.pathrnn(pack, h0)
+            output, (hn, cn) = self.pathrnn(pack, (h0, h0))
         #print('debug:', hn.shape)
         if self.num_layers == 1:
             h = hn.squeeze(0)
