@@ -62,7 +62,9 @@ mnist-7:
 	python3 -m veccls.train_mnist --model_type=gru
 	python3 -m veccls.train_mnist --model_type=hgru
 	python3 -m veccls.train_mnist --model_type=pst
+	python3 -m veccls.train_mnist --model_type=hpst
 fashion-7:
 	python3 -m veccls.train_fashion --model_type=gru
 	python3 -m veccls.train_fashion --model_type=hgru
 	python3 -m veccls.train_fashion --model_type=pst
+	python3 -m veccls.train_fashion --model_type=hpst
