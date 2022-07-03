@@ -78,6 +78,8 @@ mnist-6:
 	python3 -m veccls.mnist_dataset
 fashion-6:
 	python3 -m veccls.fashion_dataset
+cifar10-6:
+	python3 -m veccls.cifar10_dataset
 
 mnist-7:
 	# step 7: training
