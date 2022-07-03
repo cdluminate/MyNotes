@@ -87,7 +87,7 @@ mnist-7:
 	python3 -m veccls.train_mnist --model_type=hgru
 	python3 -m veccls.train_mnist --model_type=pst
 	python3 -m veccls.train_mnist --model_type=hpst
-	python3 -m torch.distributed.launch --use_env --nproc_per_node=4 \
+	python3 -m torch.distributed.launch --nproc_per_node=4 --use_env \
 		scripts/train_mnist.py
 fashion-7:
 	python3 -m veccls.train_fashion --model_type=gru
