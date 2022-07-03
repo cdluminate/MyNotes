@@ -102,7 +102,7 @@ class HierarchicalRNN(th.nn.Module):
                 th.nn.ReLU(),
                 )
         self.svgfc = th.nn.Linear(hidden_size, num_classes)
-        self.encoder = th.nn.Linear(input_size, hidden_size)
+        self.encoder = th.nn.Linear(input_size, hidden_size) # MLP here harmful
         self.num_params = sum(param.numel() for param in self.parameters()
                 if param.requires_grad)
     def forward(self, x, y, z, *, device: str='cpu'):
