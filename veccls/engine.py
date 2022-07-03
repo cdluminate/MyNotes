@@ -12,12 +12,15 @@ def train_one_epoch(model, optim, loader,
         epoch: int = -1,
         device: str = 'cpu',
         report_every: int = 50,
-        logdir: str = None):
+        logdir: str = None,
+        local_rank: int = None):
     '''
     train for one epoch, literally
     '''
     if logdir is not None:
         logfile = open(os.path.join(logdir, 'train_log.txt'), 'at')
+        if local_rank is not None and local_rank > 0:
+            logfile = None
     else:
         logfile = None
     for i, (x, y, trco, lens, packlens) in enumerate(loader):
@@ -28,9 +31,16 @@ def train_one_epoch(model, optim, loader,
         loss.backward()
         optim.step()
 
-        if (i)%report_every == 0:
+        #if (i%report_every == 0) and ((local_rank is None) or (
+        #        (local_rank is not None) and (local_rank == 0))):
+        if i%report_every == 0:
             pred = logits.max(dim=1)[1].cpu()
             acc = (pred == y.cpu()).cpu().float().mean().item() * 100
+            if local_rank is not None:
+                tmp = th.tensor(acc).to(local_rank)
+                th.distributed.all_reduce(tmp, op=th.distributed.ReduceOp.SUM)
+                tmp = tmp.item() / th.distributed.get_world_size()
+                acc = tmp
             console.print(f'Eph[{epoch}] ({i+1}/{len(loader)})',
                     f'loss={loss.item():.3f}',
                     f'accuracy={acc:.2f} (/100)',

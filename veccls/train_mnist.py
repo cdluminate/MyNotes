@@ -10,8 +10,16 @@ from . import transformer
 from . import engine
 console = rich.get_console()
 
-
 def train_mnist():
+    try:
+        train_mnist_()
+    except KeyboardInterrupt:
+        if os.getenv('LOCAL_RANK', None) is not None:
+            th.distributed.destroy_process_group()
+        console.print('[white on red]>_< pulled down processes.')
+        exit()
+
+def train_mnist_():
     ag = argparse.ArgumentParser('''Train an MNIST model, vector graphics!
     (1) Passing in the color and translate as h0 to RNN slightly improves
         performance, from 95.5 to 95.8 (model_type=gru), only using longest
