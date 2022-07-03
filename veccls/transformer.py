@@ -8,7 +8,7 @@ class PositionalEncoding(th.nn.Module):
     https://pytorch.org/tutorials/beginner/transformer_tutorial.html
     '''
     def __init__(self, d_model: int,
-            dropout: float = 0.1,
+            dropout: float = 0.01,
             max_len: int = 5000):
         super().__init__()
         self.dropout = th.nn.Dropout(p=dropout)
@@ -27,13 +27,17 @@ class PositionalEncoding(th.nn.Module):
         return self.dropout(x)
 
 class LongestPathTransformer(th.nn.Module):
+    '''
+    Transformer usage reference:
+    https://github.com/facebookresearch/detr
+    '''
     def __init__(self, model_type,
             input_size: int,
             d_model: int,
             nhead: int,
             d_mlp: int,
             nlayers: int,
-            dropout: float = 0.1,
+            dropout: float = 0.01,
             num_classes: int = 10,
             layernorm: bool = False):
         super(LongestPathTransformer, self).__init__()
@@ -106,8 +110,21 @@ class LongestPathTransformer(th.nn.Module):
         # [end: has decoder]
         return logits
 
-class HierarchicalTransformer(object):
-    ...
+class HierarchicalPathTransformer(th.nn.Module):
+    '''
+    Hierarchical version of path sequence transformer (HPST)
+    '''
+    def __init__(self, model_type: str,
+            input_size: int,
+            d_model: int,
+            nhead: int,
+            d_mlp: int,
+            nlayers: int,
+            dropout: float = 0.01,
+            num_classes: int = 10,
+            layernorm: bool = False):
+        self.model_type = model_type
+
 
 if __name__ == '__main__':
     console.rule('>_< testing position encoding')
