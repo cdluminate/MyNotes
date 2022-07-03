@@ -57,14 +57,20 @@ mnist-5:
 	-$(RM) -rf mnist-train
 	-$(RM) -rf mnist-test
 	echo -- We use mnist-train.json and mnist-test.json --
+	python3 -m veccls.jsonstat -j mnist-train.json
+	python3 -m veccls.jsonstat -j mnist-test.json
 fashion-5:
 	-$(RM) -rf fashion-train
 	-$(RM) -rf fashion-test
 	echo -- We use fashin-train.json and fashion-test.json --
+	python3 -m veccls.jsonstat -j fasion-train.json
+	python3 -m veccls.jsonstat -j fasion-test.json
 cifar10-5:
 	-$(RM) -rf cifar10-train
 	-$(RM) -rf cifar10-test
 	echo -- We use cifar10-train.json and cifar10-test.json --
+	python3 -m veccls.jsonstat -j cifar10-train.json
+	python3 -m veccls.jsonstat -j cifar10-test.json
 
 # dataloader and model training: mnist-{6...
 mnist-6:
