@@ -72,8 +72,13 @@ class LongestPathTransformer(th.nn.Module):
         self.num_params = sum(param.numel() for param in self.parameters()
                 if param.requires_grad)
     def gen_mask(self, lens: th.Tensor):
-        mask = [[1]*i + [0]*(lens.max().item()-i) for i in lens]
-        mask = th.tensor(mask) #.bool() # nan
+        '''
+        be careful with the mask
+        https://pytorch.org/docs/stable/generated/torch.nn.Transformer.html
+        Bool mask, 0 to use, 1 to ignore.
+        '''
+        mask = [[0]*i + [1]*(lens.max().item()-i) for i in lens]
+        mask = th.tensor(mask).bool()
         return mask
     def forward(self, x, y, trco, lens, packlens, *, device: str = 'cpu'):
         '''
@@ -153,8 +158,8 @@ class HierarchicalPathTransformer(th.nn.Module):
         self.num_params = sum(param.numel() for param in self.parameters()
                 if param.requires_grad)
     def gen_mask(self, lens: th.Tensor) -> th.Tensor:
-        mask = [[1]*i + [0]*(lens.max().item()-i) for i in lens]
-        mask = th.tensor(mask) #.bool() #nan
+        mask = [[0]*i + [1]*(lens.max().item()-i) for i in lens]
+        mask = th.tensor(mask).bool()
         return mask
     def forward(self, x, y, trco, lens, packlens, *, device: str = 'cpu'):
         '''
