@@ -82,17 +82,18 @@ def train_mnist():
                 d_mlp=ag.hidden_size,
                 nlayers=ag.num_layers,
                 dropout=ag.dropout).to(ag.device)
-    if ag.local_rank is None or th.distributed.get_rank() == 0:
-        console.print(model)
-        console.print(f'-- Number of parameters:', model.num_params)
     if ag.local_rank is not None:
         model = th.nn.parallel.DistributedDataParallel(model,
-                device_ids=[ag.local_rank], output_device=ag.local_rank)
+                device_ids=[ag.local_rank], output_device=ag.local_rank,
+                find_unused_parameters=False)
+        model.num_params = model.module.num_params
     optim = th.optim.Adam(model.parameters(),
         lr=ag.lr, weight_decay=ag.weight_decay)
     scheduler = th.optim.lr_scheduler.MultiStepLR(optim,
             milestones=[ag.lr_drop], gamma=0.1)
     if ag.local_rank is None or th.distributed.get_rank() == 0:
+        console.print(model)
+        console.print(f'-- Number of parameters:', model.num_params)
         console.print(f'-- Optimizer:', optim)
         console.print(f'-- Scheduler:', scheduler)
 
