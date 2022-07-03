@@ -10,16 +10,16 @@ from . import transformer
 from . import engine
 console = rich.get_console()
 
-def train_mnist():
+def main():
     try:
-        train_mnist_()
+        main_()
     except KeyboardInterrupt:
         if os.getenv('LOCAL_RANK', None) is not None:
             th.distributed.destroy_process_group()
         console.print('[white on red]>_< pulled down processes.')
         exit()
 
-def train_mnist_():
+def main_():
     ag = argparse.ArgumentParser('''Train an MNIST model, vector graphics!
     (1) Passing in the color and translate as h0 to RNN slightly improves
         performance, from 95.5 to 95.8 (model_type=gru), only using longest
@@ -46,10 +46,10 @@ def train_mnist_():
     ag.add_argument('--local_rank', type=int, default=None)
     ag = ag.parse_args()
     ag.logdir = ag.logdir + ag.model_type
-    if os.getenv('LOCAL_RANK', None) is not None:
-        ag.local_rank = int(os.getenv('LOCAL_RANK'))
     if not os.path.exists(ag.logdir):
         os.mkdir(ag.logdir)
+    if os.getenv('LOCAL_RANK', None) is not None:
+        ag.local_rank = int(os.getenv('LOCAL_RANK'))
     console.print(ag)
 
     if ag.local_rank is not None:
@@ -59,8 +59,7 @@ def train_mnist_():
             raise NotImplementedError('distributed not implemented for cpu')
         th.cuda.set_device(ag.local_rank)
         th.distributed.init_process_group(backend='NCCL', init_method='env://')
-    else:
-        console.print('[bold white on violet]>_< start training MnistRNN')
+    console.print('[bold white on violet]>_< start training MnistRNN')
 
     modelmapping = {
             # only use the longest path. one path per image.
@@ -135,4 +134,4 @@ def train_mnist_():
 
 
 if __name__ == '__main__':
-    train_mnist()
+    main()
