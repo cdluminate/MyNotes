@@ -73,11 +73,7 @@ def evaluate(model, loader,
     losses = []
     preds = []
     ys = []
-    if local_rank is None or local_rank == 0:
-        wrap = track
-    else:
-        wrap = iter
-    for (x, y, trco, lens, packlens) in wrap(loader, description=f'Evaluation ...'):
+    for (x, y, trco, lens, packlens) in track(loader, description=f'Evaluation ...'):
         logits = model(x, y, trco, lens, packlens, device=device)
         loss = F.cross_entropy(logits, y.to(device), reduction='none')
 
