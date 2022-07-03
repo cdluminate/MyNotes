@@ -47,7 +47,7 @@ class LongestPathRNN(th.nn.Module):
         B = int(x.shape[1])  # batch size. x is already padded sequence
         x = x.to(device)
         x = self.encoder(x)
-        pack = pack_padded_sequence(x, lens)
+        pack = pack_padded_sequence(x, lens.cpu())
         pack = pack.to(device)
         y = y.to(device)
         h0 = self.tc(trco.to(device)).unsqueeze(0)
