@@ -110,37 +110,39 @@ image transformer for image represetnation. input is sequence of paths.
 GRU and HGRU works for both mnist and cifar
 
 \begin{verbatim}
-Dataset         Model     Accuracy     Parameters
-=================================================
-MNIST           LeNet     98.9         431k
--------------------------------------------------
-MNIST           RNN       96.43        34k
-..              GRU       97.31        84k
-..              LSTM      96.89        109k
-..              PST       97.30        211k
--------------------------------------------------
-MNIST           HRNN      96.66        59k
-..              HGRU      98.00        159k
-..              HLSTM     97.24        209k
-..              HPST      98.17        412k
--------------------------------------------------
-FashionMNIST    LeNet     88.9         431k
--------------------------------------------------
-FashionMNIST    RNN       65.97        34k
-..              GRU       72.88        84k
-..              LSTM      72.08        109k
-..              PST
-----------------------------------
-FashionMNIST    HRNN
-..              HGRU
-..              HLSTM
-..              HPST      85.57
-----------------------------------
-CIFAR10         HRNN
-..              HGRU
-..              HLSTM
-..              HPST
-===================================
+Dataset       Model     Accuracy  Parameters
+============================================
+MNIST         LeNet     98.9      431k
+--------------------------------------------
+MNIST         RNN       96.43     34k
+..            GRU       97.31     84k
+..            LSTM      96.89     109k
+..            PST       97.30     211k
+--------------------------------------------
+MNIST         HRNN      96.66     59k
+..            HGRU      98.00     159k
+..            HLSTM     97.24     209k
+..            HPST      98.17     412k
+--------------------------------------------
+FashionMNIST  LeNet     88.9      431k
+--------------------------------------------
+FashionMNIST  RNN       65.97     34k
+..            GRU       72.88     84k
+..            LSTM      72.08     109k
+..            PST       72.19     412k
+--------------------------------------------
+FashionMNIST  HRNN      78.66     59k
+..            HGRU                159k
+..            HLSTM
+..            HPST      85.57
+--------------------------------------------
+CIFAR10       ResNet18
+--------------------------------------------
+CIFAR10       HRNN
+..            HGRU      55.21     159k
+..            HLSTM
+..            HPST                412k
+============================================
 \end{verbatim}
 
 
