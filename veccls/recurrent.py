@@ -39,7 +39,7 @@ class LongestPathRNN(th.nn.Module):
         self.encoder = th.nn.Linear(input_size, hidden_size)
         self.num_params = sum(param.numel() for param in self.parameters()
                 if param.requires_grad)
-    def forward(self, x, y, z, *, device: str = 'cpu'):
+    def forward(self, x, y, trco, lens, packlens, *, device: str = 'cpu'):
         '''
         input should be pad_sequence result. we pack it by ourselves
         see torch.nn.utils.rnn.pack_padded_sequence
@@ -47,15 +47,11 @@ class LongestPathRNN(th.nn.Module):
         B = int(x.shape[1])  # batch size. x is already padded sequence
         x = x.to(device)
         x = self.encoder(x)
-        pack = pack_padded_sequence(x, z.lens)
+        pack = pack_padded_sequence(x, lens)
         pack = pack.to(device)
         y = y.to(device)
-        if not hasattr(z, 'tc'):
-            h0 = th.zeros(1, B, self.hidden_size).to(pack[0].device)
-            h0 = h0.expand(self.num_layers, B, self.hidden_size).contiguous()
-        else:
-            h0 = self.tc(z.tc.to(device)).unsqueeze(0)
-            h0 = h0.expand(self.num_layers, B, self.hidden_size).contiguous()
+        h0 = self.tc(trco.to(device)).unsqueeze(0)
+        h0 = h0.expand(self.num_layers, B, self.hidden_size).contiguous()
         if self.rnn_type in ('rnn', 'gru'):
             output, hn = self.rnn(pack, h0)
         else:
@@ -105,19 +101,18 @@ class HierarchicalRNN(th.nn.Module):
         self.encoder = th.nn.Linear(input_size, hidden_size) # MLP here harmful
         self.num_params = sum(param.numel() for param in self.parameters()
                 if param.requires_grad)
-    def forward(self, x, y, z, *, device: str='cpu'):
+    def forward(self, x, y, trco, lens, packlens, *, device: str='cpu'):
         '''
         x should be padded sequence
         '''
         B = int(x.shape[1]) # batch size
         x = x.to(device)
         x = self.encoder(x)
-        pack = pack_padded_sequence(x, z.lens, enforce_sorted=False)
+        pack = pack_padded_sequence(x, lens, enforce_sorted=False)
         pack = pack.to(device)
         y = y.to(device)
         # [hierarchy 1]: per-path representations
-        assert(hasattr(z, 'tc'))
-        h0 = self.pathtc(z.tc.to(device)).unsqueeze(0)
+        h0 = self.pathtc(trco.to(device)).unsqueeze(0)
         h0 = h0.expand(self.num_layers, B, self.hidden_size).contiguous()
         if self.rnn_type in ('hrnn', 'hgru'):
             output, hn = self.pathrnn(pack, h0)
@@ -130,8 +125,8 @@ class HierarchicalRNN(th.nn.Module):
             h = hn[-1, ...]
         # [hierarchi 2]: aggregate path representations into svg repres
         #print(z.packlens)
-        starts = z.packlens.cumsum(dim=0) - z.packlens
-        ends = z.packlens.cumsum(dim=0)
+        starts = packlens.cumsum(dim=0) - packlens
+        ends = packlens.cumsum(dim=0)
         #print('path h.shape', h.shape)
         pathr = [h[starts[i]:ends[i]] for i in range(len(ends))]
         #print('pathr shape', len(pathr), [x.shape for x in pathr])

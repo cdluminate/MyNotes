@@ -20,8 +20,8 @@ def train_one_epoch(model, optim, loader,
         logfile = open(os.path.join(logdir, 'train_log.txt'), 'at')
     else:
         logfile = None
-    for i, (x, y, z) in enumerate(loader):
-        logits = model(x, y, z, device=device)
+    for i, (x, y, trco, lens, packlens) in enumerate(loader):
+        logits = model(x, y, trco, lens, packlens, device=device)
         #print(logits.shape, y.shape)
         loss = F.cross_entropy(logits, y.to(device), reduction='mean')
         optim.zero_grad()
@@ -59,8 +59,8 @@ def evaluate(model, loader,
     losses = []
     preds = []
     ys = []
-    for (x, y, z) in track(loader, description=f'Evaluation ...'):
-        logits = model(x, y, z, device=device)
+    for (x, y, trco, lens, packlens) in track(loader, description=f'Evaluation ...'):
+        logits = model(x, y, trco, lens, packlens, device=device)
         loss = F.cross_entropy(logits, y.to(device), reduction='none')
 
         losses.append(loss.cpu())
