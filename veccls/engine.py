@@ -6,6 +6,10 @@ import rich
 from rich.progress import track
 console = rich.get_console()
 
+def _reduce_float_(num: float, local_rank: int):
+    tmp = th.tensor(num).to(local_rank)
+    th.distributed.all_reduce(tmp, op=th.distributed.ReduceOp.SUM)
+    return tmp.item() / th.distributed.get_world_size()
 
 def train_one_epoch(model, optim, loader,
         *,
@@ -37,10 +41,8 @@ def train_one_epoch(model, optim, loader,
             pred = logits.max(dim=1)[1].cpu()
             acc = (pred == y.cpu()).cpu().float().mean().item() * 100
             if local_rank is not None:
-                tmp = th.tensor(acc).to(local_rank)
-                th.distributed.all_reduce(tmp, op=th.distributed.ReduceOp.SUM)
-                tmp = tmp.item() / th.distributed.get_world_size()
-                acc = tmp
+                acc = _reduce_float_(acc, local_rank)
+                loss = th.tensor(_reduce_float_(loss.item(), local_rank))
             console.print(f'Eph[{epoch}] ({i+1}/{len(loader)})',
                     f'loss={loss.item():.3f}',
                     f'accuracy={acc:.2f} (/100)',
@@ -58,12 +60,15 @@ def evaluate(model, loader,
         epoch: int = -1,
         device: str = 'cpu',
         logdir: str = None,
+        local_rank: int = None,
         ):
     '''
     evaluate, literally
     '''
     if logdir is not None:
         logfile = open(os.path.join(logdir, 'evaluate_log.txt'), 'at')
+        if local_rank is not None and local_rank > 0:
+            logfile = None
     else:
         logfile = None
     losses = []
@@ -82,6 +87,9 @@ def evaluate(model, loader,
     #console.print(losses.shape, preds.shape, ys.shape)
     mean_loss = losses.mean()
     acc = (preds == ys).cpu().float().mean().item() * 100
+    if local_rank is not None:
+        acc = _reduce_float_(acc, local_rank)
+        loss = th.tensor(_reduce_float_(loss.item(), local_rank))
     console.print(f'Eph[{epoch}] Evaluation:',
             f'loss={mean_loss:.2f}',
             f'acc={acc:.2f} (/100)')

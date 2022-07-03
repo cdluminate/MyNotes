@@ -122,12 +122,14 @@ def train_mnist_():
         # train one epoch
         model.train()
         engine.train_one_epoch(model, optim, loadertrn,
-                epoch=epoch, device=ag.device, logdir=ag.logdir)
+                epoch=epoch, device=ag.device, logdir=ag.logdir,
+                local_rank=ag.local_rank)
 
         # evaluate
         model.eval()
         engine.evaluate(model, loadertst,
-                epoch=epoch, device=ag.device, logdir=ag.logdir)
+                epoch=epoch, device=ag.device, logdir=ag.logdir,
+                local_rank=ag.local_rank)
 
         # adjust learning rate
         scheduler.step()
