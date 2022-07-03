@@ -38,12 +38,30 @@ class LongestPathTransformer(th.nn.Module):
             layernorm: bool = False):
         super(LongestPathTransformer, self).__init__()
         self.model_type = model_type
+        # positional encoding
         self.posenc = PositionalEncoding(d_model=d_model, dropout=dropout)
+        # path translate color encoder
+        self.pathtc = th.nn.Sequential(
+                th.nn.Linear(5, d_mlp),
+                th.nn.ReLU(),
+                th.nn.Linear(d_mlp, d_mlp),
+                th.nn.ReLU(),
+                th.nn.Linear(d_mlp, d_model),
+                th.nn.ReLU(),
+                )
+        # transformer encoder
         enclayer = th.nn.TransformerEncoderLayer(d_model, nhead, d_mlp, dropout)
         encoder_norm = th.nn.LayerNorm(d_model) if layernorm else None
         self.transenc = th.nn.TransformerEncoder(enclayer, nlayers, encoder_norm)
-        self.encoder = th.nn.Linear(input_size, d_model) # XXX: replace into MLP
+        # transformer decoder
+        declayer = th.nn.TransformerDecoderLayer(d_model, nhead, d_mlp, dropout)
+        decoder_norm = th.nn.LayerNorm(d_model) if layernorm else None
+        self.transdec = th.nn.TransformerDecoder(declayer, nlayers, decoder_norm)
+        # encode 2-d trajectory
+        self.encoder = th.nn.Linear(input_size, d_model) # XXX: no MLP here
+        # classification head
         self.fc = th.nn.Linear(d_model, num_classes)
+        # other parameters
         self.d_model = d_model
         self.num_classes = num_classes
         self.num_params = sum(param.numel() for param in self.parameters()
@@ -73,10 +91,19 @@ class LongestPathTransformer(th.nn.Module):
         #print('debug', xepe.shape, mask.shape)
         memory = self.transenc(xepe, src_key_padding_mask=mask)
         #print('debug', memory.shape)
+        # [begin: no decoder case]
         # use hidden state corrosponding the first token. following BERT.
-        h = memory[0, ...]
-        logits = self.fc(h)
+        #h = memory[0, ...]
+        #logits = self.fc(h)
         #print('logits', logits.shape)
+        # [end: no decoder case]
+        # [begin: has decoder]
+        tgt = self.pathtc(z.tc.to(device)).unsqueeze(0)
+        hs = self.transdec(tgt, memory, memory_key_padding_mask=mask)
+        hs = hs.squeeze(0)
+        #print('debug:', hs.shape)
+        logits = self.fc(hs)
+        # [end: has decoder]
         return logits
 
 class HierarchicalTransformer(object):
