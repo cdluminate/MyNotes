@@ -100,7 +100,7 @@ def get_cifar10_loader(split: str, batch_size: int, longest: bool):
     else:
         collate_fn = indefinite_sequence_collate
     shuffle = True if split == 'train' else False
-    pin_memory = True if os.getenv('LOCAL_RANK', None) if None else False
+    pin_memory = True if os.getenv('LOCAL_RANK', None) is None else False
     num_workers = 8 if os.getenv('LOCAL_RANK', None) is None else 0
     sampler = None
     if os.getenv('LOCAL_RANK', None) is not None:
