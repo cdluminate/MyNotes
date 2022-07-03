@@ -33,7 +33,6 @@ def cifar10_collect(src: str):
     '''
     collect processed data from
     '''
-    raise NotImplementedError
     dataset = []
     files = glob.glob(os.path.join(src, '*.json'))
     for file in track(files):

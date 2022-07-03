@@ -48,6 +48,9 @@ mnist-4:
 fashion-4:
 	python3 -m veccls.fashion collect -d fashion-train
 	python3 -m veccls.fashion collect -d fashion-test
+cifar10-4:
+	python3 -m veccls.cifar10 collect -d cifar10-train
+	python3 -m veccls.cifar10 collect -d cifar10-test
 
 mnist-5:
 	# step 5: now we can remove the temporary files
