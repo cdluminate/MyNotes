@@ -26,6 +26,9 @@ mnist-2:
 fashion-2:
 	bash scripts/prepro-fashion.sh fashion-train/
 	bash scripts/prepro-fashion.sh fashion-test/
+cifar10-2:
+	bash scripts/prepro-cifar10.sh cifar10-train/
+	bash scripts/prepro-cifar10.sh cifar10-test/
 	
 mnist-3:
 	# step 3: parse svgs into sequence data
