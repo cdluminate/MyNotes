@@ -11,12 +11,12 @@ from . import engine
 console = rich.get_console()
 
 
-if __name__ == '__main__':
+def train_mnist():
     ag = argparse.ArgumentParser('''Train an MNIST model, vector graphics!
     (1) Passing in the color and translate as h0 to RNN slightly improves
         performance, from 95.5 to 95.8 (model_type=gru), only using longest
     ''')
-    # recurrent neural network and transformer settings
+    # -- recurrent neural network and transformer settings --
     ag.add_argument('--model_type', type=str, default='gru',
             choices=('rnn', 'gru', 'lstm',
                 'hrnn', 'hgru', 'hlstm', 'pst', 'hpst'))
@@ -25,23 +25,31 @@ if __name__ == '__main__':
     ag.add_argument('--num_layers', type=int, default=3)
     ag.add_argument('--nhead', type=int, default=2)
     ag.add_argument('--dropout', type=float, default=0.01)
-    # optimizer and training setting
+    # -- optimizer and training setting --
     ag.add_argument('--lr', type=float, default=1e-3)
     ag.add_argument('--weight_decay', type=float, default=1e-7)
     ag.add_argument('--epochs', type=int, default=16)
     ag.add_argument('--lr_drop', type=int, default=12)
     ag.add_argument('--device', type=str, default='cpu'
             if not th.cuda.is_available() else 'cuda')
-    # logging
+    # -- logging and file operations --
     ag.add_argument('--logdir', type=str, default='train_mnist_')
+    # -- distributed training --
+    # https://pytorch.org/docs/stable/distributed.html#launch-utility
+    ag.add_argument('--local_rank', type=int, default=None)
     ag = ag.parse_args()
     ag.logdir = ag.logdir + ag.model_type
     console.print(ag)
 
     if not os.path.exists(ag.logdir):
         os.mkdir(ag.logdir)
-
-    console.print('[bold white on violet] >_< start training MnistRNN')
+    if ag.local_rank is not None:
+        if not th.cuda.is_available():
+            raise NotImplementedError('distributed not implemented for cpu')
+        th.cuda.set_device(ag.local_rank)
+        th.distributed.init_process_group(backend='NCCL', init_method='env://')
+    else:
+        console.print('[bold white on violet]>_< start training MnistRNN')
 
     modelmapping = {
             # only use the longest path. one path per image.
@@ -73,6 +81,9 @@ if __name__ == '__main__':
                 dropout=ag.dropout).to(ag.device)
     console.print(model)
     console.print(f'-- Number of parameters:', model.num_params)
+    if ag.local_rank is not None:
+        model = th.nn.parallel.DistributedDataParallel(model,
+                device_ids=[ag.local_rank], output_device=ag.local_rank)
     optim = th.optim.Adam(model.parameters(),
         lr=ag.lr, weight_decay=ag.weight_decay)
     scheduler = th.optim.lr_scheduler.MultiStepLR(optim,
@@ -106,3 +117,7 @@ if __name__ == '__main__':
 
         # adjust learning rate
         scheduler.step()
+
+
+if __name__ == '__main__':
+    train_mnist()
