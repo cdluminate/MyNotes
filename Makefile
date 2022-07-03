@@ -61,6 +61,8 @@ mnist-7:
 	# step 7: training
 	python3 -m veccls.train_mnist --model_type=gru
 	python3 -m veccls.train_mnist --model_type=hgru
+	python3 -m veccls.train_mnist --model_type=pst
 fashion-7:
 	python3 -m veccls.train_fashion --model_type=gru
 	python3 -m veccls.train_fashion --model_type=hgru
+	python3 -m veccls.train_fashion --model_type=pst
