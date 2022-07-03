@@ -19,7 +19,7 @@ def main():
         console.print('[white on red]>_< pulled down processes.')
         exit()
 
-def main_()
+def main_():
     ag = argparse.ArgumentParser('''Train an Fashion model, vector graphics!
     ''')
     # -- recurrent neural network and transformer settings --
