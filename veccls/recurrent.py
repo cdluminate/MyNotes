@@ -108,7 +108,7 @@ class HierarchicalRNN(th.nn.Module):
         B = int(x.shape[1]) # batch size
         x = x.to(device)
         x = self.encoder(x)
-        pack = pack_padded_sequence(x, lens, enforce_sorted=False)
+        pack = pack_padded_sequence(x, lens.cpu(), enforce_sorted=False)
         pack = pack.to(device)
         y = y.to(device)
         # [hierarchy 1]: per-path representations
