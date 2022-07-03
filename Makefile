@@ -61,6 +61,10 @@ fashion-5:
 	-$(RM) -rf fashion-train
 	-$(RM) -rf fashion-test
 	echo -- We use fashin-train.json and fashion-test.json --
+cifar10-5:
+	-$(RM) -rf cifar10-train
+	-$(RM) -rf cifar10-test
+	echo -- We use cifar10-train.json and cifar10-test.json --
 
 # dataloader and model training: mnist-{6...
 mnist-6:
