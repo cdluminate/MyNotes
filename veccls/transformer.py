@@ -34,12 +34,14 @@ class LongestPathTransformer(th.nn.Module):
             d_mlp: int,
             nlayers: int,
             dropout: float = 0.1,
-            num_classes: int = 10):
+            num_classes: int = 10,
+            layernorm: bool = False):
         super(LongestPathTransformer, self).__init__()
         self.model_type = model_type
         self.posenc = PositionalEncoding(d_model=d_model, dropout=dropout)
         enclayer = th.nn.TransformerEncoderLayer(d_model, nhead, d_mlp, dropout)
-        self.transenc = th.nn.TransformerEncoder(enclayer, nlayers)
+        encoder_norm = th.nn.LayerNorm(d_model) if layernorm else None
+        self.transenc = th.nn.TransformerEncoder(enclayer, nlayers, encoder_norm)
         self.encoder = th.nn.Linear(input_size, d_model) # XXX: replace into MLP
         self.fc = th.nn.Linear(d_model, num_classes)
         self.d_model = d_model
