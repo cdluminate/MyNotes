@@ -35,7 +35,6 @@ def train_mnist():
     # -- logging and file operations --
     ag.add_argument('--logdir', type=str, default='train_mnist_')
     # -- distributed training --
-    # https://pytorch.org/docs/stable/distributed.html#launch-utility
     ag.add_argument('--local_rank', type=int, default=None)
     ag = ag.parse_args()
     ag.logdir = ag.logdir + ag.model_type
@@ -46,6 +45,8 @@ def train_mnist():
     console.print(ag)
 
     if ag.local_rank is not None:
+        # https://pytorch.org/docs/stable/distributed.html#launch-utility
+        # https://pytorch.org/tutorials/intermediate/ddp_tutorial.html
         if not th.cuda.is_available():
             raise NotImplementedError('distributed not implemented for cpu')
         th.cuda.set_device(ag.local_rank)
