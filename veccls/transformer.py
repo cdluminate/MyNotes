@@ -75,7 +75,7 @@ class LongestPathTransformer(th.nn.Module):
         mask = [[1]*i + [0]*(lens.max().item()-i) for i in lens]
         mask = th.tensor(mask) #.bool() # nan
         return mask
-    def forward(self, x, y, z, *, device: str = 'cpu'):
+    def forward(self, x, y, trco, lens, packlens, *, device: str = 'cpu'):
         '''
         x is padded sequence
         y is labels
@@ -84,7 +84,7 @@ class LongestPathTransformer(th.nn.Module):
             lens: sequence lengths
         '''
         B = int(x.shape[1])
-        mask = self.gen_mask(z.lens)
+        mask = self.gen_mask(lens)
         mask = mask.to(device)
         xe = self.encoder(x.to(device)) * math.sqrt(self.d_model)  # helpful
         xepe = self.posenc(xe)
@@ -98,7 +98,7 @@ class LongestPathTransformer(th.nn.Module):
         #print('logits', logits.shape)
         # [end: no decoder case]
         # [begin: has decoder]
-        tgt = self.pathtc(z.tc.to(device)).unsqueeze(0)
+        tgt = self.pathtc(trco.to(device)).unsqueeze(0)
         hs = self.transdec(tgt, memory, memory_key_padding_mask=mask)
         hs = hs.squeeze(0)
         #print('debug:', hs.shape)
@@ -156,7 +156,7 @@ class HierarchicalPathTransformer(th.nn.Module):
         mask = [[1]*i + [0]*(lens.max().item()-i) for i in lens]
         mask = th.tensor(mask) #.bool() #nan
         return mask
-    def forward(self, x, y, z, *, device: str = 'cpu'):
+    def forward(self, x, y, trco, lens, packlens, *, device: str = 'cpu'):
         '''
         x is padded sequence
         y is labels
@@ -166,7 +166,7 @@ class HierarchicalPathTransformer(th.nn.Module):
         '''
         B = int(x.shape[1])
         # [hierarchy 1]: per-path representations
-        mask = self.gen_mask(z.lens).to(device)
+        mask = self.gen_mask(lens).to(device)
         xe = self.xyenc(x.to(device)) * math.sqrt(self.d_model)
         xepe = self.posenc(xe)
         #print('debug', xepe.shape, mask.shape)
@@ -179,18 +179,18 @@ class HierarchicalPathTransformer(th.nn.Module):
         #print('logits', logits.shape)
         # [end: no decoder case]
         # [begin: has decoder]
-        tgt = self.pathtc(z.tc.to(device)).unsqueeze(0)
+        tgt = self.pathtc(trco.to(device)).unsqueeze(0)
         hs = self.pathdec(tgt, memory, memory_key_padding_mask=mask)
         hs = hs.squeeze(0)
         #print('debug:', hs.shape)
         # [hierarchy 2]: aggregate paths per svg
         # we do not need position encoding for path aggregation
-        starts = z.packlens.cumsum(dim=0) - z.packlens
-        ends = z.packlens.cumsum(dim=0)
+        starts = packlens.cumsum(dim=0) - packlens
+        ends = packlens.cumsum(dim=0)
         pathr = [hs[starts[i]:ends[i]] for i in range(len(ends))]
         pathr = pad_sequence(pathr)
         #print('debug: pathr', pathr.shape)
-        pathmask = self.gen_mask(z.packlens).to(device)
+        pathmask = self.gen_mask(packlens).to(device)
         smemory = self.svgenc(pathr, src_key_padding_mask=pathmask)
         #print('debug: smemory:', smemory.shape)
         stgt = th.zeros((1, smemory.size(1), smemory.size(2)), device=device)
