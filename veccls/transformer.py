@@ -1,4 +1,5 @@
 import torch as th
+from torch.nn.utils.rnn import pad_sequence
 import math
 import rich
 console = rich.get_console()
@@ -120,6 +121,8 @@ class HierarchicalPathTransformer(th.nn.Module):
             layernorm: bool = False):
         super(HierarchicalPathTransformer, self).__init__()
         self.model_type = model_type
+        # path: encode 2-d trajectory
+        self.xyenc = th.nn.Linear(input_size, d_model) # XXX: no MLP here
         # path: positional encoding
         self.posenc = PositionalEncoding(d_model=d_model, dropout=dropout)
         # path: transformer encoder
@@ -136,14 +139,12 @@ class HierarchicalPathTransformer(th.nn.Module):
         declayer = th.nn.TransformerDecoderLayer(d_model, nhead, d_mlp, dropout)
         decoder_norm = th.nn.LayerNorm(d_model) if layernorm else None
         self.pathdec = th.nn.TransformerDecoder(declayer, nlayers, decoder_norm)
-        # path: encode 2-d trajectory
-        self.xyenc = th.nn.Linear(input_size, d_model) # XXX: no MLP here
         # svg: transformer encoder
         senclayer = th.nn.TransformerEncoderLayer(d_model, nhead, d_mlp, dropout)
-        self.svgenc = th.nn.TransformerEncoder(senclayer, nlayer, encoder_norm)
+        self.svgenc = th.nn.TransformerEncoder(senclayer, nlayers, encoder_norm)
         # svg: transformer decoder
         sdeclayer = th.nn.TransformerDecoderLayer(d_model, nhead, d_mlp, dropout)
-        self.svgdec = th.nn.TransformerDecoder(sdeclayer, nlayer, decoder_norm)
+        self.svgdec = th.nn.TransformerDecoder(sdeclayer, nlayers, decoder_norm)
         # svg: classification head
         self.fc = th.nn.Linear(d_model, num_classes)
         # other parameters
@@ -151,7 +152,7 @@ class HierarchicalPathTransformer(th.nn.Module):
         self.num_classes = num_classes
         self.num_params = sum(param.numel() for param in self.parameters()
                 if param.requires_grad)
-    def gen_mask(self, lens: th.Tensor):
+    def gen_mask(self, lens: th.Tensor) -> th.Tensor:
         mask = [[1]*i + [0]*(lens.max().item()-i) for i in lens]
         mask = th.tensor(mask)
         return mask
@@ -164,13 +165,13 @@ class HierarchicalPathTransformer(th.nn.Module):
             lens: sequence lengths
         '''
         B = int(x.shape[1])
-        mask = self.gen_mask(z.lens)
-        mask = mask.to(device)
-        xe = self.encoder(x.to(device)) * math.sqrt(self.d_model)
+        # [hierarchy 1]: per-path representations
+        mask = self.gen_mask(z.lens).to(device)
+        xe = self.xyenc(x.to(device)) * math.sqrt(self.d_model)
         xepe = self.posenc(xe)
         #print('debug', xepe.shape, mask.shape)
-        memory = self.transenc(xepe, src_key_padding_mask=mask)
-        #print('debug', memory.shape)
+        memory = self.pathenc(xepe, src_key_padding_mask=mask)
+        #print('debug', memory.shape, z.packlens)
         # [begin: no decoder case]
         # use hidden state corrosponding the first token. following BERT.
         #h = memory[0, ...]
@@ -179,10 +180,24 @@ class HierarchicalPathTransformer(th.nn.Module):
         # [end: no decoder case]
         # [begin: has decoder]
         tgt = self.pathtc(z.tc.to(device)).unsqueeze(0)
-        hs = self.transdec(tgt, memory, memory_key_padding_mask=mask)
+        hs = self.pathdec(tgt, memory, memory_key_padding_mask=mask)
         hs = hs.squeeze(0)
         #print('debug:', hs.shape)
-        logits = self.fc(hs)
+        # [hierarchy 2]: aggregate paths per svg
+        # we do not need position encoding for path aggregation
+        starts = z.packlens.cumsum(dim=0) - z.packlens
+        ends = z.packlens.cumsum(dim=0)
+        pathr = [hs[starts[i]:ends[i]] for i in range(len(ends))]
+        pathr = pad_sequence(pathr)
+        #print('debug: pathr', pathr.shape)
+        pathmask = self.gen_mask(z.packlens).to(device)
+        smemory = self.svgenc(pathr, src_key_padding_mask=pathmask)
+        #print('debug: smemory:', smemory.shape)
+        stgt = th.zeros((1, smemory.size(1), smemory.size(2)), device=device)
+        #print('debug: stgt', stgt.shape)
+        shs = self.svgdec(stgt, smemory, memory_key_padding_mask=pathmask)
+        #print('debug: shs:', shs.shape)
+        logits = self.fc(shs.squeeze(0))
         # [end: has decoder]
         return logits
 
