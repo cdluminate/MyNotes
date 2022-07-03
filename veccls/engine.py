@@ -3,6 +3,7 @@ import argparse
 import torch as th
 import torch.nn.functional as F
 import rich
+import time
 from rich.progress import track
 console = rich.get_console()
 
@@ -21,6 +22,7 @@ def train_one_epoch(model, optim, loader,
     '''
     train for one epoch, literally
     '''
+    time_start = time.time()
     if local_rank is not None:
         report_every = int(report_every / th.distributed.get_world_size())
     if logdir is not None:
@@ -55,6 +57,11 @@ def train_one_epoch(model, optim, loader,
                 logfile.write(f'loss={loss.item():.3f} ')
                 logfile.write(f'accuracy={acc:.2f} (/100)')
                 logfile.write('\n')
+    time_end = time.time()
+    time_elapsed = int(time_end - time_start)
+    if local_rank is None or local_rank == 0:
+        console.print(f'Eph[{epoch}] elapsed time',
+                time.strftime("%Hh:%Mm:%Ss", time.gmtime(time_elapsed)))
 
 
 @th.no_grad()
