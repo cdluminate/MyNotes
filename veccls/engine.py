@@ -21,6 +21,8 @@ def train_one_epoch(model, optim, loader,
     '''
     train for one epoch, literally
     '''
+    if local_rank is not None:
+        report_every = int(report_every / th.distributed.get_world_size())
     if logdir is not None:
         logfile = open(os.path.join(logdir, 'train_log.txt'), 'at')
         if local_rank is not None and local_rank > 0:
