@@ -49,7 +49,7 @@
 \begin{document}
 
 %%%%%%%%% TITLE - PLEASE UPDATE
-\title{PST: Path Sequence Transformer for Raster Image Classification}
+\title{Follow the Trace: Path Sequence Transformer for Image Classification}
 
 \author{First Author\\
 Institution1\\
@@ -71,18 +71,39 @@ First line of institution2 address\\
 %%%%%%%%% ABSTRACT
 \begin{abstract}
     %
-    In this paper, we restart image classification from scratch, based on
-    vector graphics instead of traditional raster graphics represented in
-    multi-dimensional arrays.
+    In this paper, we rethink of the image classification problem from scratch
+    from a vector graphics point of view, casting image classification into a
+    pure sequence classification problem.
     %
-    By doing so, image classification can be cast as a \textit{pure} sequence
-    classification problem, as vector graphics or traced raster images
-    can be represented in a hierarchical sequence of paths.
+    Traditionally, raster image is represented in multi-dimensional arrays
+    storing texture information, while the shape information is of high order.
     %
-    In this paper, we present Path Sequence Transformer for this purpose.
+    However, raster images can be traced into vector graphics, representing
+    images in a series of paths with the shapes being the first-order
+    information, as the paths resemble human stroks.
     %
-    The proposed method is evaluated on MNIST, Fashion-MNIST, CIFAR-10,
-    CIFAR-100, Tiny-ImageNet, as well as ImageNet-1k.
+    Namely, the vector representation of an image is a sequence (contains a
+    variable number of paths) of sequences (each path is a variable-length
+    sequence of x-y coordinates).
+    %
+    To achieve image classification based on such nested sequence, we reuse
+    common building blocks for sequence modeling, and present baseline models
+    including Hierarchical Path Sequence Transformer.
+    %
+    Specifically, the first level of sequence model computes the representation
+    of a single path with its fill color, while the second level of sequence
+    model aggregates all path representations for an image and yields
+    the logits.
+    %
+    The proposed method is evaluated on seven commonly used datasets, including
+    MNIST, Fashion-MNIST, CIFAR-10, CIFAR-100, Tiny-ImageNet, ImageNet-1k,
+    as well as ImageNet-22k.
+    %
+    [TODO] characteristics.
+    %
+    Ultimately, we assert that raster image is not the sole starting point
+    for computer vision problems.
+    %
 \end{abstract}
 
 %%%%%%%%% BODY TEXT
@@ -138,10 +159,10 @@ FashionMNIST  HRNN      78.66     59k
 --------------------------------------------
 CIFAR10       ResNet18            11.6m
 --------------------------------------------
-CIFAR10       HRNN
+CIFAR10       HRNN                59k
 ..            HGRU      55.21     159k
-..            HLSTM
-..            HPST                412k
+..            HLSTM               209k
+..            HPST      68.78     412k
 ============================================
 \end{verbatim}
 
