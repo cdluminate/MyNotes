@@ -100,10 +100,25 @@ def get_mnist_loader(split: str, batch_size: int, longest: bool, *, mnist='mnist
         collate_fn = longest_sequence_collate
     else:
         collate_fn = indefinite_sequence_collate
-    loader = DataLoader(data, batch_size=batch_size,
-            shuffle=True if split == 'train' else False,
-            pin_memory=True,
-            num_workers=4, collate_fn=collate_fn)
+    shuffle = True if split == 'train' else False
+    pin_memory = True if os.getenv('LOCAL_RANK', None) is None else False
+    num_workers = 4 if os.getenv('LOCAL_RANK', None) is None else 0
+    sampler = None
+    if os.getenv('LOCAL_RANK', None) is not None:
+        from torch.utils.data.distributed import DistributedSampler
+        world_size = th.distributed.get_world_size()
+        local_rank = int(os.getenv('LOCAL_RANK'))
+        sampler = DistributedSampler(data, num_replicas=world_size,
+                rank=local_rank, shuffle=shuffle)
+        loader = DataLoader(data, batch_size=batch_size,
+                pin_memory=pin_memory,
+                num_workers=num_workers, collate_fn=collate_fn,
+                sampler=sampler)
+    else:
+        loader = DataLoader(data, batch_size=batch_size,
+                shuffle=shuffle, pin_memory=pin_memory,
+                num_workers=num_workers, collate_fn=collate_fn,
+                sampler=sampler)
     return loader
 
 if __name__ == '__main__':
