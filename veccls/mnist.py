@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 import ujson as json
 import glob
 import re
+from . import configs
 import rich
 from rich.progress import track
 console = rich.get_console()
@@ -26,12 +27,11 @@ def mnist_burst(dest: str, split: str, *,
     if not os.path.exists(dest):
         os.mkdir(dest)
     if mnist == 'mnist':
-        data = V.datasets.MNIST(root=os.path.expanduser('~/.torch/MNIST'),
+        data = V.datasets.MNIST(root=configs.mnist.root,
                             train=True if split=='train' else False,
                             download=True)
     elif mnist == 'fashion':
-        data = V.datasets.FashionMNIST(
-               root=os.path.expanduser('~/.torch/FashionMNIST'),
+        data = V.datasets.FashionMNIST(root=configs.fashion.root,
                             train=True if split=='train' else False,
                             download=True)
     for i, (x, y) in enumerate(data):
