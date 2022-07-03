@@ -1,7 +1,6 @@
 import os
 import torch as th
 import ujson as json
-from easydict import EasyDict
 import functools as ft
 import torch as th
 from torch.utils.data import Dataset, DataLoader
@@ -42,7 +41,8 @@ class CIFAR10Dataset(Dataset):
             translate[0] /= float(width)
             translate[1] /= float(height)
             transcolor = translate + color
-            return path, label, transcolor
+            packlen = 1
+            return (path, label, transcolor, packlen)
         else:
             path = []
             tc = []
@@ -60,19 +60,20 @@ class CIFAR10Dataset(Dataset):
                 tc.append(transcolor)
             packlen = len(path)
             #path = pad_sequence(path)
-            return path, label, tc, packlen
+            return (path, label, tc, packlen)
 
 def longest_sequence_collate(batch):
-    paths, labels, transcolors = zip(*batch)
-    pack = sorted(zip(paths, labels, transcolors),
+    paths, labels, transcolors, packlens = zip(*batch)
+    pack = sorted(zip(paths, labels, transcolors, packlens),
             key=lambda i: len(i[0]),
             reverse=True)
-    paths, labels, transcolors = zip(*pack)
+    paths, labels, transcolors, packlens = zip(*pack)
     lens = th.tensor([x.shape[0] for x in paths])
     paths = pad_sequence(paths)
     labels = th.tensor(labels)
     transcolors = th.tensor(transcolors)
-    return paths, labels, EasyDict({'tc': transcolors, 'lens': lens})
+    packlens = th.tensor(packlens)
+    return (paths, labels, transcolors, lens, packlens)
 
 def indefinite_sequence_collate(batch):
     paths, labels, transcolors, packlens = zip(*batch)
@@ -89,11 +90,7 @@ def indefinite_sequence_collate(batch):
     labels = th.tensor(labels)
     transcolors = th.tensor(transcolors)
     packlens = th.tensor(packlens)
-    edict = EasyDict()
-    edict.tc = transcolors
-    edict.lens = pathlens
-    edict.packlens = packlens
-    return paths, labels, edict
+    return (paths, labels, transcolors, pathlens, packlens)
 
 def get_cifar10_loader(split: str, batch_size: int, longest: bool):
     assert(split in ('train', 'test'))
@@ -102,10 +99,25 @@ def get_cifar10_loader(split: str, batch_size: int, longest: bool):
         collate_fn = longest_sequence_collate
     else:
         collate_fn = indefinite_sequence_collate
-    loader = DataLoader(data, batch_size=batch_size,
-            shuffle=True if split == 'train' else False,
-            pin_memory=True,
-            num_workers=8, collate_fn=collate_fn)
+    shuffle = True if split == 'train' else False
+    pin_memory = True if os.getenv('LOCAL_RANK', None) if None else False
+    num_workers = 8 if os.getenv('LOCAL_RANK', None) is None else 0
+    sampler = None
+    if os.getenv('LOCAL_RANK', None) is not None:
+        from torch.utils.data.distributed import DistributedSampler
+        world_size = th.distributed.get_world_size()
+        local_rank = int(os.getenv('LOCAL_RANK'))
+        sampler = DistributedSampler(data, num_replicas=world_size,
+                rank=local_rank, shuffle=shuffle)
+        loader = DataLoader(data, batch_size=batch_size,
+                pin_memory=pin_memory,
+                num_workers=num_workers, collate_fn=collate_fn,
+                sampler=sampler)
+    else:
+        loader = DataLoader(data, batch_size=batch_size,
+                shuffle=shuffle, pin_memory=pin_memory,
+                num_workers=num_workers, collate_fn=collate_fn,
+                sampler=sampler)
     return loader
 
 if __name__ == '__main__':
@@ -124,11 +136,12 @@ if __name__ == '__main__':
 
     console.print('>_< testing cifar10 loader: test (longest)')
     loadertrn = get_cifar10_loader('train', 5, longest=True)
-    for (x, y, z) in loadertrn:
-        print(x.shape, y.shape, z.tc.shape, z.lens.shape)
+    for (x, y, trco, lens, packlens) in loadertrn:
+        print(x.shape, y.shape, trco.shape, lens.shape, packlens.shape)
         print('labels', y)
-        print('z.lens', z.lens)
-        print('z.tc', z.tc)
+        print('trco', trco)
+        print('lens', lens)
+        print('packlens', packlens)
         break
 
     console.print('>_< testing cifar10 dataset: test (all)')
@@ -138,10 +151,10 @@ if __name__ == '__main__':
 
     console.print('>_< testing cifar10 loader: train (all)')
     loader = get_cifar10_loader('train', 5, longest=False)
-    for (x, y, z) in loader:
-        print(x.shape, y.shape, z.tc.shape, z.lens.shape, z.packlens.shape)
+    for (x, y, trco, lens, packlens) in loader:
+        print(x.shape, y.shape, trco.shape, lens.shape, packlens.shape)
         print('labels', y)
-        print('z.lens', z.lens)
-        print('z.tc', z.tc)
-        print('z.packlens', z.packlens)
+        print('trco', trco)
+        print('lens', lens)
+        print('packlens', packlens)
         break
