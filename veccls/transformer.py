@@ -33,15 +33,17 @@ class LongestPathTransformer(th.nn.Module):
             nhead: int,
             d_mlp: int,
             nlayers: int,
-            dropout: float = 0.1):
+            dropout: float = 0.1,
+            num_classes: int = 10):
         super(LongestPathTransformer, self).__init__()
         self.model_type = model_type
         self.posenc = PositionalEncoding(d_model=d_model, dropout=dropout)
         enclayer = th.nn.TransformerEncoderLayer(d_model, nhead, d_mlp, dropout)
         self.transenc = th.nn.TransformerEncoder(enclayer, nlayers)
         self.encoder = th.nn.Linear(input_size, d_model) # XXX: replace into MLP
+        self.fc = th.nn.Linear(d_model, num_classes)
         self.d_model = d_model
-
+        self.num_classes = num_classes
         self.num_params = sum(param.numel() for param in self.parameters()
                 if param.requires_grad)
     def forward_(self, src: th.Tensor, src_mask: th.Tensor):
@@ -49,6 +51,10 @@ class LongestPathTransformer(th.nn.Module):
         src = self.posenc(src)
         output = self.transenc(src, src_mask)
         return output
+    def gen_mask(self, lens: th.Tensor):
+        mask = [[1]*i + [0]*(lens.max().item()-i) for i in lens]
+        mask = th.tensor(mask)
+        return mask
     def forward(self, x, y, z, *, device: str = 'cpu'):
         '''
         x is padded sequence
@@ -58,9 +64,18 @@ class LongestPathTransformer(th.nn.Module):
             lens: sequence lengths
         '''
         B = int(x.shape[1])
-        xe = self.encoder(x)
-        print('debug', x.shape)
-        raise NotImplementedError
+        mask = self.gen_mask(z.lens)
+        mask = mask.to(device)
+        xe = self.encoder(x.to(device))
+        xepe = self.posenc(xe)
+        #print('debug', xepe.shape, mask.shape)
+        memory = self.transenc(xepe, src_key_padding_mask=mask)
+        #print('debug', memory.shape)
+        # use hidden state corrosponding the first token. following BERT.
+        h = memory[0, ...]
+        logits = self.fc(h)
+        #print('logits', logits.shape)
+        return logits
 
 class HierarchicalTransformer(object):
     ...
