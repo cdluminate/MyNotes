@@ -63,8 +63,8 @@ fashion-5:
 	-$(RM) -rf fashion-train
 	-$(RM) -rf fashion-test
 	echo -- We use fashin-train.json and fashion-test.json --
-	python3 -m veccls.jsonstat -j fasion-train.json
-	python3 -m veccls.jsonstat -j fasion-test.json
+	python3 -m veccls.jsonstat -j fashion-train.json
+	python3 -m veccls.jsonstat -j fashion-test.json
 cifar10-5:
 	-$(RM) -rf cifar10-train
 	-$(RM) -rf cifar10-test
