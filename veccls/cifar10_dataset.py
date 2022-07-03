@@ -137,7 +137,7 @@ if __name__ == '__main__':
     console.print('tst[0]', datatst[0])
 
     console.print('>_< testing cifar10 loader: train (all)')
-    loader = get_mnist_loader('train', 5, longest=False)
+    loader = get_cifar10_loader('train', 5, longest=False)
     for (x, y, z) in loader:
         print(x.shape, y.shape, z.tc.shape, z.lens.shape, z.packlens.shape)
         print('labels', y)
