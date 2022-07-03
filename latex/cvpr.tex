@@ -105,6 +105,40 @@ path transformer for path representation. input is paths, sequence of points. in
 
 image transformer for image represetnation. input is sequence of paths.
 
+\section{Preliminary Experiments}
+
+GRU and HGRU works for both mnist and cifar
+
+\begin{verbatim}
+Dataset         Model     Accuracy
+==================================
+MNIST           RNN
+..              GRU
+..              LSTM
+..              PST
+----------------------------------
+MNIST           HRNN
+..              HGRU
+..              HLSTM
+..              HPST      98.17
+----------------------------------
+FashionMNIST    RNN
+..              GRU
+..              LSTM
+..              PST
+----------------------------------
+FashionMNIST    HRNN
+..              HGRU
+..              HLSTM
+..              HPST      85.19
+----------------------------------
+CIFAR10         HRNN
+..              HGRU
+..              HLSTM
+..              HPST
+===================================
+\end{verbatim}
+
 
 %%%%%%%%% REFERENCES
 {\small
