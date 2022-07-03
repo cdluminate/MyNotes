@@ -92,3 +92,6 @@ fashion-7:
 	python3 -m veccls.train_fashion --model_type=hgru
 	python3 -m veccls.train_fashion --model_type=pst
 	python3 -m veccls.train_fashion --model_type=hpst
+cifar10-7:
+	python3 -m veccls.train_cifar10 --model_type=hgru
+	python3 -m veccls.train_cifar10 --model_type=hpst
