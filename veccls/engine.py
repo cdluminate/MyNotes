@@ -35,9 +35,8 @@ def train_one_epoch(model, optim, loader,
         loss.backward()
         optim.step()
 
-        #if (i%report_every == 0) and ((local_rank is None) or (
-        #        (local_rank is not None) and (local_rank == 0))):
-        if i%report_every == 0:
+        if (i%report_every == 0) and ((local_rank is None) or (
+                (local_rank is not None) and (local_rank == 0))):
             pred = logits.max(dim=1)[1].cpu()
             acc = (pred == y.cpu()).cpu().float().mean().item() * 100
             if local_rank is not None:
@@ -74,7 +73,11 @@ def evaluate(model, loader,
     losses = []
     preds = []
     ys = []
-    for (x, y, trco, lens, packlens) in track(loader, description=f'Evaluation ...'):
+    if local_rank is None or local_rank == 0:
+        wrap = track
+    else:
+        wrap = iter
+    for (x, y, trco, lens, packlens) in wrap(loader, description=f'Evaluation ...'):
         logits = model(x, y, trco, lens, packlens, device=device)
         loss = F.cross_entropy(logits, y.to(device), reduction='none')
 
@@ -90,9 +93,10 @@ def evaluate(model, loader,
     if local_rank is not None:
         acc = _reduce_float_(acc, local_rank)
         mean_loss = th.tensor(_reduce_float_(mean_loss.item(), local_rank))
-    console.print(f'Eph[{epoch}] Evaluation:',
-            f'loss={mean_loss:.2f}',
-            f'acc={acc:.2f} (/100)')
+    if local_rank is None or local_rank == 0:
+        console.print(f'Eph[{epoch}] Evaluation:',
+                f'loss={mean_loss:.2f}',
+                f'acc={acc:.2f} (/100)')
     if logfile is not None:
         logfile.write(f'Eph[{epoch}] Evaluation: ')
         logfile.write(f'loss={mean_loss:.2f} ')
