@@ -37,6 +37,9 @@ mnist-3:
 fashion-3:
 	python3 -m veccls.batchsvg2json -s fashion-train
 	python3 -m veccls.batchsvg2json -s fashion-test
+cifar10-3:
+	python3 -m veccls.batchsvg2json -s cifar10-train
+	python3 -m veccls.batchsvg2json -s cifar10-test
 
 mnist-4:
 	# step 4: collect json files and aggregate into one
