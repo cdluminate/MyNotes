@@ -10,11 +10,19 @@ from . import transformer
 from . import engine
 console = rich.get_console()
 
+def main():
+    try:
+        main_()
+    except KeyboardInterrupt:
+        if os.getenv('LOCAL_RANK', None) is not None:
+            th.distributed.destroy_process_group()
+        console.print('[white on red]>_< pulled down processes.')
+        exit()
 
-if __name__ == '__main__':
+def main_():
     ag = argparse.ArgumentParser('''Train a CIFAR10 model w/ vector graphics!
     ''')
-    # recurrent neural network and transformer settings
+    # -- recurrent neural network and transformer settings --
     ag.add_argument('--model_type', type=str, default='hgru',
             # different from mnist and fashion. here we only use h* models
             choices=('hrnn', 'hgru', 'hlstm', 'hpst'))
@@ -23,23 +31,33 @@ if __name__ == '__main__':
     ag.add_argument('--num_layers', type=int, default=3)
     ag.add_argument('--nhead', type=int, default=2)
     ag.add_argument('--dropout', type=float, default=0.01)
-    # optimizer and training setting
+    # -- optimizer and training setting --
     ag.add_argument('--lr', type=float, default=1e-3)
     ag.add_argument('--weight_decay', type=float, default=1e-7)
     ag.add_argument('--epochs', type=int, default=16)
     ag.add_argument('--lr_drop', type=int, default=12)
     ag.add_argument('--device', type=str, default='cpu'
             if not th.cuda.is_available() else 'cuda')
-    # logging
+    # -- logging and file operations --
     ag.add_argument('--logdir', type=str, default='train_cifar10_')
+    # -- distributed training --
+    ag.add_argument('--local_rank', type=int, default=None)
     ag = ag.parse_args()
     ag.logdir = ag.logdir + ag.model_type
-    console.print(ag)
-
     if not os.path.exists(ag.logdir):
         os.mkdir(ag.logdir)
+    if os.getenv('LOCAL_RANK', None) is not None:
+        ag.local_rank = int(os.getenv('LOCAL_RANK'))
+    console.print(ag)
 
-    console.print('[bold white on violet] >_< start training CifarRNN/PST')
+    if ag.local_rank is not None:
+        # https://pytorch.org/docs/stable/distributed.html#launch-utility
+        # https://pytorch.org/tutorials/intermediate/ddp_tutorial.html
+        if not th.cuda.is_available():
+            raise NotImplementedError('distributed not implemented for cpu')
+        th.cuda.set_device(ag.local_rank)
+        th.distributed.init_process_group(backend='NCCL', init_method='env://')
+    console.print('[bold white on violet]>_< start training CifarRNN/PST')
 
     modelmapping = {
             # use all paths. number of paths per image is indefinite.
@@ -63,14 +81,20 @@ if __name__ == '__main__':
                 d_mlp=ag.hidden_size,
                 nlayers=ag.num_layers,
                 dropout=ag.dropout).to(ag.device)
-    console.print(model)
-    console.print(f'-- Number of parameters:', model.num_params)
+    if ag.local_rank is not None:
+        model = th.nn.parallel.DistributedDataParallel(model,
+                device_ids=[ag.local_rank], output_device=ag.local_rank,
+                find_unused_parameters=False)
+        model.num_params = model.module.num_params
     optim = th.optim.Adam(model.parameters(),
         lr=ag.lr, weight_decay=ag.weight_decay)
     scheduler = th.optim.lr_scheduler.MultiStepLR(optim,
             milestones=[ag.lr_drop], gamma=0.1)
-    console.print(f'-- Optimizer:', optim)
-    console.print(f'-- Scheduler:', scheduler)
+    if ag.local_rank is None or th.distributed.get_rank() == 0:
+        console.print(model)
+        console.print(f'-- Number of parameters:', model.num_params)
+        console.print(f'-- Optimizer:', optim)
+        console.print(f'-- Scheduler:', scheduler)
 
     loadertrn = cifar10_dataset.get_cifar10_loader(split='train',
             batch_size=128,
@@ -82,19 +106,25 @@ if __name__ == '__main__':
     # evaluate before train
     model.eval()
     engine.evaluate(model, loadertst,
-            epoch=-1, device=ag.device, logdir=ag.logdir)
+            epoch=-1, device=ag.device, logdir=ag.logdir,
+            local_rank=ag.local_rank)
     for epoch in range(ag.epochs):
-        console.print(f'>_< training epoch {epoch} ...')
 
         # train one epoch
         model.train()
         engine.train_one_epoch(model, optim, loadertrn,
-                epoch=epoch, device=ag.device, logdir=ag.logdir)
+                epoch=epoch, device=ag.device, logdir=ag.logdir,
+                local_rank=ag.local_rank)
 
         # evaluate
         model.eval()
         engine.evaluate(model, loadertst,
-                epoch=epoch, device=ag.device, logdir=ag.logdir)
+                epoch=epoch, device=ag.device, logdir=ag.logdir,
+                local_rank=ag.local_rank)
 
         # adjust learning rate
         scheduler.step()
+
+
+if __name__ == '__main__':
+    main()
