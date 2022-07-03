@@ -12,41 +12,28 @@ import rich
 from rich.progress import track
 console = rich.get_console()
 
-def mnist_burst(dest: str, split: str, *,
-        mnist='mnist'):
-    '''
-    burst mnist dataset into png images
-
-    svg background is white by default in vtracer,
-    and hence the polygons draw the background.
-    We need to invert the color, so that the paths are drawing
-    the foreground object.
-    '''
+def cifar10_burst(dest: str, split: str):
     assert(split in ('train', 'test'))
-    assert(mnist in ('mnist', 'fashion'))
     if not os.path.exists(dest):
         os.mkdir(dest)
-    if mnist == 'mnist':
-        data = V.datasets.MNIST(root=configs.datasets.mnist.root,
-                            train=True if split=='train' else False,
-                            download=True)
-    elif mnist == 'fashion':
-        data = V.datasets.FashionMNIST(root=configs.datasets.fashion.root,
-                            train=True if split=='train' else False,
-                            download=True)
+    data = V.datasets.CIFAR10(root=configs.datasets.cifar10.root,
+            train=True if split == 'train' else False,
+            download=True)
     for i, (x, y) in enumerate(data):
         fpath = os.path.join(dest, '%05d-%1d.png'%(i, y))
-        xinv = PIL.ImageOps.invert(x)
-        xinv.save(fpath)
+        #xinv = PIL.ImageOps.invert(x) # no need to invert like mnist
+        #xinv.save(fpath)
+        x.save(fpath)
         console.print(fpath)
         print(x, y)
     print(len(data))
 
 
-def mnist_collect(src: str):
+def cifar10_collect(src: str):
     '''
     collect processed data from
     '''
+    raise NotImplementedError
     dataset = []
     files = glob.glob(os.path.join(src, '*.json'))
     for file in track(files):
@@ -61,7 +48,7 @@ def mnist_collect(src: str):
 
 
 if __name__ == '__main__':
-    ag = argparse.ArgumentParser('python3 -m veccls.mnist')
+    ag = argparse.ArgumentParser('python3 -m veccls.cifar10')
     ag.add_argument('action', choices=('burst', 'collect'))
     ag.add_argument('-d', '--destination', default='.', help='dest directory')
     ag.add_argument('-s', '--split', default='train', choices=('train', 'test'))
@@ -69,6 +56,6 @@ if __name__ == '__main__':
     console.print(ag)
 
     if ag.action == 'burst':
-        mnist_burst(ag.destination, ag.split)
+        cifar10_burst(ag.destination, ag.split)
     elif ag.action == 'collect':
-        mnist_collect(ag.destination)
+        cifar10_collect(ag.destination)

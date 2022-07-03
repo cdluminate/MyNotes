@@ -15,6 +15,9 @@ mnist-1:
 fashion-1:
 	python3 -m veccls.fashion burst -s train -d fashion-train
 	python3 -m veccls.fashion burst -s test  -d fashion-test
+cifar10-1:
+	python3 -m veccls.cifar10 burst -s train -d cifar10-train
+	python3 -m veccls.cifar10 burst -s test  -d cifar10-test
 
 mnist-2:
 	# step 2: trace png files into svgs
