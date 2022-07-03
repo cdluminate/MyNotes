@@ -1,5 +1,6 @@
 import os
 import torch as th
+import torchvision as V
 import argparse
 import rich
 console = rich.get_console()
@@ -48,12 +49,26 @@ def action_lenet():
     console.print('LeNet num parameters:', num_params)
     os.system('ls -lh lenet.pt')
 
+def action_resnet18():
+    '''
+    print resnet18 statistics
+    '''
+    model = V.models.resnet18(False)
+    state_dict = model.state_dict()
+    th.save(state_dict, 'resnet18.pt')
+    num_params = sum(param.numel() for param in model.parameters()
+            if param.requires_grad)
+    console.print('ResNet18 num parameters:', num_params)
+    os.system('ls -lh resnet18.pt')
+
 if __name__ == '__main__':
     ag = argparse.ArgumentParser()
     ag.add_argument('action', type=str,
-            choices=('lenet',))
+            choices=('lenet', 'resnet18'))
     ag = ag.parse_args()
     console.print(ag)
 
     if ag.action == 'lenet':
         action_lenet()
+    elif ag.action == 'resnet18':
+        action_resnet18()
