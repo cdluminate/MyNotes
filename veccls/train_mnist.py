@@ -39,10 +39,12 @@ def train_mnist():
     ag.add_argument('--local_rank', type=int, default=None)
     ag = ag.parse_args()
     ag.logdir = ag.logdir + ag.model_type
-    console.print(ag)
-
+    if os.getenv('LOCAL_RANK', None) is not None:
+        ag.local_rank = int(os.getenv('LOCAL_RANK'))
     if not os.path.exists(ag.logdir):
         os.mkdir(ag.logdir)
+    console.print(ag)
+
     if ag.local_rank is not None:
         if not th.cuda.is_available():
             raise NotImplementedError('distributed not implemented for cpu')
