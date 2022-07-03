@@ -49,7 +49,7 @@
 \begin{document}
 
 %%%%%%%%% TITLE - PLEASE UPDATE
-\title{Vectorized Polygon Sequence Trace for Raster Image Classification}
+\title{PST: Path Sequence Transformer for Raster Image Classification}
 
 \author{First Author\\
 Institution1\\
@@ -71,16 +71,18 @@ First line of institution2 address\\
 %%%%%%%%% ABSTRACT
 \begin{abstract}
     %
-    Typical object recognition methods are based on raster graphics represented
-    in multi-dimensional array, but this is not the only way to represent
-    digital images.
+    In this paper, we restart image classification from scratch, based on
+    vector graphics instead of traditional raster graphics represented in
+    multi-dimensional arrays.
     %
-    Alternatively, they can be represented as or traced into vector graphics,
-    namely sequence of paths.
+    By doing so, image classification can be cast as a \textit{pure} sequence
+    classification problem, as vector graphics or traced raster images
+    can be represented in a hierarchical sequence of paths.
     %
-    This implies an intriguing possibility to recognize objects purely based on
-    sequence models, overthrowning all convolutional building blocks.
+    In this paper, we present Path Sequence Transformer for this purpose.
     %
+    The proposed method is evaluated on MNIST, Fashion-MNIST, CIFAR-10,
+    CIFAR-100, Tiny-ImageNet, as well as ImageNet-1k.
 \end{abstract}
 
 %%%%%%%%% BODY TEXT
