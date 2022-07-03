@@ -110,18 +110,22 @@ image transformer for image represetnation. input is sequence of paths.
 GRU and HGRU works for both mnist and cifar
 
 \begin{verbatim}
-Dataset         Model     Accuracy
-==================================
-MNIST           RNN
-..              GRU
-..              LSTM
-..              PST
+Dataset         Model     Accuracy     Parameters
+=================================================
+MNIST           LeNet     98.9         431k
+-------------------------------------------------
+MNIST           RNN       96.43        34k
+..              GRU       97.31        84k
+..              LSTM      96.89        109k
+..              PST       97.30        211k
 ----------------------------------
 MNIST           HRNN
 ..              HGRU
 ..              HLSTM
 ..              HPST      98.17
 ----------------------------------
+FashionMNIST    LeNet     88.9         431k
+-------------------------------------------------
 FashionMNIST    RNN
 ..              GRU
 ..              LSTM
