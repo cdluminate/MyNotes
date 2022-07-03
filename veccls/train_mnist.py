@@ -31,7 +31,7 @@ def main_():
     ag.add_argument('--input_size', type=int, default=2)
     ag.add_argument('--hidden_size', type=int, default=64)
     ag.add_argument('--num_layers', type=int, default=3)
-    ag.add_argument('--nhead', type=int, default=2)
+    ag.add_argument('--nhead', type=int, default=8)
     ag.add_argument('--dropout', type=float, default=0.01)
     # -- optimizer and training setting --
     ag.add_argument('--lr', type=float, default=1e-3)
