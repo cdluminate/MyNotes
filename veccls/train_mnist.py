@@ -55,7 +55,7 @@ if __name__ == '__main__':
             # only use the longest path
             'pst': transformer.LongestPathTransformer,
             # use all paths
-            'hpst': transformer.HierarchicalTransformer,
+            'hpst': transformer.HierarchicalPathTransformer,
             }
     if ag.model_type in ('rnn', 'gru', 'lstm', 'hrnn', 'hgru', 'hlstm'):
         # is recurrent model
