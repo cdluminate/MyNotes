@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 793.70081 1122.5197"
+   version="1.1"
+   id="svg5"
+   xml:space="preserve"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="demo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.3786088"
+     inkscape:cx="391.61547"
+     inkscape:cy="352.30678"
+     inkscape:window-width="2560"
+     inkscape:window-height="1369"
+     inkscape:window-x="0"
+     inkscape:window-y="39"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true" /><defs
+     id="defs2" /><g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"><g
+       id="g406"
+       transform="matrix(4.96063,0,0,4.96063,598.39777,65.595815)"
+       style="stroke-width:0.201587"><path
+         d="M 0,0 H 32 V 32 H 0 Z"
+         fill="#6d8995"
+         id="path316"
+         style="stroke-width:0.0853386" /><path
+         d="m 0,0 10,1 1,1 7,1 1,18 1,3 2,1 h -3 v 2 L 6,25 2,24 v -2 l 8,-2 V 18 L 7,19 5,16 0,14 Z"
+         fill="#82a2ab"
+         transform="translate(0,1)"
+         id="path318"
+         style="stroke-width:0.0853386" /><path
+         d="m 0,0 6,1 2,3 h 2 l 1,3 -9,1 v 2 l 9,1 10,2 2,-1 6,-1 -1,-3 4,-1 V 17 H 0 Z"
+         fill="#607b80"
+         transform="translate(0,15)"
+         id="path320"
+         style="stroke-width:0.0853386" /><path
+         d="M 0,0 H 3 V 2 L 7,1 h 9 L 15,6 11,15 7,16 5,13 0,11 Z"
+         fill="#6f8c97"
+         transform="translate(0,4)"
+         id="path322"
+         style="stroke-width:0.0853386" /><path
+         d="m 0,0 8,1 v 9 l -4,1 3,4 -9,1 -3,1 1,-4 -2,-3 V 4 l 4,-1 z"
+         fill="#6b858d"
+         transform="translate(24,12)"
+         id="path324"
+         style="stroke-width:0.0853386" /><path
+         d="M 0,0 H 2 V 10 H -11 L -25,7 -29,6 V 4 l 10,2 11,2 -1,-3 h 6 L -1,4 -2,1 Z"
+         fill="#49666e"
+         transform="translate(30,22)"
+         id="path326"
+         style="stroke-width:0.0853386" /><path
+         d="M 0,0 H 13 V 11 H 7 V 8 L 4,6 V 3 L 0,2 Z"
+         fill="#5d7583"
+         transform="translate(19,1)"
+         id="path328"
+         style="stroke-width:0.0853386" /><path
+         d="m 0,0 8,1 v 9 L 2,12 0,6 -1,1 Z"
+         fill="#5d7882"
+         transform="translate(24,12)"
+         id="path330"
+         style="stroke-width:0.0853386" /><path
+         d="M 0,0 7,1 V 3 H 9 V 1 h 3 v 2 l 2,1 H 11 V 6 L -2,4 -6,3 V 1 Z"
+         fill="#c7bfb9"
+         transform="translate(8,22)"
+         id="path332"
+         style="stroke-width:0.0853386" /><path
+         d="M 0,0 H 1 V 16 L -6,15 -4,9 Z"
+         fill="#aab8c1"
+         transform="translate(16,6)"
+         id="path334"
+         style="stroke-width:0.0853386" /><path
+         d="m 0,0 10,2 11,1 4,1 V 6 L 11,5 0,2 Z"
+         fill="#1d2529"
+         transform="translate(1,26)"
+         id="path336"
+         style="stroke-width:0.0853386" /><path
+         d="M 0,0 1,2 9,3 19,5 V 6 H 0 Z"
+         fill="#3f5759"
+         transform="translate(0,26)"
+         id="path338"
+         style="stroke-width:0.0853386" /><path
+         d="M 0,0 H 4 V 5 L -2,7 -3,3 Z"
+         fill="#4c6f79"
+         transform="translate(28,17)"
+         id="path340"
+         style="stroke-width:0.0853386" /><path
+         d="M 0,0 H 2 L 3,3 6,5 5,7 11,8 V 9 H 2 V 6 L 0,5 -1,1 Z"
+         fill="#6a828e"
+         transform="translate(21,4)"
+         id="path342"
+         style="stroke-width:0.0853386" /><path
+         d="M 0,0 H 2 V 2 L 5,3 V 4 H -2 L -6,3 V 1 Z"
+         fill="#c8cbc5"
+         transform="translate(8,22)"
+         id="path344"
+         style="stroke-width:0.0853386" /><path
+         d="M 0,0 9,1 V 5 H 5 L 4,3 0,1 Z"
+         fill="#50524c"
+         transform="translate(21,27)"
+         id="path346"
+         style="stroke-width:0.0853386" /><path
+         d="M 0,0 6,1 V 4 L -1,5 Z"
+         fill="#a19793"
+         transform="translate(20,24)"
+         id="path348"
+         style="stroke-width:0.0853386" /><path
+         d="M 0,0 5,2 4,6 H 0 Z"
+         fill="#7a95a1"
+         transform="translate(0,6)"
+         id="path350"
+         style="stroke-width:0.0853386" /><path
+         d="M 0,0 H 6 L 11,4 6,5 V 2 L 0,1 Z"
+         fill="#7a8989"
+         transform="translate(20,23)"
+         id="path352"
+         style="stroke-width:0.0853386" /><path
+         d="M 0,0 H 4 L 5,4 H 0 L -1,2 Z"
+         fill="#556e78"
+         transform="translate(19,19)"
+         id="path354"
+         style="stroke-width:0.0853386" /><path
+         d="m 0,0 h 8 v 2 l 4,1 H 5 L 0,1 Z"
+         fill="#6e939f"
+         transform="translate(6,1)"
+         id="path356"
+         style="stroke-width:0.0853386" /><path
+         d="M 0,0 H 5 L 6,3 -3,2 Z"
+         fill="#5c7983"
+         transform="translate(5,19)"
+         id="path358"
+         style="stroke-width:0.0853386" /><path
+         d="M 0,0 H 3 L 2,4 H 0 L -1,6 V 1 Z"
+         fill="#607985"
+         transform="translate(19,15)"
+         id="path360"
+         style="stroke-width:0.0853386" /><path
+         d="M 0,0 H 4 V 3 H -1 L -2,1 Z"
+         fill="#4a6570"
+         transform="translate(28,17)"
+         id="path362"
+         style="stroke-width:0.0853386" /><path
+         d="M 0,0 3,1 V 5 H 0 Z"
+         fill="#738a94"
+         transform="translate(18,4)"
+         id="path364"
+         style="stroke-width:0.0853386" /><path
+         d="M 0,0 H 3 L 2,4 H -2 V 2 h 2 z"
+         fill="#67838f"
+         transform="translate(13,5)"
+         id="path366"
+         style="stroke-width:0.0853386" /><path
+         d="M 0,0 H 3 V 4 H 1 Z"
+         fill="#2b3d3a"
+         transform="translate(27,28)"
+         id="path368"
+         style="stroke-width:0.0853386" /><path
+         d="M 0,0 4,1 0,3 Z"
+         fill="#6d919b"
+         transform="translate(7,17)"
+         id="path370"
+         style="stroke-width:0.0853386" /></g><text
+       xml:space="preserve"
+       style="font-size:24px;line-height:0.65;font-family:FreeSerif;-inkscape-font-specification:'FreeSerif, Normal';font-variant-ligatures:none;letter-spacing:0px;word-spacing:0px"
+       x="14.192845"
+       y="285.0683"
+       id="text637"><tspan
+         sodipodi:role="line"
+         id="tspan635"
+         x="14.192845"
+         y="285.0683"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="14.192845"
+         y="301.26831"
+         id="tspan639"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">&lt;svg version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;28&quot; height=&quot;28&quot;&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="14.192845"
+         y="317.46829"
+         id="tspan641"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">  &lt;path d=&quot;M0,0 L5,1 L4,9 L0,18 L-1,20 L-4,20 L-3,13 L1,4 L-7,5 L-9,4 L-9,2 Z&quot;</tspan><tspan
+         sodipodi:role="line"
+         x="14.192845"
+         y="333.6683"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+         id="tspan695">   fill=&quot;#000000&quot; transform=&quot;translate(15,6)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="14.192845"
+         y="349.86829"
+         id="tspan643"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">&lt;/svg&gt;</tspan></text><text
+       xml:space="preserve"
+       style="font-size:24px;line-height:1.25;font-family:FreeSerif;-inkscape-font-specification:'FreeSerif, Normal';font-variant-ligatures:none;letter-spacing:0px;word-spacing:0px"
+       x="18.589674"
+       y="258.47226"
+       id="text845"><tspan
+         sodipodi:role="line"
+         id="tspan843"
+         x="18.589674"
+         y="258.47226">SVG Code for the traced digit &quot;7&quot; from MNIST:</tspan></text><text
+       xml:space="preserve"
+       style="font-size:24px;line-height:1.25;font-family:FreeSerif;-inkscape-font-specification:'FreeSerif, Normal';font-variant-ligatures:none;letter-spacing:0px;word-spacing:0px"
+       x="21.012747"
+       y="394.44922"
+       id="text845-0"><tspan
+         sodipodi:role="line"
+         id="tspan843-9"
+         x="21.012747"
+         y="394.44922">SVG Code for the traced object &quot;ship&quot; from CIFAR-10:</tspan></text><rect
+       style="fill:none;stroke:#000000;stroke-width:0.377952;stroke-miterlimit:3.9;stroke-dasharray:none"
+       id="rect974"
+       width="772.68689"
+       height="91.763008"
+       x="10.840919"
+       y="267.00095" /><g
+       id="g3030"
+       transform="translate(-28.352472,-101.55405)"><image
+         width="158.74016"
+         height="158.74016"
+         preserveAspectRatio="none"
+         xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAA40lEQVR4nGP8z4AbMOGRGwSSj5tz
+GRn5z8K4jBCvnFdd8olhxrP/fxgYGBjEnsNk////////fykeZiY48P8PBVBjDb5BTPAOY2Bg8IBp
+ZIFQqz71SYczMDAI3VyF5ASoJDd3N4RxEZ9X1jIwcCrDef9RwGV+JiaZ/2gOgoEJnxkYVBmw63xv
+xsTEtR3ORZVcysTE1Pwfu+RHUxSNqJLLmJi4Jv3HLvnZiInJAFkxsms3X0DzNLJkPwMDgz8OyZ9/
+GBhYLFC0ImzYwMTEZPsfl50MDAzVuOzUkGKQU0GRZCQ7xQMAfYDUEYt9K08AAAAASUVORK5CYII=
+"
+         id="image2939"
+         x="68.659676"
+         y="167.14987"
+         style="stroke-width:0.176389" /><rect
+         style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:3.9;stroke-dasharray:none"
+         id="rect1863"
+         width="158.36221"
+         height="158.36221"
+         x="68.84864"
+         y="167.33884" /></g><g
+       id="g1919"
+       transform="matrix(0.90944447,0,0,0.90944447,157.5908,-111.83481)"
+       style="stroke-width:1.09957"><path
+         d="m 169.42419,230.9181 31.52007,6.30401 -6.30401,50.43212 -25.21606,56.73614 -6.30402,12.60803 h -18.91204 l 6.30401,-44.12811 25.21606,-56.73613 -50.43212,6.30401 -12.60803,-6.30401 v -12.60803 z"
+         fill="#000000"
+         id="path132"
+         style="stroke-width:1.09957" /><rect
+         style="fill:none;stroke:#000000;stroke-width:0.415587;stroke-miterlimit:3.9;stroke-dasharray:none"
+         id="rect1863-7"
+         width="174.13071"
+         height="174.13071"
+         x="75.799637"
+         y="195.3056" /></g><text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.2725px;line-height:0.75;font-family:FreeSerif;-inkscape-font-specification:'FreeSerif, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;stroke-width:1"
+       x="17.62952"
+       y="413.18558"
+       id="text2736"><tspan
+         sodipodi:role="line"
+         id="tspan2734"
+         x="17.62952"
+         y="413.18558"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="421.73389"
+         id="tspan2738"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;svg version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;32&quot; height=&quot;32&quot;&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="430.2822"
+         id="tspan2740"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L32,0 L32,32 L0,32 Z &quot; fill=&quot;#6D8995&quot; transform=&quot;translate(0,0)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="438.83051"
+         id="tspan2742"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L10,1 L11,2 L18,3 L19,21 L20,24 L22,25 L19,25 L19,27 L6,25 L2,24 L2,22 L10,20 L10,18 L7,19 L5,16 L0,14 Z &quot; fill=&quot;#82A2AB&quot; transform=&quot;translate(0,1)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="447.37881"
+         id="tspan2744"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L6,1 L8,4 L10,4 L11,7 L2,8 L2,10 L11,11 L21,13 L23,12 L29,11 L28,8 L32,7 L32,17 L0,17 Z &quot; fill=&quot;#607B80&quot; transform=&quot;translate(0,15)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="455.92712"
+         id="tspan2746"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L3,0 L3,2 L7,1 L16,1 L15,6 L11,15 L7,16 L5,13 L0,11 Z &quot; fill=&quot;#6F8C97&quot; transform=&quot;translate(0,4)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="464.47543"
+         id="tspan2748"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L8,1 L8,10 L4,11 L7,15 L-2,16 L-5,17 L-4,13 L-6,10 L-6,4 L-2,3 Z &quot; fill=&quot;#6B858D&quot; transform=&quot;translate(24,12)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="473.02374"
+         id="tspan2750"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L2,0 L2,10 L-11,10 L-25,7 L-29,6 L-29,4 L-19,6 L-8,8 L-9,5 L-3,5 L-1,4 L-2,1 Z &quot; fill=&quot;#49666E&quot; transform=&quot;translate(30,22)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="481.57208"
+         id="tspan2752"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L13,0 L13,11 L7,11 L7,8 L4,6 L4,3 L0,2 Z &quot; fill=&quot;#5D7583&quot; transform=&quot;translate(19,1)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="490.12039"
+         id="tspan2754"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L8,1 L8,10 L2,12 L0,6 L-1,1 Z &quot; fill=&quot;#5D7882&quot; transform=&quot;translate(24,12)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="498.6687"
+         id="tspan2756"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L7,1 L7,3 L9,3 L9,1 L12,1 L12,3 L14,4 L11,4 L11,6 L-2,4 L-6,3 L-6,1 Z &quot; fill=&quot;#C7BFB9&quot; transform=&quot;translate(8,22)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="507.21701"
+         id="tspan2758"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L1,0 L1,16 L-6,15 L-4,9 Z &quot; fill=&quot;#AAB8C1&quot; transform=&quot;translate(16,6)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="515.76532"
+         id="tspan2760"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L10,2 L21,3 L25,4 L25,6 L11,5 L0,2 Z &quot; fill=&quot;#1D2529&quot; transform=&quot;translate(1,26)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="524.3136"
+         id="tspan2762"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L1,2 L9,3 L19,5 L19,6 L0,6 Z &quot; fill=&quot;#3F5759&quot; transform=&quot;translate(0,26)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="532.86194"
+         id="tspan2764"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L4,0 L4,5 L-2,7 L-3,3 Z &quot; fill=&quot;#4C6F79&quot; transform=&quot;translate(28,17)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="541.41022"
+         id="tspan2766"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L2,0 L3,3 L6,5 L5,7 L11,8 L11,9 L2,9 L2,6 L0,5 L-1,1 Z &quot; fill=&quot;#6A828E&quot; transform=&quot;translate(21,4)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="549.95856"
+         id="tspan2768"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L2,0 L2,2 L5,3 L5,4 L-2,4 L-6,3 L-6,1 Z &quot; fill=&quot;#C8CBC5&quot; transform=&quot;translate(8,22)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="558.5069"
+         id="tspan2770"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L9,1 L9,5 L5,5 L4,3 L0,1 Z &quot; fill=&quot;#50524C&quot; transform=&quot;translate(21,27)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="567.05518"
+         id="tspan2772"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L6,1 L6,4 L-1,5 Z &quot; fill=&quot;#A19793&quot; transform=&quot;translate(20,24)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="575.60352"
+         id="tspan2774"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L5,2 L4,6 L0,6 Z &quot; fill=&quot;#7A95A1&quot; transform=&quot;translate(0,6)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="584.15179"
+         id="tspan2776"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L6,0 L11,4 L6,5 L6,2 L0,1 Z &quot; fill=&quot;#7A8989&quot; transform=&quot;translate(20,23)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="592.70013"
+         id="tspan2778"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L4,0 L5,4 L0,4 L-1,2 Z &quot; fill=&quot;#556E78&quot; transform=&quot;translate(19,19)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="601.24841"
+         id="tspan2780"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L8,0 L8,2 L12,3 L5,3 L0,1 Z &quot; fill=&quot;#6E939F&quot; transform=&quot;translate(6,1)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="609.79675"
+         id="tspan2782"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L5,0 L6,3 L-3,2 Z &quot; fill=&quot;#5C7983&quot; transform=&quot;translate(5,19)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="618.34503"
+         id="tspan2784"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L3,0 L2,4 L0,4 L-1,6 L-1,1 Z &quot; fill=&quot;#607985&quot; transform=&quot;translate(19,15)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="626.89337"
+         id="tspan2786"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L4,0 L4,3 L-1,3 L-2,1 Z &quot; fill=&quot;#4A6570&quot; transform=&quot;translate(28,17)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="635.44165"
+         id="tspan2788"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L3,1 L3,5 L0,5 Z &quot; fill=&quot;#738A94&quot; transform=&quot;translate(18,4)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="643.98999"
+         id="tspan2790"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L3,0 L2,4 L-2,4 L-2,2 L0,2 Z &quot; fill=&quot;#67838F&quot; transform=&quot;translate(13,5)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="652.53827"
+         id="tspan2792"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L3,0 L3,4 L1,4 Z &quot; fill=&quot;#2B3D3A&quot; transform=&quot;translate(27,28)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="661.08661"
+         id="tspan2794"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;path d=&quot;M0,0 L4,1 L0,3 Z &quot; fill=&quot;#6D919B&quot; transform=&quot;translate(7,17)&quot;/&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="17.62952"
+         y="669.63489"
+         id="tspan2796"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.51499px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1">&lt;/svg&gt;</tspan></text><image
+       width="158.74016"
+       height="158.74016"
+       preserveAspectRatio="none"
+       xlink:href="data:image/png;base64,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
+"
+       id="image2918"
+       x="412.36758"
+       y="65.595818"
+       style="stroke-width:0.201587" /><text
+       xml:space="preserve"
+       style="font-size:24px;line-height:0.95;font-family:FreeSerif;-inkscape-font-specification:'FreeSerif, Normal';font-variant-ligatures:none;letter-spacing:0px;word-spacing:0px"
+       x="119.67725"
+       y="31.310812"
+       id="text3115"><tspan
+         sodipodi:role="line"
+         id="tspan3113"
+         x="119.67725"
+         y="31.310812"
+         style="text-align:center;text-anchor:middle">Raster Image</tspan><tspan
+         sodipodi:role="line"
+         x="119.67725"
+         y="54.110813"
+         id="tspan3117"
+         style="text-align:center;text-anchor:middle">(Original)</tspan></text><text
+       xml:space="preserve"
+       style="font-size:24px;line-height:0.95;font-family:FreeSerif;-inkscape-font-specification:'FreeSerif, Normal';font-variant-ligatures:none;letter-spacing:0px;word-spacing:0px"
+       x="491.73764"
+       y="31.310812"
+       id="text3115-2"><tspan
+         sodipodi:role="line"
+         id="tspan3113-1"
+         x="491.73764"
+         y="31.310812"
+         style="text-align:center;text-anchor:middle">Raster Image</tspan><tspan
+         sodipodi:role="line"
+         x="491.73764"
+         y="54.110813"
+         id="tspan3117-9"
+         style="text-align:center;text-anchor:middle">(Original)</tspan></text><text
+       xml:space="preserve"
+       style="font-size:24px;line-height:0.95;font-family:FreeSerif;-inkscape-font-specification:'FreeSerif, Normal';font-variant-ligatures:none;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle"
+       x="305.94745"
+       y="32.054813"
+       id="text3279"><tspan
+         sodipodi:role="line"
+         x="305.94745"
+         y="32.054813"
+         id="tspan3281">Vector Graphics</tspan><tspan
+         sodipodi:role="line"
+         x="305.94745"
+         y="54.854813"
+         id="tspan3285">(Traced)</tspan></text><text
+       xml:space="preserve"
+       style="font-size:24px;line-height:0.95;font-family:FreeSerif;-inkscape-font-specification:'FreeSerif, Normal';font-variant-ligatures:none;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle"
+       x="683.02844"
+       y="30.355997"
+       id="text3279-7"><tspan
+         sodipodi:role="line"
+         x="683.02844"
+         y="30.355997"
+         id="tspan3281-6">Vector Graphics</tspan><tspan
+         sodipodi:role="line"
+         x="683.02844"
+         y="53.155998"
+         id="tspan3285-8">(Traced)</tspan></text></g></svg>
