@@ -3,3 +3,4 @@
 3. tiny-imagenet
 4. cifar-100
 5. imagenet-1k
+6. fix x-y coord encoder as a constant random matrix
