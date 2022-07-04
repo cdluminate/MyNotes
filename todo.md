@@ -6,3 +6,4 @@
 6. fix x-y coord encoder as a constant random matrix
 7. vtracer result too problematic for training. an image can contain more than
 1000 paths. we must try LIVE : https://ma-xu.github.io/LIVE/
+8. other than trying LIVE or DVG (too slow), maybe we can apply gaussian blur first to reduce the corner and number of paths in the resulting svg?
