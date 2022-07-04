@@ -88,7 +88,10 @@ mnist-7:
 	python3 -m veccls.train_mnist --model_type=pst
 	python3 -m veccls.train_mnist --model_type=hpst
 	python3 -m torch.distributed.launch \
-		--nproc_per_node=4 --use_env --master_port=23456 \
+		--nproc_per_node=8 --use_env --master_port=23456 \
+		scripts/train_mnist.py
+	torchrun \
+		--standalone --nnodes=1 --nproc_per_node=8 \
 		scripts/train_mnist.py
 fashion-7:
 	python3 -m veccls.train_fashion --model_type=gru
@@ -98,9 +101,15 @@ fashion-7:
 	python3 -m torch.distributed.launch \
 		--nproc_per_node=4 --use_env --master_port=24567 \
 		scripts/train_fashion.py
+	torchrun \
+		--standalone --nnodes=1 --nproc_per_node=8 \
+		scripts/train_fashion.py
 cifar10-7:
 	python3 -m veccls.train_cifar10 --model_type=hgru
 	python3 -m veccls.train_cifar10 --model_type=hpst
 	python3 -m torch.distributed.launch \
 		--nproc_per_node=4 --use_env --master_port=25678 \
+		scripts/train_cifar10.py
+	torchrun \
+		--standalone --nnodes=1 --nproc_per_node=8 \
 		scripts/train_cifar10.py
