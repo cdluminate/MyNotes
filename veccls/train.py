@@ -115,7 +115,7 @@ def main_():
 
     dataset_loader = {
             'mnist': mnist_dataset.get_mnist_loader,
-            'fashion': fashion_dataset.get_fasion_loader,
+            'fashion': fashion_dataset.get_fashion_loader,
             'cifar10': cifar10_dataset.get_cifar10_loader,
             }[ag.dataset]
     loadertrn = dataset_loader(split='train', batch_size=ag.batchsize_train,
