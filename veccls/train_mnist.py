@@ -3,6 +3,8 @@ import argparse
 import torch as th
 import torch.nn.functional as F
 from . import mnist_dataset
+from . import fashion_dataset
+from . import cifar10_dataset
 import rich
 from rich.progress import track
 from . import recurrent
@@ -20,14 +22,18 @@ def main():
         exit()
 
 def main_():
-    ag = argparse.ArgumentParser('''Train an MNIST model, vector graphics!
+    ag = argparse.ArgumentParser('''Train a model for vector graphics!
     (1) Passing in the color and translate as h0 to RNN slightly improves
         performance, from 95.5 to 95.8 (model_type=gru), only using longest
     ''')
+    # -- which dataset to use --
+    ag.add_argument('--dataset', type=str, required=True,
+            choices=('mnist', 'fashion', 'cifar10'))
     # -- recurrent neural network and transformer settings --
     ag.add_argument('--model_type', type=str, default='gru',
             choices=('rnn', 'gru', 'lstm',
-                'hrnn', 'hgru', 'hlstm', 'pst', 'hpst'))
+                'hrnn', 'hgru', 'hlstm',
+                'pst', 'hpst'))
     ag.add_argument('--input_size', type=int, default=2)
     ag.add_argument('--hidden_size', type=int, default=64)
     ag.add_argument('--num_layers', type=int, default=3)
@@ -36,16 +42,19 @@ def main_():
     # -- optimizer and training setting --
     ag.add_argument('--lr', type=float, default=1e-3)
     ag.add_argument('--weight_decay', type=float, default=1e-7)
+    ag.add_argument('--batchsize_train', type=int, default=128)
+    ag.add_argument('--batchsize_test', type=int, default=100)
     ag.add_argument('--epochs', type=int, default=16)
     ag.add_argument('--lr_drop', type=int, default=12)
     ag.add_argument('--device', type=str, default='cpu'
             if not th.cuda.is_available() else 'cuda')
     # -- logging and file operations --
-    ag.add_argument('--logdir', type=str, default='train_mnist_')
+    ag.add_argument('--logdir', type=str, default='train_{dataset}_{model_type}')
     # -- distributed training --
     ag.add_argument('--local_rank', type=int, default=None)
+    # -- end arguments --
     ag = ag.parse_args()
-    ag.logdir = ag.logdir + ag.model_type
+    ag.logdir = ag.logdir.format(dataset=ag.dataset, model_type=ag.model_type)
     if not os.path.exists(ag.logdir):
         os.mkdir(ag.logdir)
     if os.getenv('LOCAL_RANK', None) is not None:
@@ -59,7 +68,7 @@ def main_():
             raise NotImplementedError('distributed not implemented for cpu')
         th.cuda.set_device(ag.local_rank)
         th.distributed.init_process_group(backend='NCCL', init_method='env://')
-    console.print('[bold white on violet]>_< start training MnistRNN')
+    console.print('[bold white on violet]>_< start training ...')
 
     modelmapping = {
             # only use the longest path. one path per image.
@@ -104,11 +113,14 @@ def main_():
         console.print(f'-- Optimizer:', optim)
         console.print(f'-- Scheduler:', scheduler)
 
-    loadertrn = mnist_dataset.get_mnist_loader(split='train',
-            batch_size=128,
+    dataset_loader = {
+            'mnist': mnist_dataset.get_mnist_loader,
+            'fashion': fashion_dataset.get_fasion_loader,
+            'cifar10': cifar10_dataset.get_cifar10_loader,
+            }[ag.dataset]
+    loadertrn = dataset_loader(split='train', batch_size=ag.batchsize_train,
             longest=False if ag.model_type.startswith('h') else True)
-    loadertst = mnist_dataset.get_mnist_loader(split='test',
-            batch_size=100,
+    loadertst = dataset_loader(split='test', batch_size=ag.batchsize_test,
             longest=False if ag.model_type.startswith('h') else True)
 
     # evaluate before train
