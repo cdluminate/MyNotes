@@ -1,5 +1,7 @@
 import os
 import argparse
+import numpy as np
+import random
 import torch as th
 import torch.nn.functional as F
 from . import mnist_dataset
@@ -48,17 +50,24 @@ def main_():
     ag.add_argument('--lr_drop', type=int, default=12)
     ag.add_argument('--device', type=str, default='cpu'
             if not th.cuda.is_available() else 'cuda')
-    # -- logging and file operations --
+    # -- logging and miscellaneous --
     ag.add_argument('--logdir', type=str, default='train_{dataset}_{model_type}')
+    ag.add_argument('--seed', type=int, default=42)
     # -- distributed training --
     ag.add_argument('--local_rank', type=int, default=None)
     # -- end arguments --
     ag = ag.parse_args()
+    # -- post processing --
     ag.logdir = ag.logdir.format(dataset=ag.dataset, model_type=ag.model_type)
     if not os.path.exists(ag.logdir):
         os.mkdir(ag.logdir)
     if os.getenv('LOCAL_RANK', None) is not None:
         ag.local_rank = int(os.getenv('LOCAL_RANK'))
+    # https://pytorch.org/docs/stable/notes/randomness.html
+    th.manual_seed(ag.seed)
+    random.seed(ag.seed)
+    np.random.seed(ag.seed)
+    # -- done with all argument matter --
     console.print(ag)
 
     if ag.local_rank is not None:
