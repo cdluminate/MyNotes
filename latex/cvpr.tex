@@ -118,7 +118,7 @@ And such sequence is approximate to human strokes.}
 This will be novel enough as long as it works reasonably for MNIST, CIFAR-10,
 CIFAR-100, Tiny-ImageNet, and ImageNet.
 
-Reference: Image Vectorization: LIVE \cite{live}
+Reference: Image Vectorization: LIVE \cite{live,dvg}
 
 \section{Preliminary Design}
 
@@ -128,7 +128,22 @@ path transformer for path representation. input is paths, sequence of points. in
 
 image transformer for image represetnation. input is sequence of paths.
 
-\section{Preliminary Experiments}
+\section{Experiments}
+
+\subsection{Discussion on Vectorization Methods}
+
+(1) \verb|inkscape| bitmap trace is very basic. It leverages some traditional
+edge information from the image but the edges are not well seperated among
+objects.
+
+(2) \verb|vtracer| performs perfectly on MNIST, but for complicated images, it
+creates too many paths. For instance, a daisy image from ImageNet leads to more
+than $1000$ paths.  Training with such long nested sequences is expectedly very
+difficult.
+
+(3) LIVE~\cite{live} and DiffVG~\cite{dvg} TODO
+
+\subsection{Classification Performance}
 
 GRU and HGRU works for both mnist and cifar
 
