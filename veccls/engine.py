@@ -32,7 +32,7 @@ def train_one_epoch(model, optim, loader,
     else:
         logfile = None
     if local_rank is None or local_rank == 0:
-        console.print(f'>_< training epoch {epoch} ...')
+        console.rule(f'[white on green]>_< training epoch {epoch} ...')
     for i, (x, y, trco, lens, packlens) in enumerate(loader):
         logits = model(x, y, trco, lens, packlens, device=device)
         #print(logits.shape, y.shape)
