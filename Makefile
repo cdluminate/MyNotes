@@ -1,5 +1,10 @@
-main:
-	echo HELP
+# common variables
+G ?= 8  # number of GPUs
+
+usage:
+	echo The whole pipeline for reproducing this work is split into
+	echo a series of steps. Just read this Makefile and see what each
+	echo step does.
 
 mnist-all:
 	# full pipeline for reproducing the work
@@ -88,10 +93,7 @@ mnist-7:
 	python3 -m veccls.train --dataset=mnist --model_type=pst
 	python3 -m veccls.train --dataset=mnist --model_type=hpst
 	python3 -m torch.distributed.launch \
-		--nproc_per_node=8 --use_env --master_port=23456 \
-		scripts/train.py --dataset=mnist
-	torchrun \
-		--standalone --nnodes=1 --nproc_per_node=8 \
+		--nproc_per_node=$(G) --use_env --master_port=23456 \
 		scripts/train.py --dataset=mnist
 fashion-7:
 	python3 -m veccls.train --dataset=fashion --model_type=gru
@@ -99,17 +101,28 @@ fashion-7:
 	python3 -m veccls.train --dataset=fashion --model_type=pst
 	python3 -m veccls.train --dataset=fashion --model_type=hpst
 	python3 -m torch.distributed.launch \
-		--nproc_per_node=8 --use_env --master_port=24567 \
-		scripts/train.py --dataset=fashion
-	torchrun \
-		--standalone --nnodes=1 --nproc_per_node=8 \
+		--nproc_per_node=$(G) --use_env --master_port=24567 \
 		scripts/train.py --dataset=fashion
 cifar10-7:
 	python3 -m veccls.train --dataset=cifar10 --model_type=hgru
 	python3 -m veccls.train --dataset=cifar10 --model_type=hpst
 	python3 -m torch.distributed.launch \
-		--nproc_per_node=8 --use_env --master_port=25678 \
+		--nproc_per_node=$(G) --use_env --master_port=25678 \
 		scripts/train.py --dataset=cifar10
+
+# [formal training command and parameters]
+mnist-dist:
 	torchrun \
-		--standalone --nnodes=1 --nproc_per_node=8 \
-		scripts/train.py --dataset=cifar10
+		--standalone --nnodes=1 --nproc_per_node=$(G) \
+		scripts/train.py --dataset=mnist \
+		--epochs 16 --lr_drop=12
+fashion-dist:
+	torchrun \
+		--standalone --nnodes=1 --nproc_per_node=$(G) \
+		scripts/train.py --dataset=fashion \
+		--epochs 16 --lr_drop=12
+cifar10-dist:
+	torchrun \
+		--standalone --nnodes=1 --nproc_per_node=$(G) \
+		scripts/train.py --dataset=cifar10 \
+		--epochs 50 --lr_drop=25
