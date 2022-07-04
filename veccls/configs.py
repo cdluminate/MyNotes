@@ -26,8 +26,8 @@ class datasets:
     @dataclass
     class tinyimagenet:
         '''
-        use the following command to download:
-        kaggle competitions download -c tiny-imagenet
+        download it here:
+        http://cs231n.stanford.edu/tiny-imagenet-200.zip
         '''
         root : str = os.path.expanduser('~/.torch/tiny-imagenet-200')
         jsonpath_train = 'tinyimagenet-train.json'
