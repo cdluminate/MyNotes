@@ -28,6 +28,6 @@ chafa ${step2} -f sixel
 stepz=${DIR}/stepz.svg
 echo step z ${stepz}
 vtracer --input ${step2} \
-    -f16 -p 8 -m polygon --hierarchical cutout \
+    -f16 -p 8 -m polygon --hierarchical stacked -g 1 \
     --output ${stepz}
 chafa ${stepz} -f sixel
