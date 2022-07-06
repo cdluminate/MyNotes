@@ -8,6 +8,7 @@
 1000 paths. we must try LIVE : https://ma-xu.github.io/LIVE/
 8. other than trying LIVE or DVG (too slow), maybe we can apply gaussian blur 
 first to reduce the corner and number of paths in the resulting svg?
+(scirpt scripts/tryim.sh serves this purpose, and looks good so far)
 
 9. original understanding on a path was somewhat wrong in detail. When there is
 a hole within the polygon, we should not break the corresponding path into two.
@@ -26,3 +27,5 @@ as color and combine?
 ```xml
 d="m 0,0 3,1 -5,5 -6,7 h 2 l 5,-2 h 5 l 1,4 -4,4 -2,1 h -9 l -3,-3 1,-5 5,-7 -2,-1 z m -4,15 -1,2 h 5 l 1,-2 z"
 ```
+
+cifar10: cifar10-test/08890-8.png
