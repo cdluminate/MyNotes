@@ -122,6 +122,17 @@ CIFAR-100, Tiny-ImageNet, and ImageNet.
 
 Reference: Image Vectorization: LIVE \cite{live,dvg}
 
+In raster images representing textures as the first-order information,
+the shapes as edges are stored as high-order information (computed from the
+difference).
+%
+In contrast, in a vector image, both shape and texture are presented meanwhile
+as the first-order information.
+%
+Namely, the polygon paths are directly shape information, while a combination of
+a series of polygons in different colors form a texture (although the texture
+may become coarse-grained if we want to limit the number of paths).
+
 \section{Raster Graphics Vectorization}
 
 Raster Graphics.
