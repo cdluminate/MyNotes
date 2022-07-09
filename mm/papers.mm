@@ -1,8 +1,8 @@
 <map version="freeplane 1.7.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="{M,R,D}L" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1656028607949" STYLE="oval">
+<node TEXT="{M,R,D}L" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1657404442105" STYLE="oval">
 <font NAME="Gentium" SIZE="18"/>
-<hook NAME="MapStyle" zoom="1.714">
+<hook NAME="MapStyle" zoom="2.509">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="119" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="120" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1655842831914">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -1093,7 +1093,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
+<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_1556055508" CREATED="1648173325254" MODIFIED="1648173329845">
 <icon BUILTIN="info"/>
@@ -1141,7 +1141,7 @@
 <node TEXT="imitates adaptive attack paper" ID="ID_1487728187" CREATED="1652387986758" MODIFIED="1652387992706"/>
 </node>
 </node>
-<node TEXT="Adversarial Training" FOLDED="true" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1648174116710">
+<node TEXT="Adversarial Training" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1648174116710">
 <font BOLD="true"/>
 <node TEXT="Survey" ID="ID_178248607" CREATED="1642431445724" MODIFIED="1649101870385">
 <icon BUILTIN="mindmap"/>
@@ -1207,7 +1207,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Other AT" FOLDED="true" ID="ID_1850296499" CREATED="1655841474292" MODIFIED="1655841482925">
+<node TEXT="Other AT" ID="ID_1850296499" CREATED="1655841474292" MODIFIED="1655841482925">
 <node TEXT="Curriculum AT" ID="ID_373950173" CREATED="1643412302659" MODIFIED="1643412307668">
 <node TEXT="Curriculum Adversarial Training" ID="ID_285117304" CREATED="1643412309119" MODIFIED="1643413743828">
 <icon BUILTIN="checked"/>
@@ -1356,6 +1356,11 @@
 </node>
 </node>
 </node>
+<node TEXT="Second-order" ID="ID_477103075" CREATED="1657407223347" MODIFIED="1657407225304">
+<node TEXT="Hessian-Free Second-Order Adversarial Examples for Adversarial Learning" ID="ID_486872774" CREATED="1657407226722" MODIFIED="1657407234954">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
 <node TEXT="w/ Reinforcement" ID="ID_1843946389" CREATED="1655841411472" MODIFIED="1655841416919">
 <node TEXT="LAS-AT: Adversarial Training with Learnable Attack Strategy" ID="ID_21010215" CREATED="1655841419099" MODIFIED="1655841630450">
 <node TEXT="CVPR22" ID="ID_540089591" CREATED="1655841427177" MODIFIED="1655841429052"/>
@@ -1467,7 +1472,7 @@
 <node TEXT="local Lipschitz" ID="ID_1085120369" CREATED="1652385719423" MODIFIED="1652385723167"/>
 </node>
 </node>
-<node TEXT="Robust Regularization" LOCALIZED_STYLE_REF="styles.topic" ID="ID_125075162" CREATED="1643058798944" MODIFIED="1655843503716">
+<node TEXT="Robust Regularization" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_125075162" CREATED="1643058798944" MODIFIED="1655843503716">
 <node TEXT="Generalize better with adversarial attack / adversarial trianing" ID="ID_1604216423" CREATED="1648388384439" MODIFIED="1648388398758">
 <icon BUILTIN="info"/>
 </node>
@@ -1711,6 +1716,14 @@
 <node TEXT="Training-Free Robust Multimodal Learning via Sample-Wise Jacobian Regularization" ID="ID_266079583" CREATED="1649633640001" MODIFIED="1649633641760">
 <icon BUILTIN="pencil"/>
 <node TEXT="looks like rejected ECCV" ID="ID_1470248094" CREATED="1649633642769" MODIFIED="1649633646853"/>
+</node>
+</node>
+<node TEXT="Batch Norm" ID="ID_837906827" CREATED="1657406380265" MODIFIED="1657406383153">
+<node TEXT="Removing Batch Normalization Boosts Adversarial Training" ID="ID_901293275" CREATED="1657406383978" MODIFIED="1657406411314">
+<icon BUILTIN="button_ok"/>
+<icon BUILTIN="idea"/>
+<node TEXT="ICML22" ID="ID_429941529" CREATED="1657406395251" MODIFIED="1657406397238"/>
+<node TEXT="BN is harmful for adversarial training" ID="ID_300021364" CREATED="1657406428821" MODIFIED="1657406435356"/>
 </node>
 </node>
 </node>
@@ -2470,9 +2483,13 @@
 <node TEXT="YTF" ID="ID_556061465" CREATED="1651184260798" MODIFIED="1651184263116"/>
 </node>
 </node>
-<node TEXT="Multi-Class Classification" ID="ID_1466249430" CREATED="1641243301668" MODIFIED="1641520995599">
+<node TEXT="Main" ID="ID_1466249430" CREATED="1641243301668" MODIFIED="1657404195948">
 <font NAME="Gentium"/>
 <node TEXT="Softmax Loss" ID="ID_625024996" CREATED="1651184098700" MODIFIED="1651184101967"/>
+<node TEXT="Triplet Loss" ID="ID_1789138358" CREATED="1657404224232" MODIFIED="1657404229756">
+<node TEXT="Facenet" ID="ID_1326446575" CREATED="1657404230623" MODIFIED="1657404232084"/>
+<node TEXT="See also deep metric learning section" ID="ID_180904200" CREATED="1657404259535" MODIFIED="1657404264563"/>
+</node>
 <node TEXT="L2-Softmax loss" ID="ID_1655703042" CREATED="1651184103282" MODIFIED="1651184106549">
 <node TEXT="hypersphere" ID="ID_766784144" CREATED="1651184117000" MODIFIED="1651184119666"/>
 </node>
@@ -2486,7 +2503,7 @@
 <icon BUILTIN="bookmark"/>
 <font NAME="Gentium"/>
 </node>
-<node TEXT="ArcFace" ID="ID_411135218" CREATED="1652384378593" MODIFIED="1652384382019">
+<node TEXT="ArcFace" FOLDED="true" ID="ID_411135218" CREATED="1652384378593" MODIFIED="1652384382019">
 <node TEXT="ArcFace: additive angular margin loss for deep face recognition 2019" ID="ID_970043870" CREATED="1641242901225" MODIFIED="1642953945231">
 <icon BUILTIN="checked"/>
 <icon BUILTIN="bookmark"/>
@@ -2544,6 +2561,9 @@
 <icon BUILTIN="unchecked"/>
 </node>
 </node>
+<node TEXT="Probabilistic Face Embeddings" ID="ID_803226011" CREATED="1657404173922" MODIFIED="1657404174911">
+<node TEXT="ICCV19" ID="ID_1364197023" CREATED="1657404176599" MODIFIED="1657404178362"/>
+</node>
 <node TEXT="P2SGrad" ID="ID_1528859822" CREATED="1652384387406" MODIFIED="1652384390022">
 <node TEXT="P2SGrad: Refined Gradients for Optimizing Deep Face Models" ID="ID_1929819605" CREATED="1652384391411" MODIFIED="1652384397158">
 <node TEXT="CVPR19" ID="ID_1963132669" CREATED="1652384399361" MODIFIED="1652384401100"/>
@@ -2576,14 +2596,6 @@
 </node>
 </node>
 </node>
-<node TEXT="Similarity Embedding" ID="ID_290828706" CREATED="1641243309778" MODIFIED="1651184179798">
-<font NAME="Gentium"/>
-<node TEXT="FaceNet" ID="ID_466452383" CREATED="1641242953447" MODIFIED="1641520995604">
-<font NAME="Gentium"/>
-</node>
-<node TEXT="link: see deep metric learning" ID="ID_1758290390" CREATED="1655841677582" MODIFIED="1655841688414"/>
-</node>
-<node TEXT="Face Verification" ID="ID_33628603" CREATED="1651184509665" MODIFIED="1651184513925"/>
 <node TEXT="Key Point" ID="ID_1651017374" CREATED="1650830438788" MODIFIED="1650830442804">
 <node TEXT="Not All Tokens Are Equal: Human-centric Visual Analysis via&#xa;Token Clustering Transformer" ID="ID_1267200711" CREATED="1650830443573" MODIFIED="1650830471615">
 <icon BUILTIN="bookmark"/>
@@ -2608,1270 +2620,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Track: AdvRank" FOLDED="true" POSITION="right" ID="ID_67713290" CREATED="1561352085890" MODIFIED="1642394393230">
-<icon BUILTIN="idea"/>
-<font NAME="Gentium" SIZE="10" BOLD="true"/>
-<edge COLOR="#ff00ff"/>
-<node TEXT="1806.04425: Ranking Robustness Under Ad" ID="ID_562405105" CREATED="1561555589182" MODIFIED="1636485900673">
-<icon BUILTIN="button_cancel"/>
-<font NAME="Gentium" SIZE="10"/>
-<node TEXT="document manipulation for candidate attack" ID="ID_1231428087" CREATED="1561555592821" MODIFIED="1587728924172">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="mainly analysis robustness" ID="ID_55534459" CREATED="1561555648216" MODIFIED="1587728924173">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="manual documentation manipulation instead of automatic adversarial example generation" ID="ID_798730521" CREATED="1561555609750" MODIFIED="1587728924174">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="targets at RankSVM and LambdaMART models instead of neural networks" ID="ID_255349278" CREATED="1561555658663" MODIFIED="1587728924175">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-</node>
-<node TEXT="1808.03908: Adversarial Personalized Rank" ID="ID_83109239" CREATED="1561555800953" MODIFIED="1636485894233">
-<icon BUILTIN="button_cancel"/>
-<font NAME="Gentium" SIZE="10"/>
-<node TEXT="recommendation system" ID="ID_1396811583" CREATED="1561555811711" MODIFIED="1587728924177">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="enhance robustness of a recommender model with adversarial training (adv examples)" ID="ID_527243554" CREATED="1561555835768" MODIFIED="1587728924178">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="APR on Matrix Factorization" ID="ID_662100047" CREATED="1561556113144" MODIFIED="1587728924179">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-</node>
-<node TEXT="1809: AdvBox: FaceNet Attack" ID="ID_1888665729" CREATED="1561556172335" MODIFIED="1636485887561">
-<icon BUILTIN="button_cancel"/>
-<font NAME="Gentium" SIZE="10"/>
-<node TEXT="query attack" ID="ID_1680208164" CREATED="1561556180000" MODIFIED="1587728924182">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="https://github.com/advboxes/AdvBox/blob/master/applications/face_recogn" ID="ID_951928489" CREATED="1561556196446" MODIFIED="1587728924182" LINK="https://github.com/advboxes/AdvBox/blob/master/applications/face_recogn">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="\latex $L=\sqrt{\sum (E-E_t)^2}" ID="ID_79735084" CREATED="1561556315382" MODIFIED="1587728924183">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-</node>
-<node TEXT="1812.00552: Universal Perturbation Attack Against Image Retrieval" ID="ID_1919220467" CREATED="1561556406527" MODIFIED="1587728924183">
-<font NAME="Gentium" SIZE="10"/>
-<node TEXT="directly attacks triplet ranking loss function" ID="ID_491701428" CREATED="1561556424133" MODIFIED="1587728924185">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="but what if the triplet fell into the zero-gradient region" ID="ID_839129884" CREATED="1561556433741" MODIFIED="1587728924186">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="using PGD+momentum for optimization" ID="ID_948653721" CREATED="1561556446589" MODIFIED="1587728924187">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="studies query attack" ID="ID_1697473744" CREATED="1561556462589" MODIFIED="1587728924188">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-</node>
-<node TEXT="2019-ICMR: Who&#x2019;s Afraid of Adversarial Queries?" ID="ID_1703113745" CREATED="1561556482168" MODIFIED="1636485880766">
-<icon BUILTIN="button_cancel"/>
-<font NAME="Gentium" SIZE="10"/>
-<node TEXT="query attack" ID="ID_1123142555" CREATED="1561556568742" MODIFIED="1587728924189">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="\latex $\max ||f(x)-f(x+v)||_2^2$" ID="ID_1830202115" CREATED="1561556572709" MODIFIED="1587728924190">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="aims at image retrieval and didn&apos;t mention embedding learning" ID="ID_1516625397" CREATED="1561556595981" MODIFIED="1587728924190">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-</node>
-<node TEXT="1907: unsupervised adversarial attacks on deep feature-based retrieval with GAN" ID="ID_9436679" CREATED="1588230731425" MODIFIED="1588230756582">
-<node TEXT="generate adversarial perturbation with GAN" ID="ID_1151385661" CREATED="1588230816064" MODIFIED="1588230824347"/>
-</node>
-<node TEXT="1812.00552: Universal Perturbation Attack Against Image Retrieval (iccv19)" ID="ID_1472505886" CREATED="1573474834671" MODIFIED="1587728924195">
-<icon BUILTIN="messagebox_warning"/>
-<font NAME="Gentium" SIZE="10"/>
-<node TEXT="what: universal perturbation for untargeted attack" ID="ID_1954548078" CREATED="1573474853539" MODIFIED="1587728924196">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="how: currupts pairwise or listwise ranking" ID="ID_1847715376" CREATED="1573474863063" MODIFIED="1587728924197">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="untargeted, focusing on fooling" ID="ID_665084129" CREATED="1573475747222" MODIFIED="1587728924198">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-</node>
-<node TEXT="1901.10650: Metric Attack and Defense for Person Re-identificatio" ID="ID_490211267" CREATED="1592543067606" MODIFIED="1636485967109">
-<icon BUILTIN="messagebox_warning"/>
-<icon BUILTIN="button_cancel"/>
-<font BOLD="true"/>
-<node TEXT="Song Bai" ID="ID_692240773" CREATED="1636485956725" MODIFIED="1636485961987"/>
-<node TEXT="attack the metric in person reID" ID="ID_34707268" CREATED="1592543081709" MODIFIED="1592543098277"/>
-<node TEXT="push (untargeted) and pull (targeted)" ID="ID_1286430581" CREATED="1592543098573" MODIFIED="1592543112360"/>
-</node>
-<node TEXT="1908.09613: targeted mismatch adversarial attack (iccv19)" ID="ID_671271001" CREATED="1573471637067" MODIFIED="1636486108618">
-<icon BUILTIN="messagebox_warning"/>
-<icon BUILTIN="button_ok"/>
-<font NAME="Gentium" SIZE="10"/>
-<node TEXT="what: targeted mismatch" ID="ID_1563475526" CREATED="1573471664345" MODIFIED="1587728924192">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="how: distance objective" ID="ID_688655227" CREATED="1573472458185" MODIFIED="1587728924193">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="not systematic enough" ID="ID_205991126" CREATED="1573472480708" MODIFIED="1587728924194">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="THIS is a threat to us" ID="ID_988648076" CREATED="1573472496549" MODIFIED="1587728924195">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-</node>
-<node TEXT="Advpattern (iccv19)" ID="ID_932771683" CREATED="1576809427350" MODIFIED="1587728924198">
-<icon BUILTIN="messagebox_warning"/>
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="ours: Adversarial Ranking Attack and Defense (arxiv 2002.11293)" ID="ID_933056745" CREATED="1576809387016" MODIFIED="1592543327861">
-<icon BUILTIN="button_ok"/>
-<font NAME="Gentium" SIZE="10" BOLD="true"/>
-<node TEXT="ECCV2020" ID="ID_1213034229" CREATED="1576809470567" MODIFIED="1610427018812">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-</node>
-<node TEXT="2004.04199: transferable, controllable, and inconspicious adversarial attacks on person re-identification with deep-misranking (CVPR20)" ID="ID_693496331" CREATED="1590743469098" MODIFIED="1590743579415">
-<icon BUILTIN="button_ok"/>
-<node TEXT="person reID" ID="ID_548309734" CREATED="1590743636274" MODIFIED="1590743640590"/>
-<node TEXT="use triplet form attack objective" ID="ID_1324326527" CREATED="1590743509489" MODIFIED="1590743528991"/>
-<node TEXT="untargeted" ID="ID_862183953" CREATED="1590743529382" MODIFIED="1590743531961"/>
-<node TEXT="learning-to-mis-rank" ID="ID_172715084" CREATED="1590805595723" MODIFIED="1590805600800"/>
-</node>
-<node TEXT="Vulnerability of Person Re Identification Models to Metric Adversarial Attacks (cvpr20w)" ID="ID_666911505" CREATED="1592544846016" MODIFIED="1620715760339">
-<icon BUILTIN="button_ok"/>
-<icon BUILTIN="messagebox_warning"/>
-<node TEXT="self metric attack" ID="ID_1983736472" CREATED="1592544863127" MODIFIED="1592544870094">
-<node TEXT="maximum shift distance" ID="ID_1843892614" CREATED="1592544925404" MODIFIED="1592544929867"/>
-<node TEXT="untargeted" ID="ID_1551966366" CREATED="1592544982949" MODIFIED="1592544984988"/>
-</node>
-<node TEXT="furthest negative attack" ID="ID_165661813" CREATED="1592544870439" MODIFIED="1592544877498">
-<node TEXT="push from orig, pull from furthest cluster" ID="ID_765025792" CREATED="1592545364041" MODIFIED="1592545375413"/>
-<node TEXT="disturb the ranking" ID="ID_225845829" CREATED="1592544987176" MODIFIED="1592544995331"/>
-<node TEXT="untargeted" ID="ID_1161241988" CREATED="1592544996728" MODIFIED="1592544998361"/>
-</node>
-<node TEXT="adversarial training for metric" ID="ID_881036760" CREATED="1592544877759" MODIFIED="1592544885179"/>
-</node>
-<node TEXT="2012.14057: PERSONRE IDENTIFICATION WITH ADVERSARIAL TRIPLET EMBEDDING" ID="ID_974503367" CREATED="1610427222890" MODIFIED="1620715752859">
-<icon BUILTIN="messagebox_warning"/>
-<node TEXT="not peer reviewed" ID="ID_911035452" CREATED="1610427251959" MODIFIED="1610427256067"/>
-<node TEXT="\latex l_\text{triplet}(\tilde{a}, p, n)" ID="ID_1528343305" CREATED="1610427320982" MODIFIED="1610427368752"/>
-<node TEXT="better reid performance? weird" ID="ID_912255527" CREATED="1610427378471" MODIFIED="1610427386018"/>
-</node>
-<node TEXT="2103.02927 QAIR: Practical Query-efficient Black-Box Attacks for Image Retrieval" ID="ID_1939119283" CREATED="1615294198999" MODIFIED="1620715422259">
-<icon BUILTIN="messagebox_warning"/>
-<icon BUILTIN="button_ok"/>
-<node TEXT="query-based attack against image retrieval to subvert the top-k retrieval" ID="ID_788475675" CREATED="1615294409842" MODIFIED="1615294424860">
-<node TEXT="random incorrect result" ID="ID_1404780182" CREATED="1615294426968" MODIFIED="1615294439236"/>
-</node>
-<node TEXT="gradient optimization + a relevance-based loss" ID="ID_1805130536" CREATED="1615294463470" MODIFIED="1615294478666">
-<node TEXT="uses RGF (random gradient free)" ID="ID_1977339570" CREATED="1615294685532" MODIFIED="1615294698319"/>
-</node>
-<node TEXT="recursive model stealing method" ID="ID_334621555" CREATED="1615294479086" MODIFIED="1615294494768">
-<node TEXT="provides transfer prior" ID="ID_1010296679" CREATED="1615294496388" MODIFIED="1615294503336"/>
-</node>
-<node TEXT="stealing and attack is separated steps: what if we treat it as a multi-arm bandit?" ID="ID_1679102936" CREATED="1615294783533" MODIFIED="1615294824361">
-<icon BUILTIN="idea"/>
-<node TEXT="explore and exploit" ID="ID_645430104" CREATED="1615294813742" MODIFIED="1615294819339"/>
-</node>
-</node>
-<node TEXT="RobRank: adversarial attack and defense in deep ranking" ID="ID_990446170" CREATED="1636485853836" MODIFIED="1650810489070">
-<font BOLD="true"/>
-</node>
-<node TEXT="RobDML: Enhancing Adversarial Robustness for Deep Metric Learning" ID="ID_1927729885" CREATED="1636485850581" MODIFIED="1650810510794">
-<font BOLD="true"/>
-<node TEXT="CVPR22" ID="ID_1223380826" CREATED="1650810506474" MODIFIED="1650810507766"/>
-</node>
-</node>
-<node TEXT="3D + PCL Recog" FOLDED="true" POSITION="left" ID="ID_1606327696" CREATED="1583132559918" MODIFIED="1649103272801">
-<font NAME="Gentium" SIZE="10" BOLD="false"/>
-<edge COLOR="#007c7c"/>
-<node TEXT="Dataset" ID="ID_750669130" CREATED="1583137147235" MODIFIED="1587526865232">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="PartNet: A large scale benchmark for fine-grained and hierarchical part-level 3D object understanding" ID="ID_367911268" CREATED="1583137156179" MODIFIED="1587526865232">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: large-scale dataset of 3D objects annotated with fine-trained, instance-level, and hierarchical 3D part information." ID="ID_1810204510" CREATED="1583137993707" MODIFIED="1587526865232">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: 3d part recognition: fine-rained semantic segmentation, hierarchical semantic segmentation, and instance segmentation" ID="ID_447922824" CREATED="1583141336957" MODIFIED="1587526865233">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="generic" ID="ID_67683623" CREATED="1608878793211" MODIFIED="1608878794674">
-<node TEXT="2012.09688&#xa;PCT: Point Cloud Transformer" ID="ID_760061240" CREATED="1608878795342" MODIFIED="1608878805569"/>
-<node TEXT="2012.09164 Point Transformer" ID="ID_1856683145" CREATED="1608879617939" MODIFIED="1608880161951">
-<icon BUILTIN="bookmark"/>
-<node TEXT="self-attention network to PCL" ID="ID_1162420612" CREATED="1608880164884" MODIFIED="1608880172010"/>
-</node>
-</node>
-<node TEXT="classification" ID="ID_1683843111" CREATED="1583132565754" MODIFIED="1610426338023">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="PointNet: deep learning on Point Sets for 3D classification and segmentation (2017)" ID="ID_535445133" CREATED="1583132578641" MODIFIED="1587526865234">
-<icon BUILTIN="button_ok"/>
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: 3d classification and segmentation" ID="ID_369477718" CREATED="1583132646461" MODIFIED="1587526865235">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: previous works transform such data to regular 3D voxel grids or collections of images" ID="ID_509541120" CREATED="1583132656157" MODIFIED="1587526865236">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="renders data unecessarily voluminous and causes issues" ID="ID_1650499462" CREATED="1583132774211" MODIFIED="1587526865237">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="how: novel type of neural network" ID="ID_1582863497" CREATED="1583132794431" MODIFIED="1587526865238">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="directly consumes 3d point cloud" ID="ID_904651994" CREATED="1583132807372" MODIFIED="1587526865238">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="respects the permutation invariance of point in the input" ID="ID_80693188" CREATED="1583132818955" MODIFIED="1587526865239">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="Detail" ID="ID_592119659" CREATED="1583132853503" MODIFIED="1587526865239">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="properties of point set" ID="ID_923628661" CREATED="1583133482219" MODIFIED="1587526865239">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="1. unordered" ID="ID_59901348" CREATED="1583133494060" MODIFIED="1587526865240">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="2. interaction among points" ID="ID_905514121" CREATED="1583133498167" MODIFIED="1587526865240">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="3. invariance under transformations" ID="ID_932819479" CREATED="1583133522841" MODIFIED="1587526865241">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="e.g. translation and rotation" ID="ID_1003384585" CREATED="1583133566689" MODIFIED="1587526865241">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="regularize transformation to be close to orthogonal matrix" ID="ID_1980629096" CREATED="1583133585186" MODIFIED="1587526865242">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="An orthogonal transformation will not lose information in the input, thus is desired" ID="ID_285705617" CREATED="1583133597956" MODIFIED="1587526865242">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="PointNet++: deep hierarchical feature learning on point sets in a metric space (NIPS)" ID="ID_1305155138" CREATED="1583133688195" MODIFIED="1587526865243">
-<icon BUILTIN="button_ok"/>
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: 3d classification and segmentation" ID="ID_1391695258" CREATED="1583136577356" MODIFIED="1587526865244">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: pointnet does not capture local structures induced by the metric space points live in" ID="ID_1734373925" CREATED="1583136583902" MODIFIED="1587526865245">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: introduce a hierarchical neural network that applies pointnet recursively on a nested partitioning of the input point set; propoes novel set learning layers to adaptively combine features from multiple scales" ID="ID_574546543" CREATED="1583136619272" MODIFIED="1587526865246">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="2002.10876: PointAugment: an auto-agumentation framework for point cloud classification (CVPR2020)" ID="ID_1995300558" CREATED="1583310893208" MODIFIED="1587526865246">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: regularization in PCL classification" ID="ID_682948316" CREATED="1583310928954" MODIFIED="1587526865247">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: regularization" ID="ID_1191365248" CREATED="1583311604535" MODIFIED="1587526865248">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: sample-aware and takes adversarial learning stategy to jointly optimize the augmentor and the classifier" ID="ID_1638101526" CREATED="1583311614272" MODIFIED="1587526865248">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="augmentor can learn samples that best fit the classifier" ID="ID_1705315529" CREATED="1583311657637" MODIFIED="1587526865249">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="EllipsoidNet: Ellipsoid Representation for Point Cloud Classification andSegmentation (cvpr21)" ID="ID_1008449076" CREATED="1615297913979" MODIFIED="1615297923495">
-<node TEXT="new 2d representation" ID="ID_1336906720" CREATED="1615297924304" MODIFIED="1615297941283"/>
-</node>
-<node TEXT="Generalization" ID="ID_1470361340" CREATED="1650816123033" MODIFIED="1650816126078">
-<node TEXT="MetaSets: Meta-Learning on Point Sets for Generalizable Representations" ID="ID_1880007762" CREATED="1650816127428" MODIFIED="1650816134358">
-<node TEXT="CVPR21" ID="ID_1972344411" CREATED="1650816135730" MODIFIED="1650816137097"/>
-</node>
-</node>
-</node>
-<node TEXT="Semgentation" ID="ID_98283900" CREATED="1610426338878" MODIFIED="1610426343353">
-<node TEXT="2003.05593:Learning to Segment 3D Point Clouds in 2D Image Space (cvpr20 oral)" ID="ID_1194509251" CREATED="1590748289620" MODIFIED="1590748552801"/>
-<node TEXT="2003.14032 PolarNet: An Improved Grid Representation for Online LiDAR Point Clouds Semantic Segmentation (cvpr20)" ID="ID_273525175" CREATED="1590806996838" MODIFIED="1590807009853"/>
-<node TEXT="2012.10217&#xa;SegGroup: Seg-Level Supervision for 3D Instance and Semantic Segmentation" ID="ID_746665270" CREATED="1608872980932" MODIFIED="1608873093023"/>
-<node TEXT="2101: Boundary-Aware Geometric Encoding for Semantic Segmentation of Point Clouds (AAAI21)" ID="ID_18229318" CREATED="1610426385894" MODIFIED="1610426427874"/>
-</node>
-<node TEXT="Shape + PCL" ID="ID_692723578" CREATED="1587978723669" MODIFIED="1587978729471">
-<node TEXT="2004.09411: shape-oriented convolutional neural network for point cloud analysis (AAAI20)" ID="ID_648541054" CREATED="1587978730554" MODIFIED="1587978867499"/>
-<node TEXT="2004.04242: deep manifold prior" ID="ID_1198757401" CREATED="1589766955822" MODIFIED="1589766965285"/>
-<node TEXT="2005.08144: high-dimentsional convolutional networks for geometric pattern recognition" ID="ID_551842404" CREATED="1590025587186" MODIFIED="1590025610132"/>
-</node>
-<node TEXT="Depth" ID="ID_1948167092" CREATED="1617622791190" MODIFIED="1617622792504">
-<node TEXT="Depth Estimation" ID="ID_310201956" CREATED="1583313577977" MODIFIED="1587526865249">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="2002.12319: semantically-guided representation learning for self-supervised monocular depth" ID="ID_123925389" CREATED="1583319217945" MODIFIED="1587526865249">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: depth estimation" ID="ID_512544818" CREATED="1583319382866" MODIFIED="1587526865250">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: leverage more directly semantic structure to guide geometric representation learning" ID="ID_1129284074" CREATED="1583319389083" MODIFIED="1587526865251">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="Depth Representation" ID="ID_940024603" CREATED="1617622797830" MODIFIED="1617622801976">
-<node TEXT="CVPR21: S2R-DepthNet: Learning a Generalizable Depth-specific Structural Representation" ID="ID_339705407" CREATED="1617622803213" MODIFIED="1617622810654"/>
-</node>
-</node>
-<node TEXT="Motion Prediction" ID="ID_1468545131" CREATED="1585273931386" MODIFIED="1587526865251">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="2003.06594: collaborative motion prediction via neural motion message passing (CVPR20)" ID="ID_922645949" CREATED="1585273939963" MODIFIED="1587526865251">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="model the interaction among traffic actors, which could cooperate with each other to avoid collisions or form groups" ID="ID_1866499715" CREATED="1585273974008" MODIFIED="1587526865252">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="Social GAN: Socially Acceptable Trajectories&#xa;with Generative Adversarial Networks (cvpr20)" ID="ID_707374796" CREATED="1592546647558" MODIFIED="1592546660119"/>
-</node>
-<node TEXT="Tracking" ID="ID_1225202497" CREATED="1590746031233" MODIFIED="1590746035544">
-<node TEXT="2005.13888: P2B: Point-to-Box Network for 3D Object Tracking in Point Clouds (cvpr20 oral)" ID="ID_247548698" CREATED="1590746036605" MODIFIED="1590746049896"/>
-</node>
-<node TEXT="2D-&gt;3D / Reconstruction" ID="ID_85275942" CREATED="1587974524881" MODIFIED="1587975275112">
-<node TEXT="3D portrait" ID="ID_1817633511" CREATED="1587974528844" MODIFIED="1587974534327">
-<node TEXT="2004.11598: Deep 3D portrait from a single image" ID="ID_788527202" CREATED="1587974536965" MODIFIED="1587974549308">
-<node TEXT="unsupervised" ID="ID_588496742" CREATED="1587974550811" MODIFIED="1587974553381"/>
-</node>
-</node>
-</node>
-<node TEXT="Unsupervised" ID="ID_1108189941" CREATED="1590749952334" MODIFIED="1590749956189">
-<node TEXT="2004.01176: Learning Unsupervised Hierarchical Part Decomposition of 3D Objects from a Single RGB Image (cvpr20)" ID="ID_953085415" CREATED="1590749956974" MODIFIED="1590749967809"/>
-</node>
-<node TEXT="Object Detection" ID="ID_359173144" CREATED="1634062757685" MODIFIED="1648337996840">
-<node TEXT="Voxel Transformer for 3D Object Detection" ID="ID_1112299622" CREATED="1634062767074" MODIFIED="1634062773616"/>
-<node TEXT="LiDAR Snowfall Simulation for Robust 3D Object Detection" ID="ID_1716092506" CREATED="1649103277309" MODIFIED="1649103282821">
-<node TEXT="CVPR22" ID="ID_685730559" CREATED="1649103284187" MODIFIED="1649103285288"/>
-</node>
-<node TEXT="Voxel Field Fusion for 3D Object Detection" ID="ID_677783437" CREATED="1654539147223" MODIFIED="1654539148043"/>
-<node TEXT="Object DGCNN: 3D Object Detection using Dynamic Graphs" ID="ID_1443342957" CREATED="1655007165828" MODIFIED="1655007166862">
-<node TEXT="NIPS21" ID="ID_1842247761" CREATED="1655007169158" MODIFIED="1655007170975"/>
-</node>
-</node>
-<node TEXT="Interpolation" ID="ID_687015313" CREATED="1648337997035" MODIFIED="1648338000713">
-<node TEXT="IDEA-Net: Dynamic 3D Point Cloud Interpolation via Deep Embedding Alignment" ID="ID_1606213792" CREATED="1648338005697" MODIFIED="1648338009130">
-<node TEXT="CVPR22" ID="ID_80360502" CREATED="1648338010355" MODIFIED="1648338011775"/>
-</node>
-</node>
-</node>
-<node TEXT="Action Recognition" FOLDED="true" POSITION="left" ID="ID_941361807" CREATED="1647567341551" MODIFIED="1647567345392">
-<edge COLOR="#ff0000"/>
-<node TEXT="Architecture" ID="ID_694731282" CREATED="1647567346659" MODIFIED="1647567355095">
-<node TEXT="non-local neural networks" ID="ID_595201499" CREATED="1647567356067" MODIFIED="1647567369739">
-<icon BUILTIN="checked"/>
-<node TEXT="CVPR18" ID="ID_556242427" CREATED="1647567364801" MODIFIED="1647567366157"/>
-<node TEXT="kaiming he" ID="ID_598417815" CREATED="1647567408886" MODIFIED="1647567410210"/>
-<node TEXT="deal with long-range dependency problem that the traditional CNN is not very good at" ID="ID_883791225" CREATED="1647567373082" MODIFIED="1647567395434"/>
-</node>
-</node>
-<node TEXT="Framework" ID="ID_164836852" CREATED="1651953412715" MODIFIED="1651953414547">
-<node TEXT="Cross-modal Representation Learning for Zero-shot Action Recognition" ID="ID_1630052458" CREATED="1651953420845" MODIFIED="1651953421503">
-<node TEXT="CVPR22, Microsoft" ID="ID_125282230" CREATED="1651953423268" MODIFIED="1651953426559"/>
-</node>
-</node>
-<node TEXT="Bias" ID="ID_335953065" CREATED="1655187221906" MODIFIED="1655187229388">
-<node TEXT="Learning without Prejudice: Avoiding Bias in Webly-Supervised Action&#xa;Recognition" ID="ID_1991556722" CREATED="1655187230614" MODIFIED="1655187236882"/>
-</node>
-</node>
-<node TEXT="AR/VR Demands" FOLDED="true" POSITION="left" ID="ID_598464569" CREATED="1649106345613" MODIFIED="1649106350552">
-<edge COLOR="#00ff00"/>
-<node TEXT="Relighting" ID="ID_147972340" CREATED="1649106351568" MODIFIED="1649106353702">
-<node TEXT="Face Relighting with Geometrically Consistent Shadows" ID="ID_1062796447" CREATED="1649106354508" MODIFIED="1649106359170">
-<node TEXT="CVPR22" ID="ID_1173806280" CREATED="1649106360283" MODIFIED="1649106361411"/>
-</node>
-</node>
-</node>
-<node TEXT="Backdoor Attack &amp; Defense" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="left" ID="ID_1279237598" CREATED="1642964328030" MODIFIED="1648336230488">
-<edge COLOR="#ff0000"/>
-<node TEXT="Attack" ID="ID_481030829" CREATED="1642965505734" MODIFIED="1642965507796">
-<node TEXT="Classification" ID="ID_1068695249" CREATED="1643059216060" MODIFIED="1643059221252">
-<node TEXT="* Madry backdoor" ID="ID_684891535" CREATED="1643059222128" MODIFIED="1644181613323"/>
-<node TEXT="Imperceptible and Multi-channel Backdoor Attack against Deep Neural Networks" ID="ID_1408798505" CREATED="1644181613544" MODIFIED="1644181621740">
-<icon BUILTIN="pencil"/>
-<node TEXT="exploiting DCT steganography" ID="ID_645033989" CREATED="1644181646727" MODIFIED="1644181655902"/>
-</node>
-<node TEXT="Poison Ink: Robust and Invisible Backdoor Attack" ID="ID_216800788" CREATED="1647567532543" MODIFIED="1647567536305">
-<icon BUILTIN="pencil"/>
-</node>
-</node>
-<node TEXT="Federated Learning (FL)" ID="ID_63486999" CREATED="1642964624292" MODIFIED="1642964972961">
-<node TEXT="Attack of the Tails:&#xa;Yes, You Really Can Backdoor Federated Learning" ID="ID_1636233737" CREATED="1642964633771" MODIFIED="1642964637902">
-<icon BUILTIN="checked"/>
-<node TEXT="NIPS20" ID="ID_315153104" CREATED="1642964641665" MODIFIED="1642964643166"/>
-<node TEXT="there are already many attacks and defenses in FL" ID="ID_1297351488" CREATED="1642964663241" MODIFIED="1642964670655"/>
-<node TEXT="this paper breaks the sota defense" ID="ID_1011383288" CREATED="1642964675173" MODIFIED="1642964680787"/>
-<node TEXT="susceptible to attack. defense remains open problem" ID="ID_92977436" CREATED="1642964925932" MODIFIED="1642964939810"/>
-</node>
-<node ID="ID_124537533" CREATED="1642965130724" MODIFIED="1642965135500">
-<icon BUILTIN="pencil"/>
-<richcontent TYPE="NODE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    Backdoor Attacks on Federated Learning with Lottery Ticket Hypothesis
-  </body>
-</html>
-</richcontent>
-<node TEXT="21.09" OBJECT="java.lang.Double|21.09" ID="ID_874215275" CREATED="1642965148120" MODIFIED="1642965212458"/>
-</node>
-<node TEXT="DBA: Distributed Backdoor Attacks against Federated Learning" ID="ID_1786745650" CREATED="1642965312934" MODIFIED="1642965322325">
-<icon BUILTIN="unchecked"/>
-<node TEXT="iclr21" ID="ID_1366820704" CREATED="1642965323484" MODIFIED="1642965326580"/>
-</node>
-</node>
-<node TEXT="Automobile" ID="ID_1807292891" CREATED="1646928903901" MODIFIED="1646928910994">
-<node TEXT="Clean-Annotation Backdoor Attack against Lane Detection Systems in the Wild" ID="ID_444510611" CREATED="1646928911957" MODIFIED="1646928920668">
-<icon BUILTIN="pencil"/>
-<node TEXT="physical attack against lane deteciton" ID="ID_78672113" CREATED="1646928932402" MODIFIED="1646929021292"/>
-<node TEXT="clean-annotation approach" ID="ID_638994819" CREATED="1646929021555" MODIFIED="1646929029315"/>
-</node>
-</node>
-<node TEXT="Tracking" ID="ID_633333846" CREATED="1644181581603" MODIFIED="1644181584344">
-<node TEXT="Few-Shot Backdoor Attacks on Visual Object Tracking" ID="ID_1944039915" CREATED="1644181500877" MODIFIED="1644181516065">
-<icon BUILTIN="checked"/>
-<node TEXT="ICLR22" ID="ID_1379553453" CREATED="1644181502731" MODIFIED="1644181504177"/>
-<node TEXT="extension of backdoor" ID="ID_1434989681" CREATED="1644181504456" MODIFIED="1644181513607"/>
-</node>
-</node>
-<node TEXT="Contrastive Learning" ID="ID_1079011502" CREATED="1647267727724" MODIFIED="1647267731689">
-<node TEXT="Indiscriminate Poisoning Attacks on Unsupervised Contrastive Learning" ID="ID_103472433" CREATED="1647267739350" MODIFIED="1647267743429">
-<icon BUILTIN="pencil"/>
-</node>
-<node TEXT="Poisoning and Backdooring Contrastive Learning" ID="ID_199714317" CREATED="1648425561210" MODIFIED="1648425562006">
-<node TEXT="Carlini" ID="ID_1124457398" CREATED="1648425564654" MODIFIED="1648425567024"/>
-<node TEXT="CLIP" ID="ID_653822881" CREATED="1648425569833" MODIFIED="1648425571800"/>
-</node>
-</node>
-</node>
-<node TEXT="Defense" ID="ID_1943792971" CREATED="1642964418531" MODIFIED="1642965511845">
-<node TEXT="Survey" ID="ID_330468423" CREATED="1647048705270" MODIFIED="1647048707607">
-<node TEXT="A Survey of Neural Trojan Attacks and Defenses in Deep Learning" ID="ID_941695665" CREATED="1646945552550" MODIFIED="1646945574224">
-<icon BUILTIN="pencil"/>
-</node>
-</node>
-<node TEXT="Classification" ID="ID_1654847796" CREATED="1647048721032" MODIFIED="1647048723750">
-<node TEXT="Adversarial Fine-tuning for Backdoor Defense: Connect Adversarial Examples to Triggered Samples" ID="ID_580929337" CREATED="1646947640727" MODIFIED="1646947646923">
-<icon BUILTIN="pencil"/>
-</node>
-</node>
-<node TEXT="Face Recog" ID="ID_569214033" CREATED="1647266119655" MODIFIED="1647266122422">
-<node TEXT="Resurrecting Trust in Facial Recognition: Mitigating Backdoor Attacks in Face Recognition to Prevent Potential Privacy Breaches" ID="ID_880337110" CREATED="1647266127523" MODIFIED="1647266130023">
-<icon BUILTIN="pencil"/>
-<node TEXT="(1) using transfer learning" ID="ID_1190567128" CREATED="1647266131286" MODIFIED="1647266137581"/>
-<node TEXT="(2) using selective image perturbation" ID="ID_1274323880" CREATED="1647266137898" MODIFIED="1647266144697"/>
-</node>
-</node>
-<node TEXT="Federated Learning (FL)" ID="ID_1134675768" CREATED="1642965172314" MODIFIED="1642965518360">
-<node TEXT="Mitigating Backdoor Attacks in Federated Learning" ID="ID_709693725" CREATED="1642965179275" MODIFIED="1642965184157">
-<icon BUILTIN="pencil"/>
-<node TEXT="20.11" OBJECT="java.lang.Double|20.11" ID="ID_839247018" CREATED="1642965197783" MODIFIED="1642965208595"/>
-<node TEXT="Performance too good to be true?" ID="ID_813710886" CREATED="1642965276263" MODIFIED="1642965282360"/>
-</node>
-<node TEXT="Certifiably Robust Federated Learning against Backdoor Attacks" ID="ID_741627861" CREATED="1642965359811" MODIFIED="1642965362229">
-<icon BUILTIN="unchecked"/>
-<node TEXT="icml21" ID="ID_359293148" CREATED="1642965364960" MODIFIED="1642965369038"/>
-</node>
-<node TEXT="FederatedReverse: A Detection and Defense Method Against Backdoor Attacks in Federated Learning" ID="ID_1755199424" CREATED="1643036656254" MODIFIED="1643036673341">
-<icon BUILTIN="unchecked"/>
-</node>
-<node TEXT="Defending against Backdoors in Federated Learning with Robust Learning Rate AAAI21" ID="ID_1421685316" CREATED="1643036746252" MODIFIED="1643036830465">
-<icon BUILTIN="unchecked"/>
-<node TEXT="at high level, our defense is based on carefully adjusting the aggregation server&apos;s learning rate, per dimension and per round, based on the sign infirmation of agents&apos; updates" ID="ID_735008317" CREATED="1643036783427" MODIFIED="1643036817264"/>
-</node>
-</node>
-<node TEXT="Filtering" ID="ID_1962822246" CREATED="1646924812678" MODIFIED="1646924814463">
-<node TEXT="Towards Effective and Robust Neural Trojan Defenses via Input Filtering" ID="ID_199989646" CREATED="1646924820093" MODIFIED="1646924826803">
-<icon BUILTIN="pencil"/>
-<node TEXT="(1) variational input filtering: lossy data compression" ID="ID_193654578" CREATED="1647266258774" MODIFIED="1647266324880"/>
-<node TEXT="(2) adversarial input filtering: adversarial learning" ID="ID_1607964159" CREATED="1647266267852" MODIFIED="1647266332225"/>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="Capsule Network" FOLDED="true" POSITION="left" ID="ID_1447197719" CREATED="1648341702034" MODIFIED="1648341707064">
-<edge COLOR="#00ffff"/>
-<node TEXT="HP-Capsule: Unsupervised Face Part Discovery by Hierarchical Parsing Capsule Network" ID="ID_1960737685" CREATED="1648341745946" MODIFIED="1648341753103">
-<icon BUILTIN="unchecked"/>
-<node TEXT="CVPR22" ID="ID_76112470" CREATED="1648341754220" MODIFIED="1648341755486"/>
-<node TEXT="capsule networks are designed to present the objects by a set of parts and their relationships, which provide an insight into the procedure of visual perception" ID="ID_1555851286" CREATED="1648341756627" MODIFIED="1648341784222">
-<icon BUILTIN="info"/>
-</node>
-</node>
-</node>
-<node TEXT="Comp. Linguistics" FOLDED="true" POSITION="left" ID="ID_865579939" CREATED="1610008291436" MODIFIED="1642394269419">
-<edge COLOR="#0000ff"/>
-<node TEXT="Language Representation" ID="ID_1139506578" CREATED="1583319666984" MODIFIED="1648343280371">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="ELMo" ID="ID_1144092497" CREATED="1583321768820" MODIFIED="1587526864978">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="BERT" ID="ID_970622765" CREATED="1583321766003" MODIFIED="1587526864978">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="XLNet" ID="ID_214926633" CREATED="1583321774388" MODIFIED="1587526864978">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="ALBERT" ID="ID_1612144981" CREATED="1583321771476" MODIFIED="1587526864978">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="2012.10873&#xa;Sequence-to-Sequence Contrastive Learning for Text Recognition" ID="ID_936047798" CREATED="1608874619355" MODIFIED="1608874629781"/>
-<node TEXT="NAACL: Revisiting Document Representations for Large-Scale Zero-Shot Learning" ID="ID_849682508" CREATED="1619332223950" MODIFIED="1619332231274"/>
-</node>
-<node TEXT="sentence embedding" ID="ID_1959395028" CREATED="1610008316533" MODIFIED="1610008319960">
-<node TEXT="1908: Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks" ID="ID_1743352469" CREATED="1610008346393" MODIFIED="1610008369033"/>
-<node TEXT="EMNLP: on the sentence embeddings from pre-trained language models" ID="ID_413909105" CREATED="1619332268062" MODIFIED="1619332289375"/>
-</node>
-<node TEXT="Sequence Modeling" ID="ID_351729279" CREATED="1618848122097" MODIFIED="1645045266470">
-<node TEXT="vanilla RNN" ID="ID_470266436" CREATED="1645045269394" MODIFIED="1645045280217"/>
-<node TEXT="LSTM" ID="ID_1361137265" CREATED="1645045281093" MODIFIED="1645045282870"/>
-<node TEXT="GRU" ID="ID_1280881087" CREATED="1645045275154" MODIFIED="1645045276501"/>
-<node TEXT="TCN" ID="ID_789045066" CREATED="1618848128609" MODIFIED="1618848130007">
-<node TEXT="An Empirical Evaluation of Generic Convolutional and Recurrent Networksfor Sequence Modeling" ID="ID_1211179302" CREATED="1618848130953" MODIFIED="1618848146516">
-<icon BUILTIN="button_ok"/>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="Continual Learning" FOLDED="true" POSITION="left" ID="ID_28623311" CREATED="1649110273675" MODIFIED="1649110277766">
-<edge COLOR="#ff00ff"/>
-<node TEXT="Probing Representation Forgetting in Supervised and Unsupervised Continual Learning" ID="ID_73452629" CREATED="1649110278617" MODIFIED="1649110284775"/>
-</node>
-<node TEXT="Cross-Modal Retrieval" FOLDED="true" POSITION="left" ID="ID_22749108" CREATED="1576988430324" MODIFIED="1642431082632">
-<font NAME="Gentium" BOLD="false"/>
-<edge COLOR="#7c0000"/>
-<node TEXT="Image-Text" ID="ID_22916358" CREATED="1649103179989" MODIFIED="1649103183136">
-<node TEXT="VSE Family" ID="ID_730414508" CREATED="1652383580081" MODIFIED="1652383582802">
-<node TEXT="Unifying ..." ID="ID_1819265540" CREATED="1586240031907" MODIFIED="1587526865103">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="VSE++" ID="ID_612993504" CREATED="1586240024674" MODIFIED="1587526865105">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="sota" ID="ID_516293267" CREATED="1586240099321" MODIFIED="1587526865106">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="flickr30k" ID="ID_546511377" CREATED="1586240101669" MODIFIED="1587526865106">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="s-i: 52.9" ID="ID_550891352" CREATED="1586240111612" MODIFIED="1587526865106">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="i-s: 39.6" ID="ID_884008793" CREATED="1586240112874" MODIFIED="1587526865106">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="ms-coco" ID="ID_613323924" CREATED="1586240106613" MODIFIED="1587526865106">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="1k" ID="ID_1421179749" CREATED="1586240136945" MODIFIED="1587526865106">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="s-i: 64.6" ID="ID_1633553206" CREATED="1586240142100" MODIFIED="1587526865106">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="i-s: 52.0" ID="ID_1077994917" CREATED="1586240148569" MODIFIED="1587526865106">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="5k" ID="ID_1512427449" CREATED="1586240138622" MODIFIED="1587526865106">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="s-i: 41.3" ID="ID_1725968697" CREATED="1586240155222" MODIFIED="1587526865106">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="i-s: 30.3" ID="ID_481195263" CREATED="1586240162060" MODIFIED="1587526865107">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="SS" ID="ID_1699285095" CREATED="1587025688098" MODIFIED="1587526865107">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="VSE infty" ID="ID_1318319088" CREATED="1652383593326" MODIFIED="1652383596175">
-<node TEXT="Learning the Best Pooling Strategy for Visual Semantic Embedding" ID="ID_182415412" CREATED="1652383597008" MODIFIED="1652383603736">
-<node TEXT="CVPR21" ID="ID_478107870" CREATED="1652383607066" MODIFIED="1652383608206"/>
-</node>
-</node>
-</node>
-<node TEXT="SCAN (ECCV18): stacked cross attention for image-text matching" ID="ID_1439311497" CREATED="1583370940211" MODIFIED="1587526865107">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: image-text matching" ID="ID_645118810" CREATED="1586239421227" MODIFIED="1587526865108">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: simply aggregates the similarity of all possible pairs of regions and words without attending differentially to more and less important words or regions" ID="ID_1265894543" CREATED="1586239425245" MODIFIED="1587526865110">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: discover full latent alignment using both image regions and words in a sentence as contect and infer image-text similarity" ID="ID_1636622031" CREATED="1586239793548" MODIFIED="1587526865120">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="sota" ID="ID_845468264" CREATED="1586239941699" MODIFIED="1587526865121">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="flickr30k" ID="ID_217483876" CREATED="1586239945220" MODIFIED="1587526865121">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="s-i: 67.4" ID="ID_1486644891" CREATED="1586239975412" MODIFIED="1587526865121">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="i-s: 48.6" ID="ID_1708382186" CREATED="1586240008708" MODIFIED="1587526865121">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="mscoco" ID="ID_140444515" CREATED="1586239949723" MODIFIED="1587526865122">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="1k" ID="ID_1577581954" CREATED="1586240056672" MODIFIED="1587526865122">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="s-i: 72.7" ID="ID_10874274" CREATED="1586240060731" MODIFIED="1587526865122">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="i-s: 58.8" ID="ID_1159300585" CREATED="1586240075534" MODIFIED="1587526865122">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="5k" ID="ID_1654579943" CREATED="1586240057954" MODIFIED="1587526865122">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="s-i: 50.4" ID="ID_1519119507" CREATED="1586240081649" MODIFIED="1587526865122">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="i-s: 38.6" ID="ID_590281563" CREATED="1586240089142" MODIFIED="1587526865122">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="(IJCAI-19 RDAN): Multi-level visua;-semantic alighments with relation-wise dual attention network for image and text matching" ID="ID_1620531353" CREATED="1583370943434" MODIFIED="1587526865122">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: image-text matching" ID="ID_1600229973" CREATED="1586241116612" MODIFIED="1587526865124">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: abstract workds such as actions" ID="ID_182389430" CREATED="1586241120623" MODIFIED="1587526865125">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: RDAN model" ID="ID_210476871" CREATED="1586241159657" MODIFIED="1587526865126">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="sota" ID="ID_975868300" CREATED="1586240949378" MODIFIED="1587526865126">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="flickr30k" ID="ID_1658409783" CREATED="1586240952468" MODIFIED="1587526865126">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="s-i: 68.1" ID="ID_1999984019" CREATED="1586240956592" MODIFIED="1587526865126">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="i-s: 54.1" ID="ID_1298566819" CREATED="1586240968485" MODIFIED="1587526865126">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="mscoco" ID="ID_984904686" CREATED="1586240980411" MODIFIED="1587526865126">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="1k" ID="ID_783199489" CREATED="1586241018437" MODIFIED="1587526865126">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="s-i: 74.6" ID="ID_1273929468" CREATED="1586240983982" MODIFIED="1587526865126">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="i-s: 61.6" ID="ID_1540729136" CREATED="1586240991529" MODIFIED="1587526865126">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="1907.09748: (PFAN): Position Focused Attention Network for Image-Text Matching" ID="ID_470316208" CREATED="1583370946887" MODIFIED="1587526865126">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: image-text matching" ID="ID_428335848" CREATED="1586240188876" MODIFIED="1587526865128">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: PFAN to investigate the object position clue to enhance visual-text joint-embedding learning" ID="ID_1835652632" CREATED="1586240194100" MODIFIED="1587526865129">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="sota" ID="ID_1110318065" CREATED="1586240329549" MODIFIED="1587526865129">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="flickr30k" ID="ID_689076008" CREATED="1586240331929" MODIFIED="1587526865129">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="s-i: 70.0" ID="ID_770808018" CREATED="1586240337972" MODIFIED="1587526865130">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="i-s: 50.4" ID="ID_1485095872" CREATED="1586240347463" MODIFIED="1587526865130">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="mscoco" ID="ID_1563565673" CREATED="1586240334413" MODIFIED="1587526865130">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="1k" ID="ID_48740691" CREATED="1586240355540" MODIFIED="1587526865130">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="s-i: 76.5" ID="ID_947149652" CREATED="1586240361408" MODIFIED="1587526865130">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="i-s: 61.6" ID="ID_522407065" CREATED="1586240366364" MODIFIED="1587526865130">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="1909.02701: VSRN: visual semantic reasoning for image-text matching (ICCV19)" ID="ID_761207430" CREATED="1587527540837" MODIFIED="1587527570936"/>
-<node TEXT="1911.07528: Ladder Loss" ID="ID_879911839" CREATED="1609680873410" MODIFIED="1609680889225">
-<icon BUILTIN="bookmark"/>
-<font BOLD="true"/>
-<node TEXT="1904.09626: deep metric learning beyond binary supervision" ID="ID_1691858159" CREATED="1609681031569" MODIFIED="1609681049923"/>
-</node>
-<node TEXT="2002.10016: deep multimodal image-text embeddings for automatic cross-media retrieval" ID="ID_1544665375" CREATED="1583309899207" MODIFIED="1587526865130">
-<icon BUILTIN="button_cancel"/>
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: image-text retrieval" ID="ID_546012275" CREATED="1583309919471" MODIFIED="1587526865131">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="the author is having fun" ID="ID_1862649220" CREATED="1583309936837" MODIFIED="1587526865132">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="2002.08510: expressing objects just like words: recurrent visual embedding for image-text matching" ID="ID_18086236" CREATED="1583370893620" MODIFIED="1587526865133">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: image-text matching" ID="ID_869083995" CREATED="1583371002035" MODIFIED="1587526865133">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: existing works ignore the connections between the objects that are semantically related; these objectis may collectively determine whether the image corresponds to a text or not" ID="ID_1942940677" CREATED="1583371027768" MODIFIED="1587526865135">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: propose a dual path recurrent neural network which processes images and sentences symmetrically by recurrent neural networks" ID="ID_327990430" CREATED="1583371074343" MODIFIED="1587526865136">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="2003.03772: IMRAM: iterative matching with recurrent attention memory for cross-modal image-text retrieval (CVPR20)" ID="ID_1607556695" CREATED="1589849966539" MODIFIED="1589850001017">
-<icon BUILTIN="button_ok"/>
-<icon BUILTIN="bookmark"/>
-<node TEXT="sota" ID="ID_645097460" CREATED="1589850066064" MODIFIED="1589850069372"/>
-<node TEXT="f30k" ID="ID_952774624" CREATED="1589850089969" MODIFIED="1589850092250">
-<node TEXT="74, 79" ID="ID_943817756" CREATED="1589850094969" MODIFIED="1589850105582"/>
-</node>
-<node TEXT="coco" ID="ID_897203196" CREATED="1589850092464" MODIFIED="1589850093338">
-<node TEXT="76, 61" ID="ID_1993874426" CREATED="1589850107320" MODIFIED="1589850115454"/>
-</node>
-</node>
-<node TEXT="2004.09144: transformer reasoning network for image-text matching and retrieval" ID="ID_1179239931" CREATED="1587527423924" MODIFIED="1587527513062">
-<icon BUILTIN="button_cancel"/>
-</node>
-<node TEXT="2004.12070: hyperref MMNas" ID="ID_883213530" CREATED="1588074737070" MODIFIED="1589849965229">
-<icon BUILTIN="messagebox_warning"/>
-<node TEXT="f30k" ID="ID_924866619" CREATED="1588074753608" MODIFIED="1588074755550">
-<node TEXT="78.3 / 60.7" ID="ID_1428749887" CREATED="1588074757897" MODIFIED="1588074771032"/>
-</node>
-<node TEXT="maybe the new SOTA. Apr. 2020" ID="ID_544717570" CREATED="1588074809536" MODIFIED="1588074816258"/>
-</node>
-<node TEXT="2005.09801: fashionBERT: text and image matching with adaptive loss for cross-modal retrieval" ID="ID_1184415285" CREATED="1590025829965" MODIFIED="1590025860526">
-<node TEXT="no eval on f30k or coco" ID="ID_27965399" CREATED="1590025862784" MODIFIED="1590025868262"/>
-</node>
-<node TEXT="BFAN: Focus your attention:A bidirectional focal attention network for image-text match (ACM MM)" ID="ID_321497763" CREATED="1590802159181" MODIFIED="1590802206958"/>
-<node TEXT="2003.03669: Adaptive Offline Quintuplet Loss for Image-Text Matching" ID="ID_177378639" CREATED="1590748813000" MODIFIED="1590748827292">
-<node TEXT="f30k: 73 / 54" ID="ID_112288869" CREATED="1590802112238" MODIFIED="1590802125493"/>
-<node TEXT="coco: 77 / 96" ID="ID_613186739" CREATED="1590802125927" MODIFIED="1590802145018"/>
-</node>
-<node TEXT="2004.01095: MCEN: Bridging Cross-Modal Gap between Cooking Recipes and Dish Images with Latent Variable Model (cvpr20)" ID="ID_576418454" CREATED="1590749993141" MODIFIED="1590750006537"/>
-<node TEXT="2004.00277 Graph Structured Network for Image-Text Matching (cvpr20)" ID="ID_1616725398" CREATED="1590806554894" MODIFIED="1590806586098">
-<icon BUILTIN="button_ok"/>
-<node TEXT="f30K: 76 / 57" ID="ID_1331739001" CREATED="1590806678424" MODIFIED="1590806686909"/>
-<node TEXT="coco: 78 / 63" ID="ID_290191269" CREATED="1590806687324" MODIFIED="1590806696701"/>
-<node TEXT="sota May 2020" ID="ID_1480141631" CREATED="1590806725154" MODIFIED="1590806728113"/>
-</node>
-<node TEXT="2010.01666: multi-modal retrieval using graph neural networks" ID="ID_1676547166" CREATED="1608010937162" MODIFIED="1608010981920">
-<node TEXT="no comparison; inclined to qualitative evaluations" ID="ID_288207961" CREATED="1608010983165" MODIFIED="1608010996471"/>
-</node>
-<node TEXT="Cross-Modal Common Representation Learning with Triplet Loss Functions" ID="ID_1827284412" CREATED="1646944290551" MODIFIED="1646944296357">
-<icon BUILTIN="pencil"/>
-<node TEXT="fair" ID="ID_1712372002" CREATED="1646944300395" MODIFIED="1646944304415"/>
-</node>
-</node>
-<node TEXT="Image-Recipe" ID="ID_552619459" CREATED="1650809005463" MODIFIED="1650809008428">
-<node TEXT="Transformer Decoders with MultiModal Regularization for Cross-Modal Food Retrieval" ID="ID_778443774" CREATED="1650809009512" MODIFIED="1650809016539">
-<node TEXT="CVPR22w" ID="ID_253625686" CREATED="1650809019210" MODIFIED="1650809021151"/>
-</node>
-</node>
-<node TEXT="Cross-lingual" ID="ID_1275207266" CREATED="1607576963588" MODIFIED="1649103229953">
-<node TEXT="2012.05107: towards zero-shot cross-lingual image retrieval" ID="ID_33321188" CREATED="1607576975335" MODIFIED="1607576995999">
-<icon BUILTIN="button_ok"/>
-<node TEXT="multi-modal representations using cross-lingual pre-training on the text side" ID="ID_761823260" CREATED="1607577008171" MODIFIED="1607577023025"/>
-<node TEXT="objective function which tightens the text embedding clusters by pushing dissimilar texts from each other" ID="ID_278870167" CREATED="1607577035945" MODIFIED="1607577055909"/>
-</node>
-</node>
-<node TEXT="Audio-Image" ID="ID_1999112869" CREATED="1619443906882" MODIFIED="1649103236875">
-<node TEXT="Talk, Don&apos;t Write: A Study of Direct Speech-Based Image Retrieval" ID="ID_1895575295" CREATED="1619443912720" MODIFIED="1619443918857"/>
-</node>
-<node TEXT="Video-Text" ID="ID_387413475" CREATED="1649103145467" MODIFIED="1649103148698">
-<node TEXT="X-Pool: Cross-Modal Language-Video Attention for Text-Video Retrieval" ID="ID_363825595" CREATED="1649103154257" MODIFIED="1649103155281">
-<node TEXT="CVPR22" ID="ID_1553240026" CREATED="1649103156491" MODIFIED="1649103158193"/>
-</node>
-<node TEXT="Disentangled Representation Learning for Text-Video Retrieval" ID="ID_1578456483" CREATED="1649168592201" MODIFIED="1649168592807">
-<node TEXT="ECCV22" ID="ID_1572394517" CREATED="1649168594046" MODIFIED="1649168598874"/>
-</node>
-</node>
-<node TEXT="Variant: Continual Learning" ID="ID_131519106" CREATED="1619336659546" MODIFIED="1619336666539">
-<node TEXT="CVPR21w: Continual learning in cross-modal retrieval" ID="ID_834969689" CREATED="1619336667454" MODIFIED="1619336675662"/>
-</node>
-<node TEXT="Video-Audio" ID="ID_86517648" CREATED="1655841861813" MODIFIED="1655841865200">
-<node TEXT="It&apos;s Time for Artistic Correspondence in Music and Video" ID="ID_1112170588" CREATED="1655841866066" MODIFIED="1655841871418">
-<node TEXT="CVPR22" ID="ID_358779189" CREATED="1655841872298" MODIFIED="1655841873737"/>
-</node>
-</node>
-</node>
-<node TEXT="Dataset Distillation" FOLDED="true" POSITION="left" ID="ID_265073126" CREATED="1648338075798" MODIFIED="1648343254704">
-<icon BUILTIN="idea"/>
-<edge COLOR="#ff00ff"/>
-<node TEXT="Dataset Distillation by Matching Training Trajectories" ID="ID_1232754909" CREATED="1648338079783" MODIFIED="1648338088477">
-<icon BUILTIN="unchecked"/>
-<node TEXT="CVPR22" ID="ID_951175501" CREATED="1648338090454" MODIFIED="1648338092141"/>
-</node>
-</node>
-<node TEXT="DeepFake" FOLDED="true" POSITION="left" ID="ID_81253926" CREATED="1587729755009" MODIFIED="1642394342542">
-<edge COLOR="#007c7c"/>
-<node TEXT="Dataset" ID="ID_1886590251" CREATED="1615347464586" MODIFIED="1615347466780">
-<node TEXT="ForgeryNet: A Versatile Benchmark for Comprehensive Forgery Analysis (cvpr21)" ID="ID_1435934248" CREATED="1615347467706" MODIFIED="1615347479218"/>
-</node>
-<node TEXT="Survey" ID="ID_1081735994" CREATED="1587729760036" MODIFIED="1587729764469">
-<node TEXT="2004.11138: the creation and detection of deepfakes: a survey" ID="ID_229656376" CREATED="1587729766371" MODIFIED="1587729930927">
-<icon BUILTIN="button_ok"/>
-</node>
-<node TEXT="2004.12626: preliminary forensics analysis of deepfake images" ID="ID_913965" CREATED="1588068509056" MODIFIED="1588068524708"/>
-<node TEXT="Seeing is Living? Rethinking the Security of Facial Liveness Verification in the Deepfake Era" ID="ID_461047989" CREATED="1647267019291" MODIFIED="1647267027027">
-<icon BUILTIN="unchecked"/>
-<node TEXT="USENIX22" ID="ID_1148613248" CREATED="1647267021829" MODIFIED="1647267024253"/>
-</node>
-</node>
-<node TEXT="Create" ID="ID_1812140643" CREATED="1589767913067" MODIFIED="1648338593271">
-<node TEXT="2005.05535: deepfacelab: a simple flexible and extensible face swapping framework" ID="ID_1258022523" CREATED="1589767931055" MODIFIED="1589767949771"/>
-<node TEXT="2004.07165 A recurrent cycle consistency loss for progressive face-to-face synthesis (FG 2020 oral)" ID="ID_1521921331" CREATED="1590805531639" MODIFIED="1590805549067"/>
-</node>
-<node TEXT="Detection" ID="ID_1897134747" CREATED="1588389497295" MODIFIED="1619337612320">
-<node TEXT="2003.08685: leveraging frequency analysis for deep fake image recognition" ID="ID_252600993" CREATED="1588389509200" MODIFIED="1588389530379">
-<node TEXT="frequency analysis" ID="ID_818362087" CREATED="1588389590906" MODIFIED="1588389598678"/>
-</node>
-<node TEXT="2003.08645: detecting deepfakes with metric learning" ID="ID_1878482148" CREATED="1588389618001" MODIFIED="1588389634521"/>
-<node TEXT="2005.05632: detecting cnn-generated facial images in real-world scenarios (CVPR20w)" ID="ID_1299699785" CREATED="1589767828944" MODIFIED="1589767856220"/>
-<node TEXT="Multi-attentional Deepfake Detection (cvpr21)" ID="ID_781694096" CREATED="1615298559426" MODIFIED="1615298567054">
-<node TEXT="bincls -&gt; fine-grained cls" ID="ID_1081064126" CREATED="1615298568075" MODIFIED="1615298788725"/>
-<node TEXT="multi-attentional" ID="ID_634769208" CREATED="1615298789067" MODIFIED="1615298801115"/>
-</node>
-<node TEXT="CVPR21: Improving the Efficiency and Robustness of Deepfakes Detection through Precise Geometric Features" ID="ID_1786812758" CREATED="1619337614061" MODIFIED="1619337626336"/>
-<node TEXT="Self-supervised Learning of Adversarial Example: Towards Good Generalizations for Deepfake Detection" ID="ID_1441114547" CREATED="1648338608774" MODIFIED="1648338611335">
-<node TEXT="CVPR22" ID="ID_409760991" CREATED="1648338612963" MODIFIED="1648338614477"/>
-</node>
-<node TEXT="ObjectFormer for Image Manipulation Detection and Localization" ID="ID_926927385" CREATED="1649102118496" MODIFIED="1649102119754">
-<node TEXT="CVPR22" ID="ID_1894520939" CREATED="1649102122404" MODIFIED="1649102123634"/>
-</node>
-<node TEXT="Detecting Deepfakes with Self-Blended Images" ID="ID_1330201072" CREATED="1650818257543" MODIFIED="1650818258952">
-<node TEXT="CVPR22" ID="ID_678441173" CREATED="1650818260394" MODIFIED="1650818261846"/>
-</node>
-<node TEXT="Voice-Face Homogeneity Tells Deepfake" ID="ID_153357596" CREATED="1646942317853" MODIFIED="1646942325559">
-<icon BUILTIN="unchecked"/>
-<node TEXT="CVPR22" ID="ID_725170575" CREATED="1646942319120" MODIFIED="1646942321768"/>
-</node>
-</node>
-</node>
-<node TEXT="Diffusion Models" FOLDED="true" POSITION="left" ID="ID_543295574" CREATED="1645111157251" MODIFIED="1645111160424">
-<edge COLOR="#00ffff"/>
-<node TEXT="https://lilianweng.github.io/lil-log/2021/07/11/diffusion-models.html" ID="ID_626991727" CREATED="1645111188223" MODIFIED="1645111188223" LINK="https://lilianweng.github.io/lil-log/2021/07/11/diffusion-models.html"/>
-<node TEXT="Diffusion Models Beat GANs on Image Synthesis" ID="ID_1871658132" CREATED="1645111161757" MODIFIED="1645111172504">
-<icon BUILTIN="pencil"/>
-</node>
-<node TEXT="Pseudo Numerical Methods for Diffusion Models on Manifolds" ID="ID_1101187024" CREATED="1647264822390" MODIFIED="1647264900126">
-<icon BUILTIN="unchecked"/>
-<node TEXT="ICLR22" ID="ID_489004075" CREATED="1647264824614" MODIFIED="1647264826627"/>
-<node TEXT="standard diffusion is very slow and involves too many steps for inference" ID="ID_688183538" CREATED="1647264827569" MODIFIED="1647264848261"/>
-<node TEXT="DDPMs should be treated as solving differential equations on manifolds" ID="ID_80114006" CREATED="1647264848863" MODIFIED="1647264863012"/>
-<node TEXT="significantly speedup inference and made it more practical" ID="ID_1736885770" CREATED="1647264863514" MODIFIED="1647264895412"/>
-</node>
-</node>
-<node TEXT="Dimension Reduction" FOLDED="true" POSITION="left" ID="ID_703196004" CREATED="1648336542877" MODIFIED="1648336545945">
-<edge COLOR="#00ff00"/>
-<node TEXT="PCA" ID="ID_279239785" CREATED="1648336547244" MODIFIED="1648336549636"/>
-<node TEXT="t-SNE" ID="ID_372306146" CREATED="1648336550147" MODIFIED="1648336553078"/>
-<node TEXT="h-NNE" ID="ID_530951729" CREATED="1648336553298" MODIFIED="1648336598952">
-<node TEXT="Hierarchical Nearest Neighbor Graph Embedding for Efficient Dimensionality&#xa;Reduction" ID="ID_1074126704" CREATED="1648336600093" MODIFIED="1648336616328">
-<icon BUILTIN="unchecked"/>
-<node TEXT="CVPR22" ID="ID_1719348477" CREATED="1648336618438" MODIFIED="1648336619839"/>
-<node TEXT="no-optimization" ID="ID_708278320" CREATED="1648336626204" MODIFIED="1648336628663"/>
-</node>
-</node>
-</node>
-<node TEXT="Domain Adaptation" FOLDED="true" POSITION="left" ID="ID_1179225618" CREATED="1582887416803" MODIFIED="1642394196054">
-<font NAME="Gentium" BOLD="false"/>
-<edge COLOR="#ff0000"/>
-<node TEXT="Concept" ID="ID_276280133" CREATED="1650832531233" MODIFIED="1650832534030">
-<icon BUILTIN="info"/>
-<node TEXT="domain adaptation" ID="ID_1897127261" CREATED="1650832537525" MODIFIED="1650832545079">
-<node TEXT="input distribution p(x) changes between training and test" ID="ID_1783851732" CREATED="1650832546158" MODIFIED="1650832566190"/>
-<node TEXT="transfer learning posterior p(y|x) changes between training and test" ID="ID_542172298" CREATED="1650832567330" MODIFIED="1650832588622"/>
-</node>
-</node>
-<node TEXT="Openset" ID="ID_652345966" CREATED="1587030820215" MODIFIED="1587526864981">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="2004.04388: Towards Inheritable Models for Open-Set Domain Adaptation (CVPR20)" ID="ID_882848776" CREATED="1587030828036" MODIFIED="1587526864982">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="2002.08675: unsupervised domain adaptation via discriminative manifold embedding and alignment" ID="ID_1783103324" CREATED="1582887489485" MODIFIED="1587526864982">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: domain adaptation" ID="ID_364211866" CREATED="1582887681503" MODIFIED="1587526864984">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why:" ID="ID_767525254" CREATED="1582887693719" MODIFIED="1587526864984">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="1. hardcoded pseudo labels on the target domain are risky to the intrinsic data structure" ID="ID_1466382959" CREATED="1582887707992" MODIFIED="1587526864985">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="2. batch-wise trianing manner in deep learning limites the description of the global structure" ID="ID_333992277" CREATED="1582887727498" MODIFIED="1587526864986">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="how: Riemannian manifold learning framework is proposed to achieve transferability and discriminability." ID="ID_932362154" CREATED="1582887750636" MODIFIED="1587526864986">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="2002.11770: rethinking the hyperparameters for fine-tuning (ICLR20)" ID="ID_687246947" CREATED="1583323656825" MODIFIED="1587526864987">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: examines fine-tuning" ID="ID_126121824" CREATED="1583323676904" MODIFIED="1587526864988">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="findings" ID="ID_1484997220" CREATED="1583323715662" MODIFIED="1587526864988">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="1. momentum affects fine-tuning performance as suggested by previous theoretical findings" ID="ID_409173341" CREATED="1583323717892" MODIFIED="1587526864988">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="2. learning reate is not only dataset dependent, but also sensitive to the similarity between source and target domain" ID="ID_406913796" CREATED="1583323812333" MODIFIED="1587526864989">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="3. reference-based regularization that keeps models close the the initial model does not necessarily apply for &quot;dissimilar&quot; datasets." ID="ID_409659201" CREATED="1583323868185" MODIFIED="1587526864990">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="2002.04206: dual-triplet metric learning for unsupervised domain adaptation in video-based face recognition" ID="ID_1852118217" CREATED="1583375335641" MODIFIED="1587526864991">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="2004.04393: Universal Source-Free Domain Adaptation (CVPR20)" ID="ID_678847990" CREATED="1587030701603" MODIFIED="1587526864992">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="2004.08878: uncertainty-aware consistency regularization for cross-domain semantic segmentation" ID="ID_1060047510" CREATED="1587873167086" MODIFIED="1587873185991"/>
-<node TEXT="2004.09403: class distribution alignment for adversarial domain adaptation" ID="ID_1913880236" CREATED="1588082459830" MODIFIED="1588082478774"/>
-<node TEXT="2012.12302&#xa;Flexible deep transfer learning by separate feature embeddings and manifold alignment" ID="ID_1781903227" CREATED="1608871572614" MODIFIED="1608871585302">
-<node TEXT="a bit similar to cross-modal alignment" ID="ID_867737025" CREATED="1608871591299" MODIFIED="1608871600207"/>
-</node>
-<node TEXT="2012.11807&#xa;Learning Disentangled Semantic Representation for Domain Adaptation" ID="ID_1101645023" CREATED="1608871972133" MODIFIED="1608871978855"/>
-<node TEXT="Auto-Transfer: Learning to Route Transferrable Representations ICLR22" ID="ID_275822091" CREATED="1644180783785" MODIFIED="1644180796263"/>
-<node TEXT="Fine-Tuning can Distort Pretrained Features and Underperform Out-of-Distribution" ID="ID_1001645107" CREATED="1647264390521" MODIFIED="1647264398367">
-<icon BUILTIN="unchecked"/>
-<node TEXT="ICLR22" ID="ID_248597371" CREATED="1647264392555" MODIFIED="1647264395025"/>
-</node>
-<node TEXT="Does Robustness on ImageNet Transfer to Downstream Tasks?" ID="ID_442746527" CREATED="1650842399693" MODIFIED="1650842400541">
-<node TEXT="CVPR22" ID="ID_391235371" CREATED="1650842401650" MODIFIED="1650842402914"/>
-</node>
-<node TEXT="Adaptive Domain Adaptation" ID="ID_926597894" CREATED="1649130053250" MODIFIED="1649130058744">
-<node TEXT="Learning Distinctive Margin toward Active Domain Adaptation" ID="ID_1937782410" CREATED="1649130059707" MODIFIED="1649130060490">
-<node TEXT="CVPR22" ID="ID_1742639409" CREATED="1649130061738" MODIFIED="1649130063012"/>
-<node TEXT="similar to SVM" ID="ID_1059316080" CREATED="1649130063284" MODIFIED="1649130069027"/>
-</node>
-</node>
-<node TEXT="Unsupervised Domain Adaptation" ID="ID_1180792051" CREATED="1650824963676" MODIFIED="1650824970144">
-<node TEXT="Safe Self-Refinement for Transformer-based Domain Adaptation" ID="ID_1500347419" CREATED="1650824973786" MODIFIED="1650824979577">
-<node TEXT="CVPR22" ID="ID_439499097" CREATED="1650824980672" MODIFIED="1650824982140"/>
-</node>
-</node>
-</node>
-<node TEXT="Explainable AI" FOLDED="true" POSITION="left" ID="ID_1535392614" CREATED="1646937960988" MODIFIED="1650817806076">
-<edge COLOR="#7c0000"/>
-<node TEXT="Survey" ID="ID_796711666" CREATED="1653860071187" MODIFIED="1653860080368">
-<icon BUILTIN="mindmap"/>
-<node TEXT="How explainable are adversarially-robust CNNs?" ID="ID_95726314" CREATED="1653860082056" MODIFIED="1653860092200">
-<icon BUILTIN="pencil"/>
-<node TEXT="submit NIPS22" ID="ID_181101661" CREATED="1653860093733" MODIFIED="1653860102672"/>
-<node TEXT="(1) test accuracy" ID="ID_764666299" CREATED="1653860103071" MODIFIED="1653860111201"/>
-<node TEXT="(2) out-of-distribution accuracy" ID="ID_874751335" CREATED="1653860111347" MODIFIED="1653860117298"/>
-<node TEXT="(3) explainability" ID="ID_362903560" CREATED="1653860117582" MODIFIED="1653860121732"/>
-</node>
-</node>
-<node TEXT="class activation map" ID="ID_1199847666" CREATED="1651102994318" MODIFIED="1656028150739">
-<node TEXT="Class Activation Map" ID="ID_47285759" CREATED="1651102989796" MODIFIED="1651103008396">
-<node TEXT="Learning Deep Features for Discriminative Localization" ID="ID_675900606" CREATED="1651103009874" MODIFIED="1651103025782">
-<icon BUILTIN="unchecked"/>
-<node TEXT="CVPR, bolei zhou" ID="ID_1929585737" CREATED="1651103017313" MODIFIED="1651103020547"/>
-</node>
-</node>
-</node>
-<node TEXT="gradient w.r.t input" ID="ID_733899372" CREATED="1653860036334" MODIFIED="1656028158789">
-<node TEXT="Grad-CAM" ID="ID_1699913639" CREATED="1656364316838" MODIFIED="1656364339473">
-<icon BUILTIN="bookmark"/>
-<node TEXT="Grad-CAM: Why did you say that?&#xa;Visual Explanations from Deep Networks via Gradient-based Localization" ID="ID_172299995" CREATED="1656364324758" MODIFIED="1656364331599"/>
-</node>
-<node TEXT="The Manifold Hypothesis for Gradient-Based Explanations" ID="ID_743176885" CREATED="1656028126607" MODIFIED="1656028127918"/>
-</node>
-<node TEXT="perturbation" ID="ID_174218220" CREATED="1653860058835" MODIFIED="1656028174630">
-<node TEXT="LIME" ID="ID_1481560289" CREATED="1653860346455" MODIFIED="1653860348553">
-<node TEXT="&#x201c;Why Should I Trust You?&#x201d;&#xa;Explaining the Predictions of Any Classifier" ID="ID_674389421" CREATED="1653860349515" MODIFIED="1653860351696">
-<icon BUILTIN="unchecked"/>
-<node TEXT="KDD" ID="ID_706793779" CREATED="1653860352710" MODIFIED="1653860353774"/>
-</node>
-</node>
-</node>
-<node TEXT="Do Explanations Explain? Model Knows Best" ID="ID_1458677290" CREATED="1646937968275" MODIFIED="1646937983298">
-<icon BUILTIN="checked"/>
-<node TEXT="CVPR22" ID="ID_164811359" CREATED="1646937985052" MODIFIED="1646937987156"/>
-<node TEXT="one peculiar observation is that these explanations (attributions) point to different features as being important" ID="ID_1757747697" CREATED="1646942060828" MODIFIED="1646942079638"/>
-</node>
-<node TEXT="What can we learn from misclassified ImageNet&#xa;images?" ID="ID_1435212181" CREATED="1642952852302" MODIFIED="1642952861609">
-<icon BUILTIN="pencil"/>
-<node TEXT="misclassifications are rarely across superclasses, but mainly among subclasses with a superclass" ID="ID_426581992" CREATED="1642952902122" MODIFIED="1642952932522"/>
-<node TEXT="ensemble networks trained each only on subclasses of a given superclass perform better than the same network trained on all subclasses of all superclasses" ID="ID_1950788253" CREATED="1642952937590" MODIFIED="1642952961617"/>
-</node>
-</node>
-<node TEXT="Gradient Surgery" FOLDED="true" POSITION="left" ID="ID_1632297675" CREATED="1654104115851" MODIFIED="1654104119730">
-<edge COLOR="#7c0000"/>
-<node TEXT="Gradient Surgery for Multi-Task Learning" ID="ID_686455197" CREATED="1652383922344" MODIFIED="1652383931965">
-<icon BUILTIN="bookmark"/>
-<node TEXT="NIPS20" ID="ID_926576648" CREATED="1652383934990" MODIFIED="1652383936487"/>
-<node TEXT="we propose a form of gradient surgery that projects a task&apos;s gradient onto the normal plane of the gradient of any other task that has a conflicting gradient" ID="ID_1875166652" CREATED="1652383936902" MODIFIED="1652383975982"/>
-</node>
-</node>
-<node TEXT="GAN Inverstion" FOLDED="true" POSITION="left" ID="ID_1643977837" CREATED="1608014251316" MODIFIED="1642394381732">
-<edge COLOR="#0000ff"/>
-<node TEXT="2004.00049: in-domain gan inversion for real image editing" ID="ID_789901011" CREATED="1608014256819" MODIFIED="1608014290154">
-<icon BUILTIN="bookmark"/>
-</node>
-<node TEXT="2007.06600: closed-form factorization of latent semantics in GANs" ID="ID_190477062" CREATED="1624973853281" MODIFIED="1624973903147">
-<icon BUILTIN="bookmark"/>
-<icon BUILTIN="button_ok"/>
-<icon BUILTIN="launch"/>
-<node TEXT="I like this paper" ID="ID_807310527" CREATED="1624973921489" MODIFIED="1624973924563"/>
-<node TEXT="SeFa" ID="ID_485890930" CREATED="1624974410069" MODIFIED="1624974411493"/>
-</node>
-<node TEXT="2012.09036&#xa;Improved StyleGAN Embedding: Where are the Good Latents?" ID="ID_1195062919" CREATED="1608879346483" MODIFIED="1608879350891"/>
-<node TEXT="2103.03243 Anycost GANs for Interactive Image Synthesis and Editing (cvpr21)" ID="ID_1065575004" CREATED="1615296747093" MODIFIED="1615296755894">
-<node TEXT="elastic resolution + computation reduction" ID="ID_1366331350" CREATED="1615296878773" MODIFIED="1615296919734"/>
-</node>
-</node>
-<node TEXT="Graph Network" FOLDED="true" POSITION="left" ID="ID_753946836" CREATED="1582940931218" MODIFIED="1651953060730">
-<font NAME="Gentium" BOLD="false"/>
-<edge COLOR="#7c7c00"/>
-<node TEXT="GNN" ID="ID_1274111681" CREATED="1651953050512" MODIFIED="1651953052009">
-<node TEXT="2002.05544: superpixel image classification with graph attention networks" ID="ID_332176668" CREATED="1583375009739" MODIFIED="1587526865279">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="Second-Order Pooling for Graph Neural Networks (tpami20)" ID="ID_445336652" CREATED="1615351166321" MODIFIED="1615351177272">
-<node TEXT="pooling method" ID="ID_564494170" CREATED="1615351183774" MODIFIED="1615351187164"/>
-</node>
-</node>
-<node TEXT="GCN" ID="ID_1722177383" CREATED="1601902008395" MODIFIED="1601902010750"/>
-<node TEXT="Graphomer" ID="ID_1691308345" CREATED="1654125254079" MODIFIED="1654125256807">
-<node TEXT="Do Transformers Really Perform Bad&#xa;for Graph Representation?" ID="ID_1924600928" CREATED="1654125260491" MODIFIED="1654125274332">
-<icon BUILTIN="unchecked"/>
-<node TEXT="NIPS21" ID="ID_1384984375" CREATED="1654125275487" MODIFIED="1654125277597"/>
-</node>
-</node>
-</node>
-<node TEXT="Hand" FOLDED="true" POSITION="left" ID="ID_122441475" CREATED="1654709701827" MODIFIED="1654709705705">
-<edge COLOR="#00007c"/>
-<node TEXT="demands" ID="ID_703663547" CREATED="1654709706849" MODIFIED="1654709914841">
-<icon BUILTIN="info"/>
-<node TEXT="Junsong Yuan" ID="ID_1482729643" CREATED="1654720264001" MODIFIED="1654720268871"/>
-<node TEXT="AR/VR" ID="ID_1505305751" CREATED="1654709915958" MODIFIED="1654709918820"/>
-<node TEXT="hand sensing from depth camera (pcl?)" ID="ID_541340634" CREATED="1654710135442" MODIFIED="1654710145196"/>
-<node TEXT="semantics &amp; geometry" ID="ID_1873741675" CREATED="1654714638259" MODIFIED="1654714644100"/>
-</node>
-</node>
-<node TEXT="Image Compression" FOLDED="true" POSITION="left" ID="ID_1511931365" CREATED="1648343124472" MODIFIED="1648343127424">
-<edge COLOR="#7c0000"/>
-<node TEXT="ELIC: Efficient Learned Image Compression with&#xa;Unevenly Grouped Space-Channel Contextual Adaptive Coding" ID="ID_391462928" CREATED="1648343132187" MODIFIED="1648343146503">
-<node TEXT="CVPR22" ID="ID_1107484924" CREATED="1648343143028" MODIFIED="1648343144450"/>
-</node>
-<node TEXT="Unified Multivariate Gaussian Mixture for Efficient Neural Image Compression" ID="ID_525288991" CREATED="1648343235650" MODIFIED="1648343236782">
-<node TEXT="CVPR22" ID="ID_1065954996" CREATED="1648343238753" MODIFIED="1648343240041"/>
-</node>
-</node>
-<node TEXT="Image Retrieval" FOLDED="true" POSITION="left" ID="ID_1006799943" CREATED="1649630594458" MODIFIED="1649630598110">
-<edge COLOR="#007c00"/>
-<node TEXT="Correlation Verification for Image Retrieval" ID="ID_1013972134" CREATED="1649630600849" MODIFIED="1649630693321">
-<node TEXT="CVPR22" ID="ID_1345324489" CREATED="1649630694449" MODIFIED="1649630695940"/>
-</node>
-<node TEXT="Learning Super-Features for Image Retrieval" ID="ID_829824427" CREATED="1644181270753" MODIFIED="1644181364623">
-<icon BUILTIN="checked"/>
-<node TEXT="ICLR22" ID="ID_1211217354" CREATED="1644181278285" MODIFIED="1644181280219"/>
-<node TEXT="not DML" ID="ID_1043681772" CREATED="1644181273835" MODIFIED="1644181275311"/>
-<node TEXT="combine local and global features" ID="ID_1751979954" CREATED="1644181344128" MODIFIED="1644181349980"/>
-<node TEXT="existing methods suffer from problems in the use of local features" ID="ID_111945206" CREATED="1644181350883" MODIFIED="1644181360186"/>
-</node>
-</node>
-<node TEXT="Image Vectorization" FOLDED="true" POSITION="left" ID="ID_1231220509" CREATED="1655449067387" MODIFIED="1655449071990">
-<edge COLOR="#007c00"/>
-<node TEXT="Towards Layer-wise Image Vectorization" ID="ID_96979789" CREATED="1655449072900" MODIFIED="1655843072351">
-<icon BUILTIN="button_ok"/>
-<node TEXT="CVPR22 oral" ID="ID_935088308" CREATED="1655449096553" MODIFIED="1655449099799"/>
-</node>
-</node>
-<node TEXT="Instance Segmentation" FOLDED="true" POSITION="left" ID="ID_1759449865" CREATED="1649104217760" MODIFIED="1649104221244">
-<edge COLOR="#7c7c00"/>
-<node TEXT="Main" ID="ID_1417928999" CREATED="1578733356683" MODIFIED="1649104710111">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="Mask R-CNN" ID="ID_1460418401" CREATED="1590805638982" MODIFIED="1590805641615"/>
-<node TEXT="2003.13954 FGN: Fully Guided Network for Few-Shot Instance Segmentation (cvpr20)" ID="ID_1454655339" CREATED="1590975022052" MODIFIED="1590975029134"/>
-<node TEXT="2012.07177&#xa;Simple Copy-Paste is a Strong Data Augmentation Method for Instance Segmentation" ID="ID_792173050" CREATED="1608880556971" MODIFIED="1608880566837"/>
-</node>
-<node TEXT="Descriptors" ID="ID_1696499735" CREATED="1649104065329" MODIFIED="1649104223403">
-<node TEXT="Contour" ID="ID_395676166" CREATED="1649104068494" MODIFIED="1649104069863">
-<node TEXT="Eigencontours: Novel Contour Descriptors Based on Low-Rank Approximation" ID="ID_362471390" CREATED="1649104078004" MODIFIED="1649104078579">
-<node TEXT="CVPR22" ID="ID_642950560" CREATED="1649104080637" MODIFIED="1649104081863"/>
-<node TEXT="contour is one of the most important object descriptiors, along with texture and color" ID="ID_961927899" CREATED="1649104082894" MODIFIED="1649104097966"/>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="Learning" FOLDED="true" POSITION="left" ID="ID_876811772" CREATED="1583309966895" MODIFIED="1642394191143">
-<font NAME="Gentium" SIZE="10" BOLD="false"/>
-<edge COLOR="#7c7c00"/>
-<node TEXT="Federated Learning (distributed learning; protecting privacy)" ID="ID_647280840" CREATED="1583309969788" MODIFIED="1587526864937">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="2002.09843: practical and bilateral privacy-preserving federated learning" ID="ID_564507506" CREATED="1583310044407" MODIFIED="1587526864938">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: federated learning" ID="ID_985779415" CREATED="1583310061113" MODIFIED="1587526864939">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: protect more privacy" ID="ID_1208071786" CREATED="1583310065998" MODIFIED="1587526864939">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="Online Learning / Novel Class Discovery" ID="ID_1490111028" CREATED="1583373522722" MODIFIED="1587526864940">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="2002.05714: automatically discovering and learning new visual categories with ranking statistics (ICLR20, VGG Oxford)" ID="ID_1826828246" CREATED="1583373530690" MODIFIED="1587526864941">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="why: it&apos;s challenging" ID="ID_1259104861" CREATED="1583373565655" MODIFIED="1587526864941">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="Active Learning" ID="ID_853331882" CREATED="1608876358857" MODIFIED="1608876362122">
-<node TEXT="2012.10467&#xa; Minimax Active Learning" ID="ID_1952916971" CREATED="1608876363892" MODIFIED="1608876372836"/>
-</node>
-<node TEXT="Meta Learning" ID="ID_929306258" CREATED="1583378173046" MODIFIED="1587526864942">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="2002.04162: incremental learning for metric-based meta-learniers" ID="ID_415175776" CREATED="1583378216948" MODIFIED="1587526864942">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="Continual Learning" ID="ID_131447938" CREATED="1587731579088" MODIFIED="1587731583163">
-<node TEXT="2004.10862: continual learning of object instances (CVPRw)" ID="ID_1507005369" CREATED="1587731584263" MODIFIED="1587731605443">
-<node TEXT="focus on car, and incrementally learn to distinguish different car instances" ID="ID_1166289498" CREATED="1587731618521" MODIFIED="1587731648648"/>
-</node>
-<node TEXT="2004.11545: dropout as an imlicit gating mechanism for continual learning" ID="ID_475097263" CREATED="1587975571838" MODIFIED="1587975586113"/>
-</node>
-<node TEXT="Incremental Learning" ID="ID_657680929" CREATED="1590752080935" MODIFIED="1590752087255">
-<node TEXT="2004.00713: Memory-Efficient Incremental Learning Through Feature Adaptation" ID="ID_1766164041" CREATED="1590752093902" MODIFIED="1590752108458"/>
-</node>
-<node TEXT="unsup domain adaptation" ID="ID_108358759" CREATED="1610422300921" MODIFIED="1610422305959">
-<node TEXT="2101: Unsupervised Domain Adaptation of Black-Box Source Models" ID="ID_1885176581" CREATED="1610422307004" MODIFIED="1610422319037"/>
-</node>
-<node TEXT="Curriculum learning" ID="ID_570972313" CREATED="1653335363534" MODIFIED="1653335368658">
-<node TEXT="LeRaC: Learning Rate Curriculum" ID="ID_623814188" CREATED="1653335369346" MODIFIED="1653335371339">
-<icon BUILTIN="pencil"/>
-<node TEXT="Nicu" ID="ID_957914597" CREATED="1653335372975" MODIFIED="1653335375240"/>
-<node TEXT="different learning rate for each layer of a neural network  to create a data-free curriculum during the initial training epochs" ID="ID_197154943" CREATED="1653335382996" MODIFIED="1653335547811"/>
-<node TEXT="evaluated in vision, language, and audio tasks" ID="ID_1520190800" CREATED="1653335549354" MODIFIED="1653335558233"/>
-</node>
-</node>
-</node>
-<node TEXT="Model Compression" FOLDED="true" POSITION="left" ID="ID_325472209" CREATED="1649171031656" MODIFIED="1649171034930">
-<edge COLOR="#00007c"/>
-<node TEXT="Interspace Pruning: Using Adaptive Filter Representations to Improve Training of Sparse CNNs" ID="ID_1136994469" CREATED="1649171035811" MODIFIED="1649171042670">
-<node TEXT="CVPR22" ID="ID_1181157881" CREATED="1649171043941" MODIFIED="1649171045542"/>
-</node>
-<node TEXT="Leaner and Faster: Two-Stage Model Compression for Lightweight&#xa;Text-Image Retrieval" ID="ID_880443205" CREATED="1651953324409" MODIFIED="1651953325391">
-<node TEXT="NAACL" ID="ID_854685267" CREATED="1651953326299" MODIFIED="1651953329267"/>
-</node>
-</node>
-<node TEXT="Multimodal Learning" FOLDED="true" POSITION="left" ID="ID_423909848" CREATED="1649104367617" MODIFIED="1649104370772">
-<edge COLOR="#ff0000"/>
-<node TEXT="Balanced Multimodal Learning via On-the-fly Gradient Modulation" ID="ID_1018564287" CREATED="1649104376663" MODIFIED="1649104377816">
-<node TEXT="CVPR22" ID="ID_735774105" CREATED="1649104378958" MODIFIED="1649104379977"/>
-</node>
-</node>
-<node TEXT="Network Arch Search" FOLDED="true" POSITION="left" ID="ID_1465080986" CREATED="1576827705751" MODIFIED="1650817686281">
-<font NAME="Gentium" SIZE="10" BOLD="false"/>
-<edge COLOR="#00ffff"/>
-<node TEXT="Lottery (winning ticket hypothesis)" ID="ID_157689053" CREATED="1589771412424" MODIFIED="1589771423223"/>
-<node TEXT="NAS + General" ID="ID_345720050" CREATED="1589771335033" MODIFIED="1610423263436">
-<node TEXT="1912.09640 ATOMNAS: FINE-GRAINED END TO END NEURAL ARCHITECTURE SEARCH (iclr20)" ID="ID_551298402" CREATED="1591523824249" MODIFIED="1591523859249"/>
-<node TEXT="2001.01431: deeper insights into weight sharing in neural architecture search" ID="ID_788581693" CREATED="1578641715823" MODIFIED="1587526865297">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="as training every child model from scratch is very time-consuming, recent works leverage weight-sharing to speed up the model evaluation procedure" ID="ID_210487548" CREATED="1578641819751" MODIFIED="1587526865299">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="these approaches greatly reduce computation by maintaining a single copy of weights on the super-net and share the weights among every child model" ID="ID_320246153" CREATED="1578641854870" MODIFIED="1587526865306">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="weight-sharing has no theoretical guarantee and its impact has not been well studied before" ID="ID_1082606016" CREATED="1578641968342" MODIFIED="1587526865308">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="comprehensive and reveal the impact of weight-sharing" ID="ID_575085259" CREATED="1578641994032" MODIFIED="1587526865308">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="1. best-performing models from different runes or even from consecutive epoches within the same run have significant variance" ID="ID_806597637" CREATED="1578642011022" MODIFIED="1587526865309">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="2. even with high variance, we can extract valuable information from training the super-net with shared weight s" ID="ID_1259033553" CREATED="1578642053527" MODIFIED="1587526865310">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="3. inference between child models is a main factor that induces high variance" ID="ID_824472334" CREATED="1578642091423" MODIFIED="1587526865312">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="4. properly reducing the degree of weight sharing could effectively reduce variance" ID="ID_1319017164" CREATED="1578642112783" MODIFIED="1587526865312">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="2002.07376: picking winning tickets before training by preserving gradient flow" ID="ID_285121795" CREATED="1582337040844" MODIFIED="1587526865313">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: prune networks at initialization" ID="ID_242187066" CREATED="1582337065578" MODIFIED="1587526865314">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: overparameterization has been shown to benefit both the optimization and generalization of neural networks, but large networks are resource hungry at both training and test time." ID="ID_982652785" CREATED="1582337086688" MODIFIED="1587526865315">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: simple but effective pruning criterion termed Gradient Signal Preservation (GraSP)" ID="ID_456233465" CREATED="1582337135230" MODIFIED="1587526865316">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="2002.08104: neural networks on random graphs" ID="ID_1492714029" CREATED="1583370632367" MODIFIED="1587526865316">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: evaluation of neural networks with architectures corresponding to random graphs of various types" ID="ID_189291229" CREATED="1583370645715" MODIFIED="1587526865317">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="2004.05020: ModuleNet: Knowledge-inherited Neural Architecture search" ID="ID_1957978051" CREATED="1587029726858" MODIFIED="1587526865318">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="1912.12522 NASEVALUATION IS FRUSTRATINGLY HARD (ICLR20)" ID="ID_1102573147" CREATED="1591523757273" MODIFIED="1591523776195"/>
-<node TEXT="2101: Unchain the Search Space with Hierarchical Differentiable Architecture Search" ID="ID_770027754" CREATED="1610423275136" MODIFIED="1610423282492"/>
-<node TEXT="2101: Neural Architecture Search via Combinatorial Multi-Armed Bandit" ID="ID_1528572141" CREATED="1610424093363" MODIFIED="1610424103413"/>
-<node TEXT="Contrastive Neural Architecture Search with Neural Architecture Comparators (cvpr21)" ID="ID_866640575" CREATED="1615348935373" MODIFIED="1615348942277"/>
-<node TEXT="SpiderNet: Hybrid Differentiable-Evolutionary Architecture Search via Train-Free Metrics" ID="ID_704263392" CREATED="1650817696173" MODIFIED="1650817696822">
-<node TEXT="CVPR22w" ID="ID_250147196" CREATED="1650817697711" MODIFIED="1650817699427"/>
-</node>
-</node>
-<node TEXT="NAS + Other" ID="ID_1734029148" CREATED="1589771343435" MODIFIED="1589771346550">
-<node TEXT="other=SISR" ID="ID_12673974" CREATED="1589771348054" MODIFIED="1589771353001">
-<node TEXT="2003.04619: hierarchical neural architecture search for single image super-resolution" ID="ID_1727215487" CREATED="1589771353984" MODIFIED="1589771370713"/>
-</node>
-<node TEXT="other=modality" ID="ID_621571662" CREATED="1589771456800" MODIFIED="1589771460809">
-<node TEXT="2004.12070: deep multimodal neural architecture search" ID="ID_1501292654" CREATED="1588072764031" MODIFIED="1588072782358"/>
-</node>
-<node TEXT="other=multitask" ID="ID_1291820834" CREATED="1590975521172" MODIFIED="1590975526893">
-<node TEXT="2003.14058 MTL-NAS: Task-Agnostic Neural Architecture Search towards General-Purpose Multi-Task Learning (cvpr20)" ID="ID_755508472" CREATED="1590975527584" MODIFIED="1590975541542"/>
-</node>
-<node TEXT="otehr=captioning" ID="ID_341214713" CREATED="1608876510692" MODIFIED="1608876515099">
-<node TEXT="2012.09742&#xa;AutoCaption: Image Captioning with Neural Architecture Search" ID="ID_1588438121" CREATED="1608876515864" MODIFIED="1608876526467"/>
-</node>
-</node>
-</node>
-<node TEXT=" Object Detection" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1654720342537">
+<node TEXT="Object Detection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1657404442110">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_674316746" CREATED="1653969587756" MODIFIED="1653969594381">
 <icon BUILTIN="mindmap"/>
@@ -3930,7 +2679,7 @@
 <node TEXT="ECCV12" ID="ID_1085442689" CREATED="1655448044932" MODIFIED="1655448047019"/>
 </node>
 </node>
-<node TEXT="Main (multi-object)" LOCALIZED_STYLE_REF="styles.topic" ID="ID_602285743" CREATED="1590025482391" MODIFIED="1654637252853">
+<node TEXT="Main (multi-object)" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_602285743" CREATED="1590025482391" MODIFIED="1654637252853">
 <node TEXT="One-Stage" FOLDED="true" ID="ID_1861902425" CREATED="1654040858813" MODIFIED="1655005666300">
 <node TEXT="Overfeat" ID="ID_498869304" CREATED="1654625580457" MODIFIED="1654625583038">
 <node TEXT="OverFeat:&#xa;Integrated Recognition, Localization and Detection&#xa;using Convolutional Networks" ID="ID_1479745312" CREATED="1654625590470" MODIFIED="1654625601978">
@@ -3970,6 +2719,10 @@
 <icon BUILTIN="pencil"/>
 <node TEXT="Jian Sun" ID="ID_363763705" CREATED="1655448868486" MODIFIED="1655448870422"/>
 </node>
+</node>
+<node TEXT="YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors" ID="ID_423478211" CREATED="1657404910465" MODIFIED="1657404916188">
+<icon BUILTIN="pencil"/>
+<node TEXT="SOTA" ID="ID_1911741418" CREATED="1657404924571" MODIFIED="1657404925711"/>
 </node>
 </node>
 <node TEXT="RetinaNet / Focal loss" ID="ID_1759579854" CREATED="1653969367052" MODIFIED="1656534094168">
@@ -4526,6 +3279,1278 @@
 </node>
 <node TEXT="Edge" ID="ID_1165576303" CREATED="1655448300401" MODIFIED="1655448302174">
 <node TEXT="Edge YOLO: Real-Time Intelligent Object&#xa;Detection System Based on Edge-Cloud&#xa;Cooperation in Autonomous Vehicles" ID="ID_1868941984" CREATED="1655448303099" MODIFIED="1655448304130"/>
+</node>
+</node>
+<node TEXT="Track: AdvRank" FOLDED="true" POSITION="right" ID="ID_67713290" CREATED="1561352085890" MODIFIED="1642394393230">
+<icon BUILTIN="idea"/>
+<font NAME="Gentium" SIZE="10" BOLD="true"/>
+<edge COLOR="#ff00ff"/>
+<node TEXT="1806.04425: Ranking Robustness Under Ad" ID="ID_562405105" CREATED="1561555589182" MODIFIED="1636485900673">
+<icon BUILTIN="button_cancel"/>
+<font NAME="Gentium" SIZE="10"/>
+<node TEXT="document manipulation for candidate attack" ID="ID_1231428087" CREATED="1561555592821" MODIFIED="1587728924172">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="mainly analysis robustness" ID="ID_55534459" CREATED="1561555648216" MODIFIED="1587728924173">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="manual documentation manipulation instead of automatic adversarial example generation" ID="ID_798730521" CREATED="1561555609750" MODIFIED="1587728924174">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="targets at RankSVM and LambdaMART models instead of neural networks" ID="ID_255349278" CREATED="1561555658663" MODIFIED="1587728924175">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+</node>
+<node TEXT="1808.03908: Adversarial Personalized Rank" ID="ID_83109239" CREATED="1561555800953" MODIFIED="1636485894233">
+<icon BUILTIN="button_cancel"/>
+<font NAME="Gentium" SIZE="10"/>
+<node TEXT="recommendation system" ID="ID_1396811583" CREATED="1561555811711" MODIFIED="1587728924177">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="enhance robustness of a recommender model with adversarial training (adv examples)" ID="ID_527243554" CREATED="1561555835768" MODIFIED="1587728924178">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="APR on Matrix Factorization" ID="ID_662100047" CREATED="1561556113144" MODIFIED="1587728924179">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+</node>
+<node TEXT="1809: AdvBox: FaceNet Attack" ID="ID_1888665729" CREATED="1561556172335" MODIFIED="1636485887561">
+<icon BUILTIN="button_cancel"/>
+<font NAME="Gentium" SIZE="10"/>
+<node TEXT="query attack" ID="ID_1680208164" CREATED="1561556180000" MODIFIED="1587728924182">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="https://github.com/advboxes/AdvBox/blob/master/applications/face_recogn" ID="ID_951928489" CREATED="1561556196446" MODIFIED="1587728924182" LINK="https://github.com/advboxes/AdvBox/blob/master/applications/face_recogn">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="\latex $L=\sqrt{\sum (E-E_t)^2}" ID="ID_79735084" CREATED="1561556315382" MODIFIED="1587728924183">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+</node>
+<node TEXT="1812.00552: Universal Perturbation Attack Against Image Retrieval" ID="ID_1919220467" CREATED="1561556406527" MODIFIED="1587728924183">
+<font NAME="Gentium" SIZE="10"/>
+<node TEXT="directly attacks triplet ranking loss function" ID="ID_491701428" CREATED="1561556424133" MODIFIED="1587728924185">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="but what if the triplet fell into the zero-gradient region" ID="ID_839129884" CREATED="1561556433741" MODIFIED="1587728924186">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="using PGD+momentum for optimization" ID="ID_948653721" CREATED="1561556446589" MODIFIED="1587728924187">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="studies query attack" ID="ID_1697473744" CREATED="1561556462589" MODIFIED="1587728924188">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+</node>
+<node TEXT="2019-ICMR: Who&#x2019;s Afraid of Adversarial Queries?" ID="ID_1703113745" CREATED="1561556482168" MODIFIED="1636485880766">
+<icon BUILTIN="button_cancel"/>
+<font NAME="Gentium" SIZE="10"/>
+<node TEXT="query attack" ID="ID_1123142555" CREATED="1561556568742" MODIFIED="1587728924189">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="\latex $\max ||f(x)-f(x+v)||_2^2$" ID="ID_1830202115" CREATED="1561556572709" MODIFIED="1587728924190">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="aims at image retrieval and didn&apos;t mention embedding learning" ID="ID_1516625397" CREATED="1561556595981" MODIFIED="1587728924190">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+</node>
+<node TEXT="1907: unsupervised adversarial attacks on deep feature-based retrieval with GAN" ID="ID_9436679" CREATED="1588230731425" MODIFIED="1588230756582">
+<node TEXT="generate adversarial perturbation with GAN" ID="ID_1151385661" CREATED="1588230816064" MODIFIED="1588230824347"/>
+</node>
+<node TEXT="1812.00552: Universal Perturbation Attack Against Image Retrieval (iccv19)" ID="ID_1472505886" CREATED="1573474834671" MODIFIED="1587728924195">
+<icon BUILTIN="messagebox_warning"/>
+<font NAME="Gentium" SIZE="10"/>
+<node TEXT="what: universal perturbation for untargeted attack" ID="ID_1954548078" CREATED="1573474853539" MODIFIED="1587728924196">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="how: currupts pairwise or listwise ranking" ID="ID_1847715376" CREATED="1573474863063" MODIFIED="1587728924197">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="untargeted, focusing on fooling" ID="ID_665084129" CREATED="1573475747222" MODIFIED="1587728924198">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+</node>
+<node TEXT="1901.10650: Metric Attack and Defense for Person Re-identificatio" ID="ID_490211267" CREATED="1592543067606" MODIFIED="1636485967109">
+<icon BUILTIN="messagebox_warning"/>
+<icon BUILTIN="button_cancel"/>
+<font BOLD="true"/>
+<node TEXT="Song Bai" ID="ID_692240773" CREATED="1636485956725" MODIFIED="1636485961987"/>
+<node TEXT="attack the metric in person reID" ID="ID_34707268" CREATED="1592543081709" MODIFIED="1592543098277"/>
+<node TEXT="push (untargeted) and pull (targeted)" ID="ID_1286430581" CREATED="1592543098573" MODIFIED="1592543112360"/>
+</node>
+<node TEXT="1908.09613: targeted mismatch adversarial attack (iccv19)" ID="ID_671271001" CREATED="1573471637067" MODIFIED="1636486108618">
+<icon BUILTIN="messagebox_warning"/>
+<icon BUILTIN="button_ok"/>
+<font NAME="Gentium" SIZE="10"/>
+<node TEXT="what: targeted mismatch" ID="ID_1563475526" CREATED="1573471664345" MODIFIED="1587728924192">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="how: distance objective" ID="ID_688655227" CREATED="1573472458185" MODIFIED="1587728924193">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="not systematic enough" ID="ID_205991126" CREATED="1573472480708" MODIFIED="1587728924194">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="THIS is a threat to us" ID="ID_988648076" CREATED="1573472496549" MODIFIED="1587728924195">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+</node>
+<node TEXT="Advpattern (iccv19)" ID="ID_932771683" CREATED="1576809427350" MODIFIED="1587728924198">
+<icon BUILTIN="messagebox_warning"/>
+<font NAME="Gentium" SIZE="10"/>
+</node>
+<node TEXT="ours: Adversarial Ranking Attack and Defense (arxiv 2002.11293)" ID="ID_933056745" CREATED="1576809387016" MODIFIED="1592543327861">
+<icon BUILTIN="button_ok"/>
+<font NAME="Gentium" SIZE="10" BOLD="true"/>
+<node TEXT="ECCV2020" ID="ID_1213034229" CREATED="1576809470567" MODIFIED="1610427018812">
+<font NAME="Gentium" SIZE="10"/>
+</node>
+</node>
+<node TEXT="2004.04199: transferable, controllable, and inconspicious adversarial attacks on person re-identification with deep-misranking (CVPR20)" ID="ID_693496331" CREATED="1590743469098" MODIFIED="1590743579415">
+<icon BUILTIN="button_ok"/>
+<node TEXT="person reID" ID="ID_548309734" CREATED="1590743636274" MODIFIED="1590743640590"/>
+<node TEXT="use triplet form attack objective" ID="ID_1324326527" CREATED="1590743509489" MODIFIED="1590743528991"/>
+<node TEXT="untargeted" ID="ID_862183953" CREATED="1590743529382" MODIFIED="1590743531961"/>
+<node TEXT="learning-to-mis-rank" ID="ID_172715084" CREATED="1590805595723" MODIFIED="1590805600800"/>
+</node>
+<node TEXT="Vulnerability of Person Re Identification Models to Metric Adversarial Attacks (cvpr20w)" ID="ID_666911505" CREATED="1592544846016" MODIFIED="1620715760339">
+<icon BUILTIN="button_ok"/>
+<icon BUILTIN="messagebox_warning"/>
+<node TEXT="self metric attack" ID="ID_1983736472" CREATED="1592544863127" MODIFIED="1592544870094">
+<node TEXT="maximum shift distance" ID="ID_1843892614" CREATED="1592544925404" MODIFIED="1592544929867"/>
+<node TEXT="untargeted" ID="ID_1551966366" CREATED="1592544982949" MODIFIED="1592544984988"/>
+</node>
+<node TEXT="furthest negative attack" ID="ID_165661813" CREATED="1592544870439" MODIFIED="1592544877498">
+<node TEXT="push from orig, pull from furthest cluster" ID="ID_765025792" CREATED="1592545364041" MODIFIED="1592545375413"/>
+<node TEXT="disturb the ranking" ID="ID_225845829" CREATED="1592544987176" MODIFIED="1592544995331"/>
+<node TEXT="untargeted" ID="ID_1161241988" CREATED="1592544996728" MODIFIED="1592544998361"/>
+</node>
+<node TEXT="adversarial training for metric" ID="ID_881036760" CREATED="1592544877759" MODIFIED="1592544885179"/>
+</node>
+<node TEXT="2012.14057: PERSONRE IDENTIFICATION WITH ADVERSARIAL TRIPLET EMBEDDING" ID="ID_974503367" CREATED="1610427222890" MODIFIED="1620715752859">
+<icon BUILTIN="messagebox_warning"/>
+<node TEXT="not peer reviewed" ID="ID_911035452" CREATED="1610427251959" MODIFIED="1610427256067"/>
+<node TEXT="\latex l_\text{triplet}(\tilde{a}, p, n)" ID="ID_1528343305" CREATED="1610427320982" MODIFIED="1610427368752"/>
+<node TEXT="better reid performance? weird" ID="ID_912255527" CREATED="1610427378471" MODIFIED="1610427386018"/>
+</node>
+<node TEXT="2103.02927 QAIR: Practical Query-efficient Black-Box Attacks for Image Retrieval" ID="ID_1939119283" CREATED="1615294198999" MODIFIED="1620715422259">
+<icon BUILTIN="messagebox_warning"/>
+<icon BUILTIN="button_ok"/>
+<node TEXT="query-based attack against image retrieval to subvert the top-k retrieval" ID="ID_788475675" CREATED="1615294409842" MODIFIED="1615294424860">
+<node TEXT="random incorrect result" ID="ID_1404780182" CREATED="1615294426968" MODIFIED="1615294439236"/>
+</node>
+<node TEXT="gradient optimization + a relevance-based loss" ID="ID_1805130536" CREATED="1615294463470" MODIFIED="1615294478666">
+<node TEXT="uses RGF (random gradient free)" ID="ID_1977339570" CREATED="1615294685532" MODIFIED="1615294698319"/>
+</node>
+<node TEXT="recursive model stealing method" ID="ID_334621555" CREATED="1615294479086" MODIFIED="1615294494768">
+<node TEXT="provides transfer prior" ID="ID_1010296679" CREATED="1615294496388" MODIFIED="1615294503336"/>
+</node>
+<node TEXT="stealing and attack is separated steps: what if we treat it as a multi-arm bandit?" ID="ID_1679102936" CREATED="1615294783533" MODIFIED="1615294824361">
+<icon BUILTIN="idea"/>
+<node TEXT="explore and exploit" ID="ID_645430104" CREATED="1615294813742" MODIFIED="1615294819339"/>
+</node>
+</node>
+<node TEXT="RobRank: adversarial attack and defense in deep ranking" ID="ID_990446170" CREATED="1636485853836" MODIFIED="1650810489070">
+<font BOLD="true"/>
+</node>
+<node TEXT="RobDML: Enhancing Adversarial Robustness for Deep Metric Learning" ID="ID_1927729885" CREATED="1636485850581" MODIFIED="1650810510794">
+<font BOLD="true"/>
+<node TEXT="CVPR22" ID="ID_1223380826" CREATED="1650810506474" MODIFIED="1650810507766"/>
+</node>
+</node>
+<node TEXT="3D + PCL Recog" FOLDED="true" POSITION="left" ID="ID_1606327696" CREATED="1583132559918" MODIFIED="1649103272801">
+<font NAME="Gentium" SIZE="10" BOLD="false"/>
+<edge COLOR="#007c7c"/>
+<node TEXT="Dataset" ID="ID_750669130" CREATED="1583137147235" MODIFIED="1587526865232">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="PartNet: A large scale benchmark for fine-grained and hierarchical part-level 3D object understanding" ID="ID_367911268" CREATED="1583137156179" MODIFIED="1587526865232">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: large-scale dataset of 3D objects annotated with fine-trained, instance-level, and hierarchical 3D part information." ID="ID_1810204510" CREATED="1583137993707" MODIFIED="1587526865232">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="why: 3d part recognition: fine-rained semantic segmentation, hierarchical semantic segmentation, and instance segmentation" ID="ID_447922824" CREATED="1583141336957" MODIFIED="1587526865233">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="generic" ID="ID_67683623" CREATED="1608878793211" MODIFIED="1608878794674">
+<node TEXT="2012.09688&#xa;PCT: Point Cloud Transformer" ID="ID_760061240" CREATED="1608878795342" MODIFIED="1608878805569"/>
+<node TEXT="2012.09164 Point Transformer" ID="ID_1856683145" CREATED="1608879617939" MODIFIED="1608880161951">
+<icon BUILTIN="bookmark"/>
+<node TEXT="self-attention network to PCL" ID="ID_1162420612" CREATED="1608880164884" MODIFIED="1608880172010"/>
+</node>
+</node>
+<node TEXT="classification" ID="ID_1683843111" CREATED="1583132565754" MODIFIED="1610426338023">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="PointNet: deep learning on Point Sets for 3D classification and segmentation (2017)" ID="ID_535445133" CREATED="1583132578641" MODIFIED="1587526865234">
+<icon BUILTIN="button_ok"/>
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: 3d classification and segmentation" ID="ID_369477718" CREATED="1583132646461" MODIFIED="1587526865235">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="why: previous works transform such data to regular 3D voxel grids or collections of images" ID="ID_509541120" CREATED="1583132656157" MODIFIED="1587526865236">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="renders data unecessarily voluminous and causes issues" ID="ID_1650499462" CREATED="1583132774211" MODIFIED="1587526865237">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="how: novel type of neural network" ID="ID_1582863497" CREATED="1583132794431" MODIFIED="1587526865238">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="directly consumes 3d point cloud" ID="ID_904651994" CREATED="1583132807372" MODIFIED="1587526865238">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="respects the permutation invariance of point in the input" ID="ID_80693188" CREATED="1583132818955" MODIFIED="1587526865239">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="Detail" ID="ID_592119659" CREATED="1583132853503" MODIFIED="1587526865239">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="properties of point set" ID="ID_923628661" CREATED="1583133482219" MODIFIED="1587526865239">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="1. unordered" ID="ID_59901348" CREATED="1583133494060" MODIFIED="1587526865240">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="2. interaction among points" ID="ID_905514121" CREATED="1583133498167" MODIFIED="1587526865240">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="3. invariance under transformations" ID="ID_932819479" CREATED="1583133522841" MODIFIED="1587526865241">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="e.g. translation and rotation" ID="ID_1003384585" CREATED="1583133566689" MODIFIED="1587526865241">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="regularize transformation to be close to orthogonal matrix" ID="ID_1980629096" CREATED="1583133585186" MODIFIED="1587526865242">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="An orthogonal transformation will not lose information in the input, thus is desired" ID="ID_285705617" CREATED="1583133597956" MODIFIED="1587526865242">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="PointNet++: deep hierarchical feature learning on point sets in a metric space (NIPS)" ID="ID_1305155138" CREATED="1583133688195" MODIFIED="1587526865243">
+<icon BUILTIN="button_ok"/>
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: 3d classification and segmentation" ID="ID_1391695258" CREATED="1583136577356" MODIFIED="1587526865244">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="why: pointnet does not capture local structures induced by the metric space points live in" ID="ID_1734373925" CREATED="1583136583902" MODIFIED="1587526865245">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="how: introduce a hierarchical neural network that applies pointnet recursively on a nested partitioning of the input point set; propoes novel set learning layers to adaptively combine features from multiple scales" ID="ID_574546543" CREATED="1583136619272" MODIFIED="1587526865246">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="2002.10876: PointAugment: an auto-agumentation framework for point cloud classification (CVPR2020)" ID="ID_1995300558" CREATED="1583310893208" MODIFIED="1587526865246">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: regularization in PCL classification" ID="ID_682948316" CREATED="1583310928954" MODIFIED="1587526865247">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="why: regularization" ID="ID_1191365248" CREATED="1583311604535" MODIFIED="1587526865248">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="how: sample-aware and takes adversarial learning stategy to jointly optimize the augmentor and the classifier" ID="ID_1638101526" CREATED="1583311614272" MODIFIED="1587526865248">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="augmentor can learn samples that best fit the classifier" ID="ID_1705315529" CREATED="1583311657637" MODIFIED="1587526865249">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="EllipsoidNet: Ellipsoid Representation for Point Cloud Classification andSegmentation (cvpr21)" ID="ID_1008449076" CREATED="1615297913979" MODIFIED="1615297923495">
+<node TEXT="new 2d representation" ID="ID_1336906720" CREATED="1615297924304" MODIFIED="1615297941283"/>
+</node>
+<node TEXT="Generalization" ID="ID_1470361340" CREATED="1650816123033" MODIFIED="1650816126078">
+<node TEXT="MetaSets: Meta-Learning on Point Sets for Generalizable Representations" ID="ID_1880007762" CREATED="1650816127428" MODIFIED="1650816134358">
+<node TEXT="CVPR21" ID="ID_1972344411" CREATED="1650816135730" MODIFIED="1650816137097"/>
+</node>
+</node>
+</node>
+<node TEXT="Semgentation" ID="ID_98283900" CREATED="1610426338878" MODIFIED="1610426343353">
+<node TEXT="2003.05593:Learning to Segment 3D Point Clouds in 2D Image Space (cvpr20 oral)" ID="ID_1194509251" CREATED="1590748289620" MODIFIED="1590748552801"/>
+<node TEXT="2003.14032 PolarNet: An Improved Grid Representation for Online LiDAR Point Clouds Semantic Segmentation (cvpr20)" ID="ID_273525175" CREATED="1590806996838" MODIFIED="1590807009853"/>
+<node TEXT="2012.10217&#xa;SegGroup: Seg-Level Supervision for 3D Instance and Semantic Segmentation" ID="ID_746665270" CREATED="1608872980932" MODIFIED="1608873093023"/>
+<node TEXT="2101: Boundary-Aware Geometric Encoding for Semantic Segmentation of Point Clouds (AAAI21)" ID="ID_18229318" CREATED="1610426385894" MODIFIED="1610426427874"/>
+</node>
+<node TEXT="Shape + PCL" ID="ID_692723578" CREATED="1587978723669" MODIFIED="1587978729471">
+<node TEXT="2004.09411: shape-oriented convolutional neural network for point cloud analysis (AAAI20)" ID="ID_648541054" CREATED="1587978730554" MODIFIED="1587978867499"/>
+<node TEXT="2004.04242: deep manifold prior" ID="ID_1198757401" CREATED="1589766955822" MODIFIED="1589766965285"/>
+<node TEXT="2005.08144: high-dimentsional convolutional networks for geometric pattern recognition" ID="ID_551842404" CREATED="1590025587186" MODIFIED="1590025610132"/>
+</node>
+<node TEXT="Depth" ID="ID_1948167092" CREATED="1617622791190" MODIFIED="1617622792504">
+<node TEXT="Depth Estimation" ID="ID_310201956" CREATED="1583313577977" MODIFIED="1587526865249">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="2002.12319: semantically-guided representation learning for self-supervised monocular depth" ID="ID_123925389" CREATED="1583319217945" MODIFIED="1587526865249">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: depth estimation" ID="ID_512544818" CREATED="1583319382866" MODIFIED="1587526865250">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="how: leverage more directly semantic structure to guide geometric representation learning" ID="ID_1129284074" CREATED="1583319389083" MODIFIED="1587526865251">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="Depth Representation" ID="ID_940024603" CREATED="1617622797830" MODIFIED="1617622801976">
+<node TEXT="CVPR21: S2R-DepthNet: Learning a Generalizable Depth-specific Structural Representation" ID="ID_339705407" CREATED="1617622803213" MODIFIED="1617622810654"/>
+</node>
+</node>
+<node TEXT="Motion Prediction" ID="ID_1468545131" CREATED="1585273931386" MODIFIED="1587526865251">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="2003.06594: collaborative motion prediction via neural motion message passing (CVPR20)" ID="ID_922645949" CREATED="1585273939963" MODIFIED="1587526865251">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="model the interaction among traffic actors, which could cooperate with each other to avoid collisions or form groups" ID="ID_1866499715" CREATED="1585273974008" MODIFIED="1587526865252">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="Social GAN: Socially Acceptable Trajectories&#xa;with Generative Adversarial Networks (cvpr20)" ID="ID_707374796" CREATED="1592546647558" MODIFIED="1592546660119"/>
+</node>
+<node TEXT="Tracking" ID="ID_1225202497" CREATED="1590746031233" MODIFIED="1590746035544">
+<node TEXT="2005.13888: P2B: Point-to-Box Network for 3D Object Tracking in Point Clouds (cvpr20 oral)" ID="ID_247548698" CREATED="1590746036605" MODIFIED="1590746049896"/>
+</node>
+<node TEXT="2D-&gt;3D / Reconstruction" ID="ID_85275942" CREATED="1587974524881" MODIFIED="1587975275112">
+<node TEXT="3D portrait" ID="ID_1817633511" CREATED="1587974528844" MODIFIED="1587974534327">
+<node TEXT="2004.11598: Deep 3D portrait from a single image" ID="ID_788527202" CREATED="1587974536965" MODIFIED="1587974549308">
+<node TEXT="unsupervised" ID="ID_588496742" CREATED="1587974550811" MODIFIED="1587974553381"/>
+</node>
+</node>
+</node>
+<node TEXT="Unsupervised" ID="ID_1108189941" CREATED="1590749952334" MODIFIED="1590749956189">
+<node TEXT="2004.01176: Learning Unsupervised Hierarchical Part Decomposition of 3D Objects from a Single RGB Image (cvpr20)" ID="ID_953085415" CREATED="1590749956974" MODIFIED="1590749967809"/>
+</node>
+<node TEXT="Object Detection" ID="ID_359173144" CREATED="1634062757685" MODIFIED="1648337996840">
+<node TEXT="Voxel Transformer for 3D Object Detection" ID="ID_1112299622" CREATED="1634062767074" MODIFIED="1634062773616"/>
+<node TEXT="LiDAR Snowfall Simulation for Robust 3D Object Detection" ID="ID_1716092506" CREATED="1649103277309" MODIFIED="1649103282821">
+<node TEXT="CVPR22" ID="ID_685730559" CREATED="1649103284187" MODIFIED="1649103285288"/>
+</node>
+<node TEXT="Voxel Field Fusion for 3D Object Detection" ID="ID_677783437" CREATED="1654539147223" MODIFIED="1654539148043"/>
+<node TEXT="Object DGCNN: 3D Object Detection using Dynamic Graphs" ID="ID_1443342957" CREATED="1655007165828" MODIFIED="1655007166862">
+<node TEXT="NIPS21" ID="ID_1842247761" CREATED="1655007169158" MODIFIED="1655007170975"/>
+</node>
+</node>
+<node TEXT="Interpolation" ID="ID_687015313" CREATED="1648337997035" MODIFIED="1648338000713">
+<node TEXT="IDEA-Net: Dynamic 3D Point Cloud Interpolation via Deep Embedding Alignment" ID="ID_1606213792" CREATED="1648338005697" MODIFIED="1648338009130">
+<node TEXT="CVPR22" ID="ID_80360502" CREATED="1648338010355" MODIFIED="1648338011775"/>
+</node>
+</node>
+</node>
+<node TEXT="Action Recognition" FOLDED="true" POSITION="left" ID="ID_941361807" CREATED="1647567341551" MODIFIED="1647567345392">
+<edge COLOR="#ff0000"/>
+<node TEXT="Architecture" ID="ID_694731282" CREATED="1647567346659" MODIFIED="1647567355095">
+<node TEXT="non-local neural networks" ID="ID_595201499" CREATED="1647567356067" MODIFIED="1647567369739">
+<icon BUILTIN="checked"/>
+<node TEXT="CVPR18" ID="ID_556242427" CREATED="1647567364801" MODIFIED="1647567366157"/>
+<node TEXT="kaiming he" ID="ID_598417815" CREATED="1647567408886" MODIFIED="1647567410210"/>
+<node TEXT="deal with long-range dependency problem that the traditional CNN is not very good at" ID="ID_883791225" CREATED="1647567373082" MODIFIED="1647567395434"/>
+</node>
+</node>
+<node TEXT="Framework" ID="ID_164836852" CREATED="1651953412715" MODIFIED="1651953414547">
+<node TEXT="Cross-modal Representation Learning for Zero-shot Action Recognition" ID="ID_1630052458" CREATED="1651953420845" MODIFIED="1651953421503">
+<node TEXT="CVPR22, Microsoft" ID="ID_125282230" CREATED="1651953423268" MODIFIED="1651953426559"/>
+</node>
+</node>
+<node TEXT="Bias" ID="ID_335953065" CREATED="1655187221906" MODIFIED="1655187229388">
+<node TEXT="Learning without Prejudice: Avoiding Bias in Webly-Supervised Action&#xa;Recognition" ID="ID_1991556722" CREATED="1655187230614" MODIFIED="1655187236882"/>
+</node>
+</node>
+<node TEXT="Anomaly Detection" FOLDED="true" POSITION="left" ID="ID_31313107" CREATED="1657404499454" MODIFIED="1657404505651">
+<edge COLOR="#007c7c"/>
+<node TEXT="Back to the Basics: Revisiting Out-of-Distribution Detection Baselines" ID="ID_610692624" CREATED="1657404508363" MODIFIED="1657404513522">
+<node TEXT="ICML22w" ID="ID_1649193597" CREATED="1657404516644" MODIFIED="1657404522883"/>
+</node>
+</node>
+<node TEXT="AR/VR Demands" FOLDED="true" POSITION="left" ID="ID_598464569" CREATED="1649106345613" MODIFIED="1649106350552">
+<edge COLOR="#00ff00"/>
+<node TEXT="Relighting" ID="ID_147972340" CREATED="1649106351568" MODIFIED="1649106353702">
+<node TEXT="Face Relighting with Geometrically Consistent Shadows" ID="ID_1062796447" CREATED="1649106354508" MODIFIED="1649106359170">
+<node TEXT="CVPR22" ID="ID_1173806280" CREATED="1649106360283" MODIFIED="1649106361411"/>
+</node>
+</node>
+</node>
+<node TEXT="Backdoor Attack &amp; Defense" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="left" ID="ID_1279237598" CREATED="1642964328030" MODIFIED="1648336230488">
+<edge COLOR="#ff0000"/>
+<node TEXT="Attack" ID="ID_481030829" CREATED="1642965505734" MODIFIED="1642965507796">
+<node TEXT="Classification" ID="ID_1068695249" CREATED="1643059216060" MODIFIED="1643059221252">
+<node TEXT="* Madry backdoor" ID="ID_684891535" CREATED="1643059222128" MODIFIED="1644181613323"/>
+<node TEXT="Imperceptible and Multi-channel Backdoor Attack against Deep Neural Networks" ID="ID_1408798505" CREATED="1644181613544" MODIFIED="1644181621740">
+<icon BUILTIN="pencil"/>
+<node TEXT="exploiting DCT steganography" ID="ID_645033989" CREATED="1644181646727" MODIFIED="1644181655902"/>
+</node>
+<node TEXT="Poison Ink: Robust and Invisible Backdoor Attack" ID="ID_216800788" CREATED="1647567532543" MODIFIED="1647567536305">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Federated Learning (FL)" ID="ID_63486999" CREATED="1642964624292" MODIFIED="1642964972961">
+<node TEXT="Attack of the Tails:&#xa;Yes, You Really Can Backdoor Federated Learning" ID="ID_1636233737" CREATED="1642964633771" MODIFIED="1642964637902">
+<icon BUILTIN="checked"/>
+<node TEXT="NIPS20" ID="ID_315153104" CREATED="1642964641665" MODIFIED="1642964643166"/>
+<node TEXT="there are already many attacks and defenses in FL" ID="ID_1297351488" CREATED="1642964663241" MODIFIED="1642964670655"/>
+<node TEXT="this paper breaks the sota defense" ID="ID_1011383288" CREATED="1642964675173" MODIFIED="1642964680787"/>
+<node TEXT="susceptible to attack. defense remains open problem" ID="ID_92977436" CREATED="1642964925932" MODIFIED="1642964939810"/>
+</node>
+<node ID="ID_124537533" CREATED="1642965130724" MODIFIED="1642965135500">
+<icon BUILTIN="pencil"/>
+<richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    Backdoor Attacks on Federated Learning with Lottery Ticket Hypothesis
+  </body>
+</html>
+</richcontent>
+<node TEXT="21.09" OBJECT="java.lang.Double|21.09" ID="ID_874215275" CREATED="1642965148120" MODIFIED="1642965212458"/>
+</node>
+<node TEXT="DBA: Distributed Backdoor Attacks against Federated Learning" ID="ID_1786745650" CREATED="1642965312934" MODIFIED="1642965322325">
+<icon BUILTIN="unchecked"/>
+<node TEXT="iclr21" ID="ID_1366820704" CREATED="1642965323484" MODIFIED="1642965326580"/>
+</node>
+</node>
+<node TEXT="Automobile" ID="ID_1807292891" CREATED="1646928903901" MODIFIED="1646928910994">
+<node TEXT="Clean-Annotation Backdoor Attack against Lane Detection Systems in the Wild" ID="ID_444510611" CREATED="1646928911957" MODIFIED="1646928920668">
+<icon BUILTIN="pencil"/>
+<node TEXT="physical attack against lane deteciton" ID="ID_78672113" CREATED="1646928932402" MODIFIED="1646929021292"/>
+<node TEXT="clean-annotation approach" ID="ID_638994819" CREATED="1646929021555" MODIFIED="1646929029315"/>
+</node>
+</node>
+<node TEXT="Tracking" ID="ID_633333846" CREATED="1644181581603" MODIFIED="1644181584344">
+<node TEXT="Few-Shot Backdoor Attacks on Visual Object Tracking" ID="ID_1944039915" CREATED="1644181500877" MODIFIED="1644181516065">
+<icon BUILTIN="checked"/>
+<node TEXT="ICLR22" ID="ID_1379553453" CREATED="1644181502731" MODIFIED="1644181504177"/>
+<node TEXT="extension of backdoor" ID="ID_1434989681" CREATED="1644181504456" MODIFIED="1644181513607"/>
+</node>
+</node>
+<node TEXT="Contrastive Learning" ID="ID_1079011502" CREATED="1647267727724" MODIFIED="1647267731689">
+<node TEXT="Indiscriminate Poisoning Attacks on Unsupervised Contrastive Learning" ID="ID_103472433" CREATED="1647267739350" MODIFIED="1647267743429">
+<icon BUILTIN="pencil"/>
+</node>
+<node TEXT="Poisoning and Backdooring Contrastive Learning" ID="ID_199714317" CREATED="1648425561210" MODIFIED="1648425562006">
+<node TEXT="Carlini" ID="ID_1124457398" CREATED="1648425564654" MODIFIED="1648425567024"/>
+<node TEXT="CLIP" ID="ID_653822881" CREATED="1648425569833" MODIFIED="1648425571800"/>
+</node>
+</node>
+</node>
+<node TEXT="Defense" ID="ID_1943792971" CREATED="1642964418531" MODIFIED="1642965511845">
+<node TEXT="Survey" ID="ID_330468423" CREATED="1647048705270" MODIFIED="1647048707607">
+<node TEXT="A Survey of Neural Trojan Attacks and Defenses in Deep Learning" ID="ID_941695665" CREATED="1646945552550" MODIFIED="1646945574224">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Classification" ID="ID_1654847796" CREATED="1647048721032" MODIFIED="1647048723750">
+<node TEXT="Adversarial Fine-tuning for Backdoor Defense: Connect Adversarial Examples to Triggered Samples" ID="ID_580929337" CREATED="1646947640727" MODIFIED="1646947646923">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Face Recog" ID="ID_569214033" CREATED="1647266119655" MODIFIED="1647266122422">
+<node TEXT="Resurrecting Trust in Facial Recognition: Mitigating Backdoor Attacks in Face Recognition to Prevent Potential Privacy Breaches" ID="ID_880337110" CREATED="1647266127523" MODIFIED="1647266130023">
+<icon BUILTIN="pencil"/>
+<node TEXT="(1) using transfer learning" ID="ID_1190567128" CREATED="1647266131286" MODIFIED="1647266137581"/>
+<node TEXT="(2) using selective image perturbation" ID="ID_1274323880" CREATED="1647266137898" MODIFIED="1647266144697"/>
+</node>
+</node>
+<node TEXT="Federated Learning (FL)" ID="ID_1134675768" CREATED="1642965172314" MODIFIED="1642965518360">
+<node TEXT="Mitigating Backdoor Attacks in Federated Learning" ID="ID_709693725" CREATED="1642965179275" MODIFIED="1642965184157">
+<icon BUILTIN="pencil"/>
+<node TEXT="20.11" OBJECT="java.lang.Double|20.11" ID="ID_839247018" CREATED="1642965197783" MODIFIED="1642965208595"/>
+<node TEXT="Performance too good to be true?" ID="ID_813710886" CREATED="1642965276263" MODIFIED="1642965282360"/>
+</node>
+<node TEXT="Certifiably Robust Federated Learning against Backdoor Attacks" ID="ID_741627861" CREATED="1642965359811" MODIFIED="1642965362229">
+<icon BUILTIN="unchecked"/>
+<node TEXT="icml21" ID="ID_359293148" CREATED="1642965364960" MODIFIED="1642965369038"/>
+</node>
+<node TEXT="FederatedReverse: A Detection and Defense Method Against Backdoor Attacks in Federated Learning" ID="ID_1755199424" CREATED="1643036656254" MODIFIED="1643036673341">
+<icon BUILTIN="unchecked"/>
+</node>
+<node TEXT="Defending against Backdoors in Federated Learning with Robust Learning Rate AAAI21" ID="ID_1421685316" CREATED="1643036746252" MODIFIED="1643036830465">
+<icon BUILTIN="unchecked"/>
+<node TEXT="at high level, our defense is based on carefully adjusting the aggregation server&apos;s learning rate, per dimension and per round, based on the sign infirmation of agents&apos; updates" ID="ID_735008317" CREATED="1643036783427" MODIFIED="1643036817264"/>
+</node>
+</node>
+<node TEXT="Filtering" ID="ID_1962822246" CREATED="1646924812678" MODIFIED="1646924814463">
+<node TEXT="Towards Effective and Robust Neural Trojan Defenses via Input Filtering" ID="ID_199989646" CREATED="1646924820093" MODIFIED="1646924826803">
+<icon BUILTIN="pencil"/>
+<node TEXT="(1) variational input filtering: lossy data compression" ID="ID_193654578" CREATED="1647266258774" MODIFIED="1647266324880"/>
+<node TEXT="(2) adversarial input filtering: adversarial learning" ID="ID_1607964159" CREATED="1647266267852" MODIFIED="1647266332225"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Capsule Network" FOLDED="true" POSITION="left" ID="ID_1447197719" CREATED="1648341702034" MODIFIED="1648341707064">
+<edge COLOR="#00ffff"/>
+<node TEXT="HP-Capsule: Unsupervised Face Part Discovery by Hierarchical Parsing Capsule Network" ID="ID_1960737685" CREATED="1648341745946" MODIFIED="1648341753103">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_76112470" CREATED="1648341754220" MODIFIED="1648341755486"/>
+<node TEXT="capsule networks are designed to present the objects by a set of parts and their relationships, which provide an insight into the procedure of visual perception" ID="ID_1555851286" CREATED="1648341756627" MODIFIED="1648341784222">
+<icon BUILTIN="info"/>
+</node>
+</node>
+</node>
+<node TEXT="Comp. Linguistics" FOLDED="true" POSITION="left" ID="ID_865579939" CREATED="1610008291436" MODIFIED="1642394269419">
+<edge COLOR="#0000ff"/>
+<node TEXT="Language Representation" ID="ID_1139506578" CREATED="1583319666984" MODIFIED="1648343280371">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="ELMo" ID="ID_1144092497" CREATED="1583321768820" MODIFIED="1587526864978">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="BERT" ID="ID_970622765" CREATED="1583321766003" MODIFIED="1587526864978">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="XLNet" ID="ID_214926633" CREATED="1583321774388" MODIFIED="1587526864978">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="ALBERT" ID="ID_1612144981" CREATED="1583321771476" MODIFIED="1587526864978">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="2012.10873&#xa;Sequence-to-Sequence Contrastive Learning for Text Recognition" ID="ID_936047798" CREATED="1608874619355" MODIFIED="1608874629781"/>
+<node TEXT="NAACL: Revisiting Document Representations for Large-Scale Zero-Shot Learning" ID="ID_849682508" CREATED="1619332223950" MODIFIED="1619332231274"/>
+</node>
+<node TEXT="sentence embedding" ID="ID_1959395028" CREATED="1610008316533" MODIFIED="1610008319960">
+<node TEXT="1908: Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks" ID="ID_1743352469" CREATED="1610008346393" MODIFIED="1610008369033"/>
+<node TEXT="EMNLP: on the sentence embeddings from pre-trained language models" ID="ID_413909105" CREATED="1619332268062" MODIFIED="1619332289375"/>
+</node>
+<node TEXT="Sequence Modeling" ID="ID_351729279" CREATED="1618848122097" MODIFIED="1645045266470">
+<node TEXT="vanilla RNN" ID="ID_470266436" CREATED="1645045269394" MODIFIED="1645045280217"/>
+<node TEXT="LSTM" ID="ID_1361137265" CREATED="1645045281093" MODIFIED="1645045282870"/>
+<node TEXT="GRU" ID="ID_1280881087" CREATED="1645045275154" MODIFIED="1645045276501"/>
+<node TEXT="TCN" ID="ID_789045066" CREATED="1618848128609" MODIFIED="1618848130007">
+<node TEXT="An Empirical Evaluation of Generic Convolutional and Recurrent Networksfor Sequence Modeling" ID="ID_1211179302" CREATED="1618848130953" MODIFIED="1618848146516">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Continual Learning" FOLDED="true" POSITION="left" ID="ID_28623311" CREATED="1649110273675" MODIFIED="1649110277766">
+<edge COLOR="#ff00ff"/>
+<node TEXT="Probing Representation Forgetting in Supervised and Unsupervised Continual Learning" ID="ID_73452629" CREATED="1649110278617" MODIFIED="1649110284775"/>
+</node>
+<node TEXT="Cross-Modal Retrieval" FOLDED="true" POSITION="left" ID="ID_22749108" CREATED="1576988430324" MODIFIED="1642431082632">
+<font NAME="Gentium" BOLD="false"/>
+<edge COLOR="#7c0000"/>
+<node TEXT="Image-Text" FOLDED="true" ID="ID_22916358" CREATED="1649103179989" MODIFIED="1649103183136">
+<node TEXT="VSE Family" ID="ID_730414508" CREATED="1652383580081" MODIFIED="1652383582802">
+<node TEXT="Unifying ..." ID="ID_1819265540" CREATED="1586240031907" MODIFIED="1587526865103">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="VSE++" ID="ID_612993504" CREATED="1586240024674" MODIFIED="1587526865105">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="sota" ID="ID_516293267" CREATED="1586240099321" MODIFIED="1587526865106">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="flickr30k" ID="ID_546511377" CREATED="1586240101669" MODIFIED="1587526865106">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="s-i: 52.9" ID="ID_550891352" CREATED="1586240111612" MODIFIED="1587526865106">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="i-s: 39.6" ID="ID_884008793" CREATED="1586240112874" MODIFIED="1587526865106">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="ms-coco" ID="ID_613323924" CREATED="1586240106613" MODIFIED="1587526865106">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="1k" ID="ID_1421179749" CREATED="1586240136945" MODIFIED="1587526865106">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="s-i: 64.6" ID="ID_1633553206" CREATED="1586240142100" MODIFIED="1587526865106">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="i-s: 52.0" ID="ID_1077994917" CREATED="1586240148569" MODIFIED="1587526865106">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="5k" ID="ID_1512427449" CREATED="1586240138622" MODIFIED="1587526865106">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="s-i: 41.3" ID="ID_1725968697" CREATED="1586240155222" MODIFIED="1587526865106">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="i-s: 30.3" ID="ID_481195263" CREATED="1586240162060" MODIFIED="1587526865107">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="SS" ID="ID_1699285095" CREATED="1587025688098" MODIFIED="1587526865107">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="VSE infty" ID="ID_1318319088" CREATED="1652383593326" MODIFIED="1652383596175">
+<node TEXT="Learning the Best Pooling Strategy for Visual Semantic Embedding" ID="ID_182415412" CREATED="1652383597008" MODIFIED="1652383603736">
+<node TEXT="CVPR21" ID="ID_478107870" CREATED="1652383607066" MODIFIED="1652383608206"/>
+</node>
+</node>
+</node>
+<node TEXT="SCAN (ECCV18): stacked cross attention for image-text matching" ID="ID_1439311497" CREATED="1583370940211" MODIFIED="1587526865107">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: image-text matching" ID="ID_645118810" CREATED="1586239421227" MODIFIED="1587526865108">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="why: simply aggregates the similarity of all possible pairs of regions and words without attending differentially to more and less important words or regions" ID="ID_1265894543" CREATED="1586239425245" MODIFIED="1587526865110">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="how: discover full latent alignment using both image regions and words in a sentence as contect and infer image-text similarity" ID="ID_1636622031" CREATED="1586239793548" MODIFIED="1587526865120">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="sota" ID="ID_845468264" CREATED="1586239941699" MODIFIED="1587526865121">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="flickr30k" ID="ID_217483876" CREATED="1586239945220" MODIFIED="1587526865121">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="s-i: 67.4" ID="ID_1486644891" CREATED="1586239975412" MODIFIED="1587526865121">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="i-s: 48.6" ID="ID_1708382186" CREATED="1586240008708" MODIFIED="1587526865121">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="mscoco" ID="ID_140444515" CREATED="1586239949723" MODIFIED="1587526865122">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="1k" ID="ID_1577581954" CREATED="1586240056672" MODIFIED="1587526865122">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="s-i: 72.7" ID="ID_10874274" CREATED="1586240060731" MODIFIED="1587526865122">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="i-s: 58.8" ID="ID_1159300585" CREATED="1586240075534" MODIFIED="1587526865122">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="5k" ID="ID_1654579943" CREATED="1586240057954" MODIFIED="1587526865122">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="s-i: 50.4" ID="ID_1519119507" CREATED="1586240081649" MODIFIED="1587526865122">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="i-s: 38.6" ID="ID_590281563" CREATED="1586240089142" MODIFIED="1587526865122">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="(IJCAI-19 RDAN): Multi-level visua;-semantic alighments with relation-wise dual attention network for image and text matching" ID="ID_1620531353" CREATED="1583370943434" MODIFIED="1587526865122">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: image-text matching" ID="ID_1600229973" CREATED="1586241116612" MODIFIED="1587526865124">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="why: abstract workds such as actions" ID="ID_182389430" CREATED="1586241120623" MODIFIED="1587526865125">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="how: RDAN model" ID="ID_210476871" CREATED="1586241159657" MODIFIED="1587526865126">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="sota" ID="ID_975868300" CREATED="1586240949378" MODIFIED="1587526865126">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="flickr30k" ID="ID_1658409783" CREATED="1586240952468" MODIFIED="1587526865126">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="s-i: 68.1" ID="ID_1999984019" CREATED="1586240956592" MODIFIED="1587526865126">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="i-s: 54.1" ID="ID_1298566819" CREATED="1586240968485" MODIFIED="1587526865126">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="mscoco" ID="ID_984904686" CREATED="1586240980411" MODIFIED="1587526865126">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="1k" ID="ID_783199489" CREATED="1586241018437" MODIFIED="1587526865126">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="s-i: 74.6" ID="ID_1273929468" CREATED="1586240983982" MODIFIED="1587526865126">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="i-s: 61.6" ID="ID_1540729136" CREATED="1586240991529" MODIFIED="1587526865126">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="1907.09748: (PFAN): Position Focused Attention Network for Image-Text Matching" ID="ID_470316208" CREATED="1583370946887" MODIFIED="1587526865126">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: image-text matching" ID="ID_428335848" CREATED="1586240188876" MODIFIED="1587526865128">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="how: PFAN to investigate the object position clue to enhance visual-text joint-embedding learning" ID="ID_1835652632" CREATED="1586240194100" MODIFIED="1587526865129">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="sota" ID="ID_1110318065" CREATED="1586240329549" MODIFIED="1587526865129">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="flickr30k" ID="ID_689076008" CREATED="1586240331929" MODIFIED="1587526865129">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="s-i: 70.0" ID="ID_770808018" CREATED="1586240337972" MODIFIED="1587526865130">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="i-s: 50.4" ID="ID_1485095872" CREATED="1586240347463" MODIFIED="1587526865130">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="mscoco" ID="ID_1563565673" CREATED="1586240334413" MODIFIED="1587526865130">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="1k" ID="ID_48740691" CREATED="1586240355540" MODIFIED="1587526865130">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="s-i: 76.5" ID="ID_947149652" CREATED="1586240361408" MODIFIED="1587526865130">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="i-s: 61.6" ID="ID_522407065" CREATED="1586240366364" MODIFIED="1587526865130">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="1909.02701: VSRN: visual semantic reasoning for image-text matching (ICCV19)" ID="ID_761207430" CREATED="1587527540837" MODIFIED="1587527570936"/>
+<node TEXT="1911.07528: Ladder Loss" ID="ID_879911839" CREATED="1609680873410" MODIFIED="1609680889225">
+<icon BUILTIN="bookmark"/>
+<font BOLD="true"/>
+<node TEXT="1904.09626: deep metric learning beyond binary supervision" ID="ID_1691858159" CREATED="1609681031569" MODIFIED="1609681049923"/>
+</node>
+<node TEXT="2002.10016: deep multimodal image-text embeddings for automatic cross-media retrieval" ID="ID_1544665375" CREATED="1583309899207" MODIFIED="1587526865130">
+<icon BUILTIN="button_cancel"/>
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: image-text retrieval" ID="ID_546012275" CREATED="1583309919471" MODIFIED="1587526865131">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="the author is having fun" ID="ID_1862649220" CREATED="1583309936837" MODIFIED="1587526865132">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="2002.08510: expressing objects just like words: recurrent visual embedding for image-text matching" ID="ID_18086236" CREATED="1583370893620" MODIFIED="1587526865133">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: image-text matching" ID="ID_869083995" CREATED="1583371002035" MODIFIED="1587526865133">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="why: existing works ignore the connections between the objects that are semantically related; these objectis may collectively determine whether the image corresponds to a text or not" ID="ID_1942940677" CREATED="1583371027768" MODIFIED="1587526865135">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="how: propose a dual path recurrent neural network which processes images and sentences symmetrically by recurrent neural networks" ID="ID_327990430" CREATED="1583371074343" MODIFIED="1587526865136">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="2003.03772: IMRAM: iterative matching with recurrent attention memory for cross-modal image-text retrieval (CVPR20)" ID="ID_1607556695" CREATED="1589849966539" MODIFIED="1589850001017">
+<icon BUILTIN="button_ok"/>
+<icon BUILTIN="bookmark"/>
+<node TEXT="sota" ID="ID_645097460" CREATED="1589850066064" MODIFIED="1589850069372"/>
+<node TEXT="f30k" ID="ID_952774624" CREATED="1589850089969" MODIFIED="1589850092250">
+<node TEXT="74, 79" ID="ID_943817756" CREATED="1589850094969" MODIFIED="1589850105582"/>
+</node>
+<node TEXT="coco" ID="ID_897203196" CREATED="1589850092464" MODIFIED="1589850093338">
+<node TEXT="76, 61" ID="ID_1993874426" CREATED="1589850107320" MODIFIED="1589850115454"/>
+</node>
+</node>
+<node TEXT="2004.09144: transformer reasoning network for image-text matching and retrieval" ID="ID_1179239931" CREATED="1587527423924" MODIFIED="1587527513062">
+<icon BUILTIN="button_cancel"/>
+</node>
+<node TEXT="2004.12070: hyperref MMNas" ID="ID_883213530" CREATED="1588074737070" MODIFIED="1589849965229">
+<icon BUILTIN="messagebox_warning"/>
+<node TEXT="f30k" ID="ID_924866619" CREATED="1588074753608" MODIFIED="1588074755550">
+<node TEXT="78.3 / 60.7" ID="ID_1428749887" CREATED="1588074757897" MODIFIED="1588074771032"/>
+</node>
+<node TEXT="maybe the new SOTA. Apr. 2020" ID="ID_544717570" CREATED="1588074809536" MODIFIED="1588074816258"/>
+</node>
+<node TEXT="2005.09801: fashionBERT: text and image matching with adaptive loss for cross-modal retrieval" ID="ID_1184415285" CREATED="1590025829965" MODIFIED="1590025860526">
+<node TEXT="no eval on f30k or coco" ID="ID_27965399" CREATED="1590025862784" MODIFIED="1590025868262"/>
+</node>
+<node TEXT="BFAN: Focus your attention:A bidirectional focal attention network for image-text match (ACM MM)" ID="ID_321497763" CREATED="1590802159181" MODIFIED="1590802206958"/>
+<node TEXT="2003.03669: Adaptive Offline Quintuplet Loss for Image-Text Matching" ID="ID_177378639" CREATED="1590748813000" MODIFIED="1590748827292">
+<node TEXT="f30k: 73 / 54" ID="ID_112288869" CREATED="1590802112238" MODIFIED="1590802125493"/>
+<node TEXT="coco: 77 / 96" ID="ID_613186739" CREATED="1590802125927" MODIFIED="1590802145018"/>
+</node>
+<node TEXT="2004.01095: MCEN: Bridging Cross-Modal Gap between Cooking Recipes and Dish Images with Latent Variable Model (cvpr20)" ID="ID_576418454" CREATED="1590749993141" MODIFIED="1590750006537"/>
+<node TEXT="2004.00277 Graph Structured Network for Image-Text Matching (cvpr20)" ID="ID_1616725398" CREATED="1590806554894" MODIFIED="1590806586098">
+<icon BUILTIN="button_ok"/>
+<node TEXT="f30K: 76 / 57" ID="ID_1331739001" CREATED="1590806678424" MODIFIED="1590806686909"/>
+<node TEXT="coco: 78 / 63" ID="ID_290191269" CREATED="1590806687324" MODIFIED="1590806696701"/>
+<node TEXT="sota May 2020" ID="ID_1480141631" CREATED="1590806725154" MODIFIED="1590806728113"/>
+</node>
+<node TEXT="2010.01666: multi-modal retrieval using graph neural networks" ID="ID_1676547166" CREATED="1608010937162" MODIFIED="1608010981920">
+<node TEXT="no comparison; inclined to qualitative evaluations" ID="ID_288207961" CREATED="1608010983165" MODIFIED="1608010996471"/>
+</node>
+<node TEXT="Cross-Modal Common Representation Learning with Triplet Loss Functions" ID="ID_1827284412" CREATED="1646944290551" MODIFIED="1646944296357">
+<icon BUILTIN="pencil"/>
+<node TEXT="fair" ID="ID_1712372002" CREATED="1646944300395" MODIFIED="1646944304415"/>
+</node>
+<node TEXT="Probabilistic Embeddings for Cross-Modal Retrieval" ID="ID_1380822384" CREATED="1657404050195" MODIFIED="1657404051097">
+<node TEXT="CVPR21" ID="ID_1886046150" CREATED="1657404052984" MODIFIED="1657404054482"/>
+</node>
+</node>
+<node TEXT="Image-Recipe" ID="ID_552619459" CREATED="1650809005463" MODIFIED="1650809008428">
+<node TEXT="Transformer Decoders with MultiModal Regularization for Cross-Modal Food Retrieval" ID="ID_778443774" CREATED="1650809009512" MODIFIED="1650809016539">
+<node TEXT="CVPR22w" ID="ID_253625686" CREATED="1650809019210" MODIFIED="1650809021151"/>
+</node>
+</node>
+<node TEXT="Cross-lingual" ID="ID_1275207266" CREATED="1607576963588" MODIFIED="1649103229953">
+<node TEXT="2012.05107: towards zero-shot cross-lingual image retrieval" ID="ID_33321188" CREATED="1607576975335" MODIFIED="1607576995999">
+<icon BUILTIN="button_ok"/>
+<node TEXT="multi-modal representations using cross-lingual pre-training on the text side" ID="ID_761823260" CREATED="1607577008171" MODIFIED="1607577023025"/>
+<node TEXT="objective function which tightens the text embedding clusters by pushing dissimilar texts from each other" ID="ID_278870167" CREATED="1607577035945" MODIFIED="1607577055909"/>
+</node>
+</node>
+<node TEXT="Audio-Image" ID="ID_1999112869" CREATED="1619443906882" MODIFIED="1649103236875">
+<node TEXT="Talk, Don&apos;t Write: A Study of Direct Speech-Based Image Retrieval" ID="ID_1895575295" CREATED="1619443912720" MODIFIED="1619443918857"/>
+</node>
+<node TEXT="Video-Text" ID="ID_387413475" CREATED="1649103145467" MODIFIED="1649103148698">
+<node TEXT="X-Pool: Cross-Modal Language-Video Attention for Text-Video Retrieval" ID="ID_363825595" CREATED="1649103154257" MODIFIED="1649103155281">
+<node TEXT="CVPR22" ID="ID_1553240026" CREATED="1649103156491" MODIFIED="1649103158193"/>
+</node>
+<node TEXT="Disentangled Representation Learning for Text-Video Retrieval" ID="ID_1578456483" CREATED="1649168592201" MODIFIED="1649168592807">
+<node TEXT="ECCV22" ID="ID_1572394517" CREATED="1649168594046" MODIFIED="1649168598874"/>
+</node>
+</node>
+<node TEXT="Variant: Continual Learning" ID="ID_131519106" CREATED="1619336659546" MODIFIED="1619336666539">
+<node TEXT="CVPR21w: Continual learning in cross-modal retrieval" ID="ID_834969689" CREATED="1619336667454" MODIFIED="1619336675662"/>
+</node>
+<node TEXT="Video-Audio" ID="ID_86517648" CREATED="1655841861813" MODIFIED="1655841865200">
+<node TEXT="It&apos;s Time for Artistic Correspondence in Music and Video" ID="ID_1112170588" CREATED="1655841866066" MODIFIED="1655841871418">
+<node TEXT="CVPR22" ID="ID_358779189" CREATED="1655841872298" MODIFIED="1655841873737"/>
+</node>
+</node>
+</node>
+<node TEXT="Dataset Distillation" FOLDED="true" POSITION="left" ID="ID_265073126" CREATED="1648338075798" MODIFIED="1648343254704">
+<icon BUILTIN="idea"/>
+<edge COLOR="#ff00ff"/>
+<node TEXT="Dataset Distillation by Matching Training Trajectories" ID="ID_1232754909" CREATED="1648338079783" MODIFIED="1648338088477">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_951175501" CREATED="1648338090454" MODIFIED="1648338092141"/>
+</node>
+</node>
+<node TEXT="DeepFake" FOLDED="true" POSITION="left" ID="ID_81253926" CREATED="1587729755009" MODIFIED="1642394342542">
+<edge COLOR="#007c7c"/>
+<node TEXT="Dataset" ID="ID_1886590251" CREATED="1615347464586" MODIFIED="1615347466780">
+<node TEXT="ForgeryNet: A Versatile Benchmark for Comprehensive Forgery Analysis (cvpr21)" ID="ID_1435934248" CREATED="1615347467706" MODIFIED="1615347479218"/>
+</node>
+<node TEXT="Survey" ID="ID_1081735994" CREATED="1587729760036" MODIFIED="1587729764469">
+<node TEXT="2004.11138: the creation and detection of deepfakes: a survey" ID="ID_229656376" CREATED="1587729766371" MODIFIED="1587729930927">
+<icon BUILTIN="button_ok"/>
+</node>
+<node TEXT="2004.12626: preliminary forensics analysis of deepfake images" ID="ID_913965" CREATED="1588068509056" MODIFIED="1588068524708"/>
+<node TEXT="Seeing is Living? Rethinking the Security of Facial Liveness Verification in the Deepfake Era" ID="ID_461047989" CREATED="1647267019291" MODIFIED="1647267027027">
+<icon BUILTIN="unchecked"/>
+<node TEXT="USENIX22" ID="ID_1148613248" CREATED="1647267021829" MODIFIED="1647267024253"/>
+</node>
+</node>
+<node TEXT="Create" ID="ID_1812140643" CREATED="1589767913067" MODIFIED="1648338593271">
+<node TEXT="2005.05535: deepfacelab: a simple flexible and extensible face swapping framework" ID="ID_1258022523" CREATED="1589767931055" MODIFIED="1589767949771"/>
+<node TEXT="2004.07165 A recurrent cycle consistency loss for progressive face-to-face synthesis (FG 2020 oral)" ID="ID_1521921331" CREATED="1590805531639" MODIFIED="1590805549067"/>
+</node>
+<node TEXT="Detection" ID="ID_1897134747" CREATED="1588389497295" MODIFIED="1619337612320">
+<node TEXT="2003.08685: leveraging frequency analysis for deep fake image recognition" ID="ID_252600993" CREATED="1588389509200" MODIFIED="1588389530379">
+<node TEXT="frequency analysis" ID="ID_818362087" CREATED="1588389590906" MODIFIED="1588389598678"/>
+</node>
+<node TEXT="2003.08645: detecting deepfakes with metric learning" ID="ID_1878482148" CREATED="1588389618001" MODIFIED="1588389634521"/>
+<node TEXT="2005.05632: detecting cnn-generated facial images in real-world scenarios (CVPR20w)" ID="ID_1299699785" CREATED="1589767828944" MODIFIED="1589767856220"/>
+<node TEXT="Multi-attentional Deepfake Detection (cvpr21)" ID="ID_781694096" CREATED="1615298559426" MODIFIED="1615298567054">
+<node TEXT="bincls -&gt; fine-grained cls" ID="ID_1081064126" CREATED="1615298568075" MODIFIED="1615298788725"/>
+<node TEXT="multi-attentional" ID="ID_634769208" CREATED="1615298789067" MODIFIED="1615298801115"/>
+</node>
+<node TEXT="CVPR21: Improving the Efficiency and Robustness of Deepfakes Detection through Precise Geometric Features" ID="ID_1786812758" CREATED="1619337614061" MODIFIED="1619337626336"/>
+<node TEXT="Self-supervised Learning of Adversarial Example: Towards Good Generalizations for Deepfake Detection" ID="ID_1441114547" CREATED="1648338608774" MODIFIED="1648338611335">
+<node TEXT="CVPR22" ID="ID_409760991" CREATED="1648338612963" MODIFIED="1648338614477"/>
+</node>
+<node TEXT="ObjectFormer for Image Manipulation Detection and Localization" ID="ID_926927385" CREATED="1649102118496" MODIFIED="1649102119754">
+<node TEXT="CVPR22" ID="ID_1894520939" CREATED="1649102122404" MODIFIED="1649102123634"/>
+</node>
+<node TEXT="Detecting Deepfakes with Self-Blended Images" ID="ID_1330201072" CREATED="1650818257543" MODIFIED="1650818258952">
+<node TEXT="CVPR22" ID="ID_678441173" CREATED="1650818260394" MODIFIED="1650818261846"/>
+</node>
+<node TEXT="Voice-Face Homogeneity Tells Deepfake" ID="ID_153357596" CREATED="1646942317853" MODIFIED="1646942325559">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_725170575" CREATED="1646942319120" MODIFIED="1646942321768"/>
+</node>
+</node>
+</node>
+<node TEXT="Diffusion Models" FOLDED="true" POSITION="left" ID="ID_543295574" CREATED="1645111157251" MODIFIED="1645111160424">
+<edge COLOR="#00ffff"/>
+<node TEXT="https://lilianweng.github.io/lil-log/2021/07/11/diffusion-models.html" ID="ID_626991727" CREATED="1645111188223" MODIFIED="1645111188223" LINK="https://lilianweng.github.io/lil-log/2021/07/11/diffusion-models.html"/>
+<node TEXT="Diffusion Models Beat GANs on Image Synthesis" ID="ID_1871658132" CREATED="1645111161757" MODIFIED="1645111172504">
+<icon BUILTIN="pencil"/>
+</node>
+<node TEXT="Pseudo Numerical Methods for Diffusion Models on Manifolds" ID="ID_1101187024" CREATED="1647264822390" MODIFIED="1647264900126">
+<icon BUILTIN="unchecked"/>
+<node TEXT="ICLR22" ID="ID_489004075" CREATED="1647264824614" MODIFIED="1647264826627"/>
+<node TEXT="standard diffusion is very slow and involves too many steps for inference" ID="ID_688183538" CREATED="1647264827569" MODIFIED="1647264848261"/>
+<node TEXT="DDPMs should be treated as solving differential equations on manifolds" ID="ID_80114006" CREATED="1647264848863" MODIFIED="1647264863012"/>
+<node TEXT="significantly speedup inference and made it more practical" ID="ID_1736885770" CREATED="1647264863514" MODIFIED="1647264895412"/>
+</node>
+</node>
+<node TEXT="Dimension Reduction" FOLDED="true" POSITION="left" ID="ID_703196004" CREATED="1648336542877" MODIFIED="1648336545945">
+<edge COLOR="#00ff00"/>
+<node TEXT="PCA" ID="ID_279239785" CREATED="1648336547244" MODIFIED="1648336549636"/>
+<node TEXT="t-SNE" ID="ID_372306146" CREATED="1648336550147" MODIFIED="1648336553078"/>
+<node TEXT="h-NNE" ID="ID_530951729" CREATED="1648336553298" MODIFIED="1648336598952">
+<node TEXT="Hierarchical Nearest Neighbor Graph Embedding for Efficient Dimensionality&#xa;Reduction" ID="ID_1074126704" CREATED="1648336600093" MODIFIED="1648336616328">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_1719348477" CREATED="1648336618438" MODIFIED="1648336619839"/>
+<node TEXT="no-optimization" ID="ID_708278320" CREATED="1648336626204" MODIFIED="1648336628663"/>
+</node>
+</node>
+</node>
+<node TEXT="Domain Adaptation" FOLDED="true" POSITION="left" ID="ID_1179225618" CREATED="1582887416803" MODIFIED="1642394196054">
+<font NAME="Gentium" BOLD="false"/>
+<edge COLOR="#ff0000"/>
+<node TEXT="Concept" ID="ID_276280133" CREATED="1650832531233" MODIFIED="1650832534030">
+<icon BUILTIN="info"/>
+<node TEXT="domain adaptation" ID="ID_1897127261" CREATED="1650832537525" MODIFIED="1650832545079">
+<node TEXT="input distribution p(x) changes between training and test" ID="ID_1783851732" CREATED="1650832546158" MODIFIED="1650832566190"/>
+<node TEXT="transfer learning posterior p(y|x) changes between training and test" ID="ID_542172298" CREATED="1650832567330" MODIFIED="1650832588622"/>
+</node>
+</node>
+<node TEXT="Openset" ID="ID_652345966" CREATED="1587030820215" MODIFIED="1587526864981">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="2004.04388: Towards Inheritable Models for Open-Set Domain Adaptation (CVPR20)" ID="ID_882848776" CREATED="1587030828036" MODIFIED="1587526864982">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="2002.08675: unsupervised domain adaptation via discriminative manifold embedding and alignment" ID="ID_1783103324" CREATED="1582887489485" MODIFIED="1587526864982">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: domain adaptation" ID="ID_364211866" CREATED="1582887681503" MODIFIED="1587526864984">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="why:" ID="ID_767525254" CREATED="1582887693719" MODIFIED="1587526864984">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="1. hardcoded pseudo labels on the target domain are risky to the intrinsic data structure" ID="ID_1466382959" CREATED="1582887707992" MODIFIED="1587526864985">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="2. batch-wise trianing manner in deep learning limites the description of the global structure" ID="ID_333992277" CREATED="1582887727498" MODIFIED="1587526864986">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="how: Riemannian manifold learning framework is proposed to achieve transferability and discriminability." ID="ID_932362154" CREATED="1582887750636" MODIFIED="1587526864986">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="2002.11770: rethinking the hyperparameters for fine-tuning (ICLR20)" ID="ID_687246947" CREATED="1583323656825" MODIFIED="1587526864987">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: examines fine-tuning" ID="ID_126121824" CREATED="1583323676904" MODIFIED="1587526864988">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="findings" ID="ID_1484997220" CREATED="1583323715662" MODIFIED="1587526864988">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="1. momentum affects fine-tuning performance as suggested by previous theoretical findings" ID="ID_409173341" CREATED="1583323717892" MODIFIED="1587526864988">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="2. learning reate is not only dataset dependent, but also sensitive to the similarity between source and target domain" ID="ID_406913796" CREATED="1583323812333" MODIFIED="1587526864989">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="3. reference-based regularization that keeps models close the the initial model does not necessarily apply for &quot;dissimilar&quot; datasets." ID="ID_409659201" CREATED="1583323868185" MODIFIED="1587526864990">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="2002.04206: dual-triplet metric learning for unsupervised domain adaptation in video-based face recognition" ID="ID_1852118217" CREATED="1583375335641" MODIFIED="1587526864991">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="2004.04393: Universal Source-Free Domain Adaptation (CVPR20)" ID="ID_678847990" CREATED="1587030701603" MODIFIED="1587526864992">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="2004.08878: uncertainty-aware consistency regularization for cross-domain semantic segmentation" ID="ID_1060047510" CREATED="1587873167086" MODIFIED="1587873185991"/>
+<node TEXT="2004.09403: class distribution alignment for adversarial domain adaptation" ID="ID_1913880236" CREATED="1588082459830" MODIFIED="1588082478774"/>
+<node TEXT="2012.12302&#xa;Flexible deep transfer learning by separate feature embeddings and manifold alignment" ID="ID_1781903227" CREATED="1608871572614" MODIFIED="1608871585302">
+<node TEXT="a bit similar to cross-modal alignment" ID="ID_867737025" CREATED="1608871591299" MODIFIED="1608871600207"/>
+</node>
+<node TEXT="2012.11807&#xa;Learning Disentangled Semantic Representation for Domain Adaptation" ID="ID_1101645023" CREATED="1608871972133" MODIFIED="1608871978855"/>
+<node TEXT="Auto-Transfer: Learning to Route Transferrable Representations ICLR22" ID="ID_275822091" CREATED="1644180783785" MODIFIED="1644180796263"/>
+<node TEXT="Fine-Tuning can Distort Pretrained Features and Underperform Out-of-Distribution" ID="ID_1001645107" CREATED="1647264390521" MODIFIED="1647264398367">
+<icon BUILTIN="unchecked"/>
+<node TEXT="ICLR22" ID="ID_248597371" CREATED="1647264392555" MODIFIED="1647264395025"/>
+</node>
+<node TEXT="Does Robustness on ImageNet Transfer to Downstream Tasks?" ID="ID_442746527" CREATED="1650842399693" MODIFIED="1650842400541">
+<node TEXT="CVPR22" ID="ID_391235371" CREATED="1650842401650" MODIFIED="1650842402914"/>
+</node>
+<node TEXT="Adaptive Domain Adaptation" ID="ID_926597894" CREATED="1649130053250" MODIFIED="1649130058744">
+<node TEXT="Learning Distinctive Margin toward Active Domain Adaptation" ID="ID_1937782410" CREATED="1649130059707" MODIFIED="1649130060490">
+<node TEXT="CVPR22" ID="ID_1742639409" CREATED="1649130061738" MODIFIED="1649130063012"/>
+<node TEXT="similar to SVM" ID="ID_1059316080" CREATED="1649130063284" MODIFIED="1649130069027"/>
+</node>
+</node>
+<node TEXT="Unsupervised Domain Adaptation" ID="ID_1180792051" CREATED="1650824963676" MODIFIED="1650824970144">
+<node TEXT="Safe Self-Refinement for Transformer-based Domain Adaptation" ID="ID_1500347419" CREATED="1650824973786" MODIFIED="1650824979577">
+<node TEXT="CVPR22" ID="ID_439499097" CREATED="1650824980672" MODIFIED="1650824982140"/>
+</node>
+</node>
+</node>
+<node TEXT="Explainable AI" FOLDED="true" POSITION="left" ID="ID_1535392614" CREATED="1646937960988" MODIFIED="1650817806076">
+<edge COLOR="#7c0000"/>
+<node TEXT="Survey" ID="ID_796711666" CREATED="1653860071187" MODIFIED="1653860080368">
+<icon BUILTIN="mindmap"/>
+<node TEXT="How explainable are adversarially-robust CNNs?" ID="ID_95726314" CREATED="1653860082056" MODIFIED="1653860092200">
+<icon BUILTIN="pencil"/>
+<node TEXT="submit NIPS22" ID="ID_181101661" CREATED="1653860093733" MODIFIED="1653860102672"/>
+<node TEXT="(1) test accuracy" ID="ID_764666299" CREATED="1653860103071" MODIFIED="1653860111201"/>
+<node TEXT="(2) out-of-distribution accuracy" ID="ID_874751335" CREATED="1653860111347" MODIFIED="1653860117298"/>
+<node TEXT="(3) explainability" ID="ID_362903560" CREATED="1653860117582" MODIFIED="1653860121732"/>
+</node>
+</node>
+<node TEXT="class activation map" ID="ID_1199847666" CREATED="1651102994318" MODIFIED="1656028150739">
+<node TEXT="Class Activation Map" ID="ID_47285759" CREATED="1651102989796" MODIFIED="1651103008396">
+<node TEXT="Learning Deep Features for Discriminative Localization" ID="ID_675900606" CREATED="1651103009874" MODIFIED="1651103025782">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR, bolei zhou" ID="ID_1929585737" CREATED="1651103017313" MODIFIED="1651103020547"/>
+</node>
+</node>
+</node>
+<node TEXT="gradient w.r.t input" ID="ID_733899372" CREATED="1653860036334" MODIFIED="1656028158789">
+<node TEXT="Grad-CAM" ID="ID_1699913639" CREATED="1656364316838" MODIFIED="1656364339473">
+<icon BUILTIN="bookmark"/>
+<node TEXT="Grad-CAM: Why did you say that?&#xa;Visual Explanations from Deep Networks via Gradient-based Localization" ID="ID_172299995" CREATED="1656364324758" MODIFIED="1656364331599"/>
+</node>
+<node TEXT="The Manifold Hypothesis for Gradient-Based Explanations" ID="ID_743176885" CREATED="1656028126607" MODIFIED="1656028127918"/>
+</node>
+<node TEXT="perturbation" ID="ID_174218220" CREATED="1653860058835" MODIFIED="1656028174630">
+<node TEXT="LIME" ID="ID_1481560289" CREATED="1653860346455" MODIFIED="1653860348553">
+<node TEXT="&#x201c;Why Should I Trust You?&#x201d;&#xa;Explaining the Predictions of Any Classifier" ID="ID_674389421" CREATED="1653860349515" MODIFIED="1653860351696">
+<icon BUILTIN="unchecked"/>
+<node TEXT="KDD" ID="ID_706793779" CREATED="1653860352710" MODIFIED="1653860353774"/>
+</node>
+</node>
+</node>
+<node TEXT="Do Explanations Explain? Model Knows Best" ID="ID_1458677290" CREATED="1646937968275" MODIFIED="1646937983298">
+<icon BUILTIN="checked"/>
+<node TEXT="CVPR22" ID="ID_164811359" CREATED="1646937985052" MODIFIED="1646937987156"/>
+<node TEXT="one peculiar observation is that these explanations (attributions) point to different features as being important" ID="ID_1757747697" CREATED="1646942060828" MODIFIED="1646942079638"/>
+</node>
+<node TEXT="What can we learn from misclassified ImageNet&#xa;images?" ID="ID_1435212181" CREATED="1642952852302" MODIFIED="1642952861609">
+<icon BUILTIN="pencil"/>
+<node TEXT="misclassifications are rarely across superclasses, but mainly among subclasses with a superclass" ID="ID_426581992" CREATED="1642952902122" MODIFIED="1642952932522"/>
+<node TEXT="ensemble networks trained each only on subclasses of a given superclass perform better than the same network trained on all subclasses of all superclasses" ID="ID_1950788253" CREATED="1642952937590" MODIFIED="1642952961617"/>
+</node>
+</node>
+<node TEXT="Gradient Surgery" FOLDED="true" POSITION="left" ID="ID_1632297675" CREATED="1654104115851" MODIFIED="1654104119730">
+<edge COLOR="#7c0000"/>
+<node TEXT="Gradient Surgery for Multi-Task Learning" ID="ID_686455197" CREATED="1652383922344" MODIFIED="1652383931965">
+<icon BUILTIN="bookmark"/>
+<node TEXT="NIPS20" ID="ID_926576648" CREATED="1652383934990" MODIFIED="1652383936487"/>
+<node TEXT="we propose a form of gradient surgery that projects a task&apos;s gradient onto the normal plane of the gradient of any other task that has a conflicting gradient" ID="ID_1875166652" CREATED="1652383936902" MODIFIED="1652383975982"/>
+</node>
+</node>
+<node TEXT="GAN Inverstion" FOLDED="true" POSITION="left" ID="ID_1643977837" CREATED="1608014251316" MODIFIED="1642394381732">
+<edge COLOR="#0000ff"/>
+<node TEXT="2004.00049: in-domain gan inversion for real image editing" ID="ID_789901011" CREATED="1608014256819" MODIFIED="1608014290154">
+<icon BUILTIN="bookmark"/>
+</node>
+<node TEXT="2007.06600: closed-form factorization of latent semantics in GANs" ID="ID_190477062" CREATED="1624973853281" MODIFIED="1624973903147">
+<icon BUILTIN="bookmark"/>
+<icon BUILTIN="button_ok"/>
+<icon BUILTIN="launch"/>
+<node TEXT="I like this paper" ID="ID_807310527" CREATED="1624973921489" MODIFIED="1624973924563"/>
+<node TEXT="SeFa" ID="ID_485890930" CREATED="1624974410069" MODIFIED="1624974411493"/>
+</node>
+<node TEXT="2012.09036&#xa;Improved StyleGAN Embedding: Where are the Good Latents?" ID="ID_1195062919" CREATED="1608879346483" MODIFIED="1608879350891"/>
+<node TEXT="2103.03243 Anycost GANs for Interactive Image Synthesis and Editing (cvpr21)" ID="ID_1065575004" CREATED="1615296747093" MODIFIED="1615296755894">
+<node TEXT="elastic resolution + computation reduction" ID="ID_1366331350" CREATED="1615296878773" MODIFIED="1615296919734"/>
+</node>
+</node>
+<node TEXT="Graph Network" FOLDED="true" POSITION="left" ID="ID_753946836" CREATED="1582940931218" MODIFIED="1651953060730">
+<font NAME="Gentium" BOLD="false"/>
+<edge COLOR="#7c7c00"/>
+<node TEXT="GNN" ID="ID_1274111681" CREATED="1651953050512" MODIFIED="1651953052009">
+<node TEXT="2002.05544: superpixel image classification with graph attention networks" ID="ID_332176668" CREATED="1583375009739" MODIFIED="1587526865279">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="Second-Order Pooling for Graph Neural Networks (tpami20)" ID="ID_445336652" CREATED="1615351166321" MODIFIED="1615351177272">
+<node TEXT="pooling method" ID="ID_564494170" CREATED="1615351183774" MODIFIED="1615351187164"/>
+</node>
+</node>
+<node TEXT="GCN" ID="ID_1722177383" CREATED="1601902008395" MODIFIED="1601902010750"/>
+<node TEXT="Graphomer" ID="ID_1691308345" CREATED="1654125254079" MODIFIED="1654125256807">
+<node TEXT="Do Transformers Really Perform Bad&#xa;for Graph Representation?" ID="ID_1924600928" CREATED="1654125260491" MODIFIED="1654125274332">
+<icon BUILTIN="unchecked"/>
+<node TEXT="NIPS21" ID="ID_1384984375" CREATED="1654125275487" MODIFIED="1654125277597"/>
+</node>
+</node>
+</node>
+<node TEXT="Hand" FOLDED="true" POSITION="left" ID="ID_122441475" CREATED="1654709701827" MODIFIED="1654709705705">
+<edge COLOR="#00007c"/>
+<node TEXT="demands" ID="ID_703663547" CREATED="1654709706849" MODIFIED="1654709914841">
+<icon BUILTIN="info"/>
+<node TEXT="Junsong Yuan" ID="ID_1482729643" CREATED="1654720264001" MODIFIED="1654720268871"/>
+<node TEXT="AR/VR" ID="ID_1505305751" CREATED="1654709915958" MODIFIED="1654709918820"/>
+<node TEXT="hand sensing from depth camera (pcl?)" ID="ID_541340634" CREATED="1654710135442" MODIFIED="1654710145196"/>
+<node TEXT="semantics &amp; geometry" ID="ID_1873741675" CREATED="1654714638259" MODIFIED="1654714644100"/>
+</node>
+</node>
+<node TEXT="Image Compression" FOLDED="true" POSITION="left" ID="ID_1511931365" CREATED="1648343124472" MODIFIED="1648343127424">
+<edge COLOR="#7c0000"/>
+<node TEXT="ELIC: Efficient Learned Image Compression with&#xa;Unevenly Grouped Space-Channel Contextual Adaptive Coding" ID="ID_391462928" CREATED="1648343132187" MODIFIED="1648343146503">
+<node TEXT="CVPR22" ID="ID_1107484924" CREATED="1648343143028" MODIFIED="1648343144450"/>
+</node>
+<node TEXT="Unified Multivariate Gaussian Mixture for Efficient Neural Image Compression" ID="ID_525288991" CREATED="1648343235650" MODIFIED="1648343236782">
+<node TEXT="CVPR22" ID="ID_1065954996" CREATED="1648343238753" MODIFIED="1648343240041"/>
+</node>
+</node>
+<node TEXT="Image Retrieval" FOLDED="true" POSITION="left" ID="ID_1006799943" CREATED="1649630594458" MODIFIED="1649630598110">
+<edge COLOR="#007c00"/>
+<node TEXT="Correlation Verification for Image Retrieval" ID="ID_1013972134" CREATED="1649630600849" MODIFIED="1649630693321">
+<node TEXT="CVPR22" ID="ID_1345324489" CREATED="1649630694449" MODIFIED="1649630695940"/>
+</node>
+<node TEXT="Learning Super-Features for Image Retrieval" ID="ID_829824427" CREATED="1644181270753" MODIFIED="1644181364623">
+<icon BUILTIN="checked"/>
+<node TEXT="ICLR22" ID="ID_1211217354" CREATED="1644181278285" MODIFIED="1644181280219"/>
+<node TEXT="not DML" ID="ID_1043681772" CREATED="1644181273835" MODIFIED="1644181275311"/>
+<node TEXT="combine local and global features" ID="ID_1751979954" CREATED="1644181344128" MODIFIED="1644181349980"/>
+<node TEXT="existing methods suffer from problems in the use of local features" ID="ID_111945206" CREATED="1644181350883" MODIFIED="1644181360186"/>
+</node>
+</node>
+<node TEXT="Image Vectorization" FOLDED="true" POSITION="left" ID="ID_1231220509" CREATED="1655449067387" MODIFIED="1655449071990">
+<edge COLOR="#007c00"/>
+<node TEXT="Towards Layer-wise Image Vectorization" ID="ID_96979789" CREATED="1655449072900" MODIFIED="1655843072351">
+<icon BUILTIN="button_ok"/>
+<node TEXT="CVPR22 oral" ID="ID_935088308" CREATED="1655449096553" MODIFIED="1655449099799"/>
+</node>
+</node>
+<node TEXT="Instance Segmentation" FOLDED="true" POSITION="left" ID="ID_1759449865" CREATED="1649104217760" MODIFIED="1649104221244">
+<edge COLOR="#7c7c00"/>
+<node TEXT="Main" ID="ID_1417928999" CREATED="1578733356683" MODIFIED="1649104710111">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="Mask R-CNN" ID="ID_1460418401" CREATED="1590805638982" MODIFIED="1590805641615"/>
+<node TEXT="2003.13954 FGN: Fully Guided Network for Few-Shot Instance Segmentation (cvpr20)" ID="ID_1454655339" CREATED="1590975022052" MODIFIED="1590975029134"/>
+<node TEXT="2012.07177&#xa;Simple Copy-Paste is a Strong Data Augmentation Method for Instance Segmentation" ID="ID_792173050" CREATED="1608880556971" MODIFIED="1608880566837"/>
+</node>
+<node TEXT="Descriptors" ID="ID_1696499735" CREATED="1649104065329" MODIFIED="1649104223403">
+<node TEXT="Contour" ID="ID_395676166" CREATED="1649104068494" MODIFIED="1649104069863">
+<node TEXT="Eigencontours: Novel Contour Descriptors Based on Low-Rank Approximation" ID="ID_362471390" CREATED="1649104078004" MODIFIED="1649104078579">
+<node TEXT="CVPR22" ID="ID_642950560" CREATED="1649104080637" MODIFIED="1649104081863"/>
+<node TEXT="contour is one of the most important object descriptiors, along with texture and color" ID="ID_961927899" CREATED="1649104082894" MODIFIED="1649104097966"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Learning" FOLDED="true" POSITION="left" ID="ID_876811772" CREATED="1583309966895" MODIFIED="1642394191143">
+<font NAME="Gentium" SIZE="10" BOLD="false"/>
+<edge COLOR="#7c7c00"/>
+<node TEXT="Federated Learning (distributed learning; protecting privacy)" ID="ID_647280840" CREATED="1583309969788" MODIFIED="1587526864937">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="2002.09843: practical and bilateral privacy-preserving federated learning" ID="ID_564507506" CREATED="1583310044407" MODIFIED="1587526864938">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: federated learning" ID="ID_985779415" CREATED="1583310061113" MODIFIED="1587526864939">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="why: protect more privacy" ID="ID_1208071786" CREATED="1583310065998" MODIFIED="1587526864939">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="Online Learning / Novel Class Discovery" ID="ID_1490111028" CREATED="1583373522722" MODIFIED="1587526864940">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="2002.05714: automatically discovering and learning new visual categories with ranking statistics (ICLR20, VGG Oxford)" ID="ID_1826828246" CREATED="1583373530690" MODIFIED="1587526864941">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="why: it&apos;s challenging" ID="ID_1259104861" CREATED="1583373565655" MODIFIED="1587526864941">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="Active Learning" ID="ID_853331882" CREATED="1608876358857" MODIFIED="1608876362122">
+<node TEXT="2012.10467&#xa; Minimax Active Learning" ID="ID_1952916971" CREATED="1608876363892" MODIFIED="1608876372836"/>
+</node>
+<node TEXT="Meta Learning" ID="ID_929306258" CREATED="1583378173046" MODIFIED="1587526864942">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="2002.04162: incremental learning for metric-based meta-learniers" ID="ID_415175776" CREATED="1583378216948" MODIFIED="1587526864942">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="Continual Learning" ID="ID_131447938" CREATED="1587731579088" MODIFIED="1587731583163">
+<node TEXT="2004.10862: continual learning of object instances (CVPRw)" ID="ID_1507005369" CREATED="1587731584263" MODIFIED="1587731605443">
+<node TEXT="focus on car, and incrementally learn to distinguish different car instances" ID="ID_1166289498" CREATED="1587731618521" MODIFIED="1587731648648"/>
+</node>
+<node TEXT="2004.11545: dropout as an imlicit gating mechanism for continual learning" ID="ID_475097263" CREATED="1587975571838" MODIFIED="1587975586113"/>
+</node>
+<node TEXT="Incremental Learning" ID="ID_657680929" CREATED="1590752080935" MODIFIED="1590752087255">
+<node TEXT="2004.00713: Memory-Efficient Incremental Learning Through Feature Adaptation" ID="ID_1766164041" CREATED="1590752093902" MODIFIED="1590752108458"/>
+</node>
+<node TEXT="unsup domain adaptation" ID="ID_108358759" CREATED="1610422300921" MODIFIED="1610422305959">
+<node TEXT="2101: Unsupervised Domain Adaptation of Black-Box Source Models" ID="ID_1885176581" CREATED="1610422307004" MODIFIED="1610422319037"/>
+</node>
+<node TEXT="Curriculum learning" ID="ID_570972313" CREATED="1653335363534" MODIFIED="1653335368658">
+<node TEXT="LeRaC: Learning Rate Curriculum" ID="ID_623814188" CREATED="1653335369346" MODIFIED="1653335371339">
+<icon BUILTIN="pencil"/>
+<node TEXT="Nicu" ID="ID_957914597" CREATED="1653335372975" MODIFIED="1653335375240"/>
+<node TEXT="different learning rate for each layer of a neural network  to create a data-free curriculum during the initial training epochs" ID="ID_197154943" CREATED="1653335382996" MODIFIED="1653335547811"/>
+<node TEXT="evaluated in vision, language, and audio tasks" ID="ID_1520190800" CREATED="1653335549354" MODIFIED="1653335558233"/>
+</node>
+</node>
+</node>
+<node TEXT="Model Compression" FOLDED="true" POSITION="left" ID="ID_325472209" CREATED="1649171031656" MODIFIED="1649171034930">
+<edge COLOR="#00007c"/>
+<node TEXT="Interspace Pruning: Using Adaptive Filter Representations to Improve Training of Sparse CNNs" ID="ID_1136994469" CREATED="1649171035811" MODIFIED="1649171042670">
+<node TEXT="CVPR22" ID="ID_1181157881" CREATED="1649171043941" MODIFIED="1649171045542"/>
+</node>
+<node TEXT="Leaner and Faster: Two-Stage Model Compression for Lightweight&#xa;Text-Image Retrieval" ID="ID_880443205" CREATED="1651953324409" MODIFIED="1651953325391">
+<node TEXT="NAACL" ID="ID_854685267" CREATED="1651953326299" MODIFIED="1651953329267"/>
+</node>
+</node>
+<node TEXT="Multimodal Learning" FOLDED="true" POSITION="left" ID="ID_423909848" CREATED="1649104367617" MODIFIED="1649104370772">
+<edge COLOR="#ff0000"/>
+<node TEXT="Balanced Multimodal Learning via On-the-fly Gradient Modulation" ID="ID_1018564287" CREATED="1649104376663" MODIFIED="1649104377816">
+<node TEXT="CVPR22" ID="ID_735774105" CREATED="1649104378958" MODIFIED="1649104379977"/>
+</node>
+</node>
+<node TEXT="Network Arch Search" FOLDED="true" POSITION="left" ID="ID_1465080986" CREATED="1576827705751" MODIFIED="1650817686281">
+<font NAME="Gentium" SIZE="10" BOLD="false"/>
+<edge COLOR="#00ffff"/>
+<node TEXT="Lottery (winning ticket hypothesis)" ID="ID_157689053" CREATED="1589771412424" MODIFIED="1589771423223"/>
+<node TEXT="NAS + General" ID="ID_345720050" CREATED="1589771335033" MODIFIED="1610423263436">
+<node TEXT="1912.09640 ATOMNAS: FINE-GRAINED END TO END NEURAL ARCHITECTURE SEARCH (iclr20)" ID="ID_551298402" CREATED="1591523824249" MODIFIED="1591523859249"/>
+<node TEXT="2001.01431: deeper insights into weight sharing in neural architecture search" ID="ID_788581693" CREATED="1578641715823" MODIFIED="1587526865297">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="as training every child model from scratch is very time-consuming, recent works leverage weight-sharing to speed up the model evaluation procedure" ID="ID_210487548" CREATED="1578641819751" MODIFIED="1587526865299">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="these approaches greatly reduce computation by maintaining a single copy of weights on the super-net and share the weights among every child model" ID="ID_320246153" CREATED="1578641854870" MODIFIED="1587526865306">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="weight-sharing has no theoretical guarantee and its impact has not been well studied before" ID="ID_1082606016" CREATED="1578641968342" MODIFIED="1587526865308">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="comprehensive and reveal the impact of weight-sharing" ID="ID_575085259" CREATED="1578641994032" MODIFIED="1587526865308">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="1. best-performing models from different runes or even from consecutive epoches within the same run have significant variance" ID="ID_806597637" CREATED="1578642011022" MODIFIED="1587526865309">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="2. even with high variance, we can extract valuable information from training the super-net with shared weight s" ID="ID_1259033553" CREATED="1578642053527" MODIFIED="1587526865310">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="3. inference between child models is a main factor that induces high variance" ID="ID_824472334" CREATED="1578642091423" MODIFIED="1587526865312">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="4. properly reducing the degree of weight sharing could effectively reduce variance" ID="ID_1319017164" CREATED="1578642112783" MODIFIED="1587526865312">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="2002.07376: picking winning tickets before training by preserving gradient flow" ID="ID_285121795" CREATED="1582337040844" MODIFIED="1587526865313">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: prune networks at initialization" ID="ID_242187066" CREATED="1582337065578" MODIFIED="1587526865314">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="why: overparameterization has been shown to benefit both the optimization and generalization of neural networks, but large networks are resource hungry at both training and test time." ID="ID_982652785" CREATED="1582337086688" MODIFIED="1587526865315">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="how: simple but effective pruning criterion termed Gradient Signal Preservation (GraSP)" ID="ID_456233465" CREATED="1582337135230" MODIFIED="1587526865316">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="2002.08104: neural networks on random graphs" ID="ID_1492714029" CREATED="1583370632367" MODIFIED="1587526865316">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: evaluation of neural networks with architectures corresponding to random graphs of various types" ID="ID_189291229" CREATED="1583370645715" MODIFIED="1587526865317">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="2004.05020: ModuleNet: Knowledge-inherited Neural Architecture search" ID="ID_1957978051" CREATED="1587029726858" MODIFIED="1587526865318">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="1912.12522 NASEVALUATION IS FRUSTRATINGLY HARD (ICLR20)" ID="ID_1102573147" CREATED="1591523757273" MODIFIED="1591523776195"/>
+<node TEXT="2101: Unchain the Search Space with Hierarchical Differentiable Architecture Search" ID="ID_770027754" CREATED="1610423275136" MODIFIED="1610423282492"/>
+<node TEXT="2101: Neural Architecture Search via Combinatorial Multi-Armed Bandit" ID="ID_1528572141" CREATED="1610424093363" MODIFIED="1610424103413"/>
+<node TEXT="Contrastive Neural Architecture Search with Neural Architecture Comparators (cvpr21)" ID="ID_866640575" CREATED="1615348935373" MODIFIED="1615348942277"/>
+<node TEXT="SpiderNet: Hybrid Differentiable-Evolutionary Architecture Search via Train-Free Metrics" ID="ID_704263392" CREATED="1650817696173" MODIFIED="1650817696822">
+<node TEXT="CVPR22w" ID="ID_250147196" CREATED="1650817697711" MODIFIED="1650817699427"/>
+</node>
+</node>
+<node TEXT="NAS + Other" ID="ID_1734029148" CREATED="1589771343435" MODIFIED="1589771346550">
+<node TEXT="other=SISR" ID="ID_12673974" CREATED="1589771348054" MODIFIED="1589771353001">
+<node TEXT="2003.04619: hierarchical neural architecture search for single image super-resolution" ID="ID_1727215487" CREATED="1589771353984" MODIFIED="1589771370713"/>
+</node>
+<node TEXT="other=modality" ID="ID_621571662" CREATED="1589771456800" MODIFIED="1589771460809">
+<node TEXT="2004.12070: deep multimodal neural architecture search" ID="ID_1501292654" CREATED="1588072764031" MODIFIED="1588072782358"/>
+</node>
+<node TEXT="other=multitask" ID="ID_1291820834" CREATED="1590975521172" MODIFIED="1590975526893">
+<node TEXT="2003.14058 MTL-NAS: Task-Agnostic Neural Architecture Search towards General-Purpose Multi-Task Learning (cvpr20)" ID="ID_755508472" CREATED="1590975527584" MODIFIED="1590975541542"/>
+</node>
+<node TEXT="otehr=captioning" ID="ID_341214713" CREATED="1608876510692" MODIFIED="1608876515099">
+<node TEXT="2012.09742&#xa;AutoCaption: Image Captioning with Neural Architecture Search" ID="ID_1588438121" CREATED="1608876515864" MODIFIED="1608876526467"/>
+</node>
 </node>
 </node>
 <node TEXT="Open Set Recognition" FOLDED="true" POSITION="left" ID="ID_323999523" CREATED="1634132952545" MODIFIED="1647267889167">
