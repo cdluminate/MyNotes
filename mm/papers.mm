@@ -604,6 +604,9 @@
 <icon BUILTIN="pencil"/>
 <node TEXT="submit to NIPS22" ID="ID_1236014188" CREATED="1653861980419" MODIFIED="1653861985760"/>
 </node>
+<node TEXT="RAF: Recursive Adversarial Attacks on Face Recognition Using Extremely Limited Queries" ID="ID_1938639556" CREATED="1657408608528" MODIFIED="1657408617483">
+<icon BUILTIN="pencil"/>
+</node>
 </node>
 <node TEXT="Action Recognition" ID="ID_1024637428" CREATED="1652385248018" MODIFIED="1652385250882">
 <node TEXT="BASAR:Black-box Attack on Skeletal Action Recognition" ID="ID_1522399852" CREATED="1652385251738" MODIFIED="1652385257416">
@@ -1093,7 +1096,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
+<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_1556055508" CREATED="1648173325254" MODIFIED="1648173329845">
 <icon BUILTIN="info"/>
@@ -1112,7 +1115,7 @@
 <node TEXT="Carlini" ID="ID_1564104070" CREATED="1648422765982" MODIFIED="1648422768150"/>
 </node>
 </node>
-<node TEXT="Benchmark/Evaluation" ID="ID_855034612" CREATED="1642431513665" MODIFIED="1648648692799">
+<node TEXT="Benchmark/Evaluation" FOLDED="true" ID="ID_855034612" CREATED="1642431513665" MODIFIED="1648648692799">
 <font BOLD="true"/>
 <node TEXT="robustbench: a standardized adversarial robustness benchmark" ID="ID_1489423550" CREATED="1642431521917" MODIFIED="1642431542194">
 <icon BUILTIN="unchecked"/>
@@ -1141,7 +1144,7 @@
 <node TEXT="imitates adaptive attack paper" ID="ID_1487728187" CREATED="1652387986758" MODIFIED="1652387992706"/>
 </node>
 </node>
-<node TEXT="Adversarial Training" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1648174116710">
+<node TEXT="Adversarial Training" FOLDED="true" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1648174116710">
 <font BOLD="true"/>
 <node TEXT="Survey" ID="ID_178248607" CREATED="1642431445724" MODIFIED="1649101870385">
 <icon BUILTIN="mindmap"/>
@@ -1695,7 +1698,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Architecture" ID="ID_678438754" CREATED="1648336299559" MODIFIED="1648336302516">
+<node TEXT="Architecture" FOLDED="true" ID="ID_678438754" CREATED="1648336299559" MODIFIED="1648336302516">
 <node TEXT="Enhancing Classifier Conservativeness and Robustness by Polynomiality" ID="ID_1098684448" CREATED="1648336306289" MODIFIED="1648336446986">
 <icon BUILTIN="unchecked"/>
 <node TEXT="CVPR22" ID="ID_1434170291" CREATED="1648336449172" MODIFIED="1648336451497"/>
