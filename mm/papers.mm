@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="121" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="123" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1655842831914">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -2638,6 +2638,11 @@
 <icon BUILTIN="pencil"/>
 </node>
 </node>
+<node TEXT="LargestMargin" ID="ID_482085754" CREATED="1658269896202" MODIFIED="1658269900733">
+<node TEXT="Learning Towards the Largest Margins" ID="ID_1024838834" CREATED="1658269901602" MODIFIED="1658269907151">
+<node TEXT="ICLR22" ID="ID_772753696" CREATED="1658269908600" MODIFIED="1658269910421"/>
+</node>
+</node>
 </node>
 <node TEXT="Key Point" ID="ID_1651017374" CREATED="1650830438788" MODIFIED="1650830442804">
 <node TEXT="Not All Tokens Are Equal: Human-centric Visual Analysis via&#xa;Token Clustering Transformer" ID="ID_1267200711" CREATED="1650830443573" MODIFIED="1650830471615">
@@ -3277,6 +3282,14 @@
 <node TEXT="CVPR22" ID="ID_903582988" CREATED="1655446845061" MODIFIED="1655446846529"/>
 <node TEXT="detect a known set of object categories while simultaneously identifying unknown objects" ID="ID_616806391" CREATED="1655446868485" MODIFIED="1655446869285"/>
 <node TEXT="the model must incrementally learn new classes that become known in the next training episodes." ID="ID_1013145496" CREATED="1655446886665" MODIFIED="1655446887118"/>
+</node>
+</node>
+<node TEXT="+Openset" ID="ID_409502745" CREATED="1658269351697" MODIFIED="1658269354632">
+<node TEXT="Expanding Low-Density Latent Regions for Open-Set Object Detection" ID="ID_1887401308" CREATED="1658269355567" MODIFIED="1658269370623">
+<node TEXT="CVPR22" ID="ID_1115553662" CREATED="1658269371992" MODIFIED="1658269374332"/>
+<node TEXT="Zebra is not horse?" ID="ID_394730100" CREATED="1658269815561" MODIFIED="1658269826349">
+<icon BUILTIN="help"/>
+</node>
 </node>
 </node>
 <node TEXT="Camouflaged" ID="ID_1233579435" CREATED="1648388054502" MODIFIED="1648388062210">
@@ -4309,6 +4322,12 @@
 </node>
 </node>
 </node>
+<node TEXT="Edge and IoT" FOLDED="true" POSITION="left" ID="ID_1979680554" CREATED="1658275932373" MODIFIED="1658275935124">
+<edge COLOR="#0000ff"/>
+<node TEXT="On-Device Training Under 256KB Memory" ID="ID_704367415" CREATED="1658275936108" MODIFIED="1658275947917">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
 <node TEXT="Explainable AI" FOLDED="true" POSITION="left" ID="ID_1535392614" CREATED="1646937960988" MODIFIED="1650817806076">
 <edge COLOR="#7c0000"/>
 <node TEXT="Survey" ID="ID_796711666" CREATED="1653860071187" MODIFIED="1653860080368">
@@ -4380,7 +4399,7 @@
 <node TEXT="elastic resolution + computation reduction" ID="ID_1366331350" CREATED="1615296878773" MODIFIED="1615296919734"/>
 </node>
 </node>
-<node TEXT="Graph Network" POSITION="left" ID="ID_753946836" CREATED="1582940931218" MODIFIED="1651953060730">
+<node TEXT="Graph Network" FOLDED="true" POSITION="left" ID="ID_753946836" CREATED="1582940931218" MODIFIED="1651953060730">
 <font NAME="Gentium" BOLD="false"/>
 <edge COLOR="#7c7c00"/>
 <node TEXT="GNN" ID="ID_1274111681" CREATED="1651953050512" MODIFIED="1651953052009">
