@@ -701,6 +701,10 @@
 <node TEXT="Semantic Segmentation" ID="ID_1787214618" CREATED="1656028016019" MODIFIED="1656028018909">
 <node TEXT="Proximal Splitting Adversarial Attacks for Semantic Segmentation" ID="ID_1712900589" CREATED="1656028019529" MODIFIED="1656028021932">
 <icon BUILTIN="pencil"/>
+<node TEXT="Torr" ID="ID_1357910555" CREATED="1659163591561" MODIFIED="1659163594171"/>
+</node>
+<node TEXT="SegPGD: An Effective and Efficient Adversarial Attack for Evaluating and Boosting Segmentation Robustness" ID="ID_377829791" CREATED="1659163580116" MODIFIED="1659163587284">
+<icon BUILTIN="pencil"/>
 </node>
 </node>
 <node TEXT="Optical Flow" ID="ID_1641858386" CREATED="1648337319711" MODIFIED="1648337322554">
@@ -4678,6 +4682,9 @@
 <node TEXT="2001.00071 PrivGAN: Protecting GANs from membership inference attacks at low cos" ID="ID_370428646" CREATED="1591523402373" MODIFIED="1591523413026"/>
 <node TEXT="Label-only membership inference attacks" ID="ID_1310996729" CREATED="1648422783790" MODIFIED="1648422789621">
 <node TEXT="Carlini" ID="ID_1163854114" CREATED="1648422791804" MODIFIED="1648422793928"/>
+</node>
+<node TEXT="Semi-Leak: Membership Inference Attacks Against Semi-supervised Learning" ID="ID_1113661303" CREATED="1659161404298" MODIFIED="1659161405430">
+<node TEXT="ECCV22" ID="ID_1418419828" CREATED="1659161408686" MODIFIED="1659161410212"/>
 </node>
 </node>
 <node TEXT="Physical Mail" ID="ID_1223992131" CREATED="1608872127823" MODIFIED="1608872130574">
