@@ -575,12 +575,114 @@ Arc consistency detects failure earlier than forward checking.
 Probablistic Reasoning
 \end_layout
 
+\begin_layout Standard
+Probablistic inference: compute a desired probability from other known probabili
+ties.
+ Example: posterior marginal probability, most likely explanation.
+\end_layout
+
+\begin_layout Standard
+Product rule: 
+\begin_inset Formula $P(y)P(x|y)=P(x,y)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Chain rule: split a multi-variable joint probability into a chain of conditional
+ probabilities.
+\end_layout
+
+\begin_layout Standard
+Bayes rule: two ways of product rule for the same joint probability.
+\end_layout
+
+\begin_layout Standard
+Independence: 
+\begin_inset Formula $P(x)P(y)=P(x,y)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Bayes Net: describe complex joint distributions using simple and local distribut
+ions.
+ A directed acyclic graph.
+\end_layout
+
+\begin_layout Standard
+Construct Bayesian Net: (1) order variables using causality; (2) use these
+ assumptions to create graph structure.
+\end_layout
+
+\begin_layout Standard
+Inference by enumeration in Bayes' Net: computationally efficient.
+\end_layout
+
 \begin_layout Section
 Dynamic bayesian networks and associated inference algorithms
 \end_layout
 
+\begin_layout Standard
+Markov Models (chain/process): transition model.
+ Stationary assumption: transition probability is constant.
+ Markov assumption: future is independent of the past given the present.
+\end_layout
+
+\begin_layout Standard
+Hidden Markov Models: the true state is not observed.
+\end_layout
+
+\begin_layout Standard
+Filtering: 
+\begin_inset Formula $P(X_{t}|e_{1:t})$
+\end_inset
+
+.
+ Prediction, Smoothing, most likely explanation (Viterbi).
+\end_layout
+
+\begin_layout Standard
+Learning HMMs: EM Algorithm.
+\end_layout
+
 \begin_layout Section
-Optimal sequential decisions
+Optimal Sequential Decisions
+\end_layout
+
+\begin_layout Standard
+Markov Decision Process: set 
+\begin_inset Formula $S$
+\end_inset
+
+ of states, set 
+\begin_inset Formula $A$
+\end_inset
+
+ of actions.
+ Initial state, transition model, reward function.
+ Result undertain during the search process.
+\end_layout
+
+\begin_layout Standard
+Value Iteration: algorithm to find optimal policy and value for MDP.
+ Select the action with maximum expected utility.
+ Start with random utility on each state.
+ Repeat simultaneously for every state untill the utility converges.
+ Convergence depends on the biggest component of values.
+\end_layout
+
+\begin_layout Standard
+Policy iteration: compute utility by executing the currrent policy, repeat
+ untill no policy change.
+\end_layout
+
+\begin_layout Standard
+Partially observable MDP: belief state (where the agent itself is).
+ Updated by computing the conditional probability dist over all states given
+ the sequence of observations and actions so far.
 \end_layout
 
 \begin_layout Section
