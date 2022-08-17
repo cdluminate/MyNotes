@@ -492,12 +492,87 @@ Local Search in Continuous Space: (1) discretize (2) stochastic descent
  (3) small step along gradient.
 \end_layout
 
+\begin_layout Standard
+Determistic Games: states, players, actions, transition functions, terminal
+ test, terminal utility.
+ Solution is a policy.
+\end_layout
+
+\begin_layout Standard
+Minimax algorithm (impl.
+ DFS): look first at bottom tree, label bottom-most boards.
+ Then label boards one level up, according to result of best possible move.
+ Two important factors: deep look ahead, and good heuristic function.
+\end_layout
+
+\begin_layout Standard
+Adversarial Search (Minimax): state-space search tree.
+ Players alternate turns.
+ minimax value for each node: best utility against a rational adversary.
+\end_layout
+
+\begin_layout Standard
+Alpha-Beta Pruning.
+ 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ best value for MAX, 
+\begin_inset Formula $\beta$
+\end_inset
+
+ the best value for MIN.
+ Both values are updated, and nodes with worse values will be pruned.
+\end_layout
+
+\begin_layout Standard
+Evaluation function scores non-terminals in depth-limited search.
+ Ideal function: returns the actual minimax value.
+\end_layout
+
+\begin_layout Standard
+Expectimax Search: compute the average score under optimal play for the
+ MIN nodes.
+ Max nodes remains the same as in Minimax search.
+\end_layout
+
+\begin_layout Standard
+Utility: function from outcomes to real numbers describing agents' preferences.
+\end_layout
+
 \begin_layout Section
 Constraint Satisfaction Problems
 \end_layout
 
+\begin_layout Standard
+CSP is a special subset of search problems.
+ Goal test is a set of constraints specifying combinations for variables.
+ (Prunes the search space with constraints)
+\end_layout
+
+\begin_layout Standard
+Backtrack search: backtrack to previous var setting, and try next possible
+ setting.
+ If none exists, move back to another level.
+ One variable at a time, check constraints as you go.
+ This is a variant of DFS.
+\end_layout
+
+\begin_layout Standard
+CSP Formulation: initial state (empty), successor function, goal test.
+\end_layout
+
+\begin_layout Standard
+Forward checking.
+ keep track of remaining legal values for unassigned variables.
+\end_layout
+
+\begin_layout Standard
+Arc consistency detects failure earlier than forward checking.
+\end_layout
+
 \begin_layout Section
-Probablistic reasoning
+Probablistic Reasoning
 \end_layout
 
 \begin_layout Section
