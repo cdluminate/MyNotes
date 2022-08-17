@@ -7,9 +7,10 @@
 \textclass article
 \begin_preamble
 \usepackage{microtype}
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=0.7in]{geometry}
 %\usepackage{gentium}
 \usepackage{times}
+\usepackage{indentfirst}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -34,7 +35,7 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize default
+\paperfontsize 10
 \spacing single
 \use_hyperref false
 \papersize default
@@ -71,7 +72,7 @@
 \math_numbering_side default
 \quotes_style english
 \dynamic_quotes 0
-\papercolumns 1
+\papercolumns 2
 \papersides 1
 \paperpagestyle default
 \tracking_changes false
@@ -92,190 +93,47 @@ M Zhou
 \end_layout
 
 \begin_layout Section
-Misc and History
+History of AI
 \end_layout
 
 \begin_layout Standard
-Why Machine Intel instead of Artifical Intel? Coverage: traditional AI.
- The past AI models are interpretable, however deep learning (working like
- blackbox) does not.
- Bias of deep learning models.
+Rational Decision: maximizing expected utility.
 \end_layout
 
 \begin_layout Standard
-Lessons learned from the brain: memory and simulation are key to decision
- making.
+From the brain: memory and simulation are key to decision making.
 \end_layout
 
 \begin_layout Standard
-Definition of AI.
- Narrow AI v.s.
+Directions in AI: Search, Language, Vision, Expertise (expert system / recommend
+er).
+\end_layout
+
+\begin_layout Standard
+Definition of AI: Narrow AI v.s.
  General AI.
 \end_layout
 
 \begin_layout Standard
-Issues with current 
-\begin_inset Quotes eld
-\end_inset
-
-AI
-\begin_inset Quotes erd
-\end_inset
-
- approaches: data hungry, black box, generalizability (domain shift), vulnerabil
-ity, bias, fairness, privacy.
- May these lead to AI winters?
-\end_layout
-
-\begin_layout Standard
-LeCun 89 LeNet
-\end_layout
-
-\begin_layout Enumerate
-COMPUTING MACHINERY AND INTELLIGENCE.
- Alan Turing
-\end_layout
-
-\begin_layout Enumerate
-Turing’s Imitation Game: a discussion with the benefit of hind-sight
-\end_layout
-
-\begin_layout Enumerate
-Stuart Russell & Peter Norvig, AI: A Modern Approach
-\end_layout
-
-\begin_layout Subsection
-What is AI
-\end_layout
-
-\begin_layout Standard
-Rational decisions.
-\end_layout
-
-\begin_layout Enumerate
-Rational: maximally achieving pre-defined goals
-\end_layout
-
-\begin_layout Enumerate
-Rationality only concerns what decisions are made, not the thought process
- behind them
-\end_layout
-
-\begin_layout Enumerate
-goals are expressed in terms of the utility of outcomes
-\end_layout
-
-\begin_layout Enumerate
-being rational means maximizing your expected utility
-\end_layout
-
-\begin_layout Standard
-Brain – good at making rational decisions, but not perfect.
- Memory and simulation are key to decision making.
-\end_layout
-
-\begin_layout Standard
-Game Agents.
- (deep blue 1997).
- Reinforcement learning.
-\end_layout
-
-\begin_layout Standard
-simulated agents.
- robotics.
- human-ai interaction.
- tools for predictions and dicisions.
- natural language.
-\end_layout
-
-\begin_layout Standard
-Definition of AI.
- 
-\end_layout
-
-\begin_layout Standard
-AI history.
-\end_layout
-
-\begin_layout Subsection
-Directions in AI
-\end_layout
-
-\begin_layout Standard
-Search: problem solving, game strategies, browsers (search engine)
-\end_layout
-
-\begin_layout Standard
-Language: natural language processing, language understanding
-\end_layout
-
-\begin_layout Standard
-Vision: computer vision.
-\end_layout
-
-\begin_layout Standard
-Expertise: expert systems, recommenders.
-\end_layout
-
-\begin_layout Subsection
-Connectionism
-\end_layout
-
-\begin_layout Standard
-Increasingly dominant.
-\end_layout
-
-\begin_layout Subsection
-Issues with current AI
-\end_layout
-
-\begin_layout Enumerate
-Data Hungry.
-\end_layout
-
-\begin_layout Enumerate
-Black box.
-\end_layout
-
-\begin_layout Enumerate
-Generalizability.
-\end_layout
-
-\begin_layout Enumerate
-Vulnerability.
-\end_layout
-
-\begin_layout Enumerate
-Bias, Fairness.
-\end_layout
-
-\begin_layout Enumerate
-Privacy.
-\end_layout
-
-\begin_layout Enumerate
-Explainability.
-\end_layout
-
-\begin_layout Enumerate
-Going Big?
+Issues with current AI: data hungry, black box, generalizability (domain
+ shift), vulnerability, bias, fairness, privacy.
+ Explainability.
+ Going Big?
 \end_layout
 
 \begin_layout Section
-Intelligent Agents
+Intelligent Agents & Environment
 \end_layout
 
 \begin_layout Standard
 An agent is a computer system that is capable of independent action on behalf
- of its user or owner (figure out what needs to be done to satisfy design
- objectives, rather than constantly being told).
+ of its user or owner.
 \end_layout
 
 \begin_layout Standard
 A multiagent system is one that consists of a number of agents, which interact
  with one-another.
- TO successfully interact, they will require the ability to cooperate, coordinat
-e, and negotiate with each other, much as people do.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -283,77 +141,30 @@ Two key problems: agent design, and society design.
 \end_layout
 
 \begin_layout Standard
-An 
-\series bold
-agent
-\series default
- should strive to 
-\begin_inset Quotes eld
-\end_inset
-
-do the right thing
-\begin_inset Quotes erd
-\end_inset
-
-, based on what it can perceive and the actions it can perform.
- The right action is the one that will casue the agent to be most successful.
- Performance measure in this case is an objective criterion for success
- of an agent's behavior.
+Performance measure: objective criterion for success of an agent's behavior.
 \end_layout
 
 \begin_layout Standard
-For each possible percept sequence, a 
-\series bold
-rational agent
-\series default
- should select an action that maximizes its performance measure (in expectation)
- given the evidence provided by the percept sequence and whatever build-in
- knowledge the agent has.
-\end_layout
-
-\begin_layout Subsection
-Agents
+Rational agent maximizes its expected performance measure for each possible
+ percept sequence.
+ 
 \end_layout
 
 \begin_layout Standard
-An agent perceives tis environment via sensors and acts upon that environment
- through its actuators.
-\end_layout
-
-\begin_layout Subsection
-Characterizing Task Environment
+PEAS: Performance measure, Environment, Actuators, Sensors.
 \end_layout
 
 \begin_layout Standard
-PEAS: performance measure, environment, actuators, sensors.
- This is a qualitative setting.
+Environment: fully observable or partially observable, deterministic or
+ stochastic, episodic or sequential, static or dynamic (does it change while
+ the agent is thinking), discrete or continuous
 \end_layout
 
 \begin_layout Subsection
 Task environments
 \end_layout
 
-\begin_layout Enumerate
-fully observable or partially observable
-\end_layout
-
-\begin_layout Enumerate
-deterministic or stochastic
-\end_layout
-
-\begin_layout Enumerate
-episodic or sequential
-\end_layout
-
-\begin_layout Enumerate
-static or dynamic (does it change while the agent is thinking)
-\end_layout
-
-\begin_layout Enumerate
-discrete or continuous
-\end_layout
-
-\begin_layout Enumerate
+\begin_layout Standard
 single agent or multi-agent
 \end_layout
 
