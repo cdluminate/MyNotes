@@ -97,26 +97,45 @@ History of AI
 \end_layout
 
 \begin_layout Standard
-Rational Decision: maximizing expected utility.
+
+\series bold
+Rational Decision:
+\series default
+ maximizing expected utility.
 \end_layout
 
 \begin_layout Standard
-From the brain: memory and simulation are key to decision making.
+
+\series bold
+Brain:
+\series default
+ memory and simulation are key to decision making.
 \end_layout
 
 \begin_layout Standard
-Directions in AI: Search, Language, Vision, Expertise (expert system / recommend
-er).
+
+\series bold
+Directions in AI:
+\series default
+ Search, Language, Vision, Expertise (expert system / recommender).
 \end_layout
 
 \begin_layout Standard
-Definition of AI: Narrow AI v.s.
+
+\series bold
+Definition of AI: 
+\series default
+Narrow AI v.s.
  General AI.
 \end_layout
 
 \begin_layout Standard
-Issues with current AI: data hungry, black box, generalizability (domain
- shift), vulnerability, bias, fairness, privacy.
+
+\series bold
+Issues with current AI:
+\series default
+ data hungry, black box, generalizability (domain shift), vulnerability,
+ bias, fairness, privacy.
  Explainability.
  Going Big?
 \end_layout
@@ -157,52 +176,13 @@ PEAS: Performance measure, Environment, Actuators, Sensors.
 \begin_layout Standard
 Environment: fully observable or partially observable, deterministic or
  stochastic, episodic or sequential, static or dynamic (does it change while
- the agent is thinking), discrete or continuous
-\end_layout
-
-\begin_layout Subsection
-Task environments
+ the agent is thinking), discrete or continuous, single agent or multi-agent.
 \end_layout
 
 \begin_layout Standard
-single agent or multi-agent
-\end_layout
-
-\begin_layout Subsection
-Agent Types
-\end_layout
-
-\begin_layout Description
-table-driven-agents use a percept sequence/action table in memory to find
- the enxt action.
- implemented by a large lookup table
-\end_layout
-
-\begin_layout Description
-simple-refelx-agents based on condition-action rules, implemeneted with
- an appropriate production system.
- they are steateless devices which do not have memory of past world states.
-\end_layout
-
-\begin_layout Description
-agents-with-memory model-based reflex agents.
- they have internal state, which is used to keep track of past states of
- the world
-\end_layout
-
-\begin_layout Description
-agents-with-goals are agents that, in addition to state information, have
- goal information that describes desirable situations.
- agents of this kind take future events into consideration
-\end_layout
-
-\begin_layout Description
-utility-based-agents base their decisions on classis axiomatic utility theory
- in order to act rationally
-\end_layout
-
-\begin_layout Description
-learning-agents they have the ability to improve performance through learning
+Agent Types: table-lookup driven agents, simple reflex agents, model based
+ reflex agents (has memory), goal-based agents (e.g.
+ solving & search), utility-based agents (rational action), learning agents.
 \end_layout
 
 \begin_layout Section
