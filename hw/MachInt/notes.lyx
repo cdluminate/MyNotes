@@ -746,20 +746,40 @@ Face Analytics: softmax loss, L-2 softmax loss, triplet loss, ArcFace.
 GANs
 \end_layout
 
-\begin_layout Section
-Robustness to adversarial attacks
+\begin_layout Standard
+GAN: G and D.
 \end_layout
 
 \begin_layout Section
-Deep fakes
+Action Recognition
+\end_layout
+
+\begin_layout Standard
+Temporal Action Detection
 \end_layout
 
 \begin_layout Section
-Fair and ethical AI
+Adversarial Attacks & Robustness
+\end_layout
+
+\begin_layout Standard
+...
 \end_layout
 
 \begin_layout Section
-Safety of AI systems and applications in engineering and medicine
+Fair and Ethical AI
+\end_layout
+
+\begin_layout Standard
+Bias (gender, skin color, hairstyle, etc), Interpretability, security
+\end_layout
+
+\begin_layout Standard
+Grad-CAM (CAM, LIME, Guided backprop deconv)
+\end_layout
+
+\begin_layout Section
+AI and Medicine
 \end_layout
 
 \end_body
