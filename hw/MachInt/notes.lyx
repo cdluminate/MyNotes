@@ -649,7 +649,7 @@ Learning HMMs: EM Algorithm.
 \end_layout
 
 \begin_layout Section
-Optimal Sequential Decisions
+Markov Decision Process
 \end_layout
 
 \begin_layout Standard
@@ -686,15 +686,60 @@ Partially observable MDP: belief state (where the agent itself is).
 \end_layout
 
 \begin_layout Section
-Markov decision processes
+Deep Learning: CNNs
 \end_layout
 
-\begin_layout Section
-Partially observed Markov decision processes
+\begin_layout Standard
+CNNs: LeNet, Convolution, Pooling.
 \end_layout
 
-\begin_layout Section
-Deep learning
+\begin_layout Standard
+AlexNet: size computation.
+ first use ReLU.
+\end_layout
+
+\begin_layout Standard
+VGG: smaller filters (same effective receptive field as larger kernel),
+ deeper networks.
+\end_layout
+
+\begin_layout Standard
+ResNet: residual connections.
+ Gradient issue in very deep neural networks.
+\end_layout
+
+\begin_layout Standard
+Activation function, automatic differentiation (reverse mode).
+\end_layout
+
+\begin_layout Standard
+Object detection: region proposal (selective search) + classification.
+\end_layout
+
+\begin_layout Standard
+R-CNN: crop RoI from image, warp and extract feature.
+ Predict box offset and class.
+\end_layout
+
+\begin_layout Standard
+Fast R-CNN: crop RoI from feature map.
+ Predict box offset and class.
+\end_layout
+
+\begin_layout Standard
+Faster R-CNN: use Region Proposal Network to predict proposals.
+\end_layout
+
+\begin_layout Standard
+Non-max suppression: ignore overlapping proposals.
+\end_layout
+
+\begin_layout Standard
+Mask R-CNN: instance segmentation.
+\end_layout
+
+\begin_layout Standard
+Face Analytics: softmax loss, L-2 softmax loss, triplet loss, ArcFace.
 \end_layout
 
 \begin_layout Section
