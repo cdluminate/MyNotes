@@ -454,11 +454,46 @@ Summary:
 \end_layout
 
 \begin_layout Section
-Adversarial search and games
+Adversarial Search and Games
+\end_layout
+
+\begin_layout Standard
+Local Search: select random initial state; make local modification to improve
+ current state; repeat until goal.
+\end_layout
+
+\begin_layout Standard
+Hill-Climbing Search (Greedy Local Search): move to best neighbor until
+ no better neighbor.
+ Can stuck at local optimum.
+\end_layout
+
+\begin_layout Standard
+Simulated Annealing: Hill-Climbing, but occasionally take a step in reverse
+ direction.
+ As time passes, the probability to take a down-hill step is gradually reduced.
+\end_layout
+
+\begin_layout Standard
+Local Beam Search: keep 
+\begin_inset Formula $k$
+\end_inset
+
+ random states and share best successors among them.
+\end_layout
+
+\begin_layout Standard
+Genetic Algorithm: maintain a population of candidate solutions, and make
+ it evolve by a set of stochastic operators.
+\end_layout
+
+\begin_layout Standard
+Local Search in Continuous Space: (1) discretize (2) stochastic descent
+ (3) small step along gradient.
 \end_layout
 
 \begin_layout Section
-Constraint satisfaction problems
+Constraint Satisfaction Problems
 \end_layout
 
 \begin_layout Section
