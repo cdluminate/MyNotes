@@ -189,21 +189,13 @@ Agent Types: table-lookup driven agents, simple reflex agents, model based
 Problem Solving by Searching
 \end_layout
 
-\begin_layout Subsection
-running time of an algorithm
+\begin_layout Standard
+The big O notation.
 \end_layout
 
 \begin_layout Standard
-The big O notation
-\end_layout
-
-\begin_layout Subsection
-search problem
-\end_layout
-
-\begin_layout Standard
-A search problem consists of (1) a state space; (2) a successor function;
- (3) a start state and a goal test;
+Search problem: (1) a state space; (2) a successor function; (3) a start
+ state and a goal test;
 \end_layout
 
 \begin_layout Standard
@@ -212,38 +204,17 @@ A solution is a sequence of actions (a plan) which transforms the start
 \end_layout
 
 \begin_layout Standard
-example: the 8-puzzle 
-\begin_inset Quotes eld
-\end_inset
-
-sliding tile puzzle
-\begin_inset Quotes erd
-\end_inset
-
-, TSP, VLSI layout, robot navigation, protein design, etc.
-\end_layout
-
-\begin_layout Subsection
-state space graph and search tree
-\end_layout
-
-\begin_layout Standard
-each state only occurs once in graph.
-\end_layout
-
-\begin_layout Standard
-general tree search algorithm.
- imoprtant aspects: fringe, expansion, exploration strategy.
+General tree search algorithm: fringe (partial plans), expansion, exploration
+ strategy.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-depth-first search.
- DFS
+Depth-First Search (DFS
 \series default
-.
- strategy: expand a deepest node first.
+).
+ expand a deepest node first.
  implementation: fringe is a LIFO stack.
  branching factor 
 \begin_inset Formula $b$
@@ -272,11 +243,10 @@ depth-first search.
 \begin_layout Standard
 
 \series bold
-breadth-first search.
- BFS.
+Breadth-First Search (BFS).
  
 \series default
-strategy: expand a shallowest node frist.
+expand a shallowest node frist.
  implementation: fringe is a FIFO queue.
  shallowest solution depth 
 \begin_inset Formula $s$
@@ -296,7 +266,7 @@ strategy: expand a shallowest node frist.
 \begin_layout Standard
 
 \series bold
-iterative deepening search.
+Iterative Deepening search.
  (IDS)
 \series default
  is the perferred uniformed search method when there is a large search space
@@ -318,18 +288,19 @@ iterative deepening search.
 \begin_layout Standard
 
 \series bold
-uniform cost search (UCS)
+Uniform Cost Search (UCS)
 \series default
 .
- strategy expand a cheapest node first.
+ strategy expand a cheapest node first (cost contour).
  implementation: fringe is a priority queue (priority: cumulative cost).
  This is optimal according to A*.
+ This is called Dijkstra's algorithm by CS folks.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-search heuristic
+Search Heuristic
 \series default
 : a function that estimates how close a state is to a goal.
  specific to particular search problem.
@@ -338,7 +309,7 @@ search heuristic
 \begin_layout Standard
 
 \series bold
-Greedy best-first search:
+Greedy Best-First search:
 \series default
  expand a node that you think is closest to a goal state.
  best-first may take you straght to the wrong goal.
@@ -366,113 +337,12 @@ Greedy best-first search:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float algorithm
-wide false
-sideways false
-status open
 
-\begin_layout Plain Layout
-\begin_inset listings
-inline false
-status open
+\series bold
+A* Search.
 
-\begin_layout Plain Layout
-
-fun tree-search(problem, strategy) returns solution, or failure
-\end_layout
-
-\begin_layout Plain Layout
-
-	init search tree using initial state of $problem
-\end_layout
-
-\begin_layout Plain Layout
-
-	loop
-\end_layout
-
-\begin_layout Plain Layout
-
-		if there are no candidates for expansion; then
-\end_layout
-
-\begin_layout Plain Layout
-
-			return failure
-\end_layout
-
-\begin_layout Plain Layout
-
-		endif
-\end_layout
-
-\begin_layout Plain Layout
-
-		choose a leaf node for expansion according to $strategy
-\end_layout
-
-\begin_layout Plain Layout
-
-		if the node contains a goal state; then
-\end_layout
-
-\begin_layout Plain Layout
-
-			return corresponding solution
-\end_layout
-
-\begin_layout Plain Layout
-
-		else
-\end_layout
-
-\begin_layout Plain Layout
-
-			expand node and add resulting nodes to search tree
-\end_layout
-
-\begin_layout Plain Layout
-
-		endif
-\end_layout
-
-\begin_layout Plain Layout
-
-	end
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-general tree search
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-A* (a star) search
-\end_layout
-
-\begin_layout Standard
-idea: avoid expanding paths that are already expensive.
+\series default
+ idea: avoid expanding paths that are already expensive.
  Specifically, evluate function 
 \begin_inset Formula $f(n)=g(n)+h(n)$
 \end_inset
@@ -502,10 +372,7 @@ idea: avoid expanding paths that are already expensive.
 \end_inset
 
  is the total cost.
-\end_layout
-
-\begin_layout Standard
-It is combination of UCS (backward cost 
+ It is combination of UCS (backward cost 
 \begin_inset Formula $g(n)$
 \end_inset
 
@@ -514,29 +381,24 @@ It is combination of UCS (backward cost
 \end_inset
 
 ).
- A star combines both.
-\end_layout
-
-\begin_layout Standard
-Under some reasonable conditions for the heuristics, A* is complete and
+ Under some reasonable conditions for the heuristics, A* is complete and
  optimal.
 \end_layout
 
 \begin_layout Standard
-Widely used in e.g.
- google maps.
-\end_layout
-
-\begin_layout Standard
-heuristics admissibility: 
+Heuristics admissibility: 
 \begin_inset Formula $h(n)\leq h^{*}(n)$
 \end_inset
 
-, the heuristics is always less or equal to the true cost.
+, the heuristics is always less or equal to the true cost 
+\begin_inset Formula $h^{*}(n)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-heuristic consistency: 
+Heuristic consistency: 
 \begin_inset Formula $f(n)$
 \end_inset
 
@@ -567,7 +429,7 @@ We can use weighted A* search with
 \end_layout
 
 \begin_layout Standard
-other variations of A*: (1) beam search.
+Other variations of A*: (1) beam search.
  keeps only the k nodes with the best f-scores discarding any other expanded
  nodes.
  (2) iterative deepening A* search similar to iterative deepening search
@@ -577,7 +439,7 @@ other variations of A*: (1) beam search.
 \end_layout
 
 \begin_layout Standard
-most of the work in solving hard search problems optimally is in comuing
+Most of the work in solving hard search problems optimally is in coming
  up with admissible heuristics.
 \end_layout
 
@@ -588,7 +450,7 @@ Summary:
 \series default
  A* uses both backward costs and (esimates of) forward costs.
  A* is optimal with admissible or consistent heuristics.
- Heuristic design is the key: ofen use relaxed problems
+ Heuristic design is the key: ofen use relaxed problems.
 \end_layout
 
 \begin_layout Section
