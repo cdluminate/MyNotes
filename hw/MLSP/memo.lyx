@@ -190,5 +190,83 @@ Good basis: non-redundancy, compactness
 Lec 7 (w4) Eigen Representations
 \end_layout
 
+\begin_layout Standard
+SVD: 
+\begin_inset Formula $A=USV^{T}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+EigenFace.
+\end_layout
+
+\begin_layout Standard
+Eigen decomposition v.s.
+ SVD: 
+\begin_inset Formula $XX^{T}=R=EDE^{T}$
+\end_inset
+
+, 
+\begin_inset Formula $X=USV^{T}$
+\end_inset
+
+, 
+\begin_inset Formula $XX^{T}=USV^{T}VS^{T}U^{T}=US^{2}U^{T}$
+\end_inset
+
+, and thus 
+\begin_inset Formula $E=U$
+\end_inset
+
+, 
+\begin_inset Formula $S^{2}=D$
+\end_inset
+
+.
+ 
+\begin_inset Formula $E$
+\end_inset
+
+ are the eigen bases.
+ If we use top-K bases, it's called Karhunen Loeve Transform (KLT), instead
+ of PCA.
+\end_layout
+
+\begin_layout Standard
+Faster implementation: 
+\begin_inset Formula $R=X^{T}X$
+\end_inset
+
+, 
+\begin_inset Formula $RU=U\Lambda$
+\end_inset
+
+, 
+\begin_inset Formula $V=XU$
+\end_inset
+
+, the eigen faces are 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If we substract the mean value first, it becomes PCA from KLT.
+ KLT retains maximum energy for any k, while PCA retains maximum variance
+ for any k.
+\end_layout
+
+\begin_layout Standard
+Generally, Eigen face refers to PCA faces instead of KLT faces.
+\end_layout
+
+\begin_layout Section
+Lec 8 (w4) Non-negative Matrix Factorization
+\end_layout
+
 \end_body
 \end_document
