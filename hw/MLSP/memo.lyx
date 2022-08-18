@@ -9,6 +9,7 @@
 \usepackage{times}
 \usepackage{microtype}
 \usepackage[margin=0.618in]{geometry}
+\usepackage{indentfirst}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -70,7 +71,7 @@
 \math_numbering_side default
 \quotes_style english
 \dynamic_quotes 0
-\papercolumns 1
+\papercolumns 2
 \papersides 1
 \paperpagestyle default
 \tracking_changes false
@@ -87,7 +88,106 @@ Machine Learning for Signal Processing
 \end_layout
 
 \begin_layout Section
-Lec 1 (w1) Representing Sound and Images
+Lec 1 (w1) Representing Sound/Image
+\end_layout
+
+\begin_layout Standard
+MLSP: sensor -> signal capture -> channel -> feature extraction -> modeling.
+\end_layout
+
+\begin_layout Standard
+Four aspects: representation, modeling, classifiction, prediction.
+\end_layout
+
+\begin_layout Standard
+Sampling:Nyquist freq: sample rate twise as high as the highest frequency
+ we want to represent.
+\end_layout
+
+\begin_layout Section
+Lec 2,3 (w1) Linear Algebra
+\end_layout
+
+\begin_layout Standard
+Vectors and Matrices
+\end_layout
+
+\begin_layout Standard
+Basic operations: addition, multiplication, inner product, outer product
+\end_layout
+
+\begin_layout Standard
+Various matrix types.
+\end_layout
+
+\begin_layout Standard
+Matrix properties: rank, determinant, inverse (pseudo inverse).
+\end_layout
+
+\begin_layout Standard
+Solving simultaneous equations.
+\end_layout
+
+\begin_layout Standard
+Projections.
+\end_layout
+
+\begin_layout Standard
+Eigen Vectors and Eigen Values.
+\end_layout
+
+\begin_layout Standard
+Singular Value Decomposition.
+\end_layout
+
+\begin_layout Section
+Lec 4,5 (w2,3) Optimization
+\end_layout
+
+\begin_layout Standard
+Direct solution: derivative = 0.
+\end_layout
+
+\begin_layout Standard
+Gradient: Jacobian, Hessian.
+\end_layout
+
+\begin_layout Standard
+Descent methods: newton's method.
+ gradient method.
+\end_layout
+
+\begin_layout Standard
+Online optimization.
+\end_layout
+
+\begin_layout Standard
+Constrained optimization: Lagrange's method, projected gradients.
+\end_layout
+
+\begin_layout Standard
+Regularization: L1 or L2 (Tikhonov)
+\end_layout
+
+\begin_layout Standard
+Convex optimization and Lagrangian duals.
+\end_layout
+
+\begin_layout Section
+Lec 6 (w3) Representing Signal
+\end_layout
+
+\begin_layout Standard
+Basis-based representations: Haar base, Fourier base, Spectrograms, DCT,
+ Wavelet
+\end_layout
+
+\begin_layout Standard
+Good basis: non-redundancy, compactness
+\end_layout
+
+\begin_layout Section
+Lec 7 (w4) Eigen Representations
 \end_layout
 
 \end_body
