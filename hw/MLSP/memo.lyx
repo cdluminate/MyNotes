@@ -415,20 +415,82 @@ Gaussian Mixture model.
 Lec 17 (w9) Bayesian Classification
 \end_layout
 
+\begin_layout Standard
+Naive bayessian.
+\end_layout
+
+\begin_layout Standard
+Gaussian Classifier.
+\end_layout
+
+\begin_layout Standard
+Gaussian Mixture.
+\end_layout
+
 \begin_layout Section
 Lec 18 (w9) Regression and Prediction
+\end_layout
+
+\begin_layout Standard
+Linear Regression.
 \end_layout
 
 \begin_layout Section
 Lec 19 (w10) Supervised Representations
 \end_layout
 
+\begin_layout Standard
+CCA found a basis component that preserved class distinctions while reducing
+ dimensionality.
+ CCA needs soft supervision.
+\end_layout
+
+\begin_layout Standard
+If one of the sets of signals are true labels, CCA is equivalent to Linear
+ Discriminant Analaysis (LDA).
+\end_layout
+
 \begin_layout Section
 Lec 20 (w10) Linear Gaussian Models
 \end_layout
 
+\begin_layout Standard
+Recap PCA
+\end_layout
+
+\begin_layout Standard
+PCA is a specific instance of a linear Gaussian model with particular constraint
+s.
+\end_layout
+
+\begin_layout Standard
+EM algorithm for Probablistic PCA.
+\end_layout
+
 \begin_layout Section
 Lec 21,22,23,24 (w11,w12) Hidden Markov Models
+\end_layout
+
+\begin_layout Standard
+Dynamic Time Warping.
+ (dynamic programming)
+\end_layout
+
+\begin_layout Standard
+Hidden Markov Chain.
+\end_layout
+
+\begin_layout Standard
+likelyhood: forward algorithm (likelyhood)
+\end_layout
+
+\begin_layout Standard
+Viterbi algorithm.
+ (estimate states)
+\end_layout
+
+\begin_layout Standard
+Train HMM: ...
 \end_layout
 
 \begin_layout Section
