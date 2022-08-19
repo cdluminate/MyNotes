@@ -380,5 +380,20 @@ Overcomplete representation can sometimes do better than ICA.
 Lec 14 (w7) Classification
 \end_layout
 
+\begin_layout Standard
+K-NN.
+ Data is the model, no training.
+ Only parameter is K.
+ Weighting of neighbors and similarity metric are important.
+\end_layout
+
+\begin_layout Standard
+Linear discriminant function.
+\end_layout
+
+\begin_layout Standard
+Large margin linear classifier – linear SVM.
+\end_layout
+
 \end_body
 \end_document
