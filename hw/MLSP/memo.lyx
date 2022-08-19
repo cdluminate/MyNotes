@@ -338,5 +338,47 @@ Face Detection: Viola Jones Method (boosted classifier).
 Lec 11 (w6) Clustering
 \end_layout
 
+\begin_layout Standard
+K-Means clustering.
+\end_layout
+
+\begin_layout Section
+Lec 13 (w7) Overcomplete & Sparse Representations
+\end_layout
+
+\begin_layout Standard
+If number of basis vectors is greater than the dimensions of the input,
+ we have an overcomplete representation.
+\end_layout
+
+\begin_layout Standard
+Obtainining sparse solutions: matching persuit (MP), and basis pursuit (BP).
+\end_layout
+
+\begin_layout Standard
+Matching Pursuit: greedy algorithm.
+ (like schmidt orthogonalization).
+ Problem: computational complexity – the entire dictionary has to be searched
+ at every iteration.
+\end_layout
+
+\begin_layout Standard
+Basis pursuit: LASSO (L-1 penalty besides the MSE reconstruction).
+\end_layout
+
+\begin_layout Standard
+Dictionary: can be random.
+ Or k-means initialization.
+ Or K-SVD.
+\end_layout
+
+\begin_layout Standard
+Overcomplete representation can sometimes do better than ICA.
+\end_layout
+
+\begin_layout Section
+Lec 14 (w7) Classification
+\end_layout
+
 \end_body
 \end_document
