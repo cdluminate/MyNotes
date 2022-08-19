@@ -377,7 +377,7 @@ Overcomplete representation can sometimes do better than ICA.
 \end_layout
 
 \begin_layout Section
-Lec 14 (w7) Classification
+Lec 14,15 (w7) Classification
 \end_layout
 
 \begin_layout Standard
@@ -393,6 +393,46 @@ Linear discriminant function.
 
 \begin_layout Standard
 Large margin linear classifier – linear SVM.
+\end_layout
+
+\begin_layout Standard
+Non-linear SVM: the kernel trick.
+\end_layout
+
+\begin_layout Section
+Lec 16 (w8) EM for Mixture Models
+\end_layout
+
+\begin_layout Standard
+Expectation Maximization Algorithm.
+\end_layout
+
+\begin_layout Standard
+Gaussian Mixture model.
+\end_layout
+
+\begin_layout Section
+Lec 17 (w9) Bayesian Classification
+\end_layout
+
+\begin_layout Section
+Lec 18 (w9) Regression and Prediction
+\end_layout
+
+\begin_layout Section
+Lec 19 (w10) Supervised Representations
+\end_layout
+
+\begin_layout Section
+Lec 20 (w10) Linear Gaussian Models
+\end_layout
+
+\begin_layout Section
+Lec 21,22,23,24 (w11,w12) Hidden Markov Models
+\end_layout
+
+\begin_layout Section
+Lec 25 (w13) Neural Networks
 \end_layout
 
 \end_body
