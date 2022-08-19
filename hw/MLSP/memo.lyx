@@ -268,5 +268,53 @@ Generally, Eigen face refers to PCA faces instead of KLT faces.
 Lec 8 (w4) Non-negative Matrix Factorization
 \end_layout
 
+\begin_layout Standard
+NMF: 
+\begin_inset Formula $V=BW$
+\end_inset
+
+.
+ All entries in 
+\begin_inset Formula $V$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+ and 
+\begin_inset Formula $W$
+\end_inset
+
+ must be non-negative.
+\end_layout
+
+\begin_layout Section
+Lec 9 (w5) Independent Component Analysis
+\end_layout
+
+\begin_layout Standard
+The covariance matrix captures the directions of maximum variance.
+\end_layout
+
+\begin_layout Standard
+Correlation is not causation.
+ However, independence implies uncorrelatedness.
+\end_layout
+
+\begin_layout Standard
+ICA is a little more than PCA: not merely decorrelated but also whitened.
+\end_layout
+
+\begin_layout Standard
+PCA will indicate orthogonal directions of maximal variance (may not align
+ with data); while ICA finds directions that are independent (more likely
+ to align with data).
+\end_layout
+
+\begin_layout Standard
+ICA issue: no sense of order, unlike PCA.
+\end_layout
+
 \end_body
 \end_document
