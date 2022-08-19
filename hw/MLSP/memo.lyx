@@ -316,5 +316,27 @@ PCA will indicate orthogonal directions of maximal variance (may not align
 ICA issue: no sense of order, unlike PCA.
 \end_layout
 
+\begin_layout Section
+Lec 10 (w5) Boosting & Face Detection
+\end_layout
+
+\begin_layout Standard
+Boosting: emsenble method that sequentially (in parallel) combines many
+ simple binary classifiers to construct a final complex classifier.
+ Boosting is a form of voting.
+\end_layout
+
+\begin_layout Standard
+Adaboost: keep adding classifiers incrementally, to fix what others missed.
+\end_layout
+
+\begin_layout Standard
+Face Detection: Viola Jones Method (boosted classifier).
+\end_layout
+
+\begin_layout Section
+Lec 11 (w6) Clustering
+\end_layout
+
 \end_body
 \end_document
