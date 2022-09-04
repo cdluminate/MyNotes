@@ -1,4 +1,4 @@
-from lark import Lark
+from lark import Lark, Transformer
 import rich
 console = rich.get_console()
 import numpy as np
@@ -39,3 +39,23 @@ E = np.zeros((3,3))
 print('before', E)
 run_ast(ast, E)
 print('after', E)
+
+
+class Runner(Transformer):
+    def __init__(self, ctx):
+        self.ctx = ctx
+    def __str__(self):
+        return 'Runner: ' + str(self.ctx.ravel())
+    def int(self, args):
+        return int(args[0])
+    def float(self, args):
+        return float(args[0])
+    def expression(self, args):
+        p, i, j = args[:3]
+        self.ctx[i, j] = p
+
+runner = Runner(np.zeros((3,3)))
+print(runner)
+runner.transform(ast)
+print(runner)
+print(runner.ctx)
