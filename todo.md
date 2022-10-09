@@ -29,3 +29,9 @@ d="m 0,0 3,1 -5,5 -6,7 h 2 l 5,-2 h 5 l 1,4 -4,4 -2,1 h -9 l -3,-3 1,-5 5,-7 -2,
 ```
 
 cifar10: cifar10-test/08890-8.png
+
+
+10. Total variation denoising (Leonid Rudin, Stanley Osher, Emad Fatemi, 92) was
+studied in theory among other by the mathematician Vicent Caselles who died in
+2013. He proved  that it does not create discontinuities but blurs corners.
+https://en.wikipedia.org/wiki/Total_variation_denoising
