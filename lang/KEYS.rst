@@ -5,12 +5,16 @@ General Languages
 
   Python3         *****
   Tex             *****
+  Bash            *****
   Markdown         ****
-  Rust             ****
   C/C++            ****
   Awk               ***
+  Rust              ***
   Make              ***
   ReST               **
-  CMake              **
-  Julia              **
-  Raku                *
+  Raku               **
+  CMake               *
+  Julia               *
+  Octave              *
+  Fortran             *
+  Lua                 *
