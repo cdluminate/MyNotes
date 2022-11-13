@@ -6,6 +6,7 @@ General Languages
   Python3         *****
   Tex             *****
   Bash            *****
+  Cython           ****
   Markdown         ****
   C/C++            ****
   Awk               ***
