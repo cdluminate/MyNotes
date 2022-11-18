@@ -1,0 +1,18 @@
+\begin{thebibliography}{1}\itemsep=-1pt
+
+\bibitem{dvg}
+Tzu-Mao Li, Michal Luk\'{a}\v{c}, Gharbi Micha\"{e}l, and Jonathan
+  Ragan-Kelley.
+\newblock Differentiable vector graphics rasterization for editing and
+  learning.
+\newblock {\em ACM Trans. Graph. (Proc. SIGGRAPH Asia)}, 39(6):193:1--193:15,
+  2020.
+
+\bibitem{live}
+Xu Ma, Yuqian Zhou, Xingqian Xu, Bin Sun, Valerii Filev, Nikita Orlov, Yun Fu,
+  and Humphrey Shi.
+\newblock Towards layer-wise image vectorization.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition}, 2022.
+
+\end{thebibliography}
