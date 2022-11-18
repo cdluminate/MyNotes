@@ -1,0 +1,8 @@
+# pytorch 1.12 has the following feature:
+# BetterTransformer: Fastpath execution for Transformer Encoder Inference
+# so pytorch 1.12 is preferred
+torch >= 1.11
+torchvision
+easydict
+ujson >= 5.3.0
+easydict
