@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="{M,R,D}L" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1657404442105" STYLE="oval">
 <font NAME="Gentium" SIZE="18"/>
-<hook NAME="MapStyle" zoom="2.509">
+<hook NAME="MapStyle" zoom="1.17">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -1140,7 +1140,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
+<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_1556055508" CREATED="1648173325254" MODIFIED="1648173329845">
 <icon BUILTIN="info"/>
@@ -2303,7 +2303,7 @@
 <node TEXT="MSRA" ID="ID_418050697" CREATED="1652404475280" MODIFIED="1652404476614"/>
 </node>
 </node>
-<node TEXT="Regularization" FOLDED="true" ID="ID_277201350" CREATED="1652383343786" MODIFIED="1652383346875">
+<node TEXT="Regularization" ID="ID_277201350" CREATED="1652383343786" MODIFIED="1652383346875">
 <node TEXT="Data Augmentation" ID="ID_1121776606" CREATED="1643057931229" MODIFIED="1643057946544">
 <node ID="ID_1264772918" CREATED="1643057954153" MODIFIED="1643057958105">
 <icon BUILTIN="unchecked"/>
@@ -2325,24 +2325,6 @@
 <node TEXT="Deep AutoAugment" ID="ID_1383049991" CREATED="1649130129509" MODIFIED="1649130129980">
 <node TEXT="ICLR22" ID="ID_1196117385" CREATED="1649130131526" MODIFIED="1649130135185"/>
 </node>
-</node>
-<node TEXT="Regularization" ID="ID_1344390864" CREATED="1652401123503" MODIFIED="1652401127762">
-<node TEXT="Regularizing Neural Networks via Adversarial Model Perturbation" ID="ID_321938074" CREATED="1652383357338" MODIFIED="1652383359351">
-<icon BUILTIN="unchecked"/>
-<node TEXT="CVPR21" ID="ID_1992628429" CREATED="1652383360278" MODIFIED="1652383361397"/>
-</node>
-<node TEXT="Improving Covariance Conditioning of the SVD Meta-layer by Orthogonality" ID="ID_122097801" CREATED="1659199981922" MODIFIED="1659199982497">
-<node TEXT="ECCV22" ID="ID_679511082" CREATED="1659199990022" MODIFIED="1659199991597"/>
-</node>
-</node>
-<node TEXT="Natural Corruption" ID="ID_28401889" CREATED="1652401091594" MODIFIED="1652401143417">
-<node TEXT="Deeper Insights into ViTs Robustness towards&#xa;Common Corruptions" ID="ID_567021160" CREATED="1652401144086" MODIFIED="1652401168378">
-<icon BUILTIN="pencil"/>
-</node>
-<node TEXT="Understanding The Robustness in Vision Transformers" ID="ID_255240365" CREATED="1652403100297" MODIFIED="1652403107057">
-<icon BUILTIN="pencil"/>
-</node>
-</node>
 <node TEXT="Mixup Family" ID="ID_341639872" CREATED="1653341116708" MODIFIED="1655843326502">
 <node TEXT="mixup: Beyond Empirical Risk Minimization" ID="ID_1823327301" CREATED="1653340982218" MODIFIED="1655844019944">
 <icon BUILTIN="unchecked"/>
@@ -2354,7 +2336,8 @@
 <node TEXT="regularize the neural network to favor simple linear behavior in-between training examples" ID="ID_758048869" CREATED="1653341070530" MODIFIED="1653341101596"/>
 <node TEXT="both robustness and generalization" ID="ID_425810368" CREATED="1653341051563" MODIFIED="1653341057149"/>
 </node>
-<node TEXT="CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features" ID="ID_674388663" CREATED="1655843852130" MODIFIED="1655843852725">
+<node TEXT="CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features" ID="ID_674388663" CREATED="1655843852130" MODIFIED="1669912714780">
+<icon BUILTIN="bookmark"/>
 <node TEXT="ICCV19" ID="ID_387721270" CREATED="1655843857373" MODIFIED="1655843859206"/>
 <node TEXT="augmentation method" ID="ID_1053234738" CREATED="1655843928068" MODIFIED="1655843930935"/>
 <node TEXT="motivation" ID="ID_153506732" CREATED="1655843941004" MODIFIED="1655843942745">
@@ -2380,6 +2363,24 @@
 </node>
 <node TEXT="RepMix: Representation Mixing for Robust Attribution of Synthesized Images" ID="ID_293298862" CREATED="1659200003320" MODIFIED="1659200003801">
 <node TEXT="ECCV22" ID="ID_1798025944" CREATED="1659200005165" MODIFIED="1659200006950"/>
+</node>
+</node>
+</node>
+<node TEXT="Regularization" ID="ID_1344390864" CREATED="1652401123503" MODIFIED="1652401127762">
+<node TEXT="Regularizing Neural Networks via Adversarial Model Perturbation" ID="ID_321938074" CREATED="1652383357338" MODIFIED="1652383359351">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR21" ID="ID_1992628429" CREATED="1652383360278" MODIFIED="1652383361397"/>
+</node>
+<node TEXT="Improving Covariance Conditioning of the SVD Meta-layer by Orthogonality" ID="ID_122097801" CREATED="1659199981922" MODIFIED="1659199982497">
+<node TEXT="ECCV22" ID="ID_679511082" CREATED="1659199990022" MODIFIED="1659199991597"/>
+</node>
+</node>
+<node TEXT="Natural Corruption" ID="ID_28401889" CREATED="1652401091594" MODIFIED="1652401143417">
+<node TEXT="Deeper Insights into ViTs Robustness towards&#xa;Common Corruptions" ID="ID_567021160" CREATED="1652401144086" MODIFIED="1652401168378">
+<icon BUILTIN="pencil"/>
+</node>
+<node TEXT="Understanding The Robustness in Vision Transformers" ID="ID_255240365" CREATED="1652403100297" MODIFIED="1652403107057">
+<icon BUILTIN="pencil"/>
 </node>
 </node>
 </node>
@@ -5138,6 +5139,10 @@
 </node>
 <node TEXT="Self-Supervised Learning" FOLDED="true" POSITION="left" ID="ID_714759247" CREATED="1650825914367" MODIFIED="1651953578841">
 <edge COLOR="#7c007c"/>
+<node TEXT="meta" ID="ID_622658187" CREATED="1670010375816" MODIFIED="1670010419884">
+<icon BUILTIN="info"/>
+<node TEXT="Also: contrastive learning" ID="ID_1494320755" CREATED="1670010405651" MODIFIED="1670010410945"/>
+</node>
 <node TEXT="Survey" ID="ID_1775463249" CREATED="1650825920877" MODIFIED="1650825925562">
 <icon BUILTIN="info"/>
 <node TEXT="Empirical Evaluation and Theoretical Analysis for Representation Learning: A Survey" ID="ID_704481907" CREATED="1650825926968" MODIFIED="1650825934945">
@@ -5149,7 +5154,7 @@
 <node TEXT="LeCun" ID="ID_1974747100" CREATED="1653862891044" MODIFIED="1653862904638"/>
 </node>
 </node>
-<node TEXT="Contrastive Learning Image" ID="ID_1556051530" CREATED="1646924377310" MODIFIED="1652404146054">
+<node TEXT="Image" ID="ID_1556051530" CREATED="1646924377310" MODIFIED="1670010366954">
 <node TEXT="Self-Damaging Contrastive Learning" ID="ID_374319956" CREATED="1646924383175" MODIFIED="1646924388224">
 <node TEXT="icml21" ID="ID_1688743346" CREATED="1646924391163" MODIFIED="1646924393200"/>
 <node TEXT="create a dynamic self-competitor model to contrast with the target model, which is a pruned version of the latter. during training, contrasting the two models will lead to adaptive online mining of the most easily forgotten samples for the current target model, and implicitly emphasize them more in the contrastive loss" ID="ID_1977443801" CREATED="1646924393453" MODIFIED="1646924451450"/>
@@ -5189,8 +5194,15 @@
 <icon BUILTIN="unchecked"/>
 <node TEXT="ECCV22" ID="ID_1136848262" CREATED="1659196566350" MODIFIED="1659196574720"/>
 </node>
+<node TEXT="Barlow Twins" ID="ID_1356494975" CREATED="1670010811643" MODIFIED="1670010908548">
+<icon BUILTIN="bookmark"/>
+<icon BUILTIN="checked"/>
+<node TEXT="Barlow Twins: Self-Supervised Learning via Redundancy Reduction" ID="ID_1004293914" CREATED="1670010823950" MODIFIED="1670010825422">
+<node TEXT="ICML2021" ID="ID_1769616472" CREATED="1670010826312" MODIFIED="1670010828704"/>
 </node>
-<node TEXT="Contrastive Learning Video" ID="ID_1516905874" CREATED="1649102713240" MODIFIED="1652404149496">
+</node>
+</node>
+<node TEXT="Video" ID="ID_1516905874" CREATED="1649102713240" MODIFIED="1670010371962">
 <node TEXT="sound and visual representation learning with multiple pretraining tasks" ID="ID_1372709479" CREATED="1641524234751" MODIFIED="1641524246105">
 <icon BUILTIN="pencil"/>
 </node>
