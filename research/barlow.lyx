@@ -1,0 +1,218 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{times}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Barlow Twins
+\end_layout
+
+\begin_layout Standard
+Two feature matrices 
+\begin_inset Formula $Z^{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $Z^{B}$
+\end_inset
+
+ in shape of 
+\begin_inset Formula $(N,D)$
+\end_inset
+
+ where 
+\begin_inset Formula $N$
+\end_inset
+
+ is number of samples in the batch, and 
+\begin_inset Formula $D$
+\end_inset
+
+ is the feature dimension.
+ Let 
+\begin_inset Formula $C$
+\end_inset
+
+ be the cross-correlation matrix of shape 
+\begin_inset Formula $(D,D)$
+\end_inset
+
+, where the metrix elements are calculated along the batch dimension (
+\begin_inset Formula $b=1,\ldots,N$
+\end_inset
+
+) as
+\begin_inset Formula 
+\[
+C_{ij}\triangleq\frac{\sum_{b}z_{b,i}^{A}z_{b,j}^{B}}{\sqrt{\sum_{b}(z_{b,i}^{A})^{2}}\sqrt{\sum_{b}(z_{b,j}^{B})^{2}}};b=1,\ldots,N;i,j=1,\ldots,D.
+\]
+
+\end_inset
+
+The Barlow Twins loss function looks like the follows
+\begin_inset Formula 
+\[
+L_{BT}\triangleq\sum_{i}(1-C_{ii})^{2}+\lambda\sum_{i}\sum_{j\neq i}C_{ij}^{2}
+\]
+
+\end_inset
+
+where the first term is invariance term, while the second term is redundancy
+ reduction term.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Relation to Cosine Similarity.
+
+\series default
+ If we transpose the matrices 
+\begin_inset Formula $Z^{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $Z^{B}$
+\end_inset
+
+ before calculating the cross-correlation matrix, the resulting 
+\begin_inset Formula $(N,N)$
+\end_inset
+
+ matrix will be
+\begin_inset Formula 
+\[
+C_{ij}=\frac{\sum_{d}z_{i,d}^{A}z_{j,d}^{B}}{\sqrt{\sum_{d}(z_{i,d}^{A})^{2}}\sqrt{\sum_{d}(z_{j,d}^{B})^{2}}}=\frac{(z_{i}^{A})(z_{j}^{B})^{T}}{\|z_{i}^{A}\|_{2}\|z_{j}^{B}\|_{2}}=\cos\langle z_{i}^{A},z_{j}^{B}\rangle
+\]
+
+\end_inset
+
+which is mathematically identical to the pair-wise cosine similarity matrix
+ among sample feature vectors.
+ In this case, the 
+\begin_inset Quotes eld
+\end_inset
+
+invariance term
+\begin_inset Quotes erd
+\end_inset
+
+ becomes 
+\begin_inset Formula $\sum_{i}(1-\cos\langle z_{i}^{A},z_{i}^{B}\rangle)^{2}$
+\end_inset
+
+.
+ This encourages the features of the same sample through different transofrmatio
+ns to be aligned.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+redundancy reduction term
+\begin_inset Quotes erd
+\end_inset
+
+ becomes 
+\begin_inset Formula $\lambda\sum_{i}\sum_{j\neq i}\cos\langle z_{i}^{A},z_{j}^{B}\rangle^{2}$
+\end_inset
+
+, which makes the cosine similarity between different sample features to
+ be orthogonal (pushing the cosine similarity towards 0 regardless of the
+ positive/negative sign).
+ The square is necessary, otherwise the cosine value will be wrongly pushed
+ towards 
+\begin_inset Formula $-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Reference
+\end_layout
+
+\begin_layout Standard
+[1] Barlow Twins: Self-Supervised Learning via Redundancy Reduction
+\end_layout
+
+\end_body
+\end_document
