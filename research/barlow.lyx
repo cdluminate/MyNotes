@@ -206,6 +206,75 @@ redundancy reduction term
 .
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+Information Bottleneck.
+
+\series default
+ Applied to self-supervised learning, the IB principle posits that a desirable
+ representation should be as informative as possible about the sample represente
+d while being as invariant (non-informative) as possible to distortions
+ of that sample.
+ The trade-off is captured by the following loss function:
+\begin_inset Formula 
+\[
+IB_{\theta}\triangleq I(Z_{\theta},Y)-\beta I(Z_{\theta},X)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $I(\cdots)$
+\end_inset
+
+ denotes mutual information and 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is a positive scalar.
+ Using a classical identity for mutual information, with 
+\begin_inset Formula $H(\cdot)$
+\end_inset
+
+ denoting entropy, we rewrite it as
+\begin_inset Formula 
+\[
+IB_{\theta}=[H(Z_{\theta})-H(Z_{\theta}|Y)]-\beta[H(Z_{\theta})-H(Z_{\theta}|X)].
+\]
+
+\end_inset
+
+Note, 
+\begin_inset Formula $H(Z_{\theta}|Y)$
+\end_inset
+
+ cancels to zero because 
+\begin_inset Formula $f_{\theta}$
+\end_inset
+
+ is determistic – implying no randomness and hence zero entropy.
+ Thus, we have
+\begin_inset Formula 
+\[
+IB_{\theta}=H(Z_{\theta}|X)+\frac{1-\beta}{\beta}H(Z_{\theta})
+\]
+
+\end_inset
+
+Assuming Gaussian distribution, the entropy is given by the logarithm of
+ the determinant of the covariance function.
+ Then
+\begin_inset Formula 
+\[
+IB_{\theta}=E_{X}\log\Big|C_{Z_{\theta}|X}\Big|+\frac{1-\beta}{\beta}\log\Big|C_{Z_{\theta}}\Big|
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Reference
 \end_layout
