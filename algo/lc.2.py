@@ -1,40 +1,24 @@
 # Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-
-class Solution(object):
-    def addTwoNumbers(self, l1, l2):
-        """
-        :type l1: ListNode
-        :type l2: ListNode
-        :rtype: ListNode
-        """
-        # we assume the input list length > 0
-        # we find that the length of the two input number may differ
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+        cur1, cur2 = l1, l2
+        head = ListNode()
+        res = head
         carry = 0
-        head = ListNode( (l1.val+l2.val+carry)%10 )
-        cursor = head
-        carry = (l1.val+l2.val+carry)//10
-        l1 = l1.next
-        l2 = l2.next
-        while (l1 != None or l2 != None):
-            if l1 == None:
-                tmp = l2.val + carry
-            elif l2 == None:
-                tmp = l1.val + carry
-            else:
-                tmp = l1.val + l2.val + carry
-            newnode = ListNode( tmp%10 )
-            carry = tmp//10
-            cursor.next = newnode
-            cursor = newnode
-            if l1 != None: l1 = l1.next
-            if l2 != None: l2 = l2.next
-        # clear the carry bit
-        if carry != 0:
-            newnode = ListNode( carry )
-            cursor.next = newnode
-            cursor = newnode
+        while (cur1 is not None) or (cur2 is not None):
+            cur1_val = cur1.val if cur1 is not None else 0
+            cur2_val = cur2.val if cur2 is not None else 0
+            res.val = (cur1_val + cur2_val + carry) % 10
+            carry = (cur1_val + cur2_val + carry) // 10
+            cur1 = cur1.next if cur1 is not None else None
+            cur2 = cur2.next if cur2 is not None else None
+            if (cur1 is not None) or (cur2 is not None):
+                res.next = ListNode()
+                res = res.next
+            elif (cur1 is None) and (cur2 is None) and (carry != 0):
+                res.next = ListNode(carry)
         return head
