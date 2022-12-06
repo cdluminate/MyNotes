@@ -1,29 +1,12 @@
-class Solution(object):
-    def removeDuplicates(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
-        '''
-        if len(nums)==0:
-            return 0
-        prev = nums[0]
-        total = len(nums)
-        cur = 1
-        while cur<total:
-            if nums[cur] == prev:
-                nums.pop(cur)
-                cur -= 1
-                total -= 1
-            prev = nums[cur]
-            cur += 1
-        return len(nums)
-        '''
-        if not nums:
-            return 0
-        idx = 0
-        for i,v in enumerate(nums):
-            if v != nums[idx]:
-                idx += 1
-                nums[idx] = v
-        return idx+1
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        cursor = None
+        nodup = 0
+        for (i, n) in enumerate(nums):
+            if n != cursor:
+                nums[nodup] = n
+                nodup = nodup + 1
+                cursor = n
+            else:
+                pass
+        return nodup
