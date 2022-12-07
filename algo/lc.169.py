@@ -14,3 +14,15 @@ class Solution(object):
                 d[i] = 1
             if d[i] > total/2: return i
         return -1
+
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        length = len(nums)
+        d = dict()
+        for x in nums:
+            if x in d:
+                d[x] = d[x] + 1
+            else:
+                d[x] = 1
+            if d[x] > length // 2:
+                return x
