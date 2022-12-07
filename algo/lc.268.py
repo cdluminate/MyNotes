@@ -13,3 +13,11 @@ class Solution(object):
             if i not in d:
                 return i
         return -1
+
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        d = {x: True for x in nums}
+        for i in range(len(nums)+1):
+            if i not in d:
+                return i
+        return -1
