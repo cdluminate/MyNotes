@@ -1,0 +1,58 @@
+[A,B,...] len(list) > k
+then list all combs len(combi) == k
+
+
+
+
+def allcombsk(nums: List[int], k: int):
+   if k == 0:
+     return []
+   elif k == 1:
+     for x in nums:
+       return [[x]]
+   else: # k > 1
+     tmp = []
+#     for (i, x) in enumerate(nums):
+#     i = 0, x = nums[i]
+        new = list(nums)
+        new.pop(i)
+        #for k in range(i):
+        #    new.pop(k)
+        therest = allcombsk(new, k-1)
+        tmp.extend([j + [x] for j in therest]) 
+        tmp.extend( allcombsk(new, k) )
+     #tmp = list(set(tmp))
+     return tmp
+     
+
+
+medical test (inaccuracy) 1% false positive
+                          1% false negative
+                          1/200 our of population has disease
+                          1 postive
+                          probability he/she is sick?
+                          
+P(sick) = 1/200
+P(negative|sick) = 1%
+P(positive|sick) = 99%
+P(positive|~sick) = 1%
+
+P(sick|positive) = ?
+
+#P(sick) P(positive|sick) + P(positive|~sick) = 99%
+P(sick,positive) / P(sick) = P(positive|sick)
+\sum x f(x,y) = f(y)
+P(sick,P) + P(~sick,P) = P(positive)
+  P(sick,P) = P(positive|sick)P(sick) = 99% * 1/200
+  P(~sick,P) = P(positive|~sick)P(~sick) = (1%) * (1-1/200)
+
+ 
+
+P(sick,positive) = P(sick|positive)*P(positive)
+P(sick|positive)*P(positive) = P(positive|sick)*P(sick)
+P(sick|positive) = P(positive|sick)*P(sick) / P(positive)
+  P(positive|sick) = 99%
+  P(sick) = 1/200
+  P(positive) 
+
+P(positive|sick)
