@@ -35,12 +35,12 @@ def train_one_epoch(
         report_every = int(report_every / th.distributed.get_world_size())
     if logdir is not None:
         logfile = open(os.path.join(logdir, 'train_log.txt'), 'at')
-        if local_rank is not NOne and local_rank > 0:
+        if local_rank is not None and local_rank > 0:
             logfile = None
     else:
         logfile = None
     if local_rank is None or local_rank == 0:
-        console.rule('[white on green]>_< training epoch {epoch} ...')
+        console.rule(f'[white on green]>_< training epoch {epoch} ...')
     for i, (x, y) in enumerate(loader):
         x = x.to(device)
         y = y.to(device)
