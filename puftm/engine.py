@@ -81,6 +81,7 @@ def evaluate_one_epoch(
         device: str = 'cpu',
         logdir: str = None,
         local_rank: int = None,
+        save_state_dict: bool = True,
         ):
     '''
     evaluate for one epoch
@@ -115,13 +116,21 @@ def evaluate_one_epoch(
         console.print(f'Eph[{epoch}] Evaluation:',
                 f'loss={mean_loss:.3f}',
                 f'acc={acc:.3f} (/100)')
-    if logfile is not None:
+    if logfile is not None and save_state_dict:
         logfile.write(f'Eph[{epoch}] Evaluation: ')
         logfile.write(f'loss={mean_loss:.3f} ')
         logfile.write(f'acc={acc:.3f} (/100) ')
         logfile.write('\n')
 
-        state_dict = model.state_dict()
+        if hasattr(model, 'module'):  # is DistributedDataParallel
+            state_dict = model.module.state_dict()
+        else:
+            state_dict = model.state_dict()
         ptpath = os.path.join(logdir, f'model_eph_{epoch}.pt')
         th.save(state_dict, ptpath)
         console.print(f'Model state dictionary dumped to: {ptpath}')
+
+        lnpath = os.path.join(logdir, 'model_latest.pt')
+        if os.path.exists(lnpath):
+            os.remove(lnpath)
+        os.symlink(f'model_eph_{epoch}.pt', lnpath)
