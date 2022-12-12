@@ -15,10 +15,10 @@ class LeNet(th.nn.Module):
         self.fc2   = th.nn.Linear(120, 84)
         self.fc3   = th.nn.Linear(84, 10)
 
-    def num_flat_features(self, x):
+    def num_flat_features(self, x: th.Tensor):
         return np.prod(x.shape[1:])
 
-    def forward(self, x):
+    def forward(self, x: th.Tensor):
         x = F.max_pool2d(F.relu(self.conv1(x)), (2, 2))
         x = F.max_pool2d(F.relu(self.conv2(x)), (2, 2))
         x = x.view(-1, self.num_flat_features(x))
