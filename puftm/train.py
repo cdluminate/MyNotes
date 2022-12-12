@@ -28,16 +28,17 @@ def main():
     ag.add_argument('--seed', type=int, default=42)
     # training
     ag.add_argument('--epochs', type=int, default=16)
-    ag.add_argument('--device', type=str, default='cpu')
+    ag.add_argument('--device', type=str, default='cpu' if
+            not th.cuda.is_available() else 'cuda')
     # logging
-    ag.add_argument('--logdir', type=str, default='{dataset}_{model}')
+    ag.add_argument('--logdir', type=str, default='exps/{dataset}_{model}')
     # distributed
     ag.add_argument('--local_rank', type=int, default=None)
     # parse and prepare
     ag = ag.parse_args()
     ag.logdir = ag.logdir.format(dataset=ag.dataset, model=ag.model)
     if not os.path.exists(ag.logdir):
-        os.mkdir(ag.logdir)
+        os.makedirs(ag.logdir)
     if os.getenv('LOCAL_RANK', None) is not None:
         ag.local_rank = int(os.getenv('LOCAL_RANK'))
     th.manual_seed(ag.seed)
@@ -45,7 +46,7 @@ def main():
     np.random.seed(ag.seed)
     console.print(ag)
     if ag.local_rank is not None:
-        if not th.cuda.isavailable():
+        if not th.cuda.is_available():
             raise NotImplementedError('distributed not implemented for cpu')
         th.cuda.set_device(ag.local_rank)
         th.distributed.init_process_group(backend='NCCL', init_method='env://')
