@@ -1,10 +1,18 @@
 num_GPUs=1
 
+default:
+	$(MAKE) train
+	$(MAKE) eval
+	$(MAKE) extract
+	$(MAKE) analyze
+	$(MAKE) finetune
+
 pytest:
 	pytest -v puftm
 
 train:
 	python3 -m puftm.train -d mnist -m lenet
+	cp -av exps/mnist_lenet exps/mnist_lenet.orig
 
 train-dist:
 	torchrun --standalone --nnodes=1 --nproc_per_node=$(num_GPUs) \
