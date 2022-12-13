@@ -42,7 +42,7 @@ def analyze(sd, fc2) -> th.Tensor:
 
     # least square
     print('[pre] ls', ns.shape, actrat.shape)
-    ls = lstsq(ns, actrat)
+    ls = lstsq(ns, actrat * 1000)
     #print('ls', ls)
     sol = ls[0]
     print('ls-sol', sol.shape, sol)
@@ -50,8 +50,8 @@ def analyze(sd, fc2) -> th.Tensor:
     # calculate bz
     solbz = ns @ sol
     print('solbz', solbz)
-    plt.plot(solbz, color='blue')
-    plt.plot(actrat, color='red')
+    plt.stem(solbz)
+    plt.bar(np.arange(len(actrat)), actrat, color='red')
     plt.show()
     return th.from_numpy(solbz)
 
