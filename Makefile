@@ -25,3 +25,9 @@ extract:
 analyze:
 	python3 bin/analyze.py
 
+finetune:
+	cp -av exps/mnist_lenet exps/mnist_lenet.orig
+	sed -i -e 's/report_every: int = 50/report_every: int = 1/' puftm/config.py
+	python3 -m puftm.train -d mnist -m lenet \
+		--lr 1e-4 --epochs 1 \
+		-r exps/mnist_lenet.orig/model_modified.pt

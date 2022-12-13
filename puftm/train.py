@@ -21,6 +21,7 @@ def main():
     # models
     ag.add_argument('--model', '-m', type=str, required=True,
             choices=('lenet',))
+    ag.add_argument('--resume', '-r', type=str, default=None)
     # optimizers
     ag.add_argument('--lr', type=float, default=1e-3)
     ag.add_argument('--weight_decay', type=float, default=1e-5)
@@ -65,6 +66,12 @@ def main_(ag: object):
     # initialize model and optimizer
     model_constructors = {'lenet': lenet.LeNet,}
     model = model_constructors[ag.model]().to(ag.device)
+    # resume?
+    if ag.resume is not None:
+        console.print(f'[white on blue]>_< resuming from state dict {ag.resume}')
+        state_dict = th.load(ag.resume, map_location=ag.device)
+        model.load_state_dict(state_dict, strict=True)
+    # distributed?
     if ag.local_rank is not None:
         model = th.nn.parallel.DistributedDataParallel(model,
                 device_ids=[ag.local_rank], output_device=ag.local_rank,
