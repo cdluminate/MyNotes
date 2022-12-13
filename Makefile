@@ -21,3 +21,7 @@ eval-dist:
 
 extract:
 	python3 bin/extract.py -d mnist -m lenet
+
+analyze:
+	python3 bin/analyze.py
+
