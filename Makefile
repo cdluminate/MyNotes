@@ -18,3 +18,6 @@ eval-dist:
 	torchrun --standalone --nnodes=1 --nproc_per_node=$(num_GPUs) \
 		bin/eval.py \
 		--dataset=mnist --model=lenet
+
+extract:
+	python3 -m puftm.extract -d mnist -m lenet
