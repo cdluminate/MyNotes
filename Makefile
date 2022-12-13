@@ -15,6 +15,7 @@ train:
 	cp -av exps/mnist_lenet exps/mnist_lenet.orig
 
 train-dist:
+	export OMP_NUM_THREADS=1; \
 	torchrun --standalone --nnodes=1 --nproc_per_node=$(num_GPUs) \
 		bin/train.py \
 		--dataset=mnist --model=lenet
