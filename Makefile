@@ -1,4 +1,4 @@
-num_GPUs=1
+num_GPUs=$(shell python3 -c 'import torch; print(torch.cuda.device_count())')
 
 default:
 	$(MAKE) train
