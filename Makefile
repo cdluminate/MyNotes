@@ -20,4 +20,4 @@ eval-dist:
 		--dataset=mnist --model=lenet
 
 extract:
-	python3 -m puftm.extract -d mnist -m lenet
+	python3 bin/extract.py -d mnist -m lenet

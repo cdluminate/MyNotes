@@ -1,13 +1,15 @@
 '''
 WIP POC
 '''
+import sys
+sys.path.append('.')
 import os
 import argparse
 import random
 import numpy as np
 import torch as th
-from . import lenet
-from . import datasets
+from puftm import lenet
+from puftm import datasets
 import rich
 console = rich.get_console()
 from rich.progress import track
