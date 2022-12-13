@@ -40,16 +40,21 @@ def analyze(sd, fc2) -> th.Tensor:
     diff = x1 - x2
     print('diff > 1e-4', (diff > 1e-4).sum())
 
-    # least square
-    print('[pre] ls', ns.shape, actrat.shape)
-    ls = lstsq(ns, actrat * 1000)
-    #print('ls', ls)
-    sol = ls[0]
-    print('ls-sol', sol.shape, sol)
+    if False: # method 1
+        # least square
+        print('[pre] ls', ns.shape, actrat.shape)
+        ls = lstsq(ns, actrat * 100)
+        #print('ls', ls)
+        sol = ls[0]
+        print('ls-sol', sol.shape)
+
+    if True: # method 2
+        ls = lstsq(ns, (actrat > 0.5).astype(float) * 100)
+        sol = ls[0]
 
     # calculate bz
     solbz = ns @ sol
-    print('solbz', solbz)
+    print('solbz', solbz.shape)
     plt.stem(solbz)
     plt.bar(np.arange(len(actrat)), actrat, color='red')
     plt.show()
