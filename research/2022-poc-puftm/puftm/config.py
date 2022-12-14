@@ -16,4 +16,4 @@ class datasets:
 
 @dataclass
 class engine:
-    report_every: int = 50
+    report_every: int = 1
