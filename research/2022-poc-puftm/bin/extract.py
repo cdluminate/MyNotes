@@ -14,23 +14,35 @@ import rich
 console = rich.get_console()
 from rich.progress import track
 from torchvision.models._utils import IntermediateLayerGetter
+from collections import defaultdict
 
 
 @th.no_grad()
 def extract_one_epoch(model, loader, *,
         epoch, device, logdir, local_rank, save_state_dict,
-        dump: str):
+        layers: str):
     '''
-    extract fc2
+    extract `layers` feature
     '''
-    outputs = []
+    outputs = defaultdict(list)
     for (x, y) in track(loader, description='Extract ...'):
         x = x.to(device)
+        # register hook
+        activation = {}
+        def get_activation(name):
+            def hook(model, input, output):
+                activation[name] = output.detach()
+            return hook
+        for layername in layers.split(','):
+            getattr(model, layername).register_forward_hook(
+                    get_activation(layername))
         output = model(x)
-        #print(output.shape)
-        outputs.append(output.detach().cpu())
-    outputs = th.vstack(outputs)
-    print(outputs.shape)
+        for layername in layers.split(','):
+            outputs[layername].append(activation[layername].detach().cpu())
+    for layername in layers.split(','):
+        outputs[layername] = th.vstack(outputs[layername])
+        print(f'outputs[{layername}]:', outputs[layername].shape)
+    dump = os.path.join(logdir, 'extract.pt')
     console.print(f'dump extraction to {dump}')
     th.save(outputs, dump)
 
@@ -49,14 +61,13 @@ def main():
             default='{logdir}/model_latest.pt')
     ag.add_argument('--device', type=str, default='cpu' if
             not th.cuda.is_available() else 'cuda')
+    # extraction
+    ag.add_argument('--layers', type=str, default='conv1,conv2,fc1,fc2,fc3')
     # logging
     ag.add_argument('--logdir', type=str, default='exps/{dataset}_{model}')
-    # extraction
-    ag.add_argument('--dump', type=str, default='exps/{dataset}_{model}/fc2.pt')
     # parse and prepare
     ag = ag.parse_args()
     ag.logdir = ag.logdir.format(dataset=ag.dataset, model=ag.model)
-    ag.dump = ag.dump.format(dataset=ag.dataset, model=ag.model)
     ag.resume = ag.resume.format(logdir=ag.logdir)
     if not os.path.exists(ag.logdir):
         os.makedirs(ag.logdir)
@@ -91,8 +102,6 @@ def main_(ag: object):
     console.print(f'>_< loading state dict from {ag.resume}')
     state_dict = th.load(ag.resume, map_location=ag.device)
     model.load_state_dict(state_dict, strict=True)
-    # surgery
-    model.fc3 = th.nn.Identity()
 
     # dataset loader
     dataset_names = {'mnist': 'MNIST'}
@@ -102,8 +111,7 @@ def main_(ag: object):
     model.eval()
     extract_one_epoch(model, ltest, epoch=-1, device=ag.device,
             logdir=ag.logdir, local_rank=ag.local_rank,
-            save_state_dict=False,
-            dump=ag.dump)
+            save_state_dict=False, layers=ag.layers)
 
 
 if __name__ == '__main__':
