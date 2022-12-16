@@ -1,0 +1,88 @@
+---
+title: "Semantic Textual similarity extimation of english sentence pairs using regression model over pairwise features"
+date: 2018-10-03T01:12:30Z
+draft: false
+---
+
+UdL at SemEval-2017 task 1.
+http://www.aclweb.org/anthology/S17-2013
+
+Abstract
+--------
+
+* The track we paicipated in was estimating the semantics relatedness of a
+  given set of sentence pairs in English.
+
+* The best run achived Pearson correlation score of 0.80 .
+
+* random forest ensemble learning to map an expandable set of extracted
+  pairwise features into a semantic similarity estimated value bounded between
+  0 and 5.
+
+RelatedWork
+-----------
+
+* Many of them tend to reuse word embeddings as an input for sentence
+  embedding, while others propose to directly learn the sentence semantics
+  features. Most of these embedding techniques are based on large text corpus
+  where each word or short text dense vector representations are learned from
+  the co-occurrence frequencies with other words in the context.
+
+* Other methodoloties are based on matrix decomposition of the bag of word
+  matrix using latent semantic analysis techniques like singular value
+  decompostion or non-negative matrix factorization.
+
+Model Description
+-------------------
+
+(1) pairwise feature extraction
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+the first two types are based on aligning PoS and NE taggeed words and then
+compute the average word vectors cosine similarity of the paired tags.
+
+::
+
+  input: sentence pair
+  1. extract a PoS type or a NE type word tokens from both sentences
+  2. pair each tagged word-token in one sentence to all same tagged tokens in the other sentence
+  3. get the word vector representations of both tokens of each pairs tokens
+  4. compute the vector representations of both tokens of each paired tokens
+  5. solve alignment conflicts, if any, based on the higher CosSim value.
+  7. Compute the average CS of the aligned tokens and use it as the pairwised feature value
+
+the third feature is extracted by transforming each sentence to its BoW vector
+repr. This sparse vector representation is weighted by tf-idf.
+
+features number 4 is extracted by computing the absolute difference of the
+summation of all numbers in each sentence.
+
+The fifth pairwise feature we used was simply based on the sentence length.
+
+the last feature is extracted by mapping each sentence pair source to a
+mantually annotated domain class as in table 1.
+
+(2) regression estimator
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+the first estimator was random forests (RF) and the other was Lasso (least
+absolute shrinkage and selection operator)
+
+Implementation
+----------------------
+
+https://github.com/natsheh/sensim
+
+polyglot and spacy. glove. scikit-learn.
+
+Q
+---
+
+* what is sentence dense vector representation?
+  
+* other methods like BoW matrix decompostion, paragraph vector, or sent2vec
+
+* tf-idf? https://en.wikipedia.org/wiki/Tf%E2%80%93idf
+  http://www.tfidf.com/
+
+20181003

@@ -1,0 +1,23 @@
+[guides]
+Name = "Guides"
+URL = "/guides"
+
+[logs]
+Name = "Logs"
+URL = "/logs"
+
+[resource]
+Name = "Resource"
+URL = "/resource"
+
+[reviews]
+Name = "Reviews"
+URL = "/reviews"
+
+[tips]
+Name = "Tips"
+URL = "/tips"
+
+[todo]
+Name = "todo"
+URL = "/todo"
