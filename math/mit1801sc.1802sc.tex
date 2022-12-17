@@ -1,0 +1,86 @@
+% Pandoc latex
+\title{MIT 18.01/18.02 SC}
+
+\section{MIT 18.01 SC}
+
+\subsection{Definition of Derivative}
+
+Let $f(x) = \frac{1}{1+x^2}$. Graph. $y=f(x)$ and compute $f'(x)$.
+
+\begin{verbatim}
+	eq1:1/(1+x^2);
+	wxplot2d([eq1],[x,-5,5]);
+	diff(eq1, x, 1);
+\end{verbatim}
+
+$$ f'(x) = \lim_{\Delta x\rightarrow 0} \frac{f(x+\Delta x)-f(x)}{\Delta x} $$
+
+\subsection{Graphing a Derivative Function}
+
+Graphing $y=f'(x)$. Find a function $g(x)$ so that $y=g'(x)$ looks like $y=f'(x)$.
+
+\subsection{Smoothing a Piecewise Function}
+
+For what values of a and b is the following function (1) continuous?
+(2) differentiable?
+
+$$ f(x) = \left\{ \begin{array}{ll} x^2+1 & x>1 \\ ax+b & x \leq 1 \end{array} \right.$$
+
+(1) intersection. (2) left limit of derivative equals right limit.
+
+\subsection{Constant Multiple Rule}
+
+$$ \frac{d}{dx}(c\cdot f(x)) = c\cdot \frac{d}{dx}f(x) $$
+
+Using the definition of derivative.
+
+\subsection{Tangent Line to a Polynomial}
+
+Compute the tangent line to the curve $y=x^3-x$ at the point (2,6).
+
+$ y'|_{x=2} = (3x^2-1)|_{x=2} = 11$, $y-6=11(x-2)$.
+
+\subsection{Derivatives of Sine and Cosine}
+
+Let $h(x)=\sin x + \sqrt{3}\cos x$. For which values of x does $h'(x)=0$?
+
+$\tan x = \frac{1}{\sqrt{3}}$
+
+\subsection{Product Rule}
+
+$(uv)' = u'v + uv'$. Ex $f(x)=x^2\sin x\cos x$, find $f'(x)$.
+
+\subsection{Quotient Rule}
+
+$$ \Big(\frac{u}{v}\Big)' = \frac{u'v - v'u}{v^2}$$. Find $(d/dx)\tan x$
+using the quotient rule. Note, $\tan x = \sin x / \cos x$.
+
+\subsection{Chain Rule}
+
+Find two values for x so that $(d/dx) \cos^2(x^4) = 0$.
+
+\subsection{Implicit Differentiation and Linear Approximation}
+
+The function w(x) is defeind implicitly by the equation
+$(w(x)+1)\cdot e^{w(x)} = x$. Use a linear approximation to estimate $w(3/2)$.
+Note, $w(1)=0$.
+
+$w(x) \approx w'(1)\cdot(x-1) + w(1)$.
+
+\subsection{Graphing the Arctan Functions}
+
+skip.
+
+\subsection{Arccos}
+
+The inverse cosine (arccos). Graph and derivative.
+
+$\arccos:[-1,1]\rightarrow[0,\pi]$
+
+$y = \arccos x$, $\cos y = x$, $-\sin y \cdot \frac{dy}{dx} = 1$.
+
+$$\frac{dy}{dx} = \frac{-1}{\sin y} = \frac{-1}{\sin(\arccos x)} = \frac{-1}
+  {\sqrt{(1-x^2)}}$$
+
+\subsection{todo}
+

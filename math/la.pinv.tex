@@ -1,0 +1,20 @@
+
+\section{Penrose Pseudo-Inverse}
+
+Any matrix $A$ has its Penrose pseudo-inverse, which is denoted as $A^+$,
+and satisfies the following $4$ Penrose equations:
+$$ AXA=A, XAX=X, (AX)^H=AX, (XA)^H=XA$$
+
+Existence by rank decomposition:
+$$A = FG, F^+ = (F^HF)^{-1}F^H, G^+ = G^H(GG^H)^{-1}$$
+$A^+=G^+F^+ = G^H(F^HAG^H)^{-1}F^H$ satisfies the 4 Penrose equations.
+
+Existence by SVD factorization:
+$$A = UDV^H = U\begin{bmatrix}\Sigma_r&O\\ O&O\end{bmatrix} V^H$$
+$$A^+ = VDU^H = V\begin{bmatrix}\Sigma_r^{-1}&O\\ O&O\end{bmatrix} U^H$$
+
+Uniqueness of penrose pseudo inverse: Assume $X$, $Y$ are two different
+pseudo inverse of $A$, then we find that
+$$ X = XAX = XAYAX = X(AY)^H(AX)^H = AA(AXAY)^H = X(AY)^H = XAY =
+   XAYA = (XA)^H(YA)^HY = (YAXA)^HY = (YA)^HY = YAY = Y$$
+which is contradict to the initial assumption.

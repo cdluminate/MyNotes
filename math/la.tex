@@ -1,0 +1,701 @@
+% _____________________________________________________________________________
+%
+%                           Linear Algebra Part
+% _____________________________________________________________________________
+% \section{Linear Algebra}
+
+% Note these keywords
+%  * vector/inner product space.
+%  * norm. Don't only think about L-2
+%  * condition number.
+%  * SVD.
+%  * LU decomp.
+%  * Cholesky decomp.
+%  * QR decomp.
+%  * QR for eigenvalue.
+%  ? Schur factorization.
+
+Notes from book~\cite{bib:linear2} and book~\cite{bib:linalgmit} and book~\cite{bib:matana}.
+
+\subsection{Matrices and Linear System}
+
+A matrix may look like this,
+$$
+A_{m\times n} = 
+\begin{bmatrix}
+  a_{11} & a_{12} & \cdots & a_{1n} \\
+  a_{21} & a_{22} & \cdots & a_{2n} \\
+  \vdots & \vdots & \ddots & \vdots \\
+  a_{m1} & a_{m2} & \cdots & a_{mn}
+\end{bmatrix}
+$$
+
+A linear system cound be represented by a matrix equation like this,
+$$ \mathbf{A}\mathbf{x} = \mathbf{b} $$
+which can be expanded into scalar form like this,
+$$ \sum_j a_{ij} x_j = b_i, (i = 1,2,\ldots, n) $$
+and vector form like this,
+$$ \sum_j (x_j \begin{bmatrix}a_{1j}\\a_{2j}\\\vdots\\a_{nj}\end{bmatrix})
+	= \begin{bmatrix}b_{1j}\\b_{2j}\\\vdots\\b_{nj}\end{bmatrix} $$
+The vector form is what the linear system look like when we look at
+the matrix by column. 
+
+Inspecing the linear system by row, we regard the first equation in
+the linear system as an $(n-1)$-dimentional plane. The second intersects
+it in an $(n-2)$-dimentional plane and so on. Finally all these equations
+intersect in an $0$-domentional plane, namely a point, which is the
+solution of the system.
+
+When we look at a matrix equation by column, its solution could be
+interpreted as a linear combination of the column vectors
+where the destination is exactly $\mathbf{b}$.
+
+Yet, if we get no solution of a linear system, or too many solutions,
+that is to say the $n$ planes have no point in common, or infinitely
+many points, then the $n$ columns lie in the same plane. This is the
+singular case. For instance, the rows in the following $3$ by $2$
+system have no common intersection so there is no solution for it.
+
+\begin{quote}\begin{lstlisting}
+# Julia 0.6
+using Plots
+Plots.plot([x -> (2-x)/2, x -> x-2,
+	x -> 1], [-10:10])
+\end{lstlisting}\end{quote}
+
+ \subsubsection{Gaussian Elimination}
+ The Gaussian elimination is to convert a given system into an
+ equivalent triangular system, then find the solution with
+ back-substitution.
+
+ \subsubsection{Matrix Multiplication}
+ Assume that we have a matrix equation
+ $C_{m\times n} = A_{m\times s} B_{s\times n}$, then the elements of $C$
+ can be worked out in this way, $$ c_{ij} = \sum_{k=1}^s a_{ik}b_{kj} $$
+
+ Matrix multiplication is associative, {\it i.e.} $A(BC)=(AB)C=ABC$.
+ And also distributive, {\it i.e.} $A(B+C)=AB+AC$. However note that
+ matrix multiplication is not commutative, {\it i.e.} $FE\neq EF$.
+
+ BLAS library call \verb|GEMM| performs general matrix-matrix multiplication.
+ There are lots of other \verb|*MM| library calls and they are optimized for
+ special matrix multiplication.
+
+\begin{quote}\begin{lstlisting}
+E = [1. 0 0; -2 1 0; 0 0 1]
+A = [2. 1 1; 4 -6 0; -2 7 2]
+EA = BLAS.gemm('N','N',1.0,E,A) # 1.0*E*A
+\end{lstlisting}\end{quote}
+
+ \subsubsection{Triangular Factors and Row Exchange}
+ In the process of Gaussian elimination, we convert a linear system $Ax=b$
+ into an equivalent triangular system $Ux=c$, where $U$ is an upper triangular
+ matrix. Actually the steps of elimination could be represented by a series
+ of elementary marices $M_i$, and we apply those elimination steps to $A$
+ to get $U$ like this:
+ $$ M_n M_{n-1} \cdots M_1 A = U $$
+ The elimination steps could be undone, as long as we apply the reverse steps
+ to $U$ like this:
+ $$ M_1^{-1} M_2^{-1} \cdots M_n^{-1} U = A $$
+ Let $ M_1^{-1} M_2^{-1} \cdots M_n^{-1} = L $, since it is a lower-triangular matrix.
+ The special thing is, all the entries below the diagonal are the multipliers
+ which are used in the elimination process. This is triangular factorization
+ $A=LU$ with no exchange of rows.
+ 
+ With the help of this method, we convert a linear system $Ax=b$ into two 
+ triangular system $Lc=b$ and $Ux=c$. We do forward elimination on $Lc=b$
+ to get $c$, and conduct back-substitution on $Ux=c$ to get $x$. Yet,
+ sometimes this method is problematic, when the pivot is $0$ in any step
+ of elimination. To solve this problem, we exchange some rows in the original
+ matrix $A$, and represent such exchanges with a ``shuffled'' identity matrix,
+ {\it i.e.} $PAx=Pb$. In this way zeros in pivot position could be avoided,
+ as long as the system is not singular.
+
+ Briefly, LU factorization could be written as $PA=LU$. In this way, the
+ linear system $Ax=b$ can be decomposed into $Lc = Pb$ where $Ux = c$.
+
+ Note, we know that $M_n^{-1} \cdot M_n = I$, where $M_n = I + l_n \cdot e_n^T$,
+ {\it e.g.} $M_2 = I + [0,0,l_{32},l_{42}]^T \cdot [-1,1,0,0]$. Due to
+ $(I-l_n \cdot e_n^T)(I+l_n \cdot e_n^T) = I$, $M_n^{-1} = I-l_n \cdot e_n^T $.
+ Similarly,
+ $$\prod\limits_{i=n}^1 M_i = \prod\limits_{i=n}^1 (I+l_i \cdot e_i^T) =
+   I + \sum\limits_{i=1}^n l_i \cdot e_i^T$$
+ $$\prod\limits_{i=1}^n M_i^{-1} = I - \sum\limits_{i=1}^n l_i \cdot e_i^T $$
+
+\begin{quote}\begin{lstlisting}
+# Julia 0.6
+A = [2 1 1 5; 4 -6 0 -2; -2 7 2 9]
+f = lufact(A)
+@printf "# PA-LU\n"
+writedlm(STDOUT, f[:P]*A[:,1:3] - f[:L]*f[:U][:,1:3])
+\end{lstlisting}\end{quote}
+
+ \subsubsection{Inverses and Transposes}
+ For invertable matrix $A$ there is $A^{-1}A = AA^{-1} = I $
+ When matrix $A$ is invertible, it has $n$ pivots, and vise versa.
+ Note, $\text{rref}(A)=I$ when A is invertible.
+
+ Assume that matrix $A$ is square, and it has right inverse $R$ which
+ satisfies $AR=I$, and left inverse $L$ which satisfies $LA=I$, then
+ $R=L$. Hence matrix $A$ is inversable, with $R$ as its inverse.
+ That's due to $R=IR=(LA)R=L(AR)=LI=L$.
+
+\begin{quote}\begin{lstlisting} 
+A = rand(2,2)
+f = lufact(A)
+inv(f[:U])*inv(f[:L]) == inv(A)
+\end{lstlisting}\end{quote}
+
+ Matrix transpose. $A^T$, $A^H$. Note $ (AB)^T = B^T A^T $. 
+ The transpose of a symmetric matrix is the same as itself.
+
+\begin{quote}\begin{lstlisting}
+AT = transpose(A)
+\end{lstlisting}\end{quote}
+
+\subsection{Vector Spaces}
+
+$$ \vec{a}_{1\times n} = \begin{bmatrix} a_1 & a_2 & \ldots & a_n \end{bmatrix} $$
+where $a_i \in \mathcal{R}$, $\vec{a} \in \mathcal{R}^n$.
+
+Assume that $V$ is non-void set and is consists of $n$-dimention vectors, which satisfies
+(1) $\forall \vec{a},\vec{b} \in V$, $\vec{a}+\vec{b}\in V$;
+(2) $\forall \vec{a} \in V$, $\forall k \in \mathcal{R}$, $k\vec{a} \in V$.
+Then we call $V$ ``vector space''.
+
+Assume that in the vector space $V$ there are $m$ vectors $\vec{a_1}, \vec{a_2}, \ldots, \vec{a_m}$,
+if all the $m$ vectors are linear-irrelative to each other, and $\forall \vec{a} \in V$ can be
+represented by a linear combination of the $m$ vectors, then the group of vectors
+$\vec{a_1}, \vec{a_2}, \ldots, \vec{a_m}$ is called a ``base'', and $\vec{a_i}$ is called
+``base vector''. Number $m$ is the dimentionality of vector space $V$, {\it i.e.} $dimV=m$.
+
+Norm is a function that maps a vector to a real number. L-$2$ Norm of vector:
+$$ \text{Norm}(\vec{a}) = ||\vec{a}|| = \sqrt{<\vec{a},\vec{a}>} = \sqrt{\sum_{i=1}^n x_i^2 } $$
+
+Subspace of a vector space: (1) non-empty ($\neq \Phi$), (2) linear
+combinations stay in the subspace. Note, $R^2$ is not a subspace of $R^3$,
+because $\forall \vec{a} \in R^2$, $\vec{a} \notin R^3$.
+
+Column space of matrix $A_{m\times n}$: all linear combinations of the columns of $A$,
+which is a subspace of $\Re^m$. Null space of matrix $A$: the solutions to
+$Ax=0$, which is a subspace of $\Re^n$.
+
+Reduced row echelon form, {\it i.e.} \verb|rref()|, further converts from $U$
+to a reduced form $R$, which is the simplest matrix that elimination can give.
+$R$ reveals all solutions immediately. Note, Julia removed this function since
+v0.6 ~ . The operator \verb|\| is recommended for Julia users.
+
+The combinations of special solutions form the nullspace.
+
+If $Ax=0$ has more unkowns than equations $(n>m)$, it has at least one special
+solution; There are more solutions than trivial $x=0$.
+
+Every solution to $Ax=b$ is the sum of one particular solution and a solution
+to $Ax=0$, where the particular solution comes from solving the equation
+with all free variables to zero.
+
+If there are $r$ pivots, there are $r$ pivot variables and $n-r$ free variables.
+That important number will be given a name -- it is the ``rank'' of the matrix.
+The rank counts the number of genuinely independent rows in the matrix A.
+Additionally, there is only a zero vector in the null space of matrix A when
+its columns are independent.
+
+A basis for space V: (1) linear independent; (2) spans the space V. The number
+of vectors in the basis is the dimension of the space.
+
+Every matrix with rank $1$ has the simple form $A=uv^T$, {\it i.e.} column
+times row.
+
+\begin{quote}
+
+Fundamental Theorem of Linear Algebra, Part I.
+\begin{enumerate}
+\item $C (A)$ = column space of $A$; dimension $r$.
+\item $N (A)$ = nullspace of $A$; dimension $n - r$.
+\item $C (A^T)$ = row space of $A$; dimension $r$.
+\item $N (A^T)$ = left nullspace of $A$; dimension $m - r$.
+\end{enumerate}
+Where $A$ is of size $m\times n$, $r$ is the rank of $A$.
+
+\end{quote}
+
+Application: interpolation of polynomial $b=\sum_i^n a_i x^{i-1}$.
+\begin{equation}
+	\begin{bmatrix}
+		1 & x_1 & x_1^2 & \ldots & x_1^{n-1}\\
+		1 & x_2 & x_2^2 & \ldots & x_2^{n-1}\\
+		\vdots & \vdots & \vdots & \ddots & \vdots\\
+		1 & x_n & x_n^2 & \ldots & x_n^{n-1}\\
+	\end{bmatrix}
+	\begin{bmatrix}
+		a_1 \\ a_2 \\ \vdots \\ a_n 
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+		b_1 \\ b_2 \\ \vdots \\ b_n
+	\end{bmatrix}
+\end{equation}
+
+ \subsubsection{Linear Transformation}
+
+ Every linear transformation $T(x)$ must meet this requirement,
+ $$ A(cx+dy) = c(Ax) + d(Ay) $$
+ Linear transformations could be represented by matrices, such as
+ differentiation and integration of polynomials, or totations, projections
+ and reflections of vectors.
+
+ The look of the transformation matrix depends on the basis. When the basis
+ is the set of unitary vectors, the rotation, projection and reflection
+ matrices can be written as the follows.
+ $$\text{Rotation } Q = \begin{bmatrix} \cos\theta & -\sin\theta \\
+	 \sin\theta & \cos\theta \end{bmatrix}$$
+ $$\text{Projection } P = \begin{bmatrix} \cos^2\theta & \cos\theta\sin\theta \\
+	 \cos\theta\sin\theta & \sin^2\theta \end{bmatrix}$$
+ $$\text{Reflection } H = 2P - I \Leftarrow Hx + x = 2Px$$
+
+ When changing the basis while the linear transformation stays the same,
+ the matrix $A$ is altered to $S^{-1}AS$. That can be done by the theory
+ of eigenvectors.
+
+ % TODO: is translation a linear operation?
+
+ \subsection{Orthogonality}
+
+ If $x$ and $y$ are orthogonal vectors, then $x^T y=0$. The vector $x=0$ is
+ the only vector that orthogonal to every vector in $R^n$.
+
+ The row space is orthogonal to the nullspace in $R^n$, the column space
+ is orthogonal to the left nullspace in $R^n$.
+
+ Given a subspace $V$ of $R^n$, the space of all vectors orthogonal to V
+ is called the orthogonal complement of $V$. It is denoted by $V^\perp$.
+
+\begin{quote}
+Fundamental Theorem of Linear Algebra, Part II
+	\begin{enumerate}
+		\item The nullspace is the orthogonal complement of the row space
+			in $R^n$.
+		\item The left nullspace is the orthogonal complement of the colomn
+			space in $R^m$.
+	\end{enumerate}
+\end{quote}
+
+ Every matrix transforms its row space onto its column space.
+
+ Inner product:
+ $$ \langle a,b \rangle = a^T b = b^T a = \sum_{i=1}^n a_i b_i $$
+
+ Angle:
+ $$ \cos\theta = \frac{\langle a,b \rangle}{||a||~||b||} ~~, \theta \in [0,\pi] $$
+
+ The projection of the vector $b$ onto the line in the direction of $a$ is $p$:
+ $$p = \frac{a^T b}{a^T a} a$$
+ And that can also be done by the projection matrix $P$:
+ $$P = \frac{a a^T}{a^T a}$$
+ To project $b$ onto $a$, multiply by the projection matrix $P$.
+
+ Cauthy-Schwarz inquility:
+ $$ \langle a,b\rangle^2 \leqslant \langle a,a \rangle \langle b,b \rangle $$
+
+ Least squares problems: When $Ax=b$ is inconsistent, its least-squares solution
+ minimizes $||Ax-b||^2$. As shown is the normal equation:
+ $$A^TA \hat{x} = A^Tb$$
+ $A^TA$ is invertible exactly when the columns of $A$ are linearly independent.
+ The best estimate $\hat{x} = (A^TA)^{-1}A^Tb$. The projection of $b$ onto the
+ column space is the nearest point to $A\hat{x}$:
+ $$p = A\hat{x} = A(A^TA)^{-1}A^Tb$$
+
+ $A^TA$ has the same nullspace as $A$. If $A$ has independent columns,
+ then $A^TA$ is square, symmetric, and invertible.
+
+ An orthogonal matrix $Q$ is a square matrix with orthonormal columns, and $Q^T=Q^{-1}$.
+ For example, any permutation matrix $P$ is an orthogonal matrix.
+ The rows of a square matrix are orthonormal whenever the columns are.
+ Multiplication by any $Q$ preserves lengths, inner products and angles, 'cus
+ $$(Qx)^T(Qy) = x^TQ^TQy = x^Ty$$
+
+ \subsubsection{Least-Squares Fitting of Data}
+
+ Suppose we do a series of experiments, and expect the output $b$ to be a
+ linear function of the input $t$. We look for a straight line $b = C+Dt$.
+ We are likely to obtain an overdetermined system because there are $m$
+ equations and only two unknowns.
+ $$\begin{bmatrix} 1 & t_1 \\ 1 & t_2 \\ 1 & t_3 \\ \vdots & \vdots \\ 1 & t_m \end{bmatrix}
+	 \begin{bmatrix} C \\ D \end{bmatrix} = \begin{bmatrix} b_1 \\ b_2 \\ b_3 \\ \vdots \\ b_m \end{bmatrix}$$
+ If errors are present, it will have no solution. The best solution $(\hat{C},\hat{D})$
+ is the $\hat{x}$ that minimizes the squared error $E^2$:
+ $$E^2 = ||b-A\hat{x}||^2$$
+
+ \begin{quote}\begin{lstlisting}
+# Julia 0.6
+A = [ 1. -1; 1 1; 1 2 ]
+b = [1. 1 3]'
+# A'A x = A'b
+xh = A'A\A'b
+e = A * xh - b
+dot(e, A[:,1]) # nearly 0, e perp A[:,1]
+dot(e, A[:,2]) # nearly 0, e perp A[:,2]
+ \end{lstlisting}\end{quote}
+
+ % TODO: weighted least square
+
+ \subsubsection{Gram-Schmidt Orthogonalization}
+
+ Gram-Schmidt orthogonalization converts a skewed set of axes into a perpendicular set.
+
+ There is an idea of the Gram-Schmidt process. Suppose we are given three independent vectors $a$, $b$, $c$. We first normalize
+ $a$ to be $q_1$, {\it i.e.} $q_1 = a / ||a||$. Then remove any component in the direction of $q_1$ from $b$
+ to obtain $q_2$, {\it i.e.} $B = b - (q_1^T b)q_1$, $q_2 = B / ||B||$. The third
+ vector will not stay in the plane of $q_1$ and $q_2$: $C = c - (q_1^T c)q_1 - (q_2^T c)q_2$,
+ $q_3 = C / ||C||$. In a word, the process is to subtract from every new
+ vector its components in the directions that are already settled.
+
+\begin{quote}\begin{lstlisting}
+a = [1;0;1]
+b = [1;0;0]
+c = [2;1;0]
+q1 = a / norm(a)
+B = b - dot(q1,b) * q1
+q2 = B / norm(B)
+C = c - dot(q1,c)*q1 - dot(q2,c)*q2
+q3 = C / norm(C)
+Q = [q1 q2 q3]
+norm(Q'Q - inv(Q)*Q)
+\end{lstlisting}\end{quote}
+
+\subsubsection{QR Factorization: $A=QR$}
+
+ When the matrix $A$ can be orthogonalized to matrix $Q$, we can restore
+ the columns of the matrix $A$ from $Q$. We can write those coefficients
+ for restoring the columns of $A$ in an upper triangular matrix $R$.
+
+ $$A = \begin{bmatrix} & & \\ a&b&c \\ & & \end{bmatrix}
+	 = \begin{bmatrix} & & \\ q_1&q_2&q_3 \\ & & \end{bmatrix}
+		 \begin{bmatrix} q_1^Ta & q_1^Tb & q_1^T c \\ & q_2^T b & q_2^Tc \\ & & q_3^Tc \end{bmatrix}
+	 = QR $$
+
+\begin{quote}\begin{lstlisting}
+# Julia 0.6
+A = [1 1 2;0 0 1;1 0 0]
+f = qrfact(A)
+norm(f[:Q] * f[:R] - A)
+\end{lstlisting}\end{quote}
+
+ Orthogonalization simplifies the least-squares problem $Ax=b$.
+ $$A^TA = R^TQ^TQR = R^TR$$
+ The fundamental equation $A^TA\hat{x} = A^Tb$ could be simplified to a triangular system:
+ $$R^TR\hat{x}=R^TQ^Tb ~\Rightarrow ~ R\hat{x} = Q^Tb$$
+
+% TODO: QR fact -- householder reflection
+
+ %\subsubsection{Function Spaces \& Fourier Series}
+ %\subsubsection{The Fast Fourier Transform}
+
+\subsection{Determinants}
+
+ $\det: \mathbf{R}^{n\times n} \mapsto \mathbf{R}$
+
+ $$
+ \det A =
+ \begin{vmatrix}
+   a_{11} & a_{12} & \cdots & a_{1n} \\
+   a_{21} & a_{22} & \cdots & a_{2n} \\
+   \vdots & \vdots & \ddots & \vdots \\
+   a_{n1} & a_{n2} & \cdots & a_{nn}
+ \end{vmatrix}
+ $$
+
+ Determinant means whether the transformation by the matrix is to
+ inflate the target space or to shrink the target space.
+ A negative determinant indicates the chirality of the matrix,
+ and a matrix for pure rotation will get a determinant of $1$ or $-1$.
+ Besides, matrix for rotation is orthogonal matrix, and matrixes
+ with determinant of $1$ or $-1$ are orthogonal.
+
+ Determinant can be used to test for invertibility. A matrix with zero
+ determinant is singular. It will be invertible when $\det A \neq 0$.
+ The Determinant of $A$ equals the volume of a box in $n$-dimensional space.
+ Determinant is the product of the pivots.
+
+ Here are some properties of determinants:\\
+ $\det I = 1$, $\det P = \pm 1$\\
+ $\det A^T = \det A $\\
+ $\det kA = k^n \det A$\\
+ $\det AB = \det A \det B$\\
+ $\det A^{-1} = 1 / \det A$
+
+\subsubsection{Cramer's Rule}
+
+ Cramer's rule can be used to find the solution of $Ax=b$.
+
+ The $j$-th component of $x=A^{-1}b$ is the ratio
+ $$x_j = \frac{\det B_j}{\det A}$$
+ $$B_j = \begin{bmatrix} a_{11} & a_{12} & b_1 & a_{1n} \\
+	 \vdots & \vdots & \vdots & \vdots \\
+	 a_{n1} & a_{n2} & b_n & a_{nn} \end{bmatrix}$$
+ where $B_j$ has $b$ in column $j$.
+
+ For the linear system $Ax = b$, where A is a $n\times n$
+ square matrix, and the vector $x$ is $\left[x_{1}, x_{2}, \ldots, x_{n}\right]^T$,
+ the vector $b$ is $\left[b_{1}, b_{2}, \ldots, b_{n}\right]^T$. The system
+ has a unique solution, when $\det A \ne 0$.
+
+\subsection{Eigenvalues \& Eigenvectors}
+
+ The previous sections of Linear Algebra are about $Ax=b$. This part is
+ about a new problem $Ax=\lambda b$. One of the applications of eigenvalue
+ is to ordinary differential equations.
+
+ To solve the problem, we write is as
+ $$(A-\lambda I)x = 0$$
+ which means the vector $x$ is in the nullspace of $A-\lambda I$, and the
+ number $\lambda$ is chosen so that $A-\lambda I$ has a nullspace.
+ $x=0$ is always a solution to this problem but it doesn't make sense to
+ the applications. In short, $A-\lambda I$ must be singular. As we know,
+ a system is singular when its determinant equals zero, {\it i.e.}
+ $$\det (A-\lambda I) = 0$$
+ This equation is called characteristic equation. The polynomial obtained
+ from the equation is called the characteristic polynomial. Its roots,
+ where the determinant is zero, are the eigenvalues. Since the matrix
+ is singular, its nullspace must contain nonzero vectors. By substituting
+ $\lambda$ with the eigenvalues, we can obtain the corresponding eigenvectors
+ respectively.
+
+ The eigenvalues are on the main diagonal when A is triangular. Actually
+ we can transform a matrix into diagonal or triangular matrix without changing
+ its eigenvalues. Note, the Gaussian factorization ({\it i.e.} LU Factorization)
+ is not suited for this purpose. The sum of the eigenvalues equals the sum
+ of the $n$ diagonal entries: $\text{Tr}(A) = \sum_i \lambda_i = \sum_i a_{ii}$.
+ The product of the eigenvalues equals the determinant of A:
+ $\prod_i \lambda_i = \det A$.
+
+ \subsubsection{Diagonalization of Matrix}
+
+ Suppose the $n$ by $n$ matrix $A$ has $n$ linearly independent eigenvectors.
+ If these eigenvectors are the columns of a matrix $S$, then $S^{-1}AS$ is a
+ diagonal matrix $\Lambda$. The eigenvalues of $A$ are on the diagonal of
+ $\Lambda$:
+ $$S^{-1}AS = \Lambda$$
+ Note, not all matrices are diagonalizable.
+
+ \subsubsection{Complex Matrices}
+
+ Hermitian matrices are matrices that equal their conjugate transpose,
+ {\it i.e.} $A = A^H$.
+
+ Unitary matrices: $U^HU=I$, $UU^H=I$, $U^H=U^{-1}$.
+
+% \subsubsection{Similarity Transformations}
+%
+%Similar matrix $B = P^-1 A P$.
+%
+%Eigen value and eigen vector: $A_{n\times n} x_{n\times 1} = \lambda x_{n\times 1} $.
+%
+% The Jordan form
+
+\subsection{Positive Definite Matrices}
+
+ $$x^TAx = \sum_{i=1}^n \sum_{j=1}^n a_{ij}x_ix_j$$
+
+ Each of the following tests is a necessary and sufficient
+ condition for the real symmetric matrix $A$ to be positive
+ definite.
+ \begin{enumerate}
+ \item $x^TAx>0$ for all nonzero real vectors $x$.
+ \item All the eigenvalues of $A$ satisfy $\lambda_i>0$.
+ \item All the upper left submatrices $A_k$ have positive
+	 determinants.
+ \item All the pivots (without row exchanges) satisfy $d_k>0$.
+ \end{enumerate}
+ The symmetric matrix $A$ is positive definite if and only if
+ there is a matrix $R$ with independent columns such that
+ $A=R^TR$. There are many ways to do it, such as lufact,
+ cholfact and qrfact.
+
+ Each of the following tests is a necessary and sufficient
+ condition for a symmetric matrix $A$ to be positive
+ semidefinite.
+ \begin{enumerate}
+ \item $x^TAx\geq 0$ for all vectors $x$.
+ \item All the eigenvalues of $A$ satisfy $\lambda_i\geq 0$.
+ \item No principal submatrices have negative determinants.
+ \item No pivots are negative.
+ \item There is a matrix $R$, possibly with dependent columns,
+	 such that $A=R^TR$.
+ \end{enumerate}
+
+ Geometry has helped the matrix algebra. A linear equation
+ produced a plane. The system $Ax=b$ gives an intersection of
+ planes. Least squares gives a perpendicular projection. The
+ determinant is the volume of a box. Now, for a positive definite
+ matrix and its $x^TAx$, we finally get a figure that is curved.
+ It is an ellipse in two dimensions, and an ellipsoid in $n$
+ dimensions.
+
+ % the law of inertia
+ % the generalized eigenvalue problem
+
+ \subsubsection{Singular Value Decomposition (SVD)}
+
+ Any $m$ by $n$ matrix $A$ can be factored into
+ $$A=U\Sigma V^T = (\text{orth})(\text{diag})(\text{orth})$$
+ The columns of $U_{m\times m}$ are eigenvectors of $AA^T$, and
+ the columns of $V_{n\times n}$ are the eigenvectors of $A^TA$.
+ The $r$ singular values on the diagonal of $\Sigma_{m\times n}$
+ are the square roots of the nonzero eigenvalues of both
+ $AA^T$ and $A^TA$.
+
+ \begin{quote}\begin{lstlisting}
+A = rand(3,5)
+F = svdfact(A)
+norm(F[:U]*diagm(F[:S])*F[:Vt] - A)
+ \end{lstlisting}\end{quote}
+
+ % application of SVG e.g. Image processing
+
+ % minimum principles TODO
+
+
+% _____________________________________________________________________________
+%
+%                               Matrix Part
+% _____________________________________________________________________________
+
+
+
+%\subsection{Miscellaneous}
+
+% https://github.com/BVLC/caffe/issues/2312
+
+%d/da ||a-b||_2^2 = d/da (a - b)'(a - b) = 2(a - b) * d/da(a-b) = 2(a-b)
+%d/db ||a-b||_2^2 = d/db (a - b)'(a - b) = 2(a - b) * d/db(a-b) = -2(a-b)
+
+%for $|| a - b ||_2^2$
+%\[ \frac{d}{da} ||a-b||_2^2 = \frac{d}{da} (a-b)^T(a-b) = 2(a-b) * \frac{d}{da} (a-b) = 2(a-b)\]
+%\[ \frac{d}{db} ||a-b||_2^2 = \frac{d}{db} (a-b)^T(a-b) = 2(a-b) * \frac{d}{db} (a-b) = -2(a-b)\]
+
+%d/da ||a-b||_2^2 = d/da a^2 - 2ba + b^2 = 2a - 2b = 2(a-b)
+%d/db ||a-b||_2^2 = d/db a^2 - 2ba + b^2 = -2a + 2b = -2(a-b)
+
+\subsection{Matrix Differentiation}
+
+Cite Matrix Analysis and Applications, Xianda Zhang.
+
+ \subsubsection{Common Tips}
+
+ $$\langle A,B \rangle=\sum_{i,j}A_{ij}B_{ij}=\text{tr}(A^TB)$$
+
+ \subsubsection{Jacobian Matrix \& Gradient}
+
+ % -- starts from pp.143
+
+ The nature of matrix differentiation is multi-variable function
+ differentiation represented in the matrix form.
+
+ The gradient operator to column vector $\mathbf{x}_{m\times 1}$ is defined as the follows,
+ $$\nabla_x \overset{\text{def}}{=} \frac{\partial}{\partial \mathbf{x}} = \big[
+	 \frac{\partial}{\partial x_1}, \frac{\partial}{\partial x_2},
+	 \ldots, \frac{\partial}{\partial x_m} \big]^\mathtt{T} $$
+ The transpose of the operator, {\it i.e.} $\partial /\partial x^T$ ($\partial /\partial X^T$)
+ is the Jacobian operator.
+
+ The gradient matrix of a scalar-valued function $f(\mathbf{X}): \Re^{m\times n} \mapsto \Re$ is
+ $$ \nabla_X f(\mathbf{X}) =
+    \frac{\partial f(\mathbf{X})}{\partial \mathbf{X}} \overset{\text{def}}{=} \begin{bmatrix}
+	 \frac{\partial f}{\partial x_{11}} & \ldots & \frac{\partial f}{\partial x_{1n}} \\
+	\vdots & \ddots & \vdots \\ \frac{\partial f}{\partial x_{m1}} & \ldots &
+	\frac{\partial f}{\partial x_{mn}} \end{bmatrix} \in \Re^{m\times n}$$
+ The transpose of the gradient matrix {\it i.e.} $\partial f(\mathbf{X})/\partial \mathbf{X}^T$
+ is the Jacobian matrix.
+
+ Additionally, assume that we have a vector-valued function
+ $f:\Re^m\mapsto\Re^n$, the gradient matrix of the row vector
+ $y=f(x)$ w.r.t the column vector $x$ is defined as follows,
+ $$ \frac{\partial y^T}{\partial x} \overset{\text{def}}{=} \begin{bmatrix}
+	 \frac{\partial y_1}{\partial x_1} & \ldots &
+		\frac{\partial y_m}{\partial x_1} \\
+	\vdots & \ddots & \vdots \\
+	 \frac{\partial y_1}{\partial x_n} & \ldots &
+		\frac{\partial y_m}{\partial x_n} \end{bmatrix}$$
+ Its transpose $\partial y/\partial x^T$ is the Jacobian matrix.
+
+ Chain rule for matrix differentiation
+ $$\frac{\partial g(f(\mathbf{X}))}{\partial \mathbf{X}} =
+ \frac{dg(f)}{df} \frac{\partial f(\mathbf{X})}{\partial \mathbf{X}}$$
+ $$[\frac{\partial g(F_{p\times q})}{\partial X_{m\times n}}]_{ij} = \frac{\partial g(F)}{\partial x_{ij}}
+ = \sum_{k=1}^p \sum_{l=1}^q \frac{\partial g(F)}{\partial f_{kl}}
+ \frac{\partial f_{kl}}{\partial x_{ij}}$$
+
+ %Additionally, the chain rule for matrix differentiation looks like this
+ %$$ \frac{\partial f(y(x))}{\partial x} = \frac{\partial y^T(x)}{\partial x}
+ %\frac{\partial f(y)}{\partial y}$$
+ %where the term $\partial y^T(x)/\partial x$ is an $n\times n$ matrix,
+ %$y$ is a vector-valued function $y: \Re^n \mapsto \Re^n$.
+ %????????????????????????????????????????????????????????????????????? where does this come from?
+
+ Example (1) $$x^TAx = \sum_i \sum_j A_{ij} x_i x_j$$
+ $$[\frac{\partial x^TAx}{\partial x}]_k = \sum_j A_{kj}x_j + \sum_i A_{ik}x_i$$
+ $$\frac{\partial x^TAx}{\partial x} = Ax + A^Tx$$
+
+ Example (2) $$f(\mathbf{X}) = \mathbf{a}^T\mathbf{X}\mathbf{X}^T\mathbf{b}$$,
+ $$\frac{\partial f(\mathbf{X})}{\partial \mathbf{X}} = (ab^T + ba^T)X$$
+
+ \subsubsection{Hessian Matrix}
+
+ Hessian matrix $H = \nabla^2 f$ is the Jacobian matrix of
+ $\nabla y^T$ w.r.t $x$, {\it i.e.}
+ $\nabla^2 f = \nabla(\nabla f)$.
+
+ \subsubsection{old contents}
+
+ % refresh -- pp.150
+
+ \begin{enumerate}
+% scalar function vs vector
+	\item $f,g: \Re^n \mapsto \Re$,
+		$$\frac{\partial f(x)g(x)}{\partial x}=
+		 \frac{f(x)}{\partial x}g(x) + f(x)\frac{\partial g(x)}{\partial x}$$
+% matrix vs scalar
+	\item Gradient of a matrix $Y_{m\times n}$ w.r.t a scalar $s$.
+$$\frac{\partial Y}{\partial s} =
+		 \begin{bmatrix} \frac{\partial Y_{11}}{\partial s} & \\ & \frac{\partial Y_{mn}}{\partial s} \end{bmatrix}$$
+ \end{enumerate}
+
+ Matrix Gradient Examples:
+ \begin{enumerate}
+	 \item $$\frac{\partial x}{\partial x^T} =
+		 \frac{\partial x^T}{\partial x} = I$$
+	 \item $$\frac{p~x^TAy}{p~x} = \frac{p~x^T}{p~x}Ay = Ay$$
+	 \item $$y^TAx = \langle A^Ty,x \rangle =
+		 \langle x,A^Ty \rangle = x^TA^Ty$$
+		 $$\frac{p~y^TAx}{p~x} = \frac{p~x^TA^Ty}{p~x} = A^Ty$$
+	\item constant matrix $A_{m\times n}$,
+		$$\partial A = \begin{bmatrix}
+			\partial a_{11} & \ldots & \ldots \\
+			\vdots & \ddots & \vdots \\
+			\vdots & \ldots & \partial a_{mn}
+		\end{bmatrix} = 0$$
+	\item var matrix $X$, const scala $\alpha$,
+		$$ \partial(\alpha X) = \alpha \partial X$$
+	\item var matrix $X$, var matrix $Y$,
+		$$ \partial(X+Y) =
+			\begin{bmatrix} \partial(x_{11}+y_{11}) & \\
+				& \ddots \end{bmatrix} = 
+			\begin{bmatrix} \partial x_{11} + \partial y_{11} & \\
+				& \ddots \end{bmatrix}
+				= \partial X + \partial Y$$
+	\item var matrix $X$, $Tr(A) = \sum_i a_{ii}$,
+		$$ \partial Tr(X) = \partial (\sum_i x_{ii}) =
+			\sum_i \partial x_{ii} = Tr(\partial X) $$
+	\item var matrix $X$, var matrix $Y$, both of size $n\times n$,
+		$$ \partial XY = \partial [ \sum_{i=1}^n x_{1i}y_{i1} ]
+			= [ \sum_i (\partial x_{i1})y_{i1} + 
+				\sum_i x_{1i}(\partial y_{i1}) ]
+			= (\partial X)Y + X(\partial Y) $$
+	\item var matrix $X$, var matrix $Y$, element-wise multiplication $\odot$,
+		$$ \partial (X\odot Y) = (\partial X)\odot Y + X\odot (\partial Y)$$
+
+ \end{enumerate}
+
+% \bibitem{bib:linear2} Steven J. Leon, Linear Algebra with Applications (Eigth Edition), China Machine Press.  
+% \bibitem{bib:linalgmit} Gilbert Strang, {\it Linear Algebra and Its Applications (Fourth Edition)}, Unknown Press.

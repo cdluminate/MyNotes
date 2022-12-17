@@ -1,0 +1,178 @@
+
+Notes from book~\cite{bib:orop}.
+% ref Convex Optimization, Stephen Boyd
+
+\subsection{Mathematical Programming}
+
+Commonly used mathematical programming involves: (1) linear programming,
+(2) non-linear programming, (3) multi-objective programming,
+(4) integer programming, (5) dynamic programming, (6) random programming.
+
+E.g Knapsack problem, Traveling sales man problem.
+
+The general form of mathematical programming is
+$$ (fS) \left\{ \begin{array}{lc}
+  \text{min} & f(\vec{x}) \\
+  \text{s.t.} & \vec{x} \in S
+  \end{array} \right. $$
+where the valid set $S \subset \Re^n$ is a set in n-dimentional
+Euclidean space; $f: S\mapsto \Re$ is the object function;
+If $\vec{x} \in S$, then we call it a valid solution of problem $(fS)$.
+
+For instance, a linear programming problem in canonical form looks like follows
+$$ \left\{ \begin{array}{ll}
+  \text{max} & z = C^T x \\
+  \text{s.t.} & Ax \leqslant b \\
+              & x \geqslant 0 \end{array} \right. $$
+
+\subsection{Convex Optimization}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \subsection{Basics}
+
+Our discusion is scoped in n-dimensional Euclidean space, i.e. $\vec{x}\in\Re^n$ where
+vector $\vec{x}$ is a column vector by default: $\vec{x} = (x_1, x_2, \ldots, x_n)^T$.
+Let $\vec{x}^{(1)}, \ldots, \vec{x}^{(m)}\in \Re^n$ denotes different vectors, then
+the subspace formed of these vectors could be denoted as $L(\vec{x}^{(1)}, \ldots, \vec{x}^{(m)})$,
+or equivalently $\{\vec{x}\in\Re^n | \vec{x}=\sum\limits_{i=1}^m a_i \vec{x}^{(i)}, a_i \in \Re, i \in [1,m]\}$.
+Accordingly, the complement space to subspace $L$ can be written as
+$L^{\perp} = \{ \vec{x} \in \Re^n | \vec{x}^T\vec{y}=0, \forall \vec{y}\in L \}$.
+
+Obviously, $\forall \vec{z} \in \Re^n$, there is a unique decomposition $\vec{z} = \vec{x} + \vec{y}$ where
+$\vec{x}\in L$ and $\vec{y}\in L^{\perp}$. At this moment we have $||\vec{z}||^2 = ||\vec{x}||^2 + ||\vec{y}||^2 $.
+And $\vec{x}$ is the unique solution of the following problem:
+$$ \left\{ \begin{array}{l}
+  \text{min } || \vec{z} - \vec{u} || \\
+  \text{s.t. } \vec{u} \in L
+  \end{array}\right.  $$
+whose optimal value is $||\vec{y}||$.
+
+Assume that we have a twice-differentiable function $f(\vec{x}): \Re^n \mapsto \Re$.
+The gradient vector of $f(\vec{x})$ at $\vec{x}^{(0)}$ is
+$$ \vec{g} = \nabla f(\vec{x}^{(0)}) = \big( \frac{\partial f(\vec{x}^{(0)})}{\partial x_1},
+  \ldots, \frac{\partial f(\vec{x}^{(0)})}{\partial x_n}  \big)^T $$
+The Hessian matrix of $f(\vec{x})$ at $\vec{x}^{(0)}$ is
+$$ H[f(\vec{x})] = \frac{\partial^2 f(\vec{x})}{\partial \vec{x}\vec{x}^T} =
+  \frac{\partial}{\partial \vec{x}} \big[ \frac{f(\vec{x})}{\partial \vec{x}^T} \big] \in \Re^{m\times m}$$
+$$ \vec{H} = \nabla^2 f(\vec{x}^{(0)}) \begin{bmatrix}
+  \frac{\partial^2 f(\vec{x}^{(0)})}{\partial x_1 \partial x_1} & \frac{\partial^2 f(\vec{x}^{(0)})}{\partial x_2 \partial x_1} &
+  \cdots & \frac{\partial^2 f(\vec{x}^{(0)})}{\partial x_n \partial x_1} \\
+  \frac{\partial^2 f(\vec{x}^{(0)})}{\partial x_1 \partial x_2} & \frac{\partial^2 f(\vec{x}^{(0)})}{\partial x_2 \partial x_2} &
+  \cdots & \frac{\partial^2 f(\vec{x}^{(0)})}{\partial x_n \partial x_2} \\
+  \vdots & \vdots & \ddots & \vdots \\
+  \frac{\partial^2 f(\vec{x}^{(0)})}{\partial x_1 \partial x_n} & \frac{\partial^2 f(\vec{x}^{(0)})}{\partial x_2 \partial x_n} &
+  \cdots & \frac{\partial^2 f(\vec{x}^{(0)})}{\partial x_n \partial x_n}
+  \end{bmatrix} $$
+
+First-order Tyler expansion:
+$$ f(\vec{x}) = f(\vec{x}^{(0)}) + \nabla f^T(\vec{x}^{(0)})(\vec{x}-\vec{x}^{(0)}) + \vec{o}||\vec{x}-\vec{x}^{(0)}|| $$
+
+Second-order Tyler expansion:
+$$ f(\vec{x}) = f(\vec{x}^{(0)}) + \nabla f^T(\vec{x}^{(0)})(\vec{x}-\vec{x}^{(0)}) + 
+   \frac{1}{2}(\vec{x} - \vec{x}^{(0)})^T \nabla^2 f(\vec{x}^{(0)}) (\vec{x}-\vec{x}^{(0)}) +
+   \vec{o}(||x-x^{(0)}||^2) $$
+
+E.g. (1) $f(x) = c^T x, c\in \Re^n$, $\nabla f(x) = c$. (2) $f(x)=\frac{1}{2} x^T G_{n\times n} x + c^T x + p, c\in\Re^n, p\in\Re$,
+$\nabla f(x) = Gx+C$, $\nabla^2 f(x) = G$. (3) $F(x) = A_{m\times n}x+b, b\in\Re^m$, $F'(x) = A^T$.
+Note, given that $f(Ax+b), y=Ax+b$, then $\nabla_x f(Ax+b) = A^T \nabla_y f(y)$,
+and $\nabla_x^2 f(Ax+b) = A^T \nabla_y^2 f(y) A$.
+
+ \subsubsection{Convex set and function}
+
+Given that $S\in \Re^n$, if $\vec{x},\vec{y} \in S$,
+$\lambda \in (0,1)$, and $\lambda \vec{x} + (1-\lambda)\vec{y} \in S$,
+then the set $S$ is called convex set. For instance, set
+$S = \{x | Ax = b \}$ is a convex set.
+
+Given that $\vec{x}^{(1)},\vec{x}^{(2)},\ldots,\vec{x}^{(m)} \in \Re^n$,
+$ \lambda_i \geqslant 0, i = 1, 2, \ldots, m$, and $ \sum\limits_{i=1}^m \lambda_i = 1$,
+then we call $\sum\limits_{i=1}^m \lambda_i \vec{x}^{(i)}$ a convex combination of those points.
+
+Given that $S_1, S_2 \in \Re^n$, $S_1 \neq \Phi$, $S_2 \neq \Phi$, if
+$\exists \vec{p} \in \Re^n$, $\vec{p}\neq 0$, $\alpha \in \Re$, and
+$$ \left\{ \begin{array}{lr}
+ \vec{p}^T \vec{x} \geqslant \alpha & \forall \vec{x} \in S_1 \\
+ \vec{p}^T \vec{x} \leqslant \alpha & \forall \vec{x} \in S_2
+   \end{array} \right. $$
+then the hyperplane $H=\{\vec{x}: P^T x = \alpha\}$ separates $S_1$ and $S_2$,
+and is called separating hyperplane.
+
+Given that $S \subset \Re^n, S \neq \Phi$, $\bar{x} \in S_{boundary}$.
+$\vec{p} \in \Re^n$, $\vec{p} \neq 0$, if $\forall x \in S, \vec{p}^T (x - \bar{x}) \geqslant 0$,
+then we call the hyperplane $H=\{x: p^T(x-\bar{x})=0\}$ the supporting hyperplane of $S$ at point $\bar{x}$.
+
+Given that $S\subset \Re^n$, $S\neq \Phi$, $S=cov(S)$, $f:S\mapsto R$.
+If $\forall \vec{x}^{(1)}, \vec{x}^{(2)} \in S$, $\forall \lambda \in (0, 1)$, there is always
+$$ f[\lambda \vec{x}^{(1)} + (1-\lambda)\vec{x}^{(2)}] \leqslant
+  \lambda f(\vec{x}^{(1)}) + (1-\lambda) f(\vec{x}^{(2)}) $$
+then we call $f$ a convex function over $S$.
+
+Given that $S\in\Re^n$, $S\neq\Phi$, $f:S\mapsto \Re$, $\alpha\in\Re$,
+then we call $S_\alpha = \{ x | f(x) \leqslant \alpha, x \in S\}$
+a level set of $f$.
+
+$f$ is convex across $S$ $\Leftrightarrow$ $\forall x\in S$,
+$\forall \bar{x}\in S$, $f(x)\geqslant f(\bar{x}) + \nabla f^T(\bar{x})
+ (x-\bar{x})$.
+
+%$f$ is convex across $S$ $\Leftrightarrow$ $\forall x^{(1)},x^{(2)} \in S$,
+%$ [\nabla f(x^{(1)}) - \nabla f(x^{(2)})]^T (x^{(1)}-x^{(2)}) \geq 0$.
+$f$ is convex across $S$ $\Leftrightarrow$ $\forall x^{(1)}, x^{(2)} \in S$,
+$[\nabla f(x^{(1)}) - \nabla f(x^{(2)}) ]^T (x^{(1)} - x^{(2)}) \geqslant 0 $.
+
+$f$ is convex across $S$ $\Leftrightarrow$ $\forall x \in S$, $\nabla^2 f(x)$ 半正定。
+
+If $\forall x \in S$, $\nabla^2 f(x)$正定，then $f$ is strictly convex across $S$.
+
+If there is a problem $(fS)$ where set $S$ is a convex set, and function
+$f$ is convex, then we call this programming problem a convex programming
+problem. Given that $S\subset \Re^n$, $S\neq\Phi$, $S=cov(S)$,
+$f:S\mapsto\Re$ is a convex function. $x^*$ is the \verb|l.opt| of problem
+$(fS)$, then $x^*$ is the \verb|g.opt|.
+
+
+\subsection{Optimal searching algorithm}
+
+Algorithm convergence. Let $\Omega$ be the solution set, and let $\{ x^{(k)} \}$
+denote the points generated from the algorithm. When any one of the following
+conditions is satisfied, we consider the algorithm convergent:
+(1) $\{ x^{(k)} \} \cap \Omega \neq \Phi$ (2) $\{ x^{(k)} \}$的任意收敛子列的极限点属于$\Omega$.
+
+Convergence rule. For instance, (1) $|| x^{(k+m)} - x^{(k)} || < \varepsilon$,
+(2) $\frac{||x^{(k+1)} - x^{(k)}||}{||x^{(k)}||} < \varepsilon$,
+(3) $| f(x^{(k+1)}) - f(x^{(k)}) | < \varepsilon$.
+
+ \subsubsection{Pattern of Linear searching algorithms}
+
+\begin{enumerate}
+ \item Determine the searching direction $\mb{d}^{(k)}$.
+ \item Find the $\lambda_k$, so that $f(\mb{x}^{(k)} +\lambda_k \mb{d}^{(k)}) = 
+       \text{min } \{ f(\mb{x}^{(k)} +\lambda \mb{d}^{(k)}) | \lambda \in R_k \}$.
+ \item Update $\mb{x}^{(k+1)} = \mb{x}^{(k)} + \lambda_k \mb{d}^{(k)}$.
+\end{enumerate}
+
+\subsection{Optimization methods without constraints}
+
+An optimization problem without constraint can be written as
+$f: \Re^n \mapsto \Re, (f) min f(x)$.
+
+ \subsubsection{Optimal Condition}
+
+ Presume that we have a function $f(x): \Re^n \mapsto \Re$ which is
+ continuous and differentiable, with $x^*$ as its local optimal
+ solution. Then $x^*$ is a stationary point, \emph{i.e.}
+ $\nabla f(x^*) = 0$.
+
+ \subsubsection{Steepest Descent Method}
+
+ The steepest descent method is to use the inverse direction to the
+ gradient, \emph{i.e.} $d^{(k)} = -\nabla f(x^{(k)})$,
+ in the linear searching procedure discussed previously. In this
+ way, obviously $d^{(k)}$ is the descending direction, because
+ when $\nabla f(x^{(k)}) \neq 0$,
+ $$ \nabla f(x^{(k)})^T d^{(k)} = -\nabla f(x^{(k)})^T 
+    \nabla f(x^{(k)}) < 0$$
+
+

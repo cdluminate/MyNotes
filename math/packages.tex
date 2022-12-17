@@ -1,0 +1,99 @@
+% figure package
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{picture}
+
+% math packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+
+% environment and layout packages
+\usepackage[breaklinks=true,bookmarks=false,colorlinks,linkcolor=green]{hyperref}
+\usepackage{framed}
+\usepackage{geometry}
+\geometry{left=1.5cm,right=1.5cm,top=2cm,bottom=3cm}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{indentfirst}
+\usepackage{float}
+\usepackage{color}
+\usepackage{xcolor}
+
+% table packages
+\usepackage{booktabs}
+
+% CJK packages
+\usepackage{CJKutf8}
+\usepackage{CJKulem}
+
+% font packages
+\usepackage{times}
+\usepackage{mathrsfs}
+%\usepackage[T1]{fontenc}
+
+% Adobe font
+%\usepackage{MinionPro} % this package is not provided by CTAN
+
+% self-defined macro
+\newcommand{\fixme}{{\huge \textcolor{red}{FIXME}}}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\mb}[1]{\mathbf{#1}}
+
+% constrain depth of table of contents
+\setcounter{tocdepth}{2}
+
+% listing
+\usepackage{listings}
+%\lstset{%
+% language=Matlab,%
+% frame=none,%
+% numbers=left,%
+% stringstyle=\ttfamily,%
+% keepspaces=true,%
+% tabsize=2,%
+% basicstyle=\footnotesize\ttfamily
+%}
+\lstdefinelanguage{Julia}%
+  {morekeywords={
+    exit,whos,edit,load,is,isa,isequal,typeof,tuple,ntuple,uid,hash,finalizer,convert,promote,
+    subtype,typemin,typemax,realmin,realmax,sizeof,eps,promote_type,method_exists,applicable,
+    invoke,dlopen,dlsym,system,error,throw,assert,new,Inf,Nan,pi,im,begin,while,for,in,return,
+    break,continue,macro,quote,let,if,elseif,else,try,catch,end,bitstype,ccall,do,using,module,
+    import,export,importall,baremodule,immutable,local,global,const,Bool,Int,Int8,Int16,Int32,
+    Int64,Uint,Uint8,Uint16,Uint32,Uint64,Float32,Float64,Complex64,Complex128,Any,Nothing,None,
+    function,type,typealias,abstract,
+	@printf
+	},%
+   sensitive=true,%
+   alsoother={$},%
+   morecomment=[l]\#,%
+   morecomment=[n]{\#=}{=\#},%
+   morestring=[s]{"}{"},%
+%   morestring=[m]{'}{'},%
+%   morestring=[b]',%
+   morestring=[b]"%
+}[keywords,comments,strings]%
+
+\lstset{%
+    language         = Julia,
+    basicstyle       = \footnotesize\ttfamily,
+    keywordstyle     = \bfseries\color{violet},
+    stringstyle      = \color{red},
+    commentstyle     = \color{cyan},
+    numberstyle      = \ttfamily\color{yellow},
+    showstringspaces = false,
+    columns=fullflexible, % make sure to use fixed-width font, CM typewriter is NOT fixed width
+    numbers=left, 
+    stepnumber=1,              
+    numbersep=10pt, 
+    numberfirstline=true, 
+    numberblanklines=true, 
+    tabsize=4,
+    lineskip=-1.5pt,
+    extendedchars=true,
+    breaklines=true,
+}
+

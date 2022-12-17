@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{tikz}
+
+\begin{document}
+\thispagestyle{empty}
+
+\usetikzlibrary{positioning}
+\begin{tikzpicture}[xscale=3,yscale=4,>=stealth]
+	\tikzstyle{v}=[circle,minimum size=1mm,draw,thick]
+	\node[v] (x1) {$x_1$};
+	\node[v] (x2) [below=of x1] {$x_2$};
+	\node[v] (x3) [below=of x2] {$x_3$};
+	\node[v] (x4) [right=of x1] {$x_4$};
+	\node[v] (x5) [right=of x3] {$x_5$};
+	\node[v] (x6) [right=of x4] {$x_6$};
+	\node[v] (x7) [right=of x5] {$x_7$};
+	\node[v] (x8) [right=of x7] {$x_8$};
+	\node[v] (x9) [right=of x6] {$x_9$};
+	\node[v] (y)  [right=of x9] {$y$};
+
+	\draw[thick,->] (x1) to node {$\ast$} (x4);
+	\draw[thick,->] (x2) to node {$\ast$} (x4);
+	\draw[thick,->] (x3) to node {$\sin$} (x5);
+
+	\draw[thick,->] (x4) to node {$exp$} (x6);
+	\draw[thick,->] (x4) to node {$\ast$} (x7);
+	\draw[thick,->] (x5) to node {$\ast$} (x7);
+
+	\draw[thick,->] (x6) to node {$\ast$} (x9);
+	\draw[thick,->] (x6) to node {$+$} (x8);
+	\draw[thick,->] (x7) to node {$+$} (x8);
+	\draw[thick,->] (x8) to node {$\ast$} (x9);
+
+	\draw[thick,->] (x9) to node {} (y);
+\end{tikzpicture}
+
+\end{document}

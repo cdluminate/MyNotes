@@ -1,0 +1,425 @@
+% math-calc
+
+Booknote for book~\cite{bib:calc1}.
+
+\subsection{Function and Limit}
+
+ \href{https://simple.wikipedia.org/wiki/Function_(mathematics)}
+ {Wikipedia:Function}.
+
+ \href{https://en.wikipedia.org/wiki/Limit_(mathematics)}
+ {Wikipedia:Limit}.
+
+ \href{https://en.wikipedia.org/wiki/Limit_of_a_function}
+ {Wikipedia:Limit of a function}.
+
+ \href{https://en.wikipedia.org/wiki/Limit_of_a_sequence}
+ {Wikipedia:Limit of a sequence}.
+
+ $$ \lim\limits_{x\rightarrow 0} \frac{\sin x}{x} = 1 $$
+ $$ \lim\limits_{n\rightarrow \infty} (1 + \frac{1}{n})^n = e $$
+
+ \href{https://en.wikipedia.org/wiki/Continuous_function}
+ {Wikipedia:Continuous Function}.
+
+ \href{https://en.wikipedia.org/wiki/Fundamental_theorem_of_calculus}
+ {Wikipedia:Fundamental Theorem of Calculus}.
+
+\subsection{Derivative}
+
+ \href{https://en.wikipedia.org/wiki/Derivative}
+ {Wikipedia:Derivative/Differentiation}.
+
+$$ f'(x) = \lim_{h\rightarrow 0} \frac{f(x+h)-f(x)}{h} $$
+$$ y-y_0 = f'(x_0) (x-x_0) $$
+
+ Chain Rule:
+ $$ \frac{dy}{dx} = \frac{dy}{du}\cdot \frac{du}{dx} $$
+
+ Some other basic Rules:
+ $$ [u(x)\pm v(x)]' = u'(x) \pm v'(x) $$
+ $$ [u(x)v(x)]' = u'(x)v(x) + u(x)v'(x) $$
+ $$ [\frac{u(x)}{v(x)}]' = \frac{u'(x)v(x) - u(x)v'(x)}{v^2(x)} $$
+ Note, actually $(\frac{u}{v})' = (u\cdot v^{-1})'$.
+
+ Some basic derivatives:
+ $$(x^a)' = ax^{a-1}$$
+ $$(\sin x)' = \cos x$$
+ $$(\cos x)' = -\sin x$$
+ $$(\tan x)' = \sec^2 x$$
+ $$(a^x)' = a^x \ln a$$
+ $$(x^x)' = e^x \ln x$$
+ $$(\log_a x)' = \frac{1}{x\ln a}$$
+ $$(\ln x)' = \frac{1}{x} $$
+ $$(\arcsin x)' = \frac{1}{\sqrt{1-x^2}}  $$
+ $$(\arccos x)' = - \frac{1}{\sqrt{1-x^2}}  $$
+ $$(\arctan x)' = - \frac{1}{1+x^2}  $$
+
+\subsection{Mean Value Theorem}
+
+ \href{https://en.wikipedia.org/wiki/Mean_value_theorem}
+ {Wikipedia:Mean value theorem}.
+
+ \href{https://en.wikipedia.org/wiki/Rolle's_theorem}
+ {Wikipedia:Rolle's Theorem}.
+
+\subsection{L'Hospital's Rule}
+
+ \href{https://en.wikipedia.org/wiki/L%27H%C3%B4pital%27s_rule}
+ {Wikipedia:L'Hospital's Rule}.
+
+ Suppose that
+ \begin{enumerate}
+ \item when $x\rightarrow a$, both function $f(x)$ and $F(x)$ tend to zero.
+ \item over the range $\mathring{U}(x_0)$, both $f'(x)$ and $F'(x)$ exist and $F'(x)\neq 0$.
+ \item $\lim_{x\rightarrow a} \frac{f'(x)}{F'(x)}$ exists or is infinitely great.
+ \end{enumerate}
+ then
+ $$ \lim\limits_{x\rightarrow a} \frac{f(x)}{F(x)} = \lim\limits_{x\rightarrow a} \frac{f'(x)}{F'(x)} $$
+
+\subsection{Antiderivative/Indefinite Integral}
+
+ \href{https://en.wikipedia.org/wiki/Antiderivative}
+ {Wikipedia:Antiderivative}.
+
+$$ \int f(x) dx = F(x) + C $$
+
+Frequently used indefinite integral:
+$$ \int k dx = kx + C$$
+$$ \int x^a dx = \frac{x^{a+1}}{a+1}  + C, (a\neq -1)$$
+$$ \int \frac{dx}{x} = \ln|x| + C$$
+$$ \int \frac{dx}{1+x^2} = \arctan x + C$$
+$$ \int \frac{dx}{\sqrt{1-x^2}} = \arcsin x + C$$
+$$ \int \cos x dx = \sin x + C$$
+$$ \int \sin x dx = -\cos x + C$$
+$$ \int \frac{dx}{\cos^2 x} = \tan x + C$$
+$$ \int \frac{dx}{\sin^2 x} = -\cot x + C$$
+$$ \int \sec x \tan x dx = \sec x + C$$
+$$ \int \csc x \cot x dx = -\csc x + C$$
+$$ \int e^x dx = e^x + C$$
+$$ \int a^x dx = \frac{a^x}{\ln a} + C$$
+$$ \int sh x dx = ch x + C$$
+$$ \int ch x dx = sh x + C$$
+$$ d \sin^2 x = 2\sin x \cos x dx = \sin 2x dx $$
+$$ d \cos^2 x = -2\sin x \cos x dx $$
+$$ \frac{1}{\sin x \cos x} = \frac{1}{\tan x \cos^2 x} = \frac{\sec^2 x}{\tan x} $$
+
+Property:
+$$ \int [f(x) + g(x)] dx = \int f(x) dx + \int g(x) dx $$
+$$ \int kf(x) dx = k\int f(x) dx $$
+
+  \subsubsection{Integration by Substitusion}
+
+The first type:
+$$ \int f[\varphi(x)]\varphi'(x) dx = F[\varphi(x)] + C = [\int f(u)du]_{u=\varphi(x)} $$
+
+The second type:
+$$ \int f(x) dx = [\int f(\psi(t)) \psi'(t) dt ]_{t = \psi^{-1}(x)} $$
+
+Additional Frequently used:
+$$ \int \tan x dx = -\ln |\cos x| + C$$
+$$ \int \cot x dx = \ln |\sin x| + C$$
+
+$$ \int \sin^p x \cdot \cos^q x dx $$
+If there is a odd number between $p$ and $q$, then make up a differential.
+Or find a way to descrease its exponential.
+
+  \subsubsection{Integration by Parts}
+
+$ (uv)' = u'v + uv' $, $ uv' = (uv)' - u'v $, then
+$$ \int udv = uv - \int vdu $$
+
+\subsection{Definite Integral}
+
+ \href{https://en.wikipedia.org/wiki/Integral}
+ {Wikipedia:Integral}.
+
+Riemann integral
+$$ \int_a^b f(x) dx = I = \lim_{\lambda\rightarrow 0} \sum_{i=1}^n f(\xi_i)\Delta x_i $$
+
+$$ \int_a^b f(x) dx = - \int_b^a f(x) dx $$
+
+If $f(x)\leq g(x), x\in [a, b]$, then $\int_a^b f(x)dx \leq \int_a^b g(x)dx$.
+
+Let $m = min(f(x)), M = max(f(x)), x \in [a, b], a<b$, then $m(b-a) \leq \int_a^b f(x)dx \leq M(b-a)$.
+
+If $f(x)$ is continuous on range $[a,b]$, then $\exists \xi \in [a, b]$, $\int_a^b f(x)dx = f(\xi)(b-a)$.
+
+(Newton-Leibniz) If function $F(x)$ is a original function of $f(x)$'s, where $f(x)$
+is continuous on range $[a,b]$, then $\int_a^b f(x)dx = F(b)-F(a)$.
+
+ \subsubsection{Ex1: Finding the area enclosed by several curves}
+
+ \begin{quote}
+ Find the area of the ellipse $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$.
+ $$ A = 4A_1 = 4 \int_0^a ydx $$
+ We can write the equation of ellipse as $x = a\cos t$ and $y=b\sin t$ where
+ $0\leq t\leq \frac{\pi}{2}$, then
+ $$ A = 4\int_{\pi/2}^0 b\sin t \cdot -a\sin t dt = 4ab \int_0^{\pi/2} \sin^2 tdt$$
+ $$ \sin^2 t = \frac{1-\cos 2t}{2} $$
+ $$ \Rightarrow A = \pi a b $$
+ \end{quote}
+
+ \subsubsection{Ex2: Finding the area of a given sector}
+
+ $$ A = \frac{1}{2}R^2 \theta $$
+ $$ dA = \frac{1}{2} \varphi^2(\theta) d\theta $$
+
+ \subsubsection{Ex3: Finding the volume of a given solid of rotation}
+
+ $$ dV = \pi [f(x)]^2 dx $$
+ Here the volume to be found are split into a pile of disks.
+
+ \subsubsection{Ex4: Finding the arc length}
+ TODO
+
+\subsection{Multivariate functions}
+
+ Note of book~\cite{bib:calc2}.
+
+ \subsubsection{Partial derivative}
+
+$$ \frac{\partial f}{\partial x} |_{(x_0,y_0)} =
+ \lim_{\Delta x \rightarrow 0} \frac{f(x_0+\Delta x,y_0)-f(x_0,y_0)}
+ {\Delta x} $$
+
+ A special example of partial derivative. For ideal gas there is
+ $$ pV=RT $$, however
+ $$ \frac{\partial p}{\partial V} \cdot
+    \frac{\partial V}{\partial T} \cdot
+    \frac{\partial T}{\partial p} = -1 $$
+
+ If $z=f(u,v)$, then $$ \frac{dz}{dt} = \frac{\partial z}{\partial u}\cdot
+ \frac{\partial u}{\partial t} + \frac{\partial z}{\partial v}\cdot
+ \frac{\partial v}{\partial t} $$
+
+$$ \mathbf{grad} f = \frac{\partial f}{\partial x} \hat{i} +
+ \frac{\partial f}{\partial y} \hat{j} $$
+
+Hamilton Operator
+$$ \nabla = \hat{i} \frac{\partial}{\partial x} + \hat{j}\frac{\partial}{\partial y}
+		   + \hat{k} \frac{\partial}{\partial z} $$
+
+The gradient of a numerical field $u$ is
+$$ \mathbf{grad}~ u = \nabla u $$
+
+ \subsubsection{Lagrange Multiplier Method}
+
+To look for the possible extreme values of function $z=f(x,y)$ under
+the condition $\varphi(x,y)=0$, first a Lagrange function should be
+defined like this
+$$ L(x,y) = f(x,y) + \lambda \varphi(x,y) $$
+where $\lambda$ is a parameter. Combine the function with the following
+conditions:
+$$ f_x(x,y) +\lambda \varphi_x(x,y) = 0 $$
+$$ f_y(x,y) +\lambda \varphi_y(x,y) = 0 $$
+$$ \varphi(x,y) = 0 $$
+Then several points with possible extreme value can be found be solving
+the equation set.
+
+E.g. find the maximum volume of a cuboid when its surface area is $a^2$.
+$$ L(x,y,z) = xyz + \lambda(2xy + 2yz + 2xz - a^2)$$
+$ yz+2\lambda(y+z) = 0$,
+$ xz+2\lambda(x+z) = 0$,
+$ xy+2\lambda(x+y) = 0$.
+We get $x=y=z=\frac{\sqrt{6}}{6} a $.
+
+ \subsubsection{Local Extreme Value}
+
+ reference: operations research / optimization
+
+ $f_{xx} > 0$, $f_{yy} > 0$, $f^2_{xy} < f_{yy}f_{xx}$
+
+ Total differential $df = \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy$
+
+ $$\Delta f = f(x) - f(x_0) \approx \frac{1}{2} \sum_i \sum_j \frac{\partial^2 f}{\partial x_i \partial x_j}
+   \Delta x_i \Delta x_j$$
+
+ $$\Delta f = \frac{1}{2} \Delta x^T H \Delta x = \frac{1}{2} \sum_r (\lambda_r \cdot a_r^2)$$
+ where $H$ is hessian matrix, $\lambda_\ast$ is eigen value of the hessian matrix.
+
+ minimum: $\Delta f = \frac{1}{2} \sum_r (\lambda_r \cdot a_r^2) > 0$
+ maximum: $\Delta f = \frac{1}{2} \sum_r (\lambda_r \cdot a_r^2) < 0$
+
+\subsection{Automatic Differentiation (AD)}
+
+% cite 自动微分方法与最优化， 张海斌，高欢，科学出版社
+
+Computation Graphs can represent a group of computations,
+{\it e.g.} functions. They are formed of a set of symbols and
+elementary (atomic) mathematical operations. Computation graph
+can be used to reduce redundant computations to improve
+efficiency. Apart from that, computation graph can help
+finding the (partial) derivatives. This feature is extremely
+helpful when the graph is too large or too complex to find
+the derivatives manually. This way, automatic differentiation,
+with the help of computation graphs, has been studied and
+developed.
+
+\href{https://en.wikipedia.org/wiki/Automatic_differentiation}
+{Wikipedia:AD}.
+
+  \begin{figure}[!h]
+   \centering
+   \includegraphics[scale=0.7]{pic/pic-ad-ex-crop.pdf}
+   \caption{Example Diagram for AD}
+   \label{fig:pic-ad-ex}
+  \end{figure}
+
+Here is an example of automatic differentiation, as shown in figure~\ref{fig:pic-ad-ex},
+our target function is
+$$y=e^{x_1x_2}(e^{x_1x_2}+x_1x_2\sin x_3)$$
+
+Forward scan in the symbolic graph:
+\begin{align*}
+	x_4 &= x_1 * x_2 \\
+	x_5 &= \sin x_3 \\
+	x_6 &= \exp x_4 \\
+	x_7 &= x_4 * x_5 \\
+	x_8 &= x_6 + x_7 \\
+	x_9 &= x_6 * x_8 \\
+	y   &= x_9
+\end{align*}
+
+Forward Mode
+\begin{align*}
+	dx_4 &= dx_1 * x_2 + x_1 * dx_2 \\
+	dx_5 &= \cos(x_3) dx_3 \\
+	dx_6 &= \exp(x_4) dx_4 \\
+	dx_7 &= dx_4 * x_5 + x_4 * dx_5 \\
+	dx_8 &= dx_6 + dx_7 \\
+	dx_9 &= dx_6 * x_8 + x_6 * dx_8 \\
+	dy   &= dx_9
+\end{align*}
+
+Backward Mode, let $bx_i = \frac{\partial y}{\partial x_i}$, apply
+the chain rule then we can obtain:
+\begin{align*}
+	bx_9 &= by \\
+	bx_8 &= bx_9 * x_6 \\
+	bx_7 &= bx_8 \\
+	bx_6 &= bx_9 * x_8 + bx_8 \\
+	bx_5 &= bx_7 * x_4 \\
+	bx_4 &= bx_6 * x_6 + bx_7 * x_5 \\
+	bx_3 &= bx_5 * \cos x_3
+\end{align*}
+
+% section Differential equation
+\subsection{Oridnal Differential Equation}
+
+\subsubsection{Separation of Variables}
+
+Differential equations with separable variables generally look like this:
+$$ g(y)dy = f(x)dx $$
+where function $g(y)$ and $f(x)$ are continuous, and $y=\varphi(x)$.
+
+$$ g[\varphi(x)] dy = f(x)dx = g[\varphi(x)]\varphi'(x)dx $$
+$$ \int g(y)dy = \int f(x)dx \Rightarrow G(y) = F(x) + C $$
+
+E.g.
+
+$$ \frac{dy}{dx} = 2xy \Rightarrow \frac{dy}{y} = 2xdx $$
+$$ \int \frac{dy}{y} = \int 2xdx = \ln|y| + C_1 = x^2 + C_2 $$
+$$ y = \pm e^{x^2+C} = \pm e^C e^{x^2} $$
+
+\subsubsection{Homogenous ODE}
+
+$$ \frac{dy}{dx} = f(x,y) = \phi(\frac{y}{x}) $$
+Let $u=\frac{y}{x}, y=ux$, and $\frac{dy}{dx} = u + x\frac{du}{dx} = \varphi(u) $
+$$ x\frac{dy}{dx} = \varphi(u) - u \Rightarrow \frac{du}{\varphi(u) -u} = \frac{dx}{x} $$
+
+E.g.
+
+$$ y^2 + x^2 \frac{dy}{dx} = xy\frac{dy}{dx} $$
+$$ \frac{dy}{dx} = \frac{y^2}{xy - x^2} =
+ \frac{(\frac{y}{x})^2}{\frac{y}{x} - 1} $$
+ Let $u=\frac{y}{x}$, then
+ $$ u+x\frac{du}{dx}=\frac{u^2}{u-1} \Rightarrow
+ (1-\frac{1}{u})du = \frac{dx}{x} $$
+ $$ u - \ln|u| + C = \ln|x| \Rightarrow \ln|xu| = u+c $$
+ $$ \ln|y| = \frac{y}{x} + c $$
+
+%\subsection{First-order Linear ODE}
+%
+%$$ \frac{dy}{dx} + P(x)y = Q(x) $$
+%
+%TODO
+%
+%\subsubsection{Bernoulli ODE}
+%
+%
+%$$ \frac{dy}{dx} + P(x)y = Q(x)y^n $$
+%
+%TODO
+%
+%\subsection{High-order ODE}
+%
+%\begin{itemize}
+%	\item $y^{(n)} = f(x)$ 
+%\end{itemize}
+%
+
+  \subsection{Series}
+\href{https://en.wikipedia.org/wiki/Series_(mathematics)}
+{Wikipedia:Series}.
+
+\href{https://en.wikipedia.org/wiki/Convergence_tests}
+{Wikipedia:Convergence Tests}.
+
+\subsubsection{Tylor Formula}
+
+ \href{https://en.wikipedia.org/wiki/Taylor_series}
+ {Wikipedia:Tylor Series}.
+
+\begin{align*}
+   f(x) =& f(x_0) + f'(x_0)(x-x_0) + \frac{f''(x_0)}{2!}(x-x_0)^2 + \ldots \\
+   &+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n + R_n(x)
+\end{align*}
+where
+$$ R_n(x) = \frac{f^{(n+1)}(x_0)}{(n+1)!}(x-x_0)^{n+1} $$
+
+
+\subsubsection{Geometric Series}
+
+$$ \sum_{n=0}^\infty a_n x^n $$
+
+Tylor Series.
+
+$$ f(x) = f(0) + f'(0)x + \frac{f''(0)}{2!} x^2 + \cdots + \frac{f^{(n)}(0)}{n!} x^n + \cdots ~~ (-R<x<R) $$
+$$ e^x = 1 + x + \frac{x^2}{2!} + \cdots + \frac{x^n}{n!} + \cdots ~~ R=+\infty$$
+$$ \sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} + \cdots + (-1)^{(n-1)} \frac{x^{2n-1}}{(2n-1)!} + \cdots ~~ R=+\infty$$
+$$ \cos(x) = 1 - \frac{x^2}{1}  + \frac{x^4}{4!} + \cdots + (-1)^n \frac{x^{2n}}{(2n)!} + \cdots ~~ R=+\infty$$
+$$ \frac{1}{1-x} = 1 + x + x^2 + \cdots + x^n + \cdots ~~ (-1<x<1)$$
+
+Eular Formula.
+$$ e^{ix} = \cos x + i\sin x $$
+
+\subsubsection{Fourier Series}
+
+ First recall the following equations:
+
+ $$ \int_{-\pi}^{\pi} 1 dx = 2\pi $$
+ $$ \int_{-\pi}^{\pi} \sin^2 nx dx = \pi , n = 1, 2, 3, \ldots $$
+ $$ \int_{-\pi}^{\pi} \cos^2 nx dx = \pi , n = 1, 2, 3, \ldots $$
+ $$ \cos kx \cos nx = \frac{1}{2}[\cos(k+n)x + \cos(k-n)x] $$
+ $$ \begin{array}{rcl} \int_{-\pi}^\pi \cos kx \cos nx dx & = & \frac{1}{2}\int_{-\pi}^\pi [\cos(k+n)x + \cos(k-n)x] \\
+	 & = & \frac{1}{2} \big[ \frac{\sin(k+n)x }{k+n} + \frac{\sin(k-n)x }{k-n} \big]_{-\pi}^\pi \\
+	 & = & 0 \end{array}$$
+
+ Given a periodic function $f(x)$ with period of $2\pi$, we assume that the
+ function can be written as the following form:
+ $$ f(x) = \frac{a_0}{2} + \sum\limits_{k=1}^\infty (a_k \cos kx + b_k \sin kx) $$
+ By integrating the above equation we can obtain $a_0$, $a_k$ and $b_k$ as follows:
+ $$ \int_{-\pi}^\pi f(x) dx = \int_{-\pi}^\pi \frac{a_0}{2} dx + \int_{-\pi}^\pi [\sum_{k=1}^\infty (a_k \cos kx + b_k \sin kx)] dx = \frac{a_0}{2} \cdot 2\pi $$
+ $$ \int_{-\pi}^\pi f(x) \cos nx dx = \int_{-\pi}^\pi \frac{a_0}{2} \cos nx dx + \sum_{k=1}^\infty  [ (a_k \int_{-\pi}^\pi\cos kx \cos nx + b_k \int_{-\pi}^\pi \sin kx \cos nx )] dx = a_n \int_{-\pi}^\pi \cos^2 nx dx = a_n \pi $$
+ We can obtain $b_n$ in a simillar way by integrating $f(x)\sin nx$. In brief, the result looks like this:
+ $$ a_n = \frac{1}{\pi} \int_{-\pi}^\pi f(x)\cos nx dx, (n=0,1,2,3,\ldots) $$
+ $$ b_n = \frac{1}{\pi} \int_{-\pi}^\pi f(x)\sin nx dx, (n=1,2,3,\ldots) $$
+
+ \subsection{Reference \& Resource}
+
+1. List of Limits: https://en.wikipedia.org/wiki/List_of_limits
+
+2. List of Integrals: https://en.wikipedia.org/wiki/Lists_of_integrals
+
+3. List of Mathematical Series: https://en.wikipedia.org/wiki/List_of_mathematical_series

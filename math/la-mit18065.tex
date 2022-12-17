@@ -1,0 +1,32 @@
+\section{MIT 18.065, Gilbert Strang}
+
+\subsection{Lec \#1: The column space of A contains all vectors Ax}
+
+There are two ways to interpret $Ax$: (1) dot product of A's columns;
+(2) linear combination of A's columns.  Column space of A: C(A).
+
+Rank 1 matrix can be decomposed into the product of a column vector
+and a row vector.
+
+The column rank equals the row rank.
+
+There are two ways to interpret $AB$: (1) row dot column (dot product);
+(2) column dot row ($c_1r_1+c_2r_2+\ldots+...$ where the subscript goes
+until $rank-1$)
+
+\subsection{Lec \#2: Multiplying and Factoring}
+
+1. LU Decomposition: $A=LU$ aka Gaussian Elimination. Lower triangular times
+upper triangular.
+
+2. QR Decomposition: $A=QR$. Orthogonal times upper triangular. There are several
+ways to compute the QR decomposition, such as Gram-Schmidt, Givens, Householder.
+
+3. $S=Q\Lambda Q^T = [q_1 \ldots q_n]diag(\lambda_1,\ldots,\lambda_n)[q_1 \ldots q_n]^T$
+symmetric matrix $S$ is decomposed into eigenvalues and eigen vectors.
+$S=\lambda q_1q_1^T + \lambda_2 q_2q_2^T + \ldots + \lambda_n q_n q_n^T$
+$Sq_1 = \lambda_1 q_1$
+
+4. $A=X\Lambda X^T$
+
+5. SVD Decomposition. $A=U\Sigma V^T$. Orthogonal times diagonal times orthogonal.

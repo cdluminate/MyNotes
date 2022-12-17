@@ -1,0 +1,48 @@
+\section{Probablistic Graph Model}
+
+Probablistic graph models fall into two categories: Bayesian network
+(using directed acyclic graph) and Markov network (using undirected
+graph).
+
+\subsection{Hidden Markov Model (HMM)}
+
+HMM is the simplest dynamic Bayesian network. There are two groups of variables
+in the HMM model: (1) hidden variable (i.e. state variable) $y_i\in Y$ (state
+space); (2) observation variable $x_i \in X$ (observation space, often
+discrete).
+
+\begin{verbatim}
+y_1 -> y_2 -> ... -> y_i -> ... -> y_n
+ |      |             |             |
+ v      v             v             v
+x_1    x_2           x_i           x_n
+\end{verbatim}
+
+The joint probability distribution of all variables is
+$$ P(x_1,y_1,\ldots,x_n,y_n) = P(y_1)P(x_1|y_1)
+\prod_{i=2}^n P(y_i|y_{i-1})P(x_i|y_i) $$
+
+An HMM is determined by state space $Y$, observation space $X$ and three
+parameters: (1) state transfer probability matrix $A_{ij} =
+P(y_{t+1}=s_j|y_t=s_i)$; (2) observation output probability matrix $B_{ij} =
+P(x_t=o_j|y_t=s_i)$; (3) initial state probability $\pi = (\pi_1, \pi2, \ldots,
+\pi_N)$.
+
+In real life applications of HMM, people often focus on three fundamental
+problems: (1) how well does the model match with the observed sequence?
+(2) how to infer the hidden states according to observed sequences?
+(3) how to train the model such the model fits better with data?
+
+\subsection{Markov Random Field (MRF)}
+
+MRF, a typical Markov network, is a hind of undirected graph model.
+
+\subsection{Conditional Random Field (CRF)}
+
+CRF, is a kind of discriminant undirected graph model. Note that HMM and MRF
+are both generative models, which models the joint probability distribution.
+However CRF models the conditional distribution.
+
+\subsection{Reference}
+
+1. Zhihua Zhou, Machine Learning.

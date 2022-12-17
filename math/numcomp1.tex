@@ -1,0 +1,76 @@
+
+As pointed out by the book, we should take care of the
+machine float numbers since it introduces error.
+
+\subsection{Roots of equations}
+
+Find a solution $x^*$ so that $f(x^*)=0$.
+
+1. Dichotomy.
+
+2. Iterative method and Aitken method.
+
+3. Newton method and secant method.
+
+\subsection{Linear equations}
+
+Solving $Ax=b$.
+
+LU-decomposition.
+
+1. Gauss elimination.
+
+2. Iterative method. Gradient descent, Jacobi iterative method, Gauss-Deidel iterative method.
+
+\subsection{Interpolation}
+
+1. Lagrange interpolation polynomial.
+
+2. Newton interpolation polynomial.
+
+3. Piecewise interpolation polynomial.
+
+4. Spline interpolation.
+
+\subsection{Curve Fitting}
+
+Least square method. $min \frac{1}{2}|| \hat{x} - x ||^2$.
+
+For overdetermined equations $A\vec{x}=\vec{b}$, we are looking for a set of
+value $\vec{x^*}$ so that $|| A\vec{x^*} - b ||^2$ can be minimized.
+
+$$\varphi(\vec{x}) = \sum_{i=1}^m \delta_i^2 = \sum_{i=1}^m 
+  (\sum_{j=1}^n a_{ij}x_j - b_i )^2 $$
+$$ \frac{\partial \varphi}{\partial x_k} = 
+  2\sum_{i=1}^m \sum_{j=1}^n (a_{ij}x_j-b_i)a_{ik} = 0 (k=1,2,...,n) $$
+i.e. $A^T A x = A^T b $.
+
+\subsection{Numerical integration and differentiation}
+
+1. Simpson formula, Cotes formula.
+
+2. Romberg formula.
+
+3. Gauss integration formula.
+
+\subsection{Ordinal differential equation, ODE}
+
+1. Euler formula.
+
+2. Runge-Kutta formula.
+
+3. Adams.
+
+There is a useful trick which converts a high order equation into a group
+of the first order equations. E.g. given that $ y'' = f(x,y,y') $,
+$y(a)=\alpha$, $y(b)=\beta$, then we introduce $z=y'$,
+and we get $y'=z$, $y(a)=\alpha$, $z'=f(x,y,z)$, $z(a)=\beta$.
+
+\subsection{Eigen Value and Eigen Vector}
+
+Find a pair of non-zero eigen value $\lambda$ and non-zero eigen vector $x$ from
+$(\lambda I - A)x = 0$.
+
+1. Jacobi.
+
+2. QR method.

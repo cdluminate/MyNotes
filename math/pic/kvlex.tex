@@ -1,0 +1,33 @@
+
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage[free-standing-units]{siunitx}
+
+\begin{document}
+
+\thispagestyle{empty}
+\begin{circuitikz}[scale=3] \draw
+
+% (0.5,0) to[short,i=$i_4$] (1,0.866) node[circ]{}
+% (0,0.866) to[short,i=$i_5$] (1,0.866)
+% (0.5,1.732) to[short,i=$i_6$] (1,0.866)
+% (1.5,1.732) to[short,i=$i_1$] (1,0.866)
+% (2,0.866) to[short,i=$i_2$] (1,0.866)
+% (1.5,0) to[short,i=$i_3$] (1,0.866)
+(1.5,0.866) to[short,v=$u_1$,*-*] (2.5,0.866) 
+ to[short,v=$u_2$,-*] (3,1.732)
+ to[short,v=$u_3$,-*] (2.5,2.598)
+ to[short,v=$u_4$,-*] (1.5,2.598)
+ to[short,v=$u_5$,-*] (1,1.732)
+ to[short,v=$u_6$] (1.5,0.866) -- (1,0)
+(2.5,0.866) -- (3,0)
+(3,1.732) -- (4,1.732)
+(2.5,2.598) -- (3,3.464)
+(1.5,2.598) -- (1,3.464)
+(1,1.732) -- (0,1.732)
+;
+\end{circuitikz}
+
+\end{document}

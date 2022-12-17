@@ -1,0 +1,21 @@
+% compile with latex
+\documentclass{article}
+\usepackage{times}
+\usepackage{pstricks}
+\usepackage{pst-sigsys}
+\begin{document}
+\thispagestyle{empty}
+\begin{figure}
+\begin{pspicture}(-2.5,-1)(2.5,1)
+  \psset{style=RoundCorners,gratioWh=1.25}
+
+  %--- Defining blocks ---
+  \pssignal(-2,0){x}{$x(n)$}
+  \psfblock(0,0){T}{$T[\cdot]$}
+  \pssignal(2,0){y}{$y(n)$}
+
+  %--- Connecting blocks ---
+  \nclist[style=Arrow]{ncline}[naput]{x,T,y}
+\end{pspicture}
+\end{figure}
+\end{document}

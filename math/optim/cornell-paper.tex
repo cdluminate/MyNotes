@@ -1,0 +1,671 @@
+\documentclass[onecolumn,times]{article}
+\usepackage{CJK}
+\usepackage{amsmath}
+\usepackage[margin=1in]{geometry}
+\usepackage{indentfirst}
+\usepackage{fancyvrb}
+
+\begin{document}
+\begin{CJK}{UTF8}{gkai}
+
+\section{原问题: INLP}
+
+\begin{align}
+	\max\qquad & \sum_{i,j} c_{ij} w_{ij} \\
+	\text{s.t.}\qquad & x_i \sum_j (c_{ij}\prod_{k~(k\neq j)} \overline{c}_{ik} )
+	+ \overline{x}_i \prod_j \overline{c}_{ij} = 1,~ j,k\in \Phi_i,~ \forall i\\
+	& c_{ij} \cdot \overline{\text{bool}(\sum_{m\in q_{ij}} x_m)} 
+	+ \overline{c}_{ij} = 1
+	,~ \forall i,j
+\end{align}
+
+其中 $x_i$, $c_{ij}$ 为待求的0-1变量。
+其余变量如 $q_{ij}$, $\Phi_i$, $w_{ij}$
+均已事先给定。函数$\text{bool}(\cdot)$ 为整数转化为布尔型的辅助函数。
+我们需要这个函数是因为一个整数（亦即一系列布尔值的和）不存在取反的操作。
+
+可见，这个问题中所有待求变量均为0-1变量，并且约束中存在显然的变量间非线性
+关系(乘法)，因此这个问题是 INLP (Integer Non-Linear Programming) 问题。
+在实践中，这类问题因为其非线性会带来很大的求解难度，所以往往需要尝试将
+非线性部分转化为线性，使其成为一个 ILP 问题。
+
+当我们得到一个 ILP 问题之后，这个问题就可以放到常见的 MILP Solver中求解，
+	比如 CPLEX， Matlab 或者 Julia的JuMP。 MILP (Mixed-Integer Linear Programming)
+，亦即混合整数规划，是 ILP 的更加泛化形式。MILP问题中需要求解的变量为
+非整数和整数的混合。
+
+所以，解决本题的关键在于将 INLP 问题转化为 ILP 问题。
+
+\subsection{需要用到的数学技巧}
+
+\textbf{技巧1。} 将 $\text{bool}(\cdot)$ 函数线性化。
+$$y=\text{bool}(x_1 + x_2 + \ldots + x_k)$$
+	$$y\geq x_i,~ i=1,2,\ldots,k$$
+$$y\in\{0,1\}$$
+	将$y$代回原问题即消去非线性。
+
+\textbf{技巧2.} 将0-1变量乘积线性化。
+$$y=\prod_{k=1}^{K} x_k$$
+	$$y\leq x_i,~ i=1,2,\ldots,K$$
+$$y\geq (\sum_{k=1}^{K} x_k) - (K - 1)$$
+$$y\in\{0,1\}$$
+代回原问题。
+
+\subsection{线性化条件 (3)}
+
+	通过技巧1令 $a_{ij}=\text{bool}(\sum x_m)$, 原条件即可化为
+\begin{align}
+	c_{ij} \cdot \overline{a}_{ij}
+	+ \overline{c}_{ij} &= 1 ,~ \forall i,j\\
+	a_{ij} &\geq x_m,~ m\in q_{ij},~ \forall i,j\\
+	a_{ij} &\in \{0,1\},~ \forall i,j
+\end{align}
+
+现在条件中还是存在非线性，我们继续使用技巧2消除乘积。令
+	$b_{ij} = c_{ij}\cdot \overline{a}_{ij}$, 
+	条件（4）变
+\begin{align}
+	b_{ij} + \overline{c}_{ij} &= 1,~ \forall i,j\\
+	b_{ij} &\leq c_{ij},~ \forall i,j\\
+	b_{ij} &\leq \overline{a}_{ij},~ \forall i,j\\
+	b_{ij} &\geq c_{ij} + \overline{a}_{ij} - 1,~ \forall i,j
+\end{align}
+我们注意到$b_{ij} \in \{0,1\}$。
+
+汇总，条件（3）线性化结果
+\begin{align}
+	a_{ij} &\geq x_m,~ m\in q_{ij},~ \forall i,j\\
+	b_{ij} + \overline{c}_{ij} &= 1,~ \forall i,j\\
+	b_{ij} &\leq c_{ij},~ \forall i,j\\
+	b_{ij} &\leq \overline{a}_{ij},~ \forall i,j\\
+	b_{ij} &\geq c_{ij} + \overline{a}_{ij} - 1,~ \forall i,j
+\end{align}
+
+\subsection{线性(2)}
+
+条件（2）成分比较复杂，我们分为左右两部分分别线性化。
+
+右半部分。我们令 $d_i = \overline{x}_i \prod_j \overline{c}_{ij}$
+且 $d_i$ 为0-1变量，于是我们将原（2）变换为以下问题：
+\begin{align}
+	\text{左} + d_i &= 1,~ \forall i\\
+	d_i &\leq \overline{x}_i,~\forall i\\
+	d_i &\leq \overline{c}_{ij},~\forall j\in \Phi_i,~\forall i\\
+	d_i &\geq \overline{x}_i + \sum_j(\overline{c}_{ij}) - (\sum_j 1)
+\end{align}
+
+左半部分。我们为了方便先将 $x_i$ 搬到括号内。我们令
+$e_{ij} = x_i c_{ij} \prod_{k\neq j} \overline{c}_{ik}$, 于是（2）被我们
+转化成
+\begin{align}
+	\sum_j e_{ij} + d_i &= 1,~ \forall i\\
+	d_i &\leq \overline{x}_i,~\forall i\\
+	d_i &\leq \overline{c}_{ij},~\forall j\in \Phi_i,~\forall i\\
+	d_i &\geq \overline{x}_i + \sum_j(\overline{c}_{ij}) - (\sum_j 1)\\
+	e_{ij} &\leq x_i\\
+	e_{ij} &\leq c_{ij}\\
+	e_{ij} &\leq \overline{c}_{ik}~(k\neq j)\\
+	e_{ij} &\geq x_i + c_{ij} + \sum \overline{c}_{ik} - (\sum_j 1)
+\end{align}
+
+\section{使用Matlab的MILP solver求解}
+
+我们随机给定一些初始变量。令问题规模为$3$ ($i\in \{1,2,3\}$)，
+设 $w_{ij}=1$, $q_{ij}$ 为一个随机的0-1矩阵。
+
+\subsection{Matlab MILP 编程模型}
+
+Matlab 的 MILP 求解器使用固定的 MILP 问题模型：
+\begin{align}
+	\min\qquad & f^T x\\
+	\text{s.t.}\qquad & x~\text{(intcon) 为整数}\\
+	A\cdot x &\leq b\\
+	Aeq\cdot x &= beq\\
+	lb &\leq x \leq ub
+\end{align}
+其中的 \verb|intcon| 是一个矢量，指定哪几个变量 $x$ 是整数（因为这是
+一个MILP求解器），其中的值为整数变量的index。$A$ 和 $Aeq$ 两个是矩阵，
+$b$ 与 $beq$ 两个都是矢量，这四个变量用于集中所有的等式约束和不等式约束。
+$lb$ 和 $ub$ 都是矢量，用于规定 $x$ 的 lower bound and upper bound.
+目标函数中的$f$是一个矢量，包含预定义的任意值。
+
+于是，使用Matlab的编程模型需要先将我们的ILP问题整理成上述统一形式，然后
+使用
+\begin{center}
+\verb|intlinprog(f,intcon,A,b,Aeq,beq,lb,ub)|
+\end{center}
+这个MILP接口求解。详细文档matlab文档已经写的非常清楚。
+
+\subsection{编程}
+
+规模为3的问题有42个0-1变量（包括中间变量）。
+我们严格规定在在这42个位置中，
+$x_i$ occupies $1:3$,
+$c_{ij}$ ... $4:12$,
+$a_{ij}$ ... $13:21$,
+$b_{ij}$ ... $22:30$,
+$d_{i}$ ... $31:33$,
+$e_{ij}$ ... $34:42$.
+这个位置关系我们在后续的代码中使用
+\begin{center}
+\verb@x 1:3 | c 4:12 | a 13:21 | b 22:30 | d 31:33 | e 34:42@
+\end{center}
+这个记号来表示。
+
+\begin{itemize}
+%@objective(m, Max, sum(c .* w))
+\item 准备$f$。因为我们目标函数完全不关心中间变量，所以
+		只需要$w_{ij}$填入对应于$c_{ij}$位置的部分即可。注意，我们取负号因为编程模型最小化，我们要最大化。\\
+\verb|f = -[0 0 0  1 1 1  1 1 1  1 1 1  zeros(1,42-12) ]'|
+\item 将所有变量指定为整数变量\\
+\verb|intcon = [1:42]|
+\item 随便给定的 $q_{ij}$, 张量 $q$ 尺寸是$3\times 3\times 3$，因为
+	$q_{ij}$ 是一个集合。$q_{ij}$ 的三个布尔值决定 $m$ 取1，2,3中的哪个。
+\begin{verbatim}
+q = reshape([1 0 0 0 1 0 0 0 1
+	0 1 1 1 1 0 1 0 1
+	0 0 1 0 0 0 1 0 0 ], 3, 3, 3)
+\end{verbatim}
+\item 进一步限制整数变量为0-1变量\\
+\verb|lb = zeros(42, 1)|\\
+\verb|ub = ones(42, 1)|
+
+\item 初始化空矩阵和空向量用来存放海量约束\\
+\begin{verbatim}
+A = []
+b = []
+Aeq = []
+beq = []
+\end{verbatim}
+
+\item 根据 $q_{ij}$ 的值来完成公式（11）,
+%# aij >= xm
+%for i in 1:II
+%	for j in 1:J
+%		for k in 1:II
+%			if p[i,j,k] > 0
+%				@constraint(m, a[i,j] >= x[k])
+%			end
+%		end
+%	end
+%end
+\begin{Verbatim}
+% x 1:3 | c 4:12 | a 13:21 | b 22:30 | d 31:33 | e 34:42
+% a[i,j] >= x[k]
+for i = 1:3
+	for j = 1:3
+		for k = 1:3
+			if q(i,j,k) ~= 0
+				tmp = zeros(42, 1)
+				tmp(13+(i-1)*3+(j-1)) = -1
+				tmp(k) = 1
+				A = [A tmp]
+				b = [b; 0]
+			end
+		end
+	end
+end
+\end{Verbatim}
+
+\item 公式（13）
+%# bij <= cij
+%for i in 1:II
+%	for j in 1:J
+%		@constraint(m, b[i,j] <= c[i,j])
+%	end
+%end
+\begin{Verbatim}
+% x 1:3 | c 4:12 | a 13:21 | b 22:30 | d 31:33 | e 34:42
+% b[i,j] <= c[i,j]
+for i = 1:3
+	for j = 1:3
+		tmp = zeros(42, 1)
+		tmp(22+(i-1)*3+(j-1)) = 1
+		tmp(4+(i-1)*3+(j-1)) = -1
+		A = [A tmp]
+		b = [b; 0]
+	end
+end
+\end{Verbatim}
+
+\item 公式(14)
+%# bij <= \bar{aij}
+%for i in 1:II
+%	for j in 1:J
+%		@constraint(m, b[i,j] <= 1 - a[i,j])
+%	end
+%end
+\begin{Verbatim}
+% x 1:3 | c 4:12 | a 13:21 | b 22:30 | d 31:33 | e 34:42
+%b[i,j] <= 1 - a[i,j]
+for i = 1:3
+	for j = 1:3
+		tmp = zeros(42, 1)
+		tmp(22+(i-1)*3+(j-1)) = 1
+		tmp(13+(i-1)*3+(j-1)) = 1
+		A = [A tmp]
+		b = [b; 1]
+	end
+end
+\end{Verbatim}
+
+\item 公式(15)
+%# bij >= cij + \bar{aij} - 1
+%for i in 1:II
+%	for j in 1:J
+%		@constraint(m, b[i,j] >= c[i,j] + (1 - a[i,j]) - 1)
+%		# 0 >= c[i,j] - a[i,j] - b[i,j]
+%	end
+%end
+\begin{Verbatim}
+% x 1:3 | c 4:12 | a 13:21 | b 22:30 | d 31:33 | e 34:42
+% b[i,j] >= c[i,j] + (1 - a[i,j]) - 1
+% --> 0 >= c[i,j] - a[i,j] - b[i,j]
+for i = 1:3
+	for j = 1:3
+		tmp = zeros(42, 1)
+		tmp(4+(i-1)*3+(j-1)) = 1
+		tmp(13+(i-1)*3+(j-1)) = -1
+		tmp(22+(i-1)*3+(j-1)) = -1
+		A = [A tmp]
+		b = [b; 0]
+	end
+end
+\end{Verbatim}
+
+\item 公式(12). 注意这是等式约束，要并入 $Aeq$.
+%# bij + \bar{cij} = 1
+%for i in 1:II
+%	for j in 1:J
+%		@constraint(m, b[i,j] + (1 - c[i,j]) == 1)
+%       # b[i,j] - c[i,j] == 0
+%	end
+%end
+\begin{Verbatim}
+% x 1:3 | c 4:12 | a 13:21 | b 22:30 | d 31:33 | e 34:42
+% b[i,j] + (1 - c[i,j]) == 1
+% --> b[i,j] - c[i,j] == 0
+for i = 1:3
+	for j = 1:3
+		tmp = zeros(42, 1)
+		tmp(22+(i-1)*3+(j-1)) = 1
+		tmp(4+(i-1)*3+(j-1)) = -1
+		Aeq = [Aeq tmp]
+		beq = [beq 0]
+	end
+end
+\end{Verbatim}
+
+\item 公式(21)
+%# di <= \bar{xi}
+%for i in 1:II
+%	@constraint(m, d[i] <= 1 - x[i])
+%end
+\begin{Verbatim}
+% x 1:3 | c 4:12 | a 13:21 | b 22:30 | d 31:33 | e 34:42
+% d[i] <= 1 - x[i]
+for i = 1:3
+	tmp = zeros(42, 1)
+	tmp(31+(i-1)) = 1
+	tmp(1+(i-1)) = 1
+	A = [A tmp]
+	b = [b; 1]
+end
+\end{Verbatim}
+
+\item 公式(22)
+%# di <= \bar{cij}
+%for i in 1:II
+%	for j in 1:J
+%		@constraint(m, d[i] <= 1 - c[i,j])
+%	end
+%end
+\begin{Verbatim}
+% x 1:3 | c 4:12 | a 13:21 | b 22:30 | d 31:33 | e 34:42
+% d[i] <= 1 - c[i,j]
+for i = 1:3
+	for j = 1:3
+		tmp = zeros(42, 1)
+		tmp(31+(i-1)) = 1
+		tmp(4+(i-1)*3+(j-1)) = 1
+		A = [A tmp]
+		b = [b; 1]
+	end
+end
+\end{Verbatim}
+
+\item 公式(23)
+%# di >= \bar{xi} + sum_j(\bar{cij}) - J
+%for i in 1:II
+%	@constraint(m, d[i] >= (1 - x[i]) + sum(1 .- c[i,:]) - J)
+%                  0 >= -d[i] + 1 - x[i] + I - c[i,:] - J
+%                  -1 >= -d[i] -x[i] -c[i,:]
+%end
+\begin{Verbatim}
+% x 1:3 | c 4:12 | a 13:21 | b 22:30 | d 31:33 | e 34:42
+% d[i] >= (1 - x[i]) + sum(1 .- c[i,:]) - J
+% --> 0 >= -d[i] + 1 - x[i] + J - c[i,:] - J
+% --> -1 >= -d[i] -x[i] -c[i,:]
+for i = 1:3
+	tmp = zeros(42, 1)
+	tmp(31+(i-1)) = -1
+	tmp(1+(i-1)) = -1
+	tmp(4+(i-1)*3:4+(i-1)*3+2) = -1
+	A = [A tmp]
+	b = [b; -1]
+end
+\end{Verbatim}
+
+\item 公式(24)
+%# eij <= xi
+%for i in 1:II
+%	for j in 1:J
+%		@constraint(m, e[i,j] <= x[i])
+%	end
+%end
+\begin{Verbatim}
+% x 1:3 | c 4:12 | a 13:21 | b 22:30 | d 31:33 | e 34:42
+% e[i,j] <= x[i]
+for i = 1:3
+	for j = 1:3
+		tmp = zeros(42, 1)
+		tmp(1+(i-1)) = -1
+		tmp(34+(i-1)*3+(j-1)) = 1
+		A = [A tmp]
+		b = [b; 0]
+	end
+end
+\end{Verbatim}
+
+\item 公式(25)
+%# eij <= cij
+%for i in 1:II
+%	for j in 1:J
+%		@constraint(m, e[i,j] <= c[i,j])
+%	end
+%end
+\begin{Verbatim}
+% x 1:3 | c 4:12 | a 13:21 | b 22:30 | d 31:33 | e 34:42
+% e[i,j] <= c[i,j]
+for i = 1:3
+	for j = 1:3
+		tmp = zeros(42, 1)
+		tmp(34+(i-1)*3+(j-1)) = 1
+		tmp(4+(i-1)*3+(j-1)) = -1
+		A = [A tmp]
+		b = [b; 0]
+	end
+end
+\end{Verbatim}
+
+\item 公式(26)
+%# eij <= cik (k neq j)
+%for i in 1:II
+%	for j in 1:J
+%		for k in 1:J
+%			if j != k
+%				@constraint(m, e[i,j] <= 1 - c[i,k])
+%			end
+%		end
+%	end
+%end
+\begin{Verbatim}
+% x 1:3 | c 4:12 | a 13:21 | b 22:30 | d 31:33 | e 34:42
+% e[i,j] <= 1 - c[i,k]
+for i = 1:3
+	for j = 1:3
+		for k = 1:3
+			tmp = zeros(42, 1)
+			tmp(34+(i-1)*3+(j-1)) = 1
+			tmp(4+(i-1)*3+(j-1)) = 1
+			A = [A tmp]
+			b = [b; 1]
+		end
+	end
+end
+\end{Verbatim}
+
+\item 公式(27)
+%# eij >= xi + cij + sum(\bar{cik})
+%tmp = 1 .- I(3)
+%for i in 1:II
+%	for j in 1:J
+%		@constraint(m, e[i,j] >= x[i] + c[i,j] + sum(tmp[i,:]' * (1 .- c[i,:])))
+% 0 >= -eij +cij + sum(tmp[i,:]' * (1-ci:))
+% 2 >= -eij +cij - sum(ci: excl i==j)
+%	end
+%end
+\begin{Verbatim}
+% x 1:3 | c 4:12 | a 13:21 | b 22:30 | d 31:33 | e 34:42
+% e[i,j] >= x[i] + c[i,j] + sum(ones' * (1-cik)) - J
+% --> 0 >= -eij +xi +cij + sum(ones' * (1-cik)) - J
+% --> -(J-1) + J >= -eij +xi +cij - sum(cik)
+% --> 1 >= -eij +xi +cij - sum(cik)
+for i = 1:3
+	for j = 1:3
+		tmp = zeros(42, 1)
+		tmp(34+(i-1)*3+(j-1)) = -1
+		tmp(4+(i-1)*3:4+(i-1)*3+2) = -1   % cik
+		tmp(4+(i-1)*3+(j-1)) = 1  % cij
+		tmp(1+(i-1)) = 1
+		A = [A tmp]
+		b = [b; 1]
+	end
+end
+\end{Verbatim}
+
+\item 公式(20)
+%# sum_j(eij) + d_i = 1
+%for i in 1:II
+%	@constraint(m, sum(e[i,:]) + d[i] == 1)
+%end
+\begin{Verbatim}
+% x 1:3 | c 4:12 | a 13:21 | b 22:30 | d 31:33 | e 34:42
+% sum(e[i,:]) + d[i] == 1
+for i = 1:3
+	tmp = zeros(42, 1)
+	tmp(31+(i-1)) = 1
+	tmp(34+(i-1):34+(i-1)+2) = 1
+	Aeq = [Aeq tmp]
+	beq = [beq 1]
+end
+\end{Verbatim}
+
+\item 调用MILP Solver，矩阵需要翻转一下才能正确点积。
+\begin{Verbatim}
+intlinprog(f, intcon, A', b, Aeq', beq, lb, ub)
+\end{Verbatim}
+
+\end{itemize}
+
+\subsection{完整代码}
+
+\begin{Verbatim}
+f = -[0 0 0  1 1 1  1 1 1  1 1 1  zeros(1,42-12) ]'
+
+intcon = [1:42]
+
+q = reshape([1 0 0 0 1 0 0 0 1
+	0 1 1 1 1 0 1 0 1
+	0 0 1 0 0 0 1 0 0 ], 3, 3, 3)
+
+lb = zeros(42, 1)
+ub = ones(42, 1)
+
+A = []
+b = []
+Aeq = []
+beq = []
+
+% x 1:3 | c 4:12 | a 13:21 | b 22:30 | d 31:33 | e 34:42
+% a[i,j] >= x[k]
+for i = 1:3
+	for j = 1:3
+		for k = 1:3
+			if q(i,j,k) != 0
+				tmp = zeros(42, 1)
+				tmp(13+(i-1)*3+(j-1)) = -1
+				tmp(k) = 1
+				A = [A tmp]
+				b = [b; 0]
+			end
+		end
+	end
+end
+
+% x 1:3 | c 4:12 | a 13:21 | b 22:30 | d 31:33 | e 34:42
+% b[i,j] <= c[i,j]
+for i = 1:3
+	for j = 1:3
+		tmp = zeros(42, 1)
+		tmp(22+(i-1)*3+(j-1)) = 1
+		tmp(4+(i-1)*3+(j-1)) = -1
+		A = [A tmp]
+		b = [b; 0]
+	end
+end
+
+% x 1:3 | c 4:12 | a 13:21 | b 22:30 | d 31:33 | e 34:42
+%b[i,j] <= 1 - a[i,j]
+for i = 1:3
+	for j = 1:3
+		tmp = zeros(42, 1)
+		tmp(22+(i-1)*3+(j-1)) = 1
+		tmp(13+(i-1)*3+(j-1)) = 1
+		A = [A tmp]
+		b = [b; 1]
+	end
+end
+
+% x 1:3 | c 4:12 | a 13:21 | b 22:30 | d 31:33 | e 34:42
+% b[i,j] >= c[i,j] + (1 - a[i,j]) - 1
+% --> 0 >= c[i,j] - a[i,j] - b[i,j]
+for i = 1:3
+	for j = 1:3
+		tmp = zeros(42, 1)
+		tmp(4+(i-1)*3+(j-1)) = 1
+		tmp(13+(i-1)*3+(j-1)) = -1
+		tmp(22+(i-1)*3+(j-1)) = -1
+		A = [A tmp]
+		b = [b; 0]
+	end
+end
+
+% x 1:3 | c 4:12 | a 13:21 | b 22:30 | d 31:33 | e 34:42
+% b[i,j] + (1 - c[i,j]) == 1
+% --> b[i,j] - c[i,j] == 0
+for i = 1:3
+	for j = 1:3
+		tmp = zeros(42, 1)
+		tmp(22+(i-1)*3+(j-1)) = 1
+		tmp(4+(i-1)*3+(j-1)) = -1
+		Aeq = [Aeq tmp]
+		beq = [beq 0]
+	end
+end
+
+% x 1:3 | c 4:12 | a 13:21 | b 22:30 | d 31:33 | e 34:42
+% d[i] <= 1 - x[i]
+for i = 1:3
+	tmp = zeros(42, 1)
+	tmp(31+(i-1)) = 1
+	tmp(1+(i-1)) = 1
+	A = [A tmp]
+	b = [b; 1]
+end
+
+% x 1:3 | c 4:12 | a 13:21 | b 22:30 | d 31:33 | e 34:42
+% d[i] <= 1 - c[i,j]
+for i = 1:3
+	for j = 1:3
+		tmp = zeros(42, 1)
+		tmp(31+(i-1)) = 1
+		tmp(4+(i-1)*3+(j-1)) = 1
+		A = [A tmp]
+		b = [b; 1]
+	end
+end
+
+% x 1:3 | c 4:12 | a 13:21 | b 22:30 | d 31:33 | e 34:42
+% d[i] >= (1 - x[i]) + sum(1 .- c[i,:]) - J
+% --> 0 >= -d[i] + 1 - x[i] + J - c[i,:] - J
+% --> -1 >= -d[i] -x[i] -c[i,:]
+for i = 1:3
+	tmp = zeros(42, 1)
+	tmp(31+(i-1)) = -1
+	tmp(1+(i-1)) = -1
+	tmp(4+(i-1)*3:4+(i-1)*3+2) = -1
+	A = [A tmp]
+	b = [b; -1]
+end
+
+% x 1:3 | c 4:12 | a 13:21 | b 22:30 | d 31:33 | e 34:42
+% e[i,j] <= x[i]
+for i = 1:3
+	for j = 1:3
+		tmp = zeros(42, 1)
+		tmp(1+(i-1)) = -1
+		tmp(34+(i-1)*3+(j-1)) = 1
+		A = [A tmp]
+		b = [b; 0]
+	end
+end
+
+% x 1:3 | c 4:12 | a 13:21 | b 22:30 | d 31:33 | e 34:42
+% e[i,j] <= c[i,j]
+for i = 1:3
+	for j = 1:3
+		tmp = zeros(42, 1)
+		tmp(34+(i-1)*3+(j-1)) = 1
+		tmp(4+(i-1)*3+(j-1)) = -1
+		A = [A tmp]
+		b = [b; 0]
+	end
+end
+
+% x 1:3 | c 4:12 | a 13:21 | b 22:30 | d 31:33 | e 34:42
+% e[i,j] <= 1 - c[i,k]
+for i = 1:3
+	for j = 1:3
+		for k = 1:3
+			tmp = zeros(42, 1)
+			tmp(34+(i-1)*3+(j-1)) = 1
+			tmp(4+(i-1)*3+(j-1)) = 1
+			A = [A tmp]
+			b = [b; 1]
+		end
+	end
+end
+
+% x 1:3 | c 4:12 | a 13:21 | b 22:30 | d 31:33 | e 34:42
+% e[i,j] >= x[i] + c[i,j] + sum(ones' * (1-cik)) - J
+% --> 0 >= -eij +xi +cij + sum(ones' * (1-cik)) - J
+% --> -(J-1) + J >= -eij +xi +cij - sum(cik)
+% --> 1 >= -eij +xi +cij - sum(cik)
+for i = 1:3
+	for j = 1:3
+		tmp = zeros(42, 1)
+		tmp(34+(i-1)*3+(j-1)) = -1
+		tmp(4+(i-1)*3:4+(i-1)*3+2) = -1   % cik
+		tmp(4+(i-1)*3+(j-1)) = 1  % cij
+		tmp(1+(i-1)) = 1
+		A = [A tmp]
+		b = [b; 1]
+	end
+end
+
+% x 1:3 | c 4:12 | a 13:21 | b 22:30 | d 31:33 | e 34:42
+% sum(e[i,:]) + d[i] == 1
+for i = 1:3
+	tmp = zeros(42, 1)
+	tmp(31+(i-1)) = 1
+	tmp(34+(i-1):34+(i-1)+2) = 1
+	Aeq = [Aeq tmp]
+	beq = [beq 1]
+end
+intlinprog(f, intcon, A', b, Aeq', beq, lb, ub)
+
+\end{Verbatim}
+
+\end{CJK}
+\end{document}

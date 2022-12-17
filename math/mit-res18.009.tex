@@ -1,0 +1,54 @@
+\title{MIT RES18.009: Learn Differential Equations, Gilbert Strang}
+
+\href{https://ocw.mit.edu/resources/res-18-009-learn-differential-equations-up-close-with-gilbert-strang-and-cleve-moler-fall-2015/}{Link: MIT-RES-18.009}
+
+\section{Introduction}
+
+\subsection{Overview of differential equation}
+
+First order equations
+$$\frac{dy}{dt} = ay + q(t)$$
+$$\frac{dy}{dt} = f(y)$$
+
+Second order equations
+$$\frac{d^2y}{dt^2} = -ky$$
+$$my''+by'+ky = f(x)$$
+
+It is good if these equations are linear and have constant coefficients.
+However the wide part of the subject ends up as numerical solutions.
+
+Systems of n equations
+$$\frac{d\vec{y}}{dt} = A\vec{y}$$
+$$\frac{d^2\vec{y}}{dt^2} = -S\vec{y}$$
+We can leverage eigenvalues and eigenvectors, to convert these coupled
+equations into n uncoupled equations, so that we can solve them individually.
+Besides, we can also obtain the numerical solutions by using MATLAB ode45.
+
+Partial Differential Equation (PDE). For example the heat equation,
+$$\frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x^2}$$
+the wave equation,
+$$\frac{\partial^2 u}{\partial t^2} = \frac{\partial^2 u}{\partial x^2}$$
+and the Laplace equation
+$$\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0$$
+
+\subsection{The calculous you need}
+
+Derivatives of $x^n$, $\sin x$, $\cos x$, $e^x$, $\ln x$.
+
+Rules for $f+g$, $f(x)g(x)$, $f(x)/g(x)$, $f(g(x))$.
+
+Fundamental Theorem
+$$\frac{d}{dx} \int_0^x y(t)dt = y(x)$$
+
+For example,
+$$y(t) = \int_0^t e^{t-s} q(s) ds$$
+solves
+$$\frac{dy}{dt} = y + q(t)$$
+
+Tangent line to the graph,
+$$f(t+\Delta t) \approx f(t) + \Delta t \frac{df(t)}{dt}$$
+This equation can be extended into Taylor Series.
+
+\section{First Order Equations}
+
+\subsection{Response to Exponential Input}

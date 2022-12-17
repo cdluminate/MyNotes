@@ -1,0 +1,414 @@
+% math-fund.tex
+
+\subsection{Functions}
+
+ A functions $f$ is a mappings between two non-empty sets:
+ $$f: A \mapsto B$$
+ When $f(-x) = f(x)$, the function is even; When $f(-x) = -f(x)$,
+ the function is odd. See
+ \href{https://en.wikipedia.org/wiki/Function_(mathematics)}
+ {Wikipedia:Function} for more detail about function.
+ Here is a list of some elementary functions and their properties:
+
+ \begin{itemize}
+
+ \item {$y = kx + b$}
+ \item {$y = \frac{k}{x},~~x\neq 0$}
+ \item {$ y = ax^2+bx+c $}
+ \item {$ y = a^x $}\\
+  $$a^{\frac{m}{n}} = \sqrt[n]{a^m}$$
+  $$a^{-1} = \frac{1}{a}$$
+ \item {$ y = \log_a x $}
+  $$a^x = N ~~ \Rightarrow ~~ x = \log_a N$$
+  $$\log_a MN = \log_a M + \log_a N$$
+  $$\log_a \frac{M}{N} = \log_a M - \log_a N$$
+  $$\log_a M^n = n \log_a M, n \in \mathcal{R}$$
+  \[ \log_a b = \frac{\log_c b}{\log_c a}\]
+ \item
+  $$ \text{sh} x = \frac{e^x - e^{-x}}{2} $$
+  $$ \text{ch} x = \frac{e^x + e^{-x}}{2} $$
+  $$ \text{tanh} x = \frac{\text{sh} x}{\text{ch} x} =
+     \frac{e^x - e^{-x}}{e^x + e^{-x}} $$
+ \end{itemize}
+
+\subsection{Trigonometry}
+
+\begin{figure}[!h]
+ \centering
+ \setlength{\unitlength}{0.8cm}
+ \begin{picture}(3,3)
+ \thicklines
+ %\put(0,0){\vector(1,0){5}}
+ %\put(0,0){\vector(0,1){5}}
+ \put(1,0.5){\line(2,1){3}}
+ \put(4,2){\line(-2,1){2}}
+ \put(2,3){\line(-2,-5){1}}
+ \put(0.7,0.3){$A$}
+ \put(4.05,1.9){$B$}
+ \put(1.7,2.95){$C$}
+ \put(3.1,2.5){$a$}
+ \put(1.3,1.7){$b$}
+ \put(2.5,1.05){$c$}
+ \end{picture}
+ \label{pic:triangle}
+ \caption{Triangle}
+\end{figure}
+
+\begin{table}[!h]
+ \begin{center}
+ \begin{tabular}{|c|c|}
+ \hline
+ Symbol & Meaning \\
+ \hline\hline
+ $a,b,c$ & Lengths of triangle's sides\\
+ $A,B,C$ & Angles opposite to sides $a,b,c$ respectively\\
+ \hline
+ \end{tabular}
+ \end{center}
+\end{table}
+
+ See \href{https://en.wikipedia.org/wiki/Trigonometry}
+ {Wikipedia:Trogonometry} for more detail.
+
+\begin{itemize}
+\item{Triangle}\\
+ For any triangle, the following equations hold:
+ \[ a + b > c \]
+ \[ A + B + C = \pi \]
+\item{Law of Sines}\\
+  \begin{equation}
+  \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} 
+  \end{equation}
+\item{Law of Cosines}\\
+  \begin{equation}
+  a^2 = b^2 + c^2 - 2 b c \cos A
+  \end{equation}
+\item{Area of Triangle}\\
+  \begin{equation}
+  A_\triangle = \frac{1}{2} bc \sin A
+  \end{equation}
+  \begin{equation}
+  A_\triangle = \sqrt{p(p-a)(p-b)(p-c)}
+  \end{equation}
+  where
+  \[ p = \frac{a+b+c}{2} \]
+\item{Archway length and Sectorial Area}\\
+  \begin{equation}
+  l = \theta r
+  \end{equation}
+  \begin{equation}
+  A = \frac{1}{2} l r
+  \end{equation}
+\item{Period}\\
+  \[ f(x) = A \sin (\omega x + \varphi) \]
+  \[ T = \frac{2\pi}{\omega} \]
+\item{Trigonometrical Function Convertion}\\
+  \[ \tan \theta = \frac{\sin \theta}{\cos \theta}\]
+  \[ \sin^2 \theta + \cos^2 \theta = 1 \]
+  \[ \sin (\frac{\pi}{2} - \theta) = \cos \theta \]
+  \[ \cos (a+b) = \cos a \cos b - \sin a \sin b \]
+  \[ \sin (a+b) = \sin a \cos b + \cos a \sin b \]
+  \[ \tan (a+b) = \frac{\tan a + \tan b}{1 - \tan a \tan b} \]
+
+ These tricks are sometimes useful for such convertions:
+  \[ a  = (a+b) - b \]
+  \[ a = (a+b)/2 + (a-b)/2 \]
+
+ The following equations can be derived from the equations above:
+  \[ \sin (a\pm b) = \sin a \cos b \pm \cos a \sin b \]
+  \[ \cos (a\pm b) = \cos a \cos b \mp \sin a \sin b \]
+  \[ \sin 2\theta = 2 \sin a \cos a \]
+  \[ \cos 2\theta = \cos^2 \theta + \sin^2 \theta = 2\cos^2 \theta -1 \]
+  \[ \sin a + \sin b = 2 \sin \frac{a+b}{2} \cos \frac{a-b}{2} \]
+  \[ \cos a + \cos b = 2 \cos \frac{a+b}{2} \cos \frac{a-b}{2} \]
+  \[ \sin a \cos b = \frac{1}{2} [ \sin (a+b) + \sin (a-b) ] \]
+  \[ \cos a \cos b = \frac{1}{2} [ \cos (a+b) - \cos (a-b) ] \]
+  \[ \sin \theta =
+	\frac{2 \tan \frac{\theta}{2}}{1+\tan^2 \frac{\theta}{2}} \]
+  \[ \cos \theta =
+	\frac{1-\tan^2 \frac{\theta}{2}}{1+\tan^2 \frac{\theta}{2}} \]
+  \[ \tan \theta =
+	\frac{2 \tan \frac{\theta}{2}}{1-\tan^2 \frac{\theta}{2}} \]
+
+  And the following one has migic power \ldots
+  \[ a \sin \alpha + b \cos \alpha =
+	  \sqrt{a^2+b^2} \sin (\alpha + \varphi) \]
+  where $0 \leqslant \varphi < 2\pi$, and 
+  \[ \sin \varphi = \frac{b}{\sqrt{a^2+b^2}} \]
+  \[ \cos \varphi = \frac{a}{\sqrt{a^2+b^2}} \]
+
+  However this one is even more powerful \ldots
+  \[ A \cos (\omega t + \varphi_1) + B \cos(\omega t + \varphi_2)
+	  = C \cos (\omega t + \varphi_3) \]
+  where
+  \[ C = \sqrt{A^2 + B^2 - 2AB \cos(\varphi_2 - \varphi_1)} \]
+  and \[ \varphi_3 =
+	  \arctan \Big[ \frac{A\sin\varphi_1+B\sin\varphi_2}
+	  {A\cos\varphi_1+B\cos\varphi_2} \Big]\]
+
+\item{Frequently used Values}\\
+\begin{table}[!h]
+  \begin{center}
+  \begin{tabular}{|c|ccccc|}
+  \hline
+  Angle $\theta$ & $0$ & $\pi/6$ & $\pi/4$ & $\pi/3$ & $\pi/2$\\
+  \hline\hline
+  $\sin \theta$  & 0 & 1/2 & $\sqrt{2}$/2 & $\sqrt{3}$/2 & 1 \\
+  $\cos \theta$  & 1 & $\sqrt{3}$/2 & $\sqrt{2}$/2 & 1/2 & 0 \\
+  $\tan \theta$  & 0 & $\sqrt{3}$/3 & 1 & $\sqrt{3}$   & NaN \\
+  \hline
+  \end{tabular}
+  \caption{Frequently Used Trigonometric Function Values}
+  \end{center}
+\end{table}
+
+\end{itemize}
+
+\subsection{Geometry}
+
+ \begin{itemize}
+ \item{Line}\\
+  \[ y = kx + b\]
+  \[ y - y_0 = k(x - x_0) \]
+  \[ \frac{y-y_1}{y_2-y_1} = \frac{x-x_1}{x_2-x_1}\]
+  \[ \frac{x}{a} + \frac{y}{b} = 1 \]
+  \[ Ax + By + C = 0\]
+ 
+  Distance from point $P(x_0, y_0)$ to line $ax + by +c = 0$:
+  \[ \text{Dist} = \frac{|ax_0 + by_0 +c|}{\sqrt{a^2+b^2}} \]
+ \item{Circle}\\
+  \[ (x-a)^2 + (y-b)^2 = r^2\]
+ \item{Ellipse}\\
+  \[ \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\]
+  $M(x, y)$ on ellipse, $F_1, F_2$ are its focuses, $|F_1M|+|MF_2|= 2a$
+ \item{Hyperbola}\\
+  \[ \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1\]
+ \item{Parabola}\\
+  \[ y^2 = 2px\]
+ \item perimeter circle $c = 2 \pi r$ 
+ \item area circle $A = \pi r^2$
+ \item surface sphere $S = 4 \pi r^2$
+ \item volume circular cone $V = \frac{1}{3} \pi r^2 h$
+ \item volume sphere $V = \frac{4}{3} \pi r^3$
+ \item cosine distance
+  \[ \langle\vec{a},\vec{b}\rangle =
+     \frac{\vec{a}\cdot\vec{b}}{|\vec{a}||\vec{b}|} \]
+ \end{itemize}
+
+\subsection{Sequence of Numbers}
+
+ Symbol ${a_n}$ is used to denote a sequence of numbers,
+ i.e. $a_1, a_2, \ldots, a_n$. The partial fraction expansion
+ trick may sometimes help you to get the summary of a sequence.
+
+ \begin{itemize}
+ \item This is useful when only the summary of a sequence is given.
+  \[ a_n = \sum_{i=1}^n a_i - \sum_{i=1}^{n-1} a_i \]
+
+ \item{Arithmatic Progression}
+
+  \[ a_n = a_1 + (n-1) d \]
+  \begin{equation}
+  \sum_{i=1}^n a_i = \frac{n(a_1+a_n)}{2}
+  \label{eq:sumofseq_samediff}
+  \end{equation}
+
+  One of its properties:
+  \[ a_{n} + a_{n-2} = 2 a_{n-1} \]
+
+  Proof for Eq.~\ref{eq:sumofseq_samediff}:
+  \begin{eqnarray}
+                S_n & = & a_1 + a_2 + \ldots + a_n \\
+                S_n & = & a_n + a_{n-1} + \ldots + a_1 \\
+  \Rightarrow 2 S_n & = & (a_1 + a_n) + \ldots + (a_n + a_1)
+  \end{eqnarray}
+  Note, this may not work for infinite series, since
+  the commutative law and the associative law may not
+  work for infinite series.
+ 
+ \item{Geometric Progression}
+
+ \[ a_n = a_1 c^{n-1} \]
+ where $c$ is the ratio, a constant not equal to $0$.
+ \begin{equation}
+ \sum_{i=1}^n a_n = \frac{a_1 (1-c^n)}{1-c} ~~~~(c\neq1)
+ \label{eq:sumofseq_samerat}
+ \end{equation}
+
+ Proof for Eq.~\ref{eq:sumofseq_samerat}:
+ \begin{eqnarray}
+                        S_n & = & a_1 + a_2 + \ldots + a_n \\
+                c \cdot S_n & = & a_2 + a_3 + \ldots + a_{n+1} \\
+ \Rightarrow (c-1)\cdot S_n & = & a_{n+1} - a_1
+ \end{eqnarray}
+
+ \item{Special Sequences}
+
+ \[ \sum^n_{i=1} i = \frac{1}{2} n(n+1) \]
+ \[ \sum^n_{i=1} i^2 = \frac{1}{6} n(n+1)(2n+1) \]
+ \[ \sum^{n-1}_{i=1} i^2 = \frac{1}{6} n(n-1)(2n-1) \]
+ \[ \sum^n_{i=1} i^3 = \frac{1}{4} n^2(n+1)^2 \]
+
+ This is the general form for finding the summary of $i^p$:
+ \[ \sum_{k=1}^n k^p = \sum_{k=1}^p \Big( \sum_{j=0}^{k-1} (-1)^j C_k^j (k-j)^{p+1} \Big) C_{n+1}^{k+1} \]
+
+ \end{itemize}
+
+\subsection{Inequality}
+
+ \begin{itemize}
+
+ \item{Fundamental Inequibility}
+
+ \[ \frac{a+b}{2} \geqslant \sqrt{ab} \]
+ the $=$ holds only when $a=b$. Additionally,
+ \[ \frac{a+b+c}{3} \geqslant \sqrt[3]{abc} \]
+ the $=$ holds only when $a=b=c$.
+
+ \[ \frac{2}{\frac{1}{a}+\frac{1}{b}} \leqslant \sqrt{ab} \leqslant
+    \frac{a+b}{2} \leqslant \sqrt{\frac{a^2+b^2}{2}} ~~,
+		 a>0, ~b>0 \]
+
+ \item{Trigonometrical Ineq.}
+
+ \[ |a+b| \leqslant |a| + |b| \]
+ The "$=$" holds only when $ab\geq0$.
+ \[ |a-c| \leqslant |a-b| + |b-c| \]
+ The "$=$" holds only when $(a-b)(b-c)\geq0$.
+
+ Proof: using vectors.
+
+ \item{Cauthy Inequality}
+
+ \[ (a^2+b^2)(c^2+d^2) \geqslant (ac + bd)^2 \]
+ The "$=$" holds only when $ad=bc$.
+
+ Proof:
+ \[ |\vec{a}\cdot\vec{b}| \leqslant |\vec{a}|\cdot|\vec{b}| \]
+
+ General form of Cauthy Ineq. :
+ \[ (a_1^2+a_2^2+\ldots+a_n^2)(b_1^2+b_2^2+\ldots+b_n^2) \geqslant (a_1b_1 + a_2b_2 +\ldots+ a_nb_n)^2 \]
+ the "$=$" sign holds only when $b_i=0$ or $\exists~ k \in \mathcal{R}, a_i = kb_i$
+ See \href{https://en.wikipedia.org/wiki/Cauchy-Schwarz_inequality}
+ {Wikipedia:Cauthy Inequality} for detail.
+
+ \item{Sequence Inequality}
+
+ Given that $a_i \in \mathcal{R}, b_i \in \mathcal{R}$,
+ and $a_1\leq a_2\leq \cdots a_n$ and $b_1\leq b_2\leq \cdots b_n$,
+ and $c_1,c_2,\ldots,c_n$ is one of the permutations of $b_1,b_2,\ldots,b_n$, then
+ \[ a_1b_n+a_2b_{n-1}+\ldots+a_nb_1 \leq a_1c_1 + a_2c_2 + \ldots + a_nc_n \]
+ \[ a_1c_1 + a_2c_2 + \ldots + a_nc_n \leq a_1b_1 + a_2b_2 + \ldots + a_nb_n \]
+
+ \end{itemize}
+
+\subsection{Permutation \& Combination}
+
+ \[ a^3 + b^3 = (a+b)(a^2-ab+b^2) \]
+ \[ a^3 - b^3 = (a-b)(a^2+ab+b^2) \]
+ 
+\begin{lstlisting}[language=Mathematica]
+factor(a^3+b^3); factor(a^3-b^3);
+\end{lstlisting}
+
+ \[ A_n^m = \frac{n!}{(n-m)!}\]
+
+ \[ C_n^m = \frac{n!}{m!(n-m)!}\]
+
+ Binomial theorem, where $n$ is integer,
+ \[ (a+b)^n = \sum_{k=0}^n C_n^k a^{n-k}b^k \]
+ See \href{https://en.wikipedia.org/wiki/Binomial_theorem}
+ {Wikipedia:Binomial Theorem} for generalized binomial theorem.
+
+\subsection{Complex Number}
+ A complex number $z\in C$ could be written as $z = a+ib$ where $i$ is the
+ imaginary unit, $a,b\in\Re$. If we inspect this number regarding it as
+ a vector in the geometry aspect, then its length is $|z| = r = \sqrt{a^2+b^2}$,
+ and its angle to the $x$-axis is $\tan\theta=\frac{b}{a}$. Since $a=r\cos\theta$
+ and $b=r\sin\theta$, we could write the number in another form,
+ $z = r(\cos\theta + i\sin\theta) = re^{i\theta}$.
+
+\subsection{Fundamental Physics Bits}
+
+\subsubsection{Linear Movement}
+
+$$ \frac{dv}{dt} = a $$
+$$ \frac{dx}{dt} = v $$
+
+where $v$ denotes velocity, $a$ denotes acceleration (e.g. $g$),
+$t$ for time. The following equations can be derived from the
+above equations
+
+$$ v = v_0 + at $$
+$$ x = v_0 t + \frac{1}{2}at^2 + x_0 $$
+
+\subsubsection{Newton's laws of motion}
+
+$$ F = ma $$
+
+\subsubsection{Curvilinear motion}
+
+$$ v = \frac{2\pi r}{T} $$
+$$ a_n = \frac{v^2}{r} = \omega^2 \cdot r = \omega \cdot v $$
+$$ F_n = m \cdot a_n $$
+
+\subsubsection{The law of attraction}
+
+$$ F = G\frac{m_1 m_2}{r^2} $$
+where $G$ is the gravitation constant.
+
+\subsubsection{Mechanical Energy}
+
+$$ W=Fl $$
+$$ P=Fv $$
+$$ E_{kinetic} = \frac{1}{2}mv^2 $$
+$$ E_{potential1} + E_{kinetic1} = E_{potential2}+E_{kinetic2} $$
+
+\subsubsection{Static electric field}
+
+$$ F = k\frac{q_1 q_2}{r^2} $$
+$$ E = F/q $$
+
+\subsubsection{Constant current}
+
+$$ I = q/t $$
+$$ I = U/R $$
+$$ R = \rho l/S $$
+$$ P = UI $$
+$$ W = Pt $$
+
+\subsubsection{Magnetic Field}
+
+$$ F=BIL $$ (B is vertical to I)
+$$ F=qvB $$
+
+\subsubsection{Electromagnetic Induction}
+
+$$ \Phi = BS $$
+$$ E = n\frac{\Delta \Phi}{\Delta t} $$
+
+\subsubsection{Thermology}
+
+$$ pV = C $$
+where $C$ is a constant and $V$ is the volume of gas,
+$p$ denotes the pressure.
+
+\subsubsection{Mechanical Vibration}
+
+$$ x = A\sin(\omega t+\varphi) $$
+
+For electromagnetic waves
+\[ c = \lambda f \]
+where $c$ denotes the speed of light, $\lambda$ denotes wave length, and $f$ denotes the frequency. ($v=\lambda f$)
+
+\subsubsection{Optics}
+
+$$ n = \frac{\sin\theta_1}{\sin\theta_2} $$
+
+\subsubsection{Conservation of momentum}
+
+$$ p = mv $$
+
+Impulse $I=Ft$, ($dp/dt = F$).
+
+$$ p_1 + p_2 = p'_1 + p'_2 $$

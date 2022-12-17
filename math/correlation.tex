@@ -1,0 +1,170 @@
+\section{Correlation}
+
+There are three types of Correlation coefficients.
+
+\begin{itemize}
+\item{\bf Pearson} Pearson produce-moment correlation coefficient, also known
+as $r$, $R$, or pearson's $r$, is a measure of the strength and direction of
+the linear relationship between two variables that is defined as the covariance
+of the variables divided by the product of their standard deviations. This is
+the best known and most commonly used type of correlation coefficient; when the
+term "correlation coefficient" is used without further qualification, it
+usually refers to the pearson product-moment correlation coefficient.
+\item{\bf Intra-Class} Intraclass correlation (ICC) is a descriptive statistic
+that can be used when quantitative measurements are made on units that are
+organized into groups; it describes how strongly units in the same group
+resemble each other.
+\item{\bf Rank} Rank correlation is a measure of the relationship between the
+rankings of two variables or two rankings of the same variable.
+\item{\bf Distance} Distance correlation was introduced to address a deficiency
+of Pearson's correlation that it's mainly sensitive to a linear relationship
+between two variables.
+\end{itemize}
+
+\subsection{PPMCC}
+
+$$\rho_{X,Y} = \frac{\text{cov}(X,Y)}{\sigma_X \sigma_Y} $$
+where
+$$ \text{cov}(X,Y) = E[(X-E[X])(Y-E[Y])] $$
+
+\subsection{Rank Correlation}
+
+\subsubsection{Spearman's Rank Correlation}
+
+The Spearman correlation coefficient is defined as the Pearson correlation
+coefficient between the ranked variables. For a sample of size $n$, the $n$ raw
+scores $X_i$, $Y_i$ are converted to ranks $rg_{X_i}$, $rg_{Y_i}$, and $r_s$ is
+computed from $$ r_s = \rho_{rg_X,rg_Y} = \frac{cov(rg_X, rg_Y)}{\sigma_{rg_X}
+\sigma_{rg_Y}} $$ where $\rho$ denotes the usual Pearson correlation
+coefficient, but applied to the rank variables.
+
+Example Julia code
+\begin{verbatim}
+using Statistics
+xs, ys = sortperm(x), sortperm(y)
+sprman = cor(xs, ys)
+\end{verbatim}
+
+\subsubsection{Kendal Rank Correlation Coefficient} 
+
+Any pair of observations $(x_i,y_i)$ and $(x_j,y_j)$ where $i<j$, are said to
+be concordant if the ranks for both elements agree: that is, if both $x_i>x_j$
+and $y_i>y_j$; or if both $x_i<x_j$ and $y_i<y_j$. They are said to be
+discordant, if $x_i>x_j$ and $y_i<y_j$; or if $x_i<x_j$ and $y_i>y_j$. If
+$x_i=x_j$ or $y_i=y_j$, the pair is neither concordant nor discordant, but
+tied. The Kendal $\tau$ coefficient is defined as:
+$$ \tau_a = \frac{n_c-n_d}{n_0} $$
+where the coefficient itself must be in the range $-1\le \tau \le 1$.  $n_0$ is
+the total number of pair combinations, i.e. $n(n-1)/2$. $n_c$ denotes the
+number of concordant pairs, while $n_d$ denotes the number of discordant pairs.
+
+When tied pairs arise in the data, the coefficient may be modified in a number
+of ways to keep it in the range $[-1,1]$. See $\tau_b$ and $\tau_c$.
+
+Reference Implementation in Julia
+\begin{verbatim}
+# https://stackoverflow.com/questions/5284646/rank-items-in-an-array-using-python-numpy
+# https://codereview.stackexchange.com/questions/65031/creating-a-list-containing-the-rank-of-the-elements-in-the-original-list
+function Rank(X::Vector)::Vector
+	sortperm(sortperm(X))
+end
+
+function kendalltau(R1::Vector, R2::Vector)::Number
+	concordant, discordant, tied = 0, 0, 0
+	if length(R1) != length(R2)
+		error("Unequal length of ranking vector")
+	end
+	# Traversal in the upper triangular matrix
+	n = length(R1)
+	for i in 1:n
+		for j in i+1:n
+			if (R1[i]-R1[j]) * (R2[i]-R2[j]) > 0
+				concordant += 1
+			elseif (R1[i]-R1[j]) * (R2[i]-R2[j]) < 0
+				discordant += 1
+			elseif (R1[i]==R2[i]) || (R1[j]==R2[j])
+				tied += 1
+			else
+				error("unexpected value")
+			end
+		end
+	end
+	ta = (concordant - discordant)/(n*(n-1)/2)
+	dt = discordant/(n*(n-1)/2)
+	println("C", concordant, " D", discordant, " T", tied, " ta", ta, " dt", dt)
+	ta # dt
+end
+
+x1 = vec([12 2 1 12 2])
+x2 = vec([1 4 7 1 0])
+s1 = sortperm(x1)
+s2 = sortperm(x2)
+println(kendalltau(sortperm(s1), sortperm(s2)))
+
+r1 = vec([1 2 3 4 5])
+r2 = vec([3 4 1 2 5])
+println(kendalltau(r1, r2))
+\end{verbatim}
+
+Reference implementation in Python
+\begin{verbatim}
+import numpy as np
+
+def Rank(X: np.ndarray) -> np.ndarray:
+    return X.argsort().argsort()
+
+def kendalltau(r1: np.ndarray, r2: np.ndarray) -> float:
+    r1 = r1.ravel()
+    r2 = r2.ravel()
+    concordant, discordant, tied = 0, 0, 0
+    if len(r1) != len(r2):
+        raise Exception("length unequal")
+    n = len(r1)
+    for i in range(n):
+        for j in range(i+1,n):
+            if (r1[i]-r1[j])*(r2[i]-r2[j]) > 0:
+                concordant += 1
+            elif (r1[i]-r1[j])*(r2[i]-r2[j]) < 0:
+                discordant += 1
+            elif (r1[i]==r2[i]) or (r1[j]==r2[j]):
+                tied += 1
+            else:
+                raise Exception("unexpected condition")
+    ta = (concordant - discordant)/(n*(n-1)/2)
+    dt = discordant/(n*(n-1)/2)
+    print(f"C{concordant} D{discordant} T{tied}, ta {ta}, dt {dt}")
+    return ta
+
+if __name__ == '__main__':
+    x1 = np.array([12,2,1,12,2])
+    x2 = np.array([1,4,7,1,0])
+    r1, r2 = x1.argsort().argsort(), x2.argsort().argsort()
+    print(kendalltau(r1, r2))
+    r1 = np.array([1,2,3,4,5])
+    r2 = np.array([3,4,1,2,5])
+    print(kendalltau(r1, r2))
+\end{verbatim}
+
+\subsubsection{Goodman and Kruskal's Gamma}
+
+Similar to the Kendal's $\tau$ coefficient, Goodman's $G$ depends on two
+quantities: the number of concordant pairs $n_c$, and the number of discordant
+pairs $n_d$. Note that "ties" are dropped.  $$ G = \frac{n_c-n_d}{n_c+n_d} $$
+This statistic can be regarded as the maximum likelihood estimator for the
+theoretical quantity $\gamma$.
+
+\subsubsection{Somers' D}
+
+$$ D_{YX} = \tau(X,Y)/\tau(X,X) $$
+
+Note that kendall's $\tau$ is symmetric in $X$ and $Y$, whereas Somers' D is
+asymmetric in $X$ and $Y$.
+
+\subsection{See Also}
+
+\url{https://en.wikipedia.org/wiki/Correlation_and_dependence}
+\url{https://en.wikipedia.org/wiki/Covariance}
+\url{https://en.wikipedia.org/wiki/Rank_correlation}
+\url{https://en.wikipedia.org/wiki/Correlation_coefficient}
+\url{https://en.wikipedia.org/wiki/Kendall_tau_distance}
+\url{https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient}

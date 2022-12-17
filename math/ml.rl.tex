@@ -1,0 +1,63 @@
+\section{Reinforcement Learning}
+
+A reinforcement learning problem can be described as a Markov decision process
+(MDP). The RL task corresponds to a quadruplet $E=\langle X,A,P,R\rangle$,
+where $E$ denotes the environment, $X$ is the state space, $A$ stands for the
+action space, and the state transfer function is $P$ ($P:X\times A\times
+X\mapsto \Re$ indicates probabilities). The reward function $R:X\times A\times
+X\mapsto \Re$, i.e. the feedback of environment, specifies the quantitative
+rewards. Note that sometimes the reward function is irrelevant to the action.
+
+In a reinforcement learning task, the machine has to learn a "policy" $\pi$,
+such that an action $a$ to be executed could be taken given the state $x$,
+i.e. $a=\pi(x)$. There are two ways to represent the policy: deterministic
+and probablistic. The first way defines the policy as a definite mapping
+$\pi:X\mapsto A$, while another one defines it as a probablistic function
+$\pi:X\times A\mapsto \Re$.
+
+The learning objective is to maximize the accumulated rewards in long term.
+There are many ways to calculate such objective. Some common choices include
+(1) T-step accumulated reward $E[\frac{1}{T}\sum_1^T r_t]$; (2) $\gamma$-discount
+accumulated reward $E[\sum_{t=1}^{+\infty} \gamma^t r_{t+1}]$.
+
+Different from supervised learning, the rewards under reinforcement learning
+can be observed only after several actions have been taken. Let's first discuss
+about a simple case: maximizing the single-step reward. In fact, single-step
+reinforcement learning corresponds to a theoretical model named K-armed bandit.
+Exploration-only method can be used to acquire the expected rewards of each
+arm, and exploitation-only method is to trigger the optimal explored arm.
+Clearly both of the two methods are not likely to maximize the accumulcated
+rewards, due to the Exploration-Exploitation dilemma. So there must be some
+kind of compromise -- $\epsilon$-greedy method, where $\epsilon$ is a hyper
+parameter that needs to be adjusted accordingly.
+
+\begin{lstlisting}
+Input: number of arms K
+       reward function R
+	   times of exploration T
+	   exploration probability e
+Process:
+  initialize variables
+  for t = 1, 2, ..., T do
+    if rand() < e then
+	  k = random_choice([1,2,...,K])
+	else
+	  k = argmax_i Q(i)
+	end
+	calculate reward
+	update mean reward for arm k
+  end
+\end{lstlisting}
+
+Let $Q(k)=(\sum_{i=1}^n v_i)/n$ be the mean reward of arm $k$.  Note that you
+can caculate the mean reward with the following equation to save space: $$Q_n
+(k)=\frac{1}{n}((n-1)\times Q_{n-1}(k) + v_n)$$.
+
+Another method for such compromize is the Softmax algorithm, which derives
+the probability to choose arms based on Boltzmann distribution
+$$ P(k)=\frac{\exp(Q(k)/\tau)}{\sum_{i=1}^K \exp(Q(i)/\tau)} $$
+according to the current mean reward.
+
+\subsection{Reference}
+
+1. Zhihua Zhou, Machine Learning.

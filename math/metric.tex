@@ -1,0 +1,100 @@
+\section{Metric and Metric Space}
+
+Keywords in this section:
+\begin{itemize}
+	\item \href{https://en.wikipedia.org/wiki/Metric_(mathematics)}{Metric}
+	\item \href{https://en.wikipedia.org/wiki/Minkowski_distance}{Minkowski Distance}
+	\item \href{https://en.wikipedia.org/wiki/Cosine_similarity}{cosine similarity}
+	\item \href{https://en.wikipedia.org/wiki/Jaccard_index}{Jaccard index}
+	\item \href{https://en.wikipedia.org/wiki/Metric_space}{metric space}
+\end{itemize}
+
+\subsection{Metric and Metric Space}
+
+A metric, or {\bf distance function}, is a function that defines a distance
+between each pair of elements of a set $\mathcal{X}$.  $$d: \mathcal{X} \times
+\mathcal{X} \mapsto [0, \infty)$$ where $[0,\infty)$ is the set of non-negative
+real numbers. Besides, the metric should also satisfy the following conditions:
+\begin{enumerate}
+	\item Non-negativity or separation axiom: $d(x,y) \geqslant 0$
+	\item Identity of indiscernibles: $d(x,y) = 0 \Leftrightarrow x=y$
+	\item Symmetry: $d(x,y) = d(y,x)$
+	\item Subadditivity/Triangle Inequiality: $d(x,z) \leqslant d(x,y) + d(y,z)$
+\end{enumerate}
+
+Metric can be used as a measure of similarity. In broad strokes metrics are of
+two kinds:
+\begin{itemize}
+	\item{Pre-defined Metrics:} Metrics which are fully spedified without the
+		knowledge of data, e.g. Euclidean distance.
+	\item{Learned Metrics:} Metrics which can obly be defined with the
+		knowledge of the data, e.g. Mahalanobis distance. Learned metrics are
+		of two types: (1) Unsupervised. (2) Supervised.
+\end{itemize}
+
+A metric space is a set for which distances between all members of the set are
+defined. A metric space is an ordered pair $(M,d)$ where $M$ is a set and $d$
+is a matric on $M$, i.e., a function $d:M\times M\mapsto \Re$ such that several
+conditions hold, incl. $d(x,y)>0$.
+
+\subsubsection{Minkowski Distance}
+
+The minkowski distance is a metric in a normed vector space which can be
+considered as a generalization of both the Euclidean distance and the Manhattan
+distance. See also $L^p$-space. Mikowski distance of order $p$ between two
+$n$-d points $a,b\in\Re^n$ is defined as $$d(a, b) = \Big( \sum_{i=1}^n |a_i -
+b_i|^p \Big)^{\frac{1}{p}}$$ Minkowski distance is typically used with $p$
+being 1 or 2, which correspond to the Manhattan distance and the Euclidean
+distance, respectively. In the limiting case of $p$ reaching infinity, we
+obtain the Chebyshev distance.
+
+Particularly, the Euclidean distance i.e. the Minkowski distance with $p=2$
+can be represented in vector form as follows:
+$$ d(\mathbf{x},\mathbf{y}) = (\mathbf{x}-\mathbf{y})^T(\mathbf{x}-\mathbf{y})$$
+where $\mathbf{x}$ and $\mathbf{y}$ are both column vectors.
+
+\subsubsection{Cosine Similarity}
+
+...
+
+\subsubsection{Jaccard Index}
+
+Jaccard index , also known as Intersection over Union and the Jaccard
+similarity coefficient. The Jaccard coefficient measures similarity between
+finite sample sets, and is defined as the size of the intersection divided by
+the size of the union of the sample sets:
+
+$$ J(A,B) = \frac{|A\cap B|}{|A\cup B|} = \frac{|A\cap B|}{|A|+|B|-|A\cap B|} $$
+
+(If $A$ and $B$ are both empty, we define $J(A,B)=1$.) And $0\leq J(A,B)\leq 1$.
+
+The Jaccard distance, which measures dissimilarity between sample sets, is
+complementary to the Jaccard coefficent and is obtained by subtracting the
+Jaccard coefficient from $1$, or, equivalently, by dividing the difference of
+the sizes of the union and the intersection of two sets by the size of the
+union.
+
+$$ d_J(A,B) = 1 - J(A,B) $$
+
+Jaccard similarity and distance also have generalized forms. If
+$\mathbf{x} = (x_1, x_2, \ldots, x_n)$ and $\mathbf{y} = (y_1, y_2, \ldots, y_n)$
+are two vectors with all real $x_i, y_i \geq 0$, then their Jaccard similarity
+coefficient is defined as
+$$ J(\mathbf{x},\mathbf{y}) = \frac{
+	\sum_i \min(x_i,y_i)}{\sum_i \max(x_i,y_i)} $$
+And Jaccard distance
+$$ d_J(\mathbf{x}, \mathbf{y}) = 1 - J(\mathbf{x},\mathbf{y}) $$
+
+\subsubsection{Mahalanobis Distance}
+
+Mahalanobis distance weights the Euclidean distance between two points, by the
+standard deviation of the data.
+$$d(x,y) = (x-y)^T \Sigma^{-1}(x-y)$$
+where $\Sigma$ is the mean-subtracted covariance matrix of all data points.
+
+
+\subsection{Metric Learning}
+
+\subsubsection{Supervised Metric Learning}
+
+

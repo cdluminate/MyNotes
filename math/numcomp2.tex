@@ -1,0 +1,77 @@
+
+Finite Difference Method, FDTD, MoM (Method of Moment), FEA (Finite element analysys).
+
+\subsection{Finite Difference Method}
+
+The first-order difference equation as approximation to differentiation.
+$$
+  u'(x) = \lim_{\Delta x \rightarrow 0} \frac{u(x+\Delta x)-u(x)}{\Delta x}
+$$
+
+The second-order difference equation can be easily found.
+\begin{align*}
+  u''(x) &= \lim_{\Delta x \rightarrow 0} \frac{u'(x+\Delta x)-u'(x)}{\Delta x} \\
+  &= \frac{u(x+\Delta x)-2u(x)+u(x-\Delta x)}{(\Delta x)^2}
+\end{align*}
+
+For example the following equation
+$$
+  \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial x^2} = f(x,y)
+$$
+can be approximated with difference equation, like this
+\begin{align*}
+  &\frac{u(x+\Delta y, y) - 2u(x,y) + u(x-\Delta x, y)}{(\Delta x)^2}\\
+  +& \frac{u(x, y+\Delta y) - 2u(x,y) + u(x, y-\Delta y)}{(\Delta y)^2)}\\
+  =& f(x, y)
+\end{align*}
+
+Having Applied that equation into the Grid-of-field to be solved, we obtain the final form
+of equation by finite difference method for the above partial differential equation.
+\begin{align*}
+  &\frac{u(x_i+h_x, y_i) - 2u(x_i,y_i) + u(x_i-h_x, y)}{h_x^2}\\
+  +& \frac{u(x_i, y_i+h_y) - 2u(x_i,y_i) + u(x_i, y_i-h_y)}{h_y^2}\\
+  =& f(x_i, y_i)
+\end{align*}
+With this equation, we can generate a group of equations which will finally be turned into
+a matrix equation. And it yields the approximation solution.
+
+If the resulting matrix equation is too large, and hard for a computer to
+compute, there are still a way to go: solving matrix equation iteratively.
+There are two methods for this purpose: synchronized iteration method and
+asynchronized one. For synchronized one it looks like this
+$$
+V_{i,j}^{(k+1)} = \frac{1}{2(h_x^2+h_y^2)}
+  [ h_x^2(V_{i,j+1}^{(k)} +V_{i,j-1}^{(k)}) 
+    + h_y^2(V_{i+1,j}^{(k)} +V_{i-1,j}^{(k)}) ]
+$$
+And asynchronized one looks like
+$$
+V_{i,j}^{(k+1)} = \frac{1}{2(h_x^2+h_y^2)}
+  [ h_x^2(V_{i,j+1}^{(k)} +V_{i,j-1}^{(k+1)}) 
+    + h_y^2(V_{i+1,j}^{(k)} +V_{i-1,j}^{(k+1)}) ]
+$$
+Generally asynced method converges faster than the synced one.
+
+
+\subsection{Method of Moment}
+
+Suppose we have a linear operator $L(\cdot)$, and
+$$ L(f) = g $$
+where function $f$ is to be solved and $g$ is already known.
+We expand the target function $f$ into a linear combination of
+a group of base functions, {\it i.e.}
+$$ f = \sum_n a_n f_n $$
+And then we obtain this equation
+$$ \sum_n a_n L(f_n) = g $$
+
+After that, we introduce a weight function $w$ and perform
+inner production as follows
+$$ \sum_n a_n < w_m, Lf_n > = < w_m, g > $$
+or in a matrix equation form
+$$ [l_{mn}] [a_n] = [g_m] $$
+where $l_{mn} = < w_m, Lf_n >$, $g_m = < w_m, g >$.
+With this result we can find the coefficient vector because
+$ [a_n] = [l_{mn}]^{-1} [g_m] $.
+Finally the approximation, a linear combination of the base
+functions, is obtained:
+$$ f = [ \tilde{f_n} ] \cdot [a_n] $$

@@ -1,0 +1,233 @@
+\section{MIT 18.06: Linear Algebra, G.S.}
+
+\subsection{Lec 1: Geometric Interpretation of $Ax=b$}
+
+Interpreting the linear system of equations: row picture and column picture.
+Row picture: intersection of lines. Column picture: linear combination of
+column vectors.
+
+Key point: $Ax$ is a linear combination of columns of $A$.
+
+\subsection{Lec 2: Gaussian Elimination}
+
+Gaussian elimination on the augmented matrix $\tilde{A}=[A,b]$ yields
+the solution, given that matrix $A$ is not singular. When we only look
+at matrix $A$ and represent every step of elimination as a matrix
+$E_i~(i\in [2,n])$, we obtain
+\begin{align}
+	( E_n \cdot E_{n-1} \cdots E_2 ) A &= U \\
+	(L^{-1}) A &= U \\
+	A &= LU
+\end{align}
+where $U$ is an upper triangular matrix, $L$ an lower triangular matrix.
+
+\subsection{Lec 3: Matrix Multiplication & Inverse}
+
+There are $5$ ways to interpret matrix multiplication
+$A_{m\times k} \cdot B_{k\times n} = C_{m\times n}$:
+\begin{enumerate}
+	\item The regular way: $C_{i,j} = \text{dot}(A_{i,:},B_{:,j})$
+	\item The column way: $C_{:,j}$ is a linear combination of columns of $A$.
+	\item The row way: $C_{i,:}$ is a linear combination of rows of $B$.
+	\item The matrix way: $C = \sum_k A_{:,k} \cdot B_{k,:}$
+	\item By block -- block multiplication.
+\end{enumerate}
+
+A non-singular matrix $A$ has inserse, i.e. $A^{-1}A=I=AA^{-1}$. Singular
+matrix has no inverse as neither its rows nor columns could form an eye matrix
+via linear combination. In another word, a matrix $A$ is singular if there
+exists vector $x\ne 0$ which makes $Ax=0$. We can prove it by contradition
+as equation $Ax=0$ doesn't hold if both sides are left-multiplied by $A^{-1}$.
+
+The inverse of a non-singular matrix could be solved via Gauss-Jordan method,
+an extention of Gaussian elimination. The basic idea is to conduct gaussian
+elimination on the augmented matrix $[A,I]$ as follows:
+$$ (E_n E_{n-1} \cdots E_2) [A,I] = (A^{-1}) [A,I] = [I, A^{-1}] $$
+
+\subsection{Lec 4: LU Decomposition}
+
+When we can conduct Gaussian elimination on matrix $A$ without row exchange:
+\begin{align}
+	(E_n E_{n-1} \cdots E_2) A &= U \\
+	A &= (E_2^{-1} E_3^{-1} \cdots E_n^{-1}) U \\
+	A &= LU
+\end{align}
+Number of operations in Gaussian elimination:
+$$ n^2 + (n-2)^2 + \ldots + 1^2 \approx \frac{1}{3}n^3 $$
+That means the time complexity of Gaussian elimination is $O(n^3)$.
+
+Permutation matrix $P$ needs to be introduced when there is any zero pivot during
+elimination. The LU factorization with a permutation matrix, namely row exchanges
+is $PA=LU$. Particularly, $P^{-1} = P^T$.
+
+\subsection{Lec 5: Symmetric Matrix, Vector Space}
+
+Symmetric matrix $A$: $A^T=A$. For any matrix $A$, $A^TA$ forms a symmetric
+matrix because $(A^TA)^T=A^TA$.
+
+Vector space. Subspace. Column space $C(A)$, a subspace of $R^n$, consists of
+linear combinations of columns of $A$.
+
+\subsection{Lec 6: Column Space and Null Space}
+
+Vector space requirement $\vec{v}+\vec{w}\in V$, $c\vec{v}\in V$,
+$c\vec{v}+d\vec{w} \in V$.
+
+Is $b$ in the column space of $A$? Is $b$ a linear combination of $A$'s columns?
+What's the space of all $x$'s that makes $Ax=0$?
+
+\subsection{Lec 7: Finding Null Space}
+
+Finding the null space of $A$. Echelon of $A$. Rank of $A$. Pivot columns.
+Free variables. Reduced row echolon of $A$.
+
+\subsection{Lec 8: Solving $Ax=b$}
+
+{\bf Solvability of $Ax=b$ on $b$}. Solvable only when $b\in C(A)$, i.e.
+$b$ locates in the column space of $A$. If there is any linear combination of
+$A$ that equals $0$, then the same combination of $b$ must give $0$.
+
+{\bf To Find Complete Solutions of $Ax=b$}. (1) $X_{particular}$: set free
+variables to zero, then solve $Ax=b$ for pivot variables. (2) $X_{nullspace}$.
+The complete solution $X_{complete}$ is $X_p$ plus any linear combination of
+$X_n$.
+
+For $m$ by $n$ matrix $A$ of rank $r$ ($r \leq m, r \leq n$):
+\begin{itemize}
+	\item $r=m=n$, i.e. full rank square matrix, which is invertible. It's
+		row reduced echelon form $R=I$, and there is exactly $1$ solution to
+		$Ax=b$.
+	\item $r=n<m$, i.e. full column rank. It's rref form is $R=[I;O]$. In this
+		case there is no free variable and the null space only contains $\vec{0}$.
+		There will be $0$ or $1$ solutions to the system.
+	\item $r=m<n$, i.e. full row rank. It's rref form is $R=[I,F]$. In this
+		case, we can solve the system for every $b$, and there are $n-r$ free
+		variables. There will be $1$ or $\infty$ solutions to the system.
+	\item $r<m,r<n$. The rref form is $R=[I,F;O,O]$. There will be $0$ or
+		$\infty$ solutions to the system.
+\end{itemize}
+In a word, the rank tells you everything about the number of solutions.
+
+\subsection{Lec 9: Independence, Basis, Dimension}
+
+Non-zero vectors $x_1,x_2,\ldots,x_n$ are {\bf independent} if no linear combination
+gives zero vector, i.e. they are independent as long as
+$c_1x_1+c_2x_2+\ldots+c_nx_n\ne 0$ when not all $c_i$ equal zero.
+
+Vectors $v_1,v_2,\ldots,v_n$ {\bf span} a space. It means the space consists of
+all linear combinations of those vectors.
+
+{\bf Basis} for a space is a sequence of vectors $v_1,v_2,\ldots,v_d$ with two
+properties: (1) they are independent; (2) they span the space.
+
+Given a space. Every basis for the space has the same number of vectors. This
+number is the {\bf dimension} of the space.
+
+\subsection{Lec 10: Four Fundamental Subspaces}
+
+For an $m\times n$ matrix $A$:
+Column space $C(A)$, nullspace $N(A)$, rowspace $C(A^T)$, left nullspace $N(A^T)$.
+$\text{dim} C(A)=r=\text{dim} C(A^T)$, $\text{dim} N(A)=n-r$, $\text{dim} N(A^T)=m-r$.
+
+\subsection{Lec 11: Matrix Spaces}
+
+For $\frac{\partial^2 y}{\partial x^2} = y$, the dimension of solution space
+is $2$ because $y=c_1 \cos x + c_2 \sin x$.
+
+Rank $1$ matrix $A=uv^T$ (column dot row).
+
+\subsection{Lec 12: Graph, Incidence Matrices}
+
+Incidence matrix: (edge $\times$ node). KCL: in equals out in terms of current.
+Euler formula #nodes - #edges + #loops = 1 can be proven with linear algebra.
+
+\subsection{Lec 13: Skip}
+
+\subsection{Lec 14: Orthogonal Vectors and Subspaces}
+
+Key point: For a matrix $A$, its row space $\perp$ null space; its column space
+$\perp$ the null space of $A^T$.
+
+Orthogonal vector means $x^Ty=0$
+
+Row space is orthogonal to nullspace. They are orthogonal complements in $R^n$.
+Null space contain all vectors $\perp$ the row space.
+
+"Solve" $Ax=b$ when there is no solution: $A^TA\hat{x}=A^T b$.
+Note that $N(A^TA)=N(A)$ and $rank(A^TA)=rank(A)$. $A^TA$ is invertible if
+A has full rank.
+
+\subsection{Lec 15: Projection into Subspaces}
+
+* Important course.
+
+Why do we project? $Ax=b$ may have no solution. We can instead solve $A\hat{x}=p$
+where $p$ is the projection of $b$ onto the column space.
+
+Prof. Assume $p=A\hat{x}$ is in the column space. Find $\hat{x}$.
+
+The error vector $b-A\hat{x}=e$ is perpendicular to the plane. Hence
+$a_1^T (b-A\hat{x})=0$, $a_2^T(b-A\hat{x})=0$, etc. By combining these
+equations together we get
+$$ \begin{bmatrix}a_1^T \\ a_2^T \end{bmatrix} (b-A\hat{x}) =
+	\begin{bmatrix} 0 \\ 0 \end{bmatrix} = A^T(b-A\hat{x}) = 0 $$
+which means
+\begin{align}
+	A^TA\hat{x} &= A^Tb \\
+	\hat{x} &= (A^TA)^{-1}A^Tb \\
+	p &= A\hat{x} = A(A^TA)^{-1}A^Tb \\
+	P &= A(A^TA)^{-1}A^T
+\end{align}
+$P$ is the projection matrix. Note that $P^T=P, P^2=P$.
+The application of this discussion includes the least square method which
+can be used to fit a line.
+
+\subsection{Lec 17: Orthogonal Matrix \& Gram-Schmidt}
+
+Ortho-normal vector $ q_i^T q_j = \{i=j\} 1 + \{i\ne j\} 0 $.
+
+Orthogonal matrix is usually square matrix. $Q^TQ=I$, which means $Q^{-1}=Q^T$.
+
+Adhmeir matrix: special orthogonal matrix that got 1's and -1's only.
+
+$Q$ has orthonormal columns. Projection on its column space: $P=Q(Q^TQ)^{-1}Q^T=QQ^T$.
+$QQ^T$ equals $I$ when $Q$ is square.
+
+Recall that $A^TA\hat{x}=A^Tb$: when $A=Q$, we get $Q^TQ\hat{x}=Q^Tb$, i.e.
+$\hat{x}=Q^Tb$, $\hat{x}_i = q_i^T b$.
+
+Gram-Schmidt: make a set of column vectors orthogonal, not triangular. Assume we got
+vectors $a,b,c,\ldots$, to make orthogonal vectors we have to make sure the projection
+of each new vector to another should be zero vector. After a simple calculation we obtain
+these orthogonal vectors: $A$, $B=b-\frac{A^Tb}{A^TA}A$, $C=c-\frac{A^Tc}{A^TA}A - \frac{B^Tc}{B^TB} B$.
+Finally we make make them orthonormal: $q_1 = A/||A||$, $q_2=B/||B||$, etc.
+The result gram-schmidt orthogonization can be represented as $A=QR$, where $Q$ is the
+ortho-normal matrix, and $R$ is an upper triangular matrix.
+
+\subsection{Lec 18: Properties of Determinants}
+
+We need determinants because of eigenvalues. Singular matrix has zero determinant.
+
+Three properties of determinant: (1) $\det I = 1$; (2) exchange rows: reverse sign of det;
+(3a) single row multiply by $t$ -> $t\times \det A$; (3b) single row $a+a',b+b',...$ -> det of $a,b,...$ + det of $a',b',...$;
+(4) two equal rows -> det = 0; (5) subtract $l\times$ row 1 from row k doesn't change det;
+(6) row of zero leads to det = 0. (7) upper triangular $\det A = \prod \text{Diag}(A)$;
+(8) $\det A = 0$ iff A is singular; (9) $\det AB = (\det A)(\det B)$, which means
+$\det A^{-1}A= \det I = 1 = \det A^{-1} \det A \rightarrow \det A^{-1} = 1/\det A$;
+(10) $\det A^T=\det A$.
+
+Software calculates the determinant using property (7).
+
+\subsection{Lec 19: Determinant Formulas and Cofactors}
+
+Skip.
+
+\subsection{Lec 20: Cramer's Rule, Inverse Matrix, Volume}
+
+$$A^{-1}=\frac{1}{\det A} C^T$$ where $C$ is the cofactor matrix.
+
+Cramer's rule is for solving $Ax=b$. For detail please see wikipedia.
+
+The determinent gives a volume of a box.
+
+\subsection{Lec 21:}

@@ -1,0 +1,427 @@
+\chapter{Stochastic Process}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Basics
+\section{Simplified Basics}
+
+\subsection{Probability space}
+
+$(\Omega,\mathcal{F},P)$, where $\Omega$ denotes the sample
+space, $\mathcal{F}$ is the event domain, $P$ represents the probability
+measure.
+
+\subsection{Random variable}
+
+$X(w): \Omega\mapsto\Re^d$.
+
+\subsection{Distribution function}
+
+(1) discrete,
+$$F_X(x) = P(X\leq x) = \sum_{i\in N, x_i \leq x} P(X=x_i)$$
+(2) continuous,
+$$F_X(x) = P(X\leq x) = \int_{-\infty}^x f_X(y)dy$$
+where $f_X$ is the probability density function.
+
+\subsection{Moment of a random variable}
+
+(1) discrete,
+$$E[X^n] = \sum_{i=1}^\infty x_i^n P(X=x_i)$$
+$$E[g(x)] = \sum_{i=1}^\infty g(x_i)P(X=x_i)$$
+(2) continuous,
+$$E[X^n] = \int_{-\infty}^\infty x^n f_X(x)dx$$
+$$E[g(x)] = \int_{-infty}^\infty g(x)f_X(x)dx$$
+(3) variance,
+$$D(x) = E[X^2] - (E[x])^2$$
+
+\subsection{Joint distribution}
+
+$$F_{XY}(x,y) = P(X\leq x, Y\leq y) = P(\{X\leq x\}\cap \{Y\leq y\})$$
+When variable $X$ and $Y$ are independent to each other, $F_{XY}(x,y)=F_X(x)\cdot F_Y(y)$.
+$$F_{XY}(x,y) = \int_{-\infty}^x \int_{-\infty}^y f_{XY}(u, v)dvdu$$
+$$E[g(x,y)] = \int_{-\infty}^\infty \int_{-\infty}^\infty g(x,y) f_{XY}(x, y)dxdy$$
+$$E[g(x,y)] = \sum_{i=1}^\infty \sum_{j=1}^\infty g(x_i, y_j) P(X=x_i, Y=y_j)$$
+
+\subsection{Conditional probability}
+
+$$P(A|B) = P(A\cap B)/P(B)$$
+$$P(A) = \sum_{i=1}^\infty P(A|B_i)P(B_i)$$
+
+\subsection{Common discreate distributions}
+
+1. Bernoulli, $X\in \{0, 1\}$
+$$P(X=1)=p, P(X=0)=1-p$$
+$$E[X]=p, D(X)=p(1-p), E[X^n]=p$$
+
+2. Binomial, $X\sim B(n,p)$
+$$P(X=k)=\frac{n!}{k!(n-k)!}p^k(1-p)^{n-k}$$
+$$E[X]=E[\sum_i^n X_i]=\sum_i^n E[X_i] = np$$
+$$D(X)=np(1-p)$$
+
+3. Multinomial
+
+4. Geometric
+
+5. Poisson, $X\in N^+$, $X\sim P(\lambda)$, $\lambda>0$
+$$P(X=k)=\frac{\lambda^k}{k!}e^{-\lambda}, k=0,1,\ldots$$
+$$E[X]=D(X)=\lambda = \sum_{k=0}^\infty k \frac{\lambda^k}{k!} e^{-\lambda} = \lambda e^{-\lambda} \sum_{k=1}^\infty \frac{(\lambda)^{k-1}}{(k-1)!} = \lambda e^{-\lambda}e^\lambda$$
+
+\subsection{Common consinuous distributions}
+
+1. Uniform, $X\in [a,b]$, $X\sim U(a,b)$
+$$f_X(x)=\{a\leq x\leq b\}\frac{1}{b-a}$$
+$$E[X]=\frac{a+b}{2}$$
+$$D(X)=\frac{(b-a)^2}{12}$$
+
+2. Gaussian, $X\in \Re$, $X\sim N(\mu,\sigma^2)$
+$$f_X(x)=\frac{1}{\sqrt{2\pi\sigma^2}}\exp(-\frac{(x-\mu)^2}{2\sigma^2})$$
+$$E[X]=\mu, D(x)=\sigma^2$$
+
+3. Multidimensional Gaussian
+
+4. Lognormal
+
+5. Exponential, $X\sim Exp(\lambda)$
+$$f_X(x)=\{0<x<\infty\} \lambda e^{-\lambda x}$$
+$$E[X]=\frac{1}{\lambda}, D(X)=\frac{1}{\lambda^2}$$
+
+6. $\Gamma$
+
+7. $\beta$
+
+\subsection{Conditional Distribution}
+
+$$P(X=x_i, Y=y_j) / P(Y=y_j) := a_{X|Y}(i|j)$$
+
+\subsection{Conditional math expectation}
+
+When ``some'' conditions are satisfied, and $X,Y$ independent,
+$$E[E[X|Y]] = E[X]$$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stochastic Process
+\section{Stochastic Process}
+
+$$X := \{X_t(w), t\in T\} \in S$$
+where $S$ is the state space.
+
+\subsection{Classification}
+
+Bernoulli process $S=\{S_n, n\ge 0\}$. $X=\{X_t, t\in T\}$, $X_t \sim (0-1)(p)$,
+$S_n = \sum_{k=1}^n X_k$, $S_0 = 0$. Discrete $T$, discrete $S$.
+
+Poisson process $N=\{N_t, t>0\}$, $N_0=0$. $0\leq s< t, N_t(w)-N_s(w)\sim Poisson(\lambda(t-s))$,
+i.e. $$P(N_t-N_s=k)=\frac{\lambda^k(t-s)^k}{k!}e^{-\lambda(t-s)}$$ Independent
+increment $N_{t_n}-N_{t_{n-1}}$. Continuous T, discrete S.
+
+Wiener process $W=\{W_t, t\geq 0\}$, $W_0=0$. $0\leq s<t, W_t(w)-W_s(w)\sim N(0,t-s)$.
+Independent increment. Continuous trajectory.
+
+Independent increment, $X_{t_n}-X_{t_{n-1}}, n=1,2,\ldots$. Orthogonal increment,
+$E[(X_{t_3}-X_{t_2})(X_{t_2}-X_{t_1})] = 0$. Stationary independent, distribution
+of $X_t-X_s$ only depends on $t-s$.
+
+\subsection{n-D Distribution}
+
+$$F_{t_1,\ldots,t_n}(x_1,\ldots,x_n)=P(X_{t_1}\leq x_1, \ldots, X_{t_n}\leq x_n)$$
+
+\subsection{n-D Characteristic Function}
+
+$\forall u_1,\ldots,u_n \in \Re$,
+$$\phi_{t_1,\ldots,t_n}(u_1,\ldots,u_n)=E[\exp(i\sum_{k=1}^n u_kX_{t_k})]$$
+
+$$\phi(u) = E[e^{juX}]$$
+When X and Y are independent, then for process $Z=X+Y$ we have $\phi_Z(u)=\phi_X(u)\cdot\phi_Y(u)$.
+If $E[X^n]$ exists, then $\phi^{(k)}(o)=j^kE[X^k]$.
+
+\subsubsection{Examples}
+
+Binomial distribution, $P(X=k)=C_n^kp^k(1-p)^{n-k}$,
+$$\phi(u) = E[e^{juX}] = \sum_{k=0}^n e^{juk}C_n^kp^k(1-p)^{n-k} = \sum_{k=0}^n C_n^k(pe^{ju})^k(1-p)^{n-k} = (pe^{ju}+(1-p))^n$$
+
+Poisson distribution,
+$$\phi(u) = e^{-\lambda}\sum_{k=0}^\infty \frac{(\lambda e^{ju})^k}{k!} = e^{-\lambda}e^{\lambda e^{ju}}$$
+
+Normal distribution,
+$$\phi(u) = e^{j\mu u - \frac{1}{2}\sigma^2u^2}$$
+
+\subsection{Numerical Characteristics}
+
+{\bf Mean Value Function} $$m_X(t) = E[X_t]$$
+
+{\bf Co-Relation Function} $$R_X(s,t) = E[X_sX_t]$$
+
+{\bf Variance Function} $$D_X(t) = R_X(t,t) - |m_X(t)|^2 = C_X(t,t)$$
+
+{\bf Covariance Function} $$C_X(s, t) = R_X(s,t) - m_X(s)m_X(t)$$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Brownian Movement / Wiener Process
+\section{Wiener Process, namely Brownian Movement}
+
+Wiener process $W=\{W_t, t\geq 0\}$, $W_0=0$. $0\leq s<t, W_t(w)-W_s(w)\sim N(0,t-s)$.
+Independent increment. Continuous trajectory.
+
+Wiener process is a kind of normal process, because $(W_{t_1},\ldots,W_{t_n})$ is
+a linear transformation from its increments $(Y_{t_1},\ldots,Y_{t_n})$, where
+the increments obeys normal distribution.
+
+Numerical characteristics. $E[W_t]=0$, $D_W(t)=t$, $R_W(s,t)=C_W(s,t)=\min(s,t)$.
+
+n-D Wiener. $W^k={W_t^k, t\geq 0}$, $W=(W^1,W^2,\ldots,W^n)$ is an n-D Wiener process.
+
+$(\mu,\sigma^2)$ Wiener. $B_t = \mu t + \sigma W_t$ where $W_t$ is the standard
+Wiener process.
+
+Brownian bridge. $t\in [0,1]$, $B_t = W_t - tW_1$.
+
+\subsection{Examples}
+
+Characteristic function of $n$-D Standard Brownian movement, increment
+$Y_k = W_{t_k} - W_{t_{k-1}}$, $Y_k \sim N(0,t_k - t_{k-1})$,
+\begin{align}
+	\phi_{t_1,\ldots,t_n}(u_1,\ldots,u_n)
+	&= E[\exp(j\sum_{k=1}^n u_k W_{t_k})]\\
+	&= E[\exp(j(Y_1(u_1+\ldots+u_n) + Y_2(u_2+\ldots+u_n)+ \ldots + Y_nu_n))]\\
+	&= E[\exp(jY_1(u_1+\ldots+u_n))]\cdot E[\exp(jY_2(u_2+\ldots+u_n))]\ldots\cdot E[\exp(jY_nu_n)]
+\end{align}
+
+Correlation function, $\forall s, t \in T$, $0\leq s < t$,
+\begin{align}
+	R_W(s,t) &= E[W_sW_t] = E[W_s(W_t - W_s + W_s)] = E[W_s(W_t-W_s)] + E[W_s^2]\\
+	&= E[W_s]\cdot E[W_t-W_s] + s = min(s,t)
+\end{align}
+
+\subsection{Variants}
+
+$(\mu,sigma^2)$-Brownian, $B_t = \mu t + \sigma W_t$
+
+Brownian Bridge from $0$ to $0$, $t \in [0,1]$, $B_t = W_t - tW_1$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Poisson process
+\section{Poisson Process}
+
+Poisson process $N=\{N_t, t>0\}$, $N_0=0$. $0\leq s< t, N_t(w)-N_s(w)\sim Poisson(\lambda(t-s))$,
+i.e. $$P(N_t-N_s=k)=\frac{\lambda^k(t-s)^k}{k!}e^{-\lambda(t-s)}$$ Independent
+increment $N_{t_n}-N_{t_{n-1}}$. Continuous T, discrete S.
+
+Numerical characteristics. $m_N(t)=\lambda t$, $D_N(t)=\lambda t$,
+$R_N(s,t) = \lambda^2 st + \lambda\min(s,t)$.
+
+Time interval between two increment obeys Exponential distribution, i.e.
+$T_n - T_{n-1} = \tau_n \sim \text{Exp}(\lambda)$.
+
+Addition of two poisson processes is still a poisson process, with the parameter
+being the sum of the two processes, i.e. $\lambda = \lambda_1 + \lambda_2$.
+
+(0-1) law of poisson process.
+
+Composite Poisson process $X$. $N_t\sim Poisson(\lambda)$, $Y_k$ i.i.d (independent
+and identical distribution), $X_t=\sum_{k=1}^{N_t} Y_k$.
+
+$$E[X_t] = E[\sum_{k=1}^{N_t} Y_k] = E[E[\sum_{k=1}^{N_t} Y_k | N_t]]$$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stationary Process
+\section{Stationary Process}
+
+Strictly stationary process:
+$$F_{t_1,t_2,\ldots,t_n}(x_1,x_2,\ldots,x_n) = F_{t_1+\tau,t_2+\tau,\ldots,t_n+\tau}(x_1,x_2,\ldots,x_n)$$
+
+Wide stationary process: $m_X(t) = \text{const}$, and $R_X(t, t+\tau) = R_X(\tau)$.
+
+\subsection{Ergodicity}
+
+\ldots
+
+\subsection{Spectral Density}
+
+Spectral density $S$ is similar to fourier transformation:
+$$S_X(w) = \lim_{T\rightarrow\infty} \frac{1}{2T} E|\int_{-T}^T e^{-jwt}X_t dt|^2$$
+
+Parseval Eq.
+$$\int_{-\infty}^\infty x^2(t)dt = \frac{1}{2\pi} \int_{-\infty}^\infty |F_X(w)|^2 dw$$
+
+Wiener-Khintchine formula.
+$$S_X(w) = \int_{-\infty}^\infty e^{-jwt}R_X(\tau)d\tau$$
+$$R_X(\tau) = \frac{1}{2\pi} \int_{-\infty}^\infty e^{jwt}S_X(w)dw$$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Markov Chain
+\section{Markov Chain (M.C.)}
+
+\subsection{Markov Chain}
+
+State space $S$, $i_\ast \in S$, $n\in N^+$
+$$P(X_{n+1}=i_{n+1}|X_0=i_0,X_1=i_1,\ldots,X_n=i_n) = P(X_{n+1}=i_{n+1}|X_n=i_n)$$
+
+Define a symbol for the $k$-step transfer probability at step $n$ from state $i$ to $j$
+$$p_{ij}^{(k)}(n) = P(X_{n+k}=j|X_n=i)$$
+When $p^{(1)}_{ij}(n)=p^{(1)}_{ij}(n+1)=\ldots$, the M.C. is homogeneous.
+
+\subsubsection{M.C. Examples}
+
+\begin{enumerate}
+\item Population growth / discrete branching process.
+The $n$-th generation has $i$ individuals, and each of the individuals generates
+some next-gen individuals. The numbers of next-gen individuals sum to $j$.
+$$p_{ij} = P(X_{n+1}=j|X_n=i) = P(g_1+g_2+\ldots+g_n=j)$$
+\item Ehrenfest, Polya
+\end{enumerate}
+
+\subsection{Distributions of M.C.}
+
+\begin{align}
+	p_{ij}^{(k+m)}(n)
+	&= P(X_{n+k+m}=j | X_n=i) \\
+	&= P(X_{n+k+m}=j, \cup_{l\in S}(X_{n+k}=l) | X_n=i) \\
+	&= \sum_{l\in S} P(X_{n+k+m}=j | X_{n+k}=l, X_n=i)P(X_{n+k}=l|X_n=i) \\
+	&= \sum_{l\in S} p_{il}^{(k)}(n) p_{lj}^{(m)}(n+k)
+\end{align}
+
+The above equation is known as the C-K equation
+$$p_{ij}^{(k+m)}(n) = \sum_{l\in S} p_{il}^{(k)}(n) p_{lj}^{(m)}(n+k)$$
+or in matrix form, $P^{(k+m)}(n) = P^{(k)}(n) P^{(m)}(n+k)$.
+
+Initial distribution $\{P(X_0=j): j\in S\}$.
+
+Finite-dimentional distribution can be determined by initial distribution and
+the one-step transition probability.
+\begin{align}
+	& P(X_{t_1}=i_1, X_{t_2}=i_2, \ldots, X_{t_n}=i_n)\\
+	=& P(\cup_{i\in S}(X_0=i), X_{t_1}=i_1, X_{t_2}=i_2, \ldots, X_{t_n}=i_n)\\
+	=& \sum_{i\in S} P(X_0=i, X_{t_1}=i_1, X_{t_2}=i_2, \ldots, X_{t_n}=i_n)\\
+	=& \sum_{i\in S} q^{(0)}_i p_{ii_1}^{(t1)}(0) p_{i_1i_2}^{(t_2-t_1)}(t_1)
+	   \cdots p_{i_{n-1}i_n}^{(t_n-t_{n-1})}(t_{n-1})
+\end{align}
+
+Absolute distribution $\{P(X_n=j):j\in S\}$.
+The absolute distribution of an M.C. is definitely determined by its
+initial distribution and one-step transfer matrix:
+\begin{align}
+	q_j^{(n)} &= P(X_n=j) = P(\cup_{i\in S}(X_0=i), X_n=j)\\
+	 &= \sum_{i\in S}P(X_n=j, X_0=i) = \sum_{i\in S}q_i^{(0)} p_{ij}^{(n)}(0)
+\end{align}
+Which can be simplified as
+$$q^{(n)} = q^{(0)} P^{(n)}$$
+where $q^{(0)}$ is the initial distribution vector.
+
+\subsection{State Classification}
+
+The probability that the M.C. first time reaches state $j$ starting from
+state $i$ after $n$ steps
+$$f_{ij}^{(n)} = P(X_n=j, X_k\neq j, k=1,2,\ldots,n-1 | X_0=i)$$
+$$f_{ij} = \sum_{n=1}^{+\infty} f_{ij}^{(n)}$$
+The mean steps that the M.C. reaches state $i$ again starting from itself for the first time
+$$\mu_{ii} = \sum_{n=1}^{+\infty} n f_{ii}^{(n)}$$
+The period of state $i$
+$$d_i = \text{GCD}\{n | n \geq 1, p_{ii}^{(n)} > 0\}$$
+
+State $i$ is (1) non-recurrent, $f_{ii} < 1$;
+(2) recurrent, $f_{ii} = 1$; \begin{quote} (2.1) zero (negative) recurrent, $\mu_{ii} = +\infty$;
+(2.2) positive recurrent, $\mu_{ii} < +\infty$; \begin{quote} (2.2.1) periodical, $d_i>1$;
+(2.2.2) non-periodical, $d_i=1$, also named ergodic state. \end{quote}\end{quote}
+
+Lemmas that can be used for state classification
+$$f_{ij}^{(n)} \leq p_{ij}^{(n)} \leq f_{ij}$$
+$$f_{ij}^{(n)} = \sum_{i_1 \neq j}\sum_{i_2 \neq j} \cdots \sum_{i_{n-1}\neq j} p_{ii_1}p_{i_1i_2}\cdots p_{i_{n-1}j}$$
+$$p_{ij}^{(n)} = \sum_{l=1}^n f_{ij}^{(l)} p_{jj}^{(n-l)}$$
+
+Necessary and sufficient condition for $i$ to be recurrent:
+$$\sum_{n=1}^\infty p_{ii}^{(n)} = +\infty$$
+Necessary and sufficient ocndition for $i$ not to be recurrent:
+$$\sum_{n=1}^\infty p_{ii}^{(n)} < +\infty$$
+
+When state $i$ is recurrent with a period of $d_i$,
+$$\lim_{n\rightarrow\infty} p_{ii}^{(nd_i)} = \frac{d_i}{\mu_{ii}}$$
+N.S. condition for recurrent state $i$ to be zero recurrent:
+$$\lim_{n\rightarrow\infty} p_{ii}^{(n)} = 0$$
+N.S. condition for recurrent state $i$ to be ergodic:
+$$\lim_{n\rightarrow\infty} p_{ii}^{(n)} = \frac{1}{\mu_{ii}} > 0$$
+N.S. condition for recurrent state $i$ to be periodic:
+$$\lim_{n\rightarrow\infty} p_{ii}^{(n)} \text{does not exist}$$
+
+State $j \in S$ is non-recurrent of zero positive, $\forall i \in S$,
+$$\lim_{n\rightarrow\infty} p_{ij}^{(n)} = 0$$
+If $\exists n \in N^+$, such that $p_{ii}^{(n)} > 0$, $p_{ii}^{(n+1)} > 0$,
+then state $i$ is non-recurrent.
+If $\exists m \in N^+$, such that $\forall i \in S$, $p_{ij}^{(m)} > 0$,
+then state $j$ is non-recurrent.
+
+Relationship between states: (1) $i,j\in S$, if $\exists n \in N^+$, such
+that $p_{ij}^{(n)} > 0$, then state $j$ is reachable to $i$. Symbolized
+as $i\rightarrow j$. If $i\rightarrow j$ and $j\rightarrow i$, then we call
+$i$ and $j$ are mutual. Symbolized as $i\leftrightarrow j$.
+$i\rightarrow j$ only when $f_{ij}>0$. If $i$ is recurrent and $i\rightarrow j$
+then $f_{ij} =1$, $i\leftrightarrow j$. If $i\leftrightarrow j$, then $i$ and
+$j$ are the same class of states, with the same period if applicable.
+
+\subsection{Decompositoin of State Space}
+
+State space can be decomposed into a series of non-overlapping subsets, i.e.
+$$S = \cup_n S_n, S_m\cap S_n = \Phi, m\neq n$$
+
+$C\subset S$, $\forall i \in C, j\in \bar{C}$, $\forall n\in N^+$, if
+$\exists p_{ij}^{(n)} = 0$, then $C$ is a closed set. If there is no
+non-empty true closed subset in $C$, then $C$ is an irreducible closed set.
+Specifically, if $C$ contains only one state, that state is also called
+an absorbing state. A closed set has the following properties:
+(1) $i\in C, j\in\bar{C}$, $p_{ij} = 0$,
+(2) $i\in C$, $\sum_{j\in C} p_{ij} = 1$.
+
+Subsets $S_n$ that include recurrent state are irreducible closed sets.
+
+The state space $S$ of an homogeneous M.C. can be decomposed into a unique
+series of non-overlapping sets, $S = D\cup C_1\cup C_2\cup \ldots$, where
+$D$ is the subset that contains all the non-recurrent states, $C_*$ are
+irreducible closed sets formed of recurrent states.
+
+Assume that $X$ is a finite state homogeneous M.C., then (1) the $D$ set
+cannot be a closed set; (2) there is no zero-recurrent state; (3) if $X$
+is irreducible, then all the states of $X$ are recurrent.
+
+Assume that $C$ is a irredicible closed set with a period of $d$, then $C$
+can be decomposed into a unique series of non-overlapping subsets, i.e.
+$C = \cup_{m=1}^d J_m, J_m \cap J_l = \Phi, m\neq l, m,l= 1,2,\ldots, d$.
+And $\forall k\in J_m, m=1,2,\ldots,d$, $\sum_{j \in J_{m+1}} p_{kj} = 1$.
+
+\subsection{Limit Distribution}
+
+Limit distribution $\{\pi_j : j\in S\}$ where
+$\pi_j = \lim_{n\rightarrow\infty} p_{ij}^{(n)}$.
+
+When $X$ is an irredicible ergodic chain,
+$\lim_{n\rightarrow\infty} p_{ij}^{(n)} = \frac{1}{\mu{jj}} = \pi_j$.
+The limit distribution $\{\pi_j : j\in S\}$ is the solution of system of
+linear equations $\pi = \pi P$, i.e.
+$$x_j = \sum_{i\in S} x_i p_{ij}$$
+{\it s.t.} $x_j >0$, $\sum_{j\in S} x_j = 1$.
+
+\subsection{Stationary Distribution}
+
+Generally, for a Markov chain $X$ with state space
+$S=D \cup C_0 \cup C_1 \cup C_2 \cup \cdots$, where $D$ holds the non-recurrent
+status, $C_0$ is the set of negative recurrent states, $C_i (i>0)$ are sets
+of positive recurrent states. (1) No stationary distribution if
+$\cup_{i\geq 1} C_i = \Phi$; (2) Has unique stationary distribution if
+there is only one set of positive recurrent states; (3) Has infinite number
+of solutions if there are more than two sets of positive recurrent states.
+
+\appendix
+\section{Reference}
+
+1. Hailin Feng, et al. Stochastic Process. Xidian Pub.
+
+2. MIT 18.445, Introduction to Stochastic Processes, https://ocw.mit.edu/courses/mathematics/18-445-introduction-to-stochastic-processes-spring-2015/index.htm
+
+3. MIT 6.262, Discrete Stochastic Processes, https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-262-discrete-stochastic-processes-spring-2011/index.htm
+
+\section{Related Topics}
+
+1. Poisson Regression
+
+2. Monte Carlo Markov Chain (MCMC)
+
+\section{Changelog}
+
+1. Finalize the sketchy draft. Jan 24 2018.

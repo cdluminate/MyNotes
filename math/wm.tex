@@ -1,0 +1,297 @@
+% Pandoc LaTeX document
+\title{Wikipedia Mathematics}
+
+\newcommand{\wiki}[1]{\href{https://en.wikipedia.org/wiki/#1}{}}
+
+\begin{abstract}
+This document is a casual collection of some mathematical terms or topics.
+Most of them are excerpted from Wikipedia, and the source URIs are also
+provided.
+\end{abstract}
+
+\section{Preface}
+
+The following sections are organized in the alphabetical order. The topic
+classification of this document refered two wiki pages:
+[\href{https://en.wikipedia.org/wiki/Areas_of_mathematics}{Area of Mathematics}],
+[\href{https://en.wikipedia.org/wiki/Mathematics_Subject_Classification}{Mathematics Subject Classification}].
+
+\section{Probability and Statistics}
+
+\subsection{Monte Carlo Methods}
+
+[\href{https://en.wikipedia.org/wiki/Monte_Carlo_method}{Monte Carlo methods}]
+are a broad class of computational algorithms that rely on repeated random
+sampling to obtain numerical results. In principle, Monte Carlo methods can
+be used to solve any problem having a probabilistic interpretation. By the
+law of large numbers, integrals described by the expected value of some random
+variable can be approximated by taking the empirical mean (a.k.a. the sample
+mean) of independent samples of the the variable.
+
+\subsection{Hidden Markov Model (HMM)}
+
+Statistical Markov model. Assumption: the system being modeled is a Markov
+process with undiscovered states. HMM is also the simplest example of dynamic
+Bayesian network. Its optimization problem can be cast as a nonlinear filtering
+problem.
+
+Markov chain is a simple model, where states are visible. The transition
+probability matrix $P$ is the only parameter in a Markov chain. However,
+status of an HMM are not directly visible, and the visible outputs of HMM
+depend on the states.
+
+In an HMM, the Markov property indicates that the current state only depends
+on the previous state,
+$$ p(x_t|x_{t-1}, \ldots, x_1, y, \ldots) = p(x_t|x_{t-1})$$
+and the current output only depends on the current hidden state,
+$$ p(y_t|x_t, \ldots, x_1, y, \ldots) = p(y_t|x_t)$$
+The state space of HMM is discrete, while the observation space could be
+discrete (categorial distribution) or continuous (Gaussian). The parameters
+of an HMM includes a transition probability matrix and a emission probability
+matrix.
+
+Parameter learning of an HMM is usually done by maximum likelyhood estimate
+with Baum-Welch algorithm, but it suffers from the problem of local maximum.
+For time series prediction, MCMC (Bayesian inference) could also be used for
+this purpose. However, as a variational approximation method, MCMC imposes
+significant computational burden.
+
+\subsection{Probablistic Graph Model (PGM)}
+
+Two branches of graphical representation of distributions: Bayesian nets and
+MRFs. Properties: factorization and independencies.
+
+\subsubsection{Markov Random Field (MRF)}
+
+Undirected graph. Can be cyclic. Joint probability density.
+Prototypical MRF: Ising model.
+
+FIXME
+
+\subsubsection{Conditional Random Field (CRF)}
+
+CRF is a noticable variant of MRF, which aims to model a conditional
+distribution $P(Y|X)$.
+
+Parameter learning: maximum likelyhood $p(Y_i|X_i;\theta)$. Optimization
+can be done with SGD.
+
+\section{Sequences and Series}
+
+\subsection{Fibonacci numbers}
+
+[\href{https://en.wikipedia.org/wiki/Fibonacci_number}{Fibonacci number}]
+
+%Fibonacci Series
+%----------------
+%
+%.. math::
+%
+%  f(n) = f(n-1) + f(n-2)
+%
+%..
+%  \subsection{Vectors}
+%  
+%  $$ \vec{a} \parallel \vec{b} \leftrightarrow \exists \lambda \in \Re, \vec{b} = \lambda \vec{a} $$
+%  $$ \vec{a} \bot \vec{b} \leftrightarrow \vec{a}\cdot\vec{b} = 0 $$
+%  $$ \vec{a}\cdot\vec{b} = |\vec{a}|~|\vec{b}|~\cos\theta $$
+%  
+%  $$ |\vec{a}\times\vec{b}| = |\vec{a}||\vec{b}| \sin\theta $$
+%  $$ \vec{a} \times \vec{b} = \begin{vmatrix}
+%   \hat{i} & \hat{j} & \hat{k} \\
+%   a_x & a_y & a_z \\
+%   b_x & b_y & b_z \\
+%   \end{vmatrix} $$
+%  Note, the vector cross product does not obey the law of commutation. Instead,
+%  $\vec{b}\times\vec{a} = -\vec{a}\times\vec{b}$.
+%  
+%  $$ S_{\triangle ABC} = \frac{1}{2} |\vec{a}||\vec{b}| \sin C = \frac{1}{2} |\vec{a}\times\vec{b}| $$
+
+\section{Special Functions}
+
+\subsection{Gamma Function}
+
+The [\href{https://en.wikipedia.org/wiki/Gamma_function}{gamma function}]
+is an extension of the factorial function, with its argument shifted down
+by 1, to real and complex numbers. If $n$ is a positive integer,
+$\Gamma(n) = (n-1)!$. The gamma function is defined for all complex numbers
+except the non-positive integers. For complex numbers with a positive real
+part, it is defined via a convergent improper integral:
+$$\Gamma(z) = \int_0^\infty x^{z-1} e^{-x} dx $$
+
+\section{Topology \& Geometry}
+
+\subsection{Space}
+
+\subsubsection{Metric Space}
+
+A [\href{https://en.wikipedia.org/wiki/Metric_(mathematics)}{metric}], or
+{\bf distance function}, is a function that defines a distance between
+each pair of elements of a set.
+$$d: X \times X \mapsto [0, \infty)$$
+
+A [\href{https://en.wikipedia.org/wiki/Metric_space}{metric space}]
+is a set for which distances between all members of the set are defined.
+A metric space is an ordered pair $(M,d)$ where $M$ is a set and $d$ is
+a matric on $M$, i.e., a function $d:M\times M\mapsto \Re$ such that
+several conditions hold, incl. $d(x,y)>0$.
+
+For example, the [\href{https://en.wikipedia.org/wiki/Minkowski_distance}{minkowski distance}]
+is a metric in a normed vector space which can be considered as a
+generalization of both the Euclidean distance and the Manhattan distance.
+See also $L^p$-space. Mikowski distance of order $p$ between two $n$-d points
+$a,b\in\Re^n$ is defined as
+$$d(a, b) = \Big( \sum_{i=1}^n |a_i - b_i|^p \Big)^{\frac{1}{p}}$$
+Minkowski distance is typically used with $p$ being 1 or 2, which correspond
+to the Manhattan distance and the Euclidean distance, respectively. In the
+limiting case of $p$ reaching infinity, we obtain the Chebyshev distance.
+
+See also [\href{https://en.wikipedia.org/wiki/Cosine_similarity}{cosine similarity}]
+
+\subsection{Manifold}
+
+A [\href{https://en.wikipedia.org/wiki/Manifold}{manifold}] is a topological
+space that locally resembles Euclidean space near each point.
+
+\subsubsection{n-Sphere}
+
+A [\href{https://en.wikipedia.org/wiki/Sphere}{sphere}] is a perfectly round
+geometrical object in three-dimensional space that is the surface of a
+completely round ball.
+
+The [\href{https://en.wikipedia.org/wiki/N-sphere}{$n$-Sphere}] is the
+generalization of the ordinary sphere to spaces of arbitrary dimension.
+It is an $n$-dimensional manifold that can be embedded in Euclidean
+$(n+1)$-space. The $n$-sphere is defined by:
+$$ S^n = \big\{x\in\Re^{n+1} : ||x|| = r \big\} $$
+The surfaces and volumes of $n$-sphere can be given in closed form:
+$$ S_n(R) = \frac{2\pi^{(n+1)/2}}{\Gamma(\frac{n+1}{2})} R^n $$
+$$ V_n(R) = \frac{\pi^{n/2}}{\Gamma(\frac{n}{2} + 1)} R^n $$
+where $\Gamma$ is the gamma function.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Collection of Casual Problems}
+
+Contents in this section are not from wikipedia.
+
+\subsection{L-2 Norm of Random Vector}
+
+Given two random variable $x, y \sim U(-1, 1)$ i.i.d., we can make
+a $2$-D vector $v= (x, y)$.
+
+Expectation of the L-2 norm of $V$:
+\begin{align}
+E||v||_2^2 &= E[x^2+y^2] = E[x^2] + E[y^2] = 2E[x^2]\\
+  &= 2(D(x) + E[x]^2) = 2\big( \frac{(b-a)^2}{12} + \frac{(a+b)^2}{2^2} \big)\\
+  &= \frac{2}{3}(a^2 + b^2 + ab)
+\end{align}
+\begin{verbatim}
+N, d, a, b = 10000, 2, 0, 1
+fe(a, b) = (2/3)*(a^2+b^2+a*b)
+@time begin
+  V = rand(N, d) * (b-a) + a
+  D = sum(V.^2, 2)
+  E = mean(D)
+end
+println(abs(E - fe(a, b)))
+\end{verbatim}
+
+For an $n$-d random vector $(x_1, x_2, \ldots, x_n)$ where $x_* \sim U(a,b)$
+i.i.d, The expected L-$2$ norm is as follows,
+\begin{align}
+	E||v||_2^2 &= E[x_1^2 + x_2^2 + \ldots + x_n^2]\\
+	&= n E[x_1^2] = n\big( \frac{(b-a)^2}{12} + \frac{(a+b)^2}{2^2} \big)
+\end{align}
+It is noted that the items within brackets are squared i.e. greater or equal
+to zero, hence the expectation goes to infinite when $n$ tend to infinite.
+
+\subsection{Euclidean Distance between Random Vectors}
+
+Expectation of the Euclidean distance between $v_1$ and $v_2$:
+\begin{align}
+E[||v_1 - v_2||_2^2 &= E[x_1^2 + x_2^2 + y_1^2 + y_2^2 -2x_1x_2 -2y_1y_2]\\
+  &= 4E[x_1^2] -4 E[x_1x_2] = 4E[x_1^2] -4 E[x_1]\cdot E[x_2]\\
+  &= \frac{(b-a)^2}{3}
+\end{align}
+\begin{verbatim}
+N, d, a, b = 10000, 2, 0, 1
+fe(a, b) = (b-a)^2/3
+@time begin
+V1 = rand(N, d) * (b-a) + a
+V2 = rand(N, d) * (b-a) + a
+D = sum((V1-V2).^2, 2)
+E = mean(D)
+end
+println(E, '\t', abs(E - fe(a, b)))
+\end{verbatim}
+
+What if the vectors are $n$-D? That is to say,
+$v_* = (x_1^{(*)}, x_2^{(*)}, \ldots, x_n^{(*)})$
+where $x_i \sim U(a,b)$ i.i.d.
+
+\begin{align}
+	E[||v_1 - v_2||_2^2] &= E[\sum_{i=1}^n (x^{(1)}_i - x^{(2)}_i)^2 ]\\
+	&= \sum_{i=1}^n E[(x^{(1)}_i - x^{(2)}_i)^2 ]\\
+	&= \sum_{i=1}^n E[(x^{(1)}_i)^2 - 2x^{(1)}_i x^{(2)}_i +
+		(x^{(2)}_i)^2]\\
+	&= 2n E[(x^{(1)}_1)^2] - 2n [x^{(1)}_i]\cdot E[x^{(2)}_i]\\
+	&= 2n \big( \frac{(b-a)^2}{12} + \frac{(a+b)^2}{4}
+		- \frac{(a+b)^2}{4} \big) = \frac{n(b-a)^2}{6}
+\end{align}
+When the vector dimensionality $d$ tends to zero, the expectation
+goes to infinity.
+
+\subsection{Cosine Similarity between Random Vectors}
+
+Given some $2$-D random vectors $v_*=(\rho=1, \theta=\phi)$, with $\phi$
+being some random angle $\phi \sim U(0,2\pi)$.
+
+\begin{align}
+E[\cos\langle v_1, v_2\rangle]
+  &= E[\cos(\phi_1-\phi_2)] = E[\cos\phi_1 \cdot \cos\phi_2 +
+     \sin\phi_1 \cdot \sin\phi_2]\\
+  &= E[\cos\phi_1]E[\cos\phi_2] + E[\sin\phi_1]E[\sin\phi_2]\\
+  &= 0
+\end{align}
+
+For two $n$-D random vectors sampled from the $n$-sphere, the expected cosine
+similarity between them is:
+\begin{align}
+	E[\cos\langle v_1, v_2\rangle] &= E[v_1 \cdot v_2] \\
+	&= E[\sum_{i=1}^n x_{1;i} \cdot x_{2;i}]\\
+	&= \sum_{i=1}^n E[x_{1;i}] \cdot E[x_{2;i}] = 0
+\end{align}
+
+\subsection{Expectation of Max Element in Random Vector}
+
+Assume that we have a random vector $X=(x_1,x_2,\ldots,x_n)^T \in R^n$,
+where the elements are idependently and identially distributed according to
+$U[0, 1]$. We want to figure out the expectation of the maximum element in
+this vector, i.e. $E[\max_i(x_i)]$.
+
+Let's denote a little piece in the integral domain as $ds = \prod_i dx_i$.
+Now according to the definition of math expectation we can write down the
+following equation:
+$$E[\max_i(x_i)] = \int_S \max_i(x_i) f(x_1,\ldots,x_n) ds$$
+where $S$ is the whole domain of integration, $f(x_1,\ldots,x_n)$ denotes
+the joint probability density function (PDF), which satisfies
+$1 = \int_S f(x_1,\ldots,x_n) ds$.
+
+It must be pointed out that, the above equation can be divided into $n$ parts
+where every part is symmetric to each other, which means these parts have
+the same result in quantity. Particularly we can find out the result of, e.g.
+the $n$-th part:
+\begin{align}
+	&\int_{S(x_n>x_1\cap x_n>x_2 \cap \ldots \cap x_n > x_{n-1})} x_n f(x_1,\ldots,x_n) ds\\
+	=&\int_{x_n=0}^1 \int_{x_{n-1}=0}^{x_n} \cdots \int_{x_1=0}^{x_n} x_n f(x_1,\ldots,x_n) dx_1 dx_2 \cdots dx_n\\
+	=&\int_{x_n=0}^1 \int_{x_{n-1}=0}^{x_n} \cdots \int_{x_2=0}^{x_n} (x_n\cdot x_1)|_{x_1=0}^{x_n} dx_2 \cdots dx_n\\
+	=&\int_{x_n=0}^1 x_n^n dx_n\\
+	=&(\frac{1}{n+1} x_n^{n+1})|_0^1 = \frac{1}{n+1}
+\end{align}
+Since we have $n$ symmetric parts like this, where every part has the same same
+value as the others. We could simply solve the original integral like this:
+$$E[\max_i(x_i)] = n \cdot \frac{1}{n+1} = \frac{n}{n+1}$$
+
+Specifically, when $n=1$, the expectation is $1/2$; when $n\rightarrow \infty$,
+$\frac{n}{n+1} \rightarrow 1$.

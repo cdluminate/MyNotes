@@ -1,0 +1,138 @@
+% Game Theory
+% Pandoc LaTeX
+\title{Game Theory}
+
+\section{Introduction}
+
+[\href{https://en.wikipedia.org/wiki/Game_theory}{Game Theory}]
+
+Game theory is a bag of analytical tools designed to help us understand
+the phenomena that we observe when decision-makers interact. The basic
+assumptions that underlie the theory are that decision-makers pursue
+well-defined exogenous objectives (they are rational ) and take into
+account their knowledge or expectations of other decision-makers’ behavior
+(they reason strategically). \footnote{page. 1}
+
+The models we study assume that each dicision-maker is ``rational'' in
+the sense that he is aware of his alternatives, forms expectations about
+any unknowns, has clear preferences, and chooses his action deliberately
+after some process of optimization. In the absence of undertainty the
+following elements constitute a model of rational choice. \footnote{page. 4}
+\begin{itemize}
+	\item A set $A$ of actions from which the decision-maker makes a choice.
+	\item A set $C$ of possible consequences of these actions.
+	\item A consequence function $g: A\mapsto C$ that associates a consequence
+		with each action.
+	\item A preference relation (a complete transitive reflexive binary
+		relation) $\succsim$ on the set $C$.
+\end{itemize}
+
+Sometimes the decision-maker's preferences are specified by giving a utility
+function: $U: C\mapsto \Re$, which defined a preference relation $\succsim$
+by the condition $x\succsim y$ if and only if $U(x)\geqslant U(y)$.
+
+Strategic game, a model of strategic interaction, specifies for each player
+a set of possible actions and a preference ordering over the set of possible
+action profiles. Nash equilibrium is the most widely used solution concept
+for strategic games. \footnote{page. 9}
+
+\section{Nash Equilibrium}
+
+\subsection{Strategic Games}
+
+A strategic game consists of
+\begin{itemize}
+	\item a finite set $N$ (the set of players)
+	\item for each player $i\in N$ a nonempty set $A_i$ (the set of actions
+		available to player $i$)
+	\item for each palyer $i\in N$ a preference relation $\succsim_i$ on
+		$A = \times_{j\in N} A_j$ (the preference relation of player $i$)
+\end{itemize}
+Different from a dicision problem, in a strategic game each player may care
+not only about his own action but also about the actions taken by the other
+players. \foonote{page. 11}
+
+A common interpretation of a strategic game is that it is a model of an event
+that occurs only once; each player knows the details of the game and the
+fact that all the players are ``rational'', and the players choose their
+actions simutaneously and independently.
+
+\subsection{Nash Equilibrium}
+
+[\href{https://en.wikipedia.org/wiki/Nash_equilibrium}{Nash Equilibrium}]
+
+A Nash equilibrium of a strategic game $\langle N, (A_i), (\succsim_i)\rangle$
+is a profile $a^* \in A$ of actions with the property that for every palyer
+$i\in N$ we have
+$$(a^*_{-i},a^*_i) \succsim_i (a^*_{-i},a_i) ~\text{for all}~ a_i \in A_i$$
+
+For any $a_{-i} \in A_{-i}$ define $B_i(a_{-i})$ to be the set of player $i$'s
+best actions given $a_{-i}$:
+$$ B_i(a_{-i}) = \{ a_i\in A_i:
+	(a_{-i},a_i) \succsim_i (a_{-i},a'_i) ~\text{for all}~ a'_i \in A_i\} $$
+The set-valued function $B_i$ is called the best-response function of player
+$i$. A Nash equilibrium is a profile $a^*$ of actions for which
+$$ a^*_i \in B_i(a_{-i}^*) ~\text{for all}~ i \in N $$
+This alternative formulation of the definition points us to a (not necessarily
+efficient) method of finding Nash equilibria: first calculate the best response
+function of each player, then find a profile $a^*$ of actions which satisfies
+the above condition.
+
+\subsection{Examples}
+
+[\url{https://en.wikipedia.org/wiki/Prisoner\%27s_dilemma}]
+
+\subsection{Existence of a Nash Equilibrium}
+
+The existence of an equilibrium shows that the game is consistent with a
+steady state solution.
+
+LEMMA: Kakutani's fixed point theorem: 
+\begin{quote}
+Let $X$ be a compact convex subset
+of $\Re^n$ and let $f:X\mapsto X$ be a set-valued function for which
+	\begin{itemize}
+		\item for all $x\in X$ the set $f(x)$ is nonempty and convex
+		\item the graph of $f$ is closed (i.e. for all sequences $\{x_n\}$
+			and $\{y_n\}$ such that $y_n\in f(x_n)$ for all $n$,
+			$x_n\mapsto x$, and $y_n \mapsto y$, we have $y\in f(x)$
+	\end{itemize}
+	Then there exists $x^*\in X$ such that $x^* \in f(x^*)$.
+\end{quote}
+
+Define a preference relation $\succsim_i$ over $A$ to be quasi-concave on
+$A_i$ if for every $a^*\in A$ the set
+$\{a_i\in A_i:(a^*_{-i},a_i)\succsim_i a^*\}$ is convex.
+\begin{quote}
+	The strategic game $\langle N, (A_i), (\succsim_i)\rangle$ has a Nash
+	equillibrium if for all $i \in N$, the set $A_i$ of actions of player
+	$i$ is a nonempty conpact convex subset of a Euclidian space, and the
+	preference relation $\succsim_i$ is continuous, quasi-concave on $A_i$.
+\end{quote}
+
+\subsection{Strictly Competitive Games}
+
+todo: p. 21
+
+%    \subsubsubsection{Stragetic Games}
+%
+%  \subsubsection{Mixed Equilibrium}
+%
+%\subsection{Extensive games with perfect information}
+%
+%  \subsubsection{Extensive, perfect info}
+%
+%\subsection{Extensive games with imperfect information}
+%
+%  \subsubsection{Extensive, imperfect info}
+%
+%  \subsubsection{Sequential equilibrium}
+%
+%\subsection{Coalitional games}
+%
+%  \subsubsection{Core of Coalitional games}
+
+
+\section{Reference}
+
+1. Martin J. Osborne, Ariel Rubinstein, {\it A Course in Game Theory}, MIT Press.

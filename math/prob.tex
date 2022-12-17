@@ -1,0 +1,492 @@
+% Pandoc LaTeX
+% todo: parameter estimation
+\title{Probability and Statistics}
+
+\section{Basic Concepts about Probability}
+
+[\href{https://en.wikipedia.org/wiki/Probability_theory}{Probability Theory}]
+
+Let $A$, $B$, $\ldots$ denote
+[\href{https://en.wikipedia.org/wiki/Event_(probability_theory)}{events}],
+then the following laws are often used when conducting operations with events.
+
+\begin{itemize}
+	\item Commutative law\\
+$$ A\cup B=B\cup A, A\cap B=B\cap A $$
+	\item Associative law\\
+$$ A\cup(B\cup C)=(A\cup B)\cup C, A\cap(B\cap C)=(A\cap B)\cap C $$
+	\item Distributive law\\
+$$ A\cup(B\cap C)=(A\cup B)\cap(A\cup C), A\cap(B\cup C)=(A\cap B)\cup(A\cap C) $$
+	\item DE Morgan law\\
+$$ \overline{A\cup B}=\overline{A}\cap\overline{B}, \overline{A\cap B}=\overline{A}\cup\overline{B} $$
+\end{itemize}
+
+[\href{https://en.wikipedia.org/wiki/Probability_axioms}{Probability Axioms}]
+
+The possibility of an impossible event is zero, {\it i.e.}
+$ P(\Phi) = 0 $.
+
+The possibility of events is finitely summable, {\it i.e.}
+$$ P(A_1 \cup A_2 \cup \ldots \cup A_n) = 
+   P(A_1) + P(A_2) + \ldots + P(A_n) $$
+
+if $A \subset B$ then $P(B-A) = P(B)-P(A); P(B)\geq P(A)$.
+
+$\forall A, P(A) \leqslant 1$
+
+Possibility of a reciprocal event $\forall A, P(\overline{A}) = 1-P(A)$
+
+$P(A\cup B) = P(A) + P(B) - P(AB)$
+
+\subsection{3 Important Equations}
+
+[\href{https://en.wikipedia.org/wiki/Conditional_probability}{Conditional Probability}]:
+$A$ and $B$ are events and $P(A)>0$, then conditional probability can be
+written as follows,
+$$ P(B|A) = \frac{P(AB)}{P(A)} $$
+This is the generalized form of the conditional probability formula
+\begin{align}
+	& P(A_1A_2\ldots A_n)\\
+	=& P(A_n|A_1A_2\ldots A_{n-1})P(A_{n-1}|A_1A_2\ldots A_{n-2})\ldots P(A_2|A_1)P(A_1)
+\end{align}
+
+[\href{https://en.wikipedia.org/wiki/Law_of_total_probability}{Law of Total Probability}]
+$$ P(A) = P(A|B_1)P(B_1) + P(A|B_2)P(B_2) + \ldots + P(A|B_n)P(B_n) $$
+
+[\href{https://en.wikipedia.org/wiki/Bayes\%27_theorem}{Bayes' Theorem}]
+Experiment $E$ is in a sample space $S$, $B_i, i\in\{1,2,\ldots,n\}$ is
+a split of $S$, and $P(A)>0$, $P(B_i)>0$, then
+$$ P(B_i|A) = \frac{P(A|B_i)P(B_i)}{\sum\limits_{j=1}^n P(A|B_j)P(B_j)} , i \in \{1,2,\ldots, n\}$$
+This equation can be derived from the conditional probability and total
+probability.
+
+\subsection{Independence}
+
+[\href{https://en.wikipedia.org/wiki/Independence_(probability_theory)}{Independence}]
+
+Independent events: if $P(AB) = P(A)P(B)$ holds.
+
+\section{Random Variable and its Distribution}
+
+\subsection{Discrete Random Variable and Common Distributions}
+
+Assume the sample space of a random experiment is $S = \{e\}$, then
+$X=X(e)$ is real-and-single-valued function in sample space $S$.
+And $X=X(e)$ is called random variable.
+
+For a discrete random variable $X$ whose possible values are
+$x_k (k=1,2,\ldots)$, the possibility that the variable $X$ takes
+a specific values is $ P\{X=x_k\} = p_k, ~~ k = 1, 2, \ldots$.
+
+There are three important kinds of discrete random variable:
+\begin{itemize}
+\item $(0-1)$ Distribution\newline
+  $$P\{X=k\} = p^k(1-p)^{1-k} , k \in \{ 0, 1 \}, (0<p<1) $$
+\item Binomial Distribution $X\sim b(n,p)$\newline
+  $P(A) = p, P(\overline A) = 1-p$, $X$ is the counter of event $A$,
+		$$P\{X=k\} = \big(_k^n\big) p^k (1-p)^{n-k} , k = 0,1,\ldots, n$$
+\item Posion Distribution $X\sim \pi(\lambda)$\newline
+  $$ P\{X=k\} = \frac{\lambda^k e^{-\lambda}}{k!}, k = 0,1,2,\ldots. $$
+  $$ \sum_{k=0}^\infty P\{X=k\} = \sum_{k=0}^\infty \frac{\lambda^k e^{-\lambda}}{k!} 
+     = e^{-\lambda} \sum_{k=0}^\infty \frac{\lambda^k}{k!} = e^{-\lambda} \cdot e^\lambda = 1$$
+\end{itemize}
+
+[\href{https://en.wikipedia.org/wiki/Poisson_limit_theorem}{Poisson Limit Theorem}]
+
+\subsection{Continuous Random Variable and Common Distributions}
+
+[\href{https://en.wikipedia.org/wiki/Probability_distribution}{Probability Distribution}]
+
+Distribution function of a (non-discrete) random variable
+$$ F(x) = P\{X\leq x\}, -\infty < x < \infty$$
+\begin{align}
+	 & P\{x_1<X\leq x_2\} = P\{X\leq x_2\} - P\{X\leq x_1\}\\
+	=& F(x_2)-F(x_1) = \int_{x_1}^{x_2} f(x) dx
+\end{align}
+
+[\href{https://en.wikipedia.org/wiki/Probability_density_function}{Probability
+Density Function (PDF)}] is for continuous random variable.
+$$ F(x) = \int_{-\infty}^x f(t)dt $$
+where $f(x)$ is called possibility density of $X$.
+
+There are three important types of continuous random variables:
+\begin{itemize}
+\item Uniform Distribution $X\sim U(a,b)$\newline
+ $$ f(x) = \{a<x<b\} \frac{1}{b-a} $$
+\item Exponential Distribution\newline
+ $$ f(x) = \{x>0\} \frac{1}{\theta} e^{-x/\theta} $$
+Exponential distribution has an interesting property,
+$$P\{X>s+t|X>s\} = P\{X>t\}, ~~\forall s, t > 0$$
+\item Gauss/Normal Distribution $X\sim N(\mu,\sigma^2)$\newline
+ $$ f(x) = \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+		 , -\infty<x<\infty $$
+ Particularly when $\mu = 0, \sigma = 1$ it turns into a Standard Gauss Distribution.
+ $$ X\sim N(\mu,\sigma^2) \Rightarrow Z = \frac{X-\mu}{\sigma}\sim N(0,1) $$
+% Multi-Dimentional Random Variable and its Distribution, see Wikipedia
+\end{itemize}
+
+Given that random variable $X\sim N(\mu, \sigma^2)$, try to prove that a
+linear function of $X$, $Y=aX+b, ~(a\neq 0)$, obeys a Gaussian distribution too.
+
+\subsection{Distribution of Random-Variable-Argument Function}
+
+\url{https://en.wikipedia.org/wiki/Probability_density_function#Dependent_variables_and_change_of_variables}
+
+The PDF of random variable $X$ is $f_X(x), -\infty<x<\infty$. Function
+$g(x)$ is derivable everywhere and $g'(x) >0$ (or $g'(x)<0$) always holds.
+Then $Y = g(X)$ is continuous random variable, whose PDF is
+$$ f_Y(y) = \{\alpha<y<\beta\} f_X(g^{-1}(y))|h'(y)| $$
+where $a = \min(g(-\infty),g(\infty))$, $b= \max(g(-\infty),g(\infty))$.
+Because when $\alpha < y < \beta$,
+\begin{align}
+	& F_Y = P\{Y\leq y\} = P\{g(X)\leq y\}\\
+	=& P\{X\leq g^{-1}(y)\} = F_X[g^{-1}(y)]
+\end{align}
+Now $f_Y$ can be obtained by deriving $F_Y$.
+
+\section{Multi-dimensional Random Variable and its Distributions}
+
+Assume that $(X,Y)$ is a $2$-dimensional random variable. The distribution
+function of $(X,Y)$, namely the joint distribution function of $X$ and $Y$ is
+$$F(x,y) = P\{(X\leq x)\cap (Y\leq y)\} = P\{X\leq x, Y\leq y\}$$
+For discrete $2$-D random variables, $P\{X=x_i,Y=y_i\}=p_{ij},~i,j=1,2,\ldots$
+is the distribution law of $(X,Y)$, or the joint distribution law of $X$
+and $Y$.
+
+The derivative of the joint distribution function is the joint probability
+density function,
+$$ \frac{\partial^2 F(x,y)}{\partial x\partial y} = f(x,y) $$
+as long as $f(x,y)$ is continuous at point $(x,y)$. It is also noted that
+$$\int_{-\infty}^\infty \int_{-\infty}^\infty f(x,y)dxdy=F(\infty, \infty)=1$$
+
+When extended to the case of $n$-dimensional random variable, the joint
+distribution function is as follows
+$$ F(x_1,x_2,\ldots,x_n) = P\{X_1\leq x_1, X_2\leq x_2, \ldots X_n\leq x_n\} $$
+
+\subsection{Marginal Distribution}
+
+[\href{https://en.wikipedia.org/wiki/Marginal_distribution}{Marginal distribution}]
+function could be determined by the distribution function $F(x,y)$ of variable
+$(X,Y)$ as follows,
+$$ F_X(x) = P\{X\leq x\} = P\{X\leq x, Y\leq \infty\} = F(x,\infty)$$
+For discrete random variable, the marginal distribution law is
+$$ F_X(x) = F(x,\infty) = \sum_{x_i\leq x} \sum_{j=1}^\infty p_{ij}$$
+
+Hence the marginal probability density function is
+$$ f_X(x) = \int_{-\infty}^\infty f(x,y) dy $$
+
+\subsection{Conditional Distribution}
+
+$$ P\{X=x_i|Y=y_j\} = \frac{P\{X=x_i,Y=y_j\}}{P\{Y=y_j\}} = \frac{p_{ij}}{p_{*j}}$$
+is called the conditional distribution law of variable $X$ under the condition
+where $Y=y_j$.
+
+Accordingly, the conditional probability density function could be defined as
+$$f_{X|Y}(x|y) = \frac{f(x,y)}{f_Y(y)}$$
+
+\subsection{Independent Random Variable}
+
+Random variable $X$ and $Y$ are independent to each other as long as the
+following condition holds,
+$$ F(x,y) = P\{X\leq x, Y\leq y\} = P\{X\leq x\}P\{Y\leq y\} = F_X(x)F_Y(y)$$
+which is equivalent to the following equation,
+$$ f(x,y) = f_X(x) f_Y(y) $$
+
+If $(X_1,X_2,\ldots,X_n)$ and $(Y_1,Y_2,\ldots,Y_n)$ are independent to each
+other, i.e. $X_i$ and $Y_i$ are independent, then $h(X_1,X_2,\ldots,X_n)$ and
+$g(Y_1,Y_2,\ldots,Y_n)$ are independent each other, where $h,g$ are continuous
+functions.
+
+\subsection{Distribution of Two-variable Function}
+
+Assume that random variable $X$ and $Y$ are independent to each other.
+
+1. $Z=X+Y$
+\begin{quote}
+	$$ f_{X+Y}(z) = \int_{-\infty}^\infty f(z-y, y)dy $$
+	When $X$ and $Y$ are independent to each other, the above equation
+	can be transformed into
+	$$ f_{X+Y}(z) = \int_{-\infty}^\infty f_X(z-y)f_Y(y)dy$$
+	which is called the convolution formula, symbolized as $f_X*f_Y$.
+	$$ f_X*f_Y = \int_{-\infty}^\infty f_X(z-y)f_Y(y)dy
+	           = \int_{-\infty}^\infty f_X(x)f_Y(z-x)dx$$
+\end{quote}
+2. $Z=Y/X$
+\begin{quote}
+	$$ f_{Y/X}(z) = \int_{-\infty}^\infty |x|f(x,xz)dx $$
+\end{quote}
+3. $Z=XY$
+\begin{quote}
+	$$ f_{Y/X}(z) = \int_{-\infty}^\infty \frac{1}{|x|}f(x,\frac{z}{x})dx $$
+\end{quote}
+4. $M=\max(X,Y)$
+\begin{quote}
+	$$ F_{\max}(z) = P(M\leq z) = P(X\leq z, Y\leq z) = P(X\leq z)P(Y\leq z)$$
+	$$ F_{\max}(z) = F_{X_1}(z)F_{X_2}(z)\cdots F_{X_n}(z) $$
+\end{quote}
+5. $N=\min(X,Y)$
+\begin{quote}
+	$$ F_{\min}(z) = P(N\leq z) = 1-P(N>z) = 1-P(X>z,Y>z) = 1-P(X>z)P(Y>z)$$
+	$$ F_{\min}(z) = 1-[1-F_{X_1}(z)][1-F_{X_2}(z)]\cdots [1-F_{X_n}(z)] $$
+\end{quote}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Numerical Characteristics}
+
+\subsection{Mathematical Expectation}
+
+Assume that a discrete random variable $X$ has such a distribution
+$P\{X=x_k\}=p_k,~~k=1,2,\ldots$. Then the following series, as long
+as it converges, is called the mathematical expectation of variable $X$.
+$$ E(X) = \sum\limits_{k=1}^\infty x_k p_k $$
+
+Similarly, for continuous random variable $X$ whose probability density
+is $f(x)$, its mathematical expectation is as follows as long as it
+converges.
+$$ E(X) = \int^\infty_{-\infty} xf(x)dx $$
+
+Here are some properties of mathematical expectation: $E(C)=C$,
+$E(CX)=CE(X)$, $E(X+Y)=E(X)+E(Y)$, $E(XY)=E(X)E(Y) ~~ (X,Y independent)$.
+
+$$E[g(X)] = \sum_{k=1}^\infty g(x_k)p_k$$
+$$E[g(X)] = \int_{-\infty}^\infty g(x)f(x)dx$$
+$$E[g(X,Y)] = \sum_{i=1}^\infty \sum_{j=1}^\infty g(x_i,y_j)p_{ij}$$
+$$E[g(X,Y)] = \int_{-\infty}^\infty\int_{-\infty}^\infty g(x,y)f(x,y)dxdy$$
+
+\subsection{Variance}
+The variance of discrete random variable $X$ is defined as follows,
+as long as it exists.
+$$ D(X)=Var(X)=E\{ [X-E(X)]^2 \} = E(X^2)-[E(X)]^2 $$
+Similarly, for continuous random variable the variance is
+$$ D(X) = \int^\infty_{-\infty} [X-E(X)]^2 f(x)dx $$
+Accordingly, the standard deviation is $\delta(X)=\sqrt{D(X)}$.
+
+Some properties of variance: $D(C)=0$, $D(CX)=C^2 D(X)$,
+$D(X+C)=D(X)$, $D(X+Y)=D(X)+D(Y)+Cov(X,Y)$.
+
+\subsection{Coviriance and Correlation Coefficient}
+ Coviriance
+ $$ Cov(X,Y) = E\{ [X-E(X)][Y-E(Y)] \} = E(XY) - E(X)E(Y)$$
+ correlation coefficient
+ $$ \rho_{XY} = \frac{Cov(X,Y)}{ \sqrt{D(X)} \sqrt{D(Y)} } $$
+
+ $Cov(aX,bY) = ab~ Cov(X,Y)$
+
+ $Cov(X+Z, Y) = Cov(X,Y) + Cov(Z,Y)$
+
+\subsection{Moment and Covariance Matrix}
+
+ $k$-th (origin) moment $E(X^k)$. $k$-th central moment $E\{[X-E(X)]^k\}$.
+ $k+l$-th mixed moment $E(X^kY^l)$.
+ $k+l$-th central mixed moment $E\{[X-E(X)]^k[Y-E(Y)]^l\}$.
+
+ Obviously, mathematical expectation $E(X)$ is $X$'s first-order origin
+ moment. Variance $D(X)$ is the second-order central moment of $X$.
+ $Cov(X,Y)$ is the second-order central mixed moment of $X$ and $Y$.
+
+ Covariance matrix $C_{ij} = Cov(X_i,X_j)$ is a symmetric matrix because
+ $c_{ij} = c_{ji}$.
+
+ Question: probability density function of $n$-D Gaussian random vector.
+
+\section{Law of Large Numbers and Central Limit Theorem}
+
+ \subsection{Chebyshev Inequility}
+ var $X$, $E(X)=\mu$, $D(X)=\delta^2$, $\forall \varepsilon >0$,
+
+ $$ P \big\{ \big| X - \mu \big| \geqslant \varepsilon \big\} 
+   \leqslant \frac{\delta^2}{\varepsilon^2} $$
+
+ \begin{align*}
+	 P \big\{ \big| X - \mu \big| \geqslant \varepsilon \big\} &=
+		\int_{|X-\mu|\geq \varepsilon} f(x)dx \\
+		&\leq \int_{|X-\mu|\geq \varepsilon} \frac{|x-\mu|^2}{\varepsilon^2}
+			f(x)dx \\
+		&\leq \frac{1}{\varepsilon^2} \int^\infty_{-\infty} (x-\mu)^2 f(x)dx\\
+		&= \frac{\delta^2}{\varepsilon^2}
+ \end{align*}
+
+ \subsection{Weak Law of Large Numbers}
+
+[\href{https://en.wikipedia.org/wiki/Law_of_large_numbers}{Law of Large Numbers}]
+
+ Assume that random variables $X_1, X_2, \ldots$ are independent to each
+ other, and have the same distribution. $E(X_k)=\mu,~k=1,2,\ldots$. Then
+ $\forall \varepsilon>0$, the following equation holds,
+ $$ \lim\limits_{n\rightarrow\infty} \big\{ \big|
+		 \frac{1}{n} \sum\limits_{k=1}^n X_k - \mu
+     \big| < \varepsilon \big\} = 1 $$
+
+ When $D(X_k)=\delta^2,~k=1,2,\ldots$ exists,
+ $$ E(\frac{1}{n} \sum\limits_{k=1}^n X_k) =
+	\frac{1}{n} \sum\limits_{k=1}^n E(X_k) = \frac{n\mu}{n} = \mu$$
+ $$ D(\frac{1}{n} \sum\limits_{k=1}^n X_k) =
+	\frac{1}{n^2} \sum\limits_{k=1}^n D(X_k) = \frac{n\delta^2}{n^2}
+	= \frac{\delta^2}{n} $$
+ We plug them in the Chebyshev inequility, and obtain the following equation,
+ $$ 1 \geqslant P \big\{ \big| \frac{1}{n} \sum\limits_{k=1}^n X_k - \mu
+    \big| < \varepsilon \big\} \geqslant 1 - \frac{\delta^2/n}{\varepsilon^2} $$
+ where $ 1 - \frac{\delta^2/n}{\varepsilon^2} $ tends to $1$ when
+ $n \rightarrow \infty$.
+
+ See also Bernoulli Law of Large Numbers.
+
+\subsection{Central Limit Theorem}
+See also Lyapunouv Theorem, De Moivre-Laplace Theorem.
+
+\section{Sample and Sampling Distribution}
+
+Statistics, based on the probability theory.
+
+[\href{https://en.wikipedia.org/wiki/Random_sample}{Random Sample}]
+
+[\href{https://en.wikipedia.org/wiki/Simple_random_sample}{Simple random sample}]
+
+Wiki(Histogram,BoxPlot)
+
+\subsection{Sampling Distribution}
+
+Sample Mean
+$$ \bar{X} = \frac{1}{n} \sum_{i=1}^n X_i $$
+Sample Variance
+$$ S^2 = \frac{1}{n-1} \sum_{i=1}^n(X_i - \bar{X})^2 $$
+etc.
+
+\section{Parameter Estimation}
+
+\subsection{Point Estimation}
+
+Estimate an unkown parameter with a sample from the sample population.
+
+\subsubsection{Method of Moments}
+
+[\href{https://en.wikipedia.org/wiki/Method_of_moments_(statistics)}{Method of Moments}]
+
+Assume that $\theta_1,\theta_2,\ldots,\theta_n$ are the parameters to be
+estimated. Given a continuous random variable $X$ with probability
+density function $f(x;\theta_1,\theta_2,\ldots,\theta_n)$, or a discrete
+random variable $X$ with distribution law
+$P(X=x)=p(x;\theta_1,\theta_2,\ldots,\theta_n)$
+where $X_1,X_2,\ldots,X_n$ are samples from $X$. Assume that the first
+$k$-th moment of $X$ exists:
+$$ \mu_l = E(X^l) = \int_{-\infty}^\infty
+   x^l f(x;\theta_1,\theta_2,\ldots,\theta_n) dx, ~~l=1,2,\ldots,k $$
+or
+$$ \mu_l = E(X^l) = \sum_{x\in R_X}
+   x^l p(x;\theta_1,\theta_2,\ldots,\theta_n), ~~l=1,2,\ldots,k $$
+As we know the sample moment $A_l = \frac{1}{n} \sum_{i=1}^n X_i^l$
+converges to the overall moment $\mu_l$ at a certain probability.
+\begin{align}
+	\mu_1 &= \mu_1(\theta_1,\theta_2,\ldots,\theta_k)\\
+	\mu_2 &= \mu_2(\theta_1,\theta_2,\ldots,\theta_k)\\
+	& \ldots\\
+	\mu_k &= \mu_k(\theta_1,\theta_2,\ldots,\theta_k)
+\end{align}
+\begin{align}
+	\theta_1 &= \theta_1(\mu_1,\mu_2,\ldots,\mu_k)\\
+	\theta_2 &= \theta_2(\mu_1,\mu_2,\ldots,\mu_k)\\
+	& \ldots\\
+	\theta_k &= \theta_k(\mu_1,\mu_2,\ldots,\mu_k)\\
+\end{align}
+$$ \hat{\theta}_i = \theta_i(A_1, A_2, \ldots, A_k),~~i=1,2,\ldots,k $$
+
+Example 1. $X\sim U(a,b)$ where a and b are unknowns.
+$\mu_1 = E(X) = (a+b)/2$, $\mu_2 = E(X^2) = D(X) + [E(X)]^2$.
+By solving the system we can obtain the solution of a and b.
+$a = \mu_1 - \sqrt{3(\mu_2-\mu_1^2)}$,
+$b = \mu_1 + \sqrt{3(\mu_2-\mu_1^2)}$.
+If we replace $\mu_1,\mu_2$ with $A_1,A_2$, we get the moment estimators
+$\hat{a}$ and $\hat{b}$.
+\begin{quote}
+	\begin{verbatim}
+# Julia 0.6.2
+x = rand(100000) # ~U(0,1)
+sm1, sm2 = mean(x.^1), mean(x.^2)
+hata = sm1 - sqrt(3(sm2-sm1^2)) # approx 0
+hatb = sm1 + sqrt(3(sm2-sm1^2)) # approx 1
+	\end{verbatim}
+\end{quote}
+
+Example 2. Mean $\mu$ and variance $\sigma^2$ unknown.
+$\mu_1 = \mu$, $\mu_2 = \sigma^2 + \mu^2$.
+$\hat{\mu}, \hat{\sigma^2} = ?$
+
+\subsubsection{Maximum Likelihood Estimation}
+
+[\href{https://en.wikipedia.org/wiki/Maximum_likelihood_estimation}{Maximum Likelihood Estimation}]
+
+Likelihood function for discrete random variable $X$ with parameter $\theta$:
+$$ L(\theta) = L(x_1,x_2,\ldots,x_n;\theta) = \prod_{i=1}^n P(X_i=x_i;\theta), ~\theta\in\Theta$$
+And for continuous random variable $X$ with parameter $\theta$:
+$$ L(\theta) = L(x_1,x_2,\ldots,x_n;\theta) = \prod_{i=1}^n f(x_i;\theta), ~\theta\in\Theta$$
+$$ L(x_1,x_2,\ldots,x_n;\hat{\theta}) = \max_{\theta\in\Theta} L(x_1,x_2,\ldots,x_n;\theta) $$
+$$ \hat{\theta} = \text{arg}\max_{\theta\in\Theta} L(x_1,x_2,\ldots,x_n;\theta) $$
+$$ \frac{d}{d\theta} L(\theta) = 0 $$
+$$ \frac{d}{d\theta} \ln L(\theta) = 0 $$
+
+Example 1. $X\sim b(1,p)$, $x_i\in {0,1}$. $L(p) = \prod_{i=1}^n p^{x_i} (1-p)^{1-x_i}$,
+$\ln L(p) = \big(\sum_{i=1}^n x_i\big) \ln p + \big(n-\sum_{i=1}^n x_i\big) \ln (1-p)$.
+$\frac{d}{dp} \ln L(p) = 0 \Rightarrow \hat{p} = \frac{1}{n} \sum_{i=1}^n x_i$.
+
+Example 2. $X\sim U(a,b)$. $L(a,b) = \{a\leq x_*\leq b\}\frac{1}{(b-a)^n}$.
+$L(a,b) = \{a\leq x_{\min}, x_{\max} \leq b\}\frac{1}{(b-a)^n}$.
+$L(a,b) = \frac{1}{(b-a)^n} \leqslant \frac{1}{(x_{\max} - x_{\min})^n}$.
+$\hat{a},\hat{b} = \text{argmax}~L(a,b) = x_{\min}, x_{\max}$.
+
+Example 3. Event A happened $n_1$ times while B happened $n_2$ times.
+$L(\theta)=\theta^{n_1} (1-\theta)^{n_2}$. $\frac{\partial \ln L(\theta)}{\partial \theta}
+= \frac{n_1}{\theta} + \frac{n_2}{\theta-1}=0 \Rightarrow \theta = \frac{n_1}{n_1+n_2}$.
+
+When analytical solution is not available, numerical methods, such as the
+Newton-Raphson method, could be leveraged to obtain an approximate solution. 
+
+\subsection{Estimator Assessment}
+
+\subsubsection{Unbiased Estimator}
+
+We call $\hat{\theta}$ an unbiased estimator of $\theta$ when
+$E(\hat{\theta}) = \theta$. Actually, a parameter may have various estimators.
+
+Example 1. $A_k = \frac{1}{n} \sum_{i=1}^n X_i^k$ is an unbiased extimator
+of $k$-th population moment $\mu_k$.
+$E(A_k) = \frac{1}{n} \sum_{i=1}^n E(X_i^k) = \mu_k$.
+
+\subsubsection{Validity}
+
+$\hat{\theta}_1$ is more effective than $\hat{\theta}_2$ when
+$D(\hat{\theta}_1) \leqslant D(\hat{\theta}_2)$.
+
+\subsubsection{Congruence}
+
+...
+
+\section{Hypothesis Testing}
+
+\section{Stochastic Process}
+
+\section{Markov Chain}
+
+In a stochastic process, given that the ``current'' state is known,
+its ``future'' state doesn't depend on the ``past'' state. This is
+Markov property. Moreover, when the time and status of a stochastic
+process are both discrete, and the process satisfies Markov property,
+then it's called Markov chain. Namely,
+\begin{align*}
+     & P\{ X_{m+n}=a_j | X_{t_1}=a_{i_1}, X_{t_2}=a_{i_2}, \ldots, X_{m}=a_{i} \} \\
+	 &= P\{ X_{m+n}=a_j | X_{m}=a_{i} \}\\
+	 &= P_{ij}(m,m+n)
+\end{align*}
+where $P_{ij}(m,m+n)$ denotes the transition probability from state
+$a_i$ at time $m$ to state $a_j$ at time $m+n$. Obviously it must
+transit to an existing status, so the summary of the probability of
+all possibilities should equal one, {\it i.e.}
+$$ \sum\limits_{j=1}^{+\infty} P_{ij}(m,m+n) = 1 $$
+
+See \verb|stochproc.tex| for detailed discussion.
+
+\section{Reference}
+
+% 1. 概率论与数理统计，浙江大学，第四版
+
+2. \url{http://cs229.stanford.edu/section/cs229-prob.pdf}

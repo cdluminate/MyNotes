@@ -1,0 +1,96 @@
+\verb|Fri Jun 22 15:45:52 UTC 2018|
+
+\section{LU Decomposition}
+\url{https://en.wikipedia.org/wiki/LU_decomposition}
+
+LU decomposition, aka. LU factorization, is the matrix form of Gaussian
+elimination. Assume there is a matrix equation $Ax=b$ on which Gaussian
+elimination can be conducted without row or column exchange:
+\begin{align}
+	a_{11}\xi_1 + a_{12}\xi_2 + \ldots + a_{1n}\xi_n &= b_1 \\
+	a_{21}\xi_1 + a_{22}\xi_2 + \ldots + a_{2n}\xi_n &= b_2 \\
+	\ldots \\
+	a_{n1}\xi_1 + a_{n2}\xi_2 + \ldots + a_{nn}\xi_n &= b_n
+\end{align}
+
+At the first step of elimination we want to eliminate the coefficients
+$a_{21}, a_{31}, \ldots, a_{n1}$, by subtracting the first row multiplied
+by a certain factor $c_{i1} = -\frac{a_{i1}}{a_{11}}, a_{11}\ne 0$. This
+step can be represented in matrix:
+$$
+L_1 A =
+\begin{bmatrix}
+	1 & & & \\
+	c_{21} & 1 & & \\
+	\vdots & & 1 & \\
+	c_{n1} & & & 1
+\end{bmatrix} A
+=
+\begin{bmatrix}
+    a11 & a12 & \ldots \\
+	0 & a22 & \ldots \\
+	\vdots & & \ldots \\
+	0 & an2 & \ldots
+\end{bmatrix}
+= A^{(1)}
+$$
+Next, we would do similar eliminations as above, producing a series of lower
+triangular matrices $L_2, L_3, \ldots, L_{n-1}$. That means
+\begin{align}
+	A^{(n-1)} &= L_{n-1} L_{n-2} \ldots L_2 L_1 A \\
+	A &= L_1^{-1} L_2^{-1} \ldots L_{n-1}^{-1} A^{(n-1)} = LU
+\end{align}
+where $\prod_i L_i^{-1} = L$, $A^{(n-1)} = U$.
+
+When none of the order-main subdeterminants equals zero, namely
+$\Delta_k \ne 0, k = 1, 2, \ldots, n-1$,
+the LU decomposition of the matrix is unique.
+
+When $A$ is invertible, i.e. none of the order-main subdeterminants equals
+zero, we can solve a linear system consisting $A$ in an easier way:
+$$
+Ax=b=LUx \Rightarrow Ux=y, Ly=b
+$$
+Both of the two linear systems are triangular.
+
+\subsection{Variants to LU Decomposition}
+
+When the given matrix doesn't allow Gaussian elimination without row or
+column change, we need to introduce a Permutation Matrix ($P$) to the
+decomposition, so that the factorization looks like $PA=LU$.
+
+After LU decomposition, the unit lower triangular matrix $L$ has ones on
+its diagonal, but the upper triangular often has non-one values on its
+diagonal. The upper triangular $U$ can be further split into a diaginal
+matrix and a unit upper triangular, i.e.
+$U = \text{Diag}(d_1, d_2, \ldots, d_n) = D\hat{U}$.
+When the LU decomposition is unique, matrix $D$ will be
+$\text{Diag}(\Delta_1/1, \Delta_2/\Delta_1, \ldots, \Delta_n/\Delta_{n-1})$
+where $\Delta_\ast$ are the order-main subdeterminants.
+
+Doolite decomposition is
+$$A = LDU = L(DU) = L\tilde{U}$$
+Crout decomposition is
+$$A = LDU = (LD)U = \tilde{L}U$$
+
+\subsection{Cholesky Decomposition}
+
+When $A$ is a real symmetric and positive definite matrix, it has a unique
+LU decomposition, i.e. $A = LDU$, where $D=diag(d_1, d_2, \ldots, d_n), d_\ast > 0$.
+At the same time, let $A = L\tilde{D}\tilde{D}U$ where $\tilde{D}=diag(\sqrt{d_1}, \ldots, \sqrt{d_n})$,
+then we have
+$$ A = A^T = L\tilde{D}\tilde{D}U = U^T\tilde{D}\tilde{D}L^T = L\tilde{D}\tilde{D} L^T = LDL^T = (L\tilde{D})(\tilde{D}L^T) = GG^T$$
+which is exactly the Cholesky decomposition of $A$.
+
+As a side note, what is a positive definite matrix? As long as any of the
+following conditions holds: (1) $x^TAx>0$ where $x$ is a column vector;
+(2) all eigenvalues are greater than 0; (3) all order-main subdeterminants
+are greater than 0.
+
+\subsection{Julia Code}
+
+\begin{verbatim}
+A = rand(5,5)
+F = lu(A)
+F.L * F.U \approx F.P * A  # PA=LU
+\end{verbatim}

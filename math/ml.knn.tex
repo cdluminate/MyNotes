@@ -1,0 +1,41 @@
+\section{K Nearest-Neighbor Model}
+
+Given a dataset which contains $N$ pairs of data vector and corresponding label,
+i.e. $\{(x_i,y_i)\}_{i=1}^N$, where $x_i \in R^m$, $y_i \in \{c_1, c_2, \ldots\}$
+is a constant from a finite set which indicates the class in which $x_i$ is
+categorized, the $k$-NN classification algorithm can be used to predict the
+label $\hat{y}$ for a query sample's vector $q \in R^m$.
+
+When we get a query sample $q$, the simplest idea to assign it with a label is to
+find out the most similar one to it from the dataset we've already had. Then
+how do we define the ``similarity'' between different samples in the $R^m$
+space? In some cases, this ``similarity'' can be represented by some Minkovski
+distance such as Euclidean distance $d(x,y) = ||x-y||_2$.
+
+This idea presents exactly how $k$-NN works when $k=1$, and the predicted label
+for the query $q$ is $\hat{y} = y_{i^*}$ where $$i^* = \text{argmin}_i d(q, x_i)$$
+
+However, sometimes the dataset may be noisy, which means that determining the
+label to assign to a query by merely the most similar sample in the dataset
+is possible to produce a wrong result. To statistically alleviate the deficiency
+introduced by dataset noise, a solution is to find the $k$ most matching samples
+from the dataset, and let their corresponding label vote for the final label
+to be assigned to the query.
+
+{\bf Performance of $1$-NN}. Given a test sample $x$ and its closest neighbor
+$z$, the probability of misclassification is the probability that they belong
+to different classes. Let $c^* = \text{argmax}_{c\in Y} P(c|x)$ be the optimal
+Bayes solution, then we have
+\begin{align}
+	P(err) &= 1-\sum_{c\in Y} P(c|x)P(c|z) \\
+		   &\approx 1-\sum_{c\in Y} P^2(c|x) \\
+		   &\leqslant 1 - P^2(c^*|x) = [1+P(c^*|x)][1-P(c^*|x)] \\
+		   &\leqslant 2[1-P(c^*|x)]
+\end{align}
+which means the kNN classifier, yet quite simple, achieved a generalization
+error not greater than twice of that of the optimal Bayes classifier.
+
+\subsection{Reference}
+
+1. Zhihua Zhou, Machine Learning.
+2. Myself.

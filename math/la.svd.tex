@@ -1,0 +1,29 @@
+
+\section{Singular Value Decomposition}
+
+\subsection{Rank Decomposition}
+\url{https://en.wikipedia.org/wiki/Rank_factorization}
+
+Given an $m\times n$ matrix $A$ of rank $r$, a rank decompostion of $A$
+is a product $A = FG$ where $F$ is an $m\times r$ matrix and $G$ is an $r\times n$ matrix. This is because any matrix $A$ can be transformed by using
+elementary transformations ($P$) into the following form
+$$ P_{m\times m}A_{m\times n} = B_{m\times n} = 
+  \begin{bmatrix} G_{r\times n} \\ O \end{bmatrix} \Rightarrow
+	  A = P^{-1}B = [F_{m\times r} S] 
+          \begin{bmatrix} G_{r\times n} \\ O \end{bmatrix} = FG + SO = FG
+	  $$
+However, it must be pointed out that the rank decomposition of a given matrix
+$A$ is not unique. There must be at least one matrix $D$ of size $r\times r$,
+such that $$A = FG = F(DD^{-1})G = (FD)(D^{-1}G) = F_1G_1$$
+
+\subsection{Sigular Value Decomposition}
+
+An Hermitian matrix $A$ ($A^H=A$) has its Schur factorization
+$U^HAU = \text{diag}(\lambda_1, \lambda_2, \ldots, \lambda_n)$.
+When A is not Hermitian, the matrix $A^HA$ can still be decompised in a
+similar way:
+$$V^H(A^HA)V = \Lambda^2 \Rightarrow (AV\Lambda^{-1})^HAV = \Lambda = U^HAV$$
+where the elements in the diagonal of $\Lambda$ are square roots of the
+eigenvalues of $A^HA$, which are called singular values.
+
+$$ A = U \begin{bmatrix} \Sigma_r & O \\ O & O\end{bmatrix} V^H$$

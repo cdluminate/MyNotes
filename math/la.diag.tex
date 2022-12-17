@@ -1,0 +1,42 @@
+
+\section{Matrix Diagonalization}
+
+Eigen values and eigen vectors, $Ax=\lambda x$, $\det(\lambda I - A)=0$,
+$tr(A) = \sum_i a_{ii} = \sum_i \lambda_i$, $\det A = \prod_i \lambda_i$.
+
+Any matrix is similar to a triangular matrix, this can be proved by using
+a sequence of elementary transformations.
+$$AP=(Ax_1,\ldots,Ax_n)=(\lambda_1 x_1, Ax_2, \ldots, Ax_n)$$
+Particularly, when a $n\times n$ matrix has $n$ linearly independent eigen
+vectors, so that $Ax_i = \lambda_i x_i$. Then by putting them into a matrix
+$$A[x_1,\ldots] = [x_1,\ldots] \text{Diag}(\lambda_1, \ldots, \lambda_n)
+  \Rightarrow AP=P\Lambda \Rightarrow P^{-1}AP = \Lambda$$
+
+\subsection{Schur Factorization}
+
+Any matrix $A$ can be factorized like the follows
+$$U^{-1}AU = R$$
+where $U$ is unitary matrix, $R$ is a upper triangular.
+When $A^HA=AA^H$, the off-diagonal elements in matrix $R$ are zero,
+i.e. $U^HAU=\Lambda$, because $diag(RR^H)=diag(R^HR)$.
+
+\subsection{Jordan Canonical Form}
+
+A matrix that cannot be diagonalized must have some multi-fold eigenvalues.
+For such kind of matrices, there is still a way to find a diagonal-matrix
+like matrix $J$ such that $P^{-1}AP=J$. The diagonal of $J$ is still consisted
+of $A$'s eigenvalues.
+
+\subsection{Eigenvalue Estimation}
+
+Gerschgorin circle theory. All the eigenvalues scatter accross the union
+of the $n$ Gerschgorin circles. The $i$-th Gerschgorin circle is
+$$ |z - a_{ii}| \leq R_i = \sum_{j\ne i} |a_{ij}|$$
+Assume that $\lambda, x$ is a pair of eigenvalue and eigenvector of $A$,
+such that $Ax=\lambda x$. Then we select the $I$-th row from the matrix
+equation, i.e. $\sum_{j=1} a_{Ij}\xi_j = \lambda_I \xi_I$. Then
+$$ \sum_{j\ne I} a_{Ij} \xi_j = (\lambda - a_{II})\xi_I$$
+which means
+$$|\lambda - a_{II}| = |\sum_{j\ne I} a_{Ij} \frac{\xi_j}{\xi_I}|
+  \leq \sum_{j\ne I} |a_{Ij}| \frac{|\xi_j|}{|\xi_I|} \leq
+  \sum_{j\ne I} |a_{Ij}| = R_i$$

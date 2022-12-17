@@ -1,0 +1,156 @@
+\verb|Sat Jun 23 14:51:28 UTC 2018|
+
+\section{QR Decomposition}
+\url{https://en.wikipedia.org/wiki/QR_decomposition}
+
+QR factorization is to decomposite an invetible matrix $A$ into
+the product of an orthogonal matrix $Q$ and an invertible upper
+triangular matrix $R$, i.e. $A=QR$.
+
+There are not only one way to conduct QR factorization on a given
+matrix. The methods for conducting QR factorization include
+Schmidt orthogonalization, Givens transformation, and Householder
+transformation.
+
+\subsection{QR Decomp by Schmidt Orthogonalization}
+
+Let $a_\ast$ be the columns of the given matrix $A$. We take the
+first column $a_1$ as the first new column vector $b_1$ of the
+orthogonal matrix. For the second column of the orthogonal matrix,
+we want to remove the $b_1$ subcomponent from $a_2$, such that
+$b_2$ is orthogonal to $b_1$, i.e.
+$$b_2 = a_2 - k_{21}b_1, b_1\cdot b_2=0$$
+By solving the above equation we get $k_{21} = \frac{b_1a_1}{b_1b_1}$.
+Similarly for the third column in the orthogonal matrix we want
+to remove the $b_1$ and $b_2$ subcomponent from $a_3$, i.e.
+$$b_3 = a_3 - k_{32}b_2 - k_{31} b_1, b_3\cdot b_2 = 0, b_3 \cdot b_1 = 0$$
+where $k_{ij} = \frac{b_j\cdot a_i}{b_j\cdot b_j}$.
+
+Finally we'll get a system like this:
+$$
+\begin{aligned}
+	b_1 &= a_1 \\
+	b_2 &= a_2 - k_{21}b_1 \\
+	\ldots \\
+	b_n &= a_n - k_{n,n-1}b_{n-1} - \ldots - k_{n1}b_1
+\end{aligned}
+\Rightarrow
+\begin{aligned}
+	a_1 &= b_1 \\
+	a_2 &= b_2 + k_{21}b_1 \\
+	\ldots \\
+	a_n &= b_n + k_{n,n-1}b_{n-1} + \ldots + k_{n1}b_1
+\end{aligned}
+$$
+Or equivalently in matrix form:
+$$
+\begin{bmatrix}
+	a_1 & \cdots & a_n
+\end{bmatrix}
+=
+\begin{bmatrix}
+	b_1 & \cdots & b_n
+\end{bmatrix}
+\begin{bmatrix}
+	1 & k21 & \cdots & kn1 \\
+	  & 1   & \ddots  & \vdots \\
+	  &     &  1 & k_{n,n-1} \\
+	  & & & 1
+\end{bmatrix}
+$$
+
+Next, $Q$ can be obtained by unitizing/normalizing the columns in
+matrix $B$, i.e. $q_i = \frac{b_i}{||b_i||}$. And
+$$
+[a_1 \ldots a_n] = [q_1 \ldots q_n] \text{Diag}(||b_1||, ||b_2||, \ldots,
+  ||b_n||)
+  \begin{bmatrix}
+	  1 & \cdots & k_{\ast\ast}\\
+	    & \ddots & \vdots \\
+		& & 1
+  \end{bmatrix}
+$$
+which is exactly the decomposition result $A=QR$.
+
+\subsection{QR by Givens Transformations}
+
+Recall that a rotating a 2-D vector looks like
+$$
+y = 
+\begin{bmatrix}
+	\cos \theta & \sin \theta \\
+	-\sin \theta & \cos \theta
+\end{bmatrix}
+x
+= Tx
+$$
+where $\det T = 1$.
+
+Givens transformation is a generalized form of such rotation where
+two dimensions are involved. In brief the Givens matrix looks like
+$$
+\begin{bmatrix}
+	I& & & & \\
+	 &c& &s& \\
+	 & &I& & \\
+	 &-s& &c& \\
+	 & & & &I
+\end{bmatrix}
+\begin{matrix}
+	\\
+	(i)\\
+	\\
+	(j)\\
+	\\
+\end{matrix}
+$$
+where $c^2 + s^2 = 1$. This represents a rotation transformation in
+the plane expanded by $\hat{e}_i$ and $\hat{e}_j$. Determinant of any 
+Givens matrix is 1, and the Givens matrix itself is orthogonal.
+
+A given vector can be transformed so that it has the same direction with
+a base vector. We first find a rotation matrix, so that the first column of $A$
+can be rotated to the same direction as that of $\hat{e}_1$.
+$$ T_1 a_1 = |a_1| \hat{e}_1$$
+Then we finish the first step by applying transformation $T_1$ to A.
+$$ T_1 A[1:n,1:n] = A_1 $$
+Next we find a rotation for the submatrix of $A_1$ starting from the second
+row and the second column, such that
+$$ T_2 A_1[2:n,2] = |A_1[2:n,2]| \hat{e}_2$$
+$$T_2 A_1[2:n,2:n] = A_2$$
+Until the last step which looks like
+$$ T_{n-1} A_{n-1}[n-1:n,n] = |\ldots|\hat{e}_n$$
+$$ T_{n-1} A_{n-2}[n-1:n,n-1:n] = A_{n-1} $$
+which indicates that
+$$
+TA = A_{n-1} = \begin{bmatrix} I_{n-2} & \\ & T_{n-1} \end{bmatrix}
+	\cdots \begin{bmatrix} I_2 & \\ & T_3 \end{bmatrix}
+		\begin{bmatrix} I_1 & \\ & T_2 \end{bmatrix}
+			T_1 = R
+$$
+where $I_\ast$ means eye matrix of size $\ast$, R is a upper triangular.
+We can find out the QR factorization if we examine the above result further.
+$$ TA = \tilde{T}_{n-1} \tilde{T}_{n-2} \ldots \tilde{T}_1 A = R$$
+$$ A = T^{-1}R = T^T R = QR $$
+where $Q = T^{-1} = T^T$ because $T$ is a product of a series of orthogonal
+matrices.
+
+\subsection{QR by Householder Transformations}
+
+Householder transformation mirrors the vector along one dimension. For instance
+$$
+y = [x_1, x_2]^T = [1, 0; 0 -1][x_1, x_2]^T = (I-2\hat{e}_2\hat{e}_2^T)x = Hx
+$$
+Assume that $u\in R^n$ is a unit column vector, $H=I-2uu^T$ is a householder matrix.
+Householder matrices have several properties: (1) $H^T=H$, (2) $H^TH=I$,
+(3) $H^2=I$, (4) $H^{-1}=H$, (5) $\det H = -1$.
+
+Any non-zero vector $x$ can be transformed into the same direction as that of
+a base vector, i.e. $Hx = |x|e_\ast$. When $x=|x|e_\ast$, we select a unit column
+vector so that $u^Tx=0$. When $x\ne |x|e_\ast$, we use
+$$ u = \frac{x-|x|e_\ast}{|x-|x|e_\ast|} $$
+
+To conduct QR factorization with householder transformations, we similarly
+mirror the first column vector of the submatrices so that they point to the
+same direction as that of the corresponding base vector. This procedure is similar
+to QR factorization with Givens transformation.

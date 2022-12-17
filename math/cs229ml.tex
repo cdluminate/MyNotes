@@ -1,0 +1,285 @@
+\title{CS229: Machine Learning, Andrew Ng.}
+
+\section{Linear Regression}
+
+\subsection{Supervised Learning}
+
+ In this section of note, the same notations as Ng's are used.
+ That is to say, we use $x^{(i)}$ to denote the (input) \emph{feature},
+ and $y^{(i)}$ to denote the \emph{target} (output) variable.
+ A pair $(x^{(i)}, y^{(i)})$ is called \emph{training example},
+ and a list of $m$ items $\big\{(x^{(i)}, y^{(i)}) | i = 1, \ldots, m\big\} $
+ is called \emph{training set}. $\mathcal{X}$ will be used to denote the space of
+ input feature, and $\mathcal{Y}$ the space of output values.
+ Particularly in this example, $\mathcal{X} = \mathcal{Y} = \mathcal{R} $.
+ 
+ The goal of supervised learning is, given a training set, to learn a function
+ \[ h : \mathcal{X} \mapsto \mathcal{Y}\]
+ which is also called \emph{hypothesis}. When the target variable is
+ continuous, we call the learning problem a \emph{regression} problem.
+ When the target variable can take only a number of discrete values,
+ we call it a \emph{classification} problem.
+
+\subsection{Linear Regression}
+
+ If we want to approximate $y$ as a linear function of x: 
+ $h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + \ldots + \theta_n x_n$
+ where the $\theta_i$'s are the \emph{parameters} (\emph{weights})
+ parameterizing the space of linear functions mapping from $\mathcal{X}$ to
+ $\mathcal{Y}$.
+ To simplify the notation, the convention $x_0 = 1$ is introduced and the
+ subscript $\theta$ is dropped from $h_\theta$ when it will not cause confusion,
+ so that \[ h(x) = \sum_{i=0}^n \theta_i x_i = \theta^T x\]
+ where $n$ is the number of input variables, and $\theta, x$ on the right side
+ are both column vectors.
+
+ \emph{Cost function}
+ \[ J(\theta) =
+   \frac{1}{2} \sum_{i=1}^m \big( h_\theta(x^{(i)}) - y^{(i)} \big)^2\]
+ This is a convex quadratic function.
+
+\subsubsection{Least Mean Square Algorithm}
+
+ \emph{Gradient descent} algorithm
+ \[ \theta_j \leftarrow \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta)\]
+ where $\alpha$ denotes \emph{learning rate}.
+ 
+ Particularly for the above linear regression problem, we obtain this equation
+ after working out the partial derivative.
+ \[ \frac{\partial}{\partial \theta_j} J(\theta) = (h_\theta(x) - y) x_j\]
+ So we get this parameter updating rule
+ \[ \theta_j \leftarrow \theta_j - \alpha  (h_\theta(x^{(i)}) - y^{(i)}) x_j^{(i)} \]
+ which is called LMS update rule (known as Widrow-Hoff learning rule).
+ 
+ The above case is for only a single training sample, but it can be modified
+ so that it can handle more than one example, one is \emph{batch gradient descent}, and another
+ is \emph{stochastic gradient descent}. When the training set is large, stochastic
+ gradient descent is often preferred over batch gradient descent.
+ 
+ {\bf Batch gradient descent}: This method looks at every example in the
+ entire training set on every step.
+ {\bf Stochastic gradient descent (SGD)}: We repeatedly run through the
+ training set, and each time we encounter a training example, we update the
+ parameters according to the gradient of the error with respect to that single
+ trianing example only.
+
+ SGD is also called incremental gradient descent. It is noted that
+ the parameters may not converge to the minimum when trained with SGD.
+ 
+ \subsubsection{The Normal Equations}
+ 
+ This time we need some matrix derivatives.
+ \[ J(\theta) = \frac{1}{2} \sum_{i=1}^m \big( h_\theta(x^{(i)}) - y^{(i)} \big)^2
+ 	= \frac{1}{2} (X\theta - \vec{y})^T(X\theta - \vec{y}) \]
+ \[ \nabla_\theta J(\theta) = X^T X \theta - X^T \vec{y}\]
+ \[ \nabla_\theta J(\theta) = 0 \Rightarrow \theta = (X^T X)^{-1} X^T \vec{y}\]
+ This can be derived from the computation graph.
+
+ \subsubsection{Probablicstic Interpretation}
+
+ Assume that $\epsilon^{(i)}$ is an error term that captures either unmodeled
+ effects or a random noise, and are distributed IID according to $N(0,\sigma^2)$.
+ $$y^{(i)} = \theta^Tx^{(i)} + \epsilon^{(i)}$$
+ $$p(\epsilon^{(i)}) = \frac{1}{\sqrt{2\pi}\sigma} \exp(
+  -\frac{(e^{(i)})^2}{2\sigma^2})$$
+ which implies that
+ $$p(y^{(i)}|x^{(i)};\theta) = \frac{1}{\sqrt{2\pi}\sigma} \exp(
+  -\frac{(y^{(i)} - \theta^Tx^{(i)})^2}{2\sigma^2})$$
+ Likelihood function
+ $$L(\theta) = L(\theta;X,y) = p(y|X;\theta) =
+  \prod_{i=1}^m p(y^{(i)}|x^{(i)};\theta)$$
+ Parameter estimation via maximizing likelihood function. However derivation
+ will be simpler if we instead maximize the log likelihood
+ \begin{align}
+	 l(\theta) &= \log L(\theta) \\
+			   &= \log \prod_{i=1}^m \frac{1}{\sqrt{2\pi}\sigma} \exp(
+			    -\frac{(y^{(i)} - \theta^Tx^{(i)})^2}{2\sigma^2}) \\
+			   &= m\log \frac{1}{\sqrt{2\pi}\sigma} -
+				\frac{1}{\sigma^2}\cdot \frac{1}{2} \sum_{i=1}^m
+				(y^{(i)} - \theta^Tx^{(i)})^2
+ \end{align}
+ Hence, maximizing $l(\theta)$ gives the same answer to minimizing the MSE loss.
+
+ \subsubsection{Locally weighted linear regression}
+ underfitting, overfitting, non-parametric and parametric.
+
+ A parametric algorithm has a fixed, finite number of parameters, which are fit
+ to the data. Once we've fit the parameters and stored them away, we no longer
+ need to keep the training data around to make future predictions.
+
+
+\section{Classification and Logistic Regression}
+
+\subsection{Logistic Regression}
+
+Logistic function is $g(z) = 1/(1+e^{-z})$. Then $h_\theta(x)=g(\theta^Tx)$.
+The derivative of the sigmoid function is
+$$g'(z) = \frac{d}{dz}g(z) = g(z)(1-g(z))$$
+
+Assume that $P(y=1|x;\theta) = h_\theta(x)$, and
+$P(y=0|x;\theta) = 1 - h_\theta(x)$. Or a more compact version
+$$P(y|x;\theta) = (h_\theta(x))^y(1-h_\theta(x))^{1-y}$$
+
+Likelihood function on a training set of size $m$ can be written down as:
+$L(\theta) = \prod_{i=1}^m p(y^{(i)}|x^{(i)};\theta)$
+Log likelihood is easier to maximize:
+$$l(\theta) = \log L(\theta)$$
+Then take derivatives to derive the stochastic gradient ascent rule:
+$$\theta_j \leftarrow \theta_j + \alpha (y^{(i)} - h_\theta(x^{(i)}))x^{(i)}_j$$
+
+\subsection{Digression: The perceptron learning algorithm}
+
+skip.
+
+\subsection{Another algorithm for maximizing $l(\theta)$}
+
+Newton's method performs the following update:
+$$\theta \leftarrow \theta - \frac{f(\theta)}{f'(\theta)}$$
+for finding a value of $\theta$ so that $f(\theta)=0$.
+When about to maximize a function, we could obtain the update rule
+by using the same algorithm:
+$$\theta \leftarrow \theta - \frac{l'(\theta)}{l''(\theta)}$$
+
+Generalized version (Newton-Raphson method)
+$$\theta \leftarrow \theta - H^{-1} \nabla_\theta l(\theta)$$
+where $H$ is an $n$-by-$n$ matrix called the Hessian.
+$$H_{ij} = \frac{\partial^2 l(\theta)}{\partial\theta_i\partial\theta_j}$$
+
+When Newton's method is applied to maximize the logistic regression log
+lokelihood function, the resulting method is also called Fisher scoring.
+
+\section{Generalized Linear Models}
+
+\subsection{The exponential family}
+
+Definition of exponential family distributions
+$$p(y;\eta) = b(y)\exp(\eta^TT(y)-a(\eta))$$
+Here, $\eta$ is called the natural parameter (aka. canonical parameter) of
+the distribution; $T(y)$ is the sufficient statistic; $a(\eta)$ is the log
+partition function.
+
+\subsection{Constructing GLMs}
+
+TODO (cs229-notes1)
+
+% ------------------------------------------------------------
+% ------------------------------------------------------------
+% ------------------------------------------------------------
+\section{old stuff}
+
+
+
+ Linear model tries to learn a function which makes prediction from
+ a linear combination of attributes, {\it i.e.}
+ $$ f(\vec{x}) = \vec{w}^T \vec{x} + b $$
+
+ Assume that the given dataset is
+ $$D = \{(\vec{x}_1, y_1), (\vec{x}_2, y_2), \ldots, (\vec{x}_m, y_m)\} $$
+ where $x_i=\{x_{i1};x_{i2};\ldots;x_{id}\}$ is a column vector and $y_i \in \Re$.
+
+ \subsubsection{Linear Regression}
+
+ A simple example with one-dimensional input space $x \in \Re$.
+ Linear regression trys to learn $f(x_i)=wx_i+b$ where $f(x_i)\simeq y_i$.
+ Loss function is Mean Square Error,
+ $$E_{(w,b)}=\sum_i (wx_i + b - y_i)^2 $$
+ We try to minimize the loss
+ $$(w^*,b^*) = \text{argmin}_{(w,b)} \sum_i (f(x_i) - y_i)^2$$
+ Parameter estamation
+ $$\frac{\partial E}{\partial w} = 2\sum_i \{ wx_i^2 +bx_i -x_iy_i\}$$
+ $$\frac{\partial E}{\partial b} = 2\sum_i \{ wx_i   +b    -y_i\}$$
+ Let $\partial E/\partial w=0$ and $\partial E/\partial b=0$ then
+ obtain the closed-form solution of $w$ and $b$ by solving them.
+
+ Generally the input space is $d$-dimensional.
+ $$f(x_i) = w^Tx_i + b$$
+ TODO
+
+ \subsubsection{Logistic Regression}
+
+ \subsubsection{Linear Discriminant Analysis (LDA)}
+
+\subsection{Decision Tree}
+
+\subsection{Neural Network}
+
+ See DL:Neural Network
+
+\subsection{Support Vector Machines}
+
+ Hyperplane is all the points $x$ where $w^T x + b = 0$.
+
+ Distance between any point $x$ in the space to the hyperplane
+ $$r = \frac{|w^Tx+b|}{||w||}$$
+ Assume that $x_0$ is the projection of point $x$ on the hyperplane,
+ {\it i.e.} $x_0 = \alpha w+x$, and $w^T x_0 + b = 0$. Plug them into
+ $r = |x - x_0|$ then the above distance equation can be obtained.
+
+%%% --- refresh split line ---
+
+\subsubsection{Probabilistic Interpretation}
+
+\subsubsection{Locally weighted linear regression}
+
+\subsubsection{UFLDL ex1a: linear regression}
+
+Forward pass
+$$ J(\theta) = \sum_i \frac{1}{2} (\theta^T x^{(i)} - y^{(i)})^2 $$
+
+Backward pass
+$$ g_J(\theta) = \sum_i x^{(i)} (\theta^T x^{(i)} - y^{(i)}) $$
+
+
+\subsubsection{Logistic Regression}
+
+\subsubsection{The perceptron learning algorithm}
+
+\subsubsection{Another algorithm for maximizing $l(\theta)$}
+
+\subsection{UFLDL ex1b: logistic regression}
+
+Forward pass
+$$ J(\theta) = - \sum_i (y^{(i)} \log(h_\theta(x^{(i)})) 
+   + (1-y^{(i)}) \log(1-h_\theta(x^{(i)}))) $$
+
+Backward pass
+$$ \Delta_\theta J(\theta) = \sum_i x^{(i)} (h_\theta (x^{(i)}) - y^{(i)}) $$
+
+%\subsection{Generalized Linear Models}
+%
+%\subsubsection{The exponential family}
+%
+%\subsubsection{Constructing GLMs}
+%
+%\subsection{Generative Learning Algorighms}
+%
+%
+%\subsection{Learning Theory}
+%
+%\subsection{Regularization and Model Selection}
+%
+%
+%\subsubsection{The perceptron and large margin classifiers}
+%
+%\subsubsection{The k-means clustering algorithm}
+%
+%\subsubsection{Mixtures of Gaussians and the EM algorithm}
+%
+%
+%\subsection{The EM algorithm}
+%
+%\subsection{Factor analysis}
+%
+%\subsection{Principal components analysis}
+%
+%\subsection{Independent Components Analysis}
+%
+%\subsection{Reinforcement Learning and Control}
+
+\section{Reference}
+
+CS229 by Andrew Ng, and UFLDL Tutorial. \url{http://cs229.stanford.edu/}
+
+Andrew Ng, {\it Stanford CS229: Machine Learning}, \\ {\tt http://cs229.stanford.edu/materials.html}.
+
+Christopher M. Bishop, {\it Pattern Recognition and Machine Learning}, Springer Science.

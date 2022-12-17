@@ -1,0 +1,61 @@
+MIT 18.06SC, Fall 2011, Linear Algebra Excercise
+================================================
+
+Ex 1
+----
+
+Solve the following linear system, find out the row picture and column
+picture in the x-y coordinates.
+
+.. math::
+
+  \begin{aligned}
+  2x + y &= 3 \\
+  x - 2y &= -1
+  \end{aligned}
+
+* Row picture: The intersection of the two lines in the x-y coordinates
+  is the solution of the system.
+* Column picture: The solution is a linear combination of the column vectors.
+* Matrix form of the system: :math:`Ax=b`. The solution is :math:`x=A^{-1}b`
+  as long as the inverse of matrix exists.
+
+Ex 2
+----
+
+Assume matrix A s.t. the complete solution to
+:math:`Ax=\begin{bmatrix}1\\4\\1\\1\end{bmatrix}` is
+:math:`x=\begin{bmatrix}0\\1\\1\end{bmatrix} + c\begin{bmatrix}0\\2\\1\end{bmatrix}`.
+What can you say about columns about A?
+
+We know that :math:`A = [c_1, c_2, c_3]_{4\times 3}`, and
+:math:`A(x_p + c x_s) = 0, \forall c \in \Re`. Then
+
+.. math::
+
+  \begin{aligned}
+  c = 0,& Ax_p = b\\
+  c = 1,& A(x_p + x_s) = b, Ax_s = 0
+  \end{aligned}
+
+.. math::
+
+  \begin{aligned}
+  c_2 + c_3 &= [1,4,1,1]^T\\
+  2c_2 + c_3 &= 0
+  \end{aligned}
+
+Now we can solve :math:`c_2` and :math:`c_3`. What about :math:`c_1`?
+
+.. math:: A(cx_s) = 0
+
+That is to say the dim of the null space of A is 1. The rank of A is
+:math:`3-1=2`. Since :math:`c_2` and :math:`c_3` are multiples of :math:`b`,
+:math:`c_1` must be linearly independent to them or the rank of matrix will
+not hold. Namely, :math:`c_1 \neq \gamma b, \forall \gamma \in \Re`.
+
+Reference
+---------
+
+1. MIT 18.06SC: https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/
+2. LaTeX in ReST: https://stackoverflow.com/questions/26049762/erroneous-nesting-of-equation-structures-in-using-beginalign-in-a-multi-l

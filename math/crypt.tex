@@ -1,0 +1,112 @@
+% app-crypt
+\section{Applied Cryptography}
+
+Encryption can be described in math as follows
+$$ E(M) = C $$
+and similarly Decryption can also be written as
+$$ D(C) = M $$
+And this equation must hold for any $E(\cdot)$ and $D(\cdot)$:
+$$ D(E(M)) = M $$
+Apartfrom encryption and decryption, Cryptography is also used for
+authentication, integrity and nonrepudiation.
+
+Modern cryptography introduced key $K$ to enhance cipher (cryptographic algorithm) security,
+{\it i.e.}
+\begin{align*}
+E_K(M) &= C \\
+D_K(C) &= M \\
+D_K(E_K(M)) &= M
+\end{align*}
+which is also called symmetric algorithm.
+Some algorithms uses different keys for encryption and decryption,
+{\it i.e.}
+\begin{align*}
+E_{K_1}(M) &= C \\
+D_{K_2}(C) &= M \\
+D_{K_2}(E_{K_1}(M)) &= M
+\end{align*}
+which is called public-key algorithm.
+
+The most common algorithm is the following three,
+(1) data encryption standard, DES, symmetric; (2) RSA, public-key; (3) digital signature algorithm, DSA, sign only.
+
+Unix program \verb|rot13| is a simple example of substitution cipher, but it's not a key point here.
+
+%\subsection{Protocols}
+%Advanced protocol: zero-knowledge proof.
+
+\subsection{Mathematical Background}
+
+\subsubsection{Information Theory}
+
+\begin{description}
+\item[Entropy and Uncertainty]
+ The amount of information of a message $M$ can be represented by its entropy $H(M)$.
+ Generally the entropy of a message $M$ is $\log_2 n$ where $n$ is the number of all
+ possible values of $M$. Here we suppose the possibility distribution is uniform
+ across all possible cases. The entropy of a message also reveals its uncertainty.
+\item[Rate of language]
+ The rate of a given language is $r = H(M)/N$ where $N$ is the length of message.
+ The absolute rate is $R = \log_2 L$ where $L$ is the number of available alphabets
+ in the given language, and the redundancy $D = R - r$.
+\item[Security of Cipher System]
+ The entropy of a given cipher system can be represented by the key space $H(K)=\log_2 K$.
+ The larger the entropy is, the more difficult the cipher system be cracked.
+\end{description}
+
+\subsubsection{Pseudo-random Sequence Generator}
+Linear congruential generator
+$$ X_n = (aX_{n-1}+b)mod m $$
+Here are some good numbers for the generator use $(a,b,m) \in \{(106,1283,6075), (84589,45989,217728)\}$.
+
+\subsection{Technique}
+
+\subsubsection{Birthday Attack against Single-direction Hash Function}
+\begin{description}
+\item[Classic Brute Force Method] Select a message $M$, and then find another message $M'$ so that
+  $H(M') = H(M)$ holds.
+\item[Birthday Attack] Randomly select a pair of messages $M$ and $M'$ so that $H(M') = H(M)$ holds.
+  As we know, you need to add $253$ people into the room to find a person whose birthday is the same
+  as yours, however only $23$ people are needed if you only want to find a pair in the same birthday in the room.
+\end{description}
+Suppose that the output length of hash function $H$ is $m$-bit, then
+method 1 requires $2^m$ times of computation, however $2^{\frac{m}{2}}$ times for birthday attack.
+
+Birthday Paradox\footnote{\tt{https://en.wikipedia.org/wiki/Birthday\_problem}}
+$$ P(\overline A) = \frac{365}{365} \times \frac{364}{365} \times \frac{363}{365} \times \ldots \frac{343}{365} \approx 0.49 $$
+therefore
+$$ P(A) = 1 - P(\overline A) \approx 0.51 $$
+
+\subsubsection{Ciphertext in Ciphertext}
+
+$$ P\oplus K = C$$
+$$ C\oplus K = P$$
+$$ K' = C \oplus P' $$
+$$ C\oplus K' = P' $$
+where $C$ is ciphertext, $P, P'$ are real and fake original plaintexts respectively, $K, K'$ are real and fake keys.
+
+\subsection{RSA}
+
+Select two very big prime numbers $p$ and $q$, then calculate their product
+$$ n = pq$$
+Next, randomly select a ecryption key $e$ which is prime to $(p-1)(q-1)$. Finally
+calculate decryption key $d$ so this equation holds
+$$ed \equiv 1 \text{ mod }(p-1)(q-1)$$
+{\it i.e.}
+$$d = e^{-1} 1 \text{ mod }(p-1)(q-1)$$
+Here $e$ and $n$ is public key, and $d$ is private key. The two prime numbers $p$ and $q$ should
+be discard but are still secret. Before encryption, the message $m$ should be diveded into
+many groups where the group size is less than $n$. The resulting ciphertext $c$ is formed
+of $c_i$,
+$$ c_i = m_i^e (\text{ mod }n) $$
+On decryption, this operation is performed
+$$ m_j = c_i^d (\text{ mod }n)  $$
+
+For example, select $p=47$ and $q=71$, then $n=pq=3337$. Encryption key $e$ must be prime to
+$(p-1)(q-1)=3220$, so we randomly select $e=79$, then $d=79^{-1} \text{ mod }3220 = 1019 $. To encrypt
+message $m=688$, we obtain $688^{79} \text{ mod }3337 = 1570 = c$. To decrypt, we get
+$1570^{1019} (\text{ mod } 3337) = 688 = m$.
+
+\subsection{Reference}
+
+1. Bruce Schneier, {\it Applied Cryptography, Second Edition}, John Wiley \& Sons.

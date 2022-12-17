@@ -1,0 +1,14 @@
+\section{PCA}
+
+\subsection{Tucker Decomposition}
+
+The Tucker decomposition family includes methods such as HOSVD (higher-order 
+SVG) and HOOI (higher-order orthogonal iteration).
+
+The $k$-mode product of a tensor $X\in R^{\cdots}$ with a matrix $A\in
+R^{\cdots}$ is written as $Y=X\times_k A$. Then Tucker decomposition looks
+like
+$$
+T_{n_1,n_2,n_3} \approx R_{r_1,r_2,r_3}
+\times_1 A_{n_1,r_1} \times_2 B_{n_2,r_2} \times_3 C_{n_3,r_3}
+$$

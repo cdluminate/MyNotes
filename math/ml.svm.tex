@@ -1,0 +1,78 @@
+\section{Support Vector Machine}
+
+Given a training set $D=\{(x_1,y_1),\ldots,(x_m,y_m)\}$, $y_i\in\{-1,+1\}$,
+the fundamental idea of classification is to find a hyperplane in the sample
+space based on the training set $D$. The hyperplane used to separate samples
+can be described as a linear formula:
+
+$$ w^T x + b = 0 $$
+
+where $w$ is the normal vector which decides the orientation of the hyperplane,
+while the scalar term $b$ indicates its translation from the original point.
+The distance between the hyperplane $(w,b)$ and a point $v$ is $r =
+|w^Tv+b|/||w||$ ($v = x + rw$). When the hyperplane could classify samples
+correctly, i.e. for any $(x_i,y_i)\in D$, $w^Tx_i+b>0$ when $y_i=+1$ and
+$w^Tx_i+b<0$ when $y_i=-1$. Let
+\begin{align}
+w^Tx_i + b &\geqslant +1, ~ y_i = +1 \\
+w^Tx_i + b &\leqslant -1, ~ y_i = -1
+\end{align}
+The closest sample points are called support vectors, which make the equal
+signs in the above equation hold. The margin between two different support
+vectors is $\gamma = 2/||w||$.
+
+The objective of finding the optimal hyperplane is to miximize the margin, i.e.
+\begin{align}
+&\max_{w,b} 2/||w|| \Rightarrow \min_{w,b} (||w||^2)/2 \\
+&\text{s.t.}~ y_i (w^Tx_i + b) \geqslant 1, ~i=1,2,\ldots
+\end{align}
+The convex quadratic programming problem could be solved directly with existing
+solvers. However, there is a more efficient way, Lagrange multipliers, which
+exploits its dual problem instead of solving it directly. (See also KKT
+conditions and SMO algorithm)
+
+The above is the discussion related to linear SVM. However, in real life tasks
+the sample space is very likely not to be linearly separable. For such problem,
+we can map the samples from the original space into another space in higher
+dimensionality. If the dimensionality of the original space is finite, there
+must be a high dimensional space where these samples are separable. Let $\phi(\cdot)$
+denote such mapping, solving the SVM optimization problem involves calculating
+$\phi(x_i)^T\phi(x_j)$, which might be hard to find out (especially in high
+dimensional space). To avoid such problem, kernel function is used:
+$$ K(x_i,x_j) = \langle \phi(x_i), \phi(x_j) \rangle = \phi(x_i)^T\phi(x_j)$$
+Any function can be used as kernel function as long as its kernel matrix (symmetric)
+is semi-positive definite. In another word, any kernel function implicitly defines
+a reproducing kernel hilbert space.
+
+The quality of feature space is crucial to the SVM performance, but we don't
+know what the best kernel function is. So "kernel function selection" becomes a
+big problem.  Commonly used kernel functions include linear kernel, polynomial
+kernel, RBF kernel and sigmoid kernel.
+
+Whatever we are training SVM or SVR, the learnt model can always be represented
+as a linear combination of the kernel function if we omit the bias term.
+
+See also soft margin, support vector regression, kernel methods (e.g. KLDA),
+and representer theorem.
+
+\subsection{SKLearn}
+
+SVMs are a set of supervised learning methods used for classification, regression
+and outlier detection.
+
+Pros: \begin{enumerate}
+\item effective in high dimensional space.
+\item still effective when number of dimensions is greater than number of samples.
+\item memory efficient since only a subset of training points are used in the solution.
+\item versatile due to the flexibility of kernel functions.
+\end{enumerate}
+
+Cons: \begin{enumerate}
+\item choosing kernel functions and regularization term is crucial to
+	avoid overfitting, if the number of features is much greater than the number of samples.
+\item SVMs do not directly provide probability estimates.
+\end{enumerate}
+
+\subsection{Reference}
+
+1. Zhihua Zhou, Machine Learning.

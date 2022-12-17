@@ -1,0 +1,199 @@
+Stanford CS231n Computer Vision
+===============================
+
+Image Classification
+--------------------
+
+Challenges
+
+  (1) view point variation
+  (2) scale variation
+  (3) deformation
+  (4) occlution
+  (5) illumination condition
+  (6) background clutter
+  (7) inter-class variation
+
+Image classification pipeline
+
+  (1) Input
+  (2) learning
+  (3) evaluation
+
+Nearest Neighbor classifier
+---------------------------
+
+Use metric distance :math:`d_1(I_1,I_2) = \sum_{p\in\text{pixels}} |I_1^p-I_2^p|`.
+L1 distance achieves :math:`38.6\%` accuracy on CIFAR-10.
+Use L2 distance :math:`d_2(I_1,I_2) = \sum_{p\in\text{pixels}} |I_1^p-I_2^p|^2)^{1/2}`.
+L2 distance achieves :math:`35.4\%` accuracy on CIFAR-10.
+
+:math:`k`-Nearest Neighbor classifier
+
+  instead of finding the single closet image in the training set, we will find
+  the top :math:`k` closet images, and have them vote on the label of the test
+  image. Here :math:`k` is a hyper-parameter, which could be tuned by
+  cross-validation.
+
+  Advantages of k-NN: (1) simple to implement and understand; (2) takes no
+  time to train (but test time is long);
+
+  Applyting k-NN in practice: (1) preprocess data (zero mean and unit variance);
+  (2) optional dimension reduction; (3) dataset split, train (7/10-9/10), val,
+  test; (4) train and evaluate on validation set, tune parameters; (5) optional
+  speedup with approximate nearest neighbor; (6) take note of the hyperparameter
+  that gave the best result.
+
+Linear Classification
+---------------------
+
+.. math:: x_i \in \Re^d, y_i \in 1,\ldots,k, i = 1,\ldots, N
+
+.. math:: f(x_{i(d\times 1)}, W_{k\times d}, b_{k\times 1}) = Wx_i + b = \hat{y}_{k\times 1}
+
+Template matching. what the classifier is doing.
+
+multiclass SVM loss :math:`L_i = \sum_{j\neq y_i} \max(0, s_j-s_{y_i} + \text{margin})`.
+when margin is zero this becomes hinge loss.
+
+regularization :math:`L = \frac{1}{N} \sum_i L_i + \lambda R(W)` where
+:math:`R(W) = \sum w_i^2`. Usually L2 regularization. improves generalization.
+
+see also binary SVM.
+
+Softmax classifier
+------------------
+
+.. math:: f(x_i,w) = wx_i = \hat{y}, L_i = -\log(\frac{e^{\hat{y}_i}}{\sum_j e^{\hat{y}_j}})
+
+The cross-entropy between a "true" distribution and an estimation distribution
+is defined as
+
+  .. math:: H(p,q) = -\sum_x p(x) \log q(x)
+
+  Softmax classifier is hence minimizing the cross-entropy loss. Equivalent to
+  minimizing the KL-divergence between the two distributions.
+
+Probablistic interpretation
+
+  .. math:: P(y_i|x_i;w) = \frac{\exp(f_{y_i})}{\sum_j \exp(f_{y_j})}
+
+Practical issue: numerical stability
+
+  .. math:: \frac{\exp(f_{y_i})}{\sum_j \exp(f_{y_j})} = \frac{C\exp(f_{y_i})}{C\sum_j \exp(f_{y_j})} = \frac{\exp(f_{y_i}+\log C)}{\sum_j \exp(f_{y_j}+\log C)}
+
+  Common choice is :math:`\log C = -\max_j f_j`, i.e. shift :math:`\hat{y}`
+  by :math:`||\hat{y}||_\infty`, :math:`\hat{y}_{new} = \hat{y} - ||\hat{y}||_\infty`.
+
+Softmax classifier provides "probabilities" for each class.
+
+Optimization
+------------
+
+Strategy1: random search. very bad.
+
+Strategy2: random local search. very bad.
+
+Strategy3: following the gradient.
+
+  (1) finite difference :math:`\frac{df(x)}{dx} = \lim_{h\rightarrow 0} \frac{f(x+h) - f(x)}{h}`
+      in practice :math:`\frac{f(x+h) - f(x-h)}{2h}` is better, with h equals say :math:`1e-5`.
+
+  (2) analytically. gradient check: compare the numerical gradient with the analytical gradient.
+      gradient descent, mini-batch gradient descent. batchsize is usually
+      :math:`2^n`, vectorized implementation works faster when the inputs are
+      sized in powers of two.
+
+Backprop
+--------
+
+Automatic Differentiation. Skip.
+
+Neural nets
+-----------
+
+Activation functions. neural net architecture. representational power.
+number of layers and their sizes. model capacity. overfitting, generalization.
+
+Data pre-processing
+
+  (1) mean subtraction: zero-center
+  (2) normalization: ``X /= np.std(X,axis=0)``, so that min -1, max 1
+  (3) PCA and whitening
+  
+  Don't make any stats of the test set.
+
+Weight initialization
+
+  Pitfall: all zero init.
+
+  (1) small random numbers
+  (2) calibrate the variance with ``1/sqrt(n)``. empirically improves the
+      rate of convergence.
+  (3) sparse initilization
+
+  bias initialization: commonly zero, or use 0.01 for ReLU sometimes.
+
+  batchnorm: alleviates the headache of properly initializing a net.
+
+Regularization
+
+  (1) L1 regularization
+  (2) L2 regularization (weight decay)
+  (3) max norm constraint
+  (4) dropout
+
+  bias regularization: do not participate in multiplicative interactions,
+  not necessary to do so. however this rearly lead to significantly worse
+  performance.
+
+Loss functions
+
+  (1) classification, attribute classifiation, logistic for every class.
+  (2) regression (L2)
+  (3) structured prediction
+
+Gradient checks (learning)
+
+Babysitting the learning process
+
+  (1) loss
+  (2) train/val accuracy
+  (3) weight update, magnitude
+  (4) activation/gradient distributions per layer
+  (5) first-layer visualization
+
+parameter updates
+
+  (1) vanilla SGD
+  (2) SGD plus momentum
+  (3) SGD + nestrov momentum
+  (4) annealing learning rate: step decay, exponential decay, 1/t decay.
+  (5) second order methods, Hessian and RAM. practice: L-BFGS.
+  (6) per-parameter adaptive: adagrad, RMSprop, adam.
+
+hyperparameter optimization
+
+  hyperparameter incl. initLR, LRdecay, Regularization strength, etc.
+
+  (1) prefer one validation fold to cross-validation
+  (2) hyper parameter range
+  (3) prefer random search to grid search
+  (4) careful with best values on border
+  (5) stage your search from coarse to fine
+  (6) bayesian hyperparam optimization
+
+Evaluation, model ensembles
+
+  (1) same model, different init
+  (2) top models discovered during cross-validation
+  (3) different checkpoints of the same model
+  (4) running average of parameters during training
+
+Putting together. skip.
+
+Reference and Material
+----------------------
+
+1. http://cs231n.github.io/
+2. http://cs231n.stanford.edu/

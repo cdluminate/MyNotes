@@ -1,0 +1,31 @@
+\section{Generalized Linear Models}
+
+The following are a set of methods indented for regression in which the target
+value is expected to be a linear combination of the input variables.
+
+$$ \hat{y}(w,x) = w_0 + w_1x_2 + \ldots + w_p x_p $$
+
+\subsection{Regression}
+
+{\bf Ordinary Least Squares}
+$$ \min_w ||Xw-y||_2^2 $$
+
+{\bf Ridge Regression}
+$$ \min_w ||Xw-y||_2^2 + \alpha ||w||_2^2 $$
+
+{\bf Lasso}
+$$ \min_w \frac{1}{2N} ||Xw-y||_w^2 + \alpha ||w||_1 $$
+
+{\bf Multi-task Lasso}
+$$ \min_w \frac{1}{2N} ||XW-Y||_F^2 + \alpha ||w||_{21} $$
+
+{\bf Elastic Net}
+$$ \min_w \frac{1}{2N} ||Xw-y||_2^2 + \alpha\rho ||w||_1 + 
+\frac{\alpha(1-\rho)}{2} ||w||_2^2 $$
+
+...
+
+\subsection{Reference}
+
+1. Zhihua Zhou, Machine Learning.
+2. Scikit-Learn.

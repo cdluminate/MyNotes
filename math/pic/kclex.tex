@@ -1,0 +1,22 @@
+
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage[free-standing-units]{siunitx}
+
+\begin{document}
+
+\thispagestyle{empty}
+\begin{circuitikz}[scale=3] \draw
+
+ (0.5,0) to[short,i=$i_4$] (1,0.866) node[circ]{}
+ (0,0.866) to[short,i=$i_5$] (1,0.866)
+ (0.5,1.732) to[short,i=$i_6$] (1,0.866)
+ (1.5,1.732) to[short,i=$i_1$] (1,0.866)
+ (2,0.866) to[short,i=$i_2$] (1,0.866)
+ (1.5,0) to[short,i=$i_3$] (1,0.866)
+;
+\end{circuitikz}
+
+\end{document}

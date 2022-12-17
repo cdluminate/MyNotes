@@ -1,0 +1,699 @@
+MIT 6.034, Artificial Intelligence, Patrick. H. Winston, Fall 2010
+==================================================================
+
+Lec 1: Artificial Intelligence
+------------------------------
+
+MIT's approach is to build models,
+
+  that we can use to explain the past, predict the future, understand the
+  subject and control the world. That's what MIT is about.
+
+Definition of Artificial Intelligence:
+
+  Algorithms enabled by constraints exposed by representations that support
+  models targeted as thinking, preception and action.
+
+Example of representation:
+
+  The problem of farmer, fox, goose and grain.
+
+Generate and Test:
+
+  Generator -> Testor -> (True of False)
+
+Rumpelstiltskin Principle:
+
+  Symbolic labels give us power over concepts.
+
+History:
+
+  * "The analytical engine has no pretensions to originalte anything, it can do
+    whatever we know how to order it to perform." -- Lady Ada Lovelace.
+  * Marvin Minski
+  * Expert system, e.g. deep blue.
+  * Future: Imagination?
+
+Combination of concepts.
+
+  Language is probably the only difference between us and chimpanzees.
+  Language is at the center of the things because it enables story telling
+  going up, and marshaling the resources of perceptual apparants that are
+  lying down.
+
+Lec 2: Goal Trees and Problem Solving
+-------------------------------------
+
+.. math::
+
+  q_0: \int \frac{-5x^4}{(1-x^2)^{5/2}}dx
+
+To conduct problem reduction with goal tree, we need the following knowledge.
+
+* Lookup table.
+* Transformations. (Safe transformations and heuristic transformations)
+
+Safe transformations are always safe.
+
+  (1) :math:`\int -f(x)dx = -\int f(x)dx`
+  (2) :math:`\int cf(x)dx = c\int f(x)dx`
+  (3) :math:`\int \sum_i f_i(x)dx = \sum_i \int f_i(x)dx`
+  (4) :math:`\int \frac{p(x)}{q(x)} = \text{DIVIDE}`
+
+We apply safe transformations on the original problem,
+
+.. math:: q_0 {(1) \atop \rightarrow} q_1: \int \frac{5x^4}{(1-x^2)^{5/2}}dx
+
+.. math:: q_1 {(2) \atop \rightarrow} q_2: \int \frac{x^4}{(1-x^2)^{5/2}}dx
+
+Now we cannot go any further with safe transformations. The heuristic
+transformations sometimes work.
+
+  (5) :math:`f(\cos,\sin,\cot,\tan,\csc,\sec) = g_1(\sin,\cos) = g_2(\tan,\cot) = g_3(\csc,\sec)`
+  (6) :math:`\int f(\tan(x))dx = \int \frac{f(y)}{1+y^2}dy \text{  } (y=\tan x)`
+  (7) :math:`1-x^2, x=\sin y; 1+x^2, x=\tan y`
+
+.. math:: q_2 {(7) \atop \rightarrow} q_3: \int \frac{\sin^4 y}{\cos^4 y}dy \text{  } (x=\sin y)
+
+.. math:: q_3 {(5) \atop \rightarrow} q_4 \text{ OR } q_5: \int \frac{1}{\cot^4 x}dx \text{ OR } \int \tan^4 x dx
+
+How to choose from the possible branches? Maybe depth of functional composition.
+
+.. math:: q_5 {(6) \atop \rightarrow} q_6: \int \frac{y^4}{1+y^2}dy
+
+.. math:: q_6 {(4) \atop \rightarrow} q_7: \int (y^2 - 1 + \frac{1}{1+y^2})dy
+
+.. math:: q_7 {(3) \atop \rightarrow}: \int y^2 dy + \int -1dy + \int \frac{1}{1+y^2}dy
+
+Where the first and second term can be solved by lookup table. The third term
+can be solved by transformation (7) and lookup table. Now the original problem
+is solved by the goal tree.
+
+Architecture of a Goal Tree program:
+
+  1. Apply safe transformation, goto 2.
+  2. look in table, goto 3.
+  3. problem solved? End if so else goto 4.
+  4. find problem, goto 5.
+  5. apply heuristic transformation, goto 1.
+
+Several points about the symbolic integration program:
+
+  1. 54/56 Correct when used to solve the MIT 18.06 quiz. The failure is due
+     to not enough table and transformations. To correctly solve these quiz,
+     the algorithm needs about 26 table, about 12 safe transformations, and
+     about 12 heuristic transformations.
+  2. When solving the quiz, the max depth of the goal tree is 7, while the
+     average depth is about 3. About 1 branch is unused during the process.
+
+Knowledge: tables, transformations.
+
+  However, knowledge about knowledge is where the true power is.
+
+Lec 3: Goal Trees & Rule-based Expert Systems
+---------------------------------------------
+
+The program structure of moving blocks.
+
+  When the problem is expanded as a goal tree, it can answer questions
+  about its own behaviour. When we are looking up (towards the root) on the
+  tree at a node, the adjacent parent node can be interpreted as the reason.
+  We we look down on the tree at this node, the adjacent child nodes can be
+  interpreted as the solutions of this node.
+
+Complexity of behaviour,
+
+  is a consequence of the complexity of the environment, not the complexity
+  of the program.
+
+  .. math:: C(\text{behaviour}) = \max\{C(\text{program}), C(\text{environment})\}
+
+Rule-based Expert systems.
+
+  1. Forward-chaining rule-based "expert" system. (bottom-up)
+  2. Backward-chaining rule-based "expert" system. (top-down)
+
+  Expert system is a kind of deduction system. However, the expert systems
+  have no "common sense", which is a problem.
+
+Knowledge engineering rules:
+
+  1. By looking at specific cases, you elict from people knowledge that they
+     otherwise would not have thought to give you.
+  2. Build a system and see how it fails.
+  3. Vocabulary items. Differences.
+
+Temprature flow is equal to the fourth power of the temprature difference.
+
+Lec 4: Search: DFS, BFS, Hill Climbing, Beam Search
+---------------------------------------------------
+
+Search methods. Search is not equal to maps here.
+
+::
+
+  ============== ============= ============= ========
+  Method         Back Tracking Extended List Informed
+  -------------- ------------- ------------- --------
+  British Museum no            no
+  Depth First    ok            ok
+  Breadth First  no            ok
+  Hill Climbing  ok            ok            ok
+  Beam Search
+  ============== ============= ============= ========
+
+.. figure:: pic/mit6034-search1.pdf
+   :height: 160px
+
+   Search Example.
+
+Hill Climbing.
+
+  Similar to DFS. Breaks ties according to which node is closer to the goal
+  Instead of using lexical order.
+
+Beam Search.
+
+  Complementation and informing heuristics to BFS.
+
+Best first search. (Greedy)
+
+When search doesn't work.
+
+  1. Local maxima / minima.
+  2. Flat area.
+  3. (Sometimes) Ridge.
+
+All knowledge in English
+
+  * Common sense level, e.g. kill then die.
+  * Reflect level, e.g. revenge.
+
+Visual intelligence.
+
+Lec 5: Search: Optimal, Branch & Bound, A*
+------------------------------------------
+
+Search is about "choice".
+
+Number of tests to find the optimal path.
+
+::
+
+  Method                  case 1   case 2
+  Branch&Bound            835      57
+  +Extended List          38       35
+  +Admissible heuristic   70       6
+  A*                      27       6
+
+A star is branch & bound plus extended list plus admissible heuristic.
+
+Admissible heuristic will not always work in specific circumstances,
+for example in a non-map graph.
+
+Admissible: :math:`H(X,G) \leq D(X,G)`
+
+  (stronger condition): consistency. :math:`|H(X,G)-H(Y,G)|\leq D(X,Y)`
+  You will win if you use consistent heuristic.
+
+Lec 6: Search: Games, Minmax, Alpha-Beta
+----------------------------------------
+
+Game solving methods:
+
+  1. (human) Get a move from the mixture of (analysis + strategy + tactics).
+  2. a series of IF-THEN rules without evaluation on the board.
+  3. look ahead and evaluate. Assume the features on the board are
+     :math:`f_1,f_2,\ldots`, then we can evaluate a static value about the
+     game status with a linear scoring polynomial
+     :math:`S = g(f_1,f_2,\ldots) = c_1f_1 + c_2f_2 + \ldots`.
+  4. British museum method.
+  5. Look ahead as far as possible.
+
+The alpha-beta algorithm is layered on top of the minmax game.
+When playing a minmax game with the alpha-beta algorithm, we don't need to
+compute all the leaf nodes and we can cut off large sections of the search
+tree.
+
+Progressive deepening can be used when required to give a result within
+limited time. Let :math:`b` be the branching factor, and :math:`d` be the
+depth of the search tree. Then the computation complexity of calculating
+from the zero level to the :math:`d-1` level of the tree is
+:math:`S = 1 + b + b^2 + \cdots + b^{d-1}`. Since that
+:math:`bS = b + b^2 + \cdots + b^{d-1} + b^d`, we can obtain the sum
+:math:`S = (b^d - 1)/(b-1) \approx b^{d-1}`.
+
+Deep blue = minmax + alpha-beta + progressive deepening + parallel-computing
++ opening-book + end-game + uneven-tree-development. Where the most important
+element may be "uneven tree development".
+
+Lec 7: Constraints: Interpreting line drawings ---------------------------------------------- Marvin Minski -> Guzman -> Dave Huffman -> David Waltz.  Validate a line drawing.
+
+The results are kind of consistent with what we human do when we look at these
+kind of things. Some constraints propagation apparatus that we use in vision.
+
+Lec 8: Constraints: Search, Domain Reduction
+--------------------------------------------
+
+Map coloring problem and Domain Reduction algorithm.
+
+Good of resource allocation:
+
+  1. Most constraints first.
+  2. propagate through domains reduced to a single algorithm.
+  3. minimum number of resource: do the under-over business. The solution
+     will quickly converge on a narrow range.
+
+Lec 9: Visual Object Recognition
+--------------------------------
+
+Computer vision and David Marr.
+
+  1. Input image from camera.
+  2. Primal sketch. (edge)
+  3. Two and a half dimensional sketch. (edge + normal vector)
+  4. Generalized cylinders.
+  5. Recognition by lookup in the library.
+
+  This is too difficult.
+
+Alignment theory works perfect in some circumstances, but that doesn't seem
+to solve the whole recognition problem.
+
+Shimon Ullman. Does not depend on edges and features, but rather on the
+correlation. That idea is a loser.
+
+Goldilocks priciple: not too big, not too small. (features)
+
+Example of face matching:
+
+  1. original face signal in the library :math:`[1,-1,1]`
+  2. input signal :math:`[0,0,0,0,1,-1,1]`
+  3. integration while sliding the template. (convolution?)
+
+  This only works when matching with the same picture.
+
+Turning the face upside down could provide evidence for the correlation
+theory, but it makes alignment more difficult.
+
+In the field of computer vision, some more serious questions are neglected.
+How do you visually determine what's happening? When do these verbs happen
+in the field of view?
+
+  We can tell a story about the picture. Our power of storytelling even
+  reaches down into our visual apparatus.
+
+Lec 10: Intro to Learning, Nearest Neighbor
+-------------------------------------------
+
+Learning can be grouped into two categories:
+
+  1. Regularity-based learning. (bulldozer)
+
+    a. Nearest neighbor. (Pattern Recognition)
+    b. Neural nets. (Mimic Biology)
+    c. Boosting. (Theory)
+
+  2. Constraint-based learning. (human like)
+
+    a. One-shot learning.
+    b. Explanation-based learning.
+
+Nearest neighbor (pattern recognition)
+
+  * Architecture: input -> feature detector -> comparitor (with library) -> recognition
+  * Decision boundaries.
+  * Different metrics. e.g. Euclidean distance, cosine distance.
+  * Example: Arm control.
+  * Note: Problems about the data:
+    
+    a. Spread problem: Data normalization, see below.
+
+    .. math::
+
+      \begin{aligned}
+      x &\Rightarrow \sigma^2 = \frac{1}{N} \sum_i (x_i - \bar{x})^2 \\
+      x_* = \frac{x}{\sigma} &\Rightarrow \sigma_*^2 = 1
+      \end{aligned}
+
+    b. "What matters" problem.
+    c. The answer is not related to the data.
+
+Sleeping.
+
+  The loss of sleep destroys one's ability. When sleeping is deprived,
+  one is more likely to make incorrect calculations.
+
+Correlation and Cause.
+
+Lec 11: Learning: Identification Trees, Disorder
+------------------------------------------------
+
+Occam's Razor principle.
+
+Identification Tree.
+
+Disorder of tests. T is the total number of samples in the test, P for number
+of positive samples, N for negative samples.
+
+  .. math:: D(\text{set}) = -\frac{P}{T} \log_2(\frac{P}{T}) - \frac{N}{T} \log_2(\frac{N}{T})
+
+  When :math:`P/T=1/2`, :math:`D=1`, when :math:`P/T=1`, :math:`D=0`. (L'Hospital Rule)
+
+Quantity of disorder. We can select tests according to the quantity of disorder.
+
+  .. math:: Q(\text{TEST}) = \sum_{\text{Sets produced}} D(\text{set}) \cdot \frac{\text{num samples in set}}{\text{num samples handled in test}}
+
+Lec 12: Learning: Neural Nets, Back propagation
+-----------------------------------------------
+
+Neuron (Naive Biology): Axon, Dendritic tree, Spike.
+
+  1. Synaptic weights.
+  2. Cumulative effect.
+  3. All or None.
+
+Neural net.
+
+  Net output :math:`\bar{z}=f(\bar{x},\bar{w})`, desired output
+  :math:`\bar{d}=g(\bar{x})`. Alignment between :math:`f` and :math:`g`.
+  Performance measurement :math:`P(\bar{d},\bar{z})=\frac{1}{2}||\bar{d}-\bar{z}||^2`.
+  Find out a combinations of weights. Hill climbing, DFS search.
+  Gradient descent/ascent method, i.e. :math:`\Delta w = \eta \frac{\partial P}{\partial w}`,
+  where :math:`\eta` is a rate constant. Gradient based method requires
+  the threshold function to be smooth. Sigmoid function, mathematically
+  convenient. Find the derivatives with Chain rule. Back-propagation
+  algorithm.
+
+What is it actually doing? How to encode the parameter into the input vector?
+(Initial input representation is the hard part) How to deal with the
+phenomenon of overfitting? Select the rate constant to void violent positive
+feedback situation for convergence?
+
+Lec 13: Learning: Genetic Algorithm
+-----------------------------------
+
+Chromosoms.
+
+  Population, mutate, crossover, genotype to phenotype transition, fitness,
+  selection, new generation.
+
+Local maxima. Fitness or sort the candidates (Rank space method).
+Simulated annealing: Big step at the beginning then slow down.
+Fitness and diversity.
+
+The space is rich in solutions.
+
+Lec 14: Learning: Sparse Spaces, Phonology
+------------------------------------------
+
+Distinctive Features
+
+  1. collect positive and negative examples
+  2. pick seed from positive examples
+  3. generalize
+
+Marr's catechism: When you are dealing with an AI problem,
+
+  1. Specify the problem.
+  2. devise a representation suited to the problem.
+  3. determine an approach of a method.
+  4. pick a mechanism, or devise an algorithm.
+  5. experiment.
+
+  Starting with a problem, and bring to the problem the right representation,
+  e.g. distinctive features. Once we got the right representation, then the
+  constraints emerge, which enables us to devise an approach. Right now
+  go to do an experiment.
+
+Can we make a machine that will properly pluralize words using neural net?
+That's a loser. It doesn't match the problem to the mechanism. It tries
+to feed the mechanism into some problem, where it doesn't actually work well.
+
+What is a good representation?
+
+  1. Explicit
+  2. Expose constraints
+  3. Localness criteria
+
+If we go into a problem with mechanism, then we have to study mechanisms in
+a naive way, and never reach a solution that will be satisfactory.
+
+Lec 15: Learning: Near Misses, Felicity Conditions
+--------------------------------------------------
+
+Five qualities you should have when packaging your ideas
+
+  1. Symbol associated to your work
+  2. Slogan, for verbal handle. e.g. near miss
+  3. Surprise, e.g. one-shot learning
+  4. Salient, e.g. one-shot learning via near miss
+  5. Story
+
+Lec 16: Learning: Support Vector Machines
+-----------------------------------------
+
+Decision boundaries.
+
+Decision Rule.
+
+  .. math:: w\cdot u + b \geq 0 \text{ THEN positive sample}
+
+Constraints.
+
+  .. math:: w\cdot x_+ + b \geq 1
+
+  .. math:: w\cdot x_- + b \leq -1
+
+  .. math:: y_i(w\cdot x_i + b) -1 \geq 0
+
+Width.
+
+  .. math:: (x_+ - x_-)\cdot \frac{w}{||w||} = \frac{2}{||w||}
+
+  .. math:: \max\text{WIDTH} \Rightarrow \max\frac{1}{||w||} \Rightarrow \min||w|| \Rightarrow \min \frac{1}{2} ||w||^2
+
+Lagrange multiplier.
+
+  .. math:: L = \frac{1}{2}||w||^2 - \sum \alpha_i [y_i(wx_i+b)-1]
+
+  .. math:: \frac{\partial L}{\partial w} = w - \sum \alpha_i y_i x_i = 0 \Rightarrow w = \sum \alpha_i y_i x_i 
+
+  .. math:: \frac{\partial L}{\partial b} = - \sum \alpha_i y_i = 0 \Rightarrow \sum \alpha_i y_i = 0
+
+  Note that the vector :math:`w` appears to be a linear combination of the samples.
+  Then we can rewrite the original Lagrange multiplier like follows.
+
+  .. math:: L = \frac{1}{2} (\sum_i \alpha_iy_ix_i)(\sum_j \alpha_jy_jx_j) - \sum \alpha_iy_ix_i (\sum \alpha_jy_jx_j) - \sum \alpha_iy_ib + \sum \alpha_i
+
+  .. math:: L = \sum \alpha_i - \frac{1}{2}\sum_i \sum_j \alpha_i\alpha_jy_iy_jx_ix_j
+
+  .. math:: \sum \alpha_iy_ix_i \cdot u + b \geq 0 \text{ TEHN positive}
+
+  The dot products between the samples matter. Convex, i.e. no local maxima.
+
+When the dataset is not linear separable, linear SVM gets stuck.
+
+  Transformation :math:`\Phi(x)` maps sample into a more convenient space.
+  Kernel function :math:`K(x_i,x_j) = \Phi(x_i)\cdot\Phi(x_j)`.
+  Common kernels: (1) :math:`(uv+1)^n`; (2) :math:`\exp(-||x_i-x_j||/\sigma)`.
+  The kernel method doesn't immunize to overfitting, but immunize to local
+  maxima.
+
+Lec 17: Learning: Boosting
+--------------------------
+
+Boosting can be used with any classification method.
+
+Strong classifiers by combining weak classifiers.
+
+  .. math:: h(x) [-1,1] \text{ ERROR } [0,1]
+
+  .. math:: H(x) = \text{sign}(h^1(x) + h^2(x) + h^3(x))
+
+1. DATA -> :math:`h^1`
+
+   DATA exaggeration of :math:`h^1` errors -> :math:`h^2`
+
+   DATA exaggeration of :math:`h^1 \neq h^2` -> :math:`h^3`
+
+2. :math:`H(h^1(h^{11},h^{12},\ldots), h^2(\ldots), h^3(\ldots))`
+
+3. Decision tree stumps.
+
+   :math:`E = \sum_{\text{wrong}} {1}{N}`
+
+   :math:`E = \sum_{\text{wrong}} w_i`
+
+4. :math:`H(x) = \text{sign}(\alpha_1h^1(x) + \alpha_2h^2(x) + \alpha_3h^3(x) + \ldots)`
+
+5. Let :math:`w_i^1 = \frac{1}{N}` (a)
+
+   Pick :math:`h` that minimizes :math:`E^t`, Pick :math:`\alpha^+` (b)
+
+   Calculate :math:`w^{t+1}`
+
+6. :math:`w_i^{t+1} = \frac{w_i^t}{Z} \exp(-\alpha^th^t(x)y(x))`
+
+   Min error bound for whole thing if :math:`\alpha^+ = \frac{1}{2} \ln \frac{1-e^t}{e^t}`
+
+   :math:`w_i^{t+1} = \frac{w_i^t}{Z} \sqrt{\frac{e^t}{1-e^t}} \text{ CORRECT}`
+
+   :math:`w_i^{t+1} = \frac{w_i^t}{Z} \sqrt{\frac{1-e^t}{e^t}} \text{ WRONG}`
+
+   .. math:: Z = \sqrt{\frac{e^t}{1-e^t}} \sum_\text{correct} w_i^t + \sqrt{\frac{1-e^t}{e^t}} \sum_\text{wrong} w_i^t = 2\sqrt{e^t(1-e^t)}
+
+   Correct sample :math:`w_i^{t+1} = \frac{w^t}{2} \frac{1}{1-e}`
+
+   Wrong sample :math:`w_i^{t+1} = \frac{w^t}{2} \frac{1}{e}`
+
+   :math:`\sum_\text{correct} w^{t+1} = \sum_\text{wrong} w^{t+1} = \frac{1}{2}`
+
+Doesn't seem to overfit.
+
+Lec 18: Representations: Classes, Trajectories, Transitions
+-----------------------------------------------------------
+
+The ability is to take two concepts and put them together to form a third
+concept without disturbing the original concepts and without limit.
+
+Representations:
+
+  (1) Class
+
+  (2) Transition
+
+  (3) Trajectory
+
+  (4) Story sequence
+
+Avoid unnecessary syntactic burden on the reader
+
+  1. Don't use pronouns. Especially for German.
+  2. Don't use "former" or "later".
+  3. Don't call a shovel a spade.
+
+Lec 19: Architectures: GPS, SOAR, Subsumption, Society of Mind
+--------------------------------------------------------------
+
+General Problem Solver: Problem solving hypothesis
+
+  Get more and more closer to the destination point by appropriate steps.
+  Problem: collecting the differences and finding the operators outside
+  the scope of this architecture.
+
+SOAR (State Operator And Result) (CMU): Symbols system hypothesis
+
+  1. STM (short term memory) & LTM (COG Science)
+  2. Assertions and rules aka production (AI)
+  3. Elaborate preference systems (AI)
+  4. Problem space (GPS)
+  5. Universal subgoaling (GPS)
+
+Emotion Machine (Marvin Minski): Common sence hypothesis
+
+  Self conscious thinking
+  Self reflecting layer
+  Reglective thinking
+  Deliberate thinking (SOAR/GPS)
+  Learned reaction (subsumption)
+  Instinctive reaction (subsumption)
+
+Brooks: subsumption (inspired by brain): Creature hypothesis
+
+  1. no representation
+  2. use world instead of model
+  3. finite state machines
+
+  * The ability to tell Left and right is the indicator that a child
+    becomes an adult.
+
+Lec20: Probablistic Inference I
+-------------------------------
+
+Probablity inference, though important, is not the only way.
+Joint Porbability Table: of size :math:`2^n`
+
+Basic Prob axioms
+
+  1. :math:`0 \leq P(a) \leq 1`
+  2. :math:`P(TRUE) = 1, P(FALSE) = 0`
+  3. :math:`P(a)+P(b)-P(ab) = P(a\cup b)`
+
+Conditional probability (can be extended by chain rule)
+
+  :math:`p(a|b) = p(ab)/p(b)`
+  
+  :math:`p(x_1,\ldots,x_n) = \prod_{i=n}^1 p(x_i|x_{i-1},\ldots,x_1)`
+
+Independence
+
+  :math:`p(a|b) = p(a)` when a is independent of b.
+
+Conditional Independence
+
+  :math:`p(a|bz) = p(a|z)` when a is independent of b.
+
+Belief Network
+
+  Acyclic directed graph + joint probability table. Has a reduced size
+  compared to pure joint probability table.
+
+Lec21: Probablistic Inference II
+--------------------------------
+
+Naive Bayes
+
+  :math:`p(a|b) = p(a,b)/p(b)`, then we have
+  :math:`p(a|b)p(b) = p(a,b) = p(b|a)p(a)`
+
+  When c denotes class, e denotes evidence (the evidences are independent
+  to each other, e.g. repeated events)
+
+    .. math::
+
+      p(c_i|e_i) =
+      \frac{p(e_1,\ldots,e_n|c_i)p(c_i)}{d = p(e_1,\ldots,e_n)} =
+      \frac{p(e_1|c_i)p(e_2|c_i)\ldots p(e_n|c_i)p(c_i)}{d}
+
+  Model selection, model strecture discovery (by making use of Bayesian
+  discovery), naive Bayesian classification.
+
+* The right thing when you don't know anything (probability and bayesian stuff)
+* You often don't know anything.
+
+Lec22: Merging, Cross-modal Coupling, Review
+--------------------------------------------
+
+* When we merge and begin to examine and explore the world around us, we're
+  presented with a lot of unlabeled data that we've got to make sense.
+  I believe that this kind of cross-modal coupling idea is very likely to be
+  mound up in our understanding of that world that's presented to us.
+* [Scientific Perspective] Artificial Intelligence is about understanding stuff
+  with representations, methods, and architectures.
+* The thing that turns people on from the point of view of application, is not
+  replacing people at making new revenue, making new capability, and that at
+  one's license is you do not have something done exclusively by a computer,
+  but something that can be done in partnership with the person. So all of the
+  important applications of artificial intelligence involved people and
+  computers working in tandem with each doing what they do best, not with
+  replacing people.
+* [What does AI offer that is different?]
+  1. A language for precedures
+  2. New ways to make models
+  3. Enforced detail
+  4. Opportunities to experiment
+  5. Upper bounds.
+* [How do you do it?]
+  1. Define or describe a competence
+  2. select or invent a representation
+  3. Understand constraints and regularities
+  4. Select methods
+  5. Implement and experiment
+
+Reference and Material
+----------------------
+
+Thank you Patrick. H. Winston for this excellent open course!
+
+1. MIT 6.034: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-034-artificial-intelligence-fall-2010/

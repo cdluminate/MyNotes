@@ -1,0 +1,87 @@
+
+There are two kind of circuits in our real life -- analog circuits and
+digital circuits. Digital circuits are abstracted from analog circuits
+since, for instance, the underlying principle of logical gate ``AND''
+is about analog instruments. Digital circuits are effective simplification
+from analog circuits, which cares only about high and low electric potential,
+and reduced much complexity brought by analog instruments.
+
+\subsection{Circuit Fundamental}
+
+\begin{itemize}
+
+ \item{Kirchhoff's law}
+
+  \begin{figure}[!h]
+   \centering
+   \includegraphics[scale=0.5]{kclex-crop.pdf}
+  $$ \sum_n i_n(t) = 0, \forall t $$
+  \end{figure}
+
+  \begin{figure}[!h]
+   \centering
+   \includegraphics[scale=0.3]{kvlex-crop.pdf}
+  $$ \sum_n u_n(t) = 0, \forall t $$
+  \end{figure}
+
+ \item{Equivalent Circuits}
+
+  Thevenin's theorem and Norton's theorem.
+\end{itemize}
+
+\subsection{Analog Circuit}
+
+  Amplifier. Diode. Triode. Transistor.
+
+\subsection{Digital Circuit}
+
+\begin{itemize}
+
+ \item{Gray code}
+
+Binary to Gray code
+$$ \left\{ \begin{array}{lc}
+  G_{i} = B_{i} & i = 0 \\
+  G_{i} = B_{i} \oplus B_{i - 1} & i \in \mathbb{N}^{*}
+  \end{array} \right. $$
+
+Gray code to Binary
+$$ \left\{ \begin{array}{lc}
+  B_{i} = G_{i} & i = 0 \\
+  B_{i} = G_{i} \oplus B_{i - 1} & i \in \mathbb{N}^{*}
+  \end{array} \right. $$
+
+where bits are indexed from high to low.
+i.e. i = 0 means the highest bit.
+
+ \item{Boolean Algebra}
+
+$A\cdot B$ denotes AND operation.
+$A + B$ denoes OR operation.
+$\bar{A}$ denotes NOT operation.
+$A\oplus B$ denoes XOR operation.
+$\odot$ for XNOR.
+
+$$ A+BC=(A+B)(A+C) $$
+$$ \overline{A+B} = \bar{A}\cdot\bar{B} $$
+
+$$ AB+A\bar{B}=A $$
+$$ A+AB=A $$
+$$ A+\bar{A}B=A+B $$
+$$ AB+\bar{A}C+BC=AB+AC $$
+
+$$ (A+B)(A+\bar{B})=A $$
+$$ A\cdot (A+B) = A $$
+$$ A\cdot (\bar{A}+B)=A\cdot B $$
+$$ (A+B)(\bar{A}+C)(B+C) = (A+B)(\bar{A}+C) $$
+
+ \item{Simplifing Boolean Function with Karnaugh Graph}
+
+ \item{Flip-Flop}
+
+ SRAM uses flip-flop for every single memory unit.
+ DRAM restores information with capacitors and must be re-charged regularly.
+
+ \item{VHDL}
+
+\end{itemize}

@@ -1,0 +1,80 @@
+
+\section{Linear Space and Linear Transformation}
+
+\url{https://en.wikipedia.org/wiki/Vector_space#Definition}
+
+\subsection{Base of a Linear Space}
+
+Given a set of vectors ${x_1, x_2, \ldots}$ from a linear
+space $V$, if there is no solution to $\sum_i c_i x_i = 0$ s.t. $\sum|c_i|=0$,
+the vectors $x_*$ are linearly independent to each other. The maxium size of
+a set of linearly independent vectors from linear space $V$ is the
+dimentionality of the space, denoted as $\text{dim}V=n$. Such a group of
+vectors is called a base of space $V$.
+
+Any vector from the space $V$ can be represented as a linear combination
+of the base vectors $x_1,\ldots,x_n$, i.e.
+$\forall x\in V^n, x = \sum_i \xi_i x_i$. The coefficients for this linear
+combination is called coordinate, which can be denoted as column vector
+$(\xi_1,\ldots,\xi_n)^T$. In this way, the vector can be denoted as
+$$x = [x_1, \ldots, x_n][\xi_1,\ldots,\xi_n]^T$$
+
+Assume that we have another set of base vectors $(y_1,\ldots,y_n)$, where 
+each base vector can still be represented as a linear combination of the
+original base vectors, i.e. $(y_1,y_2,\ldots,y_n) = (x_1,x_2,\ldots,x_n)C$.
+Here matrix $C$ is called the base shift matrix, and $y_*$ is the new base
+while $x_*$ is the original base. Given $\forall x\in V^n$, and
+$x = \sum_i \xi_i x_i = \sum_i \eta_i y_i$, we have
+\begin{align}
+(x_1,\ldots,x_n)(\xi_1,\ldots,\xi_n)^T = (y_1,\ldots,y_n)
+	(\eta_1,\ldots,\eta_n)^T \\= (x_1,\ldots,x_n)C(\eta_1,\ldots,\eta_n)^T
+\end{align}
+That is to say
+$$(\xi_1,\ldots,\xi_n)^T = C(\eta_1,\ldots,\eta_n)^T$$
+$$(\eta_1,\ldots,\eta_n)^T = C^{-1}(\xi_1,\ldots,\xi_n)^T$$
+
+\subsection{Subspace}
+
+$V_s \subset V$ and $V_s \neq \Phi$, s.t.  $\forall x, y \in V_s, x+y\in V_s$,
+and $\forall x\in V_s, kx \in V_s$. Note, the dim of this subspace is less or
+equal to that of the original linear space, i.e.
+$\text{dim} V_s \leq \text{dim} V$.
+
+{\bf Column space} $R(A) = \text{lincomb}(a_1,\ldots,a_n) = \{Ax|x\in R^n\}$
+where $A\in R^{m\times n}$ and $a_* \in R^m$ is the columns of matrix $A$.
+Similarly, the row space can be defined as
+$R(A^T) = \{A^Tx|x\in R^m\} \subset R^n$.
+Note that $\text{rank} A = \text{dim} R(A) = \text{dim} R(A^T)$.
+Or equivalently, the column space of a matrix $A$ is the span of its column
+vectors, i.e. $R(A) = \text{Span}\{a_1,a_2,\ldots,a_n\}$.
+
+{\bf Null space} $N(A) = \{x|Ax=0\}$ where $A\in R^{m\times n}$. Note,
+$\text{rank} A + n(A) = n$ where $n(A) = \text{dim} N(A)$.
+
+\subsection{Linear Transformation and Matrix}
+
+A linear transformation $T$ must satisfy the following property:
+$$ T(kx + ly) = k(Tx) + l(Ty)$$
+where $k, l$ are constants, vector $x, y$ are from vector space $V$.
+
+Given a vector $a \in V$, and $a = [x_1,\ldots,x_n][\xi_1,\ldots,\xi_n]^T$,
+a linear transformation $T$ will update it to a new vector, i.e.
+$$ Ta = T([x_1,\ldots][\xi_1,\ldots]^T) = T([x_1,\ldots])[\xi_1,\ldots]^T
+   = [x_1,\ldots]A[\xi_1,\ldots]^T $$
+which means the new coordinate of this vector after transformation is
+$[\eta_1,\ldots]^T = A[\xi_1,\ldots]^T$. At the same time, matrix $A$ is
+called the matrix of transformation $T$ with respect to the base $[x_1,\ldots]$.
+
+\subsection{Similar Matrix}
+
+Assume that the matrix of transformation $T$ with respect to two bases
+$[x_1,\ldots]$ and $[y_1,\ldots]$ are $A$ and $B$, respectively. Namely
+$$T[x_1,\ldots] = [x_1,\ldots]A, T[y_1,\ldots] = [y_1,\ldots]B,
+                                  [y_1,\ldots] = [x_1,\ldots]C$$
+$$T[y_1,\ldots] = T([x_1,\ldots]C) = T([x_1,\ldots])C =
+   [x_1,\ldots]AC = [y_1,\ldots]C^{-1}AC $$
+We call that $B$ is similar to $A$.
+
+\subsection{Euclid Space and Unitary Space}
+
+A linear space with a distance function defined as $f: V\times V \mapsto R$.

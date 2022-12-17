@@ -1,0 +1,1157 @@
+In this secion $t$ indicates continuous time signal,
+and $k$ indicates discrete time signal.
+Superscript $^{(1)}$ means differentiation, and
+superscript $^{(-1)}$ means integration.
+
+book~\cite{bib:dsp}.
+
+\subsection{Continuous and Discrete Signal}
+
+ \subsubsection{Periodic Signal}
+
+ \[ f(t) = f(t + mT), m = 0, \pm 1, \pm 2 \]
+ \[ f(k) = f(k + mT), m = 0, \pm 1, \pm 2 \]
+
+ \emph{e.g.}
+
+ \begin{align*}
+	 f(k) & = \sin(\beta k) = \sin(\beta k + 2m\pi) \\
+	 & = \sin [ \beta ( k + m \frac{2\pi}{\beta})]
+ \end{align*}
+ where $2\pi/\beta$ is required to be an integer so that the function
+ can be periodic.
+
+ Signal addition is element-wise matrix addition, and signal
+ multiplication is also element-wise.
+
+ \subsubsection{Continuous Dirac and Heaviside}
+
+ Impulse function is also called Dirac function, while
+ step function is also named Heaviside function.
+
+ Step function $\varepsilon$
+ \[ \varepsilon(t) = \left\{ \begin{array}{rl}
+		 0 & \text{if } t < 0,\\
+		 \frac{1}{2} & \text{if } t = 0,\\
+		 1 & \text{if } t > 0.
+		 \end{array}\right.
+ \]
+
+ Dirac function $\delta$
+ \[ \delta(t) = \frac{d\varepsilon(t)}{dt} \]
+ \[ \varepsilon(t) = \int_{-\infty}^t \delta(x) dx \]
+
+ Dirac function and Heaviside function have some interesting properties,
+ \[ \int_{-\infty}^{\infty} \delta'(t) \varphi(t)dt = -\int_{-\infty}^\infty \delta(t)\varphi'(t)dt = -\varphi'(0) \]
+ (can be proved using integration by part)
+
+ Heaviside function can be integrated,
+ \[ \int_{-\infty}^t \varepsilon(x)dx = \left\{ \begin{array}{rl}
+			 0 & \text{if } t < 0,\\
+			 t & \text{if } t > 0.
+		 \end{array} \right.
+ \]
+
+ \[ \int_{-\infty}^\infty \delta(t) dt = 1 \]
+
+ Dirac function has sampling property,
+ \[ f(t)\delta(t) = f(0)\delta(t) \]
+ then
+ \[ \int_{-\infty}^\infty f(t)\delta(t) dt = \int_{-\infty}^\infty f(0)\delta(t) dt = f(0) \]
+
+ \[ f(t)\delta'(t) = f(0)\delta'(t) - f'(0)\delta(t) \]
+ 
+ \[ \delta(\alpha t) = \frac{1}{|\alpha|} \delta(t) \]
+
+ \subsubsection{Discrete Dirac and Heaviside}
+ \[ \delta(k) = \left\{ 
+	 \begin{array}{rl}
+	 1 & \text{if } k = 0, \\
+	 0 & \text{if } k \neq 0.
+	 \end{array} \right.
+ \]
+ \[ \varepsilon(k) = \left\{
+		\begin{array}{rl}
+			0 & \text{if } k < 0,\\
+			1 & \text{if } k \geqslant 0.
+		\end{array} \right.
+ \]
+ \[ \delta(k) = \varepsilon(k) - \varepsilon(k-1) \]
+ \[ \varepsilon(k) = \sum^k_{i=-\infty} \delta(i) = \sum^\infty_{j=0} \delta(k-j)\]
+
+\subsection{Sampling Theorem}
+
+ Sampling sigmal
+ $$ P_\delta (t) = \sum\limits_{n=-\infty}^\infty \delta(t-nT) $$
+ 
+ Frequency spectrum
+ $$ \hat{X}_a (j\Omega) = \frac{1}{T} \sum\limits_{k=-\infty}^\infty X_a(j\Omega - jk\Omega_s) $$
+ 
+ $$ u(n) = \sum\limits_{k=0}^\infty \delta(n-k) $$
+ 
+\subsection{CLTI \& DLTI Systems}
+
+ Define $f(\cdot)$ as activation, $y(\cdot)$ as response of system,
+ and their relationship is $y(\cdot) = T[f(\cdot)]$. In the following
+ part, subscript $_{zs}$ means ``zero state'', while subscript $_{zi}$
+ means ``zero input''.
+
+ {\bf Linearity of System}
+ \[ T[\alpha f_1 + \beta f_2] = \alpha T[f_1] + \beta T[f_2] \]
+
+ {\bf Time Invariant System}
+ \[ T[{0}, f(t-t_d)] = y_{zs} (t-t_d) \]
+
+ {\bf Causual System}
+ \[ h(\cdot) = 0, t < t_0 \]
+
+ {\bf Stability}
+ \[ |y_{zs}(\cdot)| < \infty, \text{when } |f(\cdot)| < \infty \]
+
+ \begin{quote}  
+	 Ex. Given a system that its output is $y(t) = b_2x''(t)+b_1x'(t)+b_0x(t)$,
+	 with corresponding input $x''(t)+a_1x'(t)+a_0x(t) = f(t)$. Find out the differentia
+	 equation of this system.
+	 
+	 Solution:
+ \begin{align*}
+	 a_0 y &= b_2(a_0 x'') +b_1(a_0 x') + b_0(a_0 x) \\
+	 a_1 y' &= b_2(a_1 x'')' +b_1(a_1 x')' +b_0(a_1 x)' \\
+	 y'' &= b_2(x'')'' + b_1(x')'' + b_0(x)'' 
+ \end{align*}
+	 Add up the above equations we obtain
+ \begin{align*}
+	 y'' + a_1 y' + a_0 y & = b_2(x''+a_1 x'+a_0 x)'' \\
+						  & + b_1(x'' + a_1 x' + a_0 x)' \\
+						  & + b_0( x'' + a_1 x' + a_0 x)
+ \end{align*}
+ 	So the system can be described as
+	\begin{align*}
+		y''+a_1 y' + a_0 y = b_2 f'' + b_1 f' + b_0 f
+	\end{align*}
+ 	 
+ \end{quote}
+
+
+ \subsubsection{CLTI System}
+
+ The relationship between the response of LTI system and its input can be described
+ in N order constant coefficient linear differential equation,
+ \[ \sum_{j=0}^N a_j y^{(j)}(t) = \sum_{i=0}^m b_i f^{(i)}(t) \]
+ and its solution is formed from homogeneous solution $y_h$ and particular solution $y_p$,
+ \[ y(t) = y_h(t) + y_p(t) \]
+
+ \begin{table}[!h]
+	 \begin{center}
+		 \begin{tabular}{|c|c|}
+			 \hline
+			 $\lambda$ & Homogeneous Solution \\
+			 \hline\hline
+			 simple real root   & $Ce^{\lambda t}$ \\
+			 r-fold real root   & $(C_{r-1}t^{r-1}+ \ldots + C_1 t + C_0)e^{\lambda t}$ \\
+			 a pair of conjugate root & $e^{\alpha t}[C\cos(\beta t)+D\sin(\beta t)]$ \\
+			 \hline
+		 \end{tabular}
+		 \caption{Homogeneous Solutions \emph{w.r.t} different latent roots}
+	 \end{center}
+ \end{table}
+ \begin{table}[!h]
+	 \begin{center}
+		 \begin{tabular}{|c|c|}
+			 \hline
+			 $f(t)$ & Particular Solution \\
+			 \hline\hline
+			 $t^m, \forall \lambda \neq 0$   & $P_m t^m + \ldots + P_1 t + P_0$ \\
+			 $t^m, \exists \lambda \neq 0 \text{(r-fold)}$   & $t^r[P_m t^m + \ldots + P_0]$ \\
+			 $e^{\alpha t}, \alpha \neq \lambda$ & $Pe^{\alpha t}$\\
+			 $e^{\alpha t}, \alpha = \lambda$ & $(P_1 t + P_0)e^{\alpha t}$\\
+			 \hline
+		 \end{tabular}
+		 \caption{Particular Solutions \emph{w.r.t} different inputs}
+	 \end{center}
+ \end{table}
+
+ {\bf Example.}\\
+ Find the solution of DE $ y''(t) + 5y'(t) + 6y(t) = f(t)$, where
+ $f(t)=2e^{-t}, t\geq 0; y(0) = 2; y'(0) = -1$.
+
+ (1) for $y_h(t)$
+ \[ \lambda^2 + 5\lambda + 6 = 0 \]
+ hence
+ \[ y_h(t) = C_1e^{-2t} + C_2e^{-3t}\]
+
+ (2) for $y_p(t)$
+ \[ y_p(t) = Pe^{-t}\]
+ after plugging it into the original DE, the coefficient $P$ can be yielded.
+
+ (3) for $y(t)$
+ \[ y(t) = y_h(t) + y_p(t) = C_1e^{-2t} + C_2e^{-3t} + e^{-t}\]
+ the rest coefficients can be solved with the other conditions given.
+
+ \subsubsection{Continuous Convolution}
+
+ \[ y(t) = f(t) * g(t) = \int_{-\infty}^\infty f(\tau)g(t-\tau)d\tau \]
+ \begin{quote}
+  \begin{align*}
+   f(t) * g(t) &= \int_{-\infty}^\infty f(x)g(t-x)dx \\
+  \mathit{F}[f(t)*g(t)] &= \int_{-\infty}^\infty [ \int_{-\infty}^\infty f(x)g(t-x)dx ] e^{-j\omega t} dt \\
+               &= \int_{-\infty}^\infty f(x) [ \int_{-\infty}^\infty g(t-x) e^{-j\omega t} dx ] dx \\
+               &= \int_{-\infty}^\infty f(x) [ e^{-j\omega x} G(j\omega) ] dx \\
+               &= F(j\omega) G(j\omega)
+  \end{align*}
+ \end{quote}
+
+ {\bf Commutative law}
+ \[ f * g = g * f \]
+
+ {\bf Associative law}
+ \[ f * (g * h) = (f * g) * h\]
+
+ {\bf Distributive law}
+ \[ f * (g + h) = f * g + f * h\]
+
+ \[ f(t) * \delta(t) = f(t)\]
+
+ \[ f(t) * \delta(t - t_0) = f(t-t_0) \]
+
+ Given $f = g * h = h * g$
+ \[ f^{(1)} = f' = g' * h = g * h' \]
+ \[ f^{(-1)} = f^{(-1)} * g = f * g^{(-1)}\]
+
+ {\bf Example.}\\
+ \begin{align*}
+	 \varepsilon(t) * \varepsilon(t) &= \int^\infty_{-\infty} \varepsilon(\tau)\cdot\varepsilon(t-\tau)d\tau \\
+	 &= \varepsilon(t) \int_0^t d\tau \\
+	&= t \varepsilon(t)
+ \end{align*}
+
+ \subsubsection{DLTI System}
+
+ Generally difference equation is like
+ \[ G[k,y(k),y(k-1),\ldots,y(k-n)] = 0 \]
+ which is called n order difference equation.
+
+ {\bf Iterative Method}
+ 
+ Given a difference equation and corresponding boundary,
+ one can obtain the solutions iteratively, starting from
+ the boundary.
+
+ {\bf Classical Solution}
+
+ Assumes that our DLTI system has single input port $f$ denoting stimulation
+ and single output port $y$ denoting complete responce,
+ \[ \sum_{j=0}^n a_{n-j} y(k-j) = \sum_{i=0}^m b_{m-i} f(k-i) \]
+ and its solution can usually be written as
+ \[ y(k) = y_h(k) + y_p(k) \]
+ Homogeneous solution $y_h$ comes from
+ \[ \sum_{j=0}^n a_{n-j} y(k-j) = 0 \]
+
+ \begin{quote}
+	 Ex. First order homogeneous difference equation $y(k) + ay(k-1) = 0$,
+	 \emph{i.e.} $\frac{y(k)}{y(k-1)} = -a$, can be solved with arithmetic
+	 progression.
+ \end{quote}
+
+ \begin{table}[!h]
+	 \begin{center}
+		 \begin{tabular}{|c|c|}
+			 \hline
+			 $\lambda$ & Homogeneous Solution $y_h(k)$\\
+			 \hline\hline
+			 simple real root   & $C\lambda^k $ \\
+			 r-fold real root   & $(C_{r-1}k^{r-1}+ \ldots + C_1 k + C_0) \lambda^k$ \\
+			 a pair of conjugate root & $\rho^k[C\cos(\beta k)+D\sin(\beta k)]$ \\
+			 \hline
+		 \end{tabular}
+		 \caption{Homogeneous Solutions \emph{w.r.t} different latent roots.
+		 Note, conjugate root means $\lambda_{1,2} = a\pm jb = \rho e^{\pm jb}$.}
+	 \end{center}
+ \end{table}
+ \begin{table}[!h]
+	 \begin{center}
+		 \begin{tabular}{|c|c|}
+			 \hline
+			 $f(k)$ & Particular Solution $y_p(k)$\\
+			 \hline\hline
+			 $k^m, \forall \lambda \neq 1$   & $P_m k^m + \ldots + P_1 k + P_0$ \\
+			 $k^m, \sum(\lambda==1)=r$   & $k^r[P_m k^m + \ldots + P_1 k + P_0]$ \\
+			 $a^k, \alpha \neq \lambda$ & $Pa^k$\\
+			 $a^k, \alpha = \lambda$ & $(Pk + P_0)a^k$\\
+			 $a^k, \alpha = \lambda$ (r-folds) & $[P_rk^r + P_{r-1}^{k-1}
+		 		+ \ldots + P_1k + P_0]a^k$\\
+			 \hline
+		 \end{tabular}
+		 \caption{Particular Solutions \emph{w.r.t} different inputs}
+	 \end{center}
+ \end{table}
+
+ {\bf Example.}\\
+ Given an LTI discrete system $y(k) + 4y(k-1) + 4y(k-2) = f(k)$, where
+ initial condition is $y(0) = 0, y(1) = -1$, and input is $f(k)=2^k, k\geq 0$.
+
+ (1) For $y_h(k)$, we get $\lambda^2+4\lambda+4=0$, so
+ \[ y_h(k) = (C_1k + C_2)2^k\]
+
+ (2) For $y_p(k)$,
+ \[ y_p(k) = P\cdot 2^k\]
+ plugging it into the original DE then $P$ can be found.
+
+ (3) For $y(k)$,
+ \[ y(k) = y_h(k) + y_p(k)\]
+ the rest coefficients can be solved with given conditions.
+
+ \subsubsection{Discrete Convolution}
+ \[ f(k) * g(k) = \sum^\infty_{i = -\infty} f(i)g(k-i)\]
+ It has similar property to the continuous convolution.
+ \[ f * (g * h) = (f * g) * h\]
+ \[ f * (g + h) = f * g + f * h\]
+ \[ f(k) * \delta(k) = f(k)\] 
+ \[ f(k) * \delta(k-k_0) = f(k-k_0)\]
+
+\subsection{Fourier Transform}
+
+ \subsubsection{Orthogonal Function Set}
+ Given a set of functions $\{f_1, f_2, \ldots, f_n\}$, it is
+ called orthogonal function set within range $(t_1, t_2)$
+ when the following equation holds,
+ \[ \int^{t_2}_{t_1} f_1(t)f_2(t) = \left\{ 
+	 \begin{array}{cl}
+	 0 & \text{if } i \neq j,\\
+	 K_i \neq 0 & \text{if } i = j.
+ \end{array} \right. \]
+ where $K_i$ is constant.
+
+ \subsubsection{Fourier Series}
+ Given periodic function $f(t) = f(t+mT), m \in \mathcal{Z}$ with period $T$
+ and angular freqency $\Omega=2\pi F=\frac{2\pi}{T}$, it can be expanded as
+ a Fourier series once the Dirichlet conditions are satisfied.
+ \[ f(t) = \frac{a_0}{2}
+	 + \sum^\infty_{n=1} a_n \cos(n\Omega t)
+	 + \sum^\infty_{n=1} b_n \sin(n\Omega t)
+ \]
+ where
+ \[ a_n = \frac{2}{T} \int_{-\frac{T}{2}}^{\frac{T}{2}}
+          f(t)\cos(n\Omega t)dt , n = 0,1,2,\ldots\]
+ \[ b_n = \frac{2}{T} \int_{-\frac{T}{2}}^{\frac{T}{2}}
+          f(t)\sin(n\Omega t)dt , n = 1,2,\ldots\]
+
+ {\bf Fourier Series in Exponential Form}
+ 
+ With the help of Euler equation (Eq.~\ref{eq:euler}), the Fourier series can be represented with
+ a series of exponentials,
+ \[ f(t) = \frac{1}{2} \sum_{i=-\infty}^\infty F_n e^{jn\Omega t}\]
+ where
+ \[ F_n = \frac{1}{T} \int_{-\frac{T}{2}}^{\frac{T}{2}} f(t) e^{-jn\Omega t}dt, n=0,\pm 1, \pm2, \ldots\]
+
+ {\bf Paseval Euqation}\\
+ \[ \frac{1}{T} \int_{-\frac{T}{2}}^{\frac{T}{2}} f^2(t)dt = \sum_{n=-\infty}^\infty |F_n|^2\]
+ It shows that the power found from the time domain equals that from the frequency domain.
+
+ \subsubsection{Fourier Transform}
+ Sufficient, but not necessary condition supporting that the fourier transform exists
+ \[ \int_{-\infty}^\infty |f(t)|dt < \infty\]
+
+ Fourier transform
+ \[ F(j\omega) = \int_{-\infty}^\infty f(t) e^{-j\omega t} dt\]
+
+ Inverse fourier transform
+ \[ f(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} F(j\omega)e^{j\omega t} d\omega\]
+
+ {\bf Frequently used results}
+
+ Gate funciton
+ \[ g_\tau = \left\{ \begin{array}{rl}
+			 1 & \text{if } |t| < \tau/2, \\
+			 0 & \text{if } |t| > \tau/2.
+		 \end{array} \right.
+ \]
+ \[ \mathit{F}[g_\tau (t)] = \frac{2}{\omega} \sin(\frac{\omega \tau}{2})\]
+ \[ \mathit{F}[e^{-at}\varepsilon(t)] = \frac{1}{a + j\omega} , a > 0 \]
+ \[ \mathit{F}[e^{-a|t|}] = \frac{2a}{a^2 + \omega^2}\]
+ \[ \mathit{F}[\delta(t)]  = 1\]
+ \[ \mathit{F}[\varepsilon(t)] = \pi \delta(\omega) + \frac{1}{j\omega}\]
+
+ \subsubsection{Properties of Fourier Transform}
+ Given that $f(t) \leftrightarrow F(j\omega)$
+
+ Linearity
+ \[ a f(t) + b g(t) \leftrightarrow a F(j\omega) + b G(j\omega)\]
+
+ Symmetry
+ \[ f(jt) \leftrightarrow 2\pi f(-\omega)\]
+
+ Scaling
+ \[ f(at) \leftrightarrow \frac{1}{|a|}F(j\frac{\omega}{a})\]
+
+ Time-domain translation
+ \[ f(t\pm \tau) \leftrightarrow e^{\pm j\omega \tau}F(j\omega) \]
+
+ Freq-domain translation
+ \[ f(t)e^{\pm jw_0t} \leftrightarrow F[j(\omega \mp w_0)] \]
+
+ Time-domain Concolution
+ \[ f(t)*g(t) \leftrightarrow F(jw)*G(jw)\]
+
+ Time-domain Differentiation
+ \[ \frac{d^n}{dt^n}f(t) \leftrightarrow (jw)^n F(jw)\]
+
+ Time-domain Integration ($f(-\infty) = 0$)
+ \[ \int^t_{-\infty} f(x)dx \leftrightarrow \pi F(0)\delta(w) + \frac{1}{jw}F(jw)\]
+
+ Freq-domain Differentiation
+ \[ (-jt)^n f(t) \leftrightarrow \frac{d^n}{dw^n} F(jw)\]
+
+ Freq-domain Integration
+ \[ \pi f(0)\delta(t) + \frac{1}{-jt}f(t) \leftrightarrow \int^t_{-\infty} F(jw)dw\]
+
+ Paseval Equation
+ \[ E = \int_{-\infty}^\infty f^2(t)dt = \frac{1}{2\pi} \int_{-\infty}^\infty |F(jw)|^2 dw\]
+
+ \subsubsection{Transformation of Periodic function}
+ With the help of $\mathcal{1} = 2\pi \delta(w)$ and translation property of Fourier transform,
+ we obtain following equations,
+ \[ \mathit{F}[e^{jw_0t}] = w\pi \delta(w - w_0) \]
+ \[ \mathit{F}[e^{-jw_0t}] = w\pi \delta(w + w_0) \]
+ \[ \mathit{F}[\cos(w_0t)] = \pi [\delta(w+w_0) + \delta(w-w_0)] \]
+ \[ \mathit{F}[\cos(w_0t)] = j\pi [\delta(w+w_0) - \delta(w-w_0)] \]
+
+ \subsubsection{LTI system}
+ LTI system $y(t) = h(t) * f(t)$, in freq-domain $Y(jw)=H(jw)X(jw)$.
+
+ {\bf Example.}\\
+ Given an LTI system $y'(t) + 2y(t) = f(t)$, where $f(t) = e^{-t}\varepsilon(t)$, find $y(t)$.
+
+ (1) let $f(t) \leftrightarrow F(jw)$ and $y(t) \leftrightarrow Y(jw)$, then
+ we transform the DE, following Eq can be obtained,
+ \[ jw Y(jw) + 2Y(jw) = F(jw)\]
+ so the frequency domain response function is
+ \[ H(jw) = Y(jw)/F(jw) = \frac{1}{jw +2}\]
+
+ (2) $f(t) \leftrightarrow \frac{1}{jw +1} = F(jw)$
+ \[ Y(jw) = H(jw)F(jw) = \frac{1}{1+jw} - \frac{1}{2+jw} \]
+ \[ \mathit{F}^{-1}[Y(jw)] = y(t) = (e^{-t} - e^{-2t})\varepsilon(t)\]
+
+ \subsubsection{Sampling Law}
+ If the frequency band of signal $f(t)$ is finite, \emph{i.e.} $F(jw) = 0, |w| < |w_m|$,
+ then the sampling angular frequency $w_s$ should be at least twice than signal frequency
+ $2w_m$, \emph{i.e.} $w_s > 2w_m$.
+
+ \subsubsection{Double side LT}
+ \[ F_b(s) = \int_{-\infty}^\infty f(t) e^{-st} dt\]
+ \[ f(t) = \frac{1}{j2\pi} \int_{\sigma-j\infty}^{\sigma+j\infty} F_b(s) e^{st} ds\]
+
+ \subsubsection{Single side LT}
+ \[ F(s) = \int_{0_-}^\infty f(t) e^{-st} dt\]
+ \[ f(t) = \frac{1}{j2\pi} \int_{\sigma-j\infty}^{\sigma+j\infty} F(s)e^{st} ds, t>0 \text{ or } 0, t<0\]
+
+ {\bf Example.}\\
+ \[ g_\tau (t - \frac{\tau}{2}) = \left\{ \begin{array}{rl}
+		 1 & 0<t<\tau, \\
+	 0 & \text{others} \end{array} \right.\]
+ \[ \mathit{L}[g_\tau(t-\frac{\tau}{2})] = \frac{1-e^{-s\tau}}{s}, Real(s) > -\infty\]
+ \[ \mathit{L}[\delta(t)] = 1, Real(s) > -\infty\]
+ \[ \mathit{L}[\delta'(t)] = s, Real(s) > -\infty\]
+ \[ \mathit{L}[\varepsilon(t)] = \frac{1}{s}, Real(s) > 0\]
+ \[ \mathit{L}[e^{at}\varepsilon(t)] = \frac{1}{s-a}, Real(s) > a\]
+ \[ \mathit{L}[e^{-at}\varepsilon(t)] = \frac{1}{s+a}, Real(s) > -a\]
+ \[ \mathit{L}[e^{jbt}\varepsilon(t)] = \frac{1}{s-jb}, Real(s) > 0\]
+ \[ \mathit{L}[e^{-jbt}\varepsilon(t)] = \frac{1}{s+jb}, Real(s) > 0\]
+ \[ \sum_{n=0}^\infty \delta(t-nT) \leftrightarrow \frac{1}{1-e^{-Ts}}\]
+
+ \subsubsection{Single Side Laplace Transform Property}
+ Given that $f(t) \leftrightarrow F(s), Real(s) > \sigma_0$,
+
+ {\bf Linearity}
+ \[ af(t)+bg(t) \leftrightarrow aF(s) + bG(s)\]
+ 
+ {\bf Scaling}
+ \[ f(at) \leftrightarrow \frac{1}{a} F(\frac{s}{a})\]
+
+ {\bf Time-domain Translation}
+ \[ f(t-\tau)\varepsilon(t-\tau) \leftrightarrow e^{-s\tau} F(s)\]
+ \[ f(at-b)\varepsilon(at-b) \leftrightarrow \frac{1}{a} e^{-\frac{b}{a}s} F(\frac{s}{a}), a>0, b\geq 0\]
+
+ {\bf Freq-domain Translation}
+ \[ f(t)e^{s_0t} \leftrightarrow F(s-s_0)\]
+
+ {\bf Time-domain differentiation}
+ \[ \frac{d}{dt}f(t) \leftrightarrow sF(s) - f(0_-) \]
+ \[ \frac{d^2}{dt^2}f(t) \leftrightarrow s^2F(s) - sf(0_-) - f^{(1)}(0_-)\]
+
+ {\bf Time-domain integration}
+ \[ (\int_{0_-}^t)^n f(x)dx \leftrightarrow \frac{1}{s^n} F(s)\]
+
+ {\bf Time-domain convolution}
+ \[ f(t) * g(t) \leftrightarrow F(s)G(s)\]
+
+ {\bf S-domain differentiation}
+ \[ (-t)^nf(t) \leftrightarrow \frac{d^n}{ds^n}F(s)\]
+
+ {\bf S-domain integration}
+ \[ \frac{f(t)}{t} \leftrightarrow \int_{s}^\infty F(\eta)d\eta, \sigma > \sigma_0\]
+
+ {\bf Boundary value}
+ \[ f(0_+) = \lim_{s \to \infty} sF(s)\]
+ \[ f(\infty) = \lim_{s \to 0} sF(s)\]
+
+ \subsubsection{Inverse Laplace Transform}
+
+ {\bf Partial fraction expantion.}\\
+ Assume that
+ \[ F(s) = \frac{B(s)}{A(s)} = \frac{b_ms^m + b_{m-1}s^{m-1} + \cdots + b_1s + b_0}
+ {s^n + a_{n-1}s^{n-1} + \cdots + a_1s + a_0 } \]
+ where $m<n$, when
+
+ (1) $F(s)$ has (conjugate) single poles, then it can be expanded as
+ \[ F(s) = \frac{B(s)}{A(s)} = \sum_{i=1}^{n} \frac{K_i}{s-s_i} \]
+ \[ K_i = (s-s_i)F(s)|_{s=s_i} = \lim_{s\to s_i} \Big[ (s-s_i) \frac{B(s)}{A(s)} \Big] \]
+ Then we can obtain the original function $f(t)$ with help with the following equation,
+ \[ \mathit{L}^{-1}\big[ \frac{1}{s-s_i} \big] = e^{s_i t}\varepsilon(t)\]
+
+ (2) $F(s)$ has r-fold poles,
+ \begin{align*} F(s) &= \frac{B(s)}{A(s)} = \frac{K_{11}}{(s-s_1)^r} + \frac{K_{12}}{(s-s_1)^{r-1}} + \cdots \\
+					 &+ \frac{K_{1r}}{s-s_1} + \sum_{i\in n, i\neq 1}^{n} \frac{K_i}{s-s_i}
+ \end{align*}
+ where
+ \[ K_{1i} = \frac{1}{(i-1)!} \frac{d^{i-1}}{ds^{i-1}} \big[ (s-s_1)^r F(s)\big] \Big|_{s=s_1} \]
+
+ \subsubsection{Complex frequency (s) domain analysis}
+
+ Continuous LTI systems are always represented by constant coefficient differential equations,
+ which can be solved with the help of Laplace transform. The form of solution looks like
+ \[ Y(s) = \frac{M(s)}{A(s)} + \frac{B(s)}{A(s)} F(s)\]
+ where $Y_{zi}(s) = \frac{M(s)}{A(s)}$, $Y_{zs}(s) = \frac{B(s)}{A(s)}F(s)$.
+ Based on that, the equation $Y(s) = Y_{zi}(s) + Y_{zs}(s)$ holds.
+
+ Based on that, system function can be defined as $H(s) = \frac{Y_{zs}}{F(s)} = \frac{B(s)}{A(s)}$,
+ namely $Y_{zs} = H(s)F(s)$.
+
+ On the application side, problems like that from circuit, can be analyzed using Laplace transform.
+
+ {\bf Example.}
+
+ Given an LIT system $y''(t) + 3y'(t) + 2y(t) = 2f'(t) + 6f(t)$, with input
+ $f(t) = \varepsilon(t)$, and initial state $y(0_-)=2, y'(0_-)=1$.
+ We perform Laplace transform against it, and then obtain the following equation,
+ \[ s^2Y(s) -sy(0_-) - y'(0_-) + 3sY(s) - 3y(0_-) + 2Y(s) = 2sF(s)\]
+ and it can be transformed into
+ \[ Y(s) = \frac{sy(0_-) + y'(0_-) + 3y(0_-)}{s^2 + 3s + 2}
+	 +\frac{2(s+3)}{s^2 + 3s + 2} F(s) \]
+ which matches the form $ Y(s) = \frac{M(s)}{A(s)} + \frac{B(s)}{A(s)} F(s)$.
+ the solution can be obtained via inverse Laplace transform.
+
+\subsection{Discrete Time Signal and System}
+
+\subsubsection{Discrete Time Signal}
+
+{\bf Discrete Time Signal}
+
+Given an anolog signal $x_a(t)$, we obtain signal sample
+in an interval $T$, \emph{i.e.} $x_a(t)|_{t=nT} = x_a(nT), n \in \mathcal{Z}$,
+then this signal sample $x_a(nT) = x(n)$ is called discrete time signal.
+
+For example, suppose we have the original analog signal $x_a(t) = \sin(\Omega t)$,
+by signal sampling we can obtain the discrete time signal $x_a(t)|_{t=nT} = \sin(\Omega nT)$,
+and it can be further written as $x(n) = \sin(wn)$ where $w = \Omega T$.
+
+{\bf Periodic Property of sine signal}
+
+Given an general sine signal $x(n) = A\sin(wn+\phi)$, according to the periodic property
+of sine function we can also obtain $x(n+N) = A\sin(w(n+N)+\phi) = x(n)$, which requires
+\[ N = \frac{2\pi}{w}k, k \in \mathcal{Z}, N \in \mathcal{Z} \]
+
+{\bf United Signal Representation}
+
+There are many kinds of signal, but all of them can be represented in an united form
+\[ x(n) = \sum_{n=-\infty}^\infty x(m)\delta(n-m) \]
+
+{\bf Fundamental Signal Operation}
+
+Signal addition, multiplication are performed element-wise, similar to
+vector operation but signal operation should be aligned to the time axis.
+
+\subsubsection{Discrete Time System}
+
+Mathematically a discrete time system, as shown in Fig.~\ref{fig:d-t-system},
+is an operation that maps the input sequence $x(n)$ into
+output sequence $y(n)$, \emph{i.e.} $f: x(n) \mapsto y(n)$.
+However here we denote this mapping as $y(n) = T[x(n)]$.
+
+\begin{figure}[!h]
+ \centering
+ \includegraphics[width=0.25\textwidth]{d-t-system-crop.pdf}
+ \label{fig:d-t-system}
+ \caption{Discrete Time System.}
+\end{figure}
+
+There are 4 kinds of such system: LTI (linear time-invariant) system, NLTI system, 
+LTV system and NLTV system.
+
+{\bf Linear System}
+
+(1) Homogeneity.
+\[ T[x(n)+y(n)] = T[x(n)] + T[y(n)] \]
+
+(2) Scalable.
+\[ T[\alpha x(n)] = \alpha T[x(n)] \]
+
+In brief, the following equation holds for any linear system
+\[ T[\alpha f(n)+\beta g(n)] = \alpha T[f(n)] + \beta T[g(n)]\]
+
+{\bf Time-Invarance}
+
+If $y(n) = T[x(n)]$, then
+\[ y(n-n_0) = T[x(n-n_0)]\]
+where $n_0$ is a constant.
+
+\subsubsection{DT System Analysis in Time-domain}
+
+{\bf Unit impulse responce}
+\[ h(n) = T[\delta(n)] \]
+
+{\bf Input-output relationship}
+\[ y(n) = \sum_{m=-\infty}^\infty x(m)h(n-m) = x(n) * h(n)\]
+where ``$*$'' denotes linear convolution. Note, the resulting $y(n)$
+is zero-state responce.
+
+{\bf Properties of Convolution}
+\[ x(n) = \sum_{m=-\infty}^\infty x(m)\delta(n-m) = x(n) * \delta(n)\]
+\[ x(n) * \delta(n-n_0) = x(n-n_0)\]
+
+{\bf Causal system}
+
+Necessary and sufficient condition
+\[ h(n) = 0, n < 0\]
+
+{\bf Stability}
+
+Necessary and sufficient condition
+\[ \sum_{m=-\infty}^\infty |h(n)| < \infty\]
+
+\subsubsection{DT System and Difference Equation}
+
+\[ \sum_{k=0}^N a_k y(n-k) = \sum_{i=0}^M b_i x(n-i), a_0 = 1\]
+There are 3 ways to find its solution: (1) classical method,
+(2) recurrence method, (3) transformation method.
+
+\subsection{Discrete Time Fourier Transform, DTFT}
+
+ Sufficient condition 
+ \[ \sum_{k=-\infty}^\infty |f(k)| < \infty \]
+ \[ DTFT[f(k)] = F(e^{j\theta}) = \sum_{k=-\infty}^\infty f(k)e^{-j\theta k} \]
+ \[ IDTFT[F(e^{j\theta})] = f(k) = \frac{1}{2\pi} \int_{-\pi}^\pi F(e^{j\theta})e^{j\theta k} d\theta\]
+
+ \subsection{Laplace Transform}
+ Let $s = \sigma + j\omega$, and please pay attention of the region
+ of convergence (ROC) when applying Laplace Transform.
+
+ \subsubsection{Discrete Time Fourier Transform, DTFT}
+\[ X(e^{jw}) = DTFT[x(n)] = \sum_{m=-\infty}^\infty x(n) e^{-jwn} \]
+The necessary and sufficient condition which supports that the DTFT of
+a given signal exists is
+\[ \sum_{m=-\infty}^\infty |x(n)| < \infty\]
+Its inverse form is
+\[ x(n) = IDTFT[X(e^{jw})] = \frac{1}{2\pi} \int_{-\infty}^\infty X(e^{jw})e^{jwn} dw\]
+
+\subsubsection{DTFT Property}
+Let $X(e^{jw}) = DTFT[x(n)]$.
+
+{\bf Periodicity}
+\[ X(e^{jw}) = \sum_{m=-\infty}^\infty x(n) e^{-j(w+2\pi M)n} , M \in \mathcal{Z} \]
+
+{\bf Flip}
+\[ x(-n) \leftrightarrow X(e^{-jw}) \]
+
+{\bf Linearity}
+\[ DTFT[ax(n) + by(n)] = aX(e^{jw}) + bY(e^{jw})\]
+
+{\bf Time Translation}
+\[ DTFT[x(n-n_0)] = e^{-jwn_0} X(e^{jw})\]
+
+{\bf Frequency Translation}
+\[ DTFT[e^{jw_0n} x(n)] = X(e^{j(w-w_0)})\]
+
+{\bf Multiplied by n}
+\[ DTFT[nx(n)] = j\frac{X(e^{jw})}{dw}\]
+
+{\bf Conjugate}
+\[ DTFT[x^*(n)] = X^*(e^{-jw}) \]
+\[ DTFT[x^*(-n)] = X^*(e^{jw}) \]
+
+{\bf Symmetry}
+
+Conjugate symmetric sequence
+\[ x_e(n) = x_e^*(-n)\]
+Based on that, we can write the following 2 equations
+\begin{align*}
+	x_e(n) & = x_{er}(n) + jx_{ei}(n)\\
+	x_e^*(-n) & = x_{er}(-n) - jx_{ei}(-n)
+\end{align*}
+then we can conclude that the real part $x_{er}$ is even, while the imaginary
+part $x_{ei}$ is odd.
+
+Conjugate antisymmetric sequence
+\[ x_o(n) = - x_o^*(-n)\]
+Its real part $x_{or}$ is odd, and its imaginary part $x_{oi}$ is even.
+
+What good will them do? Generally a sequence can be represented by
+a conjugate symmetric sequence and a conjugate antisymmetric sequence,
+\emph{i.e.}
+\[ x(n) = x_e(n) + x_o(n)\]
+where
+\[ x_e(n) = \frac{1}{2} [x(n) + x^*(-n) ]\]
+\[ x_o(n) = \frac{1}{2} [x(n) - x^*(-n) ]\]
+
+Similarly,
+\[ X(e^{jw}) = X_e(e^{jw}) + X_o(e^{jw})\]
+where $X_e(e^{jw}) = X_e^*(e^{-jw})$, $X_o(e^{jw}) = -X_o^*(e^{-jw})$,
+and they can also be respresented by the original spectrum
+\begin{align*}
+	X_e(e^{jw}) &= \frac{1}{2} [X(e^{jw}) + X^*(e^{-jw})] \\
+	X_o(e^{jw}) &= \frac{1}{2} [X(e^{jw}) - X^*(e^{-jw})] 
+\end{align*}
+
+\ldots
+
+\[ \Re[x(n)] \leftrightarrow X_e(e^{jw}) \]
+\[ j\Im[x(n)] \leftrightarrow X_o(e^{jw}) \]
+\[ x_e(n) \leftrightarrow \Re[X(e^{jw})] \]
+\[ x_o(n) \leftrightarrow j\Im[X(e^{jw})] \]
+
+{\bf Time-domain Convolution}
+
+\[ x(n)*y(n) \leftrightarrow X(e^{jw}) Y(e^{jw})\]
+
+{\bf Freq-domain Convolution}
+
+\[ x(n)y(n) \leftrightarrow \frac{1}{2\pi} X(e^{jw}) * Y(e^{jw}) 
+	= \frac{1}{2\pi} \int_{-\pi}^\pi X(e^{j\theta}) Y(e^{j(w - \theta)}) d\theta \]
+
+{\bf Parseval}
+
+\[ \sum_{n=-\infty}^\infty |x(n)|^2 = \frac{1}{2\pi} \int_{-\pi}^\pi |X(e^{jw})|^2 dw\]
+
+\subsubsection{Frequently Used DTFT Result}
+\[ \delta(t) \leftrightarrow 1 \]
+\[ 1 \leftrightarrow 2\pi \sum_{l=-\infty}^\infty \delta(\omega - 2\pi l) \]
+\[ u(n) \leftrightarrow \frac{1}{1-e^{-jw}} \]
+\[ R_N(n) \leftrightarrow \sum_{n=0}^{N-1} e^{-jwn} = e^{-j\frac{(N-1)w}{2}} \frac{\sin(wN/2)}{\sin(w/2)} \]
+\[ a^n u(n) \leftrightarrow \frac{1}{1-ae^{-jw}} \]
+
+\subsection{Z Transform}
+
+\subsubsection{Z Transform}
+\[ X(z) = \sum_{n=-\infty}^\infty x(n) z^{-n} \]
+The condition that the Z transform of a given signal exists is
+\[ \sum_{n=-\infty}^\infty | x(n) z^{-n} | < \infty \]
+
+the relationship between DTFT and Z transform
+\[ X(z) \big|_{z=e^{jw}} = \sum_{n=-\infty}^\infty x(n)e^{-jwn}  \]
+
+\subsubsection{Frequently used Z transform results}
+
+\[ \delta(n) \leftrightarrow 1, 0 \leq |z| \leq \infty \]
+\[ u(n) \leftrightarrow \frac{1}{1-z^{-1}}, 1 < |z| \]
+\[ a^n u(n) \leftrightarrow \frac{1}{1-az^{-1}}, |a| < |z| \]
+\[ -a^n u(-n-1) \leftrightarrow \frac{1}{1-az^{-1}}, |z| < |a| \]
+\[ R_N(n) \leftrightarrow \frac{1-z^{-N}}{1-z^{-1}}, 0 < |z| \leq \infty \]
+
+\subsubsection{Inverse Z Transform}
+According to Cauthy integration law, i.e.
+\[ \frac{1}{j2\pi} \oint_c z^{k-1} dz = 1 \{k = 0\} + 0 \{k \neq 0\} \]
+the IZT
+\[ x(n) = \frac{1}{j2\pi} \oint_c X(z)z^{n-1} dz \]
+
+For instance, using long division we can obtain 
+\[ 1/(1-az^{-1}) = \sum_{n=0}^\infty a^n z^{-n} = a^n u(n) , |z|>|a|\]
+
+Partial fraction expansion
+\begin{align*}
+X(z) &= \frac{b_0 + b_1 z^{-1} + \ldots + b_M z^{-M}}{1 + a_1 z^{-1} + \ldots + a_N z^{-N}} \\
+&= \sum_{k=1}^N \frac{r_k z}{z - p_k} + \{M\geq N\} \sum_{k=0}^{M-N} c_k z^{-k}
+\end{align*}
+where the first order reserved number can be obtained with
+\[ r_k = X(z)(1-p_k z^{-1}) \big|_{z=p_k} \]
+
+with the help of the law of reserved number
+\[ \frac{1}{j2\pi} \oint_c X(z)z^{n-1} dz = \sum_{k=1}^{L_1} Res[X(z)z^{-1}, p_k] \]
+first ordered reserve number
+\[ \sum_{k=1}^{L_1} Res[X(z)z^{-1}, p_k] = X(z)z^{n-1}(z-p_k)|_{z=p_k} \]
+m-ordered reserve number
+\[ \sum_{k=1}^{L_1} Res[X(z)z^{-1}, p_k] = \frac{1}{(m-1)!} \frac{d^{m-1}}{dz^{m-1}}
+ [(z-p_k)^m X(z) z^{n-1} ]|_{z=p_k} \]
+the auxiliary law of residue sometimes helps too.
+
+\subsubsection{Z transform property}
+
+linearity
+\[ ax(n)+by(n) \leftrightarrow aX(z)+bY(z)\]
+its ROC is the intersection of X(z) and Y(z).
+
+shift
+\[ x(n-n_0) \leftrightarrow z^{-n_0}X(z), ROC same\]
+
+multiplied by exponential term
+\[ a^n x(n) \leftrightarrow X(a^{-1}z), ROC bound *|a| \]
+
+numtiplied by n
+\[ nx(n) \leftrightarrow -z dX(z)/dz, ROC same\]
+
+reverse
+\[ x(-n) \leftrightarrow X(1/Z), ROC bound \leftarrow 1/bound\]
+
+conjugate
+\[ x^*(n) \leftrightarrow X^*(z^*) , ROC same\]
+\[ x^*(-n) \leftrightarrow X^*(1/z^*) , ROC bound \leftarrow 1/bound\]
+
+convolution
+\[ x(n)\ast y(n) \leftrightarrow X(z)Y(z), ROC intersection\]
+
+\[ x(n)y(n) \otimes 1/(j2\pi) \oint_c X(v)Y(z/v)v^{-1} dv, ROC boundX*boundY\]
+
+real and imagine
+\[ \Re[x(n)] \otimes (X(z)+X^*(z^*))/2, ROC same\]
+\[ j\Im[x(n)] \otimes (X(z)-X^*(z^*))/2, ROC same\]
+
+\subsubsection{Discrete time LTI system}
+\[ H(z) = \frac{Y(z)}{X(z)} = \frac{\sum\limits_{i=0}^M b_i z^{-1} }{1 + \sum\limits_{k=1}^N a_k z^{-k} }
+= b_0 z^{N-M} \frac{\prod\limits_{i=1}^M (z-z_i)}{\prod\limits_{k=1}^N (z-p_k) } \]
+
+In a causal system, the peak points of $H(z)$ should be located inside
+a certain circle, to which its ROC should be complement.
+Besides, in a stable system, the ROC of $H(z)$ must contain the unit circle,
+and there should be no peak points in its ROC. 
+Ultimatyly, in a causal stable system its ROC must satisfy that
+$r < |z| \leq \infty, 0<r<1$,
+and that is to say, all peak points are enclosed by the unit circle.
+
+
+ Double side Z transform
+ \[ F(z) = \sum_{k=-\infty}^\infty f(kT) z^{-k}\]
+ Single side Z transform
+ \[ F(z) = \sum_{k=-\infty}^\infty f(kT)\varepsilon(k)z^{-k} = \sum_{k=0}^\infty f(kT) z^{-k}\]
+ where $z = e^{sT}$.
+
+ \subsubsection{Region of Convergence, ROC}
+
+ Sufficient and Necessary condition supporting that Z transformation equation converges
+ \[ \sum_{k=-\infty}^\infty \big| f(k)z^{-k} \big| < \infty\]
+
+ \[ \delta(k) \leftrightarrow 1 \text{ , ROC } \forall z \in \mathcal{C} \]
+ \[ \varepsilon(k) \leftrightarrow \frac{1}{1-z^{-1}} \text{ , ROC } |z| > 1\]
+ \[ a^k\varepsilon(k) \leftrightarrow \frac{1}{1-az^{-1}} \text{ , ROC } |z| > |a|\]
+ \[ a^k\varepsilon(-k-1) \leftrightarrow \frac{-1}{1-az^{-1}} \text{ , ROC } |z| < |a|\]
+
+ \subsubsection{Z Transform Properties}
+ Assume that $f(t) \leftrightarrow F(z)$ with ROC $\alpha < |z| < \beta$.
+ 
+ {\bf Linearity}
+
+ \[ af(t) + bg(t) \leftrightarrow aF(z) + bG(z) \]
+
+ {\bf Translation}
+
+ \[ f(k\pm m) \leftrightarrow z^{\pm m} F_b(z) \text{ , ROC } \alpha < |z| < \beta\]
+ \[ f(k - m) \leftrightarrow z^{-m}F(z) + \sum_{k=0}^{m-1} f(k-m)z^{-k} \text{, ROC } |z| > \alpha\]
+ 
+ \[ \text{{\it e.g.   }} \delta(k-mN) \leftrightarrow z^{-mN}\]
+
+ {\bf Z-domain scaling}
+
+ \[ a^k f(k) \leftrightarrow F(\frac{z}{a}), \alpha|a| < |z| < \beta|b| \]
+
+ {\bf Convolution}
+
+ \[ f(k) * g(k) = F(z)G(z) \]
+
+ {\bf Z-domain differentiation}
+
+ \[ kf(k) \leftrightarrow -z \frac{d}{dz} F(z), \alpha < |z| < \beta\]
+
+ \[ k^m f(k) \leftrightarrow [-z\frac{d}{dz}]^m F(z), \alpha < |z| < \beta\]
+
+ {\bf Z-domain integration}
+
+ \[ \frac{f(k)}{k+m} \leftrightarrow z^m \int_z^\infty \frac{F(\eta)}{\eta^{m+1}} d\eta, k+m > 0, \alpha < |z| < \beta\]
+
+ {\bf Z-domain reversal}
+
+ \[ f(-k) \leftrightarrow F(z^{-1}), \frac{1}{\beta} < |z| < \frac{1}{\alpha} \]
+
+ {\bf Partial Sum}
+
+ \[ \sum_{i=\infty}^k f(i) \leftrightarrow \frac{z}{z-1}F(z), max(\alpha, 1) < |z| < \beta\]
+
+ \subsubsection{Inverse Z-Transform}
+
+ Ref DSP:IZT subsection in this note.
+
+\subsection{Discrete Fourier Transform}
+
+ \subsubsection{Discrete Fourier Series (DFS)}
+
+ \[ \text{Given } x_N(k) = x_N(k + lN), l \in \mathcal{Z}\]
+
+Let $W_n = e^{-j\frac{2\pi}{N}}$, then DFS and IDFS can be calculated
+as following equations respectively,
+\[ \tilde{X}(k) = \sum_{n=0}^{N-1} \tilde{x}(n)W_N^{kn} \]
+\[ \tilde{x}(k) = \frac{1}{N} \sum_{k=0}^{N-1} \tilde{X}(k)W_N^{-kn} \]
+
+ \subsubsection{Discrete Fourier Transform (DFT)}
+
+\[ X(k) = \sum_{n=0}^{N-1} x(n)W_N^{kn}, 0\leq k\leq N-1 \]
+\[ x(n) = \frac{1}{N} \sum_{k=0}^{N-1} X(k)W_N^{-kn}, 0\leq n\leq N-1 \]
+
+relationship between DFT and ZT
+\[ X(k) = X(z)|_{z=e^{j\frac{2\pi}{N}k}}, 0\leq k\leq N-1 \]
+relationship between DFT and DTFT
+\[ X(k) = X(e^{jw})|_{w=e^{\frac{2\pi}{N}k}}, 0\leq k\leq N-1 \]
+
+\subsubsection{DFT properties}
+
+ \begin{quote}
+  \begin{align*}
+   f(k)\circledast g(k) &= \sum_{m=0}^{N-1} f(m)g((k-m))_N \\
+   f(k)\circledast g(k) &= F(n)G(n) \\
+  \end{align*}
+ \end{quote}
+
+due to implicit periodicity of $W_N^k$, i.e.
+$W_N^k = W_N^{k+lN}, k,l,N\in \mathcal{Z}$,
+the following equations always hold,
+\[ X(k+lN) = X(k), 0\leq k\leq N-1\]
+\[ x(n+lN) = x(n+lN), 0\leq n\leq N-1\]
+
+linearity
+
+circular shift
+\[ x(mod(n+n_0, N))R_N(n) \otimes W_N^{-kn_0} X(k), 0\leq k\leq N-1\]
+\[ W_N^{ln} X(k) \otimes X(mod(k+l, N))R_N(k),  0\leq k\leq N-1\]
+
+circular convolution
+\[ x(n) \circledast y(n) \otimes X(k)Y(k)\]
+\[ x(n)y(n) \otimes \frac{1}{N} X(k)\circledast Y(k)\]
+Only when the length of circular convolution $L$ is greater or equal
+to the sum of length of two operands sequences minus one, \emph{i.e.}
+$L\leqslant N+M-1$, the result of circular convolution is the same
+with that of linear convolution.
+
+complex conjugate sequence
+\[ x^*(n) \otimes X^*(N-k) \]
+\[ x^*(N-n) \otimes X^*(k) \]
+
+conjugate symmetry
+\[ \Re[x(n)] \otimes X_{ep} = \frac{1}{2} [X(k)+X^*(N-k)]\]
+\[ j\Im[x(n)] \otimes X_{op} = \frac{1}{2} [X(k)-X^*(N-k)]\]
+\[ x_{ep} = \frac{1}{2} [x(n)+x^*(N-n)] \otimes \Re[X(k)]\]
+\[ x_{op} = \frac{1}{2} [x(n)-x^*(N-n)] \otimes j\Im[X(k)]\]
+
+real sequence
+\[ x(n) = \Re[x(n)] \otimes X(k) = X^*(N-k) \]
+\[ x(n) = x(N-n) \otimes X(k) = X(N-k) \]
+\[ x(n) =-x(N-n) \otimes X(k) =-X(N-k) \]
+
+\subsection{Fast Fourier Transform}
+
+DFT
+\[ X(k) = \sum_{n=0}^{N-1} x(n)W_N^{kn} \]
+IDFT
+\[ x(n) = \frac{1}{N} \sum_{k=0}^{N-1} X(k) W_N^{-kn}\]
+where $W = e^{j\frac{2\pi}{N}}$
+
+For a sequence of length $N$, we need to perform $N$ times of complex multiplication
+and $(N-1)$ times of complex addition with respect to each $k$. Hence the total
+calculation complexity is $N\times [N + (N-1)] \approx 2N^2$, or $O(N^2)$ in time complexity.
+
+\subsubsection{Base 2 DIT-FFT}
+decimation in time, base 2 fft, in brief DIT-FFT.
+
+Assume we have a signal $x(n)$ of length $N$, where $N=2^M, M\in \mathcal{Z}$,
+with the help of several properties of $W$ as shown below, where $W_N = e^{-j\frac{2\pi}{N}}$,
+\[ W_N^{m+lN} = e^{-j\frac{2\pi}{N}(m+lN)}= W_N^m , l \in \mathcal{Z}\]
+\[ W_N^{-m} = W_N^{N-m} \]
+\[ W_N^{m+\frac{N}{2}} = -W_N^m \]
+\[ W_N^{mk} = W_{N/k}^m\]
+we first split the sigal/sequence $x(n)$ into even and odd subsequences,
+{\it i.e.} $x_1(r) = x(2r), 0 \leq r \leq N/2-1$ and $x_2(r) = x(2r+1), 0 \leq r \leq N/2-1$.
+Then the DFT of signal $x(n)$ can be transformed into
+\begin{align*}
+X(k) &= \sum_{n \in \{2r\}} x(n) W_N^{kn} + \sum_{n \in \{2r+1\}} x(n) W_N^{kn}\\
+ &= \sum_{r=0}^{N/2-1} x(2r)W_N^{2rk} + \sum_{r=0}^{N/2-1} x(2r+1)W_N^{(2r+1)k}\\
+ &= \sum_{r=0}^{N/2-1} x_1(r)W_N^{2rk} + W_N^{k} \sum_{r=0}^{N/2-1} x_2(r)W_N^{2rk}\\
+ &= \sum_{r=0}^{N/2-1} x_1(r)W_{N/2}^{rk} + W_N^{k} \sum_{r=0}^{N/2-1} x_2(r)W_{N/2}^{rk}\\
+ &= X_1(k) + W_N^k X_2(k), 0 \leq k \leq N-1
+\end{align*}
+Furthermore, with the help of the following 3 clues,
+\begin{align*}
+X_1(k+N/2) &= X_1(k), 0\leq k \leq N/2-1 \\
+X_2(k+N/2) &= X_2(k), 0\leq k \leq N/2-1 \\
+W_N^{k+N/2} & = e^{-j\pi}W_N^k = -W_N^k
+\end{align*}
+we then obtain
+\begin{align*}
+X(k) &= X_1(k) + W_N^k X_2(k), 0\leq k \leq N/2-1\\
+X(K+N/2) &= X_1(k) - W_N^k X_2(k), 0\leq k \leq N/2-1
+\end{align*}
+
+After several times of decomposition by butterfly computation,
+the calculation complexity becomes
+$\frac{N}{2}\log_2 N$ on complex multiplication operation and
+$N \log_2 N$ on complex summation operation.
+
+{\bf Example}:
+
+To get a mapping, for usage in the reduce step,
+of the given sequence \verb|x = [ 0:7 ].'|,
+\[
+\begin{bmatrix} 0\\ 1\\ 2\\ 3\\ 4\\ 5\\ 6\\ 7 \end{bmatrix}
+\xrightarrow[0246\atop 1357]{Exchange}
+{\substack{
+\begin{bmatrix} 0\\ 2\\ 4\\ 6 \end{bmatrix} \\
+\begin{bmatrix} 1\\ 3\\ 5\\ 7 \end{bmatrix}
+}}
+\xrightarrow[04\atop{26\atop{15\atop 37}}]{Exchange}
+{\substack{
+\begin{bmatrix} 0\\ 4\\ \end{bmatrix} \\
+\begin{bmatrix} 2\\ 6\\ \end{bmatrix} \\
+\begin{bmatrix} 1\\ 5\\ \end{bmatrix} \\
+\begin{bmatrix} 3\\ 7 \end{bmatrix}
+}}
+\xrightarrow[0\atop{4\atop{2\atop{6\atop{1\atop{5\atop{3\atop 7}}}}}}]{Exchange}
+{\substack{
+\begin{bmatrix} 0\\ \end{bmatrix} \\
+\begin{bmatrix} 4\\ \end{bmatrix} \\
+\begin{bmatrix} 2\\ \end{bmatrix} \\
+\begin{bmatrix} 6\\ \end{bmatrix} \\
+\begin{bmatrix} 1\\ \end{bmatrix} \\
+\begin{bmatrix} 5\\ \end{bmatrix} \\
+\begin{bmatrix} 3\\ \end{bmatrix} \\
+\begin{bmatrix} 7 \end{bmatrix}
+}}
+\]
+
+To reduce the mapped sequence, yielding the FFT result. 
+(let $\bowtie$ denotes the butterfly computation)
+\[ 
+% column 1
+{\substack{
+\begin{bmatrix} 0\\ 4\\ \end{bmatrix} \xrightarrow[W_2^0]{\bowtie} \\
+\begin{bmatrix} 2\\ 6\\ \end{bmatrix} \xrightarrow[W_2^0]{\bowtie} \\
+\begin{bmatrix} 1\\ 5\\ \end{bmatrix} \xrightarrow[W_2^0]{\bowtie} \\
+\begin{bmatrix} 3\\ 7 \end{bmatrix} \xrightarrow[W_2^0]{\bowtie}
+}}
+% column 2
+{\substack{
+  {\substack{
+\begin{bmatrix} 4\\ -4 \end{bmatrix} \\
+\begin{bmatrix} 8\\ -4 \end{bmatrix}
+  }}
+\xrightarrow[\substack{W_4^0\\W_4^1}]{\bowtie}\\
+  {\substack{
+\begin{bmatrix} 6\\ -4 \end{bmatrix} \\
+\begin{bmatrix} 10\\ -4 \end{bmatrix}
+  }}
+\xrightarrow[\substack{W_4^0\\W_4^1}]{\bowtie}
+}}
+% column 3
+{\substack{
+\begin{bmatrix} 12 \\ -4 +  4i\\ -4 \\ -4 -  4i \end{bmatrix} \\
+\begin{bmatrix} 16 \\ -4 +  4i\\ -4 \\ -4 -  4i \end{bmatrix} }}
+\xrightarrow[\substack{W_8^0\\W_8^1\\W_8^2\\W_8^3}]{\bowtie}
+\begin{bmatrix}
+   28\\
+   -4 +  9.6569i\\
+   -4 +  4i\\
+   -4 +  1.6569i\\
+   -4\\
+   -4 -  1.6569i\\
+   -4 -  4i\\
+   -4 -  9.6569i
+\end{bmatrix}
+\]
+The final column vector is actually the FFT result. Note, the butterfly computation goes like this form
+\[ \begin{bmatrix} a \\ b \end{bmatrix} \xrightarrow[w]{\bowtie}
+ \begin{bmatrix} a + wb \\ a - wb \end{bmatrix}
+\]
+
+Code:
+{\footnotesize%
+\begin{lstlisting}[caption={FFT Demo},numbers=none]
+%!/usr/bin/octave
+% FFT Demo
+x_orig = [ 0 : 7 ]
+% map
+x = [ 0 4 2 6 1 5 3 7 ]
+% reduce step 1
+w2 = exp(-j * (2*pi) / 2) .^ [ 0 ].';
+x11 = [ x(1) + w2.*x(2); x(1) - w2.*x(2) ]
+x12 = [ x(3) + w2.*x(4); x(3) - w2.*x(4) ]
+x21 = [ x(5) + w2.*x(6); x(5) - w2.*x(6) ]
+x22 = [ x(7) + w2.*x(8); x(7) - w2.*x(8) ]
+% reduce step 2
+w4 = exp(-j * (2*pi) / 4) .^ [ 0 1 ].';
+x1 = [ x11 + w4 .* x12; x11 - w4 .* x12 ]
+x2 = [ x21 + w4 .* x22; x21 - w4 .* x22 ]
+% reduce step 3
+w8 = exp(-j * (2*pi) / 8) .^ [ 0 1 2 3 ].';
+X  = [ x1 + w8 .* x2; x1 - w8 .* x2 ]
+% Code: ./code/fft_demo.m
+\end{lstlisting}
+}
+\href{https://en.wikipedia.org/wiki/Cooley-Tukey_FFT_algorithm|}
+{See: Wikipedia}.
+
+\subsubsection{Base 2 DIT-IFFT}
+
+This is the form of another kind of butterfly computation, used in this IFFT,
+\[ \begin{bmatrix} a \\ b \end{bmatrix} \xrightarrow[w]{\bowtie\prime}
+ \begin{bmatrix} a + b \\ (a - b)w \end{bmatrix}
+\]
+
+{\footnotesize%
+\begin{verbatim}
+X0 -\ /- 1/2      -\ /- 1/2      -\/- 1/2     - x0
+X1 -\ /- 1/2      - o - 1/2      -/\- W_N^0/2 - x4
+X2 - o - 1/2      - o - W_N^0/2  -\/- 1/2     - x2
+X3 - o - 1/2      -/ \- W_N^-2/2 -/\- W_N^0/2 - x6
+X4 - o - W_N^0/2  -\ /- 1/2      -\/- 1/2     - x1
+X5 - o - W_N^-1/2 - o - 1/2      -/\- W_N^0/2 - x5
+X6 -/ \- W_N^-2/2 - o - W_N^0/2  -\/- 1/2     - x3
+X7 -/ \- W_N^-3/2 -/ \- W_N^-2/2 -/\- W_N^0/2 - x7
+\end{verbatim}
+}
+
+
+
+\subsection{System Function}
+
+ The system function of an LTI system is a function of $s$ or $z$, which seems like
+ \[ H(\cdot) = \frac{B(\cdot)}{A(\cdot)} \] 
+ For example,
+ \[H(s) = \frac{b_m \prod_{j=1}^m (s - \zeta_j)}{\prod_{i=1}^n (s - p_i)} \]
+ where $\zeta_j$'s are called zero points, $p_i$'s are called polar points.
+
+ The form of the responce of a system can be asured with the help of polar points.
+ For continuous systems ($s$) the polar points can be classificated into 3 cases by location.
+ (1) When $\sigma < 0$, the time going, the amplitude of response will decrease as well,
+ which means that the system is stable.
+ (2) When $\sigma = 0$, the amplitude of responce is a constant.
+ (3) When $\sigma > 0$, the amplitude of responce will increase as the time goes by.
+ Both case (2) and (3) are unstable systems.
+ For the polar points in discrete systems ($z$), (1) when $|z|=1$, the amplitude of
+ responce is invariant to time; (2) when $|z| < 1$, decrease or periodic; (3) when $|z|>1$,
+ increasing.
+
+ \subsubsection{Causal, stability}
+ 
+ For continuous causal system $h(t) = 0 , t < 0$, and $\Re[s]>\sigma_0$ is the ROC of $H(s)$.
+ For discrete causal system $h(k)=0, k<0$, and $|z|>\rho_0$ is the ROC of $H(z)$.
+
+ For continuous stable system $\int\limits_{-\infty}^\infty |h(t)|dt \leqslant M$, where $M$ is a
+ constant. For discrete stable sytem $\sum\limits_{k=-\infty}^\infty |h(k)|\leqslant M$, where
+ $M$ is a constant.
+
+\subsection{Reference}
+
+ 1. Alan V. Oppenheim, {\it Signals \& Systems (Second Edition)}, Prentice-Hall.

@@ -1,0 +1,79 @@
+\section{Naive Bayes}
+
+Bayesian decision theory is a fundamental measure for making decisions in the
+probablistic way. Assume there are $N$ possible class labels, i.e.
+$Y=\{c_1,c_2,\ldots,c_N\}$, and $\lambda_{ij}$ is the loss when a sample in
+class $c_j$ is mis-classified into class $c_i$. The expected loss, or say
+conditional risk, when $x$ is classified as $c_i$ can be obtained with
+posteriori $P(c_i|x)$:
+
+$$ R(c_i|x) = \sum_{j=1}^N \lambda_{ij} P(c_j|x) $$
+
+Our mission is to find a criterion $h:X\mapsto Y$ such that the overall risk
+could be minimized: $ R(h) = E_x [R(h(x)|x)] $. To find the Bayes optimal
+classifier, we follow the Bayes decision rule:
+
+$$ h^*(x) = \text{argmax}_{c\in Y} R(c|x)$$
+
+$R(h^*)$ is called the Bayes risk, and $1-R(h^*)$ reflects the best performance
+that the classifier could reach, which is the theoretical upper bound through
+machine learning.
+
+The classification loss could be $ \lambda_{ij} = \{i=j\}0 + \{i\ne j\}1 $.
+In this case the conditional risk can be written as $ R(c|x) = 1-P(c|x)$,
+and hence the Bayes optimal classifier is
+$$ h^*(x) = \text{argmax}_{c\in Y} P(c|x) $$
+
+Obviously in order to minimize the risk, we have to first obtain the posteriori
+$P(c|x)$. However, this is very hard to acquire in real life tasks. To this
+end, machine learning is going to estimate $P(c|x)$ as accurate as possible,
+from a finite dataset. There are two strategies to achieve this: (1)
+discriminative models: directly model $P(c|x)$; (2) generative models: model
+$P(x,c)$, then obtain $P(c|x)$ indirectly.
+
+For generative models, we have to consider $P(c|x) = P(x,c)/P(x) =
+P(c)P(x|c)/P(x)$.  The class priori $P(c)$ can be estimated by the frequency of
+samples of class $c$ in the dataset, when there are enough number of i.i.d.
+samples in the training set, according to the law of large numbers. However,
+many possible samples won't emerge in the training set, so directly predicting
+$P(x|c)$ by frequency is not applicable.
+
+The above discussion is for discrete variables. For continuous variables you
+can simply replace the probability mass function $P(.)$ with probability
+density function $p(.)$.
+
+{\bf Naive Bayes}. Obviously it's very hard to obtain $P(c|x)$ from finite
+training samples. To circumvent this obstacle, naive Bayes classifier employs
+"attribute conditional independence assumption", i.e.
+$P(x_i|y,x_1,\ldots,x_{i-1},x_{i+1},\ldots,x_n)=P(x_i|y)$. Based on this
+assumption, the class-conditional probability (i.e. likelihood) can be
+re-written as
+
+$$ P(c|x) = \frac{P(c)P(x|c)}{P(x)} = \frac{P(c)}{P(x)} \prod_{i=1}^d P(x_i|c)$$
+
+For any class $P(x)$ is the same. So the naive Bayes classifier is
+
+$$ h_{nb}(x) = \text{argmax}_{c\in Y} P(c)\prod_{i=1}^d P(x_i|c) $$
+
+Clearly the training process is to estimate $P(c)$ and $P(x_i|c)$ from
+the training set $D$, as long as there is enough amount of i.i.d samples. 
+First, the class priori can be easily found: $P(c) = |D_c|/|D|$.
+Next, for discrete attributes, the conditional probability can be estimated
+as $P(x_i|c) = |D_{c,x_i}|/|D_c|$; for continous attributes we can use density
+functions such as the Gaussian.
+
+Sometimes the production would yield zero due to the absense of some certain samples
+in the training set. Such result doesn't make sense, so it has to be avoided.
+Laplacian correction is usually used as a smoothing method to mitigate this problem.
+
+\subsection{SKLearn}
+
+GaussianNB assumes the likelihood of the features to be Gaussian.
+
+$$ P(x_i|y) = \frac{1}{\sqrt{2\pi\sigma_y^2}} \exp\Big(-\frac{(x_i-\mu_y)^2}{2\sigma_y^2}\Big) $$
+
+See also MultinomialNB, ComplementNB, and BernoulliNB.
+
+\subsection{Reference}
+
+1. Zhihua Zhou, Machine Learning.

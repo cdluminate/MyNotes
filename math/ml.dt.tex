@@ -1,0 +1,84 @@
+\section{Decision Trees}
+
+Decision trees make decisions based on tree structures, which is a spontaneous
+mechanism used by human when they are facing decision problems. The objective
+of learning a decision tree is to obtain a well-generalized tree. The learning
+procedure follows the simple divide-and-conquer strategy.
+
+\begin{lstlisting}
+Input: training set D = {(x1,y1), (x2, y2), ..., (xm, ym)}
+       attribute set A = {a1, a2, ..., ad}
+Procedure:
+  function treeGenerate(D, A)
+    generate node
+    if all(x belongs to class C for x in D)
+      mark node as C-class leaf
+      return
+    end
+    if empty(A) or same_attr(D)
+      mark node as leaf, where the class is determined by voting result.
+      return
+    end
+    find the optimal attribute a*  <IMPORTANT>
+    for v in each value of a*
+      create a new branch on the node
+      Dv = [x for x in D if x.v = v]
+      if empty(Dv)
+        mark branch end as leaf, whose class is voted by D
+        return
+      else
+        use treeGenerate(Dv, A - a*) as the end of new branch    
+      end
+    end
+  end
+\end{lstlisting}
+
+We hope the samples included by a node become more and more pure (i.e. belong
+to the same class) as the tree grows. And information entropy is exactly a good
+fit for this purpose. Assume the ratio of k-class samples in the sample set D
+is $p_k (k=1,2,\ldots)$, then the information entropy of $D$ is defined as $$
+E(D) = -\sum_{k=1}^{\cdots} p_k \log _2 p_k $$ The lower the value of $E(D)$
+is, the more pure the set $D$ would be. Following this idea, we can calculate
+the information gain when attribute $a$ is used to split set $D$: $$ G(D,a) =
+E(D) - \sum_{v=1}^V \frac{|D^v|}{|D|} E(D^v) $$ The famous decision tree
+learning algorithm ID3 uses exactly such information gain to choose the optimal
+attribute. More advanced algorithm C4.5 chooses to use gain ratio instead of
+information gain to avoid some deficiencies. Apart from that, the Gini index
+can also be used as reference for selecting attributes.
+
+Decision trees also overfits. Tree pruning is the main measure to battle
+against overfitting and to learn better generalized decision trees.
+There are 2 fundamental pruning strategies: prepruning and postpruning.
+
+Decision trees can not only deal with discrete values, but also continuous
+values and missing values. Apart from univariable decision trees, there are
+works related to multivariate decision trees.
+
+\subsection{SKLearn (Python)}
+
+Decision trees are a non-parametric supervised learning method used for
+classification and regression. The sklearn documentation has made a good
+summary on the pros and cons of decision trees.
+
+Pros: \begin{enumerate}
+\item simple to understand, interpret and visualize.
+\item requires little data preparation.
+\item the cost of using the tree is logarithmic in the size of training set.
+\item able to handle both numerical and categorical data.
+\item able to handle multi-output problems.
+\item uses a white box model.
+\item possible to validate a model using statistical tests.
+\item performes well even if its assumptions are somewhat violated by the true model.
+\end{enumerate}
+
+Cons: \begin{enumerate}
+\item can create over-complex trees that do not generalize well.
+\item unstable because small variations in the data may result in different tree being generated.
+\item the problem of learning an optimal decision tree is known to be NP-complete.
+\item there are concepts that are hard to learn because decision trees do not express them easily.
+\item decision tree learners create biased trees if some classes dominate.
+\end{enumerate}
+
+\subsection{Reference}
+
+1. Zhihua Zhou, Machine Learning.

@@ -1,0 +1,78 @@
+Stanford CS224N: Natural Language Processing with Deep Learning
+===============================================================
+
+Also Ling284.
+
+Lec 01: Introduction
+--------------------
+
+What is NLP?
+
+  Goal: for computers to process or "understand" natural language in order
+  to perform tasks that are useful. However, fully understanding and
+  representing the meaning of language is a difficult goal.
+
+NLP Application.
+
+  Spell checking, information extraction, classification, machine translation,
+  dialog systems, question answering.
+
+What's special about human language?
+
+  Invariant across different encodings e.g. sound, vision.
+
+What's deep learning and why?
+
+  Most machine learning methods depend on human-designed representation and
+  input features. In this way machine learning becomes an optimization problem
+  to make a good prediction. Via Deep learning we can conduct representation
+  learning from "raw" data, in a supervised or unsupervised manner, which may
+  leads to improved performance.
+
+Why is NLP hard?
+
+  Complexity in representing, learning and using knowledge. Ambiguity.
+  Dependence on the real world.
+
+Lec 02:
+-------
+
+TODO
+
+Notes 01
+--------
+
+TODO: LINK
+
+Word vector
+~~~~~~~~~~~
+
+One-hot vector :math:`\in \Re^{V}` where :math:`V` is the size of vocabulary.
+
+words are independent to each other, i.e. does not give us any direct
+notation of similarity.
+
+SVD-Based Methods
+~~~~~~~~~~~~~~~~~
+
+Dataset :math:`X`, transformed into :math:`USV^T` by SVD factorization. The
+rows of matrix :math:`U` is used as word embedding. There are a few choices
+of :math:`X`.
+
+  (1) Word-document matrix. :math:`X \in \Re^{V\times M}` where :math:`V` is
+  the vocabulary size, :math:`M` is the number of document, :math:`X_{ij}` is
+  the word count of word :math:`i` in document :math:`j`.
+
+  (2) Window-based co-occurrence matrix. :math:`X \in \Re^{V\times V}`, where
+  :math:`X_{ij}` is the count of word :math:`j` in the window with word
+  :math:`i` as the center.
+
+Iteration-Based Methods
+~~~~~~~~~~~~~~~~~~~~~~~
+
+word2vec (software): 2 algorithms: CBoW + skip-gram. 2 training methods:
+negative sampling + hierarchical softmax.
+
+  CBow: :math:`p(w_t | context)`; skip-gram: :math:`p(context | w_t)`
+
+TODO
