@@ -1,0 +1,445 @@
+\documentclass[12pt,a4paper]{article} \usepackage{kurier}
+% CJK utf8
+\usepackage{CJKutf8}
+% CJKulem : such as uline
+\usepackage{CJKulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{geometry}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\usepackage{color}
+
+\columnseprule=0.4pt
+
+\geometry{left=1cm,right=1cm,top=1cm,bottom=2cm}
+\begin{titlepage}
+\title{Mathematic Modeling the Outline\\ -- 数学建模知识点大纲 --}
+\author{$e^{\imath \theta} = \cos(\theta) + \imath \sin(\theta)$ \\ Lumin\\cdluminate@163.com\\\texttt{This Document is distributed under the MIT license.} }
+\date{\today}
+\end{titlepage}
+
+% ----start document----
+\begin{document}
+\begin{CJK}{UTF8}{gkai}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Optimization Model}
+\begin{multicols}{2}
+	\subsection{Lineaer Programming}
+		\subsubsection{Standard Form}
+			The object is
+			\[ Minimize\, Z = C^T X \]
+			Subject to
+			\[ Ax = b \]
+			Bounds
+			\[ x \geqslant 0 \]
+			Where
+			\[ C = \begin{bmatrix} c_1 \\ c_2 \\ \ldots \\ c_n \end{bmatrix} , x = \begin{bmatrix} x_1 \\ x_2 \\ \ldots \\ x_n \end{bmatrix} , A = \begin{bmatrix} a_{11} & \ldots \\ \ldots  & a_{nn} \end{bmatrix} , b = \begin{bmatrix} b_1 \\ b_2 \\ \ldots \\ b_n \end{bmatrix} \]
+		\subsubsection{Standarlization Methods}
+			\begin{itemize}
+			\item 最大最小转换：$Z' = -Z$
+			\item 不等式约束变为等式约束：不等式中添加松弛变量/剩余变量$x_{n+i}$。
+			\item $b_i \geq 0, (i = 1,2,\ldots,n)$，乘$-1$反转公式以标准化。
+			\item $X_i$ 无限制时，引入非负变量$m,n$，令$x_i = m - n$ 并代入目标方程，转化为非负限制。
+			\end{itemize}
+		\subsubsection{Solving}
+			图解法。单纯形法（需求标准式或矩阵式问题）。
+		\subsubsection{Application}
+			各类资源规划，投资，生产/存储控制，下料。
+	\subsection{Integer Linear Programming}
+		分支界定法 Branch\&Cut
+	\subsection{Mixed Integer Programming}
+	\subsection{Dynamic Programming}
+		\subsubsection{Basic Concept}
+			\begin{enumerate}
+			\item Step $k = 1 \ldots n$
+			\item Status $S_k$
+			\item Decision $u_k(x_k)$
+			\item Policy \[ P_{kj} = { u_k(x_k), \ldots, u_j(x_j) } \]
+			\item Status Transition Equation \[ x_{k+1} = T_k (x_k, u_k (x_k) ) , k = 1, \ldots, n \]
+			\item Objective function \[ V_{k,n} (x_k, p_{k,n}(x_k) ) = \Phi_k (x_k, u_k, V_{k+1,n}) \]
+			\item Step Profit \[ V_{k,n}(x_k, p_{k,n}(x_k) = opt_{k\leq j \leq n} V_j(x_j,u_j) \]
+			\item Optimal Value Function \[ f_k(x_k) = opt V_{k,n} (x_k, p_{k,n}(x_k)) \]
+			\end{enumerate}
+		\subsubsection{Optimization Theory}
+			$\circ$ Bellman Optimization Theory
+		\subsubsection{逆序法，正序法}
+		\subsubsection{Applications}
+			When put Dynamic Programming into practice, pay attention to 1. definition of steps; 2. policies allowed within each step; 3. status transition equation.
+			\begin{itemize}
+			\item Shortest path problem
+			\item Knapsack Problem
+			\item Resource Assignment
+			\item \ldots
+			\end{itemize}
+	\subsection{Non-Linear Programming}
+		\subsubsection{Optimal problem without constraint}
+			General form \[ Min\, f(x), x = (x_1, x_2, \ldots, x_n)^T \in R^n \]
+			Local solution optimized $\to$ 一阶必要  \[ \nabla f(x^*) = 0 \]
+			Local solution optimized $\to$ 二阶充分  \[ \nabla f(x^*) = 0 \, and \,\nabla^2 f(x^*)\,is\,Positive\,definite \]
+		\subsubsection{Optimal problem with constraints}
+			General form \[ Min\, f(x)\, , x \in R \]
+			\[ s.t.\,\, c_i(x) = 0, i \in E = \{ 1,2,\ldots,l \} \]
+			\[            c_i(x) = 0, i \in I = \{ l+1,l+2,\ldots,l+m \}\]
+			Local solution optimized $\to$ 必要
+			\[ \exists vector\, \lambda^* \]
+			\[ \nabla_x L(x^*,\lambda^*) = \nabla f(x^*) + \sum_{i=1}^{l+m} \lambda_i^* \nabla c_i(x^*) = 0 \]
+			\[ c_i (x^*) = 0, i \in E \]
+			\[ c_i (x^*) \leq 0, i \in I \]
+			\[ \lambda_i^* \geq 0, i \in I \]
+			\[ \lambda_i^* c_i (x^*) = 0, i \in I \]
+			Where the $L$ is the Lagronge function \[ L(x,\lambda) = f(x) + \sum_{i=1}^{l+m} \lambda_i c_i (x)\]
+		\subsubsection{Application}
+			订购/存储模型，投资/组合问题\\
+			lingo例子\\
+			e.g. \[ min f(x) = 100 (x_2 - x_1^2)^2 + (1 - x_1)^2 \]
+			\begin{verbatim}
+sets:
+  var/1..2/: x;
+endsets
+[OBJ] min = x(1)^2 + x(2);
+[C1] x(1)^2 + x(2)^2 <= 9;
+[C2] x(1) + x(2) <= 1;
+@for(var: @free(x));
+			\end{verbatim}
+	\subsection{Software/Tools}
+		Matlab/Octave, Lingo/Lindo, IBM ILOG CPLEX.
+\end{multicols}
+
+\newpage
+\section{Dynamics Model}
+\begin{multicols}{2}
+	\subsection{Differential Function Model}
+		\subsubsection{Exponential Model}
+			\[ x(t + \Delta t) - x(t) = k x(t) \Delta t \]
+			when $\Delta x \to 0$
+			\[ \left\{  \begin{array}{l}
+				\frac{dx}{dt} = kx \\
+				x(0) = x_0
+				\end{array} \right.
+			\]
+			the solution
+			\[ x(t) = x_0 e^{kt} \]
+		\subsubsection{SI Model: susceptible infective : Logistic}
+			\[ s(t) + i(t) = N \]
+			\[ k(s) = \frac{ks}{N} = k(1- \frac{i}{n} )\]
+			\[ \left\{ \begin{array}{l}
+				\frac{di}{dt} = k(1-\frac{i}{n})s \\
+				x(0) = x_0
+				\end{array} \right.
+			\]
+			the solution
+			\[ x(t) = \frac{n}{ 1+(\frac{n}{x_0}) e^{-kt} -1   }  \]
+		\subsubsection{SIS Model}
+			\[ \left\{ \begin{array}{l}
+				\frac{dx}{dt} = k(1-\frac{x}{n})x -lx \\
+				x(0) = x_0
+				\end{array} \right.
+			\]
+		\subsubsection{SIR Model}
+			\[ \left\{ \begin{array}{l}
+				\frac{dx}{dt} = \frac{ksx}{n} - lx \\
+				\frac{ds}{dt} = - \frac{ksx}{n} \\
+				\frac{dr}{dt} = lx \\
+				x(0) = x_0,\, r(0) = r_0,\, s(0) = s_0
+				\end{array} \right.
+			\]
+	\subsection{Stability}
+		\begin{quote}定理: 设$x_0$ 是微分方程 $ dx(t)/dt = f(x) $ 的平衡点且 $f'(x_0) \neq 0$，
+		若$f'(x_0) \le 0 $ 则$ x_0$ 稳定；若 $f'(x_0) \ge 0$，则 $x_0$ 不稳定。
+		\end{quote}
+	\subsection{Application}
+		Best fishing strategy.
+	\subsection{Software}
+		Matlab:\\
+			dsolve, solver = \{ ode45, ode... \}
+
+\end{multicols}
+
+\newpage
+\section{Possibility}
+\begin{multicols}{2}
+	\subsection{Probability Base}
+		Include \cite{probbase}
+	\subsection{Computer Emulating - Monte Carlo}
+		Statistical simulation method: Combine the emulation of
+		random events with the probability feature of different kinds of random events.\\
+		e.g. Solve $ I = \int_a^b g(x) dx $ with Monte Carlo\\
+		sol. Cast uniformly randomized points to the rectangle range, then count how many point
+		dropped under the curve $g(x)$.\\
+		1. Build the probability model; 2. extract samples from known probability distributions;
+		3. Setup statistic variables in need.
+		\subsubsection{Monte Carlo Precision}
+			CLT: Central-Limit Theorem\\
+			1. Randomly Casting Points
+				\[ E(X) \approx \bar{p} = \frac{k}{n} \]
+			2. Mean Value
+				\[ \bar{x} = \frac{1}{n}(x_1 + x_2 + \ldots + x_n) = \frac{1}{n} \sum_{i=1}^n x_i\]
+	\subsection{Random Number Generator}
+		1. $ x_i = \lambda x_{i-1} (mod M) $.\\
+		2. $ x_i = (\lambda x_i + c)(mod M) $.\\
+		Tests:
+		\begin{enumerate}
+		\item Parameter test
+		\item Uniformity test
+		\item Independency test
+		\end{enumerate}
+		In matlab:\\
+			rand*, normrand
+	\subsubsection{Probability - Reference}
+		\begin{thebibliography}{9}
+		\bibitem{probbase} 概率论与数理统计，浙江大学出版社
+		\end{thebibliography}
+\end{multicols}
+
+\newpage
+\section{Graph Theory}
+\begin{multicols}{2}
+	\subsection{Basic concept of graph theory}
+		\begin{itemize}	
+		\item 矩阵\\
+			邻接矩阵 node - node\\
+			关联矩阵 node - edge\\
+			赋权矩阵 weight
+		\item 各种类型的图\\
+			完全图，立方体（偶图），完全偶图，赋权图，有向图,无向图\\
+			子图
+				\[ V' \subset V, E' \subset E \]
+			生成子图
+				\[ V' = V, E' \subset E \]
+			补图
+		\item 树\\
+			树，生成树，无向生成树
+		\end{itemize}
+	\subsection{一些定理}
+		\begin{enumerate}
+		\item Given simple graph G contains no isolated node,
+			and contains m edges, then the number of all generated
+			subgraph is $2^m$
+			\[ (_0^m) + (_1^m) + \ldots + (_m^m) = 2^m \]
+		\item For $\forall$ undirected graph
+			\[ \sum_{v \in V} d(v) = 2m \]
+		\item For $\forall$ directed graph
+			\[ \sum_{v \in V} d^+(v) + \sum_{v \in V} d^-(v) = m \]
+		\end{enumerate}
+	\subsection{Shortest Path Problem}
+		\subsubsection{Dijkstra Algorithm}
+			Base of this algorithm
+				\[ d(u_0, \bar{S}) = min_{u\in S, v\in \bar{S}} \{ d(u_0, u) + w (u, v) \} \]
+			where $u,v$ denotes the source and destination node,
+			$d(u,v)$ denotes the distance between u and v, 
+			$S \in V$ and $u_o \in S$ and $\bar{S} = V\\S$.\\
+			This algorithm can not only find the shortest path from $u_o$ to $v_0$, but also
+			all the shortest path from $u_o$ to any other nodes in graph $G$.
+		\subsubsection{Floyd Algorithm}
+			Get the minimum distance between to given nodes.
+	\subsection{Application}
+		\begin{enumerate}
+		\item 运输问题
+		\item 转运问题
+		\item 最优指派问题: 匈牙利算法
+		\item 中国邮递员问题: Fleury Algorithm
+		\end{enumerate}
+	\subsection{Euler Graph and Hamilton Cycle}
+		\subsubsection{Traveling Salesman Problem}
+			Figure out the Hamilton cycle which possess the minimum weight.\\
+			Assume that:
+			\begin{itemize}
+			\item $w_{ij}$ denotes the distance between city $i$ to city $j$
+			\item $x_{ij}$ denotes the decision if going from city $i$ 
+			\end{itemize}
+			The solution is:
+			\begin{equation} Minimize C = \sum_{i=1}^n \sum_{j=1}^n w_{ij} x_{ij} \end{equation}
+			s.t. :
+			\[ \sum_{i=1}^n x_{ij} = 1, j = 1,2, \ldots, n \]
+			\[ \sum_{j=1}^n x_{ij} = 1, j = 1,2, \ldots, n \]
+			\[ u_i - u_{j} + n x_{ij} \leqslant n - 1; i \ne j; i,j = 2,3, \ldots, n \]
+			\[ x_{ij} = 0 OR 1; i \ne j; i,j = 1,2, \ldots, n \]
+			\[ u_{j} \geqslant 0; j = 1,2, \ldots, n \]
+			Note that, there are some TSP example program available in the LINGO's user manual\cite{LINGO.pdf}.
+			\begin{verbatim}
+MODEL:
+	! traveling seller;
+SETS:
+	city/Pe T Pa M N L/: u;
+	link(city, city): w,x;
+endsets
+data:
+	!to Pe  T Pa  M  N  L;
+	w =  0 13 51 77 68 50
+	13  0 60 70 67 59
+	51 60  0 57 36  2
+	77 70 57  0 20 55
+	68 67 36 20  0 34
+	50 59  2 55 34  0;
+enddata
+
+n = @size(city);
+min = @sum(link: w * x);
+@for(city(k):
+	@sum(city(i)|i #ne# k: x(i,k)) = 1;
+	@sum(city(j)|j #ne# k: x(k,j)) = 1;
+);
+
+@for(link(i,j)|i #gt# 1 #and# j #gt# 1 #and# 1 #ne# j:
+	u(i) - u(j) + n*x(i,j) <= n-1;
+);
+
+@for(link: @bin(x));
+end
+\end{verbatim}
+	\subsection{Trees and spinning trees}
+		\subsubsection{无向生成树}
+			避圈法
+		\subsubsection{最优连线问题}
+			Kruskal
+		\subsubsection{最大流问题}
+	\subsection{Python3}
+		python3-networkx
+	\subsection{Matlab}
+		graph* function set:\\
+			graphminspantree\\
+			graphshortpath\\
+\end{multicols}
+
+\newpage
+\section{Statistics and Curve Fitting, Regression, Interpolation}
+\begin{multicols}{2}
+	\subsection{Clustering}
+	拟合，分段\newline
+	K-means：原则上需要预先知道类别数量。
+	\subsection{Regression, Curve Fitting}
+		Find a smooth curve witch matches data best, i.e. Minimize MSE.
+		No requirement that curve must cover all data.
+		\subsubsection{主要内容}
+			\begin{itemize}
+			\item 相关关系.数学表达式
+			\item 回归方程，回归预测
+			\item 估计的标准误差
+			\end{itemize}
+		\subsubsection{Single Variable Linear Regression}
+			\[ Y = a_0 + a_1 X + \varepsilon \] 
+			where
+			\[ \varepsilon_i \sim N(0,\sigma^2) \]
+			Object:
+			\[ Q = \sum{(y - y_c)^2} \]
+			Get the parameters: Least square Method
+		\subsubsection{Multi Variable Linear Regression}
+			TODO: svm :: svr ?
+			\[ Y = a_0 + a_1 X_1 + a_2 X_2 + \ldots + a_n X_n + \varepsilon \]
+		\subsubsection{Multi Variable Non-Linear Regression}
+			\[ Y = a_0 + a_1 x + a_2 x^2 + \ldots + a_n x^n \]
+		\subsubsection{keys}
+			\begin{itemize}
+			\item 选择主成分
+			\item 相关系数
+			\item 置信区间
+			\end{itemize}
+		\subsubsection{最小二乘拟合}
+			matlab: polyfit, polyval\\
+	\subsection{Interpolation}
+		Find function f, which matches all data, and f is similar to the true function.
+		e.g. Polinomial interpolation
+		\[ P_n (x) = a_0 + a_1 x + \ldots + a_n x^n \]
+		\subsubsection{1D Interpolation}
+			拉格朗日插值\\ 牛顿插值\\ 分段插值\\ 三次样条插值\\
+			e.g. 一次插值，线性插值：点斜式
+			\[ L_1(x) = y_0 + \frac{y_1 - y_0}{x_1 - x_0} (x - x_0) \]
+			e.g. 拉格朗日插值多项式\\
+			hint. 三次样条插值(三次多项，节点二阶倒数连续)比分段线性插值更加光滑。\\
+			matlab: interp1 \\
+		\subsubsection{2D Interpolation}
+			2 cases: Grid data points, Scattered data points.\\
+			Method: Nearest\\
+			Method: Piecewise interpolation\\
+			matlab: grid data: interp2\\
+			matlab: scatterd data: griddata\\
+		\subsubsection{Priciples}
+			Min RSS (Residual Sum of Squares).
+\end{multicols}
+	
+\section{Markov Chain}
+\begin{multicols}{2}
+	\subsection{placeholder}
+\end{multicols}
+
+\section{Fuzzy Mathematics}
+\begin{multicols}{2}
+	\subsection{Fuzzy Subset}
+		While the feature function of certain subset can be represented as the mapping
+		\[ X_A : U \to \{0,1\} \]
+		where $ X_A (x) = 1 $ when $ x \in A $.\\
+		秃头悖论。\\
+		The fuzzy subset $A \in U$ can be represented as the mapping
+		\[ A(x): U \to [0,1] \]
+		\subsubsection{$\lambda$ Cut Set}
+			\[ A_\lambda = \{ x | A(x) \geqslant \lambda \} \]
+		\subsubsection{Fuzzy Relationship}
+			While the classical 2 variable relationship can be represented as the mapping
+			\[ R : X \times Y \to \{ 0, 1 \} \]
+			which is in fact the feature function of subset $R$ of $X \times Y$.\\
+			The fuzzy relationship can be represented as the mapping
+			\[ R : X \times Y \to [ 0, 1 ] \]
+			The fuzzy matrix means \[ R_{m\times n}(i,j) = R(x_i,y_j) \]
+		\subsubsection{Fuzzy Relation Synthesis}
+			\[ R_1 \circ R_2 = (c_{ij})_{m\times n} \]
+			where
+			\[ c_{ij} = \vee \{ (a_{ik} \wedge b_{kj} | 1 \leq k \leq s \}\]
+		\subsubsection{Fuzzy Clustering}
+			\begin{itemize}
+			\item Data Standarlizing\\
+				1. 平移：标准差变换，极差变换
+			\item Fuzzy Likeness Matrix\\
+				1. Cosine of included angle\\
+				2. Correlation coefficient\\
+			\item Distances $r_{ij} = 1 - c d(x_i, x_j)$\\
+				1. Hamming Distance\\
+				2. Euclidean Distance\\
+				3. Chebyshev Distance\\
+			\item Fuzzy equivalant matrix
+			\end{itemize}
+\end{multicols}
+
+\section{排队论}
+
+\newpage
+\appendix
+\section{Paper composing}
+\begin{multicols}{2}
+	\begin{enumerate}
+	\item Background of problem
+	\item Assumptions
+	\item Setup the Mathematical Model
+	\item Get the solution of model
+	\item Model Analyzation
+	\item Model Validation
+	\end{enumerate}
+	\subsection{Reference Structure}
+	摘要
+	问题重述与分析
+	问题假设
+	符号说明
+	模型建立与求解
+	结果分析
+	模型检验
+	模型推广
+	模型评价
+	参考文献和附录
+\end{multicols}
+
+\newpage
+\section{Common References}
+\begin{thebibliography}{9}
+\bibitem{LINGO.pdf} LINGO 官方文档 \url{http://www.lindo.com/downloads/PDF/LINGO.pdf}
+\bibitem{} 数学建模基础（第二版），薛毅，科学出版社
+\bibitem{} \href{https://github.com/CDLuminate/mathmod}{本文的Git Repo，以及我写的一些数模相关程序}
+\bibitem{octave.pdf} Octave PDF Document \url{http://www.gnu.org/software/octave/octave.pdf}
+\end{thebibliography}
+
+\end{CJK}
+\end{document}
+% ----end document----

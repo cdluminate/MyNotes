@@ -1,0 +1,1007 @@
+\begin{verbatim}
+Log started (V12.6.2.0) Fri Jul 31 14:03:29 2015
+
+New value for absolute objective gap: 0.5
+New value for intensity for populating the MIP solution pool: 4
+New value for solutions limit for each populate call: 2100000000
+
+Problem 'M1988.lp' read.
+Read time = 0.00 sec. (0.00 ticks)
+Found incumbent of value 0.000000 after 0.00 sec. (0.00 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 1 rows and 0 columns.
+MIP Presolve modified 5 coefficients.
+Reduced MIP has 11 rows, 14 columns, and 46 nonzeros.
+Reduced MIP has 0 binaries, 14 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.01 ticks)
+Tried aggregator 1 time.
+Reduced MIP has 11 rows, 14 columns, and 46 nonzeros.
+Reduced MIP has 0 binaries, 14 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.01 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 4 threads.
+Root relaxation solution time = 0.00 sec. (0.02 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.0000     4987.0000              --- 
+      0     0     2040.0000     3        0.0000     2040.0000        7     --- 
+*     0+    0                         1984.6000     2040.0000             2.79%
+      0     0     2040.0000     6     1984.6000       Cuts: 4       14    2.79%
+*     0+    0                         2009.3000     2040.0000             1.53%
+      0     0     2040.0000     6     2009.3000       Cuts: 5       16    1.53%
+      0     2     2040.0000     6     2009.3000     2040.0000       16    1.53%
+Elapsed time = 0.01 sec. (0.37 ticks, tree = 0.00 MB, solutions = 1)
+*     9+    8                         2036.1000     2040.0000             0.19%
+*   963+  648                         2039.4000     2040.0000             0.03%
+
+Mixed integer rounding cuts applied:  2
+Zero-half cuts applied:  1
+Gomory fractional cuts applied:  2
+
+Root node processing (before b&c):
+  Real time             =    0.01 sec. (0.36 ticks)
+Parallel b&c, 4 threads:
+  Real time             =    0.21 sec. (17.29 ticks)
+  Sync time (average)   =    0.04 sec.
+  Wait time (average)   =    0.04 sec.
+                          ------------
+Total (root+branch&cut) =    0.22 sec. (17.65 ticks)
+
+Solution pool: 1 solution saved.
+
+MIP - Integer optimal solution:  Objective =  2.0394000000e+03
+Solution time =    0.22 sec.  Iterations = 6082  Nodes = 4511 (2489)
+Deterministic time = 17.65 ticks  (80.83 ticks/sec)
+
+
+Populate: phase II 
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+   4511  2489     2039.4000     2     2039.4000     2040.0000     6082    0.03%
+Elapsed time = 0.01 sec. (0.31 ticks, tree = 0.49 MB, solutions = 1)
+
+Mixed integer rounding cuts applied:  2
+Zero-half cuts applied:  1
+Gomory fractional cuts applied:  2
+
+Root node processing (before b&c):
+  Real time             =    0.00 sec. (0.01 ticks)
+Parallel b&c, 4 threads:
+  Real time             =    0.53 sec. (54.40 ticks)
+  Sync time (average)   =    0.07 sec.
+  Wait time (average)   =    0.08 sec.
+                          ------------
+Total (root+branch&cut) =    0.53 sec. (54.41 ticks)
+
+Solution pool: 60 solutions saved.
+
+Populate - All reachable solutions enumerated, pool tolerance (1e+75/0.5), integer optimal:  Objective =  2.0394000000e+03
+Current MIP best bound =  2.0388997947e+03 (gap = -0.500205, -0.02%)
+Solution time =    0.53 sec.  Iterations = 49959  Nodes = 22043 (14867)
+Deterministic time = 54.41 ticks  (101.85 ticks/sec)
+
+
+                                             Change from
+Solution Name       Objective Value            Incumbent
+p61                       2039.4000                0.00%
+p3                        2039.4000               57.14%
+p4                        2039.4000               57.14%
+p5                        2039.4000               71.43%
+p6                        2039.4000               71.43%
+p7                        2039.4000               71.43%
+p8                        2039.4000               85.71%
+p9                        2039.4000               85.71%
+p10                       2039.4000               85.71%
+p11                       2039.4000               85.71%
+p12                       2039.4000               71.43%
+p13                       2039.4000               71.43%
+p14                       2039.4000               85.71%
+p15                       2039.4000               85.71%
+p16                       2039.4000               71.43%
+p17                       2039.4000               85.71%
+p18                       2039.4000               71.43%
+p19                       2039.4000               71.43%
+p20                       2039.4000               85.71%
+p21                       2039.4000               71.43%
+p22                       2039.4000               71.43%
+p23                       2039.4000               28.57%
+p24                       2039.4000               71.43%
+p25                       2039.4000               85.71%
+p26                       2039.4000               85.71%
+p27                       2039.4000               85.71%
+p28                       2039.4000               57.14%
+p29                       2039.4000               57.14%
+p30                       2039.4000               85.71%
+p31                       2039.4000               71.43%
+p32                       2039.4000               57.14%
+p33                       2039.4000               85.71%
+p34                       2039.4000               85.71%
+p35                       2039.4000               71.43%
+p36                       2039.4000               42.86%
+p37                       2039.4000               85.71%
+p38                       2039.4000               85.71%
+p39                       2039.4000               71.43%
+p40                       2039.4000               85.71%
+p41                       2039.4000               42.86%
+p42                       2039.4000               71.43%
+p43                       2039.4000               71.43%
+p44                       2039.4000               71.43%
+p45                       2039.4000               85.71%
+p46                       2039.4000               85.71%
+p47                       2039.4000               71.43%
+p48                       2039.4000               71.43%
+p49                       2039.4000               85.71%
+p50                       2039.4000               85.71%
+p51                       2039.4000               71.43%
+p52                       2039.4000               71.43%
+p53                       2039.4000               57.14%
+p54                       2039.4000               71.43%
+p55                       2039.4000               57.14%
+p56                       2039.4000               85.71%
+p57                       2039.4000               71.43%
+p58                       2039.4000               57.14%
+p59                       2039.4000               71.43%
+p60                       2039.4000               57.14%
+p2                        2039.4000               57.14%
+
+Solution p61
+Variable Name           Solution Value
+x1                            8.000000
+x4                            6.000000
+x5                            3.000000
+x6                            1.000000
+y2                            7.000000
+y3                            9.000000
+y6                            2.000000
+All other variables matching '*' are 0.
+
+Solution p3
+Variable Name           Solution Value
+x1                            5.000000
+x2                            7.000000
+x4                            5.000000
+x5                            0.000000
+x6                            1.000000
+y1                            3.000000
+y3                            9.000000
+y4                            1.000000
+y5                            3.000000
+y6                            2.000000
+All other variables matching '*' are 0.
+
+Solution p4
+Variable Name           Solution Value
+x1                            4.000000
+x2                            7.000000
+x4                            5.000000
+x5                            1.000000
+x6                            1.000000
+y1                            4.000000
+y3                            9.000000
+y4                            1.000000
+y5                            2.000000
+y6                            2.000000
+All other variables matching '*' are 0.
+
+Solution p5
+Variable Name           Solution Value
+x1                            4.000000
+x2                            6.000000
+x4                            5.000000
+x5                            1.000000
+x6                            2.000000
+y1                            4.000000
+y2                            1.000000
+y3                            9.000000
+y4                            1.000000
+y5                            2.000000
+y6                            1.000000
+All other variables matching '*' are 0.
+
+Solution p6
+Variable Name           Solution Value
+x1                            5.000000
+x2                            6.000000
+x4                            5.000000
+x6                            2.000000
+y1                            3.000000
+y2                            1.000000
+y3                            9.000000
+y4                            1.000000
+y5                            3.000000
+y6                            1.000000
+All other variables matching '*' are 0.
+
+Solution p7
+Variable Name           Solution Value
+x1                            2.000000
+x2                            6.000000
+x3                            4.000000
+x4                            3.000000
+x5                            2.000000
+x6                            1.000000
+y1                            6.000000
+y2                            1.000000
+y3                            5.000000
+y4                            3.000000
+y5                            1.000000
+y6                            2.000000
+All other variables matching '*' are 0.
+
+Solution p8
+Variable Name           Solution Value
+x1                            2.000000
+x2                            7.000000
+x3                            4.000000
+x4                            3.000000
+x5                            2.000000
+y1                            6.000000
+y3                            5.000000
+y4                            3.000000
+y5                            1.000000
+y6                            3.000000
+All other variables matching '*' are 0.
+
+Solution p9
+Variable Name           Solution Value
+x1                            7.000000
+x2                            3.000000
+x3                            5.000000
+x4                            3.000000
+y1                            1.000000
+y2                            4.000000
+y3                            4.000000
+y4                            3.000000
+y5                            3.000000
+y6                            3.000000
+All other variables matching '*' are 0.
+
+Solution p10
+Variable Name           Solution Value
+x1                            6.000000
+x2                            3.000000
+x3                            5.000000
+x4                            3.000000
+x5                            1.000000
+y1                            2.000000
+y2                            4.000000
+y3                            4.000000
+y4                            3.000000
+y5                            2.000000
+y6                            3.000000
+All other variables matching '*' are 0.
+
+Solution p11
+Variable Name           Solution Value
+x1                            2.000000
+x2                            5.000000
+x3                            4.000000
+x4                            3.000000
+x5                            2.000000
+x6                            2.000000
+y1                            6.000000
+y2                            2.000000
+y3                            5.000000
+y4                            3.000000
+y5                            1.000000
+y6                            1.000000
+All other variables matching '*' are 0.
+
+Solution p12
+Variable Name           Solution Value
+x1                            7.000000
+x2                            2.000000
+x3                            5.000000
+x4                            3.000000
+x6                            1.000000
+y1                            1.000000
+y2                            5.000000
+y3                            4.000000
+y4                            3.000000
+y5                            3.000000
+y6                            2.000000
+All other variables matching '*' are 0.
+
+Solution p13
+Variable Name           Solution Value
+x1                            4.000000
+x2                            5.000000
+x4                            5.000000
+x5                            1.000000
+x6                            3.000000
+y1                            4.000000
+y2                            2.000000
+y3                            9.000000
+y4                            1.000000
+y5                            2.000000
+All other variables matching '*' are 0.
+
+Solution p14
+Variable Name           Solution Value
+x1                            3.000000
+x2                            4.000000
+x3                            4.000000
+x4                            3.000000
+x5                            1.000000
+x6                            3.000000
+y1                            5.000000
+y2                            3.000000
+y3                            5.000000
+y4                            3.000000
+y5                            2.000000
+All other variables matching '*' are 0.
+
+Solution p15
+Variable Name           Solution Value
+x1                            4.000000
+x2                            4.000000
+x3                            4.000000
+x4                            3.000000
+x6                            3.000000
+y1                            4.000000
+y2                            3.000000
+y3                            5.000000
+y4                            3.000000
+y5                            3.000000
+All other variables matching '*' are 0.
+
+Solution p16
+Variable Name           Solution Value
+x1                            3.000000
+x2                            6.000000
+x4                            5.000000
+x5                            2.000000
+x6                            2.000000
+y1                            5.000000
+y2                            1.000000
+y3                            9.000000
+y4                            1.000000
+y5                            1.000000
+y6                            1.000000
+All other variables matching '*' are 0.
+
+Solution p17
+Variable Name           Solution Value
+x1                            6.000000
+x2                            1.000000
+x3                            5.000000
+x4                            3.000000
+x5                            1.000000
+x6                            2.000000
+y1                            2.000000
+y2                            6.000000
+y3                            4.000000
+y4                            3.000000
+y5                            2.000000
+y6                            1.000000
+All other variables matching '*' are 0.
+
+Solution p18
+Variable Name           Solution Value
+x1                            1.000000
+x2                            5.000000
+x3                            4.000000
+x4                            3.000000
+x5                            3.000000
+x6                            2.000000
+y1                            7.000000
+y2                            2.000000
+y3                            5.000000
+y4                            3.000000
+y5                            0.000000
+y6                            1.000000
+All other variables matching '*' are 0.
+
+Solution p19
+Variable Name           Solution Value
+x1                            3.000000
+x2                            5.000000
+x4                            5.000000
+x5                            2.000000
+x6                            3.000000
+y1                            5.000000
+y2                            2.000000
+y3                            9.000000
+y4                            1.000000
+y5                            1.000000
+All other variables matching '*' are 0.
+
+Solution p20
+Variable Name           Solution Value
+x1                            6.000000
+x2                            2.000000
+x3                            9.000000
+x4                            1.000000
+y1                            2.000000
+y2                            5.000000
+y4                            5.000000
+y5                            3.000000
+y6                            3.000000
+All other variables matching '*' are 0.
+
+Solution p21
+Variable Name           Solution Value
+x1                            3.000000
+x2                            6.000000
+x3                            4.000000
+x4                            3.000000
+x5                            1.000000
+x6                            1.000000
+y1                            5.000000
+y2                            1.000000
+y3                            5.000000
+y4                            3.000000
+y5                            2.000000
+y6                            2.000000
+All other variables matching '*' are 0.
+
+Solution p22
+Variable Name           Solution Value
+x1                            4.000000
+x2                            6.000000
+x3                            4.000000
+x4                            3.000000
+x6                            1.000000
+y1                            4.000000
+y2                            1.000000
+y3                            5.000000
+y4                            3.000000
+y5                            3.000000
+y6                            2.000000
+All other variables matching '*' are 0.
+
+Solution p23
+Variable Name           Solution Value
+x1                            8.000000
+x2                            1.000000
+x4                            6.000000
+x5                            3.000000
+y2                            6.000000
+y3                            9.000000
+y5                            0.000000
+y6                            3.000000
+All other variables matching '*' are 0.
+
+Solution p24
+Variable Name           Solution Value
+x1                            6.000000
+x2                            2.000000
+x3                            5.000000
+x4                            3.000000
+x5                            1.000000
+x6                            1.000000
+y1                            2.000000
+y2                            5.000000
+y3                            4.000000
+y4                            3.000000
+y5                            2.000000
+y6                            2.000000
+All other variables matching '*' are 0.
+
+Solution p25
+Variable Name           Solution Value
+x1                            7.000000
+x2                            1.000000
+x3                            5.000000
+x4                            3.000000
+x6                            2.000000
+y1                            1.000000
+y2                            6.000000
+y3                            4.000000
+y4                            3.000000
+y5                            3.000000
+y6                            1.000000
+All other variables matching '*' are 0.
+
+Solution p26
+Variable Name           Solution Value
+x1                            3.000000
+x2                            7.000000
+x3                            4.000000
+x4                            3.000000
+x5                            1.000000
+y1                            5.000000
+y3                            5.000000
+y4                            3.000000
+y5                            2.000000
+y6                            3.000000
+All other variables matching '*' are 0.
+
+Solution p27
+Variable Name           Solution Value
+x1                            4.000000
+x2                            7.000000
+x3                            4.000000
+x4                            3.000000
+x5                            0.000000
+y1                            4.000000
+y3                            5.000000
+y4                            3.000000
+y5                            3.000000
+y6                            3.000000
+All other variables matching '*' are 0.
+
+Solution p28
+Variable Name           Solution Value
+x1                            2.000000
+x2                            5.000000
+x4                            5.000000
+x5                            3.000000
+x6                            3.000000
+y1                            6.000000
+y2                            2.000000
+y3                            9.000000
+y4                            1.000000
+All other variables matching '*' are 0.
+
+Solution p29
+Variable Name           Solution Value
+x1                            1.000000
+x2                            6.000000
+x3                            4.000000
+x4                            3.000000
+x5                            3.000000
+x6                            1.000000
+y1                            7.000000
+y2                            1.000000
+y3                            5.000000
+y4                            3.000000
+y5                            0.000000
+y6                            2.000000
+All other variables matching '*' are 0.
+
+Solution p30
+Variable Name           Solution Value
+x1                            2.000000
+x2                            4.000000
+x3                            4.000000
+x4                            3.000000
+x5                            2.000000
+x6                            3.000000
+y1                            6.000000
+y2                            3.000000
+y3                            5.000000
+y4                            3.000000
+y5                            1.000000
+All other variables matching '*' are 0.
+
+Solution p31
+Variable Name           Solution Value
+x1                            1.000000
+x2                            4.000000
+x3                            4.000000
+x4                            3.000000
+x5                            3.000000
+x6                            3.000000
+y1                            7.000000
+y2                            3.000000
+y3                            5.000000
+y4                            3.000000
+All other variables matching '*' are 0.
+
+Solution p32
+Variable Name           Solution Value
+x1                            8.000000
+x2                            1.000000
+x3                            3.000000
+x4                            2.000000
+x5                            3.000000
+x6                            2.000000
+y2                            6.000000
+y3                            6.000000
+y4                            4.000000
+y6                            1.000000
+All other variables matching '*' are 0.
+
+Solution p33
+Variable Name           Solution Value
+x1                            3.000000
+x2                            5.000000
+x3                            4.000000
+x4                            3.000000
+x5                            1.000000
+x6                            2.000000
+y1                            5.000000
+y2                            2.000000
+y3                            5.000000
+y4                            3.000000
+y5                            2.000000
+y6                            1.000000
+All other variables matching '*' are 0.
+
+Solution p34
+Variable Name           Solution Value
+x1                            4.000000
+x2                            5.000000
+x3                            4.000000
+x4                            3.000000
+x6                            2.000000
+y1                            4.000000
+y2                            2.000000
+y3                            5.000000
+y4                            3.000000
+y5                            3.000000
+y6                            1.000000
+All other variables matching '*' are 0.
+
+Solution p35
+Variable Name           Solution Value
+x1                            5.000000
+x2                            5.000000
+x4                            5.000000
+x6                            3.000000
+y1                            3.000000
+y2                            2.000000
+y3                            9.000000
+y4                            1.000000
+y5                            3.000000
+All other variables matching '*' are 0.
+
+Solution p36
+Variable Name           Solution Value
+x1                            8.000000
+x2                            2.000000
+x3                            3.000000
+x4                            2.000000
+x5                            3.000000
+x6                            1.000000
+y2                            5.000000
+y3                            6.000000
+y4                            4.000000
+y5                            0.000000
+y6                            2.000000
+All other variables matching '*' are 0.
+
+Solution p37
+Variable Name           Solution Value
+x1                            5.000000
+x2                            2.000000
+x3                            9.000000
+x4                            1.000000
+x5                            1.000000
+y1                            3.000000
+y2                            5.000000
+y4                            5.000000
+y5                            2.000000
+y6                            3.000000
+All other variables matching '*' are 0.
+
+Solution p38
+Variable Name           Solution Value
+x2                            7.000000
+x3                            6.000000
+x4                            4.000000
+x5                            0.000000
+y1                            8.000000
+y3                            3.000000
+y4                            2.000000
+y5                            3.000000
+y6                            3.000000
+All other variables matching '*' are 0.
+
+Solution p39
+Variable Name           Solution Value
+x1                            6.000000
+x3                            5.000000
+x4                            3.000000
+x5                            1.000000
+x6                            3.000000
+y1                            2.000000
+y2                            7.000000
+y3                            4.000000
+y4                            3.000000
+y5                            2.000000
+All other variables matching '*' are 0.
+
+Solution p40
+Variable Name           Solution Value
+x1                            5.000000
+x2                            3.000000
+x3                            5.000000
+x4                            3.000000
+x5                            2.000000
+y1                            3.000000
+y2                            4.000000
+y3                            4.000000
+y4                            3.000000
+y5                            1.000000
+y6                            3.000000
+All other variables matching '*' are 0.
+
+Solution p41
+Variable Name           Solution Value
+x1                            8.000000
+x3                            3.000000
+x4                            2.000000
+x5                            3.000000
+x6                            3.000000
+y2                            7.000000
+y3                            6.000000
+y4                            4.000000
+All other variables matching '*' are 0.
+
+Solution p42
+Variable Name           Solution Value
+x1                            4.000000
+x2                            3.000000
+x3                            5.000000
+x4                            3.000000
+x5                            3.000000
+y1                            4.000000
+y2                            4.000000
+y3                            4.000000
+y4                            3.000000
+y6                            3.000000
+All other variables matching '*' are 0.
+
+Solution p43
+Variable Name           Solution Value
+x2                            6.000000
+x3                            6.000000
+x4                            4.000000
+x6                            1.000000
+y1                            8.000000
+y2                            1.000000
+y3                            3.000000
+y4                            2.000000
+y5                            3.000000
+y6                            2.000000
+All other variables matching '*' are 0.
+
+Solution p44
+Variable Name           Solution Value
+x1                            5.000000
+x2                            1.000000
+x3                            9.000000
+x4                            1.000000
+x5                            1.000000
+x6                            1.000000
+y1                            3.000000
+y2                            6.000000
+y4                            5.000000
+y5                            2.000000
+y6                            2.000000
+All other variables matching '*' are 0.
+
+Solution p45
+Variable Name           Solution Value
+x2                            5.000000
+x3                            6.000000
+x4                            4.000000
+x6                            2.000000
+y1                            8.000000
+y2                            2.000000
+y3                            3.000000
+y4                            2.000000
+y5                            3.000000
+y6                            1.000000
+All other variables matching '*' are 0.
+
+Solution p46
+Variable Name           Solution Value
+x1                            4.000000
+x2                            2.000000
+x3                            9.000000
+x4                            1.000000
+x5                            2.000000
+y1                            4.000000
+y2                            5.000000
+y4                            5.000000
+y5                            1.000000
+y6                            3.000000
+All other variables matching '*' are 0.
+
+Solution p47
+Variable Name           Solution Value
+x1                            4.000000
+x3                            9.000000
+x4                            1.000000
+x5                            2.000000
+x6                            2.000000
+y1                            4.000000
+y2                            7.000000
+y4                            5.000000
+y5                            1.000000
+y6                            1.000000
+All other variables matching '*' are 0.
+
+Solution p48
+Variable Name           Solution Value
+x1                            3.000000
+x2                            2.000000
+x3                            9.000000
+x4                            1.000000
+x5                            3.000000
+y1                            5.000000
+y2                            5.000000
+y4                            5.000000
+y6                            3.000000
+All other variables matching '*' are 0.
+
+Solution p49
+Variable Name           Solution Value
+x2                            7.000000
+x3                            9.000000
+x5                            0.000000
+x6                            2.000000
+y1                            8.000000
+y4                            6.000000
+y5                            3.000000
+y6                            1.000000
+All other variables matching '*' are 0.
+
+Solution p50
+Variable Name           Solution Value
+x2                            6.000000
+x3                            9.000000
+x6                            3.000000
+y1                            8.000000
+y2                            1.000000
+y4                            6.000000
+y5                            3.000000
+All other variables matching '*' are 0.
+
+Solution p51
+Variable Name           Solution Value
+x1                            4.000000
+x2                            1.000000
+x3                            9.000000
+x4                            1.000000
+x5                            2.000000
+x6                            1.000000
+y1                            4.000000
+y2                            6.000000
+y4                            5.000000
+y5                            1.000000
+y6                            2.000000
+All other variables matching '*' are 0.
+
+Solution p52
+Variable Name           Solution Value
+x1                            5.000000
+x3                            9.000000
+x4                            1.000000
+x5                            1.000000
+x6                            2.000000
+y1                            3.000000
+y2                            7.000000
+y4                            5.000000
+y5                            2.000000
+y6                            1.000000
+All other variables matching '*' are 0.
+
+Solution p53
+Variable Name           Solution Value
+x1                            3.000000
+x2                            1.000000
+x3                            9.000000
+x4                            1.000000
+x5                            3.000000
+x6                            1.000000
+y1                            5.000000
+y2                            6.000000
+y4                            5.000000
+y6                            2.000000
+All other variables matching '*' are 0.
+
+Solution p54
+Variable Name           Solution Value
+x1                            5.000000
+x2                            2.000000
+x3                            5.000000
+x4                            3.000000
+x5                            2.000000
+x6                            1.000000
+y1                            3.000000
+y2                            5.000000
+y3                            4.000000
+y4                            3.000000
+y5                            1.000000
+y6                            2.000000
+All other variables matching '*' are 0.
+
+Solution p55
+Variable Name           Solution Value
+x1                            4.000000
+x2                            2.000000
+x3                            5.000000
+x4                            3.000000
+x5                            3.000000
+x6                            1.000000
+y1                            4.000000
+y2                            5.000000
+y3                            4.000000
+y4                            3.000000
+y6                            2.000000
+All other variables matching '*' are 0.
+
+Solution p56
+Variable Name           Solution Value
+x1                            5.000000
+x2                            1.000000
+x3                            5.000000
+x4                            3.000000
+x5                            2.000000
+x6                            2.000000
+y1                            3.000000
+y2                            6.000000
+y3                            4.000000
+y4                            3.000000
+y5                            1.000000
+y6                            1.000000
+All other variables matching '*' are 0.
+
+Solution p57
+Variable Name           Solution Value
+x1                            4.000000
+x2                            1.000000
+x3                            5.000000
+x4                            3.000000
+x5                            3.000000
+x6                            2.000000
+y1                            4.000000
+y2                            6.000000
+y3                            4.000000
+y4                            3.000000
+y6                            1.000000
+All other variables matching '*' are 0.
+
+Solution p58
+Variable Name           Solution Value
+x1                            3.000000
+x3                            9.000000
+x4                            1.000000
+x5                            3.000000
+x6                            2.000000
+y1                            5.000000
+y2                            7.000000
+y4                            5.000000
+y6                            1.000000
+All other variables matching '*' are 0.
+
+Solution p59
+Variable Name           Solution Value
+x1                            5.000000
+x3                            5.000000
+x4                            3.000000
+x5                            2.000000
+x6                            3.000000
+y1                            3.000000
+y2                            7.000000
+y3                            4.000000
+y4                            3.000000
+y5                            1.000000
+All other variables matching '*' are 0.
+
+Solution p60
+Variable Name           Solution Value
+x1                            4.000000
+x3                            5.000000
+x4                            3.000000
+x5                            3.000000
+x6                            3.000000
+y1                            4.000000
+y2                            7.000000
+y3                            4.000000
+y4                            3.000000
+All other variables matching '*' are 0.
+
+Solution p2
+Variable Name           Solution Value
+x1                            3.000000
+x2                            7.000000
+x4                            5.000000
+x5                            2.000000
+x6                            1.000000
+y1                            5.000000
+y3                            9.000000
+y4                            1.000000
+y5                            1.000000
+y6                            2.000000
+All other variables matching '*' are 0.
+\end{verbatim}

@@ -1,0 +1,304 @@
+
+Log started (V12.6.2.0) Sat Aug  1 03:38:13 2015
+
+New value for absolute objective gap: 0.05
+New value for intensity for populating the MIP solution pool: 4
+New value for solutions limit for each populate call: 2100000000
+
+Problem 'M1988.lp' read.
+Read time = 0.00 sec. (0.00 ticks)
+Found incumbent of value 0.000000 after 0.00 sec. (0.00 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 1 rows and 0 columns.
+MIP Presolve modified 6 coefficients.
+Reduced MIP has 12 rows, 14 columns, and 46 nonzeros.
+Reduced MIP has 0 binaries, 14 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.01 ticks)
+Tried aggregator 1 time.
+Reduced MIP has 12 rows, 14 columns, and 46 nonzeros.
+Reduced MIP has 0 binaries, 14 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.01 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 4 threads.
+Root relaxation solution time = 0.00 sec. (0.03 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.0000     4987.0000              --- 
+*     0+    0                         2035.5000     4987.0000           145.00%
+      0     0     2040.0000     3     2035.5000     2040.0000       13    0.22%
+      0     0     2040.0000     4     2035.5000       Cuts: 4       17    0.22%
+      0     0     2040.0000     6     2035.5000    MIRcuts: 2       20    0.22%
+      0     2     2040.0000     6     2035.5000     2040.0000       20    0.22%
+Elapsed time = 0.01 sec. (0.33 ticks, tree = 0.00 MB, solutions = 1)
+*   321   248      integral     0     2036.0000     2040.0000      482    0.20%
+*   350   267      integral     0     2036.6000     2040.0000      518    0.17%
+*  1281   843      integral     0     2037.3000     2040.0000     1703    0.13%
+*  1659+ 1038                         2037.4000     2040.0000             0.13%
+*  2453  1433      integral     0     2038.7000     2040.0000     3154    0.06%
+*  2858+ 1606                         2039.2000     2040.0000             0.04%
+*  5476+ 2029                         2039.3000     2040.0000             0.03%
+* 11342+ 4390                         2039.4000     2040.0000             0.03%
+* 11535+ 4533                         2039.9000     2040.0000             0.00%
+
+Mixed integer rounding cuts applied:  1
+Zero-half cuts applied:  1
+Gomory fractional cuts applied:  1
+
+Root node processing (before b&c):
+  Real time             =    0.01 sec. (0.31 ticks)
+Parallel b&c, 4 threads:
+  Real time             =    1.00 sec. (106.46 ticks)
+  Sync time (average)   =    0.32 sec.
+  Wait time (average)   =    0.34 sec.
+                          ------------
+Total (root+branch&cut) =    1.01 sec. (106.78 ticks)
+
+Solution pool: 1 solution saved.
+
+MIP - Integer optimal, tolerance (0.0001/1e-06):  Objective =  2.0399000000e+03
+Current MIP best bound =  2.0400000000e+03 (gap = 0.1, 0.00%)
+Solution time =    1.01 sec.  Iterations = 16174  Nodes = 11798 (4701)
+Deterministic time = 106.78 ticks  (105.34 ticks/sec)
+
+
+Populate: phase II 
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+  11798  4702     2040.0000     2     2039.9000     2040.0000    16175    0.00%
+Elapsed time = 0.00 sec. (0.03 ticks, tree = 1.01 MB, solutions = 1)
+ 156663 95452     2040.0000     2     2039.9000     2040.0000   209008    0.00%
+ 156666 95453     2013.9000     1     2039.9000     2040.0000   209013    0.00%
+ 156667 95454     2018.6000     1     2039.9000     2040.0000   209014    0.00%
+ 156668 95454     2040.0000     2     2039.9000     2040.0000   209016    0.00%
+ 156670 95456     2009.9000     1     2039.9000     2040.0000   209019    0.00%
+ 156671 95456     2040.0000     2     2039.9000     2040.0000   209020    0.00%
+ 156672 95457     2040.0000     3     2039.9000     2040.0000   209021    0.00%
+ 156674 95457     2040.0000     2     2039.9000     2040.0000   209023    0.00%
+ 156675 95457     2040.0000     2     2039.9000     2040.0000   209024    0.00%
+*196791 118480      integral     0     2040.0000     2040.0000   260728    0.00%
+ 642597 390160     2040.0000     2     2040.0000     2040.0000   831850    0.00%
+Elapsed time = 11.93 sec. (953.71 ticks, tree = 78.55 MB, solutions = 5)
+ 1278057 761617     2039.1375     2     2040.0000     2040.0000  1637850    0.00%
+ 1278061 761618     2040.0000     2     2040.0000     2040.0000  1637856    0.00%
+ 1278062 761619     2040.0000     2     2040.0000     2040.0000  1637857    0.00%
+ 1278064 761619     2040.0000     2     2040.0000     2040.0000  1637859    0.00%
+ 1278065 761619     2028.6000     1     2040.0000     2040.0000  1637860    0.00%
+ 1278066 761620     2040.0000     3     2040.0000     2040.0000  1637862    0.00%
+ 1278067 761621     2032.8000     1     2040.0000     2040.0000  1637864    0.00%
+ 1278068 761622     2040.0000     3     2040.0000     2040.0000  1637866    0.00%
+ 1278069 761623     2040.0000     3     2040.0000     2040.0000  1637868    0.00%
+ 1278070 761624     2040.0000     2     2040.0000     2040.0000  1637869    0.00%
+Elapsed time = 24.96 sec. (1907.40 ticks, tree = 156.29 MB, solutions = 11)
+
+Mixed integer rounding cuts applied:  1
+Zero-half cuts applied:  1
+Gomory fractional cuts applied:  1
+
+Root node processing (before b&c):
+  Real time             =    0.00 sec. (0.00 ticks)
+Parallel b&c, 4 threads:
+  Real time             =   36.30 sec. (2769.42 ticks)
+  Sync time (average)   =    4.32 sec.
+  Wait time (average)   =    5.37 sec.
+                          ------------
+Total (root+branch&cut) =   36.30 sec. (2769.43 ticks)
+
+Solution pool: 12 solutions saved.
+
+Populate - All reachable solutions enumerated, pool tolerance (1e+75/0.05), integer optimal:  Objective =  2.0400000000e+03
+Current MIP best bound =  2.0399454545e+03 (gap = -0.0545455, -0.00%)
+Solution time =   36.30 sec.  Iterations = 2367020  Nodes = 1842558 (1089670)
+Deterministic time = 2769.43 ticks  (76.29 ticks/sec)
+
+
+                                             Change from
+Solution Name       Objective Value            Incumbent
+p13                       2040.0000                0.00%
+p3                        2040.0000               28.57%
+p4                        2040.0000               14.29%
+p5                        2040.0000               28.57%
+p6                        2040.0000               28.57%
+p7                        2040.0000               92.86%
+p8                        2040.0000              100.00%
+p9                        2040.0000               92.86%
+p10                       2040.0000               92.86%
+p11                       2040.0000              100.00%
+p12                       2040.0000              100.00%
+p2                        2040.0000               14.29%
+
+Solution p13
+Variable Name           Solution Value
+x1                            6.000000
+x2                            2.000000
+x3                            6.000000
+x7                            4.000000
+y1                            1.000000
+y2                            4.000000
+y3                            2.000000
+y4                            5.000000
+y5                            1.000000
+y6                            2.000000
+y7                            2.000000
+All other variables matching '*' are 0.
+
+Solution p3
+Variable Name           Solution Value
+x1                            6.000000
+x2                            2.000000
+x3                            6.000000
+x7                            4.000000
+y2                            5.000000
+y3                            2.000000
+y4                            5.000000
+y5                            2.000000
+y6                            1.000000
+y7                            2.000000
+All other variables matching '*' are 0.
+
+Solution p4
+Variable Name           Solution Value
+x1                            6.000000
+x2                            2.000000
+x3                            6.000000
+x7                            4.000000
+y1                            2.000000
+y2                            4.000000
+y3                            2.000000
+y4                            5.000000
+y6                            2.000000
+y7                            2.000000
+All other variables matching '*' are 0.
+
+Solution p5
+Variable Name           Solution Value
+x1                            6.000000
+x2                            2.000000
+x3                            6.000000
+x7                            4.000000
+y1                            2.000000
+y2                            5.000000
+y3                            2.000000
+y4                            5.000000
+y6                            1.000000
+y7                            2.000000
+All other variables matching '*' are 0.
+
+Solution p6
+Variable Name           Solution Value
+x1                            6.000000
+x2                            2.000000
+x3                            6.000000
+x7                            4.000000
+y1                            2.000000
+y2                            3.000000
+y3                            2.000000
+y4                            5.000000
+y6                            3.000000
+y7                            2.000000
+All other variables matching '*' are 0.
+
+Solution p7
+Variable Name           Solution Value
+x1                            2.000000
+x2                            5.000000
+x3                            2.000000
+x4                            5.000000
+x6                            1.000000
+x7                            2.000000
+y1                            6.000000
+y2                            2.000000
+y3                            6.000000
+y7                            4.000000
+All other variables matching '*' are 0.
+
+Solution p8
+Variable Name           Solution Value
+x1                            1.000000
+x2                            5.000000
+x3                            2.000000
+x4                            5.000000
+x5                            1.000000
+x6                            1.000000
+x7                            2.000000
+y1                            6.000000
+y2                            2.000000
+y3                            6.000000
+y7                            4.000000
+All other variables matching '*' are 0.
+
+Solution p9
+Variable Name           Solution Value
+x1                            2.000000
+x2                            4.000000
+x3                            2.000000
+x4                            5.000000
+x6                            2.000000
+x7                            2.000000
+y1                            6.000000
+y2                            2.000000
+y3                            6.000000
+y7                            4.000000
+All other variables matching '*' are 0.
+
+Solution p10
+Variable Name           Solution Value
+x1                            2.000000
+x2                            3.000000
+x3                            2.000000
+x4                            5.000000
+x6                            3.000000
+x7                            2.000000
+y1                            6.000000
+y2                            2.000000
+y3                            6.000000
+y7                            4.000000
+All other variables matching '*' are 0.
+
+Solution p11
+Variable Name           Solution Value
+x1                            1.000000
+x2                            4.000000
+x3                            2.000000
+x4                            5.000000
+x5                            1.000000
+x6                            2.000000
+x7                            2.000000
+y1                            6.000000
+y2                            2.000000
+y3                            6.000000
+y7                            4.000000
+All other variables matching '*' are 0.
+
+Solution p12
+Variable Name           Solution Value
+x2                            5.000000
+x3                            2.000000
+x4                            5.000000
+x5                            2.000000
+x6                            1.000000
+x7                            2.000000
+y1                            6.000000
+y2                            2.000000
+y3                            6.000000
+y7                            4.000000
+All other variables matching '*' are 0.
+
+Solution p2
+Variable Name           Solution Value
+x1                            6.000000
+x2                            2.000000
+x3                            6.000000
+x7                            4.000000
+y1                            1.000000
+y2                            5.000000
+y3                            2.000000
+y4                            5.000000
+y5                            1.000000
+y6                            1.000000
+y7                            2.000000
+All other variables matching '*' are 0.
