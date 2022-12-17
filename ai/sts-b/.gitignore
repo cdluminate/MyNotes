@@ -1,0 +1,5 @@
+bert-sts.py.gt-bert.npz
+hybrid-sts.py.bert.npz
+hybrid-sts.py.glove.npz
+spacy-sts.py.predict
+
