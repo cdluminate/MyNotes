@@ -1,0 +1,107 @@
+% This version of CVPR template is provided by Ming-Ming Cheng.
+% Please leave an issue if you found a bug:
+% https://github.com/MCG-NKU/CVPR_Template.
+
+\documentclass[review]{cvpr}
+%\documentclass[final]{cvpr}
+
+\usepackage{times}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\input{math_commands.tex}
+
+% Include other packages here, before hyperref.
+
+% If you comment hyperref and then uncomment it, you should delete
+% egpaper.aux before re-running latex.  (Or just hit 'q' on the first latex
+% run, let it finish, and you should be clear).
+\usepackage[pagebackref=true,breaklinks=true,colorlinks,bookmarks=false]{hyperref}
+
+
+\def\cvprPaperID{****} % *** Enter the CVPR Paper ID here
+\def\confYear{CVPR 2021}
+%\setcounter{page}{4321} % For final version only
+
+
+\begin{document}
+
+%%%%%%%%% TITLE
+\title{\LaTeX\ Author Guidelines for CVPR Proceedings}
+
+\author{First Author\\
+Institution1\\
+Institution1 address\\
+{\tt\small firstauthor@i1.org}
+% For a paper whose authors are all at the same institution,
+% omit the following lines up until the closing ``}''.
+% Additional authors and addresses can be added with ``\and'',
+% just like the second author.
+% To save space, use either the email address or home page, not both
+\and
+Second Author\\
+Institution2\\
+First line of institution2 address\\
+{\tt\small secondauthor@i2.org}
+}
+
+\maketitle
+
+
+%%%%%%%%% ABSTRACT
+\begin{abstract}
+   The ABSTRACT is to be in fully-justified italicized text, at the top
+   of the left-hand column, below the author and affiliation
+   information. Use the word ``Abstract'' as the title, in 12-point
+   Times, boldface type, centered relative to the column, initially
+   capitalized. The abstract is to be in 10-point, single-spaced type.
+   Leave two blank lines after the Abstract, then begin the main text.
+   Look at previous CVPR abstracts to get a feel for style and length.
+\end{abstract}
+
+%%%%%%%%% BODY TEXT
+\section{Perturbation Decomposition}
+
+original
+
+\[ \tilde{x} = x + r, \|r\|_p < \varepsilon, x+r \in [0,1]^N \]
+
+assuming l-infty bound.
+decomposition with global carrier + class-wise payload.
+
+\begin{align}
+	\tilde{x} &= x + r_c + r_p \\
+	&= x + \varepsilon \Big(\frac{\xi}{2}\sin \theta + \frac{1-\xi}{2} \sin \rho \Big)
+\end{align}
+where $\rho = P\hat{y}$ is a column of the class-wise payload matrix $P$ , $0\leq \xi \leq 1$, $x+r\in [0,1]^N$.
+
+decompostion with class-wise carrier + class-target-wise payloads.
+\begin{align}
+	\tilde{x} &= x + r_c + r_p \\
+	&= x + \varepsilon \Big(\frac{\xi}{2}\sin \mC \vy + \frac{1-\xi}{2} \sin \tP_{y,\tilde{y},:} \Big)
+\end{align}
+
+next?
+
+1. use these factorized components as features? classification? adversarial resetting?
+
+2. accelerate black-box attack? digging out the intrinsics of the target black-box model?
+
+3. the carrier is not necessarily a universal adversarial perturbation (UAP).
+
+difference?
+
+$p$, $c+p$, UAP; $Py$ cls wise UAP;
+$c+Py$ coarse decomp (adv ptb more related to model parameters ... being source-class agnostic);
+$Cy+Pyy$ fine decomp (adv ptb more related to source image ... being source-class sensitive ... chance for adv resetting);
+$Cyy+Pyy$ per-source-target UAP;
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{\small
+\bibliographystyle{ieee_fullname}
+\bibliography{egbib}
+}
+
+\end{document}
