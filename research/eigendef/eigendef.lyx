@@ -1,0 +1,285 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "times" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Adversarial Defense via Singular Value Decomposition?
+\end_layout
+
+\begin_layout Standard
+Singularity of a network v.s.
+ singular value decomposition of an approximated linear system.
+ Adversarial vulnerability is basically the singularity of the neural network.
+ future work: incorporate the mechanism naturally and make neural nets naturally
+ resistant to adversarial examples, or say to reduce the singularity of
+ the neural networks.
+ Better generalization and better learning of robust features.
+\end_layout
+
+\begin_layout Standard
+new
+\end_layout
+
+\begin_layout Standard
+the model is non-linear w.r.t.
+ benign sample, but linear to the adversarial perturbation.
+ so y0 + y1 = f(x+r) = f(x) + wr.
+ f(x) = b, we use y=wx+b.
+ Adversarial Singularity of Deep Neural Network
+\end_layout
+
+\begin_layout Section
+Method
+\end_layout
+
+\begin_layout Standard
+1.
+ It is noted that the deep neural networks behave linearly when under adversaria
+l attack.
+ So we assume that the neural nets can be approximated by a linear system
+ when facing adversarial examples.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y=Wx=U\Sigma V^{T}x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where y is the pre-softmax network output, W is the approximated linear
+ transformation, x is the input vector (column vector by default).
+ y.size = (n_cls+1, 1), W.size=(10,n_input), x.size(n_input, 1)
+\end_layout
+
+\begin_layout Standard
+2.
+ the directions on which the network is sensitive are aligned to the eigenvector
+ directions.
+ given an 
+\begin_inset Formula $x$
+\end_inset
+
+ in any class, we perform adversarial attack to change it into every class,
+ and obtain 
+\begin_inset Formula $x^{(1)},x^{(2)},x^{(3)}$
+\end_inset
+
+.
+ They are actually the combination of a base vector 
+\begin_inset Formula $x_{b}$
+\end_inset
+
+ and an adversarial perturbation of a specified class, namely 
+\begin_inset Formula $x^{(1)}=x_{b}+r^{(1)}$
+\end_inset
+
+, etc.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+x_{b} & \rightarrow & y_{b}\\
+x^{(1)} & \rightarrow & y_{b}+cls_{1}\\
+x^{(2)} & \rightarrow & y_{b}+cls_{2}\\
+x^{(3)} & \rightarrow & y_{b}+cls_{3}
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ how to fetch x_base and y_base, the restored version?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{r}\approx U\cdot\text{filter}(\Sigma)\cdot V^{T}\tilde{x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{r}\approx V\cdot\text{filter}(\Sigma^{-1})\cdot U^{T}\cdot\tilde{y}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+filter: remove any non-significant componet.
+ only keep the maximum singular value.
+\end_layout
+
+\begin_layout Standard
+4.
+ get the matrix 
+\begin_inset Formula $W$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+W=YX^{\dagger}=Y\begin{bmatrix}x_{b}\\
+x^{(1)}\\
+x^{(2)}\\
+x^{(3)}
+\end{bmatrix}^{\dagger}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+exp1: look at the spectrum
+\end_layout
+
+\begin_layout Standard
+exp2: diff 
+\begin_inset Formula $y_{b}-f(x_{b})$
+\end_inset
+
+ ? confidence = K-L divergence?
+\end_layout
+
+\begin_layout Section
+Another Formulation
+\end_layout
+
+\begin_layout Standard
+Based on the assumption that perturbations does not correlate with original
+ signal.
+ perturbations for different classes do not correlate with each other.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+SVD(\begin{bmatrix}x\\
+x+r_{1}\\
+x+r_{2}\\
+x+r_{3}
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+What if we do ICA instead of PCA?
+\end_layout
+
+\begin_layout Standard
+Conclusion: adversarial perturbation correlates with usable signal.
+ It is very difficult to separate it from the original image data.
+\end_layout
+
+\end_body
+\end_document
