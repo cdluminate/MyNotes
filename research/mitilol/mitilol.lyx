@@ -1,0 +1,1530 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{times}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "times" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 2
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MitiLoL: Mitigation of Local-Linearity as Adversarial Defense
+\end_layout
+
+\begin_layout Author
+Mo Zhou
+\end_layout
+
+\begin_layout Section
+Core Idea 
+\end_layout
+
+\begin_layout Subsection
+Motivation
+\end_layout
+
+\begin_layout Standard
+According to Ian, et al., 
+\begin_inset Quotes eld
+\end_inset
+
+FGSM
+\begin_inset Quotes erd
+\end_inset
+
+, the deep neural networks suffer from a 
+\begin_inset Quotes eld
+\end_inset
+
+local linearity
+\begin_inset Quotes erd
+\end_inset
+
+ characteristic, where the neural network outputs can be easily manipulated
+ via adversarial perturbations.
+\end_layout
+
+\begin_layout Standard
+Generic defense.
+ Classification only class.
+ DML defense only defense.
+ Nowadays pretraining is prevalent.
+ This is a very good start.
+ 1.
+ Will adversarial vulnerability he inherited from the pre-trained backbone
+ network? 2.
+ Will adversarial robustness decend into downstream tasks? Suppose we have
+ a deep neural network which learns intermediate representation of the data
+ as 
+\begin_inset Formula $\bm{\nu}.$
+\end_inset
+
+ Then 
+\begin_inset Formula $\nu$
+\end_inset
+
+ can be used for classification, metric learning, etc.
+ through subsequent multi-layer perceptrons.
+ Should we develop different defense methods for different tasks? In that
+ way the attack-defense arms race will never end.
+ Can we design a generic defense based on the origin of adversarial vulnerabilit
+y and end this infinite loop? We have to try.
+\end_layout
+
+\begin_layout Subsection
+Mitilol - Decomp lin-nonlin
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Method I.
+ Coarse grained.
+\end_layout
+
+\begin_layout Standard
+We interpret the FGSM 
+\begin_inset Quotes eld
+\end_inset
+
+local linearity
+\begin_inset Quotes erd
+\end_inset
+
+, assuming the neural network can be regarded as a vector (representation)
+ function w.r.t the vector input, such that the output can be approximated
+ as the sum of a non-linear response and a local-linear response.
+ For every element of the output
+\begin_inset Formula 
+\[
+\tilde{y}=f(x+r)\approx g(x)+h(r)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $g(x)$
+\end_inset
+
+ is the non-linear response, 
+\begin_inset Formula $h(r)$
+\end_inset
+
+ is the local-linear response to the adversarial perturbation.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Question: can we clearly define 
+\begin_inset Formula $g$
+\end_inset
+
+ and 
+\begin_inset Formula $h$
+\end_inset
+
+ functions? what if we look into this from a single linear layer?
+\end_layout
+
+\begin_layout Standard
+Since the 
+\begin_inset Formula $h(r)$
+\end_inset
+
+ is a local-linear response, let 
+\begin_inset Formula $\psi\geq1$
+\end_inset
+
+ be a constant, then we have
+\begin_inset Formula 
+\[
+\tilde{y}=f(x+\psi r)\approx g(x)+h(\psi r)=g(x)+\psi h(r)
+\]
+
+\end_inset
+
+and note that the local linearity is not necessarily guaranteed when 
+\begin_inset Formula $\psi<1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We want to eliminate the part of local linear response
+\begin_inset Formula 
+\begin{align*}
+\psi f(x+r)-f(x+\psi r)\approx(\psi-1)g(x)
+\end{align*}
+
+\end_inset
+
+which means 
+\begin_inset Formula 
+\[
+g(x)\approx\frac{\psi f(x+r)-f(x+\psi r)}{\psi-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+This is the case when we can control the perturbation.
+ What if we do not know whether 
+\begin_inset Formula $x$
+\end_inset
+
+ is already perturbed? Can we eliminate its original linearity by traversing
+ all classes and attack+regress the representation vector?
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Is the linear response 
+\begin_inset Formula $g(x)$
+\end_inset
+
+ still accurate for, e.g., classification?
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+What if we combine this with tylor expansion?
+\end_layout
+
+\begin_layout Standard
+This method can be done element-wise.
+ So I things like Jacobian are not required.
+ It is fast because we don't have to do differentiation.
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Method II.
+ Fine grained iterative method.
+\end_layout
+
+\begin_layout Standard
+Problem of the coarse method: the turning point or the border point is not
+ necessarily the regressed 
+\begin_inset Formula $g(x)$
+\end_inset
+
+.
+ The turning point for the local-linear area may lie between the 
+\begin_inset Formula $\psi\in[0,1]$
+\end_inset
+
+ range for 
+\begin_inset Formula $f(x+\psi r)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename drawing.svg
+	scale 16
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We need to design an iterative algorithm to more accurately regress the
+ 
+\begin_inset Formula $g(x)$
+\end_inset
+
+ value.
+ The direct removal is just an approximation of 
+\begin_inset Formula $g(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+It can be an iterative bisection algorithm to locate the border value for
+ the local-linear area, by comparing the descent direction (cosine similarity
+ consistency constraint?) and stop when the constraint breaks or the direction
+ is not aligned for the linear assumption.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+I guess this works better on simpler networks.
+ The coarse method works better on resnet etc because the borderline 
+\begin_inset Formula $\psi$
+\end_inset
+
+ for resnet can be very close to zero.
+\end_layout
+
+\begin_layout Subsection
+Mitilol - Tylor Version
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+T(x)=f(a)+(x-a)^{T}\nabla f(a)+O(\cdots)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Input manifold: (1) on-manifold example: the network behaves non-linearly
+ in the neibor area, and the network cannot be easily approxiated with Tylor
+ expansion.
+ 
+\begin_inset Formula $f(x)\neq f(a)+\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(2) off-manifold adversarial example: the network behaves linearly in that
+ local area
+\begin_inset Formula 
+\begin{align*}
+f(x) & \approx f(a)+(x-a)^{T}\nabla f(a)\\
+f(x+\psi r) & \approx f(x+r)+(\psi-1)r^{T}\nabla f(x+r)\\
+f(x) & \approx f(x+r)-r^{T}\nabla f(x+r)
+\end{align*}
+
+\end_inset
+
+Such a bold assumption.
+ 
+\end_layout
+
+\begin_layout Standard
+The decomp version is a manual differentiation process.
+ similarly, we are not sure where the non-linear to linear transition point
+ lies at 
+\begin_inset Formula $\psi=0$
+\end_inset
+
+.
+ It may lie at 
+\begin_inset Formula $\psi=0.3$
+\end_inset
+
+ for example.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+So this needs to be extended into Jacobian.
+ Pytorch can do jacobian.
+ But automatic differentiation is afterall slower than manual gradient computati
+on.
+\end_layout
+
+\begin_layout Standard
+Ummm actually the decomposition is basically equivalent to the Tylor version.
+\begin_inset Formula 
+\[
+\frac{\psi f(x+r)-f(x+\psi r)}{\psi-1}=f(x+r)-r^{T}\nabla f(x+r)=f_{Tylor}|_{\psi=0}
+\]
+
+\end_inset
+
+this means that
+\begin_inset Formula 
+\begin{align*}
+g(x) & =f(x+r)-r^{T}\nabla f(x+r)\\
+h(\psi r) & =\psi h(r)=\psi r^{T}\nabla f(x+r)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Method 2: iterative with Tylor.
+\end_layout
+
+\begin_layout Standard
+Choise problem: linear for single-dimension for linear for the whole response?
+\end_layout
+
+\begin_layout Subsection
+Mitilol as Defense
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+f(x+z+\psi r) & \approx f(x)+h(z)+\psi h(r)\\
+f(x+z+\psi r) & \approx f(x+z)+\psi r^{T}\nabla f(x+z)\\
+f(x+\psi r+z) & \approx f(x+r)+(\psi-1)r^{T}\nabla f(x+r)+z^{T}\nabla f(x+r)
+\end{align*}
+
+\end_inset
+
+we cannot control the unknown constant perturbation 
+\begin_inset Formula $z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+I.
+ when 
+\begin_inset Formula $z$
+\end_inset
+
+ and 
+\begin_inset Formula $r$
+\end_inset
+
+ are homogenious, the directions are aligned.
+ probe-bisect is the best way to isolate nonlinear response.
+ Scalar target or vector cosine?
+\end_layout
+
+\begin_layout Standard
+II.
+ when 
+\begin_inset Formula $z$
+\end_inset
+
+ and 
+\begin_inset Formula $r$
+\end_inset
+
+ are heterogenious, the algorithm will still stop at 
+\begin_inset Formula $g(x)+h(z)$
+\end_inset
+
+.
+ This is just like lockpicking, as long as the direction is incorrect, we
+ cannot go further from the original point.
+ We traverse every class, and find the maximum shift back from 
+\begin_inset Formula $f(x+z)$
+\end_inset
+
+, that's possibly the class for which the lockpicking worked.
+ Only when the directions are aligned can the lockpick succeed – resulting
+ in maximum shift distance.
+\end_layout
+
+\begin_layout Section
+How To Validate
+\end_layout
+
+\begin_layout Standard
+We can validate this on classification and metric learning.
+\end_layout
+
+\begin_layout Standard
+robrank would be a good quick start.
+\end_layout
+
+\begin_layout Standard
+Then we move to classification.
+\end_layout
+
+\begin_layout Subsection
+Forward Validation (Attack)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Figure_1.svg
+	special width=\columnwidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Cosine Similarity Matrix for Jacobian Matrices during Foward Verification.
+ fa_mlp, e=0.3, step=48, batch of 100.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Figure_fac2f2.svg
+	special width=\columnwidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Cosine Matrix.
+ fa_c2f2, e=0.3, step=48, batch of 100.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figure_res18.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Cosine matrix on Jacobian.
+ ct_res18, e=16, step=48, batch of 128.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using pytorch autograd functional jacobian.
+\end_layout
+
+\begin_layout Standard
+We do multiple steps of PGD.
+ Given network 
+\begin_inset Formula $y=f(\cdot)$
+\end_inset
+
+ which outputs the pre-softmax output.
+ Given image 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+, we attack it for 48 steps and get the adversarial example from each step
+ as 
+\begin_inset Formula $\{x_{1},x_{2},\ldots,x_{M}\}$
+\end_inset
+
+.
+ Then we want to figure out the changing pattern of the Jacobian matrix
+ 
+\begin_inset Formula 
+\[
+J_{i}=\frac{\partial f(x_{i})}{\partial x_{i}}
+\]
+
+\end_inset
+
+Then we are interested in the cosine similarity matrix (difference between
+ steps), namely 
+\begin_inset Formula $\langle J_{i},J_{i-1}\rangle$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+As shown in the graph, the adversarial example lies in a 
+\begin_inset Quotes eld
+\end_inset
+
+local linear
+\begin_inset Quotes erd
+\end_inset
+
+ area in the input space of the model.
+ That means following the Jacobian matrix, we can approximately revert the
+ PGD steps to some extent.
+ Let's do the backward validation and see what happens.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename cosine_during_attack_regular.png
+	special width=1.0\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Cosine during regular PGD attack.
+ fa_c2f2.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename cosine_during_attack_already_adv.png
+	special width=1.0\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Cos during attacking an example that is already adversarial.
+ fa_c2f2.
+ alicer/neuroski UT:PGDT.
+ Does this indicate possibility of adversarial example detection?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename cosine_during_attack_regular_res18.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename cosine_during_attack_already_adv_res18.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Cos for CIFAR10 Resnet18.
+ Upper: starting from benign.
+ Lower: starting from adversarial.
+ PGDstep=18
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Backward Validation (Revert)
+\end_layout
+
+\begin_layout Standard
+The forward verification reveals some interesting patterns.
+ (1) the model behaves linearly in every class at the last part of the trajector
+y.
+ (2) there is a clear turning point during attack in the cosine matrix.
+ It's even more clear on simpler models like mlp.
+ Due to complexity of c2f2, it's linearity is not as strong as in mlp.
+ (3) the cosine matrix starting from an already adversarial example looks
+ like the upper right part, which is quite different from a benign example.
+ Can this be used for adversarial example detection?
+\end_layout
+
+\begin_layout Standard
+So, the basic idea of backward validation is to perform gradient descent
+ until the linearity disappears.
+\end_layout
+
+\begin_layout Subsubsection
+Adversarial Example Detection
+\end_layout
+
+\begin_layout Standard
+[ ] Concept validation on the resnet 18 model?
+\end_layout
+
+\begin_layout Standard
+[ ] how about the detection accuracy based on that?
+\end_layout
+
+\begin_layout Subsubsection
+Revert
+\end_layout
+
+\begin_layout Standard
+Pick the element with the largest acivation and use its corresponding gradient
+ for reversal.
+ Namely, we pick 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ where 
+\begin_inset Formula $i=\arg\max_{i}y_{i}$
+\end_inset
+
+.
+ Then its corresponding gradient 
+\begin_inset Formula $g=\frac{\partial}{\partial x}\max_{i}y_{i}$
+\end_inset
+
+.
+ And the example can be upgraded using PGD attack: 
+\begin_inset Formula 
+\[
+x_{t+1}=x_{t}-\alpha\text{sign}(\nabla_{x}\max_{i}y_{i})
+\]
+
+\end_inset
+
+We can descend along this gradient until the model no longer behaves linearly.
+ Namely, we stop when
+\begin_inset Formula 
+\[
+\langle\frac{\partial}{\partial x_{0}}\max_{i}y_{i0},\frac{\partial}{\partial x_{t}}\max_{i}y_{it}\rangle<\rho\qquad\rho\in(0,1]
+\]
+
+\end_inset
+
+According to the cosine matrices, it possibly should be around 
+\begin_inset Formula $0.7$
+\end_inset
+
+ to 
+\begin_inset Formula $0.9$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+PRELIM
+\series default
+ Reverting using 
+\begin_inset Formula $\partial y_{i}/\partial x$
+\end_inset
+
+ does not work on fa_mlp, fa_c2f2, and ct_res18.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+NEXT
+\series default
+ How about 
+\begin_inset Formula $\frac{1}{N}\sum_{i}\partial y_{i}/\partial x$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+PRELIM
+\series default
+ NO
+\end_layout
+
+\begin_layout Subsection
+Conclusion
+\end_layout
+
+\begin_layout Standard
+This degenerates into an adversarial example detection method.
+\end_layout
+
+\begin_layout Section
+LoLiDet: Adversarial Perturbation Detection
+\end_layout
+
+\begin_layout Subsection
+Detecting from Jacobian Cosine
+\end_layout
+
+\begin_layout Standard
+The scatter plots with mean and variance values of the cosine matrix reveals
+ cues of attack.
+ Specifically, for each batch, we calculate the mean cosine matrix
+\begin_inset Formula 
+\[
+\bar{C}=\frac{1}{10}\sum_{i=1}^{10}C_{i}
+\]
+
+\end_inset
+
+And the mean and variance statistics comes from 
+\begin_inset Formula $\bar{C}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename mlp-e2.svg
+	special width=0.7\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename mlp-e4.svg
+	special width=0.7\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename mlp-e8.svg
+	special width=0.7\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename mlp-e16.svg
+	special width=0.7\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename mlp-e77.svg
+	special width=0.7\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+fa_mlp, 2, 4, 8, 16, 77
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename c2f2-e2.svg
+	special width=0.7\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename c2f2-e4.svg
+	special width=0.7\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename c2f2-e8.svg
+	special width=0.7\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename c2f2-e16.svg
+	special width=0.7\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename c2f2-e77.svg
+	special width=0.7\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Histogram, Parameter Scatter of Gaussian, Parameter Scatter of Gumbel.
+ fa_c2f2.
+ from high to low e=2,4,8,16, 77
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename whylap-ct-e16.svg
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Why use Laplacian function? ct-res18, e=16/255.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ct-e2.svg
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ct-e4.svg
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ct-e8.svg
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ct-e16.svg
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Histogram, Parameter Scatter of Gaussian, Parameter Scatter of Gumbel.
+ ct_res18.
+ from high to low e=2,4,8,16
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Why Detection?
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $P(A)$
+\end_inset
+
+ be prior prob of attack, while 
+\begin_inset Formula $P(B)$
+\end_inset
+
+ for benign.
+ 
+\begin_inset Formula $P(A)+P(B)=1$
+\end_inset
+
+.
+ Detection probability 
+\begin_inset Formula $P_{D}=P(\hat{A}|A)$
+\end_inset
+
+, and false alarm rate 
+\begin_inset Formula $P_{F}=P(\hat{A}|B)$
+\end_inset
+
+.
+ Classifier accuracy 
+\begin_inset Formula $R_{A}$
+\end_inset
+
+ is defensive adversarial, 
+\begin_inset Formula $R_{B}$
+\end_inset
+
+ is defensive benign, 
+\begin_inset Formula $A_{A}$
+\end_inset
+
+ is benign adversarial, 
+\begin_inset Formula $A_{B}$
+\end_inset
+
+ is benign performance.
+ We have 
+\begin_inset Formula $R_{A}>A_{A}$
+\end_inset
+
+, 
+\begin_inset Formula $R_{B}<A_{B}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $R_{B}-R_{A}<A_{B}-A_{A}$
+\end_inset
+
+, namely 
+\begin_inset Formula $R_{B}-A_{B}<R_{A}-A_{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Expected accuracy for N/A defense:
+\begin_inset Formula 
+\[
+E[\text{Acc-N/A}]=P(A)A_{A}+P(B)A_{B}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Expected accuracy for pure defense:
+\begin_inset Formula 
+\[
+E[\text{Acc-Def}]=P(A)R_{A}+P(B)R_{B}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Only when the following condition is satisfied, will the pure defense be
+ better than without defense in practical use.
+ When 
+\begin_inset Formula $P(A)$
+\end_inset
+
+ is very small (small enough to neglect, say), the performance gap will
+ make pure defense not applicable.
+\begin_inset Formula 
+\[
+\frac{P(A)}{P(B)}>\frac{A_{B}-R_{B}}{R_{A}-A_{A}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Expectation of accuracy if we have a detector:
+\begin_inset Formula 
+\[
+E[\text{Acc-Det}]=P(A)P_{D}R_{A}+P_{A}(1-P_{D})A_{A}+P(B)P_{F}R_{B}+P(B)(1-P_{F})A_{B}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We want to say that 
+\begin_inset Formula $E_{Acc-DET}>E_{N/A}$
+\end_inset
+
+ when:
+\begin_inset Formula 
+\begin{align*}
+P(A)P_{D}R_{A}+P(A)(1-P_{D})A_{A} & +P(B)P_{F}R_{B}+P(B)(1-P_{F})A_{B}\\
+ & >P(A)A_{A}+P(B)A_{B}\\
+P(A)(P_{D}R_{A}+A_{A}-P_{D}A_{A}-A_{A}) & >P(B)(A_{B}-P_{F}R_{B}-A_{B}+P_{F}A_{B})\\
+P(A)(P_{D}R_{A}-P_{D}A_{A}) & >P(B)(P_{F}A_{B}-P_{F}R_{B})\\
+P(A)P_{D}(R_{A}-A_{A}) & >P(B)P_{F}(A_{B}-R_{B})\\
+\frac{P(A)}{P(B)} & >\frac{P_{F}(A_{B}-R_{B})}{P_{D}(R_{A}-A_{A})}\\
+\text{will always hold if }\frac{P(A)}{P(B)} & >\frac{P_{F}}{P_{D}}
+\end{align*}
+
+\end_inset
+
+and actually this is not easy to achieve especially when 
+\begin_inset Formula $P(A)$
+\end_inset
+
+ is very small (e.g., 0.01).
+ This can be a limitation of attack detection methods.
+ Attack detection methods must be accurate in order to improve the accuracy
+ expectation.
+\end_layout
+
+\begin_layout Subsection
+Discussions
+\end_layout
+
+\begin_layout Standard
+TODO: Maybe removing the center stem before doing Laplacian fitting could
+ be better in terms of discriminating the two cases.
+\end_layout
+
+\begin_layout Standard
+Advantages of this detection method: (1) does not require training any additiona
+l model and does not interfere with existing model; (2) can operate at the
+ representation level, and hence is applicable to a wide range of applications
+ beyond classification; (3) cheap to create; (4) the method is agnostic
+ to backbone, as long as the backbone is differentiable.
+\end_layout
+
+\begin_layout Standard
+Experimental evaluations: should design adaptive attack.
+\end_layout
+
+\begin_layout Subsection
+Regress adv extent (which PGD step)
+\end_layout
+
+\begin_layout Standard
+How adversarial is it? Match the region in cosine matrix.
+ Methods: linear regression, ordinal regression based on the binary classifiers
+ above.
+ KL divergence.
+\end_layout
+
+\begin_layout Section
+TODO
+\end_layout
+
+\begin_layout Enumerate
+Read related works.
+\end_layout
+
+\begin_layout Enumerate
+Design evaluation protocol.
+\end_layout
+
+\begin_layout Enumerate
+design adaptive attack.
+\end_layout
+
+\begin_layout Enumerate
+what we want: classification with confidence, regression of how adversarial
+ it is (confidence?)
+\end_layout
+
+\begin_layout Enumerate
+Models to test: c2f2 (madry), resnet18 for (cifar10, cifar100), resnet152
+ for imagenet, SwinT for imagenet, OpenAI CLIP or imagenet.
+\end_layout
+
+\begin_layout Enumerate
+overlap with adversarial training?
+\end_layout
+
+\begin_layout Section
+Skeleton of Story
+\end_layout
+
+\begin_layout Enumerate
+Ian Goodfellow FGSM – vulnerability and local linearity.
+\end_layout
+
+\begin_layout Enumerate
+Local linearity interpretation through Tylor expansion (gradient similarity
+ in the local linear area) and Jacobian.
+\end_layout
+
+\begin_layout Enumerate
+Derive lolidet: Jacobian, Opposite diagonal, Laplacian, 
+\series bold
+Classification
+\series default
+ in low-dim parameter space.
+ We can also provide confidence with traditional machine learning method.
+\end_layout
+
+\begin_layout Enumerate
+Extend white-box detection (we know the attack parameters, e.g., 
+\begin_inset Formula $\varepsilon=0.3$
+\end_inset
+
+ or 
+\begin_inset Formula $\varepsilon=16/255$
+\end_inset
+
+) to black-box attack detection: Ordinal 
+\series bold
+Regression
+\series default
+ reusing the classifiers.
+\end_layout
+
+\end_body
+\end_document
