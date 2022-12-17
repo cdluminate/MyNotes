@@ -1,0 +1,175 @@
+\documentclass[twocolumn]{article}
+\usepackage{times}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\usepackage{xcolor}
+
+
+\title{neuroski sparks}
+\author{Mo Zhou}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+%\newpage
+	
+\section{NeuroSki Algorithm}
+
+Adversarial examples lies in the off-manifold space. They
+are expected to slide off further from their original places
+compared to benign examples. This phenomenon will be even
+more obvious if we remove the $\ell_p$ restriction from the
+$attack_{step}$ function. Adversarial examples does not have
+stationary property in the off-manifold space.
+
+Identifying adversarial examples by their trails in the space
+during the NeuroSki process.
+
+New algo? multiski?
+
+"Imperceptible" is a special and necessary property of
+adversarial examples. Can we turn it into a disadvantage
+of adversarial examples? Since the perturbation is imperceptible,
+the distance for resetting cannot be too long.
+
+ZReg is actually a tiny branch of the fractal defense.
+
+Designing a good defense if much harder than designing a good attack.
+An attack is good enough as long as it is able to break one kind of defense,
+while a defense is good enough only when it is able to resist multiple types
+of defenses.
+
+\begin{algorithm}
+	\SetAlgoLined
+	\KwIn{Input images $x$, and predicted class $y$}
+	\KwOut{Perturbed images $\hat{x}$}	
+	$\hat{x} \gets x$\;
+	\For{$i\gets 0$ \KwTo $\text{MaxIter}$}{
+		$\hat{x} \gets \text{Attack\_Step}\big(\hat{x},
+		\text{Random}(C\backslash y)\big)$\;
+		$\hat{x} \gets \text{Attack\_Step}\big(\hat{x}, y\big)$,
+	}
+	\caption{NeuroSki Process}
+	\label{algo:neuroski}
+\end{algorithm}
+
+\begin{algorithm}
+	\SetAlgoLined	
+	\KwIn{Input image $x$, no label}
+	\KwOut{Predicted label of image $x$}	
+	\For{$c \in C$}{
+		$\hat{x} \gets \text{NeuroSki}(x, c)$\;
+		$\text{ski}_c \gets \|\hat{x} - x \|_2$\;
+	}
+	$\text{label} \leftarrow \arg\min_{c\in C} \text{ski}_c$\;
+	\caption{ZREG: NeuroSki Regression (looks good sometimes), needs
+	improvement, no way for MAX}
+	\label{algo:nsreg}
+\end{algorithm}
+
+\begin{algorithm}
+	\SetAlgoLined
+	\KwIn{Input image $x$, no label}
+	\KwOut{Predicted label of image $x$}	
+	\For{$c \in C$}{
+		$\hat{x} \gets \textcolor{red}{Attack\_UntilSucc}(x, c)$\;
+		$\hat{x} \gets \text{NeuroSki}(\hat{x}, c)$\;
+		$\text{ski}_c \gets \|\hat{x} - x \|_2$\;
+	}
+	$\text{label} \leftarrow \arg\min_{c\in C} \text{ski}_c$\;
+	\caption{NeuroSki \textcolor{red}{Dash} (PGD) Regression}
+\end{algorithm}
+
+\begin{algorithm}
+	\SetAlgoLined	
+	\KwIn{Input image $x$, and predicted $y$}
+	\KwOut{Predicted label of image $x$}
+	\KwResult{output}		
+	\For{$c \in C\backslash y$}{
+		$\hat{x} \gets \text{Attack\_UntilSucc}(x, c)$\;
+		$\text{ski}_c \gets \|\hat{x} - x \|_2$\;
+	}
+	label$\leftarrow \arg\min_{i\in C} $ski$_i$\;	
+	\caption{SREG: NeuroSki Straight Regression (min?max?)}
+\end{algorithm}
+
+
+\begin{description}
+	\item[Pros] \begin{itemize}
+		\item The defense side has full access to the model details
+			and the gradients
+		\item The neuroski regression algorithm can be used as a pluging
+		to existing neural network classifiers
+	\end{itemize}
+	\item[Cons] \begin{itemize}
+		\item Expensive computation process
+	\end{itemize}
+\end{description}
+
+
+\subsection{Adversarial Fractal Defense}
+
+* defense by attack -> fractal defense.
+
+* fractal defense. is there any intriguing property in the off-manifold space?
+
+* adversarial saturation? fractal saturation? can we deduce the original class by some of these properties?
+
+* adversarial example generation speed? see Bengio's causual inference paper.
+
+does a fractal structure exist in the off-manifold space? does the adversarial anchors (in critical condition) exist? is there any inequality relationship between $x+r$ or alike?
+
+Given an $f(x)=[q_1,q_2,\ldots,q_C]^T$ which predicts the categorical distribution from the input image.
+
+\textbf{Adversarial Anchor}.
+An specific adversarial perturbation $r$, with which at least two categorical predictions are concurrently the maximum one, e.g. $f(x+r_{ij})=[q_1,q_2,\ldots,q_C]^T$, $\exists i,j \in [1,C] ~(i\neq j)$, such that $q_i=q_j = \|\mathbf{q}\|_\infty$.
+
+\subsection{Adversarial Reset: Defense by Attacking}
+
+Assumption: on-manifold ordinary image, and adversarially perturbed image have different properties when being (further) adversarially perturbed.
+
+We have a well-trained classification model:
+\begin{equation}
+\theta^* = \argmin_\theta \mathbf{E}_{(x,y)\sim D} \big\{ L(x,y;\theta) \big\}
+\end{equation}
+
+Adversarially perturbing an ordinary image in class $0$: (attack - reset - attack - reset - ...)
+\begin{align}
+r_{0,1} &= \argmin_r L(x_{(0)} + r, y_1; \theta) \\
+	r_{0,1,0} &= \argmin_r L(x_{(0)} + r_{0,1} + r, y_0; \theta) \\
+	%
+	r_{0,1,0} \approx - r_{0,1} &\rightarrow x_{(0)} + r_{0,1} + r_{0,1,0} \approx x_{(0)} \\
+	%
+	r_{0,1,0,2} &= \argmin_r L(x_{(0)} + r_{0,1} + r_{0,1,0} + r, y_2; \theta) \\
+	r_{0,1,0,2,0} &= \argmin_r L(x_{(0)} + r_{0,1} + r_{0,1,0} + r_{0,1,0,2}, y_0; \theta) \\
+	%
+	r_{0,1,0,2,0} \approx - r_{0,1,0,2} &\rightarrow 		x_{(0)} + r_{0,1} + r_{0,1,0} + r_{0,1,0,2} + r_{0,1,0,2,0} \approx x_{(0)}\\
+	%
+	&\rightarrow x_{(0)} + R_{0,1,0,2,0} \approx x_{(0)}
+\end{align}
+The reset perturbation should be approximate to the negative attacking perturbation, as they are computed from the gradient.
+
+Adversarially perturbing an adversarial example misclassified as class $0$:
+\begin{align}
+	r_{0,1} &= \argmin_r L(x_{(9)} + r_0 + r, y_1; \theta)\\
+	r_{0,1,0} &= \argmin_r L(x_{(9)} + r_0 + r_{0,1} + r, y_0; \theta)\\
+	%
+	r_{0,1,0} \not\approx r_{0,1} &\rightarrow x_{(9)} + r_0 + r_{0,1} + r_{0,1,0} \not\approx x_{(9)}+ r_0\\ 	%
+	&\rightarrow x_{(9)} + r_{0} + R_{0,1,0} \not\approx x_{(9)} + r_0
+\end{align}
+
+detailed process with FGSM or FGM? Tylor expansion? Investigate the 1-layer softmax classifier and the local linearity theory?
+
+\begin{equation}
+	\| R^{(0)}_{0,\ldots,0} \|_p <? \| R^{(9)}_{0,\ldots,0} \|_p
+\end{equation}
+	
+\end{document}
