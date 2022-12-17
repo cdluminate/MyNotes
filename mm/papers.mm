@@ -1,15 +1,16 @@
-<map version="freeplane 1.7.0">
-<!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="{M,R,D}L" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1657404442105" STYLE="oval">
-<font NAME="Gentium" SIZE="18"/>
-<hook NAME="MapStyle" zoom="1.17">
+<map version="freeplane 1.9.13">
+<!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
+<node TEXT="{M,R,D}L" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1671215692966" STYLE="oval">
+<font NAME="Gentium" SIZE="18" ITALIC="false"/>
+<hook NAME="MapStyle" zoom="1.977">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
-<stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
+<stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
-<stylenode LOCALIZED_TEXT="default" ICON_SIZE="12.0 pt" COLOR="#000000">
+<stylenode LOCALIZED_TEXT="default" ID="ID_1950589302" ICON_SIZE="12 pt" COLOR="#000000">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1950589302" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Gentium" SIZE="10" BOLD="false" ITALIC="false"/>
 </stylenode>
 <stylenode LOCALIZED_TEXT="defaultstyle.details"/>
@@ -21,6 +22,7 @@
 <edge STYLE="hide_edge"/>
 <cloud COLOR="#f0f0f0" SHAPE="ROUND_RECT"/>
 </stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.selection" BACKGROUND_COLOR="#4e85f8" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#4e85f8"/>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="styles.topic" COLOR="#18898b" STYLE="fork">
@@ -37,7 +39,7 @@
 </stylenode>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
-<stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" COLOR="#000000" STYLE="oval" SHAPE_HORIZONTAL_MARGIN="10.0 pt" SHAPE_VERTICAL_MARGIN="10.0 pt">
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" COLOR="#000000" STYLE="oval" SHAPE_HORIZONTAL_MARGIN="10 pt" SHAPE_VERTICAL_MARGIN="10 pt">
 <font SIZE="18"/>
 </stylenode>
 <stylenode LOCALIZED_TEXT="AutomaticLayout.level,1" COLOR="#0033ff">
@@ -2134,7 +2136,7 @@
 </node>
 </node>
 <node TEXT="Manual Network Arch Search" ID="ID_1644165991" CREATED="1590798285515" MODIFIED="1590798297350">
-<node TEXT="2003.03828: &#x3a0;&#x2212;nets: Deep Polynomial Neural Networks (cvpr20)" ID="ID_1971909483" CREATED="1590798302462" MODIFIED="1590798316921"/>
+<node TEXT="2003.03828: Π−nets: Deep Polynomial Neural Networks (cvpr20)" ID="ID_1971909483" CREATED="1590798302462" MODIFIED="1590798316921"/>
 <node TEXT="2003.13866: Dataless Model Selection with the Deep Frame Potential (cvpr20 oral)" ID="ID_1001428483" CREATED="1590749590119" MODIFIED="1590749604523">
 <node TEXT="Manual network Architecture search" ID="ID_906467454" CREATED="1590749906309" MODIFIED="1590749914137"/>
 </node>
@@ -2821,7 +2823,7 @@
 <node TEXT="(3) accuracy" ID="ID_1035220223" CREATED="1654102615605" MODIFIED="1654102617755"/>
 </node>
 </node>
-<node TEXT="&#x201c;Object Detection in 20 Years: A Survey" ID="ID_1224901954" CREATED="1653970416866" MODIFIED="1653970420561">
+<node TEXT="“Object Detection in 20 Years: A Survey" ID="ID_1224901954" CREATED="1653970416866" MODIFIED="1653970420561">
 <icon BUILTIN="pencil"/>
 </node>
 <node TEXT="https://github.com/amusi/awesome-object-detection" ID="ID_1845974464" CREATED="1654041279612" MODIFIED="1654041280016"/>
@@ -2869,7 +2871,7 @@
 </node>
 <node TEXT="Faster R-CNN" ID="ID_642482113" CREATED="1578733414892" MODIFIED="1587526865053">
 <font NAME="Gentium" BOLD="false"/>
-<node TEXT="&#x201c;Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks" ID="ID_1931573471" CREATED="1653968978046" MODIFIED="1653968979831">
+<node TEXT="“Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks" ID="ID_1931573471" CREATED="1653968978046" MODIFIED="1653968979831">
 <node TEXT="NIPS15" ID="ID_146741130" CREATED="1653968981601" MODIFIED="1653968983499"/>
 <node TEXT="make CNN do proposals!" ID="ID_427255944" CREATED="1653969118650" MODIFIED="1653969122706"/>
 <node TEXT="This is a two-stage object detector" ID="ID_468294209" CREATED="1653969242963" MODIFIED="1653969251904">
@@ -2940,7 +2942,7 @@
 <node TEXT="anchor-based" ID="ID_1928529639" CREATED="1654720582917" MODIFIED="1654720588478">
 <icon BUILTIN="info"/>
 </node>
-<node TEXT="&#x201c;SSD: Single-Shot MultiBox Detector" ID="ID_1049708950" CREATED="1653969449265" MODIFIED="1654041102631">
+<node TEXT="“SSD: Single-Shot MultiBox Detector" ID="ID_1049708950" CREATED="1653969449265" MODIFIED="1654041102631">
 <icon BUILTIN="unchecked"/>
 </node>
 </node>
@@ -3234,7 +3236,7 @@
 </node>
 </node>
 <node TEXT="Both" ID="ID_1865823804" CREATED="1654994072992" MODIFIED="1655004436611">
-<node TEXT="Don&#x2019;t Judge an Object by Its Context: Learning to Overcome Contextual Bias" ID="ID_834860768" CREATED="1654994077221" MODIFIED="1654994086424">
+<node TEXT="Don’t Judge an Object by Its Context: Learning to Overcome Contextual Bias" ID="ID_834860768" CREATED="1654994077221" MODIFIED="1654994086424">
 <icon BUILTIN="bookmark"/>
 <icon BUILTIN="button_ok"/>
 <node TEXT="CVPR20" ID="ID_1300735588" CREATED="1654994080417" MODIFIED="1654994081985"/>
@@ -3742,7 +3744,7 @@
 <font NAME="Gentium" SIZE="10"/>
 </node>
 </node>
-<node TEXT="2019-ICMR: Who&#x2019;s Afraid of Adversarial Queries?" ID="ID_1703113745" CREATED="1561556482168" MODIFIED="1636485880766">
+<node TEXT="2019-ICMR: Who’s Afraid of Adversarial Queries?" ID="ID_1703113745" CREATED="1561556482168" MODIFIED="1636485880766">
 <icon BUILTIN="button_cancel"/>
 <font NAME="Gentium" SIZE="10"/>
 <node TEXT="query attack" ID="ID_1123142555" CREATED="1561556568742" MODIFIED="1587728924189">
@@ -4675,7 +4677,7 @@
 </node>
 <node TEXT="perturbation" ID="ID_174218220" CREATED="1653860058835" MODIFIED="1656028174630">
 <node TEXT="LIME" ID="ID_1481560289" CREATED="1653860346455" MODIFIED="1653860348553">
-<node TEXT="&#x201c;Why Should I Trust You?&#x201d;&#xa;Explaining the Predictions of Any Classifier" ID="ID_674389421" CREATED="1653860349515" MODIFIED="1653860351696">
+<node TEXT="“Why Should I Trust You?”&#xa;Explaining the Predictions of Any Classifier" ID="ID_674389421" CREATED="1653860349515" MODIFIED="1653860351696">
 <icon BUILTIN="unchecked"/>
 <node TEXT="KDD" ID="ID_706793779" CREATED="1653860352710" MODIFIED="1653860353774"/>
 </node>
@@ -4761,7 +4763,7 @@
 </node>
 <node TEXT="Fundamental" ID="ID_1355970702" CREATED="1619335831487" MODIFIED="1619335834763">
 <node TEXT="CVPR21: Surrogate Gradient Field for Latent Space Manipulation" ID="ID_592809931" CREATED="1619335835845" MODIFIED="1619335849013"/>
-<node TEXT="2106.10410 Deep Generative Learning via Schr &#x308;odinger Bridge" ID="ID_1481005194" CREATED="1624457232722" MODIFIED="1624457250506">
+<node TEXT="2106.10410 Deep Generative Learning via Schr ̈odinger Bridge" ID="ID_1481005194" CREATED="1624457232722" MODIFIED="1624457250506">
 <icon BUILTIN="button_ok"/>
 </node>
 <node TEXT="Rewriting Geometric Rules of a GAN" ID="ID_1854620633" CREATED="1659196066523" MODIFIED="1659196067439">
@@ -5111,7 +5113,7 @@
 <node TEXT="iccv21" ID="ID_588513264" CREATED="1642456785239" MODIFIED="1642456786804"/>
 <node TEXT="attackers can construct sensitive information (such as faces) merely from model predictions" ID="ID_111964935" CREATED="1642456788665" MODIFIED="1642456829436"/>
 </node>
-<node TEXT="WHEN MACHINE LEARNING ISN&#x2019;T PRIVATE" ID="ID_1244120972" CREATED="1648419587624" MODIFIED="1648419588530">
+<node TEXT="WHEN MACHINE LEARNING ISN’T PRIVATE" ID="ID_1244120972" CREATED="1648419587624" MODIFIED="1648419588530">
 <node TEXT="USENIX" ID="ID_105372756" CREATED="1648419590393" MODIFIED="1648419592312"/>
 <node TEXT="Carlini" ID="ID_901631564" CREATED="1648419592553" MODIFIED="1648419594517"/>
 </node>
@@ -6932,7 +6934,7 @@
 <node TEXT="Beat Pixel Deflection" ID="ID_1029281929" CREATED="1559916803927" MODIFIED="1587728923685">
 <font NAME="Gentium" SIZE="10"/>
 </node>
-<node TEXT="Beat HGR" ID="ID_1085915829" CREATED="1559916828285" MODIFIED="1587728923686" HGAP_QUANTITY="18.499999865889553 pt" VSHIFT_QUANTITY="3.7499998882412946 pt">
+<node TEXT="Beat HGR" ID="ID_1085915829" CREATED="1559916828285" MODIFIED="1587728923686" HGAP_QUANTITY="18.5 pt" VSHIFT_QUANTITY="3.75 pt">
 <font NAME="Gentium" SIZE="10"/>
 </node>
 </node>
@@ -7123,7 +7125,7 @@
 <font NAME="Gentium" SIZE="10"/>
 <node TEXT="What Else Can Fool Deep Learning?Addressing Color Constancy Errors on Deep Neural Network Performance (iccv19)" ID="ID_662245401" CREATED="1573481623146" MODIFIED="1587728923749">
 <font NAME="Gentium" SIZE="10"/>
-<node TEXT=" Specifically, we explore how strong color castscaused  by  incorrectly  applied  computational  color  con-stancy &#x2013; referred to as white balance (WB) in photography&#x2013; negatively impact the performance of DNNs targeting im-age segmentation and classification. In addition, we discusshow existing image augmentation methods used to improvethe  robustness  of  DNNs  are  not  well  suited  for  modelingWB errors." ID="ID_1338052480" CREATED="1573481618321" MODIFIED="1587728923750">
+<node TEXT=" Specifically, we explore how strong color castscaused  by  incorrectly  applied  computational  color  con-stancy – referred to as white balance (WB) in photography– negatively impact the performance of DNNs targeting im-age segmentation and classification. In addition, we discusshow existing image augmentation methods used to improvethe  robustness  of  DNNs  are  not  well  suited  for  modelingWB errors." ID="ID_1338052480" CREATED="1573481618321" MODIFIED="1587728923750">
 <font NAME="Gentium" SIZE="10"/>
 </node>
 </node>
@@ -7363,7 +7365,7 @@
 </node>
 <node TEXT="Analysis" FOLDED="true" ID="ID_585918457" CREATED="1561468158595" MODIFIED="1607497436436">
 <font NAME="Gentium" SIZE="10"/>
-<node TEXT="1502.02590: Analysis of classifiers&#x2019; robustness" ID="ID_282179492" CREATED="1561468168547" MODIFIED="1587728923810">
+<node TEXT="1502.02590: Analysis of classifiers’ robustness" ID="ID_282179492" CREATED="1561468168547" MODIFIED="1587728923810">
 <font NAME="Gentium" SIZE="10"/>
 <node TEXT="theoretical framework for analysing classifier robustness" ID="ID_988543480" CREATED="1561468186067" MODIFIED="1587728923812">
 <font NAME="Gentium" SIZE="10"/>
@@ -7603,7 +7605,7 @@
 <edge COLOR="#0000ff"/>
 <font NAME="Gentium" SIZE="10"/>
 <node TEXT="Overview" ID="ID_1874182065" CREATED="1590802845241" MODIFIED="1590802847746">
-<node TEXT="2002.10703: G&#xf6;del&apos;s Sentence Is An Adversarial Example But Unsolvable" ID="ID_540984029" CREATED="1590802862032" MODIFIED="1590802872662"/>
+<node TEXT="2002.10703: Gödel&apos;s Sentence Is An Adversarial Example But Unsolvable" ID="ID_540984029" CREATED="1590802862032" MODIFIED="1590802872662"/>
 </node>
 <node TEXT="Gradient Masking" FOLDED="true" ID="ID_1081745433" CREATED="1559914030938" MODIFIED="1587728923882">
 <font NAME="Gentium" SIZE="10"/>
@@ -8182,7 +8184,7 @@
 <font NAME="Gentium" SIZE="10"/>
 <node TEXT="Improving Adversarial Robustness via Guided Complement Entropy" ID="ID_630231682" CREATED="1573478826936" MODIFIED="1587728924082">
 <font NAME="Gentium" SIZE="10"/>
-<node TEXT="In   this   paper,   we   propose   a   new   trainingparadigm calledGuidedComplementEntropy (GCE) thatis capable of achieving &#x201c;adversarial defense for free,&#x201d; whichinvolves  no  additional  procedures  in  the  process  of  im-proving adversarial robustness" ID="ID_1816415488" CREATED="1573478855965" MODIFIED="1587728924083">
+<node TEXT="In   this   paper,   we   propose   a   new   trainingparadigm calledGuidedComplementEntropy (GCE) thatis capable of achieving “adversarial defense for free,” whichinvolves  no  additional  procedures  in  the  process  of  im-proving adversarial robustness" ID="ID_1816415488" CREATED="1573478855965" MODIFIED="1587728924083">
 <font NAME="Gentium" SIZE="10"/>
 </node>
 </node>
