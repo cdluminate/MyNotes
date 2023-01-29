@@ -12,6 +12,8 @@ Graphic Design Resources
 
 1. https://www.youtube.com/watch?v=8f011wdiW7g&list=RDCMUCx-ljiKQcLSd8_4AFi_yaIw&start_radio=1&rv=8f011wdiW7g&t=167
 
+1. https://www.youtube.com/watch?v=m2WYRWKuZTQ&list=PLynG8gQD-n8AFcLFAkvqJYnQUiBweRh1y
+
 ## Adobe Illustrator
 
 TEDU; Too expensive, don't use.
