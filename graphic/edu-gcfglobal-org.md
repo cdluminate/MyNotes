@@ -117,3 +117,8 @@ line, shape, form, texture, balance.
 5. balance. the equal distribution of visual weight. color, size, number, negative space. symmetric / asymmetrical designs.
 
 *rule of thirds*: imagine the work is divided by a 3x3 grid. the focal point on the image is placed near one of these lines, creating visual balance with rest of the space.
+
+
+# 6. visual identity
+
+main components: logo, color, typography, images.
