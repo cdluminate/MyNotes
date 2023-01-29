@@ -1,4 +1,4 @@
-Graphic Design
+Beginning Graphic Design
 ===
 
 # 1. Typography
@@ -28,3 +28,37 @@ kerning, leading, tracking, hierarchy (essential for professional looking design
 * tracking: overall space between characters (character space). dense / span. 
 
 * kerning: space between specific characters. (varies across words)
+
+# 2. Color (Color Theory)
+
+from RGB to color wheel. 
+
+* hue: just another word of color
+
+* saturation: color intensity: subtle / vibrant
+
+* value: how dark or light the color is. from black to white
+
+https://color.adobe.com/ provides an easy to use color wheel with many color harmony rules.
+
+## Color harmony
+
+1. the easiest formula for harmony is monochromatic because it only uses one hue. The best thing about monochromatic schemes is that they are guaranteed to match. just tune saturation and value to find different variants.
+
+2. analogous. use colors that are next to each other on the wheel.
+
+3. complementary: colors opposite to each other.
+
+4. split complementary. same level of contrast, but more colors to work with
+
+5. triadic: three colors that are evenly spaced, forming a perfect triangle on the wheel. tend to be pretty striking.
+
+6. tetradic. form a rectangle on the wheel, using not one but two complemeentary color pairs. works best if you let one color dominate while the others serve as an accent.
+
+## Dos and Don'ts
+
+1. colors that seem to vibrate when they are placed next to each other. solution: tone it down. start with one color, try adjust lightness, darkness, or saturation.
+
+2. readability. sometimes that means not using colors. at least not in every detail. neutral colors like black, white and gray can help you balance your design. so when you do use color, it really stands out
+
+3. message. bright colors tend to have a fun or modern vibe. desaturated colors often appear more business-like.
