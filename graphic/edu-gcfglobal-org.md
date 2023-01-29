@@ -1,6 +1,8 @@
 Beginning Graphic Design
 ===
 
+**Design speaks louder than words.**
+
 <!---------------------------------------------------------------------------->
 # 1. Typography
 <!---------------------------------------------------------------------------->
@@ -87,3 +89,31 @@ The are the foundation of design. structure. easier to navigate.
 <!---------------------------------------------------------------------------->
 # 4. Images
 <!---------------------------------------------------------------------------->
+
+high quality images. stock. (materials for designers)
+
+raster. vector.
+
+1. cropping.
+
+2. cosmetic (color adjust)
+
+3. resizing.
+
+<!---------------------------------------------------------------------------->
+# 5. Fundamentals of Design
+<!---------------------------------------------------------------------------->
+
+line, shape, form, texture, balance.
+
+1. line. add emphasis, divide / organize content, guide viewer's eye. pay attention to weight, color, texture, style.
+
+2. shape. geometric (regular) or organic (free form). organize / separate content, create simple illustrations, add interest to your work.
+
+3. form. a shape that comes into 3d. makes realism possible. even flat designs use subtle techniques to hint at form and depth.
+
+4. texture. physical quality of a surface. too much texture in a single design can quickly become overwhelming.
+
+5. balance. the equal distribution of visual weight. color, size, number, negative space. symmetric / asymmetrical designs.
+
+*rule of thirds*: imagine the work is divided by a 3x3 grid. the focal point on the image is placed near one of these lines, creating visual balance with rest of the space.
