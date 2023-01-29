@@ -1,7 +1,9 @@
 Beginning Graphic Design
 ===
 
+<!---------------------------------------------------------------------------->
 # 1. Typography
+<!---------------------------------------------------------------------------->
 
 typography is the style or apperance of text. (art of working with text)
 
@@ -29,7 +31,9 @@ kerning, leading, tracking, hierarchy (essential for professional looking design
 
 * kerning: space between specific characters. (varies across words)
 
+<!---------------------------------------------------------------------------->
 # 2. Color (Color Theory)
+<!---------------------------------------------------------------------------->
 
 from RGB to color wheel. 
 
@@ -62,3 +66,24 @@ https://color.adobe.com/ provides an easy to use color wheel with many color har
 2. readability. sometimes that means not using colors. at least not in every detail. neutral colors like black, white and gray can help you balance your design. so when you do use color, it really stands out
 
 3. message. bright colors tend to have a fun or modern vibe. desaturated colors often appear more business-like.
+
+<!---------------------------------------------------------------------------->
+# 3. Layout and Composition
+<!---------------------------------------------------------------------------->
+
+The are the foundation of design. structure. easier to navigate.
+
+1. proximity. using visual space to show relationships in your content. in practice, related items are grouped together, e.g. blocks of texts, and elements in a grpahic. groups that are not related should be separated to show their lack of relationship
+
+2. white space. helps you to define and separate different sections.
+
+3. alignment. the most important thing is to be consistent.
+
+4. contrast. catch the reader's eye, create emphasis, or call attention to something important. strategies: color, size, shape, visual weight, style of text.
+
+5. repetition. consistent look and feel. for instance, if you have a specific color palette, look for ways to carry it through. if you have chosen a special header style, use it every time. apart from aethetic reasons, being consisent can also make your work easier to read.
+
+
+<!---------------------------------------------------------------------------->
+# 4. Images
+<!---------------------------------------------------------------------------->
