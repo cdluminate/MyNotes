@@ -1,0 +1,6 @@
+* write down the formulation of null defense / duality network
+* flatcat -- not universal l2 but individual l2
+* duality -- only increase the cosine similarity. don't do MSE/euclidean alignment.
+
+* [ok] knot loss -- only constraints the representation vector. don't limit the intermediate knots
+  now it only aligns the representation vectors.

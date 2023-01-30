@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="50mm"
+   viewBox="0 0 210 50"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="lipschitz.svg">
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect870"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect24"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect16"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect12"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="331.4773"
+     inkscape:cy="179.6173"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="2560"
+     inkscape:window-height="1407"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 16.603732,43.396158 C 24.895814,32.085211 33.18793,20.774219 40.653924,19.224959 c 7.465993,-1.549261 14.105598,6.662967 18.594383,10.624681 4.488784,3.961714 6.826661,3.673244 11.043936,2.259679 4.217275,-1.413565 10.313756,-3.952091 16.749534,-5.260526 6.435779,-1.308434 13.210333,-1.386775 19.984763,-1.465114"
+       id="path10"
+       inkscape:path-effect="#path-effect12"
+       inkscape:original-d="M 16.603732,43.396158 C 24.896113,32.08543 33.188228,20.774438 41.480079,9.4631816 48.119948,17.675673 54.759553,25.887901 61.398893,34.099864 c 2.338234,-0.288219 4.676111,-0.576689 7.013771,-0.865428 6.096987,-2.538363 12.193468,-5.076889 18.289804,-7.61573 6.775091,-0.07808 13.549642,-0.156422 20.324072,-0.235027"
+       sodipodi:nodetypes="cccccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 126.64664,33.240178 c 4.92377,-0.186096 9.84729,-0.372182 12.40441,-2.438606 2.55713,-2.066424 2.74812,-6.013286 2.89195,-8.46648 0.14382,-2.453194 0.24049,-3.41259 3.60154,-3.946816 3.36105,-0.534225 10.06225,-0.644274 14.74942,1.43954 4.68716,2.083813 7.42151,6.397014 13.43626,8.728002 6.01475,2.330989 15.32102,2.698281 24.62719,3.06557"
+       id="path14"
+       inkscape:path-effect="#path-effect16"
+       inkscape:original-d="m 126.64664,33.240178 c 4.92378,-0.185822 9.8473,-0.371909 14.77055,-0.558258 0.19127,-3.946758 0.38226,-7.893621 0.57299,-11.840829 0.0969,-0.959167 0.1936,-1.91856 0.29,-2.878237 6.6254,-0.109161 13.32661,-0.218583 19.98952,-0.328271 2.6826,4.295319 5.44584,8.590202 8.16836,12.884906 9.3069,0.367572 18.61317,0.734864 27.91935,1.101899" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.01361px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="47.700344"
+       y="13.698737"
+       id="text20"><tspan
+         sodipodi:role="line"
+         id="tspan18"
+         x="47.700344"
+         y="13.698737"
+         style="stroke-width:0.264583">Lipschitz</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.265, 0.53;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 11.548592,40.133869 C 23.148414,31.032503 34.7482,21.931166 46.347951,12.829857"
+       id="path22"
+       inkscape:path-effect="#path-effect24"
+       inkscape:original-d="M 11.548592,40.133869 C 23.148643,31.032795 34.74843,21.931459 46.347951,12.829857" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.265, 0.53;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 141.48456,40.641779 c 0.14337,-11.33032 0.28674,-22.660905 0.43012,-33.9917471"
+       id="path22-0"
+       inkscape:path-effect="#path-effect870"
+       inkscape:original-d="m 141.48456,40.641779 c 0.14364,-11.330317 0.28701,-22.660902 0.43012,-33.9917471"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.01361px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="144.49065"
+       y="12.090449"
+       id="text20-3"><tspan
+         sodipodi:role="line"
+         id="tspan18-3"
+         x="144.49065"
+         y="12.090449"
+         style="stroke-width:0.264583">No Lipschitz</tspan></text>
+  </g>
+</svg>
