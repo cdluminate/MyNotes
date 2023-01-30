@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="144" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="145" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1675045289036">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -83,6 +83,7 @@
 <font NAME="Gentium"/>
 </node>
 <node TEXT="2. agressively delete deprecated literature and fields. This is not used for writing surveys --- we don&apos;t have to trace back to the history in this document" ID="ID_800024958" CREATED="1675050501021" MODIFIED="1675050563309"/>
+<node TEXT="3. be cautious to saturated areas, especially when they are not the core task of computer vision." ID="ID_201332391" CREATED="1675050892708" MODIFIED="1675050922346"/>
 </node>
 <node TEXT="symbol definitions" ID="ID_107155097" CREATED="1641521217140" MODIFIED="1641521224034">
 <node TEXT=" I have read this paper (published)" ID="ID_1116629927" CREATED="1641521225706" MODIFIED="1641524141636">
@@ -175,9 +176,6 @@
 <node TEXT="ACL" ID="ID_126154590" CREATED="1642954126358" MODIFIED="1642954130606"/>
 <node TEXT="TPAMI" ID="ID_137066053" CREATED="1675042363096" MODIFIED="1675042364744"/>
 </node>
-</node>
-<node TEXT="Saturation &amp; Not Core Task" POSITION="left" ID="ID_1486832869" CREATED="1675045300369" MODIFIED="1675045322045">
-<edge COLOR="#ff0000"/>
 </node>
 <node TEXT="Misc: Surveys" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1805920002" CREATED="1608010101067" MODIFIED="1648337561524">
 <icon BUILTIN="mindmap"/>
@@ -4795,6 +4793,12 @@
 <node TEXT="Adaptive Hierarchical Representation Learning for Long-Tailed Object Detection" ID="ID_1552897089" CREATED="1659198428672" MODIFIED="1659198429623">
 <node TEXT="CVPR22" ID="ID_141751924" CREATED="1659198430516" MODIFIED="1659198431709"/>
 </node>
+<node TEXT="Long-tail Detection with Effective Class-Margins" ID="ID_158465025" CREATED="1675050158093" MODIFIED="1675050390923">
+<icon BUILTIN="unchecked"/>
+<node TEXT="ECCV22" ID="ID_1464029623" CREATED="1675050176093" MODIFIED="1675050178551"/>
+<node TEXT="ECM loss function" ID="ID_1452917031" CREATED="1675050398173" MODIFIED="1675050403194"/>
+<node TEXT="in long-tail detection, training objectives do not align with evaluation objectives" ID="ID_371487485" CREATED="1675050447898" MODIFIED="1675050465183"/>
+</node>
 </node>
 <node TEXT="Multi Modality" FOLDED="true" ID="ID_239849107" CREATED="1659200424712" MODIFIED="1659200427607">
 <node TEXT="Detection Hub: Unifying Object Detection Datasets via Query Adaptation on Language Embedding" ID="ID_616783248" CREATED="1659200428266" MODIFIED="1659200434649">
@@ -4958,15 +4962,6 @@
 <node TEXT="Robust Region Feature Synthesizer for Zero-Shot Object Detection" ID="ID_1145135975" CREATED="1659199076804" MODIFIED="1659199077308">
 <node TEXT="CVPR22" ID="ID_1677243997" CREATED="1659199079437" MODIFIED="1659199080613"/>
 </node>
-</node>
-</node>
-<node TEXT="Object Detection (long-tail)" FOLDED="true" POSITION="right" ID="ID_546136073" CREATED="1675050151298" MODIFIED="1675050157512">
-<edge COLOR="#ff0000"/>
-<node TEXT="Long-tail Detection with Effective Class-Margins" ID="ID_158465025" CREATED="1675050158093" MODIFIED="1675050390923">
-<icon BUILTIN="unchecked"/>
-<node TEXT="ECCV22" ID="ID_1464029623" CREATED="1675050176093" MODIFIED="1675050178551"/>
-<node TEXT="ECM loss function" ID="ID_1452917031" CREATED="1675050398173" MODIFIED="1675050403194"/>
-<node TEXT="in long-tail detection, training objectives do not align with evaluation objectives" ID="ID_371487485" CREATED="1675050447898" MODIFIED="1675050465183"/>
 </node>
 </node>
 <node TEXT="Track: AdvRank" FOLDED="true" POSITION="right" ID="ID_67713290" CREATED="1561352085890" MODIFIED="1642394393230">
@@ -5345,6 +5340,9 @@
 <node TEXT="Back to the Basics: Revisiting Out-of-Distribution Detection Baselines" ID="ID_610692624" CREATED="1657404508363" MODIFIED="1657404513522">
 <node TEXT="ICML22w" ID="ID_1649193597" CREATED="1657404516644" MODIFIED="1657404522883"/>
 </node>
+</node>
+<node TEXT="Adversarial Trainign (Robustness)" POSITION="left" ID="ID_1633797140" CREATED="1675050942299" MODIFIED="1675050952789">
+<edge COLOR="#0000ff"/>
 </node>
 <node TEXT="Backdoor Attack &amp; Defense" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="left" ID="ID_1279237598" CREATED="1642964328030" MODIFIED="1648336230488">
 <edge COLOR="#ff0000"/>
