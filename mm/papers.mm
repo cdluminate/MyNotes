@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="133" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="144" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1675045289036">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -82,6 +82,7 @@
 <node TEXT="1. may include preprints, but only include them when I think they are relevant or helpful." ID="ID_608512408" CREATED="1641520800532" MODIFIED="1641520995590">
 <font NAME="Gentium"/>
 </node>
+<node TEXT="2. agressively delete deprecated literature and fields. This is not used for writing surveys --- we don&apos;t have to trace back to the history in this document" ID="ID_800024958" CREATED="1675050501021" MODIFIED="1675050563309"/>
 </node>
 <node TEXT="symbol definitions" ID="ID_107155097" CREATED="1641521217140" MODIFIED="1641521224034">
 <node TEXT=" I have read this paper (published)" ID="ID_1116629927" CREATED="1641521225706" MODIFIED="1641524141636">
@@ -404,7 +405,7 @@
 <icon BUILTIN="help"/>
 </node>
 </node>
-<node TEXT="Failures" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1502842186" CREATED="1630692548912" MODIFIED="1675042094788">
+<node TEXT="Failures" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_1502842186" CREATED="1630692548912" MODIFIED="1675042094788">
 <icon BUILTIN="stop-sign"/>
 <node TEXT="uncertainty" ID="ID_158937490" CREATED="1618124027353" MODIFIED="1618124029656">
 <node TEXT="\accept Evidential Deep Learning + Distillation?" ID="ID_1904807575" CREATED="1618124030544" MODIFIED="1618124036591"/>
@@ -727,7 +728,7 @@
 <node TEXT="ultimately linear defense" ID="ID_1957242309" CREATED="1652283751238" MODIFIED="1652283757407"/>
 </node>
 </node>
-<node TEXT="Questions" FOLDED="true" ID="ID_1635080843" CREATED="1675042162167" MODIFIED="1675042203699">
+<node TEXT="Questions" ID="ID_1635080843" CREATED="1675042162167" MODIFIED="1675042203699">
 <node TEXT="Object recognition w/ vectorized images?" FOLDED="true" ID="ID_122040551" CREATED="1656372931630" MODIFIED="1675042169938">
 <node TEXT="I kind of like image vectorization" ID="ID_653939614" CREATED="1656373042240" MODIFIED="1656373051048"/>
 <node TEXT=" (image in different modality -- less noisy" ID="ID_1252599478" CREATED="1656373093113" MODIFIED="1656373094000"/>
@@ -1394,16 +1395,26 @@
 <node TEXT="accelerate speed of AWP" ID="ID_816681450" CREATED="1656352447735" MODIFIED="1656352453106"/>
 <node TEXT="making imagenet training possible" ID="ID_1515947373" CREATED="1656372925309" MODIFIED="1656372930676"/>
 </node>
+<node TEXT="Rain + adv noise : two layers of perturbations. which layer is introducing more risk to practical applications?" ID="ID_1122720674" CREATED="1675050724158" MODIFIED="1675050749633"/>
+<node TEXT="adversarial patch and object detection" ID="ID_82175170" CREATED="1675050753903" MODIFIED="1675050760411"/>
+<node TEXT="chatgpt detection?" ID="ID_1789367242" CREATED="1675050760855" MODIFIED="1675050766869"/>
+<node TEXT="self-supervised learining + robustness?" ID="ID_141218618" CREATED="1675050768236" MODIFIED="1675050780228">
+<icon BUILTIN="bookmark"/>
 </node>
 </node>
-<node TEXT="Prevalent" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1933246052" CREATED="1675045185955" MODIFIED="1675045266738">
-<edge COLOR="#7c7c00"/>
-<node TEXT="Contrastive Learning" ID="ID_1223342213" CREATED="1675048671290" MODIFIED="1675048677236">
+</node>
+<node TEXT="-------------------------------------------------------------------" LOCALIZED_STYLE_REF="default" POSITION="right" ID="ID_1134167122" CREATED="1675049435899" MODIFIED="1675049470053">
+<edge COLOR="#007c00"/>
+</node>
+<node TEXT="Contrastive Learning" FOLDED="true" POSITION="right" ID="ID_1223342213" CREATED="1675048671290" MODIFIED="1675049283065">
+<edge COLOR="#0000ff"/>
 <node TEXT="Cross-Modal" ID="ID_805657635" CREATED="1675048683328" MODIFIED="1675048685763">
 <node TEXT="CLIP" ID="ID_928055559" CREATED="1675048679300" MODIFIED="1675048680813"/>
 </node>
 </node>
-<node TEXT="Text-to-Image Synthesis" ID="ID_534441759" CREATED="1675045086637" MODIFIED="1675045190135">
+<node TEXT="Generative Model" FOLDED="true" POSITION="right" ID="ID_293903694" CREATED="1675049414636" MODIFIED="1675049418308">
+<edge COLOR="#7c0000"/>
+<node TEXT="Text-to-Image Synthesis" FOLDED="true" ID="ID_534441759" CREATED="1675045086637" MODIFIED="1675049421962">
 <node TEXT="Dall E 2" ID="ID_1555270559" CREATED="1675045202469" MODIFIED="1675045213095">
 <node TEXT="Hierarchical Text-Conditional Image Generation with CLIP Latents" ID="ID_246970714" CREATED="1675045215025" MODIFIED="1675045359919">
 <icon BUILTIN="messagebox_warning"/>
@@ -1432,11 +1443,11 @@
 </node>
 </node>
 </node>
-<node TEXT="Text Synthesis" ID="ID_947216604" CREATED="1675045191624" MODIFIED="1675045196039">
+<node TEXT="Text Synthesis" FOLDED="true" ID="ID_947216604" CREATED="1675045191624" MODIFIED="1675049423158">
 <node TEXT="ChatGPT" ID="ID_1978389784" CREATED="1675045199545" MODIFIED="1675045201237"/>
 </node>
 </node>
-<node TEXT="__________________________________________________________" POSITION="right" ID="ID_1447965157" CREATED="1675045082295" MODIFIED="1675045230352">
+<node TEXT="---------------------------------------------------------------------" POSITION="right" ID="ID_1447965157" CREATED="1675045082295" MODIFIED="1675049443238">
 <edge COLOR="#7c007c"/>
 </node>
 <node TEXT="Adversarial Attack: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_234014270" CREATED="1641521502446" MODIFIED="1647263386358">
@@ -4949,6 +4960,15 @@
 </node>
 </node>
 </node>
+<node TEXT="Object Detection (long-tail)" FOLDED="true" POSITION="right" ID="ID_546136073" CREATED="1675050151298" MODIFIED="1675050157512">
+<edge COLOR="#ff0000"/>
+<node TEXT="Long-tail Detection with Effective Class-Margins" ID="ID_158465025" CREATED="1675050158093" MODIFIED="1675050390923">
+<icon BUILTIN="unchecked"/>
+<node TEXT="ECCV22" ID="ID_1464029623" CREATED="1675050176093" MODIFIED="1675050178551"/>
+<node TEXT="ECM loss function" ID="ID_1452917031" CREATED="1675050398173" MODIFIED="1675050403194"/>
+<node TEXT="in long-tail detection, training objectives do not align with evaluation objectives" ID="ID_371487485" CREATED="1675050447898" MODIFIED="1675050465183"/>
+</node>
+</node>
 <node TEXT="Track: AdvRank" FOLDED="true" POSITION="right" ID="ID_67713290" CREATED="1561352085890" MODIFIED="1642394393230">
 <icon BUILTIN="idea"/>
 <font NAME="Gentium" SIZE="10" BOLD="true"/>
@@ -5776,6 +5796,22 @@
 <node TEXT="CVPR22" ID="ID_951175501" CREATED="1648338090454" MODIFIED="1648338092141"/>
 </node>
 </node>
+<node TEXT="Face Recognition Attack" FOLDED="true" POSITION="left" ID="ID_490223917" CREATED="1675049870200" MODIFIED="1675049874030">
+<edge COLOR="#7c7c00"/>
+<node TEXT="risk: maybe common corruptions like brightness, rain, angle, etc can introduce more risk to a system in practice" ID="ID_567079036" CREATED="1675049927982" MODIFIED="1675049976962">
+<icon BUILTIN="attach"/>
+</node>
+<node TEXT="Spoofing (physical object attack)" ID="ID_393376547" CREATED="1675049875376" MODIFIED="1675049882084">
+<node TEXT="induces more risk in practice than digital attacks" ID="ID_1125927438" CREATED="1675049901499" MODIFIED="1675049920921"/>
+</node>
+<node TEXT="Presentation attack (physical)" ID="ID_1422211929" CREATED="1675050065706" MODIFIED="1675050071944">
+<node TEXT="induces more risk in practice than digital attacks" ID="ID_1063774366" CREATED="1675049901499" MODIFIED="1675049920921"/>
+</node>
+<node TEXT="Adversarial noise (digital attack)" ID="ID_1835156252" CREATED="1675049882328" MODIFIED="1675049887621">
+<node TEXT="lower risk than spoofing" ID="ID_1740617712" CREATED="1675049890833" MODIFIED="1675049897544"/>
+<node TEXT="Rama and Alan have some robustness evaluation papers in this regard" ID="ID_1691197998" CREATED="1675049986257" MODIFIED="1675050004356"/>
+</node>
+</node>
 <node TEXT="Generative: DeepFake" FOLDED="true" POSITION="left" ID="ID_81253926" CREATED="1587729755009" MODIFIED="1672075032232">
 <edge COLOR="#007c7c"/>
 <node TEXT="Dataset" ID="ID_1886590251" CREATED="1615347464586" MODIFIED="1615347466780">
@@ -5979,6 +6015,8 @@
 </node>
 <node TEXT="Federated Learning" FOLDED="true" POSITION="left" ID="ID_121320330" CREATED="1658618674669" MODIFIED="1658618677623">
 <edge COLOR="#ff00ff"/>
+<node TEXT="low hanging fruits are basically gone. there are some unresolved corner cases. This is going towards an engineering problem direction." ID="ID_1703063236" CREATED="1675049770366" MODIFIED="1675049837716"/>
+<node TEXT="FedAvg" ID="ID_485649293" CREATED="1675049758554" MODIFIED="1675049762453"/>
 <node TEXT="SphereFed: Hyperspherical Federated Learning" ID="ID_1881740651" CREATED="1658618678515" MODIFIED="1658618679170">
 <node TEXT="ECCV22" ID="ID_624140530" CREATED="1658618681127" MODIFIED="1658618682432"/>
 </node>
@@ -6438,6 +6476,12 @@
 <node TEXT="Privacy-Preserving Face Recognition with&#xa;Learnable Privacy Budgets in Frequency Domain" ID="ID_1791080951" CREATED="1658615204668" MODIFIED="1658615205306">
 <node TEXT="ECCV22" ID="ID_1951337159" CREATED="1658615207954" MODIFIED="1658615209392"/>
 </node>
+</node>
+</node>
+<node TEXT="Private Inference (PI)" FOLDED="true" POSITION="left" ID="ID_601747646" CREATED="1675049599116" MODIFIED="1675049606906">
+<edge COLOR="#007c7c"/>
+<node TEXT="Learning to Linearize Deep Neural Networks for Secure and Efficient Private Inference" ID="ID_664848252" CREATED="1675049614506" MODIFIED="1675049616041">
+<node TEXT="ICLR23" ID="ID_983434925" CREATED="1675049617972" MODIFIED="1675049619844"/>
 </node>
 </node>
 <node TEXT="Self-Supervised Learning" FOLDED="true" POSITION="left" ID="ID_714759247" CREATED="1650825914367" MODIFIED="1651953578841">
