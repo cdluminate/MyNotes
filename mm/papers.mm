@@ -1,8 +1,8 @@
 <map version="freeplane 1.9.13">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
-<node TEXT="{M,R,D}L" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1671215692966" STYLE="oval">
+<node TEXT="Memo" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1675045349693" STYLE="oval">
 <font NAME="Gentium" SIZE="18" ITALIC="false"/>
-<hook NAME="MapStyle" zoom="1.521">
+<hook NAME="MapStyle" zoom="2.57">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
@@ -65,16 +65,13 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="129" RULE="ON_BRANCH_CREATION"/>
-<node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1655842831914">
+<hook NAME="AutomaticEdgeColor" COUNTER="133" RULE="ON_BRANCH_CREATION"/>
+<node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1675045289036">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
-<node TEXT="what&apos;s this" ID="ID_34209772" CREATED="1641520840738" MODIFIED="1641520995587">
+<node TEXT="What&apos;s this" ID="ID_34209772" CREATED="1641520840738" MODIFIED="1675042561339">
 <font NAME="Gentium"/>
-<node TEXT="Personal notes for regular paper reading." ID="ID_1963538377" CREATED="1641520844766" MODIFIED="1641520995588">
-<font NAME="Gentium"/>
-</node>
-<node TEXT="starting from scratch again." ID="ID_531358300" CREATED="1641520859492" MODIFIED="1641520995589">
+<node TEXT="Personal memos for regular paper reading." ID="ID_1963538377" CREATED="1641520844766" MODIFIED="1675042551344">
 <font NAME="Gentium"/>
 </node>
 <node TEXT="Copyright (C) 2021-2022 Mo Zhou" ID="ID_1535888258" CREATED="1641673010735" MODIFIED="1641673016816"/>
@@ -83,9 +80,6 @@
 <node TEXT="Policy for this document" ID="ID_288232758" CREATED="1641520783594" MODIFIED="1641520995590">
 <font NAME="Gentium"/>
 <node TEXT="1. may include preprints, but only include them when I think they are relevant or helpful." ID="ID_608512408" CREATED="1641520800532" MODIFIED="1641520995590">
-<font NAME="Gentium"/>
-</node>
-<node TEXT="2. gradually migrate the notes from the private mm&apos;s." ID="ID_1159004725" CREATED="1641520874706" MODIFIED="1641520995596">
 <font NAME="Gentium"/>
 </node>
 </node>
@@ -105,6 +99,9 @@
 <node TEXT=" insight" ID="ID_188358894" CREATED="1642449409015" MODIFIED="1642449417941">
 <icon BUILTIN="yes"/>
 </node>
+<node TEXT="Influential Paper" ID="ID_1174819833" CREATED="1675045366812" MODIFIED="1675045373882">
+<icon BUILTIN="messagebox_warning"/>
+</node>
 <node TEXT=" Very good+Important paper" ID="ID_78304803" CREATED="1641521263664" MODIFIED="1641679080458">
 <icon BUILTIN="bookmark"/>
 </node>
@@ -120,14 +117,9 @@
 <node TEXT="My Thoughts" ID="ID_1201449199" CREATED="1641743757646" MODIFIED="1642368052082">
 <icon BUILTIN="button_ok"/>
 </node>
+<node TEXT="Meta information" ID="ID_114710715" CREATED="1675042572800" MODIFIED="1675042578793">
+<icon BUILTIN="attach"/>
 </node>
-<node TEXT="researchers of interest" ID="ID_855888271" CREATED="1641929219444" MODIFIED="1641929229750">
-<node TEXT="Alexandar Madry" ID="ID_303512197" CREATED="1641929236490" MODIFIED="1648335746889"/>
-<node TEXT="Alan Yuille" ID="ID_362725284" CREATED="1641929240578" MODIFIED="1648335761283"/>
-<node TEXT="Jun Zhu" ID="ID_586060874" CREATED="1643133067259" MODIFIED="1648335764547"/>
-<node TEXT="Nicolas Carlini" ID="ID_323304377" CREATED="1643133070053" MODIFIED="1648335753367"/>
-<node TEXT="Ian Goodfellow" ID="ID_1353458379" CREATED="1648335753716" MODIFIED="1648335756288"/>
-<node TEXT="Cihang Xie" ID="ID_362731686" CREATED="1672079003278" MODIFIED="1672079006975"/>
 </node>
 <node TEXT="browse history" ID="ID_1769952352" CREATED="1641521397167" MODIFIED="1641521457619">
 <node TEXT="arXiv" ID="ID_555001851" CREATED="1641521435482" MODIFIED="1642954134722">
@@ -182,6 +174,9 @@
 <node TEXT="ACL" ID="ID_126154590" CREATED="1642954126358" MODIFIED="1642954130606"/>
 <node TEXT="TPAMI" ID="ID_137066053" CREATED="1675042363096" MODIFIED="1675042364744"/>
 </node>
+</node>
+<node TEXT="Saturation &amp; Not Core Task" POSITION="left" ID="ID_1486832869" CREATED="1675045300369" MODIFIED="1675045322045">
+<edge COLOR="#ff0000"/>
 </node>
 <node TEXT="Misc: Surveys" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1805920002" CREATED="1608010101067" MODIFIED="1648337561524">
 <icon BUILTIN="mindmap"/>
@@ -1400,6 +1395,49 @@
 <node TEXT="making imagenet training possible" ID="ID_1515947373" CREATED="1656372925309" MODIFIED="1656372930676"/>
 </node>
 </node>
+</node>
+<node TEXT="Prevalent" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1933246052" CREATED="1675045185955" MODIFIED="1675045266738">
+<edge COLOR="#7c7c00"/>
+<node TEXT="Contrastive Learning" ID="ID_1223342213" CREATED="1675048671290" MODIFIED="1675048677236">
+<node TEXT="Cross-Modal" ID="ID_805657635" CREATED="1675048683328" MODIFIED="1675048685763">
+<node TEXT="CLIP" ID="ID_928055559" CREATED="1675048679300" MODIFIED="1675048680813"/>
+</node>
+</node>
+<node TEXT="Text-to-Image Synthesis" ID="ID_534441759" CREATED="1675045086637" MODIFIED="1675045190135">
+<node TEXT="Dall E 2" ID="ID_1555270559" CREATED="1675045202469" MODIFIED="1675045213095">
+<node TEXT="Hierarchical Text-Conditional Image Generation with CLIP Latents" ID="ID_246970714" CREATED="1675045215025" MODIFIED="1675045359919">
+<icon BUILTIN="messagebox_warning"/>
+<node TEXT="high resource consumption" ID="ID_772611272" CREATED="1675045538828" MODIFIED="1675045565586">
+<icon BUILTIN="attach"/>
+</node>
+<node TEXT="Can quickly and efficiently provide stock for graphic designers. this means a lot to companies like adobe." ID="ID_1214590279" CREATED="1675045884794" MODIFIED="1675045936956">
+<icon BUILTIN="attach"/>
+</node>
+<node TEXT="influential because it basically ended the previous paradigms for text-image retrieval methods, like visual-semantic embedding" ID="ID_1796634553" CREATED="1675045485299" MODIFIED="1675045533790">
+<icon BUILTIN="yes"/>
+<node TEXT="The semantic property of the CLIP embedding is too good." ID="ID_1675443039" CREATED="1675048194214" MODIFIED="1675048209632"/>
+<node TEXT="Contrastive multi-modal embedding learning." ID="ID_1972538665" CREATED="1675048209874" MODIFIED="1675048260829"/>
+<node TEXT="impact self-supervised learning field as well" ID="ID_1441414889" CREATED="1675048287321" MODIFIED="1675048299612"/>
+</node>
+<node TEXT="two stage model" ID="ID_984750206" CREATED="1675045404050" MODIFIED="1675045408105">
+<node TEXT="relies on pre-trained CLIP embeddings" ID="ID_1517818079" CREATED="1675045379952" MODIFIED="1675047994683">
+<icon BUILTIN="yes"/>
+</node>
+<node TEXT="a prior that generates a CLIP image embedding given a text caption" ID="ID_67220351" CREATED="1675045408663" MODIFIED="1675045422303"/>
+<node TEXT="a decoder that generates an image conditioned on the image embedding" ID="ID_327096186" CREATED="1675045422479" MODIFIED="1675045433728"/>
+</node>
+<node TEXT="observations" ID="ID_822843052" CREATED="1675048557191" MODIFIED="1675048559423">
+<node TEXT="explicitly generating image representations improves diversity and photorealism" ID="ID_1050226435" CREATED="1675048559935" MODIFIED="1675048576658"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Text Synthesis" ID="ID_947216604" CREATED="1675045191624" MODIFIED="1675045196039">
+<node TEXT="ChatGPT" ID="ID_1978389784" CREATED="1675045199545" MODIFIED="1675045201237"/>
+</node>
+</node>
+<node TEXT="__________________________________________________________" POSITION="right" ID="ID_1447965157" CREATED="1675045082295" MODIFIED="1675045230352">
+<edge COLOR="#7c007c"/>
 </node>
 <node TEXT="Adversarial Attack: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_234014270" CREATED="1641521502446" MODIFIED="1647263386358">
 <edge COLOR="#ff0000"/>
