@@ -5341,8 +5341,14 @@
 <node TEXT="ICML22w" ID="ID_1649193597" CREATED="1657404516644" MODIFIED="1657404522883"/>
 </node>
 </node>
-<node TEXT="Adversarial Trainign (Robustness)" POSITION="left" ID="ID_1633797140" CREATED="1675050942299" MODIFIED="1675050952789">
+<node TEXT="Adversarial Training (Robustness)" FOLDED="true" POSITION="left" ID="ID_1633797140" CREATED="1675050942299" MODIFIED="1675052765536">
 <edge COLOR="#0000ff"/>
+<node TEXT="Can we simply make adv training faster on imagenet? people are still playing with CIFAR" ID="ID_133206511" CREATED="1675052822881" MODIFIED="1675052888793">
+<icon BUILTIN="attach"/>
+</node>
+<node TEXT="Data Augmentation Alone Can Improve Adversarial Training" ID="ID_266269491" CREATED="1675052851143" MODIFIED="1675052861836">
+<node TEXT="ICLR23" ID="ID_1007201331" CREATED="1675052862033" MODIFIED="1675052865053"/>
+</node>
 </node>
 <node TEXT="Backdoor Attack &amp; Defense" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="left" ID="ID_1279237598" CREATED="1642964328030" MODIFIED="1648336230488">
 <edge COLOR="#ff0000"/>
