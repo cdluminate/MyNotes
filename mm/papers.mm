@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="Memo" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1675045349693" STYLE="oval">
 <font NAME="Gentium" SIZE="18" ITALIC="false"/>
-<hook NAME="MapStyle" zoom="2.57">
+<hook NAME="MapStyle" zoom="1.977">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="145" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="147" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1675045289036">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -177,7 +177,7 @@
 <node TEXT="TPAMI" ID="ID_137066053" CREATED="1675042363096" MODIFIED="1675042364744"/>
 </node>
 </node>
-<node TEXT="Misc: Surveys" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1805920002" CREATED="1608010101067" MODIFIED="1648337561524">
+<node TEXT="Surveys &amp; Background" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1805920002" CREATED="1608010101067" MODIFIED="1675296645861">
 <icon BUILTIN="mindmap"/>
 <edge COLOR="#ff0000"/>
 <node TEXT="Deep Learning Book" ID="ID_1914998592" CREATED="1624456582801" MODIFIED="1624456586327">
@@ -1443,6 +1443,25 @@
 </node>
 <node TEXT="Text Synthesis" FOLDED="true" ID="ID_947216604" CREATED="1675045191624" MODIFIED="1675049423158">
 <node TEXT="ChatGPT" ID="ID_1978389784" CREATED="1675045199545" MODIFIED="1675045201237"/>
+</node>
+</node>
+<node TEXT="Large Language Model (LLM)" FOLDED="true" POSITION="right" ID="ID_1735833052" CREATED="1675287989836" MODIFIED="1675287997379">
+<edge COLOR="#00ff00"/>
+<node TEXT="ChatGPT" ID="ID_929371264" CREATED="1675287998205" MODIFIED="1675288002483">
+<node TEXT="Main" ID="ID_1521352916" CREATED="1675288009231" MODIFIED="1675288011622">
+<node TEXT="ChatGPT" ID="ID_937804408" CREATED="1675288029662" MODIFIED="1675288032098"/>
+<node TEXT="Math" ID="ID_1908497848" CREATED="1675288022192" MODIFIED="1675288024335">
+<node TEXT="Mathematical Capabilities of ChatGPT" ID="ID_65222373" CREATED="1675288051262" MODIFIED="1675288057051">
+<icon BUILTIN="pencil"/>
+<node TEXT="a dataset." ID="ID_1087097384" CREATED="1675288058034" MODIFIED="1675288063193"/>
+</node>
+</node>
+</node>
+<node TEXT="Detection" ID="ID_398704158" CREATED="1675288011819" MODIFIED="1675288013535"/>
+<node TEXT="Counter Detection?" ID="ID_1319347872" CREATED="1675288013731" MODIFIED="1675288021905">
+<node TEXT="attack detector" ID="ID_890431519" CREATED="1675295663510" MODIFIED="1675295666328"/>
+<node TEXT="How to genrate realistic human text? there is FID for image." ID="ID_1601127519" CREATED="1675295648525" MODIFIED="1675295679716"/>
+</node>
 </node>
 </node>
 <node TEXT="---------------------------------------------------------------------" POSITION="right" ID="ID_1447965157" CREATED="1675045082295" MODIFIED="1675049443238">
@@ -6184,23 +6203,6 @@
 </node>
 <node TEXT="Primal sketch" ID="ID_959414508" CREATED="1658618720052" MODIFIED="1658618724107"/>
 </node>
-<node TEXT="Instance Segmentation" FOLDED="true" POSITION="left" ID="ID_1759449865" CREATED="1649104217760" MODIFIED="1649104221244">
-<edge COLOR="#7c7c00"/>
-<node TEXT="Main" ID="ID_1417928999" CREATED="1578733356683" MODIFIED="1649104710111">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="Mask R-CNN" ID="ID_1460418401" CREATED="1590805638982" MODIFIED="1590805641615"/>
-<node TEXT="2003.13954 FGN: Fully Guided Network for Few-Shot Instance Segmentation (cvpr20)" ID="ID_1454655339" CREATED="1590975022052" MODIFIED="1590975029134"/>
-<node TEXT="2012.07177&#xa;Simple Copy-Paste is a Strong Data Augmentation Method for Instance Segmentation" ID="ID_792173050" CREATED="1608880556971" MODIFIED="1608880566837"/>
-</node>
-<node TEXT="Descriptors" ID="ID_1696499735" CREATED="1649104065329" MODIFIED="1649104223403">
-<node TEXT="Contour" ID="ID_395676166" CREATED="1649104068494" MODIFIED="1649104069863">
-<node TEXT="Eigencontours: Novel Contour Descriptors Based on Low-Rank Approximation" ID="ID_362471390" CREATED="1649104078004" MODIFIED="1649104078579">
-<node TEXT="CVPR22" ID="ID_642950560" CREATED="1649104080637" MODIFIED="1649104081863"/>
-<node TEXT="contour is one of the most important object descriptiors, along with texture and color" ID="ID_961927899" CREATED="1649104082894" MODIFIED="1649104097966"/>
-</node>
-</node>
-</node>
-</node>
 <node TEXT="Learning" FOLDED="true" POSITION="left" ID="ID_876811772" CREATED="1583309966895" MODIFIED="1642394191143">
 <font NAME="Gentium" SIZE="10" BOLD="false"/>
 <edge COLOR="#7c7c00"/>
@@ -6430,7 +6432,26 @@
 </node>
 </node>
 </node>
-<node TEXT="Model Inversion (Privacy)" ID="ID_1887850078" CREATED="1646937279593" MODIFIED="1647265571606">
+<node TEXT="model watermark" ID="ID_854641187" CREATED="1647567587011" MODIFIED="1647567593099">
+<node TEXT="exloring structure consistency for deep model watermarking" ID="ID_489056739" CREATED="1647567594240" MODIFIED="1647567607226">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Differential Privacy" ID="ID_1268713155" CREATED="1648337762797" MODIFIED="1648337766246">
+<node TEXT="Mixed Differential Privacy in Computer Vision" ID="ID_1969874071" CREATED="1648337767049" MODIFIED="1648337770249">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_1404369978" CREATED="1648337773035" MODIFIED="1648337774527"/>
+</node>
+<node TEXT="Privacy-Preserving Face Recognition with&#xa;Learnable Privacy Budgets in Frequency Domain" ID="ID_1791080951" CREATED="1658615204668" MODIFIED="1658615205306">
+<node TEXT="ECCV22" ID="ID_1951337159" CREATED="1658615207954" MODIFIED="1658615209392"/>
+</node>
+</node>
+</node>
+<node TEXT="Privacy: Model Inversion" FOLDED="true" POSITION="left" ID="ID_609996958" CREATED="1675296482479" MODIFIED="1675296486828">
+<edge COLOR="#ff00ff"/>
+<node TEXT="restore training data from a trained model" ID="ID_928344118" CREATED="1675296489117" MODIFIED="1675296499126">
+<icon BUILTIN="info"/>
+</node>
 <node TEXT="Label-Only Model Inversion Attacks via Boundary Repulsion" ID="ID_1711729671" CREATED="1646937292008" MODIFIED="1646937298623">
 <icon BUILTIN="checked"/>
 <font ITALIC="false"/>
@@ -6467,23 +6488,11 @@
 <node TEXT="CVPR22" ID="ID_512975228" CREATED="1649126365880" MODIFIED="1649126366979"/>
 </node>
 </node>
-<node TEXT="model watermark" ID="ID_854641187" CREATED="1647567587011" MODIFIED="1647567593099">
-<node TEXT="exloring structure consistency for deep model watermarking" ID="ID_489056739" CREATED="1647567594240" MODIFIED="1647567607226">
-<icon BUILTIN="pencil"/>
-</node>
-</node>
-<node TEXT="Differential Privacy" ID="ID_1268713155" CREATED="1648337762797" MODIFIED="1648337766246">
-<node TEXT="Mixed Differential Privacy in Computer Vision" ID="ID_1969874071" CREATED="1648337767049" MODIFIED="1648337770249">
-<icon BUILTIN="unchecked"/>
-<node TEXT="CVPR22" ID="ID_1404369978" CREATED="1648337773035" MODIFIED="1648337774527"/>
-</node>
-<node TEXT="Privacy-Preserving Face Recognition with&#xa;Learnable Privacy Budgets in Frequency Domain" ID="ID_1791080951" CREATED="1658615204668" MODIFIED="1658615205306">
-<node TEXT="ECCV22" ID="ID_1951337159" CREATED="1658615207954" MODIFIED="1658615209392"/>
-</node>
-</node>
-</node>
 <node TEXT="Private Inference (PI)" FOLDED="true" POSITION="left" ID="ID_601747646" CREATED="1675049599116" MODIFIED="1675049606906">
 <edge COLOR="#007c7c"/>
+<node TEXT="private cloud inference service?" ID="ID_1508068551" CREATED="1675296552861" MODIFIED="1675296561075">
+<icon BUILTIN="info"/>
+</node>
 <node TEXT="Learning to Linearize Deep Neural Networks for Secure and Efficient Private Inference" ID="ID_664848252" CREATED="1675049614506" MODIFIED="1675049616041">
 <node TEXT="ICLR23" ID="ID_983434925" CREATED="1675049617972" MODIFIED="1675049619844"/>
 </node>
@@ -6577,62 +6586,9 @@
 </node>
 </node>
 </node>
-<node TEXT="Scene/Knowledge Graph" FOLDED="true" POSITION="left" ID="ID_691684807" CREATED="1582940936028" MODIFIED="1653357364861">
-<font NAME="Gentium" BOLD="false"/>
+<node TEXT="Segmentation" FOLDED="true" POSITION="left" ID="ID_710086984" CREATED="1641524074732" MODIFIED="1675287905747">
 <edge COLOR="#007c7c"/>
-<node TEXT="SG" ID="ID_62932280" CREATED="1653357372586" MODIFIED="1653357374319">
-<node TEXT="Survey" ID="ID_1665575737" CREATED="1653357500064" MODIFIED="1653357514750">
-<icon BUILTIN="info"/>
-<node TEXT="A Comprehensive Survey of Scene Graphs:&#xa;Generation and Application" ID="ID_1652046589" CREATED="1653357506363" MODIFIED="1654622118685">
-<icon BUILTIN="unchecked"/>
-<node TEXT="TPAMI" ID="ID_188900375" CREATED="1654622121760" MODIFIED="1654622123512"/>
-</node>
-</node>
-<node TEXT="Generation" ID="ID_1992268449" CREATED="1582940945725" MODIFIED="1590024968949">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="2002.11949: unbiased scene graph generalization from biased training" ID="ID_1016607145" CREATED="1582940950980" MODIFIED="1587526865280">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: scene graph generation (SGG)" ID="ID_1614294683" CREATED="1582940994088" MODIFIED="1587526865281">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: collapsing diversity hurts downstream tasks due to the training bias. However, debiasing is not trivial because traditional methods call tell good bias and bad bias" ID="ID_476245187" CREATED="1582941002281" MODIFIED="1587526865282">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: draw counterfactual causality from the trained graph" ID="ID_538665732" CREATED="1582941507255" MODIFIED="1587526865283">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="2005.08230: graph density-aware losses for novel compositions in scene graph generation (CVPR20)" ID="ID_168569159" CREATED="1590024970199" MODIFIED="1590024994252"/>
-<node TEXT="Exploiting Edge-Oriented Reasoning for 3D Point-based Scene Graph Analysis (cvpr21)" ID="ID_110979499" CREATED="1615348622406" MODIFIED="1615348629899"/>
-<node TEXT="Probabilistic Modeling of Semantic Ambiguity for Scene Graph Generation (cvpr21)" ID="ID_1895253076" CREATED="1615351040893" MODIFIED="1615351048231"/>
-</node>
-<node TEXT="Inverse Generation" ID="ID_1595445036" CREATED="1653357386274" MODIFIED="1653357388858">
-<node TEXT="1912.07414 Learning Canonical Representations forScene Graph to Image Generation" ID="ID_1230724059" CREATED="1591523975753" MODIFIED="1591523987076"/>
-</node>
-<node TEXT="Image Retrieval" ID="ID_1768896" CREATED="1610425686042" MODIFIED="1610425689498">
-<node TEXT="2012: Image-to-Image Retrieval by Learning Similarity between Scene Graphs (AAAI21)" ID="ID_1384437389" CREATED="1610425690361" MODIFIED="1610425706901">
-<icon BUILTIN="button_ok"/>
-</node>
-</node>
-</node>
-<node TEXT="KG" ID="ID_822456907" CREATED="1653357374701" MODIFIED="1653357375953">
-<node TEXT="Survey" ID="ID_961480222" CREATED="1653357413499" MODIFIED="1653357418188">
-<icon BUILTIN="info"/>
-<node TEXT="Deep Learning on Knowledge Graph for Recommender&#xa;System: A Survey" ID="ID_474794422" CREATED="1653357426923" MODIFIED="1653357430650">
-<icon BUILTIN="pencil"/>
-</node>
-<node TEXT="" ID="ID_993691552" CREATED="1654033772224" MODIFIED="1654033772224"/>
-</node>
-<node TEXT="ConceptNet 5.5: An Open Multilingual Graph of General Knowledge." ID="ID_916824453" CREATED="1654033790966" MODIFIED="1654033793845">
-<icon BUILTIN="unchecked"/>
-<node TEXT="AAAI" ID="ID_599287398" CREATED="1654033795196" MODIFIED="1654033796379"/>
-<node TEXT="contains both positive relation and negative relation" ID="ID_755158262" CREATED="1654033864046" MODIFIED="1654033872607"/>
-</node>
-</node>
-</node>
-<node TEXT="Semantic Segmentation" FOLDED="true" POSITION="left" ID="ID_710086984" CREATED="1641524074732" MODIFIED="1641524079818">
-<edge COLOR="#007c7c"/>
-<node TEXT="Main" ID="ID_1927721844" CREATED="1578733352755" MODIFIED="1649104722464">
+<node TEXT="Supervised Semantic" ID="ID_1927721844" CREATED="1578733352755" MODIFIED="1675287914511">
 <font NAME="Gentium" BOLD="false"/>
 <node TEXT="1505.04597: U-Net: convolutional networks for biomedical image segmentation (U-Net)" ID="ID_1662911562" CREATED="1578733451101" MODIFIED="1587526865046">
 <icon BUILTIN="button_ok"/>
@@ -6687,6 +6643,84 @@
 <node TEXT="noisy label especially at object boundaries" ID="ID_1470006065" CREATED="1617622216454" MODIFIED="1617622256519">
 <node TEXT="noise-aware loss, less susceptible to incorrect labels" ID="ID_707624454" CREATED="1617622261098" MODIFIED="1617622288020"/>
 </node>
+</node>
+</node>
+<node TEXT="Instance Segmentation" ID="ID_1759449865" CREATED="1649104217760" MODIFIED="1675287923713">
+<node TEXT="Main" ID="ID_1417928999" CREATED="1578733356683" MODIFIED="1649104710111">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="Mask R-CNN" ID="ID_1460418401" CREATED="1590805638982" MODIFIED="1590805641615"/>
+<node TEXT="2003.13954 FGN: Fully Guided Network for Few-Shot Instance Segmentation (cvpr20)" ID="ID_1454655339" CREATED="1590975022052" MODIFIED="1590975029134"/>
+<node TEXT="2012.07177&#xa;Simple Copy-Paste is a Strong Data Augmentation Method for Instance Segmentation" ID="ID_792173050" CREATED="1608880556971" MODIFIED="1608880566837"/>
+</node>
+<node TEXT="Descriptors" ID="ID_1696499735" CREATED="1649104065329" MODIFIED="1649104223403">
+<node TEXT="Contour" ID="ID_395676166" CREATED="1649104068494" MODIFIED="1649104069863">
+<node TEXT="Eigencontours: Novel Contour Descriptors Based on Low-Rank Approximation" ID="ID_362471390" CREATED="1649104078004" MODIFIED="1649104078579">
+<node TEXT="CVPR22" ID="ID_642950560" CREATED="1649104080637" MODIFIED="1649104081863"/>
+<node TEXT="contour is one of the most important object descriptiors, along with texture and color" ID="ID_961927899" CREATED="1649104082894" MODIFIED="1649104097966"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Unification" ID="ID_1225291372" CREATED="1675287931179" MODIFIED="1675295913721">
+<node TEXT="X-Decoder (Vision + language)" ID="ID_1614956324" CREATED="1675287938828" MODIFIED="1675295921347">
+<node TEXT="Generalized Decoding for Pixel, Image, and Language" ID="ID_382060918" CREATED="1675287942315" MODIFIED="1675295769005">
+<node TEXT="unified model that predicts pixel-level segmentation and language tokens seamlessly." ID="ID_599683713" CREATED="1675287949651" MODIFIED="1675295765947"/>
+<node TEXT="The three segmentation tasks are unified: semantic, instance, and panoptic (pixel level)" ID="ID_1789214660" CREATED="1675296164458" MODIFIED="1675296212976"/>
+<node TEXT="region level task: detection, grounding." ID="ID_467063647" CREATED="1675296213149" MODIFIED="1675296224384"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Scene/Knowledge Graph" FOLDED="true" POSITION="left" ID="ID_691684807" CREATED="1582940936028" MODIFIED="1653357364861">
+<font NAME="Gentium" BOLD="false"/>
+<edge COLOR="#007c7c"/>
+<node TEXT="SG" ID="ID_62932280" CREATED="1653357372586" MODIFIED="1653357374319">
+<node TEXT="Survey" ID="ID_1665575737" CREATED="1653357500064" MODIFIED="1653357514750">
+<icon BUILTIN="info"/>
+<node TEXT="A Comprehensive Survey of Scene Graphs:&#xa;Generation and Application" ID="ID_1652046589" CREATED="1653357506363" MODIFIED="1654622118685">
+<icon BUILTIN="unchecked"/>
+<node TEXT="TPAMI" ID="ID_188900375" CREATED="1654622121760" MODIFIED="1654622123512"/>
+</node>
+</node>
+<node TEXT="Generation" ID="ID_1992268449" CREATED="1582940945725" MODIFIED="1590024968949">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="2002.11949: unbiased scene graph generalization from biased training" ID="ID_1016607145" CREATED="1582940950980" MODIFIED="1587526865280">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: scene graph generation (SGG)" ID="ID_1614294683" CREATED="1582940994088" MODIFIED="1587526865281">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="why: collapsing diversity hurts downstream tasks due to the training bias. However, debiasing is not trivial because traditional methods call tell good bias and bad bias" ID="ID_476245187" CREATED="1582941002281" MODIFIED="1587526865282">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="how: draw counterfactual causality from the trained graph" ID="ID_538665732" CREATED="1582941507255" MODIFIED="1587526865283">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="2005.08230: graph density-aware losses for novel compositions in scene graph generation (CVPR20)" ID="ID_168569159" CREATED="1590024970199" MODIFIED="1590024994252"/>
+<node TEXT="Exploiting Edge-Oriented Reasoning for 3D Point-based Scene Graph Analysis (cvpr21)" ID="ID_110979499" CREATED="1615348622406" MODIFIED="1615348629899"/>
+<node TEXT="Probabilistic Modeling of Semantic Ambiguity for Scene Graph Generation (cvpr21)" ID="ID_1895253076" CREATED="1615351040893" MODIFIED="1615351048231"/>
+</node>
+<node TEXT="Inverse Generation" ID="ID_1595445036" CREATED="1653357386274" MODIFIED="1653357388858">
+<node TEXT="1912.07414 Learning Canonical Representations forScene Graph to Image Generation" ID="ID_1230724059" CREATED="1591523975753" MODIFIED="1591523987076"/>
+</node>
+<node TEXT="Image Retrieval" ID="ID_1768896" CREATED="1610425686042" MODIFIED="1610425689498">
+<node TEXT="2012: Image-to-Image Retrieval by Learning Similarity between Scene Graphs (AAAI21)" ID="ID_1384437389" CREATED="1610425690361" MODIFIED="1610425706901">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+</node>
+<node TEXT="KG" ID="ID_822456907" CREATED="1653357374701" MODIFIED="1653357375953">
+<node TEXT="Survey" ID="ID_961480222" CREATED="1653357413499" MODIFIED="1653357418188">
+<icon BUILTIN="info"/>
+<node TEXT="Deep Learning on Knowledge Graph for Recommender&#xa;System: A Survey" ID="ID_474794422" CREATED="1653357426923" MODIFIED="1653357430650">
+<icon BUILTIN="pencil"/>
+</node>
+<node TEXT="" ID="ID_993691552" CREATED="1654033772224" MODIFIED="1654033772224"/>
+</node>
+<node TEXT="ConceptNet 5.5: An Open Multilingual Graph of General Knowledge." ID="ID_916824453" CREATED="1654033790966" MODIFIED="1654033793845">
+<icon BUILTIN="unchecked"/>
+<node TEXT="AAAI" ID="ID_599287398" CREATED="1654033795196" MODIFIED="1654033796379"/>
+<node TEXT="contains both positive relation and negative relation" ID="ID_755158262" CREATED="1654033864046" MODIFIED="1654033872607"/>
 </node>
 </node>
 </node>
