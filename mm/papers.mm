@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="149" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="150" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1675045289036">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -1416,7 +1416,7 @@
 </node>
 <node TEXT="-------------------------------------------------------------------" LOCALIZED_STYLE_REF="default" ID="ID_1134167122" CREATED="1675049435899" MODIFIED="1675302565765"/>
 </node>
-<node TEXT="Generative Model" POSITION="right" ID="ID_293903694" CREATED="1675049414636" MODIFIED="1675049418308">
+<node TEXT="Generative Model" FOLDED="true" POSITION="right" ID="ID_293903694" CREATED="1675049414636" MODIFIED="1675049418308">
 <edge COLOR="#7c0000"/>
 <node TEXT="Two Image Iput (style transfer" ID="ID_904035504" CREATED="1675304201992" MODIFIED="1675304210570">
 <node TEXT="A Style-Based Generator Architecture for Generative Adversarial Networks" ID="ID_19629646" CREATED="1675304213086" MODIFIED="1675304216108">
@@ -1482,6 +1482,27 @@
 <node TEXT="attack detector" ID="ID_890431519" CREATED="1675295663510" MODIFIED="1675295666328"/>
 <node TEXT="How to genrate realistic human text? there is FID for image." ID="ID_1601127519" CREATED="1675295648525" MODIFIED="1675295679716"/>
 </node>
+</node>
+</node>
+<node TEXT="Prompt" POSITION="right" ID="ID_118617573" CREATED="1675367056032" MODIFIED="1675367063292">
+<edge COLOR="#00007c"/>
+<node TEXT="Computational Linguistics" ID="ID_686007260" CREATED="1675367065325" MODIFIED="1675367071806">
+<node TEXT="Prompting: Instead of adapting pre-trianed lms to downstream tasks via objective engineering, downstream tasks are reformulated to look more like those solved during the original LM training with the help of a textual prompt. This allows us to adapt large scale pre-trianed models to specific tasks without having to fine-tune the model or even the last few layers. For instance, prompt templates handcrafted for the task." ID="ID_1922284406" CREATED="1675367102133" MODIFIED="1675367109043">
+<icon BUILTIN="info"/>
+</node>
+</node>
+<node TEXT="Vision" ID="ID_1318848578" CREATED="1675367072095" MODIFIED="1675367080740">
+<node TEXT="Exploring Visual Prompts for Adapting Large-Scale Models" ID="ID_153991492" CREATED="1675367088251" MODIFIED="1675367208771">
+<icon BUILTIN="bookmark"/>
+</node>
+<node TEXT="Visual Prompt Tuning." ID="ID_696407912" CREATED="1675367094078" MODIFIED="1675367205892">
+<icon BUILTIN="bookmark"/>
+</node>
+<node TEXT="AdaptFormer: Adapting Vision Transformers for&#xa;Scalable Visual Recognition" ID="ID_6970235" CREATED="1675367135928" MODIFIED="1675367136456"/>
+<node TEXT="Visual Prompting via Image Inpainting" ID="ID_698976721" CREATED="1675367145040" MODIFIED="1675367145499"/>
+<node TEXT="Open-Vocabulary Semantic Segmentation with Mask-adapted CLIP" ID="ID_712695760" CREATED="1675367157483" MODIFIED="1675367170253"/>
+<node TEXT="Visual Prompt Tuning for Test-time Domain Adaptation" ID="ID_431267464" CREATED="1675367186463" MODIFIED="1675367187485"/>
+<node TEXT="Unleashing the Power of Visual Prompting At the Pixel Level" ID="ID_595029881" CREATED="1675367196116" MODIFIED="1675367197072"/>
 </node>
 </node>
 <node TEXT="---------------------------------------------------------------------" POSITION="right" ID="ID_1447965157" CREATED="1675045082295" MODIFIED="1675049443238">
