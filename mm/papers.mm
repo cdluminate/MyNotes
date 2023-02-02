@@ -1409,14 +1409,12 @@
 </node>
 </node>
 </node>
-<node TEXT="-------------------------------------------------------------------" LOCALIZED_STYLE_REF="default" POSITION="right" ID="ID_1134167122" CREATED="1675049435899" MODIFIED="1675049470053">
-<edge COLOR="#007c00"/>
-</node>
 <node TEXT="Contrastive Learning" FOLDED="true" POSITION="right" ID="ID_1223342213" CREATED="1675048671290" MODIFIED="1675049283065">
 <edge COLOR="#0000ff"/>
 <node TEXT="Cross-Modal" ID="ID_805657635" CREATED="1675048683328" MODIFIED="1675048685763">
 <node TEXT="CLIP" ID="ID_928055559" CREATED="1675048679300" MODIFIED="1675048680813"/>
 </node>
+<node TEXT="-------------------------------------------------------------------" LOCALIZED_STYLE_REF="default" ID="ID_1134167122" CREATED="1675049435899" MODIFIED="1675302565765"/>
 </node>
 <node TEXT="Generative Model" FOLDED="true" POSITION="right" ID="ID_293903694" CREATED="1675049414636" MODIFIED="1675049418308">
 <edge COLOR="#7c0000"/>
@@ -6459,7 +6457,7 @@
 <node TEXT="ECCV22" ID="ID_1418419828" CREATED="1659161408686" MODIFIED="1659161410212"/>
 </node>
 </node>
-<node TEXT="Privacy: Model Inversion" FOLDED="true" POSITION="left" ID="ID_609996958" CREATED="1675296482479" MODIFIED="1675296486828">
+<node TEXT="Privacy: Model Inversion" POSITION="left" ID="ID_609996958" CREATED="1675296482479" MODIFIED="1675296486828">
 <edge COLOR="#ff00ff"/>
 <node TEXT="restore training data from a trained model (more powerful than membership inference)" ID="ID_928344118" CREATED="1675296489117" MODIFIED="1675297639168">
 <icon BUILTIN="info"/>
@@ -6505,8 +6503,11 @@
 <node TEXT="Carlini" ID="ID_1289612633" CREATED="1675296853288" MODIFIED="1675297788563">
 <icon BUILTIN="messagebox_warning"/>
 </node>
-<node TEXT="risk? privacy and dataset. But we have to craft a large amount of prompts to a large number of data" ID="ID_1314420682" CREATED="1675296968603" MODIFIED="1675297050963">
+<node TEXT="risk? privacy and dataset. But we have to craft a large amount of prompts to a large number of data?" ID="ID_1314420682" CREATED="1675296968603" MODIFIED="1675301894169">
 <icon BUILTIN="attach"/>
+</node>
+<node TEXT="the proposed method assumes that an adversary knows the captions for some images in the training set (impractical, but good for studying the worst case)" ID="ID_358136832" CREATED="1675302285074" MODIFIED="1675302320271">
+<icon BUILTIN="yes"/>
 </node>
 <node TEXT="diffusion models are much less private than prior generative models such as GANs" ID="ID_1622705940" CREATED="1675296941670" MODIFIED="1675296962331"/>
 </node>
