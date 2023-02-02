@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="148" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="149" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1675045289036">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -1416,9 +1416,14 @@
 </node>
 <node TEXT="-------------------------------------------------------------------" LOCALIZED_STYLE_REF="default" ID="ID_1134167122" CREATED="1675049435899" MODIFIED="1675302565765"/>
 </node>
-<node TEXT="Generative Model" FOLDED="true" POSITION="right" ID="ID_293903694" CREATED="1675049414636" MODIFIED="1675049418308">
+<node TEXT="Generative Model" POSITION="right" ID="ID_293903694" CREATED="1675049414636" MODIFIED="1675049418308">
 <edge COLOR="#7c0000"/>
-<node TEXT="Text-to-Image Synthesis" FOLDED="true" ID="ID_534441759" CREATED="1675045086637" MODIFIED="1675049421962">
+<node TEXT="Two Image Iput (style transfer" ID="ID_904035504" CREATED="1675304201992" MODIFIED="1675304210570">
+<node TEXT="A Style-Based Generator Architecture for Generative Adversarial Networks" ID="ID_19629646" CREATED="1675304213086" MODIFIED="1675304216108">
+<icon BUILTIN="unchecked"/>
+</node>
+</node>
+<node TEXT="Text-to-Image Synthesis" ID="ID_534441759" CREATED="1675045086637" MODIFIED="1675049421962">
 <node TEXT="Dall E 2" ID="ID_1555270559" CREATED="1675045202469" MODIFIED="1675045213095">
 <node TEXT="Hierarchical Text-Conditional Image Generation with CLIP Latents" ID="ID_246970714" CREATED="1675045215025" MODIFIED="1675045359919">
 <icon BUILTIN="messagebox_warning"/>
@@ -1446,8 +1451,17 @@
 </node>
 </node>
 </node>
+<node TEXT="StyleGAN-T" ID="ID_725758643" CREATED="1675304094058" MODIFIED="1675304096898">
+<node TEXT="StyleGAN-T: Unlocking the Power of GANs for Fast Large-Scale Text-to-Image Synthesis" ID="ID_1952479944" CREATED="1675304097298" MODIFIED="1675304103833">
+<icon BUILTIN="unchecked"/>
+<node TEXT="Nvidia" ID="ID_974489067" CREATED="1675304106028" MODIFIED="1675304107496"/>
+<node TEXT="GAN can be faster than diffusion models. But it still cannot beat diffusion model in terms of FID. Some generation tasks do not require the system to be real-time. Some may require real-time response, but that kind of application sounds like far away from normal people" ID="ID_1729035487" CREATED="1675304235023" MODIFIED="1675304320613">
+<icon BUILTIN="attach"/>
 </node>
-<node TEXT="Text Synthesis" FOLDED="true" ID="ID_947216604" CREATED="1675045191624" MODIFIED="1675049423158">
+</node>
+</node>
+</node>
+<node TEXT="Text Synthesis" ID="ID_947216604" CREATED="1675045191624" MODIFIED="1675049423158">
 <node TEXT="ChatGPT" ID="ID_1978389784" CREATED="1675045199545" MODIFIED="1675045201237"/>
 </node>
 </node>
@@ -6273,6 +6287,14 @@
 </node>
 </node>
 </node>
+<node TEXT="Medical Imaging" FOLDED="true" POSITION="left" ID="ID_802684133" CREATED="1675303648280" MODIFIED="1675303651346">
+<edge COLOR="#7c0000"/>
+<node TEXT="unified models" ID="ID_1931879684" CREATED="1675303651993" MODIFIED="1675303656250">
+<node TEXT="Towards a Single Unified Model for Effective Detection, Segmentation, and&#xa;Diagnosis of Eight Major Cancers Using a Large Collection of CT Scans" ID="ID_1702871452" CREATED="1675303664638" MODIFIED="1675303665904">
+<node TEXT="Alan Yuille" ID="ID_1762581450" CREATED="1675303667361" MODIFIED="1675303672001"/>
+</node>
+</node>
+</node>
 <node TEXT="Model Compression" FOLDED="true" POSITION="left" ID="ID_325472209" CREATED="1649171031656" MODIFIED="1649171034930">
 <edge COLOR="#00007c"/>
 <node TEXT="Interspace Pruning: Using Adaptive Filter Representations to Improve Training of Sparse CNNs" ID="ID_1136994469" CREATED="1649171035811" MODIFIED="1649171042670">
@@ -6457,7 +6479,7 @@
 <node TEXT="ECCV22" ID="ID_1418419828" CREATED="1659161408686" MODIFIED="1659161410212"/>
 </node>
 </node>
-<node TEXT="Privacy: Model Inversion" POSITION="left" ID="ID_609996958" CREATED="1675296482479" MODIFIED="1675296486828">
+<node TEXT="Privacy: Model Inversion" FOLDED="true" POSITION="left" ID="ID_609996958" CREATED="1675296482479" MODIFIED="1675296486828">
 <edge COLOR="#ff00ff"/>
 <node TEXT="restore training data from a trained model (more powerful than membership inference)" ID="ID_928344118" CREATED="1675296489117" MODIFIED="1675297639168">
 <icon BUILTIN="info"/>
