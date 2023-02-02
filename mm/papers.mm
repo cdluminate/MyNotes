@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="147" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="148" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1675045289036">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -1398,6 +1398,14 @@
 <node TEXT="chatgpt detection?" ID="ID_1789367242" CREATED="1675050760855" MODIFIED="1675050766869"/>
 <node TEXT="self-supervised learining + robustness?" ID="ID_141218618" CREATED="1675050768236" MODIFIED="1675050780228">
 <icon BUILTIN="bookmark"/>
+</node>
+<node TEXT="Private diffusion model?" FOLDED="true" ID="ID_614688806" CREATED="1675297854851" MODIFIED="1675297859875">
+<node TEXT="ref" ID="ID_256115243" CREATED="1675297862411" MODIFIED="1675297892905">
+<node TEXT="Extracting Training Data from Diffusion Models" ID="ID_835523982" CREATED="1675297893101" MODIFIED="1675297893940"/>
+</node>
+<node TEXT="Does the risk worth fighting?" ID="ID_1617863091" CREATED="1675298018294" MODIFIED="1675298046462">
+<icon BUILTIN="help"/>
+</node>
 </node>
 </node>
 </node>
@@ -6407,19 +6415,10 @@
 <node TEXT="CVPR22" ID="ID_1439656873" CREATED="1649623426704" MODIFIED="1649623428734"/>
 </node>
 </node>
-<node TEXT="Privacy ML" FOLDED="true" POSITION="left" ID="ID_1174539463" CREATED="1590802979023" MODIFIED="1647265584135">
+<node TEXT="Privacy ML" LOCALIZED_STYLE_REF="defaultstyle.floating" FOLDED="true" POSITION="left" ID="ID_1174539463" CREATED="1590802979023" MODIFIED="1675297580861">
 <edge COLOR="#7c0000"/>
 <node TEXT="Encrypt / Decrypt" ID="ID_892914237" CREATED="1590803103499" MODIFIED="1590803111112">
 <node TEXT="2004.05523 DeepEDN: A Deep Learning-based Image Encryption and Decryption Network for Internet of Medical Things" ID="ID_779071488" CREATED="1590802983849" MODIFIED="1590802993502"/>
-</node>
-<node TEXT="Membership Inference" ID="ID_1965495393" CREATED="1591523395980" MODIFIED="1591523401694">
-<node TEXT="2001.00071 PrivGAN: Protecting GANs from membership inference attacks at low cos" ID="ID_370428646" CREATED="1591523402373" MODIFIED="1591523413026"/>
-<node TEXT="Label-only membership inference attacks" ID="ID_1310996729" CREATED="1648422783790" MODIFIED="1648422789621">
-<node TEXT="Carlini" ID="ID_1163854114" CREATED="1648422791804" MODIFIED="1648422793928"/>
-</node>
-<node TEXT="Semi-Leak: Membership Inference Attacks Against Semi-supervised Learning" ID="ID_1113661303" CREATED="1659161404298" MODIFIED="1659161405430">
-<node TEXT="ECCV22" ID="ID_1418419828" CREATED="1659161408686" MODIFIED="1659161410212"/>
-</node>
 </node>
 <node TEXT="Physical Mail" ID="ID_1223992131" CREATED="1608872127823" MODIFIED="1608872130574">
 <node TEXT="2012.11803&#xa; Modeling Deep Learning Based Privacy Attacks on Physical Mail" ID="ID_924300325" CREATED="1608872131773" MODIFIED="1608872140902"/>
@@ -6447,9 +6446,22 @@
 </node>
 </node>
 </node>
+<node TEXT="Privacy: Membership Inference" FOLDED="true" POSITION="left" ID="ID_1965495393" CREATED="1591523395980" MODIFIED="1675297567729">
+<edge COLOR="#00ffff"/>
+<node TEXT="Is this example used in the training dataset? (mild)" ID="ID_1568715434" CREATED="1675297612949" MODIFIED="1675297628144">
+<icon BUILTIN="info"/>
+</node>
+<node TEXT="2001.00071 PrivGAN: Protecting GANs from membership inference attacks at low cos" ID="ID_370428646" CREATED="1591523402373" MODIFIED="1591523413026"/>
+<node TEXT="Label-only membership inference attacks" ID="ID_1310996729" CREATED="1648422783790" MODIFIED="1648422789621">
+<node TEXT="Carlini" ID="ID_1163854114" CREATED="1648422791804" MODIFIED="1648422793928"/>
+</node>
+<node TEXT="Semi-Leak: Membership Inference Attacks Against Semi-supervised Learning" ID="ID_1113661303" CREATED="1659161404298" MODIFIED="1659161405430">
+<node TEXT="ECCV22" ID="ID_1418419828" CREATED="1659161408686" MODIFIED="1659161410212"/>
+</node>
+</node>
 <node TEXT="Privacy: Model Inversion" FOLDED="true" POSITION="left" ID="ID_609996958" CREATED="1675296482479" MODIFIED="1675296486828">
 <edge COLOR="#ff00ff"/>
-<node TEXT="restore training data from a trained model" ID="ID_928344118" CREATED="1675296489117" MODIFIED="1675296499126">
+<node TEXT="restore training data from a trained model (more powerful than membership inference)" ID="ID_928344118" CREATED="1675296489117" MODIFIED="1675297639168">
 <icon BUILTIN="info"/>
 </node>
 <node TEXT="Label-Only Model Inversion Attacks via Boundary Repulsion" ID="ID_1711729671" CREATED="1646937292008" MODIFIED="1646937298623">
@@ -6486,6 +6498,18 @@
 </node>
 <node TEXT="GradViT: Gradient Inversion of Vision Transformers" ID="ID_1338574288" CREATED="1649126363591" MODIFIED="1649126364829">
 <node TEXT="CVPR22" ID="ID_512975228" CREATED="1649126365880" MODIFIED="1649126366979"/>
+</node>
+<node TEXT="Diffusion Model" ID="ID_1626265725" CREATED="1675296843500" MODIFIED="1675296847106">
+<node TEXT="Extracting Training Data from Diffusion Models" ID="ID_566250643" CREATED="1675296851330" MODIFIED="1675296860784">
+<icon BUILTIN="pencil"/>
+<node TEXT="Carlini" ID="ID_1289612633" CREATED="1675296853288" MODIFIED="1675297788563">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node TEXT="risk? privacy and dataset. But we have to craft a large amount of prompts to a large number of data" ID="ID_1314420682" CREATED="1675296968603" MODIFIED="1675297050963">
+<icon BUILTIN="attach"/>
+</node>
+<node TEXT="diffusion models are much less private than prior generative models such as GANs" ID="ID_1622705940" CREATED="1675296941670" MODIFIED="1675296962331"/>
+</node>
 </node>
 </node>
 <node TEXT="Private Inference (PI)" FOLDED="true" POSITION="left" ID="ID_601747646" CREATED="1675049599116" MODIFIED="1675049606906">
