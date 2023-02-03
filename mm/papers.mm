@@ -726,7 +726,7 @@
 <node TEXT="ultimately linear defense" ID="ID_1957242309" CREATED="1652283751238" MODIFIED="1652283757407"/>
 </node>
 </node>
-<node TEXT="Questions" ID="ID_1635080843" CREATED="1675042162167" MODIFIED="1675042203699">
+<node TEXT="Questions" FOLDED="true" ID="ID_1635080843" CREATED="1675042162167" MODIFIED="1675042203699">
 <node TEXT="Object recognition w/ vectorized images?" FOLDED="true" ID="ID_122040551" CREATED="1656372931630" MODIFIED="1675042169938">
 <node TEXT="I kind of like image vectorization" ID="ID_653939614" CREATED="1656373042240" MODIFIED="1656373051048"/>
 <node TEXT=" (image in different modality -- less noisy" ID="ID_1252599478" CREATED="1656373093113" MODIFIED="1656373094000"/>
@@ -1359,8 +1359,12 @@
 <node TEXT="this is the first (throught the history) relatively general (explicit) guidance on neural network design compared to the traditional trial and error based experience" ID="ID_1666386124" CREATED="1653612154729" MODIFIED="1653612235301"/>
 <node TEXT="" ID="ID_203077210" CREATED="1653612235947" MODIFIED="1653612235947"/>
 </node>
-<node TEXT="3D PCL atk and defense?" FOLDED="true" ID="ID_831089163" CREATED="1653612406664" MODIFIED="1675042192123">
-<icon BUILTIN="help"/>
+<node TEXT="3D PCL atk and defense?" FOLDED="true" ID="ID_831089163" CREATED="1653612406664" MODIFIED="1675449351240">
+<icon BUILTIN="closed"/>
+<font ITALIC="false"/>
+<node TEXT="the poor performance for the base task is more risky than small-probability attackers in the current stage. although we can think of some interesting ideas in this completely different setting (compared to image), the results would make marginal impact" ID="ID_136866994" CREATED="1675448744331" MODIFIED="1675449335253">
+<icon BUILTIN="attach"/>
+</node>
 <node TEXT="defense" ID="ID_642588147" CREATED="1653612422744" MODIFIED="1653612424249">
 <node TEXT="lipschitz?" ID="ID_949744864" CREATED="1653612411381" MODIFIED="1653612414574"/>
 </node>
@@ -1389,10 +1393,6 @@
 <node TEXT="TraceFormer: semantic guided SVG (speed and result at low curve number)?" ID="ID_877489334" CREATED="1670301589984" MODIFIED="1675041010512"/>
 <node TEXT="+Graphics" ID="ID_1039182099" CREATED="1675040994236" MODIFIED="1675040997797"/>
 </node>
-<node TEXT="Free AWP?" FOLDED="true" ID="ID_205416469" CREATED="1656352443325" MODIFIED="1675042195183">
-<node TEXT="accelerate speed of AWP" ID="ID_816681450" CREATED="1656352447735" MODIFIED="1656352453106"/>
-<node TEXT="making imagenet training possible" ID="ID_1515947373" CREATED="1656372925309" MODIFIED="1656372930676"/>
-</node>
 <node TEXT="Rain + adv noise : two layers of perturbations. which layer is introducing more risk to practical applications?" ID="ID_1122720674" CREATED="1675050724158" MODIFIED="1675050749633"/>
 <node TEXT="adversarial patch and object detection" ID="ID_82175170" CREATED="1675050753903" MODIFIED="1675050760411"/>
 <node TEXT="chatgpt detection?" ID="ID_1789367242" CREATED="1675050760855" MODIFIED="1675050766869">
@@ -1402,7 +1402,7 @@
 <node TEXT="self-supervised learining + robustness?" ID="ID_141218618" CREATED="1675050768236" MODIFIED="1675050780228">
 <icon BUILTIN="bookmark"/>
 </node>
-<node TEXT="Private diffusion model?" ID="ID_614688806" CREATED="1675297854851" MODIFIED="1675445625719">
+<node TEXT="Private diffusion model?" FOLDED="true" ID="ID_614688806" CREATED="1675297854851" MODIFIED="1675445625719">
 <icon BUILTIN="closed"/>
 <node TEXT="ref" ID="ID_256115243" CREATED="1675297862411" MODIFIED="1675297892905">
 <node TEXT="Extracting Training Data from Diffusion Models" ID="ID_835523982" CREATED="1675297893101" MODIFIED="1675297893940">
@@ -1432,7 +1432,18 @@
 <node TEXT="defense must be more difficult compared to attack" ID="ID_319996305" CREATED="1675445497700" MODIFIED="1675445505454"/>
 </node>
 </node>
-<node TEXT="Large Scale Adversarial Training for Robustness Made Easy" ID="ID_1896369931" CREATED="1675445552336" MODIFIED="1675445613987"/>
+<node TEXT="Large Scale Adversarial Training for Robustness Made Easy" ID="ID_1896369931" CREATED="1675445552336" MODIFIED="1675445613987">
+<node TEXT="Free AWP?" ID="ID_205416469" CREATED="1656352443325" MODIFIED="1675042195183">
+<node TEXT="accelerate speed of AWP" ID="ID_816681450" CREATED="1656352447735" MODIFIED="1656352453106"/>
+<node TEXT="making imagenet training possible" ID="ID_1515947373" CREATED="1656372925309" MODIFIED="1656372930676"/>
+<node TEXT="state-of-the-art not tested on imagenet" ID="ID_401733108" CREATED="1675448479782" MODIFIED="1675448487137"/>
+</node>
+</node>
+<node TEXT="Visual Semantic Embedding (Vision + Language Embedding)" ID="ID_938327331" CREATED="1675447964212" MODIFIED="1675448041339">
+<node TEXT="CLIP is the reference" ID="ID_202859265" CREATED="1675448041695" MODIFIED="1675448052450"/>
+<node TEXT="what are the issues in CLIP?" ID="ID_397482816" CREATED="1675448052675" MODIFIED="1675448058665"/>
+<node TEXT="metric learning and visual semantic embedding?" ID="ID_909931555" CREATED="1675448119576" MODIFIED="1675448127988"/>
+</node>
 </node>
 </node>
 <node TEXT="Contrastive Learning" FOLDED="true" POSITION="right" ID="ID_1223342213" CREATED="1675048671290" MODIFIED="1675049283065">
