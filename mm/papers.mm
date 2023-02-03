@@ -232,7 +232,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1675042129591">
+<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1675042129591">
 <icon BUILTIN="bookmark"/>
 <edge COLOR="#7c0000"/>
 <node TEXT="Tactic / Impact" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_896452525" CREATED="1642481777876" MODIFIED="1675042109019">
@@ -1395,18 +1395,44 @@
 </node>
 <node TEXT="Rain + adv noise : two layers of perturbations. which layer is introducing more risk to practical applications?" ID="ID_1122720674" CREATED="1675050724158" MODIFIED="1675050749633"/>
 <node TEXT="adversarial patch and object detection" ID="ID_82175170" CREATED="1675050753903" MODIFIED="1675050760411"/>
-<node TEXT="chatgpt detection?" ID="ID_1789367242" CREATED="1675050760855" MODIFIED="1675050766869"/>
+<node TEXT="chatgpt detection?" ID="ID_1789367242" CREATED="1675050760855" MODIFIED="1675050766869">
+<node TEXT="watermark" ID="ID_1509983747" CREATED="1675445639503" MODIFIED="1675445646906"/>
+<node TEXT="directly detect" ID="ID_1743726816" CREATED="1675445641471" MODIFIED="1675445644902"/>
+</node>
 <node TEXT="self-supervised learining + robustness?" ID="ID_141218618" CREATED="1675050768236" MODIFIED="1675050780228">
 <icon BUILTIN="bookmark"/>
 </node>
-<node TEXT="Private diffusion model?" FOLDED="true" ID="ID_614688806" CREATED="1675297854851" MODIFIED="1675297859875">
+<node TEXT="Private diffusion model?" ID="ID_614688806" CREATED="1675297854851" MODIFIED="1675445625719">
+<icon BUILTIN="closed"/>
 <node TEXT="ref" ID="ID_256115243" CREATED="1675297862411" MODIFIED="1675297892905">
-<node TEXT="Extracting Training Data from Diffusion Models" ID="ID_835523982" CREATED="1675297893101" MODIFIED="1675297893940"/>
+<node TEXT="Extracting Training Data from Diffusion Models" ID="ID_835523982" CREATED="1675297893101" MODIFIED="1675297893940">
+<node TEXT="Carlini" ID="ID_538858967" CREATED="1675445453163" MODIFIED="1675445455391"/>
+</node>
 </node>
 <node TEXT="Does the risk worth fighting?" ID="ID_1617863091" CREATED="1675298018294" MODIFIED="1675298046462">
 <icon BUILTIN="help"/>
+<node TEXT="membership inference" ID="ID_1658588448" CREATED="1675444951808" MODIFIED="1675444957178">
+<node TEXT="privacy. but does the author really know where his/per photo is used. Even if they knew, do they have enough time and energy to launch lawsuites?" ID="ID_579325905" CREATED="1675444957371" MODIFIED="1675445000859"/>
+<node TEXT="compared to the risk (reducing realisticness / performance), it is not very worthwhile to defend against membership inference." ID="ID_182422507" CREATED="1675445009699" MODIFIED="1675445042347"/>
+<node TEXT="The trainer can simply remove one or several images from the training dataset once sued. That will not impact performance at all." ID="ID_1018680606" CREATED="1675445042630" MODIFIED="1675445075325"/>
+</node>
+<node TEXT="data extraction attack" ID="ID_944462677" CREATED="1675445136803" MODIFIED="1675445141506">
+<node TEXT="privacy and commercial interest." ID="ID_104803927" CREATED="1675445157856" MODIFIED="1675445170499"/>
+<node TEXT="is it worthwhile to defend against such attack? according to the experience of attack &amp; defense, introducing a defense will very likely hamper the image realisticness." ID="ID_968143606" CREATED="1675445172699" MODIFIED="1675445210053"/>
+<node TEXT="the model release party can use many other mature methods to prevent malicious users from extracting the training data from models, such as encryption." ID="ID_1170925921" CREATED="1675445210256" MODIFIED="1675445246312"/>
+<node TEXT="even if the training data is leaked, they are not digitally original. Can a model reach the similar level of performance with the extracted data?" ID="ID_753336733" CREATED="1675445247168" MODIFIED="1675445287288"/>
+</node>
+<node TEXT="improve efficiency &amp; reduce risk" ID="ID_999134006" CREATED="1675445116718" MODIFIED="1675445133150">
+<node TEXT="the risk (legal risk) is evetually less concerning than the imperfect image generation." ID="ID_395152678" CREATED="1675445306888" MODIFIED="1675445334535"/>
+<node TEXT="the showcase images in the generative model literature are all picked. Randomly generated images will immediately show artifacts and unrealistic (or even ridiculous) details." ID="ID_1785735263" CREATED="1675445334722" MODIFIED="1675445369523"/>
 </node>
 </node>
+<node TEXT="concl: we can think about it. But there are more worthwhile topics to think about, such as preventing generative models from giving ridiculous results that violate common sense." ID="ID_1999774246" CREATED="1675445386473" MODIFIED="1675445441005">
+<node TEXT="maybe this is the reason why carlini stops at inference/extraction attack only, and does not take a step further towards defense" ID="ID_1006342954" CREATED="1675445468180" MODIFIED="1675445496550"/>
+<node TEXT="defense must be more difficult compared to attack" ID="ID_319996305" CREATED="1675445497700" MODIFIED="1675445505454"/>
+</node>
+</node>
+<node TEXT="Large Scale Adversarial Training for Robustness Made Easy" ID="ID_1896369931" CREATED="1675445552336" MODIFIED="1675445613987"/>
 </node>
 </node>
 <node TEXT="Contrastive Learning" FOLDED="true" POSITION="right" ID="ID_1223342213" CREATED="1675048671290" MODIFIED="1675049283065">
@@ -1465,7 +1491,7 @@
 <node TEXT="ChatGPT" ID="ID_1978389784" CREATED="1675045199545" MODIFIED="1675045201237"/>
 </node>
 </node>
-<node TEXT="Large Language Model (LLM)" FOLDED="true" POSITION="right" ID="ID_1735833052" CREATED="1675287989836" MODIFIED="1675287997379">
+<node TEXT="Large Language Model (LLM)" POSITION="right" ID="ID_1735833052" CREATED="1675287989836" MODIFIED="1675287997379">
 <edge COLOR="#00ff00"/>
 <node TEXT="ChatGPT" ID="ID_929371264" CREATED="1675287998205" MODIFIED="1675288002483">
 <node TEXT="Main" ID="ID_1521352916" CREATED="1675288009231" MODIFIED="1675288011622">
@@ -1477,7 +1503,9 @@
 </node>
 </node>
 </node>
-<node TEXT="Detection" ID="ID_398704158" CREATED="1675288011819" MODIFIED="1675288013535"/>
+<node TEXT="Detection" ID="ID_398704158" CREATED="1675288011819" MODIFIED="1675288013535">
+<node TEXT="watermarking" ID="ID_919169453" CREATED="1675444907732" MODIFIED="1675444909586"/>
+</node>
 <node TEXT="Counter Detection?" ID="ID_1319347872" CREATED="1675288013731" MODIFIED="1675288021905">
 <node TEXT="attack detector" ID="ID_890431519" CREATED="1675295663510" MODIFIED="1675295666328"/>
 <node TEXT="How to genrate realistic human text? there is FID for image." ID="ID_1601127519" CREATED="1675295648525" MODIFIED="1675295679716"/>
