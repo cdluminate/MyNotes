@@ -21,3 +21,5 @@ See Debian bug `Bug#802327`. The solution is to install the
 ```
 export _JAVA_AWT_WM_NONREPARENTING=1
 ```
+
+Applicataions including matlab, freeplane, etc may need this to function properly for their GUI parts.
