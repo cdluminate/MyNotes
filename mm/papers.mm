@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="Memo" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1675045349693" STYLE="oval">
 <font NAME="Gentium" SIZE="18" ITALIC="false"/>
-<hook NAME="MapStyle" zoom="1.977">
+<hook NAME="MapStyle" zoom="3.341">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="150" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="151" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1675045289036">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -232,7 +232,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1675042129591">
+<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1675042129591">
 <icon BUILTIN="bookmark"/>
 <edge COLOR="#7c0000"/>
 <node TEXT="Tactic / Impact" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_896452525" CREATED="1642481777876" MODIFIED="1675042109019">
@@ -1444,6 +1444,7 @@
 <node TEXT="what are the issues in CLIP?" ID="ID_397482816" CREATED="1675448052675" MODIFIED="1675448058665"/>
 <node TEXT="metric learning and visual semantic embedding?" ID="ID_909931555" CREATED="1675448119576" MODIFIED="1675448127988"/>
 </node>
+<node TEXT="De-centralized federated learning? (FL is strongly centralized)" ID="ID_1223316625" CREATED="1675739676348" MODIFIED="1675739690191"/>
 </node>
 </node>
 <node TEXT="Contrastive Learning" FOLDED="true" POSITION="right" ID="ID_1223342213" CREATED="1675048671290" MODIFIED="1675049283065">
@@ -1502,7 +1503,7 @@
 <node TEXT="ChatGPT" ID="ID_1978389784" CREATED="1675045199545" MODIFIED="1675045201237"/>
 </node>
 </node>
-<node TEXT="Large Language Model (LLM)" POSITION="right" ID="ID_1735833052" CREATED="1675287989836" MODIFIED="1675287997379">
+<node TEXT="Large Language Model (LLM)" FOLDED="true" POSITION="right" ID="ID_1735833052" CREATED="1675287989836" MODIFIED="1675287997379">
 <edge COLOR="#00ff00"/>
 <node TEXT="ChatGPT" ID="ID_929371264" CREATED="1675287998205" MODIFIED="1675288002483">
 <node TEXT="Main" ID="ID_1521352916" CREATED="1675288009231" MODIFIED="1675288011622">
@@ -1523,7 +1524,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Prompt" POSITION="right" ID="ID_118617573" CREATED="1675367056032" MODIFIED="1675367063292">
+<node TEXT="Prompt" FOLDED="true" POSITION="right" ID="ID_118617573" CREATED="1675367056032" MODIFIED="1675367063292">
 <edge COLOR="#00007c"/>
 <node TEXT="Computational Linguistics" ID="ID_686007260" CREATED="1675367065325" MODIFIED="1675367071806">
 <node TEXT="Prompting: Instead of adapting pre-trianed lms to downstream tasks via objective engineering, downstream tasks are reformulated to look more like those solved during the original LM training with the help of a textual prompt. This allows us to adapt large scale pre-trianed models to specific tasks without having to fine-tune the model or even the last few layers. For instance, prompt templates handcrafted for the task." ID="ID_1922284406" CREATED="1675367102133" MODIFIED="1675367109043">
@@ -2127,7 +2128,7 @@
 <icon BUILTIN="pencil"/>
 </node>
 </node>
-<node TEXT="Navigation" FOLDED="true" ID="ID_67892815" CREATED="1656027242642" MODIFIED="1656027246902">
+<node TEXT="Navigation" ID="ID_67892815" CREATED="1656027242642" MODIFIED="1656027246902">
 <node TEXT="Consistent Attack: Universal Adversarial Perturbation on&#xa;Embodied Vision Navigation" ID="ID_472242787" CREATED="1656027248020" MODIFIED="1656027253385">
 <node TEXT="Jun Zhu" ID="ID_1474238794" CREATED="1656027254365" MODIFIED="1656027256269"/>
 </node>
@@ -5434,7 +5435,7 @@
 <node TEXT="Learning without Prejudice: Avoiding Bias in Webly-Supervised Action&#xa;Recognition" ID="ID_1991556722" CREATED="1655187230614" MODIFIED="1655187236882"/>
 </node>
 </node>
-<node TEXT="Anomaly Detection" FOLDED="true" POSITION="left" ID="ID_31313107" CREATED="1657404499454" MODIFIED="1657404505651">
+<node TEXT="Anomaly Detection (OOD)" FOLDED="true" POSITION="left" ID="ID_31313107" CREATED="1657404499454" MODIFIED="1675739883522">
 <edge COLOR="#007c7c"/>
 <node TEXT="Back to the Basics: Revisiting Out-of-Distribution Detection Baselines" ID="ID_610692624" CREATED="1657404508363" MODIFIED="1657404513522">
 <node TEXT="ICML22w" ID="ID_1649193597" CREATED="1657404516644" MODIFIED="1657404522883"/>
@@ -5447,6 +5448,7 @@
 </node>
 <node TEXT="Data Augmentation Alone Can Improve Adversarial Training" ID="ID_266269491" CREATED="1675052851143" MODIFIED="1675052861836">
 <node TEXT="ICLR23" ID="ID_1007201331" CREATED="1675052862033" MODIFIED="1675052865053"/>
+<node TEXT="CIFAR 10, no imagenet" ID="ID_820963333" CREATED="1675739931665" MODIFIED="1675739935991"/>
 </node>
 </node>
 <node TEXT="Backdoor Attack &amp; Defense" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="left" ID="ID_1279237598" CREATED="1642964328030" MODIFIED="1648336230488">
@@ -6118,7 +6120,9 @@
 </node>
 <node TEXT="Federated Learning" FOLDED="true" POSITION="left" ID="ID_121320330" CREATED="1658618674669" MODIFIED="1658618677623">
 <edge COLOR="#ff00ff"/>
-<node TEXT="low hanging fruits are basically gone. there are some unresolved corner cases. This is going towards an engineering problem direction." ID="ID_1703063236" CREATED="1675049770366" MODIFIED="1675049837716"/>
+<node TEXT="low hanging fruits are basically gone. there are some unresolved corner cases. This is going towards an engineering problem direction." ID="ID_1703063236" CREATED="1675049770366" MODIFIED="1675739832428">
+<icon BUILTIN="attach"/>
+</node>
 <node TEXT="FedAvg" ID="ID_485649293" CREATED="1675049758554" MODIFIED="1675049762453"/>
 <node TEXT="SphereFed: Hyperspherical Federated Learning" ID="ID_1881740651" CREATED="1658618678515" MODIFIED="1658618679170">
 <node TEXT="ECCV22" ID="ID_624140530" CREATED="1658618681127" MODIFIED="1658618682432"/>
@@ -6130,6 +6134,55 @@
 <icon BUILTIN="bookmark"/>
 <node TEXT="NIPS20" ID="ID_926576648" CREATED="1652383934990" MODIFIED="1652383936487"/>
 <node TEXT="we propose a form of gradient surgery that projects a task&apos;s gradient onto the normal plane of the gradient of any other task that has a conflicting gradient" ID="ID_1875166652" CREATED="1652383936902" MODIFIED="1652383975982"/>
+</node>
+</node>
+<node TEXT="Gradient Inversion" FOLDED="true" POSITION="left" ID="ID_856893547" CREATED="1675738524485" MODIFIED="1675739230998">
+<edge COLOR="#007c00"/>
+<node TEXT="Privacy breach in federated learning" ID="ID_370882247" CREATED="1675738529186" MODIFIED="1675739233174">
+<icon BUILTIN="info"/>
+</node>
+<node TEXT="Recover training data from gradients under restrictive conditions" ID="ID_340337385" CREATED="1675738567796" MODIFIED="1675738589125">
+<icon BUILTIN="info"/>
+</node>
+<node TEXT="How risky is this to the industry and the real-life applications? Does the risk worth the cost for the corresponding mitigation?" ID="ID_1898725442" CREATED="1675738905185" MODIFIED="1675738946233">
+<icon BUILTIN="help"/>
+<node TEXT="privacy protection does not make money for the industry. But sometimes it avoids losing money due to sues?" ID="ID_1992154293" CREATED="1675738981842" MODIFIED="1675739027639"/>
+<node TEXT="Why not just encrypt the gradient using the mature encryption methods? Why do we assume that the gradients are communicated in plain format without any encryption? The mature encryption methods does not impose a great overhead on model training time, but can cheaply prevent the man in the middle attacker from accessing the gradient data." ID="ID_1309505419" CREATED="1675740293591" MODIFIED="1675740391919"/>
+<node TEXT="It is interesting. But there are cheap solutions to it." ID="ID_1738081604" CREATED="1675740398663" MODIFIED="1675740423090">
+<icon BUILTIN="attach"/>
+</node>
+</node>
+<node TEXT="Attack" ID="ID_376304068" CREATED="1675739269843" MODIFIED="1675739271131">
+<node TEXT="Deep Leakage from Gradients" ID="ID_276864711" CREATED="1675740231154" MODIFIED="1675740231947">
+<node TEXT="NIPS19" ID="ID_323956691" CREATED="1675740234709" MODIFIED="1675740236222">
+<node TEXT="Song Han" ID="ID_873470254" CREATED="1675740236982" MODIFIED="1675740239080"/>
+</node>
+</node>
+<node TEXT="Inverting Gradients -- How easy is it to break privacy in federated learning?" ID="ID_62976593" CREATED="1675740147524" MODIFIED="1675740152975">
+<node TEXT="NIPS2020" ID="ID_1863732890" CREATED="1675740153913" MODIFIED="1675740157924"/>
+</node>
+<node TEXT="See through Gradients: Image Batch Recovery via GradInversion" ID="ID_1220157339" CREATED="1675738592141" MODIFIED="1675738601823">
+<node TEXT="CVPR21" ID="ID_439032463" CREATED="1675738602311" MODIFIED="1675738603763"/>
+<node TEXT="large batch (8-48 images) on ImageNet" ID="ID_7854666" CREATED="1675738623776" MODIFIED="1675738632624"/>
+<node TEXT="the aggregated gradient and the network weights are known. The optimization is to find an input whose gradient matches with the aggregated gradients." ID="ID_1915947616" CREATED="1675738854470" MODIFIED="1675738896371"/>
+</node>
+<node TEXT="GradViT: Gradient Inversion of Vision Transformers" ID="ID_354014530" CREATED="1675740081488" MODIFIED="1675740082875">
+<node TEXT="CVPR22" ID="ID_1148559731" CREATED="1675740085762" MODIFIED="1675740089684"/>
+</node>
+</node>
+<node TEXT="Defense" ID="ID_998251950" CREATED="1675739273330" MODIFIED="1675739274665">
+<node TEXT="Cryptography based" ID="ID_1228579139" CREATED="1675739279450" MODIFIED="1675739285216">
+<node TEXT="multi-party communication (MPC)" ID="ID_688657039" CREATED="1675739331042" MODIFIED="1675739345426"/>
+</node>
+<node TEXT="Gradient degradation based" ID="ID_1233800263" CREATED="1675739285436" MODIFIED="1675739291515">
+<node TEXT="differential privacy (DP)" ID="ID_813016819" CREATED="1675739347198" MODIFIED="1675739359691"/>
+</node>
+</node>
+<node TEXT="Attack Defense" ID="ID_276108364" CREATED="1675739470610" MODIFIED="1675739478958">
+<node TEXT="Auditing Privacy Defenses in Federated Learning via Generative Gradient Leakage" ID="ID_524301344" CREATED="1675739517073" MODIFIED="1675739522712">
+<node TEXT="CVPR22" ID="ID_1787895017" CREATED="1675739523193" MODIFIED="1675739524639"/>
+<node TEXT="new type of leakage that breaks gradient degradation methods" ID="ID_197111042" CREATED="1675739527086" MODIFIED="1675739550941"/>
+</node>
 </node>
 </node>
 <node TEXT="GAN Inverstion" FOLDED="true" POSITION="left" ID="ID_1643977837" CREATED="1608014251316" MODIFIED="1642394381732">
@@ -6273,10 +6326,10 @@
 </node>
 </node>
 </node>
-<node TEXT="Image Vectorization" FOLDED="true" POSITION="left" ID="ID_1231220509" CREATED="1655449067387" MODIFIED="1655449071990">
+<node TEXT="Image Vectorization" POSITION="left" ID="ID_1231220509" CREATED="1655449067387" MODIFIED="1655449071990">
 <edge COLOR="#007c00"/>
 <node TEXT="Vectorization" ID="ID_598894574" CREATED="1658618727950" MODIFIED="1658618730026">
-<node TEXT="Towards Layer-wise Image Vectorization" ID="ID_96979789" CREATED="1655449072900" MODIFIED="1655843072351">
+<node TEXT="Towards Layer-wise Image Vectorization (LIVE)" ID="ID_96979789" CREATED="1655449072900" MODIFIED="1675740476495">
 <icon BUILTIN="button_ok"/>
 <node TEXT="CVPR22 oral" ID="ID_935088308" CREATED="1655449096553" MODIFIED="1655449099799"/>
 </node>
