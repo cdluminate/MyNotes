@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="152" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="157" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1675045289036">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -177,6 +177,52 @@
 <node TEXT="TPAMI" ID="ID_137066053" CREATED="1675042363096" MODIFIED="1675042364744"/>
 </node>
 </node>
+<node TEXT="Tactic / Impact" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_896452525" CREATED="1642481777876" MODIFIED="1675744702833">
+<icon BUILTIN="info"/>
+<edge COLOR="#00ff00"/>
+<node TEXT="Think About Real Impact" ID="ID_911357239" CREATED="1642481791989" MODIFIED="1652385398738">
+<icon BUILTIN="bookmark"/>
+<font BOLD="false" STRIKETHROUGH="false" ITALIC="true"/>
+<node TEXT="What is important to study?" ID="ID_523483050" CREATED="1642482740356" MODIFIED="1642482745945">
+<node TEXT="adversarial robustness" ID="ID_842265845" CREATED="1642482755443" MODIFIED="1642482759383">
+<node TEXT="reveals intrinsic deficiency" ID="ID_1828537500" CREATED="1642482766339" MODIFIED="1642482772671"/>
+<node TEXT="stimulates revolution" ID="ID_954723767" CREATED="1642482773954" MODIFIED="1642482782684"/>
+</node>
+</node>
+</node>
+<node TEXT="futuristic works" ID="ID_967715831" CREATED="1642709658506" MODIFIED="1642709665874">
+<node TEXT="futuristic works" ID="ID_1948507537" CREATED="1642709667170" MODIFIED="1642709670754">
+<node TEXT="can think carefully" ID="ID_324229065" CREATED="1642709671696" MODIFIED="1642709676810"/>
+</node>
+<node TEXT="increamental works" ID="ID_1279802750" CREATED="1642709682711" MODIFIED="1642709685950">
+<node TEXT="must implement the prototype as quick as possible" ID="ID_724087321" CREATED="1642709687147" MODIFIED="1642709698927"/>
+<node TEXT="or it will lag" ID="ID_1598337776" CREATED="1642709706967" MODIFIED="1642709711055"/>
+</node>
+</node>
+<node TEXT="Tactic on Defense" LOCALIZED_STYLE_REF="styles.topic" ID="ID_838159228" CREATED="1643131959198" MODIFIED="1645067537984">
+<icon BUILTIN="info"/>
+<node TEXT="" ID="ID_199043642" CREATED="1643131995068" MODIFIED="1643131995068">
+<hook NAME="FirstGroupNode"/>
+</node>
+<node TEXT="general defense" ID="ID_403059335" CREATED="1643131971643" MODIFIED="1643131974611"/>
+<node TEXT="task-specific defense" ID="ID_165488249" CREATED="1643131974771" MODIFIED="1643131979246"/>
+<node TEXT="" ID="ID_990459491" CREATED="1643131995062" MODIFIED="1643131995068">
+<hook NAME="SummaryNode"/>
+<hook NAME="AlwaysUnfoldedNode"/>
+<node TEXT="will converge into a point in the future" ID="ID_1550318983" CREATED="1643131995069" MODIFIED="1643132004646"/>
+</node>
+<node TEXT="Defense" ID="ID_614574775" CREATED="1642481850518" MODIFIED="1642481854529">
+<node TEXT="detection is a deadend. it does not eventually solve the intrinsic issue" ID="ID_11478104" CREATED="1642481855705" MODIFIED="1642481871296"/>
+<node TEXT="when they are still doint easy attack, we do hard defense" ID="ID_1922226893" CREATED="1642481887844" MODIFIED="1642481899679"/>
+<node TEXT="when they are doing easy task-specific defense, we do generic or generalizable defense" ID="ID_239278608" CREATED="1642481900490" MODIFIED="1642481922606"/>
+</node>
+<node TEXT="Defense Goal" ID="ID_601872647" CREATED="1652385285637" MODIFIED="1652385288093">
+<node TEXT="the goal of attack is defense, beyond threatening deep learning application safety and security" ID="ID_231354137" CREATED="1652385288884" MODIFIED="1652385322804"/>
+<node TEXT="the goal of defense is fixing intrinsic representation problem of deep learning, beyond obtaining safe and secure AI" ID="ID_1986456732" CREATED="1652385314100" MODIFIED="1652385356500"/>
+<node TEXT="when we are able to fix the intrinsicly wrong representations, it&apos;s very likely the next revoslution of deep learning" ID="ID_1153408560" CREATED="1652385357825" MODIFIED="1652385380680"/>
+</node>
+</node>
+</node>
 <node TEXT="Surveys &amp; Background" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1805920002" CREATED="1608010101067" MODIFIED="1675296645861">
 <icon BUILTIN="mindmap"/>
 <edge COLOR="#ff0000"/>
@@ -232,54 +278,9 @@
 </node>
 </node>
 </node>
-<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1675042129591">
+<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1675042129591">
 <icon BUILTIN="bookmark"/>
 <edge COLOR="#7c0000"/>
-<node TEXT="Tactic / Impact" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_896452525" CREATED="1642481777876" MODIFIED="1675042109019">
-<icon BUILTIN="info"/>
-<node TEXT="Think About Real Impact" ID="ID_911357239" CREATED="1642481791989" MODIFIED="1652385398738">
-<icon BUILTIN="bookmark"/>
-<font BOLD="false" STRIKETHROUGH="false" ITALIC="true"/>
-<node TEXT="What is important to study?" ID="ID_523483050" CREATED="1642482740356" MODIFIED="1642482745945">
-<node TEXT="adversarial robustness" ID="ID_842265845" CREATED="1642482755443" MODIFIED="1642482759383">
-<node TEXT="reveals intrinsic deficiency" ID="ID_1828537500" CREATED="1642482766339" MODIFIED="1642482772671"/>
-<node TEXT="stimulates revolution" ID="ID_954723767" CREATED="1642482773954" MODIFIED="1642482782684"/>
-</node>
-</node>
-</node>
-<node TEXT="futuristic works" ID="ID_967715831" CREATED="1642709658506" MODIFIED="1642709665874">
-<node TEXT="futuristic works" ID="ID_1948507537" CREATED="1642709667170" MODIFIED="1642709670754">
-<node TEXT="can think carefully" ID="ID_324229065" CREATED="1642709671696" MODIFIED="1642709676810"/>
-</node>
-<node TEXT="increamental works" ID="ID_1279802750" CREATED="1642709682711" MODIFIED="1642709685950">
-<node TEXT="must implement the prototype as quick as possible" ID="ID_724087321" CREATED="1642709687147" MODIFIED="1642709698927"/>
-<node TEXT="or it will lag" ID="ID_1598337776" CREATED="1642709706967" MODIFIED="1642709711055"/>
-</node>
-</node>
-<node TEXT="Tactic on Defense" LOCALIZED_STYLE_REF="styles.topic" ID="ID_838159228" CREATED="1643131959198" MODIFIED="1645067537984">
-<icon BUILTIN="info"/>
-<node TEXT="" ID="ID_199043642" CREATED="1643131995068" MODIFIED="1643131995068">
-<hook NAME="FirstGroupNode"/>
-</node>
-<node TEXT="general defense" ID="ID_403059335" CREATED="1643131971643" MODIFIED="1643131974611"/>
-<node TEXT="task-specific defense" ID="ID_165488249" CREATED="1643131974771" MODIFIED="1643131979246"/>
-<node TEXT="" ID="ID_990459491" CREATED="1643131995062" MODIFIED="1643131995068">
-<hook NAME="SummaryNode"/>
-<hook NAME="AlwaysUnfoldedNode"/>
-<node TEXT="will converge into a point in the future" ID="ID_1550318983" CREATED="1643131995069" MODIFIED="1643132004646"/>
-</node>
-<node TEXT="Defense" ID="ID_614574775" CREATED="1642481850518" MODIFIED="1642481854529">
-<node TEXT="detection is a deadend. it does not eventually solve the intrinsic issue" ID="ID_11478104" CREATED="1642481855705" MODIFIED="1642481871296"/>
-<node TEXT="when they are still doint easy attack, we do hard defense" ID="ID_1922226893" CREATED="1642481887844" MODIFIED="1642481899679"/>
-<node TEXT="when they are doing easy task-specific defense, we do generic or generalizable defense" ID="ID_239278608" CREATED="1642481900490" MODIFIED="1642481922606"/>
-</node>
-<node TEXT="Defense Goal" ID="ID_601872647" CREATED="1652385285637" MODIFIED="1652385288093">
-<node TEXT="the goal of attack is defense, beyond threatening deep learning application safety and security" ID="ID_231354137" CREATED="1652385288884" MODIFIED="1652385322804"/>
-<node TEXT="the goal of defense is fixing intrinsic representation problem of deep learning, beyond obtaining safe and secure AI" ID="ID_1986456732" CREATED="1652385314100" MODIFIED="1652385356500"/>
-<node TEXT="when we are able to fix the intrinsicly wrong representations, it&apos;s very likely the next revoslution of deep learning" ID="ID_1153408560" CREATED="1652385357825" MODIFIED="1652385380680"/>
-</node>
-</node>
-</node>
 <node TEXT="Research Radar" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_860684520" CREATED="1645122829972" MODIFIED="1675042093373">
 <icon BUILTIN="wizard"/>
 <node TEXT="Does sampling matter in adversarial training of classifiers?" ID="ID_164735611" CREATED="1646924871981" MODIFIED="1646924880743"/>
@@ -1445,6 +1446,10 @@
 <node TEXT="metric learning and visual semantic embedding?" ID="ID_909931555" CREATED="1675448119576" MODIFIED="1675448127988"/>
 </node>
 <node TEXT="De-centralized federated learning? (FL is strongly centralized)" ID="ID_1223316625" CREATED="1675739676348" MODIFIED="1675739690191"/>
+<node TEXT="self supervised learning through reconstruction?" ID="ID_1301115767" CREATED="1675744654491" MODIFIED="1675744661764">
+<node TEXT="can do ood" ID="ID_1343924000" CREATED="1675744662071" MODIFIED="1675744664599"/>
+<node TEXT="can be hierarchical" ID="ID_745396914" CREATED="1675744665246" MODIFIED="1675744670089"/>
+</node>
 </node>
 </node>
 <node TEXT="Contrastive Learning" FOLDED="true" POSITION="right" ID="ID_1223342213" CREATED="1675048671290" MODIFIED="1675049283065">
@@ -5460,6 +5465,14 @@
 <node TEXT="ICLR23" ID="ID_1007201331" CREATED="1675052862033" MODIFIED="1675052865053"/>
 <node TEXT="CIFAR 10, no imagenet" ID="ID_820963333" CREATED="1675739931665" MODIFIED="1675739935991"/>
 </node>
+<node TEXT="GAT: Guided Adversarial Training with Pareto-optimal Auxiliary Tasks" ID="ID_133990523" CREATED="1675744303021" MODIFIED="1675744307739">
+<icon BUILTIN="pencil"/>
+<node TEXT="extend standard training into multi-task learning" ID="ID_1736353825" CREATED="1675744309435" MODIFIED="1675744320735"/>
+<node TEXT="self-supervised task (auto label)" ID="ID_711669879" CREATED="1675744320977" MODIFIED="1675744349872"/>
+<node TEXT="domain-knowledge task (human label)" ID="ID_784242622" CREATED="1675744337605" MODIFIED="1675744354889"/>
+<node TEXT="CIFAR-10. No imagenet" ID="ID_845291209" CREATED="1675744431046" MODIFIED="1675744440796"/>
+<node TEXT="evaluation is problematic. No AutoAttack / PGD" ID="ID_1689881582" CREATED="1675744501739" MODIFIED="1675744514975"/>
+</node>
 </node>
 <node TEXT="Self-supervised Learning" ID="ID_1886314157" CREATED="1675742636744" MODIFIED="1675742640282">
 <node TEXT="Adversarial Training of Self-supervised Monocular Depth Estimation against Physical-World Attacks" ID="ID_539306686" CREATED="1675742640998" MODIFIED="1675742648145">
@@ -5469,9 +5482,8 @@
 </node>
 </node>
 </node>
-<node TEXT="Backdoor Attack &amp; Defense" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="left" ID="ID_1279237598" CREATED="1642964328030" MODIFIED="1648336230488">
-<edge COLOR="#ff0000"/>
-<node TEXT="Attack" ID="ID_481030829" CREATED="1642965505734" MODIFIED="1642965507796">
+<node TEXT="Backdoor Attack" FOLDED="true" POSITION="left" ID="ID_481030829" CREATED="1642965505734" MODIFIED="1675743736921">
+<edge COLOR="#007c7c"/>
 <node TEXT="Classification" ID="ID_1068695249" CREATED="1643059216060" MODIFIED="1643059221252">
 <node TEXT="* Madry backdoor" ID="ID_684891535" CREATED="1643059222128" MODIFIED="1644181613323"/>
 <node TEXT="Imperceptible and Multi-channel Backdoor Attack against Deep Neural Networks" ID="ID_1408798505" CREATED="1644181613544" MODIFIED="1644181621740">
@@ -5537,16 +5549,17 @@
 </node>
 </node>
 </node>
-<node TEXT="Detection" ID="ID_671670757" CREATED="1672075152527" MODIFIED="1672075155300">
-<node TEXT="Backdoor Attack Detection in Computer Vision by Applying Matrix Factorization on the Weights of Deep Networks" ID="ID_432585247" CREATED="1672075170235" MODIFIED="1672075171748">
-<node TEXT="AAAI23w" ID="ID_564155447" CREATED="1672075172077" MODIFIED="1672075177553"/>
-<node TEXT="extracts features from pre-trianed DNN&apos;s weights using independent vector analysis (IVA) followed by a machine learning classifier" ID="ID_1950286909" CREATED="1672075216674" MODIFIED="1672075245368"/>
-</node>
-</node>
-<node TEXT="Defense" ID="ID_1943792971" CREATED="1642964418531" MODIFIED="1642965511845">
+<node TEXT="Backdoor Defense" FOLDED="true" POSITION="left" ID="ID_1943792971" CREATED="1642964418531" MODIFIED="1675743745379">
+<edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_330468423" CREATED="1647048705270" MODIFIED="1647048707607">
 <node TEXT="A Survey of Neural Trojan Attacks and Defenses in Deep Learning" ID="ID_941695665" CREATED="1646945552550" MODIFIED="1646945574224">
 <icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Detection" ID="ID_671670757" CREATED="1672075152527" MODIFIED="1675743716385">
+<node TEXT="Backdoor Attack Detection in Computer Vision by Applying Matrix Factorization on the Weights of Deep Networks" ID="ID_432585247" CREATED="1672075170235" MODIFIED="1672075171748">
+<node TEXT="AAAI23w" ID="ID_564155447" CREATED="1672075172077" MODIFIED="1672075177553"/>
+<node TEXT="extracts features from pre-trianed DNN&apos;s weights using independent vector analysis (IVA) followed by a machine learning classifier" ID="ID_1950286909" CREATED="1672075216674" MODIFIED="1672075245368"/>
 </node>
 </node>
 <node TEXT="Classification" ID="ID_1654847796" CREATED="1647048721032" MODIFIED="1647048723750">
@@ -5593,6 +5606,10 @@
 <node TEXT="neural networks have strong self-recovery capability" ID="ID_744809892" CREATED="1672077434315" MODIFIED="1672077444669"/>
 </node>
 </node>
+<node TEXT="Reconstruction" ID="ID_1763795426" CREATED="1675743755183" MODIFIED="1675743757574">
+<node TEXT="Salient Conditional Diffusion for Defending Against Backdoor Attacks" ID="ID_455918413" CREATED="1675743761393" MODIFIED="1675743771058">
+<icon BUILTIN="pencil"/>
+</node>
 </node>
 </node>
 <node TEXT="Comp. Linguistics" FOLDED="true" POSITION="left" ID="ID_865579939" CREATED="1610008291436" MODIFIED="1642394269419">
@@ -5637,6 +5654,11 @@
 <font NAME="Gentium" BOLD="false"/>
 <edge COLOR="#7c0000"/>
 <node TEXT="Image-Text" ID="ID_22916358" CREATED="1649103179989" MODIFIED="1649103183136">
+<node TEXT="Image-Recipe" ID="ID_552619459" CREATED="1650809005463" MODIFIED="1650809008428">
+<node TEXT="Transformer Decoders with MultiModal Regularization for Cross-Modal Food Retrieval" ID="ID_778443774" CREATED="1650809009512" MODIFIED="1650809016539">
+<node TEXT="CVPR22w" ID="ID_253625686" CREATED="1650809019210" MODIFIED="1650809021151"/>
+</node>
+</node>
 <node TEXT="VSE Family" ID="ID_730414508" CREATED="1652383580081" MODIFIED="1652383582802">
 <node TEXT="Unifying ..." ID="ID_1819265540" CREATED="1586240031907" MODIFIED="1587526865103">
 <font NAME="Gentium" BOLD="false"/>
@@ -5878,10 +5900,14 @@
 <node TEXT="axv 2212" ID="ID_1802900090" CREATED="1672076255530" MODIFIED="1672076260992"/>
 <node TEXT="image feature graph + text feature graph. feature aggregation, triplet" ID="ID_877133921" CREATED="1672076298685" MODIFIED="1672076391667"/>
 </node>
+<node TEXT="CLIP" ID="ID_1330205121" CREATED="1675743879334" MODIFIED="1675743880577">
+<node TEXT="large scale pre-training" ID="ID_999072639" CREATED="1675743967553" MODIFIED="1675743971249"/>
 </node>
-<node TEXT="Image-Recipe" ID="ID_552619459" CREATED="1650809005463" MODIFIED="1650809008428">
-<node TEXT="Transformer Decoders with MultiModal Regularization for Cross-Modal Food Retrieval" ID="ID_778443774" CREATED="1650809009512" MODIFIED="1650809016539">
-<node TEXT="CVPR22w" ID="ID_253625686" CREATED="1650809019210" MODIFIED="1650809021151"/>
+<node TEXT="LexLIP: Lexicon-Bottlenecked Language-Image Pre-Training for Large-Scale Image-Text Retrieval" ID="ID_1000169817" CREATED="1675743880886" MODIFIED="1675743896805">
+<icon BUILTIN="pencil"/>
+<node TEXT="pre-training" ID="ID_132691776" CREATED="1675743963323" MODIFIED="1675743965152"/>
+<node TEXT="faster than CLIP" ID="ID_471456345" CREATED="1675743898142" MODIFIED="1675743903144"/>
+<node TEXT="less storage than CLIP" ID="ID_1939734106" CREATED="1675743903318" MODIFIED="1675743909152"/>
 </node>
 </node>
 <node TEXT="Cross-lingual" ID="ID_1275207266" CREATED="1607576963588" MODIFIED="1649103229953">
