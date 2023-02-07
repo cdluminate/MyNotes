@@ -2086,12 +2086,15 @@
 </node>
 <node TEXT="Universal Adversarial Examples in Remote Sensing: Methodology and Benchmark" ID="ID_1566703454" CREATED="1646945260207" MODIFIED="1646945261393"/>
 </node>
-<node TEXT="Semantic Segmentation" FOLDED="true" ID="ID_1787214618" CREATED="1656028016019" MODIFIED="1656028018909">
+<node TEXT="Semantic Segmentation" ID="ID_1787214618" CREATED="1656028016019" MODIFIED="1656028018909">
 <node TEXT="Proximal Splitting Adversarial Attacks for Semantic Segmentation" ID="ID_1712900589" CREATED="1656028019529" MODIFIED="1656028021932">
 <icon BUILTIN="pencil"/>
 <node TEXT="Torr" ID="ID_1357910555" CREATED="1659163591561" MODIFIED="1659163594171"/>
 </node>
 <node TEXT="SegPGD: An Effective and Efficient Adversarial Attack for Evaluating and Boosting Segmentation Robustness" ID="ID_377829791" CREATED="1659163580116" MODIFIED="1659163587284">
+<icon BUILTIN="pencil"/>
+</node>
+<node TEXT="CosPGD: a unified white-box adversarial attack for pixel-wise prediction tasks" ID="ID_1267039337" CREATED="1675745591116" MODIFIED="1675745595045">
 <icon BUILTIN="pencil"/>
 </node>
 </node>
@@ -5451,8 +5454,17 @@
 </node>
 <node TEXT="Anomaly Detection (OOD)" FOLDED="true" POSITION="left" ID="ID_31313107" CREATED="1657404499454" MODIFIED="1675739883522">
 <edge COLOR="#007c7c"/>
+<node TEXT="This is a saturated area. Performance numbers are too high." ID="ID_275469478" CREATED="1675745241040" MODIFIED="1675745258548">
+<icon BUILTIN="attach"/>
+</node>
+<node TEXT="It is generally useful in various scenarios. It is an old topic though." ID="ID_675420273" CREATED="1675745275149" MODIFIED="1675745297272"/>
 <node TEXT="Back to the Basics: Revisiting Out-of-Distribution Detection Baselines" ID="ID_610692624" CREATED="1657404508363" MODIFIED="1657404513522">
 <node TEXT="ICML22w" ID="ID_1649193597" CREATED="1657404516644" MODIFIED="1657404522883"/>
+</node>
+<node TEXT="Rethinking Out-of-distribution (OOD) Detection:&#xa;Masked Image Modeling is All You Need" ID="ID_1967773333" CREATED="1675745141770" MODIFIED="1675745149081">
+<icon BUILTIN="pencil"/>
+<node TEXT="simply using reconstruction based methods" ID="ID_1444620585" CREATED="1675745171762" MODIFIED="1675745181691"/>
+<node TEXT="masked image modeling as a pretext task" ID="ID_280600644" CREATED="1675745150680" MODIFIED="1675745164658"/>
 </node>
 </node>
 <node TEXT="Adversarial Training (Robustness)" FOLDED="true" POSITION="left" ID="ID_1633797140" CREATED="1675050942299" MODIFIED="1675052765536">
