@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="151" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="152" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1675045289036">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -2146,6 +2146,12 @@
 <node TEXT="Identification of Attack-Specific Signatures in Adversarial Examples" ID="ID_1517932797" CREATED="1651096604936" MODIFIED="1651096617795">
 <icon BUILTIN="pencil"/>
 <node TEXT="Rama" ID="ID_83793265" CREATED="1651096619569" MODIFIED="1651096620790"/>
+</node>
+<node TEXT="On Trace" ID="ID_263873324" CREATED="1675743049602" MODIFIED="1675743057146"/>
+<node TEXT="Inference Time Evidences of Adversarial Attacks for Forensic on Transformers" ID="ID_261415017" CREATED="1675743041254" MODIFIED="1675743087125">
+<node TEXT="AAAI23" ID="ID_1488123411" CREATED="1675743087514" MODIFIED="1675743089816"/>
+<node TEXT="specific to vision transformer" ID="ID_978132523" CREATED="1675743090035" MODIFIED="1675743093820"/>
+<node TEXT="signature of the inference" ID="ID_269789676" CREATED="1675743123560" MODIFIED="1675743132560"/>
 </node>
 </node>
 <node TEXT="Vulnerability Analysis" ID="ID_1332546973" CREATED="1641743569630" MODIFIED="1647048986674">
@@ -4777,6 +4783,9 @@
 <node TEXT="Sylph: A Hypernetwork Framework for Incremental Few-Shot Object Detection" ID="ID_372451803" CREATED="1659198270431" MODIFIED="1659198270870">
 <node TEXT="CVPR22" ID="ID_47429970" CREATED="1659198271871" MODIFIED="1659198273130"/>
 </node>
+<node TEXT="Few-Shot Object Detection via Variational Feature Aggregation" ID="ID_1784180237" CREATED="1675742788329" MODIFIED="1675742788965">
+<node TEXT="AAAI23" ID="ID_1724039655" CREATED="1675742789297" MODIFIED="1675742790832"/>
+</node>
 </node>
 <node TEXT="+Federated" FOLDED="true" ID="ID_1959109465" CREATED="1659196788691" MODIFIED="1659196792231">
 <node TEXT="Cross-domain Federated Object Detection" ID="ID_185717192" CREATED="1659196792899" MODIFIED="1659196796563">
@@ -5446,9 +5455,18 @@
 <node TEXT="Can we simply make adv training faster on imagenet? people are still playing with CIFAR" ID="ID_133206511" CREATED="1675052822881" MODIFIED="1675052888793">
 <icon BUILTIN="attach"/>
 </node>
+<node TEXT="Image Classification" ID="ID_1457539369" CREATED="1675742630904" MODIFIED="1675742634724">
 <node TEXT="Data Augmentation Alone Can Improve Adversarial Training" ID="ID_266269491" CREATED="1675052851143" MODIFIED="1675052861836">
 <node TEXT="ICLR23" ID="ID_1007201331" CREATED="1675052862033" MODIFIED="1675052865053"/>
 <node TEXT="CIFAR 10, no imagenet" ID="ID_820963333" CREATED="1675739931665" MODIFIED="1675739935991"/>
+</node>
+</node>
+<node TEXT="Self-supervised Learning" ID="ID_1886314157" CREATED="1675742636744" MODIFIED="1675742640282">
+<node TEXT="Adversarial Training of Self-supervised Monocular Depth Estimation against Physical-World Attacks" ID="ID_539306686" CREATED="1675742640998" MODIFIED="1675742648145">
+<node TEXT="ICLR23" ID="ID_810916472" CREATED="1675742649030" MODIFIED="1675742650739"/>
+<node TEXT="traditional adversarial training requires ground truth label" ID="ID_258417514" CREATED="1675742690407" MODIFIED="1675742709560"/>
+<node TEXT="based on view synthesis. does not require grund-truth label" ID="ID_1349391221" CREATED="1675742651932" MODIFIED="1675742685215"/>
+</node>
 </node>
 </node>
 <node TEXT="Backdoor Attack &amp; Defense" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="left" ID="ID_1279237598" CREATED="1642964328030" MODIFIED="1648336230488">
@@ -5901,6 +5919,15 @@
 <node TEXT="CVPR22" ID="ID_951175501" CREATED="1648338090454" MODIFIED="1648338092141"/>
 </node>
 </node>
+<node TEXT="Diffusion Probablistic Models" FOLDED="true" POSITION="left" ID="ID_1851434164" CREATED="1675742478183" MODIFIED="1675742491217">
+<icon BUILTIN="bookmark"/>
+<edge COLOR="#7c007c"/>
+<node TEXT="Analysis" ID="ID_372113868" CREATED="1675742492314" MODIFIED="1675742504986">
+<node TEXT="DisDiff: Unsupervised Disentanglement of Diffusion Probabilistic Models" ID="ID_1294380024" CREATED="1675742496342" MODIFIED="1675742509742">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+</node>
 <node TEXT="Face Recognition Attack" FOLDED="true" POSITION="left" ID="ID_490223917" CREATED="1675049870200" MODIFIED="1675049874030">
 <edge COLOR="#7c7c00"/>
 <node TEXT="risk: maybe common corruptions like brightness, rain, angle, etc can introduce more risk to a system in practice" ID="ID_567079036" CREATED="1675049927982" MODIFIED="1675049976962">
@@ -6326,9 +6353,14 @@
 </node>
 </node>
 </node>
-<node TEXT="Image Vectorization" POSITION="left" ID="ID_1231220509" CREATED="1655449067387" MODIFIED="1655449071990">
+<node TEXT="Image Vectorization" FOLDED="true" POSITION="left" ID="ID_1231220509" CREATED="1655449067387" MODIFIED="1655449071990">
 <edge COLOR="#007c00"/>
 <node TEXT="Vectorization" ID="ID_598894574" CREATED="1658618727950" MODIFIED="1658618730026">
+<node TEXT="DeepSVG: A Hierarchical Generative Network for&#xa;Vector Graphics Animation" ID="ID_89337032" CREATED="1675740863101" MODIFIED="1675740864101">
+<node TEXT="NIPS20" ID="ID_1922124527" CREATED="1675740869648" MODIFIED="1675740929011"/>
+<node TEXT="Icon generation with hierarchical genrative network" ID="ID_1328738360" CREATED="1675740871336" MODIFIED="1675740922329"/>
+<node TEXT="not possible for imagenet" ID="ID_644174663" CREATED="1675740876083" MODIFIED="1675740881242"/>
+</node>
 <node TEXT="Towards Layer-wise Image Vectorization (LIVE)" ID="ID_96979789" CREATED="1655449072900" MODIFIED="1675740476495">
 <icon BUILTIN="button_ok"/>
 <node TEXT="CVPR22 oral" ID="ID_935088308" CREATED="1655449096553" MODIFIED="1655449099799"/>
