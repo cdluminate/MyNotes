@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="Memo" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1675045349693" STYLE="oval">
 <font NAME="Gentium" SIZE="18" ITALIC="false"/>
-<hook NAME="MapStyle" zoom="3.341">
+<hook NAME="MapStyle" zoom="1.17">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="157" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="159" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1675045289036">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -223,6 +223,14 @@
 </node>
 </node>
 </node>
+<node TEXT="Math Hints" POSITION="right" ID="ID_779216680" CREATED="1675889763507" MODIFIED="1675889770467">
+<edge COLOR="#00ffff"/>
+<node TEXT="Computational linguistics" ID="ID_1848073684" CREATED="1675889779775" MODIFIED="1675889790605">
+<node TEXT="Zipf&apos;s law" ID="ID_1642293792" CREATED="1675889791206" MODIFIED="1675889796378">
+<node TEXT="for many types of data studied in the physical and social sciences, the rank-frequency distribution is an inverse relation." ID="ID_1911959760" CREATED="1675889822617" MODIFIED="1675889849537"/>
+</node>
+</node>
+</node>
 <node TEXT="Surveys &amp; Background" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1805920002" CREATED="1608010101067" MODIFIED="1675296645861">
 <icon BUILTIN="mindmap"/>
 <edge COLOR="#ff0000"/>
@@ -278,7 +286,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1675042129591">
+<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1675042129591">
 <icon BUILTIN="bookmark"/>
 <edge COLOR="#7c0000"/>
 <node TEXT="Research Radar" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_860684520" CREATED="1645122829972" MODIFIED="1675042093373">
@@ -1450,14 +1458,44 @@
 <node TEXT="can do ood" ID="ID_1343924000" CREATED="1675744662071" MODIFIED="1675744664599"/>
 <node TEXT="can be hierarchical" ID="ID_745396914" CREATED="1675744665246" MODIFIED="1675744670089"/>
 </node>
+<node TEXT="MSRA idea + masked autoencoder?" ID="ID_1614060668" CREATED="1675889013847" MODIFIED="1675889020948"/>
 </node>
 </node>
-<node TEXT="Contrastive Learning" FOLDED="true" POSITION="right" ID="ID_1223342213" CREATED="1675048671290" MODIFIED="1675049283065">
+<node TEXT="-------------------------------------------------------------------" LOCALIZED_STYLE_REF="default" POSITION="right" ID="ID_1134167122" CREATED="1675049435899" MODIFIED="1675886470423">
+<edge COLOR="#ff00ff"/>
+</node>
+<node TEXT="Self-supervised Representation" POSITION="right" ID="ID_1223342213" CREATED="1675048671290" MODIFIED="1675886593093">
 <edge COLOR="#0000ff"/>
-<node TEXT="Cross-Modal" ID="ID_805657635" CREATED="1675048683328" MODIFIED="1675048685763">
+<node TEXT="Single Modal Linguistics" ID="ID_1606225626" CREATED="1675891148148" MODIFIED="1675891155383">
+<node TEXT="BERT" ID="ID_1239615666" CREATED="1675891158294" MODIFIED="1675891159992"/>
+<node TEXT="GPT" ID="ID_641068612" CREATED="1675891160565" MODIFIED="1675891161880"/>
+</node>
+<node TEXT="Single Modal Vision" ID="ID_1896428960" CREATED="1675886596835" MODIFIED="1675891147400">
+<node TEXT="MAE" ID="ID_1610729841" CREATED="1675887212306" MODIFIED="1675887214029">
+<node TEXT="Masked Autoencoders Are Scalable Vision Learners" ID="ID_1946699135" CREATED="1675887223216" MODIFIED="1675887224200">
+<node TEXT="Simple algorithms that scale well are the core of deep&#xa;learning." ID="ID_733682737" CREATED="1675892807986" MODIFIED="1675892814536">
+<icon BUILTIN="bookmark"/>
+<font BOLD="true"/>
+</node>
+<node TEXT="encoder" ID="ID_347801035" CREATED="1675893721991" MODIFIED="1675893723283">
+<node TEXT="The input is segmented into patches" ID="ID_1025481810" CREATED="1675893705610" MODIFIED="1675893714526"/>
+<node TEXT="a portion of the patches are masked. The ratio is typically 75%" ID="ID_1718394396" CREATED="1675893716634" MODIFIED="1675893820306"/>
+<node TEXT="only unmasked patches are used by the encoder to learn their corresponding encodings" ID="ID_101439197" CREATED="1675893729369" MODIFIED="1675893752890"/>
+</node>
+<node TEXT="decoder" ID="ID_522154959" CREATED="1675893755178" MODIFIED="1675893757751">
+<node TEXT="the encodings are filled in a full length sequence" ID="ID_1992272442" CREATED="1675893758102" MODIFIED="1675893772940"/>
+<node TEXT="empty (masked) places will be filled with a learned embedding" ID="ID_1438410421" CREATED="1675893773313" MODIFIED="1675893785786"/>
+<node TEXT="decoder reconstructs the original image" ID="ID_432282977" CREATED="1675893793316" MODIFIED="1675893804509"/>
+</node>
+<node TEXT="How is the image level representation obtained from the encoder?" ID="ID_770030303" CREATED="1675893869455" MODIFIED="1675893886753">
+<icon BUILTIN="help"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Cross Modal" ID="ID_805657635" CREATED="1675048683328" MODIFIED="1675886607818">
 <node TEXT="CLIP" ID="ID_928055559" CREATED="1675048679300" MODIFIED="1675048680813"/>
 </node>
-<node TEXT="-------------------------------------------------------------------" LOCALIZED_STYLE_REF="default" ID="ID_1134167122" CREATED="1675049435899" MODIFIED="1675302565765"/>
 </node>
 <node TEXT="Generative Model" FOLDED="true" POSITION="right" ID="ID_293903694" CREATED="1675049414636" MODIFIED="1675049418308">
 <edge COLOR="#7c0000"/>
@@ -6313,7 +6351,7 @@
 <node TEXT="CVPR22" ID="ID_1065954996" CREATED="1648343238753" MODIFIED="1648343240041"/>
 </node>
 </node>
-<node TEXT="Image Generation" FOLDED="true" POSITION="left" ID="ID_65977927" CREATED="1576830540818" MODIFIED="1655843128532">
+<node TEXT="Image Generation" POSITION="left" ID="ID_65977927" CREATED="1576830540818" MODIFIED="1655843128532">
 <font NAME="Gentium" BOLD="false"/>
 <edge COLOR="#ff0000"/>
 <node TEXT="Metrics" ID="ID_1323509383" CREATED="1659195775718" MODIFIED="1659195778362">
