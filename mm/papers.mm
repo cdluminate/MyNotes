@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="165" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="166" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1675045289036">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -292,7 +292,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1675042129591">
+<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1675042129591">
 <icon BUILTIN="bookmark"/>
 <edge COLOR="#7c0000"/>
 <node TEXT="Research Radar" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_860684520" CREATED="1645122829972" MODIFIED="1675042093373">
@@ -418,7 +418,7 @@
 <icon BUILTIN="help"/>
 </node>
 </node>
-<node TEXT="Failures" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_1502842186" CREATED="1630692548912" MODIFIED="1675042094788">
+<node TEXT="Failures" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1502842186" CREATED="1630692548912" MODIFIED="1675042094788">
 <icon BUILTIN="stop-sign"/>
 <node TEXT="uncertainty" ID="ID_158937490" CREATED="1618124027353" MODIFIED="1618124029656">
 <node TEXT="\accept Evidential Deep Learning + Distillation?" ID="ID_1904807575" CREATED="1618124030544" MODIFIED="1618124036591"/>
@@ -1518,7 +1518,7 @@
 <node TEXT="reconstruction?" ID="ID_1043968895" CREATED="1676228383633" MODIFIED="1676228386002"/>
 </node>
 </node>
-<node TEXT="Vision-Language Pretraining" LOCALIZED_STYLE_REF="default" POSITION="right" ID="ID_1438251706" CREATED="1646945591468" MODIFIED="1676254644721">
+<node TEXT="Vision-Language Pretraining" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="right" ID="ID_1438251706" CREATED="1646945591468" MODIFIED="1676254644721">
 <edge COLOR="#00ff00"/>
 <node TEXT="Survey" ID="ID_1995640100" CREATED="1650816017282" MODIFIED="1650816021941">
 <icon BUILTIN="info"/>
@@ -1558,7 +1558,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Large Language Model (LLM)" FOLDED="true" POSITION="right" ID="ID_947216604" CREATED="1675045191624" MODIFIED="1676254084090">
+<node TEXT="Large Language Model (LLM)" POSITION="right" ID="ID_947216604" CREATED="1675045191624" MODIFIED="1676254084090">
 <edge COLOR="#007c00"/>
 <node TEXT="GPT3" ID="ID_876218906" CREATED="1676254085097" MODIFIED="1676254086815"/>
 <node TEXT="ChatGPT" ID="ID_1978389784" CREATED="1675045199545" MODIFIED="1675045201237"/>
@@ -1616,8 +1616,11 @@
 </node>
 </node>
 </node>
-<node TEXT="Large Language Model (LLM)" FOLDED="true" POSITION="right" ID="ID_1735833052" CREATED="1675287989836" MODIFIED="1675287997379">
+<node TEXT="Large Language Model (LLM)" FOLDED="true" POSITION="right" ID="ID_1735833052" CREATED="1675287989836" MODIFIED="1676260281565">
 <edge COLOR="#00ff00"/>
+<node TEXT="BERT" ID="ID_676603491" CREATED="1676260264280" MODIFIED="1676260265477"/>
+<node TEXT="GPT3" ID="ID_252935248" CREATED="1676260186407" MODIFIED="1676260188123"/>
+<node TEXT="GPT4" ID="ID_1419163353" CREATED="1676260188792" MODIFIED="1676260190103"/>
 <node TEXT="ChatGPT" ID="ID_929371264" CREATED="1675287998205" MODIFIED="1675288002483">
 <node TEXT="Main" ID="ID_1521352916" CREATED="1675288009231" MODIFIED="1675288011622">
 <node TEXT="ChatGPT" ID="ID_937804408" CREATED="1675288029662" MODIFIED="1675288032098"/>
@@ -1628,16 +1631,21 @@
 </node>
 </node>
 </node>
+</node>
 <node TEXT="Detection" ID="ID_398704158" CREATED="1675288011819" MODIFIED="1675288013535">
 <node TEXT="Arms race?" ID="ID_516276125" CREATED="1676227885257" MODIFIED="1676227896882">
 <icon BUILTIN="attach"/>
 </node>
-<node TEXT="watermarking" ID="ID_919169453" CREATED="1675444907732" MODIFIED="1675444909586"/>
+<node TEXT="direct feature" ID="ID_1682794622" CREATED="1676260237977" MODIFIED="1676260253353">
+<node TEXT="DetectGPT: Zero-Shot Machine-Generated Text Detection using Probability Curvature" ID="ID_586336814" CREATED="1676260234916" MODIFIED="1676260308498">
+<icon BUILTIN="unchecked"/>
+</node>
+</node>
+<node TEXT="watermark" ID="ID_919169453" CREATED="1675444907732" MODIFIED="1676260246600"/>
 </node>
 <node TEXT="Counter Detection?" ID="ID_1319347872" CREATED="1675288013731" MODIFIED="1675288021905">
 <node TEXT="attack detector" ID="ID_890431519" CREATED="1675295663510" MODIFIED="1675295666328"/>
 <node TEXT="How to genrate realistic human text? there is FID for image." ID="ID_1601127519" CREATED="1675295648525" MODIFIED="1675295679716"/>
-</node>
 </node>
 </node>
 <node TEXT="Prompt :: Computational Linguistics" FOLDED="true" POSITION="right" ID="ID_686007260" CREATED="1675367065325" MODIFIED="1676254142013">
@@ -1671,6 +1679,9 @@
 <node TEXT="python: torchattacks" ID="ID_1476724210" CREATED="1650817877844" MODIFIED="1650817881932"/>
 </node>
 <node TEXT="White-Box Attack" ID="ID_449007607" CREATED="1641522449462" MODIFIED="1651778178797">
+<node TEXT="It is already very difficult to improve attack performance as of 2022. Think more about defense -- that is much more useful than exploring the marginally worse robust performance." ID="ID_962792801" CREATED="1676259094431" MODIFIED="1676259147650">
+<icon BUILTIN="attach"/>
+</node>
 <node TEXT="L-BFGS" ID="ID_1011268115" CREATED="1642438696428" MODIFIED="1642438699395"/>
 <node TEXT="FGSM" ID="ID_1740870459" CREATED="1642438691608" MODIFIED="1642438694832">
 <node TEXT="Explaining and harnessing adversarial examples." ID="ID_522955177" CREATED="1642455794565" MODIFIED="1642455799174">
@@ -1708,6 +1719,15 @@
 <icon BUILTIN="idea"/>
 <node TEXT="CVPR22w" ID="ID_1962162102" CREATED="1659196936312" MODIFIED="1659196938479"/>
 <node TEXT="Carlini" ID="ID_1794164394" CREATED="1659196946233" MODIFIED="1659196948152"/>
+</node>
+<node TEXT="AutoAttack" ID="ID_428703954" CREATED="1676258979072" MODIFIED="1676258981418"/>
+<node TEXT="Adaptive Auto Attack (A3)" ID="ID_217185072" CREATED="1676258981637" MODIFIED="1676259001084">
+<node TEXT="Practical Evaluation of Adversarial Robustness via Adaptive Auto Attack" ID="ID_332581355" CREATED="1676258995519" MODIFIED="1676258996766">
+<node TEXT="CVPR22" ID="ID_1990705126" CREATED="1676259002539" MODIFIED="1676259003823"/>
+</node>
+<node TEXT="Automated Discovery of Adaptive Attacks on Adversarial Defenses" ID="ID_730096673" CREATED="1676259028797" MODIFIED="1676259042213">
+<node TEXT="NIPS21" ID="ID_574761173" CREATED="1676259043085" MODIFIED="1676259051220"/>
+</node>
 </node>
 <node TEXT="-----------------" ID="ID_1402220042" CREATED="1659199655941" MODIFIED="1659199658606"/>
 <node TEXT="Fast is better than free: Revisiting adversarial training" ID="ID_1673133690" CREATED="1659199605404" MODIFIED="1659199607945">
@@ -1766,8 +1786,8 @@
 </node>
 </node>
 </node>
-<node TEXT="Transferrability" FOLDED="true" ID="ID_142248765" CREATED="1641678368814" MODIFIED="1641678372373">
-<node TEXT="It is to some extent ridiculous to assume an overlap of the vulnerability space among different trained models." ID="ID_539973320" CREATED="1676256488396" MODIFIED="1676256537792">
+<node TEXT="Transfer Attack (untargeted)" ID="ID_142248765" CREATED="1641678368814" MODIFIED="1676259342344">
+<node TEXT="It is to some extent ridiculous to assume an overlap of the vulnerability space among different trained models. I have lost interest in the transferability. Defending against attacks is more important than developing new and marginally better transfer attacks." ID="ID_539973320" CREATED="1676256488396" MODIFIED="1676259290908">
 <icon BUILTIN="attach"/>
 <node TEXT="But according to the empirical results of the community, imagenet models indeed share some stupid common vulnerability space." ID="ID_1762438180" CREATED="1676256538121" MODIFIED="1676256561123"/>
 <node TEXT="can such common vulnerability space be provably removed?" ID="ID_496754271" CREATED="1676256563570" MODIFIED="1676256576198"/>
@@ -1870,12 +1890,13 @@
 </node>
 </node>
 </node>
-<node TEXT="Transferrable (targeted)" ID="ID_1579455963" CREATED="1672079658910" MODIFIED="1672079666477">
+<node TEXT="Transfer Attack (targeted)" ID="ID_1579455963" CREATED="1672079658910" MODIFIED="1676259347654">
 <node TEXT="Minimizing Maximum Model Discrepancy for Transferable&#xa;Black-box Targeted Attacks" ID="ID_1550837597" CREATED="1672079615777" MODIFIED="1672079622103">
 <node TEXT="axv 2212" ID="ID_1042757284" CREATED="1672079670970" MODIFIED="1672079672978"/>
 </node>
 </node>
 <node TEXT="Universal Perturbation" ID="ID_883577858" CREATED="1641522438698" MODIFIED="1641522443789">
+<node TEXT="UAP: universal adversarial perturbation" ID="ID_1968562568" CREATED="1676259309261" MODIFIED="1676259318021"/>
 <node TEXT="on distinctive properties of universal perturbations (madry)" ID="ID_224581737" CREATED="1641522458794" MODIFIED="1641743879665">
 <icon BUILTIN="pencil"/>
 <node TEXT="targeted UAP via PGD, compared to standard targeted attack" ID="ID_358135140" CREATED="1641743454798" MODIFIED="1641743500936">
@@ -1960,7 +1981,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Unlearnable Example" FOLDED="true" ID="ID_1890366930" CREATED="1649095313088" MODIFIED="1649095318895">
+<node TEXT="Unlearnable Example" ID="ID_1890366930" CREATED="1649095313088" MODIFIED="1649095318895">
 <font BOLD="true"/>
 <node TEXT="Robust unlearnable examples: protecting data against adversarial learning" ID="ID_392399956" CREATED="1649095319935" MODIFIED="1651190729445">
 <icon BUILTIN="checked"/>
@@ -2000,6 +2021,7 @@
 <node TEXT="STAGE" ID="ID_1760709543" CREATED="1642438720562" MODIFIED="1642438722150">
 <node TEXT="Boosting adversarial attacks with momentum" ID="ID_75324346" CREATED="1642438722774" MODIFIED="1642438725961">
 <icon BUILTIN="unchecked"/>
+<node TEXT="MIM?" ID="ID_1504477626" CREATED="1676259477270" MODIFIED="1676259478761"/>
 </node>
 </node>
 </node>
@@ -2674,7 +2696,7 @@
 <node TEXT="ECML-PKDD 22" ID="ID_234027639" CREATED="1659200214013" MODIFIED="1659200220502"/>
 </node>
 </node>
-<node TEXT="Adversarial Training" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1648174116710">
+<node TEXT="Adversarial Training" FOLDED="true" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1648174116710">
 <font BOLD="true"/>
 <node TEXT="Survey" ID="ID_178248607" CREATED="1642431445724" MODIFIED="1649101870385">
 <icon BUILTIN="mindmap"/>
@@ -2919,11 +2941,12 @@
 </node>
 </node>
 <node TEXT="+ Speed" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1548520614" CREATED="1642441206809" MODIFIED="1655841532179">
-<node TEXT="FreeAT (ATF, FAT)" ID="ID_10759055" CREATED="1642441224672" MODIFIED="1642455921912">
-<node TEXT="adversarial training for free!" ID="ID_902115687" CREATED="1642441227881" MODIFIED="1642455925752">
+<node TEXT="FreeAT (FAT)" ID="ID_10759055" CREATED="1642441224672" MODIFIED="1676258824003">
+<node TEXT="adversarial training for free! (NIPS19)" ID="ID_902115687" CREATED="1642441227881" MODIFIED="1676258833234">
 <icon BUILTIN="checked"/>
 <icon BUILTIN="bookmark"/>
 <node TEXT="reuse computed gradients" ID="ID_540017524" CREATED="1642448873312" MODIFIED="1642448880329"/>
+<node TEXT="imagenet training possible with 4 P100 and 2 days" ID="ID_1857583147" CREATED="1676258798328" MODIFIED="1676258809907"/>
 </node>
 </node>
 <node TEXT="Prior-Guided Adversarial Initialization for Fast Adversarial Training" ID="ID_1381461872" CREATED="1658618577266" MODIFIED="1658618578676">
@@ -2940,6 +2963,12 @@
 <icon BUILTIN="pencil"/>
 <node TEXT="the comparison looks problematic or lacking" ID="ID_139867221" CREATED="1652406219486" MODIFIED="1652406237251"/>
 </node>
+</node>
+</node>
+<node TEXT="+Bound" ID="ID_572037102" CREATED="1676258924329" MODIFIED="1676258927621">
+<node TEXT="Adversarial Robustness Against the Union of Multiple Perturbation Models" ID="ID_1890490809" CREATED="1676258928717" MODIFIED="1676258933076">
+<node TEXT="ICML20" ID="ID_655022088" CREATED="1676258934972" MODIFIED="1676258936463"/>
+<node TEXT="simultaneously robust in l-inf, l-1, l2 configs" ID="ID_708824682" CREATED="1676258936613" MODIFIED="1676258947353"/>
 </node>
 </node>
 <node TEXT="not-famous" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1872674435" CREATED="1642431357219" MODIFIED="1647050857744">
@@ -3589,7 +3618,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Track: AdvRank" FOLDED="true" POSITION="right" ID="ID_67713290" CREATED="1561352085890" MODIFIED="1642394393230">
+<node TEXT="Attack &amp; Defense in Deep Metric Learning" FOLDED="true" POSITION="right" ID="ID_67713290" CREATED="1561352085890" MODIFIED="1676259619322">
 <icon BUILTIN="idea"/>
 <font NAME="Gentium" SIZE="10" BOLD="true"/>
 <edge COLOR="#ff00ff"/>
@@ -4283,7 +4312,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Face Recognition" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_153988282" CREATED="1641242964517" MODIFIED="1642456756940">
+<node TEXT="Face Recognition" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_153988282" CREATED="1641242964517" MODIFIED="1642456756940">
 <edge COLOR="#00ff00"/>
 <font NAME="Gentium"/>
 <node TEXT="Face Identification by default. It is basically a deadend to do face for CVPR as of 2023" ID="ID_1812222459" CREATED="1651184495295" MODIFIED="1676257457594">
@@ -6425,16 +6454,6 @@
 </node>
 </node>
 </node>
-<node TEXT="Hashing" FOLDED="true" POSITION="left" ID="ID_524199338" CREATED="1672078632226" MODIFIED="1672078634144">
-<edge COLOR="#00007c"/>
-<node TEXT="unsup" ID="ID_620910783" CREATED="1672078635579" MODIFIED="1672078637364">
-<node TEXT="Hyperbolic Hierarchical Contrastive Hashing" ID="ID_135497694" CREATED="1672078639584" MODIFIED="1672078645641">
-<node TEXT="axv 2212" ID="ID_1543243555" CREATED="1672078646762" MODIFIED="1672078649470"/>
-<node TEXT="using hyperbolic embedding space" ID="ID_402670784" CREATED="1672078649641" MODIFIED="1672078654913"/>
-</node>
-</node>
-<node TEXT="sup" ID="ID_30199100" CREATED="1672078637560" MODIFIED="1672078638218"/>
-</node>
 <node TEXT="Image Caption" FOLDED="true" POSITION="left" ID="ID_1834444713" CREATED="1672078790020" MODIFIED="1672078799455">
 <edge COLOR="#007c00"/>
 <node TEXT="Andrej&apos;s early works" ID="ID_1741039778" CREATED="1676254817451" MODIFIED="1676254821822"/>
@@ -6628,6 +6647,7 @@
 <node TEXT="2002.04162: incremental learning for metric-based meta-learniers" ID="ID_415175776" CREATED="1583378216948" MODIFIED="1587526864942">
 <font NAME="Gentium" BOLD="false"/>
 </node>
+<node TEXT="meta-sr" ID="ID_1118787532" CREATED="1676259542003" MODIFIED="1676259543988"/>
 </node>
 <node TEXT="Life long learning" ID="ID_876193623" CREATED="1659196615332" MODIFIED="1659196619027">
 <node TEXT="Learning with Recoverable Forgetting" ID="ID_1427700540" CREATED="1659196620033" MODIFIED="1659196621031">
@@ -7099,6 +7119,10 @@
 </node>
 </node>
 </node>
+</node>
+<node TEXT="Super-Resolution" FOLDED="true" POSITION="left" ID="ID_594530626" CREATED="1676259559215" MODIFIED="1676259562169">
+<edge COLOR="#ff0000"/>
+<node TEXT="Meta-SR" ID="ID_641411943" CREATED="1676259562365" MODIFIED="1676259564576"/>
 </node>
 <node TEXT="Scene/Knowledge Graph" FOLDED="true" POSITION="left" ID="ID_691684807" CREATED="1582940936028" MODIFIED="1653357364861">
 <font NAME="Gentium" BOLD="false"/>
