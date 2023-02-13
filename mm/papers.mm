@@ -1518,7 +1518,7 @@
 <node TEXT="reconstruction?" ID="ID_1043968895" CREATED="1676228383633" MODIFIED="1676228386002"/>
 </node>
 </node>
-<node TEXT="Vision-Language Pretraining" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="right" ID="ID_1438251706" CREATED="1646945591468" MODIFIED="1676254644721">
+<node TEXT="Vision-Language Pretraining" LOCALIZED_STYLE_REF="default" POSITION="right" ID="ID_1438251706" CREATED="1646945591468" MODIFIED="1676254644721">
 <edge COLOR="#00ff00"/>
 <node TEXT="Survey" ID="ID_1995640100" CREATED="1650816017282" MODIFIED="1650816021941">
 <icon BUILTIN="info"/>
@@ -1548,6 +1548,13 @@
 <node TEXT="FILIP" ID="ID_712868502" CREATED="1646945686665" MODIFIED="1646945695226"/>
 <node TEXT="Conditional Prompt Learning for Vision-Language Models" ID="ID_1017315336" CREATED="1648394772288" MODIFIED="1648394773329">
 <node TEXT="CVPR22" ID="ID_1728549709" CREATED="1648394774156" MODIFIED="1648394775509"/>
+</node>
+</node>
+<node TEXT="Video" ID="ID_730709277" CREATED="1676255829459" MODIFIED="1676255831827">
+<node TEXT="EMCL" ID="ID_99498945" CREATED="1676255911045" MODIFIED="1676255913386">
+<node TEXT="Expectation-Maximization Contrastive Learning for Compact Video-and-Language Representations Resources" ID="ID_337844078" CREATED="1676255913722" MODIFIED="1676255919277">
+<node TEXT="NIPS22" ID="ID_254607655" CREATED="1676255920292" MODIFIED="1676255923745"/>
+</node>
 </node>
 </node>
 </node>
@@ -1760,18 +1767,33 @@
 </node>
 </node>
 <node TEXT="Transferrability" FOLDED="true" ID="ID_142248765" CREATED="1641678368814" MODIFIED="1641678372373">
+<node TEXT="It is to some extent ridiculous to assume an overlap of the vulnerability space among different trained models." ID="ID_539973320" CREATED="1676256488396" MODIFIED="1676256537792">
+<icon BUILTIN="attach"/>
+<node TEXT="But according to the empirical results of the community, imagenet models indeed share some stupid common vulnerability space." ID="ID_1762438180" CREATED="1676256538121" MODIFIED="1676256561123"/>
+<node TEXT="can such common vulnerability space be provably removed?" ID="ID_496754271" CREATED="1676256563570" MODIFIED="1676256576198"/>
+<node TEXT="unless this can be done provably, this is worthless to do compared to a better generic defense" ID="ID_1989357519" CREATED="1676256670693" MODIFIED="1676256687776"/>
+<node TEXT="shrinking the common vulnerability space can eliminate transfer attack, but still not the model specific vulnerability space." ID="ID_860287767" CREATED="1676256577295" MODIFIED="1676256618993"/>
+<node TEXT="hence, the perfect defense against transfer attack is still weaker than the  standard defense." ID="ID_949193663" CREATED="1676256619190" MODIFIED="1676256658459"/>
+</node>
 <node TEXT="Overview" ID="ID_1315303289" CREATED="1659196338991" MODIFIED="1659196355376">
 <icon BUILTIN="mindmap"/>
 <node TEXT="Proving Common Mechanisms Shared by Twelve Methods of Boosting Adversarial Transferability" ID="ID_1292658818" CREATED="1659196347024" MODIFIED="1659196350086">
 <icon BUILTIN="pencil"/>
 </node>
 </node>
-<node TEXT="TI-FGSM" ID="ID_1220544753" CREATED="1651189229068" MODIFIED="1651189234087">
+<node TEXT="TI-FGSM" ID="ID_1220544753" CREATED="1651189229068" MODIFIED="1676256432185">
+<icon BUILTIN="yes"/>
 <node TEXT="Evading Defenses to Transferable Adversarial Examples by&#xa;Translation-Invariant Attacks" ID="ID_1319672231" CREATED="1651189237732" MODIFIED="1651189244732">
 <node TEXT="CVPR, Jun Zhu" ID="ID_707284341" CREATED="1651189245815" MODIFIED="1651189253385"/>
 </node>
 </node>
-<node TEXT="DI-FGSM" ID="ID_1373016052" CREATED="1651189234341" MODIFIED="1651189236405"/>
+<node TEXT="DI-FGSM" ID="ID_1373016052" CREATED="1651189234341" MODIFIED="1676256434464">
+<icon BUILTIN="yes"/>
+<node TEXT="Improving Transferability of Adversarial Examples with Input Diversity" ID="ID_1770037653" CREATED="1676256450822" MODIFIED="1676256452075">
+<node TEXT="Cihang" ID="ID_1645411241" CREATED="1676256454197" MODIFIED="1676256456385"/>
+<node TEXT="CVPR19" ID="ID_1274040552" CREATED="1676256461734" MODIFIED="1676256463046"/>
+</node>
+</node>
 <node TEXT="An Intermediate-level Attack Framework on The Basis of Linear Regression" ID="ID_1499876765" CREATED="1648342305622" MODIFIED="1648342307756">
 <icon BUILTIN="pencil"/>
 <node TEXT="ECCV extension" ID="ID_1206816090" CREATED="1648342309374" MODIFIED="1648342312215"/>
@@ -2601,7 +2623,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
+<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_1556055508" CREATED="1648173325254" MODIFIED="1648173329845">
 <icon BUILTIN="info"/>
@@ -2652,7 +2674,7 @@
 <node TEXT="ECML-PKDD 22" ID="ID_234027639" CREATED="1659200214013" MODIFIED="1659200220502"/>
 </node>
 </node>
-<node TEXT="Adversarial Training" FOLDED="true" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1648174116710">
+<node TEXT="Adversarial Training" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1648174116710">
 <font BOLD="true"/>
 <node TEXT="Survey" ID="ID_178248607" CREATED="1642431445724" MODIFIED="1649101870385">
 <icon BUILTIN="mindmap"/>
@@ -2665,7 +2687,7 @@
 <node TEXT="IJCAI21" ID="ID_611376488" CREATED="1652390215736" MODIFIED="1652390222813"/>
 </node>
 </node>
-<node TEXT="Main" ID="ID_1258403498" CREATED="1655841460995" MODIFIED="1655841462580">
+<node TEXT="Main Stream" ID="ID_1258403498" CREATED="1655841460995" MODIFIED="1676256816747">
 <node TEXT="FGSM-AT (Ian G.)" ID="ID_1386316101" CREATED="1642455770819" MODIFIED="1652389774213">
 <node TEXT="Explaining and harnessing adversarial examples." ID="ID_444955732" CREATED="1642455817682" MODIFIED="1642455817682">
 <node TEXT="see Attack/FGSM" ID="ID_1699730646" CREATED="1642455774488" MODIFIED="1642455811066"/>
@@ -2717,8 +2739,17 @@
 </node>
 </node>
 </node>
+<node TEXT="LAS-AT (CVPR22)" ID="ID_118006351" CREATED="1676256822411" MODIFIED="1676256826108">
+<node TEXT="LAS-AT: Adversarial Training with Learnable Attack Strategy" ID="ID_1464456011" CREATED="1676256819755" MODIFIED="1676256820982">
+<node TEXT="automatically learned attack strategy (attack parameters) instead of manually crafted one" ID="ID_170283522" CREATED="1676257124137" MODIFIED="1676257161247"/>
+<node TEXT="can be combined with PGD-AT, TRADES, and AWP" ID="ID_703171753" CREATED="1676257131494" MODIFIED="1676257141582"/>
+<node TEXT="cifar10" ID="ID_29879527" CREATED="1676256832311" MODIFIED="1676256833532"/>
+<node TEXT="cifar100" ID="ID_1476984946" CREATED="1676256833886" MODIFIED="1676256835243"/>
+<node TEXT="tiny-imagenet" ID="ID_229784389" CREATED="1676256835415" MODIFIED="1676256837825"/>
 </node>
-<node TEXT="Other AT" FOLDED="true" ID="ID_1850296499" CREATED="1655841474292" MODIFIED="1655841482925">
+</node>
+</node>
+<node TEXT="Other AT" ID="ID_1850296499" CREATED="1655841474292" MODIFIED="1655841482925">
 <node TEXT="Curriculum AT" ID="ID_373950173" CREATED="1643412302659" MODIFIED="1643412307668">
 <node TEXT="Curriculum Adversarial Training" ID="ID_285117304" CREATED="1643412309119" MODIFIED="1643413743828">
 <icon BUILTIN="checked"/>
@@ -2862,6 +2893,14 @@
 <icon BUILTIN="pencil"/>
 <node TEXT="submit NIPS22" ID="ID_498526726" CREATED="1653862491961" MODIFIED="1653862495203"/>
 <node TEXT="min-max v.s. max-min adversarial training" ID="ID_1952682132" CREATED="1653862495447" MODIFIED="1653862599477">
+<icon BUILTIN="info"/>
+</node>
+</node>
+</node>
+<node TEXT="Beneficial Perturbation" ID="ID_1511451367" CREATED="1676257326053" MODIFIED="1676257329817">
+<node TEXT="Beneficial Perturbation Network for Defending Adversarial Examples" ID="ID_1565898627" CREATED="1676257330169" MODIFIED="1676257330992">
+<node TEXT="PRL (not top journal)" ID="ID_1049199928" CREATED="1676257331542" MODIFIED="1676257339515"/>
+<node TEXT="min-max v.s. max-min adversarial training" ID="ID_179875505" CREATED="1676257340722" MODIFIED="1676257350067">
 <icon BUILTIN="info"/>
 </node>
 </node>
@@ -3733,7 +3772,7 @@
 <node TEXT="-------------------------------------------------------" POSITION="right" ID="ID_198111288" CREATED="1676254941135" MODIFIED="1676254944987">
 <edge COLOR="#7c7c00"/>
 </node>
-<node TEXT="Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_98760508" CREATED="1642438760894" MODIFIED="1656028607953">
+<node TEXT="Classification &amp; Backbone" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_98760508" CREATED="1642438760894" MODIFIED="1676256169396">
 <edge COLOR="#7c7c00"/>
 <node TEXT="MLP" ID="ID_636086784" CREATED="1648181297496" MODIFIED="1648181311232">
 <font BOLD="true"/>
@@ -3810,7 +3849,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Transformer" ID="ID_1624253019" CREATED="1642438779008" MODIFIED="1642953058542">
+<node TEXT="Transformer.Architecture" ID="ID_1624253019" CREATED="1642438779008" MODIFIED="1676256210619">
 <font BOLD="true"/>
 <node TEXT="Attention Mechanism" ID="ID_813294848" CREATED="1618848447541" MODIFIED="1645045062292">
 <icon BUILTIN="info"/>
@@ -3851,6 +3890,13 @@
 <node TEXT="MiniViT: Compressing Vision Transformers with Weight Multiplexing" ID="ID_1344779054" CREATED="1652406431608" MODIFIED="1652406432695">
 <node TEXT="CVPR22" ID="ID_158269939" CREATED="1652406439183" MODIFIED="1652406440398"/>
 </node>
+</node>
+</node>
+<node TEXT="Transformer.Analysis" ID="ID_1080181876" CREATED="1676256200913" MODIFIED="1676256205487">
+<node TEXT="Understanding The Robustness in Vision Transformers" ID="ID_165784353" CREATED="1676256219723" MODIFIED="1676256221213">
+<node TEXT="ICML22" ID="ID_872247821" CREATED="1676256314966" MODIFIED="1676256317560"/>
+<node TEXT="not adversarial robustness. it&apos;s general robustness" ID="ID_270758464" CREATED="1676256317712" MODIFIED="1676256329201"/>
+<node TEXT="ViTs exhibit strong robustness against various corruptions partly due to the self-attention mechanism" ID="ID_37541911" CREATED="1676256376865" MODIFIED="1676256397210"/>
 </node>
 </node>
 <node TEXT="+Bias" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1422488966" CREATED="1654992650483" MODIFIED="1654992655257">
@@ -3961,7 +4007,7 @@
 <node TEXT="MSRA" ID="ID_418050697" CREATED="1652404475280" MODIFIED="1652404476614"/>
 </node>
 </node>
-<node TEXT="Regularization" ID="ID_277201350" CREATED="1652383343786" MODIFIED="1652383346875">
+<node TEXT="Regularization" FOLDED="true" ID="ID_277201350" CREATED="1652383343786" MODIFIED="1652383346875">
 <node TEXT="Data Augmentation" ID="ID_1121776606" CREATED="1643057931229" MODIFIED="1643057946544">
 <node ID="ID_1264772918" CREATED="1643057954153" MODIFIED="1643057958105">
 <icon BUILTIN="unchecked"/>
@@ -4082,6 +4128,7 @@
 <icon BUILTIN="checked"/>
 <icon BUILTIN="bookmark"/>
 <font NAME="Gentium" BOLD="false"/>
+<node TEXT="ICML20" ID="ID_949541280" CREATED="1676255986644" MODIFIED="1676255988879"/>
 <node TEXT="revisit most widely used DML objective functions" ID="ID_1601875277" CREATED="1582857225897" MODIFIED="1587526865066">
 <font NAME="Gentium" BOLD="false"/>
 </node>
