@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="159" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="164" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1675045289036">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -194,7 +194,7 @@
 <node TEXT="or it will lag behind arxiv works" ID="ID_1598337776" CREATED="1642709706967" MODIFIED="1676227664763"/>
 </node>
 </node>
-<node TEXT="Tactic on Defense" LOCALIZED_STYLE_REF="styles.topic" ID="ID_838159228" CREATED="1643131959198" MODIFIED="1645067537984">
+<node TEXT="Defense" LOCALIZED_STYLE_REF="styles.topic" ID="ID_838159228" CREATED="1643131959198" MODIFIED="1676253510590">
 <icon BUILTIN="info"/>
 <node TEXT="" ID="ID_199043642" CREATED="1643131995068" MODIFIED="1643131995068">
 <hook NAME="FirstGroupNode"/>
@@ -224,6 +224,9 @@
 <node TEXT="basically the progress is stalled at Madry 2017 and AWP 2020 etc." ID="ID_1174615962" CREATED="1676227720376" MODIFIED="1676227737571"/>
 <node TEXT="certified defense is not used for imagenet" ID="ID_749439492" CREATED="1676227746004" MODIFIED="1676227753637"/>
 </node>
+</node>
+<node TEXT="Self Supervised Learning" ID="ID_750923691" CREATED="1676253512156" MODIFIED="1676253517827">
+<icon BUILTIN="info"/>
 </node>
 </node>
 <node TEXT="Math Hints" FOLDED="true" POSITION="right" ID="ID_779216680" CREATED="1675889763507" MODIFIED="1675889770467">
@@ -1483,7 +1486,10 @@
 <node TEXT="SwAV" ID="ID_872654192" CREATED="1676228244740" MODIFIED="1676228253814"/>
 <node TEXT="MoCO v1 (CVPR20)" ID="ID_545238113" CREATED="1676228200414" MODIFIED="1676228206384"/>
 <node TEXT="DetCo (ICCV21)" ID="ID_1853239454" CREATED="1676227949247" MODIFIED="1676227954608">
-<node TEXT="DetCo: Unsupervised Contrastive Learning for Object Detection" ID="ID_360125368" CREATED="1676227955074" MODIFIED="1676228291622"/>
+<node TEXT="DetCo: Unsupervised Contrastive Learning for Object Detection" ID="ID_360125368" CREATED="1676227955074" MODIFIED="1676228291622">
+<node TEXT="MoCo only considers the single high-level feature and learning contrast from a global perspective" ID="ID_921907244" CREATED="1676253550990" MODIFIED="1676253579748"/>
+<node TEXT="DetCo learns representation with multi-level supervision and adds two additional local patch sets for input, building contrastive loss cross the global and local views" ID="ID_452463605" CREATED="1676253568113" MODIFIED="1676253620239"/>
+</node>
 </node>
 <node TEXT="DenseCL (CVPR21)" ID="ID_1577393686" CREATED="1676228207233" MODIFIED="1676228216082"/>
 <node TEXT="MAE (CVPR22)" ID="ID_1610729841" CREATED="1675887212306" MODIFIED="1676227939556">
@@ -1511,18 +1517,48 @@
 <node TEXT="Single Modal Vision (non-contrastive)" ID="ID_1629993952" CREATED="1676228376837" MODIFIED="1676228383234">
 <node TEXT="reconstruction?" ID="ID_1043968895" CREATED="1676228383633" MODIFIED="1676228386002"/>
 </node>
-<node TEXT="Cross Modal (contrastive)" ID="ID_805657635" CREATED="1675048683328" MODIFIED="1676228412688">
-<node TEXT="CLIP" ID="ID_928055559" CREATED="1675048679300" MODIFIED="1675048680813"/>
+</node>
+<node TEXT="Vision-Language Pretraining" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="right" ID="ID_1438251706" CREATED="1646945591468" MODIFIED="1676254644721">
+<edge COLOR="#00ff00"/>
+<node TEXT="Survey" ID="ID_1995640100" CREATED="1650816017282" MODIFIED="1650816021941">
+<icon BUILTIN="info"/>
+<node TEXT="Vision-and-Language Pretrained Models: A Survey" ID="ID_1852780037" CREATED="1650816023897" MODIFIED="1650816029291">
+<node TEXT="IJCAI22" ID="ID_653641959" CREATED="1650816029905" MODIFIED="1650816032042"/>
 </node>
 </node>
-<node TEXT="Generative Model" FOLDED="true" POSITION="right" ID="ID_293903694" CREATED="1675049414636" MODIFIED="1675049418308">
-<edge COLOR="#7c0000"/>
-<node TEXT="Two Image Iput (style transfer" ID="ID_904035504" CREATED="1675304201992" MODIFIED="1675304210570">
-<node TEXT="A Style-Based Generator Architecture for Generative Adversarial Networks" ID="ID_19629646" CREATED="1675304213086" MODIFIED="1675304216108">
-<icon BUILTIN="unchecked"/>
+<node TEXT="Datasets" ID="ID_1369858105" CREATED="1676254656171" MODIFIED="1676254657752">
+<node TEXT="Wukong: 100 Million Large-scale Chinese Cross-modal Pre-training Dataset and A Foundation Framework" ID="ID_579762046" CREATED="1646945599992" MODIFIED="1646945607267">
+<icon BUILTIN="pencil"/>
 </node>
 </node>
-<node TEXT="Text-to-Image Synthesis" ID="ID_534441759" CREATED="1675045086637" MODIFIED="1675049421962">
+<node TEXT="Analysis" ID="ID_791083130" CREATED="1676254665802" MODIFIED="1676254667967">
+<node TEXT="Localization vs. Semantics: How Can Language Benefit Visual Representation Learning?" ID="ID_1112448517" CREATED="1676254492303" MODIFIED="1676254506506">
+<icon BUILTIN="pencil"/>
+<node TEXT="Cihang" ID="ID_439754987" CREATED="1676254507581" MODIFIED="1676254587079"/>
+<node TEXT="V+L models are better at lebel prediction tasks like object and attribute prediction, while V-only models are stronger at dense prediction tasks that require more localized information." ID="ID_1181098891" CREATED="1676254517076" MODIFIED="1676254550876"/>
+<node TEXT="language helps vision models learn better semantics, but not localization" ID="ID_317268677" CREATED="1676254561985" MODIFIED="1676254578282"/>
+</node>
+</node>
+<node TEXT="Frameworks" ID="ID_1251064479" CREATED="1676254649983" MODIFIED="1676254651474">
+<node TEXT="CLIP" ID="ID_410734693" CREATED="1646945598394" MODIFIED="1676254682445">
+<icon BUILTIN="bookmark"/>
+<node TEXT="CLIP and adversarial robustness?" ID="ID_484691074" CREATED="1647048643037" MODIFIED="1647048648456"/>
+</node>
+<node TEXT="ALIGN" ID="ID_883337544" CREATED="1646945681124" MODIFIED="1646945684050"/>
+<node TEXT="FILIP" ID="ID_712868502" CREATED="1646945686665" MODIFIED="1646945695226"/>
+<node TEXT="Conditional Prompt Learning for Vision-Language Models" ID="ID_1017315336" CREATED="1648394772288" MODIFIED="1648394773329">
+<node TEXT="CVPR22" ID="ID_1728549709" CREATED="1648394774156" MODIFIED="1648394775509"/>
+</node>
+</node>
+</node>
+<node TEXT="Large Language Model (LLM)" FOLDED="true" POSITION="right" ID="ID_947216604" CREATED="1675045191624" MODIFIED="1676254084090">
+<edge COLOR="#007c00"/>
+<node TEXT="GPT3" ID="ID_876218906" CREATED="1676254085097" MODIFIED="1676254086815"/>
+<node TEXT="ChatGPT" ID="ID_1978389784" CREATED="1675045199545" MODIFIED="1675045201237"/>
+<node TEXT="GPT4" ID="ID_1755229088" CREATED="1676254090654" MODIFIED="1676254092145"/>
+</node>
+<node TEXT="Text-to-Image Synthesis" FOLDED="true" POSITION="right" ID="ID_534441759" CREATED="1675045086637" MODIFIED="1676254056222">
+<edge COLOR="#00007c"/>
 <node TEXT="Dall E 2" ID="ID_1555270559" CREATED="1675045202469" MODIFIED="1675045213095">
 <node TEXT="Hierarchical Text-Conditional Image Generation with CLIP Latents" ID="ID_246970714" CREATED="1675045215025" MODIFIED="1675045359919">
 <icon BUILTIN="messagebox_warning"/>
@@ -1560,8 +1596,17 @@
 </node>
 </node>
 </node>
-<node TEXT="Text Synthesis" ID="ID_947216604" CREATED="1675045191624" MODIFIED="1675049423158">
-<node TEXT="ChatGPT" ID="ID_1978389784" CREATED="1675045199545" MODIFIED="1675045201237"/>
+<node TEXT="Image Manipulation" FOLDED="true" POSITION="right" ID="ID_904035504" CREATED="1675304201992" MODIFIED="1676254049394">
+<edge COLOR="#7c0000"/>
+<node TEXT="Style transfer" ID="ID_3432368" CREATED="1676254033527" MODIFIED="1676254035934">
+<node TEXT="A Style-Based Generator Architecture for Generative Adversarial Networks" ID="ID_19629646" CREATED="1675304213086" MODIFIED="1675304216108">
+<icon BUILTIN="unchecked"/>
+</node>
+</node>
+<node TEXT="text-guided" ID="ID_1528570078" CREATED="1676254101004" MODIFIED="1676254103531">
+<node TEXT="CLIPVG: Text-Guided Image Manipulation Using Differentiable Vector Graphics" ID="ID_1526385769" CREATED="1676254105459" MODIFIED="1676254110556">
+<node TEXT="AAAI23" ID="ID_431547750" CREATED="1676254111062" MODIFIED="1676254112598"/>
+</node>
 </node>
 </node>
 <node TEXT="Large Language Model (LLM)" FOLDED="true" POSITION="right" ID="ID_1735833052" CREATED="1675287989836" MODIFIED="1675287997379">
@@ -1588,14 +1633,14 @@
 </node>
 </node>
 </node>
-<node TEXT="Prompt" FOLDED="true" POSITION="right" ID="ID_118617573" CREATED="1675367056032" MODIFIED="1675367063292">
-<edge COLOR="#00007c"/>
-<node TEXT="Computational Linguistics" ID="ID_686007260" CREATED="1675367065325" MODIFIED="1675367071806">
+<node TEXT="Prompt :: Computational Linguistics" FOLDED="true" POSITION="right" ID="ID_686007260" CREATED="1675367065325" MODIFIED="1676254142013">
+<edge COLOR="#007c7c"/>
 <node TEXT="Prompting: Instead of adapting pre-trianed lms to downstream tasks via objective engineering, downstream tasks are reformulated to look more like those solved during the original LM training with the help of a textual prompt. This allows us to adapt large scale pre-trianed models to specific tasks without having to fine-tune the model or even the last few layers. For instance, prompt templates handcrafted for the task." ID="ID_1922284406" CREATED="1675367102133" MODIFIED="1675367109043">
 <icon BUILTIN="info"/>
 </node>
 </node>
-<node TEXT="Vision" ID="ID_1318848578" CREATED="1675367072095" MODIFIED="1675367080740">
+<node TEXT="Prompt :: Vision" FOLDED="true" POSITION="right" ID="ID_1318848578" CREATED="1675367072095" MODIFIED="1676254140703">
+<edge COLOR="#7c007c"/>
 <node TEXT="Exploring Visual Prompts for Adapting Large-Scale Models" ID="ID_153991492" CREATED="1675367088251" MODIFIED="1675367208771">
 <icon BUILTIN="bookmark"/>
 </node>
@@ -1607,7 +1652,6 @@
 <node TEXT="Open-Vocabulary Semantic Segmentation with Mask-adapted CLIP" ID="ID_712695760" CREATED="1675367157483" MODIFIED="1675367170253"/>
 <node TEXT="Visual Prompt Tuning for Test-time Domain Adaptation" ID="ID_431267464" CREATED="1675367186463" MODIFIED="1675367187485"/>
 <node TEXT="Unleashing the Power of Visual Prompting At the Pixel Level" ID="ID_595029881" CREATED="1675367196116" MODIFIED="1675367197072"/>
-</node>
 </node>
 <node TEXT="---------------------------------------------------------------------" POSITION="right" ID="ID_1447965157" CREATED="1675045082295" MODIFIED="1675049443238">
 <edge COLOR="#7c007c"/>
@@ -6458,21 +6502,6 @@
 </node>
 </node>
 </node>
-<node TEXT="Image Vectorization" FOLDED="true" POSITION="left" ID="ID_1231220509" CREATED="1655449067387" MODIFIED="1655449071990">
-<edge COLOR="#007c00"/>
-<node TEXT="Vectorization" ID="ID_598894574" CREATED="1658618727950" MODIFIED="1658618730026">
-<node TEXT="DeepSVG: A Hierarchical Generative Network for&#xa;Vector Graphics Animation" ID="ID_89337032" CREATED="1675740863101" MODIFIED="1675740864101">
-<node TEXT="NIPS20" ID="ID_1922124527" CREATED="1675740869648" MODIFIED="1675740929011"/>
-<node TEXT="Icon generation with hierarchical genrative network" ID="ID_1328738360" CREATED="1675740871336" MODIFIED="1675740922329"/>
-<node TEXT="not possible for imagenet" ID="ID_644174663" CREATED="1675740876083" MODIFIED="1675740881242"/>
-</node>
-<node TEXT="Towards Layer-wise Image Vectorization (LIVE)" ID="ID_96979789" CREATED="1655449072900" MODIFIED="1675740476495">
-<icon BUILTIN="button_ok"/>
-<node TEXT="CVPR22 oral" ID="ID_935088308" CREATED="1655449096553" MODIFIED="1655449099799"/>
-</node>
-</node>
-<node TEXT="Primal sketch" ID="ID_959414508" CREATED="1658618720052" MODIFIED="1658618724107"/>
-</node>
 <node TEXT="Learning" FOLDED="true" POSITION="left" ID="ID_876811772" CREATED="1583309966895" MODIFIED="1642394191143">
 <font NAME="Gentium" SIZE="10" BOLD="false"/>
 <edge COLOR="#7c7c00"/>
@@ -6552,6 +6581,11 @@
 </node>
 <node TEXT="Leaner and Faster: Two-Stage Model Compression for Lightweight&#xa;Text-Image Retrieval" ID="ID_880443205" CREATED="1651953324409" MODIFIED="1651953325391">
 <node TEXT="NAACL" ID="ID_854685267" CREATED="1651953326299" MODIFIED="1651953329267"/>
+</node>
+<node TEXT="+adversarial robustness" ID="ID_337513749" CREATED="1676254220412" MODIFIED="1676254224462">
+<node TEXT="CSTAR: Towards Compact and STructured Deep Neural Networks with Adversarial Robustness" ID="ID_957844051" CREATED="1676254228175" MODIFIED="1676254230174">
+<node TEXT="AAAI23" ID="ID_1844084790" CREATED="1676254231167" MODIFIED="1676254233670"/>
+</node>
 </node>
 </node>
 <node TEXT="Multimodal Learning" FOLDED="true" POSITION="left" ID="ID_423909848" CREATED="1649104367617" MODIFIED="1649104370772">
@@ -6685,7 +6719,7 @@
 <node TEXT="CVPR22" ID="ID_1439656873" CREATED="1649623426704" MODIFIED="1649623428734"/>
 </node>
 </node>
-<node TEXT="Privacy ML" LOCALIZED_STYLE_REF="defaultstyle.floating" FOLDED="true" POSITION="left" ID="ID_1174539463" CREATED="1590802979023" MODIFIED="1675297580861">
+<node TEXT="Privacy ML" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="left" ID="ID_1174539463" CREATED="1590802979023" MODIFIED="1676254295179">
 <edge COLOR="#7c0000"/>
 <node TEXT="Encrypt / Decrypt" ID="ID_892914237" CREATED="1590803103499" MODIFIED="1590803111112">
 <node TEXT="2004.05523 DeepEDN: A Deep Learning-based Image Encryption and Decryption Network for Internet of Medical Things" ID="ID_779071488" CREATED="1590802983849" MODIFIED="1590802993502"/>
@@ -7048,6 +7082,26 @@
 <node TEXT="FAIR" ID="ID_1062435801" CREATED="1659201151768" MODIFIED="1659201153574"/>
 </node>
 </node>
+<node TEXT="Vector Image Image" FOLDED="true" POSITION="left" ID="ID_1231220509" CREATED="1655449067387" MODIFIED="1676254282341">
+<edge COLOR="#007c00"/>
+<node TEXT="Primal sketch. G. hua suggestion" ID="ID_959414508" CREATED="1658618720052" MODIFIED="1676253751719">
+<icon BUILTIN="info"/>
+</node>
+<node TEXT="Raster Vectorization" ID="ID_598894574" CREATED="1658618727950" MODIFIED="1676253729849">
+<node TEXT="DiffVG (SIGGRAPH 2020)" ID="ID_1269397469" CREATED="1676253844009" MODIFIED="1676253856300"/>
+<node TEXT="Towards Layer-wise Image Vectorization (LIVE)" ID="ID_96979789" CREATED="1655449072900" MODIFIED="1675740476495">
+<icon BUILTIN="button_ok"/>
+<node TEXT="CVPR22 oral" ID="ID_935088308" CREATED="1655449096553" MODIFIED="1655449099799"/>
+</node>
+</node>
+<node TEXT="Animation" ID="ID_817947561" CREATED="1676253730113" MODIFIED="1676253733135">
+<node TEXT="DeepSVG: A Hierarchical Generative Network for&#xa;Vector Graphics Animation" ID="ID_89337032" CREATED="1675740863101" MODIFIED="1675740864101">
+<node TEXT="NIPS20" ID="ID_1922124527" CREATED="1675740869648" MODIFIED="1675740929011"/>
+<node TEXT="Icon generation with hierarchical genrative network" ID="ID_1328738360" CREATED="1675740871336" MODIFIED="1675740922329"/>
+<node TEXT="not possible for imagenet" ID="ID_644174663" CREATED="1675740876083" MODIFIED="1675740881242"/>
+</node>
+</node>
+</node>
 <node TEXT="Video Compression" FOLDED="true" POSITION="left" ID="ID_1356152672" CREATED="1656028365896" MODIFIED="1656028368670">
 <edge COLOR="#7c007c"/>
 <node TEXT="Multimedia compression" ID="ID_1218868860" CREATED="1656028370464" MODIFIED="1656028385545">
@@ -7056,26 +7110,6 @@
 <node TEXT="VCT: A Video Compression Transformer" ID="ID_1169737283" CREATED="1656028386394" MODIFIED="1656028395754">
 <icon BUILTIN="pencil"/>
 <node TEXT="looks like NIPS22" ID="ID_506609950" CREATED="1656028396789" MODIFIED="1656028400780"/>
-</node>
-</node>
-<node TEXT="Vision-Language Pretraining" FOLDED="true" POSITION="left" ID="ID_1438251706" CREATED="1646945591468" MODIFIED="1646945596520">
-<edge COLOR="#00ff00"/>
-<node TEXT="Survey" ID="ID_1995640100" CREATED="1650816017282" MODIFIED="1650816021941">
-<icon BUILTIN="info"/>
-<node TEXT="Vision-and-Language Pretrained Models: A Survey" ID="ID_1852780037" CREATED="1650816023897" MODIFIED="1650816029291">
-<node TEXT="IJCAI22" ID="ID_653641959" CREATED="1650816029905" MODIFIED="1650816032042"/>
-</node>
-</node>
-<node TEXT="CLIP" ID="ID_410734693" CREATED="1646945598394" MODIFIED="1646945599795">
-<node TEXT="CLIP and adversarial robustness?" ID="ID_484691074" CREATED="1647048643037" MODIFIED="1647048648456"/>
-</node>
-<node TEXT="ALIGN" ID="ID_883337544" CREATED="1646945681124" MODIFIED="1646945684050"/>
-<node TEXT="FILIP" ID="ID_712868502" CREATED="1646945686665" MODIFIED="1646945695226"/>
-<node TEXT="Wukong: 100 Million Large-scale Chinese Cross-modal Pre-training Dataset and A Foundation Framework" ID="ID_579762046" CREATED="1646945599992" MODIFIED="1646945607267">
-<icon BUILTIN="pencil"/>
-</node>
-<node TEXT="Conditional Prompt Learning for Vision-Language Models" ID="ID_1017315336" CREATED="1648394772288" MODIFIED="1648394773329">
-<node TEXT="CVPR22" ID="ID_1728549709" CREATED="1648394774156" MODIFIED="1648394775509"/>
 </node>
 </node>
 <node TEXT="-------------------------------------------------------------------------------------------------" POSITION="left" ID="ID_1156109860" CREATED="1647264433260" MODIFIED="1647264435598">
