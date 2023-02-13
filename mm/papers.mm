@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="Memo" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1675045349693" STYLE="oval">
 <font NAME="Gentium" SIZE="18" ITALIC="false"/>
-<hook NAME="MapStyle" zoom="1.17">
+<hook NAME="MapStyle" zoom="3.341">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
@@ -183,12 +183,7 @@
 <node TEXT="Think About Real Impact" ID="ID_911357239" CREATED="1642481791989" MODIFIED="1652385398738">
 <icon BUILTIN="bookmark"/>
 <font BOLD="false" STRIKETHROUGH="false" ITALIC="true"/>
-<node TEXT="What is important to study?" ID="ID_523483050" CREATED="1642482740356" MODIFIED="1642482745945">
-<node TEXT="adversarial robustness" ID="ID_842265845" CREATED="1642482755443" MODIFIED="1642482759383">
-<node TEXT="reveals intrinsic deficiency" ID="ID_1828537500" CREATED="1642482766339" MODIFIED="1642482772671"/>
-<node TEXT="stimulates revolution" ID="ID_954723767" CREATED="1642482773954" MODIFIED="1642482782684"/>
-</node>
-</node>
+<node TEXT="What is important to study?" ID="ID_523483050" CREATED="1642482740356" MODIFIED="1642482745945"/>
 </node>
 <node TEXT="futuristic works" ID="ID_967715831" CREATED="1642709658506" MODIFIED="1642709665874">
 <node TEXT="futuristic works" ID="ID_1948507537" CREATED="1642709667170" MODIFIED="1642709670754">
@@ -196,7 +191,7 @@
 </node>
 <node TEXT="increamental works" ID="ID_1279802750" CREATED="1642709682711" MODIFIED="1642709685950">
 <node TEXT="must implement the prototype as quick as possible" ID="ID_724087321" CREATED="1642709687147" MODIFIED="1642709698927"/>
-<node TEXT="or it will lag" ID="ID_1598337776" CREATED="1642709706967" MODIFIED="1642709711055"/>
+<node TEXT="or it will lag behind arxiv works" ID="ID_1598337776" CREATED="1642709706967" MODIFIED="1676227664763"/>
 </node>
 </node>
 <node TEXT="Tactic on Defense" LOCALIZED_STYLE_REF="styles.topic" ID="ID_838159228" CREATED="1643131959198" MODIFIED="1645067537984">
@@ -209,7 +204,10 @@
 <node TEXT="" ID="ID_990459491" CREATED="1643131995062" MODIFIED="1643131995068">
 <hook NAME="SummaryNode"/>
 <hook NAME="AlwaysUnfoldedNode"/>
-<node TEXT="will converge into a point in the future" ID="ID_1550318983" CREATED="1643131995069" MODIFIED="1643132004646"/>
+<node TEXT="will converge into a point in the future" ID="ID_1550318983" CREATED="1643131995069" MODIFIED="1643132004646">
+<node TEXT="reveals intrinsic deficiency" ID="ID_1908505778" CREATED="1676227672361" MODIFIED="1676227692953"/>
+<node TEXT="stimulates revolution&apos;" ID="ID_646510582" CREATED="1676227678278" MODIFIED="1676227683280"/>
+</node>
 </node>
 <node TEXT="Defense" ID="ID_614574775" CREATED="1642481850518" MODIFIED="1642481854529">
 <node TEXT="detection is a deadend. it does not eventually solve the intrinsic issue" ID="ID_11478104" CREATED="1642481855705" MODIFIED="1642481871296"/>
@@ -221,9 +219,14 @@
 <node TEXT="the goal of defense is fixing intrinsic representation problem of deep learning, beyond obtaining safe and secure AI" ID="ID_1986456732" CREATED="1652385314100" MODIFIED="1652385356500"/>
 <node TEXT="when we are able to fix the intrinsicly wrong representations, it&apos;s very likely the next revoslution of deep learning" ID="ID_1153408560" CREATED="1652385357825" MODIFIED="1652385380680"/>
 </node>
+<node TEXT="but this field seems stalled. super difficult to really gain stronger robustness?" ID="ID_130483192" CREATED="1676227636878" MODIFIED="1676227720000">
+<icon BUILTIN="attach"/>
+<node TEXT="basically the progress is stalled at Madry 2017 and AWP 2020 etc." ID="ID_1174615962" CREATED="1676227720376" MODIFIED="1676227737571"/>
+<node TEXT="certified defense is not used for imagenet" ID="ID_749439492" CREATED="1676227746004" MODIFIED="1676227753637"/>
 </node>
 </node>
-<node TEXT="Math Hints" POSITION="right" ID="ID_779216680" CREATED="1675889763507" MODIFIED="1675889770467">
+</node>
+<node TEXT="Math Hints" FOLDED="true" POSITION="right" ID="ID_779216680" CREATED="1675889763507" MODIFIED="1675889770467">
 <edge COLOR="#00ffff"/>
 <node TEXT="Computational linguistics" ID="ID_1848073684" CREATED="1675889779775" MODIFIED="1675889790605">
 <node TEXT="Zipf&apos;s law" ID="ID_1642293792" CREATED="1675889791206" MODIFIED="1675889796378">
@@ -286,7 +289,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1675042129591">
+<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1675042129591">
 <icon BUILTIN="bookmark"/>
 <edge COLOR="#7c0000"/>
 <node TEXT="Research Radar" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_860684520" CREATED="1645122829972" MODIFIED="1675042093373">
@@ -1459,19 +1462,31 @@
 <node TEXT="can be hierarchical" ID="ID_745396914" CREATED="1675744665246" MODIFIED="1675744670089"/>
 </node>
 <node TEXT="MSRA idea + masked autoencoder?" ID="ID_1614060668" CREATED="1675889013847" MODIFIED="1675889020948"/>
+<node TEXT="meta learning + adversarial defense + imagenet? a queue of gradient" ID="ID_1490471265" CREATED="1676227826643" MODIFIED="1676227848183"/>
+<node TEXT="active contrast? actively selecting contrastive strategy" ID="ID_931043277" CREATED="1676228498182" MODIFIED="1676228514207"/>
 </node>
 </node>
 <node TEXT="-------------------------------------------------------------------" LOCALIZED_STYLE_REF="default" POSITION="right" ID="ID_1134167122" CREATED="1675049435899" MODIFIED="1675886470423">
 <edge COLOR="#ff00ff"/>
 </node>
-<node TEXT="Self-supervised Representation" POSITION="right" ID="ID_1223342213" CREATED="1675048671290" MODIFIED="1675886593093">
+<node TEXT="Self-Supervised Learning (SSL)" FOLDED="true" POSITION="right" ID="ID_1223342213" CREATED="1675048671290" MODIFIED="1676228658908">
 <edge COLOR="#0000ff"/>
-<node TEXT="Single Modal Linguistics" ID="ID_1606225626" CREATED="1675891148148" MODIFIED="1675891155383">
+<node TEXT="Single Modal Linguistics (reconstruction)" ID="ID_1606225626" CREATED="1675891148148" MODIFIED="1676228400091">
 <node TEXT="BERT" ID="ID_1239615666" CREATED="1675891158294" MODIFIED="1675891159992"/>
 <node TEXT="GPT" ID="ID_641068612" CREATED="1675891160565" MODIFIED="1675891161880"/>
 </node>
-<node TEXT="Single Modal Vision" ID="ID_1896428960" CREATED="1675886596835" MODIFIED="1675891147400">
-<node TEXT="MAE" ID="ID_1610729841" CREATED="1675887212306" MODIFIED="1675887214029">
+<node TEXT="Single Modal Vision (Contrastive)" FOLDED="true" ID="ID_1896428960" CREATED="1675886596835" MODIFIED="1676228374708">
+<node TEXT="Contrastive learning: distance among multiple views of a single image" ID="ID_301623290" CREATED="1676228430141" MODIFIED="1676228457243">
+<icon BUILTIN="info"/>
+</node>
+<node TEXT="BYOL" ID="ID_1137581690" CREATED="1676228241612" MODIFIED="1676228244544"/>
+<node TEXT="SwAV" ID="ID_872654192" CREATED="1676228244740" MODIFIED="1676228253814"/>
+<node TEXT="MoCO v1 (CVPR20)" ID="ID_545238113" CREATED="1676228200414" MODIFIED="1676228206384"/>
+<node TEXT="DetCo (ICCV21)" ID="ID_1853239454" CREATED="1676227949247" MODIFIED="1676227954608">
+<node TEXT="DetCo: Unsupervised Contrastive Learning for Object Detection" ID="ID_360125368" CREATED="1676227955074" MODIFIED="1676228291622"/>
+</node>
+<node TEXT="DenseCL (CVPR21)" ID="ID_1577393686" CREATED="1676228207233" MODIFIED="1676228216082"/>
+<node TEXT="MAE (CVPR22)" ID="ID_1610729841" CREATED="1675887212306" MODIFIED="1676227939556">
 <node TEXT="Masked Autoencoders Are Scalable Vision Learners" ID="ID_1946699135" CREATED="1675887223216" MODIFIED="1675887224200">
 <node TEXT="Simple algorithms that scale well are the core of deep&#xa;learning." ID="ID_733682737" CREATED="1675892807986" MODIFIED="1675892814536">
 <icon BUILTIN="bookmark"/>
@@ -1493,7 +1508,10 @@
 </node>
 </node>
 </node>
-<node TEXT="Cross Modal" ID="ID_805657635" CREATED="1675048683328" MODIFIED="1675886607818">
+<node TEXT="Single Modal Vision (non-contrastive)" ID="ID_1629993952" CREATED="1676228376837" MODIFIED="1676228383234">
+<node TEXT="reconstruction?" ID="ID_1043968895" CREATED="1676228383633" MODIFIED="1676228386002"/>
+</node>
+<node TEXT="Cross Modal (contrastive)" ID="ID_805657635" CREATED="1675048683328" MODIFIED="1676228412688">
 <node TEXT="CLIP" ID="ID_928055559" CREATED="1675048679300" MODIFIED="1675048680813"/>
 </node>
 </node>
@@ -1559,6 +1577,9 @@
 </node>
 </node>
 <node TEXT="Detection" ID="ID_398704158" CREATED="1675288011819" MODIFIED="1675288013535">
+<node TEXT="Arms race?" ID="ID_516276125" CREATED="1676227885257" MODIFIED="1676227896882">
+<icon BUILTIN="attach"/>
+</node>
 <node TEXT="watermarking" ID="ID_919169453" CREATED="1675444907732" MODIFIED="1675444909586"/>
 </node>
 <node TEXT="Counter Detection?" ID="ID_1319347872" CREATED="1675288013731" MODIFIED="1675288021905">
@@ -3815,7 +3836,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Deep Metric Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_464750159" CREATED="1641242970936" MODIFIED="1642456761439">
+<node TEXT="Deep Metric Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_464750159" CREATED="1641242970936" MODIFIED="1676226993326">
 <edge COLOR="#ff00ff"/>
 <font NAME="Gentium"/>
 <node TEXT="Survey" ID="ID_1192003468" CREATED="1641520461677" MODIFIED="1648175016651">
@@ -3865,7 +3886,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Loss Functions" FOLDED="true" ID="ID_1262041414" CREATED="1641520453737" MODIFIED="1641520995604">
+<node TEXT="Loss Functions" ID="ID_1262041414" CREATED="1641520453737" MODIFIED="1641520995604">
 <font NAME="Gentium"/>
 <node TEXT="Group-based?" ID="ID_1898475549" CREATED="1641524460135" MODIFIED="1648342703726">
 <node TEXT="LiftStructure" ID="ID_362567920" CREATED="1641242980713" MODIFIED="1641520995605">
@@ -3926,6 +3947,8 @@
 <node TEXT="Triplet" ID="ID_430004220" CREATED="1641242977534" MODIFIED="1641520995604">
 <font NAME="Gentium"/>
 </node>
+</node>
+<node TEXT="Unified" ID="ID_1564397687" CREATED="1676226967952" MODIFIED="1676226970365">
 <node TEXT="CircleLoss" ID="ID_1293728558" CREATED="1648174903893" MODIFIED="1652385120654">
 <node TEXT="Circle Loss: A Unified Perspective of Pair Similarity Optimization" ID="ID_1136191375" CREATED="1652385123360" MODIFIED="1652385130236">
 <node TEXT="CVPR20" ID="ID_1759135943" CREATED="1652385182714" MODIFIED="1652385184033"/>
@@ -3935,6 +3958,9 @@
 </node>
 <node TEXT="Classification-based" ID="ID_336668153" CREATED="1641524453412" MODIFIED="1648174884961">
 <font BOLD="true"/>
+<node TEXT="See also Face Recognition section" ID="ID_1714726390" CREATED="1676226998101" MODIFIED="1676227106435">
+<icon BUILTIN="gohome"/>
+</node>
 </node>
 <node TEXT="Hyperbolic" ID="ID_1875171674" CREATED="1648342666602" MODIFIED="1648342670818">
 <node TEXT="Hyperbolic Vision Transformers: Combining Improvements in Metric Learning" ID="ID_10937222" CREATED="1648342671777" MODIFIED="1648342675156">
@@ -4046,7 +4072,7 @@
 <node TEXT="YTF" ID="ID_556061465" CREATED="1651184260798" MODIFIED="1651184263116"/>
 </node>
 </node>
-<node TEXT="Main" FOLDED="true" ID="ID_1466249430" CREATED="1641243301668" MODIFIED="1657404195948">
+<node TEXT="Main" ID="ID_1466249430" CREATED="1641243301668" MODIFIED="1657404195948">
 <font NAME="Gentium"/>
 <node TEXT="Softmax Loss" ID="ID_625024996" CREATED="1651184098700" MODIFIED="1651184101967"/>
 <node TEXT="Triplet Loss" ID="ID_1789138358" CREATED="1657404224232" MODIFIED="1657404229756">
@@ -4137,6 +4163,7 @@
 <icon BUILTIN="unchecked"/>
 <node TEXT="CVPR20" ID="ID_1109536073" CREATED="1652385150869" MODIFIED="1652385166238"/>
 <node TEXT="Both DML and Face" ID="ID_1366793448" CREATED="1652385166575" MODIFIED="1652385169170"/>
+<node TEXT="we find a majority of loss functions inflexibly, because the penalty strength on every singel similarity score is restricted to be equal" ID="ID_1265356626" CREATED="1676227053023" MODIFIED="1676227085274"/>
 </node>
 </node>
 <node TEXT="Curricularface: adaptive curriculum learning loss for deep face recognition. CVPR2020" ID="ID_1026306137" CREATED="1642950986727" MODIFIED="1642953955842">
@@ -6020,51 +6047,6 @@
 <node TEXT="Rama and Alan have some robustness evaluation papers in this regard" ID="ID_1691197998" CREATED="1675049986257" MODIFIED="1675050004356"/>
 </node>
 </node>
-<node TEXT="Generative: DeepFake" FOLDED="true" POSITION="left" ID="ID_81253926" CREATED="1587729755009" MODIFIED="1672075032232">
-<edge COLOR="#007c7c"/>
-<node TEXT="Dataset" ID="ID_1886590251" CREATED="1615347464586" MODIFIED="1615347466780">
-<node TEXT="ForgeryNet: A Versatile Benchmark for Comprehensive Forgery Analysis (cvpr21)" ID="ID_1435934248" CREATED="1615347467706" MODIFIED="1615347479218"/>
-</node>
-<node TEXT="Survey" ID="ID_1081735994" CREATED="1587729760036" MODIFIED="1587729764469">
-<node TEXT="2004.11138: the creation and detection of deepfakes: a survey" ID="ID_229656376" CREATED="1587729766371" MODIFIED="1587729930927">
-<icon BUILTIN="button_ok"/>
-</node>
-<node TEXT="2004.12626: preliminary forensics analysis of deepfake images" ID="ID_913965" CREATED="1588068509056" MODIFIED="1588068524708"/>
-<node TEXT="Seeing is Living? Rethinking the Security of Facial Liveness Verification in the Deepfake Era" ID="ID_461047989" CREATED="1647267019291" MODIFIED="1647267027027">
-<icon BUILTIN="unchecked"/>
-<node TEXT="USENIX22" ID="ID_1148613248" CREATED="1647267021829" MODIFIED="1647267024253"/>
-</node>
-</node>
-<node TEXT="Create" ID="ID_1812140643" CREATED="1589767913067" MODIFIED="1648338593271">
-<node TEXT="2005.05535: deepfacelab: a simple flexible and extensible face swapping framework" ID="ID_1258022523" CREATED="1589767931055" MODIFIED="1589767949771"/>
-<node TEXT="2004.07165 A recurrent cycle consistency loss for progressive face-to-face synthesis (FG 2020 oral)" ID="ID_1521921331" CREATED="1590805531639" MODIFIED="1590805549067"/>
-</node>
-<node TEXT="Detection" ID="ID_1897134747" CREATED="1588389497295" MODIFIED="1619337612320">
-<node TEXT="2003.08685: leveraging frequency analysis for deep fake image recognition" ID="ID_252600993" CREATED="1588389509200" MODIFIED="1588389530379">
-<node TEXT="frequency analysis" ID="ID_818362087" CREATED="1588389590906" MODIFIED="1588389598678"/>
-</node>
-<node TEXT="2003.08645: detecting deepfakes with metric learning" ID="ID_1878482148" CREATED="1588389618001" MODIFIED="1588389634521"/>
-<node TEXT="2005.05632: detecting cnn-generated facial images in real-world scenarios (CVPR20w)" ID="ID_1299699785" CREATED="1589767828944" MODIFIED="1589767856220"/>
-<node TEXT="Multi-attentional Deepfake Detection (cvpr21)" ID="ID_781694096" CREATED="1615298559426" MODIFIED="1615298567054">
-<node TEXT="bincls -&gt; fine-grained cls" ID="ID_1081064126" CREATED="1615298568075" MODIFIED="1615298788725"/>
-<node TEXT="multi-attentional" ID="ID_634769208" CREATED="1615298789067" MODIFIED="1615298801115"/>
-</node>
-<node TEXT="CVPR21: Improving the Efficiency and Robustness of Deepfakes Detection through Precise Geometric Features" ID="ID_1786812758" CREATED="1619337614061" MODIFIED="1619337626336"/>
-<node TEXT="Self-supervised Learning of Adversarial Example: Towards Good Generalizations for Deepfake Detection" ID="ID_1441114547" CREATED="1648338608774" MODIFIED="1648338611335">
-<node TEXT="CVPR22" ID="ID_409760991" CREATED="1648338612963" MODIFIED="1648338614477"/>
-</node>
-<node TEXT="ObjectFormer for Image Manipulation Detection and Localization" ID="ID_926927385" CREATED="1649102118496" MODIFIED="1649102119754">
-<node TEXT="CVPR22" ID="ID_1894520939" CREATED="1649102122404" MODIFIED="1649102123634"/>
-</node>
-<node TEXT="Detecting Deepfakes with Self-Blended Images" ID="ID_1330201072" CREATED="1650818257543" MODIFIED="1650818258952">
-<node TEXT="CVPR22" ID="ID_678441173" CREATED="1650818260394" MODIFIED="1650818261846"/>
-</node>
-<node TEXT="Voice-Face Homogeneity Tells Deepfake" ID="ID_153357596" CREATED="1646942317853" MODIFIED="1646942325559">
-<icon BUILTIN="unchecked"/>
-<node TEXT="CVPR22" ID="ID_725170575" CREATED="1646942319120" MODIFIED="1646942321768"/>
-</node>
-</node>
-</node>
 <node TEXT="Diffusion Models" FOLDED="true" POSITION="left" ID="ID_543295574" CREATED="1645111157251" MODIFIED="1645111160424">
 <edge COLOR="#00ffff"/>
 <node TEXT="https://lilianweng.github.io/lil-log/2021/07/11/diffusion-models.html" ID="ID_626991727" CREATED="1645111188223" MODIFIED="1645111188223" LINK="https://lilianweng.github.io/lil-log/2021/07/11/diffusion-models.html"/>
@@ -6351,7 +6333,7 @@
 <node TEXT="CVPR22" ID="ID_1065954996" CREATED="1648343238753" MODIFIED="1648343240041"/>
 </node>
 </node>
-<node TEXT="Image Generation" POSITION="left" ID="ID_65977927" CREATED="1576830540818" MODIFIED="1655843128532">
+<node TEXT="Image Generation" FOLDED="true" POSITION="left" ID="ID_65977927" CREATED="1576830540818" MODIFIED="1655843128532">
 <font NAME="Gentium" BOLD="false"/>
 <edge COLOR="#ff0000"/>
 <node TEXT="Metrics" ID="ID_1323509383" CREATED="1659195775718" MODIFIED="1659195778362">
@@ -6367,6 +6349,53 @@
 <node TEXT="Rewriting Geometric Rules of a GAN" ID="ID_1854620633" CREATED="1659196066523" MODIFIED="1659196067439">
 <node TEXT="SIGGRAPH" ID="ID_521737696" CREATED="1659196068818" MODIFIED="1659196071456"/>
 <node TEXT="junyan zhu" ID="ID_938954070" CREATED="1659196072012" MODIFIED="1659196074471"/>
+</node>
+</node>
+<node TEXT="DeepFake" ID="ID_81253926" CREATED="1587729755009" MODIFIED="1676228592936">
+<node TEXT="Deepfake is specific to face and person" ID="ID_1286313360" CREATED="1676228603594" MODIFIED="1676228635463">
+<icon BUILTIN="info"/>
+</node>
+<node TEXT="Dataset" ID="ID_1886590251" CREATED="1615347464586" MODIFIED="1615347466780">
+<node TEXT="ForgeryNet: A Versatile Benchmark for Comprehensive Forgery Analysis (cvpr21)" ID="ID_1435934248" CREATED="1615347467706" MODIFIED="1615347479218"/>
+</node>
+<node TEXT="Survey" ID="ID_1081735994" CREATED="1587729760036" MODIFIED="1587729764469">
+<node TEXT="2004.11138: the creation and detection of deepfakes: a survey" ID="ID_229656376" CREATED="1587729766371" MODIFIED="1587729930927">
+<icon BUILTIN="button_ok"/>
+</node>
+<node TEXT="2004.12626: preliminary forensics analysis of deepfake images" ID="ID_913965" CREATED="1588068509056" MODIFIED="1588068524708"/>
+<node TEXT="Seeing is Living? Rethinking the Security of Facial Liveness Verification in the Deepfake Era" ID="ID_461047989" CREATED="1647267019291" MODIFIED="1647267027027">
+<icon BUILTIN="unchecked"/>
+<node TEXT="USENIX22" ID="ID_1148613248" CREATED="1647267021829" MODIFIED="1647267024253"/>
+</node>
+</node>
+<node TEXT="Create" ID="ID_1812140643" CREATED="1589767913067" MODIFIED="1648338593271">
+<node TEXT="2005.05535: deepfacelab: a simple flexible and extensible face swapping framework" ID="ID_1258022523" CREATED="1589767931055" MODIFIED="1589767949771"/>
+<node TEXT="2004.07165 A recurrent cycle consistency loss for progressive face-to-face synthesis (FG 2020 oral)" ID="ID_1521921331" CREATED="1590805531639" MODIFIED="1590805549067"/>
+</node>
+<node TEXT="Detection" ID="ID_1897134747" CREATED="1588389497295" MODIFIED="1619337612320">
+<node TEXT="2003.08685: leveraging frequency analysis for deep fake image recognition" ID="ID_252600993" CREATED="1588389509200" MODIFIED="1588389530379">
+<node TEXT="frequency analysis" ID="ID_818362087" CREATED="1588389590906" MODIFIED="1588389598678"/>
+</node>
+<node TEXT="2003.08645: detecting deepfakes with metric learning" ID="ID_1878482148" CREATED="1588389618001" MODIFIED="1588389634521"/>
+<node TEXT="2005.05632: detecting cnn-generated facial images in real-world scenarios (CVPR20w)" ID="ID_1299699785" CREATED="1589767828944" MODIFIED="1589767856220"/>
+<node TEXT="Multi-attentional Deepfake Detection (cvpr21)" ID="ID_781694096" CREATED="1615298559426" MODIFIED="1615298567054">
+<node TEXT="bincls -&gt; fine-grained cls" ID="ID_1081064126" CREATED="1615298568075" MODIFIED="1615298788725"/>
+<node TEXT="multi-attentional" ID="ID_634769208" CREATED="1615298789067" MODIFIED="1615298801115"/>
+</node>
+<node TEXT="CVPR21: Improving the Efficiency and Robustness of Deepfakes Detection through Precise Geometric Features" ID="ID_1786812758" CREATED="1619337614061" MODIFIED="1619337626336"/>
+<node TEXT="Self-supervised Learning of Adversarial Example: Towards Good Generalizations for Deepfake Detection" ID="ID_1441114547" CREATED="1648338608774" MODIFIED="1648338611335">
+<node TEXT="CVPR22" ID="ID_409760991" CREATED="1648338612963" MODIFIED="1648338614477"/>
+</node>
+<node TEXT="ObjectFormer for Image Manipulation Detection and Localization" ID="ID_926927385" CREATED="1649102118496" MODIFIED="1649102119754">
+<node TEXT="CVPR22" ID="ID_1894520939" CREATED="1649102122404" MODIFIED="1649102123634"/>
+</node>
+<node TEXT="Detecting Deepfakes with Self-Blended Images" ID="ID_1330201072" CREATED="1650818257543" MODIFIED="1650818258952">
+<node TEXT="CVPR22" ID="ID_678441173" CREATED="1650818260394" MODIFIED="1650818261846"/>
+</node>
+<node TEXT="Voice-Face Homogeneity Tells Deepfake" ID="ID_153357596" CREATED="1646942317853" MODIFIED="1646942325559">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_725170575" CREATED="1646942319120" MODIFIED="1646942321768"/>
+</node>
 </node>
 </node>
 <node TEXT="Text-guided" ID="ID_96180274" CREATED="1576830552417" MODIFIED="1587526865271">
