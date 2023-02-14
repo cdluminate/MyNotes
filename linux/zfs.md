@@ -86,6 +86,12 @@ sudo zpool list -v
 ```
 See also Autoexpand.
 
+## sending encrypted dataset
+
+```
+sudo zfs send -i luminz/Private@2021-05-07_14.35.03--1m luminz/Private@2021-08-17_15.28.17--1m --raw -v | zfs recv -v rc100/Private -v
+```
+
 ## reference
 
 `man zfs`, `man zpool`
