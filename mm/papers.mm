@@ -292,7 +292,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1675042129591">
+<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1675042129591">
 <icon BUILTIN="bookmark"/>
 <edge COLOR="#7c0000"/>
 <node TEXT="Failures/Deprecation/DeadEnd" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1502842186" CREATED="1630692548912" MODIFIED="1676562252779">
@@ -1467,18 +1467,23 @@
 <node TEXT="active contrast? actively selecting contrastive strategy" ID="ID_931043277" CREATED="1676228498182" MODIFIED="1676228514207"/>
 <node TEXT="deepfake: prompt with generator signature" ID="ID_1936211240" CREATED="1676562020875" MODIFIED="1676562033595"/>
 <node TEXT="prompts for object detection?" ID="ID_1365056264" CREATED="1676562830249" MODIFIED="1676562839768"/>
-<node TEXT="calidet: dynamic prompt creator instead of static prompts" ID="ID_1934543999" CREATED="1676562910436" MODIFIED="1676562929252"/>
 <node TEXT="dnn explain decision like chatgpt?" ID="ID_1850654642" CREATED="1676563006652" MODIFIED="1676563030114"/>
 <node TEXT="dml defense used for classification" ID="ID_666160789" CREATED="1676563040967" MODIFIED="1676563049361">
 <node TEXT="neurips 16: metric learning for adversarial defense" ID="ID_200897201" CREATED="1676563049732" MODIFIED="1676563065730"/>
 </node>
 <node TEXT="visual prompt for attack detection? defense?" ID="ID_398199516" CREATED="1676563742779" MODIFIED="1676563749662"/>
+<node TEXT="diffusion model data leak attack?" ID="ID_1119641245" CREATED="1676575709922" MODIFIED="1676575721671"/>
+<node TEXT="detectgpu robustness (realistic chat)? adaptive attack against detectGPT? chatgpt adversarial editing?" ID="ID_213734565" CREATED="1676575714467" MODIFIED="1676575791896"/>
+<node TEXT="calidet: mode bias embed modulate" ID="ID_916597609" CREATED="1676575740837" MODIFIED="1676575764020"/>
+<node TEXT="calidet: dynamic prompt creator instead of static prompts" ID="ID_1934543999" CREATED="1676562910436" MODIFIED="1676562929252"/>
+<node TEXT="calidet: epr fine mode" ID="ID_1672348623" CREATED="1676575770494" MODIFIED="1676575774285"/>
+<node TEXT="" ID="ID_1219436467" CREATED="1676575780374" MODIFIED="1676575780374"/>
 </node>
 </node>
 <node TEXT="-------------------------------------------------------------------" LOCALIZED_STYLE_REF="default" POSITION="right" ID="ID_1134167122" CREATED="1675049435899" MODIFIED="1675886470423">
 <edge COLOR="#ff00ff"/>
 </node>
-<node TEXT="Self-Supervised Learning (SSL)" FOLDED="true" POSITION="right" ID="ID_1223342213" CREATED="1675048671290" MODIFIED="1676562853671">
+<node TEXT="Self-Supervised Learning (SSL)" POSITION="right" ID="ID_1223342213" CREATED="1675048671290" MODIFIED="1676562853671">
 <edge COLOR="#0000ff"/>
 <node TEXT="Single Modal Linguistics (reconstruction)" ID="ID_1606225626" CREATED="1675891148148" MODIFIED="1676228400091">
 <node TEXT="BERT" ID="ID_1239615666" CREATED="1675891158294" MODIFIED="1675891159992"/>
@@ -1554,7 +1559,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Vision-Language Pretraining" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="right" ID="ID_1438251706" CREATED="1646945591468" MODIFIED="1676254644721">
+<node TEXT="Vision-Language Pretraining" LOCALIZED_STYLE_REF="default" POSITION="right" ID="ID_1438251706" CREATED="1646945591468" MODIFIED="1676254644721">
 <edge COLOR="#00ff00"/>
 <node TEXT="Survey" ID="ID_1995640100" CREATED="1650816017282" MODIFIED="1650816021941">
 <icon BUILTIN="info"/>
