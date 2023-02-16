@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="166" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="167" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1675045289036">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -292,137 +292,12 @@
 </node>
 </node>
 </node>
-<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1675042129591">
+<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1675042129591">
 <icon BUILTIN="bookmark"/>
 <edge COLOR="#7c0000"/>
-<node TEXT="Research Radar" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_860684520" CREATED="1645122829972" MODIFIED="1675042093373">
-<icon BUILTIN="wizard"/>
-<node TEXT="Does sampling matter in adversarial training of classifiers?" ID="ID_164735611" CREATED="1646924871981" MODIFIED="1646924880743"/>
-<node TEXT="CLIP and adversarial robustness?" ID="ID_1525069" CREATED="1647048660346" MODIFIED="1647048671826">
-<icon BUILTIN="info"/>
-</node>
-<node TEXT="Obj Det &amp; Defense / Generalization" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_1350295868" CREATED="1643126020381" MODIFIED="1645122874997">
-<icon BUILTIN="help"/>
-<node TEXT="non-smooth transition" ID="ID_1395219277" CREATED="1643126039755" MODIFIED="1643126045701"/>
-<node TEXT="requires lots of work" ID="ID_1054268514" CREATED="1643126046094" MODIFIED="1643126048650"/>
-<node TEXT="postpone, and wait for GPUs" ID="ID_1793071076" CREATED="1643126048906" MODIFIED="1643126072489"/>
-<node TEXT="cihang xie + kaiming" ID="ID_1683648833" CREATED="1630530957144" MODIFIED="1630530961303"/>
-<node TEXT="references:" ID="ID_308446066" CREATED="1643138296472" MODIFIED="1643138298801">
-<node TEXT="Physical Adversarial Attacks on an Aerial Imagery Object Detector" ID="ID_1519647741" CREATED="1630530961747" MODIFIED="1630530971356">
-<node TEXT="patch attack" ID="ID_359771752" CREATED="1630530974288" MODIFIED="1630530977194"/>
-<node TEXT="aerial image" ID="ID_494931115" CREATED="1630531070677" MODIFIED="1630531073881"/>
-</node>
-</node>
-</node>
-<node TEXT="Backdoor Defense / Federated Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_1233089117" CREATED="1643059107922" MODIFIED="1645122869584">
-<icon BUILTIN="help"/>
-<node TEXT="why: somewhat promising direction due to privacy" ID="ID_908942836" CREATED="1643059137102" MODIFIED="1643059258547"/>
-<node TEXT="how: client sends gradients or parameters to central server" ID="ID_1501778088" CREATED="1643059183287" MODIFIED="1643059264866"/>
-<node TEXT="insight: vulnerable to backdoor attack" ID="ID_825048197" CREATED="1643059198261" MODIFIED="1643059269152">
-<node TEXT="the core problem is still defense against backdoor attack. it&apos;s the upperbound of federated learning." ID="ID_915980200" CREATED="1643059322521" MODIFIED="1643059345408">
-<node TEXT="that said, the federated learning setting is the most practical scenario to exercise robustness against backdoor examples" ID="ID_1848003240" CREATED="1643059490279" MODIFIED="1643059511694"/>
-<node TEXT="can we further leverage the uniqueness of federated learning, if we choose this specific scenario?" ID="ID_1105889720" CREATED="1643059523080" MODIFIED="1643059542310"/>
-</node>
-<node TEXT="the ideal case is the model can be trained on malicious backdoor data which leads to correct features instead. unlike existing methods, the ultimate algorithm should be able to use malicious data instead of filtering them out" ID="ID_1188469115" CREATED="1643059346053" MODIFIED="1643059415813"/>
-</node>
-<node TEXT="insight: vulnerable to membership inference attack" ID="ID_599476864" CREATED="1643059309834" MODIFIED="1643059321327"/>
-<node TEXT="algos" ID="ID_994142773" CREATED="1643059239095" MODIFIED="1643059241108">
-<node TEXT="FedSGD" ID="ID_396545484" CREATED="1643059156165" MODIFIED="1643059160043"/>
-<node TEXT="FedAVG" ID="ID_776306608" CREATED="1643059160226" MODIFIED="1643059164105"/>
-</node>
-<node TEXT="defend pure backdoor attack in non-FL scenario" ID="ID_1912871466" CREATED="1623722122983" MODIFIED="1643138137941">
-<icon BUILTIN="help"/>
-<node TEXT="unfamiliar, uninterested" ID="ID_1993691354" CREATED="1631024670037" MODIFIED="1631024675519"/>
-<node TEXT="how to learn robust feature from scratch?" ID="ID_1679269813" CREATED="1623722184445" MODIFIED="1623722199935">
-<node TEXT="(nips) Spectral Signatures in Backdoor Attacks" ID="ID_410957437" CREATED="1625818113534" MODIFIED="1625818121003"/>
-</node>
-<node TEXT="can we still generalize using samples with backdoor?" ID="ID_531719058" CREATED="1630619179694" MODIFIED="1630619190781">
-<node TEXT="directly facing this issue" ID="ID_11453776" CREATED="1630619193915" MODIFIED="1630619197435"/>
-<node TEXT="instead of trimming the dataset" ID="ID_655429921" CREATED="1642477322567" MODIFIED="1642477327990"/>
-</node>
-<node TEXT="bingxu: adversarial training is (to some extent) effective against backdoor attack" ID="ID_1414980145" CREATED="1631024614786" MODIFIED="1631024635632"/>
-</node>
-</node>
-<node TEXT="Backdoor Defense" ID="ID_513790783" CREATED="1646924752934" MODIFIED="1646924756399">
-<node TEXT="it should not filter examples" ID="ID_945931312" CREATED="1646924757748" MODIFIED="1646924762502"/>
-<node TEXT="can we still generalize using polluted data?" ID="ID_173878150" CREATED="1646924762789" MODIFIED="1646924778727"/>
-<node TEXT="in case data is scarce" ID="ID_594911959" CREATED="1646924779205" MODIFIED="1646924783565"/>
-</node>
-<node TEXT="Diffusion Model" LOCALIZED_STYLE_REF="styles.topic" ID="ID_458863232" CREATED="1645066685699" MODIFIED="1645122881681">
-<icon BUILTIN="help"/>
-<node TEXT="is diffusion model robust against adversarial attack?" ID="ID_1921497341" CREATED="1645066696851" MODIFIED="1645066709715"/>
-<node TEXT="as long as there involves linear layer, the overall model is very likely still vulnerable" ID="ID_517009563" CREATED="1645066713900" MODIFIED="1645066729837"/>
-<node TEXT="multiple times of sampling from a random signal given a learned distribution ... this sounds like some kind of randomization. How to design adaptive attack in this case?" ID="ID_1573069675" CREATED="1645066731194" MODIFIED="1645066768047"/>
-</node>
-<node TEXT="black-box attack" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_95081554" CREATED="1618123656586" MODIFIED="1645123107451">
-<icon BUILTIN="help"/>
-<node TEXT="\pending Why are square-shaped perturbations so efficient in black-box attacks? (are they efficient in white-box attacks as well?)&#xa;This can be explained using the FGSM theory. Expectation(conv(constant block, non-zero-mean kernel)) $&gt;$ Expectation&#xa;(conv(rand block, non-zero-mean kernel)). A direct solution is to make the kernels zero-mean. but meanwhile this is exactly&#xa;one of the outcomes of the madry defense. Maybe we can devise a theory by extending FGSM? YES." ID="ID_1939933767" CREATED="1618123660797" MODIFIED="1618123713462"/>
-</node>
-<node TEXT="Generative Model &amp; Robustness?" ID="ID_1638767059" CREATED="1625980725403" MODIFIED="1645122996294">
-<node TEXT="robust feature + GAN?" ID="ID_1208571372" CREATED="1625980732714" MODIFIED="1625980737673">
-<node TEXT="ref" ID="ID_1347869765" CREATED="1625980739250" MODIFIED="1625980741523">
-<node TEXT="Inverting Adversarially Robust Networks for Image Synthesis (arxiv)" ID="ID_49512226" CREATED="1625980742211" MODIFIED="1625980748729"/>
-</node>
-</node>
-</node>
-<node TEXT="Pixel Art and Computer Vision?" ID="ID_1046821581" CREATED="1631023081431" MODIFIED="1643138478904">
-<icon BUILTIN="xmag"/>
-<node TEXT="how to catch the invariance like human does?" ID="ID_1223640933" CREATED="1642442902911" MODIFIED="1642442914285"/>
-<node TEXT="multi-scale multi-modal input?" ID="ID_883839669" CREATED="1643138446588" MODIFIED="1643138452911">
-<node TEXT="or cross-style-domain?" ID="ID_1164105020" CREATED="1643138463016" MODIFIED="1643138470315"/>
-</node>
-<node TEXT="can this be a self-supervised learning?" ID="ID_743593163" CREATED="1643138454479" MODIFIED="1643138460687"/>
-<node TEXT="related to the MSRA idea" ID="ID_857689034" CREATED="1643138482055" MODIFIED="1643138486053"/>
-</node>
-<node TEXT="atk &amp; def for segmentation?" ID="ID_1517687236" CREATED="1630530424198" MODIFIED="1643138372350">
-<icon BUILTIN="xmag"/>
-</node>
-<node TEXT="atk &amp; def in 3D / PCL / lidar" ID="ID_1302244965" CREATED="1630681467137" MODIFIED="1630693975014">
-<icon BUILTIN="xmag"/>
-<node TEXT="not sufficiently explored" ID="ID_721235663" CREATED="1630691283448" MODIFIED="1630691295813"/>
-<node TEXT="applications" ID="ID_165711042" CREATED="1615359076845" MODIFIED="1631025038401">
-<node TEXT="PCL classification?" ID="ID_1033109885" CREATED="1615359082519" MODIFIED="1615359091955">
-<icon BUILTIN="xmag"/>
-</node>
-<node TEXT="segmentation" ID="ID_1155903593" CREATED="1631025039953" MODIFIED="1631025043553"/>
-<node TEXT="object detection" ID="ID_1322901450" CREATED="1631025043740" MODIFIED="1631025046497"/>
-</node>
-<node TEXT="less impact compared to canonical task or generic solution" ID="ID_135951825" CREATED="1643138337600" MODIFIED="1643138348953"/>
-</node>
-<node TEXT="atk &amp; def with multi-modal" ID="ID_1137848982" CREATED="1630691267635" MODIFIED="1630693978846">
-<icon BUILTIN="xmag"/>
-<node TEXT="can be simplified into the core problem. possibly" ID="ID_610301055" CREATED="1630691299736" MODIFIED="1630691309174"/>
-<node TEXT="use another modality as cue for defense?" ID="ID_464655364" CREATED="1643138378278" MODIFIED="1643138390036"/>
-<node TEXT="formulation?" ID="ID_105513488" CREATED="1630692316260" MODIFIED="1630692319525"/>
-<node TEXT="atk and def for language?" ID="ID_320576521" CREATED="1643139012639" MODIFIED="1643139018739"/>
-<node TEXT="orthogonal representation for error correction?" ID="ID_1656679240" CREATED="1645296238844" MODIFIED="1645296260964"/>
-<node TEXT="cross-modal" ID="ID_749582912" CREATED="1618123611194" MODIFIED="1618123613524">
-<node TEXT="\omitted adversarial against image captioning? No. It&apos;s hard to explain its application in real life. How about attacking sequence 2&#xa;sequence models? There will be a number of victim models. LSTM ? NLP ? Typo Attack? | there is a track of latest works on NLP attack." ID="ID_1358129513" CREATED="1618123614215" MODIFIED="1618123620391"/>
-<node TEXT="attack the pretrained models?" ID="ID_1352772833" CREATED="1618123625246" MODIFIED="1618123630195"/>
-</node>
-<node TEXT="infrared/ optical flow" ID="ID_1889821825" CREATED="1630691970228" MODIFIED="1630694024214">
-<icon BUILTIN="xmag"/>
-<node TEXT="will the formulation for these modalities be something similar?" ID="ID_1887966366" CREATED="1630691989080" MODIFIED="1630692020158">
-<icon BUILTIN="idea"/>
-<node TEXT="how to develop something novel from here?" ID="ID_1980032032" CREATED="1630692005412" MODIFIED="1630692016230"/>
-</node>
-</node>
-</node>
-<node TEXT="is classification cross-modal retrieval?" FOLDED="true" ID="ID_1492242614" CREATED="1652404499228" MODIFIED="1653343721916">
-<icon BUILTIN="help"/>
-<node TEXT="reference" ID="ID_264927759" CREATED="1652404508948" MODIFIED="1652404510022">
-<node TEXT="iCAR: Bridging Image Classification and Image-text Alignment for Visual Recognition" ID="ID_1900334416" CREATED="1652404507050" MODIFIED="1652404508051"/>
-</node>
-</node>
-<node TEXT="Change detection &amp; robustness" ID="ID_120812628" CREATED="1651603360611" MODIFIED="1653343726313">
-<icon BUILTIN="help"/>
-</node>
-</node>
-<node TEXT="Failures" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1502842186" CREATED="1630692548912" MODIFIED="1675042094788">
+<node TEXT="Failures/Deprecation/DeadEnd" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1502842186" CREATED="1630692548912" MODIFIED="1676562252779">
 <icon BUILTIN="stop-sign"/>
-<node TEXT="uncertainty" ID="ID_158937490" CREATED="1618124027353" MODIFIED="1618124029656">
-<node TEXT="\accept Evidential Deep Learning + Distillation?" ID="ID_1904807575" CREATED="1618124030544" MODIFIED="1618124036591"/>
-</node>
+<node TEXT="\accept Evidential Deep Learning + Distillation? (uncertainty)" ID="ID_1904807575" CREATED="1618124030544" MODIFIED="1676562267260"/>
 <node TEXT="\omitted sop convergence issue: pretrained = True/False and no parameter lock during the training process." ID="ID_1047376694" CREATED="1618124077576" MODIFIED="1618124078159"/>
 <node TEXT="\omitted Idea: (according to madry&apos;s adaptive attack) automated adaptive adversarial attack? (adversarial defense detection) (apr 2020) (this is too difficult as it is not straightforward to model the various types of defenses)." ID="ID_619791359" CREATED="1618124069251" MODIFIED="1618124070100"/>
 <node TEXT="multiscale (algorithm innovation) such as the hard-negative in ranking." ID="ID_1929292873" CREATED="1618124060454" MODIFIED="1618124061468"/>
@@ -693,6 +568,129 @@
 <node TEXT="differentiate robust and non-robust feature" ID="ID_1247310502" CREATED="1645068601001" MODIFIED="1645068610052"/>
 <node TEXT="penalize differently" ID="ID_855369787" CREATED="1645068615575" MODIFIED="1645068619178"/>
 </node>
+</node>
+</node>
+<node TEXT="Research Radar" LOCALIZED_STYLE_REF="styles.topic" ID="ID_860684520" CREATED="1645122829972" MODIFIED="1675042093373">
+<icon BUILTIN="wizard"/>
+<node TEXT="Does sampling matter in adversarial training of classifiers?" ID="ID_164735611" CREATED="1646924871981" MODIFIED="1646924880743"/>
+<node TEXT="CLIP and adversarial robustness?" ID="ID_1525069" CREATED="1647048660346" MODIFIED="1647048671826">
+<icon BUILTIN="info"/>
+</node>
+<node TEXT="Obj Det &amp; Defense / Generalization" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_1350295868" CREATED="1643126020381" MODIFIED="1645122874997">
+<icon BUILTIN="help"/>
+<node TEXT="non-smooth transition" ID="ID_1395219277" CREATED="1643126039755" MODIFIED="1643126045701"/>
+<node TEXT="requires lots of work" ID="ID_1054268514" CREATED="1643126046094" MODIFIED="1643126048650"/>
+<node TEXT="postpone, and wait for GPUs" ID="ID_1793071076" CREATED="1643126048906" MODIFIED="1643126072489"/>
+<node TEXT="cihang xie + kaiming" ID="ID_1683648833" CREATED="1630530957144" MODIFIED="1630530961303"/>
+<node TEXT="references:" ID="ID_308446066" CREATED="1643138296472" MODIFIED="1643138298801">
+<node TEXT="Physical Adversarial Attacks on an Aerial Imagery Object Detector" ID="ID_1519647741" CREATED="1630530961747" MODIFIED="1630530971356">
+<node TEXT="patch attack" ID="ID_359771752" CREATED="1630530974288" MODIFIED="1630530977194"/>
+<node TEXT="aerial image" ID="ID_494931115" CREATED="1630531070677" MODIFIED="1630531073881"/>
+</node>
+</node>
+</node>
+<node TEXT="Backdoor Defense / Federated Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_1233089117" CREATED="1643059107922" MODIFIED="1645122869584">
+<icon BUILTIN="help"/>
+<node TEXT="why: somewhat promising direction due to privacy" ID="ID_908942836" CREATED="1643059137102" MODIFIED="1643059258547"/>
+<node TEXT="how: client sends gradients or parameters to central server" ID="ID_1501778088" CREATED="1643059183287" MODIFIED="1643059264866"/>
+<node TEXT="insight: vulnerable to backdoor attack" ID="ID_825048197" CREATED="1643059198261" MODIFIED="1643059269152">
+<node TEXT="the core problem is still defense against backdoor attack. it&apos;s the upperbound of federated learning." ID="ID_915980200" CREATED="1643059322521" MODIFIED="1643059345408">
+<node TEXT="that said, the federated learning setting is the most practical scenario to exercise robustness against backdoor examples" ID="ID_1848003240" CREATED="1643059490279" MODIFIED="1643059511694"/>
+<node TEXT="can we further leverage the uniqueness of federated learning, if we choose this specific scenario?" ID="ID_1105889720" CREATED="1643059523080" MODIFIED="1643059542310"/>
+</node>
+<node TEXT="the ideal case is the model can be trained on malicious backdoor data which leads to correct features instead. unlike existing methods, the ultimate algorithm should be able to use malicious data instead of filtering them out" ID="ID_1188469115" CREATED="1643059346053" MODIFIED="1643059415813"/>
+</node>
+<node TEXT="insight: vulnerable to membership inference attack" ID="ID_599476864" CREATED="1643059309834" MODIFIED="1643059321327"/>
+<node TEXT="algos" ID="ID_994142773" CREATED="1643059239095" MODIFIED="1643059241108">
+<node TEXT="FedSGD" ID="ID_396545484" CREATED="1643059156165" MODIFIED="1643059160043"/>
+<node TEXT="FedAVG" ID="ID_776306608" CREATED="1643059160226" MODIFIED="1643059164105"/>
+</node>
+<node TEXT="defend pure backdoor attack in non-FL scenario" ID="ID_1912871466" CREATED="1623722122983" MODIFIED="1643138137941">
+<icon BUILTIN="help"/>
+<node TEXT="unfamiliar, uninterested" ID="ID_1993691354" CREATED="1631024670037" MODIFIED="1631024675519"/>
+<node TEXT="how to learn robust feature from scratch?" ID="ID_1679269813" CREATED="1623722184445" MODIFIED="1623722199935">
+<node TEXT="(nips) Spectral Signatures in Backdoor Attacks" ID="ID_410957437" CREATED="1625818113534" MODIFIED="1625818121003"/>
+</node>
+<node TEXT="can we still generalize using samples with backdoor?" ID="ID_531719058" CREATED="1630619179694" MODIFIED="1630619190781">
+<node TEXT="directly facing this issue" ID="ID_11453776" CREATED="1630619193915" MODIFIED="1630619197435"/>
+<node TEXT="instead of trimming the dataset" ID="ID_655429921" CREATED="1642477322567" MODIFIED="1642477327990"/>
+</node>
+<node TEXT="bingxu: adversarial training is (to some extent) effective against backdoor attack" ID="ID_1414980145" CREATED="1631024614786" MODIFIED="1631024635632"/>
+</node>
+</node>
+<node TEXT="Backdoor Defense" ID="ID_513790783" CREATED="1646924752934" MODIFIED="1646924756399">
+<node TEXT="it should not filter examples" ID="ID_945931312" CREATED="1646924757748" MODIFIED="1646924762502"/>
+<node TEXT="can we still generalize using polluted data?" ID="ID_173878150" CREATED="1646924762789" MODIFIED="1646924778727"/>
+<node TEXT="in case data is scarce" ID="ID_594911959" CREATED="1646924779205" MODIFIED="1646924783565"/>
+</node>
+<node TEXT="Diffusion Model" LOCALIZED_STYLE_REF="styles.topic" ID="ID_458863232" CREATED="1645066685699" MODIFIED="1645122881681">
+<icon BUILTIN="help"/>
+<node TEXT="is diffusion model robust against adversarial attack?" ID="ID_1921497341" CREATED="1645066696851" MODIFIED="1645066709715"/>
+<node TEXT="as long as there involves linear layer, the overall model is very likely still vulnerable" ID="ID_517009563" CREATED="1645066713900" MODIFIED="1645066729837"/>
+<node TEXT="multiple times of sampling from a random signal given a learned distribution ... this sounds like some kind of randomization. How to design adaptive attack in this case?" ID="ID_1573069675" CREATED="1645066731194" MODIFIED="1645066768047"/>
+</node>
+<node TEXT="black-box attack" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_95081554" CREATED="1618123656586" MODIFIED="1645123107451">
+<icon BUILTIN="help"/>
+<node TEXT="\pending Why are square-shaped perturbations so efficient in black-box attacks? (are they efficient in white-box attacks as well?)&#xa;This can be explained using the FGSM theory. Expectation(conv(constant block, non-zero-mean kernel)) $&gt;$ Expectation&#xa;(conv(rand block, non-zero-mean kernel)). A direct solution is to make the kernels zero-mean. but meanwhile this is exactly&#xa;one of the outcomes of the madry defense. Maybe we can devise a theory by extending FGSM? YES." ID="ID_1939933767" CREATED="1618123660797" MODIFIED="1618123713462"/>
+</node>
+<node TEXT="Generative Model &amp; Robustness?" ID="ID_1638767059" CREATED="1625980725403" MODIFIED="1645122996294">
+<node TEXT="robust feature + GAN?" ID="ID_1208571372" CREATED="1625980732714" MODIFIED="1625980737673">
+<node TEXT="ref" ID="ID_1347869765" CREATED="1625980739250" MODIFIED="1625980741523">
+<node TEXT="Inverting Adversarially Robust Networks for Image Synthesis (arxiv)" ID="ID_49512226" CREATED="1625980742211" MODIFIED="1625980748729"/>
+</node>
+</node>
+</node>
+<node TEXT="Pixel Art and Computer Vision?" ID="ID_1046821581" CREATED="1631023081431" MODIFIED="1643138478904">
+<icon BUILTIN="xmag"/>
+<node TEXT="how to catch the invariance like human does?" ID="ID_1223640933" CREATED="1642442902911" MODIFIED="1642442914285"/>
+<node TEXT="multi-scale multi-modal input?" ID="ID_883839669" CREATED="1643138446588" MODIFIED="1643138452911">
+<node TEXT="or cross-style-domain?" ID="ID_1164105020" CREATED="1643138463016" MODIFIED="1643138470315"/>
+</node>
+<node TEXT="can this be a self-supervised learning?" ID="ID_743593163" CREATED="1643138454479" MODIFIED="1643138460687"/>
+<node TEXT="related to the MSRA idea" ID="ID_857689034" CREATED="1643138482055" MODIFIED="1643138486053"/>
+</node>
+<node TEXT="atk &amp; def for segmentation?" ID="ID_1517687236" CREATED="1630530424198" MODIFIED="1643138372350">
+<icon BUILTIN="xmag"/>
+</node>
+<node TEXT="atk &amp; def in 3D / PCL / lidar" ID="ID_1302244965" CREATED="1630681467137" MODIFIED="1630693975014">
+<icon BUILTIN="xmag"/>
+<node TEXT="not sufficiently explored" ID="ID_721235663" CREATED="1630691283448" MODIFIED="1630691295813"/>
+<node TEXT="applications" ID="ID_165711042" CREATED="1615359076845" MODIFIED="1631025038401">
+<node TEXT="PCL classification?" ID="ID_1033109885" CREATED="1615359082519" MODIFIED="1615359091955">
+<icon BUILTIN="xmag"/>
+</node>
+<node TEXT="segmentation" ID="ID_1155903593" CREATED="1631025039953" MODIFIED="1631025043553"/>
+<node TEXT="object detection" ID="ID_1322901450" CREATED="1631025043740" MODIFIED="1631025046497"/>
+</node>
+<node TEXT="less impact compared to canonical task or generic solution" ID="ID_135951825" CREATED="1643138337600" MODIFIED="1643138348953"/>
+</node>
+<node TEXT="atk &amp; def with multi-modal" ID="ID_1137848982" CREATED="1630691267635" MODIFIED="1630693978846">
+<icon BUILTIN="xmag"/>
+<node TEXT="can be simplified into the core problem. possibly" ID="ID_610301055" CREATED="1630691299736" MODIFIED="1630691309174"/>
+<node TEXT="use another modality as cue for defense?" ID="ID_464655364" CREATED="1643138378278" MODIFIED="1643138390036"/>
+<node TEXT="formulation?" ID="ID_105513488" CREATED="1630692316260" MODIFIED="1630692319525"/>
+<node TEXT="atk and def for language?" ID="ID_320576521" CREATED="1643139012639" MODIFIED="1643139018739"/>
+<node TEXT="orthogonal representation for error correction?" ID="ID_1656679240" CREATED="1645296238844" MODIFIED="1645296260964"/>
+<node TEXT="cross-modal" ID="ID_749582912" CREATED="1618123611194" MODIFIED="1618123613524">
+<node TEXT="\omitted adversarial against image captioning? No. It&apos;s hard to explain its application in real life. How about attacking sequence 2&#xa;sequence models? There will be a number of victim models. LSTM ? NLP ? Typo Attack? | there is a track of latest works on NLP attack." ID="ID_1358129513" CREATED="1618123614215" MODIFIED="1618123620391"/>
+<node TEXT="attack the pretrained models?" ID="ID_1352772833" CREATED="1618123625246" MODIFIED="1618123630195"/>
+</node>
+<node TEXT="infrared/ optical flow" ID="ID_1889821825" CREATED="1630691970228" MODIFIED="1630694024214">
+<icon BUILTIN="xmag"/>
+<node TEXT="will the formulation for these modalities be something similar?" ID="ID_1887966366" CREATED="1630691989080" MODIFIED="1630692020158">
+<icon BUILTIN="idea"/>
+<node TEXT="how to develop something novel from here?" ID="ID_1980032032" CREATED="1630692005412" MODIFIED="1630692016230"/>
+</node>
+</node>
+</node>
+<node TEXT="is classification cross-modal retrieval?" FOLDED="true" ID="ID_1492242614" CREATED="1652404499228" MODIFIED="1653343721916">
+<icon BUILTIN="help"/>
+<node TEXT="reference" ID="ID_264927759" CREATED="1652404508948" MODIFIED="1652404510022">
+<node TEXT="iCAR: Bridging Image Classification and Image-text Alignment for Visual Recognition" ID="ID_1900334416" CREATED="1652404507050" MODIFIED="1652404508051"/>
+</node>
+</node>
+<node TEXT="Change detection &amp; robustness" ID="ID_120812628" CREATED="1651603360611" MODIFIED="1653343726313">
+<icon BUILTIN="help"/>
 </node>
 </node>
 <node TEXT="Blocked" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_975414650" CREATED="1646333166651" MODIFIED="1675042096454">
@@ -1467,18 +1465,26 @@
 <node TEXT="MSRA idea + masked autoencoder?" ID="ID_1614060668" CREATED="1675889013847" MODIFIED="1675889020948"/>
 <node TEXT="meta learning + adversarial defense + imagenet? a queue of gradient" ID="ID_1490471265" CREATED="1676227826643" MODIFIED="1676227848183"/>
 <node TEXT="active contrast? actively selecting contrastive strategy" ID="ID_931043277" CREATED="1676228498182" MODIFIED="1676228514207"/>
+<node TEXT="deepfake: prompt with generator signature" ID="ID_1936211240" CREATED="1676562020875" MODIFIED="1676562033595"/>
+<node TEXT="prompts for object detection?" ID="ID_1365056264" CREATED="1676562830249" MODIFIED="1676562839768"/>
+<node TEXT="calidet: dynamic prompt creator instead of static prompts" ID="ID_1934543999" CREATED="1676562910436" MODIFIED="1676562929252"/>
+<node TEXT="dnn explain decision like chatgpt?" ID="ID_1850654642" CREATED="1676563006652" MODIFIED="1676563030114"/>
+<node TEXT="dml defense used for classification" ID="ID_666160789" CREATED="1676563040967" MODIFIED="1676563049361">
+<node TEXT="neurips 16: metric learning for adversarial defense" ID="ID_200897201" CREATED="1676563049732" MODIFIED="1676563065730"/>
+</node>
+<node TEXT="visual prompt for attack detection? defense?" ID="ID_398199516" CREATED="1676563742779" MODIFIED="1676563749662"/>
 </node>
 </node>
 <node TEXT="-------------------------------------------------------------------" LOCALIZED_STYLE_REF="default" POSITION="right" ID="ID_1134167122" CREATED="1675049435899" MODIFIED="1675886470423">
 <edge COLOR="#ff00ff"/>
 </node>
-<node TEXT="Self-Supervised Learning (SSL)" FOLDED="true" POSITION="right" ID="ID_1223342213" CREATED="1675048671290" MODIFIED="1676228658908">
+<node TEXT="Self-Supervised Learning (SSL)" FOLDED="true" POSITION="right" ID="ID_1223342213" CREATED="1675048671290" MODIFIED="1676562853671">
 <edge COLOR="#0000ff"/>
 <node TEXT="Single Modal Linguistics (reconstruction)" ID="ID_1606225626" CREATED="1675891148148" MODIFIED="1676228400091">
 <node TEXT="BERT" ID="ID_1239615666" CREATED="1675891158294" MODIFIED="1675891159992"/>
 <node TEXT="GPT" ID="ID_641068612" CREATED="1675891160565" MODIFIED="1675891161880"/>
 </node>
-<node TEXT="Single Modal Vision (Contrastive)" FOLDED="true" ID="ID_1896428960" CREATED="1675886596835" MODIFIED="1676228374708">
+<node TEXT="Single Modal Vision (Contrastive)" ID="ID_1896428960" CREATED="1675886596835" MODIFIED="1676228374708">
 <node TEXT="Contrastive learning: distance among multiple views of a single image" ID="ID_301623290" CREATED="1676228430141" MODIFIED="1676228457243">
 <icon BUILTIN="info"/>
 </node>
@@ -1492,6 +1498,8 @@
 </node>
 </node>
 <node TEXT="DenseCL (CVPR21)" ID="ID_1577393686" CREATED="1676228207233" MODIFIED="1676228216082"/>
+</node>
+<node TEXT="Single Modal Vision (Reconstruction)" ID="ID_1629993952" CREATED="1676228376837" MODIFIED="1676561140347">
 <node TEXT="MAE (CVPR22)" ID="ID_1610729841" CREATED="1675887212306" MODIFIED="1676227939556">
 <node TEXT="Masked Autoencoders Are Scalable Vision Learners" ID="ID_1946699135" CREATED="1675887223216" MODIFIED="1675887224200">
 <node TEXT="Simple algorithms that scale well are the core of deep&#xa;learning." ID="ID_733682737" CREATED="1675892807986" MODIFIED="1675892814536">
@@ -1514,8 +1522,36 @@
 </node>
 </node>
 </node>
-<node TEXT="Single Modal Vision (non-contrastive)" ID="ID_1629993952" CREATED="1676228376837" MODIFIED="1676228383234">
-<node TEXT="reconstruction?" ID="ID_1043968895" CREATED="1676228383633" MODIFIED="1676228386002"/>
+<node TEXT="Is contrastive / reconstruction itself a limitation?" ID="ID_1818018635" CREATED="1676563112928" MODIFIED="1676563129567">
+<icon BUILTIN="attach"/>
+</node>
+</node>
+<node TEXT="SSL :: Prompting" FOLDED="true" POSITION="right" ID="ID_1318848578" CREATED="1675367072095" MODIFIED="1676563911026">
+<edge COLOR="#7c007c"/>
+<node TEXT="Closes the gap between pre-training and fine-tuning" ID="ID_302094227" CREATED="1676563861861" MODIFIED="1676563873900">
+<icon BUILTIN="info"/>
+</node>
+<node TEXT="does prompting require a strong pre-training baseline?" ID="ID_911983346" CREATED="1676564263133" MODIFIED="1676564274050">
+<icon BUILTIN="attach"/>
+<node TEXT="i.e., will prompting lose its effectiveness when the backbone is not sufficiently trained?" ID="ID_1436967788" CREATED="1676564278835" MODIFIED="1676564310214"/>
+</node>
+<node TEXT="Prompt :: Vision" ID="ID_783422550" CREATED="1676563804923" MODIFIED="1676563808059">
+<node TEXT="Exploring Visual Prompts for Adapting Large-Scale Models" ID="ID_153991492" CREATED="1675367088251" MODIFIED="1675367208771">
+<icon BUILTIN="bookmark"/>
+</node>
+<node TEXT="Visual Prompt Tuning." ID="ID_696407912" CREATED="1675367094078" MODIFIED="1675367205892">
+<icon BUILTIN="bookmark"/>
+</node>
+<node TEXT="AdaptFormer: Adapting Vision Transformers for&#xa;Scalable Visual Recognition" ID="ID_6970235" CREATED="1675367135928" MODIFIED="1675367136456"/>
+<node TEXT="Visual Prompting via Image Inpainting" ID="ID_698976721" CREATED="1675367145040" MODIFIED="1675367145499"/>
+<node TEXT="Open-Vocabulary Semantic Segmentation with Mask-adapted CLIP" ID="ID_712695760" CREATED="1675367157483" MODIFIED="1675367170253"/>
+<node TEXT="Visual Prompt Tuning for Test-time Domain Adaptation" ID="ID_431267464" CREATED="1675367186463" MODIFIED="1675367187485"/>
+<node TEXT="Unleashing the Power of Visual Prompting At the Pixel Level" ID="ID_595029881" CREATED="1675367196116" MODIFIED="1675367197072"/>
+</node>
+<node TEXT="Prompt :: Computational Linguistics" ID="ID_686007260" CREATED="1675367065325" MODIFIED="1676563797447">
+<node TEXT="Prompting: Instead of adapting pre-trianed lms to downstream tasks via objective engineering, downstream tasks are reformulated to look more like those solved during the original LM training with the help of a textual prompt. This allows us to adapt large scale pre-trianed models to specific tasks without having to fine-tune the model or even the last few layers. For instance, prompt templates handcrafted for the task." ID="ID_1922284406" CREATED="1675367102133" MODIFIED="1675367109043">
+<icon BUILTIN="info"/>
+</node>
 </node>
 </node>
 <node TEXT="Vision-Language Pretraining" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="right" ID="ID_1438251706" CREATED="1646945591468" MODIFIED="1676254644721">
@@ -1557,12 +1593,6 @@
 </node>
 </node>
 </node>
-</node>
-<node TEXT="Large Language Model (LLM)" POSITION="right" ID="ID_947216604" CREATED="1675045191624" MODIFIED="1676254084090">
-<edge COLOR="#007c00"/>
-<node TEXT="GPT3" ID="ID_876218906" CREATED="1676254085097" MODIFIED="1676254086815"/>
-<node TEXT="ChatGPT" ID="ID_1978389784" CREATED="1675045199545" MODIFIED="1675045201237"/>
-<node TEXT="GPT4" ID="ID_1755229088" CREATED="1676254090654" MODIFIED="1676254092145"/>
 </node>
 <node TEXT="Text-to-Image Synthesis" FOLDED="true" POSITION="right" ID="ID_534441759" CREATED="1675045086637" MODIFIED="1676254056222">
 <edge COLOR="#00007c"/>
@@ -1616,7 +1646,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Large Language Model (LLM)" FOLDED="true" POSITION="right" ID="ID_1735833052" CREATED="1675287989836" MODIFIED="1676260281565">
+<node TEXT="LLM: Large Language Model (LLM)" FOLDED="true" POSITION="right" ID="ID_1735833052" CREATED="1675287989836" MODIFIED="1676562874800">
 <edge COLOR="#00ff00"/>
 <node TEXT="BERT" ID="ID_676603491" CREATED="1676260264280" MODIFIED="1676260265477"/>
 <node TEXT="GPT3" ID="ID_252935248" CREATED="1676260186407" MODIFIED="1676260188123"/>
@@ -1647,26 +1677,6 @@
 <node TEXT="attack detector" ID="ID_890431519" CREATED="1675295663510" MODIFIED="1675295666328"/>
 <node TEXT="How to genrate realistic human text? there is FID for image." ID="ID_1601127519" CREATED="1675295648525" MODIFIED="1675295679716"/>
 </node>
-</node>
-<node TEXT="Prompt :: Computational Linguistics" FOLDED="true" POSITION="right" ID="ID_686007260" CREATED="1675367065325" MODIFIED="1676254142013">
-<edge COLOR="#007c7c"/>
-<node TEXT="Prompting: Instead of adapting pre-trianed lms to downstream tasks via objective engineering, downstream tasks are reformulated to look more like those solved during the original LM training with the help of a textual prompt. This allows us to adapt large scale pre-trianed models to specific tasks without having to fine-tune the model or even the last few layers. For instance, prompt templates handcrafted for the task." ID="ID_1922284406" CREATED="1675367102133" MODIFIED="1675367109043">
-<icon BUILTIN="info"/>
-</node>
-</node>
-<node TEXT="Prompt :: Vision" FOLDED="true" POSITION="right" ID="ID_1318848578" CREATED="1675367072095" MODIFIED="1676254140703">
-<edge COLOR="#7c007c"/>
-<node TEXT="Exploring Visual Prompts for Adapting Large-Scale Models" ID="ID_153991492" CREATED="1675367088251" MODIFIED="1675367208771">
-<icon BUILTIN="bookmark"/>
-</node>
-<node TEXT="Visual Prompt Tuning." ID="ID_696407912" CREATED="1675367094078" MODIFIED="1675367205892">
-<icon BUILTIN="bookmark"/>
-</node>
-<node TEXT="AdaptFormer: Adapting Vision Transformers for&#xa;Scalable Visual Recognition" ID="ID_6970235" CREATED="1675367135928" MODIFIED="1675367136456"/>
-<node TEXT="Visual Prompting via Image Inpainting" ID="ID_698976721" CREATED="1675367145040" MODIFIED="1675367145499"/>
-<node TEXT="Open-Vocabulary Semantic Segmentation with Mask-adapted CLIP" ID="ID_712695760" CREATED="1675367157483" MODIFIED="1675367170253"/>
-<node TEXT="Visual Prompt Tuning for Test-time Domain Adaptation" ID="ID_431267464" CREATED="1675367186463" MODIFIED="1675367187485"/>
-<node TEXT="Unleashing the Power of Visual Prompting At the Pixel Level" ID="ID_595029881" CREATED="1675367196116" MODIFIED="1675367197072"/>
 </node>
 <node TEXT="---------------------------------------------------------------------" POSITION="right" ID="ID_1447965157" CREATED="1675045082295" MODIFIED="1675049443238">
 <edge COLOR="#7c007c"/>
@@ -4545,7 +4555,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Object Detection" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1657404442110">
+<node TEXT="Object Detection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1657404442110">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_674316746" CREATED="1653969587756" MODIFIED="1653969594381">
 <icon BUILTIN="mindmap"/>
@@ -5692,7 +5702,7 @@
 <node TEXT="Learning without Prejudice: Avoiding Bias in Webly-Supervised Action&#xa;Recognition" ID="ID_1991556722" CREATED="1655187230614" MODIFIED="1655187236882"/>
 </node>
 </node>
-<node TEXT="Anomaly Detection (OOD)" FOLDED="true" POSITION="left" ID="ID_31313107" CREATED="1657404499454" MODIFIED="1675739883522">
+<node TEXT="Anomaly Detection / Out-of-distribution (OOD) / OpenSet" FOLDED="true" POSITION="left" ID="ID_31313107" CREATED="1657404499454" MODIFIED="1676564171135">
 <edge COLOR="#007c7c"/>
 <node TEXT="This is a saturated area. Performance numbers are too high." ID="ID_275469478" CREATED="1675745241040" MODIFIED="1675745258548">
 <icon BUILTIN="attach"/>
@@ -5705,6 +5715,42 @@
 <icon BUILTIN="pencil"/>
 <node TEXT="simply using reconstruction based methods" ID="ID_1444620585" CREATED="1675745171762" MODIFIED="1675745181691"/>
 <node TEXT="masked image modeling as a pretext task" ID="ID_280600644" CREATED="1675745150680" MODIFIED="1675745164658"/>
+</node>
+<node TEXT="Prompt-driven efficient Open-set Semi-supervised Learning" ID="ID_618906363" CREATED="1676563283331" MODIFIED="1676563293165">
+<icon BUILTIN="pencil"/>
+<node TEXT="+visual prompt" ID="ID_1334817435" CREATED="1676563294737" MODIFIED="1676563301568"/>
+<node TEXT="prompt is like adversarial attacks. in this paper, prompt is used to enlarge the distribution difference distinguished by the ID prompt for OOD detection." ID="ID_1808214758" CREATED="1676563559028" MODIFIED="1676563613055"/>
+<node TEXT="does this assume: prompt moves OOD samples irregularly." ID="ID_581566900" CREATED="1676563618042" MODIFIED="1676563638237"/>
+<node TEXT="OpenPrompt: prompt-driven joint space learning mechanism" ID="ID_1571439494" CREATED="1676563995089" MODIFIED="1676564028995">
+<font SIZE="9"/>
+</node>
+<node TEXT="CIFAR10, cifar100, imagenet-30" ID="ID_730325274" CREATED="1676564196747" MODIFIED="1676564204541"/>
+</node>
+<node TEXT="Open Set Recognition" ID="ID_323999523" CREATED="1634132952545" MODIFIED="1676564159987">
+<node TEXT="Open-Set Recognition: A Good Closed-Set Classifier is All You Need" ID="ID_1603928418" CREATED="1634132957520" MODIFIED="1634132962452">
+<node TEXT="vgg group" ID="ID_419228120" CREATED="1634132963805" MODIFIED="1634132966497"/>
+<node TEXT="arxiv" ID="ID_1399907050" CREATED="1634132966842" MODIFIED="1634132967732"/>
+</node>
+<node TEXT="PMAL: Open Set Recognition via Robust Prototype Mining" ID="ID_1567699679" CREATED="1648174626207" MODIFIED="1648174710258">
+<icon BUILTIN="unchecked"/>
+<icon BUILTIN="idea"/>
+<node TEXT="AAAI21" ID="ID_1093847305" CREATED="1648174632155" MODIFIED="1648174634120"/>
+<node TEXT="Open-Set is somewhat similar to deep metric learning variant" ID="ID_162349135" CREATED="1648174806913" MODIFIED="1648174820515"/>
+<node TEXT="besides recognizing predefined classes, the system needs to reject the unknowns" ID="ID_1080431228" CREATED="1648174634902" MODIFIED="1648174647137"/>
+<node TEXT="prototype learning is a potential manner to handle the problem as its ability to improve intra-class compactness of representations is much needed in discrimination between the known and the unknowns" ID="ID_1737399656" CREATED="1648174672305" MODIFIED="1648174703066"/>
+<node TEXT="using mining strategy to avoid inteference of noise" ID="ID_879408251" CREATED="1648174763868" MODIFIED="1648174797459">
+<icon BUILTIN="yes"/>
+</node>
+<node TEXT="can we borrow these to face recognition?" ID="ID_290608270" CREATED="1648174835615" MODIFIED="1648174856270">
+<icon BUILTIN="help"/>
+</node>
+</node>
+<node TEXT="Towards Accurate Open-Set Recognition via Background-Class Regularization" ID="ID_190797296" CREATED="1658616591676" MODIFIED="1658616592488">
+<node TEXT="ECCV22" ID="ID_1527424862" CREATED="1658616596986" MODIFIED="1658616598763"/>
+</node>
+<node TEXT="Partial and Asymmetric Contrastive Learning for Out-of-Distribution Detection in Long-Tailed Recognition" ID="ID_1293076546" CREATED="1659199711340" MODIFIED="1659199712052">
+<node TEXT="ICML22" ID="ID_1862789298" CREATED="1659199712937" MODIFIED="1659199720317"/>
+</node>
 </node>
 </node>
 <node TEXT="Adversarial Training (Robustness)" FOLDED="true" POSITION="left" ID="ID_1633797140" CREATED="1675050942299" MODIFIED="1675052765536">
@@ -6212,7 +6258,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Face Recognition Attack" FOLDED="true" POSITION="left" ID="ID_490223917" CREATED="1675049870200" MODIFIED="1675049874030">
+<node TEXT="Face Recognition Attack (not digital ones)" FOLDED="true" POSITION="left" ID="ID_490223917" CREATED="1675049870200" MODIFIED="1676561521322">
 <edge COLOR="#7c7c00"/>
 <node TEXT="risk: maybe common corruptions like brightness, rain, angle, etc can introduce more risk to a system in practice" ID="ID_567079036" CREATED="1675049927982" MODIFIED="1675049976962">
 <icon BUILTIN="attach"/>
@@ -6817,31 +6863,11 @@
 </node>
 </node>
 </node>
-<node TEXT="Open Set Recognition" FOLDED="true" POSITION="left" ID="ID_323999523" CREATED="1634132952545" MODIFIED="1659199741091">
-<edge COLOR="#00ffff"/>
-<node TEXT="Open-Set Recognition: A Good Closed-Set Classifier is All You Need" ID="ID_1603928418" CREATED="1634132957520" MODIFIED="1634132962452">
-<node TEXT="vgg group" ID="ID_419228120" CREATED="1634132963805" MODIFIED="1634132966497"/>
-<node TEXT="arxiv" ID="ID_1399907050" CREATED="1634132966842" MODIFIED="1634132967732"/>
-</node>
-<node TEXT="PMAL: Open Set Recognition via Robust Prototype Mining" ID="ID_1567699679" CREATED="1648174626207" MODIFIED="1648174710258">
-<icon BUILTIN="unchecked"/>
-<icon BUILTIN="idea"/>
-<node TEXT="AAAI21" ID="ID_1093847305" CREATED="1648174632155" MODIFIED="1648174634120"/>
-<node TEXT="Open-Set is somewhat similar to deep metric learning variant" ID="ID_162349135" CREATED="1648174806913" MODIFIED="1648174820515"/>
-<node TEXT="besides recognizing predefined classes, the system needs to reject the unknowns" ID="ID_1080431228" CREATED="1648174634902" MODIFIED="1648174647137"/>
-<node TEXT="prototype learning is a potential manner to handle the problem as its ability to improve intra-class compactness of representations is much needed in discrimination between the known and the unknowns" ID="ID_1737399656" CREATED="1648174672305" MODIFIED="1648174703066"/>
-<node TEXT="using mining strategy to avoid inteference of noise" ID="ID_879408251" CREATED="1648174763868" MODIFIED="1648174797459">
-<icon BUILTIN="yes"/>
-</node>
-<node TEXT="can we borrow these to face recognition?" ID="ID_290608270" CREATED="1648174835615" MODIFIED="1648174856270">
-<icon BUILTIN="help"/>
-</node>
-</node>
-<node TEXT="Towards Accurate Open-Set Recognition via Background-Class Regularization" ID="ID_190797296" CREATED="1658616591676" MODIFIED="1658616592488">
-<node TEXT="ECCV22" ID="ID_1527424862" CREATED="1658616596986" MODIFIED="1658616598763"/>
-</node>
-<node TEXT="Partial and Asymmetric Contrastive Learning for Out-of-Distribution Detection in Long-Tailed Recognition" ID="ID_1293076546" CREATED="1659199711340" MODIFIED="1659199712052">
-<node TEXT="ICML22" ID="ID_1862789298" CREATED="1659199712937" MODIFIED="1659199720317"/>
+<node TEXT="Optimizer" FOLDED="true" POSITION="left" ID="ID_1099765438" CREATED="1676560948910" MODIFIED="1676560950878">
+<edge COLOR="#0000ff"/>
+<node TEXT="Amos: AN ADAM-STYLE OPTIMIZER WITH ADAPTIVE&#xa;WEIGHT DECAY TOWARDS MODEL-ORIENTED SCALE" ID="ID_388968323" CREATED="1676560951138" MODIFIED="1676560963930">
+<node TEXT="ICLR23" ID="ID_105752447" CREATED="1676560968416" MODIFIED="1676560970224"/>
+<node TEXT="optimizer for language model" ID="ID_473215861" CREATED="1676560970417" MODIFIED="1676560980916"/>
 </node>
 </node>
 <node TEXT="Ordinal Regression" FOLDED="true" POSITION="left" ID="ID_408572005" CREATED="1576825445602" MODIFIED="1647264584581">
