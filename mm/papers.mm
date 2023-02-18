@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="Memo" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1675045349693" STYLE="oval">
 <font NAME="Gentium" SIZE="18" ITALIC="false"/>
-<hook NAME="MapStyle" zoom="1.977">
+<hook NAME="MapStyle" zoom="3.341">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="167" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="168" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1675045289036">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -225,6 +225,10 @@
 <node TEXT="certified defense is not used for imagenet" ID="ID_749439492" CREATED="1676227746004" MODIFIED="1676227753637"/>
 </node>
 </node>
+<node TEXT="Federated learning" ID="ID_1789103217" CREATED="1676754946649" MODIFIED="1676754951059">
+<icon BUILTIN="info"/>
+<node TEXT="low hanging fruits are gone. This problem might eventually turn into an engineering problem" ID="ID_1566340538" CREATED="1676754952071" MODIFIED="1676754974263"/>
+</node>
 <node TEXT="Self Supervised Learning" ID="ID_750923691" CREATED="1676253512156" MODIFIED="1676253517827">
 <icon BUILTIN="info"/>
 </node>
@@ -292,7 +296,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1675042129591">
+<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1675042129591">
 <icon BUILTIN="bookmark"/>
 <edge COLOR="#7c0000"/>
 <node TEXT="Failures/Deprecation/DeadEnd" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1502842186" CREATED="1630692548912" MODIFIED="1676562252779">
@@ -739,7 +743,7 @@
 <node TEXT="ultimately linear defense" ID="ID_1957242309" CREATED="1652283751238" MODIFIED="1652283757407"/>
 </node>
 </node>
-<node TEXT="Questions" ID="ID_1635080843" CREATED="1675042162167" MODIFIED="1675042203699">
+<node TEXT="Questions" FOLDED="true" ID="ID_1635080843" CREATED="1675042162167" MODIFIED="1675042203699">
 <node TEXT="Object recognition w/ vectorized images?" FOLDED="true" ID="ID_122040551" CREATED="1656372931630" MODIFIED="1675042169938">
 <node TEXT="I kind of like image vectorization" ID="ID_653939614" CREATED="1656373042240" MODIFIED="1656373051048"/>
 <node TEXT=" (image in different modality -- less noisy" ID="ID_1252599478" CREATED="1656373093113" MODIFIED="1656373094000"/>
@@ -1493,6 +1497,51 @@
 <node TEXT="-------------------------------------------------------------------" LOCALIZED_STYLE_REF="default" POSITION="right" ID="ID_1134167122" CREATED="1675049435899" MODIFIED="1675886470423">
 <edge COLOR="#ff00ff"/>
 </node>
+<node TEXT="Image Manipulation" FOLDED="true" POSITION="right" ID="ID_904035504" CREATED="1675304201992" MODIFIED="1676254049394">
+<edge COLOR="#7c0000"/>
+<node TEXT="Style transfer" ID="ID_3432368" CREATED="1676254033527" MODIFIED="1676254035934">
+<node TEXT="A Style-Based Generator Architecture for Generative Adversarial Networks" ID="ID_19629646" CREATED="1675304213086" MODIFIED="1675304216108">
+<icon BUILTIN="unchecked"/>
+</node>
+</node>
+<node TEXT="text-guided" ID="ID_1528570078" CREATED="1676254101004" MODIFIED="1676254103531">
+<node TEXT="CLIPVG: Text-Guided Image Manipulation Using Differentiable Vector Graphics" ID="ID_1526385769" CREATED="1676254105459" MODIFIED="1676254110556">
+<node TEXT="AAAI23" ID="ID_431547750" CREATED="1676254111062" MODIFIED="1676254112598"/>
+</node>
+</node>
+</node>
+<node TEXT="LLM: Large Language Model (LLM)" FOLDED="true" POSITION="right" ID="ID_1735833052" CREATED="1675287989836" MODIFIED="1676562874800">
+<edge COLOR="#00ff00"/>
+<node TEXT="BERT" ID="ID_676603491" CREATED="1676260264280" MODIFIED="1676260265477"/>
+<node TEXT="GPT3" ID="ID_252935248" CREATED="1676260186407" MODIFIED="1676260188123"/>
+<node TEXT="GPT4" ID="ID_1419163353" CREATED="1676260188792" MODIFIED="1676260190103"/>
+<node TEXT="ChatGPT" ID="ID_929371264" CREATED="1675287998205" MODIFIED="1675288002483">
+<node TEXT="Main" ID="ID_1521352916" CREATED="1675288009231" MODIFIED="1675288011622">
+<node TEXT="ChatGPT" ID="ID_937804408" CREATED="1675288029662" MODIFIED="1675288032098"/>
+<node TEXT="Math" ID="ID_1908497848" CREATED="1675288022192" MODIFIED="1675288024335">
+<node TEXT="Mathematical Capabilities of ChatGPT" ID="ID_65222373" CREATED="1675288051262" MODIFIED="1675288057051">
+<icon BUILTIN="pencil"/>
+<node TEXT="a dataset." ID="ID_1087097384" CREATED="1675288058034" MODIFIED="1675288063193"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Detection" ID="ID_398704158" CREATED="1675288011819" MODIFIED="1675288013535">
+<node TEXT="Arms race?" ID="ID_516276125" CREATED="1676227885257" MODIFIED="1676227896882">
+<icon BUILTIN="attach"/>
+</node>
+<node TEXT="direct feature" ID="ID_1682794622" CREATED="1676260237977" MODIFIED="1676260253353">
+<node TEXT="DetectGPT: Zero-Shot Machine-Generated Text Detection using Probability Curvature" ID="ID_586336814" CREATED="1676260234916" MODIFIED="1676260308498">
+<icon BUILTIN="unchecked"/>
+</node>
+</node>
+<node TEXT="watermark" ID="ID_919169453" CREATED="1675444907732" MODIFIED="1676260246600"/>
+</node>
+<node TEXT="Counter Detection?" ID="ID_1319347872" CREATED="1675288013731" MODIFIED="1675288021905">
+<node TEXT="attack detector" ID="ID_890431519" CREATED="1675295663510" MODIFIED="1675295666328"/>
+<node TEXT="How to genrate realistic human text? there is FID for image." ID="ID_1601127519" CREATED="1675295648525" MODIFIED="1675295679716"/>
+</node>
+</node>
 <node TEXT="Self-Supervised Learning (SSL)" FOLDED="true" POSITION="right" ID="ID_1223342213" CREATED="1675048671290" MODIFIED="1676562853671">
 <edge COLOR="#0000ff"/>
 <node TEXT="Single Modal Linguistics (reconstruction)" ID="ID_1606225626" CREATED="1675891148148" MODIFIED="1676228400091">
@@ -1546,6 +1595,9 @@
 <node TEXT="Closes the gap between pre-training and fine-tuning" ID="ID_302094227" CREATED="1676563861861" MODIFIED="1676563873900">
 <icon BUILTIN="info"/>
 </node>
+<node TEXT="parameter efficient transfer learning" ID="ID_960003750" CREATED="1676754753599" MODIFIED="1676754819035">
+<icon BUILTIN="info"/>
+</node>
 <node TEXT="does prompting require a strong pre-training baseline?" ID="ID_911983346" CREATED="1676564263133" MODIFIED="1676564274050">
 <icon BUILTIN="attach"/>
 <node TEXT="i.e., will prompting lose its effectiveness when the backbone is not sufficiently trained?" ID="ID_1436967788" CREATED="1676564278835" MODIFIED="1676564310214"/>
@@ -1566,6 +1618,59 @@
 <node TEXT="Prompt :: Computational Linguistics" ID="ID_686007260" CREATED="1675367065325" MODIFIED="1676563797447">
 <node TEXT="Prompting: Instead of adapting pre-trianed lms to downstream tasks via objective engineering, downstream tasks are reformulated to look more like those solved during the original LM training with the help of a textual prompt. This allows us to adapt large scale pre-trianed models to specific tasks without having to fine-tune the model or even the last few layers. For instance, prompt templates handcrafted for the task." ID="ID_1922284406" CREATED="1675367102133" MODIFIED="1675367109043">
 <icon BUILTIN="info"/>
+</node>
+</node>
+<node TEXT="Adapter" ID="ID_144633425" CREATED="1676754803503" MODIFIED="1676754804859">
+<node TEXT="Towards Efficient Visual Adaption via Structural Re-parameterization" ID="ID_1608505464" CREATED="1676754762531" MODIFIED="1676754769759">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+</node>
+<node TEXT="Text-to-Image Synthesis" FOLDED="true" POSITION="right" ID="ID_534441759" CREATED="1675045086637" MODIFIED="1676254056222">
+<edge COLOR="#00007c"/>
+<node TEXT="Dall E 2" ID="ID_1555270559" CREATED="1675045202469" MODIFIED="1675045213095">
+<node TEXT="Hierarchical Text-Conditional Image Generation with CLIP Latents" ID="ID_246970714" CREATED="1675045215025" MODIFIED="1675045359919">
+<icon BUILTIN="messagebox_warning"/>
+<node TEXT="high resource consumption" ID="ID_772611272" CREATED="1675045538828" MODIFIED="1675045565586">
+<icon BUILTIN="attach"/>
+</node>
+<node TEXT="Can quickly and efficiently provide stock for graphic designers. this means a lot to companies like adobe." ID="ID_1214590279" CREATED="1675045884794" MODIFIED="1675045936956">
+<icon BUILTIN="attach"/>
+</node>
+<node TEXT="influential because it basically ended the previous paradigms for text-image retrieval methods, like visual-semantic embedding" ID="ID_1796634553" CREATED="1675045485299" MODIFIED="1675045533790">
+<icon BUILTIN="yes"/>
+<node TEXT="The semantic property of the CLIP embedding is too good." ID="ID_1675443039" CREATED="1675048194214" MODIFIED="1675048209632"/>
+<node TEXT="Contrastive multi-modal embedding learning." ID="ID_1972538665" CREATED="1675048209874" MODIFIED="1675048260829"/>
+<node TEXT="impact self-supervised learning field as well" ID="ID_1441414889" CREATED="1675048287321" MODIFIED="1675048299612"/>
+</node>
+<node TEXT="two stage model" ID="ID_984750206" CREATED="1675045404050" MODIFIED="1675045408105">
+<node TEXT="relies on pre-trained CLIP embeddings" ID="ID_1517818079" CREATED="1675045379952" MODIFIED="1675047994683">
+<icon BUILTIN="yes"/>
+</node>
+<node TEXT="a prior that generates a CLIP image embedding given a text caption" ID="ID_67220351" CREATED="1675045408663" MODIFIED="1675045422303"/>
+<node TEXT="a decoder that generates an image conditioned on the image embedding" ID="ID_327096186" CREATED="1675045422479" MODIFIED="1675045433728"/>
+</node>
+<node TEXT="observations" ID="ID_822843052" CREATED="1675048557191" MODIFIED="1675048559423">
+<node TEXT="explicitly generating image representations improves diversity and photorealism" ID="ID_1050226435" CREATED="1675048559935" MODIFIED="1675048576658"/>
+</node>
+</node>
+</node>
+<node TEXT="StyleGAN-T" ID="ID_725758643" CREATED="1675304094058" MODIFIED="1675304096898">
+<node TEXT="StyleGAN-T: Unlocking the Power of GANs for Fast Large-Scale Text-to-Image Synthesis" ID="ID_1952479944" CREATED="1675304097298" MODIFIED="1675304103833">
+<icon BUILTIN="unchecked"/>
+<node TEXT="Nvidia" ID="ID_974489067" CREATED="1675304106028" MODIFIED="1675304107496"/>
+<node TEXT="GAN can be faster than diffusion models. But it still cannot beat diffusion model in terms of FID. Some generation tasks do not require the system to be real-time. Some may require real-time response, but that kind of application sounds like far away from normal people" ID="ID_1729035487" CREATED="1675304235023" MODIFIED="1675304320613">
+<icon BUILTIN="attach"/>
+</node>
+</node>
+</node>
+<node TEXT="Fine-grained control" ID="ID_659756001" CREATED="1676755247722" MODIFIED="1676755397066">
+<node TEXT="reverse to phrase grounding? this is to generate images using the phrase grounding mask." ID="ID_610349271" CREATED="1676755332345" MODIFIED="1676755367474">
+<icon BUILTIN="attach"/>
+</node>
+<node TEXT="Yu Zeng cvpr2023" ID="ID_1043160911" CREATED="1676755255013" MODIFIED="1676755258618"/>
+<node TEXT="MultiDiffusion: Fusing Diffusion Paths for Controlled Image Generation" ID="ID_1179630063" CREATED="1676755258972" MODIFIED="1676755277235">
+<icon BUILTIN="pencil"/>
 </node>
 </node>
 </node>
@@ -1608,89 +1713,14 @@
 </node>
 </node>
 </node>
-</node>
-<node TEXT="Text-to-Image Synthesis" FOLDED="true" POSITION="right" ID="ID_534441759" CREATED="1675045086637" MODIFIED="1676254056222">
-<edge COLOR="#00007c"/>
-<node TEXT="Dall E 2" ID="ID_1555270559" CREATED="1675045202469" MODIFIED="1675045213095">
-<node TEXT="Hierarchical Text-Conditional Image Generation with CLIP Latents" ID="ID_246970714" CREATED="1675045215025" MODIFIED="1675045359919">
-<icon BUILTIN="messagebox_warning"/>
-<node TEXT="high resource consumption" ID="ID_772611272" CREATED="1675045538828" MODIFIED="1675045565586">
-<icon BUILTIN="attach"/>
-</node>
-<node TEXT="Can quickly and efficiently provide stock for graphic designers. this means a lot to companies like adobe." ID="ID_1214590279" CREATED="1675045884794" MODIFIED="1675045936956">
-<icon BUILTIN="attach"/>
-</node>
-<node TEXT="influential because it basically ended the previous paradigms for text-image retrieval methods, like visual-semantic embedding" ID="ID_1796634553" CREATED="1675045485299" MODIFIED="1675045533790">
-<icon BUILTIN="yes"/>
-<node TEXT="The semantic property of the CLIP embedding is too good." ID="ID_1675443039" CREATED="1675048194214" MODIFIED="1675048209632"/>
-<node TEXT="Contrastive multi-modal embedding learning." ID="ID_1972538665" CREATED="1675048209874" MODIFIED="1675048260829"/>
-<node TEXT="impact self-supervised learning field as well" ID="ID_1441414889" CREATED="1675048287321" MODIFIED="1675048299612"/>
-</node>
-<node TEXT="two stage model" ID="ID_984750206" CREATED="1675045404050" MODIFIED="1675045408105">
-<node TEXT="relies on pre-trained CLIP embeddings" ID="ID_1517818079" CREATED="1675045379952" MODIFIED="1675047994683">
-<icon BUILTIN="yes"/>
-</node>
-<node TEXT="a prior that generates a CLIP image embedding given a text caption" ID="ID_67220351" CREATED="1675045408663" MODIFIED="1675045422303"/>
-<node TEXT="a decoder that generates an image conditioned on the image embedding" ID="ID_327096186" CREATED="1675045422479" MODIFIED="1675045433728"/>
-</node>
-<node TEXT="observations" ID="ID_822843052" CREATED="1675048557191" MODIFIED="1675048559423">
-<node TEXT="explicitly generating image representations improves diversity and photorealism" ID="ID_1050226435" CREATED="1675048559935" MODIFIED="1675048576658"/>
-</node>
-</node>
-</node>
-<node TEXT="StyleGAN-T" ID="ID_725758643" CREATED="1675304094058" MODIFIED="1675304096898">
-<node TEXT="StyleGAN-T: Unlocking the Power of GANs for Fast Large-Scale Text-to-Image Synthesis" ID="ID_1952479944" CREATED="1675304097298" MODIFIED="1675304103833">
-<icon BUILTIN="unchecked"/>
-<node TEXT="Nvidia" ID="ID_974489067" CREATED="1675304106028" MODIFIED="1675304107496"/>
-<node TEXT="GAN can be faster than diffusion models. But it still cannot beat diffusion model in terms of FID. Some generation tasks do not require the system to be real-time. Some may require real-time response, but that kind of application sounds like far away from normal people" ID="ID_1729035487" CREATED="1675304235023" MODIFIED="1675304320613">
+<node TEXT="Audio + Visual" ID="ID_830074287" CREATED="1676756045382" MODIFIED="1676756054559">
+<node TEXT="Audio-Visual Contrastive Learning with Temporal Self-Supervision" ID="ID_764350881" CREATED="1676756054845" MODIFIED="1676756060070">
+<node TEXT="AAAI23" ID="ID_1480921324" CREATED="1676756061056" MODIFIED="1676756063103"/>
+<node TEXT="the idea is straightforward." ID="ID_297356427" CREATED="1676756181881" MODIFIED="1676756186386"/>
+<node TEXT="but it is weird that there is no contrastive term almong audio clips" ID="ID_502301076" CREATED="1676756186786" MODIFIED="1676756213453">
 <icon BUILTIN="attach"/>
 </node>
 </node>
-</node>
-</node>
-<node TEXT="Image Manipulation" FOLDED="true" POSITION="right" ID="ID_904035504" CREATED="1675304201992" MODIFIED="1676254049394">
-<edge COLOR="#7c0000"/>
-<node TEXT="Style transfer" ID="ID_3432368" CREATED="1676254033527" MODIFIED="1676254035934">
-<node TEXT="A Style-Based Generator Architecture for Generative Adversarial Networks" ID="ID_19629646" CREATED="1675304213086" MODIFIED="1675304216108">
-<icon BUILTIN="unchecked"/>
-</node>
-</node>
-<node TEXT="text-guided" ID="ID_1528570078" CREATED="1676254101004" MODIFIED="1676254103531">
-<node TEXT="CLIPVG: Text-Guided Image Manipulation Using Differentiable Vector Graphics" ID="ID_1526385769" CREATED="1676254105459" MODIFIED="1676254110556">
-<node TEXT="AAAI23" ID="ID_431547750" CREATED="1676254111062" MODIFIED="1676254112598"/>
-</node>
-</node>
-</node>
-<node TEXT="LLM: Large Language Model (LLM)" FOLDED="true" POSITION="right" ID="ID_1735833052" CREATED="1675287989836" MODIFIED="1676562874800">
-<edge COLOR="#00ff00"/>
-<node TEXT="BERT" ID="ID_676603491" CREATED="1676260264280" MODIFIED="1676260265477"/>
-<node TEXT="GPT3" ID="ID_252935248" CREATED="1676260186407" MODIFIED="1676260188123"/>
-<node TEXT="GPT4" ID="ID_1419163353" CREATED="1676260188792" MODIFIED="1676260190103"/>
-<node TEXT="ChatGPT" ID="ID_929371264" CREATED="1675287998205" MODIFIED="1675288002483">
-<node TEXT="Main" ID="ID_1521352916" CREATED="1675288009231" MODIFIED="1675288011622">
-<node TEXT="ChatGPT" ID="ID_937804408" CREATED="1675288029662" MODIFIED="1675288032098"/>
-<node TEXT="Math" ID="ID_1908497848" CREATED="1675288022192" MODIFIED="1675288024335">
-<node TEXT="Mathematical Capabilities of ChatGPT" ID="ID_65222373" CREATED="1675288051262" MODIFIED="1675288057051">
-<icon BUILTIN="pencil"/>
-<node TEXT="a dataset." ID="ID_1087097384" CREATED="1675288058034" MODIFIED="1675288063193"/>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="Detection" ID="ID_398704158" CREATED="1675288011819" MODIFIED="1675288013535">
-<node TEXT="Arms race?" ID="ID_516276125" CREATED="1676227885257" MODIFIED="1676227896882">
-<icon BUILTIN="attach"/>
-</node>
-<node TEXT="direct feature" ID="ID_1682794622" CREATED="1676260237977" MODIFIED="1676260253353">
-<node TEXT="DetectGPT: Zero-Shot Machine-Generated Text Detection using Probability Curvature" ID="ID_586336814" CREATED="1676260234916" MODIFIED="1676260308498">
-<icon BUILTIN="unchecked"/>
-</node>
-</node>
-<node TEXT="watermark" ID="ID_919169453" CREATED="1675444907732" MODIFIED="1676260246600"/>
-</node>
-<node TEXT="Counter Detection?" ID="ID_1319347872" CREATED="1675288013731" MODIFIED="1675288021905">
-<node TEXT="attack detector" ID="ID_890431519" CREATED="1675295663510" MODIFIED="1675295666328"/>
-<node TEXT="How to genrate realistic human text? there is FID for image." ID="ID_1601127519" CREATED="1675295648525" MODIFIED="1675295679716"/>
 </node>
 </node>
 <node TEXT="---------------------------------------------------------------------" POSITION="right" ID="ID_1447965157" CREATED="1675045082295" MODIFIED="1675049443238">
@@ -3643,9 +3673,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Attack &amp; Defense in Deep Metric Learning" FOLDED="true" POSITION="right" ID="ID_67713290" CREATED="1561352085890" MODIFIED="1676259619322">
-<icon BUILTIN="idea"/>
-<font NAME="Gentium" SIZE="10" BOLD="true"/>
+<node TEXT="Attack &amp; Defense in Deep Metric Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_67713290" CREATED="1561352085890" MODIFIED="1676756007028">
 <edge COLOR="#ff00ff"/>
 <node TEXT="1806.04425: Ranking Robustness Under Ad" ID="ID_562405105" CREATED="1561555589182" MODIFIED="1636485900673">
 <icon BUILTIN="button_cancel"/>
@@ -3901,7 +3929,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Transformer.Architecture" ID="ID_1624253019" CREATED="1642438779008" MODIFIED="1676256210619">
+<node TEXT="Transformer.Architecture" FOLDED="true" ID="ID_1624253019" CREATED="1642438779008" MODIFIED="1676256210619">
 <font BOLD="true"/>
 <node TEXT="Attention Mechanism" ID="ID_813294848" CREATED="1618848447541" MODIFIED="1645045062292">
 <icon BUILTIN="info"/>
@@ -3941,6 +3969,11 @@
 <node TEXT="MiniViT" ID="ID_1122712443" CREATED="1652406434654" MODIFIED="1652406437076">
 <node TEXT="MiniViT: Compressing Vision Transformers with Weight Multiplexing" ID="ID_1344779054" CREATED="1652406431608" MODIFIED="1652406432695">
 <node TEXT="CVPR22" ID="ID_158269939" CREATED="1652406439183" MODIFIED="1652406440398"/>
+</node>
+</node>
+<node TEXT="+Theoretical Support" ID="ID_145913041" CREATED="1676755788714" MODIFIED="1676755799228">
+<node TEXT="Energy Transformer" ID="ID_1902767465" CREATED="1676755799559" MODIFIED="1676755804625">
+<icon BUILTIN="pencil"/>
 </node>
 </node>
 </node>
@@ -4614,7 +4647,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Datasets" ID="ID_1041810112" CREATED="1676320299111" MODIFIED="1676320300769">
+<node TEXT="Datasets" FOLDED="true" ID="ID_1041810112" CREATED="1676320299111" MODIFIED="1676320300769">
 <node TEXT="Pascal VOC" ID="ID_671764536" CREATED="1676320458750" MODIFIED="1676320462227"/>
 <node TEXT="COCO" ID="ID_1985912249" CREATED="1676320462373" MODIFIED="1676320463151"/>
 <node TEXT="Objects 365" ID="ID_1975960989" CREATED="1676320463381" MODIFIED="1676320466431">
@@ -5000,6 +5033,10 @@
 <icon BUILTIN="pencil"/>
 <node TEXT="Object queries matter" ID="ID_827229684" CREATED="1659200502182" MODIFIED="1659200507592"/>
 </node>
+<node TEXT="Team DETR: Guide Queries as a Professional Team in Detection Transformers" ID="ID_494790190" CREATED="1676758427231" MODIFIED="1676758429718">
+<icon BUILTIN="pencil"/>
+<node TEXT="learned queries" ID="ID_375635071" CREATED="1676758431078" MODIFIED="1676758433313"/>
+</node>
 </node>
 </node>
 <node TEXT="?-stage" FOLDED="true" ID="ID_1254657210" CREATED="1654102722886" MODIFIED="1659198803602">
@@ -5077,7 +5114,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Benchmarking" ID="ID_1654847408" CREATED="1676321514456" MODIFIED="1676321518111">
+<node TEXT="Benchmarking" FOLDED="true" ID="ID_1654847408" CREATED="1676321514456" MODIFIED="1676321518111">
 <node TEXT="Speed/accuracy trade-offs for modern convolutional object detectors" ID="ID_1624440628" CREATED="1653969595497" MODIFIED="1654102461440">
 <icon BUILTIN="unchecked"/>
 <icon BUILTIN="button_ok"/>
@@ -5903,6 +5940,11 @@
 <node TEXT="Defending against Backdoors in Federated Learning with Robust Learning Rate AAAI21" ID="ID_1421685316" CREATED="1643036746252" MODIFIED="1643036830465">
 <icon BUILTIN="unchecked"/>
 <node TEXT="at high level, our defense is based on carefully adjusting the aggregation server&apos;s learning rate, per dimension and per round, based on the sign infirmation of agents&apos; updates" ID="ID_735008317" CREATED="1643036783427" MODIFIED="1643036817264"/>
+</node>
+</node>
+<node TEXT="hyper-Parameter search" ID="ID_673796588" CREATED="1676753860012" MODIFIED="1676753879998">
+<node TEXT="Hyperparameter Search Is All You Need For Training-Agnostic Backdoor Robustness" ID="ID_1257422576" CREATED="1676753888158" MODIFIED="1676753891016">
+<icon BUILTIN="pencil"/>
 </node>
 </node>
 <node TEXT="Filtering" ID="ID_1962822246" CREATED="1646924812678" MODIFIED="1646924814463">
@@ -6780,6 +6822,12 @@
 <node TEXT="Alan Yuille" ID="ID_1762581450" CREATED="1675303667361" MODIFIED="1675303672001"/>
 </node>
 </node>
+<node TEXT="computer aided diagnnosis" ID="ID_1246105715" CREATED="1676756869888" MODIFIED="1676756876891">
+<node TEXT="ChatCAD: Interactive Computer-Aided Diagnosis on Medical Image using Large Language Models" ID="ID_1497724570" CREATED="1676756888405" MODIFIED="1676756891780">
+<icon BUILTIN="pencil"/>
+<node TEXT="multiple models write prompts from different aspects. Then we let chatgpt to summarize" ID="ID_1647640307" CREATED="1676756893219" MODIFIED="1676756913858"/>
+</node>
+</node>
 </node>
 <node TEXT="Model Compression" FOLDED="true" POSITION="left" ID="ID_325472209" CREATED="1649171031656" MODIFIED="1649171034930">
 <edge COLOR="#00007c"/>
@@ -6904,6 +6952,15 @@
 </node>
 <node TEXT="Unimodal-Concentrated Loss: Fully Adaptive Label Distribution Learning for Ordinal Regression" ID="ID_1643259552" CREATED="1649623420719" MODIFIED="1649623421988">
 <node TEXT="CVPR22" ID="ID_1439656873" CREATED="1649623426704" MODIFIED="1649623428734"/>
+</node>
+</node>
+<node TEXT="Phrase Grounding" FOLDED="true" POSITION="left" ID="ID_1776879731" CREATED="1676756426456" MODIFIED="1676756429770">
+<edge COLOR="#00ff00"/>
+<node TEXT="also known as referring image segmentation" ID="ID_1417531331" CREATED="1676756510853" MODIFIED="1676756522330">
+<icon BUILTIN="info"/>
+</node>
+<node TEXT="PolyFormer: Referring Image Segmentation as Sequential Polygon Generation" ID="ID_537362781" CREATED="1676756435929" MODIFIED="1676756439989">
+<icon BUILTIN="pencil"/>
 </node>
 </node>
 <node TEXT="Privacy ML" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="left" ID="ID_1174539463" CREATED="1590802979023" MODIFIED="1676254295179">
@@ -7196,6 +7253,9 @@
 <node TEXT="Super-Resolution" FOLDED="true" POSITION="left" ID="ID_594530626" CREATED="1676259559215" MODIFIED="1676259562169">
 <edge COLOR="#ff0000"/>
 <node TEXT="Meta-SR" ID="ID_641411943" CREATED="1676259562365" MODIFIED="1676259564576"/>
+<node TEXT="Denoising Diffusion Probabilistic Models for Robust Image Super-Resolution in the Wild" ID="ID_100061264" CREATED="1676755918517" MODIFIED="1676755920936">
+<icon BUILTIN="pencil"/>
+</node>
 </node>
 <node TEXT="Scene/Knowledge Graph" FOLDED="true" POSITION="left" ID="ID_691684807" CREATED="1582940936028" MODIFIED="1653357364861">
 <font NAME="Gentium" BOLD="false"/>
