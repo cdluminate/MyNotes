@@ -1590,7 +1590,7 @@
 <icon BUILTIN="attach"/>
 </node>
 </node>
-<node TEXT="SSL :: Prompting" FOLDED="true" POSITION="right" ID="ID_1318848578" CREATED="1675367072095" MODIFIED="1676563911026">
+<node TEXT="SSL :: Prompting" POSITION="right" ID="ID_1318848578" CREATED="1675367072095" MODIFIED="1676563911026">
 <edge COLOR="#7c007c"/>
 <node TEXT="Closes the gap between pre-training and fine-tuning" ID="ID_302094227" CREATED="1676563861861" MODIFIED="1676563873900">
 <icon BUILTIN="info"/>
@@ -1623,6 +1623,13 @@
 <node TEXT="Adapter" ID="ID_144633425" CREATED="1676754803503" MODIFIED="1676754804859">
 <node TEXT="Towards Efficient Visual Adaption via Structural Re-parameterization" ID="ID_1608505464" CREATED="1676754762531" MODIFIED="1676754769759">
 <icon BUILTIN="pencil"/>
+</node>
+<node TEXT="UniAdapter: Unified Parameter-Efficient Transfer Learning for Cross-modal Modeling" ID="ID_1639232125" CREATED="1676768334233" MODIFIED="1676769345728">
+<icon BUILTIN="pencil"/>
+<icon BUILTIN="messagebox_warning"/>
+<node TEXT="vision+language" ID="ID_1842585478" CREATED="1676768347305" MODIFIED="1676768349809"/>
+<node TEXT="beats fine-tuning" ID="ID_534783510" CREATED="1676768338126" MODIFIED="1676768342609"/>
+<node TEXT="introduces UniAdapter for encoder, query, and decoder." ID="ID_1034684149" CREATED="1676769384401" MODIFIED="1676769401799"/>
 </node>
 </node>
 </node>
