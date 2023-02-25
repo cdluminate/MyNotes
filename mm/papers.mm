@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="Memo" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1675045349693" STYLE="oval">
 <font NAME="Gentium" SIZE="18" ITALIC="false"/>
-<hook NAME="MapStyle" zoom="3.341">
+<hook NAME="MapStyle" zoom="1.521">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="168" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="170" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1675045289036">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -574,7 +574,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Research Radar" LOCALIZED_STYLE_REF="styles.topic" ID="ID_860684520" CREATED="1645122829972" MODIFIED="1675042093373">
+<node TEXT="Research Radar" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_860684520" CREATED="1645122829972" MODIFIED="1675042093373">
 <icon BUILTIN="wizard"/>
 <node TEXT="Does sampling matter in adversarial training of classifiers?" ID="ID_164735611" CREATED="1646924871981" MODIFIED="1646924880743"/>
 <node TEXT="CLIP and adversarial robustness?" ID="ID_1525069" CREATED="1647048660346" MODIFIED="1647048671826">
@@ -697,7 +697,7 @@
 <icon BUILTIN="help"/>
 </node>
 </node>
-<node TEXT="Blocked" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_975414650" CREATED="1646333166651" MODIFIED="1675042096454">
+<node TEXT="Blocked" LOCALIZED_STYLE_REF="styles.topic" ID="ID_975414650" CREATED="1646333166651" MODIFIED="1675042096454">
 <icon BUILTIN="bell"/>
 <node TEXT="RobRank (pending:TPAMI)" LOCALIZED_STYLE_REF="styles.topic" ID="ID_619314852" CREATED="1630684222251" MODIFIED="1653343942778">
 <icon BUILTIN="bookmark"/>
@@ -1392,11 +1392,15 @@
 <node TEXT="self-supervised learning in object-level granularity" ID="ID_1941963419" CREATED="1653612834249" MODIFIED="1675042192753">
 <icon BUILTIN="help"/>
 </node>
-<node TEXT="ARC-feature guided base architecture" FOLDED="true" ID="ID_479726873" CREATED="1656104437328" MODIFIED="1675042193408">
+<node TEXT="ARC-feature guided base architecture" ID="ID_479726873" CREATED="1656104437328" MODIFIED="1675042193408">
 <icon BUILTIN="help"/>
 <node TEXT="inspired by arc feature" ID="ID_1866226513" CREATED="1656104443021" MODIFIED="1656104447528"/>
 <node TEXT="do models that transition faster from non-linear to linear have more learning capability?" ID="ID_195919473" CREATED="1656104447768" MODIFIED="1656104471154"/>
 <node TEXT="Gradient Consistency Guided Model Architecture Design" ID="ID_757089613" CREATED="1656104476612" MODIFIED="1656104500289"/>
+<node TEXT="DEEP TRANSFORMERS WITHOUT SHORTCUTS:&#xa;MODIFYING SELF-ATTENTION FOR FAITHFUL SIGNAL&#xa;PROPAGATION" ID="ID_959255706" CREATED="1677266260174" MODIFIED="1677266260998">
+<node TEXT="ICLR23" ID="ID_1433363555" CREATED="1677266262109" MODIFIED="1677266263714"/>
+<node TEXT="better architecture should suffer less from rank collapse in the kernels" ID="ID_1350604858" CREATED="1677266286433" MODIFIED="1677266300887"/>
+</node>
 </node>
 <node TEXT="deep metric learning + attention" FOLDED="true" ID="ID_1626910932" CREATED="1656104543033" MODIFIED="1675042194036">
 <icon BUILTIN="help"/>
@@ -1486,7 +1490,11 @@
 <node TEXT="calidet: mode bias embed modulate" ID="ID_916597609" CREATED="1676575740837" MODIFIED="1676575764020"/>
 <node TEXT="calidet: dynamic prompt creator instead of static prompts" ID="ID_1934543999" CREATED="1676562910436" MODIFIED="1676562929252"/>
 <node TEXT="calidet: epr fine mode" ID="ID_1672348623" CREATED="1676575770494" MODIFIED="1676575774285"/>
-<node TEXT="prompt in FL for heterogenity" ID="ID_1219436467" CREATED="1676575780374" MODIFIED="1676582406658"/>
+<node TEXT="prompt in FL for heterogenity" ID="ID_1219436467" CREATED="1676575780374" MODIFIED="1676582406658">
+<node TEXT="https://github.com/intel/openfl/blob/develop/openfl-tutorials/Federated_FedProx_PyTorch_MNIST_Tutorial.ipynb" ID="ID_1826313692" CREATED="1677265503404" MODIFIED="1677265507960"/>
+<node TEXT="https://github.com/vaseline555/Federated-Averaging-PyTorch" ID="ID_1650767065" CREATED="1677265513823" MODIFIED="1677265514688"/>
+<node TEXT="https://github.com/JYWa/FedNova" ID="ID_949882380" CREATED="1677265534163" MODIFIED="1677265534931"/>
+</node>
 <node TEXT="mixup family and adversarial training?" ID="ID_1102550802" CREATED="1676582425675" MODIFIED="1676582432051"/>
 <node TEXT="is contrastive itself a limitation?" ID="ID_332707487" CREATED="1676582545983" MODIFIED="1676582560411">
 <node TEXT="combine with reconstruction?" ID="ID_569789502" CREATED="1676582561395" MODIFIED="1676582566242"/>
@@ -1590,7 +1598,7 @@
 <icon BUILTIN="attach"/>
 </node>
 </node>
-<node TEXT="SSL :: Prompting" POSITION="right" ID="ID_1318848578" CREATED="1675367072095" MODIFIED="1676563911026">
+<node TEXT="SSL :: Prompting" FOLDED="true" POSITION="right" ID="ID_1318848578" CREATED="1675367072095" MODIFIED="1676563911026">
 <edge COLOR="#7c007c"/>
 <node TEXT="Closes the gap between pre-training and fine-tuning" ID="ID_302094227" CREATED="1676563861861" MODIFIED="1676563873900">
 <icon BUILTIN="info"/>
@@ -2707,7 +2715,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
+<node TEXT="Adversarial Defense: Classification" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1647265138437">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_1556055508" CREATED="1648173325254" MODIFIED="1648173329845">
 <icon BUILTIN="info"/>
@@ -2758,7 +2766,7 @@
 <node TEXT="ECML-PKDD 22" ID="ID_234027639" CREATED="1659200214013" MODIFIED="1659200220502"/>
 </node>
 </node>
-<node TEXT="Adversarial Training" FOLDED="true" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1648174116710">
+<node TEXT="Adversarial Training" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1648174116710">
 <font BOLD="true"/>
 <node TEXT="Survey" ID="ID_178248607" CREATED="1642431445724" MODIFIED="1649101870385">
 <icon BUILTIN="mindmap"/>
@@ -3031,6 +3039,14 @@
 <node TEXT="Adversarial Robustness Against the Union of Multiple Perturbation Models" ID="ID_1890490809" CREATED="1676258928717" MODIFIED="1676258933076">
 <node TEXT="ICML20" ID="ID_655022088" CREATED="1676258934972" MODIFIED="1676258936463"/>
 <node TEXT="simultaneously robust in l-inf, l-1, l2 configs" ID="ID_708824682" CREATED="1676258936613" MODIFIED="1676258947353"/>
+</node>
+</node>
+<node TEXT="+Ensemble/Soup" ID="ID_297204783" CREATED="1677273686648" MODIFIED="1677273690450">
+<node TEXT="Seasoning Model Soups for Robustness&#xa;to Adversarial and Natural Distribution Shifts" ID="ID_191605479" CREATED="1677273691103" MODIFIED="1677273700178">
+<icon BUILTIN="pencil"/>
+<node TEXT="Sven Gowal" ID="ID_1581842575" CREATED="1677273961308" MODIFIED="1677273966717"/>
+<node TEXT="mix of different base models" ID="ID_43238383" CREATED="1677273728135" MODIFIED="1677273734456"/>
+<node TEXT="cifar10 + imagenet" ID="ID_199751334" CREATED="1677273969048" MODIFIED="1677273972889"/>
 </node>
 </node>
 <node TEXT="not-famous" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1872674435" CREATED="1642431357219" MODIFIED="1647050857744">
@@ -6499,9 +6515,15 @@
 <node TEXT="low hanging fruits are basically gone. there are some unresolved corner cases. This is going towards an engineering problem direction." ID="ID_1703063236" CREATED="1675049770366" MODIFIED="1675739832428">
 <icon BUILTIN="attach"/>
 </node>
+<node TEXT="Important Baselines" ID="ID_814985517" CREATED="1677265600561" MODIFIED="1677265604030">
 <node TEXT="FedAvg" ID="ID_485649293" CREATED="1675049758554" MODIFIED="1675049762453"/>
+<node TEXT="FedProx" ID="ID_356723584" CREATED="1677265595295" MODIFIED="1677265596861"/>
+</node>
+<node TEXT="top-conf sotas" ID="ID_1219472155" CREATED="1677265608189" MODIFIED="1677265620574">
+<node TEXT="FedNova" ID="ID_1485537673" CREATED="1677265588546" MODIFIED="1677265592562"/>
 <node TEXT="SphereFed: Hyperspherical Federated Learning" ID="ID_1881740651" CREATED="1658618678515" MODIFIED="1658618679170">
 <node TEXT="ECCV22" ID="ID_624140530" CREATED="1658618681127" MODIFIED="1658618682432"/>
+</node>
 </node>
 </node>
 <node TEXT="Gradient Surgery" FOLDED="true" POSITION="left" ID="ID_1632297675" CREATED="1654104115851" MODIFIED="1654104119730">
@@ -6757,7 +6779,33 @@
 </node>
 </node>
 </node>
-<node TEXT="Learning" FOLDED="true" POSITION="left" ID="ID_876811772" CREATED="1583309966895" MODIFIED="1642394191143">
+<node TEXT="Image Synthesis" POSITION="left" ID="ID_372386304" CREATED="1677265731040" MODIFIED="1677265733841">
+<edge COLOR="#00ffff"/>
+<node TEXT="StyleGAN" ID="ID_1362123487" CREATED="1677265739992" MODIFIED="1677265742253">
+<node TEXT="A Style-Based Generator Architecture for Generative Adversarial Networks" ID="ID_1591507547" CREATED="1677265742809" MODIFIED="1677265756977"/>
+</node>
+</node>
+<node TEXT="Meta Learning" FOLDED="true" POSITION="left" ID="ID_929306258" CREATED="1583378173046" MODIFIED="1677265041408">
+<font NAME="Gentium" BOLD="false"/>
+<edge COLOR="#ff00ff"/>
+<node TEXT="2002.04162: incremental learning for metric-based meta-learniers" ID="ID_415175776" CREATED="1583378216948" MODIFIED="1587526864942">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="meta-sr" ID="ID_1118787532" CREATED="1676259542003" MODIFIED="1676259543988"/>
+<node TEXT="MAML" ID="ID_1684879216" CREATED="1677265150586" MODIFIED="1677265152517">
+<node TEXT="Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks" ID="ID_1680498840" CREATED="1677265153892" MODIFIED="1677265467516">
+<icon BUILTIN="checked"/>
+<icon BUILTIN="bookmark"/>
+<node TEXT="ICML17" ID="ID_929161646" CREATED="1677265156432" MODIFIED="1677265158335"/>
+<node TEXT="in fact FedAvg is very similar to this" ID="ID_97979454" CREATED="1677265169731" MODIFIED="1677265187471"/>
+<node TEXT="the goal of meta-learning is to train a model on a variety of learning tasks, such that it can solve new learning tasks using only a small number of training samples" ID="ID_1958330240" CREATED="1677265401501" MODIFIED="1677265426468"/>
+<node TEXT="generally, tasks used for meta-testing are held out during meta-training" ID="ID_657097218" CREATED="1677265209038" MODIFIED="1677265224720">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Learning" LOCALIZED_STYLE_REF="defaultstyle.floating" FOLDED="true" POSITION="left" ID="ID_876811772" CREATED="1583309966895" MODIFIED="1677265582050">
 <font NAME="Gentium" SIZE="10" BOLD="false"/>
 <edge COLOR="#7c7c00"/>
 <node TEXT="Federated Learning (distributed learning; protecting privacy)" ID="ID_647280840" CREATED="1583309969788" MODIFIED="1587526864937">
@@ -6783,13 +6831,6 @@
 </node>
 <node TEXT="Active Learning" ID="ID_853331882" CREATED="1608876358857" MODIFIED="1608876362122">
 <node TEXT="2012.10467&#xa; Minimax Active Learning" ID="ID_1952916971" CREATED="1608876363892" MODIFIED="1608876372836"/>
-</node>
-<node TEXT="Meta Learning" ID="ID_929306258" CREATED="1583378173046" MODIFIED="1587526864942">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="2002.04162: incremental learning for metric-based meta-learniers" ID="ID_415175776" CREATED="1583378216948" MODIFIED="1587526864942">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="meta-sr" ID="ID_1118787532" CREATED="1676259542003" MODIFIED="1676259543988"/>
 </node>
 <node TEXT="Life long learning" ID="ID_876193623" CREATED="1659196615332" MODIFIED="1659196619027">
 <node TEXT="Learning with Recoverable Forgetting" ID="ID_1427700540" CREATED="1659196620033" MODIFIED="1659196621031">
@@ -6836,8 +6877,9 @@
 </node>
 </node>
 </node>
-<node TEXT="Model Compression" FOLDED="true" POSITION="left" ID="ID_325472209" CREATED="1649171031656" MODIFIED="1649171034930">
+<node TEXT="Model Compression" POSITION="left" ID="ID_325472209" CREATED="1649171031656" MODIFIED="1649171034930">
 <edge COLOR="#00007c"/>
+<node TEXT="distillation" ID="ID_1526826713" CREATED="1677266367499" MODIFIED="1677266369626"/>
 <node TEXT="Interspace Pruning: Using Adaptive Filter Representations to Improve Training of Sparse CNNs" ID="ID_1136994469" CREATED="1649171035811" MODIFIED="1649171042670">
 <node TEXT="CVPR22" ID="ID_1181157881" CREATED="1649171043941" MODIFIED="1649171045542"/>
 </node>
