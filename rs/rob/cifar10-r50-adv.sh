@@ -2,7 +2,7 @@
 set -e
 set -x
 export NCCL_P2P_DISABLE=1
-export CUDA_VISIBLE_DEVICES=6
+export CUDA_VISIBLE_DEVICES=3,4,5,6
 LOGDIR=${0%.sh}
 if ! test -d ${LOGDIR}; then
 	mkdir -p ${LOGDIR}
