@@ -1477,13 +1477,21 @@
 </node>
 <node TEXT="Arch :: Transformer (General)" FOLDED="true" POSITION="right" ID="ID_635837322" CREATED="1680201811805" MODIFIED="1680202161288">
 <edge COLOR="#00ffff"/>
-<node TEXT="Transformer" ID="ID_1241800952" CREATED="1680202163081" MODIFIED="1680202165135"/>
+<node TEXT="Transformer" ID="ID_1241800952" CREATED="1680202163081" MODIFIED="1680202165135">
+<node TEXT="Attention is all you need 2017" ID="ID_778533107" CREATED="1680203776000" MODIFIED="1680203780484"/>
+</node>
+<node TEXT="Sparse Transformer" ID="ID_377101541" CREATED="1680203781581" MODIFIED="1680203784984">
+<node TEXT="Generating Long Sequences with Sparse Transformers" ID="ID_833258058" CREATED="1680203789298" MODIFIED="1680203790086">
+<node TEXT="sequence length ... time and memory" ID="ID_29916891" CREATED="1680203794834" MODIFIED="1680203803300"/>
+<node TEXT="complexity from n^2 to n\sqrt{n}" ID="ID_1627315302" CREATED="1680203818999" MODIFIED="1680203839413"/>
+</node>
+</node>
 <node TEXT="RoFormer: Enhanced Transformer with Rotary Position Embedding" ID="ID_214470439" CREATED="1680201821637" MODIFIED="1680201828152">
 <icon BUILTIN="pencil"/>
 <node TEXT="used by llama" ID="ID_1089381409" CREATED="1680202169066" MODIFIED="1680202172381"/>
 </node>
 </node>
-<node TEXT="SSL :: Large Language Model (LLM)" POSITION="right" ID="ID_1735833052" CREATED="1675287989836" MODIFIED="1680015447215">
+<node TEXT="SSL :: Large Language Model (LLM)" FOLDED="true" POSITION="right" ID="ID_1735833052" CREATED="1675287989836" MODIFIED="1680015447215">
 <edge COLOR="#00ff00"/>
 <node TEXT="self-supervise by reconstruction" ID="ID_1462056670" CREATED="1680015462579" MODIFIED="1680015470175">
 <icon BUILTIN="info"/>
@@ -1652,7 +1660,12 @@
 <icon BUILTIN="info"/>
 </node>
 </node>
-<node TEXT="Adapter" ID="ID_144633425" CREATED="1676754803503" MODIFIED="1676754804859">
+<node TEXT="Adapter :: Language" ID="ID_144633425" CREATED="1676754803503" MODIFIED="1680219526577">
+<node TEXT="Parameter-Efficient Transfer Learning for NLP" ID="ID_1361039349" CREATED="1680219584737" MODIFIED="1680219592074">
+<icon BUILTIN="unchecked"/>
+<node TEXT="ICML" ID="ID_1990949618" CREATED="1680219593287" MODIFIED="1680219594417"/>
+<node TEXT="Source of adapter" ID="ID_284289350" CREATED="1680219595221" MODIFIED="1680219603262"/>
+</node>
 <node TEXT="Towards Efficient Visual Adaption via Structural Re-parameterization" ID="ID_1608505464" CREATED="1676754762531" MODIFIED="1676754769759">
 <icon BUILTIN="pencil"/>
 </node>
@@ -1663,6 +1676,9 @@
 <node TEXT="beats fine-tuning" ID="ID_534783510" CREATED="1676768338126" MODIFIED="1676768342609"/>
 <node TEXT="introduces UniAdapter for encoder, query, and decoder." ID="ID_1034684149" CREATED="1676769384401" MODIFIED="1676769401799"/>
 </node>
+</node>
+<node TEXT="Adapter :: Vision" ID="ID_947469827" CREATED="1680219527201" MODIFIED="1680219534565">
+<node TEXT="AdaptFormer: Adapting Vision Transformers for&#xa;Scalable Visual Recognition" ID="ID_700158606" CREATED="1680220283588" MODIFIED="1680220284468"/>
 </node>
 </node>
 <node TEXT="Text-to-Image Synthesis" FOLDED="true" POSITION="right" ID="ID_534441759" CREATED="1675045086637" MODIFIED="1676254056222">
@@ -1741,6 +1757,12 @@
 </node>
 <node TEXT="ALIGN" ID="ID_883337544" CREATED="1646945681124" MODIFIED="1646945684050"/>
 <node TEXT="FILIP" ID="ID_712868502" CREATED="1646945686665" MODIFIED="1646945695226"/>
+<node TEXT="GLIP" ID="ID_201864930" CREATED="1680218963318" MODIFIED="1680218965146">
+<node TEXT="CVPR22, Microsoft" ID="ID_1754094226" CREATED="1680218967750" MODIFIED="1680218994082"/>
+<node TEXT="Grounded Language-Image Pre-training" ID="ID_1032122554" CREATED="1680218973915" MODIFIED="1680218979534">
+<icon BUILTIN="bookmark"/>
+</node>
+</node>
 <node TEXT="Conditional Prompt Learning for Vision-Language Models" ID="ID_1017315336" CREATED="1648394772288" MODIFIED="1648394773329">
 <node TEXT="CVPR22" ID="ID_1728549709" CREATED="1648394774156" MODIFIED="1648394775509"/>
 </node>
@@ -1880,7 +1902,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Transfer Attack (untargeted)" ID="ID_142248765" CREATED="1641678368814" MODIFIED="1676259342344">
+<node TEXT="Transferrability" ID="ID_142248765" CREATED="1641678368814" MODIFIED="1680220505902">
 <node TEXT="It is to some extent ridiculous to assume an overlap of the vulnerability space among different trained models. I have lost interest in the transferability. Defending against attacks is more important than developing new and marginally better transfer attacks." ID="ID_539973320" CREATED="1676256488396" MODIFIED="1676259290908">
 <icon BUILTIN="attach"/>
 <node TEXT="But according to the empirical results of the community, imagenet models indeed share some stupid common vulnerability space." ID="ID_1762438180" CREATED="1676256538121" MODIFIED="1676256561123"/>
@@ -1965,6 +1987,9 @@
 <node TEXT="Enhancing the Transferability via Feature-Momentum Adversarial Attack" ID="ID_1388592764" CREATED="1652404351334" MODIFIED="1652404353003">
 <icon BUILTIN="pencil"/>
 </node>
+<node TEXT="Minimizing Maximum Model Discrepancy for Transferable&#xa;Black-box Targeted Attacks" ID="ID_1550837597" CREATED="1672079615777" MODIFIED="1672079622103">
+<node TEXT="axv 2212" ID="ID_1042757284" CREATED="1672079670970" MODIFIED="1672079672978"/>
+</node>
 <node TEXT="Transferable Adversarial Attack based on Integrated Gradients" ID="ID_293565208" CREATED="1653859752677" MODIFIED="1653859764757">
 <icon BUILTIN="unchecked"/>
 <node TEXT="ICLR22" ID="ID_1384165963" CREATED="1653859766828" MODIFIED="1653859768539"/>
@@ -1983,10 +2008,10 @@
 <node TEXT="query prior-based method for fast gradient sign methods and improve their transferability using a few queries" ID="ID_27055622" CREATED="1653340537954" MODIFIED="1653340560913"/>
 </node>
 </node>
-</node>
-<node TEXT="Transfer Attack (targeted)" ID="ID_1579455963" CREATED="1672079658910" MODIFIED="1676259347654">
-<node TEXT="Minimizing Maximum Model Discrepancy for Transferable&#xa;Black-box Targeted Attacks" ID="ID_1550837597" CREATED="1672079615777" MODIFIED="1672079622103">
-<node TEXT="axv 2212" ID="ID_1042757284" CREATED="1672079670970" MODIFIED="1672079672978"/>
+<node TEXT="Making Substitute Models More Bayesian Can Enhance Transferability of Adversarial Examples" ID="ID_1771212848" CREATED="1680220456393" MODIFIED="1680220459186">
+<icon BUILTIN="unchecked"/>
+<node TEXT="ICLR23" ID="ID_1030441636" CREATED="1680220460262" MODIFIED="1680220462272"/>
+<node TEXT="looks like the Sota of transferrable attack" ID="ID_1218085080" CREATED="1680220462468" MODIFIED="1680220471519"/>
 </node>
 </node>
 <node TEXT="Universal Perturbation" ID="ID_883577858" CREATED="1641522438698" MODIFIED="1641522443789">
@@ -3907,7 +3932,7 @@
 <node TEXT="-------------------------------------------------------" POSITION="right" ID="ID_198111288" CREATED="1676254941135" MODIFIED="1676254944987">
 <edge COLOR="#7c7c00"/>
 </node>
-<node TEXT="Classification &amp; Backbone" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_98760508" CREATED="1642438760894" MODIFIED="1676256169396">
+<node TEXT="Img :: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_98760508" CREATED="1642438760894" MODIFIED="1680203951399">
 <edge COLOR="#7c7c00"/>
 <node TEXT="MLP" ID="ID_636086784" CREATED="1648181297496" MODIFIED="1648181311232">
 <font BOLD="true"/>
@@ -4258,9 +4283,8 @@
 </node>
 </node>
 </node>
-<node TEXT="Deep Metric Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_464750159" CREATED="1641242970936" MODIFIED="1676226993326">
+<node TEXT="Img :: Deep Metric Learning" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="right" ID="ID_464750159" CREATED="1641242970936" MODIFIED="1680203941631">
 <edge COLOR="#ff00ff"/>
-<font NAME="Gentium"/>
 <node TEXT="Survey" ID="ID_1192003468" CREATED="1641520461677" MODIFIED="1648175016651">
 <icon BUILTIN="info"/>
 <font NAME="Gentium"/>
@@ -4425,7 +4449,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Object Detection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1657404442110">
+<node TEXT="Img :: Object Detection" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="right" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1680203920130">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_674316746" CREATED="1653969587756" MODIFIED="1653969594381">
 <icon BUILTIN="mindmap"/>
@@ -4666,6 +4690,7 @@
 </node>
 </node>
 <node TEXT="CenterNet" ID="ID_1103406305" CREATED="1654537355701" MODIFIED="1654537359098">
+<node TEXT="point-based" ID="ID_1577951141" CREATED="1680217235201" MODIFIED="1680217238267"/>
 <node TEXT="CenterNet: Keypoint Triplets for Object Detection" ID="ID_653706233" CREATED="1655412326688" MODIFIED="1655412342540">
 <node TEXT="keypoint-based, anchor free" ID="ID_1518783440" CREATED="1655412344171" MODIFIED="1655412811212">
 <icon BUILTIN="info"/>
@@ -4679,8 +4704,11 @@
 <node TEXT="updates hand-crafted anchor assignment to &apos;free&apos; anchor matching by formulating detector training as a maximum likelihood estimation (MLE) procedure" ID="ID_905160337" CREATED="1655412849974" MODIFIED="1655412874741"/>
 </node>
 </node>
-<node TEXT="DETR Family" FOLDED="true" ID="ID_348406151" CREATED="1654113701876" MODIFIED="1659198797873">
+<node TEXT="DETR Family" ID="ID_348406151" CREATED="1654113701876" MODIFIED="1659198797873">
 <icon BUILTIN="gohome"/>
+<node TEXT="also called object query-based detectors" ID="ID_1745046240" CREATED="1680217864424" MODIFIED="1680217882612">
+<icon BUILTIN="info"/>
+</node>
 <node TEXT="DETR" FOLDED="true" ID="ID_1443953889" CREATED="1654537437342" MODIFIED="1656016862157">
 <icon BUILTIN="bookmark"/>
 <node TEXT="End-to-End Object Detection with Transformers" ID="ID_943659149" CREATED="1654116599499" MODIFIED="1656026504756">
@@ -4834,17 +4862,36 @@
 <node TEXT="PAMI?" ID="ID_1363668970" CREATED="1659195867673" MODIFIED="1659195871731"/>
 </node>
 </node>
+<node TEXT="UP-DETR: Unsupervised Pre-training for Object Detection with Transformers" ID="ID_1505365211" CREATED="1655447890784" MODIFIED="1655447891746">
+<node TEXT="CVPR21" ID="ID_1107234416" CREATED="1655447895644" MODIFIED="1655447896944"/>
+<node TEXT="pascal voc" ID="ID_1630225768" CREATED="1655447902303" MODIFIED="1655447904975"/>
+</node>
+<node TEXT="AdaMixer" ID="ID_151723892" CREATED="1680216733011" MODIFIED="1680216737949">
+<node TEXT="AdaMixer: A Fast-Converging Query-Based Object Detector" ID="ID_916503855" CREATED="1680216738752" MODIFIED="1680216751597">
+<icon BUILTIN="messagebox_warning"/>
+<node TEXT="CVPR22" ID="ID_196804401" CREATED="1680216753575" MODIFIED="1680216771739"/>
+<node TEXT="44.1 AP @ 12 eph, 46.7 AP @ 24 eph, or 47.0 AP @ 36 eph" ID="ID_958138732" CREATED="1680216786919" MODIFIED="1680216824035"/>
+<node TEXT="adaptability of decoder for casting queries to varying objects" ID="ID_201506643" CREATED="1680216885291" MODIFIED="1680216896127">
+<node TEXT="(1) each query adaptively samples features over space and scales based on estimated offests, which allows efficient attending to the coherent regions of objects." ID="ID_19583535" CREATED="1680216909125" MODIFIED="1680217066726"/>
+<node TEXT="(2) dynamically decode these sampled features with an adaptive MLP-mixer under the guidance of each query." ID="ID_811800788" CREATED="1680217007047" MODIFIED="1680217071562"/>
+</node>
+<node TEXT="does not need an attentional encoder like other DETR works" ID="ID_1618052997" CREATED="1680217460679" MODIFIED="1680217840942">
+<icon BUILTIN="yes"/>
+</node>
+</node>
+</node>
 <node TEXT="DINO" ID="ID_1332999985" CREATED="1659200751990" MODIFIED="1659200753215">
-<node TEXT="DINO: DETR with Improved DeNoising Anchor Boxes for End-to-End Object Detection" ID="ID_852083954" CREATED="1659201248967" MODIFIED="1659201251335">
-<icon BUILTIN="pencil"/>
+<node TEXT="DINO: DETR with Improved DeNoising Anchor Boxes for End-to-End Object Detection" ID="ID_852083954" CREATED="1659201248967" MODIFIED="1680218713083">
+<icon BUILTIN="messagebox_warning"/>
+<node TEXT="ICLR23, using additional training data" ID="ID_855245177" CREATED="1680218714170" MODIFIED="1680218720923"/>
+<node TEXT="dino + res50 no extra data" ID="ID_253366459" CREATED="1680219319993" MODIFIED="1680219326615">
+<node TEXT="49.0 AP @ 12eph" ID="ID_1025080816" CREATED="1680219335563" MODIFIED="1680219348505"/>
+</node>
+<node TEXT="dino + swinL using o365" ID="ID_1066262898" CREATED="1680219326856" MODIFIED="1680219333252"/>
 </node>
 <node TEXT="Mask DINO: Towards A Unified Transformer-based Framework for Object Detection and Segmentation" ID="ID_564664202" CREATED="1659200747355" MODIFIED="1659200758142">
 <icon BUILTIN="pencil"/>
 </node>
-</node>
-<node TEXT="UP-DETR: Unsupervised Pre-training for Object Detection with Transformers" ID="ID_1505365211" CREATED="1655447890784" MODIFIED="1655447891746">
-<node TEXT="CVPR21" ID="ID_1107234416" CREATED="1655447895644" MODIFIED="1655447896944"/>
-<node TEXT="pascal voc" ID="ID_1630225768" CREATED="1655447902303" MODIFIED="1655447904975"/>
 </node>
 <node TEXT="Arxiv" ID="ID_1686283127" CREATED="1659200493970" MODIFIED="1659200495179">
 <node TEXT="Group DETR: Fast Training Convergence with Decoupled One-to-Many Label Assignment" ID="ID_1816299590" CREATED="1659195419405" MODIFIED="1659195425235">
@@ -4861,12 +4908,8 @@
 </node>
 </node>
 </node>
-<node TEXT="?-stage" FOLDED="true" ID="ID_1254657210" CREATED="1654102722886" MODIFIED="1659198803602">
+<node TEXT="?-stage" ID="ID_1254657210" CREATED="1654102722886" MODIFIED="1659198803602">
 <icon BUILTIN="broken-line"/>
-<node TEXT="AdaMixer: A Fast-Converging Query-Based Object Detector" ID="ID_1153453315" CREATED="1659198248877" MODIFIED="1659198253154">
-<icon BUILTIN="unchecked"/>
-<node TEXT="CVPR22" ID="ID_385842250" CREATED="1659198250587" MODIFIED="1659198252052"/>
-</node>
 <node TEXT="Revisiting AP Loss for Dense Object Detection: Adaptive Ranking Pair Selection" FOLDED="true" ID="ID_1320091812" CREATED="1659196405095" MODIFIED="1659197182936">
 <icon BUILTIN="unchecked"/>
 <icon BUILTIN="idea"/>
