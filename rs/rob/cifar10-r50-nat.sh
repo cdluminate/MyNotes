@@ -26,3 +26,6 @@ if ! test -d ${LOGDIR_E20}; then
 		--resume $(find ${LOGDIR} -type f -name '*.pt.best' | head -n1) \
 		| tee ${LOGDIR_E20}/eval.log
 fi
+# Val Epoch:0 | Loss 0.1999 | NatPrec1 95.150 | NatPrec5 99.850 | Reg term: 0.0 ||: 100%|███████████████| 79/79 [00:06<00:00, 12.46it/s]
+# Val Epoch:0 | Loss 13.5461 | AdvPrec1 0.400 | AdvPrec5 61.640 | Reg term: 0.0 ||: 100%|███████████████| 79/79 [01:39<00:00,  1.26s/it]
+
