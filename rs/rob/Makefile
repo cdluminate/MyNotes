@@ -1,3 +1,7 @@
 clone:
 	git clone https://github.com/MadryLab/robustness.git robustness.git
 	mv robustness.git/* . -v
+	rm -rf robustness.git
+
+cifar-r50-nat: clone
+	bash cifar10-r50-nat.sh
