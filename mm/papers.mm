@@ -263,7 +263,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1675042129591">
+<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1675042129591">
 <icon BUILTIN="bookmark"/>
 <edge COLOR="#7c0000"/>
 <node TEXT="Failures/Deprecation/DeadEnd" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1502842186" CREATED="1630692548912" MODIFIED="1676562252779">
@@ -666,7 +666,7 @@
 </node>
 <node TEXT="Blocked" LOCALIZED_STYLE_REF="styles.topic" ID="ID_975414650" CREATED="1646333166651" MODIFIED="1675042096454">
 <icon BUILTIN="bell"/>
-<node TEXT="RobRank (pending:TPAMI)" LOCALIZED_STYLE_REF="styles.topic" ID="ID_619314852" CREATED="1630684222251" MODIFIED="1653343942778">
+<node TEXT="RobRank (pending:TPAMI)" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_619314852" CREATED="1630684222251" MODIFIED="1653343942778">
 <icon BUILTIN="bookmark"/>
 <node TEXT="remaining problems after submission" ID="ID_1871122665" CREATED="1630684227114" MODIFIED="1631022655445">
 <icon BUILTIN="button_ok"/>
@@ -678,13 +678,13 @@
 <node TEXT="section 6.1.3: 8/244 should be 8/255" ID="ID_629656220" CREATED="1630684385376" MODIFIED="1630684401314"/>
 </node>
 </node>
-<node TEXT="Attack Detection w/ Local Linearity (pending:CVPR)" LOCALIZED_STYLE_REF="styles.topic" ID="ID_865096445" CREATED="1646332539527" MODIFIED="1669999494396">
+<node TEXT="Attack Detection w/ Local Linearity" LOCALIZED_STYLE_REF="styles.topic" ID="ID_865096445" CREATED="1646332539527" MODIFIED="1680749738611">
 <icon BUILTIN="xmag"/>
 <node TEXT="the neural networks shows approximately linear behavior with adversarial examples, while remains non-linear with benign examples." ID="ID_250519315" CREATED="1646332578564" MODIFIED="1646332634625"/>
 <node TEXT="reference: advtrace" ID="ID_1287675558" CREATED="1646332849386" MODIFIED="1652282869139"/>
 <node TEXT="room for improvement? not yet seen" ID="ID_809170449" CREATED="1670010553567" MODIFIED="1670010559782"/>
 </node>
-<node TEXT="Advtrace extension" FOLDED="true" ID="ID_1105992558" CREATED="1652282977798" MODIFIED="1669999500813">
+<node TEXT="Advtrace extension" ID="ID_1105992558" CREATED="1652282977798" MODIFIED="1669999500813">
 <icon BUILTIN="pencil"/>
 <node TEXT="Super Simple Adversarial Defense with Linear Approximation" ID="ID_1223634765" CREATED="1652282985374" MODIFIED="1652383029894"/>
 <node TEXT="since defense works because the network is very linear, why not use a linear function to approximate the model around the benign input? is such linear approximation still vulnerable?" ID="ID_596218186" CREATED="1652283529988" MODIFIED="1652283555786">
@@ -709,8 +709,11 @@
 <node TEXT="this is inspired by the linear interpretation of defense using ARCm" ID="ID_720864657" CREATED="1652283691943" MODIFIED="1652283749348"/>
 <node TEXT="ultimately linear defense" ID="ID_1957242309" CREATED="1652283751238" MODIFIED="1652283757407"/>
 </node>
+<node TEXT="arc feature evaluate timmm models. blocked" ID="ID_1310535562" CREATED="1680750488441" MODIFIED="1680750509166">
+<icon BUILTIN="bookmark"/>
 </node>
-<node TEXT="Questions" FOLDED="true" ID="ID_1635080843" CREATED="1675042162167" MODIFIED="1675042203699">
+</node>
+<node TEXT="Questions" ID="ID_1635080843" CREATED="1675042162167" MODIFIED="1675042203699">
 <node TEXT="Object recognition w/ vectorized images?" FOLDED="true" ID="ID_122040551" CREATED="1656372931630" MODIFIED="1675042169938">
 <node TEXT="I kind of like image vectorization" ID="ID_653939614" CREATED="1656373042240" MODIFIED="1656373051048"/>
 <node TEXT=" (image in different modality -- less noisy" ID="ID_1252599478" CREATED="1656373093113" MODIFIED="1656373094000"/>
@@ -1456,7 +1459,6 @@
 </node>
 <node TEXT="calidet: mode bias embed modulate" ID="ID_916597609" CREATED="1676575740837" MODIFIED="1676575764020"/>
 <node TEXT="calidet: dynamic prompt creator instead of static prompts" ID="ID_1934543999" CREATED="1676562910436" MODIFIED="1676562929252"/>
-<node TEXT="calidet: epr fine mode" ID="ID_1672348623" CREATED="1676575770494" MODIFIED="1676575774285"/>
 <node TEXT="prompt in FL for heterogenity" ID="ID_1219436467" CREATED="1676575780374" MODIFIED="1676582406658">
 <node TEXT="https://github.com/intel/openfl/blob/develop/openfl-tutorials/Federated_FedProx_PyTorch_MNIST_Tutorial.ipynb" ID="ID_1826313692" CREATED="1677265503404" MODIFIED="1677265507960"/>
 <node TEXT="https://github.com/vaseline555/Federated-Averaging-PyTorch" ID="ID_1650767065" CREATED="1677265513823" MODIFIED="1677265514688"/>
@@ -1467,6 +1469,18 @@
 <node TEXT="combine with reconstruction?" ID="ID_569789502" CREATED="1676582561395" MODIFIED="1676582566242"/>
 <node TEXT="both characteristics" ID="ID_1743334057" CREATED="1676582566525" MODIFIED="1676582571931"/>
 </node>
+<node TEXT="robust pre-training? ViT, CLIP, GPT3, etc." ID="ID_1574790295" CREATED="1680749810459" MODIFIED="1680749831842"/>
+<node TEXT="defense / infoNCE converge? | use experience from DML / SSL for cls? (has to be better than madry defense to make sense)" ID="ID_1794250950" CREATED="1680749821641" MODIFIED="1680749898532">
+<node TEXT="bridge the gap between dml and cls?" ID="ID_1548817250" CREATED="1680749899267" MODIFIED="1680749906317"/>
+<node TEXT="circle loss" ID="ID_1934319509" CREATED="1680749906490" MODIFIED="1680749910322"/>
+<node TEXT="madry method must CE? what if other loss?" ID="ID_210129020" CREATED="1680749910583" MODIFIED="1680749917501"/>
+</node>
+<node TEXT="PEFT for robustness?" ID="ID_1401922186" CREATED="1680749931195" MODIFIED="1680749934788"/>
+<node TEXT="adv train, dropout, self ensemble, make the other half to cancel the shift. self neutralization for adversarial robustness" ID="ID_261169352" CREATED="1680750100984" MODIFIED="1680750125584">
+<node TEXT="X (m,n) * W (n,k) = Y (m,k)." ID="ID_1534759890" CREATED="1680750128614" MODIFIED="1680750148309"/>
+<node TEXT="randomly mask a half of W along dim n." ID="ID_1181772876" CREATED="1680750148505" MODIFIED="1680750176096"/>
+</node>
+<node TEXT="ssl predict position or position encoding for learning structure, jigsaw" ID="ID_1115727643" CREATED="1680750919797" MODIFIED="1680750929501"/>
 </node>
 </node>
 <node TEXT="-------------------------------------------------------------------" LOCALIZED_STYLE_REF="default" POSITION="right" ID="ID_1134167122" CREATED="1675049435899" MODIFIED="1675886470423">
