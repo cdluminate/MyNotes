@@ -13,21 +13,24 @@ if ! test -d ${LOGDIR}; then
            --constraint inf \
            --eps $(python3 -c "print(8./255.)") \
            --attack-lr $(python3 -c "print(2./255.)") \
-           --attack-steps 20 \
+           --attack-steps 7 \
            | tee ${LOGDIR}/train.log
 fi
-LOGDIR_E20=${LOGDIR}/attack-eval-20/
-if ! test -d ${LOGDIR_E20}; then
-    mkdir -p ${LOGDIR_E20}
+LOGDIR_E7=${LOGDIR}/attack-eval-7/
+if ! test -d ${LOGDIR_E7}; then
+    mkdir -p ${LOGDIR_E7}
     python -m robustness.main --dataset cifar --data ~/.torch/ \
-        --out-dir ${LOGDIR_E20} \
+        --out-dir ${LOGDIR_E7} \
         --arch resnet50 \
         --eval-only 1 \
         --adv-eval 1 \
         --constraint inf \
         --eps $(python3 -c "print(8./255.)") \
         --attack-lr $(python3 -c "print(2./255.)") \
-        --attack-steps 20 \
+        --attack-steps 7 \
         --resume $(find ${LOGDIR} -type f -name '*.pt.best' | head -n1) \
-        | tee ${LOGDIR_E20}/eval.log
+        | tee ${LOGDIR_E7}/eval.log
 fi
+# 20 steps: 81.9 51.6
+#  7 steps:
+# Reference: 87 53
