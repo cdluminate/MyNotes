@@ -32,5 +32,5 @@ if ! test -d ${LOGDIR_E7}; then
         | tee ${LOGDIR_E7}/eval.log
 fi
 # 20 steps: 81.9 51.6
-#  7 steps:
+#  7 steps: 86.61 52.89 (OK)
 # Reference: 87 53
