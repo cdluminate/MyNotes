@@ -79,7 +79,8 @@ TRAINING_ARGS = [
     ['adv-eval', [0, 1], 'whether to adversarially evaluate', None], 
     ['log-iters', int, 'how frequently (in epochs) to log', 5],
     ['save-ckpt-iters', int, 'how frequently (epochs) to save \
-            (-1 for none, only saves best and last)', -1]
+            (-1 for none, only saves best and last)', -1],
+    ['use-self-neu', float, 'self-neu coef', 0.0],
 ]
 """
 Arguments essential for the `train_model` function.

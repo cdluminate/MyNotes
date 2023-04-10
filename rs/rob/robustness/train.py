@@ -444,9 +444,19 @@ def _model_loop(args, loop_type, loader, model, opt, epoch, adv, writer):
     for i, (inp, target) in iterator:
        # measure data loading time
         target = target.cuda(non_blocking=True)
-        output, final_inp = model(inp, target=target, make_adv=adv,
-                                  **attack_kwargs)
-        loss = train_criterion(output, target)
+        # (begin) mod
+        if args.use_self_neu > 0.0:
+            output_latent, final_inp = model(inp, target=target, make_adv=adv,
+                with_latent=True, **attack_kwargs)
+            output, latent = output_latent
+            loss = train_criterion(output, target)
+        else:
+            output, final_inp = model(inp, target=target, make_adv=adv,
+                                      **attack_kwargs)
+            loss = train_criterion(output, target)
+            print('DEBUG', 'output.shape', output.shape)
+            print('DEBUG', 'loss.shape', loss.shape)
+        # (end) mod
 
         if len(loss.shape) > 0: loss = loss.mean()
 
