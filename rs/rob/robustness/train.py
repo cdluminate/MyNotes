@@ -455,6 +455,7 @@ def _model_loop(args, loop_type, loader, model, opt, epoch, adv, writer):
             q('DEBUG', 'latent.shape', latent.shape)
             q('DEBUG', 'linear.weight.shape', model.module.model.linear.weight.shape)
             q('DEBUG', 'loss.shape', loss.shape, loss)
+# XXX: FIXME: should use th.mm instead of nat_output. it includes bias.
             (nat_output, _), _ = model(inp, target=target, make_adv=False,
                     with_latent=True, **attack_kwargs)
             w = model.module.model.linear.weight
