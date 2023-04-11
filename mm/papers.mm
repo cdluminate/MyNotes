@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="Memo" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1675045349693" STYLE="oval">
 <font NAME="Gentium" SIZE="18" ITALIC="false"/>
-<hook NAME="MapStyle" zoom="2.57">
+<hook NAME="MapStyle" zoom="1.521">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
@@ -266,33 +266,11 @@
 <node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1675042129591">
 <icon BUILTIN="bookmark"/>
 <edge COLOR="#7c0000"/>
-<node TEXT="Failures/Deprecation/DeadEnd" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1502842186" CREATED="1630692548912" MODIFIED="1676562252779">
+<node TEXT="Failures/Deprecation/DeadEnd" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_1502842186" CREATED="1630692548912" MODIFIED="1676562252779">
 <icon BUILTIN="stop-sign"/>
 <node TEXT="\accept Evidential Deep Learning + Distillation? (uncertainty)" ID="ID_1904807575" CREATED="1618124030544" MODIFIED="1676562267260"/>
 <node TEXT="\omitted sop convergence issue: pretrained = True/False and no parameter lock during the training process." ID="ID_1047376694" CREATED="1618124077576" MODIFIED="1618124078159"/>
 <node TEXT="\omitted Idea: (according to madry&apos;s adaptive attack) automated adaptive adversarial attack? (adversarial defense detection) (apr 2020) (this is too difficult as it is not straightforward to model the various types of defenses)." ID="ID_619791359" CREATED="1618124069251" MODIFIED="1618124070100"/>
-<node TEXT="multiscale (algorithm innovation) such as the hard-negative in ranking." ID="ID_1929292873" CREATED="1618124060454" MODIFIED="1618124061468"/>
-<node TEXT="\omitted benchmarking (cvpr20 oral) inspire: setting up a ranking attack / defense benchmark?" ID="ID_1986293812" CREATED="1618124049966" MODIFIED="1618124056596"/>
-<node TEXT="NeuroSki" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_912421846" CREATED="1637079209530" MODIFIED="1645122935810">
-<icon BUILTIN="closed"/>
-<node TEXT="attack the given sample x, with random target class at each step. odd step random. even step a fixed class." ID="ID_288028212" CREATED="1642475853089" MODIFIED="1642475908180">
-<node TEXT="if benign, trajectory should be zig zag" ID="ID_1556007325" CREATED="1642475866438" MODIFIED="1642475914503"/>
-<node TEXT="if adversarial, trajectory should diverge" ID="ID_905372747" CREATED="1642475914776" MODIFIED="1642475920863"/>
-</node>
-<node TEXT="this did not work very well according to experiments." ID="ID_1405783252" CREATED="1642475924204" MODIFIED="1642475935222"/>
-<node TEXT="references" ID="ID_695725688" CREATED="1637079216740" MODIFIED="1637079219050">
-<node TEXT="Attack as Defense: Characterizing Adversarial Examples using&#xa;Robustness" ID="ID_1831144584" CREATED="1637079213739" MODIFIED="1637079215640"/>
-</node>
-<node TEXT="Neuroski and defense" ID="ID_1251629181" CREATED="1618122025290" MODIFIED="1618122029182">
-<node TEXT="\probe Adversarial defense leveraging the properties of adversarial attack.&#xa;See private repo github::2020-neuroski/ iclr21/Sparks.tex for more details." ID="ID_979201881" CREATED="1618123352018" MODIFIED="1618123373741"/>
-<node TEXT="\omitted Detecting network architecture for paving the way for transferability attack? (neuroski as a signature?) There are many types of neural networks. It&apos;s not easy to locate the target black-box model in the NAS (network architecture search) space.&#xa;Besides, the black-box attacks are already good enough." ID="ID_1242189559" CREATED="1618123392409" MODIFIED="1618123393855"/>
-<node TEXT="\unk momemtum-based defense? (inspired by my advrank defense analysis)" ID="ID_1112464718" CREATED="1618123399234" MODIFIED="1618123400024"/>
-<node TEXT="\probe dimension reduction -- defense? how to break this trick? solely invalidating this trick is also a viable defense." ID="ID_1456116110" CREATED="1618123407341" MODIFIED="1618123408230"/>
-<node TEXT="\reject sin/sigmoid activation tu suppress FGSM activation surge? No. This is eventually gradient masking even if it works for PGD. So this is not the real source of neural net vulnerability." ID="ID_840365365" CREATED="1618123415156" MODIFIED="1618123416152"/>
-<node TEXT="\probe Adversarial Reset: UAP of $x^{(0)}$, $x^{(1)}$, .... $x^{(9)}$. Pointing to center or pointing to the same direction?" ID="ID_1464472746" CREATED="1618123421890" MODIFIED="1618123422924"/>
-<node TEXT="\probe Nullspace/Duality Defense. Representations $f(x)+g(x)=2y$ for classification, and $f(x+\Delta x) - y \approx y - g(x+\Delta x)$, namely $f(x+\Delta x) + g(x+\Delta x) \approx 2y$. Then attacking this model becomes $\Delta x \approx -\Delta x$???." ID="ID_936112385" CREATED="1618123428386" MODIFIED="1618123429193"/>
-</node>
-</node>
 <node TEXT="adversarial atk and def in multimodal setting (e.g., video)" ID="ID_1813929749" CREATED="1630503678229" MODIFIED="1642482856818">
 <icon BUILTIN="button_cancel"/>
 <node TEXT="what task involves multiple modality?" ID="ID_524713664" CREATED="1630529284735" MODIFIED="1630529291936">
@@ -320,6 +298,7 @@
 <node TEXT="1. \hard incorporating hyperbolic embedding space in VSE? (cvpr20)" ID="ID_864949750" CREATED="1618123836952" MODIFIED="1618123841851"/>
 <node TEXT="\omitted vilbert (1908) + AAAI investigation for PAMI? Already done by MS (Oscar, ECCV2020)." ID="ID_756494063" CREATED="1618123849745" MODIFIED="1618123850730"/>
 <node TEXT="\accept should also report mAP for the ladderloss extension work." ID="ID_1510784212" CREATED="1618123855559" MODIFIED="1618123856320"/>
+<node TEXT="This is completely done given CLIP" ID="ID_1210353272" CREATED="1681239201675" MODIFIED="1681239209688"/>
 </node>
 <node TEXT="Adversarial Privacy" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_368238953" CREATED="1617253764573" MODIFIED="1645540236459">
 <node TEXT="Adversarial examples can be understood by human, but no&#xa;by machines.&#xa;Can we find and use some processed data (human cannot&#xa; understand, but&#xa;the machine can understand) to train the model, so that the&#xa;resulting model is also&#xa;generalizable to human-understandable data?" ID="ID_803151656" CREATED="1617253808914" MODIFIED="1617253819782" TEXT_ALIGN="CENTER">
@@ -343,32 +322,6 @@
 <node TEXT="ref: closed form gan inversion" ID="ID_354968307" CREATED="1625981404191" MODIFIED="1625981409808"/>
 <node TEXT="RELATED" ID="ID_271449863" CREATED="1645296073409" MODIFIED="1645296075906">
 <node TEXT="rotate the weight matrix to let vulnerable space match the null space of the next layer?" ID="ID_607337607" CREATED="1645296076619" MODIFIED="1645296094884"/>
-</node>
-</node>
-<node TEXT="EigenDef" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_1134713832" CREATED="1645069900542" MODIFIED="1645121683702">
-<icon BUILTIN="messagebox_warning"/>
-<font ITALIC="false"/>
-<node TEXT="[x, x+r1, x+r2, x+r3] decompose" ID="ID_1134527800" CREATED="1645069912699" MODIFIED="1645069974475">
-<node TEXT="if failure: we cannot decorrelate them using such simple method" ID="ID_188335097" CREATED="1645118626979" MODIFIED="1645118651280"/>
-<node TEXT="this could be a supportive finding to adversarial singularity" ID="ID_1774959424" CREATED="1645118654283" MODIFIED="1645121696557"/>
-</node>
-<node TEXT="what if we do ICA instead of PCA" ID="ID_1088717794" CREATED="1645069976967" MODIFIED="1645118616180">
-<icon BUILTIN="closed"/>
-<node TEXT="https://www.quora.com/What-is-the-difference-between-PCA-and-ICA" ID="ID_848015610" CREATED="1645070067727" MODIFIED="1645070068468"/>
-<node TEXT="possibly no." ID="ID_1864528145" CREATED="1645118551963" MODIFIED="1645118558667">
-<node TEXT="independence is a stronger condition than decorrelate" ID="ID_1820607459" CREATED="1645118559389" MODIFIED="1645118572768"/>
-<node TEXT="the adversarial perturbation correlate with original singal, and hence making them independent could be even harder." ID="ID_1739699380" CREATED="1645118587059" MODIFIED="1645118609084"/>
-</node>
-</node>
-<node TEXT="Perturbation decomposition" ID="ID_1810004914" CREATED="1618120947475" MODIFIED="1618120953039">
-<node TEXT="\probe universal solution (image-agnostic) + particular solution (image-dependant).&#xa;$$ \tilde{x} = x + r = x + (r_g + r_p)$$" ID="ID_1785548781" CREATED="1618120954555" MODIFIED="1618120966979">
-<node TEXT="(1) UAP + adversarial training does not manifest better result (due to bug: PGD-UAP has little effect on a single batch.).&#xa;Actually defending the UAP merely results in a model whose robustness level lies between the vanilla network and the madry defense." ID="ID_505933838" CREATED="1618120970662" MODIFIED="1618120975810"/>
-<node TEXT="(2) $r_p= Ec$ where $E$ is a embedding matrix, $c$ is a one-hot vector that indicates the class label." ID="ID_1903401191" CREATED="1618120976321" MODIFIED="1618120989627"/>
-<node TEXT="(3) divide and conquer for reducing optimization difficulty?" ID="ID_42852101" CREATED="1618120990942" MODIFIED="1618120992835"/>
-</node>
-<node TEXT="\unk Or task-dependent decomposition. (and then? can it contribute to defense?)" ID="ID_1493688054" CREATED="1618121005848" MODIFIED="1618121007213"/>
-<node TEXT="\unk eigen vector \&amp; adversarial examples?" ID="ID_622077722" CREATED="1618121013497" MODIFIED="1618121014594"/>
-<node TEXT="\unk Is UAP correlated with the neural network weights? gradients? signs?" ID="ID_66067956" CREATED="1618121019131" MODIFIED="1618121020132"/>
 </node>
 </node>
 <node TEXT="Deep Metric Learning / Gradient Guided Loss Design" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_1572186402" CREATED="1642534120452" MODIFIED="1645121644732">
@@ -396,94 +349,6 @@
 <node TEXT=" \probe DR Loss: Improving Object Detection by Distributional Ranking. Can you combine it with our ladder loss?" ID="ID_333994487" CREATED="1618123804049" MODIFIED="1618123804777"/>
 </node>
 <node TEXT="but can we adopt the gradient guide idea to other tasks?" ID="ID_1127330027" CREATED="1643138751932" MODIFIED="1643138761333"/>
-</node>
-<node TEXT="Triangle Wave" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_1060542339" CREATED="1645111419816" MODIFIED="1645369987954">
-<icon BUILTIN="closed"/>
-<node TEXT="motivation" ID="ID_1929304078" CREATED="1645113329140" MODIFIED="1645113331328">
-<node TEXT="FGSM recap" ID="ID_257804751" CREATED="1645111703299" MODIFIED="1645111707620">
-<node TEXT="sets an upperbound of the maximum activation bump" ID="ID_1891160774" CREATED="1645111708356" MODIFIED="1645111729099"/>
-<node TEXT="unlike ReLU which gives an unlimited positive part for activation change" ID="ID_524284951" CREATED="1645111731038" MODIFIED="1645111763465"/>
-</node>
-<node TEXT="make the bump upperbound smaller than the top-1 top-2 gap in pre-softmax activation?" ID="ID_524337831" CREATED="1645113337049" MODIFIED="1645113361073">
-<node TEXT="relu: upperbound is infty" ID="ID_1281058936" CREATED="1645113372571" MODIFIED="1645113376936"/>
-<node TEXT="\latex $r^T w_2 \geq c_1 -c_2 $" ID="ID_1624505019" CREATED="1645113774680" MODIFIED="1645113791752"/>
-</node>
-<node TEXT="can we incorporate the finding of the nullspace squashing" ID="ID_1520179907" CREATED="1645118451217" MODIFIED="1645118470024"/>
-<node TEXT="many attacks require the relu activation" ID="ID_716019380" CREATED="1645540207574" MODIFIED="1645540217273">
-<icon BUILTIN="info"/>
-</node>
-<node TEXT="evaluation" ID="ID_1487448775" CREATED="1645113745942" MODIFIED="1645113748103">
-<node TEXT="extent of representation breaking" ID="ID_82256295" CREATED="1645113748805" MODIFIED="1645113760838"/>
-<node TEXT="extent of classification result change" ID="ID_856230825" CREATED="1645113761000" MODIFIED="1645113766721"/>
-</node>
-</node>
-<node TEXT="sinusoidal activation reference" ID="ID_152433633" CREATED="1645111434990" MODIFIED="1645111621289">
-<node TEXT="https://stats.stackexchange.com/questions/402618/can-sinx-be-used-as-activation-in-deep-learning" ID="ID_762460142" CREATED="1645111449868" MODIFIED="1645111449868" LINK="https://stats.stackexchange.com/questions/402618/can-sinx-be-used-as-activation-in-deep-learning">
-<node TEXT="after training, the networks don&apos;t really use the periodic nature of the activation function. rather, they only use the central region near zero, where the sinusoid is nearly equivalent to the more traditional tanh activation function" ID="ID_1404051043" CREATED="1645111469655" MODIFIED="1645111506939"/>
-</node>
-<node ID="ID_901421635" CREATED="1645111590962" MODIFIED="1645111596636">
-<icon BUILTIN="unchecked"/>
-<richcontent TYPE="NODE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    Implicit Neural Representations with Periodic Activation Functions
-  </body>
-</html>
-</richcontent>
-<node TEXT="NIPS21" ID="ID_1401976065" CREATED="1645111598061" MODIFIED="1645111604457"/>
-<node TEXT="https://www.vincentsitzmann.com/siren/" ID="ID_1462120566" CREATED="1645111573761" MODIFIED="1645111573761" LINK="https://www.vincentsitzmann.com/siren/"/>
-<node TEXT="sinusoidal representation networks or SIRENS aaare ideally suited for representing complex natural signals and their derivatives" ID="ID_998801966" CREATED="1645111629223" MODIFIED="1645111699220"/>
-</node>
-</node>
-<node TEXT="activation &amp; robustness" ID="ID_160632703" CREATED="1645112648878" MODIFIED="1645112653931">
-<node TEXT="https://pubmed.ncbi.nlm.nih.gov/33743319/" ID="ID_1197519658" CREATED="1645112655456" MODIFIED="1645112885549" LINK="https://pubmed.ncbi.nlm.nih.gov/33743319/">
-<icon BUILTIN="bookmark"/>
-<node TEXT="TODO" ID="ID_1139214303" CREATED="1645112668543" MODIFIED="1645112670311"/>
-</node>
-</node>
-<node TEXT="status:" ID="ID_339987294" CREATED="1645113396966" MODIFIED="1645113399267">
-<node TEXT="doing experiments" ID="ID_1952428486" CREATED="1645113400308" MODIFIED="1645113403117"/>
-<node TEXT="search and study the effect of period" ID="ID_395807399" CREATED="1645113403311" MODIFIED="1645113413262"/>
-<node TEXT="formulations made clear" ID="ID_1278128575" CREATED="1645113415552" MODIFIED="1645113426155">
-<node TEXT="heaviside step function times sin or triangle wave" ID="ID_1590236380" CREATED="1645113440487" MODIFIED="1645113470525">
-<node TEXT="\latex $H(x)\cdot \sin(x)$" ID="ID_1468438625" CREATED="1645113472848" MODIFIED="1645113487975"/>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="Mitigation of Local Linearity (Mitilol)" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_1456739931" CREATED="1643297094387" MODIFIED="1646332870866">
-<icon BUILTIN="stop-sign"/>
-<node TEXT="mitigating/suppression of local linearity as adversarial defense" ID="ID_1366547541" CREATED="1645066946896" MODIFIED="1645066949906"/>
-<node TEXT="Reverting adversarial attack does not work." ID="ID_50202564" CREATED="1646174632805" MODIFIED="1646174656688"/>
-<node TEXT="But there are some patterns that may be helpful in terms of adversarial example detection." ID="ID_1280165506" CREATED="1646174657027" MODIFIED="1646174673906">
-<icon BUILTIN="info"/>
-</node>
-<node TEXT="The network behaves linearly when under attack" ID="ID_1584378078" CREATED="1631022387929" MODIFIED="1631022462570">
-<icon BUILTIN="bookmark"/>
-<node TEXT="approximate with a linear system when attacked" ID="ID_255982511" CREATED="1631022405491" MODIFIED="1631022418505"/>
-<node TEXT="not every element of the input has a linear relation with the output" ID="ID_1926099883" CREATED="1631022419115" MODIFIED="1631022459891">
-<icon BUILTIN="bookmark"/>
-<node TEXT="using a mask. we get a masked linear transformation" ID="ID_166538958" CREATED="1631022443350" MODIFIED="1631022454166"/>
-</node>
-</node>
-<node TEXT="x + r -&gt; rep1, x + 2r -&gt; rep2" ID="ID_922629534" CREATED="1625980979222" MODIFIED="1625980995880">
-<node TEXT="Linear Annealing" ID="ID_829053374" CREATED="1634059223078" MODIFIED="1634059226798"/>
-<node TEXT="split out the linear part" ID="ID_884737402" CREATED="1625981006848" MODIFIED="1625981011985"/>
-<node TEXT="x + r -&gt; rep1, already linear (affine)" ID="ID_308264527" CREATED="1625981105311" MODIFIED="1625981115321"/>
-<node TEXT="f(x) = b" ID="ID_1847687510" CREATED="1625981131628" MODIFIED="1625981139075"/>
-<node TEXT="f(x + r) = wr + b" ID="ID_1190408783" CREATED="1625981139619" MODIFIED="1625981145275"/>
-<node TEXT="f(x + 2r) = 2wr + b" ID="ID_1806294854" CREATED="1625981146023" MODIFIED="1625981151644"/>
-<node TEXT="f(x + 2r) - f(x + r) = wr" ID="ID_1813341234" CREATED="1625981163685" MODIFIED="1625981177495"/>
-<node TEXT="x \approx (x + r) - w^{-1}(f(x+2r)-f(x+r))" ID="ID_1315128535" CREATED="1625981185500" MODIFIED="1625981276305"/>
-<node TEXT="construct w -&gt; batch adv ex: expose linearity" ID="ID_423613561" CREATED="1625981372995" MODIFIED="1625981385871"/>
-<node TEXT="when meaningful parts of the input lies in null space, the model has its own bias" ID="ID_834776007" CREATED="1634059091726" MODIFIED="1634059110438">
-<node TEXT="it is not learning what we want it to learn" ID="ID_762650179" CREATED="1634059118806" MODIFIED="1634059127405"/>
-</node>
-</node>
 </node>
 <node TEXT="Spoilt Example (RevAT)" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_1620743321" CREATED="1642481530344" MODIFIED="1649094926112">
 <icon BUILTIN="messagebox_warning"/>
@@ -664,7 +529,7 @@
 <icon BUILTIN="help"/>
 </node>
 </node>
-<node TEXT="Blocked" LOCALIZED_STYLE_REF="styles.topic" ID="ID_975414650" CREATED="1646333166651" MODIFIED="1675042096454">
+<node TEXT="Blocked" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_975414650" CREATED="1646333166651" MODIFIED="1675042096454">
 <icon BUILTIN="bell"/>
 <node TEXT="RobRank (pending:TPAMI)" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_619314852" CREATED="1630684222251" MODIFIED="1653343942778">
 <icon BUILTIN="bookmark"/>
