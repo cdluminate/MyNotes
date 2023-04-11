@@ -36,3 +36,5 @@ fi
 # 20 steps: 81.9 51.6
 #  7 steps: 86.61 52.89 (OK)
 # Reference: 87 53
+
+# neu 0.1 (bug): 86.4 52.8
