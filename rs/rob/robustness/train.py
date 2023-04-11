@@ -455,10 +455,10 @@ def _model_loop(args, loop_type, loader, model, opt, epoch, adv, writer):
             q('DEBUG', 'latent.shape', latent.shape)
             q('DEBUG', 'linear.weight.shape', model.module.model.linear.weight.shape)
             q('DEBUG', 'loss.shape', loss.shape, loss)
-# XXX: FIXME: should use th.mm instead of nat_output. it includes bias.
-            (nat_output, _), _ = model(inp, target=target, make_adv=False,
+            (_, nat_latent), _ = model(inp, target=target, make_adv=False,
                     with_latent=True, **attack_kwargs)
             w = model.module.model.linear.weight
+            nat_out = ch.mm(nat_latent, w.T)
             mask = ch.randint(0, 2, (latent.shape[-1],), dtype=bool) # (2048,)
             mask = mask.to(device=w.device)
             w0 = ch.zeros_like(w, device=w.device)
@@ -466,8 +466,8 @@ def _model_loop(args, loop_type, loader, model, opt, epoch, adv, writer):
             w_l = ch.where(ch.logical_not(mask.view(1,-1)), w, w0)
             out_u = ch.mm(latent, w_u.T)
             out_l = ch.mm(latent, w_l.T)
-            diff_u = out_u - nat_output
-            diff_l = out_l - nat_output
+            diff_u = out_u - nat_out
+            diff_l = out_l - nat_out
             cos = ch.nn.functional.cosine_similarity(diff_u, diff_l, dim=-1)
             cos = cos.mean()
             q('DEBUG', 'cos.mean', cos)
