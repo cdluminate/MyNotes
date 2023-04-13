@@ -471,7 +471,7 @@ def _model_loop(args, loop_type, loader, model, opt, epoch, adv, writer):
             cos = ch.nn.functional.cosine_similarity(diff_u, diff_l, dim=-1)
             cos = cos.mean()
             q('DEBUG', 'cos.mean', cos)
-            loss = loss + args.use_self_neu * cos
+            loss = loss + args.use_self_neu * (1.0 + cos)
         else:
             output, final_inp = model(inp, target=target, make_adv=adv,
                                       **attack_kwargs)
