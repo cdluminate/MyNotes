@@ -14,6 +14,7 @@ if ! test -d ${LOGDIR}; then
            --eps $(python3 -c "print(8./255.)") \
            --attack-lr $(python3 -c "print(2./255.)") \
            --attack-steps 7 \
+           --use-self-neu 0.0 \
            | tee ${LOGDIR}/train.log
 fi
 LOGDIR_E7=${LOGDIR}/attack-eval-7/
@@ -28,6 +29,7 @@ if ! test -d ${LOGDIR_E7}; then
         --eps $(python3 -c "print(8./255.)") \
         --attack-lr $(python3 -c "print(2./255.)") \
         --attack-steps 7 \
+        --use-self-neu 0.0 \
         --resume $(find ${LOGDIR} -type f -name '*.pt.best' | head -n1) \
         | tee ${LOGDIR_E7}/eval.log
 fi
