@@ -38,11 +38,14 @@ def list_pretrained_models():
     #argsort = param_count.argsort()
     #param_count = param_count[argsort]
     #top1 = top1[argsort]
-    ax = plt.figure(figsize=(8,5)).gca()
+    ax = plt.figure().gca()
     ax.scatter(param_count, top1)
     #ax.set_xticks(ax.get_xticks()[::20])
+    ax.set_xlabel('log(param_count)')
+    ax.set_ylabel('accuracy %')
     ax.set_title('Top-1 v.s. param_count')
-    ax.grid(True)
+    ax.set_xscale('log')
+    ax.grid(False)
     plt.tight_layout()
     plt.show()
 
