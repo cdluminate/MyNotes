@@ -18,14 +18,6 @@ from rich.progress import track
 console = rich.get_console()
 
 
-IMmean = th.tensor([0.485, 0.456, 0.406])
-IMstd = th.tensor([0.229, 0.224, 0.225])
-
-
-renorm = lambda im: im.sub(IMmean[:,None,None].to(im.device)).div(IMstd[:,None,None].to(im.device))
-denorm = lambda im: im.mul(IMstd[:,None,None].to(im.device)).add(IMmean[:,None,None].to(im.device))
-
-
 def BIM_l8_T(model, images, labels, *, eps=8./255., alpha=2./255., maxiter=6, verbose=False):
     '''
     model should have the classification head.
@@ -37,7 +29,7 @@ def BIM_l8_T(model, images, labels, *, eps=8./255., alpha=2./255., maxiter=6, ve
     images_orig = images.clone().detach()
     labels_orig = labels.clone().detach()
     images = images.clone().detach()
-    traj = [renorm(images_orig.clone()).detach()]
+    traj = [images_orig.clone().detach()]
     batch_size = images.shape[0]
     for _ in range(maxiter):
         images.requires_grad = True
@@ -51,7 +43,7 @@ def BIM_l8_T(model, images, labels, *, eps=8./255., alpha=2./255., maxiter=6, ve
         images = images.detach() + alpha * grad.sign()
         diff = th.clamp(images - images_orig, min=-eps, max=+eps).detach()
         images = th.clamp(images_orig + diff, min=0., max=1.).detach()
-        traj.append(renorm(images.clone()).detach())
+        traj.append(images.clone().detach())
     traj = th.stack(traj)
     return traj
 
