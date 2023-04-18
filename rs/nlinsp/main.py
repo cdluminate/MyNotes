@@ -7,11 +7,16 @@ import pandas as pd
 import timm
 import argparse
 import matplotlib.pyplot as plt
+import os
 import rich
 console = rich.get_console()
 
 
 _RESULTS_CSV_URL_ = 'https://github.com/huggingface/pytorch-image-models/raw/main/results/results-imagenet.csv'
+
+
+def download_csv():
+    os.system(f'wget -c {_RESULTS_CSV_URL_}')
 
 
 def list_pretrained_models():
@@ -20,6 +25,7 @@ def list_pretrained_models():
     '''
     list_models = timm.list_models(pretrained=True)
     results = pd.read_csv(_RESULTS_CSV_URL_)
+    print(results)
     #import IPython
     #IPython.embed(colors='neutral')
     param_count = []
@@ -53,7 +59,10 @@ def list_pretrained_models():
 if __name__ == '__main__':
     ag = argparse.ArgumentParser()
     ag.add_argument('--list-pretrained-models', action='store_true')
+    ag.add_argument('--download-csv', action='store_true')
     ag = ag.parse_args()
 
     if ag.list_pretrained_models:
         list_pretrained_models()
+    if ag.download_csv:
+        download_csv()
