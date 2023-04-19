@@ -52,7 +52,7 @@ if __name__ == '__main__':
     ag.add_argument('--nclass', type=int, default=10)
     ag.add_argument('--nsample', type=int, default=8)
     ag.add_argument('--csv', type=str, default='results-imagenet.csv')
-    ag.add_argument('--json', type=str, default=f'{__file__}.json')
+    ag.add_argument('--json', type=str, default=f'nlinsp-nsampleX-nclassY.json')
     ag = ag.parse_args()
     console.print(ag)
     
