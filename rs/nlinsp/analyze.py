@@ -37,6 +37,9 @@ def traverse_models_for_arcv(csv: str, nclass: int, nsample: int, device:str):
         except RuntimeError:
             console.print(f'[{idx+1}/{len(csv)}]>', model, top1, img_size, '[Skipped]')
             continue
+        except ImportError:
+            console.print(f'[{idx+1}/{len(csv)}]>', model, top1, img_size, '[Skipped]')
+            continue
         results[model] = arcv.tolist() + [entry.top1, entry.img_size]
         #break # [for debugging]
     return results
