@@ -30,11 +30,12 @@ def traverse_models_for_arcv(csv: str, nclass: int, nsample: int, device:str):
     for idx, entry in csv.iterrows():
         model = entry['model']
         img_size = entry['img_size']
+        top1 = entry['top1']
         try:
             arcv = one_model_for_arcv(model, img_size, nclass, nsample, device)
-            console.print(f'[{idx+1}/{len(csv)}]>', model, img_size, arcv)
+            console.print(f'[{idx+1}/{len(csv)}]>', model, top1, img_size, arcv)
         except RuntimeError:
-            console.print(f'[{idx+1}/{len(csv)}]>', model, img_size, '[Skipped]')
+            console.print(f'[{idx+1}/{len(csv)}]>', model, top1, img_size, '[Skipped]')
             continue
         results[model] = arcv.tolist() + [entry.top1, entry.img_size]
         #break # [for debugging]
