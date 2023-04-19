@@ -36,8 +36,8 @@ def traverse_models_for_arcv(csv: str, nclass: int, nsample: int, device:str):
         except RuntimeError:
             console.print(f'[{idx+1}/{len(csv)}]>', model, img_size, '[Skipped]')
             continue
-        results[model] = arcv.tolist() + [entry.top1]
-        #break
+        results[model] = arcv.tolist() + [entry.top1, entry.img_size]
+        #break # [for debugging]
     return results
     
 
@@ -48,7 +48,7 @@ if __name__ == '__main__':
     ag.add_argument('--nclass', type=int, default=10)
     ag.add_argument('--nsample', type=int, default=8)
     ag.add_argument('--csv', type=str, default='results-imagenet.csv')
-    ag.add_argument('--json', type=str, default='x.json')
+    ag.add_argument('--json', type=str, default=f'{__file__}.json')
     ag = ag.parse_args()
     console.print(ag)
     
