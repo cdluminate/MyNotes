@@ -19,8 +19,8 @@ def one_model_for_arcv(name: str, ishape: int, nclass: int, nsample: int, device
     labels = labels.to(device)
     traj = pgdt.BIM_l8_T(model, images, labels, verbose=False)
     arcm = pgdt.traj2arcm(model, traj, Nclass=nclass)
+    arcm = arcm.mean(axis=0)
     arcv = pgdt.arcm2v(arcm)
-    arcv = arcv.mean(axis=0)
     return arcv
 
 
