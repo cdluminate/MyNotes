@@ -58,7 +58,7 @@ def traj2arcm(model, traj, Nclass:int=1000, *, takemax:bool=False):
     arcM = []
     def _jx_from_jacobian(isample):
         Jx = []
-        for istep in track(range(Nstep), description=f'ARC-M[{isample+1}/{Nbatch}]'):
+        for istep in track(range(Nstep), description=f'ARC-M'):
             gc.collect()
             #console.print('arcM> isample', isample, 'istep', istep+1, '/', Nstep)
             xi = traj[istep, isample, :, :, :]  # [1, 1, C, H, W]

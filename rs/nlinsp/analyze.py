@@ -13,14 +13,19 @@ def one_model_for_arcv(name: str, ishape: int, nclass: int, nsample: int, device
     model = timm.create_model(name, pretrained=False, num_classes=nclass)
     model.eval()
     model = model.to(device)
-    images = th.rand(nsample, 3, ishape, ishape)
-    images = images.to(device)
-    labels = th.randint(0, nclass, (nsample,))
-    labels = labels.to(device)
-    traj = pgdt.BIM_l8_T(model, images, labels, verbose=False)
-    arcm = pgdt.traj2arcm(model, traj, Nclass=nclass)
-    arcm = arcm.mean(axis=0)
-    arcv = pgdt.arcm2v(arcm)
+    arcvs = []
+    for _ in range(nsample):
+        images = th.rand(1, 3, ishape, ishape)
+        images = images.to(device)
+        labels = th.randint(0, nclass, (1,))
+        labels = labels.to(device)
+        traj = pgdt.BIM_l8_T(model, images, labels, verbose=False)
+        arcm = pgdt.traj2arcm(model, traj, Nclass=nclass)
+        arcm = arcm.mean(axis=0)
+        arcv = pgdt.arcm2v(arcm)
+        arcvs.append(arcv)
+    arcv = np.vstack(arcvs)
+    arcv = arcv.mean(axis=0)
     return arcv
 
 
