@@ -48,7 +48,7 @@ def BIM_l8_T(model, images, labels, *, eps=8./255., alpha=2./255., maxiter=6, ve
     return traj
 
 
-def traj2arcm(model, traj, Nclass:int=1000):
+def traj2arcm(model, traj, Nclass:int=1000, *, takemax:bool=False):
     model.eval()
     device = traj.device
     assert len(traj.shape) == 5
@@ -81,10 +81,11 @@ def traj2arcm(model, traj, Nclass:int=1000):
                 Jxkn = th.nn.functional.normalize(Jxk)
                 cos = th.mm(Jxkn, Jxkn.T)
                 tmp.append(cos.clone().detach().cpu())
-            sums = [x.sum().item() for x in tmp]
-            argsort = np.argsort(sums)[::-1]
-            tmp = tmp[argsort[0]]
-            tmp = [tmp]
+            if takemax: # intead of mean(all)
+                sums = [x.sum().item() for x in tmp]
+                argsort = np.argsort(sums)[::-1]
+                tmp = tmp[argsort[0]]
+                tmp = [tmp]
         arcM.append(th.stack(tmp).mean(0).detach())
         fcntl.lockf(lock, fcntl.LOCK_UN)
         lock.close()
