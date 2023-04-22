@@ -97,7 +97,7 @@ def traj2arcm(model, traj, Nclass:int=1000, *, takemax:bool=False):
 def arcm2v(arcm: np.ndarray) -> np.ndarray:
     def laplace(x, *p):
         A, scale = p
-        return A * np.exp(-np.abs(x/scale))
+        return 1.0 * np.exp(-np.abs(x/scale))  # XXX: lock A=1.0
     if len(arcm.shape) == 2:
         assert arcm.shape[0] == arcm.shape[1]
         n = arcm.shape[0]
