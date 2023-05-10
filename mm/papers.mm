@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="185" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="187" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1675045289036">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -185,6 +185,11 @@
 <font BOLD="false" STRIKETHROUGH="false" ITALIC="true"/>
 <node TEXT="What is important to study?" ID="ID_523483050" CREATED="1642482740356" MODIFIED="1642482745945"/>
 </node>
+<node TEXT="Survival Strategy" ID="ID_412871727" CREATED="1683726661919" MODIFIED="1683726665645">
+<node TEXT="Choose Your Weapon: Survival Strategies for Depressed AI Academics" ID="ID_847207998" CREATED="1683726666067" MODIFIED="1683726675408">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
 <node TEXT="futuristic works" ID="ID_967715831" CREATED="1642709658506" MODIFIED="1642709665874">
 <node TEXT="futuristic works" ID="ID_1948507537" CREATED="1642709667170" MODIFIED="1642709670754">
 <node TEXT="can think carefully" ID="ID_324229065" CREATED="1642709671696" MODIFIED="1642709676810"/>
@@ -263,7 +268,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1675042129591">
+<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1675042129591">
 <icon BUILTIN="bookmark"/>
 <edge COLOR="#7c0000"/>
 <node TEXT="Failures/Deprecation/DeadEnd" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_1502842186" CREATED="1630692548912" MODIFIED="1676562252779">
@@ -1351,6 +1356,10 @@
 <node TEXT="-------------------------------------------------------------------" LOCALIZED_STYLE_REF="default" POSITION="right" ID="ID_1134167122" CREATED="1675049435899" MODIFIED="1675886470423">
 <edge COLOR="#ff00ff"/>
 </node>
+<node TEXT="Theory :: Neural Net" FOLDED="true" POSITION="right" ID="ID_1817022303" CREATED="1683727013722" MODIFIED="1683727020140">
+<edge COLOR="#007c7c"/>
+<node TEXT="Lottery (winning ticket hypothesis) ICLR best paper" ID="ID_1215319316" CREATED="1683727020380" MODIFIED="1683727027118"/>
+</node>
 <node TEXT="Arch :: CNN (General)" POSITION="right" ID="ID_1058668533" CREATED="1680201832033" MODIFIED="1680636993659">
 <edge COLOR="#7c0000"/>
 </node>
@@ -1572,7 +1581,7 @@
 </node>
 </node>
 </node>
-<node TEXT="V+L :: Vision-Language Pretraining" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="right" ID="ID_1438251706" CREATED="1646945591468" MODIFIED="1680190468725">
+<node TEXT="PRE :: Vision-Language Pretraining" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="right" ID="ID_1438251706" CREATED="1646945591468" MODIFIED="1683727262898">
 <edge COLOR="#00ff00"/>
 <node TEXT="Survey" ID="ID_1995640100" CREATED="1650816017282" MODIFIED="1650816021941">
 <icon BUILTIN="info"/>
@@ -5474,7 +5483,7 @@
 <node TEXT="Learning without Prejudice: Avoiding Bias in Webly-Supervised Action&#xa;Recognition" ID="ID_1991556722" CREATED="1655187230614" MODIFIED="1655187236882"/>
 </node>
 </node>
-<node TEXT="OOD :: Main" FOLDED="true" POSITION="left" ID="ID_31313107" CREATED="1657404499454" MODIFIED="1680200168582">
+<node TEXT="OOD :: Detection" FOLDED="true" POSITION="left" ID="ID_31313107" CREATED="1657404499454" MODIFIED="1683727058683">
 <edge COLOR="#007c7c"/>
 <node TEXT="Anomaly detection, out-of-distribution detection, open-set recognition" ID="ID_439134135" CREATED="1680200146165" MODIFIED="1680200161268"/>
 <node TEXT="This is a saturated area. Performance numbers are too high." ID="ID_275469478" CREATED="1675745241040" MODIFIED="1675745258548">
@@ -6529,14 +6538,20 @@
 <node TEXT="ensemble networks trained each only on subclasses of a given superclass perform better than the same network trained on all subclasses of all superclasses" ID="ID_1950788253" CREATED="1642952937590" MODIFIED="1642952961617"/>
 </node>
 </node>
-<node TEXT="Federated Learning" FOLDED="true" POSITION="left" ID="ID_121320330" CREATED="1658618674669" MODIFIED="1658618677623">
+<node TEXT="LG :: Federated Learning" POSITION="left" ID="ID_121320330" CREATED="1658618674669" MODIFIED="1683727217873">
 <edge COLOR="#ff00ff"/>
 <node TEXT="low hanging fruits are basically gone. there are some unresolved corner cases. This is going towards an engineering problem direction." ID="ID_1703063236" CREATED="1675049770366" MODIFIED="1675739832428">
 <icon BUILTIN="attach"/>
 </node>
 <node TEXT="Important Baselines" ID="ID_814985517" CREATED="1677265600561" MODIFIED="1677265604030">
+<node TEXT="FedSGD" ID="ID_1562968111" CREATED="1683726575457" MODIFIED="1683726577608"/>
 <node TEXT="FedAvg" ID="ID_485649293" CREATED="1675049758554" MODIFIED="1675049762453"/>
-<node TEXT="FedProx" ID="ID_356723584" CREATED="1677265595295" MODIFIED="1677265596861"/>
+<node TEXT="FedProx" ID="ID_356723584" CREATED="1677265595295" MODIFIED="1677265596861">
+<node TEXT="Federated Optimization in Heterogeneous Networks" ID="ID_495724457" CREATED="1683726616184" MODIFIED="1683726637184">
+<icon BUILTIN="bookmark"/>
+<node TEXT="MLSYS20" ID="ID_221877250" CREATED="1683726626079" MODIFIED="1683726632032"/>
+</node>
+</node>
 </node>
 <node TEXT="top-conf sotas" ID="ID_1219472155" CREATED="1677265608189" MODIFIED="1677265620574">
 <node TEXT="FedNova" ID="ID_1485537673" CREATED="1677265588546" MODIFIED="1677265592562"/>
@@ -6664,16 +6679,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Image Compression" FOLDED="true" POSITION="left" ID="ID_1511931365" CREATED="1648343124472" MODIFIED="1648343127424">
-<edge COLOR="#7c0000"/>
-<node TEXT="ELIC: Efficient Learned Image Compression with&#xa;Unevenly Grouped Space-Channel Contextual Adaptive Coding" ID="ID_391462928" CREATED="1648343132187" MODIFIED="1648343146503">
-<node TEXT="CVPR22" ID="ID_1107484924" CREATED="1648343143028" MODIFIED="1648343144450"/>
-</node>
-<node TEXT="Unified Multivariate Gaussian Mixture for Efficient Neural Image Compression" ID="ID_525288991" CREATED="1648343235650" MODIFIED="1648343236782">
-<node TEXT="CVPR22" ID="ID_1065954996" CREATED="1648343238753" MODIFIED="1648343240041"/>
-</node>
-</node>
-<node TEXT="Image Generation" FOLDED="true" POSITION="left" ID="ID_65977927" CREATED="1576830540818" MODIFIED="1655843128532">
+<node TEXT="GEN :: Image Generation (uncond)" FOLDED="true" POSITION="left" ID="ID_65977927" CREATED="1576830540818" MODIFIED="1683727324166">
 <font NAME="Gentium" BOLD="false"/>
 <edge COLOR="#ff0000"/>
 <node TEXT="Metrics" ID="ID_1323509383" CREATED="1659195775718" MODIFIED="1659195778362">
@@ -6691,7 +6697,50 @@
 <node TEXT="junyan zhu" ID="ID_938954070" CREATED="1659196072012" MODIFIED="1659196074471"/>
 </node>
 </node>
-<node TEXT="DeepFake" ID="ID_81253926" CREATED="1587729755009" MODIFIED="1676228592936">
+<node TEXT="Text-guided" ID="ID_96180274" CREATED="1576830552417" MODIFIED="1587526865271">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="1912.06203: ManiGan, Text-guided image manipulation" ID="ID_1256240562" CREATED="1576830556977" MODIFIED="1587526865272">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: edit parts of an image" ID="ID_1251551865" CREATED="1576830600090" MODIFIED="1587526865272">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="how: GAN" ID="ID_724188695" CREATED="1576830608609" MODIFIED="1587526865273">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="two key components" ID="ID_1561560255" CREATED="1576830618737" MODIFIED="1587526865273">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="text-image affine combination module" ID="ID_1986990785" CREATED="1576830628497" MODIFIED="1587526865273">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="select region to be edited" ID="ID_929413564" CREATED="1576830658330" MODIFIED="1587526865273">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="original image feature -- text-irrelevant contents" ID="ID_1498613519" CREATED="1576830684170" MODIFIED="1587526865274">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="detail correction module" ID="ID_1261711347" CREATED="1576830637049" MODIFIED="1587526865275">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="rectifies mismatched atrributes and completes the missing conetnt" ID="ID_1490051208" CREATED="1576830667121" MODIFIED="1587526865275">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Text-Image Synthesis" ID="ID_1506766368" CREATED="1588403169157" MODIFIED="1588403180098">
+<node TEXT="2003.08152: SwapText: Image Based Texts Transfer in Scenes" ID="ID_1133281286" CREATED="1588403187099" MODIFIED="1588403216138"/>
+</node>
+<node TEXT="hair" ID="ID_538662627" CREATED="1590804467312" MODIFIED="1590804469002">
+<node TEXT="2004.06848 Intuitive, Interactive Beard and Hair Synthesis with Generative Models (cvpr20)" ID="ID_1110805262" CREATED="1590804469671" MODIFIED="1590804486111"/>
+</node>
+<node TEXT="anime" ID="ID_862113376" CREATED="1590804588447" MODIFIED="1590804590452">
+<node TEXT="2004.06718 Line Art Correlation Matching Network for Automatic Animation Colorization" ID="ID_1382110194" CREATED="1590804591161" MODIFIED="1590804601517"/>
+</node>
+<node TEXT="2012.09290&#xa;Self-Supervised Sketch-to-Image Synthesis" ID="ID_1510941603" CREATED="1608878874818" MODIFIED="1608878886235"/>
+<node TEXT="2012.09841&#xa;Taming Transformers for High-Resolution Image Synthesis" ID="ID_1075081377" CREATED="1608879204035" MODIFIED="1608879212785"/>
+</node>
+<node TEXT="GEN :: DeepFake" FOLDED="true" POSITION="left" ID="ID_81253926" CREATED="1587729755009" MODIFIED="1683727329228">
+<edge COLOR="#7c7c00"/>
 <node TEXT="Deepfake is specific to face and person" ID="ID_1286313360" CREATED="1676228603594" MODIFIED="1676228635463">
 <icon BUILTIN="info"/>
 </node>
@@ -6738,79 +6787,18 @@
 </node>
 </node>
 </node>
-<node TEXT="Text-guided" ID="ID_96180274" CREATED="1576830552417" MODIFIED="1587526865271">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="1912.06203: ManiGan, Text-guided image manipulation" ID="ID_1256240562" CREATED="1576830556977" MODIFIED="1587526865272">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: edit parts of an image" ID="ID_1251551865" CREATED="1576830600090" MODIFIED="1587526865272">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: GAN" ID="ID_724188695" CREATED="1576830608609" MODIFIED="1587526865273">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="two key components" ID="ID_1561560255" CREATED="1576830618737" MODIFIED="1587526865273">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="text-image affine combination module" ID="ID_1986990785" CREATED="1576830628497" MODIFIED="1587526865273">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="select region to be edited" ID="ID_929413564" CREATED="1576830658330" MODIFIED="1587526865273">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="original image feature -- text-irrelevant contents" ID="ID_1498613519" CREATED="1576830684170" MODIFIED="1587526865274">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="detail correction module" ID="ID_1261711347" CREATED="1576830637049" MODIFIED="1587526865275">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="rectifies mismatched atrributes and completes the missing conetnt" ID="ID_1490051208" CREATED="1576830667121" MODIFIED="1587526865275">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="Text-Image Synthesis" ID="ID_1506766368" CREATED="1588403169157" MODIFIED="1588403180098">
-<node TEXT="2003.08152: SwapText: Image Based Texts Transfer in Scenes" ID="ID_1133281286" CREATED="1588403187099" MODIFIED="1588403216138"/>
-</node>
-<node TEXT="hair" ID="ID_538662627" CREATED="1590804467312" MODIFIED="1590804469002">
-<node TEXT="2004.06848 Intuitive, Interactive Beard and Hair Synthesis with Generative Models (cvpr20)" ID="ID_1110805262" CREATED="1590804469671" MODIFIED="1590804486111"/>
-</node>
-<node TEXT="anime" ID="ID_862113376" CREATED="1590804588447" MODIFIED="1590804590452">
-<node TEXT="2004.06718 Line Art Correlation Matching Network for Automatic Animation Colorization" ID="ID_1382110194" CREATED="1590804591161" MODIFIED="1590804601517"/>
-</node>
-<node TEXT="2012.09290&#xa;Self-Supervised Sketch-to-Image Synthesis" ID="ID_1510941603" CREATED="1608878874818" MODIFIED="1608878886235"/>
-<node TEXT="2012.09841&#xa;Taming Transformers for High-Resolution Image Synthesis" ID="ID_1075081377" CREATED="1608879204035" MODIFIED="1608879212785"/>
-</node>
-<node TEXT="Image Retrieval" FOLDED="true" POSITION="left" ID="ID_1006799943" CREATED="1649630594458" MODIFIED="1649630598110">
-<edge COLOR="#007c00"/>
-<node TEXT="Correlation Verification for Image Retrieval" ID="ID_1013972134" CREATED="1649630600849" MODIFIED="1649630693321">
-<node TEXT="CVPR22" ID="ID_1345324489" CREATED="1649630694449" MODIFIED="1649630695940"/>
-</node>
-<node TEXT="Learning Super-Features for Image Retrieval" ID="ID_829824427" CREATED="1644181270753" MODIFIED="1644181364623">
-<icon BUILTIN="checked"/>
-<node TEXT="ICLR22" ID="ID_1211217354" CREATED="1644181278285" MODIFIED="1644181280219"/>
-<node TEXT="not DML" ID="ID_1043681772" CREATED="1644181273835" MODIFIED="1644181275311"/>
-<node TEXT="combine local and global features" ID="ID_1751979954" CREATED="1644181344128" MODIFIED="1644181349980"/>
-<node TEXT="existing methods suffer from problems in the use of local features" ID="ID_111945206" CREATED="1644181350883" MODIFIED="1644181360186"/>
-</node>
-<node TEXT="Sketch based image retrieval (SBIR)" ID="ID_1111185320" CREATED="1659200143789" MODIFIED="1659200164721">
-<node TEXT="Adaptive Fine-Grained Sketch-Based Image Retrieval" ID="ID_1074627903" CREATED="1659200145836" MODIFIED="1659200146698">
-<node TEXT="ECCV22" ID="ID_1880730121" CREATED="1659200154409" MODIFIED="1659200155757"/>
-</node>
-</node>
-</node>
-<node TEXT="Image Synthesis" POSITION="left" ID="ID_372386304" CREATED="1677265731040" MODIFIED="1677265733841">
+<node TEXT="GEN :: Image Generation (conditioned)" FOLDED="true" POSITION="left" ID="ID_372386304" CREATED="1677265731040" MODIFIED="1683727338813">
 <edge COLOR="#00ffff"/>
 <node TEXT="StyleGAN" ID="ID_1362123487" CREATED="1677265739992" MODIFIED="1677265742253">
 <node TEXT="A Style-Based Generator Architecture for Generative Adversarial Networks" ID="ID_1591507547" CREATED="1677265742809" MODIFIED="1677265756977"/>
 </node>
 </node>
-<node TEXT="Meta Learning" FOLDED="true" POSITION="left" ID="ID_929306258" CREATED="1583378173046" MODIFIED="1677265041408">
+<node TEXT="LG :: Meta Learning" FOLDED="true" POSITION="left" ID="ID_929306258" CREATED="1583378173046" MODIFIED="1683727483380">
 <font NAME="Gentium" BOLD="false"/>
 <edge COLOR="#ff00ff"/>
 <node TEXT="2002.04162: incremental learning for metric-based meta-learniers" ID="ID_415175776" CREATED="1583378216948" MODIFIED="1587526864942">
 <font NAME="Gentium" BOLD="false"/>
 </node>
-<node TEXT="meta-sr" ID="ID_1118787532" CREATED="1676259542003" MODIFIED="1676259543988"/>
 <node TEXT="MAML" ID="ID_1684879216" CREATED="1677265150586" MODIFIED="1677265152517">
 <node TEXT="Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks" ID="ID_1680498840" CREATED="1677265153892" MODIFIED="1677265467516">
 <icon BUILTIN="checked"/>
@@ -6821,6 +6809,11 @@
 <node TEXT="generally, tasks used for meta-testing are held out during meta-training" ID="ID_657097218" CREATED="1677265209038" MODIFIED="1677265224720">
 <icon BUILTIN="messagebox_warning"/>
 </node>
+</node>
+</node>
+<node TEXT="Meta-SR" ID="ID_1118787532" CREATED="1676259542003" MODIFIED="1683727496340">
+<node TEXT="Meta-SR: A Magnification-Arbitrary Network for Super-Resolution" ID="ID_1305779936" CREATED="1683727486793" MODIFIED="1683727489908">
+<icon BUILTIN="bookmark"/>
 </node>
 </node>
 </node>
@@ -6882,7 +6875,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Model Compression" POSITION="left" ID="ID_325472209" CREATED="1649171031656" MODIFIED="1649171034930">
+<node TEXT="Model Compression" FOLDED="true" POSITION="left" ID="ID_325472209" CREATED="1649171031656" MODIFIED="1649171034930">
 <edge COLOR="#00007c"/>
 <node TEXT="distillation" ID="ID_1526826713" CREATED="1677266367499" MODIFIED="1677266369626"/>
 <node TEXT="Interspace Pruning: Using Adaptive Filter Representations to Improve Training of Sparse CNNs" ID="ID_1136994469" CREATED="1649171035811" MODIFIED="1649171042670">
@@ -6906,7 +6899,7 @@
 <node TEXT="Network Arch Search" FOLDED="true" POSITION="left" ID="ID_1465080986" CREATED="1576827705751" MODIFIED="1650817686281">
 <font NAME="Gentium" SIZE="10" BOLD="false"/>
 <edge COLOR="#00ffff"/>
-<node TEXT="Lottery (winning ticket hypothesis)" ID="ID_157689053" CREATED="1589771412424" MODIFIED="1589771423223"/>
+<node TEXT="" ID="ID_157689053" CREATED="1589771412424" MODIFIED="1683727003883"/>
 <node TEXT="NAS + General" ID="ID_345720050" CREATED="1589771335033" MODIFIED="1610423263436">
 <node TEXT="1912.09640 ATOMNAS: FINE-GRAINED END TO END NEURAL ARCHITECTURE SEARCH (iclr20)" ID="ID_551298402" CREATED="1591523824249" MODIFIED="1591523859249"/>
 <node TEXT="2001.01431: deeper insights into weight sharing in neural architecture search" ID="ID_788581693" CREATED="1578641715823" MODIFIED="1587526865297">
