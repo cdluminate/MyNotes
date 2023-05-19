@@ -1351,6 +1351,10 @@
 <node TEXT="randomly mask a half of W along dim n." ID="ID_1181772876" CREATED="1680750148505" MODIFIED="1680750176096"/>
 </node>
 <node TEXT="ssl predict position or position encoding for learning structure, jigsaw" ID="ID_1115727643" CREATED="1680750919797" MODIFIED="1680750929501"/>
+<node TEXT="ssl predict position encoding to learn spatial structure. (BYOL) no contrast." ID="ID_1055198183" CREATED="1684520339178" MODIFIED="1684520360089">
+<node TEXT="the others are either reconstruction or contrastive" ID="ID_195575755" CREATED="1684520360535" MODIFIED="1684520374141"/>
+<node TEXT="" ID="ID_977912985" CREATED="1684520374426" MODIFIED="1684520374426"/>
+</node>
 </node>
 </node>
 <node TEXT="-------------------------------------------------------------------" LOCALIZED_STYLE_REF="default" POSITION="right" ID="ID_1134167122" CREATED="1675049435899" MODIFIED="1675886470423">
