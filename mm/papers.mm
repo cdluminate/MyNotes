@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="189" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="190" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1675045289036">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -125,11 +125,8 @@
 </node>
 <node TEXT="browse history" ID="ID_1769952352" CREATED="1641521397167" MODIFIED="1641521457619">
 <node TEXT="arXiv" ID="ID_555001851" CREATED="1641521435482" MODIFIED="1642954134722">
-<node TEXT="2023" OBJECT="java.lang.Long|2023" ID="ID_1996231133" CREATED="1675042342779" MODIFIED="1675042344449">
-<node TEXT="Jan 29 OK" ID="ID_745940322" CREATED="1675042345298" MODIFIED="1675042347509"/>
-</node>
-<node TEXT="2022" OBJECT="java.lang.Long|2022" ID="ID_1490488610" CREATED="1641521399876" MODIFIED="1641521403819">
-<node TEXT="Weekly batch" ID="ID_1917473385" CREATED="1642949144502" MODIFIED="1642949169400"/>
+<node TEXT="cs.CV" ID="ID_1996231133" CREATED="1675042342779" MODIFIED="1686334351177">
+<node TEXT="June 9 2023" ID="ID_1051522480" CREATED="1686334325145" MODIFIED="1686334348802"/>
 </node>
 </node>
 <node TEXT="CVPR" ID="ID_1240053621" CREATED="1641521439738" MODIFIED="1642954136648">
@@ -237,15 +234,6 @@
 <node TEXT="Self Supervised Learning" ID="ID_750923691" CREATED="1676253512156" MODIFIED="1676253517827">
 <icon BUILTIN="info"/>
 </node>
-</node>
-<node TEXT="Math Hints" POSITION="right" ID="ID_779216680" CREATED="1675889763507" MODIFIED="1675889770467">
-<edge COLOR="#00ffff"/>
-<node TEXT="Computational linguistics" ID="ID_1848073684" CREATED="1675889779775" MODIFIED="1675889790605">
-<node TEXT="Zipf&apos;s law" ID="ID_1642293792" CREATED="1675889791206" MODIFIED="1675889796378">
-<node TEXT="for many types of data studied in the physical and social sciences, the rank-frequency distribution is an inverse relation." ID="ID_1911959760" CREATED="1675889822617" MODIFIED="1675889849537"/>
-</node>
-</node>
-<node TEXT="Deep Learning Book (flower book)" ID="ID_1585406271" CREATED="1680200319867" MODIFIED="1680200332383"/>
 </node>
 <node TEXT="Surveys &amp; Background" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1805920002" CREATED="1608010101067" MODIFIED="1675296645861">
 <icon BUILTIN="mindmap"/>
@@ -1580,7 +1568,7 @@
 </node>
 </node>
 </node>
-<node TEXT="SSL :: Vision" FOLDED="true" POSITION="right" ID="ID_1062312538" CREATED="1686334044572" MODIFIED="1686334046856">
+<node TEXT="Lg :: Vision Pretrain &amp; SSL" FOLDED="true" POSITION="right" ID="ID_1062312538" CREATED="1686334044572" MODIFIED="1686353871055">
 <edge COLOR="#0000ff"/>
 <node TEXT="Property" ID="ID_225546958" CREATED="1686334080875" MODIFIED="1686334082633">
 <node TEXT="DINO: emerging properties in self-supervised vision transformers" ID="ID_1900004082" CREATED="1686334082859" MODIFIED="1686334092138">
@@ -1605,7 +1593,7 @@
 <icon BUILTIN="info"/>
 </node>
 </node>
-<node TEXT="SSL :: Vision Reconstruction" FOLDED="true" ID="ID_29624267" CREATED="1680015510463" MODIFIED="1686334049799">
+<node TEXT="SSL :: Vision Reconstruction" ID="ID_29624267" CREATED="1680015510463" MODIFIED="1686334049799">
 <node TEXT="Self-supervised learning has two major forms, reconstruction and contrastive learning" ID="ID_1689550023" CREATED="1647264534821" MODIFIED="1680200393467">
 <icon BUILTIN="info"/>
 </node>
@@ -1629,11 +1617,18 @@
 <icon BUILTIN="help"/>
 </node>
 </node>
+<node TEXT="Understanding Masked Autoencoders via hierarchical latent variable models" ID="ID_832319458" CREATED="1686356072026" MODIFIED="1686356083153">
+<node TEXT="CVPR 2023" ID="ID_1474018883" CREATED="1686356083560" MODIFIED="1686356085825"/>
+<node TEXT="theoretical guarantees of MAE" ID="ID_1839629427" CREATED="1686356087004" MODIFIED="1686356094234"/>
+</node>
 </node>
 </node>
 <node TEXT="SSL :: Vision Jigsaw" ID="ID_1633599777" CREATED="1686334051507" MODIFIED="1686334056608"/>
+<node TEXT="SAM" ID="ID_272647120" CREATED="1686353874379" MODIFIED="1686353876261">
+<node TEXT="segment anything" ID="ID_975480133" CREATED="1686353879160" MODIFIED="1686353883690"/>
 </node>
-<node TEXT="SSL :: Param Efficient FT (PEFT)" FOLDED="true" POSITION="right" ID="ID_1318848578" CREATED="1675367072095" MODIFIED="1680015610243">
+</node>
+<node TEXT="Lg :: Param Efficient Fine Tuning (PEFT)" FOLDED="true" POSITION="right" ID="ID_1318848578" CREATED="1675367072095" MODIFIED="1686350664138">
 <edge COLOR="#7c007c"/>
 <node TEXT="Closes the gap between pre-training and fine-tuning" ID="ID_302094227" CREATED="1676563861861" MODIFIED="1676563873900">
 <icon BUILTIN="info"/>
@@ -1657,6 +1652,9 @@
 <node TEXT="Open-Vocabulary Semantic Segmentation with Mask-adapted CLIP" ID="ID_712695760" CREATED="1675367157483" MODIFIED="1675367170253"/>
 <node TEXT="Visual Prompt Tuning for Test-time Domain Adaptation" ID="ID_431267464" CREATED="1675367186463" MODIFIED="1675367187485"/>
 <node TEXT="Unleashing the Power of Visual Prompting At the Pixel Level" ID="ID_595029881" CREATED="1675367196116" MODIFIED="1675367197072"/>
+<node TEXT="Improving visual prompt tuning for self-supervised vision transformers" ID="ID_1926682417" CREATED="1686356014399" MODIFIED="1686356024594">
+<node TEXT="ICML23" ID="ID_64081843" CREATED="1686356024820" MODIFIED="1686356027334"/>
+</node>
 </node>
 <node TEXT="Prompt :: Computational Linguistics" ID="ID_686007260" CREATED="1675367065325" MODIFIED="1676563797447">
 <node TEXT="Prompting: Instead of adapting pre-trianed lms to downstream tasks via objective engineering, downstream tasks are reformulated to look more like those solved during the original LM training with the help of a textual prompt. This allows us to adapt large scale pre-trianed models to specific tasks without having to fine-tune the model or even the last few layers. For instance, prompt templates handcrafted for the task." ID="ID_1922284406" CREATED="1675367102133" MODIFIED="1675367109043">
@@ -1683,6 +1681,11 @@
 <node TEXT="vision+language" ID="ID_1842585478" CREATED="1676768347305" MODIFIED="1676768349809"/>
 <node TEXT="beats fine-tuning" ID="ID_534783510" CREATED="1676768338126" MODIFIED="1676768342609"/>
 <node TEXT="introduces UniAdapter for encoder, query, and decoder." ID="ID_1034684149" CREATED="1676769384401" MODIFIED="1676769401799"/>
+</node>
+</node>
+<node TEXT="+ Robustness" ID="ID_1371149928" CREATED="1686350672593" MODIFIED="1686350675342">
+<node TEXT="benchmarking robustness of adaptation methods on pre-trained vision language models" ID="ID_773568370" CREATED="1686350675763" MODIFIED="1686350749738">
+<icon BUILTIN="pencil"/>
 </node>
 </node>
 </node>
@@ -4434,7 +4437,7 @@
 <node TEXT="ECCV12" ID="ID_1085442689" CREATED="1655448044932" MODIFIED="1655448047019"/>
 </node>
 </node>
-<node TEXT="Two-Stage" FOLDED="true" ID="ID_981048532" CREATED="1654041315951" MODIFIED="1659198793583">
+<node TEXT="Two-Stage" ID="ID_981048532" CREATED="1654041315951" MODIFIED="1659198793583">
 <icon BUILTIN="gohome"/>
 <node TEXT="R-CNN" ID="ID_1685978685" CREATED="1578733403630" MODIFIED="1676321395764">
 <icon BUILTIN="bookmark"/>
@@ -4534,6 +4537,13 @@
 <node TEXT="soft decision tree at decision head" ID="ID_287995473" CREATED="1655005274461" MODIFIED="1655005312806"/>
 </node>
 </node>
+<node TEXT="+ Multi Dataset" ID="ID_673239681" CREATED="1686355457255" MODIFIED="1686355460962">
+<node TEXT="ScaleDet" ID="ID_514910240" CREATED="1686355461227" MODIFIED="1686355467048">
+<node TEXT="a scalable multi-dataset object detector" ID="ID_1416020587" CREATED="1686355467311" MODIFIED="1686355477465">
+<node TEXT="CVPR23" ID="ID_143449877" CREATED="1686355477581" MODIFIED="1686355479037"/>
+</node>
+</node>
+</node>
 </node>
 <node TEXT="One-Stage" FOLDED="true" ID="ID_1861902425" CREATED="1654040858813" MODIFIED="1659198795657">
 <icon BUILTIN="gohome"/>
@@ -4618,7 +4628,7 @@
 <node TEXT="updates hand-crafted anchor assignment to &apos;free&apos; anchor matching by formulating detector training as a maximum likelihood estimation (MLE) procedure" ID="ID_905160337" CREATED="1655412849974" MODIFIED="1655412874741"/>
 </node>
 </node>
-<node TEXT="DETR Family" ID="ID_348406151" CREATED="1654113701876" MODIFIED="1659198797873">
+<node TEXT="DETR Family" FOLDED="true" ID="ID_348406151" CREATED="1654113701876" MODIFIED="1659198797873">
 <icon BUILTIN="gohome"/>
 <node TEXT="also called object query-based detectors" ID="ID_1745046240" CREATED="1680217864424" MODIFIED="1680217882612">
 <icon BUILTIN="info"/>
@@ -6456,7 +6466,7 @@
 </node>
 </node>
 </node>
-<node TEXT="DDPM :: Prevent Image Editing" FOLDED="true" POSITION="left" ID="ID_1205778136" CREATED="1680653497543" MODIFIED="1680653640135">
+<node TEXT="DDPM :: Protection and Tracking" FOLDED="true" POSITION="left" ID="ID_1205778136" CREATED="1680653497543" MODIFIED="1686356610153">
 <edge COLOR="#7c007c"/>
 <node TEXT="Raising the Cost of Malicious AI-Powered Image Editing" ID="ID_650622645" CREATED="1680653552985" MODIFIED="1680653555037">
 <icon BUILTIN="pencil"/>
@@ -6466,6 +6476,10 @@
 <node TEXT="Adversarial Example Does Good: Preventing Painting Imitation from Diffusion Models via Adversarial Examples" ID="ID_1164664445" CREATED="1680653705695" MODIFIED="1680653708145">
 <icon BUILTIN="pencil"/>
 </node>
+<node TEXT="unlearnable examples for diffusion models: protext data from unauthorized exploitaiton" ID="ID_1294212707" CREATED="1686351326573" MODIFIED="1686351376813">
+<icon BUILTIN="pencil"/>
+</node>
+<node TEXT="weight modulation for user attribution and fingerprinting in text-to-image diffusion models" ID="ID_202941701" CREATED="1686356616790" MODIFIED="1686356629944"/>
 </node>
 <node TEXT="Dimension Reduction" FOLDED="true" POSITION="left" ID="ID_703196004" CREATED="1648336542877" MODIFIED="1672078777071">
 <edge COLOR="#00ff00"/>
@@ -6479,7 +6493,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Domain Adaptation" FOLDED="true" POSITION="left" ID="ID_1179225618" CREATED="1582887416803" MODIFIED="1642394196054">
+<node TEXT="Domain Adapt / Transfer Lg" FOLDED="true" POSITION="left" ID="ID_1179225618" CREATED="1582887416803" MODIFIED="1686351459779">
 <font NAME="Gentium" BOLD="false"/>
 <edge COLOR="#ff0000"/>
 <node TEXT="Concept" ID="ID_276280133" CREATED="1650832531233" MODIFIED="1650832534030">
@@ -6608,6 +6622,14 @@
 <node TEXT="misclassifications are rarely across superclasses, but mainly among subclasses with a superclass" ID="ID_426581992" CREATED="1642952902122" MODIFIED="1642952932522"/>
 <node TEXT="ensemble networks trained each only on subclasses of a given superclass perform better than the same network trained on all subclasses of all superclasses" ID="ID_1950788253" CREATED="1642952937590" MODIFIED="1642952961617"/>
 </node>
+<node TEXT="CBM" ID="ID_301801388" CREATED="1686352109549" MODIFIED="1686352115552">
+<node TEXT="ProbCBM" ID="ID_1662486844" CREATED="1686352116228" MODIFIED="1686352120779">
+<node TEXT="Probablistic concept bottleneck models" ID="ID_1120360806" CREATED="1686352151657" MODIFIED="1686352160264">
+<node TEXT="ICML23" ID="ID_1922667021" CREATED="1686352161669" MODIFIED="1686352163617"/>
+<node TEXT="relies on the necessity of concept labels." ID="ID_1287049420" CREATED="1686352121662" MODIFIED="1686352140647"/>
+</node>
+</node>
+</node>
 </node>
 <node TEXT="LG :: Federated Learning" FOLDED="true" POSITION="left" ID="ID_121320330" CREATED="1658618674669" MODIFIED="1683727217873">
 <edge COLOR="#ff00ff"/>
@@ -6628,6 +6650,11 @@
 <node TEXT="FedNova" ID="ID_1485537673" CREATED="1677265588546" MODIFIED="1677265592562"/>
 <node TEXT="SphereFed: Hyperspherical Federated Learning" ID="ID_1881740651" CREATED="1658618678515" MODIFIED="1658618679170">
 <node TEXT="ECCV22" ID="ID_624140530" CREATED="1658618681127" MODIFIED="1658618682432"/>
+</node>
+</node>
+<node TEXT="+ Diffusion" ID="ID_217151115" CREATED="1686353294356" MODIFIED="1686353297211">
+<node TEXT="phoenix: a federated generative diffusion model" ID="ID_1101885608" CREATED="1686353297577" MODIFIED="1686353310534">
+<icon BUILTIN="pencil"/>
 </node>
 </node>
 </node>
@@ -6724,7 +6751,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Image Caption" POSITION="left" ID="ID_1834444713" CREATED="1672078790020" MODIFIED="1672078799455">
+<node TEXT="Image Caption" FOLDED="true" POSITION="left" ID="ID_1834444713" CREATED="1672078790020" MODIFIED="1672078799455">
 <edge COLOR="#007c00"/>
 <node TEXT="Andrej&apos;s early works" ID="ID_1741039778" CREATED="1676254817451" MODIFIED="1676254821822"/>
 <node TEXT="+Edge" ID="ID_205292947" CREATED="1676254828184" MODIFIED="1676254830327">
@@ -6750,7 +6777,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Gen :: Image Generation" FOLDED="true" POSITION="right" ID="ID_65977927" CREATED="1576830540818" MODIFIED="1686332971419">
+<node TEXT="Gen :: Image Generation" POSITION="right" ID="ID_65977927" CREATED="1576830540818" MODIFIED="1686332971419">
 <font NAME="Gentium" BOLD="false"/>
 <edge COLOR="#ff0000"/>
 <node TEXT="Metrics" ID="ID_1323509383" CREATED="1659195775718" MODIFIED="1659195778362">
@@ -6778,11 +6805,50 @@
 </node>
 </node>
 <node TEXT="Unconditioned" ID="ID_1049820445" CREATED="1686332896941" MODIFIED="1686332900710">
+<node TEXT="VQGAN" ID="ID_1988505855" CREATED="1686345876373" MODIFIED="1686345878893">
+<node TEXT="2012.09841 Taming Transformers for High-Resolution Image Synthesis (VQGAN)" ID="ID_1075081377" CREATED="1608879204035" MODIFIED="1686345797553"/>
+</node>
 <node TEXT="ADM" ID="ID_246796407" CREATED="1686333000864" MODIFIED="1686333002225"/>
 <node TEXT="LDM" ID="ID_1406137232" CREATED="1686333002582" MODIFIED="1686333003400"/>
 </node>
-<node TEXT="Text-guided" ID="ID_96180274" CREATED="1576830552417" MODIFIED="1587526865271">
-<font NAME="Gentium" BOLD="false"/>
+<node TEXT="Text-Image Synthesis" ID="ID_1506766368" CREATED="1588403169157" MODIFIED="1588403180098">
+<node TEXT="2003.08152: SwapText: Image Based Texts Transfer in Scenes" ID="ID_1133281286" CREATED="1588403187099" MODIFIED="1588403216138"/>
+<node TEXT="LDM" ID="ID_479498826" CREATED="1686332992990" MODIFIED="1686332997988">
+<node TEXT="LDM" ID="ID_1844469825" CREATED="1686333007106" MODIFIED="1686333013032">
+<node TEXT="High-Resolution Image Synthesis with Latent Diffusion Models" ID="ID_60879573" CREATED="1686333434769" MODIFIED="1686333446090"/>
+</node>
+<node TEXT="Stable-Diffusion V1" ID="ID_1744496896" CREATED="1686333013229" MODIFIED="1686333017042">
+<node TEXT="this provides training script" ID="ID_758397307" CREATED="1686333422252" MODIFIED="1686333426016"/>
+</node>
+<node TEXT="Stable-Diffusion V2" ID="ID_872410892" CREATED="1686333017310" MODIFIED="1686333021921">
+<node TEXT="no training code released sofar" ID="ID_1700177349" CREATED="1686333022158" MODIFIED="1686333048262"/>
+</node>
+</node>
+<node TEXT="ControlNet" ID="ID_869051561" CREATED="1686333458404" MODIFIED="1686333460287">
+<node TEXT="Adding conditional control to text-to-image diffusion models" ID="ID_339709287" CREATED="1686333460644" MODIFIED="1686333469952"/>
+</node>
+<node TEXT="+ Robustness" ID="ID_677553007" CREATED="1686346050736" MODIFIED="1686346057018">
+<node TEXT="Stable diffusion is unstable" ID="ID_454504249" CREATED="1686346057260" MODIFIED="1686346073707">
+<icon BUILTIN="pencil"/>
+<node TEXT="2306" OBJECT="java.lang.Long|2306" ID="ID_1303149192" CREATED="1686346066494" MODIFIED="1686346071750"/>
+<node TEXT="a small perturbation to the text prompt can result in blending of primary subjects with ohter categories or their complete disappearance in the generated images." ID="ID_669159635" CREATED="1686346075160" MODIFIED="1686346114078"/>
+</node>
+</node>
+<node TEXT="+TODO" ID="ID_1396222461" CREATED="1686356328770" MODIFIED="1686356662200">
+<icon BUILTIN="bell"/>
+<node TEXT="designing a better asymmetric vqgan for stable diffusion" ID="ID_147213015" CREATED="1686356330452" MODIFIED="1686356344050">
+<node TEXT="zixin" ID="ID_687797920" CREATED="1686356474566" MODIFIED="1686356476089"/>
+</node>
+<node TEXT="conceptbed: evaluating concept learning abilities of text-to-image diffusion models" ID="ID_1916479296" CREATED="1686356344304" MODIFIED="1686356489305">
+<node TEXT="text-to-image evaluation" ID="ID_150655953" CREATED="1686356489915" MODIFIED="1686356494522"/>
+</node>
+<node TEXT="interactive fasihon content generation using llms and latent diffusion models" ID="ID_1054406160" CREATED="1686356496503" MODIFIED="1686356675279"/>
+<node TEXT="grounded text-to-image synthesis with attention refocusing." ID="ID_861285530" CREATED="1686356683949" MODIFIED="1686356692917">
+<node TEXT="appending more information seemingly helps improving the image quality" ID="ID_1370401657" CREATED="1686356693275" MODIFIED="1686356706116"/>
+</node>
+</node>
+</node>
+<node TEXT="Image Manipulation" ID="ID_791526487" CREATED="1686345836261" MODIFIED="1686345840287">
 <node TEXT="1912.06203: ManiGan, Text-guided image manipulation" ID="ID_1256240562" CREATED="1576830556977" MODIFIED="1587526865272">
 <font NAME="Gentium" BOLD="false"/>
 <node TEXT="what: edit parts of an image" ID="ID_1251551865" CREATED="1576830600090" MODIFIED="1587526865272">
@@ -6810,36 +6876,20 @@
 </node>
 </node>
 </node>
-</node>
-<node TEXT="Text-Image Synthesis" ID="ID_1506766368" CREATED="1588403169157" MODIFIED="1588403180098">
-<node TEXT="2003.08152: SwapText: Image Based Texts Transfer in Scenes" ID="ID_1133281286" CREATED="1588403187099" MODIFIED="1588403216138"/>
-<node TEXT="LDM" ID="ID_479498826" CREATED="1686332992990" MODIFIED="1686332997988">
-<node TEXT="LDM" ID="ID_1844469825" CREATED="1686333007106" MODIFIED="1686333013032">
-<node TEXT="High-Resolution Image Synthesis with Latent Diffusion Models" ID="ID_60879573" CREATED="1686333434769" MODIFIED="1686333446090"/>
-</node>
-<node TEXT="Stable-Diffusion V1" ID="ID_1744496896" CREATED="1686333013229" MODIFIED="1686333017042">
-<node TEXT="this provides training script" ID="ID_758397307" CREATED="1686333422252" MODIFIED="1686333426016"/>
-</node>
-<node TEXT="Stable-Diffusion V2" ID="ID_872410892" CREATED="1686333017310" MODIFIED="1686333021921">
-<node TEXT="no training code released sofar" ID="ID_1700177349" CREATED="1686333022158" MODIFIED="1686333048262"/>
-</node>
-</node>
-<node TEXT="ControlNet" ID="ID_869051561" CREATED="1686333458404" MODIFIED="1686333460287">
-<node TEXT="Adding conditional control to text-to-image diffusion models" ID="ID_339709287" CREATED="1686333460644" MODIFIED="1686333469952"/>
-</node>
-</node>
-<node TEXT="hair" ID="ID_538662627" CREATED="1590804467312" MODIFIED="1590804469002">
-<node TEXT="2004.06848 Intuitive, Interactive Beard and Hair Synthesis with Generative Models (cvpr20)" ID="ID_1110805262" CREATED="1590804469671" MODIFIED="1590804486111"/>
-</node>
-<node TEXT="anime" ID="ID_862113376" CREATED="1590804588447" MODIFIED="1590804590452">
-<node TEXT="2004.06718 Line Art Correlation Matching Network for Automatic Animation Colorization" ID="ID_1382110194" CREATED="1590804591161" MODIFIED="1590804601517"/>
-</node>
-<node TEXT="2012.09290&#xa;Self-Supervised Sketch-to-Image Synthesis" ID="ID_1510941603" CREATED="1608878874818" MODIFIED="1608878886235"/>
-<node TEXT="2012.09841&#xa;Taming Transformers for High-Resolution Image Synthesis" ID="ID_1075081377" CREATED="1608879204035" MODIFIED="1608879212785"/>
-<node TEXT="Style Transfer" ID="ID_416491996" CREATED="1686332910077" MODIFIED="1686332913736">
 <node TEXT="StyleGAN" ID="ID_1362123487" CREATED="1677265739992" MODIFIED="1686332906221">
 <node TEXT="A Style-Based Generator Architecture for Generative Adversarial Networks" ID="ID_1591507547" CREATED="1677265742809" MODIFIED="1677265756977"/>
 </node>
+</node>
+<node TEXT="Sketch-guided Synthesis" ID="ID_1553669180" CREATED="1686345763081" MODIFIED="1686345863556">
+<node TEXT="2012.09290&#xa;Self-Supervised Sketch-to-Image Synthesis" ID="ID_1510941603" CREATED="1608878874818" MODIFIED="1608878886235"/>
+</node>
+<node TEXT="Human" ID="ID_11912070" CREATED="1686345748973" MODIFIED="1686345750825">
+<node TEXT="hair" ID="ID_538662627" CREATED="1590804467312" MODIFIED="1590804469002">
+<node TEXT="2004.06848 Intuitive, Interactive Beard and Hair Synthesis with Generative Models (cvpr20)" ID="ID_1110805262" CREATED="1590804469671" MODIFIED="1590804486111"/>
+</node>
+</node>
+<node TEXT="anime" ID="ID_862113376" CREATED="1590804588447" MODIFIED="1590804590452">
+<node TEXT="2004.06718 Line Art Correlation Matching Network for Automatic Animation Colorization" ID="ID_1382110194" CREATED="1590804591161" MODIFIED="1590804601517"/>
 </node>
 </node>
 <node TEXT="GEN :: DeepFake" FOLDED="true" POSITION="left" ID="ID_81253926" CREATED="1587729755009" MODIFIED="1683727329228">
@@ -6911,64 +6961,6 @@
 <node TEXT="Meta-SR" ID="ID_1118787532" CREATED="1676259542003" MODIFIED="1683727496340">
 <node TEXT="Meta-SR: A Magnification-Arbitrary Network for Super-Resolution" ID="ID_1305779936" CREATED="1683727486793" MODIFIED="1683727489908">
 <icon BUILTIN="bookmark"/>
-</node>
-</node>
-</node>
-<node TEXT="Learning" LOCALIZED_STYLE_REF="defaultstyle.floating" FOLDED="true" POSITION="left" ID="ID_876811772" CREATED="1583309966895" MODIFIED="1677265582050">
-<font NAME="Gentium" SIZE="10" BOLD="false"/>
-<edge COLOR="#7c7c00"/>
-<node TEXT="Federated Learning (distributed learning; protecting privacy)" ID="ID_647280840" CREATED="1583309969788" MODIFIED="1587526864937">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="2002.09843: practical and bilateral privacy-preserving federated learning" ID="ID_564507506" CREATED="1583310044407" MODIFIED="1587526864938">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: federated learning" ID="ID_985779415" CREATED="1583310061113" MODIFIED="1587526864939">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: protect more privacy" ID="ID_1208071786" CREATED="1583310065998" MODIFIED="1587526864939">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="Online Learning / Novel Class Discovery" ID="ID_1490111028" CREATED="1583373522722" MODIFIED="1587526864940">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="2002.05714: automatically discovering and learning new visual categories with ranking statistics (ICLR20, VGG Oxford)" ID="ID_1826828246" CREATED="1583373530690" MODIFIED="1587526864941">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="why: it&apos;s challenging" ID="ID_1259104861" CREATED="1583373565655" MODIFIED="1587526864941">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="Active Learning" ID="ID_853331882" CREATED="1608876358857" MODIFIED="1608876362122">
-<node TEXT="2012.10467&#xa; Minimax Active Learning" ID="ID_1952916971" CREATED="1608876363892" MODIFIED="1608876372836"/>
-</node>
-<node TEXT="Life long learning" ID="ID_876193623" CREATED="1659196615332" MODIFIED="1659196619027">
-<node TEXT="Learning with Recoverable Forgetting" ID="ID_1427700540" CREATED="1659196620033" MODIFIED="1659196621031">
-<node TEXT="ECCV22" ID="ID_204869768" CREATED="1659196624646" MODIFIED="1659196626020"/>
-</node>
-</node>
-<node TEXT="Continual Learning" ID="ID_131447938" CREATED="1587731579088" MODIFIED="1587731583163">
-<node TEXT="2004.10862: continual learning of object instances (CVPRw)" ID="ID_1507005369" CREATED="1587731584263" MODIFIED="1587731605443">
-<node TEXT="focus on car, and incrementally learn to distinguish different car instances" ID="ID_1166289498" CREATED="1587731618521" MODIFIED="1587731648648"/>
-</node>
-<node TEXT="2004.11545: dropout as an imlicit gating mechanism for continual learning" ID="ID_475097263" CREATED="1587975571838" MODIFIED="1587975586113"/>
-</node>
-<node TEXT="Incremental Learning" ID="ID_657680929" CREATED="1590752080935" MODIFIED="1590752087255">
-<node TEXT="2004.00713: Memory-Efficient Incremental Learning Through Feature Adaptation" ID="ID_1766164041" CREATED="1590752093902" MODIFIED="1590752108458"/>
-</node>
-<node TEXT="Invariance learning" ID="ID_700006871" CREATED="1659196748394" MODIFIED="1659196751798">
-<node TEXT="HyperInvariances: Amortizing Invariance Learning" ID="ID_40211978" CREATED="1659196752893" MODIFIED="1659196754028">
-<node TEXT="ICML22w" ID="ID_770405984" CREATED="1659196754807" MODIFIED="1659196757305"/>
-</node>
-</node>
-<node TEXT="unsup domain adaptation" ID="ID_108358759" CREATED="1610422300921" MODIFIED="1610422305959">
-<node TEXT="2101: Unsupervised Domain Adaptation of Black-Box Source Models" ID="ID_1885176581" CREATED="1610422307004" MODIFIED="1610422319037"/>
-</node>
-<node TEXT="Curriculum learning" ID="ID_570972313" CREATED="1653335363534" MODIFIED="1653335368658">
-<node TEXT="LeRaC: Learning Rate Curriculum" ID="ID_623814188" CREATED="1653335369346" MODIFIED="1653335371339">
-<icon BUILTIN="pencil"/>
-<node TEXT="Nicu" ID="ID_957914597" CREATED="1653335372975" MODIFIED="1653335375240"/>
-<node TEXT="different learning rate for each layer of a neural network  to create a data-free curriculum during the initial training epochs" ID="ID_197154943" CREATED="1653335382996" MODIFIED="1653335547811"/>
-<node TEXT="evaluated in vision, language, and audio tasks" ID="ID_1520190800" CREATED="1653335549354" MODIFIED="1653335558233"/>
 </node>
 </node>
 </node>
@@ -7068,13 +7060,6 @@
 <node TEXT="otehr=captioning" ID="ID_341214713" CREATED="1608876510692" MODIFIED="1608876515099">
 <node TEXT="2012.09742&#xa;AutoCaption: Image Captioning with Neural Architecture Search" ID="ID_1588438121" CREATED="1608876515864" MODIFIED="1608876526467"/>
 </node>
-</node>
-</node>
-<node TEXT="Optimizer" FOLDED="true" POSITION="left" ID="ID_1099765438" CREATED="1676560948910" MODIFIED="1676560950878">
-<edge COLOR="#0000ff"/>
-<node TEXT="Amos: AN ADAM-STYLE OPTIMIZER WITH ADAPTIVE&#xa;WEIGHT DECAY TOWARDS MODEL-ORIENTED SCALE" ID="ID_388968323" CREATED="1676560951138" MODIFIED="1676560963930">
-<node TEXT="ICLR23" ID="ID_105752447" CREATED="1676560968416" MODIFIED="1676560970224"/>
-<node TEXT="optimizer for language model" ID="ID_473215861" CREATED="1676560970417" MODIFIED="1676560980916"/>
 </node>
 </node>
 <node TEXT="Ordinal Regression" FOLDED="true" POSITION="left" ID="ID_408572005" CREATED="1576825445602" MODIFIED="1647264584581">
@@ -7481,7 +7466,7 @@
 <node TEXT="FAIR" ID="ID_1062435801" CREATED="1659201151768" MODIFIED="1659201153574"/>
 </node>
 </node>
-<node TEXT="Vector Image Generation" POSITION="left" ID="ID_1231220509" CREATED="1655449067387" MODIFIED="1686330944600">
+<node TEXT="Vector Image Generation" FOLDED="true" POSITION="left" ID="ID_1231220509" CREATED="1655449067387" MODIFIED="1686330944600">
 <edge COLOR="#007c00"/>
 <node TEXT="Primal sketch. G. hua suggestion" ID="ID_959414508" CREATED="1658618720052" MODIFIED="1676253751719">
 <icon BUILTIN="info"/>
