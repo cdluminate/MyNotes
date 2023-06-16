@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="199" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="202" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1675045289036">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -256,7 +256,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1675042129591">
+<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1675042129591">
 <icon BUILTIN="bookmark"/>
 <edge COLOR="#7c0000"/>
 <node TEXT="Failures/Deprecation/DeadEnd" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_1502842186" CREATED="1630692548912" MODIFIED="1676562252779">
@@ -571,7 +571,7 @@
 <icon BUILTIN="bookmark"/>
 </node>
 </node>
-<node TEXT="Questions" FOLDED="true" ID="ID_1635080843" CREATED="1675042162167" MODIFIED="1675042203699">
+<node TEXT="Questions" ID="ID_1635080843" CREATED="1675042162167" MODIFIED="1675042203699">
 <node TEXT="Object recognition w/ vectorized images?" FOLDED="true" ID="ID_122040551" CREATED="1656372931630" MODIFIED="1675042169938">
 <node TEXT="I kind of like image vectorization" ID="ID_653939614" CREATED="1656373042240" MODIFIED="1656373051048"/>
 <node TEXT=" (image in different modality -- less noisy" ID="ID_1252599478" CREATED="1656373093113" MODIFIED="1656373094000"/>
@@ -1344,6 +1344,13 @@
 <node TEXT="" ID="ID_977912985" CREATED="1684520374426" MODIFIED="1684520374426"/>
 </node>
 <node TEXT="SVG / object detection? polynomial fitting of image edges. then transformer." ID="ID_583484651" CREATED="1686940806690" MODIFIED="1686940826905"/>
+<node TEXT="FastDINO" ID="ID_1723147497" CREATED="1686956073389" MODIFIED="1686956075413"/>
+<node TEXT="invertible residual network" ID="ID_1867456163" CREATED="1686956139269" MODIFIED="1686956145610"/>
+<node TEXT="original neuroski slacks off and will shrink the rep space. we need to support the space (avoid collapse) with triplet. norm only makes sense when scale is kept intact (ie. doe snot collapse)" ID="ID_1243787639" CREATED="1686956146341" MODIFIED="1686956198518">
+<node TEXT="Scale, norm, angle, and lipschitz" ID="ID_839752538" CREATED="1686956202889" MODIFIED="1686956214672"/>
+<node TEXT="towards zero-AT robustness?" ID="ID_962271500" CREATED="1686956214947" MODIFIED="1686956229476"/>
+<node TEXT="not gaussian. Use half gaussian. truncated to only positive or only negative." ID="ID_2633012" CREATED="1686956264955" MODIFIED="1686956279937"/>
+</node>
 </node>
 </node>
 <node TEXT="-------------------------------------------------------------------" LOCALIZED_STYLE_REF="default" POSITION="right" ID="ID_1134167122" CREATED="1675049435899" MODIFIED="1675886470423">
@@ -1387,6 +1394,12 @@
 </node>
 </node>
 <node TEXT="image GPT (iGPT)" ID="ID_716806882" CREATED="1686331869004" MODIFIED="1686331880271"/>
+</node>
+<node TEXT="CNN + Transformer Hybrid" ID="ID_543000976" CREATED="1686954585228" MODIFIED="1686954591055">
+<node TEXT="fasterVIT: fast vision transformers with hierarchical attention" ID="ID_1691166333" CREATED="1686954591288" MODIFIED="1686954606987">
+<icon BUILTIN="pencil"/>
+<node TEXT="nvidia" ID="ID_232813480" CREATED="1686954608158" MODIFIED="1686954609050"/>
+</node>
 </node>
 </node>
 <node TEXT="V+L :: Image-Text Matching" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="right" ID="ID_1438251706" CREATED="1646945591468" MODIFIED="1686948313780">
@@ -1498,7 +1511,7 @@
 </node>
 </node>
 </node>
-<node TEXT="CL :: Large Language Model (LLM)" POSITION="right" ID="ID_1735833052" CREATED="1675287989836" MODIFIED="1686948223424">
+<node TEXT="CL :: Large Language Model (LLM)" FOLDED="true" POSITION="right" ID="ID_1735833052" CREATED="1675287989836" MODIFIED="1686948223424">
 <edge COLOR="#00ff00"/>
 <node TEXT="self-supervise by reconstruction" ID="ID_1462056670" CREATED="1680015462579" MODIFIED="1680015470175">
 <icon BUILTIN="info"/>
@@ -1652,7 +1665,9 @@
 <node TEXT="SSL :: Vision Jigsaw" ID="ID_1633599777" CREATED="1686334051507" MODIFIED="1686334056608"/>
 <node TEXT="Foundation Models" ID="ID_1024777438" CREATED="1686939023872" MODIFIED="1686939026511">
 <node TEXT="SAM" ID="ID_272647120" CREATED="1686353874379" MODIFIED="1686353876261">
-<node TEXT="segment anything" ID="ID_975480133" CREATED="1686353879160" MODIFIED="1686353883690"/>
+<node TEXT="segment anything" ID="ID_975480133" CREATED="1686353879160" MODIFIED="1686353883690">
+<node TEXT="LINK: V :: Segmentation" ID="ID_311297852" CREATED="1686954881879" MODIFIED="1686954899438"/>
+</node>
 </node>
 <node TEXT="SLIC" ID="ID_667972573" CREATED="1686939087022" MODIFIED="1686939088616"/>
 <node TEXT="X-Decoder" ID="ID_1814516965" CREATED="1686939089863" MODIFIED="1686939093305"/>
@@ -4231,7 +4246,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Img :: Deep Metric Learning" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="right" ID="ID_464750159" CREATED="1641242970936" MODIFIED="1680203941631">
+<node TEXT="V :: Deep Metric Learning" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="right" ID="ID_464750159" CREATED="1641242970936" MODIFIED="1686953338237">
 <edge COLOR="#ff00ff"/>
 <node TEXT="Survey" ID="ID_1192003468" CREATED="1641520461677" MODIFIED="1648175016651">
 <icon BUILTIN="info"/>
@@ -4397,7 +4412,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Img :: Object Detection" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="right" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1680203920130">
+<node TEXT="V :: Object Detection" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="right" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1686953333927">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_674316746" CREATED="1653969587756" MODIFIED="1653969594381">
 <icon BUILTIN="mindmap"/>
@@ -4461,7 +4476,8 @@
 <node TEXT="Super difficult." ID="ID_171444601" CREATED="1685735971559" MODIFIED="1685735974674"/>
 </node>
 </node>
-<node TEXT="Traditional (non-deep)" ID="ID_1399622954" CREATED="1655448039016" MODIFIED="1658263506613">
+<node TEXT="Traditional (non-deep)" FOLDED="true" ID="ID_1399622954" CREATED="1655448039016" MODIFIED="1686949121283">
+<icon BUILTIN="gohome"/>
 <node TEXT="DPM (Deformable Part Models)" ID="ID_1233374002" CREATED="1676320572871" MODIFIED="1676320624875">
 <node TEXT="one of the most famous object detection algorithm before the introduction of deep learning" ID="ID_1003531967" CREATED="1676320575930" MODIFIED="1676320612878">
 <icon BUILTIN="info"/>
@@ -4472,7 +4488,7 @@
 <node TEXT="ECCV12" ID="ID_1085442689" CREATED="1655448044932" MODIFIED="1655448047019"/>
 </node>
 </node>
-<node TEXT="Two-Stage" ID="ID_981048532" CREATED="1654041315951" MODIFIED="1659198793583">
+<node TEXT="Two-Stage" FOLDED="true" ID="ID_981048532" CREATED="1654041315951" MODIFIED="1659198793583">
 <icon BUILTIN="gohome"/>
 <node TEXT="R-CNN" ID="ID_1685978685" CREATED="1578733403630" MODIFIED="1676321395764">
 <icon BUILTIN="bookmark"/>
@@ -4663,7 +4679,7 @@
 <node TEXT="updates hand-crafted anchor assignment to &apos;free&apos; anchor matching by formulating detector training as a maximum likelihood estimation (MLE) procedure" ID="ID_905160337" CREATED="1655412849974" MODIFIED="1655412874741"/>
 </node>
 </node>
-<node TEXT="DETR Family" FOLDED="true" ID="ID_348406151" CREATED="1654113701876" MODIFIED="1659198797873">
+<node TEXT="DETR Family" ID="ID_348406151" CREATED="1654113701876" MODIFIED="1659198797873">
 <icon BUILTIN="gohome"/>
 <node TEXT="also called object query-based detectors" ID="ID_1745046240" CREATED="1680217864424" MODIFIED="1680217882612">
 <icon BUILTIN="info"/>
@@ -4882,8 +4898,15 @@
 <node TEXT="+ Prior" ID="ID_674524070" CREATED="1686333271512" MODIFIED="1686333277438">
 <node TEXT="Efficient DETR: improving end to end object detector with dense prior" ID="ID_185886597" CREATED="1686333278922" MODIFIED="1686333292292"/>
 </node>
+<node TEXT="+ Benchmarking Framework" ID="ID_429699841" CREATED="1686955527409" MODIFIED="1686955533369">
+<node TEXT="detrex: benchmarking detection transformers" ID="ID_1223161773" CREATED="1686955533568" MODIFIED="1686955723884">
+<icon BUILTIN="pencil"/>
+<icon BUILTIN="bookmark"/>
+<node TEXT="good code base" ID="ID_200267609" CREATED="1686955726349" MODIFIED="1686955728908"/>
 </node>
-<node TEXT="?-stage" ID="ID_1254657210" CREATED="1654102722886" MODIFIED="1659198803602">
+</node>
+</node>
+<node TEXT="?-stage" FOLDED="true" ID="ID_1254657210" CREATED="1654102722886" MODIFIED="1659198803602">
 <icon BUILTIN="broken-line"/>
 <node TEXT="Revisiting AP Loss for Dense Object Detection: Adaptive Ranking Pair Selection" FOLDED="true" ID="ID_1320091812" CREATED="1659196405095" MODIFIED="1659197182936">
 <icon BUILTIN="unchecked"/>
@@ -4909,7 +4932,7 @@
 <node TEXT="CVPR22" ID="ID_179843625" CREATED="1659199186691" MODIFIED="1659199187858"/>
 </node>
 </node>
-<node TEXT="+Bias/Context" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1638323157" CREATED="1654992332106" MODIFIED="1655004640534">
+<node TEXT="+Bias/Context" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_1638323157" CREATED="1654992332106" MODIFIED="1655004640534">
 <node TEXT="unary bias" ID="ID_740807651" CREATED="1654993208125" MODIFIED="1654993216331">
 <node TEXT="geographycal" ID="ID_1267403260" CREATED="1654994710874" MODIFIED="1654994714039">
 <node TEXT="Does Object Recognition Work for Everyone?" ID="ID_1417014568" CREATED="1654994715621" MODIFIED="1654994724433">
@@ -4954,7 +4977,7 @@
 </node>
 </node>
 </node>
-<node TEXT="+ Object Relation" ID="ID_830458372" CREATED="1686333758750" MODIFIED="1686333842593">
+<node TEXT="+ Object Relation" FOLDED="true" ID="ID_830458372" CREATED="1686333758750" MODIFIED="1686333842593">
 <node TEXT="Relation networks for object detection" ID="ID_104920520" CREATED="1686333761416" MODIFIED="1686333775143">
 <node TEXT="2017" OBJECT="java.lang.Long|2017" ID="ID_1840533535" CREATED="1686333775390" MODIFIED="1686333802589"/>
 </node>
@@ -5309,7 +5332,12 @@
 <node TEXT="CVPR22" ID="ID_1475369829" CREATED="1659198515475" MODIFIED="1659198516607"/>
 </node>
 </node>
-<node TEXT="+Prompt" FOLDED="true" ID="ID_37682239" CREATED="1659197550981" MODIFIED="1659197552720">
+<node TEXT="+OpenVocabulary" FOLDED="true" ID="ID_1540101941" CREATED="1686949151978" MODIFIED="1686949157809">
+<node TEXT="multi-modal classifiers for pen-vocabulary object detection" ID="ID_1473403693" CREATED="1686949158349" MODIFIED="1686949174807">
+<node TEXT="icml23" ID="ID_534268996" CREATED="1686949179011" MODIFIED="1686949181814"/>
+<node TEXT="vgg group" ID="ID_952574388" CREATED="1686949175365" MODIFIED="1686949178375"/>
+<node TEXT="OVOD: building a model that can detect objects beyond the set of categories seen at training, thus enabling the user to specify categories of interest at inference without the need for model retraining" ID="ID_480008372" CREATED="1686949197915" MODIFIED="1686949244531"/>
+</node>
 <node TEXT="Learning To Prompt for Open-Vocabulary Object Detection With Vision-Language Model" ID="ID_903357962" CREATED="1659197553996" MODIFIED="1659197554603">
 <node TEXT="CVPR22" ID="ID_1177037307" CREATED="1659197556312" MODIFIED="1659197557483"/>
 </node>
@@ -5404,6 +5432,15 @@
 <node TEXT="Robust Region Feature Synthesizer for Zero-Shot Object Detection" ID="ID_1145135975" CREATED="1659199076804" MODIFIED="1659199077308">
 <node TEXT="CVPR22" ID="ID_1677243997" CREATED="1659199079437" MODIFIED="1659199080613"/>
 </node>
+</node>
+</node>
+<node TEXT="V :: Segmentation" FOLDED="true" POSITION="right" ID="ID_782654761" CREATED="1686954666427" MODIFIED="1686954669475">
+<edge COLOR="#ff00ff"/>
+<node TEXT="SAM" ID="ID_912969430" CREATED="1686954669640" MODIFIED="1686954672510">
+<node TEXT="Survey" ID="ID_576114666" CREATED="1686954673273" MODIFIED="1686954675318">
+<node TEXT="a survey on segment anything model (SAM): vision foundation model meets prompt enginnering" ID="ID_1309688486" CREATED="1686954675501" MODIFIED="1686954691846"/>
+</node>
+<node TEXT="Segment Anything Model" ID="ID_1688203184" CREATED="1686954905274" MODIFIED="1686954910450"/>
 </node>
 </node>
 <node TEXT="3D :: Recognition" FOLDED="true" POSITION="left" ID="ID_1606327696" CREATED="1583132559918" MODIFIED="1686942261411">
@@ -6302,17 +6339,7 @@
 <node TEXT="Rama and Alan have some robustness evaluation papers in this regard" ID="ID_1691197998" CREATED="1675049986257" MODIFIED="1675050004356"/>
 </node>
 </node>
-<node TEXT="Diffusion :: Foundation" POSITION="left" ID="ID_543295574" CREATED="1645111157251" MODIFIED="1686941140275">
-<edge COLOR="#00ffff"/>
-<node TEXT="https://lilianweng.github.io/lil-log/2021/07/11/diffusion-models.html" ID="ID_626991727" CREATED="1645111188223" MODIFIED="1645111188223" LINK="https://lilianweng.github.io/lil-log/2021/07/11/diffusion-models.html"/>
-<node TEXT="It seems that the only remaining advantage of GANs is the inference speed, compared to the DDPM family" ID="ID_1636661625" CREATED="1680191602489" MODIFIED="1680191629182">
-<icon BUILTIN="attach"/>
-</node>
-</node>
-<node TEXT="Diffusion :: Detection" POSITION="left" ID="ID_249373918" CREATED="1680017812076" MODIFIED="1686941145903">
-<edge COLOR="#7c007c"/>
-</node>
-<node TEXT="Gen :: Protection" POSITION="left" ID="ID_1205778136" CREATED="1680653497543" MODIFIED="1686947108936">
+<node TEXT="Gen :: Protection" FOLDED="true" POSITION="left" ID="ID_1205778136" CREATED="1680653497543" MODIFIED="1686947108936">
 <edge COLOR="#7c007c"/>
 <node TEXT="Watermarking" ID="ID_268438493" CREATED="1680017829445" MODIFIED="1686947063689">
 <node TEXT="The Stable Signature: Rooting Watermarks in Latent Diffusion Models" ID="ID_623109936" CREATED="1680017818352" MODIFIED="1680017846037">
@@ -6504,14 +6531,6 @@
 </node>
 </node>
 </node>
-<node TEXT="Gradient Surgery" FOLDED="true" POSITION="left" ID="ID_1632297675" CREATED="1654104115851" MODIFIED="1654104119730">
-<edge COLOR="#7c0000"/>
-<node TEXT="Gradient Surgery for Multi-Task Learning" ID="ID_686455197" CREATED="1652383922344" MODIFIED="1652383931965">
-<icon BUILTIN="bookmark"/>
-<node TEXT="NIPS20" ID="ID_926576648" CREATED="1652383934990" MODIFIED="1652383936487"/>
-<node TEXT="we propose a form of gradient surgery that projects a task&apos;s gradient onto the normal plane of the gradient of any other task that has a conflicting gradient" ID="ID_1875166652" CREATED="1652383936902" MODIFIED="1652383975982"/>
-</node>
-</node>
 <node TEXT="Gradient Inversion" FOLDED="true" POSITION="left" ID="ID_856893547" CREATED="1675738524485" MODIFIED="1675739230998">
 <edge COLOR="#007c00"/>
 <node TEXT="Privacy breach in federated learning" ID="ID_370882247" CREATED="1675738529186" MODIFIED="1675739233174">
@@ -6614,7 +6633,7 @@
 <node TEXT="FID" ID="ID_1763340674" CREATED="1686332922420" MODIFIED="1686332923597"/>
 <node TEXT="PSNR" ID="ID_1421989608" CREATED="1686332924087" MODIFIED="1686332930331"/>
 </node>
-<node TEXT="Fundamental :: GAN" ID="ID_1355970702" CREATED="1619335831487" MODIFIED="1686333555050">
+<node TEXT="GAN :: Foundation" ID="ID_1355970702" CREATED="1619335831487" MODIFIED="1686954131039">
 <node TEXT="CVPR21: Surrogate Gradient Field for Latent Space Manipulation" ID="ID_592809931" CREATED="1619335835845" MODIFIED="1619335849013"/>
 <node TEXT="2106.10410 Deep Generative Learning via Schr ̈odinger Bridge" ID="ID_1481005194" CREATED="1624457232722" MODIFIED="1624457250506">
 <icon BUILTIN="button_ok"/>
@@ -6625,6 +6644,10 @@
 </node>
 </node>
 <node TEXT="Diffusion :: Foundation" ID="ID_834316280" CREATED="1686333555244" MODIFIED="1686946900555">
+<node TEXT="It seems that the only remaining advantage of GANs is the inference speed, compared to the DDPM family" ID="ID_1636661625" CREATED="1680191602489" MODIFIED="1680191629182">
+<icon BUILTIN="attach"/>
+</node>
+<node TEXT="https://lilianweng.github.io/lil-log/2021/07/11/diffusion-models.html" ID="ID_626991727" CREATED="1645111188223" MODIFIED="1645111188223" LINK="https://lilianweng.github.io/lil-log/2021/07/11/diffusion-models.html"/>
 <node TEXT="EDM" ID="ID_528992160" CREATED="1686333559772" MODIFIED="1686333563789">
 <node TEXT="elucidating the design space of diffusion based generative models" ID="ID_1619173478" CREATED="1686333563901" MODIFIED="1686333575358">
 <node TEXT="neurips 2022" ID="ID_1847303335" CREATED="1686333581961" MODIFIED="1686333583630"/>
@@ -6938,6 +6961,25 @@
 </node>
 <node TEXT="Unimodal-Concentrated Loss: Fully Adaptive Label Distribution Learning for Ordinal Regression" ID="ID_1643259552" CREATED="1649623420719" MODIFIED="1649623421988">
 <node TEXT="CVPR22" ID="ID_1439656873" CREATED="1649623426704" MODIFIED="1649623428734"/>
+</node>
+</node>
+<node TEXT="Opt :: Optimization" FOLDED="true" POSITION="left" ID="ID_1084462232" CREATED="1686954326647" MODIFIED="1686955296933">
+<edge COLOR="#00ff00"/>
+<node TEXT="Optimizers" ID="ID_1488221874" CREATED="1686955286362" MODIFIED="1686955289173">
+<node TEXT="SGD" ID="ID_1775899232" CREATED="1686954331246" MODIFIED="1686954332878"/>
+<node TEXT="Adam" ID="ID_572023614" CREATED="1686954333424" MODIFIED="1686954334609"/>
+</node>
+<node TEXT="Forward Gradient" ID="ID_108057711" CREATED="1686954334921" MODIFIED="1686954340856">
+<node TEXT="can forward gradient match backpropagation?" ID="ID_887218565" CREATED="1686954341114" MODIFIED="1686954348261">
+<node TEXT="ICML23" ID="ID_377653219" CREATED="1686954349509" MODIFIED="1686954350826"/>
+</node>
+</node>
+<node TEXT="Gradient Surgery" ID="ID_1632297675" CREATED="1654104115851" MODIFIED="1686955284797">
+<node TEXT="Gradient Surgery for Multi-Task Learning" ID="ID_686455197" CREATED="1652383922344" MODIFIED="1652383931965">
+<icon BUILTIN="bookmark"/>
+<node TEXT="NIPS20" ID="ID_926576648" CREATED="1652383934990" MODIFIED="1652383936487"/>
+<node TEXT="we propose a form of gradient surgery that projects a task&apos;s gradient onto the normal plane of the gradient of any other task that has a conflicting gradient" ID="ID_1875166652" CREATED="1652383936902" MODIFIED="1652383975982"/>
+</node>
 </node>
 </node>
 <node TEXT="Phrase Grounding" FOLDED="true" POSITION="left" ID="ID_1776879731" CREATED="1676756426456" MODIFIED="1676756429770">
@@ -7323,10 +7365,13 @@
 <node TEXT="FAIR" ID="ID_1062435801" CREATED="1659201151768" MODIFIED="1659201153574"/>
 </node>
 </node>
-<node TEXT="Vector Image Generation" FOLDED="true" POSITION="left" ID="ID_1231220509" CREATED="1655449067387" MODIFIED="1686330944600">
-<edge COLOR="#007c00"/>
-<node TEXT="Primal sketch. G. hua suggestion" ID="ID_959414508" CREATED="1658618720052" MODIFIED="1676253751719">
-<icon BUILTIN="info"/>
+<node TEXT="SVG :: Vector Images" POSITION="left" ID="ID_968071643" CREATED="1686953734459" MODIFIED="1686953746848">
+<edge COLOR="#0000ff"/>
+<node TEXT="Generation" ID="ID_1231220509" CREATED="1655449067387" MODIFIED="1686953757766">
+<node TEXT="Survey" ID="ID_1371727930" CREATED="1686955123655" MODIFIED="1686955139963">
+<node TEXT="image vectorization: a review" ID="ID_805808621" CREATED="1686955127833" MODIFIED="1686955146693">
+<node TEXT="2306.06441" OBJECT="java.lang.Double|2306.06441" ID="ID_414457277" CREATED="1686955147522" MODIFIED="1686955153697"/>
+</node>
 </node>
 <node TEXT="Raster Vectorization" ID="ID_598894574" CREATED="1658618727950" MODIFIED="1676253729849">
 <node TEXT="DiffVG (SIGGRAPH 2020)" ID="ID_1269397469" CREATED="1676253844009" MODIFIED="1676253856300"/>
@@ -7340,6 +7385,18 @@
 <node TEXT="NIPS20" ID="ID_1922124527" CREATED="1675740869648" MODIFIED="1675740929011"/>
 <node TEXT="Icon generation with hierarchical genrative network" ID="ID_1328738360" CREATED="1675740871336" MODIFIED="1675740922329"/>
 <node TEXT="not possible for imagenet" ID="ID_644174663" CREATED="1675740876083" MODIFIED="1675740881242"/>
+</node>
+</node>
+</node>
+<node TEXT="Recognition" ID="ID_443953909" CREATED="1686953751347" MODIFIED="1686953755125">
+<node TEXT="Primal sketch. G. hua suggestion" ID="ID_959414508" CREATED="1658618720052" MODIFIED="1676253751719">
+<icon BUILTIN="info"/>
+</node>
+<node TEXT="Leveraging large language models for scalable vector graphics driven image understanding" ID="ID_54134188" CREATED="1686953968627" MODIFIED="1686953985828">
+<icon BUILTIN="pencil"/>
+<node TEXT="only mnist" ID="ID_1004613855" CREATED="1686953990427" MODIFIED="1686953993969"/>
+<node TEXT="no imagenet" ID="ID_1119295818" CREATED="1686953994243" MODIFIED="1686953995802"/>
+<node TEXT="imagenet vector image is much complicated" ID="ID_779548582" CREATED="1686953996334" MODIFIED="1686954002514"/>
 </node>
 </node>
 </node>
