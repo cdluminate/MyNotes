@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="191" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="192" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1675045289036">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -1364,6 +1364,12 @@
 <node TEXT="Local relation networks for image recognition" ID="ID_1695199923" CREATED="1686333900044" MODIFIED="1686333906288">
 <node TEXT="2019" OBJECT="java.lang.Long|2019" ID="ID_1915944070" CREATED="1686333906731" MODIFIED="1686333908244"/>
 </node>
+</node>
+<node TEXT="non-local neural networks" ID="ID_595201499" CREATED="1647567356067" MODIFIED="1647567369739">
+<icon BUILTIN="checked"/>
+<node TEXT="CVPR18" ID="ID_556242427" CREATED="1647567364801" MODIFIED="1647567366157"/>
+<node TEXT="kaiming he" ID="ID_598417815" CREATED="1647567408886" MODIFIED="1647567410210"/>
+<node TEXT="deal with long-range dependency problem that the traditional CNN is not very good at" ID="ID_883791225" CREATED="1647567373082" MODIFIED="1647567395434"/>
 </node>
 </node>
 <node TEXT="Transformer for Language" ID="ID_1560756699" CREATED="1680638515975" MODIFIED="1686331857482">
@@ -5381,7 +5387,7 @@
 </node>
 </node>
 </node>
-<node TEXT="3D + PCL Recog" POSITION="left" ID="ID_1606327696" CREATED="1583132559918" MODIFIED="1649103272801">
+<node TEXT="3D :: Recognition" FOLDED="true" POSITION="left" ID="ID_1606327696" CREATED="1583132559918" MODIFIED="1686942261411">
 <font NAME="Gentium" SIZE="10" BOLD="false"/>
 <edge COLOR="#007c7c"/>
 <node TEXT="Lite Mode" ID="ID_572835973" CREATED="1686942025210" MODIFIED="1686942048700">
@@ -5475,25 +5481,6 @@
 </node>
 </node>
 </node>
-<node TEXT="Video :: Action Recog" FOLDED="true" POSITION="left" ID="ID_941361807" CREATED="1647567341551" MODIFIED="1680200212073">
-<edge COLOR="#ff0000"/>
-<node TEXT="Architecture" ID="ID_694731282" CREATED="1647567346659" MODIFIED="1647567355095">
-<node TEXT="non-local neural networks" ID="ID_595201499" CREATED="1647567356067" MODIFIED="1647567369739">
-<icon BUILTIN="checked"/>
-<node TEXT="CVPR18" ID="ID_556242427" CREATED="1647567364801" MODIFIED="1647567366157"/>
-<node TEXT="kaiming he" ID="ID_598417815" CREATED="1647567408886" MODIFIED="1647567410210"/>
-<node TEXT="deal with long-range dependency problem that the traditional CNN is not very good at" ID="ID_883791225" CREATED="1647567373082" MODIFIED="1647567395434"/>
-</node>
-</node>
-<node TEXT="Framework" ID="ID_164836852" CREATED="1651953412715" MODIFIED="1651953414547">
-<node TEXT="Cross-modal Representation Learning for Zero-shot Action Recognition" ID="ID_1630052458" CREATED="1651953420845" MODIFIED="1651953421503">
-<node TEXT="CVPR22, Microsoft" ID="ID_125282230" CREATED="1651953423268" MODIFIED="1651953426559"/>
-</node>
-</node>
-<node TEXT="Bias" ID="ID_335953065" CREATED="1655187221906" MODIFIED="1655187229388">
-<node TEXT="Learning without Prejudice: Avoiding Bias in Webly-Supervised Action&#xa;Recognition" ID="ID_1991556722" CREATED="1655187230614" MODIFIED="1655187236882"/>
-</node>
-</node>
 <node TEXT="OOD :: Detection" FOLDED="true" POSITION="left" ID="ID_31313107" CREATED="1657404499454" MODIFIED="1683727058683">
 <edge COLOR="#007c7c"/>
 <node TEXT="Anomaly detection, out-of-distribution detection, open-set recognition" ID="ID_439134135" CREATED="1680200146165" MODIFIED="1680200161268"/>
@@ -5546,7 +5533,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Training (Robustness)" FOLDED="true" POSITION="left" ID="ID_1633797140" CREATED="1675050942299" MODIFIED="1675052765536">
+<node TEXT="Robustness :: Adversarial Training" POSITION="left" ID="ID_1633797140" CREATED="1675050942299" MODIFIED="1686942373622">
 <edge COLOR="#0000ff"/>
 <node TEXT="Can we simply make adv training faster on imagenet? people are still playing with CIFAR" ID="ID_133206511" CREATED="1675052822881" MODIFIED="1675052888793">
 <icon BUILTIN="attach"/>
@@ -6674,7 +6661,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Gen :: Image Generation" FOLDED="true" POSITION="right" ID="ID_65977927" CREATED="1576830540818" MODIFIED="1686332971419">
+<node TEXT="Gen :: Image Generation" POSITION="right" ID="ID_65977927" CREATED="1576830540818" MODIFIED="1686332971419">
 <font NAME="Gentium" BOLD="false"/>
 <edge COLOR="#ff0000"/>
 <node TEXT="Metrics" ID="ID_1323509383" CREATED="1659195775718" MODIFIED="1659195778362">
@@ -6730,6 +6717,11 @@
 <node TEXT="a small perturbation to the text prompt can result in blending of primary subjects with ohter categories or their complete disappearance in the generated images." ID="ID_669159635" CREATED="1686346075160" MODIFIED="1686346114078"/>
 </node>
 </node>
+<node TEXT="+ Data Attribution" ID="ID_1071829437" CREATED="1686942830068" MODIFIED="1686942836432">
+<node TEXT="evaluating data attribution for tet-to-image models" ID="ID_1977966199" CREATED="1686942836753" MODIFIED="1686942848207">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
 <node TEXT="+TODO" ID="ID_1396222461" CREATED="1686356328770" MODIFIED="1686356662200">
 <icon BUILTIN="bell"/>
 <node TEXT="designing a better asymmetric vqgan for stable diffusion" ID="ID_147213015" CREATED="1686356330452" MODIFIED="1686356344050">
@@ -6739,8 +6731,11 @@
 <node TEXT="text-to-image evaluation" ID="ID_150655953" CREATED="1686356489915" MODIFIED="1686356494522"/>
 </node>
 <node TEXT="interactive fasihon content generation using llms and latent diffusion models" ID="ID_1054406160" CREATED="1686356496503" MODIFIED="1686356675279"/>
-<node TEXT="grounded text-to-image synthesis with attention refocusing." ID="ID_861285530" CREATED="1686356683949" MODIFIED="1686356692917">
+<node TEXT="grounded text-to-image synthesis with attention refocusing." ID="ID_861285530" CREATED="1686356683949" MODIFIED="1686942665854">
+<icon BUILTIN="yes"/>
+<node TEXT="2306.05427" OBJECT="java.lang.Double|2306.05427" ID="ID_1839739319" CREATED="1686942668538" MODIFIED="1686942679167"/>
 <node TEXT="appending more information seemingly helps improving the image quality" ID="ID_1370401657" CREATED="1686356693275" MODIFIED="1686356706116"/>
+<node TEXT="benchmarks and metrics" ID="ID_887815891" CREATED="1686942706437" MODIFIED="1686942709522"/>
 </node>
 </node>
 </node>
