@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="202" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="204" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1675045289036">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -1522,13 +1522,18 @@
 <icon BUILTIN="pencil"/>
 <icon BUILTIN="unchecked"/>
 </node>
-<node TEXT="Towards AGI in comuter vision: lessons learned from gpt and large language models" ID="ID_1858759001" CREATED="1686946680197" MODIFIED="1686946698567"/>
+<node TEXT="Towards AGI in comuter vision: lessons learned from gpt and large language models" ID="ID_1858759001" CREATED="1686946680197" MODIFIED="1686964029558">
+<icon BUILTIN="unchecked"/>
+</node>
 </node>
 <node TEXT="Analysis" ID="ID_1965827828" CREATED="1680200688536" MODIFIED="1680200690230">
 <node TEXT="Scaling Laws for Neural Language Models" ID="ID_1808856429" CREATED="1680200690652" MODIFIED="1680200700679">
 <icon BUILTIN="messagebox_warning"/>
 <node TEXT="larger models are significantly more sample-efficient, such as optimally compute-efficient training involves training very large models on a relatively modest amount of data and stopping significantly before convergence" ID="ID_967909416" CREATED="1680200759143" MODIFIED="1680200789816"/>
 </node>
+</node>
+<node TEXT="Prompt Engineering" ID="ID_979384371" CREATED="1686964121535" MODIFIED="1686964124822">
+<node TEXT="https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/" ID="ID_903829990" CREATED="1686964125831" MODIFIED="1686964125831" LINK="https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/"/>
 </node>
 <node TEXT="LLMs" ID="ID_5598775" CREATED="1680200637888" MODIFIED="1680200639132">
 <node TEXT="BERT" ID="ID_676603491" CREATED="1676260264280" MODIFIED="1676260265477">
@@ -4296,6 +4301,13 @@
 </node>
 </node>
 </node>
+<node TEXT="Conditional Similarity" ID="ID_40919240" CREATED="1686962133392" MODIFIED="1686962141696">
+<node TEXT="GeneCIS: a benchmark for genreal conditional image similarity" ID="ID_375260371" CREATED="1686962144203" MODIFIED="1686962174579">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR23" ID="ID_823573538" CREATED="1686962158675" MODIFIED="1686962159896"/>
+<node TEXT="interesting insight." ID="ID_272867591" CREATED="1686962161472" MODIFIED="1686962166593"/>
+</node>
+</node>
 <node TEXT="Loss Functions" FOLDED="true" ID="ID_1262041414" CREATED="1641520453737" MODIFIED="1641520995604">
 <font NAME="Gentium"/>
 <node TEXT="Group-based?" ID="ID_1898475549" CREATED="1641524460135" MODIFIED="1648342703726">
@@ -5537,30 +5549,27 @@
 </node>
 </node>
 </node>
-<node TEXT="OOD :: Detect and Learn" POSITION="left" ID="ID_31313107" CREATED="1657404499454" MODIFIED="1686947208750">
+<node TEXT="OOD :: Detect and Learn" FOLDED="true" POSITION="left" ID="ID_31313107" CREATED="1657404499454" MODIFIED="1686947208750">
 <edge COLOR="#007c7c"/>
 <node TEXT="Anomaly detection, out-of-distribution detection, open-set recognition" ID="ID_439134135" CREATED="1680200146165" MODIFIED="1680200161268"/>
 <node TEXT="This is a saturated area. Performance numbers are too high." ID="ID_275469478" CREATED="1675745241040" MODIFIED="1675745258548">
 <icon BUILTIN="attach"/>
 </node>
 <node TEXT="It is generally useful in various scenarios. It is an old topic though." ID="ID_675420273" CREATED="1675745275149" MODIFIED="1675745297272"/>
-<node TEXT="Back to the Basics: Revisiting Out-of-Distribution Detection Baselines" ID="ID_610692624" CREATED="1657404508363" MODIFIED="1657404513522">
-<node TEXT="ICML22w" ID="ID_1649193597" CREATED="1657404516644" MODIFIED="1657404522883"/>
+<node TEXT="Dataset" ID="ID_683694116" CREATED="1686962805307" MODIFIED="1686962806648">
+<node TEXT="openood v1.5: enhanced benchmark for out-of-distribution detection" ID="ID_702733472" CREATED="1686962806995" MODIFIED="1686962823711">
+<icon BUILTIN="pencil"/>
 </node>
+</node>
+<node TEXT="Detection" ID="ID_817880271" CREATED="1686962796860" MODIFIED="1686962799112">
 <node TEXT="Rethinking Out-of-distribution (OOD) Detection:&#xa;Masked Image Modeling is All You Need" ID="ID_1967773333" CREATED="1675745141770" MODIFIED="1675745149081">
 <icon BUILTIN="pencil"/>
 <node TEXT="simply using reconstruction based methods" ID="ID_1444620585" CREATED="1675745171762" MODIFIED="1675745181691"/>
 <node TEXT="masked image modeling as a pretext task" ID="ID_280600644" CREATED="1675745150680" MODIFIED="1675745164658"/>
 </node>
-<node TEXT="Prompt-driven efficient Open-set Semi-supervised Learning" ID="ID_618906363" CREATED="1676563283331" MODIFIED="1676563293165">
-<icon BUILTIN="pencil"/>
-<node TEXT="+visual prompt" ID="ID_1334817435" CREATED="1676563294737" MODIFIED="1676563301568"/>
-<node TEXT="prompt is like adversarial attacks. in this paper, prompt is used to enlarge the distribution difference distinguished by the ID prompt for OOD detection." ID="ID_1808214758" CREATED="1676563559028" MODIFIED="1676563613055"/>
-<node TEXT="does this assume: prompt moves OOD samples irregularly." ID="ID_581566900" CREATED="1676563618042" MODIFIED="1676563638237"/>
-<node TEXT="OpenPrompt: prompt-driven joint space learning mechanism" ID="ID_1571439494" CREATED="1676563995089" MODIFIED="1676564028995">
-<font SIZE="9"/>
+<node TEXT="Back to the Basics: Revisiting Out-of-Distribution Detection Baselines" ID="ID_610692624" CREATED="1657404508363" MODIFIED="1657404513522">
+<node TEXT="ICML22w" ID="ID_1649193597" CREATED="1657404516644" MODIFIED="1657404522883"/>
 </node>
-<node TEXT="CIFAR10, cifar100, imagenet-30" ID="ID_730325274" CREATED="1676564196747" MODIFIED="1676564204541"/>
 </node>
 <node TEXT="Open Set Recognition" ID="ID_323999523" CREATED="1634132952545" MODIFIED="1676564159987">
 <node TEXT="Open-Set Recognition: A Good Closed-Set Classifier is All You Need" ID="ID_1603928418" CREATED="1634132957520" MODIFIED="1634132962452">
@@ -5586,6 +5595,16 @@
 </node>
 <node TEXT="Partial and Asymmetric Contrastive Learning for Out-of-Distribution Detection in Long-Tailed Recognition" ID="ID_1293076546" CREATED="1659199711340" MODIFIED="1659199712052">
 <node TEXT="ICML22" ID="ID_1862789298" CREATED="1659199712937" MODIFIED="1659199720317"/>
+</node>
+<node TEXT="Prompt-driven efficient Open-set Semi-supervised Learning" ID="ID_618906363" CREATED="1676563283331" MODIFIED="1676563293165">
+<icon BUILTIN="pencil"/>
+<node TEXT="+visual prompt" ID="ID_1334817435" CREATED="1676563294737" MODIFIED="1676563301568"/>
+<node TEXT="prompt is like adversarial attacks. in this paper, prompt is used to enlarge the distribution difference distinguished by the ID prompt for OOD detection." ID="ID_1808214758" CREATED="1676563559028" MODIFIED="1676563613055"/>
+<node TEXT="does this assume: prompt moves OOD samples irregularly." ID="ID_581566900" CREATED="1676563618042" MODIFIED="1676563638237"/>
+<node TEXT="OpenPrompt: prompt-driven joint space learning mechanism" ID="ID_1571439494" CREATED="1676563995089" MODIFIED="1676564028995">
+<font SIZE="9"/>
+</node>
+<node TEXT="CIFAR10, cifar100, imagenet-30" ID="ID_730325274" CREATED="1676564196747" MODIFIED="1676564204541"/>
 </node>
 </node>
 </node>
@@ -5665,6 +5684,11 @@
 </node>
 <node TEXT="Train-Time Attack :: Defense" FOLDED="true" POSITION="left" ID="ID_1943792971" CREATED="1642964418531" MODIFIED="1680200077161">
 <edge COLOR="#7c7c00"/>
+<node TEXT="Meaningful. supply chain attack will become a concern where pre-trained models is used everywhere." ID="ID_678139697" CREATED="1686959841236" MODIFIED="1686959880535">
+<icon BUILTIN="info"/>
+<node TEXT="supply chain attack" ID="ID_525565970" CREATED="1686959902875" MODIFIED="1686959905913"/>
+<node TEXT="inheritage of vulnerabilities" ID="ID_757937032" CREATED="1686959906444" MODIFIED="1686959913147"/>
+</node>
 <node TEXT="Survey" ID="ID_330468423" CREATED="1647048705270" MODIFIED="1647048707607">
 <node TEXT="A Survey of Neural Trojan Attacks and Defenses in Deep Learning" ID="ID_941695665" CREATED="1646945552550" MODIFIED="1646945574224">
 <icon BUILTIN="pencil"/>
@@ -6312,33 +6336,6 @@
 <node TEXT="Rama and Alan have some robustness evaluation papers in this regard" ID="ID_1691197998" CREATED="1675049986257" MODIFIED="1675050004356"/>
 </node>
 </node>
-<node TEXT="Gen :: Protection" FOLDED="true" POSITION="left" ID="ID_1205778136" CREATED="1680653497543" MODIFIED="1686947108936">
-<edge COLOR="#7c007c"/>
-<node TEXT="Watermarking" ID="ID_268438493" CREATED="1680017829445" MODIFIED="1686947063689">
-<node TEXT="The Stable Signature: Rooting Watermarks in Latent Diffusion Models" ID="ID_623109936" CREATED="1680017818352" MODIFIED="1680017846037">
-<icon BUILTIN="pencil"/>
-<icon BUILTIN="clanbomber"/>
-<node TEXT="fine-tune LDM to add watermark" ID="ID_262852307" CREATED="1680018919151" MODIFIED="1680018927345"/>
-<node TEXT="associate binary code for identification" ID="ID_401091781" CREATED="1680018927544" MODIFIED="1680018941299"/>
-</node>
-<node TEXT="weight modulation for user attribution and fingerprinting in text-to-image diffusion models" ID="ID_202941701" CREATED="1686356616790" MODIFIED="1686356629944"/>
-</node>
-<node TEXT="Anti-Edit" ID="ID_702699802" CREATED="1686947069642" MODIFIED="1686947073981">
-<node TEXT="Raising the Cost of Malicious AI-Powered Image Editing" ID="ID_650622645" CREATED="1680653552985" MODIFIED="1680653555037">
-<icon BUILTIN="pencil"/>
-<node TEXT="madry" ID="ID_291065376" CREATED="1680653555437" MODIFIED="1680653556905"/>
-<node TEXT="adv attack against DDPM" ID="ID_149867757" CREATED="1680653522429" MODIFIED="1680653568924"/>
-</node>
-<node TEXT="Adversarial Example Does Good: Preventing Painting Imitation from Diffusion Models via Adversarial Examples" ID="ID_1164664445" CREATED="1680653705695" MODIFIED="1680653708145">
-<icon BUILTIN="pencil"/>
-</node>
-</node>
-<node TEXT="Anti-Learn" ID="ID_527229392" CREATED="1686947087861" MODIFIED="1686947090223">
-<node TEXT="unlearnable examples for diffusion models: protext data from unauthorized exploitaiton" ID="ID_1294212707" CREATED="1686351326573" MODIFIED="1686351376813">
-<icon BUILTIN="pencil"/>
-</node>
-</node>
-</node>
 <node TEXT="Domain Adapt / Transfer Lg" FOLDED="true" POSITION="left" ID="ID_1179225618" CREATED="1582887416803" MODIFIED="1686351459779">
 <font NAME="Gentium" BOLD="false"/>
 <edge COLOR="#ff0000"/>
@@ -6423,57 +6420,42 @@
 </node>
 </node>
 </node>
-<node TEXT="Explainable AI" FOLDED="true" POSITION="left" ID="ID_1535392614" CREATED="1646937960988" MODIFIED="1650817806076">
-<edge COLOR="#7c0000"/>
-<node TEXT="Survey" ID="ID_796711666" CREATED="1653860071187" MODIFIED="1653860080368">
-<icon BUILTIN="mindmap"/>
-<node TEXT="How explainable are adversarially-robust CNNs?" ID="ID_95726314" CREATED="1653860082056" MODIFIED="1653860092200">
+<node TEXT="Gen :: Protection" FOLDED="true" POSITION="left" ID="ID_1205778136" CREATED="1680653497543" MODIFIED="1686947108936">
+<edge COLOR="#7c007c"/>
+<node TEXT="Dataset" ID="ID_1236582168" CREATED="1686963892000" MODIFIED="1686963895044">
+<node TEXT="genimage: a million-scale benchmark for detecting ai-generated image" ID="ID_1948375546" CREATED="1686963895369" MODIFIED="1686963910193">
 <icon BUILTIN="pencil"/>
-<node TEXT="submit NIPS22" ID="ID_181101661" CREATED="1653860093733" MODIFIED="1653860102672"/>
-<node TEXT="(1) test accuracy" ID="ID_764666299" CREATED="1653860103071" MODIFIED="1653860111201"/>
-<node TEXT="(2) out-of-distribution accuracy" ID="ID_874751335" CREATED="1653860111347" MODIFIED="1653860117298"/>
-<node TEXT="(3) explainability" ID="ID_362903560" CREATED="1653860117582" MODIFIED="1653860121732"/>
+<node TEXT="huawei" ID="ID_266638630" CREATED="1686963936295" MODIFIED="1686963938143"/>
 </node>
 </node>
-<node TEXT="class activation map" ID="ID_1199847666" CREATED="1651102994318" MODIFIED="1656028150739">
-<node TEXT="Class Activation Map" ID="ID_47285759" CREATED="1651102989796" MODIFIED="1651103008396">
-<node TEXT="Learning Deep Features for Discriminative Localization" ID="ID_675900606" CREATED="1651103009874" MODIFIED="1651103025782">
-<icon BUILTIN="unchecked"/>
-<node TEXT="CVPR, bolei zhou" ID="ID_1929585737" CREATED="1651103017313" MODIFIED="1651103020547"/>
-</node>
-</node>
-</node>
-<node TEXT="gradient w.r.t input" ID="ID_733899372" CREATED="1653860036334" MODIFIED="1656028158789">
-<node TEXT="Grad-CAM" ID="ID_1699913639" CREATED="1656364316838" MODIFIED="1656364339473">
-<icon BUILTIN="bookmark"/>
-<node TEXT="Grad-CAM: Why did you say that?&#xa;Visual Explanations from Deep Networks via Gradient-based Localization" ID="ID_172299995" CREATED="1656364324758" MODIFIED="1656364331599"/>
-</node>
-<node TEXT="The Manifold Hypothesis for Gradient-Based Explanations" ID="ID_743176885" CREATED="1656028126607" MODIFIED="1656028127918"/>
-</node>
-<node TEXT="perturbation" ID="ID_174218220" CREATED="1653860058835" MODIFIED="1656028174630">
-<node TEXT="LIME" ID="ID_1481560289" CREATED="1653860346455" MODIFIED="1653860348553">
-<node TEXT="“Why Should I Trust You?”&#xa;Explaining the Predictions of Any Classifier" ID="ID_674389421" CREATED="1653860349515" MODIFIED="1653860351696">
-<icon BUILTIN="unchecked"/>
-<node TEXT="KDD" ID="ID_706793779" CREATED="1653860352710" MODIFIED="1653860353774"/>
-</node>
-</node>
-</node>
-<node TEXT="Do Explanations Explain? Model Knows Best" ID="ID_1458677290" CREATED="1646937968275" MODIFIED="1646937983298">
-<icon BUILTIN="checked"/>
-<node TEXT="CVPR22" ID="ID_164811359" CREATED="1646937985052" MODIFIED="1646937987156"/>
-<node TEXT="one peculiar observation is that these explanations (attributions) point to different features as being important" ID="ID_1757747697" CREATED="1646942060828" MODIFIED="1646942079638"/>
-</node>
-<node TEXT="What can we learn from misclassified ImageNet&#xa;images?" ID="ID_1435212181" CREATED="1642952852302" MODIFIED="1642952861609">
+<node TEXT="Watermarking" ID="ID_268438493" CREATED="1680017829445" MODIFIED="1686947063689">
+<node TEXT="The Stable Signature: Rooting Watermarks in Latent Diffusion Models" ID="ID_623109936" CREATED="1680017818352" MODIFIED="1680017846037">
 <icon BUILTIN="pencil"/>
-<node TEXT="misclassifications are rarely across superclasses, but mainly among subclasses with a superclass" ID="ID_426581992" CREATED="1642952902122" MODIFIED="1642952932522"/>
-<node TEXT="ensemble networks trained each only on subclasses of a given superclass perform better than the same network trained on all subclasses of all superclasses" ID="ID_1950788253" CREATED="1642952937590" MODIFIED="1642952961617"/>
+<icon BUILTIN="clanbomber"/>
+<node TEXT="fine-tune LDM to add watermark" ID="ID_262852307" CREATED="1680018919151" MODIFIED="1680018927345"/>
+<node TEXT="associate binary code for identification" ID="ID_401091781" CREATED="1680018927544" MODIFIED="1680018941299"/>
 </node>
-<node TEXT="CBM" ID="ID_301801388" CREATED="1686352109549" MODIFIED="1686352115552">
-<node TEXT="ProbCBM" ID="ID_1662486844" CREATED="1686352116228" MODIFIED="1686352120779">
-<node TEXT="Probablistic concept bottleneck models" ID="ID_1120360806" CREATED="1686352151657" MODIFIED="1686352160264">
-<node TEXT="ICML23" ID="ID_1922667021" CREATED="1686352161669" MODIFIED="1686352163617"/>
-<node TEXT="relies on the necessity of concept labels." ID="ID_1287049420" CREATED="1686352121662" MODIFIED="1686352140647"/>
+<node TEXT="weight modulation for user attribution and fingerprinting in text-to-image diffusion models" ID="ID_202941701" CREATED="1686356616790" MODIFIED="1686356629944"/>
+<node TEXT="generative watermarking against unauthorized subject-driven image synthesis" ID="ID_1747560992" CREATED="1686961966188" MODIFIED="1686961982705">
+<icon BUILTIN="pencil"/>
 </node>
+<node TEXT="securing deep generative models with universal adversarial signature" ID="ID_219050064" CREATED="1686961995129" MODIFIED="1686962024811">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Anti-Edit" ID="ID_702699802" CREATED="1686947069642" MODIFIED="1686947073981">
+<node TEXT="Raising the Cost of Malicious AI-Powered Image Editing" ID="ID_650622645" CREATED="1680653552985" MODIFIED="1680653555037">
+<icon BUILTIN="pencil"/>
+<node TEXT="madry" ID="ID_291065376" CREATED="1680653555437" MODIFIED="1680653556905"/>
+<node TEXT="adv attack against DDPM" ID="ID_149867757" CREATED="1680653522429" MODIFIED="1680653568924"/>
+</node>
+<node TEXT="Adversarial Example Does Good: Preventing Painting Imitation from Diffusion Models via Adversarial Examples" ID="ID_1164664445" CREATED="1680653705695" MODIFIED="1680653708145">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Anti-Learn" ID="ID_527229392" CREATED="1686947087861" MODIFIED="1686947090223">
+<node TEXT="unlearnable examples for diffusion models: protext data from unauthorized exploitaiton" ID="ID_1294212707" CREATED="1686351326573" MODIFIED="1686351376813">
+<icon BUILTIN="pencil"/>
 </node>
 </node>
 </node>
@@ -6501,6 +6483,30 @@
 <node TEXT="+ Diffusion" ID="ID_217151115" CREATED="1686353294356" MODIFIED="1686353297211">
 <node TEXT="phoenix: a federated generative diffusion model" ID="ID_1101885608" CREATED="1686353297577" MODIFIED="1686353310534">
 <icon BUILTIN="pencil"/>
+</node>
+</node>
+</node>
+<node TEXT="LG :: Meta Learning" FOLDED="true" POSITION="left" ID="ID_929306258" CREATED="1583378173046" MODIFIED="1683727483380">
+<font NAME="Gentium" BOLD="false"/>
+<edge COLOR="#ff00ff"/>
+<node TEXT="2002.04162: incremental learning for metric-based meta-learniers" ID="ID_415175776" CREATED="1583378216948" MODIFIED="1587526864942">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="MAML" ID="ID_1684879216" CREATED="1677265150586" MODIFIED="1677265152517">
+<node TEXT="Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks" ID="ID_1680498840" CREATED="1677265153892" MODIFIED="1677265467516">
+<icon BUILTIN="checked"/>
+<icon BUILTIN="bookmark"/>
+<node TEXT="ICML17" ID="ID_929161646" CREATED="1677265156432" MODIFIED="1677265158335"/>
+<node TEXT="in fact FedAvg is very similar to this" ID="ID_97979454" CREATED="1677265169731" MODIFIED="1677265187471"/>
+<node TEXT="the goal of meta-learning is to train a model on a variety of learning tasks, such that it can solve new learning tasks using only a small number of training samples" ID="ID_1958330240" CREATED="1677265401501" MODIFIED="1677265426468"/>
+<node TEXT="generally, tasks used for meta-testing are held out during meta-training" ID="ID_657097218" CREATED="1677265209038" MODIFIED="1677265224720">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
+</node>
+<node TEXT="Meta-SR" ID="ID_1118787532" CREATED="1676259542003" MODIFIED="1683727496340">
+<node TEXT="Meta-SR: A Magnification-Arbitrary Network for Super-Resolution" ID="ID_1305779936" CREATED="1683727486793" MODIFIED="1683727489908">
+<icon BUILTIN="bookmark"/>
 </node>
 </node>
 </node>
@@ -6596,7 +6602,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Gen :: Image Generation" FOLDED="true" POSITION="right" ID="ID_65977927" CREATED="1576830540818" MODIFIED="1686332971419">
+<node TEXT="Gen :: Image Generation" POSITION="right" ID="ID_65977927" CREATED="1576830540818" MODIFIED="1686332971419">
 <font NAME="Gentium" BOLD="false"/>
 <edge COLOR="#ff0000"/>
 <node TEXT="Metrics" ID="ID_1323509383" CREATED="1659195775718" MODIFIED="1659195778362">
@@ -6614,6 +6620,13 @@
 <node TEXT="Rewriting Geometric Rules of a GAN" ID="ID_1854620633" CREATED="1659196066523" MODIFIED="1659196067439">
 <node TEXT="SIGGRAPH" ID="ID_521737696" CREATED="1659196068818" MODIFIED="1659196071456"/>
 <node TEXT="junyan zhu" ID="ID_938954070" CREATED="1659196072012" MODIFIED="1659196074471"/>
+</node>
+</node>
+<node TEXT="Generative for representation" ID="ID_1236190836" CREATED="1686962321096" MODIFIED="1686962325406">
+<node TEXT="GAN Inversion" ID="ID_1698100168" CREATED="1686962325619" MODIFIED="1686962328717"/>
+<node TEXT="infodiffusion: representation learning using information maximizing diffusion models" ID="ID_476033572" CREATED="1686962329016" MODIFIED="1686962437296">
+<icon BUILTIN="unchecked"/>
+<node TEXT="ICML23" ID="ID_941327232" CREATED="1686962433290" MODIFIED="1686962434848"/>
 </node>
 </node>
 <node TEXT="Diffusion :: Foundation" ID="ID_834316280" CREATED="1686333555244" MODIFIED="1686946900555">
@@ -6635,6 +6648,10 @@
 </node>
 <node TEXT="DisDiff: Unsupervised Disentanglement of Diffusion Probabilistic Models" ID="ID_1294380024" CREATED="1675742496342" MODIFIED="1675742509742">
 <icon BUILTIN="pencil"/>
+</node>
+<node TEXT="Fast Training of Diffusion models with masked transformers" ID="ID_583126338" CREATED="1686964158095" MODIFIED="1686964176119">
+<icon BUILTIN="pencil"/>
+<node TEXT="anima" ID="ID_38663024" CREATED="1686964172165" MODIFIED="1686964173147"/>
 </node>
 </node>
 <node TEXT="Unconditioned" ID="ID_1049820445" CREATED="1686332896941" MODIFIED="1686332900710">
@@ -6667,11 +6684,19 @@
 <node TEXT="no training code released sofar" ID="ID_1700177349" CREATED="1686333022158" MODIFIED="1686333048262"/>
 </node>
 </node>
+<node TEXT="+ Quality" ID="ID_991786870" CREATED="1686964225930" MODIFIED="1686964247611">
+<node TEXT="norm-guided latent space exploration for text-to-image generation" ID="ID_1765834709" CREATED="1686964248500" MODIFIED="1686964262397">
+<icon BUILTIN="unchecked"/>
+</node>
+</node>
 <node TEXT="+ Robustness" ID="ID_677553007" CREATED="1686346050736" MODIFIED="1686346057018">
 <node TEXT="Stable diffusion is unstable" ID="ID_454504249" CREATED="1686346057260" MODIFIED="1686346073707">
 <icon BUILTIN="pencil"/>
 <node TEXT="2306" OBJECT="java.lang.Long|2306" ID="ID_1303149192" CREATED="1686346066494" MODIFIED="1686346071750"/>
 <node TEXT="a small perturbation to the text prompt can result in blending of primary subjects with ohter categories or their complete disappearance in the generated images." ID="ID_669159635" CREATED="1686346075160" MODIFIED="1686346114078"/>
+</node>
+<node TEXT="on the robustness of latent diffusion models" ID="ID_1143150204" CREATED="1686963214072" MODIFIED="1686963222242">
+<icon BUILTIN="pencil"/>
 </node>
 </node>
 <node TEXT="+ Data Attribution" ID="ID_1071829437" CREATED="1686942830068" MODIFIED="1686942836432">
@@ -6696,6 +6721,12 @@
 <node TEXT="Controlling text-to-image diffusion by orthogonal finetuning" ID="ID_1024318042" CREATED="1686957511890" MODIFIED="1686957529892">
 <icon BUILTIN="unchecked"/>
 </node>
+<node TEXT="diffusion in diffusion: cyclic one-way diffusion for text-vision conditioned generation" ID="ID_1366396837" CREATED="1686963128417" MODIFIED="1686963149538">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="+ Resolution" ID="ID_38134435" CREATED="1686964195200" MODIFIED="1686964199020">
+<node TEXT="Training free diffusion model adaptation for variable sized text to image syntehsis" ID="ID_1137000951" CREATED="1686964199204" MODIFIED="1686964215038"/>
 </node>
 <node TEXT="+TODO" ID="ID_1396222461" CREATED="1686356328770" MODIFIED="1686356662200">
 <icon BUILTIN="bell"/>
@@ -6739,6 +6770,7 @@
 <node TEXT="StyleGAN" ID="ID_1362123487" CREATED="1677265739992" MODIFIED="1686332906221">
 <node TEXT="A Style-Based Generator Architecture for Generative Adversarial Networks" ID="ID_1591507547" CREATED="1677265742809" MODIFIED="1677265756977"/>
 </node>
+<node TEXT="CycleGAN" ID="ID_1567812880" CREATED="1686963076127" MODIFIED="1686963078694"/>
 </node>
 <node TEXT="Sketch-guided Synthesis" ID="ID_1553669180" CREATED="1686345763081" MODIFIED="1686345863556">
 <node TEXT="2012.09290&#xa;Self-Supervised Sketch-to-Image Synthesis" ID="ID_1510941603" CREATED="1608878874818" MODIFIED="1608878886235"/>
@@ -6797,30 +6829,6 @@
 <node TEXT="Voice-Face Homogeneity Tells Deepfake" ID="ID_153357596" CREATED="1646942317853" MODIFIED="1646942325559">
 <icon BUILTIN="unchecked"/>
 <node TEXT="CVPR22" ID="ID_725170575" CREATED="1646942319120" MODIFIED="1646942321768"/>
-</node>
-</node>
-</node>
-<node TEXT="LG :: Meta Learning" FOLDED="true" POSITION="left" ID="ID_929306258" CREATED="1583378173046" MODIFIED="1683727483380">
-<font NAME="Gentium" BOLD="false"/>
-<edge COLOR="#ff00ff"/>
-<node TEXT="2002.04162: incremental learning for metric-based meta-learniers" ID="ID_415175776" CREATED="1583378216948" MODIFIED="1587526864942">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="MAML" ID="ID_1684879216" CREATED="1677265150586" MODIFIED="1677265152517">
-<node TEXT="Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks" ID="ID_1680498840" CREATED="1677265153892" MODIFIED="1677265467516">
-<icon BUILTIN="checked"/>
-<icon BUILTIN="bookmark"/>
-<node TEXT="ICML17" ID="ID_929161646" CREATED="1677265156432" MODIFIED="1677265158335"/>
-<node TEXT="in fact FedAvg is very similar to this" ID="ID_97979454" CREATED="1677265169731" MODIFIED="1677265187471"/>
-<node TEXT="the goal of meta-learning is to train a model on a variety of learning tasks, such that it can solve new learning tasks using only a small number of training samples" ID="ID_1958330240" CREATED="1677265401501" MODIFIED="1677265426468"/>
-<node TEXT="generally, tasks used for meta-testing are held out during meta-training" ID="ID_657097218" CREATED="1677265209038" MODIFIED="1677265224720">
-<icon BUILTIN="messagebox_warning"/>
-</node>
-</node>
-</node>
-<node TEXT="Meta-SR" ID="ID_1118787532" CREATED="1676259542003" MODIFIED="1683727496340">
-<node TEXT="Meta-SR: A Magnification-Arbitrary Network for Super-Resolution" ID="ID_1305779936" CREATED="1683727486793" MODIFIED="1683727489908">
-<icon BUILTIN="bookmark"/>
 </node>
 </node>
 </node>
@@ -6944,6 +6952,12 @@
 </node>
 <node TEXT="Opt :: Optimization" FOLDED="true" POSITION="left" ID="ID_1084462232" CREATED="1686954326647" MODIFIED="1686955296933">
 <edge COLOR="#00ff00"/>
+<node TEXT="Analysis" ID="ID_736915803" CREATED="1686962924080" MODIFIED="1686962926319">
+<node TEXT="understanding optimization of deep learning" ID="ID_73979866" CREATED="1686962926654" MODIFIED="1686962935635">
+<icon BUILTIN="pencil"/>
+<node TEXT="IDEA" ID="ID_1215351740" CREATED="1686962935973" MODIFIED="1686962937668"/>
+</node>
+</node>
 <node TEXT="Optimizers" ID="ID_1488221874" CREATED="1686955286362" MODIFIED="1686955289173">
 <node TEXT="SGD" ID="ID_1775899232" CREATED="1686954331246" MODIFIED="1686954332878"/>
 <node TEXT="Adam" ID="ID_572023614" CREATED="1686954333424" MODIFIED="1686954334609"/>
@@ -7083,7 +7097,7 @@
 <node TEXT="Bo Li" ID="ID_600425233" CREATED="1676255678686" MODIFIED="1676255679996"/>
 </node>
 </node>
-<node TEXT="Robustness :: Adversarial Training" POSITION="left" ID="ID_1633797140" CREATED="1675050942299" MODIFIED="1686942373622">
+<node TEXT="Robustness :: Adversarial Training" FOLDED="true" POSITION="left" ID="ID_1633797140" CREATED="1675050942299" MODIFIED="1686942373622">
 <edge COLOR="#0000ff"/>
 <node TEXT="Can we simply make adv training faster on imagenet? people are still playing with CIFAR. Is adversarial training the ultimate answer of robustness? Definitely no." ID="ID_133206511" CREATED="1675052822881" MODIFIED="1686956698031">
 <icon BUILTIN="attach"/>
@@ -7112,6 +7126,14 @@
 <node TEXT="traditional adversarial training requires ground truth label" ID="ID_258417514" CREATED="1675742690407" MODIFIED="1675742709560"/>
 <node TEXT="based on view synthesis. does not require grund-truth label" ID="ID_1349391221" CREATED="1675742651932" MODIFIED="1675742685215"/>
 </node>
+</node>
+</node>
+<node TEXT="Repr :: VAE" FOLDED="true" POSITION="left" ID="ID_763531053" CREATED="1686962599858" MODIFIED="1686962615705">
+<edge COLOR="#00ffff"/>
+<node TEXT="Tree variational autoencoders" ID="ID_1805352616" CREATED="1686962616828" MODIFIED="1686962626851">
+<icon BUILTIN="pencil"/>
+<node TEXT="ETHZ" ID="ID_683183791" CREATED="1686962628399" MODIFIED="1686962629916"/>
+<node TEXT="connection with treelstm?" ID="ID_813907976" CREATED="1686962686453" MODIFIED="1686962697688"/>
 </node>
 </node>
 <node TEXT="Self-Supervised Learning" FOLDED="true" POSITION="left" ID="ID_714759247" CREATED="1650825914367" MODIFIED="1651953578841">
@@ -7418,6 +7440,63 @@
 <node TEXT="VCT: A Video Compression Transformer" ID="ID_1169737283" CREATED="1656028386394" MODIFIED="1656028395754">
 <icon BUILTIN="pencil"/>
 <node TEXT="looks like NIPS22" ID="ID_506609950" CREATED="1656028396789" MODIFIED="1656028400780"/>
+</node>
+</node>
+<node TEXT="XAI :: Explainable AI" FOLDED="true" POSITION="left" ID="ID_1535392614" CREATED="1646937960988" MODIFIED="1686962495685">
+<edge COLOR="#7c0000"/>
+<node TEXT="Survey" ID="ID_796711666" CREATED="1653860071187" MODIFIED="1653860080368">
+<icon BUILTIN="mindmap"/>
+<node TEXT="How explainable are adversarially-robust CNNs?" ID="ID_95726314" CREATED="1653860082056" MODIFIED="1653860092200">
+<icon BUILTIN="pencil"/>
+<node TEXT="submit NIPS22" ID="ID_181101661" CREATED="1653860093733" MODIFIED="1653860102672"/>
+<node TEXT="(1) test accuracy" ID="ID_764666299" CREATED="1653860103071" MODIFIED="1653860111201"/>
+<node TEXT="(2) out-of-distribution accuracy" ID="ID_874751335" CREATED="1653860111347" MODIFIED="1653860117298"/>
+<node TEXT="(3) explainability" ID="ID_362903560" CREATED="1653860117582" MODIFIED="1653860121732"/>
+</node>
+</node>
+<node TEXT="class activation map" ID="ID_1199847666" CREATED="1651102994318" MODIFIED="1656028150739">
+<node TEXT="Class Activation Map" ID="ID_47285759" CREATED="1651102989796" MODIFIED="1651103008396">
+<node TEXT="Learning Deep Features for Discriminative Localization" ID="ID_675900606" CREATED="1651103009874" MODIFIED="1651103025782">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR, bolei zhou" ID="ID_1929585737" CREATED="1651103017313" MODIFIED="1651103020547"/>
+</node>
+</node>
+</node>
+<node TEXT="gradient w.r.t input" ID="ID_733899372" CREATED="1653860036334" MODIFIED="1656028158789">
+<node TEXT="Grad-CAM" ID="ID_1699913639" CREATED="1656364316838" MODIFIED="1656364339473">
+<icon BUILTIN="bookmark"/>
+<node TEXT="Grad-CAM: Why did you say that?&#xa;Visual Explanations from Deep Networks via Gradient-based Localization" ID="ID_172299995" CREATED="1656364324758" MODIFIED="1656364331599"/>
+</node>
+<node TEXT="The Manifold Hypothesis for Gradient-Based Explanations" ID="ID_743176885" CREATED="1656028126607" MODIFIED="1656028127918"/>
+</node>
+<node TEXT="perturbation" ID="ID_174218220" CREATED="1653860058835" MODIFIED="1656028174630">
+<node TEXT="LIME" ID="ID_1481560289" CREATED="1653860346455" MODIFIED="1653860348553">
+<node TEXT="“Why Should I Trust You?”&#xa;Explaining the Predictions of Any Classifier" ID="ID_674389421" CREATED="1653860349515" MODIFIED="1653860351696">
+<icon BUILTIN="unchecked"/>
+<node TEXT="KDD" ID="ID_706793779" CREATED="1653860352710" MODIFIED="1653860353774"/>
+</node>
+</node>
+</node>
+<node TEXT="Do Explanations Explain? Model Knows Best" ID="ID_1458677290" CREATED="1646937968275" MODIFIED="1646937983298">
+<icon BUILTIN="checked"/>
+<node TEXT="CVPR22" ID="ID_164811359" CREATED="1646937985052" MODIFIED="1646937987156"/>
+<node TEXT="one peculiar observation is that these explanations (attributions) point to different features as being important" ID="ID_1757747697" CREATED="1646942060828" MODIFIED="1646942079638"/>
+</node>
+<node TEXT="What can we learn from misclassified ImageNet&#xa;images?" ID="ID_1435212181" CREATED="1642952852302" MODIFIED="1642952861609">
+<icon BUILTIN="pencil"/>
+<node TEXT="misclassifications are rarely across superclasses, but mainly among subclasses with a superclass" ID="ID_426581992" CREATED="1642952902122" MODIFIED="1642952932522"/>
+<node TEXT="ensemble networks trained each only on subclasses of a given superclass perform better than the same network trained on all subclasses of all superclasses" ID="ID_1950788253" CREATED="1642952937590" MODIFIED="1642952961617"/>
+</node>
+<node TEXT="CBM" ID="ID_301801388" CREATED="1686352109549" MODIFIED="1686352115552">
+<node TEXT="ProbCBM" ID="ID_1662486844" CREATED="1686352116228" MODIFIED="1686352120779">
+<node TEXT="Probablistic concept bottleneck models" ID="ID_1120360806" CREATED="1686352151657" MODIFIED="1686352160264">
+<node TEXT="ICML23" ID="ID_1922667021" CREATED="1686352161669" MODIFIED="1686352163617"/>
+<node TEXT="relies on the necessity of concept labels." ID="ID_1287049420" CREATED="1686352121662" MODIFIED="1686352140647"/>
+</node>
+</node>
+</node>
+<node TEXT="explaining explainability: towards deeper actionable insights into deep learning through second order explainability" ID="ID_523562714" CREATED="1686962508190" MODIFIED="1686962539410">
+<icon BUILTIN="pencil"/>
 </node>
 </node>
 <node TEXT="-------------------------------------------------------------------------------------------------" POSITION="left" ID="ID_1156109860" CREATED="1647264433260" MODIFIED="1647264435598">
