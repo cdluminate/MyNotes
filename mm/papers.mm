@@ -1439,7 +1439,26 @@
 <node TEXT="language helps vision models learn better semantics, but not localization" ID="ID_317268677" CREATED="1676254561985" MODIFIED="1676254578282"/>
 </node>
 </node>
-<node TEXT="Frameworks" ID="ID_1251064479" CREATED="1676254649983" MODIFIED="1676254651474">
+<node TEXT="VSE Phase" ID="ID_1809718999" CREATED="1687553556359" MODIFIED="1687553587751">
+<node ID="ID_1466199437" CREATED="1687553560739" MODIFIED="1687553560739"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    Learning the Best Pooling Strategy for Visual Semantic Embedding
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="CVPR21" ID="ID_220396584" CREATED="1687553563728" MODIFIED="1687553565305"/>
+</node>
+<node TEXT="Probabilistic Embeddings for Cross-Modal Retrieval" ID="ID_757259340" CREATED="1687553635107" MODIFIED="1687553635693">
+<node TEXT="CVPR21" ID="ID_75104719" CREATED="1687553635894" MODIFIED="1687553637461"/>
+</node>
+</node>
+<node TEXT="CLIP Phase" ID="ID_1251064479" CREATED="1676254649983" MODIFIED="1687553594296">
 <node TEXT="CLIP" ID="ID_410734693" CREATED="1646945598394" MODIFIED="1676254682445">
 <icon BUILTIN="bookmark"/>
 <node TEXT="CLIP and adversarial robustness?" ID="ID_484691074" CREATED="1647048643037" MODIFIED="1647048648456"/>
@@ -1634,6 +1653,9 @@
 </node>
 </node>
 <node TEXT="SSL :: Vision Contrastive" ID="ID_636216475" CREATED="1680015504163" MODIFIED="1686334048386">
+<node TEXT="Contrastive learning: distance among multiple views of a single image" ID="ID_301623290" CREATED="1676228430141" MODIFIED="1676228457243">
+<icon BUILTIN="info"/>
+</node>
 <node TEXT="Is contrastive/reconstruction itself a limitation?" ID="ID_403223152" CREATED="1680015531684" MODIFIED="1680015552679">
 <icon BUILTIN="attach"/>
 </node>
@@ -1646,10 +1668,10 @@
 <node TEXT="DetCo learns representation with multi-level supervision and adds two additional local patch sets for input, building contrastive loss cross the global and local views" ID="ID_452463605" CREATED="1676253568113" MODIFIED="1676253620239"/>
 </node>
 </node>
-<node TEXT="DenseCL (CVPR21)" ID="ID_1577393686" CREATED="1676228207233" MODIFIED="1676228216082"/>
-<node TEXT="Contrastive learning: distance among multiple views of a single image" ID="ID_301623290" CREATED="1676228430141" MODIFIED="1676228457243">
-<icon BUILTIN="info"/>
+<node TEXT="Propagate Yourself: Exploring Pixel-Level Consistency for Unsupervised Visual Representation Learning" ID="ID_1726713330" CREATED="1687553021723" MODIFIED="1687553023939">
+<node TEXT="CVPR21" ID="ID_1334655869" CREATED="1687553024917" MODIFIED="1687553026661"/>
 </node>
+<node TEXT="DenseCL (CVPR21)" ID="ID_1577393686" CREATED="1676228207233" MODIFIED="1676228216082"/>
 </node>
 <node TEXT="SSL :: Vision Reconstruction" ID="ID_29624267" CREATED="1680015510463" MODIFIED="1686334049799">
 <node TEXT="Self-supervised learning has two major forms, reconstruction and contrastive learning" ID="ID_1689550023" CREATED="1647264534821" MODIFIED="1680200393467">
@@ -1898,7 +1920,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Transferrability" ID="ID_142248765" CREATED="1641678368814" MODIFIED="1680220505902">
+<node TEXT="Transferrability" FOLDED="true" ID="ID_142248765" CREATED="1641678368814" MODIFIED="1680220505902">
 <node TEXT="It is to some extent ridiculous to assume an overlap of the vulnerability space among different trained models. I have lost interest in the transferability. Defending against attacks is more important than developing new and marginally better transfer attacks." ID="ID_539973320" CREATED="1676256488396" MODIFIED="1676259290908">
 <icon BUILTIN="attach"/>
 <node TEXT="But according to the empirical results of the community, imagenet models indeed share some stupid common vulnerability space." ID="ID_1762438180" CREATED="1676256538121" MODIFIED="1676256561123"/>
@@ -2055,6 +2077,7 @@
 <node TEXT="ICLR22" ID="ID_1001676990" CREATED="1644181090717" MODIFIED="1644181096398"/>
 </node>
 </node>
+<node TEXT="SurFree: A Fast Surrogate-Free Black-Box Attack" ID="ID_1608866563" CREATED="1687553259702" MODIFIED="1687553260518"/>
 <node TEXT="w/ Transfer Prior" ID="ID_1448999389" CREATED="1649101767532" MODIFIED="1649101771379">
 <node TEXT="Boosting Black-Box Adversarial Attacks with Meta Learning" ID="ID_460302765" CREATED="1649101772257" MODIFIED="1649101787420">
 <icon BUILTIN="pencil"/>
@@ -2070,7 +2093,6 @@
 </node>
 </node>
 </node>
-<node TEXT="Black Box Attack (targeted)" ID="ID_657350127" CREATED="1672079608329" MODIFIED="1672079614861"/>
 <node TEXT="No-Box Attack" ID="ID_571284137" CREATED="1648396305541" MODIFIED="1648396309532">
 <node TEXT="Practical No-box Adversarial Attacks with Training-free Hybrid Image Transformation" ID="ID_1643901069" CREATED="1648396360998" MODIFIED="1648396366599">
 <icon BUILTIN="unchecked"/>
@@ -2722,6 +2744,11 @@
 <node TEXT="(3) multi-task adv attack" ID="ID_1353003322" CREATED="1646932559964" MODIFIED="1646932565527">
 <node TEXT="fooling various tasks and the detection" ID="ID_1825015452" CREATED="1646932573883" MODIFIED="1646932587870"/>
 </node>
+</node>
+</node>
+<node TEXT="?Taxonomy" ID="ID_1354228623" CREATED="1687553165468" MODIFIED="1687553175830">
+<node TEXT="LiBRe: A Practical Bayesian Approach to Adversarial Detection" ID="ID_1599847811" CREATED="1687553176146" MODIFIED="1687553177292">
+<node TEXT="CVPR21" ID="ID_1534540845" CREATED="1687553177807" MODIFIED="1687553180570"/>
 </node>
 </node>
 </node>
@@ -3943,6 +3970,12 @@
 </node>
 <node TEXT="Img :: Classification" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="right" ID="ID_98760508" CREATED="1642438760894" MODIFIED="1680638579724">
 <edge COLOR="#7c7c00"/>
+<node TEXT="Datasets" ID="ID_176161287" CREATED="1687553416721" MODIFIED="1687553418590">
+<node TEXT="ILSVRC (ImageNet)" ID="ID_466907802" CREATED="1687553418725" MODIFIED="1687553425730"/>
+<node TEXT="Natural Adversarial Examples" ID="ID_943621957" CREATED="1687553426075" MODIFIED="1687553429129">
+<node TEXT="CVPR21" ID="ID_456484075" CREATED="1687553430837" MODIFIED="1687553432152"/>
+</node>
+</node>
 <node TEXT="MLP" ID="ID_636086784" CREATED="1648181297496" MODIFIED="1648181311232">
 <font BOLD="true"/>
 <node TEXT="MAE" ID="ID_436521303" CREATED="1648181301355" MODIFIED="1648181305556">
@@ -4300,7 +4333,7 @@
 </node>
 </node>
 </node>
-<node TEXT="V :: Metric Learning" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="right" ID="ID_464750159" CREATED="1641242970936" MODIFIED="1687546343688">
+<node TEXT="V :: Metric Learning" LOCALIZED_STYLE_REF="default" POSITION="right" ID="ID_464750159" CREATED="1641242970936" MODIFIED="1687546343688">
 <edge COLOR="#ff00ff"/>
 <node TEXT="Survey" ID="ID_1192003468" CREATED="1641520461677" MODIFIED="1648175016651">
 <icon BUILTIN="info"/>
@@ -4357,7 +4390,7 @@
 <node TEXT="interesting insight." ID="ID_272867591" CREATED="1686962161472" MODIFIED="1686962166593"/>
 </node>
 </node>
-<node TEXT="Loss Functions" FOLDED="true" ID="ID_1262041414" CREATED="1641520453737" MODIFIED="1641520995604">
+<node TEXT="Loss Functions" ID="ID_1262041414" CREATED="1641520453737" MODIFIED="1641520995604">
 <font NAME="Gentium"/>
 <node TEXT="Group-based?" ID="ID_1898475549" CREATED="1641524460135" MODIFIED="1648342703726">
 <node TEXT="LiftStructure" ID="ID_362567920" CREATED="1641242980713" MODIFIED="1641520995605">
@@ -4465,7 +4498,12 @@
 </node>
 </node>
 </node>
-<node TEXT="Augmentation" FOLDED="true" ID="ID_877212931" CREATED="1676255334166" MODIFIED="1676255338312">
+<node TEXT="+Compositional" ID="ID_1615207956" CREATED="1687553773704" MODIFIED="1687553782451">
+<node TEXT="Deep Compositional Metric Learning" ID="ID_409820668" CREATED="1687553782935" MODIFIED="1687553783725">
+<node TEXT="CVPR21" ID="ID_852068085" CREATED="1687553784094" MODIFIED="1687553785299"/>
+</node>
+</node>
+<node TEXT="+Augmentaiton" ID="ID_877212931" CREATED="1676255334166" MODIFIED="1687553791002">
 <node TEXT="Intra-class Adaptive Augmentation with Neighbor Correction for Deep Metric Learning" ID="ID_956878171" CREATED="1676255338845" MODIFIED="1676255345560">
 <node TEXT="TMM" ID="ID_768011628" CREATED="1676255347351" MODIFIED="1676255349472"/>
 <node TEXT="previous methods use simple linear interpolation" ID="ID_855265348" CREATED="1676255349825" MODIFIED="1676255360699"/>
@@ -5668,6 +5706,9 @@
 <node TEXT="Backdoor Attack Detection in Computer Vision by Applying Matrix Factorization on the Weights of Deep Networks" ID="ID_432585247" CREATED="1672075170235" MODIFIED="1672075171748">
 <node TEXT="AAAI23w" ID="ID_564155447" CREATED="1672075172077" MODIFIED="1672075177553"/>
 <node TEXT="extracts features from pre-trianed DNN&apos;s weights using independent vector analysis (IVA) followed by a machine learning classifier" ID="ID_1950286909" CREATED="1672075216674" MODIFIED="1672075245368"/>
+</node>
+<node TEXT="Spectral Signatures in Backdoor Attacks" ID="ID_1742626169" CREATED="1687552792416" MODIFIED="1687552793122">
+<node TEXT="madry" ID="ID_684143831" CREATED="1687552808112" MODIFIED="1687552809108"/>
 </node>
 </node>
 <node TEXT="Classification" ID="ID_1654847796" CREATED="1647048721032" MODIFIED="1647048723750">
@@ -7049,6 +7090,9 @@
 <node TEXT="rethinking adversarial training with a simple baseline" ID="ID_546701121" CREATED="1686958794230" MODIFIED="1686958903519">
 <icon BUILTIN="pencil"/>
 <node TEXT="2023 robustbench" ID="ID_56019325" CREATED="1686958896499" MODIFIED="1686958900731"/>
+</node>
+<node TEXT="Smooth Adversarial Training" ID="ID_1842687092" CREATED="1687552909573" MODIFIED="1687552910236">
+<node TEXT="Cihang" ID="ID_584809873" CREATED="1687552910581" MODIFIED="1687552912500"/>
 </node>
 </node>
 <node TEXT="Self-supervised Learning" ID="ID_1886314157" CREATED="1675742636744" MODIFIED="1675742640282">
