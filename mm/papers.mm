@@ -1894,6 +1894,9 @@
 <icon BUILTIN="pencil"/>
 </node>
 </node>
+<node TEXT="Adversarial Example Decomposition" ID="ID_804088761" CREATED="1687544969531" MODIFIED="1687544970689">
+<node TEXT="ICML18" ID="ID_1098529902" CREATED="1687544970872" MODIFIED="1687544972642"/>
+</node>
 <node TEXT="TI-FGSM" ID="ID_1220544753" CREATED="1651189229068" MODIFIED="1676256432185">
 <icon BUILTIN="yes"/>
 <node TEXT="Evading Defenses to Transferable Adversarial Examples by&#xa;Translation-Invariant Attacks" ID="ID_1319672231" CREATED="1651189237732" MODIFIED="1651189244732">
@@ -5476,100 +5479,6 @@
 <node TEXT="Segment Anything Model" ID="ID_1688203184" CREATED="1686954905274" MODIFIED="1686954910450"/>
 </node>
 </node>
-<node TEXT="3D :: Recognition" FOLDED="true" POSITION="left" ID="ID_1606327696" CREATED="1583132559918" MODIFIED="1686942261411">
-<font NAME="Gentium" SIZE="10" BOLD="false"/>
-<edge COLOR="#007c7c"/>
-<node TEXT="Lite Mode" ID="ID_572835973" CREATED="1686942025210" MODIFIED="1686942048700">
-<icon BUILTIN="info"/>
-</node>
-<node TEXT="Dataset" ID="ID_750669130" CREATED="1583137147235" MODIFIED="1587526865232">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="PartNet: A large scale benchmark for fine-grained and hierarchical part-level 3D object understanding" ID="ID_367911268" CREATED="1583137156179" MODIFIED="1587526865232">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: large-scale dataset of 3D objects annotated with fine-trained, instance-level, and hierarchical 3D part information." ID="ID_1810204510" CREATED="1583137993707" MODIFIED="1587526865232">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: 3d part recognition: fine-rained semantic segmentation, hierarchical semantic segmentation, and instance segmentation" ID="ID_447922824" CREATED="1583141336957" MODIFIED="1587526865233">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="Representation" ID="ID_67683623" CREATED="1608878793211" MODIFIED="1686942199578">
-<node TEXT="Deep Learning on Implicit Neural Representations of Shapes" ID="ID_740475406" CREATED="1680637291367" MODIFIED="1686942183022">
-<icon BUILTIN="unchecked"/>
-<node TEXT="ICLR23" ID="ID_681585986" CREATED="1680637293279" MODIFIED="1680637294612"/>
-<node TEXT="implicit neural representations can encode continuously a variety of different signals like images, videos, audio and 3d shapes" ID="ID_559050772" CREATED="1680637449611" MODIFIED="1680637476101"/>
-</node>
-<node TEXT="MetaSets: Meta-Learning on Point Sets for Generalizable Representations" ID="ID_1880007762" CREATED="1650816127428" MODIFIED="1650816134358">
-<node TEXT="CVPR21" ID="ID_1972344411" CREATED="1650816135730" MODIFIED="1650816137097"/>
-</node>
-<node TEXT="IDEA-Net: Dynamic 3D Point Cloud Interpolation via Deep Embedding Alignment" ID="ID_1606213792" CREATED="1648338005697" MODIFIED="1648338009130">
-<node TEXT="CVPR22" ID="ID_80360502" CREATED="1648338010355" MODIFIED="1648338011775"/>
-</node>
-</node>
-<node TEXT="Classification" ID="ID_1683843111" CREATED="1583132565754" MODIFIED="1686942100027">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="PointNet: deep learning on Point Sets for 3D classification and segmentation (2017)" ID="ID_535445133" CREATED="1583132578641" MODIFIED="1587526865234">
-<icon BUILTIN="button_ok"/>
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: 3d classification and segmentation" ID="ID_369477718" CREATED="1583132646461" MODIFIED="1587526865235">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: previous works transform such data to regular 3D voxel grids or collections of images" ID="ID_509541120" CREATED="1583132656157" MODIFIED="1587526865236">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="renders data unecessarily voluminous and causes issues" ID="ID_1650499462" CREATED="1583132774211" MODIFIED="1587526865237">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="how: novel type of neural network" ID="ID_1582863497" CREATED="1583132794431" MODIFIED="1587526865238">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="directly consumes 3d point cloud" ID="ID_904651994" CREATED="1583132807372" MODIFIED="1587526865238">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="respects the permutation invariance of point in the input" ID="ID_80693188" CREATED="1583132818955" MODIFIED="1587526865239">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="Detail" ID="ID_592119659" CREATED="1583132853503" MODIFIED="1587526865239">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="properties of point set" ID="ID_923628661" CREATED="1583133482219" MODIFIED="1587526865239">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="1. unordered" ID="ID_59901348" CREATED="1583133494060" MODIFIED="1587526865240">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="2. interaction among points" ID="ID_905514121" CREATED="1583133498167" MODIFIED="1587526865240">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="3. invariance under transformations" ID="ID_932819479" CREATED="1583133522841" MODIFIED="1587526865241">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="e.g. translation and rotation" ID="ID_1003384585" CREATED="1583133566689" MODIFIED="1587526865241">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="regularize transformation to be close to orthogonal matrix" ID="ID_1980629096" CREATED="1583133585186" MODIFIED="1587526865242">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="An orthogonal transformation will not lose information in the input, thus is desired" ID="ID_285705617" CREATED="1583133597956" MODIFIED="1587526865242">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="PointNet++: deep hierarchical feature learning on point sets in a metric space (NIPS)" ID="ID_1305155138" CREATED="1583133688195" MODIFIED="1587526865243">
-<icon BUILTIN="button_ok"/>
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: 3d classification and segmentation" ID="ID_1391695258" CREATED="1583136577356" MODIFIED="1587526865244">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: pointnet does not capture local structures induced by the metric space points live in" ID="ID_1734373925" CREATED="1583136583902" MODIFIED="1587526865245">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: introduce a hierarchical neural network that applies pointnet recursively on a nested partitioning of the input point set; propoes novel set learning layers to adaptively combine features from multiple scales" ID="ID_574546543" CREATED="1583136619272" MODIFIED="1587526865246">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-</node>
 <node TEXT="OOD :: Detect and Learn" FOLDED="true" POSITION="left" ID="ID_31313107" CREATED="1657404499454" MODIFIED="1686947208750">
 <edge COLOR="#007c7c"/>
 <node TEXT="Anomaly detection, out-of-distribution detection, open-set recognition" ID="ID_439134135" CREATED="1680200146165" MODIFIED="1680200161268"/>
@@ -6040,8 +5949,7 @@
 <node TEXT="less storage than CLIP" ID="ID_1939734106" CREATED="1675743903318" MODIFIED="1675743909152"/>
 </node>
 </node>
-<node TEXT="Dataset Distillation" FOLDED="true" POSITION="left" ID="ID_265073126" CREATED="1648338075798" MODIFIED="1648343254704">
-<icon BUILTIN="idea"/>
+<node TEXT="Eff :: Dataset Distillation" FOLDED="true" POSITION="left" ID="ID_265073126" CREATED="1648338075798" MODIFIED="1687544762322">
 <edge COLOR="#ff00ff"/>
 <node TEXT="Dataset Distillation by Matching Training Trajectories" ID="ID_1232754909" CREATED="1648338079783" MODIFIED="1648338088477">
 <icon BUILTIN="unchecked"/>
@@ -6396,12 +6304,12 @@
 </node>
 </node>
 </node>
-<node TEXT="LG :: Federated Learning" FOLDED="true" POSITION="left" ID="ID_121320330" CREATED="1658618674669" MODIFIED="1683727217873">
+<node TEXT="LG :: Meta/Federated Learning" FOLDED="true" POSITION="left" ID="ID_121320330" CREATED="1658618674669" MODIFIED="1687545331609">
 <edge COLOR="#ff00ff"/>
 <node TEXT="low hanging fruits are basically gone. there are some unresolved corner cases. This is going towards an engineering problem direction." ID="ID_1703063236" CREATED="1675049770366" MODIFIED="1675739832428">
 <icon BUILTIN="attach"/>
 </node>
-<node TEXT="Baselines" ID="ID_814985517" CREATED="1677265600561" MODIFIED="1685736041602">
+<node TEXT="Federated" ID="ID_814985517" CREATED="1677265600561" MODIFIED="1687545309243">
 <node TEXT="FedSGD" ID="ID_1562968111" CREATED="1683726575457" MODIFIED="1683726577608"/>
 <node TEXT="FedAvg" ID="ID_485649293" CREATED="1675049758554" MODIFIED="1675049762453"/>
 <node TEXT="FedProx" ID="ID_356723584" CREATED="1677265595295" MODIFIED="1677265596861">
@@ -6410,12 +6318,9 @@
 <node TEXT="MLSYS20" ID="ID_221877250" CREATED="1683726626079" MODIFIED="1683726632032"/>
 </node>
 </node>
-</node>
-<node TEXT="SOTAs" ID="ID_1219472155" CREATED="1677265608189" MODIFIED="1685736051793">
 <node TEXT="FedNova" ID="ID_1485537673" CREATED="1677265588546" MODIFIED="1677265592562"/>
 <node TEXT="SphereFed: Hyperspherical Federated Learning" ID="ID_1881740651" CREATED="1658618678515" MODIFIED="1658618679170">
 <node TEXT="ECCV22" ID="ID_624140530" CREATED="1658618681127" MODIFIED="1658618682432"/>
-</node>
 </node>
 <node TEXT="+ Diffusion" ID="ID_217151115" CREATED="1686353294356" MODIFIED="1686353297211">
 <node TEXT="phoenix: a federated generative diffusion model" ID="ID_1101885608" CREATED="1686353297577" MODIFIED="1686353310534">
@@ -6423,9 +6328,8 @@
 </node>
 </node>
 </node>
-<node TEXT="LG :: Meta Learning" FOLDED="true" POSITION="left" ID="ID_929306258" CREATED="1583378173046" MODIFIED="1683727483380">
+<node TEXT="META" ID="ID_929306258" CREATED="1583378173046" MODIFIED="1687545303848">
 <font NAME="Gentium" BOLD="false"/>
-<edge COLOR="#ff00ff"/>
 <node TEXT="2002.04162: incremental learning for metric-based meta-learniers" ID="ID_415175776" CREATED="1583378216948" MODIFIED="1587526864942">
 <font NAME="Gentium" BOLD="false"/>
 </node>
@@ -6444,6 +6348,7 @@
 <node TEXT="Meta-SR" ID="ID_1118787532" CREATED="1676259542003" MODIFIED="1683727496340">
 <node TEXT="Meta-SR: A Magnification-Arbitrary Network for Super-Resolution" ID="ID_1305779936" CREATED="1683727486793" MODIFIED="1683727489908">
 <icon BUILTIN="bookmark"/>
+</node>
 </node>
 </node>
 </node>
@@ -6548,55 +6453,6 @@
 </html>
 
 </richcontent>
-</node>
-</node>
-</node>
-<node TEXT="Gradient Inversion" FOLDED="true" POSITION="left" ID="ID_856893547" CREATED="1675738524485" MODIFIED="1675739230998">
-<edge COLOR="#007c00"/>
-<node TEXT="Privacy breach in federated learning" ID="ID_370882247" CREATED="1675738529186" MODIFIED="1675739233174">
-<icon BUILTIN="info"/>
-</node>
-<node TEXT="Recover training data from gradients under restrictive conditions" ID="ID_340337385" CREATED="1675738567796" MODIFIED="1675738589125">
-<icon BUILTIN="info"/>
-</node>
-<node TEXT="How risky is this to the industry and the real-life applications? Does the risk worth the cost for the corresponding mitigation?" ID="ID_1898725442" CREATED="1675738905185" MODIFIED="1675738946233">
-<icon BUILTIN="help"/>
-<node TEXT="privacy protection does not make money for the industry. But sometimes it avoids losing money due to sues?" ID="ID_1992154293" CREATED="1675738981842" MODIFIED="1675739027639"/>
-<node TEXT="Why not just encrypt the gradient using the mature encryption methods? Why do we assume that the gradients are communicated in plain format without any encryption? The mature encryption methods does not impose a great overhead on model training time, but can cheaply prevent the man in the middle attacker from accessing the gradient data." ID="ID_1309505419" CREATED="1675740293591" MODIFIED="1675740391919"/>
-<node TEXT="It is interesting. But there are cheap solutions to it." ID="ID_1738081604" CREATED="1675740398663" MODIFIED="1675740423090">
-<icon BUILTIN="attach"/>
-</node>
-</node>
-<node TEXT="Attack" ID="ID_376304068" CREATED="1675739269843" MODIFIED="1675739271131">
-<node TEXT="Deep Leakage from Gradients" ID="ID_276864711" CREATED="1675740231154" MODIFIED="1675740231947">
-<node TEXT="NIPS19" ID="ID_323956691" CREATED="1675740234709" MODIFIED="1675740236222">
-<node TEXT="Song Han" ID="ID_873470254" CREATED="1675740236982" MODIFIED="1675740239080"/>
-</node>
-</node>
-<node TEXT="Inverting Gradients -- How easy is it to break privacy in federated learning?" ID="ID_62976593" CREATED="1675740147524" MODIFIED="1675740152975">
-<node TEXT="NIPS2020" ID="ID_1863732890" CREATED="1675740153913" MODIFIED="1675740157924"/>
-</node>
-<node TEXT="See through Gradients: Image Batch Recovery via GradInversion" ID="ID_1220157339" CREATED="1675738592141" MODIFIED="1675738601823">
-<node TEXT="CVPR21" ID="ID_439032463" CREATED="1675738602311" MODIFIED="1675738603763"/>
-<node TEXT="large batch (8-48 images) on ImageNet" ID="ID_7854666" CREATED="1675738623776" MODIFIED="1675738632624"/>
-<node TEXT="the aggregated gradient and the network weights are known. The optimization is to find an input whose gradient matches with the aggregated gradients." ID="ID_1915947616" CREATED="1675738854470" MODIFIED="1675738896371"/>
-</node>
-<node TEXT="GradViT: Gradient Inversion of Vision Transformers" ID="ID_354014530" CREATED="1675740081488" MODIFIED="1675740082875">
-<node TEXT="CVPR22" ID="ID_1148559731" CREATED="1675740085762" MODIFIED="1675740089684"/>
-</node>
-</node>
-<node TEXT="Defense" ID="ID_998251950" CREATED="1675739273330" MODIFIED="1675739274665">
-<node TEXT="Cryptography based" ID="ID_1228579139" CREATED="1675739279450" MODIFIED="1675739285216">
-<node TEXT="multi-party communication (MPC)" ID="ID_688657039" CREATED="1675739331042" MODIFIED="1675739345426"/>
-</node>
-<node TEXT="Gradient degradation based" ID="ID_1233800263" CREATED="1675739285436" MODIFIED="1675739291515">
-<node TEXT="differential privacy (DP)" ID="ID_813016819" CREATED="1675739347198" MODIFIED="1675739359691"/>
-</node>
-</node>
-<node TEXT="Attack Defense" ID="ID_276108364" CREATED="1675739470610" MODIFIED="1675739478958">
-<node TEXT="Auditing Privacy Defenses in Federated Learning via Generative Gradient Leakage" ID="ID_524301344" CREATED="1675739517073" MODIFIED="1675739522712">
-<node TEXT="CVPR22" ID="ID_1787895017" CREATED="1675739523193" MODIFIED="1675739524639"/>
-<node TEXT="new type of leakage that breaks gradient degradation methods" ID="ID_197111042" CREATED="1675739527086" MODIFIED="1675739550941"/>
 </node>
 </node>
 </node>
@@ -6895,82 +6751,6 @@
 <node TEXT="CVPR22" ID="ID_735774105" CREATED="1649104378958" MODIFIED="1649104379977"/>
 </node>
 </node>
-<node TEXT="Network Arch Search" FOLDED="true" POSITION="left" ID="ID_1465080986" CREATED="1576827705751" MODIFIED="1650817686281">
-<font NAME="Gentium" SIZE="10" BOLD="false"/>
-<edge COLOR="#00ffff"/>
-<node TEXT="NAS + General" ID="ID_345720050" CREATED="1589771335033" MODIFIED="1610423263436">
-<node TEXT="1912.09640 ATOMNAS: FINE-GRAINED END TO END NEURAL ARCHITECTURE SEARCH (iclr20)" ID="ID_551298402" CREATED="1591523824249" MODIFIED="1591523859249"/>
-<node TEXT="2001.01431: deeper insights into weight sharing in neural architecture search" ID="ID_788581693" CREATED="1578641715823" MODIFIED="1587526865297">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="as training every child model from scratch is very time-consuming, recent works leverage weight-sharing to speed up the model evaluation procedure" ID="ID_210487548" CREATED="1578641819751" MODIFIED="1587526865299">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="these approaches greatly reduce computation by maintaining a single copy of weights on the super-net and share the weights among every child model" ID="ID_320246153" CREATED="1578641854870" MODIFIED="1587526865306">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="weight-sharing has no theoretical guarantee and its impact has not been well studied before" ID="ID_1082606016" CREATED="1578641968342" MODIFIED="1587526865308">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="comprehensive and reveal the impact of weight-sharing" ID="ID_575085259" CREATED="1578641994032" MODIFIED="1587526865308">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="1. best-performing models from different runes or even from consecutive epoches within the same run have significant variance" ID="ID_806597637" CREATED="1578642011022" MODIFIED="1587526865309">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="2. even with high variance, we can extract valuable information from training the super-net with shared weight s" ID="ID_1259033553" CREATED="1578642053527" MODIFIED="1587526865310">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="3. inference between child models is a main factor that induces high variance" ID="ID_824472334" CREATED="1578642091423" MODIFIED="1587526865312">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="4. properly reducing the degree of weight sharing could effectively reduce variance" ID="ID_1319017164" CREATED="1578642112783" MODIFIED="1587526865312">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="2002.07376: picking winning tickets before training by preserving gradient flow" ID="ID_285121795" CREATED="1582337040844" MODIFIED="1587526865313">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: prune networks at initialization" ID="ID_242187066" CREATED="1582337065578" MODIFIED="1587526865314">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: overparameterization has been shown to benefit both the optimization and generalization of neural networks, but large networks are resource hungry at both training and test time." ID="ID_982652785" CREATED="1582337086688" MODIFIED="1587526865315">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: simple but effective pruning criterion termed Gradient Signal Preservation (GraSP)" ID="ID_456233465" CREATED="1582337135230" MODIFIED="1587526865316">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="2002.08104: neural networks on random graphs" ID="ID_1492714029" CREATED="1583370632367" MODIFIED="1587526865316">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: evaluation of neural networks with architectures corresponding to random graphs of various types" ID="ID_189291229" CREATED="1583370645715" MODIFIED="1587526865317">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="2004.05020: ModuleNet: Knowledge-inherited Neural Architecture search" ID="ID_1957978051" CREATED="1587029726858" MODIFIED="1587526865318">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="1912.12522 NASEVALUATION IS FRUSTRATINGLY HARD (ICLR20)" ID="ID_1102573147" CREATED="1591523757273" MODIFIED="1591523776195"/>
-<node TEXT="2101: Unchain the Search Space with Hierarchical Differentiable Architecture Search" ID="ID_770027754" CREATED="1610423275136" MODIFIED="1610423282492"/>
-<node TEXT="2101: Neural Architecture Search via Combinatorial Multi-Armed Bandit" ID="ID_1528572141" CREATED="1610424093363" MODIFIED="1610424103413"/>
-<node TEXT="Contrastive Neural Architecture Search with Neural Architecture Comparators (cvpr21)" ID="ID_866640575" CREATED="1615348935373" MODIFIED="1615348942277"/>
-<node TEXT="SpiderNet: Hybrid Differentiable-Evolutionary Architecture Search via Train-Free Metrics" ID="ID_704263392" CREATED="1650817696173" MODIFIED="1650817696822">
-<node TEXT="CVPR22w" ID="ID_250147196" CREATED="1650817697711" MODIFIED="1650817699427"/>
-</node>
-</node>
-<node TEXT="NAS + Other" ID="ID_1734029148" CREATED="1589771343435" MODIFIED="1589771346550">
-<node TEXT="other=SISR" ID="ID_12673974" CREATED="1589771348054" MODIFIED="1589771353001">
-<node TEXT="2003.04619: hierarchical neural architecture search for single image super-resolution" ID="ID_1727215487" CREATED="1589771353984" MODIFIED="1589771370713"/>
-</node>
-<node TEXT="other=modality" ID="ID_621571662" CREATED="1589771456800" MODIFIED="1589771460809">
-<node TEXT="2004.12070: deep multimodal neural architecture search" ID="ID_1501292654" CREATED="1588072764031" MODIFIED="1588072782358"/>
-</node>
-<node TEXT="other=multitask" ID="ID_1291820834" CREATED="1590975521172" MODIFIED="1590975526893">
-<node TEXT="2003.14058 MTL-NAS: Task-Agnostic Neural Architecture Search towards General-Purpose Multi-Task Learning (cvpr20)" ID="ID_755508472" CREATED="1590975527584" MODIFIED="1590975541542"/>
-</node>
-<node TEXT="otehr=captioning" ID="ID_341214713" CREATED="1608876510692" MODIFIED="1608876515099">
-<node TEXT="2012.09742&#xa;AutoCaption: Image Captioning with Neural Architecture Search" ID="ID_1588438121" CREATED="1608876515864" MODIFIED="1608876526467"/>
-</node>
-</node>
-</node>
 <node TEXT="Ordinal Regression" FOLDED="true" POSITION="left" ID="ID_408572005" CREATED="1576825445602" MODIFIED="1647264584581">
 <font NAME="Gentium" SIZE="10" BOLD="false"/>
 <edge COLOR="#00ffff"/>
@@ -7026,7 +6806,7 @@
 <icon BUILTIN="pencil"/>
 </node>
 </node>
-<node TEXT="Privacy ML" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="left" ID="ID_1174539463" CREATED="1590802979023" MODIFIED="1676254295179">
+<node TEXT="Ethics :: Privacy ML" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="left" ID="ID_1174539463" CREATED="1590802979023" MODIFIED="1687545189932">
 <edge COLOR="#7c0000"/>
 <node TEXT="Encrypt / Decrypt" ID="ID_892914237" CREATED="1590803103499" MODIFIED="1590803111112">
 <node TEXT="2004.05523 DeepEDN: A Deep Learning-based Image Encryption and Decryption Network for Internet of Medical Things" ID="ID_779071488" CREATED="1590802983849" MODIFIED="1590802993502"/>
@@ -7046,6 +6826,9 @@
 <node TEXT="exloring structure consistency for deep model watermarking" ID="ID_489056739" CREATED="1647567594240" MODIFIED="1647567607226">
 <icon BUILTIN="pencil"/>
 </node>
+<node TEXT="Certified Neural Network Watermarks with Randomized Smoothing" ID="ID_820456333" CREATED="1687545175901" MODIFIED="1687545176717">
+<node TEXT="ICML22" ID="ID_148985769" CREATED="1687545178172" MODIFIED="1687545179746"/>
+</node>
 </node>
 <node TEXT="Differential Privacy" ID="ID_1268713155" CREATED="1648337762797" MODIFIED="1648337766246">
 <node TEXT="Mixed Differential Privacy in Computer Vision" ID="ID_1969874071" CREATED="1648337767049" MODIFIED="1648337770249">
@@ -7056,9 +6839,19 @@
 <node TEXT="ECCV22" ID="ID_1951337159" CREATED="1658615207954" MODIFIED="1658615209392"/>
 </node>
 </node>
+<node TEXT="Private: Inference (PI)" ID="ID_601747646" CREATED="1675049599116" MODIFIED="1687545206438">
+<node TEXT="private cloud inference service?" ID="ID_1508068551" CREATED="1675296552861" MODIFIED="1675296561075">
+<icon BUILTIN="info"/>
 </node>
-<node TEXT="Privacy: Membership Inference" FOLDED="true" POSITION="left" ID="ID_1965495393" CREATED="1591523395980" MODIFIED="1675297567729">
-<edge COLOR="#00ffff"/>
+<node TEXT="Learning to Linearize Deep Neural Networks for Secure and Efficient Private Inference" ID="ID_664848252" CREATED="1675049614506" MODIFIED="1675049616041">
+<node TEXT="ICLR23" ID="ID_983434925" CREATED="1675049617972" MODIFIED="1675049619844"/>
+</node>
+<node TEXT="CoPur: Certifiably Robust Collaborative Inference via Feature Purification" ID="ID_1669506611" CREATED="1676255668247" MODIFIED="1676255674492">
+<node TEXT="NIPS22" ID="ID_594211028" CREATED="1676255675243" MODIFIED="1676255677567"/>
+<node TEXT="Bo Li" ID="ID_600425233" CREATED="1676255678686" MODIFIED="1676255679996"/>
+</node>
+</node>
+<node TEXT="Privacy: Membership Inference" ID="ID_1965495393" CREATED="1591523395980" MODIFIED="1687545208995">
 <node TEXT="Is this example used in the training dataset? (mild)" ID="ID_1568715434" CREATED="1675297612949" MODIFIED="1675297628144">
 <icon BUILTIN="info"/>
 </node>
@@ -7070,8 +6863,7 @@
 <node TEXT="ECCV22" ID="ID_1418419828" CREATED="1659161408686" MODIFIED="1659161410212"/>
 </node>
 </node>
-<node TEXT="Privacy: Model Inversion" FOLDED="true" POSITION="left" ID="ID_609996958" CREATED="1675296482479" MODIFIED="1675296486828">
-<edge COLOR="#ff00ff"/>
+<node TEXT="Privacy: Model Inversion" ID="ID_609996958" CREATED="1675296482479" MODIFIED="1687545211089">
 <node TEXT="restore training data from a trained model (more powerful than membership inference)" ID="ID_928344118" CREATED="1675296489117" MODIFIED="1675297639168">
 <icon BUILTIN="info"/>
 </node>
@@ -7126,17 +6918,53 @@
 </node>
 </node>
 </node>
-<node TEXT="Private: Inference (PI)" FOLDED="true" POSITION="left" ID="ID_601747646" CREATED="1675049599116" MODIFIED="1676255645030">
-<edge COLOR="#007c7c"/>
-<node TEXT="private cloud inference service?" ID="ID_1508068551" CREATED="1675296552861" MODIFIED="1675296561075">
+<node TEXT="Gradient Inversion" ID="ID_856893547" CREATED="1675738524485" MODIFIED="1687545377318">
+<node TEXT="Privacy breach in federated learning" ID="ID_370882247" CREATED="1675738529186" MODIFIED="1675739233174">
 <icon BUILTIN="info"/>
 </node>
-<node TEXT="Learning to Linearize Deep Neural Networks for Secure and Efficient Private Inference" ID="ID_664848252" CREATED="1675049614506" MODIFIED="1675049616041">
-<node TEXT="ICLR23" ID="ID_983434925" CREATED="1675049617972" MODIFIED="1675049619844"/>
+<node TEXT="Recover training data from gradients under restrictive conditions" ID="ID_340337385" CREATED="1675738567796" MODIFIED="1675738589125">
+<icon BUILTIN="info"/>
 </node>
-<node TEXT="CoPur: Certifiably Robust Collaborative Inference via Feature Purification" ID="ID_1669506611" CREATED="1676255668247" MODIFIED="1676255674492">
-<node TEXT="NIPS22" ID="ID_594211028" CREATED="1676255675243" MODIFIED="1676255677567"/>
-<node TEXT="Bo Li" ID="ID_600425233" CREATED="1676255678686" MODIFIED="1676255679996"/>
+<node TEXT="How risky is this to the industry and the real-life applications? Does the risk worth the cost for the corresponding mitigation?" ID="ID_1898725442" CREATED="1675738905185" MODIFIED="1675738946233">
+<icon BUILTIN="help"/>
+<node TEXT="privacy protection does not make money for the industry. But sometimes it avoids losing money due to sues?" ID="ID_1992154293" CREATED="1675738981842" MODIFIED="1675739027639"/>
+<node TEXT="Why not just encrypt the gradient using the mature encryption methods? Why do we assume that the gradients are communicated in plain format without any encryption? The mature encryption methods does not impose a great overhead on model training time, but can cheaply prevent the man in the middle attacker from accessing the gradient data." ID="ID_1309505419" CREATED="1675740293591" MODIFIED="1675740391919"/>
+<node TEXT="It is interesting. But there are cheap solutions to it." ID="ID_1738081604" CREATED="1675740398663" MODIFIED="1675740423090">
+<icon BUILTIN="attach"/>
+</node>
+</node>
+<node TEXT="Attack" ID="ID_376304068" CREATED="1675739269843" MODIFIED="1675739271131">
+<node TEXT="Deep Leakage from Gradients" ID="ID_276864711" CREATED="1675740231154" MODIFIED="1675740231947">
+<node TEXT="NIPS19" ID="ID_323956691" CREATED="1675740234709" MODIFIED="1675740236222">
+<node TEXT="Song Han" ID="ID_873470254" CREATED="1675740236982" MODIFIED="1675740239080"/>
+</node>
+</node>
+<node TEXT="Inverting Gradients -- How easy is it to break privacy in federated learning?" ID="ID_62976593" CREATED="1675740147524" MODIFIED="1675740152975">
+<node TEXT="NIPS2020" ID="ID_1863732890" CREATED="1675740153913" MODIFIED="1675740157924"/>
+</node>
+<node TEXT="See through Gradients: Image Batch Recovery via GradInversion" ID="ID_1220157339" CREATED="1675738592141" MODIFIED="1675738601823">
+<node TEXT="CVPR21" ID="ID_439032463" CREATED="1675738602311" MODIFIED="1675738603763"/>
+<node TEXT="large batch (8-48 images) on ImageNet" ID="ID_7854666" CREATED="1675738623776" MODIFIED="1675738632624"/>
+<node TEXT="the aggregated gradient and the network weights are known. The optimization is to find an input whose gradient matches with the aggregated gradients." ID="ID_1915947616" CREATED="1675738854470" MODIFIED="1675738896371"/>
+</node>
+<node TEXT="GradViT: Gradient Inversion of Vision Transformers" ID="ID_354014530" CREATED="1675740081488" MODIFIED="1675740082875">
+<node TEXT="CVPR22" ID="ID_1148559731" CREATED="1675740085762" MODIFIED="1675740089684"/>
+</node>
+</node>
+<node TEXT="Defense" ID="ID_998251950" CREATED="1675739273330" MODIFIED="1675739274665">
+<node TEXT="Cryptography based" ID="ID_1228579139" CREATED="1675739279450" MODIFIED="1675739285216">
+<node TEXT="multi-party communication (MPC)" ID="ID_688657039" CREATED="1675739331042" MODIFIED="1675739345426"/>
+</node>
+<node TEXT="Gradient degradation based" ID="ID_1233800263" CREATED="1675739285436" MODIFIED="1675739291515">
+<node TEXT="differential privacy (DP)" ID="ID_813016819" CREATED="1675739347198" MODIFIED="1675739359691"/>
+</node>
+</node>
+<node TEXT="Attack Defense" ID="ID_276108364" CREATED="1675739470610" MODIFIED="1675739478958">
+<node TEXT="Auditing Privacy Defenses in Federated Learning via Generative Gradient Leakage" ID="ID_524301344" CREATED="1675739517073" MODIFIED="1675739522712">
+<node TEXT="CVPR22" ID="ID_1787895017" CREATED="1675739523193" MODIFIED="1675739524639"/>
+<node TEXT="new type of leakage that breaks gradient degradation methods" ID="ID_197111042" CREATED="1675739527086" MODIFIED="1675739550941"/>
+</node>
+</node>
 </node>
 </node>
 <node TEXT="Robustness :: Adversarial Training" FOLDED="true" POSITION="left" ID="ID_1633797140" CREATED="1675050942299" MODIFIED="1686942373622">
@@ -7350,13 +7178,6 @@
 <node TEXT="region level task: detection, grounding." ID="ID_467063647" CREATED="1675296213149" MODIFIED="1675296224384"/>
 </node>
 </node>
-</node>
-</node>
-<node TEXT="Super-Resolution" FOLDED="true" POSITION="left" ID="ID_594530626" CREATED="1676259559215" MODIFIED="1676259562169">
-<edge COLOR="#ff0000"/>
-<node TEXT="Meta-SR" ID="ID_641411943" CREATED="1676259562365" MODIFIED="1676259564576"/>
-<node TEXT="Denoising Diffusion Probabilistic Models for Robust Image Super-Resolution in the Wild" ID="ID_100061264" CREATED="1676755918517" MODIFIED="1676755920936">
-<icon BUILTIN="pencil"/>
 </node>
 </node>
 <node TEXT="Scene/Knowledge Graph" FOLDED="true" POSITION="left" ID="ID_691684807" CREATED="1582940936028" MODIFIED="1653357364861">
