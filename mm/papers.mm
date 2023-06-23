@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="204" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="206" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1675045289036">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -130,6 +130,11 @@
 </node>
 </node>
 <node TEXT="CVPR" ID="ID_1240053621" CREATED="1641521439738" MODIFIED="1642954136648">
+<node TEXT="2023" OBJECT="java.lang.Long|2023" ID="ID_1406042219" CREATED="1687542529345" MODIFIED="1687542530948">
+<node TEXT="https://openaccess.thecvf.com/CVPR2023?day=2023-06-20#" ID="ID_493182579" CREATED="1687542531209" MODIFIED="1687542542976">
+<icon BUILTIN="unchecked"/>
+</node>
+</node>
 <node TEXT="2022" OBJECT="java.lang.Long|2022" ID="ID_1290012760" CREATED="1646924932979" MODIFIED="1646924934382">
 <node TEXT="scanned June 27 2022" ID="ID_726647901" CREATED="1646924935622" MODIFIED="1656355980580">
 <icon BUILTIN="button_ok"/>
@@ -164,6 +169,9 @@
 </node>
 </node>
 <node TEXT="ICLR" ID="ID_1738325130" CREATED="1641521447460" MODIFIED="1642954147510">
+<node TEXT="Most influential" ID="ID_1999097908" CREATED="1687542572167" MODIFIED="1687542575704">
+<node TEXT="https://www.paperdigest.org/2023/04/most-influential-iclr-papers-2023-04/" ID="ID_1757728846" CREATED="1687542576684" MODIFIED="1687542576684" LINK="https://www.paperdigest.org/2023/04/most-influential-iclr-papers-2023-04/"/>
+</node>
 <node TEXT="2022" OBJECT="java.lang.Long|2022" ID="ID_814285036" CREATED="1650825816095" MODIFIED="1650825819933">
 <node TEXT="TODO" ID="ID_944733876" CREATED="1650825820715" MODIFIED="1650825821778"/>
 </node>
@@ -1666,6 +1674,9 @@
 <node TEXT="theoretical guarantees of MAE" ID="ID_1839629427" CREATED="1686356087004" MODIFIED="1686356094234"/>
 </node>
 </node>
+<node TEXT="MILAN" ID="ID_481092044" CREATED="1687544052301" MODIFIED="1687544053951">
+<node TEXT="MILAN: Masked Image Pretraining on Language Assisted Representation" ID="ID_540696511" CREATED="1687544054296" MODIFIED="1687544055205"/>
+</node>
 </node>
 <node TEXT="SSL :: Vision Jigsaw" ID="ID_1633599777" CREATED="1686334051507" MODIFIED="1686334056608"/>
 <node TEXT="Foundation Models" ID="ID_1024777438" CREATED="1686939023872" MODIFIED="1686939026511">
@@ -1695,12 +1706,18 @@
 <icon BUILTIN="attach"/>
 <node TEXT="i.e., will prompting lose its effectiveness when the backbone is not sufficiently trained?" ID="ID_1436967788" CREATED="1676564278835" MODIFIED="1676564310214"/>
 </node>
+<node TEXT="Rank :: LoRA" ID="ID_899348349" CREATED="1687542279139" MODIFIED="1687542284684"/>
 <node TEXT="Prompt :: Vision" ID="ID_783422550" CREATED="1676563804923" MODIFIED="1676563808059">
 <node TEXT="Exploring Visual Prompts for Adapting Large-Scale Models" ID="ID_153991492" CREATED="1675367088251" MODIFIED="1675367208771">
 <icon BUILTIN="bookmark"/>
 </node>
 <node TEXT="Visual Prompt Tuning." ID="ID_696407912" CREATED="1675367094078" MODIFIED="1675367205892">
 <icon BUILTIN="bookmark"/>
+<node TEXT="ECCV22" ID="ID_1950966719" CREATED="1687542819128" MODIFIED="1687542821172"/>
+<node TEXT="VPT introduces only a small amount of trainable parameters in the input space while keeping the model backbone frozen." ID="ID_958897522" CREATED="1687543470410" MODIFIED="1687543491910"/>
+<node TEXT="more trainabe parameters are added as new tokens in the input space" ID="ID_1722926040" CREATED="1687543492134" MODIFIED="1687543510579"/>
+<node TEXT="their &quot;deep&quot; is to insert new prompt tokens to each encoder layer." ID="ID_793243928" CREATED="1687543638040" MODIFIED="1687543665792"/>
+<node TEXT="their &quot;shallow&quot; is to insert new prompt tokens to only the first encoder layer" ID="ID_28941799" CREATED="1687543666441" MODIFIED="1687543679661"/>
 </node>
 <node TEXT="AdaptFormer: Adapting Vision Transformers for&#xa;Scalable Visual Recognition" ID="ID_6970235" CREATED="1675367135928" MODIFIED="1675367136456"/>
 <node TEXT="Visual Prompting via Image Inpainting" ID="ID_698976721" CREATED="1675367145040" MODIFIED="1675367145499"/>
@@ -4892,6 +4909,10 @@
 <node TEXT="50 mAP within 12eph" ID="ID_1424900339" CREATED="1686333085391" MODIFIED="1686333091786"/>
 </node>
 </node>
+<node TEXT=" Lite DETR : An Interleaved Multi-Scale Encoder for Efficient DETR" ID="ID_1270014134" CREATED="1687542693733" MODIFIED="1687542703635">
+<node TEXT="CVPR 2023" ID="ID_1973785821" CREATED="1687542697295" MODIFIED="1687542699121"/>
+<node TEXT="includes light-DINO" ID="ID_9034388" CREATED="1687542706765" MODIFIED="1687542711008"/>
+</node>
 </node>
 <node TEXT="Arxiv" ID="ID_1686283127" CREATED="1659200493970" MODIFIED="1659200495179">
 <node TEXT="Group DETR: Fast Training Convergence with Decoupled One-to-Many Label Assignment" ID="ID_1816299590" CREATED="1659195419405" MODIFIED="1659195425235">
@@ -6336,90 +6357,6 @@
 <node TEXT="Rama and Alan have some robustness evaluation papers in this regard" ID="ID_1691197998" CREATED="1675049986257" MODIFIED="1675050004356"/>
 </node>
 </node>
-<node TEXT="Domain Adapt / Transfer Lg" FOLDED="true" POSITION="left" ID="ID_1179225618" CREATED="1582887416803" MODIFIED="1686351459779">
-<font NAME="Gentium" BOLD="false"/>
-<edge COLOR="#ff0000"/>
-<node TEXT="Concept" ID="ID_276280133" CREATED="1650832531233" MODIFIED="1650832534030">
-<icon BUILTIN="info"/>
-<node TEXT="domain adaptation" ID="ID_1897127261" CREATED="1650832537525" MODIFIED="1650832545079">
-<node TEXT="input distribution p(x) changes between training and test" ID="ID_1783851732" CREATED="1650832546158" MODIFIED="1650832566190"/>
-<node TEXT="transfer learning posterior p(y|x) changes between training and test" ID="ID_542172298" CREATED="1650832567330" MODIFIED="1650832588622"/>
-</node>
-</node>
-<node TEXT="Openset" ID="ID_652345966" CREATED="1587030820215" MODIFIED="1587526864981">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="2004.04388: Towards Inheritable Models for Open-Set Domain Adaptation (CVPR20)" ID="ID_882848776" CREATED="1587030828036" MODIFIED="1587526864982">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="2002.08675: unsupervised domain adaptation via discriminative manifold embedding and alignment" ID="ID_1783103324" CREATED="1582887489485" MODIFIED="1587526864982">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: domain adaptation" ID="ID_364211866" CREATED="1582887681503" MODIFIED="1587526864984">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why:" ID="ID_767525254" CREATED="1582887693719" MODIFIED="1587526864984">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="1. hardcoded pseudo labels on the target domain are risky to the intrinsic data structure" ID="ID_1466382959" CREATED="1582887707992" MODIFIED="1587526864985">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="2. batch-wise trianing manner in deep learning limites the description of the global structure" ID="ID_333992277" CREATED="1582887727498" MODIFIED="1587526864986">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="how: Riemannian manifold learning framework is proposed to achieve transferability and discriminability." ID="ID_932362154" CREATED="1582887750636" MODIFIED="1587526864986">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="2002.11770: rethinking the hyperparameters for fine-tuning (ICLR20)" ID="ID_687246947" CREATED="1583323656825" MODIFIED="1587526864987">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: examines fine-tuning" ID="ID_126121824" CREATED="1583323676904" MODIFIED="1587526864988">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="findings" ID="ID_1484997220" CREATED="1583323715662" MODIFIED="1587526864988">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="1. momentum affects fine-tuning performance as suggested by previous theoretical findings" ID="ID_409173341" CREATED="1583323717892" MODIFIED="1587526864988">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="2. learning reate is not only dataset dependent, but also sensitive to the similarity between source and target domain" ID="ID_406913796" CREATED="1583323812333" MODIFIED="1587526864989">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="3. reference-based regularization that keeps models close the the initial model does not necessarily apply for &quot;dissimilar&quot; datasets." ID="ID_409659201" CREATED="1583323868185" MODIFIED="1587526864990">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="2002.04206: dual-triplet metric learning for unsupervised domain adaptation in video-based face recognition" ID="ID_1852118217" CREATED="1583375335641" MODIFIED="1587526864991">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="2004.04393: Universal Source-Free Domain Adaptation (CVPR20)" ID="ID_678847990" CREATED="1587030701603" MODIFIED="1587526864992">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="2004.08878: uncertainty-aware consistency regularization for cross-domain semantic segmentation" ID="ID_1060047510" CREATED="1587873167086" MODIFIED="1587873185991"/>
-<node TEXT="2004.09403: class distribution alignment for adversarial domain adaptation" ID="ID_1913880236" CREATED="1588082459830" MODIFIED="1588082478774"/>
-<node TEXT="2012.12302&#xa;Flexible deep transfer learning by separate feature embeddings and manifold alignment" ID="ID_1781903227" CREATED="1608871572614" MODIFIED="1608871585302">
-<node TEXT="a bit similar to cross-modal alignment" ID="ID_867737025" CREATED="1608871591299" MODIFIED="1608871600207"/>
-</node>
-<node TEXT="2012.11807&#xa;Learning Disentangled Semantic Representation for Domain Adaptation" ID="ID_1101645023" CREATED="1608871972133" MODIFIED="1608871978855"/>
-<node TEXT="Auto-Transfer: Learning to Route Transferrable Representations ICLR22" ID="ID_275822091" CREATED="1644180783785" MODIFIED="1644180796263"/>
-<node TEXT="Fine-Tuning can Distort Pretrained Features and Underperform Out-of-Distribution" ID="ID_1001645107" CREATED="1647264390521" MODIFIED="1647264398367">
-<icon BUILTIN="unchecked"/>
-<node TEXT="ICLR22" ID="ID_248597371" CREATED="1647264392555" MODIFIED="1647264395025"/>
-</node>
-<node TEXT="Does Robustness on ImageNet Transfer to Downstream Tasks?" ID="ID_442746527" CREATED="1650842399693" MODIFIED="1650842400541">
-<node TEXT="CVPR22" ID="ID_391235371" CREATED="1650842401650" MODIFIED="1650842402914"/>
-</node>
-<node TEXT="Adaptive Domain Adaptation" ID="ID_926597894" CREATED="1649130053250" MODIFIED="1649130058744">
-<node TEXT="Learning Distinctive Margin toward Active Domain Adaptation" ID="ID_1937782410" CREATED="1649130059707" MODIFIED="1649130060490">
-<node TEXT="CVPR22" ID="ID_1742639409" CREATED="1649130061738" MODIFIED="1649130063012"/>
-<node TEXT="similar to SVM" ID="ID_1059316080" CREATED="1649130063284" MODIFIED="1649130069027"/>
-</node>
-</node>
-<node TEXT="Unsupervised Domain Adaptation" ID="ID_1180792051" CREATED="1650824963676" MODIFIED="1650824970144">
-<node TEXT="Safe Self-Refinement for Transformer-based Domain Adaptation" ID="ID_1500347419" CREATED="1650824973786" MODIFIED="1650824979577">
-<node TEXT="CVPR22" ID="ID_439499097" CREATED="1650824980672" MODIFIED="1650824982140"/>
-</node>
-</node>
-</node>
 <node TEXT="Gen :: Protection" FOLDED="true" POSITION="left" ID="ID_1205778136" CREATED="1680653497543" MODIFIED="1686947108936">
 <edge COLOR="#7c007c"/>
 <node TEXT="Dataset" ID="ID_1236582168" CREATED="1686963892000" MODIFIED="1686963895044">
@@ -6507,6 +6444,110 @@
 <node TEXT="Meta-SR" ID="ID_1118787532" CREATED="1676259542003" MODIFIED="1683727496340">
 <node TEXT="Meta-SR: A Magnification-Arbitrary Network for Super-Resolution" ID="ID_1305779936" CREATED="1683727486793" MODIFIED="1683727489908">
 <icon BUILTIN="bookmark"/>
+</node>
+</node>
+</node>
+<node TEXT="LG :: Domain Adapt/Generalize" FOLDED="true" POSITION="left" ID="ID_1179225618" CREATED="1582887416803" MODIFIED="1687544451054">
+<font NAME="Gentium" BOLD="false"/>
+<edge COLOR="#ff0000"/>
+<node TEXT="Concept" ID="ID_276280133" CREATED="1650832531233" MODIFIED="1650832534030">
+<icon BUILTIN="info"/>
+<node TEXT="domain adaptation" ID="ID_1897127261" CREATED="1650832537525" MODIFIED="1650832545079">
+<node TEXT="input distribution p(x) changes between training and test" ID="ID_1783851732" CREATED="1650832546158" MODIFIED="1650832566190"/>
+<node TEXT="transfer learning posterior p(y|x) changes between training and test" ID="ID_542172298" CREATED="1650832567330" MODIFIED="1650832588622"/>
+</node>
+</node>
+<node TEXT="Openset" ID="ID_652345966" CREATED="1587030820215" MODIFIED="1587526864981">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="2004.04388: Towards Inheritable Models for Open-Set Domain Adaptation (CVPR20)" ID="ID_882848776" CREATED="1587030828036" MODIFIED="1587526864982">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="Adaptation" ID="ID_1151658902" CREATED="1687544611893" MODIFIED="1687544614071"/>
+<node TEXT="2002.08675: unsupervised domain adaptation via discriminative manifold embedding and alignment" ID="ID_1783103324" CREATED="1582887489485" MODIFIED="1587526864982">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: domain adaptation" ID="ID_364211866" CREATED="1582887681503" MODIFIED="1587526864984">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="why:" ID="ID_767525254" CREATED="1582887693719" MODIFIED="1587526864984">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="1. hardcoded pseudo labels on the target domain are risky to the intrinsic data structure" ID="ID_1466382959" CREATED="1582887707992" MODIFIED="1587526864985">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="2. batch-wise trianing manner in deep learning limites the description of the global structure" ID="ID_333992277" CREATED="1582887727498" MODIFIED="1587526864986">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="how: Riemannian manifold learning framework is proposed to achieve transferability and discriminability." ID="ID_932362154" CREATED="1582887750636" MODIFIED="1587526864986">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+<node TEXT="2002.11770: rethinking the hyperparameters for fine-tuning (ICLR20)" ID="ID_687246947" CREATED="1583323656825" MODIFIED="1587526864987">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: examines fine-tuning" ID="ID_126121824" CREATED="1583323676904" MODIFIED="1587526864988">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="findings" ID="ID_1484997220" CREATED="1583323715662" MODIFIED="1587526864988">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="1. momentum affects fine-tuning performance as suggested by previous theoretical findings" ID="ID_409173341" CREATED="1583323717892" MODIFIED="1587526864988">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="2. learning reate is not only dataset dependent, but also sensitive to the similarity between source and target domain" ID="ID_406913796" CREATED="1583323812333" MODIFIED="1587526864989">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="3. reference-based regularization that keeps models close the the initial model does not necessarily apply for &quot;dissimilar&quot; datasets." ID="ID_409659201" CREATED="1583323868185" MODIFIED="1587526864990">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="2002.04206: dual-triplet metric learning for unsupervised domain adaptation in video-based face recognition" ID="ID_1852118217" CREATED="1583375335641" MODIFIED="1587526864991">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="2004.04393: Universal Source-Free Domain Adaptation (CVPR20)" ID="ID_678847990" CREATED="1587030701603" MODIFIED="1587526864992">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="2004.08878: uncertainty-aware consistency regularization for cross-domain semantic segmentation" ID="ID_1060047510" CREATED="1587873167086" MODIFIED="1587873185991"/>
+<node TEXT="2004.09403: class distribution alignment for adversarial domain adaptation" ID="ID_1913880236" CREATED="1588082459830" MODIFIED="1588082478774"/>
+<node TEXT="2012.12302&#xa;Flexible deep transfer learning by separate feature embeddings and manifold alignment" ID="ID_1781903227" CREATED="1608871572614" MODIFIED="1608871585302">
+<node TEXT="a bit similar to cross-modal alignment" ID="ID_867737025" CREATED="1608871591299" MODIFIED="1608871600207"/>
+</node>
+<node TEXT="2012.11807&#xa;Learning Disentangled Semantic Representation for Domain Adaptation" ID="ID_1101645023" CREATED="1608871972133" MODIFIED="1608871978855"/>
+<node TEXT="Auto-Transfer: Learning to Route Transferrable Representations ICLR22" ID="ID_275822091" CREATED="1644180783785" MODIFIED="1644180796263"/>
+<node TEXT="Fine-Tuning can Distort Pretrained Features and Underperform Out-of-Distribution" ID="ID_1001645107" CREATED="1647264390521" MODIFIED="1647264398367">
+<icon BUILTIN="unchecked"/>
+<node TEXT="ICLR22" ID="ID_248597371" CREATED="1647264392555" MODIFIED="1647264395025"/>
+</node>
+<node TEXT="Does Robustness on ImageNet Transfer to Downstream Tasks?" ID="ID_442746527" CREATED="1650842399693" MODIFIED="1650842400541">
+<node TEXT="CVPR22" ID="ID_391235371" CREATED="1650842401650" MODIFIED="1650842402914"/>
+</node>
+<node TEXT="Adaptive Domain Adaptation" ID="ID_926597894" CREATED="1649130053250" MODIFIED="1649130058744">
+<node TEXT="Learning Distinctive Margin toward Active Domain Adaptation" ID="ID_1937782410" CREATED="1649130059707" MODIFIED="1649130060490">
+<node TEXT="CVPR22" ID="ID_1742639409" CREATED="1649130061738" MODIFIED="1649130063012"/>
+<node TEXT="similar to SVM" ID="ID_1059316080" CREATED="1649130063284" MODIFIED="1649130069027"/>
+</node>
+</node>
+<node TEXT="Unsupervised Domain Adaptation" ID="ID_1180792051" CREATED="1650824963676" MODIFIED="1650824970144">
+<node TEXT="Safe Self-Refinement for Transformer-based Domain Adaptation" ID="ID_1500347419" CREATED="1650824973786" MODIFIED="1650824979577">
+<node TEXT="CVPR22" ID="ID_439499097" CREATED="1650824980672" MODIFIED="1650824982140"/>
+</node>
+</node>
+<node TEXT="Generalization" ID="ID_1499813348" CREATED="1687544614251" MODIFIED="1687544618334">
+<node TEXT="Gradient Matching for Domain Generalization" ID="ID_1430621358" CREATED="1687544312558" MODIFIED="1687544427656">
+<node TEXT="ICLR22" ID="ID_692678293" CREATED="1687544314207" MODIFIED="1687544315774"/>
+<node TEXT="inter-domain gradient matching objective that targets domain generalization by maximizing the inner product between gradients from different domains" ID="ID_372440006" CREATED="1687544353503" MODIFIED="1687544378327"/>
+</node>
+<node ID="ID_1367075676" CREATED="1687544634490" MODIFIED="1687544634490"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    PCL: Proxy-based Contrastive Learning for Domain Generalization
+  </body>
+</html>
+
+</richcontent>
 </node>
 </node>
 </node>
@@ -6602,7 +6643,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Gen :: Image Generation" POSITION="right" ID="ID_65977927" CREATED="1576830540818" MODIFIED="1686332971419">
+<node TEXT="Gen :: Image Generation" FOLDED="true" POSITION="right" ID="ID_65977927" CREATED="1576830540818" MODIFIED="1686332971419">
 <font NAME="Gentium" BOLD="false"/>
 <edge COLOR="#ff0000"/>
 <node TEXT="Metrics" ID="ID_1323509383" CREATED="1659195775718" MODIFIED="1659195778362">
@@ -6611,6 +6652,7 @@
 </node>
 <node TEXT="FID" ID="ID_1763340674" CREATED="1686332922420" MODIFIED="1686332923597"/>
 <node TEXT="PSNR" ID="ID_1421989608" CREATED="1686332924087" MODIFIED="1686332930331"/>
+<node TEXT="LLMScore" ID="ID_110493461" CREATED="1687542247956" MODIFIED="1687542250840"/>
 </node>
 <node TEXT="GAN :: Foundation" ID="ID_1355970702" CREATED="1619335831487" MODIFIED="1686954131039">
 <node TEXT="CVPR21: Surrogate Gradient Field for Latent Space Manipulation" ID="ID_592809931" CREATED="1619335835845" MODIFIED="1619335849013"/>
@@ -6685,7 +6727,7 @@
 </node>
 </node>
 <node TEXT="+ Quality" ID="ID_991786870" CREATED="1686964225930" MODIFIED="1686964247611">
-<node TEXT="norm-guided latent space exploration for text-to-image generation" ID="ID_1765834709" CREATED="1686964248500" MODIFIED="1686964262397">
+<node TEXT="verlo" ID="ID_1765834709" CREATED="1686964248500" MODIFIED="1687542134505">
 <icon BUILTIN="unchecked"/>
 </node>
 </node>
