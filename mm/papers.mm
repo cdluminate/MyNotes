@@ -1,14 +1,14 @@
-<map version="freeplane 1.9.13">
+<map version="freeplane 1.11.1">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
-<node TEXT="Memo" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1675045349693" STYLE="oval">
-<font NAME="Gentium" SIZE="18" ITALIC="false"/>
+<node TEXT="Memo" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1688338000259" STYLE="oval">
+<font NAME="Fira Code" SIZE="18" ITALIC="false"/>
 <hook NAME="MapStyle" zoom="1.521">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
 <font SIZE="24"/>
-<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="bottom_or_right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="default" ID="ID_1950589302" ICON_SIZE="12 pt" COLOR="#000000">
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1950589302" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Gentium" SIZE="10" BOLD="false" ITALIC="false"/>
@@ -24,7 +24,7 @@
 </stylenode>
 <stylenode LOCALIZED_TEXT="defaultstyle.selection" BACKGROUND_COLOR="#4e85f8" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#4e85f8"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="bottom_or_right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="styles.topic" COLOR="#18898b" STYLE="fork">
 <font NAME="Gentium" SIZE="10" BOLD="true"/>
 </stylenode>
@@ -38,7 +38,7 @@
 <icon BUILTIN="yes"/>
 </stylenode>
 </stylenode>
-<stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="bottom_or_right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" COLOR="#000000" STYLE="oval" SHAPE_HORIZONTAL_MARGIN="10 pt" SHAPE_VERTICAL_MARGIN="10 pt">
 <font SIZE="18"/>
 </stylenode>
@@ -66,186 +66,303 @@
 </map_styles>
 </hook>
 <hook NAME="AutomaticEdgeColor" COUNTER="209" RULE="ON_BRANCH_CREATION"/>
-<node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1675045289036">
+<node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="top_or_left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1688338000260">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
-<node TEXT="What&apos;s this" ID="ID_34209772" CREATED="1641520840738" MODIFIED="1675042561339">
-<font NAME="Gentium"/>
-<node TEXT="Personal memos for regular paper reading." ID="ID_1963538377" CREATED="1641520844766" MODIFIED="1675042551344">
-<font NAME="Gentium"/>
+<font NAME="Fira Code"/>
+<node TEXT="What&apos;s this" ID="ID_34209772" CREATED="1641520840738" MODIFIED="1688338000264">
+<font NAME="Fira Code"/>
+<node TEXT="Personal memos for regular paper reading." ID="ID_1963538377" CREATED="1641520844766" MODIFIED="1688338000265">
+<font NAME="Fira Code"/>
 </node>
-<node TEXT="Copyright (C) 2021-2022 Mo Zhou" ID="ID_1535888258" CREATED="1641673010735" MODIFIED="1641673016816"/>
-<node TEXT="CC-BY-SA-4.0 License" ID="ID_726858210" CREATED="1641673017130" MODIFIED="1641673022764"/>
+<node TEXT="Copyright (C) 2021-2022 Mo Zhou" ID="ID_1535888258" CREATED="1641673010735" MODIFIED="1688338000265">
+<font NAME="Fira Code"/>
 </node>
-<node TEXT="Policy for this document" ID="ID_288232758" CREATED="1641520783594" MODIFIED="1641520995590">
-<font NAME="Gentium"/>
-<node TEXT="1. may include preprints, but only include them when I think they are relevant or helpful." ID="ID_608512408" CREATED="1641520800532" MODIFIED="1641520995590">
-<font NAME="Gentium"/>
+<node TEXT="CC-BY-SA-4.0 License" ID="ID_726858210" CREATED="1641673017130" MODIFIED="1688338000266">
+<font NAME="Fira Code"/>
 </node>
-<node TEXT="2. agressively delete deprecated literature and fields. This is not used for writing surveys --- we don&apos;t have to trace back to the history in this document" ID="ID_800024958" CREATED="1675050501021" MODIFIED="1675050563309"/>
-<node TEXT="3. be cautious to saturated areas, especially when they are not the core task of computer vision." ID="ID_201332391" CREATED="1675050892708" MODIFIED="1675050922346"/>
 </node>
-<node TEXT="symbol definitions" ID="ID_107155097" CREATED="1641521217140" MODIFIED="1641521224034">
-<node TEXT=" I have read this paper (published)" ID="ID_1116629927" CREATED="1641521225706" MODIFIED="1641524141636">
+<node TEXT="Policy for this document" ID="ID_288232758" CREATED="1641520783594" MODIFIED="1688338000266">
+<font NAME="Fira Code"/>
+<node TEXT="1. may include preprints, but only include them when I think they are relevant or helpful." ID="ID_608512408" CREATED="1641520800532" MODIFIED="1688338000266">
+<font NAME="Fira Code"/>
+</node>
+<node TEXT="2. agressively delete deprecated literature and fields. This is not used for writing surveys --- we don&apos;t have to trace back to the history in this document" ID="ID_800024958" CREATED="1675050501021" MODIFIED="1688338000270">
+<font NAME="Fira Code"/>
+</node>
+<node TEXT="3. be cautious to saturated areas, especially when they are not the core task of computer vision." ID="ID_201332391" CREATED="1675050892708" MODIFIED="1688338000272">
+<font NAME="Fira Code"/>
+</node>
+</node>
+<node TEXT="symbol definitions" ID="ID_107155097" CREATED="1641521217140" MODIFIED="1688338000273">
+<font NAME="Fira Code"/>
+<node TEXT=" I have read this paper (published)" ID="ID_1116629927" CREATED="1641521225706" MODIFIED="1688338000273">
 <icon BUILTIN="checked"/>
+<font NAME="Fira Code"/>
 </node>
-<node TEXT=" I have skimmed this paper (preprint)" ID="ID_504737720" CREATED="1641523236144" MODIFIED="1641679124582">
+<node TEXT=" I have skimmed this paper (preprint)" ID="ID_504737720" CREATED="1641523236144" MODIFIED="1688338000273">
 <icon BUILTIN="pencil"/>
+<font NAME="Fira Code"/>
 </node>
-<node TEXT=" this paper is a TODO" ID="ID_1381101491" CREATED="1641521235679" MODIFIED="1641521246931">
+<node TEXT=" this paper is a TODO" ID="ID_1381101491" CREATED="1641521235679" MODIFIED="1688338000273">
 <icon BUILTIN="unchecked"/>
+<font NAME="Fira Code"/>
 </node>
-<node TEXT=" in doubt in details" ID="ID_420094020" CREATED="1641521248004" MODIFIED="1641521262966">
+<node TEXT=" in doubt in details" ID="ID_420094020" CREATED="1641521248004" MODIFIED="1688338000273">
 <icon BUILTIN="help"/>
+<font NAME="Fira Code"/>
 </node>
-<node TEXT=" insight" ID="ID_188358894" CREATED="1642449409015" MODIFIED="1642449417941">
+<node TEXT=" insight" ID="ID_188358894" CREATED="1642449409015" MODIFIED="1688338000274">
 <icon BUILTIN="yes"/>
+<font NAME="Fira Code"/>
 </node>
-<node TEXT="Influential Paper" ID="ID_1174819833" CREATED="1675045366812" MODIFIED="1675045373882">
+<node TEXT="Influential Paper" ID="ID_1174819833" CREATED="1675045366812" MODIFIED="1688338000274">
 <icon BUILTIN="messagebox_warning"/>
+<font NAME="Fira Code"/>
 </node>
-<node TEXT=" Very good+Important paper" ID="ID_78304803" CREATED="1641521263664" MODIFIED="1641679080458">
+<node TEXT=" Very good+Important paper" ID="ID_78304803" CREATED="1641521263664" MODIFIED="1688338000274">
 <icon BUILTIN="bookmark"/>
+<font NAME="Fira Code"/>
 </node>
-<node TEXT=" Consider for removal from this map" ID="ID_1712139759" CREATED="1641522205670" MODIFIED="1641679143123">
+<node TEXT=" Consider for removal from this map" ID="ID_1712139759" CREATED="1641522205670" MODIFIED="1688338000274">
 <icon BUILTIN="button_cancel"/>
+<font NAME="Fira Code"/>
 </node>
-<node TEXT="There is problem / Problematic" ID="ID_337495690" CREATED="1642431277318" MODIFIED="1642431293651">
+<node TEXT="There is problem / Problematic" ID="ID_337495690" CREATED="1642431277318" MODIFIED="1688338000274">
 <icon BUILTIN="closed"/>
+<font NAME="Fira Code"/>
 </node>
-<node TEXT=" Paper Tag" ID="ID_961819152" CREATED="1641524318246" MODIFIED="1641524325129">
+<node TEXT=" Paper Tag" ID="ID_961819152" CREATED="1641524318246" MODIFIED="1688338000274">
 <icon BUILTIN="password"/>
+<font NAME="Fira Code"/>
 </node>
-<node TEXT="My Thoughts" ID="ID_1201449199" CREATED="1641743757646" MODIFIED="1642368052082">
+<node TEXT="My Thoughts" ID="ID_1201449199" CREATED="1641743757646" MODIFIED="1688338000274">
 <icon BUILTIN="button_ok"/>
+<font NAME="Fira Code"/>
 </node>
-<node TEXT="Meta information" ID="ID_114710715" CREATED="1675042572800" MODIFIED="1675042578793">
+<node TEXT="Meta information" ID="ID_114710715" CREATED="1675042572800" MODIFIED="1688338000275">
 <icon BUILTIN="attach"/>
+<font NAME="Fira Code"/>
 </node>
 </node>
-<node TEXT="browse history" ID="ID_1769952352" CREATED="1641521397167" MODIFIED="1641521457619">
-<node TEXT="arXiv" ID="ID_555001851" CREATED="1641521435482" MODIFIED="1642954134722">
-<node TEXT="cs.CV" ID="ID_1996231133" CREATED="1675042342779" MODIFIED="1686334351177">
-<node TEXT="June 9 2023" ID="ID_1051522480" CREATED="1686334325145" MODIFIED="1686334348802"/>
+<node TEXT="browse history" ID="ID_1769952352" CREATED="1641521397167" MODIFIED="1688338000275">
+<font NAME="Fira Code"/>
+<node TEXT="arXiv" ID="ID_555001851" CREATED="1641521435482" MODIFIED="1688338000275">
+<font NAME="Fira Code"/>
+<node TEXT="cs.CV" ID="ID_1996231133" CREATED="1675042342779" MODIFIED="1688338000275">
+<font NAME="Fira Code"/>
+<node TEXT="June 9 2023" ID="ID_1051522480" CREATED="1686334325145" MODIFIED="1688338000275">
+<font NAME="Fira Code"/>
 </node>
 </node>
-<node TEXT="CVPR" ID="ID_1240053621" CREATED="1641521439738" MODIFIED="1642954136648">
-<node TEXT="2023" OBJECT="java.lang.Long|2023" ID="ID_1406042219" CREATED="1687542529345" MODIFIED="1687542530948">
-<node TEXT="https://openaccess.thecvf.com/CVPR2023?day=2023-06-20#" ID="ID_493182579" CREATED="1687542531209" MODIFIED="1687542542976">
+</node>
+<node TEXT="CVPR" ID="ID_1240053621" CREATED="1641521439738" MODIFIED="1688338000275">
+<font NAME="Fira Code"/>
+<node TEXT="2023" OBJECT="java.lang.Long|2023" ID="ID_1406042219" CREATED="1687542529345" MODIFIED="1688338000275">
+<font NAME="Fira Code"/>
+<node TEXT="https://openaccess.thecvf.com/CVPR2023?day=2023-06-20#" ID="ID_493182579" CREATED="1687542531209" MODIFIED="1688338000275">
 <icon BUILTIN="unchecked"/>
+<font NAME="Fira Code"/>
 </node>
 </node>
-<node TEXT="2022" OBJECT="java.lang.Long|2022" ID="ID_1290012760" CREATED="1646924932979" MODIFIED="1646924934382">
-<node TEXT="scanned June 27 2022" ID="ID_726647901" CREATED="1646924935622" MODIFIED="1656355980580">
+<node TEXT="2022" OBJECT="java.lang.Long|2022" ID="ID_1290012760" CREATED="1646924932979" MODIFIED="1688338000277">
+<font NAME="Fira Code"/>
+<node TEXT="scanned June 27 2022" ID="ID_726647901" CREATED="1646924935622" MODIFIED="1688338000277">
 <icon BUILTIN="button_ok"/>
+<font NAME="Fira Code"/>
 </node>
 </node>
-<node TEXT="2021" OBJECT="java.lang.Long|2021" ID="ID_1246146016" CREATED="1642954104588" MODIFIED="1642954106947">
-<node TEXT="TODO" ID="ID_609674727" CREATED="1642954107744" MODIFIED="1642954109015"/>
+<node TEXT="2021" OBJECT="java.lang.Long|2021" ID="ID_1246146016" CREATED="1642954104588" MODIFIED="1688338000278">
+<font NAME="Fira Code"/>
+<node TEXT="TODO" ID="ID_609674727" CREATED="1642954107744" MODIFIED="1688338000278">
+<font NAME="Fira Code"/>
 </node>
 </node>
-<node TEXT="ICCV" ID="ID_436661845" CREATED="1641521441682" MODIFIED="1642954138589">
-<node TEXT="2021" OBJECT="java.lang.Long|2021" ID="ID_95518471" CREATED="1641929159364" MODIFIED="1641929161060">
-<node TEXT="scanned." ID="ID_1641147403" CREATED="1641929162150" MODIFIED="1642954158598">
+</node>
+<node TEXT="ICCV" ID="ID_436661845" CREATED="1641521441682" MODIFIED="1688338000278">
+<font NAME="Fira Code"/>
+<node TEXT="2021" OBJECT="java.lang.Long|2021" ID="ID_95518471" CREATED="1641929159364" MODIFIED="1688338000278">
+<font NAME="Fira Code"/>
+<node TEXT="scanned." ID="ID_1641147403" CREATED="1641929162150" MODIFIED="1688338000278">
 <icon BUILTIN="button_ok"/>
+<font NAME="Fira Code"/>
 </node>
-<node TEXT="list stored in chrome, WIP" ID="ID_23203732" CREATED="1641929165306" MODIFIED="1642954165230"/>
-</node>
-<node TEXT="2019" OBJECT="java.lang.Long|2019" ID="ID_886460557" CREATED="1646924942307" MODIFIED="1646924943938">
-<node TEXT="TODO" ID="ID_443194080" CREATED="1646924948431" MODIFIED="1646924949472"/>
-</node>
-</node>
-<node TEXT="ECCV" ID="ID_536802877" CREATED="1641521443344" MODIFIED="1642954140158">
-<node TEXT="2020" OBJECT="java.lang.Long|2020" ID="ID_314203344" CREATED="1642954114529" MODIFIED="1642954115862">
-<node TEXT="TODO" ID="ID_1908132768" CREATED="1642954116649" MODIFIED="1642954117576"/>
-</node>
-<node TEXT="2018" OBJECT="java.lang.Long|2018" ID="ID_1513907030" CREATED="1646924952108" MODIFIED="1646924953701">
-<node TEXT="TODO" ID="ID_388311225" CREATED="1646924954493" MODIFIED="1646924958076"/>
+<node TEXT="list stored in chrome, WIP" ID="ID_23203732" CREATED="1641929165306" MODIFIED="1688338000278">
+<font NAME="Fira Code"/>
 </node>
 </node>
-<node TEXT="NeurIPS" ID="ID_301924831" CREATED="1641521444597" MODIFIED="1642954144776">
-<node TEXT="2022" OBJECT="java.lang.Long|2022" ID="ID_722753692" CREATED="1672078974905" MODIFIED="1672078977117">
-<node TEXT="TODO" ID="ID_677549598" CREATED="1672078977334" MODIFIED="1672078978467"/>
+<node TEXT="2019" OBJECT="java.lang.Long|2019" ID="ID_886460557" CREATED="1646924942307" MODIFIED="1688338000278">
+<font NAME="Fira Code"/>
+<node TEXT="TODO" ID="ID_443194080" CREATED="1646924948431" MODIFIED="1688338000278">
+<font NAME="Fira Code"/>
 </node>
 </node>
-<node TEXT="ICLR" ID="ID_1738325130" CREATED="1641521447460" MODIFIED="1642954147510">
-<node TEXT="Most influential" ID="ID_1999097908" CREATED="1687542572167" MODIFIED="1687542575704">
-<node TEXT="https://www.paperdigest.org/2023/04/most-influential-iclr-papers-2023-04/" ID="ID_1757728846" CREATED="1687542576684" MODIFIED="1687542576684" LINK="https://www.paperdigest.org/2023/04/most-influential-iclr-papers-2023-04/"/>
 </node>
-<node TEXT="2022" OBJECT="java.lang.Long|2022" ID="ID_814285036" CREATED="1650825816095" MODIFIED="1650825819933">
-<node TEXT="TODO" ID="ID_944733876" CREATED="1650825820715" MODIFIED="1650825821778"/>
-</node>
-</node>
-<node TEXT="ICML" ID="ID_8273996" CREATED="1642954123777" MODIFIED="1642954125427"/>
-<node TEXT="AAAI" ID="ID_583291215" CREATED="1641521448752" MODIFIED="1642954149324"/>
-<node TEXT="ACL" ID="ID_126154590" CREATED="1642954126358" MODIFIED="1642954130606"/>
-<node TEXT="TPAMI" ID="ID_137066053" CREATED="1675042363096" MODIFIED="1675042364744"/>
+<node TEXT="ECCV" ID="ID_536802877" CREATED="1641521443344" MODIFIED="1688338000278">
+<font NAME="Fira Code"/>
+<node TEXT="2020" OBJECT="java.lang.Long|2020" ID="ID_314203344" CREATED="1642954114529" MODIFIED="1688338000278">
+<font NAME="Fira Code"/>
+<node TEXT="TODO" ID="ID_1908132768" CREATED="1642954116649" MODIFIED="1688338000278">
+<font NAME="Fira Code"/>
 </node>
 </node>
-<node TEXT="Tactic / Impact" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_896452525" CREATED="1642481777876" MODIFIED="1675744702833">
+<node TEXT="2018" OBJECT="java.lang.Long|2018" ID="ID_1513907030" CREATED="1646924952108" MODIFIED="1688338000279">
+<font NAME="Fira Code"/>
+<node TEXT="TODO" ID="ID_388311225" CREATED="1646924954493" MODIFIED="1688338000279">
+<font NAME="Fira Code"/>
+</node>
+</node>
+</node>
+<node TEXT="NeurIPS" ID="ID_301924831" CREATED="1641521444597" MODIFIED="1688338000279">
+<font NAME="Fira Code"/>
+<node TEXT="2022" OBJECT="java.lang.Long|2022" ID="ID_722753692" CREATED="1672078974905" MODIFIED="1688338000279">
+<font NAME="Fira Code"/>
+<node TEXT="TODO" ID="ID_677549598" CREATED="1672078977334" MODIFIED="1688338000279">
+<font NAME="Fira Code"/>
+</node>
+</node>
+</node>
+<node TEXT="ICLR" ID="ID_1738325130" CREATED="1641521447460" MODIFIED="1688338000279">
+<font NAME="Fira Code"/>
+<node TEXT="Most influential" ID="ID_1999097908" CREATED="1687542572167" MODIFIED="1688338000279">
+<font NAME="Fira Code"/>
+<node TEXT="https://www.paperdigest.org/2023/04/most-influential-iclr-papers-2023-04/" ID="ID_1757728846" CREATED="1687542576684" MODIFIED="1688338000279" LINK="https://www.paperdigest.org/2023/04/most-influential-iclr-papers-2023-04/">
+<font NAME="Fira Code"/>
+</node>
+</node>
+<node TEXT="2022" OBJECT="java.lang.Long|2022" ID="ID_814285036" CREATED="1650825816095" MODIFIED="1688338000280">
+<font NAME="Fira Code"/>
+<node TEXT="TODO" ID="ID_944733876" CREATED="1650825820715" MODIFIED="1688338000280">
+<font NAME="Fira Code"/>
+</node>
+</node>
+</node>
+<node TEXT="ICML" ID="ID_8273996" CREATED="1642954123777" MODIFIED="1688338000280">
+<font NAME="Fira Code"/>
+</node>
+<node TEXT="AAAI" ID="ID_583291215" CREATED="1641521448752" MODIFIED="1688338000280">
+<font NAME="Fira Code"/>
+</node>
+<node TEXT="ACL" ID="ID_126154590" CREATED="1642954126358" MODIFIED="1688338000280">
+<font NAME="Fira Code"/>
+</node>
+<node TEXT="TPAMI" ID="ID_137066053" CREATED="1675042363096" MODIFIED="1688338000281">
+<font NAME="Fira Code"/>
+</node>
+</node>
+</node>
+<node TEXT="Tactic / Impact" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_896452525" CREATED="1642481777876" MODIFIED="1688338000281">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ff00"/>
-<node TEXT="Think About Real Impact" ID="ID_911357239" CREATED="1642481791989" MODIFIED="1652385398738">
+<font NAME="Fira Code"/>
+<node TEXT="Think About Real Impact" ID="ID_911357239" CREATED="1642481791989" MODIFIED="1688338000283">
 <icon BUILTIN="bookmark"/>
-<font BOLD="false" STRIKETHROUGH="false" ITALIC="true"/>
-<node TEXT="What is important to study?" ID="ID_523483050" CREATED="1642482740356" MODIFIED="1642482745945"/>
+<font NAME="Fira Code" BOLD="false" STRIKETHROUGH="false" ITALIC="true"/>
+<node TEXT="What is important to study?" ID="ID_523483050" CREATED="1642482740356" MODIFIED="1688338000284">
+<font NAME="Fira Code"/>
 </node>
-<node TEXT="Survival Strategy" ID="ID_412871727" CREATED="1683726661919" MODIFIED="1683726665645">
-<node TEXT="Choose Your Weapon: Survival Strategies for Depressed AI Academics" ID="ID_847207998" CREATED="1683726666067" MODIFIED="1683726675408">
+</node>
+<node TEXT="Survival Strategy" ID="ID_412871727" CREATED="1683726661919" MODIFIED="1688338000284">
+<font NAME="Fira Code"/>
+<node TEXT="Choose Your Weapon: Survival Strategies for Depressed AI Academics" ID="ID_847207998" CREATED="1683726666067" MODIFIED="1688338000285">
 <icon BUILTIN="pencil"/>
+<font NAME="Fira Code"/>
 </node>
 </node>
-<node TEXT="futuristic works" ID="ID_967715831" CREATED="1642709658506" MODIFIED="1642709665874">
-<node TEXT="futuristic works" ID="ID_1948507537" CREATED="1642709667170" MODIFIED="1642709670754">
-<node TEXT="can think carefully" ID="ID_324229065" CREATED="1642709671696" MODIFIED="1642709676810"/>
+<node TEXT="futuristic works" ID="ID_967715831" CREATED="1642709658506" MODIFIED="1688338000286">
+<font NAME="Fira Code"/>
+<node TEXT="futuristic works" ID="ID_1948507537" CREATED="1642709667170" MODIFIED="1688338000286">
+<font NAME="Fira Code"/>
+<node TEXT="can think carefully" ID="ID_324229065" CREATED="1642709671696" MODIFIED="1688338000286">
+<font NAME="Fira Code"/>
 </node>
-<node TEXT="increamental works" ID="ID_1279802750" CREATED="1642709682711" MODIFIED="1642709685950">
-<node TEXT="must implement the prototype as quick as possible" ID="ID_724087321" CREATED="1642709687147" MODIFIED="1642709698927"/>
-<node TEXT="or it will lag behind arxiv works" ID="ID_1598337776" CREATED="1642709706967" MODIFIED="1676227664763"/>
+</node>
+<node TEXT="increamental works" ID="ID_1279802750" CREATED="1642709682711" MODIFIED="1688338000286">
+<font NAME="Fira Code"/>
+<node TEXT="must implement the prototype as quick as possible" ID="ID_724087321" CREATED="1642709687147" MODIFIED="1688338000286">
+<font NAME="Fira Code"/>
+</node>
+<node TEXT="or it will lag behind arxiv works" ID="ID_1598337776" CREATED="1642709706967" MODIFIED="1688338000287">
+<font NAME="Fira Code"/>
 </node>
 </node>
-<node TEXT="Defense" LOCALIZED_STYLE_REF="default" ID="ID_838159228" CREATED="1643131959198" MODIFIED="1680190547478">
+</node>
+<node TEXT="Defense" LOCALIZED_STYLE_REF="default" ID="ID_838159228" CREATED="1643131959198" MODIFIED="1688338000287">
 <icon BUILTIN="info"/>
+<font NAME="Fira Code"/>
 <node TEXT="" ID="ID_199043642" CREATED="1643131995068" MODIFIED="1643131995068">
 <hook NAME="FirstGroupNode"/>
 </node>
-<node TEXT="general defense" ID="ID_403059335" CREATED="1643131971643" MODIFIED="1643131974611"/>
-<node TEXT="task-specific defense" ID="ID_165488249" CREATED="1643131974771" MODIFIED="1643131979246"/>
+<node TEXT="general defense" ID="ID_403059335" CREATED="1643131971643" MODIFIED="1688338000287">
+<font NAME="Fira Code"/>
+</node>
+<node TEXT="task-specific defense" ID="ID_165488249" CREATED="1643131974771" MODIFIED="1688338000287">
+<font NAME="Fira Code"/>
+</node>
 <node TEXT="" ID="ID_990459491" CREATED="1643131995062" MODIFIED="1643131995068">
 <hook NAME="SummaryNode"/>
 <hook NAME="AlwaysUnfoldedNode"/>
-<node TEXT="will converge into a point in the future" ID="ID_1550318983" CREATED="1643131995069" MODIFIED="1643132004646">
-<node TEXT="reveals intrinsic deficiency" ID="ID_1908505778" CREATED="1676227672361" MODIFIED="1676227692953"/>
-<node TEXT="stimulates revolution&apos;" ID="ID_646510582" CREATED="1676227678278" MODIFIED="1676227683280"/>
+<node TEXT="will converge into a point in the future" ID="ID_1550318983" CREATED="1643131995069" MODIFIED="1688338000288">
+<font NAME="Fira Code"/>
+<node TEXT="reveals intrinsic deficiency" ID="ID_1908505778" CREATED="1676227672361" MODIFIED="1688338000288">
+<font NAME="Fira Code"/>
+</node>
+<node TEXT="stimulates revolution&apos;" ID="ID_646510582" CREATED="1676227678278" MODIFIED="1688338000288">
+<font NAME="Fira Code"/>
 </node>
 </node>
-<node TEXT="Defense" ID="ID_614574775" CREATED="1642481850518" MODIFIED="1642481854529">
-<node TEXT="detection is a deadend. it does not eventually solve the intrinsic issue" ID="ID_11478104" CREATED="1642481855705" MODIFIED="1642481871296"/>
-<node TEXT="when they are still doint easy attack, we do hard defense" ID="ID_1922226893" CREATED="1642481887844" MODIFIED="1642481899679"/>
-<node TEXT="when they are doing easy task-specific defense, we do generic or generalizable defense" ID="ID_239278608" CREATED="1642481900490" MODIFIED="1642481922606"/>
 </node>
-<node TEXT="Defense Goal" ID="ID_601872647" CREATED="1652385285637" MODIFIED="1652385288093">
-<node TEXT="the goal of attack is defense, beyond threatening deep learning application safety and security" ID="ID_231354137" CREATED="1652385288884" MODIFIED="1652385322804"/>
-<node TEXT="the goal of defense is fixing intrinsic representation problem of deep learning, beyond obtaining safe and secure AI" ID="ID_1986456732" CREATED="1652385314100" MODIFIED="1652385356500"/>
-<node TEXT="when we are able to fix the intrinsicly wrong representations, it&apos;s very likely the next revoslution of deep learning" ID="ID_1153408560" CREATED="1652385357825" MODIFIED="1652385380680"/>
+<node TEXT="Defense" ID="ID_614574775" CREATED="1642481850518" MODIFIED="1688338000288">
+<font NAME="Fira Code"/>
+<node TEXT="detection is a deadend. it does not eventually solve the intrinsic issue" ID="ID_11478104" CREATED="1642481855705" MODIFIED="1688338000288">
+<font NAME="Fira Code"/>
 </node>
-<node TEXT="but this field seems stalled. super difficult to really gain stronger robustness?" ID="ID_130483192" CREATED="1676227636878" MODIFIED="1676227720000">
+<node TEXT="when they are still doint easy attack, we do hard defense" ID="ID_1922226893" CREATED="1642481887844" MODIFIED="1688338000289">
+<font NAME="Fira Code"/>
+</node>
+<node TEXT="when they are doing easy task-specific defense, we do generic or generalizable defense" ID="ID_239278608" CREATED="1642481900490" MODIFIED="1688338000290">
+<font NAME="Fira Code"/>
+</node>
+</node>
+<node TEXT="Defense Goal" ID="ID_601872647" CREATED="1652385285637" MODIFIED="1688338000291">
+<font NAME="Fira Code"/>
+<node TEXT="the goal of attack is defense, beyond threatening deep learning application safety and security" ID="ID_231354137" CREATED="1652385288884" MODIFIED="1688338000292">
+<font NAME="Fira Code"/>
+</node>
+<node TEXT="the goal of defense is fixing intrinsic representation problem of deep learning, beyond obtaining safe and secure AI" ID="ID_1986456732" CREATED="1652385314100" MODIFIED="1688338000293">
+<font NAME="Fira Code"/>
+</node>
+<node TEXT="when we are able to fix the intrinsicly wrong representations, it&apos;s very likely the next revoslution of deep learning" ID="ID_1153408560" CREATED="1652385357825" MODIFIED="1688338000294">
+<font NAME="Fira Code"/>
+</node>
+</node>
+<node TEXT="but this field seems stalled. super difficult to really gain stronger robustness?" ID="ID_130483192" CREATED="1676227636878" MODIFIED="1688338000295">
 <icon BUILTIN="attach"/>
-<node TEXT="basically the progress is stalled at Madry 2017 and AWP 2020 etc." ID="ID_1174615962" CREATED="1676227720376" MODIFIED="1676227737571"/>
-<node TEXT="certified defense is not used for imagenet" ID="ID_749439492" CREATED="1676227746004" MODIFIED="1676227753637"/>
+<font NAME="Fira Code"/>
+<node TEXT="basically the progress is stalled at Madry 2017 and AWP 2020 etc." ID="ID_1174615962" CREATED="1676227720376" MODIFIED="1688338000296">
+<font NAME="Fira Code"/>
+</node>
+<node TEXT="certified defense is not used for imagenet" ID="ID_749439492" CREATED="1676227746004" MODIFIED="1688338000296">
+<font NAME="Fira Code"/>
 </node>
 </node>
-<node TEXT="Federated learning" ID="ID_1789103217" CREATED="1676754946649" MODIFIED="1676754951059">
+</node>
+<node TEXT="Federated learning" ID="ID_1789103217" CREATED="1676754946649" MODIFIED="1688338000297">
 <icon BUILTIN="info"/>
-<node TEXT="low hanging fruits are gone. This problem might eventually turn into an engineering problem" ID="ID_1566340538" CREATED="1676754952071" MODIFIED="1676754974263"/>
+<font NAME="Fira Code"/>
+<node TEXT="low hanging fruits are gone. This problem might eventually turn into an engineering problem" ID="ID_1566340538" CREATED="1676754952071" MODIFIED="1688338000297">
+<font NAME="Fira Code"/>
 </node>
-<node TEXT="Self Supervised Learning" ID="ID_750923691" CREATED="1676253512156" MODIFIED="1676253517827">
+</node>
+<node TEXT="Self Supervised Learning" ID="ID_750923691" CREATED="1676253512156" MODIFIED="1688338000297">
 <icon BUILTIN="info"/>
+<font NAME="Fira Code"/>
 </node>
 </node>
-<node TEXT="Surveys &amp; Background" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1805920002" CREATED="1608010101067" MODIFIED="1675296645861">
+<node TEXT="Surveys &amp; Background" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1805920002" CREATED="1608010101067" MODIFIED="1688338000298">
 <icon BUILTIN="mindmap"/>
 <edge COLOR="#ff0000"/>
+<font NAME="Fira Code"/>
 <node TEXT="Scene" ID="ID_282839696" CREATED="1612166497534" MODIFIED="1612166501051">
 <node TEXT="2101.10531&#xa; Deep Learning for Scene Classification: A Survey" ID="ID_1588464638" CREATED="1612166502020" MODIFIED="1612166508755"/>
 </node>
@@ -267,9 +384,10 @@
 <node TEXT="Choose Your Weapon: Survival Strategies for Depressed AI Academics" ID="ID_1672749784" CREATED="1687546023472" MODIFIED="1687546029644"/>
 </node>
 </node>
-<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1675042129591">
+<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1688338000300">
 <icon BUILTIN="bookmark"/>
 <edge COLOR="#7c0000"/>
+<font NAME="Fira Code"/>
 <node TEXT="Failures/Deprecation/DeadEnd" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_1502842186" CREATED="1630692548912" MODIFIED="1676562252779">
 <icon BUILTIN="stop-sign"/>
 <node TEXT="\accept Evidential Deep Learning + Distillation? (uncertainty)" ID="ID_1904807575" CREATED="1618124030544" MODIFIED="1676562267260"/>
@@ -1364,10 +1482,10 @@
 </node>
 </node>
 </node>
-<node TEXT="-------------------------------------------------------------------" LOCALIZED_STYLE_REF="default" POSITION="right" ID="ID_1134167122" CREATED="1675049435899" MODIFIED="1675886470423">
+<node TEXT="-------------------------------------------------------------------" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1134167122" CREATED="1675049435899" MODIFIED="1688338048258">
 <edge COLOR="#ff00ff"/>
 </node>
-<node TEXT="V :: Classification Backbone" FOLDED="true" POSITION="right" ID="ID_461736327" CREATED="1686948436159" MODIFIED="1686948442535">
+<node TEXT="V :: Classification Backbone" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_461736327" CREATED="1686948436159" MODIFIED="1688338048272">
 <edge COLOR="#007c00"/>
 <node TEXT="+Theory" ID="ID_617737604" CREATED="1686948490676" MODIFIED="1686948495312">
 <node TEXT="Lottery (winning ticket hypothesis) ICLR best paper" ID="ID_1215319316" CREATED="1683727020380" MODIFIED="1686948498016"/>
@@ -1416,7 +1534,7 @@
 </node>
 </node>
 </node>
-<node TEXT="V+L :: Image-Text Matching" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="right" ID="ID_1438251706" CREATED="1646945591468" MODIFIED="1686948313780">
+<node TEXT="V+L :: Image-Text Matching" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1438251706" CREATED="1646945591468" MODIFIED="1688338048279">
 <edge COLOR="#00ff00"/>
 <node TEXT="Survey" ID="ID_1995640100" CREATED="1650816017282" MODIFIED="1650816021941">
 <icon BUILTIN="info"/>
@@ -1450,7 +1568,6 @@
     Learning the Best Pooling Strategy for Visual Semantic Embedding
   </body>
 </html>
-
 </richcontent>
 <node TEXT="CVPR21" ID="ID_220396584" CREATED="1687553563728" MODIFIED="1687553565305"/>
 </node>
@@ -1469,7 +1586,6 @@
     Adaptive Cross-Modal Prototypes for Cross-Domain Visual-Language Retrieval
   </body>
 </html>
-
 </richcontent>
 <node TEXT="CVPR21" ID="ID_1683436324" CREATED="1687554151467" MODIFIED="1687554153351"/>
 </node>
@@ -1497,7 +1613,7 @@
 </node>
 </node>
 </node>
-<node TEXT="CL :: Small Scale Models" FOLDED="true" POSITION="right" ID="ID_865579939" CREATED="1610008291436" MODIFIED="1686948377829">
+<node TEXT="CL :: Small Scale Models" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_865579939" CREATED="1610008291436" MODIFIED="1688338048285">
 <edge COLOR="#00007c"/>
 <node TEXT="Sequence Modeling" ID="ID_351729279" CREATED="1618848122097" MODIFIED="1645045266470">
 <node TEXT="vanilla RNN" ID="ID_470266436" CREATED="1645045269394" MODIFIED="1645045280217"/>
@@ -1560,7 +1676,7 @@
 </node>
 </node>
 </node>
-<node TEXT="CL :: Large Language Model (LLM)" FOLDED="true" POSITION="right" ID="ID_1735833052" CREATED="1675287989836" MODIFIED="1686948223424">
+<node TEXT="CL :: Large Language Model (LLM)" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1735833052" CREATED="1675287989836" MODIFIED="1688338048289">
 <edge COLOR="#00ff00"/>
 <node TEXT="self-supervise by reconstruction" ID="ID_1462056670" CREATED="1680015462579" MODIFIED="1680015470175">
 <icon BUILTIN="info"/>
@@ -1661,7 +1777,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Lg :: Vision Pretrain &amp; SSL" FOLDED="true" POSITION="right" ID="ID_1062312538" CREATED="1686334044572" MODIFIED="1686353871055">
+<node TEXT="Lg :: Vision Pretrain &amp; SSL" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1062312538" CREATED="1686334044572" MODIFIED="1688338048294">
 <edge COLOR="#0000ff"/>
 <node TEXT="Property" ID="ID_225546958" CREATED="1686334080875" MODIFIED="1686334082633">
 <node TEXT="DINO: emerging properties in self-supervised vision transformers" ID="ID_1900004082" CREATED="1686334082859" MODIFIED="1686334092138">
@@ -1734,7 +1850,6 @@
     Uniform Masking: Enabling MAE Pre-training for Pyramid-based Vision Transformers with Locality
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
@@ -1754,7 +1869,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Lg :: Param Efficient Fine Tuning (PEFT)" FOLDED="true" POSITION="right" ID="ID_1318848578" CREATED="1675367072095" MODIFIED="1686350664138">
+<node TEXT="Lg :: Param Efficient Fine Tuning (PEFT)" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1318848578" CREATED="1675367072095" MODIFIED="1688338048298">
 <edge COLOR="#7c007c"/>
 <node TEXT="Closes the gap between pre-training and fine-tuning" ID="ID_302094227" CREATED="1676563861861" MODIFIED="1676563873900">
 <icon BUILTIN="info"/>
@@ -1821,10 +1936,10 @@
 </node>
 </node>
 </node>
-<node TEXT="---------------------------------------------------------------------" POSITION="right" ID="ID_1447965157" CREATED="1675045082295" MODIFIED="1675049443238">
+<node TEXT="---------------------------------------------------------------------" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1447965157" CREATED="1675045082295" MODIFIED="1688338048303">
 <edge COLOR="#7c007c"/>
 </node>
-<node TEXT="Adv :: Classification Attack" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="right" ID="ID_234014270" CREATED="1641521502446" MODIFIED="1680190331629">
+<node TEXT="Adv :: Classification Attack" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_234014270" CREATED="1641521502446" MODIFIED="1688338048306">
 <edge COLOR="#ff0000"/>
 <node TEXT="Survey" ID="ID_1901553164" CREATED="1650817865364" MODIFIED="1650817870013">
 <icon BUILTIN="info"/>
@@ -2187,7 +2302,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adv :: Intersection Attack" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="right" ID="ID_1335351832" CREATED="1647263319144" MODIFIED="1680190325510">
+<node TEXT="Adv :: Intersection Attack" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1335351832" CREATED="1647263319144" MODIFIED="1688338048310">
 <edge COLOR="#7c007c"/>
 <node TEXT="3D and PCL" ID="ID_1616919715" CREATED="1648388494887" MODIFIED="1672080239869">
 <node TEXT="Shape-invariant 3D Adversarial Point Clouds" ID="ID_1106915267" CREATED="1648388498393" MODIFIED="1648388503330">
@@ -2456,7 +2571,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adv :: Detect &amp; Vul Analysis" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="right" ID="ID_1244682927" CREATED="1646761472294" MODIFIED="1680190316533">
+<node TEXT="Adv :: Detect &amp; Vul Analysis" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1244682927" CREATED="1646761472294" MODIFIED="1688338048313">
 <edge COLOR="#7c0000"/>
 <node TEXT="Attack Signature" ID="ID_822623830" CREATED="1651096591068" MODIFIED="1651096596793">
 <font BOLD="true"/>
@@ -2818,7 +2933,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adv :: Classification Defense" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1680190347112">
+<node TEXT="Adv :: Classification Defense" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1688338048317">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_1556055508" CREATED="1648173325254" MODIFIED="1648173329845">
 <icon BUILTIN="info"/>
@@ -3650,7 +3765,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adv :: Intersection Defense" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1680190355819">
+<node TEXT="Adv :: Intersection Defense" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1688338048320">
 <edge COLOR="#0000ff"/>
 <node TEXT="Contrastive Learning" FOLDED="true" ID="ID_230158987" CREATED="1649169110339" MODIFIED="1649169131686">
 <font BOLD="true"/>
@@ -3993,10 +4108,10 @@
 </node>
 </node>
 </node>
-<node TEXT="-------------------------------------------------------" POSITION="right" ID="ID_198111288" CREATED="1676254941135" MODIFIED="1676254944987">
+<node TEXT="-------------------------------------------------------" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_198111288" CREATED="1676254941135" MODIFIED="1688338048323">
 <edge COLOR="#7c7c00"/>
 </node>
-<node TEXT="V :: Classification" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="right" ID="ID_98760508" CREATED="1642438760894" MODIFIED="1687554269832">
+<node TEXT="V :: Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_98760508" CREATED="1642438760894" MODIFIED="1688338048327">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Datasets" ID="ID_176161287" CREATED="1687553416721" MODIFIED="1687553418590">
 <node TEXT="ILSVRC (ImageNet)" ID="ID_466907802" CREATED="1687553418725" MODIFIED="1687553425730"/>
@@ -4362,7 +4477,7 @@
 </node>
 </node>
 </node>
-<node TEXT="V :: Metric Learning" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="right" ID="ID_464750159" CREATED="1641242970936" MODIFIED="1687546343688">
+<node TEXT="V :: Metric Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_464750159" CREATED="1641242970936" MODIFIED="1688338048329">
 <edge COLOR="#ff00ff"/>
 <node TEXT="Survey" ID="ID_1192003468" CREATED="1641520461677" MODIFIED="1648175016651">
 <icon BUILTIN="info"/>
@@ -4540,7 +4655,7 @@
 </node>
 </node>
 </node>
-<node TEXT="V :: Object Detection" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="right" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1686953333927">
+<node TEXT="V :: Object Detection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1688338048332">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Survey" ID="ID_674316746" CREATED="1653969587756" MODIFIED="1653969594381">
 <icon BUILTIN="mindmap"/>
@@ -5575,7 +5690,7 @@
 </node>
 </node>
 </node>
-<node TEXT="V :: Segmentation" FOLDED="true" POSITION="right" ID="ID_782654761" CREATED="1686954666427" MODIFIED="1686954669475">
+<node TEXT="V :: Segmentation" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_782654761" CREATED="1686954666427" MODIFIED="1688338048335">
 <edge COLOR="#ff00ff"/>
 <node TEXT="SAM" ID="ID_912969430" CREATED="1686954669640" MODIFIED="1686954672510">
 <node TEXT="Survey" ID="ID_576114666" CREATED="1686954673273" MODIFIED="1686954675318">
@@ -5584,13 +5699,13 @@
 <node TEXT="Segment Anything Model" ID="ID_1688203184" CREATED="1686954905274" MODIFIED="1686954910450"/>
 </node>
 </node>
-<node TEXT="ML :: Dimention Reduction" FOLDED="true" POSITION="left" ID="ID_1954193241" CREATED="1687554687203" MODIFIED="1687554693808">
+<node TEXT="ML :: Dimention Reduction" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1954193241" CREATED="1687554687203" MODIFIED="1688338063599">
 <edge COLOR="#007c7c"/>
 <node TEXT="EIGENGAME: PCA AS A NASH EQUILIBRIUM" ID="ID_1928874629" CREATED="1687554694277" MODIFIED="1687554695313">
 <node TEXT="ICLR21" ID="ID_84874185" CREATED="1687554696803" MODIFIED="1687554698415"/>
 </node>
 </node>
-<node TEXT="OOD :: Detect" FOLDED="true" POSITION="left" ID="ID_31313107" CREATED="1657404499454" MODIFIED="1687546951603">
+<node TEXT="OOD :: Detect" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_31313107" CREATED="1657404499454" MODIFIED="1688338063609">
 <edge COLOR="#007c7c"/>
 <node TEXT="Anomaly detection, out-of-distribution detection, open-set recognition" ID="ID_439134135" CREATED="1680200146165" MODIFIED="1680200161268"/>
 <node TEXT="This is a saturated area. Performance numbers are too high." ID="ID_275469478" CREATED="1675745241040" MODIFIED="1675745258548">
@@ -5614,7 +5729,7 @@
 <node TEXT="Out-of-Domain Robustness via Targeted Augmentations" ID="ID_1554177936" CREATED="1687546916134" MODIFIED="1687546917086"/>
 </node>
 </node>
-<node TEXT="OOD :: Open Set Recog" FOLDED="true" POSITION="left" ID="ID_323999523" CREATED="1634132952545" MODIFIED="1687546946649">
+<node TEXT="OOD :: Open Set Recog" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_323999523" CREATED="1634132952545" MODIFIED="1688338063614">
 <edge COLOR="#7c007c"/>
 <node TEXT="Open-Set Recognition: A Good Closed-Set Classifier is All You Need" ID="ID_1603928418" CREATED="1634132957520" MODIFIED="1634132962452">
 <node TEXT="vgg group" ID="ID_419228120" CREATED="1634132963805" MODIFIED="1634132966497"/>
@@ -5651,7 +5766,7 @@
 <node TEXT="CIFAR10, cifar100, imagenet-30" ID="ID_730325274" CREATED="1676564196747" MODIFIED="1676564204541"/>
 </node>
 </node>
-<node TEXT="Train-Time Attack :: Attack" FOLDED="true" POSITION="left" ID="ID_481030829" CREATED="1642965505734" MODIFIED="1680200069490">
+<node TEXT="Train-Time Attack :: Attack" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_481030829" CREATED="1642965505734" MODIFIED="1688338063617">
 <edge COLOR="#007c7c"/>
 <node TEXT="AI Supply chain attack. Pre-trained models a large amount." ID="ID_736931024" CREATED="1680191651518" MODIFIED="1680191666940">
 <icon BUILTIN="info"/>
@@ -5725,7 +5840,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Train-Time Attack :: Defense" FOLDED="true" POSITION="left" ID="ID_1943792971" CREATED="1642964418531" MODIFIED="1680200077161">
+<node TEXT="Train-Time Attack :: Defense" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1943792971" CREATED="1642964418531" MODIFIED="1688338063621">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Meaningful. supply chain attack will become a concern where pre-trained models is used everywhere." ID="ID_678139697" CREATED="1686959841236" MODIFIED="1686959880535">
 <icon BUILTIN="info"/>
@@ -5807,7 +5922,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Image-Text Matching" FOLDED="true" POSITION="left" ID="ID_22916358" CREATED="1649103179989" MODIFIED="1686941972917">
+<node TEXT="Image-Text Matching" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_22916358" CREATED="1649103179989" MODIFIED="1688338063624">
 <edge COLOR="#ff00ff"/>
 <node TEXT="Image-Recipe" ID="ID_552619459" CREATED="1650809005463" MODIFIED="1650809008428">
 <node TEXT="Transformer Decoders with MultiModal Regularization for Cross-Modal Food Retrieval" ID="ID_778443774" CREATED="1650809009512" MODIFIED="1650809016539">
@@ -6065,14 +6180,14 @@
 <node TEXT="less storage than CLIP" ID="ID_1939734106" CREATED="1675743903318" MODIFIED="1675743909152"/>
 </node>
 </node>
-<node TEXT="Eff :: Dataset Distillation" FOLDED="true" POSITION="left" ID="ID_265073126" CREATED="1648338075798" MODIFIED="1687544762322">
+<node TEXT="Eff :: Dataset Distillation" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_265073126" CREATED="1648338075798" MODIFIED="1688338063627">
 <edge COLOR="#ff00ff"/>
 <node TEXT="Dataset Distillation by Matching Training Trajectories" ID="ID_1232754909" CREATED="1648338079783" MODIFIED="1648338088477">
 <icon BUILTIN="unchecked"/>
 <node TEXT="CVPR22" ID="ID_951175501" CREATED="1648338090454" MODIFIED="1648338092141"/>
 </node>
 </node>
-<node TEXT="Gen :: Conditional :: Text-to-Image Synthesis" FOLDED="true" POSITION="left" ID="ID_534441759" CREATED="1675045086637" MODIFIED="1680638830921">
+<node TEXT="Gen :: Conditional :: Text-to-Image Synthesis" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_534441759" CREATED="1675045086637" MODIFIED="1688338063630">
 <edge COLOR="#00007c"/>
 <node TEXT="Dall E 2" ID="ID_1555270559" CREATED="1675045202469" MODIFIED="1675045213095">
 <node TEXT="Hierarchical Text-Conditional Image Generation with CLIP Latents" ID="ID_246970714" CREATED="1675045215025" MODIFIED="1675045359919">
@@ -6120,7 +6235,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Gen :: Conditional :: Image Editing" FOLDED="true" POSITION="left" ID="ID_904035504" CREATED="1675304201992" MODIFIED="1680653487153">
+<node TEXT="Gen :: Conditional :: Image Editing" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_904035504" CREATED="1675304201992" MODIFIED="1688338063634">
 <edge COLOR="#7c0000"/>
 <node TEXT="Style transfer" ID="ID_3432368" CREATED="1676254033527" MODIFIED="1676254035934">
 <node TEXT="A Style-Based Generator Architecture for Generative Adversarial Networks" ID="ID_19629646" CREATED="1675304213086" MODIFIED="1675304216108">
@@ -6133,7 +6248,7 @@
 </node>
 </node>
 </node>
-<node TEXT="V :: Face Recog" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="left" ID="ID_153988282" CREATED="1641242964517" MODIFIED="1687554776223">
+<node TEXT="V :: Face Recog" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_153988282" CREATED="1641242964517" MODIFIED="1688338063636">
 <edge COLOR="#00ff00"/>
 <node TEXT="Face Identification by default. It is basically a deadend to do face for CVPR as of 2023" ID="ID_1812222459" CREATED="1651184495295" MODIFIED="1676257457594">
 <icon BUILTIN="info"/>
@@ -6365,7 +6480,7 @@
 </node>
 </node>
 </node>
-<node TEXT="V :: Attack :: Face" FOLDED="true" POSITION="left" ID="ID_490223917" CREATED="1675049870200" MODIFIED="1687554758411">
+<node TEXT="V :: Attack :: Face" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_490223917" CREATED="1675049870200" MODIFIED="1688338063639">
 <edge COLOR="#7c7c00"/>
 <node TEXT="risk: maybe common corruptions like brightness, rain, angle, etc can introduce more risk to a system in practice" ID="ID_567079036" CREATED="1675049927982" MODIFIED="1675049976962">
 <icon BUILTIN="attach"/>
@@ -6381,7 +6496,7 @@
 <node TEXT="Rama and Alan have some robustness evaluation papers in this regard" ID="ID_1691197998" CREATED="1675049986257" MODIFIED="1675050004356"/>
 </node>
 </node>
-<node TEXT="Gen :: Protection" FOLDED="true" POSITION="left" ID="ID_1205778136" CREATED="1680653497543" MODIFIED="1686947108936">
+<node TEXT="Gen :: Protection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1205778136" CREATED="1680653497543" MODIFIED="1688338063641">
 <edge COLOR="#7c007c"/>
 <node TEXT="Dataset" ID="ID_1236582168" CREATED="1686963892000" MODIFIED="1686963895044">
 <node TEXT="genimage: a million-scale benchmark for detecting ai-generated image" ID="ID_1948375546" CREATED="1686963895369" MODIFIED="1686963910193">
@@ -6420,7 +6535,7 @@
 </node>
 </node>
 </node>
-<node TEXT="LG :: Meta/Federated Learning" FOLDED="true" POSITION="left" ID="ID_121320330" CREATED="1658618674669" MODIFIED="1687545331609">
+<node TEXT="LG :: Meta/Federated Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_121320330" CREATED="1658618674669" MODIFIED="1688338063644">
 <edge COLOR="#ff00ff"/>
 <node TEXT="low hanging fruits are basically gone. there are some unresolved corner cases. This is going towards an engineering problem direction." ID="ID_1703063236" CREATED="1675049770366" MODIFIED="1675739832428">
 <icon BUILTIN="attach"/>
@@ -6468,8 +6583,7 @@
 </node>
 </node>
 </node>
-<node TEXT="LG :: Domain Adapt/Generalize" FOLDED="true" POSITION="left" ID="ID_1179225618" CREATED="1582887416803" MODIFIED="1687544451054">
-<font NAME="Gentium" BOLD="false"/>
+<node TEXT="LG :: Domain Adapt/Generalize" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1179225618" CREATED="1582887416803" MODIFIED="1688338063646">
 <edge COLOR="#ff0000"/>
 <node TEXT="Concept" ID="ID_276280133" CREATED="1650832531233" MODIFIED="1650832534030">
 <icon BUILTIN="info"/>
@@ -6567,7 +6681,6 @@
     PCL: Proxy-based Contrastive Learning for Domain Generalization
   </body>
 </html>
-
 </richcontent>
 </node>
 <node ID="ID_220256675" CREATED="1687546730982" MODIFIED="1687546730982"><richcontent TYPE="NODE">
@@ -6580,7 +6693,6 @@
     Localized Adversarial Domain Generalization
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="Cross-Domain Similarity Learning for Face Recognition in Unseen Domains" ID="ID_1825852205" CREATED="1687553955470" MODIFIED="1687553956458">
@@ -6588,7 +6700,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Gen :: GAN :: GAN Inverstion" FOLDED="true" POSITION="left" ID="ID_1643977837" CREATED="1608014251316" MODIFIED="1687554031464">
+<node TEXT="Gen :: GAN :: GAN Inverstion" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1643977837" CREATED="1608014251316" MODIFIED="1688338063648">
 <edge COLOR="#0000ff"/>
 <node TEXT="2004.00049: in-domain gan inversion for real image editing" ID="ID_789901011" CREATED="1608014256819" MODIFIED="1608014290154">
 <icon BUILTIN="bookmark"/>
@@ -6610,7 +6722,7 @@
 <node TEXT="CVPR21" ID="ID_1927538965" CREATED="1687554038840" MODIFIED="1687554040976"/>
 </node>
 </node>
-<node TEXT="Image Caption" FOLDED="true" POSITION="left" ID="ID_1834444713" CREATED="1672078790020" MODIFIED="1672078799455">
+<node TEXT="Image Caption" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1834444713" CREATED="1672078790020" MODIFIED="1688338063651">
 <edge COLOR="#007c00"/>
 <node TEXT="Andrej&apos;s early works" ID="ID_1741039778" CREATED="1676254817451" MODIFIED="1676254821822"/>
 <node TEXT="+Edge" ID="ID_205292947" CREATED="1676254828184" MODIFIED="1676254830327">
@@ -6636,8 +6748,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Gen :: Image Generation" FOLDED="true" POSITION="right" ID="ID_65977927" CREATED="1576830540818" MODIFIED="1686332971419">
-<font NAME="Gentium" BOLD="false"/>
+<node TEXT="Gen :: Image Generation" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_65977927" CREATED="1576830540818" MODIFIED="1688338048338">
 <edge COLOR="#ff0000"/>
 <node TEXT="Metrics" ID="ID_1323509383" CREATED="1659195775718" MODIFIED="1659195778362">
 <node TEXT="Shift-tolerant Perceptual Similarity Metric" ID="ID_1319269798" CREATED="1659195779296" MODIFIED="1659195780969">
@@ -6827,7 +6938,7 @@
 <node TEXT="2004.06718 Line Art Correlation Matching Network for Automatic Animation Colorization" ID="ID_1382110194" CREATED="1590804591161" MODIFIED="1590804601517"/>
 </node>
 </node>
-<node TEXT="GEN :: DeepFake" FOLDED="true" POSITION="left" ID="ID_81253926" CREATED="1587729755009" MODIFIED="1683727329228">
+<node TEXT="GEN :: DeepFake" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_81253926" CREATED="1587729755009" MODIFIED="1688338063653">
 <edge COLOR="#7c7c00"/>
 <node TEXT="Deepfake is specific to face and person" ID="ID_1286313360" CREATED="1676228603594" MODIFIED="1676228635463">
 <icon BUILTIN="info"/>
@@ -6875,7 +6986,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Model Compression" FOLDED="true" POSITION="left" ID="ID_325472209" CREATED="1649171031656" MODIFIED="1649171034930">
+<node TEXT="Model Compression" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_325472209" CREATED="1649171031656" MODIFIED="1688338063656">
 <edge COLOR="#00007c"/>
 <node TEXT="distillation" ID="ID_1526826713" CREATED="1677266367499" MODIFIED="1677266369626"/>
 <node TEXT="Interspace Pruning: Using Adaptive Filter Representations to Improve Training of Sparse CNNs" ID="ID_1136994469" CREATED="1649171035811" MODIFIED="1649171042670">
@@ -6890,14 +7001,13 @@
 </node>
 </node>
 </node>
-<node TEXT="Multimodal Learning" FOLDED="true" POSITION="left" ID="ID_423909848" CREATED="1649104367617" MODIFIED="1649104370772">
+<node TEXT="Multimodal Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_423909848" CREATED="1649104367617" MODIFIED="1688338063658">
 <edge COLOR="#ff0000"/>
 <node TEXT="Balanced Multimodal Learning via On-the-fly Gradient Modulation" ID="ID_1018564287" CREATED="1649104376663" MODIFIED="1649104377816">
 <node TEXT="CVPR22" ID="ID_735774105" CREATED="1649104378958" MODIFIED="1649104379977"/>
 </node>
 </node>
-<node TEXT="Ordinal Regression" FOLDED="true" POSITION="left" ID="ID_408572005" CREATED="1576825445602" MODIFIED="1647264584581">
-<font NAME="Gentium" SIZE="10" BOLD="false"/>
+<node TEXT="Ordinal Regression" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_408572005" CREATED="1576825445602" MODIFIED="1688338063661">
 <edge COLOR="#00ffff"/>
 <node TEXT="OR-CNN" ID="ID_646788311" CREATED="1648336827721" MODIFIED="1648336832137"/>
 <node TEXT="2004.12260: learning to autofocus (CVPR20)" ID="ID_1326141945" CREATED="1588068686019" MODIFIED="1588068859199">
@@ -6917,7 +7027,7 @@
 <node TEXT="CVPR22" ID="ID_1439656873" CREATED="1649623426704" MODIFIED="1649623428734"/>
 </node>
 </node>
-<node TEXT="Opt :: Optimization" FOLDED="true" POSITION="left" ID="ID_1084462232" CREATED="1686954326647" MODIFIED="1686955296933">
+<node TEXT="Opt :: Optimization" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1084462232" CREATED="1686954326647" MODIFIED="1688338063663">
 <edge COLOR="#00ff00"/>
 <node TEXT="Analysis" ID="ID_736915803" CREATED="1686962924080" MODIFIED="1686962926319">
 <node TEXT="understanding optimization of deep learning" ID="ID_73979866" CREATED="1686962926654" MODIFIED="1686962935635">
@@ -6942,7 +7052,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Phrase Grounding" FOLDED="true" POSITION="left" ID="ID_1776879731" CREATED="1676756426456" MODIFIED="1676756429770">
+<node TEXT="Phrase Grounding" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1776879731" CREATED="1676756426456" MODIFIED="1688338063665">
 <edge COLOR="#00ff00"/>
 <node TEXT="also known as referring image segmentation" ID="ID_1417531331" CREATED="1676756510853" MODIFIED="1676756522330">
 <icon BUILTIN="info"/>
@@ -6951,7 +7061,7 @@
 <icon BUILTIN="pencil"/>
 </node>
 </node>
-<node TEXT="Ethics :: Privacy ML" LOCALIZED_STYLE_REF="default" FOLDED="true" POSITION="left" ID="ID_1174539463" CREATED="1590802979023" MODIFIED="1687545189932">
+<node TEXT="Ethics :: Privacy ML" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1174539463" CREATED="1590802979023" MODIFIED="1688338063668">
 <edge COLOR="#7c0000"/>
 <node TEXT="Encrypt / Decrypt" ID="ID_892914237" CREATED="1590803103499" MODIFIED="1590803111112">
 <node TEXT="2004.05523 DeepEDN: A Deep Learning-based Image Encryption and Decryption Network for Internet of Medical Things" ID="ID_779071488" CREATED="1590802983849" MODIFIED="1590802993502"/>
@@ -7112,7 +7222,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Robustness :: Adversarial Training" FOLDED="true" POSITION="left" ID="ID_1633797140" CREATED="1675050942299" MODIFIED="1686942373622">
+<node TEXT="Robustness :: Adversarial Training" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1633797140" CREATED="1675050942299" MODIFIED="1688338063670">
 <edge COLOR="#0000ff"/>
 <node TEXT="Can we simply make adv training faster on imagenet? people are still playing with CIFAR. Is adversarial training the ultimate answer of robustness? Definitely no." ID="ID_133206511" CREATED="1675052822881" MODIFIED="1686956698031">
 <icon BUILTIN="attach"/>
@@ -7146,7 +7256,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Repr :: VAE" FOLDED="true" POSITION="left" ID="ID_763531053" CREATED="1686962599858" MODIFIED="1686962615705">
+<node TEXT="Repr :: VAE" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_763531053" CREATED="1686962599858" MODIFIED="1688338063672">
 <edge COLOR="#00ffff"/>
 <node TEXT="Tree variational autoencoders" ID="ID_1805352616" CREATED="1686962616828" MODIFIED="1686962626851">
 <icon BUILTIN="pencil"/>
@@ -7154,7 +7264,7 @@
 <node TEXT="connection with treelstm?" ID="ID_813907976" CREATED="1686962686453" MODIFIED="1686962697688"/>
 </node>
 </node>
-<node TEXT="Self-Supervised Learning" FOLDED="true" POSITION="left" ID="ID_714759247" CREATED="1650825914367" MODIFIED="1651953578841">
+<node TEXT="Self-Supervised Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_714759247" CREATED="1650825914367" MODIFIED="1688338063675">
 <edge COLOR="#7c007c"/>
 <node TEXT="meta" ID="ID_622658187" CREATED="1670010375816" MODIFIED="1670010419884">
 <icon BUILTIN="info"/>
@@ -7243,7 +7353,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Segmentation" FOLDED="true" POSITION="left" ID="ID_710086984" CREATED="1641524074732" MODIFIED="1675287905747">
+<node TEXT="Segmentation" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_710086984" CREATED="1641524074732" MODIFIED="1688338063677">
 <edge COLOR="#007c7c"/>
 <node TEXT="Supervised Semantic" ID="ID_1927721844" CREATED="1578733352755" MODIFIED="1675287914511">
 <font NAME="Gentium" BOLD="false"/>
@@ -7328,8 +7438,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Scene/Knowledge Graph" FOLDED="true" POSITION="left" ID="ID_691684807" CREATED="1582940936028" MODIFIED="1653357364861">
-<font NAME="Gentium" BOLD="false"/>
+<node TEXT="Scene/Knowledge Graph" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_691684807" CREATED="1582940936028" MODIFIED="1688338063679">
 <edge COLOR="#007c7c"/>
 <node TEXT="SG" ID="ID_62932280" CREATED="1653357372586" MODIFIED="1653357374319">
 <node TEXT="Survey" ID="ID_1665575737" CREATED="1653357500064" MODIFIED="1653357514750">
@@ -7381,7 +7490,7 @@
 </node>
 </node>
 </node>
-<node TEXT="SVG :: Vector Images" FOLDED="true" POSITION="left" ID="ID_968071643" CREATED="1686953734459" MODIFIED="1686953746848">
+<node TEXT="SVG :: Vector Images" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_968071643" CREATED="1686953734459" MODIFIED="1688338063681">
 <edge COLOR="#0000ff"/>
 <node TEXT="Generation" ID="ID_1231220509" CREATED="1655449067387" MODIFIED="1686953757766">
 <node TEXT="Survey" ID="ID_1371727930" CREATED="1686955123655" MODIFIED="1686955139963">
@@ -7416,7 +7525,7 @@
 </node>
 </node>
 </node>
-<node TEXT="XAI :: Explainable AI" FOLDED="true" POSITION="left" ID="ID_1535392614" CREATED="1646937960988" MODIFIED="1686962495685">
+<node TEXT="XAI :: Explainable AI" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1535392614" CREATED="1646937960988" MODIFIED="1688338063683">
 <edge COLOR="#7c0000"/>
 <node TEXT="Survey" ID="ID_796711666" CREATED="1653860071187" MODIFIED="1653860080368">
 <icon BUILTIN="mindmap"/>
@@ -7473,10 +7582,10 @@
 <icon BUILTIN="pencil"/>
 </node>
 </node>
-<node TEXT="-------------------------------------------------------------------------------------------------" POSITION="left" ID="ID_1156109860" CREATED="1647264433260" MODIFIED="1647264435598">
+<node TEXT="-------------------------------------------------------------------------------------" LOCALIZED_STYLE_REF="styles.topic" POSITION="top_or_left" ID="ID_1156109860" CREATED="1647264433260" MODIFIED="1688338130492">
 <edge COLOR="#007c7c"/>
 </node>
-<node FOLDED="true" POSITION="left" ID="ID_950327353" CREATED="1583319653266" MODIFIED="1651953012174">
+<node LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_950327353" CREATED="1583319653266" MODIFIED="1688338063688">
 <icon BUILTIN="clanbomber"/>
 <richcontent TYPE="NODE">
 
@@ -7491,7 +7600,6 @@
   </body>
 </html>
 </richcontent>
-<font NAME="Gentium" SIZE="10" BOLD="false"/>
 <edge COLOR="#0000ff"/>
 <node TEXT="Overview" ID="ID_1167874158" CREATED="1590806838024" MODIFIED="1590806839723">
 <node TEXT="2003.14323 How Useful is Self-Supervised Pretraining for Visual Tasks? (cvpr20)" ID="ID_519934474" CREATED="1590806840836" MODIFIED="1590806854620">
@@ -7691,9 +7799,8 @@
 <node TEXT="2012.13089&#xa; P4Contrast: Contrastive Learning with Pairs of Point-Pixel Pairs for RGB-D Scene Understanding" ID="ID_1359907490" CREATED="1608871275332" MODIFIED="1608871286097"/>
 </node>
 </node>
-<node TEXT="Classification" FOLDED="true" POSITION="left" ID="ID_1412187905" CREATED="1576825420762" MODIFIED="1648335928432">
+<node TEXT="Classification" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1412187905" CREATED="1576825420762" MODIFIED="1688338063690">
 <icon BUILTIN="clanbomber"/>
-<font NAME="Gentium" SIZE="10" BOLD="false"/>
 <edge COLOR="#00ff00"/>
 <node TEXT="Regularization" FOLDED="true" ID="ID_988535058" CREATED="1583203860700" MODIFIED="1587526864992">
 <font NAME="Gentium" BOLD="false"/>
@@ -7854,9 +7961,8 @@
 </node>
 </node>
 </node>
-<node TEXT="Face / ReID" FOLDED="true" POSITION="left" ID="ID_764967541" CREATED="1576824448954" MODIFIED="1648335926319">
+<node TEXT="Face / ReID" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_764967541" CREATED="1576824448954" MODIFIED="1688338063691">
 <icon BUILTIN="clanbomber"/>
-<font NAME="Gentium" SIZE="10" BOLD="false"/>
 <edge COLOR="#00007c"/>
 <node TEXT="Face Recognition" ID="ID_1959392251" CREATED="1576824686204" MODIFIED="1618846679952">
 <font NAME="Gentium" BOLD="false"/>
@@ -7971,7 +8077,7 @@
 <node TEXT="2004.06271: The Devil is in the Details: Self-Supervised Attention for Vehicle Re-Identification" ID="ID_1878470047" CREATED="1590803731542" MODIFIED="1590803743255"/>
 </node>
 </node>
-<node FOLDED="true" POSITION="left" ID="ID_1579389920" CREATED="1588216741582" MODIFIED="1642394113994"><richcontent TYPE="NODE">
+<node LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1579389920" CREATED="1588216741582" MODIFIED="1688338063692"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -7984,7 +8090,6 @@
   </body>
 </html>
 </richcontent>
-<font BOLD="true"/>
 <edge COLOR="#00ff00"/>
 <node TEXT="vision + language" ID="ID_125347534" CREATED="1590803820236" MODIFIED="1590803826356">
 <node TEXT="ECCV 2004.06165: Oscar: Object-Semantics Aligned Pre-training for Vision-Language Tasks" ID="ID_1961572401" CREATED="1590803830019" MODIFIED="1624970126864">
@@ -7999,8 +8104,7 @@
 <node TEXT="2004.14326: seeing voices and hearing voices: learning discriminative embeddings using cross-modal self-supervisoin" ID="ID_538501606" CREATED="1588216764991" MODIFIED="1588216790938"/>
 </node>
 </node>
-<node TEXT="Image Translation" FOLDED="true" POSITION="left" ID="ID_357087353" CREATED="1578730821872" MODIFIED="1642394370987">
-<font NAME="Gentium" BOLD="false"/>
+<node TEXT="Image Translation" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_357087353" CREATED="1578730821872" MODIFIED="1688338063694">
 <edge COLOR="#7c7c00"/>
 <node TEXT="supervised (high cost, hard to collect datasets)" ID="ID_237136676" CREATED="1578731997076" MODIFIED="1587739146931">
 <font NAME="Gentium" BOLD="false"/>
@@ -8099,8 +8203,7 @@
 <node TEXT="2004.09484: bringing old photos back to life (CVPR20 Oral)" ID="ID_1797644713" CREATED="1587739157845" MODIFIED="1587739177365"/>
 </node>
 </node>
-<node TEXT="Image Generation" FOLDED="true" POSITION="left" ID="ID_1134997009" CREATED="1576827671482" MODIFIED="1642394336267">
-<font NAME="Gentium" SIZE="10" BOLD="false"/>
+<node TEXT="Image Generation" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1134997009" CREATED="1576827671482" MODIFIED="1688338063695">
 <edge COLOR="#7c007c"/>
 <node TEXT="Overview" ID="ID_1253581434" CREATED="1590026500990" MODIFIED="1590026503690">
 <node TEXT="2005.09165: regularization methods for generative adversarial networks: an overview of recent studies" ID="ID_626951677" CREATED="1590026504674" MODIFIED="1590026522304"/>
@@ -8165,8 +8268,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Causual &amp; Induction &amp; Common Sense" FOLDED="true" POSITION="left" ID="ID_1958356012" CREATED="1582337801426" MODIFIED="1642394325220">
-<font NAME="Gentium" SIZE="10" BOLD="false"/>
+<node TEXT="Causual &amp; Induction &amp; Common Sense" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1958356012" CREATED="1582337801426" MODIFIED="1688338063696">
 <edge COLOR="#00007c"/>
 <node TEXT="Causual" ID="ID_324034028" CREATED="1587731828478" MODIFIED="1587731830847">
 <node TEXT="2002.06838: hierarchical rule induction network for abstract visual reasoning" ID="ID_150581699" CREATED="1582337816081" MODIFIED="1587526865326">
@@ -8191,7 +8293,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Intersection Defense" FOLDED="true" POSITION="left" ID="ID_1275267930" CREATED="1622799700597" MODIFIED="1642394158922">
+<node TEXT="Intersection Defense" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1275267930" CREATED="1622799700597" MODIFIED="1688338063697">
 <edge COLOR="#007c00"/>
 <node TEXT="DML" ID="ID_927008795" CREATED="1622802719468" MODIFIED="1622802720343">
 <node TEXT="Rubbish" ID="ID_1247032023" CREATED="1622802723397" MODIFIED="1624543493448">
@@ -8245,7 +8347,7 @@
 <node TEXT="Trade-off Between Accuracy, Robustness, and Fairness of Deep Classifiers" ID="ID_1785636070" CREATED="1636487564115" MODIFIED="1636487570060"/>
 </node>
 </node>
-<node FOLDED="true" POSITION="left" ID="ID_164822436" CREATED="1619332448153" MODIFIED="1642394149974"><richcontent TYPE="NODE">
+<node LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_164822436" CREATED="1619332448153" MODIFIED="1688338063697"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -8258,7 +8360,6 @@
   </body>
 </html>
 </richcontent>
-<font SIZE="10" BOLD="true"/>
 <edge COLOR="#00007c"/>
 <node TEXT="Robustness Metric" ID="ID_680776114" CREATED="1625979162858" MODIFIED="1625979166960">
 <node TEXT="Residual Error: a New Performance Measure for Adversarial Robustness" ID="ID_194335772" CREATED="1625979167723" MODIFIED="1625979173388">
@@ -8382,7 +8483,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Intersection Attack" FOLDED="true" POSITION="left" ID="ID_1233458939" CREATED="1622799217079" MODIFIED="1642394135458">
+<node TEXT="Intersection Attack" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1233458939" CREATED="1622799217079" MODIFIED="1688338063699">
 <edge COLOR="#7c0000"/>
 <node TEXT="Transformer" ID="ID_1624340256" CREATED="1634131797665" MODIFIED="1634131800516">
 <node TEXT="Towards Transferable Adversarial Attacks on Vision Transformers" ID="ID_74442504" CREATED="1634131802049" MODIFIED="1634131803417">
@@ -8420,7 +8521,7 @@
 </node>
 </node>
 </node>
-<node FOLDED="true" POSITION="left" ID="ID_1921860778" CREATED="1619332443607" MODIFIED="1642394128518"><richcontent TYPE="NODE">
+<node LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1921860778" CREATED="1619332443607" MODIFIED="1688338063699"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -8433,7 +8534,6 @@
   </body>
 </html>
 </richcontent>
-<font SIZE="10" BOLD="true"/>
 <edge COLOR="#00ffff"/>
 <node TEXT="White-box" ID="ID_1555511443" CREATED="1622799936449" MODIFIED="1622799939620">
 <node TEXT="adaptive (nips20)" ID="ID_1782873595" CREATED="1622799940581" MODIFIED="1622799955723">
@@ -8505,8 +8605,7 @@
 <node TEXT="Robustness Evaluation of Transformer-based Form Field Extractors via Form Attacks" ID="ID_750372851" CREATED="1637078618966" MODIFIED="1637078619794"/>
 </node>
 </node>
-<node TEXT="Deep Metric Learning" FOLDED="true" POSITION="left" ID="ID_1326637759" CREATED="1576827604321" MODIFIED="1642394121127" COLOR="#ff0000">
-<font NAME="Gentium" SIZE="10" BOLD="true"/>
+<node TEXT="Deep Metric Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1326637759" CREATED="1576827604321" MODIFIED="1688338063700">
 <edge COLOR="#ff00ff"/>
 <node TEXT="DML Loss" ID="ID_820417736" CREATED="1587973956142" MODIFIED="1619442792710">
 <node TEXT="Contrastive" ID="ID_1945215396" CREATED="1587973802684" MODIFIED="1587973804570"/>
@@ -8650,7 +8749,7 @@
 </node>
 </node>
 </node>
-<node FOLDED="true" POSITION="left" ID="ID_742784641" CREATED="1558004886033" MODIFIED="1642394387258" COLOR="#ff0000"><richcontent TYPE="NODE">
+<node LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_742784641" CREATED="1558004886033" MODIFIED="1688338063700"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -8663,7 +8762,6 @@
   </body>
 </html>
 </richcontent>
-<font NAME="Gentium" SIZE="10" BOLD="true"/>
 <edge COLOR="#00ff00"/>
 <node TEXT="Overviews" FOLDED="true" ID="ID_1394264125" CREATED="1559914265823" MODIFIED="1590025174942">
 <edge COLOR="#007c7c"/>
