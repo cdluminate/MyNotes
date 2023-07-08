@@ -1501,7 +1501,9 @@
 </node>
 </node>
 <node TEXT="MLP For Vision" ID="ID_1947948232" CREATED="1686332551397" MODIFIED="1686948451690">
-<node TEXT="MLP-Mixer" ID="ID_669899255" CREATED="1686332562506" MODIFIED="1686332566814"/>
+<node TEXT="MLP-Mixer" ID="ID_669899255" CREATED="1686332562506" MODIFIED="1686332566814">
+<node TEXT="MLP-Mixer: An all-MLP Architecture for Vision" ID="ID_860709209" CREATED="1688786108347" MODIFIED="1688786109402"/>
+</node>
 </node>
 <node TEXT="CNNs" ID="ID_1058668533" CREATED="1680201832033" MODIFIED="1686948456534">
 <node TEXT="ResNet" ID="ID_1109855655" CREATED="1686330897151" MODIFIED="1686330898588"/>
@@ -2098,6 +2100,13 @@
 </node>
 <node TEXT="Is contrastive/reconstruction itself a limitation?" ID="ID_403223152" CREATED="1680015531684" MODIFIED="1680015552679">
 <icon BUILTIN="attach"/>
+</node>
+<node TEXT="Survey" ID="ID_77078208" CREATED="1688785999576" MODIFIED="1688786005694">
+<icon BUILTIN="mindmap"/>
+<node TEXT="When Does Contrastive Visual Representation Learning Work?" ID="ID_1320681703" CREATED="1688785995880" MODIFIED="1688785998248">
+<node TEXT="CVPR2022" ID="ID_830890404" CREATED="1688786008047" MODIFIED="1688786031062"/>
+<node TEXT="Sergy" ID="ID_1726276362" CREATED="1688786009401" MODIFIED="1688786011773"/>
+</node>
 </node>
 <node TEXT="BYOL" ID="ID_1137581690" CREATED="1676228241612" MODIFIED="1676228244544"/>
 <node TEXT="SwAV" ID="ID_872654192" CREATED="1676228244740" MODIFIED="1676228253814"/>
@@ -2787,6 +2796,9 @@
 <node TEXT="CVPR22w" ID="ID_808643348" CREATED="1651955408814" MODIFIED="1651955410645"/>
 </node>
 </node>
+<node TEXT="Fighting Gradients with Gradients:&#xa;Dynamic Defenses against Adversarial Attacks" ID="ID_1154700629" CREATED="1688785892362" MODIFIED="1688785895645">
+<icon BUILTIN="pencil"/>
+</node>
 </node>
 <node TEXT="Perturbation Detection" FOLDED="true" ID="ID_983985712" CREATED="1641523884091" MODIFIED="1648419471576">
 <font BOLD="true"/>
@@ -3093,6 +3105,9 @@
 <icon BUILTIN="unchecked"/>
 <node TEXT="Carlini" ID="ID_1564104070" CREATED="1648422765982" MODIFIED="1648422768150"/>
 </node>
+<node TEXT="On Evaluating Adversarial Robustness" ID="ID_1484032499" CREATED="1688785035438" MODIFIED="1688785036552">
+<node TEXT="Madry+Carlini" ID="ID_1832761408" CREATED="1688785037647" MODIFIED="1688785043150"/>
+</node>
 <node TEXT="RobustBench: a standardized adversarial robustness&#xa;benchmark" ID="ID_78839791" CREATED="1688783645299" MODIFIED="1688783660958">
 <icon BUILTIN="button_ok"/>
 </node>
@@ -3129,7 +3144,7 @@
 <node TEXT="ECML-PKDD 22" ID="ID_234027639" CREATED="1659200214013" MODIFIED="1659200220502"/>
 </node>
 </node>
-<node TEXT="Adversarial Training" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1648174116710">
+<node TEXT="Adversarial Training" FOLDED="true" ID="ID_557683107" CREATED="1641678574479" MODIFIED="1648174116710">
 <font BOLD="true"/>
 <node TEXT="Survey" ID="ID_178248607" CREATED="1642431445724" MODIFIED="1649101870385">
 <icon BUILTIN="mindmap"/>
@@ -3507,7 +3522,7 @@
 <node TEXT="local Lipschitz" ID="ID_1085120369" CREATED="1652385719423" MODIFIED="1652385723167"/>
 </node>
 </node>
-<node TEXT="Robust Regularization" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_125075162" CREATED="1643058798944" MODIFIED="1655843503716">
+<node TEXT="Robust Regularization" LOCALIZED_STYLE_REF="styles.topic" ID="ID_125075162" CREATED="1643058798944" MODIFIED="1655843503716">
 <node TEXT="Generalize better with adversarial attack / adversarial trianing" ID="ID_1604216423" CREATED="1648388384439" MODIFIED="1648388398758">
 <icon BUILTIN="info"/>
 </node>
@@ -3558,7 +3573,9 @@
 <node TEXT="AdvProp" ID="ID_465753517" CREATED="1651092418089" MODIFIED="1651092439619">
 <icon BUILTIN="unchecked"/>
 <icon BUILTIN="bookmark"/>
+<node TEXT="Adversarial Examples Improve Image Recognition" ID="ID_1909879519" CREATED="1688785252117" MODIFIED="1688785253227">
 <node TEXT="Cihang xie" ID="ID_1667513983" CREATED="1643058809140" MODIFIED="1643058811907"/>
+</node>
 </node>
 <node TEXT="Fast AdvProp" ID="ID_868830173" CREATED="1650809050717" MODIFIED="1651092436063">
 <icon BUILTIN="unchecked"/>
@@ -3585,7 +3602,7 @@
 <node TEXT="CVPR21" ID="ID_184665612" CREATED="1687554404765" MODIFIED="1687554406066"/>
 </node>
 </node>
-<node TEXT="Certified Robustness" ID="ID_636878532" CREATED="1641743555483" MODIFIED="1651777660583">
+<node TEXT="Certified Robustness" FOLDED="true" ID="ID_636878532" CREATED="1641743555483" MODIFIED="1651777660583">
 <node TEXT="Mostly not usable for imagenet?" ID="ID_441716187" CREATED="1676255559616" MODIFIED="1676255570624">
 <icon BUILTIN="info"/>
 </node>
@@ -3914,6 +3931,9 @@
 <icon BUILTIN="pencil"/>
 <node TEXT="NIPS submission" ID="ID_1059311551" CREATED="1653958925818" MODIFIED="1653958928535"/>
 </node>
+</node>
+<node TEXT="Misc" ID="ID_1025380098" CREATED="1688785917130" MODIFIED="1688785921800">
+<node TEXT="Fighting Gradients with Gradients:&#xa;Dynamic Defenses against Adversarial Attacks" ID="ID_1305031368" CREATED="1688785922161" MODIFIED="1688785922936"/>
 </node>
 </node>
 <node TEXT="Adv :: Intersection Defense" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1324883012" CREATED="1641521506805" MODIFIED="1688777454188">
@@ -4266,10 +4286,57 @@
 <icon BUILTIN="unchecked"/>
 </node>
 </node>
+<node TEXT="Adv :: Adversarial Training" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1633797140" CREATED="1675050942299" MODIFIED="1688785699353">
+<edge COLOR="#0000ff"/>
+<font NAME="Gentium"/>
+<node TEXT="Can we simply make adv training faster on imagenet? people are still playing with CIFAR. Is adversarial training the ultimate answer of robustness? Definitely no." ID="ID_133206511" CREATED="1675052822881" MODIFIED="1686956698031">
+<icon BUILTIN="attach"/>
+</node>
+<node TEXT="Analysis" ID="ID_22125853" CREATED="1688785711129" MODIFIED="1688785713398">
+<node TEXT="Exploring Memorization in Adversarial Training" ID="ID_1582041372" CREATED="1688785714053" MODIFIED="1688785714883">
+<node TEXT="Jun Zhu" ID="ID_283163752" CREATED="1688785715401" MODIFIED="1688785717073"/>
+</node>
+<node TEXT="Understanding Catastrophic Overfitting in Adversarial Training" ID="ID_976240730" CREATED="1688786051158" MODIFIED="1688786057729">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Image Classification" ID="ID_1457539369" CREATED="1675742630904" MODIFIED="1675742634724">
+<node TEXT="Data Augmentation Alone Can Improve Adversarial Training" ID="ID_266269491" CREATED="1675052851143" MODIFIED="1675052861836">
+<node TEXT="ICLR23" ID="ID_1007201331" CREATED="1675052862033" MODIFIED="1675052865053"/>
+<node TEXT="CIFAR 10, no imagenet" ID="ID_820963333" CREATED="1675739931665" MODIFIED="1675739935991"/>
+</node>
+<node TEXT="GAT: Guided Adversarial Training with Pareto-optimal Auxiliary Tasks" ID="ID_133990523" CREATED="1675744303021" MODIFIED="1675744307739">
+<icon BUILTIN="pencil"/>
+<node TEXT="extend standard training into multi-task learning" ID="ID_1736353825" CREATED="1675744309435" MODIFIED="1675744320735"/>
+<node TEXT="self-supervised task (auto label)" ID="ID_711669879" CREATED="1675744320977" MODIFIED="1675744349872"/>
+<node TEXT="domain-knowledge task (human label)" ID="ID_784242622" CREATED="1675744337605" MODIFIED="1675744354889"/>
+<node TEXT="CIFAR-10. No imagenet" ID="ID_845291209" CREATED="1675744431046" MODIFIED="1675744440796"/>
+<node TEXT="evaluation is problematic. No AutoAttack / PGD" ID="ID_1689881582" CREATED="1675744501739" MODIFIED="1675744514975"/>
+</node>
+<node TEXT="rethinking adversarial training with a simple baseline" ID="ID_546701121" CREATED="1686958794230" MODIFIED="1686958903519">
+<icon BUILTIN="pencil"/>
+<node TEXT="2023 robustbench" ID="ID_56019325" CREATED="1686958896499" MODIFIED="1686958900731"/>
+</node>
+<node TEXT="Smooth Adversarial Training" ID="ID_1842687092" CREATED="1687552909573" MODIFIED="1687552910236">
+<node TEXT="Cihang" ID="ID_584809873" CREATED="1687552910581" MODIFIED="1687552912500"/>
+</node>
+</node>
+<node TEXT="Self-supervised Learning" ID="ID_1886314157" CREATED="1675742636744" MODIFIED="1675742640282">
+<node TEXT="Adversarial Training of Self-supervised Monocular Depth Estimation against Physical-World Attacks" ID="ID_539306686" CREATED="1675742640998" MODIFIED="1675742648145">
+<node TEXT="ICLR23" ID="ID_810916472" CREATED="1675742649030" MODIFIED="1675742650739"/>
+<node TEXT="traditional adversarial training requires ground truth label" ID="ID_258417514" CREATED="1675742690407" MODIFIED="1675742709560"/>
+<node TEXT="based on view synthesis. does not require grund-truth label" ID="ID_1349391221" CREATED="1675742651932" MODIFIED="1675742685215"/>
+</node>
+</node>
+</node>
 <node TEXT="Adv :: Perceptually Aligned Gradient (PAG)" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_89908453" CREATED="1688781994914" MODIFIED="1688782045978">
 <edge COLOR="#ff0000"/>
 <node TEXT="Adversarially robust models have gradients better aligned with human perception" ID="ID_914196299" CREATED="1688782002191" MODIFIED="1688782058117">
 <icon BUILTIN="info"/>
+</node>
+<node TEXT="Image Synthesis with a Single (Robust) Classifier" ID="ID_1954524107" CREATED="1688785165679" MODIFIED="1688785166501">
+<node TEXT="Madry" ID="ID_1032155017" CREATED="1688785166721" MODIFIED="1688785167888"/>
+<node TEXT="2019" OBJECT="java.lang.Long|2019" ID="ID_1023327526" CREATED="1688785173827" MODIFIED="1688785174774"/>
 </node>
 <node TEXT="Adversarial Robustness as a Prior&#xa;for Learned Representations" ID="ID_808711314" CREATED="1688784849204" MODIFIED="1688784850326">
 <node TEXT="Madry" ID="ID_1173031685" CREATED="1688784850962" MODIFIED="1688784852214"/>
@@ -4776,6 +4843,9 @@
 <font BOLD="true"/>
 <node TEXT="Triplet" ID="ID_430004220" CREATED="1641242977534" MODIFIED="1641520995604">
 <font NAME="Gentium"/>
+</node>
+<node TEXT="In Defense of the Triplet Loss for Person Re-Identification" ID="ID_324007466" CREATED="1688785125724" MODIFIED="1688785129118">
+<icon BUILTIN="pencil"/>
 </node>
 </node>
 <node TEXT="Unified" ID="ID_1564397687" CREATED="1676226967952" MODIFIED="1676226970365">
@@ -5350,7 +5420,7 @@
 </node>
 </node>
 </node>
-<node TEXT="?-stage" FOLDED="true" ID="ID_1254657210" CREATED="1654102722886" MODIFIED="1659198803602">
+<node TEXT="?-stage" ID="ID_1254657210" CREATED="1654102722886" MODIFIED="1659198803602">
 <icon BUILTIN="broken-line"/>
 <node TEXT="Revisiting AP Loss for Dense Object Detection: Adaptive Ranking Pair Selection" FOLDED="true" ID="ID_1320091812" CREATED="1659196405095" MODIFIED="1659197182936">
 <icon BUILTIN="unchecked"/>
@@ -5374,6 +5444,9 @@
 </node>
 <node TEXT="Localization Distillation for Dense Object Detection" ID="ID_1462588730" CREATED="1659199185273" MODIFIED="1659199185909">
 <node TEXT="CVPR22" ID="ID_179843625" CREATED="1659199186691" MODIFIED="1659199187858"/>
+</node>
+<node TEXT="Dynamic Head: Unifying Object Detection Heads with Attentions" ID="ID_53181614" CREATED="1688785499575" MODIFIED="1688785500475">
+<node TEXT="CVPR21" ID="ID_1524800363" CREATED="1688785501939" MODIFIED="1688785503270"/>
 </node>
 </node>
 <node TEXT="+Bias/Context" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_1638323157" CREATED="1654992332106" MODIFIED="1655004640534">
@@ -6127,13 +6200,16 @@
 <node TEXT="extension of backdoor" ID="ID_1434989681" CREATED="1644181504456" MODIFIED="1644181513607"/>
 </node>
 </node>
-<node TEXT="Contrastive Learning" ID="ID_1079011502" CREATED="1647267727724" MODIFIED="1647267731689">
+<node TEXT="SSL" ID="ID_1079011502" CREATED="1647267727724" MODIFIED="1688785822215">
 <node TEXT="Indiscriminate Poisoning Attacks on Unsupervised Contrastive Learning" ID="ID_103472433" CREATED="1647267739350" MODIFIED="1647267743429">
 <icon BUILTIN="pencil"/>
 </node>
 <node TEXT="Poisoning and Backdooring Contrastive Learning" ID="ID_199714317" CREATED="1648425561210" MODIFIED="1648425562006">
 <node TEXT="Carlini" ID="ID_1124457398" CREATED="1648425564654" MODIFIED="1648425567024"/>
 <node TEXT="CLIP" ID="ID_653822881" CREATED="1648425569833" MODIFIED="1648425571800"/>
+</node>
+<node TEXT="Backdoor Attacks on Self-Supervised Learning" ID="ID_1394664355" CREATED="1688785823636" MODIFIED="1688785824329">
+<node TEXT="CVPR22" ID="ID_1008861049" CREATED="1688785825350" MODIFIED="1688785826662"/>
 </node>
 </node>
 </node>
@@ -6502,7 +6578,11 @@
 <node TEXT="token clustering" ID="ID_1084636872" CREATED="1650830509672" MODIFIED="1650830512102"/>
 </node>
 </node>
-<node TEXT="Bias" ID="ID_1657534476" CREATED="1651188079795" MODIFIED="1651188082281"/>
+<node TEXT="Fairness/Bias" ID="ID_1657534476" CREATED="1651188079795" MODIFIED="1688785602346">
+<node TEXT="Consistent Instance False Positive Improves Fairness in Face Recognition" ID="ID_744502682" CREATED="1688785603077" MODIFIED="1688785604026">
+<node TEXT="CVPR21" ID="ID_1986793496" CREATED="1688785606007" MODIFIED="1688785607305"/>
+</node>
+</node>
 <node TEXT="Privacy" ID="ID_191145216" CREATED="1651188082570" MODIFIED="1651188086484"/>
 <node TEXT="Facial Expression" ID="ID_1665603625" CREATED="1648335974432" MODIFIED="1654104074785">
 <node TEXT="Towards Semi-Supervised Deep Facial Expression Recognition with An Adaptive Confidence Margin" ID="ID_1230150992" CREATED="1648335980975" MODIFIED="1648336159200">
@@ -7161,6 +7241,9 @@
 <node TEXT="restore training data from a trained model (more powerful than membership inference)" ID="ID_928344118" CREATED="1675296489117" MODIFIED="1675297639168">
 <icon BUILTIN="info"/>
 </node>
+<node TEXT="Exploiting Explanations for Model Inversion Attacks" ID="ID_1241365876" CREATED="1688786216815" MODIFIED="1688786222204">
+<icon BUILTIN="pencil"/>
+</node>
 <node TEXT="Label-Only Model Inversion Attacks via Boundary Repulsion" ID="ID_1711729671" CREATED="1646937292008" MODIFIED="1646937298623">
 <icon BUILTIN="checked"/>
 <font ITALIC="false"/>
@@ -7258,41 +7341,6 @@
 <node TEXT="CVPR22" ID="ID_1787895017" CREATED="1675739523193" MODIFIED="1675739524639"/>
 <node TEXT="new type of leakage that breaks gradient degradation methods" ID="ID_197111042" CREATED="1675739527086" MODIFIED="1675739550941"/>
 </node>
-</node>
-</node>
-</node>
-<node TEXT="Robustness :: Adversarial Training" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1633797140" CREATED="1675050942299" MODIFIED="1688777454248">
-<edge COLOR="#0000ff"/>
-<font NAME="Gentium"/>
-<node TEXT="Can we simply make adv training faster on imagenet? people are still playing with CIFAR. Is adversarial training the ultimate answer of robustness? Definitely no." ID="ID_133206511" CREATED="1675052822881" MODIFIED="1686956698031">
-<icon BUILTIN="attach"/>
-</node>
-<node TEXT="Image Classification" ID="ID_1457539369" CREATED="1675742630904" MODIFIED="1675742634724">
-<node TEXT="Data Augmentation Alone Can Improve Adversarial Training" ID="ID_266269491" CREATED="1675052851143" MODIFIED="1675052861836">
-<node TEXT="ICLR23" ID="ID_1007201331" CREATED="1675052862033" MODIFIED="1675052865053"/>
-<node TEXT="CIFAR 10, no imagenet" ID="ID_820963333" CREATED="1675739931665" MODIFIED="1675739935991"/>
-</node>
-<node TEXT="GAT: Guided Adversarial Training with Pareto-optimal Auxiliary Tasks" ID="ID_133990523" CREATED="1675744303021" MODIFIED="1675744307739">
-<icon BUILTIN="pencil"/>
-<node TEXT="extend standard training into multi-task learning" ID="ID_1736353825" CREATED="1675744309435" MODIFIED="1675744320735"/>
-<node TEXT="self-supervised task (auto label)" ID="ID_711669879" CREATED="1675744320977" MODIFIED="1675744349872"/>
-<node TEXT="domain-knowledge task (human label)" ID="ID_784242622" CREATED="1675744337605" MODIFIED="1675744354889"/>
-<node TEXT="CIFAR-10. No imagenet" ID="ID_845291209" CREATED="1675744431046" MODIFIED="1675744440796"/>
-<node TEXT="evaluation is problematic. No AutoAttack / PGD" ID="ID_1689881582" CREATED="1675744501739" MODIFIED="1675744514975"/>
-</node>
-<node TEXT="rethinking adversarial training with a simple baseline" ID="ID_546701121" CREATED="1686958794230" MODIFIED="1686958903519">
-<icon BUILTIN="pencil"/>
-<node TEXT="2023 robustbench" ID="ID_56019325" CREATED="1686958896499" MODIFIED="1686958900731"/>
-</node>
-<node TEXT="Smooth Adversarial Training" ID="ID_1842687092" CREATED="1687552909573" MODIFIED="1687552910236">
-<node TEXT="Cihang" ID="ID_584809873" CREATED="1687552910581" MODIFIED="1687552912500"/>
-</node>
-</node>
-<node TEXT="Self-supervised Learning" ID="ID_1886314157" CREATED="1675742636744" MODIFIED="1675742640282">
-<node TEXT="Adversarial Training of Self-supervised Monocular Depth Estimation against Physical-World Attacks" ID="ID_539306686" CREATED="1675742640998" MODIFIED="1675742648145">
-<node TEXT="ICLR23" ID="ID_810916472" CREATED="1675742649030" MODIFIED="1675742650739"/>
-<node TEXT="traditional adversarial training requires ground truth label" ID="ID_258417514" CREATED="1675742690407" MODIFIED="1675742709560"/>
-<node TEXT="based on view synthesis. does not require grund-truth label" ID="ID_1349391221" CREATED="1675742651932" MODIFIED="1675742685215"/>
 </node>
 </node>
 </node>
