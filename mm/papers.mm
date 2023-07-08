@@ -1974,6 +1974,10 @@
 <node TEXT="Towards AGI in comuter vision: lessons learned from gpt and large language models" ID="ID_1858759001" CREATED="1686946680197" MODIFIED="1686964029558">
 <icon BUILTIN="unchecked"/>
 </node>
+<node TEXT="Next Steps for Human-Centered Generative AI: A Technical Perspective" ID="ID_801510502" CREATED="1688782360518" MODIFIED="1688782364844">
+<icon BUILTIN="unchecked"/>
+<node TEXT="Bolei Zhou" ID="ID_1673396090" CREATED="1688782365975" MODIFIED="1688782368434"/>
+</node>
 </node>
 <node TEXT="Analysis" ID="ID_1965827828" CREATED="1680200688536" MODIFIED="1680200690230">
 <node TEXT="Scaling Laws for Neural Language Models" ID="ID_1808856429" CREATED="1680200690652" MODIFIED="1680200700679">
@@ -2037,8 +2041,17 @@
 </node>
 </node>
 <node TEXT="+Extend to Image" ID="ID_649283041" CREATED="1688781112063" MODIFIED="1688781186200">
-<node TEXT="SPAE: Semantic Pyramid AutoEncoder for Multimodal Generation with Frozen LLMs" ID="ID_1015079999" CREATED="1688781119537" MODIFIED="1688781120420"/>
+<node TEXT="Survey" ID="ID_1613577872" CREATED="1688782888170" MODIFIED="1688782913995">
+<icon BUILTIN="mindmap"/>
+<node TEXT="A Survey on Multimodal Large Language Models" ID="ID_925961807" CREATED="1688782890505" MODIFIED="1688782891372"/>
+</node>
 <node TEXT="chatgpt plugin" ID="ID_591891179" CREATED="1688781120972" MODIFIED="1688781130523"/>
+<node TEXT="SPAE: Semantic Pyramid AutoEncoder for Multimodal Generation with Frozen LLMs" ID="ID_1015079999" CREATED="1688781119537" MODIFIED="1688782328662">
+<icon BUILTIN="pencil"/>
+</node>
+<node TEXT="Towards Language Models That Can See: Computer Vision Through the LENS of Natural Language" ID="ID_40776272" CREATED="1688782435252" MODIFIED="1688782439070">
+<icon BUILTIN="pencil"/>
+</node>
 </node>
 <node TEXT="Detection" ID="ID_398704158" CREATED="1675288011819" MODIFIED="1675288013535">
 <node TEXT="Arms race? Will gradually converge into the random classification baseline." ID="ID_516276125" CREATED="1676227885257" MODIFIED="1680054010520">
@@ -2074,6 +2087,9 @@
 <node TEXT="Property" ID="ID_225546958" CREATED="1686334080875" MODIFIED="1686334082633">
 <node TEXT="DINO: emerging properties in self-supervised vision transformers" ID="ID_1900004082" CREATED="1686334082859" MODIFIED="1686334092138">
 <node TEXT="we look at the self-attention of the [cls] token on the heads of the last layer. These maps show that the model automatically learns class-specific features leading to unsupervised object segmentaiton" ID="ID_1846020762" CREATED="1686334092672" MODIFIED="1686334137433"/>
+</node>
+<node TEXT="Variance-Covariance Regularization Improves Representation Learning" ID="ID_183658069" CREATED="1688782847319" MODIFIED="1688782848617">
+<node TEXT="LeCun" ID="ID_1229571401" CREATED="1688782849589" MODIFIED="1688782851689"/>
 </node>
 </node>
 <node TEXT="SSL :: Vision Contrastive" ID="ID_636216475" CREATED="1680015504163" MODIFIED="1686334048386">
@@ -4611,7 +4627,7 @@
 </node>
 </node>
 </node>
-<node TEXT="V :: Deep Metric Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_464750159" CREATED="1641242970936" MODIFIED="1688779934034">
+<node TEXT="V :: Deep Metric Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_464750159" CREATED="1641242970936" MODIFIED="1688782642555">
 <edge COLOR="#ff00ff"/>
 <font NAME="Gentium"/>
 <node TEXT="Survey" ID="ID_1192003468" CREATED="1641520461677" MODIFIED="1648175016651">
@@ -6868,7 +6884,16 @@
 <node TEXT="diffusion in diffusion: cyclic one-way diffusion for text-vision conditioned generation" ID="ID_1366396837" CREATED="1686963128417" MODIFIED="1686963149538">
 <icon BUILTIN="pencil"/>
 </node>
-<node TEXT="scene composer" ID="ID_696736571" CREATED="1688777692258" MODIFIED="1688777695186"/>
+<node TEXT="scene composer" ID="ID_696736571" CREATED="1688777692258" MODIFIED="1688777695186">
+<node TEXT="Yu zeng 2023" ID="ID_1322053122" CREATED="1688782300468" MODIFIED="1688782302886"/>
+</node>
+<node TEXT="Generate Anything Anywhere in Any Scene" ID="ID_438645873" CREATED="1688782303799" MODIFIED="1688782307686">
+<icon BUILTIN="pencil"/>
+</node>
+<node TEXT="Zero-shot spatial layout conditioning for text-to-image diffusion models" ID="ID_1881360570" CREATED="1688782685658" MODIFIED="1688782686762"/>
+<node TEXT="Decompose and Realign: Tackling Condition Misalignment in Text-to-Image Diffusion Models" ID="ID_139459741" CREATED="1688783349559" MODIFIED="1688783353154">
+<icon BUILTIN="pencil"/>
+</node>
 </node>
 <node TEXT="+ Resolution" ID="ID_38134435" CREATED="1686964195200" MODIFIED="1686964199020">
 <node TEXT="Training free diffusion model adaptation for variable sized text to image syntehsis" ID="ID_1137000951" CREATED="1686964199204" MODIFIED="1686964215038"/>
