@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="216" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="221" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="top_or_left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1688777454193">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -357,6 +357,9 @@
 <node TEXT="Self Supervised Learning" ID="ID_750923691" CREATED="1676253512156" MODIFIED="1688777454223">
 <icon BUILTIN="info"/>
 <font NAME="Gentium"/>
+</node>
+<node TEXT="Expecting the Unexpected at Deep Learning Runtime" ID="ID_1658176871" CREATED="1688780432322" MODIFIED="1688780448924">
+<icon BUILTIN="bell"/>
 </node>
 </node>
 <node TEXT="Surveys &amp; Background" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1805920002" CREATED="1608010101067" MODIFIED="1688777454223">
@@ -1473,7 +1476,9 @@
 <node TEXT="" ID="ID_977912985" CREATED="1684520374426" MODIFIED="1684520374426"/>
 </node>
 <node TEXT="SVG / object detection? polynomial fitting of image edges. then transformer." ID="ID_583484651" CREATED="1686940806690" MODIFIED="1686940826905"/>
-<node TEXT="FastDINO" ID="ID_1723147497" CREATED="1686956073389" MODIFIED="1686956075413"/>
+<node TEXT="FastDINO" ID="ID_1723147497" CREATED="1686956073389" MODIFIED="1686956075413">
+<node TEXT="matching directly from encoder." ID="ID_9870260" CREATED="1688780496408" MODIFIED="1688780501282"/>
+</node>
 <node TEXT="invertible residual network" ID="ID_1867456163" CREATED="1686956139269" MODIFIED="1686956145610"/>
 <node TEXT="original neuroski slacks off and will shrink the rep space. we need to support the space (avoid collapse) with triplet. norm only makes sense when scale is kept intact (ie. doe snot collapse)" ID="ID_1243787639" CREATED="1686956146341" MODIFIED="1686956198518">
 <node TEXT="Scale, norm, angle, and lipschitz" ID="ID_839752538" CREATED="1686956202889" MODIFIED="1686956214672"/>
@@ -1978,6 +1983,9 @@
 </node>
 <node TEXT="Prompt Engineering" ID="ID_979384371" CREATED="1686964121535" MODIFIED="1686964124822">
 <node TEXT="https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/" ID="ID_903829990" CREATED="1686964125831" MODIFIED="1686964125831" LINK="https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/"/>
+<node TEXT="Manual engineering" ID="ID_1339712857" CREATED="1688781142685" MODIFIED="1688781146072"/>
+<node TEXT="In-context learning" ID="ID_1209885315" CREATED="1688781137978" MODIFIED="1688781140788"/>
+<node TEXT="Chain-of-thought" ID="ID_1907580130" CREATED="1688781152941" MODIFIED="1688781157685"/>
 </node>
 <node TEXT="LLMs" ID="ID_5598775" CREATED="1680200637888" MODIFIED="1680200639132">
 <node TEXT="BERT" ID="ID_676603491" CREATED="1676260264280" MODIFIED="1676260265477">
@@ -2027,6 +2035,10 @@
 <node TEXT="GPT4" ID="ID_1419163353" CREATED="1676260188792" MODIFIED="1676260190103">
 <node TEXT="OpenAI" ID="ID_1817934794" CREATED="1680054366110" MODIFIED="1680054367669"/>
 </node>
+</node>
+<node TEXT="+Extend to Image" ID="ID_649283041" CREATED="1688781112063" MODIFIED="1688781186200">
+<node TEXT="SPAE: Semantic Pyramid AutoEncoder for Multimodal Generation with Frozen LLMs" ID="ID_1015079999" CREATED="1688781119537" MODIFIED="1688781120420"/>
+<node TEXT="chatgpt plugin" ID="ID_591891179" CREATED="1688781120972" MODIFIED="1688781130523"/>
 </node>
 <node TEXT="Detection" ID="ID_398704158" CREATED="1675288011819" MODIFIED="1675288013535">
 <node TEXT="Arms race? Will gradually converge into the random classification baseline." ID="ID_516276125" CREATED="1676227885257" MODIFIED="1680054010520">
@@ -2161,6 +2173,12 @@
 <node TEXT="does prompting require a strong pre-training baseline?" ID="ID_911983346" CREATED="1676564263133" MODIFIED="1676564274050">
 <icon BUILTIN="attach"/>
 <node TEXT="i.e., will prompting lose its effectiveness when the backbone is not sufficiently trained?" ID="ID_1436967788" CREATED="1676564278835" MODIFIED="1676564310214"/>
+</node>
+<node TEXT="Survey" ID="ID_465380573" CREATED="1688781024627" MODIFIED="1688781038980">
+<icon BUILTIN="mindmap"/>
+<node TEXT="Review of Large Vision Models and Visual Prompt Engineering" ID="ID_1132310608" CREATED="1688781027545" MODIFIED="1688781033239">
+<icon BUILTIN="pencil"/>
+</node>
 </node>
 <node TEXT="Rank :: LoRA" ID="ID_899348349" CREATED="1687542279139" MODIFIED="1687542284684"/>
 <node TEXT="Prompt :: Vision" ID="ID_783422550" CREATED="1676563804923" MODIFIED="1676563808059">
@@ -2584,11 +2602,7 @@
 <node TEXT="MIM?" ID="ID_1504477626" CREATED="1676259477270" MODIFIED="1676259478761"/>
 </node>
 </node>
-</node>
-<node TEXT="Adv :: Intersection Attack" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1335351832" CREATED="1647263319144" MODIFIED="1688777454230">
-<edge COLOR="#7c007c"/>
-<font NAME="Gentium"/>
-<node TEXT="Face Recog" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_1806006397" CREATED="1642368429380" MODIFIED="1656027236721">
+<node TEXT="+Face Recog" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" ID="ID_1806006397" CREATED="1642368429380" MODIFIED="1688780625910">
 <node TEXT="Fast Geometrically-Perturbed Adversarial Faces" ID="ID_1719260635" CREATED="1653346033107" MODIFIED="1653346035039">
 <icon BUILTIN="unchecked"/>
 <node TEXT="WACV19" ID="ID_657441840" CREATED="1653346036610" MODIFIED="1653346038731"/>
@@ -2655,8 +2669,7 @@
 <icon BUILTIN="pencil"/>
 </node>
 </node>
-<node TEXT="Multi-label Prediction" FOLDED="true" ID="ID_1211679974" CREATED="1647568084959" MODIFIED="1648388483965">
-<icon BUILTIN="button_ok"/>
+<node TEXT="+Multi-label Prediction" FOLDED="true" ID="ID_1211679974" CREATED="1647568084959" MODIFIED="1688780632449">
 <node TEXT="tkml-ap: adversarial attacks to top-k multi-label learning" ID="ID_768468346" CREATED="1647568102113" MODIFIED="1647568115332">
 <icon BUILTIN="unchecked"/>
 <node TEXT="iccv21" ID="ID_1410742901" CREATED="1647568116971" MODIFIED="1647568120084"/>
@@ -2667,7 +2680,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Watermark removal" ID="ID_1909219616" CREATED="1659196502405" MODIFIED="1659196507765">
+<node TEXT="+Watermark removal" ID="ID_1909219616" CREATED="1659196502405" MODIFIED="1688780638204">
 <node TEXT="Watermark Vaccine: Adversarial Attacks to Prevent Watermark Removal" ID="ID_739011151" CREATED="1659196508638" MODIFIED="1659196513481">
 <node TEXT="ECCV22" ID="ID_291469030" CREATED="1659196514353" MODIFIED="1659196515693"/>
 </node>
@@ -4216,6 +4229,17 @@
 </node>
 </node>
 </node>
+<node TEXT="Adv :: Perceptually Aligned Gradient (PAG)" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_89908453" CREATED="1688781994914" MODIFIED="1688782045978">
+<edge COLOR="#ff0000"/>
+<node TEXT="Adversarially robust models have gradients better aligned with human perception" ID="ID_914196299" CREATED="1688782002191" MODIFIED="1688782058117">
+<icon BUILTIN="info"/>
+</node>
+<node TEXT="CLIPAG: Towards Generator-Free Text-to-Image Generation" ID="ID_1776665168" CREATED="1688782067164" MODIFIED="1688782070865">
+<icon BUILTIN="pencil"/>
+<node TEXT="adversarially fine-tune CLIP." ID="ID_1997699110" CREATED="1688782071451" MODIFIED="1688782082569"/>
+<node TEXT="can reliably create images without any generator. instead of creating adversarial examples." ID="ID_1287007833" CREATED="1688782082717" MODIFIED="1688782113780"/>
+</node>
+</node>
 <node TEXT="-------------------------------------------------------" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_198111288" CREATED="1676254941135" MODIFIED="1688777454232">
 <edge COLOR="#7c7c00"/>
 <font NAME="Gentium"/>
@@ -4587,7 +4611,7 @@
 </node>
 </node>
 </node>
-<node TEXT="V :: Metric Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_464750159" CREATED="1641242970936" MODIFIED="1688777454233">
+<node TEXT="V :: Deep Metric Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_464750159" CREATED="1641242970936" MODIFIED="1688779934034">
 <edge COLOR="#ff00ff"/>
 <font NAME="Gentium"/>
 <node TEXT="Survey" ID="ID_1192003468" CREATED="1641520461677" MODIFIED="1648175016651">
@@ -5805,11 +5829,95 @@
 <node TEXT="V :: Segmentation" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_782654761" CREATED="1686954666427" MODIFIED="1688777454234">
 <edge COLOR="#ff00ff"/>
 <font NAME="Gentium"/>
-<node TEXT="SAM" ID="ID_912969430" CREATED="1686954669640" MODIFIED="1686954672510">
+<node TEXT="Pretrain Family" ID="ID_1639956171" CREATED="1688779995820" MODIFIED="1688779998940">
+<node TEXT="X-Decoder (Vision + language)" ID="ID_1614956324" CREATED="1675287938828" MODIFIED="1675295921347">
+<node TEXT="Generalized Decoding for Pixel, Image, and Language" ID="ID_382060918" CREATED="1675287942315" MODIFIED="1675295769005">
+<node TEXT="unified model that predicts pixel-level segmentation and language tokens seamlessly." ID="ID_599683713" CREATED="1675287949651" MODIFIED="1675295765947"/>
+<node TEXT="The three segmentation tasks are unified: semantic, instance, and panoptic (pixel level)" ID="ID_1789214660" CREATED="1675296164458" MODIFIED="1675296212976"/>
+<node TEXT="region level task: detection, grounding." ID="ID_467063647" CREATED="1675296213149" MODIFIED="1675296224384"/>
+</node>
+</node>
+<node TEXT="SAM" ID="ID_912969430" CREATED="1686954669640" MODIFIED="1688780010839">
+<icon BUILTIN="bookmark"/>
 <node TEXT="Survey" ID="ID_576114666" CREATED="1686954673273" MODIFIED="1686954675318">
 <node TEXT="a survey on segment anything model (SAM): vision foundation model meets prompt enginnering" ID="ID_1309688486" CREATED="1686954675501" MODIFIED="1686954691846"/>
 </node>
 <node TEXT="Segment Anything Model" ID="ID_1688203184" CREATED="1686954905274" MODIFIED="1686954910450"/>
+</node>
+</node>
+<node TEXT="Supervised Semantic" ID="ID_1927721844" CREATED="1578733352755" MODIFIED="1675287914511">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="1505.04597: U-Net: convolutional networks for biomedical image segmentation (U-Net)" ID="ID_1662911562" CREATED="1578733451101" MODIFIED="1587526865046">
+<icon BUILTIN="button_ok"/>
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="what: segmentation" ID="ID_525154704" CREATED="1578733494076" MODIFIED="1587526865046">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="how" ID="ID_564416828" CREATED="1578733499940" MODIFIED="1587526865046">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="training strategy that relies on strong use of data augmentation" ID="ID_1775116489" CREATED="1578733508732" MODIFIED="1587526865046">
+<font NAME="Gentium" BOLD="false"/>
+</node>
+<node TEXT="architecture: contracting path to capture context and a symmetric expanding path that enables precise localization" ID="ID_1230729181" CREATED="1578733542669" MODIFIED="1587526865047">
+<icon BUILTIN="wizard"/>
+<font NAME="Gentium" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="1912.08193 PointRend: Image Segmentation as Rendering (kaiming)" ID="ID_1360164242" CREATED="1591524011593" MODIFIED="1591524026866">
+<icon BUILTIN="button_ok"/>
+</node>
+<node TEXT="2012.05007: group-wise semantic mining for weakly supervised semantic segmentation" ID="ID_871835183" CREATED="1607580365071" MODIFIED="1607580381423">
+<node TEXT="input images are represented as graph nodes, and the underlying relations between a pair of images are characterized by an efficient co-attention mechnism" ID="ID_701602240" CREATED="1607580528072" MODIFIED="1607580553437"/>
+</node>
+<node TEXT="2101: Rethinking Semantic Segmentation from a Sequence-to-Sequence Perspective with Transformers" ID="ID_782123948" CREATED="1610424579200" MODIFIED="1610424586216"/>
+<node TEXT="Multi-Source Domain Adaptation with Collaborative Learning for Semantic Segmentation (cvpr21)" ID="ID_1873517908" CREATED="1615358252825" MODIFIED="1615358259859">
+<node TEXT="arXiv:2103.04717" ID="ID_1286107433" CREATED="1615358260849" MODIFIED="1615358265830"/>
+</node>
+<node TEXT="Tree Energy Loss: Towards Sparsely Annotated Semantic Segmentation" ID="ID_1072029066" CREATED="1648342536462" MODIFIED="1648342539439">
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_366650528" CREATED="1648342540556" MODIFIED="1648342541821"/>
+</node>
+<node TEXT="towards unsupervised open world semantic segmentation" ID="ID_886126595" CREATED="1641524113165" MODIFIED="1641524125507">
+<icon BUILTIN="pencil"/>
+</node>
+<node TEXT="Generalization Gap" ID="ID_1078614193" CREATED="1649622999156" MODIFIED="1649623010400">
+<node TEXT="Pin the Memory: Learning to Generalize Semantic Segmentation" ID="ID_565752448" CREATED="1649623011621" MODIFIED="1649623013281">
+<node TEXT="CVPR22" ID="ID_259258542" CREATED="1649623015267" MODIFIED="1649623016760"/>
+<node TEXT="meta-learning to shrink the generalization gap" ID="ID_536241004" CREATED="1649623017156" MODIFIED="1649623033341"/>
+</node>
+</node>
+<node TEXT="k-means Mask Transformer" ID="ID_708667182" CREATED="1658263807495" MODIFIED="1658263808748">
+<node TEXT="ECCV22" ID="ID_263790383" CREATED="1658263812942" MODIFIED="1658263815091"/>
+<node TEXT="segmentation" ID="ID_1573687807" CREATED="1658263815370" MODIFIED="1658263817950"/>
+</node>
+</node>
+<node TEXT="Instance Segmentation" ID="ID_1759449865" CREATED="1649104217760" MODIFIED="1675287923713">
+<node TEXT="Main" ID="ID_1417928999" CREATED="1578733356683" MODIFIED="1649104710111">
+<font NAME="Gentium" BOLD="false"/>
+<node TEXT="Mask R-CNN" ID="ID_1460418401" CREATED="1590805638982" MODIFIED="1590805641615"/>
+<node TEXT="2003.13954 FGN: Fully Guided Network for Few-Shot Instance Segmentation (cvpr20)" ID="ID_1454655339" CREATED="1590975022052" MODIFIED="1590975029134"/>
+<node TEXT="2012.07177&#xa;Simple Copy-Paste is a Strong Data Augmentation Method for Instance Segmentation" ID="ID_792173050" CREATED="1608880556971" MODIFIED="1608880566837"/>
+</node>
+<node TEXT="Descriptors" ID="ID_1696499735" CREATED="1649104065329" MODIFIED="1649104223403">
+<node TEXT="Contour" ID="ID_395676166" CREATED="1649104068494" MODIFIED="1649104069863">
+<node TEXT="Eigencontours: Novel Contour Descriptors Based on Low-Rank Approximation" ID="ID_362471390" CREATED="1649104078004" MODIFIED="1649104078579">
+<node TEXT="CVPR22" ID="ID_642950560" CREATED="1649104080637" MODIFIED="1649104081863"/>
+<node TEXT="contour is one of the most important object descriptiors, along with texture and color" ID="ID_961927899" CREATED="1649104082894" MODIFIED="1649104097966"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Panoptic Segmentation" ID="ID_806825521" CREATED="1688780072433" MODIFIED="1688780076851"/>
+<node TEXT="Weakly supervised semantic segmentation" ID="ID_898901373" CREATED="1617621463991" MODIFIED="1617621470599">
+<node TEXT="CVPR21: Background-Aware Pooling and Noise-Aware Loss for Weakly-Supervised Semantic Segmentation" ID="ID_438120929" CREATED="1617621471500" MODIFIED="1617621479134">
+<node TEXT="bounding boxes do not specify object boundaries" ID="ID_630389636" CREATED="1617622064739" MODIFIED="1617622078587">
+<node TEXT="background-aware pooling, focusing more on aggregating foreground features, for high quality pseudo segmentation labels" ID="ID_1930311428" CREATED="1617622086378" MODIFIED="1617622241077"/>
+</node>
+<node TEXT="noisy label especially at object boundaries" ID="ID_1470006065" CREATED="1617622216454" MODIFIED="1617622256519">
+<node TEXT="noise-aware loss, less susceptible to incorrect labels" ID="ID_707624454" CREATED="1617622261098" MODIFIED="1617622288020"/>
+</node>
+</node>
 </node>
 </node>
 <node TEXT="ML :: ALL" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1954193241" CREATED="1687554687203" MODIFIED="1688778957752">
@@ -6455,14 +6563,14 @@
 </node>
 </node>
 </node>
-<node TEXT="LG :: Domain Adapt/Generalize" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1179225618" CREATED="1582887416803" MODIFIED="1688777454241">
+<node TEXT="LG :: Domain Adapt" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1179225618" CREATED="1582887416803" MODIFIED="1688779791315">
 <edge COLOR="#ff0000"/>
 <font NAME="Gentium"/>
 <node TEXT="Concept" ID="ID_276280133" CREATED="1650832531233" MODIFIED="1650832534030">
 <icon BUILTIN="info"/>
 <node TEXT="domain adaptation" ID="ID_1897127261" CREATED="1650832537525" MODIFIED="1650832545079">
-<node TEXT="input distribution p(x) changes between training and test" ID="ID_1783851732" CREATED="1650832546158" MODIFIED="1650832566190"/>
-<node TEXT="transfer learning posterior p(y|x) changes between training and test" ID="ID_542172298" CREATED="1650832567330" MODIFIED="1650832588622"/>
+<node TEXT="domain adaption: input distribution p(x) changes between training and test" ID="ID_1783851732" CREATED="1650832546158" MODIFIED="1688779778273"/>
+<node TEXT="transfer learning: posterior p(y|x) changes between training and test" ID="ID_542172298" CREATED="1650832567330" MODIFIED="1688779771566"/>
 </node>
 </node>
 <node TEXT="Openset" ID="ID_652345966" CREATED="1587030820215" MODIFIED="1587526864981">
@@ -6573,6 +6681,13 @@
 </node>
 </node>
 </node>
+<node TEXT="LG :: Test-Time-Adaptation (TTA)" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1993560435" CREATED="1688779810317" MODIFIED="1688779824472">
+<edge COLOR="#007c00"/>
+<node TEXT="enhancing the generalization performance of models by leveraging unlabeled samples solely during prediction. Requires fine-tuning and modifies the model parameters." ID="ID_65767297" CREATED="1688779840183" MODIFIED="1688779872940">
+<icon BUILTIN="info"/>
+</node>
+<node TEXT="Benchmarking Test-Time Adaptation against Distribution Shifts in Image Classification" ID="ID_1829966491" CREATED="1688779827651" MODIFIED="1688779837960"/>
+</node>
 <node TEXT="Gen :: GAN :: GAN Inverstion" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1643977837" CREATED="1608014251316" MODIFIED="1688777454242">
 <edge COLOR="#0000ff"/>
 <font NAME="Gentium"/>
@@ -6607,13 +6722,6 @@
 <node TEXT="PSNR" ID="ID_1421989608" CREATED="1686332924087" MODIFIED="1686332930331"/>
 <node TEXT="LLMScore" ID="ID_110493461" CREATED="1687542247956" MODIFIED="1687542250840"/>
 </node>
-<node TEXT="Representation LG" ID="ID_1236190836" CREATED="1686962321096" MODIFIED="1688777770509">
-<node TEXT="GAN Inversion" ID="ID_1698100168" CREATED="1686962325619" MODIFIED="1686962328717"/>
-<node TEXT="infodiffusion: representation learning using information maximizing diffusion models" ID="ID_476033572" CREATED="1686962329016" MODIFIED="1686962437296">
-<icon BUILTIN="unchecked"/>
-<node TEXT="ICML23" ID="ID_941327232" CREATED="1686962433290" MODIFIED="1686962434848"/>
-</node>
-</node>
 <node TEXT="GAN :: Foundation" ID="ID_1355970702" CREATED="1619335831487" MODIFIED="1688777754236">
 <node TEXT="CVPR21: Surrogate Gradient Field for Latent Space Manipulation" ID="ID_592809931" CREATED="1619335835845" MODIFIED="1619335849013"/>
 <node TEXT="2106.10410 Deep Generative Learning via Schr ̈odinger Bridge" ID="ID_1481005194" CREATED="1624457232722" MODIFIED="1624457250506">
@@ -6623,6 +6731,9 @@
 <node TEXT="SIGGRAPH" ID="ID_521737696" CREATED="1659196068818" MODIFIED="1659196071456"/>
 <node TEXT="junyan zhu" ID="ID_938954070" CREATED="1659196072012" MODIFIED="1659196074471"/>
 </node>
+</node>
+<node TEXT="GAN :: Repr" ID="ID_685890706" CREATED="1688780692701" MODIFIED="1688780696130">
+<node TEXT="GAN Inversion" ID="ID_1698100168" CREATED="1686962325619" MODIFIED="1686962328717"/>
 </node>
 <node TEXT="Diffusion :: Foundation" ID="ID_834316280" CREATED="1686333555244" MODIFIED="1688777773580">
 <node TEXT="It seems that the only remaining advantage of GANs is the inference speed, compared to the DDPM family" ID="ID_1636661625" CREATED="1680191602489" MODIFIED="1680191629182">
@@ -6653,6 +6764,15 @@
 <node TEXT="Restart Sampling for Improving Generative Processes" ID="ID_72796958" CREATED="1688777840381" MODIFIED="1688777850216">
 <icon BUILTIN="pencil"/>
 </node>
+</node>
+</node>
+<node TEXT="Diffusion :: Representation LG" ID="ID_1236190836" CREATED="1686962321096" MODIFIED="1688780687757">
+<node TEXT="infodiffusion: representation learning using information maximizing diffusion models" ID="ID_476033572" CREATED="1686962329016" MODIFIED="1686962437296">
+<icon BUILTIN="unchecked"/>
+<node TEXT="ICML23" ID="ID_941327232" CREATED="1686962433290" MODIFIED="1686962434848"/>
+</node>
+<node TEXT="Prompting Diffusion Representations for Cross-Domain Semantic Segmentation" ID="ID_1269378817" CREATED="1688780671187" MODIFIED="1688780708076">
+<icon BUILTIN="pencil"/>
 </node>
 </node>
 <node TEXT="Image Generation" ID="ID_1049820445" CREATED="1686332896941" MODIFIED="1688777964665">
@@ -6686,7 +6806,7 @@
 </node>
 <node TEXT="Text-Image Synthesis" ID="ID_1506766368" CREATED="1588403169157" MODIFIED="1588403180098">
 <node TEXT="2003.08152: SwapText: Image Based Texts Transfer in Scenes" ID="ID_1133281286" CREATED="1588403187099" MODIFIED="1588403216138"/>
-<node TEXT="LDM" ID="ID_479498826" CREATED="1686332992990" MODIFIED="1687551551305">
+<node TEXT="LDM Family" ID="ID_479498826" CREATED="1686332992990" MODIFIED="1688780756169">
 <icon BUILTIN="bookmark"/>
 <icon BUILTIN="unchecked"/>
 <node TEXT="LDM" ID="ID_1844469825" CREATED="1686333007106" MODIFIED="1686333013032">
@@ -6698,11 +6818,19 @@
 <node TEXT="Stable-Diffusion V2" ID="ID_872410892" CREATED="1686333017310" MODIFIED="1686333021921">
 <node TEXT="V2-1 checkpoint" ID="ID_1587877333" CREATED="1688777715723" MODIFIED="1688777719014"/>
 </node>
-<node TEXT="Stable-Diffusion XL" ID="ID_1087234637" CREATED="1688777697894" MODIFIED="1688777701596"/>
+<node TEXT="Stable-Diffusion XL" ID="ID_1087234637" CREATED="1688777697894" MODIFIED="1688777701596">
+<node TEXT="SDXL: Improving Latent Diffusion Models for High-Resolution Image Synthesis" ID="ID_1818834466" CREATED="1688780741449" MODIFIED="1688780742638"/>
+</node>
 </node>
 <node TEXT="+ Quality" ID="ID_991786870" CREATED="1686964225930" MODIFIED="1686964247611">
 <node TEXT="verlo" ID="ID_1765834709" CREATED="1686964248500" MODIFIED="1687542134505">
 <icon BUILTIN="unchecked"/>
+</node>
+<node TEXT=":object number" ID="ID_417493698" CREATED="1688781225116" MODIFIED="1688781229766">
+<node TEXT="Counting Guidance for High Fidelity Text-to-Image Synthesis" ID="ID_835539899" CREATED="1688781230345" MODIFIED="1688781233383">
+<icon BUILTIN="pencil"/>
+<node TEXT="make the model generate exact number of objects" ID="ID_128906674" CREATED="1688781252788" MODIFIED="1688781260599"/>
+</node>
 </node>
 </node>
 <node TEXT="+ Robustness" ID="ID_677553007" CREATED="1686346050736" MODIFIED="1686346057018">
@@ -6792,6 +6920,9 @@
 <node TEXT="CVPR22" ID="ID_1162593367" CREATED="1687546997098" MODIFIED="1687546998461"/>
 </node>
 <node TEXT="2004.06718 Line Art Correlation Matching Network for Automatic Animation Colorization" ID="ID_1382110194" CREATED="1590804591161" MODIFIED="1590804601517"/>
+<node TEXT="Filtered-Guided Diffusion: Fast Filter Guidance for Black-Box Diffusion Models" ID="ID_1636699051" CREATED="1688781541666" MODIFIED="1688781546558">
+<icon BUILTIN="pencil"/>
+</node>
 </node>
 <node TEXT="Sketch-to-Image" ID="ID_1553669180" CREATED="1686345763081" MODIFIED="1688777614704">
 <node TEXT="2012.09290&#xa;Self-Supervised Sketch-to-Image Synthesis" ID="ID_1510941603" CREATED="1608878874818" MODIFIED="1608878886235"/>
@@ -7185,145 +7316,6 @@
 <node TEXT="In Defense of Image Pre-Training for&#xa;Spatiotemporal Recognition" ID="ID_889274972" CREATED="1651953774184" MODIFIED="1651953776596">
 <icon BUILTIN="pencil"/>
 <node TEXT="cihang xie" ID="ID_1074268195" CREATED="1651953777761" MODIFIED="1651953779253"/>
-</node>
-</node>
-</node>
-<node TEXT="Segmentation" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_710086984" CREATED="1641524074732" MODIFIED="1688777454250">
-<edge COLOR="#007c7c"/>
-<font NAME="Gentium"/>
-<node TEXT="Supervised Semantic" ID="ID_1927721844" CREATED="1578733352755" MODIFIED="1675287914511">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="1505.04597: U-Net: convolutional networks for biomedical image segmentation (U-Net)" ID="ID_1662911562" CREATED="1578733451101" MODIFIED="1587526865046">
-<icon BUILTIN="button_ok"/>
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: segmentation" ID="ID_525154704" CREATED="1578733494076" MODIFIED="1587526865046">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how" ID="ID_564416828" CREATED="1578733499940" MODIFIED="1587526865046">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="training strategy that relies on strong use of data augmentation" ID="ID_1775116489" CREATED="1578733508732" MODIFIED="1587526865046">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="architecture: contracting path to capture context and a symmetric expanding path that enables precise localization" ID="ID_1230729181" CREATED="1578733542669" MODIFIED="1587526865047">
-<icon BUILTIN="wizard"/>
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="1912.08193 PointRend: Image Segmentation as Rendering (kaiming)" ID="ID_1360164242" CREATED="1591524011593" MODIFIED="1591524026866">
-<icon BUILTIN="button_ok"/>
-</node>
-<node TEXT="2012.05007: group-wise semantic mining for weakly supervised semantic segmentation" ID="ID_871835183" CREATED="1607580365071" MODIFIED="1607580381423">
-<node TEXT="input images are represented as graph nodes, and the underlying relations between a pair of images are characterized by an efficient co-attention mechnism" ID="ID_701602240" CREATED="1607580528072" MODIFIED="1607580553437"/>
-</node>
-<node TEXT="2101: Rethinking Semantic Segmentation from a Sequence-to-Sequence Perspective with Transformers" ID="ID_782123948" CREATED="1610424579200" MODIFIED="1610424586216"/>
-<node TEXT="Multi-Source Domain Adaptation with Collaborative Learning for Semantic Segmentation (cvpr21)" ID="ID_1873517908" CREATED="1615358252825" MODIFIED="1615358259859">
-<node TEXT="arXiv:2103.04717" ID="ID_1286107433" CREATED="1615358260849" MODIFIED="1615358265830"/>
-</node>
-<node TEXT="Tree Energy Loss: Towards Sparsely Annotated Semantic Segmentation" ID="ID_1072029066" CREATED="1648342536462" MODIFIED="1648342539439">
-<icon BUILTIN="unchecked"/>
-<node TEXT="CVPR22" ID="ID_366650528" CREATED="1648342540556" MODIFIED="1648342541821"/>
-</node>
-<node TEXT="towards unsupervised open world semantic segmentation" ID="ID_886126595" CREATED="1641524113165" MODIFIED="1641524125507">
-<icon BUILTIN="pencil"/>
-</node>
-<node TEXT="Generalization Gap" ID="ID_1078614193" CREATED="1649622999156" MODIFIED="1649623010400">
-<node TEXT="Pin the Memory: Learning to Generalize Semantic Segmentation" ID="ID_565752448" CREATED="1649623011621" MODIFIED="1649623013281">
-<node TEXT="CVPR22" ID="ID_259258542" CREATED="1649623015267" MODIFIED="1649623016760"/>
-<node TEXT="meta-learning to shrink the generalization gap" ID="ID_536241004" CREATED="1649623017156" MODIFIED="1649623033341"/>
-</node>
-</node>
-<node TEXT="k-means Mask Transformer" ID="ID_708667182" CREATED="1658263807495" MODIFIED="1658263808748">
-<node TEXT="ECCV22" ID="ID_263790383" CREATED="1658263812942" MODIFIED="1658263815091"/>
-<node TEXT="segmentation" ID="ID_1573687807" CREATED="1658263815370" MODIFIED="1658263817950"/>
-</node>
-</node>
-<node TEXT="Weakly supervised semantic segmentation" ID="ID_898901373" CREATED="1617621463991" MODIFIED="1617621470599">
-<node TEXT="CVPR21: Background-Aware Pooling and Noise-Aware Loss for Weakly-Supervised Semantic Segmentation" ID="ID_438120929" CREATED="1617621471500" MODIFIED="1617621479134">
-<node TEXT="bounding boxes do not specify object boundaries" ID="ID_630389636" CREATED="1617622064739" MODIFIED="1617622078587">
-<node TEXT="background-aware pooling, focusing more on aggregating foreground features, for high quality pseudo segmentation labels" ID="ID_1930311428" CREATED="1617622086378" MODIFIED="1617622241077"/>
-</node>
-<node TEXT="noisy label especially at object boundaries" ID="ID_1470006065" CREATED="1617622216454" MODIFIED="1617622256519">
-<node TEXT="noise-aware loss, less susceptible to incorrect labels" ID="ID_707624454" CREATED="1617622261098" MODIFIED="1617622288020"/>
-</node>
-</node>
-</node>
-<node TEXT="Instance Segmentation" ID="ID_1759449865" CREATED="1649104217760" MODIFIED="1675287923713">
-<node TEXT="Main" ID="ID_1417928999" CREATED="1578733356683" MODIFIED="1649104710111">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="Mask R-CNN" ID="ID_1460418401" CREATED="1590805638982" MODIFIED="1590805641615"/>
-<node TEXT="2003.13954 FGN: Fully Guided Network for Few-Shot Instance Segmentation (cvpr20)" ID="ID_1454655339" CREATED="1590975022052" MODIFIED="1590975029134"/>
-<node TEXT="2012.07177&#xa;Simple Copy-Paste is a Strong Data Augmentation Method for Instance Segmentation" ID="ID_792173050" CREATED="1608880556971" MODIFIED="1608880566837"/>
-</node>
-<node TEXT="Descriptors" ID="ID_1696499735" CREATED="1649104065329" MODIFIED="1649104223403">
-<node TEXT="Contour" ID="ID_395676166" CREATED="1649104068494" MODIFIED="1649104069863">
-<node TEXT="Eigencontours: Novel Contour Descriptors Based on Low-Rank Approximation" ID="ID_362471390" CREATED="1649104078004" MODIFIED="1649104078579">
-<node TEXT="CVPR22" ID="ID_642950560" CREATED="1649104080637" MODIFIED="1649104081863"/>
-<node TEXT="contour is one of the most important object descriptiors, along with texture and color" ID="ID_961927899" CREATED="1649104082894" MODIFIED="1649104097966"/>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="Unification" ID="ID_1225291372" CREATED="1675287931179" MODIFIED="1675295913721">
-<node TEXT="X-Decoder (Vision + language)" ID="ID_1614956324" CREATED="1675287938828" MODIFIED="1675295921347">
-<node TEXT="Generalized Decoding for Pixel, Image, and Language" ID="ID_382060918" CREATED="1675287942315" MODIFIED="1675295769005">
-<node TEXT="unified model that predicts pixel-level segmentation and language tokens seamlessly." ID="ID_599683713" CREATED="1675287949651" MODIFIED="1675295765947"/>
-<node TEXT="The three segmentation tasks are unified: semantic, instance, and panoptic (pixel level)" ID="ID_1789214660" CREATED="1675296164458" MODIFIED="1675296212976"/>
-<node TEXT="region level task: detection, grounding." ID="ID_467063647" CREATED="1675296213149" MODIFIED="1675296224384"/>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="Scene/Knowledge Graph" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_691684807" CREATED="1582940936028" MODIFIED="1688777454250">
-<edge COLOR="#007c7c"/>
-<font NAME="Gentium"/>
-<node TEXT="SG" ID="ID_62932280" CREATED="1653357372586" MODIFIED="1653357374319">
-<node TEXT="Survey" ID="ID_1665575737" CREATED="1653357500064" MODIFIED="1653357514750">
-<icon BUILTIN="info"/>
-<node TEXT="A Comprehensive Survey of Scene Graphs:&#xa;Generation and Application" ID="ID_1652046589" CREATED="1653357506363" MODIFIED="1654622118685">
-<icon BUILTIN="unchecked"/>
-<node TEXT="TPAMI" ID="ID_188900375" CREATED="1654622121760" MODIFIED="1654622123512"/>
-</node>
-</node>
-<node TEXT="Generation" ID="ID_1992268449" CREATED="1582940945725" MODIFIED="1590024968949">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="2002.11949: unbiased scene graph generalization from biased training" ID="ID_1016607145" CREATED="1582940950980" MODIFIED="1587526865280">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: scene graph generation (SGG)" ID="ID_1614294683" CREATED="1582940994088" MODIFIED="1587526865281">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: collapsing diversity hurts downstream tasks due to the training bias. However, debiasing is not trivial because traditional methods call tell good bias and bad bias" ID="ID_476245187" CREATED="1582941002281" MODIFIED="1587526865282">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: draw counterfactual causality from the trained graph" ID="ID_538665732" CREATED="1582941507255" MODIFIED="1587526865283">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="2005.08230: graph density-aware losses for novel compositions in scene graph generation (CVPR20)" ID="ID_168569159" CREATED="1590024970199" MODIFIED="1590024994252"/>
-<node TEXT="Exploiting Edge-Oriented Reasoning for 3D Point-based Scene Graph Analysis (cvpr21)" ID="ID_110979499" CREATED="1615348622406" MODIFIED="1615348629899"/>
-<node TEXT="Probabilistic Modeling of Semantic Ambiguity for Scene Graph Generation (cvpr21)" ID="ID_1895253076" CREATED="1615351040893" MODIFIED="1615351048231"/>
-</node>
-<node TEXT="Inverse Generation" ID="ID_1595445036" CREATED="1653357386274" MODIFIED="1653357388858">
-<node TEXT="1912.07414 Learning Canonical Representations forScene Graph to Image Generation" ID="ID_1230724059" CREATED="1591523975753" MODIFIED="1591523987076"/>
-</node>
-<node TEXT="Image Retrieval" ID="ID_1768896" CREATED="1610425686042" MODIFIED="1610425689498">
-<node TEXT="2012: Image-to-Image Retrieval by Learning Similarity between Scene Graphs (AAAI21)" ID="ID_1384437389" CREATED="1610425690361" MODIFIED="1610425706901">
-<icon BUILTIN="button_ok"/>
-</node>
-</node>
-</node>
-<node TEXT="KG" ID="ID_822456907" CREATED="1653357374701" MODIFIED="1653357375953">
-<node TEXT="Survey" ID="ID_961480222" CREATED="1653357413499" MODIFIED="1653357418188">
-<icon BUILTIN="info"/>
-<node TEXT="Deep Learning on Knowledge Graph for Recommender&#xa;System: A Survey" ID="ID_474794422" CREATED="1653357426923" MODIFIED="1653357430650">
-<icon BUILTIN="pencil"/>
-</node>
-<node TEXT="" ID="ID_993691552" CREATED="1654033772224" MODIFIED="1654033772224"/>
-</node>
-<node TEXT="ConceptNet 5.5: An Open Multilingual Graph of General Knowledge." ID="ID_916824453" CREATED="1654033790966" MODIFIED="1654033793845">
-<icon BUILTIN="unchecked"/>
-<node TEXT="AAAI" ID="ID_599287398" CREATED="1654033795196" MODIFIED="1654033796379"/>
-<node TEXT="contains both positive relation and negative relation" ID="ID_755158262" CREATED="1654033864046" MODIFIED="1654033872607"/>
 </node>
 </node>
 </node>
