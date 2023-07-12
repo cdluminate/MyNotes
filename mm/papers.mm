@@ -7211,7 +7211,7 @@
 </node>
 </node>
 </node>
-<node TEXT="GEN :: DeepFake" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_81253926" CREATED="1587729755009" MODIFIED="1688777454244">
+<node TEXT="Gen :: DeepFake" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_81253926" CREATED="1587729755009" MODIFIED="1689205017010">
 <edge COLOR="#7c7c00"/>
 <font NAME="Gentium"/>
 <node TEXT="Deepfake is specific to face and person" ID="ID_1286313360" CREATED="1676228603594" MODIFIED="1676228635463">
@@ -7257,6 +7257,11 @@
 <node TEXT="Voice-Face Homogeneity Tells Deepfake" ID="ID_153357596" CREATED="1646942317853" MODIFIED="1646942325559">
 <icon BUILTIN="unchecked"/>
 <node TEXT="CVPR22" ID="ID_725170575" CREATED="1646942319120" MODIFIED="1646942321768"/>
+</node>
+</node>
+<node TEXT="@Robustness (Adversarial)" ID="ID_1610818012" CREATED="1689205021051" MODIFIED="1689205031544">
+<node TEXT="evading forensic classifiers with attribute-conditioned adversarial faces" ID="ID_1739750223" CREATED="1689205031937" MODIFIED="1689205044006">
+<node TEXT="CVPR23" ID="ID_576297780" CREATED="1689205044364" MODIFIED="1689205045739"/>
 </node>
 </node>
 </node>
