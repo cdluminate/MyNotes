@@ -12,7 +12,7 @@ from collections import defaultdict
 from rich.progress import track
 console = rich.get_console()
 
-def check_resnet18(args):
+def check_resnet(args):
     M = getattr(V.models, ag.model)().to(args.device)
     print(M)
     M0p = IntermediateLayerGetter(M, {'maxpool': 'maxpool'})
@@ -22,44 +22,53 @@ def check_resnet18(args):
     M4 = IntermediateLayerGetter(M, {'layer4':'layer4'})
     Tforward = defaultdict(list)
     Tbackward = defaultdict(list)
-    for i in track(range(args.maxiter)):
+
+    def _get_forward_time(module, name, tdict, iteration):
+        _ts = time.time()
+        y = module(x)
+        _te = time.time()
+        if iteration > 1: # warmup
+            tdict[name].append(1000*(_te - _ts))  # in ms
+        return y
+
+    def _get_backward_time(module, name, inp, tdict, iteration):
+        if isinstance(inp, th.Tensor):
+            loss = y.sum()
+        else:
+            loss = list(y.values())[0].sum()
+        _ts = time.time()
+        loss.backward()
+        _te = time.time()
+        if iteration > 1: # warmup
+            tdict[name].append(1000*(_te - _ts))  # in ms
+
+    for i in track(range(args.maxiter), description='maxpool'):
         x = th.rand(args.batchsize, 3, 224, 224).to(args.device)
-        x.requires_grad = True
-
-        def _get_forward_time(module, name, tdict, iteration):
-            _ts = time.time()
-            y = module(x)
-            _te = time.time()
-            if iteration > 1: # warmup
-                tdict[name].append(1000*(_te - _ts))  # in ms
-            return y
-
-        def _get_backward_time(module, name, inp, tdict, iteration):
-            if isinstance(inp, th.Tensor):
-                loss = y.sum()
-            else:
-                loss = list(y.values())[0].sum()
-            _ts = time.time()
-            loss.backward()
-            _te = time.time()
-            if iteration > 1: # warmup
-                tdict[name].append(1000*(_te - _ts))  # in ms
-
         y = _get_forward_time(M0p, 'maxpool', Tforward, i)
         _get_backward_time(M0p, 'maxpool', y, Tbackward, i)
 
+    for i in track(range(args.maxiter), description='layer1'):
+        x = th.rand(args.batchsize, 3, 224, 224).to(args.device)
         y = _get_forward_time(M1, 'layer1', Tforward, i)
         _get_backward_time(M1, 'layer1', y, Tbackward, i)
 
+    for i in track(range(args.maxiter), description='layer2'):
+        x = th.rand(args.batchsize, 3, 224, 224).to(args.device)
         y = _get_forward_time(M2, 'layer2', Tforward, i)
         _get_backward_time(M2, 'layer2', y, Tbackward, i)
 
+    for i in track(range(args.maxiter), description='layer3'):
+        x = th.rand(args.batchsize, 3, 224, 224).to(args.device)
         y = _get_forward_time(M3, 'layer3', Tforward, i)
         _get_backward_time(M3, 'layer3', y, Tbackward, i)
 
+    for i in track(range(args.maxiter), description='layer4'):
+        x = th.rand(args.batchsize, 3, 224, 224).to(args.device)
         y = _get_forward_time(M4, 'layer4', Tforward, i)
         _get_backward_time(M4, 'layer4', y, Tbackward, i)
 
+    for i in track(range(args.maxiter), description='fc'):
+        x = th.rand(args.batchsize, 3, 224, 224).to(args.device)
         y = _get_forward_time(M, 'fc', Tforward, i)
         _get_backward_time(M, 'fc', y, Tbackward, i)
 
@@ -78,4 +87,7 @@ if __name__ == '__main__':
     ag.add_argument('--batchsize', type=int, default=128)
     ag = ag.parse_args()
 
-    check_resnet18(ag)
+    if 'resnet' in ag.model:
+        check_resnet(ag)
+    else:
+        raise NotImplementedError
