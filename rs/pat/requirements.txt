@@ -1,0 +1,4 @@
+torch >= 2.0.0
+pytorch-lightning == 1.9.5
+lightning-bolts == 0.7.0
+torchmetrics == 1.0.3
