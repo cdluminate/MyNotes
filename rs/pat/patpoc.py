@@ -1,6 +1,16 @@
 '''
 POC for ParetoAT
 
+Pytorch's official benchmarking tool is not designed for
+benchmarking forward + backward time. They do not provide
+a post-stmt procedure for us to clear the gradients.
+As a result, the loop will break at the second iteration
+becasue we repetitively conduct backward on the same graph.
+If we toggle retain_graph=True, then the CUDA memory will
+boom very quickly. It is much worse than the naive tic;toc
+solution for this case.
+https://pytorch.org/docs/stable/benchmark_utils.html
+
 Quadro RTX 8000
 resnet18 Forward Time (in ms)
 [
