@@ -1,6 +1,5 @@
 '''
 POC for ParetoAT
-https://pytorch.org/tutorials/recipes/recipes/benchmark.html
 
 Quadro RTX 8000
 resnet18 Forward Time (in ms)
@@ -62,7 +61,6 @@ import numpy as np
 import torch as th
 import torchvision as V
 from torchvision.models._utils import IntermediateLayerGetter
-import torch.utils.benchmark as benchmark
 import argparse
 import time
 import rich
@@ -70,7 +68,7 @@ from collections import defaultdict
 from rich.progress import track
 console = rich.get_console()
 
-def benchmark_resnet(args):
+def check_resnet(args):
     M = getattr(V.models, ag.model)().to(args.device)
     print(M)
     M0p = IntermediateLayerGetter(M, {'maxpool': 'maxpool'})
@@ -78,117 +76,68 @@ def benchmark_resnet(args):
     M2 = IntermediateLayerGetter(M, {'layer2':'layer2'})
     M3 = IntermediateLayerGetter(M, {'layer3':'layer3'})
     M4 = IntermediateLayerGetter(M, {'layer4':'layer4'})
+    Tforward = defaultdict(list)
+    Tbackward = defaultdict(list)
 
-    results = []
+    def _get_forward_time(module, name, tdict, iteration):
+        _ts = time.time()
+        y = module(x)
+        _te = time.time()
+        if iteration > 1: # warmup
+            tdict[name].append(1000*(_te - _ts))  # in ms
+        return y
 
-    x = th.rand(args.batchsize, 3, 224, 224).to(args.device)
-    x.requires_grad = True
+    def _get_backward_time(module, name, inp, tdict, iteration):
+        if isinstance(inp, th.Tensor):
+            loss = y.sum()
+        else:
+            loss = list(y.values())[0].sum()
+        _ts = time.time()
+        loss.backward()
+        _te = time.time()
+        if iteration > 1: # warmup
+            tdict[name].append(1000*(_te - _ts))  # in ms
 
-    # maxpool forward
-    M0p_forward = benchmark.Timer(stmt='y=M0p.forward(x)',
-                                  globals={'x': x, 'M0p': M0p},
-                                  description=ag.model,
-                                  ).timeit(args.maxiter)
-    console.print('M0p_forward', M0p_forward)
-    results.append(M0p_forward)
+    for i in track(range(args.maxiter), description='maxpool'):
+        x = th.rand(args.batchsize, 3, 224, 224).to(args.device)
+        x.requires_grad = True
+        y = _get_forward_time(M0p, 'maxpool', Tforward, i)
+        _get_backward_time(M0p, 'maxpool', y, Tbackward, i)
 
-    # maxpool backward
-    y0p = list(M0p.forward(x).values())[0]
-    M0p_backward = benchmark.Timer(stmt='y0p.sum().backward(retain_graph=True)',
-                                   globals={'y0p': y0p},
-                                   description=ag.model,
-                                   ).timeit(args.maxiter)
-    console.print('M0p_backward', M0p_forward)
-    results.append(M0p_backward)
+    for i in track(range(args.maxiter), description='layer1'):
+        x = th.rand(args.batchsize, 3, 224, 224).to(args.device)
+        x.requires_grad = True
+        y = _get_forward_time(M1, 'layer1', Tforward, i)
+        _get_backward_time(M1, 'layer1', y, Tbackward, i)
 
-    # layer1 forward
-    M1_forward = benchmark.Timer(stmt='y=M1.forward(x)',
-                                 globals={'x': x, 'M1': M1},
-                                 description=ag.model,
-                                 ).timeit(args.maxiter)
-    console.print('M1_forward', M1_forward)
-    results.append(M1_forward)
+    for i in track(range(args.maxiter), description='layer2'):
+        x = th.rand(args.batchsize, 3, 224, 224).to(args.device)
+        x.requires_grad = True
+        y = _get_forward_time(M2, 'layer2', Tforward, i)
+        _get_backward_time(M2, 'layer2', y, Tbackward, i)
 
-    # layer1 backward
-    y1 = list(M1.forward(x).values())[0]
-    M1_backward = benchmark.Timer(stmt='y1.sum().backward(retain_graph=True)',
-                                   globals={'y1': y1},
-                                   description=ag.model,
-                                   ).timeit(args.maxiter)
-    console.print('M1_backward', M1_forward)
-    results.append(M1_backward)
+    for i in track(range(args.maxiter), description='layer3'):
+        x = th.rand(args.batchsize, 3, 224, 224).to(args.device)
+        x.requires_grad = True
+        y = _get_forward_time(M3, 'layer3', Tforward, i)
+        _get_backward_time(M3, 'layer3', y, Tbackward, i)
 
-    # layer2 forward
-    M2_forward = benchmark.Timer(stmt='y=M2.forward(x)',
-                                 globals={'x': x, 'M2': M2},
-                                 description=ag.model,
-                                 ).timeit(args.maxiter)
-    console.print('M2_forward', M2_forward)
-    results.append(M2_forward)
+    for i in track(range(args.maxiter), description='layer4'):
+        x = th.rand(args.batchsize, 3, 224, 224).to(args.device)
+        x.requires_grad = True
+        y = _get_forward_time(M4, 'layer4', Tforward, i)
+        _get_backward_time(M4, 'layer4', y, Tbackward, i)
 
-    # layer2 backward
-    y2 = list(M2.forward(x).values())[0]
-    M2_backward = benchmark.Timer(stmt='y2.sum().backward(retain_graph=True)',
-                                   globals={'y2': y2},
-                                   description=ag.model,
-                                   ).timeit(args.maxiter)
-    console.print('M2_backward', M2_forward)
-    results.append(M2_backward)
+    for i in track(range(args.maxiter), description='fc'):
+        x = th.rand(args.batchsize, 3, 224, 224).to(args.device)
+        x.requires_grad = True
+        y = _get_forward_time(M, 'fc', Tforward, i)
+        _get_backward_time(M, 'fc', y, Tbackward, i)
 
-    # layer3 forward
-    M3_forward = benchmark.Timer(stmt='y=M3.forward(x)',
-                                 globals={'x': x, 'M3': M3},
-                                 description=ag.model,
-                                 ).timeit(args.maxiter)
-    console.print('M3_forward', M3_forward)
-    results.append(M3_forward)
-
-    # layer3 backward
-    y3 = list(M3.forward(x).values())[0]
-    M3_backward = benchmark.Timer(stmt='y3.sum().backward(retain_graph=True)',
-                                   globals={'y3': y3},
-                                   description=ag.model,
-                                   ).timeit(args.maxiter)
-    console.print('M3_backward', M3_forward)
-    results.append(M3_backward)
-
-    # layer4 forward
-    M4_forward = benchmark.Timer(stmt='y=M4.forward(x)',
-                                 globals={'x': x, 'M4': M4},
-                                 description=ag.model,
-                                 ).timeit(args.maxiter)
-    console.print('M4_forward', M4_forward)
-    results.append(M4_forward)
-
-    # layer4 backward
-    y4 = list(M4.forward(x).values())[0]
-    M4_backward = benchmark.Timer(stmt='y4.sum().backward(retain_graph=True)',
-                                   globals={'y4': y4},
-                                   description=ag.model,
-                                   ).timeit(args.maxiter)
-    console.print('M4_backward', M4_forward)
-    results.append(M4_backward)
-
-    # M forward
-    M_forward = benchmark.Timer(stmt='y=M.forward(x)',
-                                 globals={'x': x, 'M': M},
-                                 description=ag.model,
-                                 ).timeit(args.maxiter)
-    console.print('M_forward', M_forward)
-    results.append(M_forward)
-
-    # M backward
-    y = M.forward(x)
-    M_backward = benchmark.Timer(stmt='y.sum().backward(retain_graph=True)',
-                                   globals={'y': y},
-                                   description=ag.model,
-                                   ).timeit(args.maxiter)
-    console.print('M_backward', M_forward)
-    results.append(M_backward)
-
-    # compare
-    compare = benchmark.Compare(results)
-    compare.print()
+    console.print(f'{args.model} Forward Time (in ms)')
+    console.print([(k, np.mean(v), np.std(v)) for (k, v) in Tforward.items()])
+    console.print(f'{args.model} Backward Time (in ms)')
+    console.print([(k, np.mean(v), np.std(v)) for (k, v) in Tbackward.items()])
 
 
 if __name__ == '__main__':
@@ -201,6 +150,6 @@ if __name__ == '__main__':
     ag = ag.parse_args()
 
     if 'resnet' in ag.model:
-        benchmark_resnet(ag)
+        check_resnet(ag)
     else:
         raise NotImplementedError
