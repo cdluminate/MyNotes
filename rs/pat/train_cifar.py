@@ -1,7 +1,17 @@
 '''
 https://lightning.ai/docs/pytorch/stable/notebooks/lightning_examples/cifar10-baseline.html
+
+Note, distributed data parallel training can reduce performance.
+Benign Training. 2* Nvidia Quadro RTX8000 (48GB)
+2GPU  30 eph accuracy 83.7%
+2GPU  50 eph accuracy 86.6%
+2GPU 150 eph accuracy 88.7%
+1GPU  30 eph accuracy 91.8%
+1GPU  50 eph accuracy 92.7%
+1GPU 100 eph accuracy 94.2%
 '''
 import os
+# disabling NCCL's nvlink communication is necessary on many servers.
 os.putenv('NCCL_P2P_DISABLE', '1')
 import torch as th
 import torch.nn.functional as F
@@ -11,7 +21,7 @@ from pl_bolts.transforms.dataset_normalizations import cifar10_normalization
 from pytorch_lightning import LightningModule, Trainer, seed_everything
 from pytorch_lightning.callbacks import LearningRateMonitor
 from pytorch_lightning.callbacks.progress import TQDMProgressBar
-from pytorch_lightning.loggers import CSVLogger
+from pytorch_lightning.loggers import CSVLogger, TensorBoardLogger
 from torch.optim.lr_scheduler import OneCycleLR
 from torch.optim.swa_utils import AveragedModel, update_bn
 from torchmetrics.functional import accuracy
@@ -25,7 +35,6 @@ train_transforms = V.transforms.Compose([
     V.transforms.RandomCrop(32, padding=4),
     V.transforms.RandomHorizontalFlip(),
     V.transforms.ToTensor(),
-    cifar10_normalization(),
     ])
 
 test_transforms = V.transforms.Compose([
@@ -60,8 +69,9 @@ class LitResNet(LightningModule):
         self.model = create_model(args)
         self.args = args
     def forward(self, x):
+        x = cifar10_normalization()(x)
         out = self.model(x)
-        return F.log_softmax(out, dim=1)
+        return out
     def training_step(self, batch, batch_idx):
         x, y = batch
         logits = self(x)
@@ -71,7 +81,7 @@ class LitResNet(LightningModule):
     def evaluate(self, batch, stage=None):
         x, y = batch
         logits = self(x)
-        loss = F.nll_loss(logits, y)
+        loss = F.cross_entropy(logits, y)
         preds = th.argmax(logits, dim=1)
         acc = accuracy(preds, y, task='multiclass', num_classes=10, top_k=1)
         if stage:
@@ -108,6 +118,9 @@ if __name__ == '__main__':
     ag.add_argument('--datadir', type=str, default='.')
     ag.add_argument('--lr', type=float, default=0.05)
     ag.add_argument('--max_epochs', type=int, default=30)
+    ag.add_argument('--logdir', type=str, default='logs')
+    ag.add_argument('--logger', type=str, default='TensorBoardLogger',
+                    choices=('TensorBoardLogger', 'CSVLogger'))
     ag = ag.parse_args()
     console.print(ag)
 
@@ -118,7 +131,7 @@ if __name__ == '__main__':
             accelerator='gpu',
             strategy='ddp',
             devices=th.cuda.device_count() if th.cuda.is_available() else None,
-            logger=CSVLogger(save_dir='logs/'),
+            logger=eval(ag.logger)(save_dir=ag.logdir),
             callbacks=[LearningRateMonitor(logging_interval='step'),
                        TQDMProgressBar(refresh_rate=10)],
             )
