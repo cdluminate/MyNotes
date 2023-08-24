@@ -39,7 +39,6 @@ train_transforms = V.transforms.Compose([
 
 test_transforms = V.transforms.Compose([
     V.transforms.ToTensor(),
-    cifar10_normalization(),
     ])
 
 
@@ -75,7 +74,7 @@ class LitResNet(LightningModule):
     def training_step(self, batch, batch_idx):
         x, y = batch
         logits = self(x)
-        loss = F.nll_loss(logits, y)
+        loss = F.cross_entropy(logits, y)
         self.log('train_loss', loss)
         return loss
     def evaluate(self, batch, stage=None):
