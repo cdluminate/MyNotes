@@ -98,14 +98,14 @@ class LitResNet(LightningModule):
                 weight_decay=5e-4,
                 )
         steps_per_epoch = 45000 // self.args.batch_size
-        schedular_dict = {
+        scheduler_dict = {
                 'scheduler': OneCycleLR(optimizer,
-                                        0.1,
+                                        self.args.lr_max,
                                         epochs=self.trainer.max_epochs,
                                         steps_per_epoch=steps_per_epoch),
                 'interval': 'step',
                 }
-        return {'optimizer': optimizer, 'lr_scheduler': schedular_dict}
+        return {'optimizer': optimizer, 'lr_scheduler': scheduler_dict}
 
 
 if __name__ == '__main__':
@@ -116,6 +116,7 @@ if __name__ == '__main__':
     ag.add_argument('--num_workers', '-j', type=int, default=int(os.cpu_count()/2))
     ag.add_argument('--datadir', type=str, default='./data/')
     ag.add_argument('--lr', type=float, default=0.05)
+    ag.add_argument('--lr_max', type=float, default=0.1)
     ag.add_argument('--max_epochs', type=int, default=30)
     ag.add_argument('--logdir', type=str, default='logs')
     ag.add_argument('--logger', type=str, default='TensorBoardLogger',
