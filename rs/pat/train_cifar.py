@@ -115,7 +115,7 @@ if __name__ == '__main__':
                     default='cuda' if th.cuda.is_available() else 'cpu')
     ag.add_argument('--batch_size', '-b', type=int, default=256)
     ag.add_argument('--num_workers', '-j', type=int, default=int(os.cpu_count()/2))
-    ag.add_argument('--datadir', type=str, default='.')
+    ag.add_argument('--datadir', type=str, default='./data/')
     ag.add_argument('--lr', type=float, default=0.05)
     ag.add_argument('--max_epochs', type=int, default=30)
     ag.add_argument('--logdir', type=str, default='logs')
