@@ -5,6 +5,7 @@ Note, distributed data parallel training can reduce performance.
 Benign Training. 2* Nvidia Quadro RTX8000 (48GB)
 2GPU  30 eph accuracy 83.7%
 2GPU  50 eph accuracy 86.6%
+2GPU 100 eph accuracy 87.8%
 2GPU 150 eph accuracy 88.7%
 1GPU  30 eph accuracy 91.8%
 1GPU  50 eph accuracy 92.7%
