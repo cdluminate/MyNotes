@@ -12,4 +12,4 @@ train_imagenet:
 		--multiprocessing-distributed \
 		--world-size 1 \
 		--rank 0 \
-		~/storage/ILSVRC
+		~/zfs/ILSVRC
