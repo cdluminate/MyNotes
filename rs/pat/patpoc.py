@@ -25,6 +25,7 @@ console = rich.get_console()
 def check_resnet(args):
     M = getattr(V.models, ag.model)().to(args.device)
     print(M)
+    M0b = IntermediateLayerGetter(M, {'bn1': 'bn1'})
     M0p = IntermediateLayerGetter(M, {'maxpool': 'maxpool'})
     M1 = IntermediateLayerGetter(M, {'layer1':'layer1'})
     M2 = IntermediateLayerGetter(M, {'layer2':'layer2'})
@@ -55,6 +56,12 @@ def check_resnet(args):
         _te = time.time()
         if iteration > 1: # warmup
             tdict[name].append(1000*(_te - _ts))  # in ms
+
+    for i in track(range(args.maxiter), description='bn1'):
+        x = th.rand(args.batchsize, 3, 224, 224).to(args.device)
+        x.requires_grad = True
+        y = _get_forward_time(M0b, 'bn1', Tforward, i)
+        _get_backward_time(M0b, 'bn1', y, Tbackward, i)
 
     for i in track(range(args.maxiter), description='maxpool'):
         x = th.rand(args.batchsize, 3, 224, 224).to(args.device)
