@@ -5,6 +5,10 @@
 \save_transient_properties true
 \origin unavailable
 \textclass article
+\begin_preamble
+\usepackage{times}
+\usepackage{microtype}
+\end_preamble
 \use_default_options true
 \maintain_unincluded_children false
 \language english
@@ -29,6 +33,7 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
+\spacing single
 \use_hyperref false
 \papersize default
 \use_geometry false
@@ -44,6 +49,7 @@
 \use_package undertilde 1
 \cite_engine basic
 \cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -83,7 +89,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="14" columns="4">
+<lyxtabular version="3" rows="16" columns="4">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -94,6 +100,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Forward Till
 \end_layout
 
@@ -103,6 +111,8 @@ Forward Till
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 ResNet18
 \end_layout
 
@@ -112,6 +122,8 @@ ResNet18
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 ResNet50
 \end_layout
 
@@ -121,6 +133,8 @@ ResNet50
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 ResNet152
 \end_layout
 
@@ -132,7 +146,7 @@ ResNet152
 \begin_inset Text
 
 \begin_layout Plain Layout
-maxpool
+bn1
 \end_layout
 
 \end_inset
@@ -141,7 +155,7 @@ maxpool
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $0.42\pm0.18$
+\begin_inset Formula $5.87\pm0.11$
 \end_inset
 
 
@@ -153,7 +167,7 @@ maxpool
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $0.40\pm0.01$
+\begin_inset Formula $5.90\pm0.25$
 \end_inset
 
 
@@ -165,7 +179,7 @@ maxpool
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $0.40\pm0.01$
+\begin_inset Formula $5.84\pm0.03$
 \end_inset
 
 
@@ -175,7 +189,54 @@ maxpool
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+maxpool
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $8.72\pm0.39$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $8.63\pm0.12$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $8.63\pm0.13$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -184,11 +245,11 @@ layer1
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $1.13\pm0.29$
+\begin_inset Formula $22.20\pm0.18$
 \end_inset
 
 
@@ -196,11 +257,11 @@ layer1
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $1.80\pm0.35$
+\begin_inset Formula $49.54\pm0.46$
 \end_inset
 
 
@@ -208,11 +269,11 @@ layer1
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $1.86\pm0.42$
+\begin_inset Formula $49.43\pm0.04$
 \end_inset
 
 
@@ -222,7 +283,7 @@ layer1
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -231,11 +292,11 @@ layer2
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $1.85\pm0.42$
+\begin_inset Formula $30.18\pm0.04$
 \end_inset
 
 
@@ -243,11 +304,11 @@ layer2
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $3.35\pm0.50$
+\begin_inset Formula $86.34\pm0.37$
 \end_inset
 
 
@@ -255,11 +316,11 @@ layer2
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $5.12\pm0.91$
+\begin_inset Formula $115.29\pm0.29$
 \end_inset
 
 
@@ -269,7 +330,7 @@ layer2
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -278,11 +339,11 @@ layer3
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $2.49\pm0.36$
+\begin_inset Formula $36.51\pm0.05$
 \end_inset
 
 
@@ -290,11 +351,11 @@ layer3
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $5.78\pm0.76$
+\begin_inset Formula $123.19\pm0.33$
 \end_inset
 
 
@@ -302,11 +363,11 @@ layer3
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $18.87\pm1.29$
+\begin_inset Formula $311.97\pm0.69$
 \end_inset
 
 
@@ -316,7 +377,7 @@ layer3
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -325,11 +386,11 @@ layer4
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $3.20\pm0.53$
+\begin_inset Formula $41.57\pm0.21$
 \end_inset
 
 
@@ -337,11 +398,11 @@ layer4
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $6.93\pm0.74$
+\begin_inset Formula $140.98\pm1.16$
 \end_inset
 
 
@@ -349,11 +410,11 @@ layer4
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $20.02\pm1.39$
+\begin_inset Formula $331.05\pm0.31$
 \end_inset
 
 
@@ -363,7 +424,7 @@ layer4
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -372,11 +433,11 @@ fc
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $3.39\pm0.62$
+\begin_inset Formula $41.76\pm0.14$
 \end_inset
 
 
@@ -384,11 +445,11 @@ fc
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $7.17\pm0.79$
+\begin_inset Formula $141.29\pm1.04$
 \end_inset
 
 
@@ -396,11 +457,11 @@ fc
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $20.24\pm1.34$
+\begin_inset Formula $331.93\pm0.29$
 \end_inset
 
 
@@ -414,6 +475,8 @@ fc
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Backward From
 \end_layout
 
@@ -423,6 +486,8 @@ Backward From
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 ResNet18
 \end_layout
 
@@ -432,6 +497,8 @@ ResNet18
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 ResNet50
 \end_layout
 
@@ -441,6 +508,8 @@ ResNet50
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 ResNet152
 \end_layout
 
@@ -452,7 +521,7 @@ ResNet152
 \begin_inset Text
 
 \begin_layout Plain Layout
-maxpool
+bn1
 \end_layout
 
 \end_inset
@@ -461,7 +530,7 @@ maxpool
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $0.96\pm0.05$
+\begin_inset Formula $18.51\pm0.82$
 \end_inset
 
 
@@ -473,7 +542,7 @@ maxpool
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $0.97\pm0.15$
+\begin_inset Formula $18.38\pm0.30$
 \end_inset
 
 
@@ -485,7 +554,7 @@ maxpool
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $0.97\pm0.10$
+\begin_inset Formula $18.37\pm0.28$
 \end_inset
 
 
@@ -495,7 +564,54 @@ maxpool
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+maxpool
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $25.21\pm0.34$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $25.27\pm0.43$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $25.34\pm0.40$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -504,11 +620,11 @@ layer1
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $2.61\pm0.17$
+\begin_inset Formula $50.26\pm2.19$
 \end_inset
 
 
@@ -516,11 +632,11 @@ layer1
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $4.83\pm0.74$
+\begin_inset Formula $103.93\pm0.77$
 \end_inset
 
 
@@ -528,11 +644,11 @@ layer1
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $4.65\pm0.25$
+\begin_inset Formula $103.56\pm0.39$
 \end_inset
 
 
@@ -542,7 +658,7 @@ layer1
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -551,11 +667,11 @@ layer2
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $4.68\pm0.69$
+\begin_inset Formula $68.48\pm0.33$
 \end_inset
 
 
@@ -563,11 +679,11 @@ layer2
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $9.63\pm0.90$
+\begin_inset Formula $191.59\pm0.93$
 \end_inset
 
 
@@ -575,11 +691,11 @@ layer2
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $13.96\pm1.03$
+\begin_inset Formula $250.43\pm1.11$
 \end_inset
 
 
@@ -589,7 +705,7 @@ layer2
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -598,11 +714,11 @@ layer3
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $6.54\pm0.64$
+\begin_inset Formula $82.25\pm0.40$
 \end_inset
 
 
@@ -610,11 +726,11 @@ layer3
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $15.96\pm1.49$
+\begin_inset Formula $270.46\pm0.90$
 \end_inset
 
 
@@ -622,11 +738,11 @@ layer3
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $472.65\pm2.06$
+\begin_inset Formula $638.21\pm1.75$
 \end_inset
 
 
@@ -636,7 +752,7 @@ layer3
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -645,11 +761,11 @@ layer4
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $8.41\pm0.99$
+\begin_inset Formula $95.28\pm0.52$
 \end_inset
 
 
@@ -657,11 +773,11 @@ layer4
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $11.34\pm5.92$
+\begin_inset Formula $317.80\pm2.80$
 \end_inset
 
 
@@ -669,11 +785,11 @@ layer4
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $538.68\pm1.50$
+\begin_inset Formula $689.01\pm0.93$
 \end_inset
 
 
@@ -683,7 +799,7 @@ layer4
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -692,11 +808,11 @@ fc
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $9.01\pm0.94$
+\begin_inset Formula $96.15\pm0.24$
 \end_inset
 
 
@@ -704,11 +820,11 @@ fc
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $12.27\pm6.07$
+\begin_inset Formula $318.44\pm0.75$
 \end_inset
 
 
@@ -716,11 +832,11 @@ fc
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $540.62\pm1.33$
+\begin_inset Formula $691.16\pm0.73$
 \end_inset
 
 
@@ -743,6 +859,7 @@ fc
 Foward/Backward Time (in ms).
  Quadro RTX 8000.
  batchsize128.
+ Image size 3x224x224.
 \end_layout
 
 \end_inset
