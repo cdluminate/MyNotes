@@ -22,3 +22,14 @@ train_imagenet:
 		--rank 0 \
 		./ILSVRC
 
+# Quadro RTX 8000 * 2 (48GB)
+train_imagenet_pat_x_bn1:
+	python3 train_imagenet.py \
+		-a resnet50 \
+		--dist-url 'tcp://127.0.0.1:12345' \
+		--dist-backend 'nccl' \
+		--multiprocessing-distributed \
+		--world-size 1 \
+		--rank 0 \
+		--pat --pati=x --patj=bn1 \
+		./ILSVRC
