@@ -63,20 +63,15 @@ def pat_resnet_from_x_to_bn1(model, x, losstype:str, *, eps:float=4./255., numst
     xr = x.clone().detach()
     xr.requires_grad = True
     for i in range(numstep):
-        y = model_x_bn1(xr)['bn1']
-        #print(f'{y.shape=}')
-        loss = pat_loss(y, losstype)
-        #print(f'{loss.shape=}', loss.item())
+        loss = pat_loss(model_x_bn1(xr)['bn1'], losstype)
         gxr = th.autograd.grad(loss, xr)[0]
-        #print(f'{gxr.shape=}')
-        xr = xr - stepsize * th.sign(gxr)
-        #xr = xr - stepsize * gxr * 2.0
+        xr = xr - stepsize * th.sign(gxr)  # XXX: PGD
+        #xr = xr - stepsize * gxr * 2.0  # XXX: GD
         xr = xr.clamp(min=x - eps, max=x + eps)
         xr = xr.clamp(min=0.0, max=1.0)
         xr = xr.clone().detach()
         xr.requires_grad = True
     return (xr - x).clone().detach()
-
 
 
 @pytest.mark.parametrize('losstype', ('flat', 'rflat', 'exp'))
