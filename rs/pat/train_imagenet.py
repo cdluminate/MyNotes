@@ -343,7 +343,9 @@ def train(train_loader, model, criterion, optimizer, epoch, device, args):
         # BEGIN MOD
         #output = model(images)
         if args.pat:
-            ptb = pat_resnet.pat_resnet(model, args.pati, args.patj, images)
+            ptb = pat_resnet.pat_resnet(
+                    model.module if args.distributed else model,
+                    args.pati, args.patj, images)
             output = model(images + ptb)
         else:
             output = model(images)
