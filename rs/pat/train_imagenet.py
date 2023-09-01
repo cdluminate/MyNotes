@@ -27,6 +27,7 @@ from torch.utils.data import Subset
 
 # BEGIN MOD
 import ilsvrc
+import pat_resnet
 # END MOD
 
 model_names = sorted(name for name in models.__dict__
@@ -34,6 +35,11 @@ model_names = sorted(name for name in models.__dict__
     and callable(models.__dict__[name]))
 
 parser = argparse.ArgumentParser(description='PyTorch ImageNet Training')
+# BEGIN MOD
+parser.add_argument('--pat', action='store_true')
+parser.add_argument('--pati', type=str, default=None)
+parser.add_argument('--patj', type=str, default=None)
+# END MOD
 parser.add_argument('data', metavar='DIR', nargs='?', default='imagenet',
                     help='path to dataset (default: imagenet)')
 parser.add_argument('-a', '--arch', metavar='ARCH', default='resnet18',
@@ -334,7 +340,14 @@ def train(train_loader, model, criterion, optimizer, epoch, device, args):
         target = target.to(device, non_blocking=True)
 
         # compute output
-        output = model(images)
+        # BEGIN MOD
+        #output = model(images)
+        if args.pat:
+            ptb = pat_resnet.pat_resnet(model, args.pati, args.patj, images)
+            output = model(images + ptb)
+        else:
+            output = model(images)
+        # END MOD
         loss = criterion(output, target)
 
         # measure accuracy and record loss
