@@ -17,12 +17,16 @@ def pat_loss(y: th.Tensor, losstype: str) -> th.Tensor:
     flat:
         x>0 py/px=+1 y=x.sign(x) -> y=|x|+c
         x<0 py/px=-1 y=x.sign(x)
+    rflat:
+        reverse flat.
     exp:
         x>0 py/px=exp(-x) y=-exp(-x) -> y=-exp(-x.sign(x))+c
         x<0 py/px=-exp(x) y=-exp(x)  --> y=-exp(-|x|)+c
     '''
     if losstype == 'flat':
         loss = y.view(-1).abs().sum()
+    elif losstype == 'rflat':
+        loss = -y.view(-1).abs().sum()
     elif losstype == 'exp':
         loss = 1 + ((y.view(-1).abs() * -1).exp() * -1).sum()
     else:
@@ -30,7 +34,7 @@ def pat_loss(y: th.Tensor, losstype: str) -> th.Tensor:
     return loss
 
 
-@pytest.mark.parametrize('losstype', ('flat', 'exp'))
+@pytest.mark.parametrize('losstype', ('flat', 'rflat', 'exp'))
 def test_pat_loss(losstype: str):
     y = th.rand(1,22,33,44)
     loss = pat_loss(y, losstype)
@@ -75,7 +79,7 @@ def pat_resnet_from_x_to_bn1(model, x, losstype:str, *, eps:float=4./255., numst
 
 
 
-@pytest.mark.parametrize('losstype', ('flat', 'exp'))
+@pytest.mark.parametrize('losstype', ('flat', 'rflat', 'exp'))
 def test_pat_resnet18_from_x_to_bn1(losstype: str):
     model = V.models.resnet18()
     x = th.rand(1,3,224,224)
@@ -97,7 +101,7 @@ def test_pat_resnet18_from_x_to_bn1(losstype: str):
     assert xr.max() <= 1.0
 
 
-@pytest.mark.parametrize('losstype', ('flat', 'exp'))
+@pytest.mark.parametrize('losstype', ('flat', 'rflat', 'exp'))
 def test_pat_resnet50_from_x_to_bn1(losstype: str):
     model = V.models.resnet50()
     x = th.rand(1,3,224,224)
