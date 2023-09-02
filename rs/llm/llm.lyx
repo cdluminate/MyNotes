@@ -11,9 +11,10 @@
 % or ...
 
 %\usecolortheme{orchis}
-\setbeamertemplate{footline}[text line]{} % makes the footer EMPTY
+\setbeamertemplate{footline}[frame number]{}
+\usefonttheme[onlymath]{serif}
 
-\setbeamercovered{transparent}
+%\setbeamercovered{transparent}
 % or whatever (possibly just delete it)
 \end_preamble
 \use_default_options false
@@ -25,7 +26,7 @@
 \font_roman "default" "default"
 \font_sans "biolinum" "default"
 \font_typewriter "default" "default"
-\font_math "auto" "auto"
+\font_math "libertine-ntxm" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
@@ -106,7 +107,7 @@ Johns Hopkins University
 
 \begin_layout Date
 Sept.
- 9 2023
+ 6 2023
 \end_layout
 
 \begin_layout Frame
@@ -208,6 +209,8 @@ status open
 
 \backslash
 vfill
+\backslash
+scriptsize
 \end_layout
 
 \end_inset
@@ -271,6 +274,8 @@ status open
 
 \backslash
 vfill
+\backslash
+scriptsize
 \end_layout
 
 \end_inset
@@ -332,6 +337,8 @@ status open
 
 \backslash
 vfill
+\backslash
+scriptsize
 \end_layout
 
 \end_inset
@@ -355,11 +362,7 @@ vfill
 status open
 
 \begin_layout Plain Layout
-Natural Language 
-\series bold
-Understanding
-\series default
- (discriminative)
+Natural Language Processing
 \end_layout
 
 \end_inset
@@ -369,7 +372,7 @@ Understanding
 
 \begin_deeper
 \begin_layout FrameSubtitle
-Requires a stronger language representation.
+Understanding tasks requires a stronger language representation.
 \end_layout
 
 \begin_layout Block
@@ -510,6 +513,8 @@ status open
 
 \backslash
 vfill
+\backslash
+scriptsize
 \end_layout
 
 \end_inset
@@ -672,11 +677,230 @@ status open
 
 \backslash
 vfill
+\backslash
+scriptsize
 \end_layout
 
 \end_inset
 
  [1] Efficient Estimation of Word Representations in Vector Space, 1301.3781
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Word2vec: extensions and further work
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\begin_inset Quotes eld
+\end_inset
+
+Learning from context
+\begin_inset Quotes erd
+\end_inset
+
+ -> computer vision?
+\end_layout
+
+\begin_layout Itemize
+The previously shown method is the skip-gram (SG) variant – predicting context
+ words given center word.
+\end_layout
+
+\begin_layout Itemize
+We can also use the continuous bag of words (CBoW) variant – predicting
+ center word given context words.
+ 
+\end_layout
+
+\begin_layout Itemize
+Negative sampling (a true pair + several 
+\begin_inset Quotes eld
+\end_inset
+
+noise
+\begin_inset Quotes erd
+\end_inset
+
+ pairs) can be used for less computational overhead in normalization term.
+\end_layout
+
+\begin_layout Itemize
+GloVe: Global Vectors for Word Representation, EMNLP2014
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+ [1] http://web.stanford.edu/class/cs224n/
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Recurrent Neural Network
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Language Modeling
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Language Modeling
+\series default
+ is the task of predicting what word comes next.
+ i.e., 
+\begin_inset Formula 
+\[
+P(x_{t+1}|x_{t},\ldots,x_{2},x_{1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Can also assign a probability to a piece of text
+\begin_inset Formula 
+\[
+P(x_{1},\ldots,x_{T})=\prod_{t=1}^{T}P(x_{t}|x_{t-1},\ldots,x_{1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+[1] Alex Graves, Supervised Sequence Labelling with Recurrent Neural Networks
+ (Book)
+\end_layout
+
+\begin_layout Frame
+[2] Improved Semantic Representations From Tree-Structured Long Short-Term
+ Memory Networks, ACL2015
+\end_layout
+
+\begin_layout Frame
+[3] http://web.stanford.edu/class/cs224n/
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Recurrent Neural Network
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+They have became the past since the introduction of transformers – but they
+ incubated attention.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+[1] A.
+ Graves, Generating Sequences With Recurrent Neural Networks
 \end_layout
 
 \begin_layout Standard
