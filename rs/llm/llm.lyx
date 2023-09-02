@@ -774,7 +774,7 @@ scriptsize
 \end_layout
 
 \begin_layout Subsection
-Recurrent Neural Network
+Language Modeling and RNN
 \end_layout
 
 \begin_layout Frame
@@ -851,6 +851,69 @@ scriptsize
 
 \begin_layout Frame
 [3] http://web.stanford.edu/class/cs224n/
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+N-Gram Language Models
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Pretty old.
+ But good to know.
+ The intuitions behind them do not change for decades.
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+n-gram examples
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+unigrams: “the”, “students”, “opened”, ”their”
+\end_layout
+
+\begin_layout Itemize
+bigrams: “the students”, “students opened”, “opened their”
+\end_layout
+
+\begin_layout Itemize
+trigrams: “the students opened”, “students opened their”
+\end_layout
+
+\begin_layout Itemize
+four-grams: “the students opened their”
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Frame
+
 \end_layout
 
 \begin_layout Standard
