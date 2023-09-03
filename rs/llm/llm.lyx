@@ -2736,6 +2736,196 @@ centering
 \end_layout
 
 \end_deeper
+\begin_layout Subsection
+Decoder-Only Pretraining
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Pretraining for Decoder-Only Model
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+All the biggest pretrained models are Decoders.
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+5cm
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Pre-training
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted19.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Block
+\begin_inset Formula 
+\begin{align*}
+h_{1},\ldots,h_{T} & =\text{Decoder}(w_{1},\ldots,w_{T})\\
+w_{t} & \sim Ah_{t-1}+b
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+5cm
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Fine-tuning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Graphics
+	filename pasted20.png
+	special width=\linewidth
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+h_{1},\ldots,h_{T} & =\text{Decoder}(w_{1},\ldots,w_{T})\\
+y & \sim Ah_{T}+b
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+GPT-1: Generative Pretrained Transformer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Improving Language Understanding by Generative Pre-Training, 2018
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+GPT-2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Language Models are Unsupervised Multitask Learners, 2018
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+GPT-3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Language Models are Few-Shot Learners, 2005.14165
+\end_layout
+
+\end_deeper
 \begin_layout Section
 Large Language Models
 \end_layout
@@ -2751,6 +2941,10 @@ Large Language Models
 \end_inset
 
 
+\end_layout
+
+\begin_layout Frame
+https://arxiv.org/pdf/2303.18223.pdf
 \end_layout
 
 \begin_layout Standard
