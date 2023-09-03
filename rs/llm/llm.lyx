@@ -2119,6 +2119,127 @@ Demonstrated not necessary by later works.
 \end_layout
 
 \end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+More on BERT
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Model Size
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+BERT-base: 12 layers, 768-dim hidden states, 12 attention heads, 110 million
+ params.
+\end_layout
+
+\begin_layout Itemize
+BERT-large: 24 layers, 1024-dim hidden states, 16 attention heads, 340 million
+ params.
+\end_layout
+
+\begin_layout Itemize
+PyTorch-ResNet50-ILSVRC: 25.6M params
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Issues
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+Does not naturally lead to autoregressive methods.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Extensions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+RoBERTa: mainly just train BERT for longer and remove next sentence prediction.
+\end_layout
+
+\begin_layout Itemize
+SpanBERT: masking contiguous spans of words makes pretraining task harder.
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -2127,6 +2248,37 @@ Demonstrated not necessary by later works.
 \end_layout
 
 \end_deeper
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+[1] RoBERTa: A Robustly Optimized BERT Pretraining Approach, 1907.11692
+\end_layout
+
+\begin_layout Frame
+[2] SpanBERT: Improving Pre-training by Representing and Predicting Spans,
+ 1907.10529
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
 \begin_layout Section
 Large Language Models
 \end_layout
