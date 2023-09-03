@@ -1168,7 +1168,8 @@ Can process any-length input.
 
 But slow since input tokens are not processed in parallel, and difficult
  to access information for long range.
- Also suffers from vanishing/exploding gradient issue.
+ Also suffers from vanishing gradient and exploding gradient issue (grad
+ clipping) issue.
 \end_layout
 
 \end_deeper
@@ -1354,6 +1355,223 @@ scriptsize
 
 \begin_layout Frame
 [1] http://web.stanford.edu/class/cs224n/
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Sequence To Sequence
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Neural Machine Translation (NMT)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+The sequence-to-sequence (seq2seq) model is an example of conditional language
+ model.
+ The first commercially successful NLP deep learning domain.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset Graphics
+	filename pasted8.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+[1] http://web.stanford.edu/class/cs224n/
+\end_layout
+
+\begin_layout Frame
+[2] Y.
+ Bengio, Neural Machine Translation by Jointly Learning to Align and Translate,
+ 1409.0473
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Information Bottleneck & Attention
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Sequence-to-sequence with attention mechanism.
+ Core Idea: on each decoder step, use direct connection to the encoder to
+ focus on a particular part of the source sequence.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset Graphics
+	filename pasted9.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+[1] Y.
+ Bengio, Neural Machine Translation by Jointly Learning to Align and Translate,
+ 1409.0473
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Attention Is All You Need (NMT)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Transformer: eschewing recurrence and instead relying entirely on an attention
+ mechanism.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted10.png
+	special width=0.4\linewidth
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+[1] Attention Is All You Need, 1706.03762
 \end_layout
 
 \begin_layout Standard
