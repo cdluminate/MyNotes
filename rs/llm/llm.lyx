@@ -1595,7 +1595,7 @@ Pre-training
 status open
 
 \begin_layout Plain Layout
-Pretrained Word Embeddings
+Only Word Embeddings is Pretrained
 \end_layout
 
 \end_inset
@@ -1674,6 +1674,10 @@ record
 : the two instances of record mean different things.
 \end_layout
 
+\begin_layout ExampleBlock
+-> See ELMo
+\end_layout
+
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -1723,7 +1727,7 @@ begin{center}
 
 \begin_inset Graphics
 	filename pasted12.png
-	special width=0.4\linewidth
+	special width=0.35\linewidth
 
 \end_inset
 
@@ -1770,6 +1774,10 @@ parameter initializations
 probability distributions
 \end_layout
 
+\begin_layout Standard
+Even if the pre-training task is simply next word prediction [1].
+\end_layout
+
 \end_deeper
 \end_deeper
 \begin_layout Frame
@@ -1795,6 +1803,71 @@ scriptsize
  Le, Semi-supervised Sequence Learning, 1511.01432
 \end_layout
 
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Feasible Pretraining Task Depends on Architecture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+We don't know which architecture is the best.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Encoder-Only
+\series default
+ Architecture
+\begin_inset Newline newline
+\end_inset
+
+Can obtain bidirectional context – but accessing future means it is infeasible
+ for language modeling.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Encoder-Decoder
+\series default
+ Architecture
+\begin_inset Newline newline
+\end_inset
+
+What is the best way to pretrain them?
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Decoder-Only
+\series default
+ Architecture
+\begin_inset Newline newline
+\end_inset
+
+Suitable for LMs.
+ Nice for generation.
+ Cannot condition on future words.
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -1907,6 +1980,145 @@ Bidirectional Encoder Representations from Transformers, 2018
 \end_layout
 
 \end_deeper
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.3cm}
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted14.png
+	special width=0.9\linewidth
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\backslash
+vspace{-0.9cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+5cm
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Task #1: Masked LM
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Randomly replace 15% of all WordPiece tokens.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+80%: w/ [MASK] token
+\end_layout
+
+\begin_layout Enumerate
+10%: w/ random token
+\end_layout
+
+\begin_layout Enumerate
+with itself 10% of the time
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Then predict the masked word.
+\end_layout
+
+\end_deeper
+\begin_layout Column
+5cm
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Task #2: Next Sentence Pred
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+Bert pretraining input is a pair of sentence
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Sentence B is the next sentence of A 50% of the time
+\end_layout
+
+\begin_layout Itemize
+Sentence B is not next sentence of A 50% of the time
+\end_layout
+
+\end_deeper
+\begin_layout Block
+Beneficial for some downstream tasks like QA and NLI.
+\end_layout
+
+\begin_layout Block
+Demonstrated not necessary by later works.
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -1914,6 +2126,7 @@ Bidirectional Encoder Representations from Transformers, 2018
 
 \end_layout
 
+\end_deeper
 \begin_layout Section
 Large Language Models
 \end_layout
