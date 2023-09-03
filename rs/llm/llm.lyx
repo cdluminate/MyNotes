@@ -2518,6 +2518,11 @@ More on T5
 \end_layout
 
 \begin_deeper
+\begin_layout FrameSubtitle
+T5 Can be finetuned to answer a wide range of questions, retrieving knowledge
+ from its parameters.
+\end_layout
+
 \begin_layout Block
 \begin_inset Argument 2
 status open
@@ -2540,6 +2545,8 @@ status open
 
 \backslash
 centering
+\backslash
+small
 \end_layout
 
 \end_inset
@@ -2685,12 +2692,19 @@ Large
 status open
 
 \begin_layout Plain Layout
-Properties
+Flan-T5: Scaling Instruction-Finetuned Language Models, 2210.11416
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Block
+
+\size footnotesize
+Instruction/chain-of-thought finetuning, while scaling number of tasks and
+ model size.
 \end_layout
 
 \begin_deeper
@@ -2702,63 +2716,26 @@ status open
 
 
 \backslash
-small 
-\end_layout
-
-\end_inset
-
-Can be finetuned to answer a wide range of questions, retrieving knowledge
- from its parameters.
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Block
-\begin_inset Argument 2
-status open
-
-\begin_layout Plain Layout
-Extensions
+centering
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-Flan-T5: Scaling Instruction-Finetuned Language Models, 2210.11416
 \end_layout
 
 \end_deeper
 \begin_layout Block
+\begin_inset Graphics
+	filename pasted18.png
+	special width=0.7\linewidth
+
+\end_inset
+
 
 \end_layout
 
 \end_deeper
-\begin_layout Frame
-
-\end_layout
-
-\begin_layout Frame
-
-\end_layout
-
-\begin_layout Frame
-
-\end_layout
-
-\begin_layout Frame
-
-\end_layout
-
 \begin_layout Section
 Large Language Models
 \end_layout
