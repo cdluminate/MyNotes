@@ -753,13 +753,18 @@ noise
 \end_layout
 
 \begin_layout Itemize
-SoTA for a long period of time
+SoTA word representations for a long period of time
 \begin_inset Newline newline
 \end_inset
 
 
 \bar under
 GloVe: Global Vectors for Word Representation, EMNLP2014
+\begin_inset Newline newline
+\end_inset
+
+ELMo: Extending a Parser to Distant Domains Using a Few Dozen Partially
+ Annotated Examples, ACL2018
 \end_layout
 
 \end_deeper
@@ -887,7 +892,6 @@ N-Gram Language Models
 \begin_layout FrameSubtitle
 Pretty old.
  But good to know.
- The intuitions behind them do not change for decades.
 \end_layout
 
 \begin_layout ExampleBlock
@@ -1513,6 +1517,7 @@ Attention Is All You Need (NMT)
 \begin_layout FrameSubtitle
 Transformer: eschewing recurrence and instead relying entirely on an attention
  mechanism.
+ Solved many previously existing issues, e.g., parallelism, interaction distance.
 \end_layout
 
 \end_deeper
@@ -1572,6 +1577,246 @@ scriptsize
 
 \begin_layout Frame
 [1] Attention Is All You Need, 1706.03762
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Pre-training
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Pretrained Word Embeddings
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+The past tense (before 2017): Start with pretrained word emb, then learn
+ to incorporate context in LSTM/Transformer on 
+\series bold
+specific task
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted11.png
+	special width=0.4\linewidth
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Example
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+Consider I 
+\series bold
+record
+\series default
+ the 
+\series bold
+record
+\series default
+: the two instances of record mean different things.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Pretraining in Modern NLP
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+
+\series bold
+All parameters are initialized via pretraining
+\series default
+ — hiding parts of the input from the model, and train the model to reconstruct
+ those parts.
+ Does not require datasets for specific task.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted12.png
+	special width=0.4\linewidth
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+This practice leads to exceptionally strong:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+representations of language
+\end_layout
+
+\begin_layout Itemize
+parameter initializations
+\end_layout
+
+\begin_layout Itemize
+probability distributions
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Reconstruction Tasks?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ExampleBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Reconstructing masked input
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+Stanford University is located in __________, California.
+\end_layout
+
+\begin_layout ExampleBlock
+I put ___ fork down on the table.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
 \end_layout
 
 \begin_layout Standard
