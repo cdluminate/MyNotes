@@ -1772,6 +1772,29 @@ probability distributions
 
 \end_deeper
 \end_deeper
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+[1] Quoc V.
+ Le, Semi-supervised Sequence Learning, 1511.01432
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -1784,7 +1807,50 @@ probability distributions
 status open
 
 \begin_layout Plain Layout
-Reconstruction Tasks?
+Pretraining for Encoder-Only Model
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+It has got bi-directional context (can condition on the future), so cannot
+ do language modeling.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted13.png
+	special width=0.5\linewidth
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
 \end_layout
 
 \end_inset
@@ -1798,7 +1864,7 @@ Reconstruction Tasks?
 status open
 
 \begin_layout Plain Layout
-Reconstructing masked input
+Reconstructing masked input: Masked LM
 \end_layout
 
 \end_inset
@@ -1815,10 +1881,32 @@ I put ___ fork down on the table.
 \end_layout
 
 \end_deeper
-\begin_layout Frame
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
 
 \end_layout
 
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Masked LM — BERT
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Bidirectional Encoder Representations from Transformers, 2018
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -1881,10 +1969,6 @@ Make Titles Informative.
 \end_inset
 
 
-\begin_inset Separator latexpar
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
@@ -1920,17 +2004,10 @@ Make Titles Informative.
 \end_inset
 
 
-\begin_inset Separator latexpar
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
 \begin_layout ColumnsTopAligned
-\begin_inset Separator latexpar
-\end_inset
-
 
 \end_layout
 
@@ -1940,16 +2017,6 @@ Make Titles Informative.
 \end_layout
 
 \begin_layout Theorem
-\begin_inset Argument 1
-status collapsed
-
-\begin_layout Plain Layout
-
-1-
-\end_layout
-
-\end_inset
-
 In left column.
 \end_layout
 
@@ -1958,16 +2025,6 @@ In left column.
 \end_layout
 
 \begin_layout Corollary
-\begin_inset Argument 1
-status collapsed
-
-\begin_layout Plain Layout
-
-2-
-\end_layout
-
-\end_inset
-
 In right column.
 \begin_inset Newline newline
 \end_inset
