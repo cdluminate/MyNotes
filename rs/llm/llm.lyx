@@ -94,7 +94,8 @@ Brief Review on Large Language Models
 \end_layout
 
 \begin_layout Subtitle
-GPT-3 is the milestone towards foundation models.
+Simple algorithms that scale well are the core of deep learning.
+ — Kaiming He
 \end_layout
 
 \begin_layout Author
@@ -420,12 +421,20 @@ Example: Semantic Textual Similarity Benchmark (STS-B)
 (2) Birdie is washing itself in the water basin.
 \end_layout
 
-\begin_layout Itemize
-Measure semantic similarity between two sentences.
+\begin_layout Standard
+Measure 
+\series bold
+semantic similarity
+\series default
+ between two sentences.
 \end_layout
 
-\begin_layout Itemize
-Evaluation is Pearson correlation w.r.t.
+\begin_layout Standard
+Evaluation is 
+\series bold
+Pearson correlation
+\series default
+ w.r.t.
  human.
 \end_layout
 
@@ -744,6 +753,12 @@ noise
 \end_layout
 
 \begin_layout Itemize
+SoTA for a long period of time
+\begin_inset Newline newline
+\end_inset
+
+
+\bar under
 GloVe: Global Vectors for Word Representation, EMNLP2014
 \end_layout
 
@@ -774,7 +789,7 @@ scriptsize
 \end_layout
 
 \begin_layout Subsection
-Language Modeling and RNN
+Language Modeling
 \end_layout
 
 \begin_layout Frame
@@ -845,12 +860,7 @@ scriptsize
 \end_layout
 
 \begin_layout Frame
-[2] Improved Semantic Representations From Tree-Structured Long Short-Term
- Memory Networks, ACL2015
-\end_layout
-
-\begin_layout Frame
-[3] http://web.stanford.edu/class/cs224n/
+[2] http://web.stanford.edu/class/cs224n/
 \end_layout
 
 \begin_layout Standard
@@ -913,6 +923,142 @@ four-grams: “the students opened their”
 \end_deeper
 \end_deeper
 \begin_layout Frame
+The we can use Markov model, using the assumption that 
+\begin_inset Formula $x_{t+1}$
+\end_inset
+
+ only depends on the preceding 
+\begin_inset Formula $n-1$
+\end_inset
+
+ words.
+\begin_inset Formula 
+\[
+P(x_{t+1}|x_{t},\ldots,x_{1})=P(x_{t+1}|x_{t},\ldots,x_{t-n+2})=\frac{P(x_{t+1},x_{t},\ldots,x_{t-n+2})}{P(x_{t},\ldots,x_{t-n+2})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Such model can be statically approximated by counting on an corpus.
+\end_layout
+
+\begin_layout Frame
+Then you can generate language from it in the auto-regressive manner.
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+ [1] http://web.stanford.edu/class/cs224n/
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Recurrent Neural Network
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Neural Language Model
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+They have became the past since the introduction of transformers – 
+\series bold
+but they incubated attention
+\series default
+.
+\end_layout
+
+\begin_layout Itemize
+Markov model
+\begin_inset Newline newline
+\end_inset
+
+A larger window will greatly increase model size, and introduce sparsity
+ issue.
+\end_layout
+
+\begin_layout Itemize
+Fixed-window neural language model
+\begin_inset Newline newline
+\end_inset
+
+MLP for predicting 
+\begin_inset Formula $x_{t+1}$
+\end_inset
+
+ based on the previous window.
+\begin_inset Newline newline
+\end_inset
+
+No longer need to store all n-grams.
+\begin_inset Newline newline
+\end_inset
+
+But fixed window is still too small.
+\end_layout
+
+\begin_layout Itemize
+We need a neural architecture that can process variable length input.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+[1] Y.
+ Bengio, A Neural Probabilistic Language Model (2000/2003)
+\end_layout
+
+\begin_layout Frame
 
 \end_layout
 
@@ -938,8 +1084,253 @@ Recurrent Neural Network
 
 \begin_deeper
 \begin_layout FrameSubtitle
-They have became the past since the introduction of transformers – but they
- incubated attention.
+Core idea: apply the same weights 
+\begin_inset Formula $W$
+\end_inset
+
+ repeatedly across the whole sequence.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset Graphics
+	filename pasted5.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+[1] A.
+ Graves, Generating Sequences With Recurrent Neural Networks
+\end_layout
+
+\begin_layout Frame
+[2] Alex Graves, Supervised Sequence Labelling with Recurrent Neural Networks
+ (Book)
+\end_layout
+
+\begin_layout Frame
+[3] Improved Semantic Representations From Tree-Structured Long Short-Term
+ Memory Networks, ACL2015
+\end_layout
+
+\begin_layout Frame
+[4] http://web.stanford.edu/class/cs224n/
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Simple RNN Language Model
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Can process any-length input.
+ Trained using cross-entropy loss.
+\begin_inset Newline newline
+\end_inset
+
+But slow since input tokens are not processed in parallel, and difficult
+ to access information for long range.
+ Also suffers from vanishing/exploding gradient issue.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename pasted6.png
+	special width=0.6\linewidth
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+[1] http://web.stanford.edu/class/cs224n/
+\end_layout
+
+\begin_layout Frame
+[2] On the difficulty of training recurrent neural networks, 1211.5063
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Long-Short Term Memory (LSTM)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Forget gate, input gate, and output gate.
+ Cell state and hidden state.
+ Dominant between 2013-2015.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted7.png
+	special width=0.8\linewidth
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Alleviated long-term dependency issue.
+ But what about even longer distance dependency?
+\end_layout
+
+\begin_layout Itemize
+LSTM is much slower than RNN.
+ The input sequence is not processed in parallel.
+\end_layout
+
+\begin_layout Itemize
+People removed several gates from the model and then it becomes Gated Recurrent
+ Unit (GRU).
 \end_layout
 
 \end_deeper
@@ -962,8 +1353,7 @@ scriptsize
 \end_layout
 
 \begin_layout Frame
-[1] A.
- Graves, Generating Sequences With Recurrent Neural Networks
+[1] http://web.stanford.edu/class/cs224n/
 \end_layout
 
 \begin_layout Standard
@@ -1060,236 +1450,6 @@ On second slide.
 status open
 
 \begin_layout Plain Layout
-Make Titles Inasdfformative.
-\end_layout
-
-\end_inset
-
-
-\begin_inset Separator latexpar
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Block
-\begin_inset Argument 1
-status collapsed
-
-\begin_layout Plain Layout
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-1-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Argument 2
-status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Separator latexpar
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Untitled block.
-\end_layout
-
-\begin_layout Itemize
-Shown on all slides.
-\end_layout
-
-\end_deeper
-\begin_layout ExampleBlock
-\begin_inset Argument 1
-status collapsed
-
-\begin_layout Plain Layout
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-2-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Argument 2
-status collapsed
-
-\begin_layout Plain Layout
-Some Example Block Title
-\end_layout
-
-\end_inset
-
-
-\begin_inset Separator latexpar
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-\begin_inset Formula $e^{i\pi}=-1$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $e^{i\pi/2}=i$
-\end_inset
-
-.
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Make Titles Informative.
- 
-\end_layout
-
-\end_inset
-
-
-\begin_inset Separator latexpar
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Example
-\begin_inset Argument 1
-status collapsed
-
-\begin_layout Plain Layout
-
-1-
-\end_layout
-
-\end_inset
-
-On first slide.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Argument 1
-status collapsed
-
-\begin_layout Plain Layout
-
-2-
-\end_layout
-
-\end_inset
-
-On second slide.
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Make Titles Informative.
- 
-\end_layout
-
-\end_inset
-
-
-\begin_inset Separator latexpar
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Theorem
-On first slide.
-\end_layout
-
-\begin_layout Pause
-
-\end_layout
-
-\begin_layout Corollary
-On second slide.
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
 Make Titles Informative.
  
 \end_layout
@@ -1354,129 +1514,5 @@ New line
 
 \end_deeper
 \end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Summary
-\end_layout
-
-\end_inset
-
-
-\begin_inset Separator latexpar
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The
-\color none
- 
-\color red
-first main message
-\color none
- of your talk in one or two lines.
-\end_layout
-
-\begin_layout Itemize
-The
-\color none
- 
-\color red
-second main message
-\color none
- of your talk in one or two lines.
-\end_layout
-
-\begin_layout Itemize
-Perhaps a
-\color none
- 
-\color red
-third message
-\color none
-, but not more than that.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-An outlook is always optional.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-vskip0pt plus.5fill
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Outlook
-\begin_inset Separator latexpar
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-What we have not done yet.
-\end_layout
-
-\begin_layout Itemize
-Even more stuff.
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Frame
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-asdfasdf
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-asdf
-\end_layout
-
 \end_body
 \end_document
