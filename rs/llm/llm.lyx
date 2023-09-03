@@ -1135,12 +1135,7 @@ scriptsize
 \end_layout
 
 \begin_layout Frame
-[3] Improved Semantic Representations From Tree-Structured Long Short-Term
- Memory Networks, ACL2015
-\end_layout
-
-\begin_layout Frame
-[4] http://web.stanford.edu/class/cs224n/
+[3] http://web.stanford.edu/class/cs224n/
 \end_layout
 
 \begin_layout Standard
@@ -1359,6 +1354,11 @@ scriptsize
 
 \begin_layout Frame
 [1] http://web.stanford.edu/class/cs224n/
+\end_layout
+
+\begin_layout Frame
+[2] Improved Semantic Representations From Tree-Structured Long Short-Term
+ Memory Networks, ACL2015
 \end_layout
 
 \begin_layout Standard
@@ -2425,6 +2425,114 @@ scriptsize
 \begin_layout Frame
 [1] T5: Exploring the Limits of Transfer Learning with a Unified Text-to-Text
  Transformer, 1910.10683
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Text-to-Text w/ Span-Corruption Pretraining
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+T5: Exploring the Limits of Transfer Learning with a Unified Text-to-Text
+ Transformer, 1910.10683
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset Graphics
+	filename pasted16.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hrulefill
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename pasted17.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+More on T5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Model Size
+\end_layout
+
+\begin_layout Frame
+Properties
+\end_layout
+
+\begin_layout Frame
+Can be finetuned to answer a wide range of questions, retrieving knowledge
+ from its parameters.
+\end_layout
+
+\begin_layout Frame
+Extensions
+\end_layout
+
+\begin_layout Frame
+Flan-T5: Scaling Instruction-Finetuned Language Models, 2210.11416
 \end_layout
 
 \begin_layout Section
