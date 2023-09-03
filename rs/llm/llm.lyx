@@ -2482,6 +2482,9 @@ hrulefill
 
 \begin_layout Frame
 
+\size small
+Every task considered is cast as feeding (task-specific) text prefix and
+ input, and then generating some target text (teacher-forcing objective).
 \end_layout
 
 \begin_layout Frame
