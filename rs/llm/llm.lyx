@@ -4802,6 +4802,23 @@ https://crfm.stanford.edu/helm/latest/
 \end_layout
 
 \begin_layout Subsection
+Non-GPT sota LLMs
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Non-GPT SoTA LLMs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 Decoding Algorithm
 \end_layout
 
