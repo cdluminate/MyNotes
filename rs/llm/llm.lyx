@@ -2788,6 +2788,16 @@ Flan-T5: Scaling Instruction-Finetuned Language Models, 2210.11416
 \end_layout
 
 \begin_layout Block
+\begin_inset CommandInset label
+LatexCommand label
+name "page:flan-t5"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
 
 \size footnotesize
 Instruction/chain-of-thought finetuning, while scaling number of tasks and
@@ -2819,6 +2829,10 @@ centering
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Block
 
 \end_layout
 
@@ -4308,7 +4322,7 @@ Emergent Properties (ICL)
 status open
 
 \begin_layout Plain Layout
-LLM :: In-Context Learning (ICL) a.k.a.
+In-Context Learning a.k.a.
  Prompt Engineering
 \end_layout
 
@@ -4317,6 +4331,17 @@ LLM :: In-Context Learning (ICL) a.k.a.
 
 \end_layout
 
+\begin_deeper
+\begin_layout FrameSubtitle
+ICL is LLM's emergent property when model is large enough.
+\begin_inset Newline newline
+\end_inset
+
+Should you try prompt engineering a small LM, you'll find the model not
+ smart at all.
+\end_layout
+
+\end_deeper
 \begin_layout Frame
 GPT-3: supply a few examples in context.
 \end_layout
@@ -4740,7 +4765,7 @@ Fine-Tuning LLMs
 status open
 
 \begin_layout Plain Layout
-LLM :: Instruction Tuning
+LLM :: Instruction Tuning w/ Human Feedback
 \end_layout
 
 \end_inset
@@ -4748,8 +4773,73 @@ LLM :: Instruction Tuning
 
 \end_layout
 
+\begin_deeper
+\begin_layout FrameSubtitle
+InstructGPT: Training language models to follow instructions with human
+ feedback, 2203.02155
+\end_layout
+
+\begin_layout Standard
+GPT-3 is not well aligned to human intent.
+ Sometimes generates unsafe answers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted34.png
+	special width=0.6\linewidth
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Frame
-InstructGPT
+
+\bar under
+Instruction Finetuning:
+\bar default
+ collect examples of (instruction, output) pairs across many tasks and ft
+ the LM.
+ See Flan-T5 (page 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "page:flan-t5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) for examples.
+ Evaluate on unseen task.
 \end_layout
 
 \begin_layout Standard
@@ -4764,7 +4854,7 @@ InstructGPT
 status open
 
 \begin_layout Plain Layout
-RLHF: Reinforcement Learning from Human Feedback 
+RLHF: Reinforcement Learning from Human Feedback
 \end_layout
 
 \end_inset
@@ -4772,6 +4862,13 @@ RLHF: Reinforcement Learning from Human Feedback
 
 \end_layout
 
+\begin_deeper
+\begin_layout FrameSubtitle
+InstructGPT: Training language models to follow instructions with human
+ feedback, 2203.02155
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -4912,17 +5009,47 @@ On second slide.
 
 \end_layout
 
+\begin_layout Section
+Closing
+\end_layout
+
 \begin_layout Frame
 \begin_inset Argument 4
 status open
 
 \begin_layout Plain Layout
-Summary
+Future Topics
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+What is OpenAI doing recently? Secretly training GPT-5?
+\begin_inset Newline newline
+\end_inset
+
+https://openai.com/research
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+More natural ways to prompt stable diffusion.
+\end_layout
+
+\begin_layout Frame
+Detecting and source-tracking AI-generated contents.
+\end_layout
+
+\begin_layout Frame
+Safety and ethics: reduce NSFW from Stable diffusion, prevent LLM jailbreaking.
 \end_layout
 
 \begin_deeper
