@@ -161,6 +161,10 @@ Part I: Natural Language Processing
 Large portion borrowed from CS224N (Stanford).
 \end_layout
 
+\begin_layout Quote
+NLP = Natural Language Understanding + Generation.
+\end_layout
+
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -3615,6 +3619,153 @@ The post-training alignment process results in improved performance on measures
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Natural Langauge Genration
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Natural Language Generation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Previous discussion only covers a small part of generation.
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+5.5cm
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Plot Generation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Graphics
+	filename pasted29.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+5.5cm
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Visual Description
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted30.png
+	special width=0.6\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+[1] Outline-Conditioned Generation with Dynamic Plot State Tracking, EMNLP20
+\end_layout
+
+\begin_layout Frame
+[2] A Hierarchical Approach for Generating Descriptive Image Paragraphs,
+ CVPR17
+\end_layout
+
 \begin_layout Section
 Large Language Models
 \end_layout
@@ -3893,6 +4044,52 @@ f
 status open
 
 \begin_layout Plain Layout
+LLM :: Generated Text Detection
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LLM :: Security & Ethics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+For instance, jail break attacks to bypass the NSFW/Ethics check.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Make Titles Informative.
 \end_layout
 
@@ -3927,8 +4124,7 @@ On second slide.
 status open
 
 \begin_layout Plain Layout
-Make Titles Informative.
- 
+Summary
 \end_layout
 
 \end_inset
@@ -3964,5 +4160,25 @@ New line
 
 \end_deeper
 \end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Q&A Session
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
