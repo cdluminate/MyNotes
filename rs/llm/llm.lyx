@@ -3104,9 +3104,106 @@ GPT-2
 
 \begin_deeper
 \begin_layout FrameSubtitle
-Language Models are Unsupervised Multitask Learners, 2018
+Language Models are Unsupervised Multitask Learners, 2019
 \end_layout
 
+\begin_layout ExampleBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+TL;DR: w/ Larger dataset, LM begins to learn sup tasks w/o sup label.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+GPT-2 is a (117M, 345M, 762M, 1.5B) decoder model, almost same as GPT architectur
+e.
+\end_layout
+
+\begin_layout Itemize
+Building LMs which learn to perform tasks from their naturally occuring
+ demonstrations.
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+5.5cm
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Pre-training
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+Same as GPT-1.
+\end_layout
+
+\begin_layout Block
+Although there should be something hidden in details.
+\end_layout
+
+\begin_layout Column
+5.5cm
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Fine-tuning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+Same as GPT-1.
+\end_layout
+
+\begin_layout Block
+Although there should be something hidden in details.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
