@@ -4304,8 +4304,36 @@ Chain-of-Thought Prompting
 \begin_deeper
 \begin_layout FrameSubtitle
 One of LLM's emergent abilities.
- CoT useful especially for difficult tasks involving richer, multi-step
- reasoning.
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+A series of intermediate reasoning steps – significantly improves the ability
+ of large language models to perform complex reasoning.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted32.png
+	special width=\linewidth
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
