@@ -3890,7 +3890,7 @@ Vocab
 \begin_layout ExampleBlock
 \begin_inset Formula 
 \begin{align*}
-P(y_{t}|\{y_{<t}\}) & =\frac{\exp(S_{w})}{\sum_{w'\in V}\exp(S_{w'})}\\
+P(y_{t}=w|\{y_{<t}\}) & =\frac{\exp(S_{w})}{\sum_{w'\in V}\exp(S_{w'})}\\
 \hat{y}_{t} & \leftarrow P(y_{t}|y_{1},\ldots y_{t-1})\\
 \hat{y}_{t+1} & \leftarrow P(y_{t+1}|y_{1},\ldots,y_{t-1},\hat{y}_{t})\\
 \hat{y}_{t+2} & \leftarrow P(y_{t+2}|y_{1},\ldots,y_{t-1},\hat{y}_{t},\hat{y}_{t+1})\\
@@ -3933,6 +3933,219 @@ Decoding Algorithms
 \end_inset
 
 
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Decoding algorithm defines a function to select to token from the distribution.
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Decoding algorithm 
+\begin_inset Formula $g(\cdot)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset Formula 
+\[
+\hat{y}_{t}=g\big\{ P(y_{t}|\{y_{<t}\})\big\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Greedy Decoding: highest probability for the next token at each step.
+\begin_inset Formula 
+\[
+\hat{y}_{t}=\arg\max_{w\in V}P(y_{t}=w|\{y_{<t}\})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Beam Search: find strings that maximizes the log-prob, with wider exploration
+ of candidates.
+\end_layout
+
+\begin_layout AlertBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Issue
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Good for low-entropy tasks like MT and summarization.
+\end_layout
+
+\begin_layout Standard
+Bad for open-ended generation – most likely going repetitive.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Decoding :: Random Sampling
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Sample a token from the token distribution
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Formula 
+\[
+\hat{y}_{t}\sim P(y_{t}=w|\{y_{<t}\})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Vanilla sampling may fall into the long-tail of the distribution (the long
+ tail has a considerable mass), where many tokens are really wrong.
+\end_layout
+
+\begin_layout Itemize
+Top-k sampling.
+ Only sampling within the top-k (e.g., 50) tokens.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Larger 
+\begin_inset Formula $k$
+\end_inset
+
+ leads to more diverse but risky outputs.
+\end_layout
+
+\begin_layout Itemize
+Smaller 
+\begin_inset Formula $k$
+\end_inset
+
+ leads to safe but generic outputs.
+\end_layout
+
+\begin_layout Itemize
+Not adaptive to the distribution shape,either too small or too large.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Top-
+\begin_inset Formula $p$
+\end_inset
+
+ (nucleus) sampling.
+ Sampling from the tokens in top-
+\begin_inset Formula $p$
+\end_inset
+
+ cumulative probability mass.
+\end_layout
+
+\begin_layout Itemize
+Other decoding algorithms...
+ (re-ranking; will cover it later)
+\end_layout
+
+\begin_layout Itemize
+Scaling randomness through 
+\series bold
+Temperature
+\series default
+ (See Hinton distillation)
+\begin_inset Formula 
+\[
+P(y_{t}=w|\ldots)=\frac{\exp(S_{w}/\tau)}{\sum_{w'\in V}\exp(S_{w'}/\tau)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+[1] The Curious Case of Neural Text Degeneration, ICLR20
+\end_layout
+
+\begin_layout Frame
+[2] G.
+ Hinton, Distilling the Knowledge in a Neural Network, NIPSw2014
 \end_layout
 
 \begin_layout Section
@@ -4148,6 +4361,63 @@ LLM :: Evaluation Metrics
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LLM :: Decoding Algorithms
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Performance improvements for 
+\begin_inset Quotes eld
+\end_inset
+
+free
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+The Re-ranking Paradigm for Decoding
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+1.
+ Decode a bunch of sequences.
+\end_layout
+
+\begin_layout Block
+2.
+ Define a score to approximate sequence quality and re-rank by this score.
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
