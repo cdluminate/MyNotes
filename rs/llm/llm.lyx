@@ -2873,7 +2873,215 @@ GPT-1: Generative Pretrained Transformer
 Improving Language Understanding by Generative Pre-Training, 2018
 \end_layout
 
+\begin_layout ExampleBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+TL;DR: generative pre-training and discriminative fine-tuning.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+Transformer Decoder w/ 12 layers.
+ 117M params.
+ Trained on BooksCorpus (> 7k books).
+ Contains long spans of contiguous text (long distance dependency learning).
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+5.5cm
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Unsupervised Pretraining
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+Given an unsup corpus of tokens 
+\begin_inset Formula 
+\[
+U=\{u_{1},\ldots,u_{n}\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+Standard LM for maximizing likelihood
+\begin_inset Formula 
+\[
+L_{1}(U)=\sum_{i}\log P(u_{i}|u_{i-k},\ldots,u_{i-1};\Theta)
+\]
+
+\end_inset
+
+the 
+\begin_inset Formula $k$
+\end_inset
+
+ is context window size.
+\end_layout
+
+\begin_layout Column
+5.5cm
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Supervised Fine-tuning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+Dataset 
+\begin_inset Formula $C$
+\end_inset
+
+ where 
+\begin_inset Formula $x_{1},\ldots,x_{m}$
+\end_inset
+
+ has label 
+\begin_inset Formula $y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Block
+Last block activation 
+\begin_inset Formula $h_{m}^{l}$
+\end_inset
+
+ for prediction
+\begin_inset Formula 
+\begin{align*}
+P(y|x_{1},\ldots,x_{m}) & =\text{softmax}(h_{m}^{l}W_{y})
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+L_{2}(C)=\sum_{(x,y)}\log P(y|x_{1},\ldots,x_{m})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+Pretraining as regularization
+\begin_inset Formula 
+\[
+L_{3}(C)=L_{2}(C)+\lambda\times L_{1}(C)
+\]
+
+\end_inset
+
+
+\end_layout
+
 \end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+GPT-1 Architecture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Generative model can learn good representation for discriminative task.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset Graphics
+	filename pasted21.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -2926,6 +3134,32 @@ Language Models are Few-Shot Learners, 2005.14165
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+GPT-4
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+GPT-4 Technical Report, 2303.08774
+\end_layout
+
+\end_deeper
 \begin_layout Section
 Large Language Models
 \end_layout
@@ -2947,6 +3181,58 @@ Large Language Models
 https://arxiv.org/pdf/2303.18223.pdf
 \end_layout
 
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Open LLM Leaderboard (HuggingFace)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Holistic Evaluation of Language Models (Stanford)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+https://crfm.stanford.edu/helm/latest/
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
