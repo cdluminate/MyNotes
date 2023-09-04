@@ -3597,11 +3597,51 @@ TL;DR: ChatGPT (2022) is fine-tuned version of GPT-3.5
 No much technical details are disclosed from OpenAI.
 \end_layout
 
+\begin_layout Itemize
+(Chat) gpt-3.5-turbo
+\end_layout
+
+\begin_layout Itemize
+(Text completion) text-davinci-003
+\end_layout
+
+\begin_layout Itemize
+(Text completion) text-davinci-002
+\end_layout
+
+\begin_layout Standard
+FYI: text-davinci-001 is InstructGPT-3, not included in GPT-3.5.
+\end_layout
+
 \end_deeper
 \begin_layout Frame
+InstructGPT will be covered later.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
+\begin_layout Standard
+[1] https://en.wikipedia.org/wiki/GPT-3#GPT-3.5
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -4220,7 +4260,7 @@ Is scaling up everything the ultimate answer towards intelligence?
 \end_layout
 
 \begin_layout Subsection
-Scaling Law & Emergent Property
+Scaling Law
 \end_layout
 
 \begin_layout Frame
@@ -4257,6 +4297,10 @@ Chinchilla scaling law
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Emergent Properties (ICL)
 \end_layout
 
 \begin_layout Frame
@@ -4360,10 +4404,177 @@ scriptsize
  2201.11903
 \end_layout
 
-\begin_layout Frame
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
 
 \end_layout
 
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Zero-Shot Chain-of-Thought
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+LLMs are decent zero-shot reasoners by simply adding 
+\bar under
+“Let’s think step by step”
+\bar default
+ before each answer.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted33.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout AlertBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Two prompts make a NeurIPS 2022 paper?
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+[1] Large Language Models are Zero-Shot Reasoners, NeurIPS 2022 (2005.11916)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+New Dark Art of 
+\begin_inset Quotes eld
+\end_inset
+
+Prompt Engineering?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Asking LLM for reasoning
+\end_layout
+
+\begin_layout Itemize
+Stable diffusion prompts (e.g., artstation, depth of field, 4k, masterpiece)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+Jail-breaking
+\begin_inset Quotes erd
+\end_inset
+
+ LLMs (societal impact & ethics)
+\end_layout
+
+\begin_layout Itemize
+Use google code header (e.g., 
+\begin_inset Quotes eld
+\end_inset
+
+Copyright (C) 2022, Google LLC
+\begin_inset Quotes erd
+\end_inset
+
+) to generate more 
+\begin_inset Quotes eld
+\end_inset
+
+professional
+\begin_inset Quotes erd
+\end_inset
+
+ code?
+\end_layout
+
+\begin_layout Itemize
+etc.
+\end_layout
+
+\begin_layout AlertBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+What about visual prompting in computer vision?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout AlertBlock
+Prompt engineering is an emergent property.
+\end_layout
+
+\begin_layout AlertBlock
+Does this really work for small-sized vision models?
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -4535,6 +4746,10 @@ LLM :: Instruction Tuning
 \end_inset
 
 
+\end_layout
+
+\begin_layout Frame
+InstructGPT
 \end_layout
 
 \begin_layout Standard
