@@ -3204,6 +3204,35 @@ Although there should be something hidden in details.
 \end_layout
 
 \end_deeper
+\begin_layout ExampleBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Limitations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+Tends to 
+\begin_inset Quotes eld
+\end_inset
+
+stray off topic
+\begin_inset Quotes erd
+\end_inset
+
+ when generating long text.
+\end_layout
+
+\begin_layout ExampleBlock
+Can become repetitive or nonsensical when generating long text.
+\end_layout
+
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -3256,6 +3285,25 @@ GPT-4
 GPT-4 Technical Report, 2303.08774
 \end_layout
 
+\begin_layout ExampleBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+TL;DR: multi-modality extension
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Did not present much useful information other than showing off.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Section
 Large Language Models
