@@ -3836,7 +3836,102 @@ training
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
 \begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Autoregressive Generation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+GPT Family is auto-regressive.
+ Note, non-autoregressive LM models do exist.
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Model 
+\begin_inset Formula $f(\cdot),$
+\end_inset
+
+Vocab 
+\begin_inset Formula $V$
+\end_inset
+
+, Score 
+\begin_inset Formula $S=f(\{y_{<t}\},\theta\}\in R^{V}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset Formula 
+\begin{align*}
+P(y_{t}|\{y_{<t}\}) & =\frac{\exp(S_{w})}{\sum_{w'\in V}\exp(S_{w'})}\\
+\hat{y}_{t} & \leftarrow P(y_{t}|y_{1},\ldots y_{t-1})\\
+\hat{y}_{t+1} & \leftarrow P(y_{t+1}|y_{1},\ldots,y_{t-1},\hat{y}_{t})\\
+\hat{y}_{t+2} & \leftarrow P(y_{t+2}|y_{1},\ldots,y_{t-1},\hat{y}_{t},\hat{y}_{t+1})\\
+\ldots & \ldots\\
+\mathcal{L} & =-\sum_{t=1}^{T}\log P(y_{t}^{*}|\{y_{<t}^{*}\})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+For non-open-ended tasks (e.g., NMT), we typically use encoder-decoder model,
+ where the autoregressive model serves as the decoder, and the bidirectional
+ encoder deals with the inputs.
+\end_layout
+
+\begin_layout Itemize
+For open-ended tasks (e.g., story generation), autoregressive generation is
+ often the only component.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Decoding Algorithms
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
