@@ -381,7 +381,7 @@ Understanding tasks requires a stronger language representation.
 status open
 
 \begin_layout Plain Layout
-GLUE/SuperGLUE Benchmarks
+GLUE/SuperGLUE Benchmarks (understanding)
 \end_layout
 
 \end_inset
@@ -3058,7 +3058,7 @@ L_{3}(C)=L_{2}(C)+\lambda\times L_{1}(C)
 status open
 
 \begin_layout Plain Layout
-GPT-1 Architecture
+GPT-1 :: Architecture
 \end_layout
 
 \end_inset
@@ -3259,7 +3259,151 @@ GPT-3
 Language Models are Few-Shot Learners, 2005.14165
 \end_layout
 
+\begin_layout ExampleBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+TL;DR: Very large LM 
+\begin_inset Quotes eld
+\end_inset
+
+learns
+\begin_inset Quotes erd
+\end_inset
+
+ without gradient within contexts
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+GPT-3 is 175B model (800GB disk), using the same arch as GPT-2, evaluated
+ without fine-tuning.
+\end_layout
+
+\begin_layout ExampleBlock
+Apart from sampling from LM's distribution, and fine-tuning them and take
+ their distributions, very large LMs enables in-context learning (as well
+ as prompt engineering).
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+6cm
+\end_layout
+
 \end_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Graphics
+	filename pasted23.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+5cm
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+\begin_inset Graphics
+	filename pasted24.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+GPT-3 :: Model Size
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Larger model -> larger batch size but smaller learning rate.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset Graphics
+	filename pasted22.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+GPT-3 :: Scaling Effect
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -3422,6 +3566,14 @@ LLM :: Scaling Law
 
 \end_layout
 
+\begin_layout Frame
+GPT-3 scaling law
+\end_layout
+
+\begin_layout Frame
+Chinchilla scaling law
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -3508,6 +3660,10 @@ Prefix Tuning
 
 \begin_layout Frame
 Prompt Tuning
+\end_layout
+
+\begin_layout Frame
+Chain-of-thought prompting
 \end_layout
 
 \begin_layout Frame
