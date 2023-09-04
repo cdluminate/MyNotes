@@ -133,8 +133,40 @@ LatexCommand tableofcontents
 
 \end_layout
 
+\begin_layout Frame
+
+\end_layout
+
 \begin_layout Section
 Natural Langauge Processing
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\bar under
+Natural Language Processing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+Large portion borrowed from CS224N (Stanford).
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Frame
@@ -829,10 +861,22 @@ P(x_{t+1}|x_{t},\ldots,x_{2},x_{1})
 \end_layout
 
 \begin_layout Itemize
-Can also assign a probability to a piece of text
+Can also assign a probability to a piece of text (chain rule)
 \begin_inset Formula 
 \[
 P(x_{1},\ldots,x_{T})=\prod_{t=1}^{T}P(x_{t}|x_{t-1},\ldots,x_{1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Flexible enough (chain rule) to deal with issues like
+\begin_inset Formula 
+\[
+P(y_{1},\ldots,y_{M}|x_{1},\ldots,x_{T})=\prod_{m=1}^{M}P(y_{1},\ldots,y_{m}|x_{1},\ldots,x_{T})
 \]
 
 \end_inset
@@ -3360,7 +3404,7 @@ Apart from sampling from LM's distribution, and fine-tuning them and take
 status open
 
 \begin_layout Plain Layout
-GPT-3 :: Model Size
+GPT-3 :: In-Context Learning (Inference)
 \end_layout
 
 \end_inset
@@ -3370,7 +3414,85 @@ GPT-3 :: Model Size
 
 \begin_deeper
 \begin_layout FrameSubtitle
-Larger model -> larger batch size but smaller learning rate.
+No gradient update at all.
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+4cm
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Graphics
+	filename pasted25.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+4cm
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Graphics
+	filename pasted26.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+4cm
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Graphics
+	filename pasted27.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+GPT-3 :: Model Size Scaling Law
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Larger model -> requires larger batch size but smaller learning rate.
 \end_layout
 
 \end_deeper
@@ -3378,6 +3500,16 @@ Larger model -> larger batch size but smaller learning rate.
 \begin_inset Graphics
 	filename pasted22.png
 	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename pasted28.png
+	special width=0.8\linewidth
 
 \end_inset
 
@@ -3396,11 +3528,34 @@ Larger model -> larger batch size but smaller learning rate.
 status open
 
 \begin_layout Plain Layout
-GPT-3 :: Scaling Effect
+GPT-3.5
 \end_layout
 
 \end_inset
 
+
+\end_layout
+
+\begin_deeper
+\begin_layout ExampleBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+TL;DR: ChatGPT (2022) is fine-tuned version of GPT-3.5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+No much technical details are disclosed from OpenAI.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
 
 \end_layout
 
@@ -3434,7 +3589,7 @@ GPT-4 Technical Report, 2303.08774
 status open
 
 \begin_layout Plain Layout
-TL;DR: multi-modality extension
+TL;DR: larger scale; multi-modality extension; human-level
 \end_layout
 
 \end_inset
@@ -3448,6 +3603,17 @@ Did not present much useful information other than showing off.
 \end_layout
 
 \end_deeper
+\begin_layout Itemize
+GPT-4 is a Transformerbased model pre-trained to predict the next token
+ in a document.
+\end_layout
+
+\begin_layout Itemize
+The post-training alignment process results in improved performance on measures
+ of factuality and adherence to desired behavior.
+ 
+\end_layout
+
 \end_deeper
 \begin_layout Section
 Large Language Models
@@ -3458,7 +3624,35 @@ Large Language Models
 status open
 
 \begin_layout Plain Layout
+
+\bar under
 Large Language Models
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+Is scaling up everything the answer towards intelligence?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LLM :: Overview
 \end_layout
 
 \end_inset
