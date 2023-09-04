@@ -93,11 +93,6 @@
 Brief Review on Large Language Models
 \end_layout
 
-\begin_layout Subtitle
-Simple algorithms that scale well are the core of deep learning.
- — Kaiming He
-\end_layout
-
 \begin_layout Author
 Mo Zhou
 \begin_inset Newline newline
@@ -109,6 +104,110 @@ Johns Hopkins University
 \begin_layout Date
 Sept.
  6 2023
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Quotation
+Simple algorithms that scale well are the core of deep learning.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+flushright
+\end_layout
+
+\end_inset
+
+— Kaiming He
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+[1] Masked Autoencoders Are Scalable Vision Learners, 2111.06377
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Quoted from Section 6 
+\begin_inset Quotes eld
+\end_inset
+
+Discussion and Conclusion
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Frame
@@ -5107,6 +5206,10 @@ Congrats!
 \end_inset
 
 You have gone through not only CS224N, but also some latest papers.
+\end_layout
+
+\begin_layout Quote
+You are able to read LLM papers afterwards without much doubt.
 \end_layout
 
 \end_deeper
