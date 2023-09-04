@@ -4194,6 +4194,16 @@ LLM :: Overview
 \end_layout
 
 \begin_layout Frame
+Falcon-7B-Instruct: bf16 precision, inference requires 1GPU w/ 16GB.
+ Disk space 14GB.
+\end_layout
+
+\begin_layout Frame
+Falcon-40B-Instruct: bf16 precision, inference requires 4GPU w/ 24GB in
+ PipelineParallel
+\end_layout
+
+\begin_layout Frame
 https://arxiv.org/pdf/2303.18223.pdf
 \end_layout
 
