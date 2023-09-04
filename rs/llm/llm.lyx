@@ -4161,7 +4161,11 @@ Decoding algorithm
 \end_layout
 
 \begin_layout Itemize
-Greedy Decoding: highest probability for the next token at each step.
+
+\series bold
+Greedy Decoding
+\series default
+: highest probability for the next token at each step.
 \begin_inset Formula 
 \[
 \hat{y}_{t}=\arg\max_{w\in V}P(y_{t}=w|\{y_{<t}\})
@@ -4173,8 +4177,12 @@ Greedy Decoding: highest probability for the next token at each step.
 \end_layout
 
 \begin_layout Itemize
-Beam Search: find strings that maximizes the log-prob, with wider exploration
- of candidates.
+
+\series bold
+Beam Search
+\series default
+: find strings that maximizes the log-prob, with wider exploration of candidates.
+ Frequently used in tasks like NMT.
 \end_layout
 
 \begin_layout AlertBlock
@@ -4873,7 +4881,7 @@ The Re-ranking Paradigm for Decoding
 
 \end_deeper
 \begin_layout Subsection
-Fine-Tuning LLMs
+Fine-Tuning & Alignment
 \end_layout
 
 \begin_layout Frame
@@ -4900,6 +4908,21 @@ GPT-3 is not well aligned to human intent.
  Sometimes generates unsafe answers.
 \end_layout
 
+\end_deeper
+\begin_layout Frame
+This is due to the training task (predicting next token on web-based corpus)
+ is different from 
+\begin_inset Quotes eld
+\end_inset
+
+follow the user's instructions helpfully and safely
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -4916,7 +4939,7 @@ begin{center}
 
 \begin_inset Graphics
 	filename pasted34.png
-	special width=0.6\linewidth
+	special width=0.7\linewidth
 
 \end_inset
 
@@ -4982,6 +5005,173 @@ RLHF: Reinforcement Learning from Human Feedback
 \begin_layout FrameSubtitle
 InstructGPT: Training language models to follow instructions with human
  feedback, 2203.02155
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\bar under
+TL;DR: use human preferences as a reward signal to fine-tune our models.
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename pasted35.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+RLHF :: Reward Modeling & Reinforcement LG
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+InstructGPT: Training language models to follow instructions with human
+ feedback, 2203.02155
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Supervised Fine-Tuning (SFT): Start with GPT-3 on the instruction dataset.
+\end_layout
+
+\begin_layout Enumerate
+Reward Modeling (RM): 6B model, denoted as 
+\begin_inset Formula $r_{\theta}(x,y_{l})$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+input=(prompt, response), output=scalar reward.
+\begin_inset Newline newline
+\end_inset
+
+A labler is presented with 
+\begin_inset Formula $K=4\sim9$
+\end_inset
+
+ responses to rank – i.e., 
+\begin_inset Formula $(_{2}^{K})$
+\end_inset
+
+ comparisons.
+\begin_inset Formula 
+\[
+\mathcal{L}_{\text{RM}}(\theta)=\frac{1}{(_{2}^{K})}\mathbb{E}_{(x,y_{w},y_{l})\sim D}\Big\{\log\big(\sigma[r_{\theta}(x,y_{w})-r_{\theta}(x,y_{l})]\big)\Big\}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $x$
+\end_inset
+
+ is prompt, 
+\begin_inset Formula $y$
+\end_inset
+
+ is completion.
+ The 
+\begin_inset Formula $y_{w}$
+\end_inset
+
+ is prefered out of the pair 
+\begin_inset Formula $(y_{w},y_{l})$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $D$
+\end_inset
+
+ is dataset.
+\end_layout
+
+\begin_layout Enumerate
+Reinforcement Learning w/ PPO:
+\begin_inset Newline newline
+\end_inset
+
+Environment: bandit environment which presents a random customer prompt
+ and expects a response to prompt.
+\begin_inset Newline newline
+\end_inset
+
+Also add per-token KL penalty from SFT model at each token to mitigate RM
+ over-optimization 
+\begin_inset Formula 
+\begin{align*}
+\text{Obj}(\phi) & =\mathbb{E}_{(x,y)\sim D_{\pi_{\phi}^{RL}}}\big[r_{\theta}(x,y)-\beta\log(\pi_{\phi}^{RL}(y|x)/\pi^{SFT}(y|x))\big]\\
+ & +\gamma\mathbb{E}_{x\sim D_{pretrain}}\big[\log(\pi_{\phi}^{RL}(x))\big]
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\pi_{\phi}^{RL}$
+\end_inset
+
+ is RL policy, 
+\begin_inset Formula $\pi^{SFT}$
+\end_inset
+
+ is supervised trained model, 
+\begin_inset Formula $D_{pretrain}$
+\end_inset
+
+ is pretrain distribution, 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is KL reward coef.
+ For PPO model, 
+\begin_inset Formula $\gamma=0$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ term introduces pretraining gradients in order to fix performance regression
+ on public NLP tasks.
 \end_layout
 
 \end_deeper
