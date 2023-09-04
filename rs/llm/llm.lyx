@@ -3766,6 +3766,80 @@ scriptsize
  CVPR17
 \end_layout
 
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Categorization of NLG Tasks
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+One way of formalizing categorization this is by 
+\series bold
+entropy
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset Graphics
+	filename pasted31.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Open-ended generation
+\begin_inset Newline newline
+\end_inset
+
+the output distribution still has high freedom
+\end_layout
+
+\begin_layout Itemize
+Non-open-ended generation
+\begin_inset Newline newline
+\end_inset
+
+the input mostly determines the output generation.
+\end_layout
+
+\begin_layout Itemize
+The two types of tasks require different 
+\series bold
+decoding
+\series default
+ and/or 
+\series bold
+training
+\series default
+ approaches.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
 \begin_layout Section
 Large Language Models
 \end_layout
@@ -4180,5 +4254,15 @@ Q&A Session
 
 \end_layout
 
+\begin_deeper
+\begin_layout Quote
+Congrats!
+\begin_inset Newline newline
+\end_inset
+
+You have gone through not only CS224N, but also some latest papers.
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
