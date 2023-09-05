@@ -296,7 +296,7 @@ Part I: Natural Language Processing
 
 \begin_deeper
 \begin_layout Quote
-Large portion borrowed from CS224N (Stanford).
+A portion of this part is borrowed from CS224N (Stanford).
 \end_layout
 
 \begin_layout Quote
@@ -3977,6 +3977,79 @@ scriptsize
 
 \end_layout
 
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Why does next-word prediction work?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Taken from Jensen Huang and Ilya's Talk: https://lifearchitect.ai/ilya/
+\end_layout
+
+\begin_layout Quotation
+
+\size small
+So, I’d like to take a small detour and to give an analogy that will hopefully
+ clarify why more accurate prediction of the next word leads to more understandi
+ng, real understanding.
+ Let’s consider an example.
+ 
+\bar under
+Say you read a detective novel.
+ It’s like complicated plot, a storyline, different characters, lots of
+ events, mysteries like clues, it’s unclear.
+ Then, let’s say that at the last page of the book, the detective has gathered
+ all the clues, gathered all the people
+\bar default
+ and saying, “okay, I’m going to reveal the identity of whoever committed
+ the crime and that person’s name is”.
+ 
+\bar under
+Predict that word.
+
+\bar default
+ Predict that word, exactly.
+ My goodness.
+ Right? Yeah, right.
+ Now, there are many different words.
+ But predicting those words better and better and better, the understanding
+ of the text keeps on increasing.
+ GPT-4 predicts the next word better.
+\end_layout
+
+\begin_layout Quotation
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+flushright
+\end_layout
+
+\end_inset
+
+– Ilya
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Natural Langauge Genration
 \end_layout
@@ -4805,776 +4878,6 @@ scriptsize
 \end_layout
 
 \begin_layout Subsection
-Emergent Properties (e.g., ICL)
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-In-Context Learning (ICL) a.k.a.
- Prompt Engineering
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout FrameSubtitle
-One of LLM's emergent properties when model is large enough.
- Small model, e.g., BERT do not exhibit it.
-\begin_inset Newline newline
-\end_inset
-
-Should you try prompt engineering a small LM, you'll find the model not
- smart at all.
-\end_layout
-
-\end_deeper
-\begin_layout Frame
-
-\end_layout
-
-\begin_layout Frame
-GPT-3: supply a few examples in context.
-\end_layout
-
-\begin_layout Frame
-Chain-of-thought prompting.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Chain-of-Thought Prompting
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout FrameSubtitle
-One of LLM's emergent abilities.
-\end_layout
-
-\begin_layout Block
-\begin_inset Argument 2
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-A series of intermediate reasoning steps – significantly improves the ability
- of large language models to perform complex reasoning.
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Graphics
-	filename pasted32.png
-	special width=\linewidth
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Frame
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-vfill
-\backslash
-scriptsize
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-[1] Chain-of-Thought Prompting Elicits Reasoning in Large Language Models,
- 2201.11903
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Zero-Shot Chain-of-Thought
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout FrameSubtitle
-LLMs are decent zero-shot reasoners by simply adding 
-\bar under
-“Let’s think step by step”
-\bar default
- before each answer.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename pasted33.png
-	special width=\linewidth
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout AlertBlock
-\begin_inset Argument 2
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-Two prompts make a NeurIPS 2022 paper?
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Frame
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-vfill
-\backslash
-scriptsize
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-[1] Large Language Models are Zero-Shot Reasoners, NeurIPS 2022 (2005.11916)
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-New Dark Art of 
-\begin_inset Quotes eld
-\end_inset
-
-Prompt Engineering?
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Asking LLM for reasoning
-\end_layout
-
-\begin_layout Itemize
-Stable diffusion prompts (e.g., artstation, depth of field, 4k, masterpiece)
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Quotes eld
-\end_inset
-
-Jail-breaking
-\begin_inset Quotes erd
-\end_inset
-
- LLMs (societal impact & ethics)
-\end_layout
-
-\begin_layout Itemize
-Use google code header (e.g., 
-\begin_inset Quotes eld
-\end_inset
-
-Copyright (C) 2022, Google LLC
-\begin_inset Quotes erd
-\end_inset
-
-) to generate more 
-\begin_inset Quotes eld
-\end_inset
-
-professional
-\begin_inset Quotes erd
-\end_inset
-
- code?
-\end_layout
-
-\begin_layout Itemize
-etc.
-\end_layout
-
-\begin_layout AlertBlock
-\begin_inset Argument 2
-status open
-
-\begin_layout Plain Layout
-What about visual prompting in computer vision?
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout AlertBlock
-Prompt engineering is an emergent property.
-\end_layout
-
-\begin_layout AlertBlock
-Does this really work for small-sized vision models?
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Leaderboards
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-LLM :: Benchmark & Leaderboards
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout FrameSubtitle
-Where you can pick an LLM for further work.
-\end_layout
-
-\begin_layout Itemize
-Open LLM Leaderboard (HuggingFace)
-\begin_inset Newline newline
-\end_inset
-
-https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard
-\end_layout
-
-\begin_layout Itemize
-Holistic Evaluation of Language Models (Piercy Liang; Stanford)
-\begin_inset Newline newline
-\end_inset
-
-https://crfm.stanford.edu/helm/latest/
-\end_layout
-
-\begin_layout Itemize
-[1] Measuring Massive Multitask Language Understanding, ICLR21
-\end_layout
-
-\begin_layout Itemize
-[2] Beyond the Imitation Game: Quantifying and extrapolating the capabilities
- of language models, 2206.04615
-\end_layout
-
-\begin_layout Itemize
-...
-\end_layout
-
-\begin_layout AlertBlock
-\begin_inset Argument 2
-status open
-
-\begin_layout Plain Layout
-Some Notes if you want to try LLM locally
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout AlertBlock
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-resizebox{
-\backslash
-linewidth}{!}{
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout AlertBlock
-\begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="6">
-<features booktabs="true" tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Model
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Disk Space
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Inference Batch
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Inference Precition
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Inference Mode
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-GPU Requirement
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Falcon-7B-Instruct
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-14GB
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-bf16
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Single GPU
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1 * 16GB
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Falcon-40B-Instruct
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-80GB
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-bf16
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Pipeline Parallel
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-4 * 24GB
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout AlertBlock
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Non-GPT sota LLMs
-\end_layout
-
-\begin_layout Frame
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Graphics
-	filename pasted37.png
-	special width=\linewidth
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-vfill
-\backslash
-scriptsize
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-[1] A Survey of Large Language Models, 2303.18223
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Non-GPT SoTA LLMs
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-T5 (Google; 2019), 11B
-\end_layout
-
-\begin_layout Frame
-T0 (; 2021) 11B
-\end_layout
-
-\begin_layout Frame
-OPT (Meta; 2022), 175B
-\end_layout
-
-\begin_layout Frame
-GLM (Tsinghua; 2022), 130B
-\end_layout
-
-\begin_layout Frame
-Galactica (; 2022), 120B
-\end_layout
-
-\begin_layout Frame
-BLOOMZ (; 2022), 176B
-\end_layout
-
-\begin_layout Frame
-LLaMA 1 (Meta; 2023)
-\end_layout
-
-\begin_layout Frame
-Alpaca (Stanford)
-\end_layout
-
-\begin_layout Frame
-LLaMA 2 (Meta)
-\end_layout
-
-\begin_layout Frame
-PaLM (Google)
-\end_layout
-
-\begin_layout Frame
-
-\end_layout
-
-\begin_layout Frame
-Falcon (TII.UAE)
-\end_layout
-
-\begin_layout Frame
-Vicuna (Berkeley)
-\end_layout
-
-\begin_layout Frame
-Pythia (Stanford, Piercy Liang)
-\end_layout
-
-\begin_layout Frame
-
-\end_layout
-
-\begin_layout Frame
-
-\end_layout
-
-\begin_layout Frame
-
-\end_layout
-
-\begin_layout Subsection
-Decoding Algorithm
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-LLM :: Decoding Algorithms
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout FrameSubtitle
-Performance improvements for 
-\begin_inset Quotes eld
-\end_inset
-
-free
-\begin_inset Quotes erd
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Block
-\begin_inset Argument 2
-status open
-
-\begin_layout Plain Layout
-The Re-ranking Paradigm for Decoding
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Block
-1.
- Decode a bunch of sequences.
-\end_layout
-
-\begin_layout Block
-2.
- Define a score to approximate sequence quality and re-rank by this score.
-\end_layout
-
-\end_deeper
-\begin_layout Subsection
 Fine-Tuning & Alignment
 \end_layout
 
@@ -5583,7 +4886,7 @@ Fine-Tuning & Alignment
 status open
 
 \begin_layout Plain Layout
-Instruction Tuning
+Instruction/Alignment Tuning
 \end_layout
 
 \end_inset
@@ -5598,12 +4901,16 @@ InstructGPT: Training language models to follow instructions with human
 \end_layout
 
 \begin_layout Standard
+
+\size footnotesize
 GPT-3 is not well aligned to human intent.
  Sometimes generates unsafe answers.
 \end_layout
 
 \end_deeper
 \begin_layout Frame
+
+\size footnotesize
 This is due to the training task (predicting next token on web-based corpus)
  is different from 
 \begin_inset Quotes eld
@@ -6093,6 +5400,1719 @@ Further readings:
 
 \end_layout
 
+\begin_layout Subsection
+Emergent Properties (e.g., ICL)
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+In-Context Learning (ICL) a.k.a.
+ Prompt Engineering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+One of LLM's emergent properties when model is large enough.
+ Small model, e.g., BERT do not exhibit it.
+\begin_inset Newline newline
+\end_inset
+
+Should you try prompt engineering a small LM, you'll find the model not
+ smart at all.
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+5cm
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Graphics
+	filename pasted39.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+5cm
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Graphics
+	filename pasted40.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+[1] GPT-3: Language Models are Few-Shot Learners, 2005.14165
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Chain-of-Thought Prompting
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+One of LLM's emergent abilities.
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+A series of intermediate reasoning steps – significantly improves the ability
+ of large language models to perform complex reasoning.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted32.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+[1] Chain-of-Thought Prompting Elicits Reasoning in Large Language Models,
+ 2201.11903
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Zero-Shot Chain-of-Thought
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+LLMs are decent zero-shot reasoners by simply adding 
+\bar under
+“Let’s think step by step”
+\bar default
+ before each answer.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted33.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout AlertBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Two prompts make a NeurIPS 2022 paper?
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+[1] Large Language Models are Zero-Shot Reasoners, NeurIPS 2022 (2005.11916)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+New Dark Art of 
+\begin_inset Quotes eld
+\end_inset
+
+Prompt Engineering?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Asking LLM for reasoning
+\end_layout
+
+\begin_layout Itemize
+Stable diffusion prompts (e.g., artstation, depth of field, 4k, masterpiece)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+Jail-breaking
+\begin_inset Quotes erd
+\end_inset
+
+ LLMs (societal impact & ethics)
+\end_layout
+
+\begin_layout Itemize
+Use google code header (e.g., 
+\begin_inset Quotes eld
+\end_inset
+
+Copyright (C) 2022, Google LLC
+\begin_inset Quotes erd
+\end_inset
+
+) to generate more 
+\begin_inset Quotes eld
+\end_inset
+
+professional
+\begin_inset Quotes erd
+\end_inset
+
+ code?
+\end_layout
+
+\begin_layout Itemize
+etc.
+\end_layout
+
+\begin_layout Standard
+Further readings:
+\end_layout
+
+\begin_layout Itemize
+https://en.wikipedia.org/wiki/Prompt_engineering
+\end_layout
+
+\begin_layout AlertBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+What about visual prompting in computer vision?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout AlertBlock
+Prompt engineering is an emergent property.
+\end_layout
+
+\begin_layout AlertBlock
+Does this really work for small-sized vision models?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LLM :: Prompt Engineering Hints
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Reference: https://arxiv.org/pdf/2303.18223.pdf
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+5.5cm
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Key Ingredients
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size small
+Task description
+\begin_inset Newline newline
+\end_inset
+
+and necessary clarifications
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+Input data format
+\begin_inset Newline newline
+\end_inset
+
+e.g., linearization of structured data
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+Contextual information
+\begin_inset Newline newline
+\end_inset
+
+e.g., background of the topic
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+Prompt style
+\begin_inset Newline newline
+\end_inset
+
+e.g., 
+\begin_inset Quotes eld
+\end_inset
+
+Let us think step by step
+\begin_inset Quotes erd
+\end_inset
+
+,
+\begin_inset Newline newline
+\end_inset
+
+e.g., 
+\begin_inset Quotes eld
+\end_inset
+
+You are an expert on this task
+\begin_inset Quotes erd
+\end_inset
+
+,
+\end_layout
+
+\end_deeper
+\begin_layout Column
+5.5cm
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Design Principles
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size small
+Expressing the task goal clearly.
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+Decomposing into easy, detailed sub-tasks.
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+Providing few-shot demonstrations.
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+Utilizing model-friendly format.
+\begin_inset Newline newline
+\end_inset
+
+e.g., using ### or 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ as stop symbol for OpenAI model to separate instruction and context.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Leaderboards
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LLM :: Benchmark & Leaderboards
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Where you can pick an LLM for further work.
+\end_layout
+
+\begin_layout Itemize
+Open LLM Leaderboard (HuggingFace)
+\begin_inset Newline newline
+\end_inset
+
+https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard
+\end_layout
+
+\begin_layout Itemize
+[1] Holistic Evaluation of Language Models (Piercy Liang; Stanford)
+\begin_inset Newline newline
+\end_inset
+
+https://crfm.stanford.edu/helm/latest/
+\end_layout
+
+\begin_layout Itemize
+[2] Measuring Massive Multitask Language Understanding, ICLR21
+\end_layout
+
+\begin_layout Itemize
+[3] Beyond the Imitation Game: Quantifying and extrapolating the capabilities
+ of language models, 2206.04615
+\end_layout
+
+\begin_layout Itemize
+...
+\end_layout
+
+\begin_layout AlertBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Some Notes if you want to try LLM locally
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout AlertBlock
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resizebox{
+\backslash
+linewidth}{!}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout AlertBlock
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="6">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Model
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Disk Space
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Inference Batch
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Inference Precition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Inference Mode
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GPU Requirement
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Falcon-7B-Instruct
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+14GB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+bf16
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Single GPU
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 * 16GB
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Falcon-40B-Instruct
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+80GB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+bf16
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pipeline Parallel
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4 * 24GB
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout AlertBlock
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Non-GPT sota LLMs
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename pasted37.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+[1] A Survey of Large Language Models, 2303.18223
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename pasted41.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Non-GPT SoTA LLMs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+We've got just, toooooooooooooooooooo many of them.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resizebox{
+\backslash
+linewidth}{!}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Tabular
+<lyxtabular version="3" rows="13" columns="5">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Year
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Trainer
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+#Params
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Comment
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2019
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Google
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Already introduced in previous slides.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2021
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PaLM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2022
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Google
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+OPT
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2022
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Meta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+175B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GLM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2022
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tsinghua
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+130B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Galactica
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2022
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+120B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+BLOOMZ
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2022
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+176B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LLaMA v1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2023
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Meta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+65B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Alpaca
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stanford
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LLaMA v2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Meta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Falcon
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TII.UAE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vicuna
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Berkeley
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Position Embedding
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LLM :: Position Embedding
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Absolute position embededing (vanilla transformer)
+\begin_inset Formula 
+\[
+x_{i}=x_{i}+p_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Relative position embedding (T5, Gopher)
+\begin_inset Formula 
+\[
+A_{ij}=W_{q}x_{i}x_{j}^{T}W_{k}^{T}+r_{i-j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Rotary position embedding (LLaMA, PaLM).
+ Unifies absolute and relative.
+\begin_inset Formula 
+\[
+A_{ij}=W_{q}x_{i}R_{\theta,i-j}x_{j}^{T}W_{k}^{T}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+[1] Survey: https://arxiv.org/pdf/2303.18223.pdf
+\end_layout
+
+\begin_layout Frame
+[2] Self-Attention with Relative Position Representations, 1803.02155
+\end_layout
+
+\begin_layout Frame
+[3] RoFormer: Enhanced Transformer with Rotary Position Embedding, 2104.09864
+\end_layout
+
+\begin_layout Frame
+[4] https://blog.eleuther.ai/rotary-embeddings/
+\end_layout
+
+\begin_layout Subsection
+Decoding Algorithm
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LLM :: Decoding Algorithms
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Performance improvements for 
+\begin_inset Quotes eld
+\end_inset
+
+free
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+The Re-ranking Paradigm for Decoding
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+1.
+ Decode a bunch of sequences.
+\end_layout
+
+\begin_layout Block
+2.
+ Define a score to approximate sequence quality and re-rank by this score.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+PEFT
+\end_layout
+
 \begin_layout Frame
 \begin_inset Argument 4
 status open
@@ -6104,6 +7124,10 @@ LLM :: Parameter Efficient Fine-Tuning
 \end_inset
 
 
+\end_layout
+
+\begin_layout Frame
+Adapter Tuning
 \end_layout
 
 \begin_layout Frame
@@ -6133,6 +7157,26 @@ diff
 \begin_layout Frame
 [1] http://web.stanford.edu/class/cs224n/slides/cs224n-2023-lecture9-pretraining.pd
 f
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LoRA: Low-Rank Adaptation
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -6432,6 +7476,47 @@ status open
 
 \backslash
 vfill
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Fun Fact
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+The survey 
+\begin_inset Quotes eld
+\end_inset
+
+A Survey of Large Language Models
+\begin_inset Quotes erd
+\end_inset
+
+ (2303.18223) cited 610 papers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
 \backslash
 footnotesize
 \end_layout
@@ -6444,7 +7529,13 @@ footnotesize
 \begin_layout Standard
 * NLP topics not covered: including but not limited to question answering,
  linguistics, TreeLSTM/TreeRNN or CNN for sequence modeling, code generation,
- coreference resolution, model interpretability
+ coreference resolution, model interpretability,
+\begin_inset Newline newline
+\end_inset
+
+* LLM topics not covered: including but not limited to dataset collection
+ and curating, LLM training details, LLM quantization, LLM for task planning,
+ LLM evaluation and benchmarking, LLM interpretability,
 \end_layout
 
 \end_deeper
