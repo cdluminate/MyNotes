@@ -1459,6 +1459,8 @@ status open
 
 
 \backslash
+vspace{-0.5cm}
+\backslash
 begin{center}
 \end_layout
 
@@ -1478,6 +1480,8 @@ status open
 \begin_layout Plain Layout
 
 
+\backslash
+vspace{-0.5cm}
 \backslash
 end{center}
 \end_layout
@@ -1545,6 +1549,22 @@ scriptsize
 \begin_layout Frame
 [2] Improved Semantic Representations From Tree-Structured Long Short-Term
  Memory Networks, ACL2015
+\end_layout
+
+\begin_layout Frame
+[3] Very Deep Convolutional Networks for Text Classification, 1606.01781
+\end_layout
+
+\begin_layout Frame
+[4] Convolutional Neural Networks for Sentence Classification.
+ EMNLP 2014
+\end_layout
+
+\begin_layout Frame
+[5] Parsing Natural Scenes and Natural Language with Recursive Neural Networks,
+ ICML2011 
+\series bold
+Distinguished Paper Awards
 \end_layout
 
 \begin_layout Standard
@@ -1765,11 +1785,114 @@ scriptsize
 [1] Attention Is All You Need, 1706.03762
 \end_layout
 
+\begin_layout Frame
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Sequence + Multi-Modality
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Sequence + Multimodal
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Retrieval (image<>text)
+\begin_inset Newline newline
+\end_inset
+
+Early models: Visual Semantic Embedding (Frome 2013)
+\begin_inset Newline newline
+\end_inset
+
+Contrastive models: CLIP (Radford 2021), ALIGN (Jia 2021), 
+\end_layout
+
+\begin_layout Itemize
+Captioning (image->text)
+\begin_inset Newline newline
+\end_inset
+
+Early models: Show and tell (Vinyals 2015)
+\end_layout
+
+\begin_layout Itemize
+Generation(text->image)
+\begin_inset Newline newline
+\end_inset
+
+Early models: GAN (Goodfellow 2014)
+\end_layout
+
+\begin_layout Itemize
+VQA (image+text->text)
+\end_layout
+
+\begin_layout Itemize
+Multimodal CLS (image+text->label)
+\end_layout
+
+\begin_layout Itemize
+Vision Sequence?
+\begin_inset Newline newline
+\end_inset
+
+ViT, SwinT, etc.
+\end_layout
+
+\begin_layout Itemize
+V+L Foundation Models:
+\begin_inset Newline newline
+\end_inset
+
+Visual BERT models, ViLT (Kim 2021), Flamingo (Alayrac 2022), BLIP-2 (Junnan
+ 2023) ......
+\end_layout
+
+\begin_layout Itemize
+...
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+[1] https://web.stanford.edu/class/cs224n/slides/Multimodal-Deep-Learning-CS224n-K
+iela.pdf
 \end_layout
 
 \begin_layout Subsection
@@ -5457,6 +5580,95 @@ f
 \end_layout
 
 \begin_layout Subsection
+Multi-Modality
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LLM :: Multi-Modality
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+[1] Language Is Not All You Need: Aligning Perception with Langauge Models
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Multi-Modal Prompting?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Multimodal “Chain of Thought” (Zhang et al., 2023)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Multi-Modal Scaling Law?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Scaling laws for generative mixed modal language models
+\end_layout
+
+\begin_layout Subsection
+Extra Capability
+\end_layout
+
+\begin_layout Standard
+external tool
+\end_layout
+
+\begin_layout Standard
+math
+\end_layout
+
+\begin_layout Standard
+coding
+\end_layout
+
+\begin_layout Standard
+etc.
+\end_layout
+
+\begin_layout Subsection
 Societal Impact & Ethics
 \end_layout
 
@@ -5646,6 +5858,30 @@ You have gone through not only CS224N, but also some latest papers.
 
 \begin_layout Quote
 You are able to read LLM papers afterwards without much doubt.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+* NLP topics not covered: including but not limited to question answering,
+ linguistics, TreeLSTM/TreeRNN or CNN for sequence modeling, code generation,
+ coreference resolution, model interpretability
 \end_layout
 
 \end_deeper
