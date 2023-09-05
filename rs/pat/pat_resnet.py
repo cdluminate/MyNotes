@@ -42,20 +42,24 @@ def test_pat_loss(losstype: str):
     assert not th.isnan(loss)
 
 
-def pat_resnet(model: th.nn.Module, i: str, j: str, x: th.Tensor) -> th.Tensor:
+def pat_resnet(model: th.nn.Module, i: str, j: str, x: th.Tensor, normalize=None) -> th.Tensor:
     # this is a dispatcher
     IJLIST = ('x', 'bn1', 'maxpool', 'layer1', 'layer2', 'layer3', 'layer4', 'fc')
     assert i in IJLIST
     assert j in IJLIST
     assert IJLIST.index(i) < IJLIST.index(j)
     if (i, j) == ('x', 'bn1'):
-        ptb = pat_resnet_from_x_to_bn1(model, x, 'flat')
+        ptb = pat_resnet_from_x_to_bn1(model, x, 'flat', normalize=normalize)
     else:
         raise NotImplementedError
     return ptb
 
 
-def pat_resnet_from_x_to_bn1(model, x, losstype:str, *, eps:float=4./255., numstep:int=3, stepsize:float=2./255.) -> th.Tensor:
+def pat_resnet_from_x_to_bn1(model, x, losstype:str, *,
+                             normalize:callable=None,
+                             eps:float=4./255.,
+                             numstep:int=3,
+                             stepsize:float=2./255.) -> th.Tensor:
     '''
     return the pat perturbation to x
     '''
@@ -63,6 +67,8 @@ def pat_resnet_from_x_to_bn1(model, x, losstype:str, *, eps:float=4./255., numst
     xr = x.clone().detach()
     xr.requires_grad = True
     for i in range(numstep):
+        if normalize is not None:
+            xr = normalize(xr)
         loss = pat_loss(model_x_bn1(xr)['bn1'], losstype)
         gxr = th.autograd.grad(loss, xr)[0]
         xr = xr - stepsize * th.sign(gxr)  # XXX: PGD

@@ -28,14 +28,14 @@ TRANS_train = V.transforms.Compose([
     V.transforms.RandomResizedCrop(224),
     V.transforms.RandomHorizontalFlip(),
     V.transforms.ToTensor(),
-    NORMALIZE,
+#    NORMALIZE,
 ])
 
 TRANS_val = V.transforms.Compose([
     V.transforms.Resize(256),
     V.transforms.CenterCrop(224),
     V.transforms.ToTensor(),
-    NORMALIZE,
+#    NORMALIZE,
 ])
 
 

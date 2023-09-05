@@ -345,9 +345,12 @@ def train(train_loader, model, criterion, optimizer, epoch, device, args):
         if args.pat:
             ptb = pat_resnet.pat_resnet(
                     model.module if args.distributed else model,
-                    args.pati, args.patj, images)
-            output = model(images + ptb)
+                    args.pati, args.patj, images,
+                    ilsvrc.NORMALIZE)
+            images_r = ilsvrc.NORMALIZE(images + ptb)
+            output = model(images_r)
         else:
+            images = ilsvrc.NORMALIZE(images)
             output = model(images)
         # END MOD
         loss = criterion(output, target)
@@ -387,6 +390,9 @@ def validate(val_loader, model, criterion, args):
                     target = target.cuda(args.gpu, non_blocking=True)
 
                 # compute output
+                # BEGIN MOD
+                images = ilsvrc.NORMALIZE(images)
+                # END MOD
                 output = model(images)
                 loss = criterion(output, target)
 
