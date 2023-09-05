@@ -4715,7 +4715,7 @@ Does this really work for small-sized vision models?
 \end_layout
 
 \begin_layout Subsection
-Metrics & Leaderboards
+Leaderboards
 \end_layout
 
 \begin_layout Frame
@@ -4723,7 +4723,7 @@ Metrics & Leaderboards
 status open
 
 \begin_layout Plain Layout
-LLM :: Overview
+LLM :: Benchmarks & Leaderboards
 \end_layout
 
 \end_inset
@@ -4746,8 +4746,16 @@ https://arxiv.org/pdf/2303.18223.pdf
 \end_layout
 
 \begin_layout Frame
-Evaluation metric: no standard one.
- Just bunch of benchmarks.
+Metrics e.g.,
+\end_layout
+
+\begin_layout Frame
+[1] Measuring Massive Multitask Language Understanding, ICLR21
+\end_layout
+
+\begin_layout Frame
+[2] Beyond the Imitation Game: Quantifying and extrapolating the capabilities
+ of language models, 2206.04615
 \end_layout
 
 \begin_layout Standard
@@ -4889,7 +4897,7 @@ Fine-Tuning & Alignment
 status open
 
 \begin_layout Plain Layout
-LLM :: Instruction Tuning w/ Human Feedback
+Instruction Tuning
 \end_layout
 
 \end_inset
@@ -4979,6 +4987,33 @@ noprefix "false"
 
 ) for examples.
  Evaluate on unseen task.
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+[1] Training language models to follow instructions with human feedback,
+ 2203.02155 (OpenAI)
+\end_layout
+
+\begin_layout Frame
+[2] Finetuned Language Models Are Zero-Shot Learners, 2109.01652 (Google)
 \end_layout
 
 \begin_layout Standard
@@ -5172,9 +5207,199 @@ where
 
  term introduces pretraining gradients in order to fix performance regression
  on public NLP tasks.
+ Gradient ascent.
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+ChatGPT!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+https://openai.com/blog/chatgpt
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Methods
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Trained using RLHF (same as InstructGPT).
+\end_layout
+
+\begin_layout Itemize
+Slightly different in data collection setup.
+\end_layout
+
+\begin_layout Itemize
+Performed several iterations of the (RM, RLHF) steps.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Not really much information.
+\end_layout
+
+\begin_layout Standard
+:-(
+\end_layout
+
+\begin_layout AlertBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+RL is very tricky to get right.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+Reward hacking (a common problem in RL)
+\begin_inset Quotes erd
+\end_inset
+
+ ChatBot are rewarded by responses that seem authorative and helpful, regardless
+ of truth.
+\end_layout
+
+\begin_layout Itemize
+This can result in making up facts and hallucinations.
+\end_layout
+
+\begin_layout Itemize
+Models (RM) of human preference are even more unreliable.
+\end_layout
+
+\begin_layout Itemize
+
+\bar under
+AI misalignment is a real concern.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+RLHF Datarequirements?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+RLAIF! RL from AI Feedback.
+ 
+\end_layout
+
+\begin_layout Itemize
+Constitutional AI: Harmlessness from AI Feedback, 2212.08073
+\end_layout
+
+\begin_layout Itemize
+Large Language Models Can Self-Improve, 2210.11610
+\begin_inset Newline newline
+\end_inset
+
+Generate 
+\begin_inset Quotes eld
+\end_inset
+
+high-confidence
+\begin_inset Quotes erd
+\end_inset
+
+ rationale-augmented answers using CoT prompting and self-consistency.
+ And then fine-tune LN with those generated answers.
+\end_layout
+
+\begin_layout Itemize
+STaR: Bootstrapping Reasoning With Reasoning, 2203.14465
+\begin_inset Newline newline
+\end_inset
+
+Generate chain-of-thought data.
+ Fine-tune LM itself with generated data.
+\end_layout
+
+\begin_layout Itemize
+Convergence issue?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+Further readings:
+\end_layout
+
+\begin_layout Frame
+[1] Learning to summarize from human feedback, 2009.01325
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -5274,6 +5499,10 @@ For instance, jail break attacks to bypass the NSFW/Ethics check.
 \end_layout
 
 \end_deeper
+\begin_layout Frame
+AI Alignment Forum: https://www.alignmentforum.org/
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
