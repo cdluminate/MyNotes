@@ -3846,7 +3846,7 @@ No much technical details are disclosed from OpenAI.
 \end_layout
 
 \begin_layout Standard
-FYI: text-davinci-001 is InstructGPT-3, not included in GPT-3.5.
+FYI: text-davinci-001 migbt be InstructGPT-3, not included in GPT-3.5.
 \end_layout
 
 \end_deeper
@@ -3923,17 +3923,53 @@ Did not present much useful information other than showing off.
 
 \end_deeper
 \begin_layout Itemize
+
+\size small
 GPT-4 is a Transformerbased model pre-trained to predict the next token
  in a document.
 \end_layout
 
 \begin_layout Itemize
+
+\size small
 The post-training alignment process results in improved performance on measures
  of factuality and adherence to desired behavior.
  
 \end_layout
 
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted36.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
 \end_deeper
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+[1] Figure source: https://arxiv.org/pdf/2303.18223.pdf
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -4512,7 +4548,7 @@ Scaling Law
 status open
 
 \begin_layout Plain Layout
-LLM :: Scaling Law
+LLM :: Scaling Law [1/2]
 \end_layout
 
 \end_inset
@@ -4522,18 +4558,116 @@ LLM :: Scaling Law
 
 \begin_deeper
 \begin_layout FrameSubtitle
-Emergent low-shot abilities (aka.
- In-Context Learning, ICL): language modeling at scale can be effective
- pretraining for downstream tasks, even w/o task specific fine-tuning.
+Scaling can largely improve the model capacity of LLMs, and show emergent
+ properties.
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+Power law between model performance and model size (
+\begin_inset Formula $N$
+\end_inset
+
+), dataset size (
+\begin_inset Formula $D$
+\end_inset
+
+), and amount of compute (
+\begin_inset Formula $C$
+\end_inset
+
+).
+\begin_inset Newline newline
+\end_inset
+
+These notations are constants: 
+\begin_inset Formula $N_{c}$
+\end_inset
+
+, 
+\begin_inset Formula $D_{c}$
+\end_inset
+
+, 
+\begin_inset Formula $C_{c}$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha_{N}$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha_{D}$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha_{C}$
+\end_inset
+
+ to be found through curve fitting.
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Kaplan Scaling Law (OpenAI)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Graphics
+	filename pasted38.png
+	special width=\linewidth
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+L(N)\approx\Big[\frac{N_{c}}{N}\Big]^{\alpha_{N}}\quad L(D)\approx\Big[\frac{D_{c}}{D}\Big]^{\alpha_{D}}\quad L(C)\approx\Big[\frac{C_{c}}{C}\Big]^{\alpha_{C}}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
 \begin_layout Frame
-GPT-3 scaling law
+
 \end_layout
 
 \begin_layout Frame
-Chinchilla scaling law
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+[1] A Survey of Large Language Models, 2303.18223
+\end_layout
+
+\begin_layout Frame
+[2] (Kaplan Scaling Law) Scaling Laws for Neural Language Models, 2001.08361
 \end_layout
 
 \begin_layout Standard
@@ -4543,8 +4677,135 @@ Chinchilla scaling law
 
 \end_layout
 
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LLM :: Scaling Law [2/2]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Given a fixed FLOPs budget, how should one trade-off model size and the
+ number of training tokens?
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Chinchilla Scaling Law (DeepMind)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+
+\size footnotesize
+Minimizing pretraining loss 
+\begin_inset Formula $L$
+\end_inset
+
+ under the constraint FLOPs
+\begin_inset Formula $(N,D)=C$
+\end_inset
+
+ for optimal allocation of 
+\begin_inset Formula $N$
+\end_inset
+
+ and 
+\begin_inset Formula $D$
+\end_inset
+
+:
+\size default
+
+\begin_inset Formula 
+\[
+N_{\text{opt}}(C),D_{\text{opt}}(C)=\underset{N,D\text{ s.t. FLOPs}(N,D)=C}{\text{argmin}}L(N,D)
+\]
+
+\end_inset
+
+With many analysis, they propose the following functional form to fit:
+\begin_inset Formula 
+\[
+\hat{L}(N,D)\triangleq E+\frac{A}{N^{\alpha}}+\frac{B}{D^{\beta}}\qquad\text{const.}(A,B,E,\alpha,\beta)
+\]
+
+\end_inset
+
+After estimating the coefficients using L-BFGS on the Huber loss, they obtain
+\begin_inset Formula 
+\[
+N_{\text{opt}}(C)=G\big[\frac{C}{6}\big]^{a}\quad D_{\text{opt}}(C)=G^{-1}\big[\frac{C}{6}\big]^{b}\quad\text{where }G=\big(\frac{\alpha A}{\beta B})^{\frac{1}{\alpha+\beta}},a=\frac{\beta}{\alpha+\beta},b=\frac{\alpha}{\alpha+\beta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout AlertBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout AlertBlock
+But emergent properties cannot be predicted through scaling law.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+[1] Chinchilla: Training Compute-Optimal Large Language Models, 2203.15556
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
-Emergent Properties (ICL)
+Emergent Properties (e.g., ICL)
 \end_layout
 
 \begin_layout Frame
@@ -4552,7 +4813,7 @@ Emergent Properties (ICL)
 status open
 
 \begin_layout Plain Layout
-In-Context Learning a.k.a.
+In-Context Learning (ICL) a.k.a.
  Prompt Engineering
 \end_layout
 
@@ -4563,7 +4824,8 @@ In-Context Learning a.k.a.
 
 \begin_deeper
 \begin_layout FrameSubtitle
-ICL is LLM's emergent property when model is large enough.
+One of LLM's emergent properties when model is large enough.
+ Small model, e.g., BERT do not exhibit it.
 \begin_inset Newline newline
 \end_inset
 
@@ -4572,6 +4834,10 @@ Should you try prompt engineering a small LM, you'll find the model not
 \end_layout
 
 \end_deeper
+\begin_layout Frame
+
+\end_layout
+
 \begin_layout Frame
 GPT-3: supply a few examples in context.
 \end_layout
@@ -4846,7 +5112,7 @@ Leaderboards
 status open
 
 \begin_layout Plain Layout
-LLM :: Benchmarks & Leaderboards
+LLM :: Benchmark & Leaderboards
 \end_layout
 
 \end_inset
@@ -4854,46 +5120,46 @@ LLM :: Benchmarks & Leaderboards
 
 \end_layout
 
-\begin_layout Frame
-Falcon-7B-Instruct: bf16 precision, inference requires 1GPU w/ 16GB.
- Disk space 14GB.
+\begin_deeper
+\begin_layout FrameSubtitle
+Where you can pick an LLM for further work.
 \end_layout
 
-\begin_layout Frame
-Falcon-40B-Instruct: bf16 precision, inference requires 4GPU w/ 24GB in
- PipelineParallel
+\begin_layout Itemize
+Open LLM Leaderboard (HuggingFace)
+\begin_inset Newline newline
+\end_inset
+
+https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard
 \end_layout
 
-\begin_layout Frame
-https://arxiv.org/pdf/2303.18223.pdf
+\begin_layout Itemize
+Holistic Evaluation of Language Models (Piercy Liang; Stanford)
+\begin_inset Newline newline
+\end_inset
+
+https://crfm.stanford.edu/helm/latest/
 \end_layout
 
-\begin_layout Frame
-Metrics e.g.,
-\end_layout
-
-\begin_layout Frame
+\begin_layout Itemize
 [1] Measuring Massive Multitask Language Understanding, ICLR21
 \end_layout
 
-\begin_layout Frame
+\begin_layout Itemize
 [2] Beyond the Imitation Game: Quantifying and extrapolating the capabilities
  of language models, 2206.04615
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
+\begin_layout Itemize
+...
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
+\begin_layout AlertBlock
+\begin_inset Argument 2
 status open
 
 \begin_layout Plain Layout
-Open LLM Leaderboard (HuggingFace)
+Some Notes if you want to try LLM locally
 \end_layout
 
 \end_inset
@@ -4901,25 +5167,17 @@ Open LLM Leaderboard (HuggingFace)
 
 \end_layout
 
-\begin_deeper
-\begin_layout FrameSubtitle
-https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
+\begin_layout AlertBlock
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-Holistic Evaluation of Language Models (Stanford)
+
+
+\backslash
+resizebox{
+\backslash
+linewidth}{!}{
 \end_layout
 
 \end_inset
@@ -4927,9 +5185,203 @@ Holistic Evaluation of Language Models (Stanford)
 
 \end_layout
 
-\begin_deeper
-\begin_layout FrameSubtitle
-https://crfm.stanford.edu/helm/latest/
+\begin_layout AlertBlock
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="6">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Model
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Disk Space
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Inference Batch
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Inference Precition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Inference Mode
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GPU Requirement
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Falcon-7B-Instruct
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+14GB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+bf16
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Single GPU
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 * 16GB
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Falcon-40B-Instruct
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+80GB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+bf16
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pipeline Parallel
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4 * 24GB
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout AlertBlock
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -4945,6 +5397,49 @@ Non-GPT sota LLMs
 \end_layout
 
 \begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename pasted37.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+[1] A Survey of Large Language Models, 2303.18223
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
 \begin_inset Argument 4
 status open
 
@@ -4954,6 +5449,74 @@ Non-GPT SoTA LLMs
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Frame
+T5 (Google; 2019), 11B
+\end_layout
+
+\begin_layout Frame
+T0 (; 2021) 11B
+\end_layout
+
+\begin_layout Frame
+OPT (Meta; 2022), 175B
+\end_layout
+
+\begin_layout Frame
+GLM (Tsinghua; 2022), 130B
+\end_layout
+
+\begin_layout Frame
+Galactica (; 2022), 120B
+\end_layout
+
+\begin_layout Frame
+BLOOMZ (; 2022), 176B
+\end_layout
+
+\begin_layout Frame
+LLaMA 1 (Meta; 2023)
+\end_layout
+
+\begin_layout Frame
+Alpaca (Stanford)
+\end_layout
+
+\begin_layout Frame
+LLaMA 2 (Meta)
+\end_layout
+
+\begin_layout Frame
+PaLM (Google)
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+Falcon (TII.UAE)
+\end_layout
+
+\begin_layout Frame
+Vicuna (Berkeley)
+\end_layout
+
+\begin_layout Frame
+Pythia (Stanford, Piercy Liang)
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
 
 \end_layout
 
