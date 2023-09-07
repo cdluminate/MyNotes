@@ -1018,7 +1018,7 @@ P(x_{1},\ldots,x_{T})=\prod_{t=1}^{T}P(x_{t}|x_{t-1},\ldots,x_{1})
 Flexible enough (chain rule) to deal with issues like
 \begin_inset Formula 
 \[
-P(y_{1},\ldots,y_{M}|x_{1},\ldots,x_{T})=\prod_{m=1}^{M}P(y_{1},\ldots,y_{m}|x_{1},\ldots,x_{T})
+P(y_{1},\ldots,y_{M}|x_{1},\ldots,x_{T})=\prod_{m=1}^{M}P(y_{m}|x_{1},\ldots,x_{T},y_{1},\ldots,y_{m-1})
 \]
 
 \end_inset
