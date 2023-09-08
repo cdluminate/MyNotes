@@ -25,11 +25,35 @@ train_imagenet_r50:
 		--rank 0 \
 		./ILSVRC
 
+train_imagenet_r50_8gpu:
+	CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
+		python3 \
+		train_imagenet.py \
+		-a resnet50 \
+		--dist-url 'tcp://127.0.0.1:12345' \
+		--dist-backend 'nccl' \
+		--multiprocessing-distributed \
+		--world-size 1 \
+		--rank 0 \
+		./ILSVRC
+
 # Quadro RTX 8000 * 2 (48GB)
 #
 # Official reference score: Swin_T_Weights.IMAGENET1K_V1 81.474 95.776 28.3M 4.49
 train_imagenet_swint:
 	python3 train_imagenet.py \
+		-a swin_t \
+		--dist-url 'tcp://127.0.0.1:12345' \
+		--dist-backend 'nccl' \
+		--multiprocessing-distributed \
+		--world-size 1 \
+		--rank 0 \
+		./ILSVRC
+
+train_imagenet_swint_8gpu:
+	CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
+		python3 \
+		train_imagenet.py \
 		-a swin_t \
 		--dist-url 'tcp://127.0.0.1:12345' \
 		--dist-backend 'nccl' \
