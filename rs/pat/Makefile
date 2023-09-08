@@ -61,7 +61,7 @@ train_imagenet_swint_8gpu:
 		--multiprocessing-distributed \
 		--world-size 1 \
 		--rank 0 \
-		--batch-size 1024
+		--batch-size 1024 \
 		./ILSVRC
 
 # Quadro RTX 8000 * 2 (48GB)
