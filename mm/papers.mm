@@ -1984,56 +1984,6 @@
 <node TEXT="self-supervise by reconstruction" ID="ID_1462056670" CREATED="1680015462579" MODIFIED="1680015470175">
 <icon BUILTIN="info"/>
 </node>
-<node TEXT="Survey" ID="ID_610037966" CREATED="1680200407416" MODIFIED="1680200415444">
-<icon BUILTIN="freemind_butterfly"/>
-<node TEXT="A Comprehensive Survey on Pretrained Foundation Models: A History from BERT to ChatGPT" ID="ID_1578446927" CREATED="1680200410747" MODIFIED="1680201490820">
-<icon BUILTIN="pencil"/>
-<icon BUILTIN="unchecked"/>
-</node>
-<node TEXT="Towards AGI in comuter vision: lessons learned from gpt and large language models" ID="ID_1858759001" CREATED="1686946680197" MODIFIED="1686964029558">
-<icon BUILTIN="unchecked"/>
-</node>
-<node TEXT="Next Steps for Human-Centered Generative AI: A Technical Perspective" ID="ID_801510502" CREATED="1688782360518" MODIFIED="1688782364844">
-<icon BUILTIN="unchecked"/>
-<node TEXT="Bolei Zhou" ID="ID_1673396090" CREATED="1688782365975" MODIFIED="1688782368434"/>
-</node>
-</node>
-<node TEXT="@Scaling Behavior" ID="ID_1965827828" CREATED="1680200688536" MODIFIED="1689197464530">
-<node TEXT="The performance improves somewhat predictably as one scales up either the amount of compute or the size of the network" ID="ID_514676463" CREATED="1689197577582" MODIFIED="1689197603194">
-<icon BUILTIN="info"/>
-</node>
-<node TEXT="Scaling Law" ID="ID_1187145381" CREATED="1689197386203" MODIFIED="1689197388065">
-<node TEXT="Scaling Laws for Neural Language Models" ID="ID_1808856429" CREATED="1680200690652" MODIFIED="1680200700679">
-<icon BUILTIN="messagebox_warning"/>
-<node TEXT="larger models are significantly more sample-efficient, such as optimally compute-efficient training involves training very large models on a relatively modest amount of data and stopping significantly before convergence" ID="ID_967909416" CREATED="1680200759143" MODIFIED="1680200789816"/>
-</node>
-</node>
-<node TEXT="Chinchilla" ID="ID_1596462872" CREATED="1680054341383" MODIFIED="1689197240625">
-<node TEXT="Training Compute-Optimal Large Language Models" ID="ID_126180207" CREATED="1689197087088" MODIFIED="1689197245580">
-<icon BUILTIN="messagebox_warning"/>
-<node TEXT="2203.15556" OBJECT="java.lang.Double|2203.15556" ID="ID_1863236689" CREATED="1689197098521" MODIFIED="1689197104934"/>
-<node TEXT="Extension of scaling law paper" ID="ID_972987178" CREATED="1689197195086" MODIFIED="1689197201778"/>
-<node TEXT="Beats Gopher, GPT3, Jurassic-1, and Megatron-Turing NLG" ID="ID_1631647612" CREATED="1689197307507" MODIFIED="1689197330765"/>
-</node>
-</node>
-</node>
-<node TEXT="@Quality of Data" ID="ID_1840235815" CREATED="1689195642238" MODIFIED="1689197522133">
-<node TEXT="Improving data quality can dramatically change the shape of the scaling laws" ID="ID_200611341" CREATED="1689197607988" MODIFIED="1689197635080">
-<icon BUILTIN="info"/>
-</node>
-<node TEXT="Phi-1" ID="ID_1517521348" CREATED="1689195649973" MODIFIED="1689195655178">
-<node TEXT="textbooks are all you need" ID="ID_337272907" CREATED="1689195655181" MODIFIED="1689195660246">
-<node TEXT="2306.11644" OBJECT="java.lang.Double|2306.11644" ID="ID_1628550506" CREATED="1689197876707" MODIFIED="1689197882778"/>
-<node TEXT="MSFT" ID="ID_1493845766" CREATED="1689195660401" MODIFIED="1689195662043"/>
-</node>
-</node>
-</node>
-<node TEXT="@Prompt Engineering" ID="ID_979384371" CREATED="1686964121535" MODIFIED="1689197892369">
-<node TEXT="https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/" ID="ID_903829990" CREATED="1686964125831" MODIFIED="1686964125831" LINK="https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/"/>
-<node TEXT="Manual engineering" ID="ID_1339712857" CREATED="1688781142685" MODIFIED="1688781146072"/>
-<node TEXT="In-context learning" ID="ID_1209885315" CREATED="1688781137978" MODIFIED="1688781140788"/>
-<node TEXT="Chain-of-thought" ID="ID_1907580130" CREATED="1688781152941" MODIFIED="1688781157685"/>
-</node>
 <node TEXT="LLMs" ID="ID_5598775" CREATED="1680200637888" MODIFIED="1680200639132">
 <node TEXT="BERT" ID="ID_676603491" CREATED="1676260264280" MODIFIED="1676260265477">
 <node TEXT="contextual" ID="ID_934966169" CREATED="1680201432492" MODIFIED="1680201437651"/>

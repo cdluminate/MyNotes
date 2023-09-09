@@ -4600,7 +4600,47 @@ Part II: Large Language Models
 Is scaling up everything the ultimate answer towards intelligence?
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+[1] A Survey of Large Language Models, 2303.18223
+\end_layout
+
 \end_deeper
+\begin_layout Frame
+[2] A Comprehensive Survey on Pretrained Foundation Models: A History from
+ BERT to ChatGPT
+\end_layout
+
+\begin_layout Frame
+[3] Towards AGI in comuter vision: lessons learned from gpt and large language
+ models
+\end_layout
+
+\begin_layout Frame
+[4] Next Steps for Human-Centered Generative AI: A Technical Perspective
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -4610,6 +4650,38 @@ Is scaling up everything the ultimate answer towards intelligence?
 
 \begin_layout Subsection
 Scaling Law
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LLM :: Why Larger and Larger?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+The performance improves somewhat predictably as one scales up either the
+ amount of compute or the size of the network.
+\end_layout
+
+\begin_layout Frame
+Kaplan Scaling Law: larger models are significantly more sample-efficient,
+ such as optimally compute-efficient training involves training very large
+ models on a relatively modest amount of data and stopping significantly
+ before convergence
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Frame
@@ -4732,11 +4804,7 @@ scriptsize
 \end_layout
 
 \begin_layout Frame
-[1] A Survey of Large Language Models, 2303.18223
-\end_layout
-
-\begin_layout Frame
-[2] (Kaplan Scaling Law) Scaling Laws for Neural Language Models, 2001.08361
+[1] (Kaplan Scaling Law) Scaling Laws for Neural Language Models, 2001.08361
 \end_layout
 
 \begin_layout Standard
@@ -7686,6 +7754,39 @@ LLM :: Bias
 \begin_layout Frame
 Calibrate Before Use: Improving Few-Shot Performance of Language Models,
  2102.09690
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LLM :: Data Quality?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Phi-1: Textbooks are all you need, 2306.11644 (MSFT)
+\end_layout
+
+\begin_layout Frame
+Improving data quality can dramatically change the shape of the scaling
+ laws
+\end_layout
+
+\begin_layout Frame
+
 \end_layout
 
 \begin_layout Standard
