@@ -103,7 +103,7 @@ Johns Hopkins University
 
 \begin_layout Date
 Sept.
- 6 2023
+ {6,13} 2023
 \end_layout
 
 \begin_layout Frame
@@ -1459,8 +1459,6 @@ status open
 
 
 \backslash
-vspace{-0.5cm}
-\backslash
 begin{center}
 \end_layout
 
@@ -1562,9 +1560,7 @@ scriptsize
 
 \begin_layout Frame
 [5] Parsing Natural Scenes and Natural Language with Recursive Neural Networks,
- ICML2011 
-\series bold
-Distinguished Paper Awards
+ ICML2011
 \end_layout
 
 \begin_layout Standard
@@ -4886,6 +4882,30 @@ Fine-Tuning & Alignment
 status open
 
 \begin_layout Plain Layout
+Reinforcement Learning from Human Preferences, 1706.03741
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+The original RLHF paper.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Instruction/Alignment Tuning
 \end_layout
 
@@ -5258,9 +5278,8 @@ Performed several iterations of the (RM, RLHF) steps.
 \end_deeper
 \begin_layout Standard
 Not really much information.
-\end_layout
-
-\begin_layout Standard
+ 
+\series bold
 :-(
 \end_layout
 
@@ -5302,6 +5321,16 @@ Models (RM) of human preference are even more unreliable.
 
 \bar under
 AI misalignment is a real concern.
+\end_layout
+
+\begin_layout Itemize
+What are they doing recently? (https://openai.com/research)
+\begin_inset Newline newline
+\end_inset
+
+Very frequent keywords: 
+\bar under
+Safety & Alignment, Responsible AI
 \end_layout
 
 \end_deeper
@@ -5360,6 +5389,21 @@ STaR: Bootstrapping Reasoning With Reasoning, 2203.14465
 
 Generate chain-of-thought data.
  Fine-tune LM itself with generated data.
+\end_layout
+
+\begin_layout Itemize
+Self-Instruct: Aligning Language Models with Self-Generated Instructions,
+ 2212.10560 (ACL2023)
+\begin_inset Newline newline
+\end_inset
+
+Generate instructions, input, and output samples from a language model,
+ then filter invalid or similar ones before using them to finetune the original
+ model.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -6007,7 +6051,7 @@ linewidth}{!}{
 
 \begin_layout AlertBlock
 \begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="6">
+<lyxtabular version="3" rows="4" columns="6">
 <features booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -6128,7 +6172,7 @@ Single GPU
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -6137,7 +6181,7 @@ Falcon-40B-Instruct
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -6146,7 +6190,7 @@ Falcon-40B-Instruct
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -6155,7 +6199,7 @@ Falcon-40B-Instruct
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -6164,7 +6208,7 @@ bf16
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -6173,11 +6217,67 @@ Pipeline Parallel
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 4 * 24GB
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2 * 48GB
 \end_layout
 
 \end_inset
@@ -6967,6 +7067,58 @@ status open
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LLaMA (v1) from Meta
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Llama: Open and efficient foundation language models, 2023
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Alpaca from Stanford
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Alpaca: A Strong, Replicable Instruction-Following Model, 2023 March.
+\end_layout
+
+\end_deeper
 \begin_layout Subsection
 Position Embedding
 \end_layout
@@ -7275,6 +7427,10 @@ coding
 etc.
 \end_layout
 
+\begin_layout Standard
+Language as the bridge.
+\end_layout
+
 \begin_layout Subsection
 Societal Impact & Ethics
 \end_layout
@@ -7322,6 +7478,15 @@ For instance, jail break attacks to bypass the NSFW/Ethics check.
 AI Alignment Forum: https://www.alignmentforum.org/
 \end_layout
 
+\begin_layout Frame
+Baseline Defenses for Adversarial Attacks Against Aligned Language Models,
+ 2309.00614
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -7329,12 +7494,16 @@ AI Alignment Forum: https://www.alignmentforum.org/
 
 \end_layout
 
+\begin_layout Section
+Closing
+\end_layout
+
 \begin_layout Frame
 \begin_inset Argument 4
 status open
 
 \begin_layout Plain Layout
-Make Titles Informative.
+LLM :: Not Quite Promising Cases
 \end_layout
 
 \end_inset
@@ -7342,29 +7511,21 @@ Make Titles Informative.
 
 \end_layout
 
-\begin_deeper
-\begin_layout Theorem
-On first slide.
+\begin_layout Frame
+1.
+ Do not stack multiple layers of errors and uncertainty.
 \end_layout
 
-\begin_layout Corollary
-On second slide.
+\begin_layout Frame
+LLMScore: Unveiling the Power of Large Language Models in Text-to-Image
+ Synthesis Evaluation, 2305.11116
 \end_layout
 
-\begin_layout Corollary
-
-\end_layout
-
-\end_deeper
 \begin_layout Standard
 \begin_inset Separator parbreak
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section
-Closing
 \end_layout
 
 \begin_layout Frame
@@ -7433,6 +7594,48 @@ New line
 \end_layout
 
 \end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Takeaways
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Language Modeling is to build the conditional probability
+\begin_inset Formula 
+\[
+P(x_{t}|x_{t-1},\ldots,x_{2},x_{1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The largest language models are Decoder only architecture.
+\end_layout
+
+\begin_layout Itemize
+Instruction tuning and RLHF are important to make LLM useful.
+\end_layout
+
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
