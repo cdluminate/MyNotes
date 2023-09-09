@@ -6095,6 +6095,14 @@ Self-Consistency Improves Chain of Thought Reasoning in Language Models,
  2203.11171
 \end_layout
 
+\begin_layout Frame
+Generate & rank: A multi-task framework for math word problems,
+\end_layout
+
+\begin_layout Frame
+Towards a human-like open-domain chatbot,
+\end_layout
+
 \begin_layout Subsection
 Leaderboards
 \end_layout
@@ -7336,7 +7344,7 @@ scriptsize
 \end_layout
 
 \begin_layout Subsection
-PEFT
+Param Efficient FT
 \end_layout
 
 \begin_layout Frame
@@ -7353,15 +7361,17 @@ LLM :: Parameter Efficient Fine-Tuning
 \end_layout
 
 \begin_layout Frame
-Adapter Tuning
+Adapter Tuning: Parameter-efficient transfer learning for nlp, 1902.00751
 \end_layout
 
 \begin_layout Frame
-Prefix Tuning
+Prefix Tuning: Prefix-Tuning: Optimizing Continuous Prompts for Generation,
+ 2101.00190
 \end_layout
 
 \begin_layout Frame
-Prompt Tuning
+Prompt Tuning: The Power of Scale for Parameter-Efficient Prompt Tuning,
+ 2104.08691
 \end_layout
 
 \begin_layout Frame
@@ -7596,7 +7606,37 @@ Language as Bridge?
 \end_layout
 
 \begin_layout Frame
-socratic models
+Socratic Models: Composing Zero-Shot Multimodal Reasoning with Language,
+ 2204.00598
+\end_layout
+
+\begin_layout Frame
+HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face,
+ 2303.17580
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Language Prior in Downstream Task?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Lmpriors: Pre-trained language models as task-specific priors, 2022
 \end_layout
 
 \begin_layout Standard
@@ -7607,7 +7647,7 @@ socratic models
 \end_layout
 
 \begin_layout Subsection
-Societal Impact & Ethics
+Alignment & Ethics
 \end_layout
 
 \begin_layout Frame
@@ -7621,6 +7661,31 @@ LLM :: Generated Text Detection
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LLM :: Bias
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Calibrate Before Use: Improving Few-Shot Performance of Language Models,
+ 2102.09690
 \end_layout
 
 \begin_layout Standard
