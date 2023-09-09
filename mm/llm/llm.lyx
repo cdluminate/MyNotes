@@ -5768,6 +5768,12 @@ Further readings:
 https://en.wikipedia.org/wiki/Prompt_engineering
 \end_layout
 
+\begin_layout Itemize
+
+\bar under
+https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/
+\end_layout
+
 \begin_layout AlertBlock
 \begin_inset Argument 2
 status open
@@ -5965,6 +5971,128 @@ e.g., using ### or
 \end_inset
 
 
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Automatic Prompt Engineering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+AutoPrompt: Eliciting Knowledge from Language Models with Automatically
+ Generated Prompts, 2010.15980
+\end_layout
+
+\begin_layout Frame
+Prefix-Tuning: Optimizing Continuous Prompts for Generation, 2101.00190
+\end_layout
+
+\begin_layout Frame
+P-Tuning: GPT Understands, Too, 2103.10385
+\end_layout
+
+\begin_layout Frame
+Prompt-Tuning: The Power of Scale for Parameter-Efficient Prompt Tuning,
+ 2104.08691
+\end_layout
+
+\begin_layout Frame
+Automatic Prompt Engineer: Large Language Models Are Human-Level Prompt
+ Engineers, 2211.01910
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Decoding Algorithm
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LLM :: Decoding Algorithms
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Performance improvements for 
+\begin_inset Quotes eld
+\end_inset
+
+free
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+The Re-ranking Paradigm for Decoding
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+1.
+ Decode a bunch of sequences.
+\end_layout
+
+\begin_layout Block
+2.
+ Define a score to approximate sequence quality and re-rank by this score.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Self-Consistency Sampling
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Self-Consistency Improves Chain of Thought Reasoning in Language Models,
+ 2203.11171
 \end_layout
 
 \begin_layout Subsection
@@ -7208,60 +7336,6 @@ scriptsize
 \end_layout
 
 \begin_layout Subsection
-Decoding Algorithm
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-LLM :: Decoding Algorithms
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout FrameSubtitle
-Performance improvements for 
-\begin_inset Quotes eld
-\end_inset
-
-free
-\begin_inset Quotes erd
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Block
-\begin_inset Argument 2
-status open
-
-\begin_layout Plain Layout
-The Re-ranking Paradigm for Decoding
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Block
-1.
- Decode a bunch of sequences.
-\end_layout
-
-\begin_layout Block
-2.
- Define a score to approximate sequence quality and re-rank by this score.
-\end_layout
-
-\end_deeper
-\begin_layout Subsection
 PEFT
 \end_layout
 
@@ -7339,7 +7413,97 @@ LoRA: Low-Rank Adaptation
 \end_layout
 
 \begin_layout Subsection
-Multi-Modality
+Extension & Multi-Modality
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LLM + Information Retrieval
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Internet-augmented language models through few-shot prompting for open-domain
+ question answering, 2203.05115
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LLM + Programming
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Pythia LLM
+\end_layout
+
+\begin_layout Frame
+PAL: Program-aided Language Models, 2211.10435
+\end_layout
+
+\begin_layout Frame
+Program of Thoughts Prompting: Disentangling Computation from Reasoning
+ for Numerical Reasoning Tasks, 2211.12588
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LLM + External APIs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Toolformer: Language Models Can Teach Themselves to Use Tools, 2302.04761
+\end_layout
+
+\begin_layout Frame
+TALM: Tool Augmented Language Models, 2205.12255
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Frame
@@ -7357,6 +7521,10 @@ LLM :: Multi-Modality
 
 \begin_layout Frame
 [1] Language Is Not All You Need: Aligning Perception with Langauge Models
+\end_layout
+
+\begin_layout Frame
+[2] Augmented Language Models: a Survey, 2302.07842
 \end_layout
 
 \begin_layout Standard
@@ -7407,28 +7575,35 @@ Multi-Modal Scaling Law?
 Scaling laws for generative mixed modal language models
 \end_layout
 
-\begin_layout Subsection
-Extra Capability
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Language as Bridge?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+socratic models
 \end_layout
 
 \begin_layout Standard
-external tool
-\end_layout
+\begin_inset Separator plain
+\end_inset
 
-\begin_layout Standard
-math
-\end_layout
 
-\begin_layout Standard
-coding
-\end_layout
-
-\begin_layout Standard
-etc.
-\end_layout
-
-\begin_layout Standard
-Language as the bridge.
 \end_layout
 
 \begin_layout Subsection
