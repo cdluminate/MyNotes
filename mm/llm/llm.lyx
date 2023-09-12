@@ -103,7 +103,7 @@ Johns Hopkins University
 
 \begin_layout Date
 Sept.
- {6,13} 2023
+ 13 2023
 \end_layout
 
 \begin_layout Frame
@@ -4987,7 +4987,7 @@ Fine-Tuning & Alignment
 status open
 
 \begin_layout Plain Layout
-Reinforcement Learning from Human Preferences, 1706.03741
+RLHP :: 1706.03741 [1/3]
 \end_layout
 
 \end_inset
@@ -5072,7 +5072,7 @@ on with the environment.
 status open
 
 \begin_layout Plain Layout
-RLHF :: Explained
+RLHP :: Explained [2/3]
 \end_layout
 
 \end_inset
@@ -5198,7 +5198,7 @@ Goal: produce sequences preferred by human.
 status open
 
 \begin_layout Plain Layout
-RLHF :: Explained
+RLHP :: Explained [3/3]
 \end_layout
 
 \end_inset
@@ -5277,7 +5277,7 @@ There are still many other details, which are omitted here.
 status open
 
 \begin_layout Plain Layout
-Instruction/Alignment Tuning
+Instruction/Alignment Tuning [1/3]
 \end_layout
 
 \end_inset
@@ -5412,7 +5412,7 @@ footnotesize
 status open
 
 \begin_layout Plain Layout
-RLHF: Reinforcement Learning from Human Feedback
+RLHF: Reinforcement Learning from Human Feedback [2/3]
 \end_layout
 
 \end_inset
@@ -5455,7 +5455,7 @@ TL;DR: use human preferences as a reward signal to fine-tune our models.
 status open
 
 \begin_layout Plain Layout
-RLHF :: Reward Modeling & Reinforcement LG
+RLHF :: Reward Modeling & Reinforcement LG [3/3]
 \end_layout
 
 \end_inset
@@ -5741,6 +5741,8 @@ Large Language Models Can Self-Improve, 2210.11610
 \begin_inset Newline newline
 \end_inset
 
+
+\color lightgray
 Generate 
 \begin_inset Quotes eld
 \end_inset
@@ -5758,6 +5760,8 @@ STaR: Bootstrapping Reasoning With Reasoning, 2203.14465
 \begin_inset Newline newline
 \end_inset
 
+
+\color lightgray
 Generate chain-of-thought data.
  Fine-tune LM itself with generated data.
 \end_layout
@@ -5768,9 +5772,13 @@ Self-Instruct: Aligning Language Models with Self-Generated Instructions,
 \begin_inset Newline newline
 \end_inset
 
+
+\color lightgray
 Generate instructions, input, and output samples from a language model,
  then filter invalid or similar ones before using them to finetune the original
  model.
+\color inherit
+
 \begin_inset Newline newline
 \end_inset
 
@@ -5778,7 +5786,7 @@ Generate instructions, input, and output samples from a language model,
 \end_layout
 
 \begin_layout Itemize
-Convergence issue?
+Convergence issue? [TODO]
 \end_layout
 
 \begin_layout Standard
@@ -5816,7 +5824,7 @@ Further readings:
 \end_layout
 
 \begin_layout Subsection
-Emergent Properties (e.g., ICL)
+Emergent Properties
 \end_layout
 
 \begin_layout Frame
@@ -6357,29 +6365,53 @@ Automatic Prompt Engineering
 
 \end_layout
 
-\begin_layout Frame
-AutoPrompt: Eliciting Knowledge from Language Models with Automatically
- Generated Prompts, 2010.15980
+\begin_deeper
+\begin_layout FrameSubtitle
+Lazy enough? No problem!
 \end_layout
 
-\begin_layout Frame
-Prefix-Tuning: Optimizing Continuous Prompts for Generation, 2101.00190
+\begin_layout Itemize
+
+\series bold
+AutoPrompt:
+\series default
+ Eliciting Knowledge from Language Models with Automatically Generated Prompts,
+ 2010.15980
 \end_layout
 
-\begin_layout Frame
-P-Tuning: GPT Understands, Too, 2103.10385
+\begin_layout Itemize
+
+\series bold
+Prefix-Tuning:
+\series default
+ Optimizing Continuous Prompts for Generation, 2101.00190
 \end_layout
 
-\begin_layout Frame
-Prompt-Tuning: The Power of Scale for Parameter-Efficient Prompt Tuning,
- 2104.08691
+\begin_layout Itemize
+
+\series bold
+P-Tuning:
+\series default
+ GPT Understands, Too, 2103.10385
 \end_layout
 
-\begin_layout Frame
-Automatic Prompt Engineer: Large Language Models Are Human-Level Prompt
- Engineers, 2211.01910
+\begin_layout Itemize
+
+\series bold
+Prompt-Tuning:
+\series default
+ The Power of Scale for Parameter-Efficient Prompt Tuning, 2104.08691
 \end_layout
 
+\begin_layout Itemize
+
+\series bold
+Automatic Prompt Engineer:
+\series default
+ Large Language Models Are Human-Level Prompt Engineers, 2211.01910
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -6440,7 +6472,43 @@ The Re-ranking Paradigm for Decoding
  Define a score to approximate sequence quality and re-rank by this score.
 \end_layout
 
-\end_deeper
+\begin_layout ExampleBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Self-Consistency Improves Chain of Thought Reasoning in Language Models,
+ 2203.11171
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+Sample multiple pairs of CoT reasoning path and answer 
+\begin_inset Formula $(r_{i},a_{i})$
+\end_inset
+
+.
+ Self-consistency marginalizes 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ by taking the majority vote over 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $\arg\max_{a}\sum_{i=1}^{m}1\{a_{i}=a\}$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -6448,12 +6516,14 @@ The Re-ranking Paradigm for Decoding
 
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
+\begin_layout ExampleBlock
+\begin_inset Argument 2
 status open
 
 \begin_layout Plain Layout
-Self-Consistency Sampling
+
+\size footnotesize
+Generate & rank: A multi-task framework for math word problems, 2109.03034
 \end_layout
 
 \end_inset
@@ -6461,17 +6531,45 @@ Self-Consistency Sampling
 
 \end_layout
 
+\begin_layout ExampleBlock
+Adds an MLP binary classifier on top of final layer hidden state of the
+ last decoder token, as the ranker.
+ Training objective of the ranker is cross-entropy.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Towards a human-like open-domain chatbot, 2001.09977
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Frame
-Self-Consistency Improves Chain of Thought Reasoning in Language Models,
- 2203.11171
+
 \end_layout
 
 \begin_layout Frame
-Generate & rank: A multi-task framework for math word problems,
+
 \end_layout
 
 \begin_layout Frame
-Towards a human-like open-domain chatbot,
+
 \end_layout
 
 \begin_layout Subsection
