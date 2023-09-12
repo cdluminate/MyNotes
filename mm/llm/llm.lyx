@@ -11,7 +11,7 @@
 % or ...
 
 %\usecolortheme{orchis}
-\setbeamertemplate{footline}[frame number]{}
+%\setbeamertemplate{footline}[frame number]{}
 \usefonttheme[onlymath]{serif}
 
 %\setbeamercovered{transparent}
@@ -4665,18 +4665,55 @@ LLM :: Why Larger and Larger?
 
 \end_layout
 
-\begin_layout Frame
+\begin_deeper
+\begin_layout ExampleBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Observation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 The performance improves somewhat predictably as one scales up either the
  amount of compute or the size of the network.
 \end_layout
 
-\begin_layout Frame
-Kaplan Scaling Law: larger models are significantly more sample-efficient,
- such as optimally compute-efficient training involves training very large
- models on a relatively modest amount of data and stopping significantly
- before convergence
+\end_deeper
+\begin_layout Quotation
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quotation
+
+\size small
+\bar under
+Kaplan Scaling Law:
+\bar default
+ larger models are significantly more sample-efficient, such as optimally
+ compute-efficient training involves training very large models on a relatively
+ modest amount of data and stopping significantly before convergence.
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -4958,10 +4995,276 @@ Reinforcement Learning from Human Preferences, 1706.03741
 
 \end_layout
 
-\begin_layout Frame
-The original RLHF paper.
+\begin_deeper
+\begin_layout FrameSubtitle
+This is the original RLHF (OpenAI, DeepMind) paper referred by InstructGPT.
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+It uses the contrastive idea, learning from pairwise relations.
 \end_layout
 
+\begin_layout Standard
+Sequential decision problem without a well-specified reward function.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename pasted42.png
+	special width=0.6\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+This can effectively solve some RL problems with less than 1% of agent interacti
+on with the environment.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+RLHF :: Explained
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Reinforcement Learning from Human Preferences, 1706.03741
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Problem Setting
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+At timestep 
+\begin_inset Formula $t$
+\end_inset
+
+, the agent receives observation 
+\begin_inset Formula $o_{t}\in\mathcal{O}$
+\end_inset
+
+ from enrivonment, and then sends action 
+\begin_inset Formula $a_{t}\in\mathcal{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Note, there is no reward 
+\begin_inset Formula $r_{t}\in\mathcal{R}$
+\end_inset
+
+ like traditional RL setting.
+\end_layout
+
+\begin_layout Itemize
+Instead, we assume there is a human observer expressing preferences between
+ trajectory segments.
+\end_layout
+
+\begin_layout Itemize
+Trajectory segment (sequence of 
+\begin_inset Formula $o$
+\end_inset
+
+ and 
+\begin_inset Formula $a$
+\end_inset
+
+): 
+\begin_inset Formula $\sigma=[(o_{0},a_{0}),(o_{1},a_{1}),\ldots,(o_{k-1},a_{k-1})]\in(\mathcal{O}\times\mathcal{A})^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Human preference: denote 
+\begin_inset Formula $\sigma^{1}\succ\sigma^{2}$
+\end_inset
+
+ as human preference of 
+\begin_inset Formula $\sigma^{1}$
+\end_inset
+
+ over 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Human database: 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+ contains triples 
+\begin_inset Formula $(\sigma^{1},\sigma^{2},\mu)$
+\end_inset
+
+ where 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is the distribution over 
+\begin_inset Formula $\{1,2\}$
+\end_inset
+
+ for user preference.
+\end_layout
+
+\begin_layout Itemize
+Goal: produce sequences preferred by human.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+RLHF :: Explained
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Reinforcement Learning from Human Preferences, 1706.03741
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Method
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+Maintain two policies: 
+\begin_inset Formula $\pi:\mathcal{O}\rightarrow\mathcal{A}$
+\end_inset
+
+, and a reward estimate 
+\begin_inset Formula $\hat{r}:\mathcal{O}\times\mathcal{A}\rightarrow\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout ExampleBlock
+Preference predictor
+\begin_inset Formula 
+\[
+\hat{P}[\sigma^{1}\succ\sigma^{2}]=\frac{\exp\sum\hat{r}(o_{t}^{1},a_{t}^{2})}{\exp\sum\hat{r}(o_{t}^{1},a_{t}^{1})+\exp\sum\hat{r}(o_{t}^{2},a_{t}^{2})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+Minimize cross entropy between predictor and human label
+\begin_inset Formula 
+\[
+\mathscr{L}(\hat{r})=-\sum_{(\sigma^{1},\sigma^{2},\mu)\in\mathcal{D}}\mu(1)\log\hat{P}[\sigma^{1}\succ\sigma^{2}]+\mu(2)\log\hat{P}[\sigma^{2}\succ\sigma^{1}]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+There are still many other details, which are omitted here.
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
