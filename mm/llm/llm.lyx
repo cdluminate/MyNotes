@@ -8225,7 +8225,8 @@ Motivation
 
 \begin_layout Block
 2.
- Only use publically available data
+ Only use publically available data.
+ No proprietary or inaccessible data.
 \end_layout
 
 \begin_layout Standard
@@ -8267,12 +8268,12 @@ Modifications to standard Transformer
 
 \end_layout
 
-\begin_layout Block
+\begin_layout AlertBlock
 \begin_inset Argument 2
 status open
 
 \begin_layout Plain Layout
-Training & Testing
+Training Cost
 \end_layout
 
 \end_inset
@@ -8280,8 +8281,30 @@ Training & Testing
 
 \end_layout
 
-\begin_layout Block
+\begin_layout AlertBlock
+Single Model training: 2048 A100 GPUs (80GB) for 21 days.
+\end_layout
 
+\begin_layout AlertBlock
+Development took 5 months, and 2,638 MWh electricity.
+\end_layout
+
+\begin_layout AlertBlock
+
+\color lightgray
+FYI: A typical nuclear reactor produces 1 gigawatt (GW) of electricity.
+\end_layout
+
+\begin_layout AlertBlock
+Electricity bill = 2638 MWh * $0.23 / kWh = $0.6B 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 37326 A100 GPUs (80G PCIE; $16255 each) 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 20 times of the A100 GPU hardware purchase cost.
 \end_layout
 
 \end_deeper
@@ -8307,9 +8330,79 @@ LLaMA-2 :: Explained
 
 \begin_deeper
 \begin_layout FrameSubtitle
-Llama 2: Open Foundation and Fine-Tuned Chat Models
+Llama 2: Open Foundation and Fine-Tuned Chat Models, 2307.09288
 \end_layout
 
+\begin_layout Block
+
+\size small
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Motivation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+
+\size small
+Optimized for dialogue use cases.
+ Open access for both academic and commercial use cases.
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+
+\size small
+5.5cm
+\end_layout
+
+\begin_layout ExampleBlock
+
+\size small
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Pretraining
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+
+\size small
+5.5cm
+\end_layout
+
+\begin_layout ExampleBlock
+
+\size small
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Fine-Tuning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Subsection
 Position Embedding
@@ -8397,6 +8490,125 @@ scriptsize
 
 \begin_layout Frame
 [4] https://blog.eleuther.ai/rotary-embeddings/
+\end_layout
+
+\begin_layout Subsection
+Alignment & Ethics
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LLM :: Generated Text Detection
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Can AI-Generated Text be Reliably Detected? (arxiv)
+\end_layout
+
+\begin_layout Frame
+paraphrasing attacks can break a whole range of detectors
+\end_layout
+
+\begin_layout Frame
+for a sufficiently good language model, even the best possible detector
+ can only perform marginally better than a random classifier
+\end_layout
+
+\begin_layout Frame
+watermarking is vulnerable against spoofing attacks where adversarial humans
+ can infer hidden watermarking signatures.
+\end_layout
+
+\begin_layout Frame
+DetectGPT: Zero-Shot Machine-Generated Text Detection using Probability
+ Curvature (arxiv)
+\end_layout
+
+\begin_layout Frame
+Large language model watermarking?
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LLM :: Bias
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Calibrate Before Use: Improving Few-Shot Performance of Language Models,
+ 2102.09690
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LLM :: Security & Ethics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+For instance, jail break attacks to bypass the NSFW/Ethics check.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+AI Alignment Forum: https://www.alignmentforum.org/
+\end_layout
+
+\begin_layout Frame
+Baseline Defenses for Adversarial Attacks Against Aligned Language Models,
+ 2309.00614
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -8497,6 +8709,39 @@ LLM + More data?
 
 \begin_layout Frame
 Mathematical Capabilities of ChatGPT, (dataset paper)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LLM :: Data Quality?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Phi-1: Textbooks are all you need, 2306.11644 (MSFT)
+\end_layout
+
+\begin_layout Frame
+Improving data quality can dramatically change the shape of the scaling
+ laws
+\end_layout
+
+\begin_layout Frame
+
 \end_layout
 
 \begin_layout Standard
@@ -8744,158 +8989,6 @@ Lmpriors: Pre-trained language models as task-specific priors, 2022
 
 \end_layout
 
-\begin_layout Subsection
-Alignment & Ethics
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-LLM :: Generated Text Detection
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-Can AI-Generated Text be Reliably Detected? (arxiv)
-\end_layout
-
-\begin_layout Frame
-paraphrasing attacks can break a whole range of detectors
-\end_layout
-
-\begin_layout Frame
-for a sufficiently good language model, even the best possible detector
- can only perform marginally better than a random classifier
-\end_layout
-
-\begin_layout Frame
-watermarking is vulnerable against spoofing attacks where adversarial humans
- can infer hidden watermarking signatures.
-\end_layout
-
-\begin_layout Frame
-DetectGPT: Zero-Shot Machine-Generated Text Detection using Probability
- Curvature (arxiv)
-\end_layout
-
-\begin_layout Frame
-Large language model watermarking?
-\end_layout
-
-\begin_layout Frame
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-LLM :: Bias
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-Calibrate Before Use: Improving Few-Shot Performance of Language Models,
- 2102.09690
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-LLM :: Data Quality?
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-Phi-1: Textbooks are all you need, 2306.11644 (MSFT)
-\end_layout
-
-\begin_layout Frame
-Improving data quality can dramatically change the shape of the scaling
- laws
-\end_layout
-
-\begin_layout Frame
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-LLM :: Security & Ethics
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout FrameSubtitle
-For instance, jail break attacks to bypass the NSFW/Ethics check.
-\end_layout
-
-\end_deeper
-\begin_layout Frame
-AI Alignment Forum: https://www.alignmentforum.org/
-\end_layout
-
-\begin_layout Frame
-Baseline Defenses for Adversarial Attacks Against Aligned Language Models,
- 2309.00614
-\end_layout
-
-\begin_layout Frame
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 Closing
 \end_layout
@@ -9035,7 +9128,7 @@ The largest language models are Decoder only architecture.
 \end_layout
 
 \begin_layout Itemize
-Instruction tuning and RLHF are important to make LLM useful.
+Instruction tuning and RLHF are important to make LLM useful and harmless.
 \end_layout
 
 \end_deeper
