@@ -40,7 +40,7 @@ train_imagenet_r50_8gpu:
 		./ILSVRC
 
 # Quadro RTX 8000 * 2 (48GB)
-# *   Acc@1 70.802 Acc@5 89.502     #
+# *   Acc@1 70.372 Acc@5 89.390
 # should use this one: https://github.com/pytorch/vision/blob/main/references/classification/train.py
 # Official reference score: Swin_T_Weights.IMAGENET1K_V1 81.474 95.776 28.3M 4.49
 train_imagenet_swint:
@@ -53,6 +53,7 @@ train_imagenet_swint:
 		--rank 0 \
 		./ILSVRC
 
+# *   Acc@1 70.802 Acc@5 89.502
 train_imagenet_swint_8gpu:
 	CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
 		python3 \
