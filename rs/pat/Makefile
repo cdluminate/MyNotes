@@ -25,6 +25,7 @@ train_imagenet_r50:
 		--rank 0 \
 		./ILSVRC
 
+# Acc@1 74.718 Acc@5 92.134
 train_imagenet_r50_8gpu:
 	CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
 		python3 \
