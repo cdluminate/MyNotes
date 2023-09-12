@@ -8180,6 +8180,23 @@ status open
 
 \end_layout
 
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\end_layout
+
+\end_inset
+
+ I chose those beucase they are either famous, or frequently appear in the
+ related work section of relevant papers.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -8273,7 +8290,7 @@ Modifications to standard Transformer
 status open
 
 \begin_layout Plain Layout
-Training Cost
+Very Fun Fact: Training Cost
 \end_layout
 
 \end_inset
@@ -8296,15 +8313,11 @@ FYI: A typical nuclear reactor produces 1 gigawatt (GW) of electricity.
 \end_layout
 
 \begin_layout AlertBlock
-Electricity bill = 2638 MWh * $0.23 / kWh = $0.6B 
+Electricity bill = 2638 MWh * $0.23 / kWh = $0.6M 
 \begin_inset Formula $\approx$
 \end_inset
 
- 37326 A100 GPUs (80G PCIE; $16255 each) 
-\begin_inset Formula $\approx$
-\end_inset
-
- 20 times of the A100 GPU hardware purchase cost.
+ 37 A100 GPUs (80G PCIE; $16255 each) 
 \end_layout
 
 \end_deeper
@@ -8361,14 +8374,10 @@ Optimized for dialogue use cases.
 
 \begin_deeper
 \begin_layout Column
-
-\size small
 5.5cm
 \end_layout
 
-\begin_layout ExampleBlock
-
-\size small
+\begin_layout Block
 \begin_inset Argument 2
 status open
 
@@ -8381,15 +8390,21 @@ Pretraining
 
 \end_layout
 
-\begin_layout Column
+\begin_layout Block
+Arch diff from LLaMA-1: (1) increased context length and grouped query attention
+ (GQA).
+\end_layout
 
-\size small
+\begin_layout Block
+1.
+ Self-supervised learning (pretraining) using the standard language modeling.
+\end_layout
+
+\begin_layout Column
 5.5cm
 \end_layout
 
-\begin_layout ExampleBlock
-
-\size small
+\begin_layout Block
 \begin_inset Argument 2
 status open
 
@@ -8400,6 +8415,16 @@ Fine-Tuning
 \end_inset
 
 
+\end_layout
+
+\begin_layout Block
+2.
+ supervised fine-tuning
+\end_layout
+
+\begin_layout Block
+3.
+ RLHF iterations
 \end_layout
 
 \end_deeper
