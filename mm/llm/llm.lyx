@@ -5786,7 +5786,7 @@ Generate instructions, input, and output samples from a language model,
 \end_layout
 
 \begin_layout Itemize
-Convergence issue? [TODO]
+Convergence and Collapse? [TODO]
 \end_layout
 
 \begin_layout Standard
@@ -9211,7 +9211,7 @@ LLM :: Security & Ethics
 
 \begin_deeper
 \begin_layout FrameSubtitle
-For instance, jail break attacks to bypass the NSFW/Ethics check.
+For instance, jail break attacks to bypass the safety checks.
 \end_layout
 
 \end_deeper
@@ -9254,6 +9254,15 @@ LLM + More data?
 
 \begin_layout Frame
 Mathematical Capabilities of ChatGPT, (dataset paper)
+\end_layout
+
+\begin_layout Frame
+PAL: Program-aided Language Models, 2211.10435
+\end_layout
+
+\begin_layout Frame
+Program of Thoughts Prompting: Disentangling Computation from Reasoning
+ for Numerical Reasoning Tasks, 2211.12588
 \end_layout
 
 \begin_layout Standard
@@ -9314,37 +9323,8 @@ Internet-augmented language models through few-shot prompting for open-domain
  question answering, 2203.05115
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
 \begin_layout Frame
-\begin_inset Argument 4
-status open
 
-\begin_layout Plain Layout
-LLM + Programming
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-Pythia LLM
-\end_layout
-
-\begin_layout Frame
-PAL: Program-aided Language Models, 2211.10435
-\end_layout
-
-\begin_layout Frame
-Program of Thoughts Prompting: Disentangling Computation from Reasoning
- for Numerical Reasoning Tasks, 2211.12588
 \end_layout
 
 \begin_layout Standard
@@ -9607,34 +9587,6 @@ Detecting and source-tracking AI-generated contents.
 Safety and ethics: reduce NSFW from Stable diffusion, prevent LLM jailbreaking.
 \end_layout
 
-\begin_deeper
-\begin_layout ColumnsTopAligned
-
-\end_layout
-
-\begin_deeper
-\begin_layout Column
-5cm
-\end_layout
-
-\begin_layout Theorem
-In left column.
-\end_layout
-
-\begin_layout Column
-5cm
-\end_layout
-
-\begin_layout Corollary
-In right column.
-\begin_inset Newline newline
-\end_inset
-
-New line
-\end_layout
-
-\end_deeper
-\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
