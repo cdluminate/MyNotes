@@ -8750,16 +8750,70 @@ LLM :: Position Embedding [3/3]
 
 \end_layout
 
-\begin_layout Frame
-Unifies absolute and relative approaches.
+\begin_deeper
+\begin_layout FrameSubtitle
+Unifies absolute and relative approaches [1].
+ Used in (LLaMA, PaLM).
+ Involves length math.
 \end_layout
 
-\begin_layout Frame
-Rotary position embedding (LLaMA, PaLM).
- 
+\begin_layout ExampleBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Rotary Position Embedding (RoPE) : 2d Case
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+
+\size small
+Since 
+\begin_inset Formula $q^{\mathsf{T}}k$
+\end_inset
+
+ enables knowledge conveyance between tokens at different positions, we
+ hope their inner product encodes position information only in the relative
+ form:
 \begin_inset Formula 
 \[
-A_{ij}=W_{q}x_{i}R_{\theta,i-j}x_{j}^{T}W_{k}^{T}
+\langle f_{q}(x_{m},m),f_{k}(x_{n},n)\rangle=g(x_{m},x_{n},m-n)
+\]
+
+\end_inset
+
+Using geometric property of vectors, a solution can be
+\begin_inset Formula 
+\begin{align*}
+f_{q}(x_{m})=W_{q}x_{m} & \quad\Rightarrow\quad & f_{q}(x_{m})=(W_{q}x_{m})e^{im\theta}\\
+f_{k}(x_{n},n)=W_{k}(x_{n}) & \quad\Rightarrow\quad & f_{k}(x_{n},n)=(W_{k}x_{n})e^{in\theta}\\
+ &  & g(x_{m},x_{n},m-n)=\Re[(W_{q}x_{m})(W_{k}x_{n})^{\mathsf{H}}e^{i(m-n)\theta}]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+
+\size small
+This is, in fact, simply rotating the affine-transformed token embedding
+ by amount of angle multiples of its position index.
+\begin_inset Formula 
+\[
+f_{q}(x_{m},m)=\begin{bmatrix}\cos m\theta & -\sin m\theta\\
+\sin m\theta & \cos m\theta
+\end{bmatrix}\begin{bmatrix}w_{q}^{(1,1)} & w_{q}^{(1,2)}\\
+w_{q}^{(2,1)} & w_{q}^{(2,2)}
+\end{bmatrix}\begin{bmatrix}x_{m}^{(1)}\\
+x_{m}^{(2)}
+\end{bmatrix}
 \]
 
 \end_inset
@@ -8767,16 +8821,158 @@ A_{ij}=W_{q}x_{i}R_{\theta,i-j}x_{j}^{T}W_{k}^{T}
 
 \end_layout
 
+\end_deeper
 \begin_layout Frame
 
 \end_layout
 
 \begin_layout Frame
-[3] RoFormer: Enhanced Transformer with Rotary Position Embedding, 2104.09864
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Frame
-[4] https://blog.eleuther.ai/rotary-embeddings/
+[1] RoFormer: Enhanced Transformer with Rotary Position Embedding, 2104.09864
+\end_layout
+
+\begin_layout Frame
+[2] https://blog.eleuther.ai/rotary-embeddings/
+\end_layout
+
+\begin_layout Subsection
+Param Efficient FT
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LLM :: Parameter Efficient Fine-Tuning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size small
+Adapter Tuning: Parameter-efficient transfer learning for nlp, 1902.00751
+\begin_inset Newline newline
+\end_inset
+
+Insert adapter layers into the model.
+ Only train adapter and keep original model frozen.
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+Prompt Tuning: The Power of Scale for Parameter-Efficient Prompt Tuning,
+ 2104.08691
+\begin_inset Newline newline
+\end_inset
+
+Prepend task-specific prefix (virtual tokens).
+ Only train prefix, the rest is fronzen.
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+Prefix Tuning: Prefix-Tuning: Optimizing Continuous Prompts for Generation,
+ 2101.00190
+\begin_inset Newline newline
+\end_inset
+
+Prepend task-specific prefix (transformer activation).
+ Only train prefix, the rest is frozen.
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+LoRA: Low-Rank Adaptation of Large Language Models, 2106.09685
+\begin_inset Newline newline
+\end_inset
+
+Learns a low-rank 
+\begin_inset Quotes eld
+\end_inset
+
+diff
+\begin_inset Quotes erd
+\end_inset
+
+ between the pretrained and fine-tuned weight matrices.
+ (easier than prefix tuning)
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+[1] http://web.stanford.edu/class/cs224n/slides/cs224n-2023-lecture9-pretraining.pd
+f
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LoRA: Low-Rank Adaptation, 2106.09685
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -8820,7 +9016,7 @@ DetectGPT: Zero-Shot Machine-Generated Text Detection using Probability
 \end_layout
 
 \begin_layout Frame
-Large language model watermarking?
+A Watermark for Large Language Models, 2301.10226
 \end_layout
 
 \begin_layout Frame
@@ -8888,85 +9084,6 @@ Baseline Defenses for Adversarial Attacks Against Aligned Language Models,
 \end_layout
 
 \begin_layout Frame
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Param Efficient FT
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-LLM :: Parameter Efficient Fine-Tuning
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-Adapter Tuning: Parameter-efficient transfer learning for nlp, 1902.00751
-\end_layout
-
-\begin_layout Frame
-Prefix Tuning: Prefix-Tuning: Optimizing Continuous Prompts for Generation,
- 2101.00190
-\end_layout
-
-\begin_layout Frame
-Prompt Tuning: The Power of Scale for Parameter-Efficient Prompt Tuning,
- 2104.08691
-\end_layout
-
-\begin_layout Frame
-LoRA: Low-Rank Adaptation (easier than prefix tuning)
-\end_layout
-
-\begin_layout Frame
-Learns a low-rank 
-\begin_inset Quotes eld
-\end_inset
-
-diff
-\begin_inset Quotes erd
-\end_inset
-
- between the pretrained and fine-tuned weight matrices.
-\end_layout
-
-\begin_layout Frame
-[1] http://web.stanford.edu/class/cs224n/slides/cs224n-2023-lecture9-pretraining.pd
-f
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-LoRA: Low-Rank Adaptation
-\end_layout
-
-\end_inset
-
 
 \end_layout
 
