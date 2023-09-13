@@ -9628,7 +9628,40 @@ Toolformer: Language Models Can Teach Themselves to Use Tools, 2302.04761
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
 \begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Calling other models from LLM
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face,
+ 2303.17580
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset Graphics
+	filename pasted49.png
+	special width=\linewidth
+
+\end_inset
+
 
 \end_layout
 
@@ -9752,8 +9785,7 @@ Socratic Models: Composing Zero-Shot Multimodal Reasoning with Language,
 \end_layout
 
 \begin_layout Frame
-HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face,
- 2303.17580
+
 \end_layout
 
 \begin_layout Standard
