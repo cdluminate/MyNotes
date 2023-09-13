@@ -9290,18 +9290,28 @@ LLM :: Safety & Security
 \begin_deeper
 \begin_layout FrameSubtitle
 For instance, jail break attacks to bypass the safety checks.
+ A part of alignment issue.
+\end_layout
+
+\begin_layout Itemize
+https://openai.com/research
+\end_layout
+
+\begin_layout Itemize
+Baseline Defenses for Adversarial Attacks Against Aligned Language Models,
+ 2309.00614
+\begin_inset Newline newline
+\end_inset
+
+Discusses detection (preplexity based), input preprocessing (paraphrase
+ and retokenization), and adversarial training.
+\end_layout
+
+\begin_layout Itemize
+[TODO]
 \end_layout
 
 \end_deeper
-\begin_layout Frame
-AI Alignment Forum: https://www.alignmentforum.org/
-\end_layout
-
-\begin_layout Frame
-Baseline Defenses for Adversarial Attacks Against Aligned Language Models,
- 2309.00614
-\end_layout
-
 \begin_layout Frame
 
 \end_layout
@@ -9704,6 +9714,15 @@ The largest language models are Decoder only architecture.
 
 \begin_layout Itemize
 Instruction tuning and RLHF are important to make LLM useful and harmless.
+\end_layout
+
+\begin_layout Itemize
+OpenAI seems to put their focus on alignment recently (Responsible AI, Safety
+ & Alignment).
+\begin_inset Newline newline
+\end_inset
+
+https://openai.com/research
 \end_layout
 
 \end_deeper
