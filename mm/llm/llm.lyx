@@ -9133,33 +9133,47 @@ LLM :: Generated Text Detection
 
 \end_layout
 
-\begin_layout Frame
-Can AI-Generated Text be Reliably Detected? (arxiv)
+\begin_deeper
+\begin_layout Itemize
+A Watermark for Large Language Models, 2301.10226
 \end_layout
 
-\begin_layout Frame
-paraphrasing attacks can break a whole range of detectors
+\begin_layout Itemize
+DetectGPT: Zero-Shot Machine-Generated Text Detection using Probability
+ Curvature, 2301.11305 
 \end_layout
 
-\begin_layout Frame
+\begin_layout Itemize
+
+\bar under
+Can AI-Generated Text be Reliably Detected?, 2303.11156
+\bar default
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size small
+paraphrasing attacks can break a whole range of detectors.
+\end_layout
+
+\begin_layout Itemize
+
+\size small
 for a sufficiently good language model, even the best possible detector
- can only perform marginally better than a random classifier
+ can only perform marginally better than a random classifier.
 \end_layout
 
-\begin_layout Frame
+\begin_layout Itemize
+
+\size small
 watermarking is vulnerable against spoofing attacks where adversarial humans
  can infer hidden watermarking signatures.
 \end_layout
 
-\begin_layout Frame
-DetectGPT: Zero-Shot Machine-Generated Text Detection using Probability
- Curvature (arxiv)
-\end_layout
-
-\begin_layout Frame
-A Watermark for Large Language Models, 2301.10226
-\end_layout
-
+\end_deeper
+\end_deeper
 \begin_layout Frame
 
 \end_layout
@@ -9184,11 +9198,75 @@ LLM :: Bias
 
 \end_layout
 
-\begin_layout Frame
+\begin_deeper
+\begin_layout FrameSubtitle
 Calibrate Before Use: Improving Few-Shot Performance of Language Models,
  2102.09690
 \end_layout
 
+\end_deeper
+\begin_layout Frame
+\begin_inset Quotes eld
+\end_inset
+
+GPT-3 is biased towards certain answers due to the prompt and the model’s
+ intrinsic biases.
+\begin_inset Quotes erd
+\end_inset
+
+ – Section 5.
+\end_layout
+
+\begin_deeper
+\begin_layout ExampleBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Influence of language model bias
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+GPT-3's few-shot learning can be unstable: the choice of prompt format,
+ training examples, and even the order of the training examples can cause
+ accuracy to vary from near chance to near state-of-the-art.
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Contextual Calibration
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+Adjust output probabilities with an affine transformation
+\begin_inset Formula 
+\[
+\hat{q}=\text{softmax}(W\hat{p}+b)
+\]
+
+\end_inset
+
+The weight matrix 
+\begin_inset Formula $W$
+\end_inset
+
+ is restricted to be diagonal in this paper (vector scaling).
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -9201,7 +9279,7 @@ Calibrate Before Use: Improving Few-Shot Performance of Language Models,
 status open
 
 \begin_layout Plain Layout
-LLM :: Security & Ethics
+LLM :: Safety & Security
 \end_layout
 
 \end_inset
