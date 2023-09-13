@@ -9868,6 +9868,17 @@ Multi-Modal Instruct-Tuning / ICL / CoT?
 
 \begin_deeper
 \begin_layout Itemize
+Socratic Models: Composing Zero-Shot Multimodal Reasoning with Language,
+ 2204.00598 (ICLR23)
+\begin_inset Newline newline
+\end_inset
+
+Multimodal prompt engineering.
+ Combines different modalities with language as the bridge.
+ (VLM+LLM)
+\end_layout
+
+\begin_layout Itemize
 https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models
 \begin_inset Newline newline
 \end_inset
@@ -9938,31 +9949,6 @@ There are also discussions on the emergent properties in this paper.
 status open
 
 \begin_layout Plain Layout
-Language as Bridge?
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-Socratic Models: Composing Zero-Shot Multimodal Reasoning with Language,
- 2204.00598
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
 Language as Visual Representation?
 \end_layout
 
@@ -10012,10 +9998,61 @@ Language Prior in Downstream Task?
 
 \end_layout
 
-\begin_layout Frame
-Lmpriors: Pre-trained language models as task-specific priors, 2022
+\begin_deeper
+\begin_layout FrameSubtitle
+Lmpriors: Pre-trained language models as task-specific priors, 2210.12530
+ (NeurIPSw)
 \end_layout
 
+\end_deeper
+\begin_layout Frame
+Incorporates auxiliary natural language metadata about the machine learning
+ task—such as variable names and descriptions—to encourage downstream model
+ outputs to be consistent with the LM’s common-sense reasoning based on
+ the metadata.
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+6cm
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Graphics
+	filename pasted56.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+5cm
+\end_layout
+
+\begin_layout Itemize
+Only tried on several simple machine learning tasks.
+ No vision task.
+\end_layout
+
+\begin_layout Itemize
+Requires textual information about 
+\begin_inset Formula $x$
+\end_inset
+
+, such as descriptions.
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
