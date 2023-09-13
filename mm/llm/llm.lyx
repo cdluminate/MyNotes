@@ -8968,6 +8968,147 @@ LoRA: Low-Rank Adaptation, 2106.09685
 
 \end_layout
 
+\begin_layout Frame
+
+\size small
+\begin_inset Quotes eld
+\end_inset
+
+Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number
+ of trainable parameters by 10,000 times and the GPU memory requirement
+ by 3 times.
+\begin_inset Quotes erd
+\end_inset
+
+ – From abstract.
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+5cm
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Graphics
+	filename pasted43.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\size small
+We only train 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ The rest parameters are all frozen during fine-tuning.
+\end_layout
+
+\begin_layout ColumnsTopAligned
+They only adapt the attention weights 
+\begin_inset Formula $W_{q}$
+\end_inset
+
+, 
+\begin_inset Formula $W_{k}$
+\end_inset
+
+, 
+\begin_inset Formula $W_{v}$
+\end_inset
+
+, 
+\begin_inset Formula $W_{o}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+6cm
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+
+\size small
+Key insight: Pre-trained LMs have a low 
+\begin_inset Quotes eld
+\end_inset
+
+intrinsic dimension
+\begin_inset Quotes erd
+\end_inset
+
+ and can still learn efficiently despite a random projection to a smaller
+ subspace.
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\size small
+For pretrained weight 
+\begin_inset Formula $W_{0}\in\mathbb{R}^{d\times k}$
+\end_inset
+
+, we constrain its update by low-rank decomposition 
+\begin_inset Formula 
+\begin{align*}
+W_{0}+\Delta W & =W_{0}+BA\\
+ & B\in\mathbb{R}^{d\times r},A\in\mathbb{R}^{r\times k}\\
+ & r<<\min(d,k)
+\end{align*}
+
+\end_inset
+
+The forwards pass is modified as
+\begin_inset Formula 
+\[
+h=W_{0}x+\Delta Wx=W_{0}x+BAx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\size small
+* LoRA is a generallization of full fine-tuning.
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\size small
+* LoRA does not induce inference latency.
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
