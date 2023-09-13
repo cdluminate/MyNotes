@@ -9340,19 +9340,26 @@ LLM + More data?
 
 \end_layout
 
-\begin_layout Frame
-Mathematical Capabilities of ChatGPT, (dataset paper)
+\begin_deeper
+\begin_layout Itemize
+Mathematical Capabilities of ChatGPT, 2301.13867
+\begin_inset Newline newline
+\end_inset
+
+Presents a new dataset.
 \end_layout
 
-\begin_layout Frame
-PAL: Program-aided Language Models, 2211.10435
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted44.png
+	special width=\linewidth
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Frame
-Program of Thoughts Prompting: Disentangling Computation from Reasoning
- for Numerical Reasoning Tasks, 2211.12588
-\end_layout
-
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -9373,19 +9380,138 @@ LLM :: Data Quality?
 
 \end_layout
 
-\begin_layout Frame
-Phi-1: Textbooks are all you need, 2306.11644 (MSFT)
-\end_layout
+\begin_deeper
+\begin_layout Itemize
+Phi-1: Textbooks are all you need, 2306.11644 [MSFT]
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Frame
 Improving data quality can dramatically change the shape of the scaling
- laws
+ laws.
+\begin_inset Newline newline
+\end_inset
+
+A small LM with 1.3B parameter can show surprising emergent properties compared
+ to the base model.
+\begin_inset Newline newline
+\end_inset
+
+Performance comparable to 5x larger state of the art model.
 \end_layout
 
+\begin_layout Itemize
+Textbooks Are All You Need II: phi-1.5 technical report, 2309.05463 (Sept
+ 11 2023) [MSFT]
+\begin_inset Newline newline
+\end_inset
+
+Can exhibit 
+\begin_inset Quotes eld
+\end_inset
+
+think step by step
+\begin_inset Quotes erd
+\end_inset
+
+ (zero-shot CoT) ability with only 1.3B parameters.
+\end_layout
+
+\begin_layout Itemize
+
+\bar under
+Q: Vision Datasets: the larger the better?
+\end_layout
+
+\end_deeper
 \begin_layout Frame
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LLM + Symbolic Engine Aid?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted45.png
+	special width=0.8\linewidth
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+[1] PAL: Program-aided Language Models, 2211.10435
+\end_layout
+
+\begin_layout Standard
+[2] Program of Thoughts Prompting: Disentangling Computation from Reasoning
+ for Numerical Reasoning Tasks, 2211.12588
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
