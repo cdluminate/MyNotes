@@ -8366,6 +8366,24 @@ Motivation
 \size small
 Optimized for dialogue use cases.
  Open access for both academic and commercial use cases.
+\begin_inset Newline newline
+\end_inset
+
+Arch diff from LLaMA-1: increased context length and grouped query attention
+ (GQA).
+\end_layout
+
+\begin_layout Block
+
+\size small
+Introduced GhostAttention to prevent the LM from forgetting the initial
+ instruction.
+\end_layout
+
+\begin_layout Block
+
+\size small
+Training data updated to a new mix of publically available online data.
 \end_layout
 
 \begin_layout ColumnsTopAligned
@@ -8391,8 +8409,7 @@ Pretraining
 \end_layout
 
 \begin_layout Block
-Arch diff from LLaMA-1: (1) increased context length and grouped query attention
- (GQA).
+
 \end_layout
 
 \begin_layout Block
@@ -8428,6 +8445,26 @@ Fine-Tuning
 \end_layout
 
 \end_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Evaluation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+
+\size small
+Code, Commonsense Reasoning, World knowledge, reading comprehension, Math,
+ etc.
+\end_layout
+
 \end_deeper
 \begin_layout Subsection
 Position Embedding
@@ -8438,7 +8475,7 @@ Position Embedding
 status open
 
 \begin_layout Plain Layout
-LLM :: Position Embedding
+LLM :: Position Embedding [1/3]
 \end_layout
 
 \end_inset
@@ -8446,11 +8483,68 @@ LLM :: Position Embedding
 
 \end_layout
 
+\begin_deeper
+\begin_layout FrameSubtitle
+Sinusoid position embededing, or absolute position embedding from vanilla
+ transformer
+\end_layout
+
+\end_deeper
 \begin_layout Frame
-Absolute position embededing (vanilla transformer)
+
+\size footnotesize
+\begin_inset Quotes eld
+\end_inset
+
+Since our model contains no recurrence and no convolution, ......, we must inject
+ some information about the relative or absolute position of the tokens
+ in the sequence.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ExampleBlock
+
+\size small
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Absolute Position Embedding
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size small
+Typically, position embedding 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ is added onto its correponding token 
+\begin_inset Formula $k_{i}$
+\end_inset
+
+ in the token sequence,
 \begin_inset Formula 
 \[
-x_{i}=x_{i}+p_{i}
+x_{i}+p_{i}\quad p_{i}\in\mathbb{R}^{d}
+\]
+
+\end_inset
+
+which applies to query, key, and value:
+\begin_inset Formula 
+\[
+f_{\{q,k,v\}}(x_{i},i)\triangleq W_{\{q,k,v\}}(x_{i}+p_{i})
 \]
 
 \end_inset
@@ -8458,28 +8552,32 @@ x_{i}=x_{i}+p_{i}
 
 \end_layout
 
-\begin_layout Frame
-Relative position embedding (T5, Gopher)
+\begin_layout Standard
+
+\size small
+For instance, the sinusoid position embedding is
 \begin_inset Formula 
-\[
-A_{ij}=W_{q}x_{i}x_{j}^{T}W_{k}^{T}+r_{i-j}
-\]
+\begin{align*}
+p_{(i,2t)} & =\sin(i/10000^{2t/d})\\
+p_{(i,2t+1)} & =\cos(i/10000^{2t/d})
+\end{align*}
 
 \end_inset
 
 
 \end_layout
 
+\end_deeper
+\end_deeper
 \begin_layout Frame
-Rotary position embedding (LLaMA, PaLM).
- Unifies absolute and relative.
-\begin_inset Formula 
-\[
-A_{ij}=W_{q}x_{i}R_{\theta,i-j}x_{j}^{T}W_{k}^{T}
-\]
 
-\end_inset
+\size small
+You can also learn the position embedding.
+ But sinusoid embedding allows you to extrapolate to sequence lengths longer
+ than the ones encountered during the training process.
+\end_layout
 
+\begin_layout Frame
 
 \end_layout
 
@@ -8502,11 +8600,175 @@ scriptsize
 \end_layout
 
 \begin_layout Frame
-[1] Survey: https://arxiv.org/pdf/2303.18223.pdf
+[1] Attention is all you need, 1706.03762
 \end_layout
 
 \begin_layout Frame
-[2] Self-Attention with Relative Position Representations, 1803.02155
+[2] Convolutional Sequence to Sequence Learning, 1705.03122
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LLM :: Position Embedding [2/3]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Efficiently consider representations of the relative positions, or distances
+ between sequence elements.
+ (T5, Gopher)
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Relative Position Embedding
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+Trainable relative position embedding 
+\begin_inset Formula $\tilde{p}_{r}^{k}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{p}_{r}^{v}$
+\end_inset
+
+ only to key and value
+\begin_inset Formula 
+\begin{align*}
+f_{q}(x_{m})=W_{q}x_{m} & \quad\Rightarrow\quad & f_{q}(x_{m})=W_{q}x_{m}\\
+f_{k}(x_{n},n)=W_{k}(x_{n}) & \quad\Rightarrow\quad & f_{k}(x_{n},n)=W_{k}(x_{n}+\tilde{p}_{r}^{k})\\
+f_{v}(x_{n},n)=W_{v}(x_{n}) & \quad\Rightarrow\quad & f_{v}(x_{n},n)=W_{v}(x_{n}+\tilde{p}_{r}^{v})
+\end{align*}
+
+\end_inset
+
+Note that 
+\begin_inset Formula $r=\text{clip}(m-n,r_{\min},r_{\max})$
+\end_inset
+
+ is relative distance between position 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout ExampleBlock
+The relative distance is clipped with the hypothesis that precise relative
+ position information is not useful beyond a certain distance.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+There are other variants of relative position embeddings.
+ See [2].
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+[1] Self-Attention with Relative Position Representations, 1803.02155
+\end_layout
+
+\begin_layout Frame
+[2] RoFormer: Enhanced Transformer with Rotary Position Embedding, 2104.09864
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LLM :: Position Embedding [3/3]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Unifies absolute and relative approaches.
+\end_layout
+
+\begin_layout Frame
+Rotary position embedding (LLaMA, PaLM).
+ 
+\begin_inset Formula 
+\[
+A_{ij}=W_{q}x_{i}R_{\theta,i-j}x_{j}^{T}W_{k}^{T}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
 \end_layout
 
 \begin_layout Frame
