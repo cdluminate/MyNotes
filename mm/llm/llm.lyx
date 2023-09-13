@@ -9439,6 +9439,46 @@ Q: Vision Datasets: the larger the better?
 status open
 
 \begin_layout Plain Layout
+LLM + Information Retrieval
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Internet-augmented language models through few-shot prompting for open-domain
+ question answering, 2203.05115
+\end_layout
+
+\begin_layout Itemize
+Overcome some of their challenges with respect to grounding to factual and
+ up-to-date information.
+\end_layout
+
+\begin_layout Itemize
+Condition LM on google search results.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 LLM + Symbolic Engine Aid?
 \end_layout
 
@@ -9524,35 +9564,6 @@ scriptsize
 status open
 
 \begin_layout Plain Layout
-LLM + Information Retrieval
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-Internet-augmented language models through few-shot prompting for open-domain
- question answering, 2203.05115
-\end_layout
-
-\begin_layout Frame
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
 LLM + External APIs
 \end_layout
 
@@ -9561,14 +9572,62 @@ LLM + External APIs
 
 \end_layout
 
-\begin_layout Frame
-Toolformer: Language Models Can Teach Themselves to Use Tools, 2302.04761
-\end_layout
-
-\begin_layout Frame
+\begin_deeper
+\begin_layout Itemize
 TALM: Tool Augmented Language Models, 2205.12255
 \end_layout
 
+\begin_layout Itemize
+Toolformer: Language Models Can Teach Themselves to Use Tools, 2302.04761
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+5.5cm
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Graphics
+	filename pasted46.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+\begin_inset Graphics
+	filename pasted47.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+5.5cm
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Graphics
+	filename pasted48.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Frame
 
 \end_layout
