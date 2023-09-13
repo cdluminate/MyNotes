@@ -9858,7 +9858,7 @@ end{center}
 status open
 
 \begin_layout Plain Layout
-Multi-Modal Prompting?
+Multi-Modal Instruct-Tuning / ICL / CoT?
 \end_layout
 
 \end_inset
@@ -9866,8 +9866,23 @@ Multi-Modal Prompting?
 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models
+\begin_inset Newline newline
+\end_inset
+
+More or less share similar ideas to the previously shown works.
+\end_layout
+
+\begin_layout Itemize
+Too many papers and growing very rapidly.
+ I refrain from expanding the list here.
+\end_layout
+
+\end_deeper
 \begin_layout Frame
-Multimodal “Chain of Thought” (Zhang et al., 2023)
+
 \end_layout
 
 \begin_layout Standard
@@ -9890,8 +9905,25 @@ Multi-Modal Scaling Law?
 
 \end_layout
 
+\begin_deeper
+\begin_layout FrameSubtitle
+Scaling laws for generative mixed modal language models, 2301.03728
+\end_layout
+
+\end_deeper
 \begin_layout Frame
-Scaling laws for generative mixed modal language models
+\begin_inset Graphics
+	filename pasted55.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+There are also discussions on the emergent properties in this paper.
+ See preprint for details.
 \end_layout
 
 \begin_layout Standard
