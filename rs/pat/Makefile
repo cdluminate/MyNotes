@@ -81,6 +81,7 @@ train_imagenet_r18:
 		./ILSVRC
 
 # Quadro RTX 8000 * 2 (48GB)
+# *   Acc@1 75.396 Acc@5 92.692 r50-x-bn1-flat/
 train_imagenet_pat_x_bn1:
 	python3 train_imagenet.py \
 		-a resnet50 \
