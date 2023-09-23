@@ -6,6 +6,7 @@ import numpy as np
 import torchvision as V
 from torchvision.models._utils import IntermediateLayerGetter
 import pytest
+import random
 
 
 def pat_loss(y: th.Tensor, losstype: str) -> th.Tensor:
@@ -29,6 +30,9 @@ def pat_loss(y: th.Tensor, losstype: str) -> th.Tensor:
         loss = -y.view(-1).abs().sum()
     elif losstype == 'exp':
         loss = 1 + ((y.view(-1).abs() * -1).exp() * -1).sum()
+    elif losstype == 'mix':
+        losstype = random.choice(['flat', 'rflat', 'exp'])
+        return pat_loss(y, losstype)
     else:
         raise NotImplementedError
     return loss
@@ -49,7 +53,7 @@ def pat_resnet(model: th.nn.Module, i: str, j: str, x: th.Tensor, normalize=None
     assert j in IJLIST
     assert IJLIST.index(i) < IJLIST.index(j)
     if (i, j) == ('x', 'bn1'):
-        ptb = pat_resnet_from_x_to_bn1(model, x, 'flat', normalize=normalize)
+        ptb = pat_resnet_from_x_to_bn1(model, x, 'rflat', normalize=normalize)
     else:
         raise NotImplementedError
     return ptb
