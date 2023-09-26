@@ -1,3 +1,6 @@
+'''
+pip install git+https://github.com/fra31/auto-attack
+'''
 import argparse
 import os
 import numpy as np
@@ -7,6 +10,7 @@ import torchvision as V
 import rich
 from rich.progress import track
 console = rich.get_console()
+from autoattack import AutoAttack
 # in the current directory
 import ilsvrc
 
@@ -39,6 +43,14 @@ class AverageMeter(object):
         return fmtstr.format(**self.__dict__)
 
 
+class ModelInputBound0to1(th.nn.Module):
+    def __init__(self, module):
+        super(ModelInputBound0to1, self).__init__()
+        self.module = module
+    def forward(self, x):
+        return self.module(ilsvrc.NORMALIZE(x))
+
+
 if __name__ == '__main__':
     ag = argparse.ArgumentParser()
     ag.add_argument('--datadir', type=str, default='./ILSVRC')
@@ -46,6 +58,7 @@ if __name__ == '__main__':
     ag.add_argument('--batch', type=int, default=128)
     ag.add_argument('--resume', type=str, default='', help='path to pretrained weights')
     ag.add_argument('--device', type=str, default='cuda' if th.cuda.is_available() else 'cpu')
+    ag.add_argument('--attack', type=str, default='none')
     ag = ag.parse_args()
     console.log(ag)
 
@@ -59,6 +72,7 @@ if __name__ == '__main__':
     state_dict = remove_prefix_from_state_dict(checkpoint['state_dict'], 'module.')
     model.load_state_dict(state_dict)
     del checkpoint
+    model = ModelInputBound0to1(model)
     model = model.to(ag.device)
     model.eval()
 
@@ -68,15 +82,31 @@ if __name__ == '__main__':
         batch_size=ag.batch, shuffle=False, num_workers=8,
         pin_memory=True, sampler=None)
 
+    console.log(f'>_< Initializing adversary (if specified)')
+    if ag.attack == 'none':
+        pass
+    elif ag.attack == 'aa-quick':
+        adversary = AutoAttack(model, norm='Linf', eps=4/255, version='custom',
+                               attacks_to_run=['apgd-ce', 'apgd-dlr'])
+        adversary.apgd.n_restarts = 1
+    elif ag.attack == 'aa':
+        adversary = AutoAttack(model, norm='Linf', eps=4/255, version='standard')
+    else:
+        raise NotImplementedError
+
     console.log('>_< Validate')
     acc1meter = AverageMeter('Acc@1', ':6.2f')
     acc5meter = AverageMeter('Acc@5', ':6.2f')
     for i, (images, labels) in track(enumerate(val_loader), total=len(val_loader)):
         images = images.to(ag.device)
         labels = labels.to(ag.device)
-
-        images = ilsvrc.NORMALIZE(images)
-        output = model(images)
+        if ag.attack == 'none':
+            output = model(images)
+        elif ag.attack in ('aa-quick', 'aa'):
+            images_adv = adversary.run_standard_evaluation(images, labels, bs=images.size(0))
+            output = model(images_adv)
+        else:
+            raise NotImplementedError
 
         _, pred = output.topk(5, 1, True, True)
         pred = pred.t()
@@ -90,5 +120,5 @@ if __name__ == '__main__':
         acc5meter.update(acc5.item(), images.size(0))
         console.log(f'Batch[{i:4d}]', acc1meter, acc5meter)
 
-    console.log('Overall Evaluation Results is:')
+    console.log(f'Overall Evaluation Results -- <{ag.attack}>')
     console.log(acc1meter.summary(), acc5meter.summary())
