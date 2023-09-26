@@ -83,6 +83,7 @@ train_imagenet_r18:
 # Quadro RTX 8000 * 2 (48GB)
 # Acc@1 75.396 Acc@5 92.692 r50-x-bn1-flat/
 # Acc@1 75.406 Acc@5 92.702 r50-x-bn1-exp/
+# Acc@1 75.648 Acc@5 92.744 r50-x-bn1-rflat/
 train_imagenet_pat_x_bn1:
 	python3 train_imagenet.py \
 		-a resnet50 \
