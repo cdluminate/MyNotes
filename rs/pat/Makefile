@@ -94,3 +94,6 @@ train_imagenet_pat_x_bn1:
 		--rank 0 \
 		--pat --pati=x --patj=bn1 \
 		./ILSVRC
+
+eval:
+	 python3 eval_imagenet.py --resume baseline-r50/checkpoint.pth.tar
