@@ -263,10 +263,50 @@ def pat_benchmark(args) -> np.ndarray:
         mat[i, j] = tmij
     return mat
 
-    #x = th.rand(1, 3, 224, 224)
-    #if src != 'x':
-    #    x = pat_forward(model, 'x', src, x)
-    #y = pat_forward(model, src, tgt, x)
+
+def pat_solve(args) -> np.ndarray:
+    console.log('load tau and init p ...')
+    tau = np.zeros(21)
+    p = np.ones(21) / 21.
+    rho = args.solve_rho
+    eta = args.solve_eta
+    # fill in the vector
+    tmp = np.loadtxt(args.benchmark_save)
+    k = 0
+    for (i, j) in it.product(range(len(__NAMES__)), range(len(__NAMES__))):
+        if i >= j:
+            continue
+        tau[k] = tmp[i,j]
+        k += 1
+    omega = tmp[0,6]
+    console.print('tau:', tau)
+    console.print('p:', p)
+    console.print('eta:', eta)
+    console.print('rho:', rho)
+    console.print('omega:', omega)
+    console.print('rho.omega:', rho*omega)
+    # solve
+    console.log('solve x for Ax=b ...')
+
+    from scipy.optimize import lsq_linear
+    A = np.ones([2, 21])
+    A[1,:] = tau
+    b = np.array([1, rho * omega]).T
+    console.print('A', A)
+    console.print('b', b)
+    sol = lsq_linear(A, b, bounds=(0., 1.))
+    console.print('x', sol.x)
+    console.print('x.tau', (sol.x*tau).sum())
+    console.print('x.sum', sol.x.sum())
+    #
+    res = np.zeros([7, 7])
+    k = 0
+    for (i, j) in it.product(range(7), range(7)):
+        if i >= j:
+            continue
+        res[i,j] = sol.x[k]
+        k += 1
+    return res
 
 
 if __name__ == '__main__':
@@ -282,14 +322,21 @@ if __name__ == '__main__':
     # solve
     ag.add_argument('--solve', '-S', action='store_true')
     ag.add_argument('--solve_rho', type=float, default=0.2)
-    ag.add_argument('--solve_save', type=str, default='pat_r50_p.txt')
+    ag.add_argument('--solve_eta', type=float, default=3.0)
+    ag.add_argument('--solve_niter', type=int, default=1000)
+    ag.add_argument('--solve_save', type=str, default='pat_r50_p_0.2.txt')
     ag = ag.parse_args()
 
     if ag.benchmark:
         matrix = pat_benchmark(ag)
         console.print(matrix)
-        np.savetxt(ag.benchmark_save, matrix, fmt='%.5f')
+        np.savetxt(ag.benchmark_save, matrix, fmt='%.6f')
         console.log(f'matrix written into {ag.benchmark_save}')
+    elif ag.solve:
+        matrix = pat_solve(ag)
+        console.print(matrix)
+        np.savetxt(ag.solve_save, matrix, fmt='%.8f')
+        console.log(f'matrix written into {ag.solve_save}')
     else:
         console.print('No action specified')
 
