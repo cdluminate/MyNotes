@@ -19,6 +19,26 @@ def remove_prefix_from_state_dict(state_dict, prefix) -> dict:
     return new_dict
 
 
+class AverageMeter(object):
+    '''
+    Simplified meter (ref: train_imagenet.py)
+    '''
+    def __init__(self, name, fmt=':.3f'):
+        self.name, self.fmt = name, fmt
+        self.reset()
+    def reset(self):
+        self.val, self.avg, self.sum, self.count = (0, 0, 0, 0)
+    def update(self, val, n=1):
+        self.val, self.sum, self.count = (val, self.sum + val * n, self.count + n)
+        self.avg = self.sum / self.count
+    def __str__(self):
+        fmtstr = '{name} {val' + self.fmt + '} ({avg' + self.fmt + '})'
+        return fmtstr.format(**self.__dict__)
+    def summary(self):
+        fmtstr = '{name} {avg' + self.fmt + '} ({count' + self.fmt + '} samples)'
+        return fmtstr.format(**self.__dict__)
+
+
 if __name__ == '__main__':
     ag = argparse.ArgumentParser()
     ag.add_argument('--datadir', type=str, default='./ILSVRC')
@@ -49,8 +69,8 @@ if __name__ == '__main__':
         pin_memory=True, sampler=None)
 
     console.log('>_< Validate')
-    ACC1 = []
-    ACC5 = []
+    acc1meter = AverageMeter('Acc@1', ':6.2f')
+    acc5meter = AverageMeter('Acc@5', ':6.2f')
     for i, (images, labels) in track(enumerate(val_loader), total=len(val_loader)):
         images = images.to(ag.device)
         labels = labels.to(ag.device)
@@ -66,8 +86,9 @@ if __name__ == '__main__':
             correct_k = correct[:k].reshape(-1).float().sum(0, keepdim=True)
             res.append(correct_k.mul_(100.0 / labels.size(0)))
         acc1, acc5 = res
-        console.log('Batch', i, 'Acc@1', acc1.item(), 'Acc@5', acc5.item())
-        ACC1.append(acc1.item())
-        ACC5.append(acc5.item())
-    console.log('Final Results')
-    console.print('Acc@1', np.mean(ACC1), 'Acc@5', np.mean(ACC5))
+        console.log(f'Batch[{i:4d}]', acc1meter, acc5meter)
+        acc1meter.update(acc1.item(), images.size(0))
+        acc5meter.update(acc5.item(), images.size(0))
+
+    console.log('Overall Evaluation Results is:')
+    console.log(acc1meter.summary(), acc5meter.summary())
