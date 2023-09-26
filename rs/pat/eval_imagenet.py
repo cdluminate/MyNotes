@@ -86,9 +86,9 @@ if __name__ == '__main__':
             correct_k = correct[:k].reshape(-1).float().sum(0, keepdim=True)
             res.append(correct_k.mul_(100.0 / labels.size(0)))
         acc1, acc5 = res
-        console.log(f'Batch[{i:4d}]', acc1meter, acc5meter)
         acc1meter.update(acc1.item(), images.size(0))
         acc5meter.update(acc5.item(), images.size(0))
+        console.log(f'Batch[{i:4d}]', acc1meter, acc5meter)
 
     console.log('Overall Evaluation Results is:')
     console.log(acc1meter.summary(), acc5meter.summary())
