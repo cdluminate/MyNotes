@@ -11,6 +11,8 @@ boom very quickly. It is much worse than the naive tic;toc
 solution for this case.
 https://pytorch.org/docs/stable/benchmark_utils.html
 '''
+import os
+import sys
 import torch as th
 import numpy as np
 import torchvision as V
@@ -26,6 +28,14 @@ console = rich.get_console()
 from rich.progress import track
 
 __NAMES__ = ('x', 'relu', 'layer1', 'layer2', 'layer3', 'layer4', 'fc')
+
+
+def get_names(idx:int = None):
+    if idx is not None:
+        return __NAMES__[idx]
+    else:
+        return __NAMES__
+
 
 def pat_forward(r50: th.nn.Module,
                 src: str,
@@ -307,6 +317,32 @@ def pat_solve(args) -> np.ndarray:
         res[i,j] = sol.x[k]
         k += 1
     return res
+
+
+def pat_sample(p: np.ndarray) -> (int, int):
+    '''
+    sample (i, j) from prob mass matrix
+    '''
+    assert len(p.shape) == 2
+    pool = []
+    prob = []
+    for (i, j) in it.product(range(p.shape[0]), range(p.shape[1])):
+        # upper triangular
+        if i >= j:
+            continue
+        pool.append((i, j))
+        prob.append(p[i, j])
+    sel = np.random.choice(len(prob), p=prob)
+    return pool[sel]
+
+
+@pytest.mark.skipif(not os.path.exists('pat_r50_p_0.2.txt'),
+                    reason='P matrix not found')
+def test_pat_sample():
+    p = np.loadtxt('pat_r50_p_0.2.txt')
+    for i in range(100):
+        i, j = pat_sample(p)
+        print(i, j)
 
 
 if __name__ == '__main__':
