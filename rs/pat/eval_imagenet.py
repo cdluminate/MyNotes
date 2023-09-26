@@ -1,5 +1,6 @@
 import argparse
 import os
+import numpy as np
 import torch as th
 import torch.nn.functional as F
 import torchvision as V
@@ -48,7 +49,9 @@ if __name__ == '__main__':
         pin_memory=True, sampler=None)
 
     console.log('>_< Validate')
-    for i, (images, labels) in track(val_loader):
+    ACC1 = []
+    ACC5 = []
+    for i, (images, labels) in track(enumerate(val_loader), total=len(val_loader)):
         images = images.to(ag.device)
         labels = labels.to(ag.device)
 
@@ -63,4 +66,8 @@ if __name__ == '__main__':
             correct_k = correct[:k].reshape(-1).float().sum(0, keepdim=True)
             res.append(correct_k.mul_(100.0 / labels.size(0)))
         acc1, acc5 = res
-        console.log('Acc@1', acc1.item(), 'Acc@5', acc5.item())
+        console.log('Batch', i, 'Acc@1', acc1.item(), 'Acc@5', acc5.item())
+        ACC1.append(acc1.item())
+        ACC5.append(acc5.item())
+    console.log('Final Results')
+    console.print('Acc@1', np.mean(ACC1), 'Acc@5', np.mean(ACC5))
