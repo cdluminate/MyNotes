@@ -363,9 +363,10 @@ def pat_sample(p: np.ndarray) -> (int, int):
                     reason='P matrix not found')
 def test_pat_sample():
     p = np.loadtxt('pat_r50_p_0.2.txt')
-    for i in range(100):
+    for i in range(10000):
         i, j = pat_sample(p)
         print(i, j)
+        assert all([i < j, i >= 0, i < 7, j > 0, j <= 7])
 
 
 def pat_sample_r1(p: np.ndarray) -> int:
@@ -378,9 +379,10 @@ def pat_sample_r1(p: np.ndarray) -> int:
                     reason='P vector not found')
 def test_pat_sample_r1():
     p = np.loadtxt('pat_r50_pr1_0.2.txt')
-    for i in range(100):
+    for i in range(10000):
         i, j = 0, pat_sample_r1(p)
         print(i, j)
+        assert all([i < j, i >= 0, i < 7, j > 0, j <= 7])
 
 
 if __name__ == '__main__':
