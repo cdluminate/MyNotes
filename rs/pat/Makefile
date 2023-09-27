@@ -7,7 +7,7 @@ export CUDA_VISIBLE_DEVICES=0,1
 probmass:
 	python3 pat_resnet.py -B
 	python3 pat_resnet.py -S
-	python3 pat_resnet.py --solve_r1
+	python3 pat_resnet.py -R
 
 train_cifar:
 	python3 train_cifar.py --max_epochs=50

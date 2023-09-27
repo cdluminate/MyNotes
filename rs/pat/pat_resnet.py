@@ -368,6 +368,21 @@ def test_pat_sample():
         print(i, j)
 
 
+def pat_sample_r1(p: np.ndarray) -> int:
+    assert len(p.shape) == 1
+    sel = np.random.choice(len(p), p=p)
+    return sel + 1
+
+
+@pytest.mark.skipif(not os.path.exists('pat_r50_pr1_0.2.txt'),
+                    reason='P vector not found')
+def test_pat_sample_r1():
+    p = np.loadtxt('pat_r50_pr1_0.2.txt')
+    for i in range(100):
+        i, j = 0, pat_sample_r1(p)
+        print(i, j)
+
+
 if __name__ == '__main__':
     ag = argparse.ArgumentParser()
     # global
@@ -384,7 +399,7 @@ if __name__ == '__main__':
     ag.add_argument('--solve_eta', type=float, default=3.0)
     ag.add_argument('--solve_save', type=str, default='pat_r50_p_0.2.txt')
     # solve_r1 (only the first row)
-    ag.add_argument('--solve_r1', action='store_true')
+    ag.add_argument('--solve_r1', '-R', action='store_true')
     ag.add_argument('--solve_r1_save', type=str, default='pat_r50_pr1_0.2.txt')
     # parse
     ag = ag.parse_args()
