@@ -13,6 +13,7 @@ console = rich.get_console()
 from autoattack import AutoAttack
 # in the current directory
 import ilsvrc
+import pat_resnet
 
 
 def remove_prefix_from_state_dict(state_dict, prefix) -> dict:
@@ -102,6 +103,8 @@ if __name__ == '__main__':
         labels = labels.to(ag.device)
         if ag.attack == 'none':
             output = model(images)
+            # equivalent
+            #output = pat_resnet.pat_forward(model.module, 'x', 'fc', images)
         elif ag.attack in ('aa-quick', 'aa'):
             images_adv = adversary.run_standard_evaluation(images, labels, bs=images.size(0))
             output = model(images_adv)

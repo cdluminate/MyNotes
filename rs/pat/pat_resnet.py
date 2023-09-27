@@ -26,6 +26,8 @@ import time
 import rich
 console = rich.get_console()
 from rich.progress import track
+# local
+import ilsvrc
 
 __NAMES__ = ('x', 'relu', 'layer1', 'layer2', 'layer3', 'layer4', 'fc')
 
@@ -50,6 +52,8 @@ def pat_forward(r50: th.nn.Module,
     ydict = {}
     # part 1
     if names.index(src) < names.index('relu'):
+        # x bound is (0, 1)
+        x = ilsvrc.NORMALIZE(x)
         x = r50.conv1(x)
         x = r50.bn1(x)
         x = r50.relu(x)
@@ -143,9 +147,25 @@ def test_pat_loss(losstype: str):
     assert not th.isnan(loss)
 
 
-def pat_resnet(model: th.nn.Module, i: str, j: str, x: th.Tensor, normalize=None) -> th.Tensor:
+class ParetoAT(object):
+    def __init__(self, model):
+        self.normalize = ilsvrc.NORMALIZE
+        self.model = model
+    def __call__(self, i, j, x, y) -> th.Tensor:
+        return self.forward(i, j, x, y)
+    def forward(self, i: int, j: int, x: th.Tensor, y: th.Tensor) -> th.Tensor:
+        '''
+        adversarial version of x
+        '''
+        assert all([i > 0, j > 0, i < j, i < len(__NAMES__), j < len(__NAMES__)])
+        src, tgt = get_names(i), get_names(j)
+
+def pat_resnet(model: th.nn.Module, runningstat: object,
+               i: str, j: str,
+               x: th.Tensor, y: th.Tensor) -> th.Tensor:
     # this is a dispatcher
     assert all([i > 0, j > 0, i < j, i < len(__NAMES__), j < len(__NAMES__)])
+    src, tgt = get_names(i), get_names(j)
     raise NotImplementedError
     IJLIST = ('x', 'bn1', 'maxpool', 'layer1', 'layer2', 'layer3', 'layer4', 'fc')
     assert i in IJLIST
@@ -170,8 +190,6 @@ def pat_resnet_from_x_to_bn1(model, x, losstype:str, *,
     xr = x.clone().detach()
     xr.requires_grad = True
     for i in range(numstep):
-        if normalize is not None:
-            xr = normalize(xr)
         loss = pat_loss(model_x_bn1(xr)['bn1'], losstype)
         gxr = th.autograd.grad(loss, xr)[0]
         xr = xr - stepsize * th.sign(gxr)  # XXX: PGD
@@ -186,28 +204,6 @@ def pat_resnet_from_x_to_bn1(model, x, losstype:str, *,
 @pytest.mark.parametrize('losstype', ('flat', 'rflat', 'exp'))
 def test_pat_resnet18_from_x_to_bn1(losstype: str):
     model = V.models.resnet18()
-    x = th.rand(1,3,224,224)
-    ptb = pat_resnet_from_x_to_bn1(model, x, losstype, eps=4./255.)
-    print(f'{4./255.=}')
-    print(f'{ptb.mean()=}')
-    print(f'{ptb.min()=}')
-    print(f'{ptb.max()=}')
-    print(f'{ptb.std()=}')
-    assert ptb.min() >= -4./255.
-    assert ptb.max() <= 4./255.
-    xr = x + ptb
-    print(f'{4./255.=}')
-    print(f'{xr.mean()=}')
-    print(f'{xr.min()=}')
-    print(f'{xr.max()=}')
-    print(f'{xr.std()=}')
-    assert xr.min() >= 0.0
-    assert xr.max() <= 1.0
-
-
-@pytest.mark.parametrize('losstype', ('flat', 'rflat', 'exp'))
-def test_pat_resnet50_from_x_to_bn1(losstype: str):
-    model = V.models.resnet50()
     x = th.rand(1,3,224,224)
     ptb = pat_resnet_from_x_to_bn1(model, x, losstype, eps=4./255.)
     print(f'{4./255.=}')
@@ -319,6 +315,33 @@ def pat_solve(args) -> np.ndarray:
     return res
 
 
+def pat_solve_row1(args) -> np.ndarray:
+    tau = np.zeros(6)
+    p = np.ones(6) / 6.
+    rho = args.solve_rho
+    eta = args.solve_eta
+    tmp = np.loadtxt(args.benchmark_save)
+    for i in range(1, len(__NAMES__)):
+        tau[i-1] = tmp[0, i]
+    omega = tmp[0, 6]
+    console.print('tau:', tau)
+    console.print('eta:', eta)
+    console.print('rho:', rho)
+    console.print('omega:', omega)
+    console.print('rho.omega:', rho*omega)
+    from scipy.optimize import lsq_linear
+    A = np.ones([2, 6])
+    A[1, :] = tau
+    b = np.array([1, rho*omega]).T
+    console.print('A:', A)
+    console.print('b:', b)
+    sol = lsq_linear(A, b, bounds=(0., 1.))
+    console.print('x:', sol.x)
+    console.print('x.tau:', (sol.x*tau).sum())
+    console.print('x.sum:', sol.x.sum())
+    return sol.x
+
+
 def pat_sample(p: np.ndarray) -> (int, int):
     '''
     sample (i, j) from prob mass matrix
@@ -359,8 +382,11 @@ if __name__ == '__main__':
     ag.add_argument('--solve', '-S', action='store_true')
     ag.add_argument('--solve_rho', type=float, default=0.2)
     ag.add_argument('--solve_eta', type=float, default=3.0)
-    ag.add_argument('--solve_niter', type=int, default=1000)
     ag.add_argument('--solve_save', type=str, default='pat_r50_p_0.2.txt')
+    # solve_r1 (only the first row)
+    ag.add_argument('--solve_r1', action='store_true')
+    ag.add_argument('--solve_r1_save', type=str, default='pat_r50_pr1_0.2.txt')
+    # parse
     ag = ag.parse_args()
 
     if ag.benchmark:
@@ -373,6 +399,11 @@ if __name__ == '__main__':
         console.print(matrix)
         np.savetxt(ag.solve_save, matrix, fmt='%.8f')
         console.log(f'matrix written into {ag.solve_save}')
+    elif ag.solve_r1:
+        vector = pat_solve_row1(ag)
+        console.print(vector)
+        np.savetxt(ag.solve_r1_save, vector, fmt='%.8f')
+        console.log(f'vector written into {ag.solve_r1_save}')
     else:
         console.print('No action specified')
 
