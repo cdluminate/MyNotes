@@ -84,7 +84,7 @@ train_imagenet_r18:
 # Acc@1 75.396 Acc@5 92.692 r50-x-bn1-flat/
 # Acc@1 75.406 Acc@5 92.702 r50-x-bn1-exp/
 # Acc@1 75.648 Acc@5 92.744 r50-x-bn1-rflat/
-train_imagenet_pat_x_bn1:
+train_pat_row1:
 	python3 train_imagenet.py \
 		-a resnet50 \
 		--dist-url 'tcp://127.0.0.1:12345' \
@@ -92,7 +92,7 @@ train_imagenet_pat_x_bn1:
 		--multiprocessing-distributed \
 		--world-size 1 \
 		--rank 0 \
-		--pat --pati=x --patj=bn1 \
+		--patij=row1 \
 		./ILSVRC
 
 eval:

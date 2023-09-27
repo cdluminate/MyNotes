@@ -38,6 +38,9 @@ parser = argparse.ArgumentParser(description='PyTorch ImageNet Training')
 # BEGIN MOD
 parser.add_argument('--patij', type=str, default='none',
                     choices=['none', 'row1', 'all'])
+parser.add_argument('--patij_row1_p_path', type=str, default='pat_r50_pr1_0.2.txt')
+parser.add_argument('--patij_all_p_path', type=str, default='pat_r50_p_0.2.txt')
+parser.add_argument('--patij_losstype', type=str, default='mix')
 # END MOD
 parser.add_argument('data', metavar='DIR', nargs='?', default='imagenet',
                     help='path to dataset (default: imagenet)')
@@ -329,6 +332,15 @@ def train(train_loader, model, criterion, optimizer, epoch, device, args):
     # switch to train mode
     model.train()
 
+    # BEGIN MOD
+    if args.patij == 'row1':
+        autopat = pat_resnet.ParetoAT_R1(args.patij_row1_p_path, losstype=args.patij_losstype)
+    elif args.patij == 'none':
+        pass
+    else:
+        raise NotImplementedError
+    # END MOD
+
     end = time.time()
     for i, (images, target) in enumerate(train_loader):
         # measure data loading time
@@ -342,10 +354,8 @@ def train(train_loader, model, criterion, optimizer, epoch, device, args):
         # BEGIN MOD
         #output = model(images)
         if args.patij == 'row1':
-            ptb = pat_resnet.pat_resnet(
-                    model.module if args.distributed else model,
-                    args.pati, args.patj, images,
-                    ilsvrc.NORMALIZE)
+            ptb = autopat(model.module if args.distributed else model,
+                          images, target)
             images_r = ilsvrc.NORMALIZE(images + ptb)
             output = model(images_r)
         elif args.patij == 'all':

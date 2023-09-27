@@ -165,6 +165,7 @@ class ParetoAT(object):
         src, tgt = get_names(i), get_names(j)
 
 
+# XXX: rewrite
 def pat_resnet(model: th.nn.Module, runningstat: object,
                i: str, j: str,
                x: th.Tensor, y: th.Tensor) -> th.Tensor:
@@ -230,41 +231,19 @@ def test_pat_resnet_from_x_to_any(j, losstype):
     assert xr.max() <= 1.0
 
 
-def pat_resnet_from_x_to_bn1(model, x, losstype:str, *,
-                             normalize:callable=None,
-                             eps:float=6./255.,
-                             numstep:int=3,
-                             stepsize:float=2./255.) -> th.Tensor:
+class ParetoAT_R1(object):
     '''
-    return the pat perturbation to x
+    Automatic wrapper
     '''
-    model_x_bn1 = IntermediateLayerGetter(model, {'bn1': 'bn1'})
-    xr = x.clone().detach()
-    xr.requires_grad = True
-    for i in range(numstep):
-        loss = pat_loss(model_x_bn1(xr)['bn1'], losstype)
-        gxr = th.autograd.grad(loss, xr)[0]
-        xr = xr - stepsize * th.sign(gxr)  # XXX: PGD
-        #xr = xr - stepsize * gxr * 2.0  # XXX: GD
-        xr = xr.clamp(min=x - eps, max=x + eps)
-        xr = xr.clamp(min=0.0, max=1.0)
-        xr = xr.clone().detach()
-        xr.requires_grad = True
-    return (xr - x).clone().detach()
-
-
-@pytest.mark.parametrize('losstype', ('flat', 'rflat', 'exp'))
-def test_pat_resnet18_from_x_to_bn1(losstype: str):
-    model = V.models.resnet18()
-    x = th.rand(1,3,224,224)
-    ptb = pat_resnet_from_x_to_bn1(model, x, losstype, eps=4./255.)
-    print(f'{4./255.=}', f'{ptb.mean()=}', f'{ptb.min()=}', f'{ptb.max()=}', f'{ptb.std()=}')
-    assert ptb.min() >= -4./255.
-    assert ptb.max() <= 4./255.
-    xr = x + ptb
-    print(f'{4./255.=}', f'{xr.mean()=}', f'{xr.min()=}', f'{xr.max()=}', f'{xr.std()=}')
-    assert xr.min() >= 0.0
-    assert xr.max() <= 1.0
+    def __init__(self, p_path: str, losstype:str='mix'):
+        console.log(f'>_< ParetoAT_R1: initialize using {p_path}')
+        self.p = np.loadtxt(p_path)
+        self.losstype = losstype
+    def __call__(self, model, x, y):
+        j = pat_sample_r1(self.p)
+        #print(f'>_< ParetoAT_R1: (i,j)=({0},{j})')
+        ptb = pat_resnet_from_x_to_any(model, 0, j, x, y, losstype=self.losstype)
+        return ptb
 
 
 def get_forward_backward_time(model, src, tgt, args) -> float:
@@ -467,9 +446,3 @@ if __name__ == '__main__':
         console.log(f'vector written into {ag.solve_r1_save}')
     else:
         console.print('No action specified')
-
-    #model = V.models.resnet50()
-    #x = th.rand(1,3,224,224)
-    #ptb = pat_resnet(model, 'x', 'bn1', x)
-    #xr = x + ptb
-    #print('xr', xr)
