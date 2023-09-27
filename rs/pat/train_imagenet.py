@@ -36,9 +36,8 @@ model_names = sorted(name for name in models.__dict__
 
 parser = argparse.ArgumentParser(description='PyTorch ImageNet Training')
 # BEGIN MOD
-parser.add_argument('--pat', action='store_true')
-parser.add_argument('--pati', type=str, default=None)
-parser.add_argument('--patj', type=str, default=None)
+parser.add_argument('--patij', type=str, default='none',
+                    choices=['none', 'row1', 'all'])
 # END MOD
 parser.add_argument('data', metavar='DIR', nargs='?', default='imagenet',
                     help='path to dataset (default: imagenet)')
@@ -342,13 +341,15 @@ def train(train_loader, model, criterion, optimizer, epoch, device, args):
         # compute output
         # BEGIN MOD
         #output = model(images)
-        if args.pat:
+        if args.patij == 'row1':
             ptb = pat_resnet.pat_resnet(
                     model.module if args.distributed else model,
                     args.pati, args.patj, images,
                     ilsvrc.NORMALIZE)
             images_r = ilsvrc.NORMALIZE(images + ptb)
             output = model(images_r)
+        elif args.patij == 'all':
+            raise NotImplementedError
         else:
             images = ilsvrc.NORMALIZE(images)
             output = model(images)

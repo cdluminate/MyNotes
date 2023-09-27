@@ -11,11 +11,13 @@ boom very quickly. It is much worse than the naive tic;toc
 solution for this case.
 https://pytorch.org/docs/stable/benchmark_utils.html
 '''
+from typing import *
 import os
 import sys
 import torch as th
 import numpy as np
 import torchvision as V
+import torch.nn.functional as F
 from torchvision.models._utils import IntermediateLayerGetter
 import pytest
 import random
@@ -40,15 +42,17 @@ def get_names(idx:int = None):
 
 
 def pat_forward(r50: th.nn.Module,
-                src: str,
-                tgt: str,
+                src: Union[str, int],
+                tgt: Union[str, int],
                 x: th.Tensor,
                 *,
                 return_dict: bool=False):
     names = ('x', 'relu', 'layer1', 'layer2', 'layer3', 'layer4', 'fc')
-    assert src in names, 'unknown source'
-    assert tgt in names, 'unknown target'
-    assert names.index(src) < names.index(tgt), 'illegal source-target combination'
+    src = names[src] if isinstance(src, int) else src
+    tgt = names[tgt] if isinstance(tgt, int) else tgt
+    assert src in names, f'unknown source: {src}'
+    assert tgt in names, f'unknown target: {tgt}'
+    assert names.index(src) < names.index(tgt), f'illegal source-target combination {src}:{tgt}'
     ydict = {}
     # part 1
     if names.index(src) < names.index('relu'):
@@ -139,7 +143,7 @@ def pat_loss(y: th.Tensor, losstype: str) -> th.Tensor:
     return loss
 
 
-@pytest.mark.parametrize('losstype', ('flat', 'rflat', 'exp'))
+@pytest.mark.parametrize('losstype', ('flat', 'rflat', 'exp', 'mix'))
 def test_pat_loss(losstype: str):
     y = th.rand(1,22,33,44)
     loss = pat_loss(y, losstype)
@@ -160,6 +164,7 @@ class ParetoAT(object):
         assert all([i > 0, j > 0, i < j, i < len(__NAMES__), j < len(__NAMES__)])
         src, tgt = get_names(i), get_names(j)
 
+
 def pat_resnet(model: th.nn.Module, runningstat: object,
                i: str, j: str,
                x: th.Tensor, y: th.Tensor) -> th.Tensor:
@@ -176,6 +181,53 @@ def pat_resnet(model: th.nn.Module, runningstat: object,
     else:
         raise NotImplementedError
     return ptb
+
+
+def pat_resnet_from_x_to_any(model: th.nn.Module,
+                             i: int, j: int,
+                             x: th.Tensor, y: th.Tensor,
+                             *,
+                             losstype: str = 'mix',
+                             eps: float = 6./255.,
+                             numstep: int = 3,
+                             stepsize: float=2./255.) -> th.Tensor:
+    '''
+    return perturbation
+    '''
+    xr = x.clone().detach()
+    xr.requires_grad = True
+    assert i == 0
+    for niter in range(numstep):
+        output = pat_forward(model, i, j, xr)
+        if get_names(j) == 'fc':
+            loss = -F.cross_entropy(output, y)
+            #print(f'DEBUG: {i},{j} using CE', loss.item())
+        else:
+            loss = pat_loss(output, losstype)
+            #print(f'DEBUG: {i},{j} using PAT_LOSS')
+        gxr = th.autograd.grad(loss, xr)[0]
+        xr = xr - stepsize * th.sign(gxr) # PGD
+        xr = xr.clamp(min=x - eps, max=x + eps)
+        xr = xr.clamp(min=0., max=1.)
+        xr = xr.clone().detach()
+        xr.requires_grad = True
+    return (xr - x).clone().detach()
+
+
+@pytest.mark.parametrize('j,losstype', it.product(range(1, len(__NAMES__)),
+                                                  ('flat', 'rflat', 'exp', 'mix')))
+def test_pat_resnet_from_x_to_any(j, losstype):
+    model = V.models.resnet50()
+    x = th.rand(1, 3, 224, 224)
+    y = th.randint(1000, (1,))
+    ptb = pat_resnet_from_x_to_any(model, 0, j, x, y, losstype=losstype)
+    print(f'{6./255.=}', f'{ptb.mean()=}', f'{ptb.min()=}', f'{ptb.max()=}', f'{ptb.std()=}')
+    assert ptb.min() >= -6./255.
+    assert ptb.max() <= 6./255.
+    xr = x + ptb
+    print(f'{6./255.=}', f'{xr.mean()=}', f'{xr.min()=}', f'{xr.max()=}', f'{xr.std()=}')
+    assert xr.min() >= 0.0
+    assert xr.max() <= 1.0
 
 
 def pat_resnet_from_x_to_bn1(model, x, losstype:str, *,
@@ -206,19 +258,11 @@ def test_pat_resnet18_from_x_to_bn1(losstype: str):
     model = V.models.resnet18()
     x = th.rand(1,3,224,224)
     ptb = pat_resnet_from_x_to_bn1(model, x, losstype, eps=4./255.)
-    print(f'{4./255.=}')
-    print(f'{ptb.mean()=}')
-    print(f'{ptb.min()=}')
-    print(f'{ptb.max()=}')
-    print(f'{ptb.std()=}')
+    print(f'{4./255.=}', f'{ptb.mean()=}', f'{ptb.min()=}', f'{ptb.max()=}', f'{ptb.std()=}')
     assert ptb.min() >= -4./255.
     assert ptb.max() <= 4./255.
     xr = x + ptb
-    print(f'{4./255.=}')
-    print(f'{xr.mean()=}')
-    print(f'{xr.min()=}')
-    print(f'{xr.max()=}')
-    print(f'{xr.std()=}')
+    print(f'{4./255.=}', f'{xr.mean()=}', f'{xr.min()=}', f'{xr.max()=}', f'{xr.std()=}')
     assert xr.min() >= 0.0
     assert xr.max() <= 1.0
 
