@@ -4,10 +4,9 @@
 export NCCL_P2P_DISABLE=1
 export CUDA_VISIBLE_DEVICES=0,1
 
-poc:
-	python3 patpoc.py -m resnet18
-	python3 patpoc.py -m resnet50
-	python3 patpoc.py -m resnet152
+probmass:
+	python3 pat_resnet.py -B
+	python3 pat_resnet.py -S
 
 train_cifar:
 	python3 train_cifar.py --max_epochs=50
