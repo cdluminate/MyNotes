@@ -525,7 +525,7 @@ class ProgressMeter(object):
         print('\t'.join(entries))
         
     def display_summary(self):
-        entries = [" *"]
+        entries = ["Eval *"]
         entries += [meter.summary() for meter in self.meters]
         print(' '.join(entries))
 

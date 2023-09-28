@@ -93,7 +93,9 @@ train_pat_row1:
 		--world-size 1 \
 		--rank 0 \
 		--patij=row1 \
-		./ILSVRC
+		--patij_losstype=mix \
+		./ILSVRC \
+		| tee train_pat_row1.log
 
 eval:
 	 python3 eval_imagenet.py --resume baseline-r50/checkpoint.pth.tar
