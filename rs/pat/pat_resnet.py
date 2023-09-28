@@ -138,6 +138,9 @@ def pat_loss(y: th.Tensor, losstype: str) -> th.Tensor:
     elif losstype == 'mix':
         losstype = random.choice(['flat', 'rflat', 'exp'])
         return pat_loss(y, losstype)
+    elif losstype == 'mix-':
+        losstype = random.choice(['flat', 'exp'])
+        return pat_loss(y, losstype)
     else:
         raise NotImplementedError
     return loss
