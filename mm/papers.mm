@@ -6941,7 +6941,7 @@
 </node>
 </node>
 </node>
-<node TEXT="GEN :: Conditioned Generation" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_65977927" CREATED="1576830540818" MODIFIED="1688778234860">
+<node TEXT="GEN :: Conditioned Generation" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_65977927" CREATED="1576830540818" MODIFIED="1688778234860">
 <edge COLOR="#ff0000"/>
 <font NAME="Gentium"/>
 <node TEXT="Conditioned generative models have more applications in practice. Unconditioned ones are more foundational" ID="ID_512568437" CREATED="1688777560743" MODIFIED="1688777588589">
@@ -7031,6 +7031,11 @@
 <icon BUILTIN="idea"/>
 <icon BUILTIN="unchecked"/>
 <node TEXT="OpenAI" ID="ID_1227958455" CREATED="1688789483434" MODIFIED="1688789484791"/>
+</node>
+</node>
+<node TEXT="+Alignment issue" ID="ID_410880240" CREATED="1696813072278" MODIFIED="1696813075868">
+<node TEXT="Aligning Text-to-Image Diffusion Models with Reward Backpropagation" ID="ID_1511812150" CREATED="1696813076146" MODIFIED="1696813083894">
+<icon BUILTIN="pencil"/>
 </node>
 </node>
 <node TEXT="+TODO" ID="ID_1396222461" CREATED="1686356328770" MODIFIED="1686356662200">
