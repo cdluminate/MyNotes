@@ -1,8 +1,8 @@
-<map version="freeplane 1.11.1">
+<map version="freeplane 1.11.5">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="Memo" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1689204307908" STYLE="oval">
 <font NAME="Gentium" SIZE="18" ITALIC="false"/>
-<hook NAME="MapStyle" zoom="1.521">
+<hook NAME="MapStyle">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
@@ -1490,12 +1490,6 @@
 <node TEXT="-------------------------------------------------------------------" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1134167122" CREATED="1675049435899" MODIFIED="1688777454224">
 <edge COLOR="#ff00ff"/>
 <font NAME="Gentium"/>
-</node>
-<node TEXT="Lib :: Software Implementations" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_72633543" CREATED="1689204290721" MODIFIED="1689204308092">
-<edge COLOR="#00ffff"/>
-<node TEXT="FFCV: accelerating training by removing data bottlenecks" ID="ID_1929592182" CREATED="1689204297879" MODIFIED="1689204329601">
-<node TEXT="Madry" ID="ID_181164051" CREATED="1689204329931" MODIFIED="1689204331341"/>
-</node>
 </node>
 <node TEXT="V :: Classification Backbone" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_461736327" CREATED="1686948436159" MODIFIED="1689204310070">
 <edge COLOR="#007c00"/>
@@ -6033,68 +6027,6 @@
 </node>
 </node>
 </node>
-<node TEXT="ML :: ALL" LOCALIZED_STYLE_REF="styles.topic" POSITION="top_or_left" ID="ID_1954193241" CREATED="1687554687203" MODIFIED="1688778957752">
-<edge COLOR="#007c7c"/>
-<font NAME="Gentium"/>
-<node TEXT="Dimension Reduction" ID="ID_735236385" CREATED="1688778946318" MODIFIED="1688778949856">
-<node TEXT="EIGENGAME: PCA AS A NASH EQUILIBRIUM" ID="ID_1928874629" CREATED="1687554694277" MODIFIED="1687554695313">
-<node TEXT="ICLR21" ID="ID_84874185" CREATED="1687554696803" MODIFIED="1687554698415"/>
-</node>
-</node>
-</node>
-<node TEXT="DL :: ALL" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_715932534" CREATED="1688784766476" MODIFIED="1688786473883">
-<edge COLOR="#0000ff"/>
-<node TEXT="Learning Rate" ID="ID_442127233" CREATED="1688786467135" MODIFIED="1688786471194">
-<node TEXT="The Two Regimes of Deep Network Training" ID="ID_528249905" CREATED="1688784958602" MODIFIED="1688784959282">
-<node TEXT="Madry" ID="ID_396933607" CREATED="1688784959845" MODIFIED="1688784961018"/>
-</node>
-</node>
-<node TEXT="Loss" ID="ID_1319100732" CREATED="1688786439860" MODIFIED="1688786464233">
-<node TEXT="It Is Likely That Your Loss Should be a Likelihood" ID="ID_1888145882" CREATED="1688784773656" MODIFIED="1688784775267">
-<node TEXT="T. freeman" ID="ID_87346101" CREATED="1688784776184" MODIFIED="1688784778443"/>
-</node>
-</node>
-<node TEXT="Dataset Distillation/Efficiency" ID="ID_800238138" CREATED="1688786479988" MODIFIED="1688787681344">
-<node TEXT="Dataset Distillation by Matching Training Trajectories" ID="ID_1232754909" CREATED="1648338079783" MODIFIED="1648338088477">
-<icon BUILTIN="unchecked"/>
-<node TEXT="CVPR22" ID="ID_951175501" CREATED="1648338090454" MODIFIED="1648338092141"/>
-</node>
-<node TEXT="Knowledge Evolution in Neural Networks" ID="ID_1049269143" CREATED="1688787682187" MODIFIED="1688787682800">
-<node TEXT="CVPR21" ID="ID_357141720" CREATED="1688787683473" MODIFIED="1688787685252"/>
-</node>
-</node>
-<node TEXT="Generated dataset analysis" ID="ID_984408901" CREATED="1688786496856" MODIFIED="1688786505525">
-<node TEXT="Contrastive Syn-to-Real Generalization" ID="ID_104930199" CREATED="1688786499414" MODIFIED="1688786500387"/>
-</node>
-</node>
-<node TEXT="OOD :: Detection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_31313107" CREATED="1657404499454" MODIFIED="1688779120908">
-<edge COLOR="#007c7c"/>
-<font NAME="Gentium"/>
-<node TEXT="Anomaly detection, out-of-distribution detection, open-set recognition" ID="ID_439134135" CREATED="1680200146165" MODIFIED="1688778887212">
-<icon BUILTIN="info"/>
-</node>
-<node TEXT="This is a saturated area. Performance numbers are too high." ID="ID_275469478" CREATED="1675745241040" MODIFIED="1675745258548">
-<icon BUILTIN="attach"/>
-</node>
-<node TEXT="It is generally useful in various scenarios. It is an old topic though." ID="ID_675420273" CREATED="1675745275149" MODIFIED="1688778895366">
-<icon BUILTIN="info"/>
-</node>
-<node TEXT="Dataset" ID="ID_683694116" CREATED="1686962805307" MODIFIED="1686962806648">
-<node TEXT="openood v1.5: enhanced benchmark for out-of-distribution detection" ID="ID_702733472" CREATED="1686962806995" MODIFIED="1686962823711">
-<icon BUILTIN="pencil"/>
-</node>
-</node>
-<node TEXT="Detection" ID="ID_817880271" CREATED="1686962796860" MODIFIED="1686962799112">
-<node TEXT="Rethinking Out-of-distribution (OOD) Detection:&#xa;Masked Image Modeling is All You Need" ID="ID_1967773333" CREATED="1675745141770" MODIFIED="1675745149081">
-<icon BUILTIN="pencil"/>
-<node TEXT="simply using reconstruction based methods" ID="ID_1444620585" CREATED="1675745171762" MODIFIED="1675745181691"/>
-<node TEXT="masked image modeling as a pretext task" ID="ID_280600644" CREATED="1675745150680" MODIFIED="1675745164658"/>
-</node>
-<node TEXT="Back to the Basics: Revisiting Out-of-Distribution Detection Baselines" ID="ID_610692624" CREATED="1657404508363" MODIFIED="1657404513522">
-<node TEXT="ICML22w" ID="ID_1649193597" CREATED="1657404516644" MODIFIED="1657404522883"/>
-</node>
-</node>
-</node>
 <node TEXT="OOD :: Open Set Recognition" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_323999523" CREATED="1634132952545" MODIFIED="1688779131291">
 <edge COLOR="#7c007c"/>
 <font NAME="Gentium"/>
@@ -6941,7 +6873,7 @@
 </node>
 </node>
 </node>
-<node TEXT="GEN :: Conditioned Generation" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_65977927" CREATED="1576830540818" MODIFIED="1688778234860">
+<node TEXT="GEN :: Conditioned Generation" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_65977927" CREATED="1576830540818" MODIFIED="1688778234860">
 <edge COLOR="#ff0000"/>
 <font NAME="Gentium"/>
 <node TEXT="Conditioned generative models have more applications in practice. Unconditioned ones are more foundational" ID="ID_512568437" CREATED="1688777560743" MODIFIED="1688777588589">
@@ -8255,32 +8187,6 @@
 <node TEXT="Application" ID="ID_280559333" CREATED="1590025737783" MODIFIED="1590025741335">
 <node TEXT="Anonymization" ID="ID_570546115" CREATED="1590025742418" MODIFIED="1590025746828">
 <node TEXT="2005.09544: CIAGAN: conditional identity anonymization generative adversarial networks (CVPR20)" ID="ID_651028875" CREATED="1590025747793" MODIFIED="1590025772804"/>
-</node>
-</node>
-</node>
-<node TEXT="Causual &amp; Induction &amp; Common Sense" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1958356012" CREATED="1582337801426" MODIFIED="1688777454254">
-<edge COLOR="#00007c"/>
-<font NAME="Gentium"/>
-<node TEXT="Causual" ID="ID_324034028" CREATED="1587731828478" MODIFIED="1587731830847">
-<node TEXT="2002.06838: hierarchical rule induction network for abstract visual reasoning" ID="ID_150581699" CREATED="1582337816081" MODIFIED="1587526865326">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="what: visual reasoning for Raven&apos;s Progressive Matrices (RPM) test." ID="ID_726926607" CREATED="1582337835010" MODIFIED="1587526865327">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="why: existing work fails to recognize the complex attribute patterns inside or across rows/columns of RPM" ID="ID_793614613" CREATED="1582337858933" MODIFIED="1587526865328">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-<node TEXT="how: hierarchical rule induction network, by imitating human induction strategies." ID="ID_451344589" CREATED="1582337910538" MODIFIED="1587526865328">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-<node TEXT="2004.12906: towards causal generative senne models via competition of experts" ID="ID_162170802" CREATED="1588074941514" MODIFIED="1588074966266"/>
-</node>
-<node TEXT="Common Sense" ID="ID_686038090" CREATED="1587731879900" MODIFIED="1587731884082">
-<node TEXT="2004.10796: visual commonsense graphs: reasoning about the dynamic context of a still image" ID="ID_1005080176" CREATED="1587732569445" MODIFIED="1587732693054">
-<node TEXT="database: predict previous and following events" ID="ID_99087495" CREATED="1587732695996" MODIFIED="1587732747861">
-<icon BUILTIN="button_ok"/>
-</node>
 </node>
 </node>
 </node>
