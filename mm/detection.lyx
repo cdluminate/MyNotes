@@ -173,5 +173,44 @@ Base:
 on links DETR-like models with classical two-stage models.
 \end_layout
 
+\begin_layout Subsection
+DETR Does Not Need Multi-Scale or Locality Design
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Improvements:
+\series default
+ using the plain DETR.
+ (1) box-to-pixel relative position bias for cross-attention formulation;
+ (2) masked image modeling based backbone pre-training.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+BoxRPB:
+\series default
+ modify cross-attention as
+\begin_inset Formula 
+\[
+\bm{O}=\text{softmax}(\bm{Q}\bm{K}^{T}{\color{red}+\bm{B}})\bm{V}+\bm{X}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Comments:
+\series default
+ This is not for fast convergence.
+ It does not test ResNet50 backbone.
+\end_layout
+
 \end_body
 \end_document
