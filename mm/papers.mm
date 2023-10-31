@@ -4246,7 +4246,7 @@
 <icon BUILTIN="unchecked"/>
 </node>
 </node>
-<node TEXT="Adv :: Adversarial Training" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1633797140" CREATED="1675050942299" MODIFIED="1688785699353">
+<node TEXT="Adv :: Adversarial Robustness" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1633797140" CREATED="1675050942299" MODIFIED="1698762586156">
 <edge COLOR="#0000ff"/>
 <font NAME="Gentium"/>
 <node TEXT="Can we simply make adv training faster on imagenet? people are still playing with CIFAR. Is adversarial training the ultimate answer of robustness? Definitely no." ID="ID_133206511" CREATED="1675052822881" MODIFIED="1686956698031">
