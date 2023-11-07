@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="Memo" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1689204307908" STYLE="oval">
 <font NAME="Gentium" SIZE="18" ITALIC="false"/>
-<hook NAME="MapStyle">
+<hook NAME="MapStyle" zoom="1.69">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="225" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="226" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="top_or_left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1688777454193">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -1579,7 +1579,7 @@
 </node>
 </node>
 <node TEXT="VSE / Matcher" ID="ID_1809718999" CREATED="1687553556359" MODIFIED="1688779239967">
-<node TEXT="This line of work is basically terminated by the pre-training models like CLIP. It&apos;s basically a large scale VSE model. Meanwhile, this is also a basic task in BLIP-2" ID="ID_625009873" CREATED="1688778519995" MODIFIED="1688778614567">
+<node TEXT="This line of work is basically terminated by the pre-training models like CLIP. It&apos;s basically a large scale VSE model. Meanwhile, this is also a basic task in BLIP-2.&#xa;The key loss function here is InfoNCE" ID="ID_625009873" CREATED="1688778519995" MODIFIED="1699321187867">
 <icon BUILTIN="info"/>
 </node>
 <node ID="ID_1466199437" CREATED="1687553560739" MODIFIED="1687553560739"><richcontent TYPE="NODE">
@@ -2046,7 +2046,11 @@
 </node>
 <node TEXT="BYOL" ID="ID_1137581690" CREATED="1676228241612" MODIFIED="1676228244544"/>
 <node TEXT="SwAV" ID="ID_872654192" CREATED="1676228244740" MODIFIED="1676228253814"/>
-<node TEXT="MoCO v1 (CVPR20)" ID="ID_545238113" CREATED="1676228200414" MODIFIED="1676228206384"/>
+<node TEXT="MoCO v1 (CVPR20)" ID="ID_545238113" CREATED="1676228200414" MODIFIED="1676228206384">
+<node TEXT="Momemtum Contrast for unsupervised visual representation learning" ID="ID_910293249" CREATED="1699321720307" MODIFIED="1699321729985">
+<node TEXT="Kaiming" ID="ID_1771547446" CREATED="1699321980099" MODIFIED="1699321981450"/>
+</node>
+</node>
 <node TEXT="SEER" ID="ID_1813125348" CREATED="1688784225274" MODIFIED="1688784226490">
 <node TEXT="Self-supervised Pretraining of Visual Features in the Wild" ID="ID_1170312985" CREATED="1688784226672" MODIFIED="1688784229929">
 <icon BUILTIN="pencil"/>
@@ -2068,6 +2072,18 @@
 <node TEXT="Decoupled contrastive learning (DCL)" ID="ID_1465903286" CREATED="1689199943273" MODIFIED="1689199956910">
 <node TEXT="ECCV22" ID="ID_1074026230" CREATED="1689199940357" MODIFIED="1689199942553"/>
 <node TEXT="LeCun" ID="ID_1937548345" CREATED="1689199957048" MODIFIED="1689199961937"/>
+</node>
+<node TEXT="Dual temperature helps contrastive learning without many negative samples: towards understnading and simplifying moco" ID="ID_103386148" CREATED="1699321514163" MODIFIED="1699322743579">
+<icon BUILTIN="bookmark"/>
+<icon BUILTIN="unchecked"/>
+<node TEXT="CVPR22" ID="ID_650124768" CREATED="1699321540734" MODIFIED="1699321541949"/>
+<node TEXT="Chaoning" ID="ID_942902379" CREATED="1699321551963" MODIFIED="1699321553834"/>
+<node TEXT="InfoNCE" ID="ID_1090650518" CREATED="1699321561474" MODIFIED="1699321564064"/>
+</node>
+<node TEXT="Understanding the Behavior of contrastive loss" ID="ID_923981137" CREATED="1699322610783" MODIFIED="1699322745789">
+<icon BUILTIN="bookmark"/>
+<icon BUILTIN="unchecked"/>
+<node TEXT="InfoNCE is a hardness-aware loss function" ID="ID_1006248703" CREATED="1699322625474" MODIFIED="1699322639581"/>
 </node>
 </node>
 <node TEXT="SSL :: Vision Reconstruction" ID="ID_29624267" CREATED="1680015510463" MODIFIED="1686334049799">
@@ -6027,6 +6043,16 @@
 </node>
 </node>
 </node>
+<node TEXT="V+L :: Generation" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1029201849" CREATED="1699316441083" MODIFIED="1699316449155">
+<edge COLOR="#7c0000"/>
+<node TEXT="language as bridge" ID="ID_1783040034" CREATED="1699316451339" MODIFIED="1699316461070">
+<node TEXT="de-diffusion makes text a strong cross-modal interface" ID="ID_372079424" CREATED="1699316461355" MODIFIED="1699316492109">
+<icon BUILTIN="bookmark"/>
+<icon BUILTIN="unchecked"/>
+<node TEXT="Alan" ID="ID_262602133" CREATED="1699316501202" MODIFIED="1699316503211"/>
+</node>
+</node>
+</node>
 <node TEXT="OOD :: Open Set Recognition" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_323999523" CREATED="1634132952545" MODIFIED="1688779131291">
 <edge COLOR="#7c007c"/>
 <font NAME="Gentium"/>
@@ -6289,7 +6315,7 @@
 </node>
 </node>
 </node>
-<node TEXT="V :: Face Recog" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_153988282" CREATED="1641242964517" MODIFIED="1688777454239">
+<node TEXT="V :: Face" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_153988282" CREATED="1641242964517" MODIFIED="1699321127995">
 <edge COLOR="#00ff00"/>
 <font NAME="Gentium"/>
 <node TEXT="Face Identification by default. It is basically a deadend to do face for CVPR as of 2023" ID="ID_1812222459" CREATED="1651184495295" MODIFIED="1676257457594">
@@ -6505,7 +6531,6 @@
 <node TEXT="CVPR21" ID="ID_1986793496" CREATED="1688785606007" MODIFIED="1688785607305"/>
 </node>
 </node>
-<node TEXT="Privacy" ID="ID_191145216" CREATED="1651188082570" MODIFIED="1651188086484"/>
 <node TEXT="Facial Expression" ID="ID_1665603625" CREATED="1648335974432" MODIFIED="1654104074785">
 <node TEXT="Towards Semi-Supervised Deep Facial Expression Recognition with An Adaptive Confidence Margin" ID="ID_1230150992" CREATED="1648335980975" MODIFIED="1648336159200">
 <icon BUILTIN="unchecked"/>
@@ -6526,7 +6551,7 @@
 </node>
 </node>
 </node>
-<node TEXT="V :: Attack :: Face" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_490223917" CREATED="1675049870200" MODIFIED="1688777454240">
+<node TEXT="Robust :: Face" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_490223917" CREATED="1675049870200" MODIFIED="1699321071720">
 <edge COLOR="#7c7c00"/>
 <font NAME="Gentium"/>
 <node TEXT="risk: maybe common corruptions like brightness, rain, angle, etc can introduce more risk to a system in practice" ID="ID_567079036" CREATED="1675049927982" MODIFIED="1675049976962">
@@ -6583,30 +6608,11 @@
 </node>
 </node>
 </node>
-<node TEXT="LG :: Meta/Federated Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_121320330" CREATED="1658618674669" MODIFIED="1688777454241">
+<node TEXT="LG :: Meta Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_121320330" CREATED="1658618674669" MODIFIED="1699321026494">
 <edge COLOR="#ff00ff"/>
 <font NAME="Gentium"/>
 <node TEXT="low hanging fruits are basically gone. there are some unresolved corner cases. This is going towards an engineering problem direction." ID="ID_1703063236" CREATED="1675049770366" MODIFIED="1675739832428">
 <icon BUILTIN="attach"/>
-</node>
-<node TEXT="Federated" ID="ID_814985517" CREATED="1677265600561" MODIFIED="1687545309243">
-<node TEXT="FedSGD" ID="ID_1562968111" CREATED="1683726575457" MODIFIED="1683726577608"/>
-<node TEXT="FedAvg" ID="ID_485649293" CREATED="1675049758554" MODIFIED="1675049762453"/>
-<node TEXT="FedProx" ID="ID_356723584" CREATED="1677265595295" MODIFIED="1677265596861">
-<node TEXT="Federated Optimization in Heterogeneous Networks" ID="ID_495724457" CREATED="1683726616184" MODIFIED="1683726637184">
-<icon BUILTIN="bookmark"/>
-<node TEXT="MLSYS20" ID="ID_221877250" CREATED="1683726626079" MODIFIED="1683726632032"/>
-</node>
-</node>
-<node TEXT="FedNova" ID="ID_1485537673" CREATED="1677265588546" MODIFIED="1677265592562"/>
-<node TEXT="SphereFed: Hyperspherical Federated Learning" ID="ID_1881740651" CREATED="1658618678515" MODIFIED="1658618679170">
-<node TEXT="ECCV22" ID="ID_624140530" CREATED="1658618681127" MODIFIED="1658618682432"/>
-</node>
-<node TEXT="+ Diffusion" ID="ID_217151115" CREATED="1686353294356" MODIFIED="1686353297211">
-<node TEXT="phoenix: a federated generative diffusion model" ID="ID_1101885608" CREATED="1686353297577" MODIFIED="1686353310534">
-<icon BUILTIN="pencil"/>
-</node>
-</node>
 </node>
 <node TEXT="META" ID="ID_929306258" CREATED="1583378173046" MODIFIED="1687545303848">
 <font NAME="Gentium" BOLD="false"/>
@@ -6628,6 +6634,25 @@
 <node TEXT="Meta-SR" ID="ID_1118787532" CREATED="1676259542003" MODIFIED="1683727496340">
 <node TEXT="Meta-SR: A Magnification-Arbitrary Network for Super-Resolution" ID="ID_1305779936" CREATED="1683727486793" MODIFIED="1683727489908">
 <icon BUILTIN="bookmark"/>
+</node>
+</node>
+</node>
+<node TEXT="Federated" ID="ID_814985517" CREATED="1677265600561" MODIFIED="1687545309243">
+<node TEXT="FedSGD" ID="ID_1562968111" CREATED="1683726575457" MODIFIED="1683726577608"/>
+<node TEXT="FedAvg" ID="ID_485649293" CREATED="1675049758554" MODIFIED="1675049762453"/>
+<node TEXT="FedProx" ID="ID_356723584" CREATED="1677265595295" MODIFIED="1677265596861">
+<node TEXT="Federated Optimization in Heterogeneous Networks" ID="ID_495724457" CREATED="1683726616184" MODIFIED="1683726637184">
+<icon BUILTIN="bookmark"/>
+<node TEXT="MLSYS20" ID="ID_221877250" CREATED="1683726626079" MODIFIED="1683726632032"/>
+</node>
+</node>
+<node TEXT="FedNova" ID="ID_1485537673" CREATED="1677265588546" MODIFIED="1677265592562"/>
+<node TEXT="SphereFed: Hyperspherical Federated Learning" ID="ID_1881740651" CREATED="1658618678515" MODIFIED="1658618679170">
+<node TEXT="ECCV22" ID="ID_624140530" CREATED="1658618681127" MODIFIED="1658618682432"/>
+</node>
+<node TEXT="+ Diffusion" ID="ID_217151115" CREATED="1686353294356" MODIFIED="1686353297211">
+<node TEXT="phoenix: a federated generative diffusion model" ID="ID_1101885608" CREATED="1686353297577" MODIFIED="1686353310534">
+<icon BUILTIN="pencil"/>
 </node>
 </node>
 </node>
@@ -8260,16 +8285,6 @@
 </richcontent>
 <edge COLOR="#00007c"/>
 <font NAME="Gentium"/>
-<node TEXT="Robustness Metric" ID="ID_680776114" CREATED="1625979162858" MODIFIED="1625979166960">
-<node TEXT="Residual Error: a New Performance Measure for Adversarial Robustness" ID="ID_194335772" CREATED="1625979167723" MODIFIED="1625979173388">
-<node TEXT="arxiv" ID="ID_819279647" CREATED="1625979175191" MODIFIED="1625979176147"/>
-</node>
-<node TEXT="Indicators of Attack Failure: Debugging and Improving Optimization of Adversarial Examples" ID="ID_1957501644" CREATED="1625979476870" MODIFIED="1625979503638">
-<icon BUILTIN="button_ok"/>
-<node TEXT="arxiv" ID="ID_1170392465" CREATED="1625979483056" MODIFIED="1625979484055"/>
-<node TEXT="N. Carlini" ID="ID_961715346" CREATED="1625979509014" MODIFIED="1625979515723"/>
-</node>
-</node>
 <node TEXT="Activation" ID="ID_114568529" CREATED="1634132525038" MODIFIED="1634132530043">
 <node TEXT="Smooth Adversarial Training" ID="ID_1239940491" CREATED="1634062515869" MODIFIED="1634132555779">
 <icon BUILTIN="button_ok"/>
@@ -8342,37 +8357,17 @@
 </node>
 </node>
 </node>
-<node TEXT="Adversarial Regularization" ID="ID_289665507" CREATED="1636486968429" MODIFIED="1636486972960">
+<node TEXT="Regularization" ID="ID_289665507" CREATED="1636486968429" MODIFIED="1699320949094">
 <node TEXT="ARCH: Efficient Adversarial Regularized Training with Caching" ID="ID_1059826116" CREATED="1636486976372" MODIFIED="1636487132562">
 <icon BUILTIN="button_ok"/>
 </node>
 <node TEXT="Towards Improving Adversarial Training of NLP Models" ID="ID_803839388" CREATED="1636487325603" MODIFIED="1636487326981">
 <node TEXT="A2T" ID="ID_911171622" CREATED="1636487367570" MODIFIED="1636487369219"/>
 </node>
-</node>
-<node TEXT="Certified" ID="ID_1236277584" CREATED="1636487583184" MODIFIED="1636487586775">
-<node TEXT="" ID="ID_623639304" CREATED="1636487588214" MODIFIED="1636487588214"/>
-</node>
-<node TEXT="Input tramsformation" ID="ID_1213476674" CREATED="1624456431013" MODIFIED="1624456435135">
-<node TEXT="arxiv: Self-Supervised Iterative Contextual Smoothing forEfficient Adversarial Defense againstGray- and Black-Box Attack" ID="ID_1485740796" CREATED="1624456436488" MODIFIED="1624456447293"/>
-</node>
-<node TEXT="Regularization" ID="ID_619021427" CREATED="1625980053065" MODIFIED="1625980056180">
 <node TEXT="Adversarial Robustness via Fisher-Rao Regularization" ID="ID_649861640" CREATED="1625980057350" MODIFIED="1625980323173">
 <icon BUILTIN="help"/>
 <node TEXT="minor improvements" ID="ID_1916236876" CREATED="1625980295412" MODIFIED="1625980299586"/>
 <node TEXT="compared to madry, trades, self-adaptive, etc" ID="ID_653230823" CREATED="1625980299959" MODIFIED="1625980315417"/>
-</node>
-</node>
-<node TEXT="Purturbation Analysis" ID="ID_559378753" CREATED="1624457681416" MODIFIED="1624457691163">
-<node TEXT="(axv) Delving into the pixels of adversarial samples" ID="ID_469623777" CREATED="1624457692101" MODIFIED="1624457704845"/>
-</node>
-<node TEXT="Semantic Continuity" ID="ID_1461544046" CREATED="1622799081144" MODIFIED="1622799088846">
-<node TEXT="(arxiv) An Experimental Study of Semantic Continuity for Deep Learning Models" ID="ID_703257006" CREATED="1622799089949" MODIFIED="1622799101500">
-<icon BUILTIN="button_ok"/>
-</node>
-</node>
-<node TEXT="zero-shot" ID="ID_1393387700" CREATED="1618847917641" MODIFIED="1618847920321">
-<node TEXT="BREEDS: Benchmarks for Subpopulation Shift (madry)" ID="ID_294145792" CREATED="1618847904374" MODIFIED="1618847940000"/>
 </node>
 <node TEXT="GCE" ID="ID_1268717162" CREATED="1637078487916" MODIFIED="1637078489797">
 <node TEXT="improving adversarial robustness via guided complement entropy" ID="ID_1138878565" CREATED="1637078490305" MODIFIED="1637078508623">
@@ -8380,6 +8375,15 @@
 <icon BUILTIN="button_ok"/>
 <node TEXT="iccv19" ID="ID_1133047544" CREATED="1637078502597" MODIFIED="1637078503935"/>
 </node>
+</node>
+<node TEXT="Semantic Continuity" ID="ID_1461544046" CREATED="1622799081144" MODIFIED="1622799088846">
+<node TEXT="(arxiv) An Experimental Study of Semantic Continuity for Deep Learning Models" ID="ID_703257006" CREATED="1622799089949" MODIFIED="1622799101500">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+</node>
+<node TEXT="Purturbation Analysis" ID="ID_559378753" CREATED="1624457681416" MODIFIED="1624457691163">
+<node TEXT="(axv) Delving into the pixels of adversarial samples" ID="ID_469623777" CREATED="1624457692101" MODIFIED="1624457704845"/>
 </node>
 </node>
 <node LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1921860778" CREATED="1619332443607" MODIFIED="1688777454255"><richcontent TYPE="NODE">
