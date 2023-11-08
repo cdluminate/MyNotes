@@ -6043,7 +6043,7 @@
 </node>
 </node>
 </node>
-<node TEXT="V+L :: Generation" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1029201849" CREATED="1699316441083" MODIFIED="1699316449155">
+<node TEXT="V+L :: Generation" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1029201849" CREATED="1699316441083" MODIFIED="1699316449155">
 <edge COLOR="#7c0000"/>
 <node TEXT="language as bridge" ID="ID_1783040034" CREATED="1699316451339" MODIFIED="1699316461070">
 <node TEXT="de-diffusion makes text a strong cross-modal interface" ID="ID_372079424" CREATED="1699316461355" MODIFIED="1699316492109">
@@ -6315,7 +6315,7 @@
 </node>
 </node>
 </node>
-<node TEXT="V :: Face" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_153988282" CREATED="1641242964517" MODIFIED="1699321127995">
+<node TEXT="V :: Face :: Main" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_153988282" CREATED="1641242964517" MODIFIED="1699402466307">
 <edge COLOR="#00ff00"/>
 <font NAME="Gentium"/>
 <node TEXT="Face Identification by default. It is basically a deadend to do face for CVPR as of 2023" ID="ID_1812222459" CREATED="1651184495295" MODIFIED="1676257457594">
@@ -6551,7 +6551,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Robust :: Face" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_490223917" CREATED="1675049870200" MODIFIED="1699321071720">
+<node TEXT="V :: Face :: Robust" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_490223917" CREATED="1675049870200" MODIFIED="1699402352921">
 <edge COLOR="#7c7c00"/>
 <font NAME="Gentium"/>
 <node TEXT="risk: maybe common corruptions like brightness, rain, angle, etc can introduce more risk to a system in practice" ID="ID_567079036" CREATED="1675049927982" MODIFIED="1675049976962">
@@ -6566,6 +6566,7 @@
 <node TEXT="Adversarial noise (digital attack)" ID="ID_1835156252" CREATED="1675049882328" MODIFIED="1675049887621">
 <node TEXT="lower risk than spoofing" ID="ID_1740617712" CREATED="1675049890833" MODIFIED="1675049897544"/>
 <node TEXT="Rama and Alan have some robustness evaluation papers in this regard" ID="ID_1691197998" CREATED="1675049986257" MODIFIED="1675050004356"/>
+<node TEXT="" ID="ID_647611734" CREATED="1699402359648" MODIFIED="1699402359648"/>
 </node>
 </node>
 <node TEXT="Gen :: Protection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1205778136" CREATED="1680653497543" MODIFIED="1688777454240">
