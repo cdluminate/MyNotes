@@ -1906,6 +1906,7 @@
 <node TEXT="axv2111" ID="ID_1521300268" CREATED="1686332831044" MODIFIED="1686332834888"/>
 </node>
 </node>
+<node TEXT="CogVLM: Visual Expert for Pretrained Language Models" ID="ID_549791478" CREATED="1699414458540" MODIFIED="1699414459276"/>
 </node>
 </node>
 <node TEXT="CL :: Small Scale Models" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_865579939" CREATED="1610008291436" MODIFIED="1688777454226">
