@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="Memo" FOLDED="false" ID="ID_806386173" CREATED="1641242834029" MODIFIED="1689204307908" STYLE="oval">
 <font NAME="Gentium" SIZE="18" ITALIC="false"/>
-<hook NAME="MapStyle" zoom="1.69">
+<hook NAME="MapStyle" zoom="0.8">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
@@ -345,13 +345,6 @@
 <node TEXT="certified defense is not used for imagenet" ID="ID_749439492" CREATED="1676227746004" MODIFIED="1688777454222">
 <font NAME="Gentium"/>
 </node>
-</node>
-</node>
-<node TEXT="Federated learning" ID="ID_1789103217" CREATED="1676754946649" MODIFIED="1688777454222">
-<icon BUILTIN="info"/>
-<font NAME="Gentium"/>
-<node TEXT="low hanging fruits are gone. This problem might eventually turn into an engineering problem" ID="ID_1566340538" CREATED="1676754952071" MODIFIED="1688777454222">
-<font NAME="Gentium"/>
 </node>
 </node>
 <node TEXT="Self Supervised Learning" ID="ID_750923691" CREATED="1676253512156" MODIFIED="1688777454223">
@@ -1909,8 +1902,16 @@
 <node TEXT="CogVLM: Visual Expert for Pretrained Language Models" ID="ID_549791478" CREATED="1699414458540" MODIFIED="1699414459276"/>
 </node>
 </node>
-<node TEXT="CL :: Small Scale Models" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_865579939" CREATED="1610008291436" MODIFIED="1688777454226">
-<edge COLOR="#00007c"/>
+<node TEXT="Language :: Language Model (LLM)" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1735833052" CREATED="1675287989836" MODIFIED="1699840839057">
+<edge COLOR="#00ff00"/>
+<font NAME="Gentium"/>
+<node TEXT="self-supervise by reconstruction" ID="ID_1462056670" CREATED="1680015462579" MODIFIED="1680015470175">
+<icon BUILTIN="info"/>
+</node>
+<node TEXT="The subtree is redirected to ./llm/llm.lyx" ID="ID_875058286" CREATED="1694297987141" MODIFIED="1694298006573">
+<icon BUILTIN="info"/>
+</node>
+<node TEXT="Small Scale Models (The past)" LOCALIZED_STYLE_REF="styles.topic" ID="ID_865579939" CREATED="1610008291436" MODIFIED="1699840861171">
 <font NAME="Gentium"/>
 <node TEXT="Sequence Modeling" ID="ID_351729279" CREATED="1618848122097" MODIFIED="1645045266470">
 <node TEXT="vanilla RNN" ID="ID_470266436" CREATED="1645045269394" MODIFIED="1645045280217"/>
@@ -1972,15 +1973,6 @@
 </node>
 </node>
 </node>
-</node>
-<node TEXT="CL :: Large Language Model (LLM)" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1735833052" CREATED="1675287989836" MODIFIED="1688777454227">
-<edge COLOR="#00ff00"/>
-<font NAME="Gentium"/>
-<node TEXT="self-supervise by reconstruction" ID="ID_1462056670" CREATED="1680015462579" MODIFIED="1680015470175">
-<icon BUILTIN="info"/>
-</node>
-<node TEXT="The subtree is redirected to ./llm/llm.lyx" ID="ID_875058286" CREATED="1694297987141" MODIFIED="1694298006573">
-<icon BUILTIN="info"/>
 </node>
 <node TEXT="Detection" ID="ID_398704158" CREATED="1675288011819" MODIFIED="1675288013535">
 <node TEXT="Arms race? Will gradually converge into the random classification baseline." ID="ID_516276125" CREATED="1676227885257" MODIFIED="1680054010520">
@@ -2239,11 +2231,17 @@
 <node TEXT="python: foolbox" ID="ID_1553278631" CREATED="1650817871101" MODIFIED="1650817877372"/>
 <node TEXT="python: torchattacks" ID="ID_1476724210" CREATED="1650817877844" MODIFIED="1650817881932"/>
 </node>
-<node TEXT="White-Box Attack" ID="ID_449007607" CREATED="1641522449462" MODIFIED="1651778178797">
+<node TEXT="Fast is better than free: Revisiting adversarial training" ID="ID_1673133690" CREATED="1659199605404" MODIFIED="1659199607945">
+<icon BUILTIN="pencil"/>
+</node>
+<node TEXT="White-Box Attack" FOLDED="true" ID="ID_449007607" CREATED="1641522449462" MODIFIED="1651778178797">
 <node TEXT="It is already very difficult to improve attack performance as of 2022. Think more about defense -- that is much more useful than exploring the marginally worse robust performance." ID="ID_962792801" CREATED="1676259094431" MODIFIED="1676259147650">
 <icon BUILTIN="attach"/>
 </node>
-<node TEXT="L-BFGS" ID="ID_1011268115" CREATED="1642438696428" MODIFIED="1642438699395"/>
+<node TEXT="Attacks are eventually the worst-case performance metrics for the models in the future" ID="ID_614413540" CREATED="1699840441046" MODIFIED="1699840463971"/>
+<node TEXT="L-BFGS" ID="ID_1011268115" CREATED="1642438696428" MODIFIED="1642438699395">
+<node TEXT="intriguing properties of neural networks" ID="ID_631954947" CREATED="1699840409099" MODIFIED="1699840426425"/>
+</node>
 <node TEXT="FGSM" ID="ID_1740870459" CREATED="1642438691608" MODIFIED="1642438694832">
 <node TEXT="Explaining and harnessing adversarial examples." ID="ID_522955177" CREATED="1642455794565" MODIFIED="1642455799174">
 <icon BUILTIN="checked"/>
@@ -2262,6 +2260,7 @@
 <node TEXT="L-2 only" ID="ID_1686974516" CREATED="1651778528982" MODIFIED="1651778549028"/>
 </node>
 </node>
+<node TEXT="Decoupling Direction and Norm for Efficient Gradient-Based L2 Adversarial Attacks and Defenses" ID="ID_1633904940" CREATED="1652405025147" MODIFIED="1652405030281"/>
 </node>
 <node TEXT="PGD" ID="ID_375244598" CREATED="1642438708674" MODIFIED="1649126329101">
 <font BOLD="true"/>
@@ -2281,7 +2280,6 @@
 <node TEXT="CVPR22w" ID="ID_1962162102" CREATED="1659196936312" MODIFIED="1659196938479"/>
 <node TEXT="Carlini" ID="ID_1794164394" CREATED="1659196946233" MODIFIED="1659196948152"/>
 </node>
-<node TEXT="AutoAttack" ID="ID_428703954" CREATED="1676258979072" MODIFIED="1676258981418"/>
 <node TEXT="Adaptive Auto Attack (A3)" ID="ID_217185072" CREATED="1676258981637" MODIFIED="1676259001084">
 <node TEXT="Practical Evaluation of Adversarial Robustness via Adaptive Auto Attack" ID="ID_332581355" CREATED="1676258995519" MODIFIED="1676258996766">
 <node TEXT="CVPR22" ID="ID_1990705126" CREATED="1676259002539" MODIFIED="1676259003823"/>
@@ -2291,22 +2289,8 @@
 </node>
 </node>
 <node TEXT="-----------------" ID="ID_1402220042" CREATED="1659199655941" MODIFIED="1659199658606"/>
-<node TEXT="Fast is better than free: Revisiting adversarial training" ID="ID_1673133690" CREATED="1659199605404" MODIFIED="1659199607945">
-<icon BUILTIN="pencil"/>
 </node>
-<node TEXT="L-0 specific (sparse)" ID="ID_306012557" CREATED="1648343689366" MODIFIED="1651778304317">
-<node TEXT="AutoAdversary: A Pixel Pruning Method for Sparse Adversarial Attack" ID="ID_1047746457" CREATED="1648343806032" MODIFIED="1648343808769">
-<icon BUILTIN="pencil"/>
-</node>
-<node TEXT="Adversarial Scratches: Deployable Attacks to CNN Classifiers" ID="ID_338134227" CREATED="1650817912155" MODIFIED="1650817914568">
-<icon BUILTIN="pencil"/>
-<node TEXT="PR" ID="ID_368443487" CREATED="1650817915636" MODIFIED="1650817918576"/>
-</node>
-</node>
-<node TEXT="L-2 specific" ID="ID_33509691" CREATED="1652405020774" MODIFIED="1652405024389">
-<node TEXT="Decoupling Direction and Norm for Efficient Gradient-Based L2 Adversarial Attacks and Defenses" ID="ID_1633904940" CREATED="1652405025147" MODIFIED="1652405030281"/>
-</node>
-<node TEXT="Robust Evaluation" ID="ID_309429844" CREATED="1651778250124" MODIFIED="1651778255764">
+<node TEXT="Robust Evaluation" FOLDED="true" ID="ID_309429844" CREATED="1651778250124" MODIFIED="1651778255764">
 <node TEXT="Adaptive Attack" ID="ID_574326959" CREATED="1651778584932" MODIFIED="1651778598117">
 <node TEXT="On Adaptive Attacks to Adversarial Example Defenses" ID="ID_1353585071" CREATED="1651778588150" MODIFIED="1651778609942">
 <icon BUILTIN="checked"/>
@@ -2345,9 +2329,14 @@
 <node TEXT="CARBEN: Composite Adversarial Robustness Benchmark" ID="ID_174776714" CREATED="1658622158557" MODIFIED="1658622163927">
 <node TEXT="IJCAI22" ID="ID_1566846446" CREATED="1658622165008" MODIFIED="1658622167150"/>
 </node>
+<node TEXT="AutoAttack" ID="ID_428703954" CREATED="1676258979072" MODIFIED="1676258981418">
+<node TEXT="Robustbench" ID="ID_558015220" CREATED="1699840581070" MODIFIED="1699840585199">
+<node TEXT="Hein" ID="ID_79196123" CREATED="1699840585751" MODIFIED="1699840586955"/>
+</node>
+<node TEXT="Standard evaluation tool" ID="ID_1871977470" CREATED="1699840588089" MODIFIED="1699840591771"/>
 </node>
 </node>
-<node TEXT="Transferrability" FOLDED="true" ID="ID_142248765" CREATED="1641678368814" MODIFIED="1680220505902">
+<node TEXT="Transferrability" ID="ID_142248765" CREATED="1641678368814" MODIFIED="1680220505902">
 <node TEXT="It is to some extent ridiculous to assume an overlap of the vulnerability space among different trained models. I have lost interest in the transferability. Defending against attacks is more important than developing new and marginally better transfer attacks." ID="ID_539973320" CREATED="1676256488396" MODIFIED="1676259290908">
 <icon BUILTIN="attach"/>
 <node TEXT="But according to the empirical results of the community, imagenet models indeed share some stupid common vulnerability space." ID="ID_1762438180" CREATED="1676256538121" MODIFIED="1676256561123"/>
@@ -2450,7 +2439,7 @@
 <node TEXT="ECCV22" ID="ID_1750256729" CREATED="1658258868659" MODIFIED="1658258870113"/>
 </node>
 </node>
-<node TEXT="w/ Query Prior" ID="ID_455983940" CREATED="1653340512836" MODIFIED="1653340516865">
+<node TEXT="w/ Query Prior" ID="ID_455983940" CREATED="1653340512836" MODIFIED="1699840649069" HGAP_QUANTITY="14.5625 pt">
 <node TEXT="Enhancing the Transferability of Adversarial&#xa;Examples via a Few Queries" ID="ID_844258032" CREATED="1653340517614" MODIFIED="1653340525088">
 <icon BUILTIN="pencil"/>
 <node TEXT="query prior-based method for fast gradient sign methods and improve their transferability using a few queries" ID="ID_27055622" CREATED="1653340537954" MODIFIED="1653340560913"/>
@@ -5367,7 +5356,6 @@
     </div>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="Motivations: (1) previous DETR_like models are inferior to the improved classifical detectors. (2) The performance of DETR-like model has not been tested on large backbone with large-scale pre-training data." ID="ID_26889335" CREATED="1699839547705" MODIFIED="1699839548566">
@@ -5383,7 +5371,6 @@
     </div>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node ID="ID_1544581820" CREATED="1699839561591" MODIFIED="1699839561591"><richcontent TYPE="NODE">
@@ -5398,7 +5385,6 @@
     </div>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node ID="ID_754174369" CREATED="1699839561593" MODIFIED="1699839561593"><richcontent TYPE="NODE">
@@ -5413,7 +5399,6 @@
     </div>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
