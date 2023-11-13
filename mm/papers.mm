@@ -4963,7 +4963,7 @@
 <node TEXT="Super difficult." ID="ID_171444601" CREATED="1685735971559" MODIFIED="1685735974674"/>
 </node>
 </node>
-<node TEXT="Traditional (non-deep)" FOLDED="true" ID="ID_1399622954" CREATED="1655448039016" MODIFIED="1686949121283">
+<node TEXT="Very Old (non-deep)" FOLDED="true" ID="ID_1399622954" CREATED="1655448039016" MODIFIED="1699839475697">
 <icon BUILTIN="gohome"/>
 <node TEXT="DPM (Deformable Part Models)" ID="ID_1233374002" CREATED="1676320572871" MODIFIED="1676320624875">
 <node TEXT="one of the most famous object detection algorithm before the introduction of deep learning" ID="ID_1003531967" CREATED="1676320575930" MODIFIED="1676320612878">
@@ -5083,7 +5083,7 @@
 </node>
 </node>
 </node>
-<node TEXT="One-Stage" ID="ID_1861902425" CREATED="1654040858813" MODIFIED="1659198795657">
+<node TEXT="One-Stage" FOLDED="true" ID="ID_1861902425" CREATED="1654040858813" MODIFIED="1659198795657">
 <icon BUILTIN="gohome"/>
 <node TEXT="Overfeat" ID="ID_498869304" CREATED="1654625580457" MODIFIED="1654625583038">
 <node TEXT="OverFeat:&#xa;Integrated Recognition, Localization and Detection&#xa;using Convolutional Networks" ID="ID_1479745312" CREATED="1654625590470" MODIFIED="1654625601978">
@@ -5169,7 +5169,7 @@
 <node TEXT="Towards End-to-end Semi-supervised Learning for One-stage Object Detection" ID="ID_124419837" CREATED="1687547060665" MODIFIED="1687547061937"/>
 </node>
 </node>
-<node TEXT="DETR Family" FOLDED="true" ID="ID_348406151" CREATED="1654113701876" MODIFIED="1659198797873">
+<node TEXT="DETR Family" ID="ID_348406151" CREATED="1654113701876" MODIFIED="1659198797873">
 <icon BUILTIN="gohome"/>
 <node TEXT="also called object query-based detectors" ID="ID_1745046240" CREATED="1680217864424" MODIFIED="1680217882612">
 <icon BUILTIN="info"/>
@@ -5345,7 +5345,7 @@
 </node>
 </node>
 </node>
-<node TEXT="DINO" ID="ID_1332999985" CREATED="1659200751990" MODIFIED="1659200753215">
+<node TEXT="DINO" FOLDED="true" ID="ID_1332999985" CREATED="1659200751990" MODIFIED="1659200753215">
 <node TEXT="DINO: DETR with Improved DeNoising Anchor Boxes for End-to-End Object Detection" ID="ID_852083954" CREATED="1659201248967" MODIFIED="1686246769583">
 <icon BUILTIN="bookmark"/>
 <icon BUILTIN="button_ok"/>
@@ -5354,10 +5354,68 @@
 <node TEXT="49.0 AP @ 12eph" ID="ID_1025080816" CREATED="1680219335563" MODIFIED="1680219348505"/>
 </node>
 <node TEXT="dino + swinL using o365" ID="ID_1066262898" CREATED="1680219326856" MODIFIED="1680219333252"/>
-<node TEXT="Three components for improvement" ID="ID_1725853443" CREATED="1686246774730" MODIFIED="1686246794124">
-<node TEXT="(1) a contrastive way for denoising training" ID="ID_840380271" CREATED="1686246794684" MODIFIED="1686246803097"/>
-<node TEXT="(2) a mixed query selection method for anchor initialization" ID="ID_1479240287" CREATED="1686246803385" MODIFIED="1686246812162"/>
-<node TEXT="(3) a look forward twise scheme for box prediction" ID="ID_1094040134" CREATED="1686246812823" MODIFIED="1686246821885"/>
+<node TEXT="Improvements: (1) a contrastive way for denosing training; (2) a look forward twice scheme for box prediction; (3) a mixed query selection method for anchor initialization." ID="ID_1351133065" CREATED="1699839533508" MODIFIED="1699839534499"/>
+<node ID="ID_1302017518" CREATED="1699839561588" MODIFIED="1699839561588"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <div class="standard" id="magicparlabel-85">
+      <b>Base:</b>&#xa0;DN-DETR, DAB-DETR, Deformable-DETR.
+    </div>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT="Motivations: (1) previous DETR_like models are inferior to the improved classifical detectors. (2) The performance of DETR-like model has not been tested on large backbone with large-scale pre-training data." ID="ID_26889335" CREATED="1699839547705" MODIFIED="1699839548566">
+<node ID="ID_709923463" CREATED="1699839561589" MODIFIED="1699839561589"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <div class="standard" id="magicparlabel-86">
+      <b>(1) contrastive denoising training.</b>&#xa0;To remove duplicate predictions. Add two different noises to both positive and negative samples of the same ground truth at the same time. After adding the two different noises to the same ground truth box, we mark the box with a smaller noise as positive and the other as negative.
+    </div>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node ID="ID_1544581820" CREATED="1699839561591" MODIFIED="1699839561591"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <div class="standard" id="magicparlabel-87">
+      <b>(2) look forward twice.</b>&#xa0;To overcome the shortsightness of refinining boxes in each decoder layer (greedy way). Correct the updated parameters with gradients from later layers.
+    </div>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node ID="ID_754174369" CREATED="1699839561593" MODIFIED="1699839561593"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <div class="standard" id="magicparlabel-88">
+      <b>(3) mixed query selection.</b>&#xa0;To help better initialize the queries, because the dynamic anchor box formulation links DETR-like models with classical two-stage models.
+    </div>
+  </body>
+</html>
+
+</richcontent>
+</node>
 </node>
 </node>
 <node TEXT="Mask DINO: Towards A Unified Transformer-based Framework for Object Detection and Segmentation" ID="ID_564664202" CREATED="1659200747355" MODIFIED="1659200758142">
@@ -5373,6 +5431,20 @@
 <node TEXT=" Lite DETR : An Interleaved Multi-Scale Encoder for Efficient DETR" ID="ID_1270014134" CREATED="1687542693733" MODIFIED="1687542703635">
 <node TEXT="CVPR 2023" ID="ID_1973785821" CREATED="1687542697295" MODIFIED="1687542699121"/>
 <node TEXT="includes light-DINO" ID="ID_9034388" CREATED="1687542706765" MODIFIED="1687542711008"/>
+</node>
+</node>
+<node TEXT="Plain-DETR" FOLDED="true" ID="ID_443174107" CREATED="1699839602471" MODIFIED="1699839605878">
+<node TEXT="DETR Does Not Need Multi-Scale or Locality Design" ID="ID_1063827790" CREATED="1699839606364" MODIFIED="1699839637707">
+<icon BUILTIN="bookmark"/>
+<node TEXT="Yutong Lin" ID="ID_1653419623" CREATED="1699839640679" MODIFIED="1699839643092"/>
+<node TEXT="Improvements: using the plain DETR. (1) box-to-pixel relative position bias for cross-attention formulation; (2) masked image modeling based backbone pre-training." ID="ID_506746384" CREATED="1699839637974" MODIFIED="1699839638996"/>
+<node TEXT="BoxRPB: modify cross-attention as\bm{O}=\text{softmax}(\bm{Q}\bm{K}^{T}{\color{red}+\bm{B}})\bm{V}+\bm{X}" ID="ID_1201970719" CREATED="1699839679939" MODIFIED="1699839681281">
+<node TEXT="QK^T+Bias" ID="ID_592065448" CREATED="1699839737878" MODIFIED="1699839776001">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node TEXT="bias term for cross attention" ID="ID_378403953" CREATED="1699839753403" MODIFIED="1699839759344"/>
+</node>
+<node TEXT="Comments: This is not for fast convergence. It does not test ResNet50 backbone." ID="ID_1131124868" CREATED="1699839766605" MODIFIED="1699839767493"/>
 </node>
 </node>
 <node TEXT="Arxiv" ID="ID_1686283127" CREATED="1659200493970" MODIFIED="1659200495179">
