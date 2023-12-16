@@ -3037,7 +3037,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adv :: Classification Defense" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1688777454231">
+<node TEXT="Adv :: Classification Defense" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_483898562" CREATED="1642965540056" MODIFIED="1688777454231">
 <edge COLOR="#7c7c00"/>
 <font NAME="Gentium"/>
 <node TEXT="Survey" ID="ID_1556055508" CREATED="1648173325254" MODIFIED="1648173329845">
@@ -3957,230 +3957,6 @@
 <node TEXT="adversarial defense. includes madry method as baseline." ID="ID_562275760" CREATED="1687545576280" MODIFIED="1687545585390"/>
 </node>
 </node>
-<node TEXT="Deep Metric Learning" LOCALIZED_STYLE_REF="default" FOLDED="true" ID="ID_67713290" CREATED="1561352085890" MODIFIED="1687545554955">
-<icon BUILTIN="stop-sign"/>
-<font BOLD="true"/>
-<node TEXT="1806.04425: Ranking Robustness Under Ad" ID="ID_562405105" CREATED="1561555589182" MODIFIED="1636485900673">
-<icon BUILTIN="button_cancel"/>
-<font NAME="Gentium" SIZE="10"/>
-<node TEXT="document manipulation for candidate attack" ID="ID_1231428087" CREATED="1561555592821" MODIFIED="1587728924172">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="mainly analysis robustness" ID="ID_55534459" CREATED="1561555648216" MODIFIED="1587728924173">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="manual documentation manipulation instead of automatic adversarial example generation" ID="ID_798730521" CREATED="1561555609750" MODIFIED="1587728924174">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="targets at RankSVM and LambdaMART models instead of neural networks" ID="ID_255349278" CREATED="1561555658663" MODIFIED="1587728924175">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-</node>
-<node TEXT="1808.03908: Adversarial Personalized Rank" ID="ID_83109239" CREATED="1561555800953" MODIFIED="1636485894233">
-<icon BUILTIN="button_cancel"/>
-<font NAME="Gentium" SIZE="10"/>
-<node TEXT="recommendation system" ID="ID_1396811583" CREATED="1561555811711" MODIFIED="1587728924177">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="enhance robustness of a recommender model with adversarial training (adv examples)" ID="ID_527243554" CREATED="1561555835768" MODIFIED="1587728924178">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="APR on Matrix Factorization" ID="ID_662100047" CREATED="1561556113144" MODIFIED="1587728924179">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-</node>
-<node TEXT="1809: AdvBox: FaceNet Attack" ID="ID_1888665729" CREATED="1561556172335" MODIFIED="1636485887561">
-<icon BUILTIN="button_cancel"/>
-<font NAME="Gentium" SIZE="10"/>
-<node TEXT="query attack" ID="ID_1680208164" CREATED="1561556180000" MODIFIED="1587728924182">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="https://github.com/advboxes/AdvBox/blob/master/applications/face_recogn" ID="ID_951928489" CREATED="1561556196446" MODIFIED="1587728924182" LINK="https://github.com/advboxes/AdvBox/blob/master/applications/face_recogn">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="\latex $L=\sqrt{\sum (E-E_t)^2}" ID="ID_79735084" CREATED="1561556315382" MODIFIED="1587728924183">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-</node>
-<node TEXT="1812.00552: Universal Perturbation Attack Against Image Retrieval" ID="ID_1919220467" CREATED="1561556406527" MODIFIED="1587728924183">
-<font NAME="Gentium" SIZE="10"/>
-<node TEXT="directly attacks triplet ranking loss function" ID="ID_491701428" CREATED="1561556424133" MODIFIED="1587728924185">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="but what if the triplet fell into the zero-gradient region" ID="ID_839129884" CREATED="1561556433741" MODIFIED="1587728924186">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="using PGD+momentum for optimization" ID="ID_948653721" CREATED="1561556446589" MODIFIED="1587728924187">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="studies query attack" ID="ID_1697473744" CREATED="1561556462589" MODIFIED="1587728924188">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-</node>
-<node TEXT="2019-ICMR: Who’s Afraid of Adversarial Queries?" ID="ID_1703113745" CREATED="1561556482168" MODIFIED="1636485880766">
-<icon BUILTIN="button_cancel"/>
-<font NAME="Gentium" SIZE="10"/>
-<node TEXT="query attack" ID="ID_1123142555" CREATED="1561556568742" MODIFIED="1587728924189">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="\latex $\max ||f(x)-f(x+v)||_2^2$" ID="ID_1830202115" CREATED="1561556572709" MODIFIED="1587728924190">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="aims at image retrieval and didn&apos;t mention embedding learning" ID="ID_1516625397" CREATED="1561556595981" MODIFIED="1587728924190">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-</node>
-<node TEXT="1907: unsupervised adversarial attacks on deep feature-based retrieval with GAN" ID="ID_9436679" CREATED="1588230731425" MODIFIED="1588230756582">
-<node TEXT="generate adversarial perturbation with GAN" ID="ID_1151385661" CREATED="1588230816064" MODIFIED="1588230824347"/>
-</node>
-<node TEXT="1812.00552: Universal Perturbation Attack Against Image Retrieval (iccv19)" ID="ID_1472505886" CREATED="1573474834671" MODIFIED="1587728924195">
-<icon BUILTIN="messagebox_warning"/>
-<font NAME="Gentium" SIZE="10"/>
-<node TEXT="what: universal perturbation for untargeted attack" ID="ID_1954548078" CREATED="1573474853539" MODIFIED="1587728924196">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="how: currupts pairwise or listwise ranking" ID="ID_1847715376" CREATED="1573474863063" MODIFIED="1587728924197">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="untargeted, focusing on fooling" ID="ID_665084129" CREATED="1573475747222" MODIFIED="1587728924198">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-</node>
-<node TEXT="1901.10650: Metric Attack and Defense for Person Re-identificatio" ID="ID_490211267" CREATED="1592543067606" MODIFIED="1636485967109">
-<icon BUILTIN="messagebox_warning"/>
-<icon BUILTIN="button_cancel"/>
-<font BOLD="true"/>
-<node TEXT="Song Bai" ID="ID_692240773" CREATED="1636485956725" MODIFIED="1636485961987"/>
-<node TEXT="attack the metric in person reID" ID="ID_34707268" CREATED="1592543081709" MODIFIED="1592543098277"/>
-<node TEXT="push (untargeted) and pull (targeted)" ID="ID_1286430581" CREATED="1592543098573" MODIFIED="1592543112360"/>
-</node>
-<node TEXT="1908.09613: targeted mismatch adversarial attack (iccv19)" ID="ID_671271001" CREATED="1573471637067" MODIFIED="1636486108618">
-<icon BUILTIN="messagebox_warning"/>
-<icon BUILTIN="button_ok"/>
-<font NAME="Gentium" SIZE="10"/>
-<node TEXT="what: targeted mismatch" ID="ID_1563475526" CREATED="1573471664345" MODIFIED="1587728924192">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="how: distance objective" ID="ID_688655227" CREATED="1573472458185" MODIFIED="1587728924193">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="not systematic enough" ID="ID_205991126" CREATED="1573472480708" MODIFIED="1587728924194">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="THIS is a threat to us" ID="ID_988648076" CREATED="1573472496549" MODIFIED="1587728924195">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-</node>
-<node TEXT="Advpattern (iccv19)" ID="ID_932771683" CREATED="1576809427350" MODIFIED="1587728924198">
-<icon BUILTIN="messagebox_warning"/>
-<font NAME="Gentium" SIZE="10"/>
-</node>
-<node TEXT="ours: Adversarial Ranking Attack and Defense (arxiv 2002.11293)" ID="ID_933056745" CREATED="1576809387016" MODIFIED="1592543327861">
-<icon BUILTIN="button_ok"/>
-<font NAME="Gentium" SIZE="10" BOLD="true"/>
-<node TEXT="ECCV2020" ID="ID_1213034229" CREATED="1576809470567" MODIFIED="1610427018812">
-<font NAME="Gentium" SIZE="10"/>
-</node>
-</node>
-<node TEXT="2004.04199: transferable, controllable, and inconspicious adversarial attacks on person re-identification with deep-misranking (CVPR20)" ID="ID_693496331" CREATED="1590743469098" MODIFIED="1590743579415">
-<icon BUILTIN="button_ok"/>
-<node TEXT="person reID" ID="ID_548309734" CREATED="1590743636274" MODIFIED="1590743640590"/>
-<node TEXT="use triplet form attack objective" ID="ID_1324326527" CREATED="1590743509489" MODIFIED="1590743528991"/>
-<node TEXT="untargeted" ID="ID_862183953" CREATED="1590743529382" MODIFIED="1590743531961"/>
-<node TEXT="learning-to-mis-rank" ID="ID_172715084" CREATED="1590805595723" MODIFIED="1590805600800"/>
-</node>
-<node TEXT="Vulnerability of Person Re Identification Models to Metric Adversarial Attacks (cvpr20w)" ID="ID_666911505" CREATED="1592544846016" MODIFIED="1620715760339">
-<icon BUILTIN="button_ok"/>
-<icon BUILTIN="messagebox_warning"/>
-<node TEXT="self metric attack" ID="ID_1983736472" CREATED="1592544863127" MODIFIED="1592544870094">
-<node TEXT="maximum shift distance" ID="ID_1843892614" CREATED="1592544925404" MODIFIED="1592544929867"/>
-<node TEXT="untargeted" ID="ID_1551966366" CREATED="1592544982949" MODIFIED="1592544984988"/>
-</node>
-<node TEXT="furthest negative attack" ID="ID_165661813" CREATED="1592544870439" MODIFIED="1592544877498">
-<node TEXT="push from orig, pull from furthest cluster" ID="ID_765025792" CREATED="1592545364041" MODIFIED="1592545375413"/>
-<node TEXT="disturb the ranking" ID="ID_225845829" CREATED="1592544987176" MODIFIED="1592544995331"/>
-<node TEXT="untargeted" ID="ID_1161241988" CREATED="1592544996728" MODIFIED="1592544998361"/>
-</node>
-<node TEXT="adversarial training for metric" ID="ID_881036760" CREATED="1592544877759" MODIFIED="1592544885179"/>
-</node>
-<node TEXT="2012.14057: PERSONRE IDENTIFICATION WITH ADVERSARIAL TRIPLET EMBEDDING" ID="ID_974503367" CREATED="1610427222890" MODIFIED="1620715752859">
-<icon BUILTIN="messagebox_warning"/>
-<node TEXT="not peer reviewed" ID="ID_911035452" CREATED="1610427251959" MODIFIED="1610427256067"/>
-<node TEXT="\latex l_\text{triplet}(\tilde{a}, p, n)" ID="ID_1528343305" CREATED="1610427320982" MODIFIED="1610427368752"/>
-<node TEXT="better reid performance? weird" ID="ID_912255527" CREATED="1610427378471" MODIFIED="1610427386018"/>
-</node>
-<node TEXT="2103.02927 QAIR: Practical Query-efficient Black-Box Attacks for Image Retrieval" ID="ID_1939119283" CREATED="1615294198999" MODIFIED="1620715422259">
-<icon BUILTIN="messagebox_warning"/>
-<icon BUILTIN="button_ok"/>
-<node TEXT="query-based attack against image retrieval to subvert the top-k retrieval" ID="ID_788475675" CREATED="1615294409842" MODIFIED="1615294424860">
-<node TEXT="random incorrect result" ID="ID_1404780182" CREATED="1615294426968" MODIFIED="1615294439236"/>
-</node>
-<node TEXT="gradient optimization + a relevance-based loss" ID="ID_1805130536" CREATED="1615294463470" MODIFIED="1615294478666">
-<node TEXT="uses RGF (random gradient free)" ID="ID_1977339570" CREATED="1615294685532" MODIFIED="1615294698319"/>
-</node>
-<node TEXT="recursive model stealing method" ID="ID_334621555" CREATED="1615294479086" MODIFIED="1615294494768">
-<node TEXT="provides transfer prior" ID="ID_1010296679" CREATED="1615294496388" MODIFIED="1615294503336"/>
-</node>
-<node TEXT="stealing and attack is separated steps: what if we treat it as a multi-arm bandit?" ID="ID_1679102936" CREATED="1615294783533" MODIFIED="1615294824361">
-<icon BUILTIN="idea"/>
-<node TEXT="explore and exploit" ID="ID_645430104" CREATED="1615294813742" MODIFIED="1615294819339"/>
-</node>
-</node>
-<node TEXT="RobRank: adversarial attack and defense in deep ranking" ID="ID_990446170" CREATED="1636485853836" MODIFIED="1650810489070">
-<font BOLD="true"/>
-</node>
-<node TEXT="RobDML: Enhancing Adversarial Robustness for Deep Metric Learning" ID="ID_1927729885" CREATED="1636485850581" MODIFIED="1650810510794">
-<font BOLD="true"/>
-<node TEXT="CVPR22" ID="ID_1223380826" CREATED="1650810506474" MODIFIED="1650810507766"/>
-</node>
-</node>
-<node TEXT="3D/PCL" FOLDED="true" ID="ID_259895259" CREATED="1649103944879" MODIFIED="1649103947165">
-<node TEXT="Robust Structured Declarative Classifiers for 3D Point Clouds: Defending Adversarial Attacks with Implicit Gradients" ID="ID_1085580757" CREATED="1649103947887" MODIFIED="1649103955450">
-<icon BUILTIN="pencil"/>
-</node>
-</node>
-<node TEXT="Audio" FOLDED="true" ID="ID_1537810138" CREATED="1652405551815" MODIFIED="1652405553184">
-<node TEXT="From Environmental Sound Representation to Robustness of 2D CNN Models Against Adversarial Attacks" ID="ID_1291962884" CREATED="1652405557694" MODIFIED="1652405558165"/>
-</node>
-<node TEXT="Deepfake Detection" FOLDED="true" ID="ID_1986728438" CREATED="1646948353156" MODIFIED="1646948357613">
-<node TEXT="Towards Adversarially Robust Deepfake Detection: An Ensemble Approach" ID="ID_1602704665" CREATED="1646948358406" MODIFIED="1646948364713">
-<icon BUILTIN="pencil"/>
-</node>
-</node>
-<node TEXT="Generative Model" FOLDED="true" ID="ID_1297276236" CREATED="1649630202035" MODIFIED="1676255105886">
-<node TEXT="Adversarially robust segmentation models learn perceptually-aligned gradients" ID="ID_1579052965" CREATED="1649630171570" MODIFIED="1649630175331">
-<icon BUILTIN="pencil"/>
-</node>
-<node TEXT="Towards Understanding the Generative Capability of&#xa;Adversarially Robust Classifiers" ID="ID_1415803889" CREATED="1652391381081" MODIFIED="1652391391590">
-<icon BUILTIN="unchecked"/>
-<node TEXT="ICCV21" ID="ID_1011049112" CREATED="1652391392316" MODIFIED="1652391393701"/>
-</node>
-</node>
-<node TEXT="Hashing" FOLDED="true" ID="ID_254620335" CREATED="1652404685642" MODIFIED="1652404687334">
-<node TEXT="Centralized Adversarial Learning for Robust Deep Hashing" ID="ID_1749995901" CREATED="1652404688365" MODIFIED="1652404695527">
-<icon BUILTIN="pencil"/>
-<node TEXT="what&apos;s its relationship to advrank, robrank, robdml?" ID="ID_299223389" CREATED="1652404703545" MODIFIED="1652404717797">
-<icon BUILTIN="info"/>
-</node>
-</node>
-</node>
-<node TEXT="Image Denoising" FOLDED="true" ID="ID_688438108" CREATED="1642369253403" MODIFIED="1642965597652">
-<node TEXT="Towards adversarially robust deep image denoising" ID="ID_912787227" CREATED="1642369258886" MODIFIED="1642369271962">
-<icon BUILTIN="pencil"/>
-<node TEXT="present observation-based zero-mean attack" ID="ID_948789581" CREATED="1642369294389" MODIFIED="1642369302053"/>
-<node TEXT="present hybrid adversarial training" ID="ID_409590623" CREATED="1642369302455" MODIFIED="1642369331464">
-<node TEXT="using augmented data" ID="ID_632082886" CREATED="1642369349160" MODIFIED="1642369354932"/>
-</node>
-</node>
-</node>
-<node TEXT="Medical Image" ID="ID_1099124603" CREATED="1676255140147" MODIFIED="1676255142986">
-<node TEXT="Toward Robust Diagnosis: A Contour Attention Preserving Adversarial Defense for COVID-19 Detection" ID="ID_225572163" CREATED="1676255143162" MODIFIED="1676255210221">
-<icon BUILTIN="closed"/>
-<node TEXT="AAAI23" ID="ID_460456862" CREATED="1676255157608" MODIFIED="1676255159098"/>
-<node TEXT="incorporated domain specific knowledge for robustness." ID="ID_1966762341" CREATED="1676255159250" MODIFIED="1676255168255"/>
-<node TEXT="does not generalize to other domain" ID="ID_1089358613" CREATED="1676255168430" MODIFIED="1676255202367"/>
-</node>
-</node>
 <node TEXT="Multi-Task learning" FOLDED="true" ID="ID_1182441257" CREATED="1642442091094" MODIFIED="1642965600653">
 <node TEXT="Adversarial Robustness in Multi-Task Learning: Promises and Illusions" ID="ID_429718797" CREATED="1642442095758" MODIFIED="1642442212412">
 <icon BUILTIN="checked"/>
@@ -4189,22 +3965,7 @@
 <node TEXT="the choice of the task to incorporate in the loss function are important factors that can be leveraged to yield more robust models" ID="ID_1336811666" CREATED="1642442253918" MODIFIED="1642442277862"/>
 </node>
 </node>
-<node TEXT="Multi Modality" FOLDED="true" ID="ID_965023060" CREATED="1659197149721" MODIFIED="1659197152406">
-<node TEXT="Defending Multimodal Fusion Models against Single-Source Adversaries" ID="ID_1202723874" CREATED="1659197152938" MODIFIED="1659197153664">
-<node TEXT="CVPR21" ID="ID_290523082" CREATED="1659197154694" MODIFIED="1659197155979"/>
-</node>
-<node TEXT="Multi-modal Robustness Analysis Against Language and Visual Perturbations" ID="ID_1262239527" CREATED="1659199931027" MODIFIED="1659199934202">
-<icon BUILTIN="pencil"/>
-</node>
-</node>
 <node TEXT="Object Detection" FOLDED="true" ID="ID_1293793866" CREATED="1649169048366" MODIFIED="1649169051401">
-<node TEXT="Defending From Physically-Realizable Adversarial Attacks Through Internal Over-Activation Analysis" ID="ID_1601765509" CREATED="1649169051973" MODIFIED="1649169053897">
-<icon BUILTIN="pencil"/>
-</node>
-<node TEXT="Defending Against Person Hiding Adversarial Patch Attack with a Universal White Frame" ID="ID_1354705736" CREATED="1652403552952" MODIFIED="1652403560360">
-<icon BUILTIN="pencil"/>
-<node TEXT="rejected by NIPS21" ID="ID_1706619708" CREATED="1652403561081" MODIFIED="1652403565159"/>
-</node>
 <node TEXT="Adversarially-Aware Robust Object Detector" ID="ID_1868454638" CREATED="1658259340057" MODIFIED="1658259340717">
 <node TEXT="ECCV22" ID="ID_733493534" CREATED="1658259341609" MODIFIED="1658259344152"/>
 </node>
@@ -4215,36 +3976,12 @@
 <node TEXT="CVPR22" ID="ID_69102695" CREATED="1659199261716" MODIFIED="1659199262854"/>
 </node>
 </node>
-<node TEXT="Openset Recognition" FOLDED="true" ID="ID_417719416" CREATED="1646947995726" MODIFIED="1646948002223">
-<node TEXT="Open-set Adversarial Defense with Clean-Adversarial Mutual Learning" ID="ID_109010590" CREATED="1646948002881" MODIFIED="1646948362746">
-<icon BUILTIN="unchecked"/>
-<node TEXT="IJCV" ID="ID_1364434112" CREATED="1646948008562" MODIFIED="1646948010165"/>
-</node>
-</node>
-<node TEXT="Reinforcement Learning" FOLDED="true" ID="ID_628850521" CREATED="1647267813992" MODIFIED="1647267819607">
-<node TEXT="SOUND ADVERSARIAL AUDIO-VISUAL NAVIGATION" ID="ID_1280103442" CREATED="1647267824706" MODIFIED="1647267830036">
-<icon BUILTIN="unchecked"/>
-<node TEXT="ICLR22" ID="ID_197663134" CREATED="1647267826223" MODIFIED="1647267827774"/>
-</node>
-</node>
 <node TEXT="Segmentaiton" ID="ID_327210249" CREATED="1689204699831" MODIFIED="1689204702862">
 <node TEXT="cihang xie papers" ID="ID_914577520" CREATED="1689204703137" MODIFIED="1689204706764"/>
 <node TEXT="Robust semantic segmentation: strong adversarial attacks and fast training of robust models" ID="ID_1878682832" CREATED="1689204707066" MODIFIED="1689204773864">
 <icon BUILTIN="pencil"/>
 <node TEXT="Hein" ID="ID_1193648584" CREATED="1689204774603" MODIFIED="1689204777393"/>
 <node TEXT="similar merit compared to my robdml paper" ID="ID_834647537" CREATED="1689204786362" MODIFIED="1689204795902"/>
-</node>
-</node>
-<node TEXT="Text Classifiation" FOLDED="true" ID="ID_1972370487" CREATED="1652383484193" MODIFIED="1652383511660">
-<node TEXT="Adversarial Training Methods for Semi-Supervised Text Classification" ID="ID_388847845" CREATED="1652383489196" MODIFIED="1652383507765">
-<node TEXT="ICLR17" ID="ID_597381726" CREATED="1652383513623" MODIFIED="1652383517724"/>
-<node TEXT="Ian G." ID="ID_638274130" CREATED="1652383520276" MODIFIED="1652383522779"/>
-</node>
-</node>
-<node TEXT="Unsupervised Domain Adaptation" FOLDED="true" ID="ID_1641764072" CREATED="1647265453252" MODIFIED="1647265458995">
-<node TEXT="Exploring Adversarially Robust Training for Unsupervised Domain Adaptation" ID="ID_1050578370" CREATED="1647265459656" MODIFIED="1647265470596">
-<icon BUILTIN="pencil"/>
-<node TEXT="Vishal" ID="ID_707250183" CREATED="1647265465095" MODIFIED="1647265466451"/>
 </node>
 </node>
 </node>
@@ -4320,6 +4057,15 @@
 <icon BUILTIN="pencil"/>
 <node TEXT="adversarially fine-tune CLIP." ID="ID_1997699110" CREATED="1688782071451" MODIFIED="1688782082569"/>
 <node TEXT="can reliably create images without any generator. instead of creating adversarial examples." ID="ID_1287007833" CREATED="1688782082717" MODIFIED="1688782113780"/>
+</node>
+<node TEXT="Generative Model" ID="ID_1297276236" CREATED="1649630202035" MODIFIED="1676255105886">
+<node TEXT="Adversarially robust segmentation models learn perceptually-aligned gradients" ID="ID_1579052965" CREATED="1649630171570" MODIFIED="1649630175331">
+<icon BUILTIN="pencil"/>
+</node>
+<node TEXT="Towards Understanding the Generative Capability of&#xa;Adversarially Robust Classifiers" ID="ID_1415803889" CREATED="1652391381081" MODIFIED="1652391391590">
+<icon BUILTIN="unchecked"/>
+<node TEXT="ICCV21" ID="ID_1011049112" CREATED="1652391392316" MODIFIED="1652391393701"/>
+</node>
 </node>
 </node>
 <node TEXT="-------------------------------------------------------" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_198111288" CREATED="1676254941135" MODIFIED="1688777454232">
@@ -6113,7 +5859,7 @@
 </node>
 </node>
 </node>
-<node TEXT="OOD :: Open Set Recognition" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_323999523" CREATED="1634132952545" MODIFIED="1688779131291">
+<node TEXT="OOD :: Open Set Recognition" LOCALIZED_STYLE_REF="styles.topic" POSITION="top_or_left" ID="ID_323999523" CREATED="1634132952545" MODIFIED="1688779131291">
 <edge COLOR="#7c007c"/>
 <font NAME="Gentium"/>
 <node TEXT="Open-Set Recognition: A Good Closed-Set Classifier is All You Need" ID="ID_1603928418" CREATED="1634132957520" MODIFIED="1634132962452">
