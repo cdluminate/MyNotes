@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="226" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="228" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="top_or_left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1688777454193">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -3901,8 +3901,9 @@
 <font NAME="Gentium"/>
 <node TEXT="Contrastive Learning" ID="ID_230158987" CREATED="1649169110339" MODIFIED="1649169131686">
 <font BOLD="true"/>
-<node TEXT="Task-Agnostic Robust Representation Learning" ID="ID_1035556100" CREATED="1649169241964" MODIFIED="1649169251838">
+<node TEXT="Task-Agnostic Robust Representation Learning" ID="ID_1035556100" CREATED="1649169241964" MODIFIED="1702768204730">
 <icon BUILTIN="pencil"/>
+<icon BUILTIN="bookmark"/>
 <node TEXT="Philip Torr" ID="ID_461361807" CREATED="1649169244394" MODIFIED="1649169250158"/>
 <node TEXT="Robustness at the representation level" ID="ID_1452405899" CREATED="1649169266414" MODIFIED="1649169273770"/>
 </node>
@@ -4034,7 +4035,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adv :: Perceptually Aligned Gradient (PAG)" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_89908453" CREATED="1688781994914" MODIFIED="1688782045978">
+<node TEXT="Adv :: Perceptually Aligned Gradient (PAG)" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_89908453" CREATED="1688781994914" MODIFIED="1688782045978">
 <edge COLOR="#ff0000"/>
 <node TEXT="Adversarially robust models have gradients better aligned with human perception" ID="ID_914196299" CREATED="1688782002191" MODIFIED="1688782058117">
 <icon BUILTIN="info"/>
@@ -4049,9 +4050,14 @@
 <node TEXT="Adversarial Examples Are Not Bugs, They Are Features" ID="ID_1173029923" CREATED="1688784530779" MODIFIED="1688784531344">
 <node TEXT="Madry" ID="ID_1473264299" CREATED="1688784531725" MODIFIED="1688784533015"/>
 </node>
-<node TEXT="Do Adversarially Robust ImageNet Models Transfer Better?" ID="ID_932820853" CREATED="1688784089583" MODIFIED="1688784090314">
-<node TEXT="NIPS20" ID="ID_1156391256" CREATED="1688784090677" MODIFIED="1688784093775"/>
+<node TEXT="Do Adversarially Robust ImageNet Models Transfer Better?" ID="ID_932820853" CREATED="1688784089583" MODIFIED="1702768719362">
+<icon BUILTIN="bookmark"/>
+<node TEXT="NIPS20" ID="ID_1156391256" CREATED="1688784090677" MODIFIED="1688784093775">
 <node TEXT="Madry" ID="ID_1803789000" CREATED="1688784472469" MODIFIED="1688784474006"/>
+</node>
+<node TEXT="L-2 robust model" ID="ID_1467280352" CREATED="1702768377725" MODIFIED="1702768384667">
+<node TEXT="0.5 and 0.25 epsilon seems to work best among all datasets" ID="ID_1348405931" CREATED="1702768402837" MODIFIED="1702768420517"/>
+</node>
 </node>
 <node TEXT="CLIPAG: Towards Generator-Free Text-to-Image Generation" ID="ID_1776665168" CREATED="1688782067164" MODIFIED="1688782070865">
 <icon BUILTIN="pencil"/>
@@ -5859,42 +5865,15 @@
 </node>
 </node>
 </node>
-<node TEXT="OOD :: Open Set Recognition" LOCALIZED_STYLE_REF="styles.topic" POSITION="top_or_left" ID="ID_323999523" CREATED="1634132952545" MODIFIED="1688779131291">
+<node TEXT="OOD :: Out Of Distribution" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_323999523" CREATED="1634132952545" MODIFIED="1702769074547">
 <edge COLOR="#7c007c"/>
 <font NAME="Gentium"/>
 <node TEXT="Open-Set Recognition: A Good Closed-Set Classifier is All You Need" ID="ID_1603928418" CREATED="1634132957520" MODIFIED="1634132962452">
 <node TEXT="vgg group" ID="ID_419228120" CREATED="1634132963805" MODIFIED="1634132966497"/>
 <node TEXT="arxiv" ID="ID_1399907050" CREATED="1634132966842" MODIFIED="1634132967732"/>
 </node>
-<node TEXT="PMAL: Open Set Recognition via Robust Prototype Mining" ID="ID_1567699679" CREATED="1648174626207" MODIFIED="1648174710258">
-<icon BUILTIN="unchecked"/>
-<icon BUILTIN="idea"/>
-<node TEXT="AAAI21" ID="ID_1093847305" CREATED="1648174632155" MODIFIED="1648174634120"/>
-<node TEXT="Open-Set is somewhat similar to deep metric learning variant" ID="ID_162349135" CREATED="1648174806913" MODIFIED="1648174820515"/>
-<node TEXT="besides recognizing predefined classes, the system needs to reject the unknowns" ID="ID_1080431228" CREATED="1648174634902" MODIFIED="1648174647137"/>
-<node TEXT="prototype learning is a potential manner to handle the problem as its ability to improve intra-class compactness of representations is much needed in discrimination between the known and the unknowns" ID="ID_1737399656" CREATED="1648174672305" MODIFIED="1648174703066"/>
-<node TEXT="using mining strategy to avoid inteference of noise" ID="ID_879408251" CREATED="1648174763868" MODIFIED="1648174797459">
-<icon BUILTIN="yes"/>
-</node>
-<node TEXT="can we borrow these to face recognition?" ID="ID_290608270" CREATED="1648174835615" MODIFIED="1648174856270">
-<icon BUILTIN="help"/>
-</node>
-</node>
-<node TEXT="Towards Accurate Open-Set Recognition via Background-Class Regularization" ID="ID_190797296" CREATED="1658616591676" MODIFIED="1658616592488">
-<node TEXT="ECCV22" ID="ID_1527424862" CREATED="1658616596986" MODIFIED="1658616598763"/>
-</node>
 <node TEXT="Partial and Asymmetric Contrastive Learning for Out-of-Distribution Detection in Long-Tailed Recognition" ID="ID_1293076546" CREATED="1659199711340" MODIFIED="1659199712052">
 <node TEXT="ICML22" ID="ID_1862789298" CREATED="1659199712937" MODIFIED="1659199720317"/>
-</node>
-<node TEXT="Prompt-driven efficient Open-set Semi-supervised Learning" ID="ID_618906363" CREATED="1676563283331" MODIFIED="1676563293165">
-<icon BUILTIN="pencil"/>
-<node TEXT="+visual prompt" ID="ID_1334817435" CREATED="1676563294737" MODIFIED="1676563301568"/>
-<node TEXT="prompt is like adversarial attacks. in this paper, prompt is used to enlarge the distribution difference distinguished by the ID prompt for OOD detection." ID="ID_1808214758" CREATED="1676563559028" MODIFIED="1676563613055"/>
-<node TEXT="does this assume: prompt moves OOD samples irregularly." ID="ID_581566900" CREATED="1676563618042" MODIFIED="1676563638237"/>
-<node TEXT="OpenPrompt: prompt-driven joint space learning mechanism" ID="ID_1571439494" CREATED="1676563995089" MODIFIED="1676564028995">
-<font SIZE="9"/>
-</node>
-<node TEXT="CIFAR10, cifar100, imagenet-30" ID="ID_730325274" CREATED="1676564196747" MODIFIED="1676564204541"/>
 </node>
 </node>
 <node TEXT="ATK :: Train-Time Attack" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_481030829" CREATED="1642965505734" MODIFIED="1688779158709">
@@ -6121,7 +6100,7 @@
 </node>
 </node>
 </node>
-<node TEXT="V :: Face :: Main" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_153988282" CREATED="1641242964517" MODIFIED="1699402466307">
+<node TEXT="Vision :: Face" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_153988282" CREATED="1641242964517" MODIFIED="1702772099963">
 <edge COLOR="#00ff00"/>
 <font NAME="Gentium"/>
 <node TEXT="Face Identification by default. It is basically a deadend to do face for CVPR as of 2023" ID="ID_1812222459" CREATED="1651184495295" MODIFIED="1676257457594">
@@ -6356,9 +6335,7 @@
 <node TEXT="haoxiang" ID="ID_271524021" CREATED="1659200880818" MODIFIED="1659200882157"/>
 </node>
 </node>
-</node>
-<node TEXT="V :: Face :: Robust" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_490223917" CREATED="1675049870200" MODIFIED="1699402352921">
-<edge COLOR="#7c7c00"/>
+<node TEXT="V :: Face :: Robust" LOCALIZED_STYLE_REF="styles.topic" ID="ID_490223917" CREATED="1675049870200" MODIFIED="1702772088200">
 <font NAME="Gentium"/>
 <node TEXT="risk: maybe common corruptions like brightness, rain, angle, etc can introduce more risk to a system in practice" ID="ID_567079036" CREATED="1675049927982" MODIFIED="1675049976962">
 <icon BUILTIN="attach"/>
@@ -6369,10 +6346,10 @@
 <node TEXT="Presentation attack (physical)" ID="ID_1422211929" CREATED="1675050065706" MODIFIED="1675050071944">
 <node TEXT="induces more risk in practice than digital attacks" ID="ID_1063774366" CREATED="1675049901499" MODIFIED="1675049920921"/>
 </node>
-<node TEXT="Adversarial noise (digital attack)" ID="ID_1835156252" CREATED="1675049882328" MODIFIED="1675049887621">
+<node TEXT="Adversarial noise (digital attack)" ID="ID_1835156252" CREATED="1675049882328" MODIFIED="1702772076262">
 <node TEXT="lower risk than spoofing" ID="ID_1740617712" CREATED="1675049890833" MODIFIED="1675049897544"/>
 <node TEXT="Rama and Alan have some robustness evaluation papers in this regard" ID="ID_1691197998" CREATED="1675049986257" MODIFIED="1675050004356"/>
-<node TEXT="" ID="ID_647611734" CREATED="1699402359648" MODIFIED="1699402359648"/>
+</node>
 </node>
 </node>
 <node TEXT="Gen :: Protection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1205778136" CREATED="1680653497543" MODIFIED="1688777454240">
@@ -6590,6 +6567,9 @@
 <node TEXT="Benchmarking Test-Time Adaptation against Distribution Shifts in Image Classification" ID="ID_1829966491" CREATED="1688779827651" MODIFIED="1689199224882">
 <icon BUILTIN="pencil"/>
 </node>
+</node>
+<node TEXT="LG :: Transfer Learning" LOCALIZED_STYLE_REF="styles.topic" POSITION="top_or_left" ID="ID_1016810869" CREATED="1702772049422" MODIFIED="1702772064989">
+<edge COLOR="#007c00"/>
 </node>
 <node TEXT="Gen :: GAN :: GAN Inverstion" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1643977837" CREATED="1608014251316" MODIFIED="1688777454242">
 <edge COLOR="#0000ff"/>
@@ -7282,6 +7262,12 @@
 <node TEXT="(1) test accuracy" ID="ID_764666299" CREATED="1653860103071" MODIFIED="1653860111201"/>
 <node TEXT="(2) out-of-distribution accuracy" ID="ID_874751335" CREATED="1653860111347" MODIFIED="1653860117298"/>
 <node TEXT="(3) explainability" ID="ID_362903560" CREATED="1653860117582" MODIFIED="1653860121732"/>
+</node>
+</node>
+<node TEXT="Distance Correlation" ID="ID_1441814662" CREATED="1702771999934" MODIFIED="1702772005327">
+<node TEXT="On the versatile uses of partial distance correlation in deep learning" ID="ID_867397890" CREATED="1702772005643" MODIFIED="1702772023397">
+<icon BUILTIN="bookmark"/>
+<node TEXT="ECCV22 best paper" ID="ID_1689106056" CREATED="1702772017398" MODIFIED="1702772020399"/>
 </node>
 </node>
 <node TEXT="class activation map" ID="ID_1199847666" CREATED="1651102994318" MODIFIED="1656028150739">
