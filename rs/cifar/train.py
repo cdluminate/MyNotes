@@ -62,7 +62,7 @@ def get_model(args):
         raise NotImplementedError
 
 
-def train(args, model, optim, loader, epoch):
+def train(args, model, optim, sched, loader, epoch):
     model.train()
     for i, batch in track(enumerate(loader), total=len(loader), description='Train'):
         image, label = batch
@@ -75,6 +75,7 @@ def train(args, model, optim, loader, epoch):
         optim.zero_grad()
         loss.backward()
         optim.step()
+        sched.step()
         if i % args.report_every == 0:
             console.print(f'Train[{epoch}][{i+1:3d}/{len(loader)}]',
                           f'loss: {loss.item():.3f}',
@@ -82,7 +83,7 @@ def train(args, model, optim, loader, epoch):
 
 
 @th.no_grad()
-def evaluate(args, model, optim, loader, epoch):
+def evaluate(args, model, optim, sched, loader, epoch):
     model.eval()
     total_loss = 0
     total = 0
@@ -120,6 +121,7 @@ if __name__ == '__main__':
     ag.add_argument('--num_workers', '-j', type=int, default=4)
     ag.add_argument('--lr', type=float, default=0.05)
     ag.add_argument('--lr_max', type=float, default=0.1)
+    ag.add_argument('--weight_decay', type=float, default=5e-4)
     ag.add_argument('--max_epochs', type=int, default=30)
     ag.add_argument('--start_epoch', type=int, default=0)
     ag.add_argument('--log_dir', type=str, default='example')
@@ -133,11 +135,13 @@ if __name__ == '__main__':
 
     console.print('>_< Initialize model and optimizer ...')
     model = get_model(ag).to(ag.device)
-    optim = th.optim.SGD(model.parameters(), lr=ag.lr, momentum=0.9)
+    optim = th.optim.SGD(model.parameters(), lr=ag.lr, momentum=0.9, weight_decay=ag.weight_decay)
+    sched = th.optim.lr_scheduler.OneCycleLR(optim, max_lr=ag.max_lr,
+            steps_per_epoch=len(trainloader), epochs=ag.max_epochs)
 
     for epoch in range(ag.start_epoch, ag.max_epochs):
-        train(ag, model, optim, trainloader, epoch)
-        evaluate(ag, model, optim, testloader, epoch)
+        train(ag, model, optim, sched, trainloader, epoch)
+        evaluate(ag, model, optim, sched, testloader, epoch)
 
     console.print('>_< Finished Training')
     torch.save(net.state_dict(), os.path.join(ag.log_dir, 'model.state_dict.pt'))
