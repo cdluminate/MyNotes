@@ -136,7 +136,7 @@ if __name__ == '__main__':
     console.print('>_< Initialize model and optimizer ...')
     model = get_model(ag).to(ag.device)
     optim = th.optim.SGD(model.parameters(), lr=ag.lr, momentum=0.9, weight_decay=ag.weight_decay)
-    sched = th.optim.lr_scheduler.OneCycleLR(optim, max_lr=ag.max_lr,
+    sched = th.optim.lr_scheduler.OneCycleLR(optim, max_lr=ag.lr_max,
             steps_per_epoch=len(trainloader), epochs=ag.max_epochs)
 
     for epoch in range(ag.start_epoch, ag.max_epochs):
