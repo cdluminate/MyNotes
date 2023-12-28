@@ -3,6 +3,7 @@ https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html
 https://lightning.ai/docs/pytorch/stable/notebooks/lightning_examples/cifar10-baseline.html
 DDP training usually leads to worse performance on CIFAR.
 '''
+import os
 import argparse
 import torch as th
 import torchvision as V
@@ -77,7 +78,7 @@ def train(args, model, optim, sched, loader, epoch):
         optim.step()
         sched.step()
         if i % args.report_every == 0:
-            console.print(f'Train[{epoch}][{i+1:3d}/{len(loader)}]',
+            console.print(f'Trn[{epoch}][{i+1:3d}/{len(loader)}]',
                           f'lr: {sched.get_last_lr()[0]}',
                           f'loss: {loss.item():.3f}',
                           f'accuracy: {accuracy*100:.1f} (/100)')
@@ -100,15 +101,20 @@ def evaluate(args, model, optim, sched, loader, epoch):
         correct += (pred.view(-1) == label.view(-1)).sum()
         total += label.size(0)
         total_loss += loss.item() * label.size(0)
-        if i % args.report_every == 0:
-            console.print(f'Eval[{epoch}][{i+1:3d}/{len(loader)}]',
-                          f'loss: {loss.item():.3f}',
-                          f'accuracy: {accuracy*100:.1f} (/100)')
+        #if i % args.report_every == 0:
+        #    console.print(f'Val[{epoch}][{i+1:3d}/{len(loader)}]',
+        #                  f'loss: {loss.item():.3f}',
+        #                  f'accuracy: {accuracy*100:.1f} (/100)')
     loss = total_loss / total
     accuracy = correct / total
     console.print(f'Eval[{epoch}]',
                   f'loss: {loss:.3f}',
                   f'accuracy: {accuracy*100:.1f} (/100)')
+
+
+def save_checkpoint(ckname, args, model, optim, sched, epoch):
+    checkpoint = {'model': model.state_dict(), 'optimizer': optim.state_dict(), 'lr_scheduler': sched.state_dict(), 'epoch': epoch, 'args': args}
+    th.save(checkpoint, os.path.join(args.log_dir, ckname))
 
 
 
@@ -130,6 +136,8 @@ if __name__ == '__main__':
     ag.add_argument('--report_every', type=int, default=30)
     ag = ag.parse_args()
     console.print(ag)
+    if not os.path.exists(ag.log_dir):
+        os.mkdir(ag.log_dir)
 
     console.print('>_< Loading datasets ...')
     trainloader, testloader = get_loaders(ag)
@@ -145,4 +153,4 @@ if __name__ == '__main__':
         evaluate(ag, model, optim, sched, testloader, epoch)
 
     console.print('>_< Finished Training')
-    torch.save(net.state_dict(), os.path.join(ag.log_dir, 'model.state_dict.pt'))
+    save_checkpoint('latest.pth', ag, model, optim, sched, epoch)
