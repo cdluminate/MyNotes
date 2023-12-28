@@ -78,6 +78,7 @@ def train(args, model, optim, sched, loader, epoch):
         sched.step()
         if i % args.report_every == 0:
             console.print(f'Train[{epoch}][{i+1:3d}/{len(loader)}]',
+                          f'lr: {sched.get_last_lr()[0]}',
                           f'loss: {loss.item():.3f}',
                           f'accuracy: {accuracy*100:.1f} (/100)')
 
