@@ -1,96 +1,143 @@
 '''
 https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html
+https://lightning.ai/docs/pytorch/stable/notebooks/lightning_examples/cifar10-baseline.html
+DDP training usually leads to worse performance on CIFAR.
 '''
-
-import torch
-import torchvision
+import argparse
+import torch as th
+import torchvision as V
 import torchvision.transforms as transforms
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
+import rich
+from rich.progress import track
+console = rich.get_console()
 
 
-transform = transforms.Compose(
-    [transforms.ToTensor(),
-     transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
-
-batch_size = 4
-
-trainset = torchvision.datasets.CIFAR10(root='./data', train=True,
-                                        download=True, transform=transform)
-trainloader = torch.utils.data.DataLoader(trainset, batch_size=batch_size,
-                                          shuffle=True, num_workers=2)
-
-testset = torchvision.datasets.CIFAR10(root='./data', train=False,
-                                       download=True, transform=transform)
-testloader = torch.utils.data.DataLoader(testset, batch_size=batch_size,
-                                         shuffle=False, num_workers=2)
-
-class Net(nn.Module):
-    def __init__(self):
-        super().__init__()
-        self.conv1 = nn.Conv2d(3, 6, 5)
-        self.pool = nn.MaxPool2d(2, 2)
-        self.conv2 = nn.Conv2d(6, 16, 5)
-        self.fc1 = nn.Linear(16 * 5 * 5, 120)
-        self.fc2 = nn.Linear(120, 84)
-        self.fc3 = nn.Linear(84, 10)
-
-    def forward(self, x):
-        x = self.pool(F.relu(self.conv1(x)))
-        x = self.pool(F.relu(self.conv2(x)))
-        x = torch.flatten(x, 1) # flatten all dimensions except batch
-        x = F.relu(self.fc1(x))
-        x = F.relu(self.fc2(x))
-        x = self.fc3(x)
-        return x
-
-net = Net().cuda()
+def get_transforms(split: str):
+    if split == 'train':
+        return V.transforms.Compose([
+            V.transforms.RandomCrop(32, padding=4),
+            V.transforms.RandomHorizontalFlip(),
+            V.transforms.ToTensor(),
+            V.transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
+            ])
+    elif split == 'test':
+        return V.transforms.Compose([
+            V.transforms.ToTensor(),
+            V.transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
+            ])
+    else:
+        raise ValueError(split)
 
 
-criterion = nn.CrossEntropyLoss()
-optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
+def get_datasets(args):
+    trainset = V.datasets.CIFAR10(root=args.data_dir, train=True,
+                                  download=True,
+                                  transform=get_transforms('train'))
+    testset = V.datasets.CIFAR10(root=args.data_dir, train=False,
+                                 download=True,
+                                 transform=get_transforms('test'))
+    return trainset, testset
 
-for epoch in range(2):  # loop over the dataset multiple times
 
-    running_loss = 0.0
-    for i, data in enumerate(trainloader, 0):
-        # get the inputs; data is a list of [inputs, labels]
-        inputs, labels = data
-        inputs, labels = inputs.cuda(), labels.cuda()
+def get_loaders(args):
+    trainset, testset = get_datasets(args)
+    trainloader = th.utils.data.DataLoader(trainset, batch_size=args.batch_size,
+                                              shuffle=True, num_workers=args.num_workers)
+    testloader = th.utils.data.DataLoader(testset, batch_size=args.batch_size,
+                                             shuffle=False, num_workers=args.num_workers)
+    return trainloader, testloader
 
-        # zero the parameter gradients
-        optimizer.zero_grad()
 
-        # forward + backward + optimize
-        outputs = net(inputs)
-        loss = criterion(outputs, labels)
+def get_model(args):
+    if args.arch == 'resnet18':
+        model = V.models.resnet18(num_classes=10)
+        model.conv1 = th.nn.Conv2d(3, 64, kernel_size=(3,3), stride=(1,1),
+                                   padding=(1,1), bias=False)
+        model.maxpool = th.nn.Identity()
+        return model
+    else:
+        raise NotImplementedError
+
+
+def train(args, model, optim, loader, epoch):
+    model.train()
+    for i, batch in track(enumerate(loader), total=len(loader), description='Train'):
+        image, label = batch
+        image = image.to(args.device)
+        label = label.to(args.device)
+        outputs = model(image)
+        loss = F.cross_entropy(outputs, label)
+        _, pred = outputs.max(dim=-1)
+        accuracy = (pred.view(-1) == label.view(-1)).sum() / label.size(0)
+        optim.zero_grad()
         loss.backward()
-        optimizer.step()
+        optim.step()
+        if i % args.report_every == 0:
+            console.print(f'Train[{epoch}][{i+1:3d}/{len(loader)}]',
+                          f'loss: {loss.item():.3f}',
+                          f'accuracy: {accuracy*100:.1f} (/100)')
 
-        # print statistics
-        running_loss += loss.item()
-        if i % 2000 == 1999:    # print every 2000 mini-batches
-            print(f'Eph[{epoch + 1}][{i + 1:5d}] loss: {running_loss / 2000:.3f}')
-            running_loss = 0.0
 
-print('Finished Training')
-PATH = './cifar_net.pth'
-torch.save(net.state_dict(), PATH)
+@th.no_grad()
+def evaluate(args, model, optim, loader, epoch):
+    model.eval()
+    total_loss = 0
+    total = 0
+    correct = 0
+    for i, batch in track(enumerate(loader), total=len(loader), description='Eval'):
+        image, label = batch
+        image = image.to(args.device)
+        label = label.to(args.device)
+        outputs = model(image)
+        loss = F.cross_entropy(outputs, label)
+        _, pred = outputs.max(dim=-1)
+        accuracy = (pred.view(-1) == label.view(-1)).sum() / label.size(0)
+        correct += (pred.view(-1) == label.view(-1)).sum()
+        total += label.size(0)
+        total_loss += loss.item() * label.size(0)
+        if i % args.report_every == 0:
+            console.print(f'Eval[{epoch}][{i+1:3d}/{len(loader)}]',
+                          f'loss: {loss.item():.3f}',
+                          f'accuracy: {accuracy*100:.1f} (/100)')
+    loss = total_loss / total
+    accuracy = correct / total
+    console.print(f'Eval[{epoch}]',
+                  f'loss: {loss:.3f}',
+                  f'accuracy: {accuracy*100:.1f} (/100)')
 
-net.eval()
-correct = 0
-total = 0
-# since we're not training, we don't need to calculate the gradients for our outputs
-with torch.no_grad():
-    for data in testloader:
-        images, labels = data
-        images, labels = images.cuda(), labels.cuda()
-        # calculate outputs by running images through the network
-        outputs = net(images)
-        # the class with the highest energy is what we choose as prediction
-        _, predicted = torch.max(outputs.data, 1)
-        total += labels.size(0)
-        correct += (predicted == labels).sum().item()
 
-print(f'Accuracy of the network on the 10000 test images: {100 * correct // total} %')
+
+if __name__ == '__main__':
+    ag = argparse.ArgumentParser()
+    ag.add_argument('--arch', type=str, default='resnet18')
+    ag.add_argument('--device', '-d', type=str,
+                    default='cuda' if th.cuda.is_available() else 'cpu')
+    ag.add_argument('--batch_size', type=int, default=256)
+    ag.add_argument('--data_dir', type=str, default='./data')
+    ag.add_argument('--num_workers', '-j', type=int, default=4)
+    ag.add_argument('--lr', type=float, default=0.05)
+    ag.add_argument('--lr_max', type=float, default=0.1)
+    ag.add_argument('--max_epochs', type=int, default=30)
+    ag.add_argument('--start_epoch', type=int, default=0)
+    ag.add_argument('--log_dir', type=str, default='example')
+    ag.add_argument('--amp', action='store_true')
+    ag.add_argument('--report_every', type=int, default=30)
+    ag = ag.parse_args()
+    console.print(ag)
+
+    console.print('>_< Loading datasets ...')
+    trainloader, testloader = get_loaders(ag)
+
+    console.print('>_< Initialize model and optimizer ...')
+    model = get_model(ag).to(ag.device)
+    optim = th.optim.SGD(model.parameters(), lr=ag.lr, momentum=0.9)
+
+    for epoch in range(ag.start_epoch, ag.max_epochs):
+        train(ag, model, optim, trainloader, epoch)
+        evaluate(ag, model, optim, testloader, epoch)
+
+    console.print('>_< Finished Training')
+    torch.save(net.state_dict(), os.path.join(ag.log_dir, 'model.state_dict.pt'))
