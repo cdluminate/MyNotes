@@ -2,6 +2,9 @@
 https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html
 https://lightning.ai/docs/pytorch/stable/notebooks/lightning_examples/cifar10-baseline.html
 DDP training usually leads to worse performance on CIFAR.
+1. --max_epochs=100 accuracy 94.7
+2. --max_epochs=50  accuracy 94.0
+3. --max_epochs=30  accuracy 93.0 (default)
 '''
 import os
 import argparse
