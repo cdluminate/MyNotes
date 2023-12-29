@@ -134,6 +134,8 @@ if __name__ == '__main__':
     ag.add_argument('--log_dir', type=str, default='example')
     ag.add_argument('--amp', action='store_true')
     ag.add_argument('--report_every', type=int, default=30)
+    ag.add_argument('--resume', type=str, default='')
+    ag.add_argument('--eval', action='store_true')
     ag = ag.parse_args()
     console.print(ag)
     if not os.path.exists(ag.log_dir):
@@ -147,6 +149,18 @@ if __name__ == '__main__':
     optim = th.optim.SGD(model.parameters(), lr=ag.lr, momentum=0.9, weight_decay=ag.weight_decay)
     sched = th.optim.lr_scheduler.OneCycleLR(optim, max_lr=ag.lr_max,
             steps_per_epoch=len(trainloader), epochs=ag.max_epochs)
+
+    if ag.resume:
+        ckpt = th.load(ag.resume, map_location=ag.device)
+        model.load_state_dict(ckpt['model'])
+        optim.load_state_dict(ckpt['optimizer'])
+        sched.load_state_dict(ckpt['lr_scheduler'])
+        if ag.start_epoch == 0:
+            ag.start_epoch = ckpt['epoch']
+
+    if ag.eval:
+        evaluate(ag, model, optim, sched, testloader, ckpt['epoch'])
+        exit()
 
     for epoch in range(ag.start_epoch, ag.max_epochs):
         train(ag, model, optim, sched, trainloader, epoch)
