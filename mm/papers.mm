@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="228" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="241" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="top_or_left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1688777454193">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -240,15 +240,10 @@
 <node TEXT="ICML" ID="ID_8273996" CREATED="1642954123777" MODIFIED="1688777454204">
 <font NAME="Gentium"/>
 </node>
-<node TEXT="AAAI" ID="ID_583291215" CREATED="1641521448752" MODIFIED="1688777454204">
-<font NAME="Gentium"/>
-</node>
 <node TEXT="ACL" ID="ID_126154590" CREATED="1642954126358" MODIFIED="1688777454204">
 <font NAME="Gentium"/>
 </node>
-<node TEXT="TPAMI" ID="ID_137066053" CREATED="1675042363096" MODIFIED="1688777454204">
-<font NAME="Gentium"/>
-</node>
+<node TEXT="EMNLP" ID="ID_1440815488" CREATED="1704689085657" MODIFIED="1704689087365"/>
 </node>
 </node>
 <node TEXT="Tactic / Impact" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_896452525" CREATED="1642481777876" MODIFIED="1688777454204">
@@ -2083,6 +2078,7 @@
 <node TEXT="Self-supervised learning has two major forms, reconstruction and contrastive learning" ID="ID_1689550023" CREATED="1647264534821" MODIFIED="1680200393467">
 <icon BUILTIN="info"/>
 </node>
+<node TEXT="SimMIM" ID="ID_744444020" CREATED="1703823928800" MODIFIED="1703823931406"/>
 <node TEXT="MAE (CVPR22)" ID="ID_1610729841" CREATED="1675887212306" MODIFIED="1676227939556">
 <node TEXT="Masked Autoencoders Are Scalable Vision Learners" ID="ID_1946699135" CREATED="1675887223216" MODIFIED="1675887224200">
 <node TEXT="Simple algorithms that scale well are the core of deep&#xa;learning." ID="ID_733682737" CREATED="1675892807986" MODIFIED="1675892814536">
@@ -3992,7 +3988,7 @@
 <icon BUILTIN="unchecked"/>
 </node>
 </node>
-<node TEXT="Adv :: Adversarial Robustness" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1633797140" CREATED="1675050942299" MODIFIED="1698762586156">
+<node TEXT="Adv :: Adversarial Robustness" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1633797140" CREATED="1675050942299" MODIFIED="1698762586156">
 <edge COLOR="#0000ff"/>
 <font NAME="Gentium"/>
 <node TEXT="Can we simply make adv training faster on imagenet? people are still playing with CIFAR. Is adversarial training the ultimate answer of robustness? Definitely no." ID="ID_133206511" CREATED="1675052822881" MODIFIED="1686956698031">
@@ -4006,7 +4002,7 @@
 <icon BUILTIN="pencil"/>
 </node>
 </node>
-<node TEXT="Image Classification" ID="ID_1457539369" CREATED="1675742630904" MODIFIED="1675742634724">
+<node TEXT="Adversarial Training" ID="ID_1457539369" CREATED="1675742630904" MODIFIED="1704691923434">
 <node TEXT="Data Augmentation Alone Can Improve Adversarial Training" ID="ID_266269491" CREATED="1675052851143" MODIFIED="1675052861836">
 <node TEXT="ICLR23" ID="ID_1007201331" CREATED="1675052862033" MODIFIED="1675052865053"/>
 <node TEXT="CIFAR 10, no imagenet" ID="ID_820963333" CREATED="1675739931665" MODIFIED="1675739935991"/>
@@ -4027,6 +4023,14 @@
 <node TEXT="Cihang" ID="ID_584809873" CREATED="1687552910581" MODIFIED="1687552912500"/>
 </node>
 </node>
+<node TEXT="Efficient Adversarial Training" ID="ID_1852893055" CREATED="1704691906234" MODIFIED="1704691914100">
+<node TEXT="Efficiently boosting the robustness of pretrained vision transformers" ID="ID_1155559175" CREATED="1704691926560" MODIFIED="1704691941467">
+<icon BUILTIN="pencil"/>
+<node TEXT="No imagenet." ID="ID_339405604" CREATED="1704691947530" MODIFIED="1704691951133"/>
+<node TEXT="modification to LoRA" ID="ID_702211559" CREATED="1704691974199" MODIFIED="1704691978989"/>
+<node TEXT="comparable performance with 5% learnable parameters" ID="ID_1969527962" CREATED="1704691951594" MODIFIED="1704691962998"/>
+</node>
+</node>
 <node TEXT="Self-supervised Learning" ID="ID_1886314157" CREATED="1675742636744" MODIFIED="1675742640282">
 <node TEXT="Adversarial Training of Self-supervised Monocular Depth Estimation against Physical-World Attacks" ID="ID_539306686" CREATED="1675742640998" MODIFIED="1675742648145">
 <node TEXT="ICLR23" ID="ID_810916472" CREATED="1675742649030" MODIFIED="1675742650739"/>
@@ -4035,7 +4039,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Adv :: Perceptually Aligned Gradient (PAG)" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_89908453" CREATED="1688781994914" MODIFIED="1688782045978">
+<node TEXT="Adv :: Perceptually Aligned Gradient (PAG)" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_89908453" CREATED="1688781994914" MODIFIED="1688782045978">
 <edge COLOR="#ff0000"/>
 <node TEXT="Adversarially robust models have gradients better aligned with human perception" ID="ID_914196299" CREATED="1688782002191" MODIFIED="1688782058117">
 <icon BUILTIN="info"/>
@@ -4442,6 +4446,11 @@
 <node TEXT="axv 2212" ID="ID_1916325593" CREATED="1672081162663" MODIFIED="1672081166358"/>
 <node TEXT="cihang xie" ID="ID_1866139229" CREATED="1672081166554" MODIFIED="1672081168020"/>
 </node>
+</node>
+</node>
+<node TEXT="Superpixel Representation" ID="ID_534354113" CREATED="1704692674270" MODIFIED="1704692679948">
+<node TEXT="SPFormer: enhancing vision transformer with superpixel representation" ID="ID_1729909294" CREATED="1704692690312" MODIFIED="1704692708621">
+<icon BUILTIN="pencil"/>
 </node>
 </node>
 </node>
@@ -5748,6 +5757,14 @@
 </node>
 </node>
 </node>
+<node TEXT="ObjDet :: Open Vocabulary" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_243934302" CREATED="1704689819670" MODIFIED="1704689879781">
+<edge COLOR="#00ffff"/>
+<node TEXT="generating enhanced negatives for training language based object detectors" ID="ID_1539802689" CREATED="1704689995981" MODIFIED="1704690012192">
+<icon BUILTIN="pencil"/>
+<node TEXT="use LLM to generate negative text descriptions" ID="ID_530181555" CREATED="1704690041977" MODIFIED="1704690051326"/>
+<node TEXT="use T2I generatve negative images" ID="ID_67237381" CREATED="1704690051621" MODIFIED="1704690070632"/>
+</node>
+</node>
 <node TEXT="V :: Segmentation" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_782654761" CREATED="1686954666427" MODIFIED="1688777454234">
 <edge COLOR="#ff00ff"/>
 <font NAME="Gentium"/>
@@ -6850,6 +6867,96 @@
 </node>
 </node>
 </node>
+<node TEXT="LLM :: Retreival Augmented Generation" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1732405024" CREATED="1704413947426" MODIFIED="1704413961346">
+<edge COLOR="#7c007c"/>
+</node>
+<node TEXT="LLM :: Applications" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1351564910" CREATED="1704690202941" MODIFIED="1704690214805">
+<edge COLOR="#7c0000"/>
+<node TEXT="Planning" ID="ID_1480822372" CREATED="1704690209391" MODIFIED="1704690211254">
+<node TEXT="LLM-Assist: enhancing closed loop planning with langugae based reasoning" ID="ID_1521780858" CREATED="1704690221287" MODIFIED="1704690239100">
+<icon BUILTIN="pencil"/>
+</node>
+<node TEXT="VoroNav: Voronoi-based zero-shot object navigation with large language model" ID="ID_1280065429" CREATED="1704691014991" MODIFIED="1704691032351">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Adapt to Downstream" ID="ID_1269815330" CREATED="1704692922420" MODIFIED="1704692955376">
+<node TEXT="Learning to prompt with text only supervision for vision-language models" ID="ID_1330345103" CREATED="1704692924933" MODIFIED="1704692970962">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+</node>
+<node TEXT="LLM :: Internals" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1635719556" CREATED="1704689213155" MODIFIED="1704689221213">
+<edge COLOR="#ff00ff"/>
+<node TEXT="Knowledge Editing" ID="ID_186532538" CREATED="1704689224755" MODIFIED="1704689235771">
+<node TEXT="A comprehensive study of knowledge editing for large language models" ID="ID_561693528" CREATED="1704689236201" MODIFIED="1704689668477">
+<icon BUILTIN="pencil"/>
+<icon BUILTIN="unchecked"/>
+<node TEXT="survey" ID="ID_1115653851" CREATED="1704689251652" MODIFIED="1704689253259"/>
+<node TEXT="2401" OBJECT="java.lang.Long|2401" ID="ID_1160046041" CREATED="1704689246251" MODIFIED="1704689247756"/>
+<node TEXT="efficient, lightweight on-the-fly model modifications" ID="ID_1715543271" CREATED="1704689280808" MODIFIED="1704689292453"/>
+<node TEXT="(1) resotring to external knowledge" ID="ID_1922374566" CREATED="1704689639548" MODIFIED="1704689646314"/>
+<node TEXT="(2) merging knowledge into the model" ID="ID_1437311092" CREATED="1704689646551" MODIFIED="1704689652046"/>
+<node TEXT="(3) editing intrinsic knowledge" ID="ID_1186258159" CREATED="1704689652280" MODIFIED="1704689659785"/>
+</node>
+</node>
+<node TEXT="Primitive Vision Knowledge" ID="ID_1728459973" CREATED="1704691638318" MODIFIED="1704691655048">
+<node TEXT="A vision check-up for language models" ID="ID_972534659" CREATED="1704691655222" MODIFIED="1704691668745">
+<icon BUILTIN="pencil"/>
+<node TEXT="2401" OBJECT="java.lang.Long|2401" ID="ID_1967972043" CREATED="1704691664298" MODIFIED="1704691666251"/>
+<node TEXT="MIT" ID="ID_811345266" CREATED="1704691661733" MODIFIED="1704691663386"/>
+<node TEXT="Precise modeling of strings can teach language models about numerous aspects of the visual world" ID="ID_1151776532" CREATED="1704691786069" MODIFIED="1704691805708"/>
+</node>
+</node>
+</node>
+<node TEXT="LLM :: Efficiency" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_300405694" CREATED="1704693280585" MODIFIED="1704693286132">
+<edge COLOR="#007c7c"/>
+<node TEXT="Quality Corpus" ID="ID_1085153133" CREATED="1704693307629" MODIFIED="1704693317489">
+<node TEXT="llava-phi: efficient multi-modal assistant with small language model" ID="ID_118382250" CREATED="1704693294896" MODIFIED="1704693327567">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+</node>
+<node TEXT="LLM :: Safety" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1743630999" CREATED="1704690353661" MODIFIED="1704690791687">
+<edge COLOR="#00007c"/>
+<node TEXT="Explicit alighment tuning" ID="ID_43873086" CREATED="1704690772903" MODIFIED="1704690782673">
+<node TEXT="MLLM-Protector: ensuring MLLM&apos;s safety without hurting performance" ID="ID_1216957212" CREATED="1704690783223" MODIFIED="1704690962830">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+</node>
+<node TEXT="LLM :: MoE" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_370887762" CREATED="1704690794909" MODIFIED="1704690801714">
+<edge COLOR="#007c00"/>
+<node TEXT="Mixtral8x7B" ID="ID_1359897175" CREATED="1704690813434" MODIFIED="1704690817141"/>
+<node TEXT="Model Composition" ID="ID_1741654887" CREATED="1704691463374" MODIFIED="1704691469692">
+<node TEXT="LLM Augmented LLMs: expanding capabilities through composition" ID="ID_601884155" CREATED="1704691469897" MODIFIED="1704691490123">
+<icon BUILTIN="pencil"/>
+<node TEXT="2401" OBJECT="java.lang.Long|2401" ID="ID_1009359063" CREATED="1704691483337" MODIFIED="1704691486144"/>
+<node TEXT="Google" ID="ID_1725817643" CREATED="1704691486697" MODIFIED="1704691488125"/>
+</node>
+</node>
+</node>
+<node TEXT="ZLM :: Related" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1696496387" CREATED="1704689052350" MODIFIED="1704689060907">
+<edge COLOR="#0000ff"/>
+</node>
+<node TEXT="DPM :: Quality" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_847197492" CREATED="1704693018267" MODIFIED="1704693099552">
+<edge COLOR="#7c007c"/>
+<node TEXT="bring metric functions into diffusion models" ID="ID_1848808253" CREATED="1704693099759" MODIFIED="1704693110112">
+<icon BUILTIN="pencil"/>
+<node TEXT="2401" OBJECT="java.lang.Long|2401" ID="ID_404158782" CREATED="1704693112060" MODIFIED="1704693112903"/>
+</node>
+</node>
+<node TEXT="DPM :: Inference Speed" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1813965895" CREATED="1704689124948" MODIFIED="1704689133439">
+<edge COLOR="#00ff00"/>
+<node TEXT="Adversarial Diffusion Distillation" ID="ID_1905726132" CREATED="1704689176354" MODIFIED="1704689186606">
+<icon BUILTIN="bookmark"/>
+<node TEXT="SDXL-turbo" ID="ID_859852517" CREATED="1704689183304" MODIFIED="1704689191686"/>
+</node>
+<node TEXT="Fast inference through the reuse of attention maps in diffusion models" ID="ID_788987804" CREATED="1704689143067" MODIFIED="1704689156240">
+<icon BUILTIN="pencil"/>
+<node TEXT="2401" OBJECT="java.lang.Long|2401" ID="ID_170412279" CREATED="1704689158742" MODIFIED="1704689162224"/>
+</node>
+</node>
 <node TEXT="Gen :: DeepFake" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_81253926" CREATED="1587729755009" MODIFIED="1689205017010">
 <edge COLOR="#7c7c00"/>
 <font NAME="Gentium"/>
@@ -7254,16 +7361,6 @@
 <node TEXT="XAI :: Explainable AI" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1535392614" CREATED="1646937960988" MODIFIED="1688777454251">
 <edge COLOR="#7c0000"/>
 <font NAME="Gentium"/>
-<node TEXT="Survey" ID="ID_796711666" CREATED="1653860071187" MODIFIED="1653860080368">
-<icon BUILTIN="mindmap"/>
-<node TEXT="How explainable are adversarially-robust CNNs?" ID="ID_95726314" CREATED="1653860082056" MODIFIED="1653860092200">
-<icon BUILTIN="pencil"/>
-<node TEXT="submit NIPS22" ID="ID_181101661" CREATED="1653860093733" MODIFIED="1653860102672"/>
-<node TEXT="(1) test accuracy" ID="ID_764666299" CREATED="1653860103071" MODIFIED="1653860111201"/>
-<node TEXT="(2) out-of-distribution accuracy" ID="ID_874751335" CREATED="1653860111347" MODIFIED="1653860117298"/>
-<node TEXT="(3) explainability" ID="ID_362903560" CREATED="1653860117582" MODIFIED="1653860121732"/>
-</node>
-</node>
 <node TEXT="Distance Correlation" ID="ID_1441814662" CREATED="1702771999934" MODIFIED="1702772005327">
 <node TEXT="On the versatile uses of partial distance correlation in deep learning" ID="ID_867397890" CREATED="1702772005643" MODIFIED="1702772023397">
 <icon BUILTIN="bookmark"/>
@@ -7310,9 +7407,6 @@
 <node TEXT="relies on the necessity of concept labels." ID="ID_1287049420" CREATED="1686352121662" MODIFIED="1686352140647"/>
 </node>
 </node>
-</node>
-<node TEXT="explaining explainability: towards deeper actionable insights into deep learning through second order explainability" ID="ID_523562714" CREATED="1686962508190" MODIFIED="1686962539410">
-<icon BUILTIN="pencil"/>
 </node>
 </node>
 <node TEXT="-------------------------------------------------------------------------------------" LOCALIZED_STYLE_REF="styles.topic" POSITION="top_or_left" ID="ID_1156109860" CREATED="1647264433260" MODIFIED="1688777454252">
@@ -8349,14 +8443,6 @@
 <node TEXT="1907.11854: a benchmark on tricks for large-scale image retrieval" ID="ID_1121039947" CREATED="1588229016764" MODIFIED="1588229032598"/>
 <node TEXT="Ensemble of Loss Functions to Improve Generalizability of Deep Metric Learning methods" ID="ID_914967764" CREATED="1625549371652" MODIFIED="1625549445797">
 <icon BUILTIN="button_cancel"/>
-</node>
-</node>
-<node TEXT="Retrieval / Hashing" ID="ID_1132355353" CREATED="1581830794031" MODIFIED="1634062912486">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="2004.09695: image retrieval using multi-scale cnn features pooling" ID="ID_299921439" CREATED="1587548648904" MODIFIED="1587548666408"/>
-<node TEXT="2005.06653: structured query-based image retrieval using scene graphs (CVPR20)" ID="ID_1650443600" CREATED="1589767524451" MODIFIED="1589767546122"/>
-<node TEXT="Self-supervised Product Quantization for Deep Unsupervised Image Retrieval" ID="ID_1724528022" CREATED="1634062915182" MODIFIED="1634062926580">
-<node TEXT="self-supervised" ID="ID_688619887" CREATED="1634062937501" MODIFIED="1634062942012"/>
 </node>
 </node>
 </node>
