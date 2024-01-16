@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="241" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="245" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="top_or_left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1688777454193">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -3988,7 +3988,7 @@
 <icon BUILTIN="unchecked"/>
 </node>
 </node>
-<node TEXT="Adv :: Adversarial Robustness" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1633797140" CREATED="1675050942299" MODIFIED="1698762586156">
+<node TEXT="Adv :: Adversarial Robustness" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1633797140" CREATED="1675050942299" MODIFIED="1698762586156">
 <edge COLOR="#0000ff"/>
 <font NAME="Gentium"/>
 <node TEXT="Can we simply make adv training faster on imagenet? people are still playing with CIFAR. Is adversarial training the ultimate answer of robustness? Definitely no." ID="ID_133206511" CREATED="1675052822881" MODIFIED="1686956698031">
@@ -5219,6 +5219,10 @@
 <node TEXT="good code base" ID="ID_200267609" CREATED="1686955726349" MODIFIED="1686955728908"/>
 </node>
 </node>
+<node TEXT="MS-DETR: efficient DETR training with mixed supervision" ID="ID_320432743" CREATED="1705381095214" MODIFIED="1705381112898">
+<icon BUILTIN="pencil"/>
+<node TEXT="2401" OBJECT="java.lang.Long|2401" ID="ID_871100727" CREATED="1705381115128" MODIFIED="1705381116795"/>
+</node>
 </node>
 <node TEXT="?-stage" ID="ID_1254657210" CREATED="1654102722886" MODIFIED="1659198803602">
 <icon BUILTIN="broken-line"/>
@@ -5757,14 +5761,6 @@
 </node>
 </node>
 </node>
-<node TEXT="ObjDet :: Open Vocabulary" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_243934302" CREATED="1704689819670" MODIFIED="1704689879781">
-<edge COLOR="#00ffff"/>
-<node TEXT="generating enhanced negatives for training language based object detectors" ID="ID_1539802689" CREATED="1704689995981" MODIFIED="1704690012192">
-<icon BUILTIN="pencil"/>
-<node TEXT="use LLM to generate negative text descriptions" ID="ID_530181555" CREATED="1704690041977" MODIFIED="1704690051326"/>
-<node TEXT="use T2I generatve negative images" ID="ID_67237381" CREATED="1704690051621" MODIFIED="1704690070632"/>
-</node>
-</node>
 <node TEXT="V :: Segmentation" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_782654761" CREATED="1686954666427" MODIFIED="1688777454234">
 <edge COLOR="#ff00ff"/>
 <font NAME="Gentium"/>
@@ -5788,6 +5784,10 @@
 </node>
 <node TEXT="Mobile SAM" ID="ID_140841313" CREATED="1689204143949" MODIFIED="1689204146868">
 <node TEXT="KAIST" ID="ID_1910598352" CREATED="1689204148942" MODIFIED="1689204150942"/>
+</node>
+<node TEXT="Learning to prompt segment anything models" ID="ID_1707792567" CREATED="1705381281103" MODIFIED="1705381296966">
+<icon BUILTIN="pencil"/>
+<node TEXT="2401" OBJECT="java.lang.Long|2401" ID="ID_1405623946" CREATED="1705381298577" MODIFIED="1705381300275"/>
 </node>
 </node>
 </node>
@@ -5882,7 +5882,7 @@
 </node>
 </node>
 </node>
-<node TEXT="OOD :: Out Of Distribution" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_323999523" CREATED="1634132952545" MODIFIED="1702769074547">
+<node TEXT="Out Of Distribution" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_323999523" CREATED="1634132952545" MODIFIED="1705375154627">
 <edge COLOR="#7c007c"/>
 <font NAME="Gentium"/>
 <node TEXT="Open-Set Recognition: A Good Closed-Set Classifier is All You Need" ID="ID_1603928418" CREATED="1634132957520" MODIFIED="1634132962452">
@@ -6588,7 +6588,7 @@
 <node TEXT="LG :: Transfer Learning" LOCALIZED_STYLE_REF="styles.topic" POSITION="top_or_left" ID="ID_1016810869" CREATED="1702772049422" MODIFIED="1702772064989">
 <edge COLOR="#007c00"/>
 </node>
-<node TEXT="Gen :: GAN :: GAN Inverstion" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1643977837" CREATED="1608014251316" MODIFIED="1688777454242">
+<node TEXT="GAN Inverstion" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1643977837" CREATED="1608014251316" MODIFIED="1705376009925">
 <edge COLOR="#0000ff"/>
 <font NAME="Gentium"/>
 <node TEXT="2004.00049: in-domain gan inversion for real image editing" ID="ID_789901011" CREATED="1608014256819" MODIFIED="1608014290154">
@@ -6870,7 +6870,7 @@
 <node TEXT="LLM :: Retreival Augmented Generation" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1732405024" CREATED="1704413947426" MODIFIED="1704413961346">
 <edge COLOR="#7c007c"/>
 </node>
-<node TEXT="LLM :: Applications" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1351564910" CREATED="1704690202941" MODIFIED="1704690214805">
+<node TEXT="LLM :: Applications" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1351564910" CREATED="1704690202941" MODIFIED="1704690214805">
 <edge COLOR="#7c0000"/>
 <node TEXT="Planning" ID="ID_1480822372" CREATED="1704690209391" MODIFIED="1704690211254">
 <node TEXT="LLM-Assist: enhancing closed loop planning with langugae based reasoning" ID="ID_1521780858" CREATED="1704690221287" MODIFIED="1704690239100">
@@ -6886,7 +6886,7 @@
 </node>
 </node>
 </node>
-<node TEXT="LLM :: Internals" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1635719556" CREATED="1704689213155" MODIFIED="1704689221213">
+<node TEXT="LLM :: Internals" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1635719556" CREATED="1704689213155" MODIFIED="1704689221213">
 <edge COLOR="#ff00ff"/>
 <node TEXT="Knowledge Editing" ID="ID_186532538" CREATED="1704689224755" MODIFIED="1704689235771">
 <node TEXT="A comprehensive study of knowledge editing for large language models" ID="ID_561693528" CREATED="1704689236201" MODIFIED="1704689668477">
@@ -6909,26 +6909,16 @@
 </node>
 </node>
 </node>
-<node TEXT="LLM :: Efficiency" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_300405694" CREATED="1704693280585" MODIFIED="1704693286132">
+<node TEXT="LLM :: Efficiency" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_300405694" CREATED="1704693280585" MODIFIED="1704693286132">
 <edge COLOR="#007c7c"/>
 <node TEXT="Quality Corpus" ID="ID_1085153133" CREATED="1704693307629" MODIFIED="1704693317489">
 <node TEXT="llava-phi: efficient multi-modal assistant with small language model" ID="ID_118382250" CREATED="1704693294896" MODIFIED="1704693327567">
 <icon BUILTIN="pencil"/>
 </node>
 </node>
-</node>
-<node TEXT="LLM :: Safety" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1743630999" CREATED="1704690353661" MODIFIED="1704690791687">
-<edge COLOR="#00007c"/>
-<node TEXT="Explicit alighment tuning" ID="ID_43873086" CREATED="1704690772903" MODIFIED="1704690782673">
-<node TEXT="MLLM-Protector: ensuring MLLM&apos;s safety without hurting performance" ID="ID_1216957212" CREATED="1704690783223" MODIFIED="1704690962830">
-<icon BUILTIN="pencil"/>
-</node>
-</node>
-</node>
-<node TEXT="LLM :: MoE" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_370887762" CREATED="1704690794909" MODIFIED="1704690801714">
-<edge COLOR="#007c00"/>
-<node TEXT="Mixtral8x7B" ID="ID_1359897175" CREATED="1704690813434" MODIFIED="1704690817141"/>
-<node TEXT="Model Composition" ID="ID_1741654887" CREATED="1704691463374" MODIFIED="1704691469692">
+<node TEXT="MoE" ID="ID_520154131" CREATED="1705351924937" MODIFIED="1705351926575">
+<node TEXT="Mixtral8x7B" ID="ID_1359897175" CREATED="1704690813434" MODIFIED="1705351935206"/>
+<node TEXT="Model Composition" ID="ID_1741654887" CREATED="1704691463374" MODIFIED="1705351943487">
 <node TEXT="LLM Augmented LLMs: expanding capabilities through composition" ID="ID_601884155" CREATED="1704691469897" MODIFIED="1704691490123">
 <icon BUILTIN="pencil"/>
 <node TEXT="2401" OBJECT="java.lang.Long|2401" ID="ID_1009359063" CREATED="1704691483337" MODIFIED="1704691486144"/>
@@ -6936,17 +6926,31 @@
 </node>
 </node>
 </node>
-<node TEXT="ZLM :: Related" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1696496387" CREATED="1704689052350" MODIFIED="1704689060907">
-<edge COLOR="#0000ff"/>
 </node>
-<node TEXT="DPM :: Quality" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_847197492" CREATED="1704693018267" MODIFIED="1704693099552">
+<node TEXT="LLM :: Safety" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1743630999" CREATED="1704690353661" MODIFIED="1704690791687">
+<edge COLOR="#00007c"/>
+<node TEXT="Explicit alighment tuning" ID="ID_43873086" CREATED="1704690772903" MODIFIED="1704690782673">
+<node TEXT="MLLM-Protector: ensuring MLLM&apos;s safety without hurting performance" ID="ID_1216957212" CREATED="1704690783223" MODIFIED="1704690962830">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+</node>
+<node TEXT="MLLM :: Performance" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_533584247" CREATED="1705352060562" MODIFIED="1705352080751">
+<edge COLOR="#00ff00"/>
+<node TEXT="LLAVA" ID="ID_1544908391" CREATED="1705352077960" MODIFIED="1705352086549"/>
+<node TEXT="CaMML: context aware multimodal learner for large models" ID="ID_14836309" CREATED="1705352086855" MODIFIED="1705352104279">
+<icon BUILTIN="pencil"/>
+<node TEXT="2401" OBJECT="java.lang.Long|2401" ID="ID_339708058" CREATED="1705352104539" MODIFIED="1705352105879"/>
+</node>
+</node>
+<node TEXT="DPM :: Image Quality" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_847197492" CREATED="1704693018267" MODIFIED="1705351990631">
 <edge COLOR="#7c007c"/>
 <node TEXT="bring metric functions into diffusion models" ID="ID_1848808253" CREATED="1704693099759" MODIFIED="1704693110112">
 <icon BUILTIN="pencil"/>
 <node TEXT="2401" OBJECT="java.lang.Long|2401" ID="ID_404158782" CREATED="1704693112060" MODIFIED="1704693112903"/>
 </node>
 </node>
-<node TEXT="DPM :: Inference Speed" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1813965895" CREATED="1704689124948" MODIFIED="1704689133439">
+<node TEXT="DPM :: Inference Speed" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1813965895" CREATED="1704689124948" MODIFIED="1704689133439">
 <edge COLOR="#00ff00"/>
 <node TEXT="Adversarial Diffusion Distillation" ID="ID_1905726132" CREATED="1704689176354" MODIFIED="1704689186606">
 <icon BUILTIN="bookmark"/>
@@ -6956,6 +6960,16 @@
 <icon BUILTIN="pencil"/>
 <node TEXT="2401" OBJECT="java.lang.Long|2401" ID="ID_170412279" CREATED="1704689158742" MODIFIED="1704689162224"/>
 </node>
+</node>
+<node TEXT="DPM :: Video Generation" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1323054507" CREATED="1705351992641" MODIFIED="1705352002122">
+<edge COLOR="#0000ff"/>
+<node TEXT="Latte: latent diffusion transformer for video generation" ID="ID_902684573" CREATED="1705352003126" MODIFIED="1705352012101">
+<icon BUILTIN="pencil"/>
+<node TEXT="2401" OBJECT="java.lang.Long|2401" ID="ID_1717148727" CREATED="1705352013464" MODIFIED="1705352014578"/>
+</node>
+</node>
+<node TEXT="ZLM :: Related" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1696496387" CREATED="1704689052350" MODIFIED="1704689060907">
+<edge COLOR="#0000ff"/>
 </node>
 <node TEXT="Gen :: DeepFake" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_81253926" CREATED="1587729755009" MODIFIED="1689205017010">
 <edge COLOR="#7c7c00"/>
