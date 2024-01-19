@@ -66,187 +66,7 @@
 </map_styles>
 </hook>
 <hook NAME="AutomaticEdgeColor" COUNTER="253" RULE="ON_BRANCH_CREATION"/>
-<node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="top_or_left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1688777454193">
-<icon BUILTIN="info"/>
-<edge COLOR="#00ffff"/>
-<font NAME="Gentium"/>
-<node TEXT="What&apos;s this" ID="ID_34209772" CREATED="1641520840738" MODIFIED="1688777454194">
-<font NAME="Gentium"/>
-<node TEXT="Personal memos for regular paper reading." ID="ID_1963538377" CREATED="1641520844766" MODIFIED="1688777454194">
-<font NAME="Gentium"/>
-</node>
-<node TEXT="Copyright (C) 2021-2022 Mo Zhou" ID="ID_1535888258" CREATED="1641673010735" MODIFIED="1688777454195">
-<font NAME="Gentium"/>
-</node>
-<node TEXT="CC-BY-SA-4.0 License" ID="ID_726858210" CREATED="1641673017130" MODIFIED="1688777454195">
-<font NAME="Gentium"/>
-</node>
-</node>
-<node TEXT="Policy for this document" ID="ID_288232758" CREATED="1641520783594" MODIFIED="1688777454195">
-<font NAME="Gentium"/>
-<node TEXT="1. may include preprints, but only include them when I think they are relevant or helpful." ID="ID_608512408" CREATED="1641520800532" MODIFIED="1688777454195">
-<font NAME="Gentium"/>
-</node>
-<node TEXT="2. agressively delete deprecated literature and fields. This is not used for writing surveys --- we don&apos;t have to trace back to the history in this document" ID="ID_800024958" CREATED="1675050501021" MODIFIED="1688777454197">
-<font NAME="Gentium"/>
-</node>
-<node TEXT="3. be cautious to saturated areas, especially when they are not the core task of computer vision." ID="ID_201332391" CREATED="1675050892708" MODIFIED="1688777454198">
-<font NAME="Gentium"/>
-</node>
-</node>
-<node TEXT="symbol definitions" ID="ID_107155097" CREATED="1641521217140" MODIFIED="1688777454199">
-<font NAME="Gentium"/>
-<node TEXT=" I have read this paper (published)" ID="ID_1116629927" CREATED="1641521225706" MODIFIED="1688777454199">
-<icon BUILTIN="checked"/>
-<font NAME="Gentium"/>
-</node>
-<node TEXT=" I have skimmed this paper (preprint)" ID="ID_504737720" CREATED="1641523236144" MODIFIED="1688777454199">
-<icon BUILTIN="pencil"/>
-<font NAME="Gentium"/>
-</node>
-<node TEXT=" this paper is a TODO" ID="ID_1381101491" CREATED="1641521235679" MODIFIED="1688777454199">
-<icon BUILTIN="unchecked"/>
-<font NAME="Gentium"/>
-</node>
-<node TEXT=" in doubt in details" ID="ID_420094020" CREATED="1641521248004" MODIFIED="1688777454199">
-<icon BUILTIN="help"/>
-<font NAME="Gentium"/>
-</node>
-<node TEXT=" insight" ID="ID_188358894" CREATED="1642449409015" MODIFIED="1688777454199">
-<icon BUILTIN="yes"/>
-<font NAME="Gentium"/>
-</node>
-<node TEXT="Influential Paper" ID="ID_1174819833" CREATED="1675045366812" MODIFIED="1688777454200">
-<icon BUILTIN="messagebox_warning"/>
-<font NAME="Gentium"/>
-</node>
-<node TEXT=" Very good+Important paper" ID="ID_78304803" CREATED="1641521263664" MODIFIED="1688777454200">
-<icon BUILTIN="bookmark"/>
-<font NAME="Gentium"/>
-</node>
-<node TEXT=" Consider for removal from this map" ID="ID_1712139759" CREATED="1641522205670" MODIFIED="1688777454200">
-<icon BUILTIN="button_cancel"/>
-<font NAME="Gentium"/>
-</node>
-<node TEXT="There is problem / Problematic" ID="ID_337495690" CREATED="1642431277318" MODIFIED="1688777454200">
-<icon BUILTIN="closed"/>
-<font NAME="Gentium"/>
-</node>
-<node TEXT=" Paper Tag" ID="ID_961819152" CREATED="1641524318246" MODIFIED="1688777454200">
-<icon BUILTIN="password"/>
-<font NAME="Gentium"/>
-</node>
-<node TEXT="My Thoughts" ID="ID_1201449199" CREATED="1641743757646" MODIFIED="1688777454200">
-<icon BUILTIN="button_ok"/>
-<font NAME="Gentium"/>
-</node>
-<node TEXT="Meta information" ID="ID_114710715" CREATED="1675042572800" MODIFIED="1688777454200">
-<icon BUILTIN="attach"/>
-<font NAME="Gentium"/>
-</node>
-</node>
-<node TEXT="browse history" ID="ID_1769952352" CREATED="1641521397167" MODIFIED="1688777454200">
-<font NAME="Gentium"/>
-<node TEXT="arXiv" ID="ID_555001851" CREATED="1641521435482" MODIFIED="1688777454200">
-<font NAME="Gentium"/>
-<node TEXT="cs.CV" ID="ID_1996231133" CREATED="1675042342779" MODIFIED="1688777454200">
-<font NAME="Gentium"/>
-<node TEXT="June 9 2023" ID="ID_1051522480" CREATED="1686334325145" MODIFIED="1688777454201">
-<font NAME="Gentium"/>
-</node>
-</node>
-</node>
-<node TEXT="CVPR" ID="ID_1240053621" CREATED="1641521439738" MODIFIED="1688777454201">
-<font NAME="Gentium"/>
-<node TEXT="2023" OBJECT="java.lang.Long|2023" ID="ID_1406042219" CREATED="1687542529345" MODIFIED="1688777454201">
-<font NAME="Gentium"/>
-<node TEXT="https://openaccess.thecvf.com/CVPR2023?day=2023-06-20#" ID="ID_493182579" CREATED="1687542531209" MODIFIED="1688777454201">
-<icon BUILTIN="unchecked"/>
-<font NAME="Gentium"/>
-</node>
-</node>
-<node TEXT="2022" OBJECT="java.lang.Long|2022" ID="ID_1290012760" CREATED="1646924932979" MODIFIED="1688777454201">
-<font NAME="Gentium"/>
-<node TEXT="scanned June 27 2022" ID="ID_726647901" CREATED="1646924935622" MODIFIED="1688777454201">
-<icon BUILTIN="button_ok"/>
-<font NAME="Gentium"/>
-</node>
-</node>
-<node TEXT="2021" OBJECT="java.lang.Long|2021" ID="ID_1246146016" CREATED="1642954104588" MODIFIED="1688777454201">
-<font NAME="Gentium"/>
-<node TEXT="TODO" ID="ID_609674727" CREATED="1642954107744" MODIFIED="1688777454201">
-<font NAME="Gentium"/>
-</node>
-</node>
-</node>
-<node TEXT="ICCV" ID="ID_436661845" CREATED="1641521441682" MODIFIED="1688777454201">
-<font NAME="Gentium"/>
-<node TEXT="2021" OBJECT="java.lang.Long|2021" ID="ID_95518471" CREATED="1641929159364" MODIFIED="1688777454202">
-<font NAME="Gentium"/>
-<node TEXT="scanned." ID="ID_1641147403" CREATED="1641929162150" MODIFIED="1688777454202">
-<icon BUILTIN="button_ok"/>
-<font NAME="Gentium"/>
-</node>
-<node TEXT="list stored in chrome, WIP" ID="ID_23203732" CREATED="1641929165306" MODIFIED="1688777454202">
-<font NAME="Gentium"/>
-</node>
-</node>
-<node TEXT="2019" OBJECT="java.lang.Long|2019" ID="ID_886460557" CREATED="1646924942307" MODIFIED="1688777454202">
-<font NAME="Gentium"/>
-<node TEXT="TODO" ID="ID_443194080" CREATED="1646924948431" MODIFIED="1688777454202">
-<font NAME="Gentium"/>
-</node>
-</node>
-</node>
-<node TEXT="ECCV" ID="ID_536802877" CREATED="1641521443344" MODIFIED="1688777454202">
-<font NAME="Gentium"/>
-<node TEXT="2020" OBJECT="java.lang.Long|2020" ID="ID_314203344" CREATED="1642954114529" MODIFIED="1688777454202">
-<font NAME="Gentium"/>
-<node TEXT="TODO" ID="ID_1908132768" CREATED="1642954116649" MODIFIED="1688777454202">
-<font NAME="Gentium"/>
-</node>
-</node>
-<node TEXT="2018" OBJECT="java.lang.Long|2018" ID="ID_1513907030" CREATED="1646924952108" MODIFIED="1688777454202">
-<font NAME="Gentium"/>
-<node TEXT="TODO" ID="ID_388311225" CREATED="1646924954493" MODIFIED="1688777454202">
-<font NAME="Gentium"/>
-</node>
-</node>
-</node>
-<node TEXT="NeurIPS" ID="ID_301924831" CREATED="1641521444597" MODIFIED="1688777454203">
-<font NAME="Gentium"/>
-<node TEXT="2022" OBJECT="java.lang.Long|2022" ID="ID_722753692" CREATED="1672078974905" MODIFIED="1688777454203">
-<font NAME="Gentium"/>
-<node TEXT="TODO" ID="ID_677549598" CREATED="1672078977334" MODIFIED="1688777454203">
-<font NAME="Gentium"/>
-</node>
-</node>
-</node>
-<node TEXT="ICLR" ID="ID_1738325130" CREATED="1641521447460" MODIFIED="1688777454203">
-<font NAME="Gentium"/>
-<node TEXT="Most influential" ID="ID_1999097908" CREATED="1687542572167" MODIFIED="1688777454203">
-<font NAME="Gentium"/>
-<node TEXT="https://www.paperdigest.org/2023/04/most-influential-iclr-papers-2023-04/" ID="ID_1757728846" CREATED="1687542576684" MODIFIED="1688777454203" LINK="https://www.paperdigest.org/2023/04/most-influential-iclr-papers-2023-04/">
-<font NAME="Gentium"/>
-</node>
-</node>
-<node TEXT="2022" OBJECT="java.lang.Long|2022" ID="ID_814285036" CREATED="1650825816095" MODIFIED="1688777454204">
-<font NAME="Gentium"/>
-<node TEXT="TODO" ID="ID_944733876" CREATED="1650825820715" MODIFIED="1688777454204">
-<font NAME="Gentium"/>
-</node>
-</node>
-</node>
-<node TEXT="ICML" ID="ID_8273996" CREATED="1642954123777" MODIFIED="1688777454204">
-<font NAME="Gentium"/>
-</node>
-<node TEXT="ACL" ID="ID_126154590" CREATED="1642954126358" MODIFIED="1688777454204">
-<font NAME="Gentium"/>
-</node>
-<node TEXT="EMNLP" ID="ID_1440815488" CREATED="1704689085657" MODIFIED="1704689087365"/>
-</node>
-</node>
-<node TEXT="Tactic / Impact" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_896452525" CREATED="1642481777876" MODIFIED="1688777454204">
+<node TEXT="Tactic / Impact" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_896452525" CREATED="1642481777876" MODIFIED="1688777454204">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ff00"/>
 <font NAME="Gentium"/>
@@ -348,31 +168,6 @@
 </node>
 <node TEXT="Expecting the Unexpected at Deep Learning Runtime" ID="ID_1658176871" CREATED="1688780432322" MODIFIED="1688780448924">
 <icon BUILTIN="bell"/>
-</node>
-</node>
-<node TEXT="Surveys &amp; Background" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1805920002" CREATED="1608010101067" MODIFIED="1688777454223">
-<icon BUILTIN="mindmap"/>
-<edge COLOR="#ff0000"/>
-<font NAME="Gentium"/>
-<node TEXT="Scene" ID="ID_282839696" CREATED="1612166497534" MODIFIED="1612166501051">
-<node TEXT="2101.10531&#xa; Deep Learning for Scene Classification: A Survey" ID="ID_1588464638" CREATED="1612166502020" MODIFIED="1612166508755"/>
-</node>
-<node TEXT="Visual Transformer" ID="ID_84446787" CREATED="1608871011262" MODIFIED="1608871014226">
-<node TEXT="2012.12556 A Survey on Visual Transformer" ID="ID_843960911" CREATED="1608871015499" MODIFIED="1686333881176"/>
-<node TEXT="2101: Transformers in Vision: A Survey" ID="ID_1959303133" CREATED="1610425958283" MODIFIED="1610425966435"/>
-</node>
-<node TEXT="Vision+Language" ID="ID_1299391859" CREATED="1608879468011" MODIFIED="1612168631733">
-<node TEXT="Pretrain" ID="ID_974958355" CREATED="1612168632729" MODIFIED="1612168636919">
-<node TEXT="2012.08673&#xa;A Closer Look at the Robustness of Vision-and-Language Pre-trained Models" ID="ID_1936309513" CREATED="1608879475108" MODIFIED="1608879486030"/>
-</node>
-<node TEXT="Synthesis" ID="ID_740746900" CREATED="1612168639832" MODIFIED="1612168644090">
-<node TEXT="2101: Adversarial Text-to-Image Synthesis: A Review" ID="ID_1737346805" CREATED="1612168645539" MODIFIED="1612168656457">
-<node TEXT="2101.09983" OBJECT="java.lang.Double|2101.09983" ID="ID_1020253434" CREATED="1615357806562" MODIFIED="1615357813054"/>
-</node>
-</node>
-</node>
-<node TEXT="Survival Strategy" ID="ID_1479257586" CREATED="1687546016649" MODIFIED="1687546032180">
-<node TEXT="Choose Your Weapon: Survival Strategies for Depressed AI Academics" ID="ID_1672749784" CREATED="1687546023472" MODIFIED="1687546029644"/>
 </node>
 </node>
 <node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1688777454223">
@@ -5869,7 +5664,11 @@
 <node TEXT="TPAMI2021" ID="ID_689762599" CREATED="1688787815855" MODIFIED="1688787818611"/>
 </node>
 </node>
-<node TEXT="Watermarking Image" ID="ID_382338310" CREATED="1705636591821" MODIFIED="1705636594523"/>
+<node TEXT="Watermarking Image" ID="ID_382338310" CREATED="1705636591821" MODIFIED="1705636594523">
+<node TEXT="Removal" ID="ID_1312279468" CREATED="1705615954983" MODIFIED="1705615956515">
+<node TEXT="Removing Interference and Recovering Content Imaginatively for Visible Watermark Removal" ID="ID_1525771711" CREATED="1705615960268" MODIFIED="1705615961572"/>
+</node>
+</node>
 <node TEXT="Anti-Edit" ID="ID_702699802" CREATED="1686947069642" MODIFIED="1686947073981">
 <node TEXT="Raising the Cost of Malicious AI-Powered Image Editing" ID="ID_650622645" CREATED="1680653552985" MODIFIED="1680653555037">
 <icon BUILTIN="pencil"/>
@@ -9603,12 +9402,6 @@
 <node TEXT="2005.09161: adversarial attacks for embodied agents" ID="ID_852854691" CREATED="1590026357071" MODIFIED="1590026372413"/>
 <node TEXT="2005.11626: shapeadv: generating shape-aware adversarial 3d point clouds" ID="ID_304457229" CREATED="1590744659684" MODIFIED="1590744683531"/>
 </node>
-</node>
-</node>
-<node TEXT="Image Watermark" LOCALIZED_STYLE_REF="styles.topic" POSITION="top_or_left" ID="ID_961695911" CREATED="1705615938254" MODIFIED="1705615949854">
-<edge COLOR="#7c007c"/>
-<node TEXT="Removal" ID="ID_1312279468" CREATED="1705615954983" MODIFIED="1705615956515">
-<node TEXT="Removing Interference and Recovering Content Imaginatively for Visible Watermark Removal" ID="ID_1525771711" CREATED="1705615960268" MODIFIED="1705615961572"/>
 </node>
 </node>
 </node>
