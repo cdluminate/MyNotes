@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="251" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="253" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="MetaInfo" LOCALIZED_STYLE_REF="styles.topic" POSITION="top_or_left" ID="ID_897570916" CREATED="1641520773367" MODIFIED="1688777454193">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ffff"/>
@@ -7094,187 +7094,17 @@
 </node>
 </node>
 </node>
-<node TEXT="Ethics :: Privacy ML" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1174539463" CREATED="1590802979023" MODIFIED="1688777454248">
-<edge COLOR="#7c0000"/>
-<font NAME="Gentium"/>
-<node TEXT="Encrypt / Decrypt" ID="ID_892914237" CREATED="1590803103499" MODIFIED="1590803111112">
-<node TEXT="2004.05523 DeepEDN: A Deep Learning-based Image Encryption and Decryption Network for Internet of Medical Things" ID="ID_779071488" CREATED="1590802983849" MODIFIED="1590802993502"/>
-</node>
-<node TEXT="Physical Mail" ID="ID_1223992131" CREATED="1608872127823" MODIFIED="1608872130574">
-<node TEXT="2012.11803&#xa; Modeling Deep Learning Based Privacy Attacks on Physical Mail" ID="ID_924300325" CREATED="1608872131773" MODIFIED="1608872140902"/>
-</node>
-<node TEXT="Forensics" ID="ID_135402985" CREATED="1618846988345" MODIFIED="1618846991727">
-<node TEXT="2003.06951: camera tarce erasing (CVPR20)" ID="ID_586456534" CREATED="1585108821256" MODIFIED="1587526865295">
-<font NAME="Gentium" BOLD="false"/>
-<node TEXT="camera trace is a unique noise produced in digital imaging process" ID="ID_703034002" CREATED="1585108844004" MODIFIED="1587526865296">
-<font NAME="Gentium" BOLD="false"/>
-</node>
-</node>
-</node>
-<node TEXT="model watermark" ID="ID_854641187" CREATED="1647567587011" MODIFIED="1647567593099">
+<node TEXT="Model Watermark" LOCALIZED_STYLE_REF="styles.topic" POSITION="top_or_left" ID="ID_854641187" CREATED="1647567587011" MODIFIED="1705635954466">
+<edge COLOR="#007c7c"/>
 <node TEXT="exloring structure consistency for deep model watermarking" ID="ID_489056739" CREATED="1647567594240" MODIFIED="1647567607226">
 <icon BUILTIN="pencil"/>
 </node>
 <node TEXT="Certified Neural Network Watermarks with Randomized Smoothing" ID="ID_820456333" CREATED="1687545175901" MODIFIED="1687545176717">
 <node TEXT="ICML22" ID="ID_148985769" CREATED="1687545178172" MODIFIED="1687545179746"/>
 </node>
-</node>
-<node TEXT="Model Stealing" ID="ID_320342480" CREATED="1688787805767" MODIFIED="1688787809747">
-<node TEXT="Deep Model Intellectual Property Protection via Deep Watermarking" ID="ID_932868581" CREATED="1688787810439" MODIFIED="1688788942079">
+<node TEXT="Deep Model Intellectual Property Protection via Deep Watermarking" ID="ID_932868581" CREATED="1688787810439" MODIFIED="1705635991805">
 <icon BUILTIN="unchecked"/>
 <node TEXT="TPAMI2021" ID="ID_689762599" CREATED="1688787815855" MODIFIED="1688787818611"/>
-</node>
-</node>
-<node TEXT="Differential Privacy" ID="ID_1268713155" CREATED="1648337762797" MODIFIED="1648337766246">
-<node TEXT="Mixed Differential Privacy in Computer Vision" ID="ID_1969874071" CREATED="1648337767049" MODIFIED="1648337770249">
-<icon BUILTIN="unchecked"/>
-<node TEXT="CVPR22" ID="ID_1404369978" CREATED="1648337773035" MODIFIED="1648337774527"/>
-</node>
-<node TEXT="Privacy-Preserving Face Recognition with&#xa;Learnable Privacy Budgets in Frequency Domain" ID="ID_1791080951" CREATED="1658615204668" MODIFIED="1658615205306">
-<node TEXT="ECCV22" ID="ID_1951337159" CREATED="1658615207954" MODIFIED="1658615209392"/>
-</node>
-</node>
-<node TEXT="Private: Inference (PI)" ID="ID_601747646" CREATED="1675049599116" MODIFIED="1687545206438">
-<node TEXT="private cloud inference service?" ID="ID_1508068551" CREATED="1675296552861" MODIFIED="1675296561075">
-<icon BUILTIN="info"/>
-</node>
-<node TEXT="Learning to Linearize Deep Neural Networks for Secure and Efficient Private Inference" ID="ID_664848252" CREATED="1675049614506" MODIFIED="1675049616041">
-<node TEXT="ICLR23" ID="ID_983434925" CREATED="1675049617972" MODIFIED="1675049619844"/>
-</node>
-<node TEXT="CoPur: Certifiably Robust Collaborative Inference via Feature Purification" ID="ID_1669506611" CREATED="1676255668247" MODIFIED="1676255674492">
-<node TEXT="NIPS22" ID="ID_594211028" CREATED="1676255675243" MODIFIED="1676255677567"/>
-<node TEXT="Bo Li" ID="ID_600425233" CREATED="1676255678686" MODIFIED="1676255679996"/>
-</node>
-</node>
-<node TEXT="Privacy: Membership Inference" ID="ID_1965495393" CREATED="1591523395980" MODIFIED="1687545208995">
-<node TEXT="Is this example used in the training dataset? (mild)" ID="ID_1568715434" CREATED="1675297612949" MODIFIED="1675297628144">
-<icon BUILTIN="info"/>
-</node>
-<node TEXT="2001.00071 PrivGAN: Protecting GANs from membership inference attacks at low cos" ID="ID_370428646" CREATED="1591523402373" MODIFIED="1591523413026"/>
-<node TEXT="Label-only membership inference attacks" ID="ID_1310996729" CREATED="1648422783790" MODIFIED="1648422789621">
-<node TEXT="Carlini" ID="ID_1163854114" CREATED="1648422791804" MODIFIED="1648422793928"/>
-</node>
-<node TEXT="Semi-Leak: Membership Inference Attacks Against Semi-supervised Learning" ID="ID_1113661303" CREATED="1659161404298" MODIFIED="1659161405430">
-<node TEXT="ECCV22" ID="ID_1418419828" CREATED="1659161408686" MODIFIED="1659161410212"/>
-</node>
-<node TEXT="towards more realistic membership inference attacks on large diffusion models" ID="ID_793723370" CREATED="1689204491524" MODIFIED="1689204515818">
-<icon BUILTIN="pencil"/>
-</node>
-</node>
-<node TEXT="Privacy: Model Inversion" ID="ID_609996958" CREATED="1675296482479" MODIFIED="1687545211089">
-<node TEXT="restore training data from a trained model (more powerful than membership inference)" ID="ID_928344118" CREATED="1675296489117" MODIFIED="1675297639168">
-<icon BUILTIN="info"/>
-</node>
-<node TEXT="Exploiting Explanations for Model Inversion Attacks" ID="ID_1241365876" CREATED="1688786216815" MODIFIED="1688786222204">
-<icon BUILTIN="pencil"/>
-</node>
-<node TEXT="Label-Only Model Inversion Attacks via Boundary Repulsion" ID="ID_1711729671" CREATED="1646937292008" MODIFIED="1646937298623">
-<icon BUILTIN="checked"/>
-<font ITALIC="false"/>
-</node>
-<node TEXT="Do Gradient Inversion Attacks Make Federated Learning Unsafe?" ID="ID_539563592" CREATED="1646948139524" MODIFIED="1646948148268">
-<icon BUILTIN="unchecked"/>
-</node>
-<node TEXT="Assessing Privacy Risks from Feature Vector Reconstruction Attacks" ID="ID_456202389" CREATED="1646948272071" MODIFIED="1646948274903"/>
-<node TEXT="Privacy Leakage of Adversarial Training Models in Federated Learning Systems" ID="ID_1739403016" CREATED="1647266811240" MODIFIED="1647266814655">
-<icon BUILTIN="unchecked"/>
-<node TEXT="CVPR22w" ID="ID_1710159890" CREATED="1647266815467" MODIFIED="1647266817920"/>
-<node TEXT="adversarially trained nets are vulnerable to inversion attack" ID="ID_1271286519" CREATED="1647266824910" MODIFIED="1647266840002"/>
-</node>
-<node TEXT="GradViT: Gradient Inversion of Vision Transformers" ID="ID_619347180" CREATED="1648387184629" MODIFIED="1648387190460">
-<icon BUILTIN="unchecked"/>
-<node TEXT="CVPR22" ID="ID_227494600" CREATED="1648387192118" MODIFIED="1648387193540">
-<node TEXT="NVIDIA" ID="ID_739150767" CREATED="1648387416314" MODIFIED="1648387417986"/>
-</node>
-<node TEXT="transformer inversion" ID="ID_423330045" CREATED="1648387195131" MODIFIED="1648387198487"/>
-</node>
-<node TEXT="Exploiting Explanations for Model Inversion Attacks" ID="ID_1411419993" CREATED="1642456774974" MODIFIED="1642456783648">
-<icon BUILTIN="unchecked"/>
-<node TEXT="iccv21" ID="ID_588513264" CREATED="1642456785239" MODIFIED="1642456786804"/>
-<node TEXT="attackers can construct sensitive information (such as faces) merely from model predictions" ID="ID_111964935" CREATED="1642456788665" MODIFIED="1642456829436"/>
-</node>
-<node TEXT="WHEN MACHINE LEARNING ISN’T PRIVATE" ID="ID_1244120972" CREATED="1648419587624" MODIFIED="1648419588530">
-<node TEXT="USENIX" ID="ID_105372756" CREATED="1648419590393" MODIFIED="1648419592312"/>
-<node TEXT="Carlini" ID="ID_901631564" CREATED="1648419592553" MODIFIED="1648419594517"/>
-</node>
-<node TEXT="Counterfactual Memorization in&#xa;Neural Language Models" ID="ID_426897548" CREATED="1648425614069" MODIFIED="1648425614886">
-<node TEXT="Carlini" ID="ID_1948661446" CREATED="1648425616141" MODIFIED="1648425617588"/>
-</node>
-<node TEXT="GradViT: Gradient Inversion of Vision Transformers" ID="ID_1338574288" CREATED="1649126363591" MODIFIED="1649126364829">
-<node TEXT="CVPR22" ID="ID_512975228" CREATED="1649126365880" MODIFIED="1649126366979"/>
-</node>
-<node TEXT="Diffusion Model" ID="ID_1626265725" CREATED="1675296843500" MODIFIED="1675296847106">
-<node TEXT="Extracting Training Data from Diffusion Models" ID="ID_566250643" CREATED="1675296851330" MODIFIED="1675296860784">
-<icon BUILTIN="pencil"/>
-<node TEXT="Carlini" ID="ID_1289612633" CREATED="1675296853288" MODIFIED="1675297788563">
-<icon BUILTIN="messagebox_warning"/>
-</node>
-<node TEXT="risk? privacy and dataset. But we have to craft a large amount of prompts to a large number of data?" ID="ID_1314420682" CREATED="1675296968603" MODIFIED="1675301894169">
-<icon BUILTIN="attach"/>
-</node>
-<node TEXT="the proposed method assumes that an adversary knows the captions for some images in the training set (impractical, but good for studying the worst case)" ID="ID_358136832" CREATED="1675302285074" MODIFIED="1675302320271">
-<icon BUILTIN="yes"/>
-</node>
-<node TEXT="diffusion models are much less private than prior generative models such as GANs" ID="ID_1622705940" CREATED="1675296941670" MODIFIED="1675296962331"/>
-</node>
-</node>
-</node>
-<node TEXT="Gradient Inversion" ID="ID_856893547" CREATED="1675738524485" MODIFIED="1687545377318">
-<node TEXT="Privacy breach in federated learning" ID="ID_370882247" CREATED="1675738529186" MODIFIED="1675739233174">
-<icon BUILTIN="info"/>
-</node>
-<node TEXT="Recover training data from gradients under restrictive conditions" ID="ID_340337385" CREATED="1675738567796" MODIFIED="1675738589125">
-<icon BUILTIN="info"/>
-</node>
-<node TEXT="How risky is this to the industry and the real-life applications? Does the risk worth the cost for the corresponding mitigation?" ID="ID_1898725442" CREATED="1675738905185" MODIFIED="1675738946233">
-<icon BUILTIN="help"/>
-<node TEXT="privacy protection does not make money for the industry. But sometimes it avoids losing money due to sues?" ID="ID_1992154293" CREATED="1675738981842" MODIFIED="1675739027639"/>
-<node TEXT="Why not just encrypt the gradient using the mature encryption methods? Why do we assume that the gradients are communicated in plain format without any encryption? The mature encryption methods does not impose a great overhead on model training time, but can cheaply prevent the man in the middle attacker from accessing the gradient data." ID="ID_1309505419" CREATED="1675740293591" MODIFIED="1675740391919"/>
-<node TEXT="It is interesting. But there are cheap solutions to it." ID="ID_1738081604" CREATED="1675740398663" MODIFIED="1675740423090">
-<icon BUILTIN="attach"/>
-</node>
-</node>
-<node TEXT="Attack" ID="ID_376304068" CREATED="1675739269843" MODIFIED="1675739271131">
-<node TEXT="Deep Leakage from Gradients" ID="ID_276864711" CREATED="1675740231154" MODIFIED="1675740231947">
-<node TEXT="NIPS19" ID="ID_323956691" CREATED="1675740234709" MODIFIED="1675740236222">
-<node TEXT="Song Han" ID="ID_873470254" CREATED="1675740236982" MODIFIED="1675740239080"/>
-</node>
-</node>
-<node TEXT="Inverting Gradients -- How easy is it to break privacy in federated learning?" ID="ID_62976593" CREATED="1675740147524" MODIFIED="1675740152975">
-<node TEXT="NIPS2020" ID="ID_1863732890" CREATED="1675740153913" MODIFIED="1675740157924"/>
-</node>
-<node TEXT="See through Gradients: Image Batch Recovery via GradInversion" ID="ID_1220157339" CREATED="1675738592141" MODIFIED="1675738601823">
-<node TEXT="CVPR21" ID="ID_439032463" CREATED="1675738602311" MODIFIED="1675738603763"/>
-<node TEXT="large batch (8-48 images) on ImageNet" ID="ID_7854666" CREATED="1675738623776" MODIFIED="1675738632624"/>
-<node TEXT="the aggregated gradient and the network weights are known. The optimization is to find an input whose gradient matches with the aggregated gradients." ID="ID_1915947616" CREATED="1675738854470" MODIFIED="1675738896371"/>
-</node>
-<node TEXT="GradViT: Gradient Inversion of Vision Transformers" ID="ID_354014530" CREATED="1675740081488" MODIFIED="1675740082875">
-<node TEXT="CVPR22" ID="ID_1148559731" CREATED="1675740085762" MODIFIED="1675740089684"/>
-</node>
-</node>
-<node TEXT="Defense" ID="ID_998251950" CREATED="1675739273330" MODIFIED="1675739274665">
-<node TEXT="Cryptography based" ID="ID_1228579139" CREATED="1675739279450" MODIFIED="1675739285216">
-<node TEXT="multi-party communication (MPC)" ID="ID_688657039" CREATED="1675739331042" MODIFIED="1675739345426"/>
-</node>
-<node TEXT="Gradient degradation based" ID="ID_1233800263" CREATED="1675739285436" MODIFIED="1675739291515">
-<node TEXT="differential privacy (DP)" ID="ID_813016819" CREATED="1675739347198" MODIFIED="1675739359691"/>
-</node>
-</node>
-<node TEXT="Attack Defense" ID="ID_276108364" CREATED="1675739470610" MODIFIED="1675739478958">
-<node TEXT="Auditing Privacy Defenses in Federated Learning via Generative Gradient Leakage" ID="ID_524301344" CREATED="1675739517073" MODIFIED="1675739522712">
-<node TEXT="CVPR22" ID="ID_1787895017" CREATED="1675739523193" MODIFIED="1675739524639"/>
-<node TEXT="new type of leakage that breaks gradient degradation methods" ID="ID_197111042" CREATED="1675739527086" MODIFIED="1675739550941"/>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="Repr :: VAE" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_763531053" CREATED="1686962599858" MODIFIED="1688777454249">
-<edge COLOR="#00ffff"/>
-<font NAME="Gentium"/>
-<node TEXT="Tree variational autoencoders" ID="ID_1805352616" CREATED="1686962616828" MODIFIED="1686962626851">
-<icon BUILTIN="pencil"/>
-<node TEXT="ETHZ" ID="ID_683183791" CREATED="1686962628399" MODIFIED="1686962629916"/>
-<node TEXT="connection with treelstm?" ID="ID_813907976" CREATED="1686962686453" MODIFIED="1686962697688"/>
 </node>
 </node>
 <node TEXT="Self-Supervised Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_714759247" CREATED="1650825914367" MODIFIED="1688777454249">
@@ -7367,7 +7197,7 @@
 </node>
 </node>
 </node>
-<node TEXT="SVG :: Vector Images" LOCALIZED_STYLE_REF="styles.topic" POSITION="top_or_left" ID="ID_968071643" CREATED="1686953734459" MODIFIED="1688777454251">
+<node TEXT="SVG :: Vector Images" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_968071643" CREATED="1686953734459" MODIFIED="1688777454251">
 <edge COLOR="#0000ff"/>
 <font NAME="Gentium"/>
 <node TEXT="Generation" ID="ID_1231220509" CREATED="1655449067387" MODIFIED="1686953757766">
