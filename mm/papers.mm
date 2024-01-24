@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="253" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="254" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Tactic / Impact" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_896452525" CREATED="1642481777876" MODIFIED="1688777454204">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ff00"/>
@@ -1270,7 +1270,7 @@
 </node>
 </node>
 </node>
-<node TEXT="-------------------------------------------------------------------" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1134167122" CREATED="1675049435899" MODIFIED="1688777454224">
+<node TEXT="---------------------------" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1134167122" CREATED="1675049435899" MODIFIED="1705954873283">
 <edge COLOR="#ff00ff"/>
 <font NAME="Gentium"/>
 </node>
@@ -2016,7 +2016,7 @@
 </node>
 </node>
 </node>
-<node TEXT="---------------------------------------------------------------------" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1447965157" CREATED="1675045082295" MODIFIED="1688777454229">
+<node TEXT="----------------------------------" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1447965157" CREATED="1675045082295" MODIFIED="1705954885513">
 <edge COLOR="#7c007c"/>
 <font NAME="Gentium"/>
 </node>
@@ -3879,7 +3879,7 @@
 </node>
 </node>
 </node>
-<node TEXT="-------------------------------------------------------" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_198111288" CREATED="1676254941135" MODIFIED="1688777454232">
+<node TEXT="----------------------------------" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_198111288" CREATED="1676254941135" MODIFIED="1705954888931">
 <edge COLOR="#7c7c00"/>
 <font NAME="Gentium"/>
 </node>
@@ -5616,20 +5616,6 @@
 </node>
 </node>
 </node>
-<node TEXT="Gen :: Conditional :: Image Editing" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_904035504" CREATED="1675304201992" MODIFIED="1688777454239">
-<edge COLOR="#7c0000"/>
-<font NAME="Gentium"/>
-<node TEXT="Style transfer" ID="ID_3432368" CREATED="1676254033527" MODIFIED="1676254035934">
-<node TEXT="A Style-Based Generator Architecture for Generative Adversarial Networks" ID="ID_19629646" CREATED="1675304213086" MODIFIED="1675304216108">
-<icon BUILTIN="unchecked"/>
-</node>
-</node>
-<node TEXT="text-guided" ID="ID_1528570078" CREATED="1676254101004" MODIFIED="1676254103531">
-<node TEXT="CLIPVG: Text-Guided Image Manipulation Using Differentiable Vector Graphics" ID="ID_1526385769" CREATED="1676254105459" MODIFIED="1676254110556">
-<node TEXT="AAAI23" ID="ID_431547750" CREATED="1676254111062" MODIFIED="1676254112598"/>
-</node>
-</node>
-</node>
 <node TEXT="Gen :: Protection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1205778136" CREATED="1680653497543" MODIFIED="1705636476417">
 <edge COLOR="#7c007c"/>
 <font NAME="Gentium"/>
@@ -6211,39 +6197,6 @@
 <node TEXT="VIEScore: Towards Explainable Metrics for Conditional Image Synthesis Evaluation" ID="ID_230261560" CREATED="1705615693897" MODIFIED="1705615694922"/>
 </node>
 </node>
-<node TEXT="Multimodal Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_423909848" CREATED="1649104367617" MODIFIED="1688777454245">
-<edge COLOR="#ff0000"/>
-<font NAME="Gentium"/>
-<node TEXT="Balanced Multimodal Learning via On-the-fly Gradient Modulation" ID="ID_1018564287" CREATED="1649104376663" MODIFIED="1649104377816">
-<node TEXT="CVPR22" ID="ID_735774105" CREATED="1649104378958" MODIFIED="1649104379977"/>
-</node>
-</node>
-<node TEXT="Opt :: Optimization" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1084462232" CREATED="1686954326647" MODIFIED="1688777454246">
-<edge COLOR="#00ff00"/>
-<font NAME="Gentium"/>
-<node TEXT="Analysis" ID="ID_736915803" CREATED="1686962924080" MODIFIED="1686962926319">
-<node TEXT="understanding optimization of deep learning" ID="ID_73979866" CREATED="1686962926654" MODIFIED="1686962935635">
-<icon BUILTIN="pencil"/>
-<node TEXT="IDEA" ID="ID_1215351740" CREATED="1686962935973" MODIFIED="1686962937668"/>
-</node>
-</node>
-<node TEXT="Optimizers" ID="ID_1488221874" CREATED="1686955286362" MODIFIED="1686955289173">
-<node TEXT="SGD" ID="ID_1775899232" CREATED="1686954331246" MODIFIED="1686954332878"/>
-<node TEXT="Adam" ID="ID_572023614" CREATED="1686954333424" MODIFIED="1686954334609"/>
-</node>
-<node TEXT="Forward Gradient" ID="ID_108057711" CREATED="1686954334921" MODIFIED="1686954340856">
-<node TEXT="can forward gradient match backpropagation?" ID="ID_887218565" CREATED="1686954341114" MODIFIED="1686954348261">
-<node TEXT="ICML23" ID="ID_377653219" CREATED="1686954349509" MODIFIED="1686954350826"/>
-</node>
-</node>
-<node TEXT="Gradient Surgery" ID="ID_1632297675" CREATED="1654104115851" MODIFIED="1686955284797">
-<node TEXT="Gradient Surgery for Multi-Task Learning" ID="ID_686455197" CREATED="1652383922344" MODIFIED="1652383931965">
-<icon BUILTIN="bookmark"/>
-<node TEXT="NIPS20" ID="ID_926576648" CREATED="1652383934990" MODIFIED="1652383936487"/>
-<node TEXT="we propose a form of gradient surgery that projects a task&apos;s gradient onto the normal plane of the gradient of any other task that has a conflicting gradient" ID="ID_1875166652" CREATED="1652383936902" MODIFIED="1652383975982"/>
-</node>
-</node>
-</node>
 <node TEXT="Self-Supervised Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_714759247" CREATED="1650825914367" MODIFIED="1688777454249">
 <edge COLOR="#7c007c"/>
 <font NAME="Gentium"/>
@@ -6428,7 +6381,7 @@
 </node>
 </node>
 </node>
-<node TEXT="-------------------------------------------------------------------------------------" LOCALIZED_STYLE_REF="styles.topic" POSITION="top_or_left" ID="ID_1156109860" CREATED="1647264433260" MODIFIED="1688777454252">
+<node TEXT="-------------------------------------" LOCALIZED_STYLE_REF="styles.topic" POSITION="top_or_left" ID="ID_1156109860" CREATED="1647264433260" MODIFIED="1705954881926">
 <edge COLOR="#007c7c"/>
 <font NAME="Gentium"/>
 </node>
