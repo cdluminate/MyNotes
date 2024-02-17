@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="254" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="260" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Tactic / Impact" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_896452525" CREATED="1642481777876" MODIFIED="1688777454204">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ff00"/>
@@ -340,6 +340,9 @@
 <node TEXT="stable diffusion" ID="ID_844300891" CREATED="1708096102336" MODIFIED="1708096102881"/>
 <node TEXT="mixture of experts (MoE)" ID="ID_1317041321" CREATED="1708096108391" MODIFIED="1708096108955"/>
 <node TEXT="robmoe: does adversarial attack transfer across task? MoE is naturally robust against adversaries?" ID="ID_912373098" CREATED="1708096128477" MODIFIED="1708096129257"/>
+<node TEXT="does this really make sense?" ID="ID_1038194181" CREATED="1708210369078" MODIFIED="1708210376463">
+<icon BUILTIN="help"/>
+</node>
 </node>
 <node TEXT="Cali: first-order prior" FOLDED="true" ID="ID_500998670" CREATED="1708096259615" MODIFIED="1708096272914">
 <node TEXT="Classififier" ID="ID_683441044" CREATED="1708096294826" MODIFIED="1708096298834"/>
@@ -3347,6 +3350,19 @@
 </node>
 </node>
 </node>
+<node TEXT="Arch ::  Mamba" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_870462315" CREATED="1708212103950" MODIFIED="1708212117044">
+<edge COLOR="#0000ff"/>
+<node TEXT="Sequential" ID="ID_186896512" CREATED="1708212124800" MODIFIED="1708212136940"/>
+<node TEXT="Vision" ID="ID_714705228" CREATED="1708212111481" MODIFIED="1708212138589">
+<node TEXT="Vision mamba: efficient visual representating learning with bidirectional state space model" ID="ID_1104755304" CREATED="1708212138763" MODIFIED="1708212153083">
+<icon BUILTIN="pencil"/>
+<node TEXT="~3x faster and saves ~90% GPU memory compared to DeiT" ID="ID_1603374162" CREATED="1708212169892" MODIFIED="1708212190662"/>
+</node>
+<node TEXT="Vmamba: visual state space model" ID="ID_535357778" CREATED="1708212423496" MODIFIED="1708212429804">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+</node>
 <node TEXT="V :: Object Detection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_876510464" CREATED="1576825429577" MODIFIED="1688777454234">
 <edge COLOR="#7c7c00"/>
 <font NAME="Gentium"/>
@@ -4463,9 +4479,10 @@
 </node>
 </node>
 </node>
-<node TEXT="Gen :: Conditional :: Text-to-Image Synthesis" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_534441759" CREATED="1675045086637" MODIFIED="1688777454238">
+<node TEXT="Text-to-Image Synthesis" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_534441759" CREATED="1675045086637" MODIFIED="1708210232437">
 <edge COLOR="#00007c"/>
 <font NAME="Gentium"/>
+<node TEXT="LDM" ID="ID_75962773" CREATED="1708210236152" MODIFIED="1708210237235"/>
 <node TEXT="Dall E 2" ID="ID_1555270559" CREATED="1675045202469" MODIFIED="1675045213095">
 <node TEXT="Hierarchical Text-Conditional Image Generation with CLIP Latents" ID="ID_246970714" CREATED="1675045215025" MODIFIED="1675045359919">
 <icon BUILTIN="messagebox_warning"/>
@@ -4510,84 +4527,6 @@
 <node TEXT="MultiDiffusion: Fusing Diffusion Paths for Controlled Image Generation" ID="ID_1179630063" CREATED="1676755258972" MODIFIED="1676755277235">
 <icon BUILTIN="pencil"/>
 </node>
-</node>
-</node>
-<node TEXT="Gen :: Protection" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1205778136" CREATED="1680653497543" MODIFIED="1705636476417">
-<edge COLOR="#7c007c"/>
-<font NAME="Gentium"/>
-<node TEXT="Dataset" ID="ID_1236582168" CREATED="1686963892000" MODIFIED="1686963895044">
-<node TEXT="genimage: a million-scale benchmark for detecting ai-generated image" ID="ID_1948375546" CREATED="1686963895369" MODIFIED="1686963910193">
-<icon BUILTIN="pencil"/>
-<node TEXT="huawei" ID="ID_266638630" CREATED="1686963936295" MODIFIED="1686963938143"/>
-</node>
-</node>
-<node TEXT="Watermarking Model" ID="ID_268438493" CREATED="1680017829445" MODIFIED="1705636590980">
-<node TEXT="The Stable Signature: Rooting Watermarks in Latent Diffusion Models" ID="ID_623109936" CREATED="1680017818352" MODIFIED="1680017846037">
-<icon BUILTIN="pencil"/>
-<icon BUILTIN="clanbomber"/>
-<node TEXT="fine-tune LDM to add watermark" ID="ID_262852307" CREATED="1680018919151" MODIFIED="1680018927345"/>
-<node TEXT="associate binary code for identification" ID="ID_401091781" CREATED="1680018927544" MODIFIED="1680018941299"/>
-</node>
-<node TEXT="weight modulation for user attribution and fingerprinting in text-to-image diffusion models" ID="ID_202941701" CREATED="1686356616790" MODIFIED="1686356629944"/>
-<node TEXT="generative watermarking against unauthorized subject-driven image synthesis" ID="ID_1747560992" CREATED="1686961966188" MODIFIED="1686961982705">
-<icon BUILTIN="pencil"/>
-</node>
-<node TEXT="securing deep generative models with universal adversarial signature" ID="ID_219050064" CREATED="1686961995129" MODIFIED="1686962024811">
-<icon BUILTIN="pencil"/>
-</node>
-<node TEXT="exloring structure consistency for deep model watermarking" ID="ID_489056739" CREATED="1647567594240" MODIFIED="1647567607226">
-<icon BUILTIN="pencil"/>
-</node>
-<node TEXT="Certified Neural Network Watermarks with Randomized Smoothing" ID="ID_820456333" CREATED="1687545175901" MODIFIED="1687545176717">
-<node TEXT="ICML22" ID="ID_148985769" CREATED="1687545178172" MODIFIED="1687545179746"/>
-</node>
-<node TEXT="Deep Model Intellectual Property Protection via Deep Watermarking" ID="ID_932868581" CREATED="1688787810439" MODIFIED="1705635991805">
-<icon BUILTIN="unchecked"/>
-<node TEXT="TPAMI2021" ID="ID_689762599" CREATED="1688787815855" MODIFIED="1688787818611"/>
-</node>
-</node>
-<node TEXT="Watermarking Image" ID="ID_382338310" CREATED="1705636591821" MODIFIED="1705636594523">
-<node TEXT="Removal" ID="ID_1312279468" CREATED="1705615954983" MODIFIED="1705615956515">
-<node TEXT="Removing Interference and Recovering Content Imaginatively for Visible Watermark Removal" ID="ID_1525771711" CREATED="1705615960268" MODIFIED="1705615961572"/>
-</node>
-</node>
-<node TEXT="Anti-Edit" ID="ID_702699802" CREATED="1686947069642" MODIFIED="1686947073981">
-<node TEXT="Raising the Cost of Malicious AI-Powered Image Editing" ID="ID_650622645" CREATED="1680653552985" MODIFIED="1680653555037">
-<icon BUILTIN="pencil"/>
-<node TEXT="madry" ID="ID_291065376" CREATED="1680653555437" MODIFIED="1680653556905"/>
-<node TEXT="adv attack against DDPM" ID="ID_149867757" CREATED="1680653522429" MODIFIED="1680653568924"/>
-</node>
-<node TEXT="Adversarial Example Does Good: Preventing Painting Imitation from Diffusion Models via Adversarial Examples" ID="ID_1164664445" CREATED="1680653705695" MODIFIED="1680653708145">
-<icon BUILTIN="pencil"/>
-</node>
-</node>
-<node TEXT="Anti-Learn" ID="ID_527229392" CREATED="1686947087861" MODIFIED="1686947090223">
-<node TEXT="unlearnable examples for diffusion models: protext data from unauthorized exploitaiton" ID="ID_1294212707" CREATED="1686351326573" MODIFIED="1686351376813">
-<icon BUILTIN="pencil"/>
-</node>
-</node>
-</node>
-<node TEXT="GAN Inverstion" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1643977837" CREATED="1608014251316" MODIFIED="1705376009925">
-<edge COLOR="#0000ff"/>
-<font NAME="Gentium"/>
-<node TEXT="2004.00049: in-domain gan inversion for real image editing" ID="ID_789901011" CREATED="1608014256819" MODIFIED="1608014290154">
-<icon BUILTIN="bookmark"/>
-</node>
-<node TEXT="2007.06600: closed-form factorization of latent semantics in GANs" ID="ID_190477062" CREATED="1624973853281" MODIFIED="1624973903147">
-<icon BUILTIN="bookmark"/>
-<icon BUILTIN="button_ok"/>
-<icon BUILTIN="launch"/>
-<node TEXT="CVPR21" ID="ID_200127486" CREATED="1687554334550" MODIFIED="1687554336024"/>
-<node TEXT="I like this paper" ID="ID_807310527" CREATED="1624973921489" MODIFIED="1624973924563"/>
-<node TEXT="SeFa" ID="ID_485890930" CREATED="1624974410069" MODIFIED="1624974411493"/>
-<node TEXT="Bolei Zhou" ID="ID_1374655351" CREATED="1687554347575" MODIFIED="1687554351322"/>
-</node>
-<node TEXT="2012.09036&#xa;Improved StyleGAN Embedding: Where are the Good Latents?" ID="ID_1195062919" CREATED="1608879346483" MODIFIED="1608879350891"/>
-<node TEXT="2103.03243 Anycost GANs for Interactive Image Synthesis and Editing (cvpr21)" ID="ID_1065575004" CREATED="1615296747093" MODIFIED="1615296755894">
-<node TEXT="elastic resolution + computation reduction" ID="ID_1366331350" CREATED="1615296878773" MODIFIED="1615296919734"/>
-</node>
-<node TEXT=" Surrogate Gradient Field for Latent Space Manipulation" ID="ID_115677332" CREATED="1687554036785" MODIFIED="1687554037720">
-<node TEXT="CVPR21" ID="ID_1927538965" CREATED="1687554038840" MODIFIED="1687554040976"/>
 </node>
 </node>
 <node TEXT="GEN :: Unconditioned Generation" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1562070096" CREATED="1688777359403" MODIFIED="1688777956190">
@@ -4846,16 +4785,59 @@
 </node>
 </node>
 </node>
-<node TEXT="LLM :: Retreival Augmented Generation" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1732405024" CREATED="1704413947426" MODIFIED="1704413961346">
-<edge COLOR="#7c007c"/>
+<node TEXT="LLM" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_771058532" CREATED="1708213014950" MODIFIED="1708213435871">
+<edge COLOR="#00007c"/>
+<node TEXT="See LLM.lyx" ID="ID_1645454292" CREATED="1708213017752" MODIFIED="1708213193485">
+<icon BUILTIN="emoji-1F4D4"/>
 </node>
-<node TEXT="LLM :: Applications" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1351564910" CREATED="1704690202941" MODIFIED="1704690214805">
-<edge COLOR="#7c0000"/>
+<node TEXT="Survey" ID="ID_1121574615" CREATED="1708213629459" MODIFIED="1708213630543">
+<node TEXT="leveraging large language models for NLG evaluation: a survey" ID="ID_1062003705" CREATED="1708213632114" MODIFIED="1708213644153">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="In-Context-Learning (ICL)" ID="ID_506653491" CREATED="1708213732900" MODIFIED="1708213736816">
+<node TEXT="batch-icl: effective, efficient, and order-agnostic in-context-learning" ID="ID_266777282" CREATED="1708213737052" MODIFIED="1708213752427">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Backdoor" ID="ID_1475058170" CREATED="1708213703023" MODIFIED="1708213705062">
+<node TEXT="universal vulnerabilitities in large langugae models: in-context learning backdoor attacks" ID="ID_1975376255" CREATED="1708213706333" MODIFIED="1708213723802">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Context Extension" ID="ID_697717190" CREATED="1708213554879" MODIFIED="1708213557806">
+<node TEXT="E2-LLM: efficient and extreme length extension of large language models" ID="ID_526898789" CREATED="1708213558089" MODIFIED="1708213569601">
+<icon BUILTIN="pencil"/>
+</node>
+<node TEXT="extending llm&apos;s context window with 100 samples" ID="ID_763756527" CREATED="1708213612439" MODIFIED="1708213620075">
+<icon BUILTIN="pencil"/>
+</node>
+<node TEXT="flexibly scaling large language model contexts through extensible tokenization" ID="ID_995630869" CREATED="1708213653744" MODIFIED="1708213670855">
+<icon BUILTIN="pencil"/>
+</node>
+<node TEXT="loma: lossless compressed memory attention" ID="ID_1681214053" CREATED="1708213678809" MODIFIED="1708213689936">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Vision auto-regressive" ID="ID_809291168" CREATED="1708213196469" MODIFIED="1708213206161">
+<icon BUILTIN="xmag"/>
+<node TEXT="scalable pre-training of large autoregressive image models" ID="ID_1528376225" CREATED="1708213206429" MODIFIED="1708213221750">
+<icon BUILTIN="pencil"/>
+<node TEXT="apple" ID="ID_1906634935" CREATED="1708213218322" MODIFIED="1708213219421"/>
+</node>
+</node>
+<node TEXT="LLM :: Applications" LOCALIZED_STYLE_REF="default" ID="ID_1351564910" CREATED="1704690202941" MODIFIED="1708213527056">
+<icon BUILTIN="xmag"/>
 <node TEXT="Planning" ID="ID_1480822372" CREATED="1704690209391" MODIFIED="1704690211254">
 <node TEXT="LLM-Assist: enhancing closed loop planning with langugae based reasoning" ID="ID_1521780858" CREATED="1704690221287" MODIFIED="1704690239100">
 <icon BUILTIN="pencil"/>
 </node>
 <node TEXT="VoroNav: Voronoi-based zero-shot object navigation with large language model" ID="ID_1280065429" CREATED="1704691014991" MODIFIED="1704691032351">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Inpainting" ID="ID_386840328" CREATED="1708212061047" MODIFIED="1708212064396">
+<node TEXT="Towards language-driven video inpainting via multimodal large langugae models" ID="ID_1615612803" CREATED="1708212064575" MODIFIED="1708212081164">
 <icon BUILTIN="pencil"/>
 </node>
 </node>
@@ -4865,8 +4847,8 @@
 </node>
 </node>
 </node>
-<node TEXT="LLM :: Internals" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1635719556" CREATED="1704689213155" MODIFIED="1704689221213">
-<edge COLOR="#ff00ff"/>
+<node TEXT="LLM :: Internals" LOCALIZED_STYLE_REF="default" FOLDED="true" ID="ID_1635719556" CREATED="1704689213155" MODIFIED="1708213527058">
+<icon BUILTIN="xmag"/>
 <node TEXT="Knowledge Editing" ID="ID_186532538" CREATED="1704689224755" MODIFIED="1704689235771">
 <node TEXT="A comprehensive study of knowledge editing for large language models" ID="ID_561693528" CREATED="1704689236201" MODIFIED="1704689668477">
 <icon BUILTIN="pencil"/>
@@ -4888,8 +4870,8 @@
 </node>
 </node>
 </node>
-<node TEXT="LLM :: Efficiency" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_300405694" CREATED="1704693280585" MODIFIED="1704693286132">
-<edge COLOR="#007c7c"/>
+<node TEXT="LLM :: Efficiency" LOCALIZED_STYLE_REF="default" FOLDED="true" ID="ID_300405694" CREATED="1704693280585" MODIFIED="1708213527059">
+<icon BUILTIN="xmag"/>
 <node TEXT="Quality Corpus" ID="ID_1085153133" CREATED="1704693307629" MODIFIED="1704693317489">
 <node TEXT="llava-phi: efficient multi-modal assistant with small language model" ID="ID_118382250" CREATED="1704693294896" MODIFIED="1704693327567">
 <icon BUILTIN="pencil"/>
@@ -4906,16 +4888,18 @@
 </node>
 </node>
 </node>
-<node TEXT="LLM :: Safety" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1743630999" CREATED="1704690353661" MODIFIED="1704690791687">
-<edge COLOR="#00007c"/>
+<node TEXT="Alignment" LOCALIZED_STYLE_REF="default" ID="ID_1743630999" CREATED="1704690353661" MODIFIED="1708213523026">
+<icon BUILTIN="xmag"/>
 <node TEXT="Explicit alighment tuning" ID="ID_43873086" CREATED="1704690772903" MODIFIED="1704690782673">
 <node TEXT="MLLM-Protector: ensuring MLLM&apos;s safety without hurting performance" ID="ID_1216957212" CREATED="1704690783223" MODIFIED="1704690962830">
 <icon BUILTIN="pencil"/>
 </node>
 </node>
 </node>
-<node TEXT="LLM :: Retrieval" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_951451292" CREATED="1705615468446" MODIFIED="1705615476618">
-<edge COLOR="#007c00"/>
+<node TEXT="Watermark" ID="ID_1275567134" CREATED="1708213494788" MODIFIED="1708213517336">
+<node TEXT="cross-attention watermarking of large langugae models" ID="ID_1984755978" CREATED="1708213497471" MODIFIED="1708213505171"/>
+</node>
+<node TEXT="LLM :: Retrieval Augmented Gen (RAG)" LOCALIZED_STYLE_REF="default" ID="ID_951451292" CREATED="1705615468446" MODIFIED="1708213529692">
 <node TEXT="what is retrieval-generated augmentation?" ID="ID_505445985" CREATED="1705615494966" MODIFIED="1705615521121">
 <icon BUILTIN="info"/>
 </node>
@@ -4925,9 +4909,25 @@
 <node TEXT="Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks" ID="ID_717936753" CREATED="1705615478557" MODIFIED="1705615479640">
 <node TEXT="RAG" ID="ID_632746074" CREATED="1705615479900" MODIFIED="1705615481446"/>
 </node>
+<node TEXT="the chronicles of RAG: the retriever, the chunk and the generator" ID="ID_1691096720" CREATED="1708213888552" MODIFIED="1708213901638"/>
+</node>
+<node TEXT="Impossible languguage" ID="ID_1107313985" CREATED="1708213779308" MODIFIED="1708213784261">
+<node TEXT="Mission: impossible langugae models" ID="ID_341842566" CREATED="1708213785053" MODIFIED="1708213791951">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="External tools" ID="ID_1232650075" CREATED="1708213852004" MODIFIED="1708213856351">
+<node TEXT="small llms are weak tool learners: a multi-llm agent" ID="ID_1655179372" CREATED="1708213856513" MODIFIED="1708213867507">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
 </node>
 <node TEXT="MLLM" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_533584247" CREATED="1705352060562" MODIFIED="1705615831336">
 <edge COLOR="#00ff00"/>
+<node TEXT="Survey" ID="ID_1001259163" CREATED="1708213372436" MODIFIED="1708213376713">
+<icon BUILTIN="info"/>
+<node TEXT="exploring the reasoning abilities of multimodal large langugae models (MLLMS): a comprehensive survey on emerging trends in multimodal reasoning" ID="ID_1132742729" CREATED="1708213377127" MODIFIED="1708213405378"/>
+</node>
 <node TEXT="Backbones" ID="ID_1880191327" CREATED="1705616736583" MODIFIED="1705616744773">
 <icon BUILTIN="clanbomber"/>
 <node TEXT="Flamingo: a Visual Language Model for Few-Shot Learning" ID="ID_667648870" CREATED="1705615394357" MODIFIED="1705615408114">
@@ -5007,14 +5007,7 @@
 </node>
 </node>
 </node>
-<node TEXT="DPM :: Image Synth" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1221039338" CREATED="1705615200056" MODIFIED="1705615207009">
-<edge COLOR="#00007c"/>
-<node TEXT="Self-conditioned Image Generation via Generating Representations" ID="ID_879363279" CREATED="1705615209796" MODIFIED="1705615210544">
-<node TEXT="Kaiming" ID="ID_1581979943" CREATED="1705615212865" MODIFIED="1705615218423"/>
-<node TEXT="class guided" ID="ID_498501087" CREATED="1705615214352" MODIFIED="1705615222126"/>
-</node>
-</node>
-<node TEXT="DPM :: Text-Image Synth" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_523518480" CREATED="1705610571310" MODIFIED="1705610613594">
+<node TEXT="Gen :: Text-Image Synth" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_523518480" CREATED="1705610571310" MODIFIED="1708210314882">
 <edge COLOR="#00ffff"/>
 <node TEXT="FreeControl: Training-Free Spatial Control of Any Text-to-Image Diffusion Model with Any Condition" ID="ID_608554585" CREATED="1705610582226" MODIFIED="1705610640873">
 <icon BUILTIN="pencil"/>
@@ -5033,12 +5026,55 @@
 <node TEXT="2312" OBJECT="java.lang.Long|2312" ID="ID_801840770" CREATED="1705613082558" MODIFIED="1705613084435"/>
 <node TEXT="improvements over controlnet" ID="ID_583201870" CREATED="1705613084616" MODIFIED="1705613088276"/>
 </node>
+<node TEXT="Attack" ID="ID_1294502376" CREATED="1708212538006" MODIFIED="1708212541318">
+<icon BUILTIN="xmag"/>
+<node TEXT="revealing vulnerabilities in stable diffusion via targeted attacks" ID="ID_1711130457" CREATED="1708212542476" MODIFIED="1708212553255">
+<icon BUILTIN="pencil"/>
+<node TEXT="perturbs the text prompt" ID="ID_1986913046" CREATED="1708212617390" MODIFIED="1708212625016"/>
+</node>
+<node TEXT="Adversarial examples are misaligned in diffusion models manifolds" ID="ID_1668294921" CREATED="1708212891187" MODIFIED="1708212902413">
+<icon BUILTIN="pencil"/>
+</node>
+<node TEXT="Exploring adversarial attacks against latent diffusion model from the perspective of adversarial transferability" ID="ID_1663418581" CREATED="1708212951411" MODIFIED="1708212969868">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node TEXT="Uncond" ID="ID_1243513689" CREATED="1708210272509" MODIFIED="1708210275766">
+<icon BUILTIN="xmag"/>
+<node TEXT="Self-conditioned Image Generation via Generating Representations" ID="ID_879363279" CREATED="1705615209796" MODIFIED="1705615210544">
+<node TEXT="Kaiming" ID="ID_1581979943" CREATED="1705615212865" MODIFIED="1705615218423"/>
+<node TEXT="class guided" ID="ID_498501087" CREATED="1705615214352" MODIFIED="1705615222126"/>
+</node>
+</node>
 <node TEXT="Bias" ID="ID_1076408797" CREATED="1705616197269" MODIFIED="1705616202383">
 <icon BUILTIN="xmag"/>
 <node TEXT="Quantifying Bias in Text-to-Image Generative Models" ID="ID_116644928" CREATED="1705616198897" MODIFIED="1705616199796"/>
 </node>
-<node TEXT="Inversion" ID="ID_215784885" CREATED="1705614809336" MODIFIED="1705614847454">
+<node TEXT="Inversion" FOLDED="true" ID="ID_215784885" CREATED="1705614809336" MODIFIED="1705614847454">
 <icon BUILTIN="xmag"/>
+<node TEXT="GAN Inverstion" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1643977837" CREATED="1608014251316" MODIFIED="1708210350298">
+<icon BUILTIN="emoji-1F4D4"/>
+<font NAME="Gentium"/>
+<node TEXT="2004.00049: in-domain gan inversion for real image editing" ID="ID_789901011" CREATED="1608014256819" MODIFIED="1608014290154">
+<icon BUILTIN="bookmark"/>
+</node>
+<node TEXT="2007.06600: closed-form factorization of latent semantics in GANs" ID="ID_190477062" CREATED="1624973853281" MODIFIED="1624973903147">
+<icon BUILTIN="bookmark"/>
+<icon BUILTIN="button_ok"/>
+<icon BUILTIN="launch"/>
+<node TEXT="CVPR21" ID="ID_200127486" CREATED="1687554334550" MODIFIED="1687554336024"/>
+<node TEXT="I like this paper" ID="ID_807310527" CREATED="1624973921489" MODIFIED="1624973924563"/>
+<node TEXT="SeFa" ID="ID_485890930" CREATED="1624974410069" MODIFIED="1624974411493"/>
+<node TEXT="Bolei Zhou" ID="ID_1374655351" CREATED="1687554347575" MODIFIED="1687554351322"/>
+</node>
+<node TEXT="2012.09036&#xa;Improved StyleGAN Embedding: Where are the Good Latents?" ID="ID_1195062919" CREATED="1608879346483" MODIFIED="1608879350891"/>
+<node TEXT="2103.03243 Anycost GANs for Interactive Image Synthesis and Editing (cvpr21)" ID="ID_1065575004" CREATED="1615296747093" MODIFIED="1615296755894">
+<node TEXT="elastic resolution + computation reduction" ID="ID_1366331350" CREATED="1615296878773" MODIFIED="1615296919734"/>
+</node>
+<node TEXT=" Surrogate Gradient Field for Latent Space Manipulation" ID="ID_115677332" CREATED="1687554036785" MODIFIED="1687554037720">
+<node TEXT="CVPR21" ID="ID_1927538965" CREATED="1687554038840" MODIFIED="1687554040976"/>
+</node>
+</node>
 <node TEXT="Smooth Diffusion: Crafting Smooth Latent Spaces in Diffusion Models" ID="ID_1464439264" CREATED="1705614776337" MODIFIED="1705614777162"/>
 <node TEXT="Fixed-point Inversion for Text-to-image diffusion models" ID="ID_1283981865" CREATED="1705616307000" MODIFIED="1705616307477"/>
 <node TEXT="Prompting Hard or Hardly Prompting: Prompt Inversion for Text-to-Image Diffusion Models" ID="ID_924689649" CREATED="1705616624977" MODIFIED="1705616625933"/>
@@ -5053,10 +5089,23 @@
 <icon BUILTIN="pencil"/>
 <node TEXT="2401" OBJECT="java.lang.Long|2401" ID="ID_170412279" CREATED="1704689158742" MODIFIED="1704689162224"/>
 </node>
+<node TEXT="One-step diffusion distillation via deep equilibriem models" ID="ID_268504048" CREATED="1708212484471" MODIFIED="1708212506282">
+<icon BUILTIN="pencil"/>
+</node>
 </node>
 <node TEXT="Perception" ID="ID_1657162102" CREATED="1705616938382" MODIFIED="1705616944851">
 <icon BUILTIN="xmag"/>
 <node TEXT="Harnessing Diffusion Models for Visual Perception with Meta Prompts" ID="ID_1854637299" CREATED="1705616945127" MODIFIED="1705616946113"/>
+</node>
+<node TEXT="Personalization" ID="ID_1259207291" CREATED="1708212649726" MODIFIED="1708212653624">
+<icon BUILTIN="xmag"/>
+<node TEXT="PALP: prompt aligned personalization of text-to-image models" ID="ID_1662488365" CREATED="1708212657480" MODIFIED="1708212668646"/>
+</node>
+<node TEXT="PEFT" ID="ID_452793514" CREATED="1708212831543" MODIFIED="1708212833726">
+<icon BUILTIN="xmag"/>
+<node TEXT="seek for incantations: towards accurate text-to-image diffusion synthesis through prompt engineering" ID="ID_1386159619" CREATED="1708212835157" MODIFIED="1708212853803">
+<icon BUILTIN="pencil"/>
+</node>
 </node>
 <node TEXT="Quality" ID="ID_408310992" CREATED="1705614799809" MODIFIED="1705614845188">
 <icon BUILTIN="xmag"/>
@@ -5773,6 +5822,17 @@
 </node>
 <node TEXT="Purturbation Analysis" ID="ID_559378753" CREATED="1624457681416" MODIFIED="1624457691163">
 <node TEXT="(axv) Delving into the pixels of adversarial samples" ID="ID_469623777" CREATED="1624457692101" MODIFIED="1624457704845"/>
+</node>
+</node>
+<node TEXT="-----------------------" LOCALIZED_STYLE_REF="styles.topic" POSITION="top_or_left" ID="ID_1958592266" CREATED="1708212252330" MODIFIED="1708212256065">
+<edge COLOR="#00ff00"/>
+</node>
+<node TEXT="Text-to-Image + LLM" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_246881879" CREATED="1708212257985" MODIFIED="1708212526923">
+<icon BUILTIN="xmag"/>
+<edge COLOR="#ff00ff"/>
+<node TEXT="DiffusionGPT: llm-driven text-image generation system" ID="ID_934710207" CREATED="1708212279885" MODIFIED="1708212291104">
+<icon BUILTIN="pencil"/>
+<node TEXT="can be seen as a MoE of T2I models coordinated with LLM" ID="ID_81562283" CREATED="1708212379115" MODIFIED="1708212396394"/>
 </node>
 </node>
 </node>
