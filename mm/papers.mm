@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="260" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="264" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Tactic / Impact" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_896452525" CREATED="1642481777876" MODIFIED="1688777454204">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ff00"/>
@@ -5834,6 +5834,29 @@
 <icon BUILTIN="pencil"/>
 <node TEXT="can be seen as a MoE of T2I models coordinated with LLM" ID="ID_81562283" CREATED="1708212379115" MODIFIED="1708212396394"/>
 </node>
+</node>
+<node TEXT="Contrastive learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_1810663959" CREATED="1708214209797" MODIFIED="1708214330726">
+<icon BUILTIN="xmag"/>
+<edge COLOR="#007c00"/>
+<node TEXT="Probabilistic Embeddings for Cross-Modal Retrieval" ID="ID_319786477" CREATED="1708214227980" MODIFIED="1708214227980"/>
+<node TEXT="Bayesian Triplet Loss: Uncertainty Quantification in Image Retrieval" ID="ID_1189651765" CREATED="1708214242358" MODIFIED="1708214243269"/>
+<node TEXT="Smooth-AP: Smoothing the Path Towards Large-Scale Image Retrieval" ID="ID_1075741867" CREATED="1708214254496" MODIFIED="1708214255405"/>
+<node TEXT="Supervised Contrastive Learning" ID="ID_1672448157" CREATED="1708214262190" MODIFIED="1708214262838"/>
+<node TEXT="What Should Not Be Contrastive in Contrastive Learning" ID="ID_1608619726" CREATED="1708214276595" MODIFIED="1708214277101"/>
+<node TEXT="Contextual Visual Similarity" ID="ID_1938435882" CREATED="1708214286446" MODIFIED="1708214286775"/>
+<node TEXT="Circle Loss: A Unified Perspective of Pair Similarity Optimization" ID="ID_1535931863" CREATED="1708214297510" MODIFIED="1708214297844"/>
+<node TEXT="Embedding Expansion: Augmentation in Embedding Space for Deep Metric Learning" ID="ID_643909238" CREATED="1708214307429" MODIFIED="1708214307790"/>
+<node TEXT="Learning Causal Models Online" ID="ID_1954472351" CREATED="1708214322942" MODIFIED="1708214323661"/>
+</node>
+<node TEXT="Compress Token" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_980155104" CREATED="1708214385639" MODIFIED="1708214394302">
+<edge COLOR="#7c7c00"/>
+<node TEXT="ZIPFORMER: A FASTER AND BETTER ENCODER FOR&#xa;AUTOMATIC SPEECH RECOGNITION" ID="ID_1224673783" CREATED="1708214389208" MODIFIED="1708214390069"/>
+</node>
+<node TEXT="Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_405911526" CREATED="1708214347113" MODIFIED="1708214352643">
+<icon BUILTIN="xmag"/>
+<edge COLOR="#7c007c"/>
+<node TEXT="https://nlp.seas.harvard.edu/annotated-transformer/" ID="ID_1003516424" CREATED="1708214356056" MODIFIED="1708214356975"/>
+<node TEXT="http://jalammar.github.io/illustrated-transformer/" ID="ID_1844924436" CREATED="1708214373055" MODIFIED="1708214373519"/>
 </node>
 </node>
 </map>
