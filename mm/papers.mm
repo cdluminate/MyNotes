@@ -65,8 +65,8 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="268" RULE="ON_BRANCH_CREATION"/>
-<node TEXT="Tactic / Impact" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_896452525" CREATED="1642481777876" MODIFIED="1688777454204">
+<hook NAME="AutomaticEdgeColor" COUNTER="274" RULE="ON_BRANCH_CREATION"/>
+<node TEXT="Tactic / Impact" LOCALIZED_STYLE_REF="styles.topic" POSITION="top_or_left" ID="ID_896452525" CREATED="1642481777876" MODIFIED="1688777454204">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ff00"/>
 <font NAME="Gentium"/>
@@ -102,7 +102,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Defense" LOCALIZED_STYLE_REF="default" ID="ID_838159228" CREATED="1643131959198" MODIFIED="1688777454215">
+<node TEXT="Defense / AI Security" LOCALIZED_STYLE_REF="default" ID="ID_838159228" CREATED="1643131959198" MODIFIED="1712166695267">
 <icon BUILTIN="info"/>
 <font NAME="Gentium"/>
 <node TEXT="" ID="ID_199043642" CREATED="1643131995068" MODIFIED="1643131995068">
@@ -151,6 +151,15 @@
 <font NAME="Gentium"/>
 </node>
 </node>
+<node TEXT="Federated Learning" ID="ID_1896944480" CREATED="1712166686067" MODIFIED="1712166689773">
+<node TEXT="vulnerable to poisoning attackers" ID="ID_778033664" CREATED="1712166711086" MODIFIED="1712166728779"/>
+</node>
+<node TEXT="LLM Security" ID="ID_1379179029" CREATED="1712166305456" MODIFIED="1712166308648">
+<node TEXT="Long context window makes jailbreaking easier." ID="ID_1571329752" CREATED="1712166309010" MODIFIED="1712166331560">
+<node TEXT="学而不思则罔，思而不学则怠。" ID="ID_1189325459" CREATED="1712166336619" MODIFIED="1712166372725"/>
+<node TEXT="the language model probably lacks a casual structure inside, and hence can only mimic or even literally recall what it has learned." ID="ID_754752621" CREATED="1712166381265" MODIFIED="1712166417704"/>
+</node>
+</node>
 <node TEXT="but this field seems stalled. super difficult to really gain stronger robustness?" ID="ID_130483192" CREATED="1676227636878" MODIFIED="1688777454221">
 <icon BUILTIN="attach"/>
 <font NAME="Gentium"/>
@@ -160,6 +169,11 @@
 <node TEXT="certified defense is not used for imagenet" ID="ID_749439492" CREATED="1676227746004" MODIFIED="1688777454222">
 <font NAME="Gentium"/>
 </node>
+</node>
+<node TEXT="What is the ultimate goal of defense? A robust representation." ID="ID_1582064477" CREATED="1712166733272" MODIFIED="1712166748196">
+<icon BUILTIN="help"/>
+<node TEXT="Is scaling the final answer towards that goal?" ID="ID_1639958687" CREATED="1712166752698" MODIFIED="1712166763472"/>
+<node TEXT="how important is regularization under the context of scaling? adversarial training can be seen as a kind of regularization" ID="ID_656098265" CREATED="1712166776729" MODIFIED="1712166815258"/>
 </node>
 </node>
 <node TEXT="Self Supervised Learning" ID="ID_750923691" CREATED="1676253512156" MODIFIED="1688777454223">
@@ -364,12 +378,9 @@
 </node>
 </node>
 </node>
+<node TEXT="Debias or prevent memorization for generative model" ID="ID_141696794" CREATED="1711549330665" MODIFIED="1711549341886"/>
 </node>
-<node TEXT="---------------------------" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1134167122" CREATED="1675049435899" MODIFIED="1705954873283">
-<edge COLOR="#ff00ff"/>
-<font NAME="Gentium"/>
-</node>
-<node TEXT="Arch :: CNN + MLP" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1812694672" CREATED="1708214946737" MODIFIED="1708214960719">
+<node TEXT="Arch &amp; Foundation" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1812694672" CREATED="1708214946737" MODIFIED="1711549195379">
 <edge COLOR="#0000ff"/>
 <node TEXT="+Theory" ID="ID_617737604" CREATED="1686948490676" MODIFIED="1686948495312">
 <node TEXT="Lottery (winning ticket hypothesis) ICLR best paper" ID="ID_1215319316" CREATED="1683727020380" MODIFIED="1686948498016"/>
@@ -401,9 +412,7 @@
 </node>
 </node>
 </node>
-</node>
-<node TEXT="Arch :: Transformer" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1777592446" CREATED="1708214988715" MODIFIED="1708214995198">
-<edge COLOR="#00ff00"/>
+<node TEXT="Transformer" ID="ID_1142286230" CREATED="1711549203388" MODIFIED="1711549205011">
 <node TEXT="ViT: an image is wirth 16x16 words: transformers for image recodnition at scale" ID="ID_1389312371" CREATED="1686331154861" MODIFIED="1686332530498">
 <icon BUILTIN="bookmark"/>
 <icon BUILTIN="checked"/>
@@ -424,10 +433,8 @@
 <node TEXT="nvidia" ID="ID_232813480" CREATED="1686954608158" MODIFIED="1686954609050"/>
 </node>
 </node>
-<node TEXT="Arch ::  Mamba" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_870462315" CREATED="1708212103950" MODIFIED="1708212117044">
-<edge COLOR="#0000ff"/>
-<node TEXT="Sequential" ID="ID_186896512" CREATED="1708212124800" MODIFIED="1708212136940"/>
-<node TEXT="Vision" ID="ID_714705228" CREATED="1708212111481" MODIFIED="1708212138589">
+<node TEXT="Mamba" ID="ID_714705228" CREATED="1708212111481" MODIFIED="1711549078749">
+<node TEXT="Mamba" ID="ID_1217837721" CREATED="1711549080992" MODIFIED="1711549082829"/>
 <node TEXT="Vision mamba: efficient visual representating learning with bidirectional state space model" ID="ID_1104755304" CREATED="1708212138763" MODIFIED="1708212153083">
 <icon BUILTIN="pencil"/>
 <node TEXT="~3x faster and saves ~90% GPU memory compared to DeiT" ID="ID_1603374162" CREATED="1708212169892" MODIFIED="1708212190662"/>
@@ -436,9 +443,11 @@
 <icon BUILTIN="pencil"/>
 </node>
 </node>
-</node>
-<node TEXT="------------------------------" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1303659810" CREATED="1708215028127" MODIFIED="1708215033406">
-<edge COLOR="#ff00ff"/>
+<node TEXT="RWKV" ID="ID_1610790947" CREATED="1711549095402" MODIFIED="1711549101027"/>
+<node TEXT="Retnet (MSRA)" ID="ID_778035138" CREATED="1711549102077" MODIFIED="1711549108360"/>
+<node TEXT="Mega (META)" ID="ID_1650103273" CREATED="1711549108594" MODIFIED="1711549116957"/>
+<node TEXT="Hawk (Deepmind)" ID="ID_1515121364" CREATED="1711549117237" MODIFIED="1711549123538"/>
+<node TEXT="Griffin (Deepmind)" ID="ID_7709505" CREATED="1711549123951" MODIFIED="1711549127860"/>
 </node>
 <node TEXT="Language :: LLM" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_771058532" CREATED="1708213014950" MODIFIED="1708215334182">
 <edge COLOR="#00007c"/>
@@ -899,6 +908,14 @@
 <node TEXT="CVPR21" ID="ID_94762381" CREATED="1688786602452" MODIFIED="1688786603547"/>
 </node>
 </node>
+<node TEXT="SSL :: JEPA" ID="ID_1401053144" CREATED="1711548859804" MODIFIED="1711548863492">
+<node TEXT="I-JEPA" ID="ID_466917405" CREATED="1711548863736" MODIFIED="1711548871289">
+<node TEXT="Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture" ID="ID_619863030" CREATED="1711548871471" MODIFIED="1711548872280"/>
+</node>
+<node TEXT="V-JEPA" ID="ID_769271930" CREATED="1711548873518" MODIFIED="1711548875213">
+<node TEXT="Revisiting Feature Prediction for Learning Visual Representations from Video" ID="ID_501465323" CREATED="1711548875522" MODIFIED="1711548893000"/>
+</node>
+</node>
 <node TEXT="Foundation Models" ID="ID_1024777438" CREATED="1686939023872" MODIFIED="1686939026511">
 <node TEXT="SAM" ID="ID_272647120" CREATED="1686353874379" MODIFIED="1686353876261">
 <node TEXT="segment anything" ID="ID_975480133" CREATED="1686353879160" MODIFIED="1686353883690">
@@ -933,7 +950,6 @@
 <icon BUILTIN="pencil"/>
 </node>
 </node>
-<node TEXT="Rank :: LoRA" ID="ID_899348349" CREATED="1687542279139" MODIFIED="1687542284684"/>
 <node TEXT="Prompt :: Vision" ID="ID_783422550" CREATED="1676563804923" MODIFIED="1676563808059">
 <node TEXT="Exploring Visual Prompts for Adapting Large-Scale Models" ID="ID_153991492" CREATED="1675367088251" MODIFIED="1675367208771">
 <icon BUILTIN="bookmark"/>
@@ -980,6 +996,17 @@
 <node TEXT="vision+language" ID="ID_1842585478" CREATED="1676768347305" MODIFIED="1676768349809"/>
 <node TEXT="beats fine-tuning" ID="ID_534783510" CREATED="1676768338126" MODIFIED="1676768342609"/>
 <node TEXT="introduces UniAdapter for encoder, query, and decoder." ID="ID_1034684149" CREATED="1676769384401" MODIFIED="1676769401799"/>
+</node>
+</node>
+<node TEXT="LoRA :: Generative" ID="ID_899348349" CREATED="1687542279139" MODIFIED="1712168110439"/>
+<node TEXT="SVD :: Generative" ID="ID_456111001" CREATED="1712168080661" MODIFIED="1712168085705">
+<node TEXT="SVDiff (ICCV23)" ID="ID_1515469235" CREATED="1712168112909" MODIFIED="1712168118632">
+<node TEXT="Nowadays the models go larger and larger, posing great limitations on downstream adoption due to the resource requirements of large base models. Instead, the research community has to turn to parameter subspace optimization to move forward." ID="ID_986036623" CREATED="1712168127461" MODIFIED="1712168215854">
+<icon BUILTIN="info"/>
+</node>
+<node TEXT="Is it possible to reduce that requirement at the first place of training the original base model? If base model training is dominated by research groups of deep pocket, the root of the research track is controlled by capitals." ID="ID_1940051329" CREATED="1712168219681" MODIFIED="1712168286055">
+<icon BUILTIN="info"/>
+</node>
 </node>
 </node>
 <node TEXT="+ Robustness" ID="ID_1371149928" CREATED="1686350672593" MODIFIED="1686350675342">
@@ -1813,7 +1840,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Transformer.Architecture" FOLDED="true" ID="ID_1624253019" CREATED="1642438779008" MODIFIED="1676256210619">
+<node TEXT="Transformer.Architecture" ID="ID_1624253019" CREATED="1642438779008" MODIFIED="1676256210619">
 <font BOLD="true"/>
 <node TEXT="Attention Mechanism" ID="ID_813294848" CREATED="1618848447541" MODIFIED="1645045062292">
 <icon BUILTIN="info"/>
@@ -3893,6 +3920,62 @@
 <node TEXT="Metric" ID="ID_1946124686" CREATED="1705615692519" MODIFIED="1705615696780">
 <icon BUILTIN="xmag"/>
 <node TEXT="VIEScore: Towards Explainable Metrics for Conditional Image Synthesis Evaluation" ID="ID_230261560" CREATED="1705615693897" MODIFIED="1705615694922"/>
+</node>
+</node>
+<node TEXT="Image Generation" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_113560878" CREATED="1712170551651" MODIFIED="1712170559546">
+<edge COLOR="#007c7c"/>
+<node TEXT="Alignment" ID="ID_742727465" CREATED="1712170563724" MODIFIED="1712170566039">
+<node TEXT="Image generators are not always generating pleasing details. Is scaling capable of solving those kinds of issues? Or it needs an internal causual structure?" ID="ID_1186163358" CREATED="1712170600506" MODIFIED="1712170645601">
+<icon BUILTIN="info"/>
+</node>
+<node TEXT="human preference score: better aligning text-to-image models with human preference" ID="ID_1813097902" CREATED="1712170567385" MODIFIED="1712170579750">
+<node TEXT="ICCV23" ID="ID_541575908" CREATED="1712170580466" MODIFIED="1712170581923"/>
+<node TEXT="RLHF in diffusion?" ID="ID_613068191" CREATED="1712170582084" MODIFIED="1712170592080"/>
+</node>
+</node>
+</node>
+<node TEXT="Unsupervised Data Clustering" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1630411018" CREATED="1712169418907" MODIFIED="1712169427165">
+<edge COLOR="#00007c"/>
+<node TEXT="Image Concept Discoverty" ID="ID_333268169" CREATED="1712169431908" MODIFIED="1712169436963">
+<node TEXT="unsupervised compositional concepts discovery with text-to-image generative models" ID="ID_1453985342" CREATED="1712169437130" MODIFIED="1712169449631">
+<node TEXT="ICCV23" ID="ID_1177402373" CREATED="1712169450391" MODIFIED="1712169451517"/>
+</node>
+</node>
+</node>
+<node TEXT="Cost and Efficiency" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1465862758" CREATED="1712169695554" MODIFIED="1712169702062">
+<edge COLOR="#007c00"/>
+<node TEXT="The parameter efficient fine-tuning (PEFT) methods emerged under the context where the training cost has clearly surpassed the capability of the majority of the research community" ID="ID_5864139" CREATED="1712169722240" MODIFIED="1712169760288">
+<icon BUILTIN="info"/>
+</node>
+<node TEXT="LoRA Family" ID="ID_225239222" CREATED="1712169711330" MODIFIED="1712169715719"/>
+<node TEXT="Adapter Family" ID="ID_1769304013" CREATED="1712169716298" MODIFIED="1712169766277">
+<node TEXT="ProbVLM: probabilistic adapter for frozen vision-language models" ID="ID_1024351970" CREATED="1712169784625" MODIFIED="1712169802072">
+<node TEXT="ICCV23" ID="ID_963613011" CREATED="1712169802655" MODIFIED="1712169803871"/>
+</node>
+</node>
+<node TEXT="Prompting Family" ID="ID_1899147606" CREATED="1712169720935" MODIFIED="1712169770917"/>
+</node>
+<node TEXT="Bias and Distribution Mismatch" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_546014079" CREATED="1712168804428" MODIFIED="1712168817749">
+<edge COLOR="#00ffff"/>
+<node TEXT="Classification (1st order)" ID="ID_458401534" CREATED="1712169309227" MODIFIED="1712169329045">
+<node TEXT="partition-and-debias: agnostic biases mitigation via a maixture of biases-specirfic experts" ID="ID_1874117012" CREATED="1712169337876" MODIFIED="1712169355581">
+<node TEXT="ICCV23" ID="ID_1843768939" CREATED="1712169358261" MODIFIED="1712169359780"/>
+</node>
+</node>
+<node TEXT="Detection (2nd order)" ID="ID_1665670719" CREATED="1712169316172" MODIFIED="1712169322580">
+<node TEXT="CaliDet" ID="ID_1605502608" CREATED="1712169306495" MODIFIED="1712169308584"/>
+<node TEXT="unsupervised domain adaptive detection with network stability analysis" ID="ID_1795417609" CREATED="1712170228231" MODIFIED="1712170240491">
+<node TEXT="ICCV23" ID="ID_1224453421" CREATED="1712170241085" MODIFIED="1712170242197"/>
+</node>
+</node>
+</node>
+<node TEXT="Causality Structure" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1488829321" CREATED="1712169905563" MODIFIED="1712169914153">
+<edge COLOR="#7c007c"/>
+<node TEXT="This is what the current large models lack." ID="ID_1927985318" CREATED="1712170104375" MODIFIED="1712170118735">
+<icon BUILTIN="info"/>
+</node>
+<node TEXT="Mimicing" ID="ID_1609724390" CREATED="1712170120980" MODIFIED="1712170124178">
+<node TEXT="unify, align and refine: multi-level semantic alignment for radiology report generation" ID="ID_1323130111" CREATED="1712170126365" MODIFIED="1712170140982"/>
 </node>
 </node>
 <node TEXT="Self-Supervised Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_714759247" CREATED="1650825914367" MODIFIED="1688777454249">
