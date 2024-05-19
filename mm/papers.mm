@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="274" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="275" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Tactic / Impact" LOCALIZED_STYLE_REF="styles.topic" POSITION="top_or_left" ID="ID_896452525" CREATED="1642481777876" MODIFIED="1688777454204">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ff00"/>
@@ -1918,11 +1918,6 @@
 <icon BUILTIN="pencil"/>
 <node TEXT="madry" ID="ID_1287702798" CREATED="1680653378538" MODIFIED="1680653380187"/>
 <node TEXT="synthesize counterfactual examples using text-to-image diffusion model" ID="ID_1750461263" CREATED="1680653380473" MODIFIED="1680653403514"/>
-</node>
-</node>
-<node TEXT="Capsule Net" ID="ID_1659335587" CREATED="1645045179791" MODIFIED="1645045184178">
-<node TEXT="quantum capsule networks" ID="ID_1165020573" CREATED="1641523224758" MODIFIED="1641523259186">
-<icon BUILTIN="pencil"/>
 </node>
 </node>
 <node TEXT="Loss Function" FOLDED="true" ID="ID_1059926176" CREATED="1642438781602" MODIFIED="1642438785478">
@@ -3922,6 +3917,15 @@
 <node TEXT="VIEScore: Towards Explainable Metrics for Conditional Image Synthesis Evaluation" ID="ID_230261560" CREATED="1705615693897" MODIFIED="1705615694922"/>
 </node>
 </node>
+<node TEXT="Similarity Metrics" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_717187548" CREATED="1712172449510" MODIFIED="1712173100742">
+<edge COLOR="#7c7c00"/>
+<node TEXT="Deep metric learning" ID="ID_587942978" CREATED="1712173103276" MODIFIED="1712173106150"/>
+<node TEXT="Open Set Face Recognition" ID="ID_1593557887" CREATED="1712172500044" MODIFIED="1712172507639">
+<node TEXT="Pairwise similarity learning is simple" ID="ID_38505444" CREATED="1712172507933" MODIFIED="1712172516153">
+<node TEXT="ICCV23" ID="ID_1771679432" CREATED="1712172516156" MODIFIED="1712172518438"/>
+</node>
+</node>
+</node>
 <node TEXT="Image Generation" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_113560878" CREATED="1712170551651" MODIFIED="1712170559546">
 <edge COLOR="#007c7c"/>
 <node TEXT="Alignment" ID="ID_742727465" CREATED="1712170563724" MODIFIED="1712170566039">
@@ -3942,12 +3946,17 @@
 </node>
 </node>
 </node>
-<node TEXT="Cost and Efficiency" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1465862758" CREATED="1712169695554" MODIFIED="1712169702062">
+<node TEXT="Large Model Cost and Efficiency" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1465862758" CREATED="1712169695554" MODIFIED="1712173078947">
 <edge COLOR="#007c00"/>
 <node TEXT="The parameter efficient fine-tuning (PEFT) methods emerged under the context where the training cost has clearly surpassed the capability of the majority of the research community" ID="ID_5864139" CREATED="1712169722240" MODIFIED="1712169760288">
 <icon BUILTIN="info"/>
 </node>
-<node TEXT="LoRA Family" ID="ID_225239222" CREATED="1712169711330" MODIFIED="1712169715719"/>
+<node TEXT="LoRA Family" ID="ID_225239222" CREATED="1712169711330" MODIFIED="1712169715719">
+<node TEXT="LoRA" ID="ID_1815257660" CREATED="1712171270789" MODIFIED="1712171273464"/>
+<node TEXT="SVDiff" ID="ID_1002422776" CREATED="1712171273632" MODIFIED="1712171275547"/>
+<node TEXT="QLora" ID="ID_627715808" CREATED="1712171282699" MODIFIED="1712171284700"/>
+<node TEXT="NeFT" ID="ID_1702720030" CREATED="1712171275785" MODIFIED="1712171277424"/>
+</node>
 <node TEXT="Adapter Family" ID="ID_1769304013" CREATED="1712169716298" MODIFIED="1712169766277">
 <node TEXT="ProbVLM: probabilistic adapter for frozen vision-language models" ID="ID_1024351970" CREATED="1712169784625" MODIFIED="1712169802072">
 <node TEXT="ICCV23" ID="ID_963613011" CREATED="1712169802655" MODIFIED="1712169803871"/>
@@ -3973,9 +3982,15 @@
 <edge COLOR="#7c007c"/>
 <node TEXT="This is what the current large models lack." ID="ID_1927985318" CREATED="1712170104375" MODIFIED="1712170118735">
 <icon BUILTIN="info"/>
+<node TEXT="Does casality structure help the LLMs reduce alignment issues, such as jailbreaking attacks (through manipulating the context)?" ID="ID_1057742189" CREATED="1712205700644" MODIFIED="1712205726664"/>
 </node>
 <node TEXT="Mimicing" ID="ID_1609724390" CREATED="1712170120980" MODIFIED="1712170124178">
 <node TEXT="unify, align and refine: multi-level semantic alignment for radiology report generation" ID="ID_1323130111" CREATED="1712170126365" MODIFIED="1712170140982"/>
+</node>
+<node TEXT="Real?" ID="ID_1764925013" CREATED="1712171331285" MODIFIED="1712171333844">
+<node TEXT="e.g. chatgpt4 is bad at generating sensible diagrams or demonstrations with logical structure. It cannot show how to apply gauze to knee." ID="ID_1399467688" CREATED="1712171334066" MODIFIED="1712171499977">
+<icon BUILTIN="info"/>
+</node>
 </node>
 </node>
 <node TEXT="Self-Supervised Learning" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="top_or_left" ID="ID_714759247" CREATED="1650825914367" MODIFIED="1688777454249">
