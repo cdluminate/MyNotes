@@ -65,7 +65,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="275" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="277" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="Tactic / Impact" LOCALIZED_STYLE_REF="styles.topic" POSITION="top_or_left" ID="ID_896452525" CREATED="1642481777876" MODIFIED="1688777454204">
 <icon BUILTIN="info"/>
 <edge COLOR="#00ff00"/>
@@ -184,7 +184,64 @@
 <icon BUILTIN="bell"/>
 </node>
 </node>
-<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1688777454223">
+<node TEXT="Trend" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_868804619" CREATED="1720376106940" MODIFIED="1720376135951">
+<icon BUILTIN="emoji-1F9ED"/>
+<edge COLOR="#0000ff"/>
+<node TEXT="Low-level vision" ID="ID_1041475114" CREATED="1720377305173" MODIFIED="1720377308120"/>
+<node TEXT="Architecture Search" ID="ID_1809741388" CREATED="1720377456230" MODIFIED="1720377460485">
+<node TEXT="transformer acceleration" ID="ID_1480185935" CREATED="1720377460731" MODIFIED="1720377467064">
+<node TEXT="Mamba or RWKV: Exploring High-Quality and High-Efficiency Segment Anything Model" ID="ID_1000875336" CREATED="1720377480549" MODIFIED="1720377795865">
+<icon BUILTIN="pencil"/>
+<node TEXT="https://arxiv.org/abs/2406.19369" ID="ID_1658594162" CREATED="1720377467288" MODIFIED="1720377468392"/>
+</node>
+</node>
+</node>
+<node TEXT="Image Classification" ID="ID_216968173" CREATED="1720377190397" MODIFIED="1720377194319"/>
+<node TEXT="Object Detection" ID="ID_1953194814" CREATED="1720377194509" MODIFIED="1720377197999"/>
+<node TEXT="Segmentation" ID="ID_548047704" CREATED="1720377198182" MODIFIED="1720377204671">
+<node TEXT="trend" ID="ID_1694111380" CREATED="1720377205015" MODIFIED="1720377207436">
+<node TEXT="unsupervised" ID="ID_1806983356" CREATED="1720377207556" MODIFIED="1720377209989">
+<node TEXT="Segment Anything without Supervision" ID="ID_345457633" CREATED="1720377210241" MODIFIED="1720377798419">
+<icon BUILTIN="pencil"/>
+<node TEXT="arXiv:2406.20081" ID="ID_390949396" CREATED="1720377231584" MODIFIED="1720377234053"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Sketch based image retrieval (SBIR)" ID="ID_1590648292" CREATED="1720376145206" MODIFIED="1720376283380">
+<node TEXT="use case: match a photo in an album" ID="ID_1360034506" CREATED="1720376283520" MODIFIED="1720376293208"/>
+<node TEXT="impact: ?" ID="ID_612011501" CREATED="1720376300769" MODIFIED="1720376370507">
+<node TEXT="If realistic photo is not required, we can use generative models to obtain the photo. Generative models are not restricted by the limited amount of SBIR data." ID="ID_1757735761" CREATED="1720376306087" MODIFIED="1720376370656"/>
+<node TEXT="If realistic photo is required, this is the typical image document retrieval task" ID="ID_100408547" CREATED="1720376368255" MODIFIED="1720376430743"/>
+</node>
+</node>
+<node TEXT="Adversarial attack" ID="ID_1062099552" CREATED="1720376588180" MODIFIED="1720376592523">
+<node TEXT="use case: evaluate vulnerability" ID="ID_1524928769" CREATED="1720376769374" MODIFIED="1720376780098"/>
+<node TEXT="impact: ?" ID="ID_1516675728" CREATED="1720376780631" MODIFIED="1720376783697">
+<node TEXT="attack is easy, while defense is difficult" ID="ID_583715577" CREATED="1720376783898" MODIFIED="1720376793824"/>
+<node TEXT="being able to efficiently and effectively attack is good for identifying the vulnerability of models" ID="ID_1710125484" CREATED="1720376795035" MODIFIED="1720376820079"/>
+<node TEXT="the final goal of attack is defense" ID="ID_517819477" CREATED="1720376820562" MODIFIED="1720376826505"/>
+</node>
+<node TEXT="trend" ID="ID_79925303" CREATED="1720376834041" MODIFIED="1720376836571">
+<node TEXT="attack is already saturated except for new domains like LLM and MLLM. Stop attacking image classification." ID="ID_1908496929" CREATED="1720376836751" MODIFIED="1720376913225"/>
+<node TEXT="Jailbreak is the trend. But still, the goal of attack is to better understand the vulnerability of models" ID="ID_836907817" CREATED="1720376882319" MODIFIED="1720376950390"/>
+</node>
+</node>
+<node TEXT="Adversarial defense" ID="ID_708371028" CREATED="1720376592751" MODIFIED="1720376596160"/>
+<node TEXT="Text to image Synthesis (T2I)" ID="ID_1073423274" CREATED="1720377766476" MODIFIED="1720377774428">
+<node TEXT="trend" ID="ID_1512341431" CREATED="1720377774649" MODIFIED="1720377777415">
+<node TEXT="controllable generation is preferred for applications" ID="ID_1991707023" CREATED="1720377778653" MODIFIED="1720377787737">
+<node TEXT="AnyControl: Create Your Artwork with Versatile Control on Text-to-Image Generation" ID="ID_602246201" CREATED="1720377788038" MODIFIED="1720377793349">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Domain Shifts" ID="ID_290388850" CREATED="1720377507274" MODIFIED="1720377509344">
+<node TEXT="Test time adaptation" ID="ID_1839295943" CREATED="1720377512605" MODIFIED="1720377515720"/>
+</node>
+</node>
+<node TEXT="Spark" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1285482817" CREATED="1675042076690" MODIFIED="1688777454223">
 <icon BUILTIN="bookmark"/>
 <edge COLOR="#7c0000"/>
 <font NAME="Gentium"/>
@@ -346,7 +403,10 @@
 <node TEXT="can grad cam be added for defense?" ID="ID_919968303" CREATED="1676582470067" MODIFIED="1676582476306"/>
 </node>
 </node>
-<node TEXT="RobMOE" FOLDED="true" ID="ID_1459543097" CREATED="1708096059525" MODIFIED="1708096119562">
+<node TEXT="RobMOE" ID="ID_1459543097" CREATED="1708096059525" MODIFIED="1708096119562">
+<node TEXT="Heterogeneous Mixture of Expert" ID="ID_380162293" CREATED="1720375997492" MODIFIED="1720376002505">
+<font BOLD="true"/>
+</node>
 <node TEXT="task variance defense: cls + det + segment + CLIP + VLM, etc." ID="ID_1747694451" CREATED="1708096063689" MODIFIED="1708096065031"/>
 <node TEXT="orthogonal task -- the attack conflicts" ID="ID_1813092159" CREATED="1708096066792" MODIFIED="1708096072659"/>
 <node TEXT="weakness of attack: multi-tasking" ID="ID_1996625400" CREATED="1708096077673" MODIFIED="1708096078156"/>
@@ -357,6 +417,9 @@
 <node TEXT="does this really make sense?" ID="ID_1038194181" CREATED="1708210369078" MODIFIED="1708210376463">
 <icon BUILTIN="help"/>
 </node>
+<node TEXT="attacks is not universal among tasks. attacking every different task requires a redesign of at least the optimization objective" ID="ID_1642971602" CREATED="1720375863381" MODIFIED="1720375864130"/>
+<node TEXT="That means the expected efficacy of e.g., classification adversarial example is at least sub-optimal on CLIP, SAM, OD, etc" ID="ID_45725586" CREATED="1720375870312" MODIFIED="1720375870941"/>
+<node TEXT="This is unfortunate for the attacker. however, as a defender, we can leverage this for free adversarial robustness" ID="ID_1345795526" CREATED="1720375876491" MODIFIED="1720375879310"/>
 </node>
 <node TEXT="Cali: first-order prior" FOLDED="true" ID="ID_500998670" CREATED="1708096259615" MODIFIED="1708096272914">
 <node TEXT="Classififier" ID="ID_683441044" CREATED="1708096294826" MODIFIED="1708096298834"/>
@@ -379,6 +442,16 @@
 </node>
 </node>
 <node TEXT="Debias or prevent memorization for generative model" ID="ID_141696794" CREATED="1711549330665" MODIFIED="1711549341886"/>
+<node TEXT="LLM + T2I" ID="ID_628167070" CREATED="1720375808671" MODIFIED="1720375812144">
+<node TEXT="how to apply gauze and bandage to a finger? LDM draws description. we want a model to answer question using picture. this answering paradigm seems missing from literature?" ID="ID_220610576" CREATED="1720375812261" MODIFIED="1720375814677"/>
+<node TEXT="causal and reasoning?" ID="ID_553215112" CREATED="1720375830854" MODIFIED="1720375841098"/>
+</node>
+</node>
+<node TEXT="TODO" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1098695231" CREATED="1720376027781" MODIFIED="1720376036141">
+<icon BUILTIN="emoji-1F4D4"/>
+<edge COLOR="#ff0000"/>
+<node TEXT="minGPT code reading" ID="ID_233470011" CREATED="1720376038722" MODIFIED="1720376048064"/>
+<node TEXT="review annotated transformer" ID="ID_1603677168" CREATED="1720376048316" MODIFIED="1720376055163"/>
 </node>
 <node TEXT="Arch &amp; Foundation" LOCALIZED_STYLE_REF="styles.topic" FOLDED="true" POSITION="bottom_or_right" ID="ID_1812694672" CREATED="1708214946737" MODIFIED="1711549195379">
 <edge COLOR="#0000ff"/>
@@ -3935,14 +4008,6 @@
 <node TEXT="human preference score: better aligning text-to-image models with human preference" ID="ID_1813097902" CREATED="1712170567385" MODIFIED="1712170579750">
 <node TEXT="ICCV23" ID="ID_541575908" CREATED="1712170580466" MODIFIED="1712170581923"/>
 <node TEXT="RLHF in diffusion?" ID="ID_613068191" CREATED="1712170582084" MODIFIED="1712170592080"/>
-</node>
-</node>
-</node>
-<node TEXT="Unsupervised Data Clustering" LOCALIZED_STYLE_REF="styles.topic" POSITION="bottom_or_right" ID="ID_1630411018" CREATED="1712169418907" MODIFIED="1712169427165">
-<edge COLOR="#00007c"/>
-<node TEXT="Image Concept Discoverty" ID="ID_333268169" CREATED="1712169431908" MODIFIED="1712169436963">
-<node TEXT="unsupervised compositional concepts discovery with text-to-image generative models" ID="ID_1453985342" CREATED="1712169437130" MODIFIED="1712169449631">
-<node TEXT="ICCV23" ID="ID_1177402373" CREATED="1712169450391" MODIFIED="1712169451517"/>
 </node>
 </node>
 </node>
