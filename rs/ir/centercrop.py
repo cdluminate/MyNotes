@@ -26,7 +26,7 @@ def center_crop(image, size=(512, 512)):
     right = (w + cropw) / 2
     bottom = (h + croph) / 2
     # do the crop
-    crop = image.crop(left, top, right, bottom)
+    crop = image.crop((left, top, right, bottom))
     return crop
 
 
@@ -75,7 +75,7 @@ if __name__ == '__main__':
     ag.add_argument('--dst', '-d', help='destination directory',
                     type=str, required=True)
     ag.add_argument('--jobs', '-j', help='parallelism', type=int, default=8)
-    ag.add_argument('--size', '-s', help='cropping size',
+    ag.add_argument('--size', help='cropping size',
                     type=int, default=512)
     args = ag.parse_args()
 
