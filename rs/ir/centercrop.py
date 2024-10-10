@@ -1,5 +1,5 @@
 '''
-Upscale images in directory and always save PNG.
+Center-crop images in directory and always save PNG.
 '''
 from PIL import Image
 import glob
@@ -14,21 +14,28 @@ def force_png_extension(text):
     return re.sub(r'\.(jpg|png)$', '.png', text, flags=re.IGNORECASE)
 
 
-def upscale(image, factor: int = 4):
+def center_crop(image, size=(512, 512)):
     '''
-    upscale an image
+    center crop an image
     '''
-    h, w = image.height, image.width
-    img = img.resize((w*factor, h*factor), resample=Image.Resampling.BICUBIC)
-    return img
+    w, h = image.size
+    cropw, croph = size
+    # calculate coordinates for cropping
+    left = (w - cropw) / 2
+    top = (h - croph) / 2
+    right = (w + cropw) / 2
+    bottom = (h + croph) / 2
+    # do the crop
+    crop = image.crop(left, top, right, bottom)
+    return crop
 
 
-def _worker(pack, destdir: str = 'test__', factor: int = 4, total: int = -1):
+def _worker(pack, destdir: str = 'test__', size: int = 512, total: int = -1):
     # unpack the argument tuple
     i, path = pack
     # read image and upscale
     img = Image.open(path).convert('RGB')
-    img = upscale(img, factor)
+    img = center_crop(img, (size, size))
     # figure out dest path and force png extension
     name = os.path.basename(path)
     dest = os.path.join(destdir, name)
@@ -51,7 +58,7 @@ def main(args):
     # do it in parallel
     worker = ft.partial(_worker,
                         destdir=args.dst,
-                        factor=args.factor,
+                        size=args.size,
                         total=len(list_images))
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.jobs) as ex:
         results = ex.map(worker, enumerate(list_images))
@@ -68,8 +75,8 @@ if __name__ == '__main__':
     ag.add_argument('--dst', '-d', help='destination directory',
                     type=str, required=True)
     ag.add_argument('--jobs', '-j', help='parallelism', type=int, default=8)
-    ag.add_argument('--factor', '-f', help='scaling factor',
-                    type=int, default=4)
+    ag.add_argument('--size', '-s', help='cropping size',
+                    type=int, default=512)
     args = ag.parse_args()
 
     main(args)
