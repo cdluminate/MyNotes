@@ -14,12 +14,13 @@ def force_png_extension(text):
     return re.sub(r'\.(jpg|png)$', '.png', text, flags=re.IGNORECASE)
 
 
-def upscale(image, factor: int = 4):
+def upscale(img: Image, factor: float = 4.0):
     '''
     upscale an image
     '''
     h, w = image.height, image.width
-    img = img.resize((w*factor, h*factor), resample=Image.Resampling.BICUBIC)
+    newsize = (int(w*factor), int(h*factor))
+    img = img.resize(newsize, resample=Image.Resampling.BICUBIC)
     return img
 
 
@@ -69,7 +70,7 @@ if __name__ == '__main__':
                     type=str, required=True)
     ag.add_argument('--jobs', '-j', help='parallelism', type=int, default=8)
     ag.add_argument('--factor', '-f', help='scaling factor',
-                    type=int, default=4)
+                    type=float, default=4.0)
     args = ag.parse_args()
 
     main(args)
