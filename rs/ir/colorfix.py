@@ -154,7 +154,12 @@ def main(args):
         # read image and upscale
         img = Image.open(srcpath).convert('RGB')
         refimg = Image.open(refpath).convert('RGB')
-        dest = adain_color_fix(img, refimg)
+        if args.method == 'adain':
+            dest = adain_color_fix(img, refimg)
+        elif args.method == 'wavelet':
+            dest = wavelet_color_fix(img, refimg)
+        else:
+            raise ValueError('Unknown method:', args.method)
         # save and show progress
         dest.save(destpath, format='PNG')
         print(i+1, '/', total, srcpath, '->[adain]->', destpath)
@@ -180,6 +185,8 @@ if __name__ == '__main__':
                     type=str, required=True)
     ag.add_argument('--jobs', '-j', help='parallelism',
                     type=int, default=8)
+    ag.add_argument('--method', help='colorfix method',
+                    type=str, default='adain', choices=['adain', 'wavelet'])
     args = ag.parse_args()
 
     main(args)
