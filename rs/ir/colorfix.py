@@ -6,6 +6,11 @@ import torch
 from PIL import Image
 from torch import Tensor
 from torch.nn import functional as F
+import functools as ft
+import glob
+import argparse
+import os
+import concurrent.futures
 
 from torchvision.transforms import ToTensor, ToPILImage
 
@@ -115,3 +120,66 @@ def wavelet_reconstruction(content_feat:Tensor, style_feat:Tensor):
     del style_high_freq
     # reconstruct the content feature with the style's high frequency
     return content_high_freq + style_low_freq
+
+
+def main(args):
+    # read the list of images from args.src/args.glob
+    list_images = glob.glob(os.path.join(args.src, args.glob))
+    print('#imgs:', len(list_images))
+
+    # check if all reference images are available
+    def _check_image(srcpath, args) -> bool:
+        fname = os.path.basename(srcpath)
+        refpath = os.path.join(args.ref, fname)
+        if not os.path.exists(refpath):
+            print('Reference image not found:', refpath)
+            return False
+        return True
+    with concurrent.futures.ThreadPoolExecutor(max_workers=args.jobs) as ex:
+        results = ex.map(ft.partial(_check_image, args=args), list_images)
+    results = list(results)
+    assert all(results), 'Some reference images are missing'
+
+    # prepare output directory
+    if not os.path.exists(args.dst):
+        os.makedirs(args.dst)
+
+    # colorfix worker function
+    def _worker(pack, args, total: int = -1):
+        # unpack the argument tuple
+        (i, srcpath) = pack
+        fname = os.path.basename(srcpath)
+        refpath = os.path.join(args.ref, fname)
+        destpath = os.path.join(args.dst, fname)
+        # read image and upscale
+        img = Image.open(srcpath).convert('RGB')
+        refimg = Image.open(refpath).convert('RGB')
+        dest = adain_color_fix(img, refimg)
+        # save and show progress
+        dest.save(destpath, format='PNG')
+        print(i+1, '/', total, srcpath, '->[adain]->', destpath)
+        return dest
+
+    # do it in parallel
+    worker = ft.partial(_worker, args=args, total=len(list_images))
+    with concurrent.futures.ThreadPoolExecutor(max_workers=args.jobs) as ex:
+        results = ex.map(worker, enumerate(list_images))
+    results = list(results)
+    print('Finished', len(results))
+
+
+if __name__ == '__main__':
+    ag = argparse.ArgumentParser()
+    ag.add_argument('--src', '-s', help='source directory',
+                    type=str, required=True)
+    ag.add_argument('--ref', '-r', help='reference image',
+                    type=str, required=True)
+    ag.add_argument('--glob', '-g', help='glob pattern',
+                    type=str, default='*.png')
+    ag.add_argument('--dst', '-d', help='destination directory',
+                    type=str, required=True)
+    ag.add_argument('--jobs', '-j', help='parallelism',
+                    type=int, default=8)
+    args = ag.parse_args()
+
+    main(args)
