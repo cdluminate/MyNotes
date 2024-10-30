@@ -32,7 +32,9 @@ if __name__ == '__main__':
 
     # mark crop position
     rect = (args.x, args.y, args.x + args.s, args.y + args.s)
-    draw.rectangle(rect, outline=contrast_color, width=2)
+    draw.rectangle(rect, outline=contrast_color, width=4)
+    #rect1 = (args.x - 1, args.y - 1, args.x + args.s + 1, args.y + args.s + 1)
+    #draw.rectangle(rect1, outline='white', width=1)
 
     # paste crop
     if args.place == 'bl':
@@ -58,9 +60,13 @@ if __name__ == '__main__':
         img.paste(crop, (width - zoomin_size[0], 0))
         # find bounding box
         rect_outline = (width - zoomin_size[0], 0, width, zoomin_size[1])
-        draw.rectangle(rect_outline, outline=contrast_color, width=4)
+        draw.rectangle(rect_outline, outline=contrast_color, width=8)
     else:
         raise NotImplementedError('Place not implemented')
+    
+    # mark the crop with yet another white rectangle
+    rect1 = (rect_outline[0] - 1, rect_outline[1] - 1, rect_outline[2] + 1, rect_outline[3] + 1)
+    draw.rectangle(rect1, outline='white', width=1)
 
     if args.save:
         dirname = os.path.dirname(args.input)
