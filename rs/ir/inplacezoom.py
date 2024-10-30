@@ -14,6 +14,7 @@ if __name__ == '__main__':
 
     # read image
     img = Image.open(args.input)
+    img = img.resize((512, 512), Image.Resampling.BICUBIC)
     draw = ImageDraw.Draw(img)
     width, height = img.size
     print('Original size:', width, height)
@@ -22,6 +23,7 @@ if __name__ == '__main__':
     stat = ImageStat.Stat(img)
     avg_color = tuple(int(c) for c in stat.mean[:3])
     contrast_color = tuple(255 - c for c in avg_color)
+    contrast_color = 'white'  # this still looks best
 
     # make crop
     crop = img.crop((args.x, args.y, args.x + args.s, args.y + args.s))
@@ -65,8 +67,8 @@ if __name__ == '__main__':
         raise NotImplementedError('Place not implemented')
     
     # mark the crop with yet another white rectangle
-    rect1 = (rect_outline[0] - 1, rect_outline[1] - 1, rect_outline[2] + 1, rect_outline[3] + 1)
-    draw.rectangle(rect1, outline='white', width=1)
+    #rect1 = (rect_outline[0] - 1, rect_outline[1] - 1, rect_outline[2] + 1, rect_outline[3] + 1)
+    #draw.rectangle(rect1, outline='white', width=1)
 
     if args.save:
         dirname = os.path.dirname(args.input)
