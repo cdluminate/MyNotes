@@ -45,6 +45,9 @@ def main(args):
             print(path, metric, result)
             if args.dump:
                 print(result, file=open(f'{path}.{metric}', 'wt'))
+        # print the average
+        print(metric, 'average:', sum(results) / len(results))
+
 
 
 if __name__ == '__main__':
