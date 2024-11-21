@@ -20,9 +20,17 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('image', type=str, nargs='+', help='image file')
     parser.add_argument('--device', type=str, default='mps', required=False)
+    parser.add_argument('--ckpt', type=str, default=None, required=False)
     args = parser.parse_args()
 
-    model = V.models.resnet50(pretrained=True)
+    if args.ckpt is not None:
+        model = V.models.resnet50(pretrained=True)
+        print('Loading Default Imagenet Pretrained Model')
+    else:
+        ckpt = th.load(args.ckpt, map_location=args.device)
+        model = V.models.resnet50(pretrained=False)
+        model.load_state_dict(ckpt)
+        print('Loading Checkpoint', args.ckpt)
     model.fc = th.nn.Identity()
     model.eval()
     model = model.to(args.device)
