@@ -21,9 +21,10 @@ if __name__ == '__main__':
     parser.add_argument('image', type=str, nargs='+', help='image file')
     parser.add_argument('--device', type=str, default='mps', required=False)
     parser.add_argument('--ckpt', type=str, default=None, required=False)
+    parser.add_argument('--suffix', type=str, default='.res50.npz', required=False)
     args = parser.parse_args()
 
-    if args.ckpt is not None:
+    if args.ckpt is None:
         model = V.models.resnet50(pretrained=True)
         print('Loading Default Imagenet Pretrained Model')
     else:
@@ -43,6 +44,6 @@ if __name__ == '__main__':
             feat = model(img)
         feat = feat.view(-1)
 
-        dest = img_path + '.res50.npz'
+        dest = img_path + args.suffix
         np.savez(dest, feat=feat.cpu().numpy())
         print(img_path, feat.shape, '->', dest)
