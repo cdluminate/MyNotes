@@ -1203,6 +1203,23 @@ Other Degradations:
 
 \end_layout
 
+\begin_layout Frame
+Defocus Deblurring Using Dual-Pixel Data,
+ ECCV,
+ 2020
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename pasted14.png
+	lyxscale 20
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -1431,7 +1448,7 @@ Motion Blur
 \begin_layout Plain Layout
 
 \size scriptsize
-ISO (camera CCD)
+ISO (camera CMOS)
 \end_layout
 
 \end_inset
@@ -1814,6 +1831,33 @@ Image Source:
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+It Seems That
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+As long as you have a (LQ,
+ HQ) paired image dataset for the task,
+ you can modify LDM into a corresponding image restoration model,
+ as a naive baseline.
 \end_layout
 
 \begin_layout Standard
