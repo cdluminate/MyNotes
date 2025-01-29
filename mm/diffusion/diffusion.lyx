@@ -101,6 +101,10 @@ Mo Zhou
 \end_inset
 
 Johns Hopkins University
+\begin_inset Newline newline
+\end_inset
+
+(VIU Lab Seminar)
 \end_layout
 
 \begin_layout Section
@@ -133,7 +137,8 @@ Key:
 
 \end_deeper
 \begin_layout Itemize
-Controllability of Diffusion Process (ControlNet)
+Controllability of Diffusion Process (ControlNet,
+ InstructPix2Pix)
 \end_layout
 
 \begin_deeper
@@ -203,7 +208,32 @@ Key:
 status open
 
 \begin_layout Plain Layout
-Diffusion Backbone (Text-to-Image Synthesis)
+Section I:
+ Diffusion Backbone
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Latent Diffusion Model is widely studied and adopted.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Diffusion Backbone for Text-to-Image Synthesis (1/)
 \end_layout
 
 \end_inset
@@ -213,9 +243,427 @@ Diffusion Backbone (Text-to-Image Synthesis)
 
 \begin_deeper
 \begin_layout FrameSubtitle
-asdfsad
+High-Resolution Image Synthesis with Latent Diffusion Models,
+ CVPR,
+ 2022
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted1.png
+	lyxscale 20
+	special width=\linewidth
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Diffusion Backbone for Text-to-Image Synthesis (2/)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+High-Resolution Image Synthesis with Latent Diffusion Models,
+ CVPR,
+ 2022
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Unconditional Generation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+Encoder 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+ turns an image 
+\begin_inset Formula $x\in\mathbb{R}^{H\times W\times3}$
+\end_inset
+
+ into a latent representation 
+\begin_inset Formula $z=\mathcal{E}(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Block
+\begin_inset Formula 
+\[
+L_{\text{LDM}}\triangleq\mathbb{E}_{\mathcal{E}(x),\epsilon\sim\mathcal{N}(0,1),t}\Big[\|\epsilon-\epsilon_{\theta}(z_{t},t)\|_{2}^{2}\Big]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consider dealing with an 
+\begin_inset Formula $512\times512$
+\end_inset
+
+ image.
+\end_layout
+
+\begin_layout Itemize
+Scaling factor 
+\begin_inset Formula $f=4$
+\end_inset
+
+,
+ latent 
+\begin_inset Formula $128\times128$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Scaling factor 
+\begin_inset Formula $f=8$
+\end_inset
+
+,
+ latent 
+\begin_inset Formula $64\times64$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Scaling factor 
+\begin_inset Formula $f=16$
+\end_inset
+
+,
+ latent 
+\begin_inset Formula $32\times32$
+\end_inset
+
+ (Very challenging for VAE)
+\end_layout
+
+\begin_layout Standard
+Diffusion in the latent space is less resource-demanding.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Diffusion Backbone for Text-to-Image Synthesis (3/)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+High-Resolution Image Synthesis with Latent Diffusion Models,
+ CVPR,
+ 2022
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Incorporating Condition through Cross-Attention
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Let 
+\begin_inset Formula $y$
+\end_inset
+
+ be the condition we want to introduce,
+ such as language.
+\end_layout
+
+\begin_layout Itemize
+Let 
+\begin_inset Formula $\tau_{\theta}$
+\end_inset
+
+ be a domain-specific encoder,
+ so that 
+\begin_inset Formula $\tau_{\theta}(y)\in\mathbb{R}^{M\times d_{\tau}}$
+\end_inset
+
+ (sequence)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Q=W_{Q}^{(i)}\cdot{\color{blue}\varphi_{i}(z_{t})}$
+\end_inset
+
+,
+ where 
+\begin_inset Formula $\varphi_{i}(z_{t})\in\mathbb{R}^{N\times d_{\epsilon}^{i}}$
+\end_inset
+
+ is a flattened intermediate representation of UNet.
+ 
+\begin_inset Formula $W_{Q}^{(i)}\in\mathbb{R}^{d\times d_{\tau}}$
+\end_inset
+
+ is learnable projection matrix.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $K=W_{K}^{(i)}\cdot{\color{red}\tau_{\theta}(y)}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $V=W_{V}^{(i)}\cdot{\color{red}\tau_{\theta}(y)}$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $W_{V}^{(i)}\in\mathbb{R}^{d\times d_{\epsilon}^{i}}$
+\end_inset
+
+ and 
+\begin_inset Formula $W_{K}^{(i)}\in\mathbb{R}^{d\times d_{\tau}}$
+\end_inset
+
+ are learnable projection matrices.
+\end_layout
+
+\begin_layout Itemize
+Cross-attention:
+ 
+\begin_inset Formula $\text{Attention}(Q,K,V)=\text{softmax}\Big(\frac{QK^{T}}{\sqrt{d}}\Big)\cdot V$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Conditional Generation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Formula 
+\[
+L_{\text{LDM}}\triangleq\mathbb{E}_{\mathcal{E}(x),{\color{red}y},\epsilon\sim\mathcal{N}(0,1),t}\Big[\|\epsilon-\epsilon_{\theta}(z_{t},t,{\color{red}\tau_{\theta}(y)})\|_{2}^{2}\Big]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Diffusion Backbone for Text-to-Image Synthesis (4/)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+High-Resolution Image Synthesis with Latent Diffusion Models,
+ CVPR,
+ 2022
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted2.png
+	lyxscale 20
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Diffusion Backbone for Text-to-Image Synthesis (4/)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+High-Resolution Image Synthesis with Latent Diffusion Models,
+ CVPR,
+ 2022
+\end_layout
+
+\begin_layout Columns
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.6
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted3.png
+	lyxscale 20
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.3
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+LDMs can be efficiently trained for super-resolution by
+\end_layout
+
+\begin_layout Standard
+
+\color red
+diretly conditioning on low-resolution images via concatenation
+\color inherit
+.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(T2I -> I2I)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
 \end_body
 \end_document
