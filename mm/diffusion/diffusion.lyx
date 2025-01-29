@@ -160,26 +160,16 @@ Key:
  might be training data and model scale.
 \end_layout
 
-\end_deeper
-\begin_layout Itemize
-Hallucination And Fidelity (Long-standing issue)
-\end_layout
-
-\begin_deeper
 \begin_layout Itemize
 Key:
- find a trade-off
+ Hallucination,
+ and Fidelity-quality trade-off (Long-standing issue)
 \end_layout
 
-\end_deeper
-\begin_layout Itemize
-Inference Time Scaling (Also hot topic for LLM)
-\end_layout
-
-\begin_deeper
 \begin_layout Itemize
 Key:
- Classifier free guidance.
+ Inference Time Scaling,
+ such as classifier-free-guidance (Also hot topic for LLM)
 \end_layout
 
 \end_deeper
@@ -1211,12 +1201,14 @@ Other Degradations:
 
 \end_layout
 
-\begin_layout Frame
+\begin_deeper
+\begin_layout FrameSubtitle
 Defocus Deblurring Using Dual-Pixel Data,
  ECCV,
  2020
 \end_layout
 
+\end_deeper
 \begin_layout Frame
 \begin_inset Graphics
 	filename pasted14.png
@@ -1250,10 +1242,76 @@ Other Degradations:
 \end_layout
 
 \begin_deeper
+\begin_layout FrameSubtitle
+A High-Quality Denoising Dataset for Smartphone Cameras,
+ CVPR,
+ 2018
+\end_layout
+
 \begin_layout Standard
 The real noise is way more complicated than Gaussian!
 \end_layout
 
+\begin_layout Columns
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted15.png
+	lyxscale 20
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.4
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted18.png
+	lyxscale 20
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -1801,6 +1859,11 @@ Other degradations like rain,
  are not covered in this slides.
 \end_layout
 
+\begin_layout Frame
+Prof.
+ Patel has lots of publications on those topics.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -1901,13 +1964,52 @@ It Seems That
 
 \end_layout
 
-\begin_layout Frame
+\begin_deeper
+\begin_layout Itemize
 As long as you have a (LQ,
  HQ) paired image dataset for the task,
  you can modify LDM into a corresponding image restoration model,
  as a naive baseline.
 \end_layout
 
+\begin_layout Itemize
+Good Blur?
+ Already a part of training set bias.
+ So no need to avoid them.
+ Such bias has some downsides,
+ but relatively minor.
+\end_layout
+
+\begin_layout AlertBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+But
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Training data quality greatly impacts image restoration model,
+ for both lower-bound and upper-bound.
+\end_layout
+
+\begin_layout Itemize
+Hallucination problem is long-existing.
+ All SOTA have a certain type of fidelity-quality trade-off mechanism.
+\end_layout
+
+\begin_layout Itemize
+Inference-Time Scaling plays an important role for control and alignment.
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -1920,8 +2022,448 @@ As long as you have a (LQ,
 status open
 
 \begin_layout Plain Layout
-StableSR
+StableSR:
+ ControlNet + Real-ESRGAN for SR (1/2)
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Exploiting Diffusion Prior for Real-World Image Super-Resolution,
+ IJCV,
+ 2023
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted17.png
+	lyxscale 20
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Columns
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.55
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Multi-scale LQ image features 
+\begin_inset Formula $\{F^{n}\}_{n=1}^{N}$
+\end_inset
+
+ are used to modulate the intermediate feature maps 
+\begin_inset Formula $\{F_{\text{dif}}^{n}\}_{n=1}^{N}$
+\end_inset
+
+ of the residual blocks via spatial feature transformations:
+\end_layout
+
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.4
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\hat{F}_{\text{dif}}^{n} & =(1+\alpha^{n})\odot F_{\text{dif}}^{n}+\beta^{n}\\
+\alpha^{n},\beta^{n} & =M_{\theta}^{n}(F^{n})\qquad\text{(affine)}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+StableSR:
+ ControlNet + Real-ESRGAN for SR (2/2)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Exploiting Diffusion Prior for Real-World Image Super-Resolution,
+ IJCV,
+ 2023
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted17.png
+	lyxscale 20
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Columns
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.55
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Fidelity-quality trade-off:
+ 
+\begin_inset Quotes eld
+\end_inset
+
+CFW
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Coefficient 
+\begin_inset Formula $w\in[0,1]$
+\end_inset
+
+.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+1
+\begin_inset Quotes erd
+\end_inset
+
+ for max fidelity.
+\end_layout
+
+\begin_layout Standard
+Encoder/Decoder features:
+ 
+\begin_inset Formula $F_{d},F_{e}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.4
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+F_{m}=F_{d}+\mathcal{C}(F_{e},F_{d};\theta)\times w
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+SeeSR:
+ Semantic Text Description Helps SR
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+SeeSR:
+ Towards Semantics-Aware Real-World Image Super-Resolution,
+ 2311.16518
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted19.png
+	lyxscale 40
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+SeeSR:
+ Semantic Text Description Helps SR
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+SeeSR:
+ Towards Semantics-Aware Real-World Image Super-Resolution,
+ 2311.16518
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted20.png
+	lyxscale 30
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+PASD:
+ Architecture Mitigation on Hallucination
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Pixel-Aware Stable Diffusion for Realistic Image Super-resolution and Personalized Stylization,
+ 2308.14469
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted21.png
+	lyxscale 40
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+PASD:
+ Architecture Mitigation on Hallucination
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Pixel-Aware Stable Diffusion for Realistic Image Super-resolution and Personalized Stylization,
+ 2308.14469
+\end_layout
+
+\begin_layout Standard
+PACA:
+ 
+\color red
+Pixel-Aware
+\color inherit
+ Cross Attention (instead of 
+\color blue
+VAE Latent
+\color inherit
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted22.png
+	lyxscale 40
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+DiffBIR:
+ ControlNet + Loss Goes to Pixel Space
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+DiffBIR:
+ Towards Blind Image Restoration with Generative Diffusion Prior,
+ 2308.15070
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset Graphics
+	filename pasted23.png
+	lyxscale 30
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Fidelity-Quality Trade-off:
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename pasted24.png
+	lyxscale 30
+	special width=\linewidth
 
 \end_inset
 
@@ -1940,7 +2482,100 @@ StableSR
 status open
 
 \begin_layout Plain Layout
-SeeSR
+SUPIR:
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Large
+\begin_inset Quotes erd
+\end_inset
+
+ Seems to Be All You Need
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Scaling Up to Excellence:
+ Practicing Model Scaling for Photo-Realistic Image Restoration In the Wild,
+ 2401.13627
+\end_layout
+
+\begin_layout Standard
+Still ControlNet,
+ but leverages Llava-13B for the semantic text caption.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted25.png
+	lyxscale 40
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Negative prompt boosts performance.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+pos:
+ image description with positive quality words,
+ e.g.,
+ 
+\begin_inset Quotes eld
+\end_inset
+
+masterpiece,
+ 4K,
+ etc
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+neg:
+ e.g.,
+ “oil painting,
+ cartoon,
+ blur,
+ dirty,
+ messy,
+ low quality,
+ deformation,
+ low resolution,
+ oversmooth”
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
 \end_layout
 
 \end_inset
@@ -1949,65 +2584,18 @@ SeeSR
 \end_layout
 
 \begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-PASD
-\end_layout
+\begin_inset Graphics
+	filename pasted26.png
+	lyxscale 40
+	special width=0.5\linewidth
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-DiffBIR
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-SUPIR
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
+\end_deeper
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -2028,64 +2616,41 @@ All-In-One Image Restoration?
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
+\begin_layout Frame
+One model per degradation type?
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Frame
-\begin_inset Argument 4
-status open
+\begin_inset Graphics
+	filename pasted28.png
+	lyxscale 40
+	special width=0.8\linewidth
 
-\begin_layout Plain Layout
-AirNet
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
 \end_inset
 
 
 \end_layout
 
 \begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-AutoDIR
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-PromptIR
-\end_layout
-
-\end_inset
-
-
+(AirNet) All-In-One Image Restoration for Unknown Corruption,
+ CVPR,
+ 2022.
 \end_layout
 
 \begin_layout Standard
@@ -2100,110 +2665,8 @@ PromptIR
 status open
 
 \begin_layout Plain Layout
-RestoreAgent
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Section IV:
- Hallucination And Fidelity
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Section V:
- Inference Time Scaling
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Classifier Free Guidance
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Section VI:
- Model Interpolation
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Network Interpolation
+AutoDIR:
+ Iterative All-in-One restoration
 \end_layout
 
 \end_inset
@@ -2213,9 +2676,188 @@ Network Interpolation
 
 \begin_deeper
 \begin_layout FrameSubtitle
-ESRGAN:
- Enhanced Super-Resolution Generative Adversarial Networks,
- 1809.00219
+AutoDIR:
+ Automatic All-in-One Image Restoration with Latent Diffusion,
+ 2310.10123
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset Graphics
+	filename pasted29.png
+	lyxscale 40
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+PromptIR:
+ Prompts for All-In-One Restoration
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+PromptIR:
+ Prompting for All-in-One Blind Image Restoration,
+ 2306.13090
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset Graphics
+	filename pasted30.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+RestoreAgent:
+ Problems of All-in-One
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+RestoreAgent:
+ Autonomous Image Restoration Agent via Multimodal Large Language Models,
+ 2407.18035
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset Graphics
+	filename pasted31.png
+	lyxscale 40
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+RestoreAgent:
+ Problems of All-in-One
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename pasted32.png
+	lyxscale 40
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Classifier Free Guidance (Inference Time Scaling)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Classifier-Free Diffusion Guidance,
+ 2207.12598
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted33.png
+	special width=0.4\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is used everywhere,
+ such as SUPIR (see previous slides),
+ InstructPix2Pix (below):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted34.png
+	lyxscale 40
+	special width=0.5\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It greatly impacts performance.
 \end_layout
 
 \end_deeper
@@ -2231,8 +2873,8 @@ ESRGAN:
 status open
 
 \begin_layout Plain Layout
-Section VII:
- Face Restoration
+ESRGAN:
+ Network Interpolation
 \end_layout
 
 \end_inset
@@ -2240,6 +2882,53 @@ Section VII:
 
 \end_layout
 
+\begin_deeper
+\begin_layout FrameSubtitle
+ESRGAN:
+ Enhanced Super-Resolution Generative Adversarial Networks,
+ 1809.00219
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted35.png
+	lyxscale 40
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Diffusion Soup
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Diffusion Soup:
+ Model Merging for Text-to-Image Diffusion Models,
+ 2406.08431
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -2261,7 +2950,18 @@ Limitation of Generic Image Restoration Model
 \end_layout
 
 \begin_layout Frame
-SUPIR example
+\begin_inset Graphics
+	filename pasted36.png
+	lyxscale 40
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Imge Source SUPIR
 \end_layout
 
 \begin_layout Standard
@@ -2276,7 +2976,8 @@ SUPIR example
 status open
 
 \begin_layout Plain Layout
-Ref-LDM
+Ref-LDM:
+ Reference-based Face Restoration
 \end_layout
 
 \end_inset
