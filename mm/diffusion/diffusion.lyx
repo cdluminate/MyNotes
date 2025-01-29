@@ -233,7 +233,7 @@ Latent Diffusion Model is widely studied and adopted.
 status open
 
 \begin_layout Plain Layout
-Diffusion Backbone for Text-to-Image Synthesis (1/)
+Diffusion Backbone for Text-to-Image Synthesis (1/5)
 \end_layout
 
 \end_inset
@@ -272,7 +272,7 @@ High-Resolution Image Synthesis with Latent Diffusion Models,
 status open
 
 \begin_layout Plain Layout
-Diffusion Backbone for Text-to-Image Synthesis (2/)
+Diffusion Backbone for Text-to-Image Synthesis (2/5)
 \end_layout
 
 \end_inset
@@ -391,7 +391,7 @@ Diffusion in the latent space is less resource-demanding.
 status open
 
 \begin_layout Plain Layout
-Diffusion Backbone for Text-to-Image Synthesis (3/)
+Diffusion Backbone for Text-to-Image Synthesis (3/5)
 \end_layout
 
 \end_inset
@@ -534,7 +534,7 @@ L_{\text{LDM}}\triangleq\mathbb{E}_{\mathcal{E}(x),{\color{red}y},\epsilon\sim\m
 status open
 
 \begin_layout Plain Layout
-Diffusion Backbone for Text-to-Image Synthesis (4/)
+Diffusion Backbone for Text-to-Image Synthesis (4/5)
 \end_layout
 
 \end_inset
@@ -573,7 +573,7 @@ High-Resolution Image Synthesis with Latent Diffusion Models,
 status open
 
 \begin_layout Plain Layout
-Diffusion Backbone for Text-to-Image Synthesis (4/)
+Diffusion Backbone for Text-to-Image Synthesis (5/5)
 \end_layout
 
 \end_inset
@@ -661,8 +661,204 @@ diretly conditioning on low-resolution images via concatenation
 
 \end_deeper
 \end_deeper
-\begin_layout Frame
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
 
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Section II:
+ Controllability
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+What is the application of unconditional generation?
+\end_layout
+
+\begin_layout Frame
+How do you incorporate those control signals?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+ControlNet is Essentially a (not small) Adapter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Adding Conditional Control to Text-to-Image Diffusion Models,
+ ICCV,
+ 2023
+\end_layout
+
+\begin_layout Columns
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.4
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted4.png
+	lyxscale 20
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.6
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Let 
+\begin_inset Formula $y=\mathcal{F}(x;\Theta)$
+\end_inset
+
+ be a trained neural network block,
+ 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ is parameters,
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ is input.
+\end_layout
+
+\begin_layout Itemize
+Let 
+\begin_inset Formula $\mathcal{Z}(\cdot;\cdot)$
+\end_inset
+
+ be the zero convolution layers,
+ kernel 
+\begin_inset Formula $1\times1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+A controlnet block computes
+\size footnotesize
+
+\begin_inset Formula 
+\[
+y_{c}=\mathcal{F}(x;\Theta)+\mathcal{Z}\Big(F(x+\mathcal{Z}(c;\Theta_{z1});\Theta_{c});\Theta_{z2}\Big)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Upon initialization:
+\begin_inset Formula 
+\[
+y_{c}=y=\mathcal{F}(x;\Theta)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+ControlNet Applications
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename pasted5.png
+	lyxscale 20
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Image Restoration?
+ Yes.
+ Just use the low-quality image as condition.
 \end_layout
 
 \end_body
