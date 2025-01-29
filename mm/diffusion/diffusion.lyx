@@ -5,6 +5,9 @@
 \save_transient_properties true
 \origin unavailable
 \textclass beamer
+\begin_preamble
+\usetheme{Boadilla}
+\end_preamble
 \use_default_options true
 \maintain_unincluded_children no
 \language american
@@ -89,7 +92,15 @@
 \begin_body
 
 \begin_layout Title
-Diffusion Model and Beyond
+Diffusion-based Image Restoration and Beyond
+\end_layout
+
+\begin_layout Author
+Mo Zhou
+\begin_inset Newline newline
+\end_inset
+
+Johns Hopkins University
 \end_layout
 
 \begin_layout Section
@@ -135,12 +146,28 @@ As well as the temporal extensions for image/text-to-video.
 Image Restoration and Enhancement (Image-to-Image)
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
-Face Restoration Methods (Image-to-Image)
+Key:
+ might be training data and model scale.
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
-Generative Model Interpolation (ESRGAN,
+Extension:
+ Face Restoration Methods (Image-to-Image)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Key:
+ Reference Image.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Extension:
+ Generative Model Interpolation (ESRGAN,
  Diffusion Soup)
 \end_layout
 
@@ -152,7 +179,8 @@ Key:
 
 \end_deeper
 \begin_layout Itemize
-Inference Time Scaling (Also hot topic for LLM)
+Extension:
+ Inference Time Scaling (Also hot topic for LLM)
 \end_layout
 
 \begin_deeper
@@ -162,6 +190,32 @@ Key:
 \end_layout
 
 \end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Diffusion Backbone (Text-to-Image Synthesis)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+asdfsad
+\end_layout
+
 \end_deeper
 \end_body
 \end_document
