@@ -2725,6 +2725,8 @@ PromptIR:
 \begin_layout Frame
 \begin_inset Graphics
 	filename pasted30.png
+	lyxscale 30
+	special width=\linewidth
 
 \end_inset
 
@@ -2982,6 +2984,18 @@ Ref-LDM:
 
 \end_inset
 
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+ReF-LDM:
+ A Latent Diffusion Model for Reference-based Face Image Restoration,
+ 2412.05043
+\end_layout
+
+\end_deeper
+\begin_layout Frame
 
 \end_layout
 
