@@ -1,5 +1,5 @@
 '''
-Script for groupping FFHQ-Ref images from Ref-LDM
+Inference commands for FFHQ-Ref images from Ref-LDM
 https://github.com/ChiWeiHsiao/ref-ldm
 '''
 from typing import *
