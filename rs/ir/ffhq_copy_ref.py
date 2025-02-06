@@ -34,10 +34,10 @@ def load_ref_mapping(csv_file: str) -> Dict[str, List[str]]:
 def copy_files(src: str, ref_mapping: Dict[str, List[str]], dest: str) -> None:
     '''Copy files from source to destination'''
     for (lq, ref_images) in ref_mapping.items():
-        src_file = os.path.join(src, lq)
         for (idx, ref_image) in enumerate(ref_images):
             subdir = os.path.join(dest, 'ref' + str(idx+1))
             os.makedirs(subdir, exist_ok=True)
+            src_file = os.path.join(src, ref_image)
             dest_file = os.path.join(subdir, lq)
             rich.print(src_file, '->', dest_file)
             shutil.copy(src_file, dest_file)
@@ -64,4 +64,4 @@ if __name__ == '__main__':
 
     test_refs = load_ref_mapping(os.path.join(args.ref, TEST_CSV))
     print('Test refs:', len(test_refs))
-    copy_files(args.src, test_groups, os.path.join(args.dst, 'test'))
+    copy_files(args.src, test_refs, os.path.join(args.dst, 'test'))
