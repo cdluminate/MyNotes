@@ -36,10 +36,18 @@ def main(args):
             metric_func = create_metric(metric)
             status.update(f'Loaded {metric}')
         # only support NR metrics
-        assert metric_func.metric_mode == 'NR'
-        # run the metric
-        with concurrent.futures.ThreadPoolExecutor(max_workers=args.jobs) as ex:
-            results = list(track(ex.map(lambda x: metric_func(x).item(), list_images), total=len(list_images)))
+        if metric_func.metric_mode == 'NR':
+            # run the metric
+            with concurrent.futures.ThreadPoolExecutor(max_workers=args.jobs) as ex:
+                results = list(track(ex.map(lambda x: metric_func(x).item(), list_images), total=len(list_images)))
+        elif metric_func.metric_mode == 'FR':
+            assert args.ref is not None, 'reference images are required for FR metrics'
+            def _worker(path):
+                ref = os.path.join(args.ref, os.path.basename(path))
+                score = metric_func(path, ref).item()
+                return score
+            with concurrent.futures.ThreadPoolExecutor(max_workers=args.jobs) as ex:
+                results = list(track(ex.map(_worker, list_images), total=len(list_images)))
         # dump the results
         for path, result in zip(list_images, results):
             print(path, metric, result)
@@ -54,6 +62,7 @@ if __name__ == '__main__':
     ag = argparse.ArgumentParser()
     ag.add_argument('metrics', nargs='*', type=str, help='metrics to run')
     ag.add_argument('--target', '-t', type=str, help='generated images')
+    ag.add_argument('--ref', '-r', type=str, required=False, help='reference images')
     ag.add_argument('--glob', type=str, default='*.png', help='glob pattern')
     ag.add_argument('--dump', '-d', action='store_true', help='dump results to file')
     ag.add_argument('--jobs', '-j', type=int, default=8, help='number of jobs')
