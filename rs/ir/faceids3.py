@@ -108,6 +108,9 @@ if __name__ == '__main__':
         score_min = min(s1, s2, s3)
         score_mean = (s1 + s2 + s3) / 3
         score_max = max(s1, s2, s3)
+        scores_mean.append(score_mean)
+        scores_min.append(score_min)
+        scores_max.append(score_max)
 
         print('Image:', tar, 'minIDS', score_min, 'meanIDS', score_mean, 'maxIDS', score_max)
     print('Mean minIDS=', np.mean(scores_min))
