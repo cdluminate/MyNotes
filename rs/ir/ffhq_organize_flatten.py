@@ -37,7 +37,7 @@ def flatten_images(src: str, mappings: Dict[str, List[str]], dest: str, resize: 
     def _worker(src_path: str, dest_path: str, resize: int) -> str:
         img = Image.open(src_path).convert('RGB')
         img = img.resize((resize, resize), resample=Image.Resampling.BICUBIC)
-        os.makedirs(os.dirname(dest_path), exist_ok=True)
+        os.makedirs(os.path.dirname(dest_path), exist_ok=True)
         img.save(dest_path, format='PNG')
         rich.print(src_path, f'->({resize})->', dest_path)
         return dest_path
@@ -52,7 +52,7 @@ def flatten_images(src: str, mappings: Dict[str, List[str]], dest: str, resize: 
             references = eval(references)
             for i, file in enumerate(references):
                 _worker(os.path.join(src, file),
-                        os.path.join(dest, f'ref{i}', input_image),
+                        os.path.join(dest, f'ref{i+1}', input_image),
                         resize)
     else:
         with ThreadPoolExecutor(max_workers=os.cpu_count()) as ex:
