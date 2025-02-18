@@ -1,6 +1,7 @@
 '''
-Inference commands for FFHQ-Ref images from Ref-LDM
+Inference commands for FFHQ-Ref images for Ref-LDM, RestoreID
 https://github.com/ChiWeiHsiao/ref-ldm
+https://github.com/YingJiacheng/RestorerID
 '''
 from typing import *
 import os
@@ -11,6 +12,7 @@ import shutil
 
 TEST_CSV = 'reference_mapping/test_references.csv'
 CMD_TEMPLATE = 'python inference.py --ddim_step 50 --lq_path {lq_path} --output_path {output_path} --ref_paths {ref_paths}'
+CMD_TEMPLATE_RESTOREID = 'python scripts/Inference.py --LQpath {lq_path} --Outputpath {output_path} --Refpath {ref_paths}'
 
 def load_ref_mapping(csv_file: str) -> Dict[str, List[str]]:
     '''
@@ -31,11 +33,11 @@ def load_ref_mapping(csv_file: str) -> Dict[str, List[str]]:
     return ref_mapping
 
 
-def gen_cmds(test_mapping: Dict[str, List[str]], lq_path: str, ref_path: str, dst: str) -> List[str]:
+def gen_cmds(test_mapping: Dict[str, List[str]], lq_path: str, ref_path: str, dst: str, *, template: str = CMD_TEMPLATE) -> List[str]:
     '''
     Generate commands for FFHQ dataset
     '''
-    cmds = []
+    cmds = ['set -x']
     for lq_image, ref_images in test_mapping.items():
         # Create output path
         output_path = os.path.join(dst, lq_image)
@@ -43,7 +45,7 @@ def gen_cmds(test_mapping: Dict[str, List[str]], lq_path: str, ref_path: str, ds
         ref_images = eval(ref_images)
         ref_images = [os.path.join(ref_path, ref_image) for ref_image in ref_images]
         # Create command
-        cmd = CMD_TEMPLATE.format(lq_path=os.path.join(lq_path, lq_image),
+        cmd = template.format(lq_path=os.path.join(lq_path, lq_image),
                                   output_path=output_path, ref_paths=ref_images[0])
         cmds.append(cmd)
     return cmds
@@ -57,14 +59,23 @@ if __name__ == '__main__':
     parser.add_argument('--dst', type=str, default='moderate_refldm')
     parser.add_argument('--csv', type=str, default='FFHQ-Ref', help='Path to FFHQ-Ref metadata')
     parser.add_argument('--output', type=str, default='')
+    parser.add_argument('--variant', type=str, default='refldm', choices=['refldm', 'restoreid'])
     args = parser.parse_args()
 
     # Load reference mapping
     test_mapping = load_ref_mapping(os.path.join(args.csv, TEST_CSV))
     print('Test Images:', len(test_mapping))
 
+    # load template
+    if args.variant == 'refldm':
+        template = CMD_TEMPLATE
+    elif args.variant == 'restoreid':
+        template = CMD_TEMPLATE_RESTOREID
+    else:
+        raise ValueError('Unknown variant')
+
     # Generate commands
-    cmds = gen_cmds(test_mapping, args.lq, args.ref, args.dst)
+    cmds = gen_cmds(test_mapping, args.lq, args.ref, args.dst, template=template)
     if args.output:
         with open(args.output, 'w') as f:
             for cmd in cmds:
