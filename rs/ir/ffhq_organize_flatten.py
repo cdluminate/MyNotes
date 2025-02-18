@@ -32,37 +32,57 @@ def load_ref_mapping(csv_file: str) -> Dict[str, List[str]]:
     return ref_mapping
 
 
-def flatten_images(src: str, mappings: Dict[str, List[str]], dest: str, resize: int) -> None:
+def flatten_images(src: str, mappings: Dict[str, List[str]], dest: str, resize: int, jobs: int = 0) -> None:
 
-    def _worker(src_path: str, dest_path: str, resize: int) -> None:
+    def _worker(src_path: str, dest_path: str, resize: int) -> str:
         img = Image.open(src_path).convert('RGB')
         img = img.resize((resize, resize), resample=Image.Resampling.BICUBIC)
-        os.mkdir(os.path.dirname(dest_path), exist_ok=True)
+        os.makedirs(os.dirname(dest_path), exist_ok=True)
         img.save(dest_path, format='PNG')
         rich.print(src_path, f'->({resize})->', dest_path)
+        return dest_path
 
-    with ThreadPoolExecutor(max_workers=os.cpu_count()) as ex:
+    if jobs == 0:
         for input_image, references in mappings.items():
             # copy the input image
-            print('DEBUG:',
-                  os.path.join(src, input_image),
-                  os.path.join(dest, 'input', input_image),
-                  resize) if False else None
-            ex.submit(_worker,
-                      os.path.join(src, input_image),
-                      os.path.join(dest, 'input', input_image),
-                      resize,
-            )
-            references = eval(references) # stringified list
+            _worker(os.path.join(src, input_image),
+                    os.path.join(dest, 'input', input_image),
+                    resize)
+            # copy the reference images
+            references = eval(references)
             for i, file in enumerate(references):
+                _worker(os.path.join(src, file),
+                        os.path.join(dest, f'ref{i}', input_image),
+                        resize)
+    else:
+        with ThreadPoolExecutor(max_workers=os.cpu_count()) as ex:
+            results = []
+            for input_image, references in mappings.items():
+                # copy the input image
                 print('DEBUG:',
-                      os.path.join(src, file),
-                      os.path.join(dest, f'ref{i}', input_image),
-                      resize) if False else None
-                ex.submit(_worker,
-                          os.path.join(src, file),
-                          os.path.join(dest, f'ref{i}', input_image),
-                          resize)
+                    os.path.join(src, input_image),
+                    os.path.join(dest, 'input', input_image),
+                    resize) if False else None
+                future = ex.submit(_worker,
+                        os.path.join(src, input_image),
+                        os.path.join(dest, 'input', input_image),
+                        resize,
+                )
+                results.append(future)
+                # copy the reference images
+                references = eval(references) # stringified list
+                for i, file in enumerate(references):
+                    print('DEBUG:',
+                        os.path.join(src, file),
+                        os.path.join(dest, f'ref{i}', input_image),
+                        resize) if False else None
+                    future = ex.submit(_worker,
+                            os.path.join(src, file),
+                            os.path.join(dest, f'ref{i}', input_image),
+                            resize)
+                    results.append(future)
+            results = [future.result() for future in results]
+            print('Flattend images:', len(results))
 
 
 if __name__ == '__main__':
@@ -77,17 +97,12 @@ if __name__ == '__main__':
     # training
     os.makedirs(os.path.join(args.dst, 'train'), exist_ok=True)
     train_groups = load_ref_mapping(os.path.join(args.ref, TRAIN_CSV))
-    flatten_images(args.src, train_groups, os.path.join(args.dst, 'train'), args.resize)
+    flatten_images(args.src, train_groups, os.path.join(args.dst, 'train'), args.resize, args.jobs)
 
-    #os.makedirs(os.path.join(args.dst, 'val'), exist_ok=True)
+    os.makedirs(os.path.join(args.dst, 'val'), exist_ok=True)
+    val_groups = load_ref_mapping(os.path.join(args.ref, VAL_CSV))
+    flatten_images(args.src, val_groups, os.path.join(args.dst, 'val'), args.resize, args.jobs)
+
     #os.makedirs(os.path.join(args.dst, 'test'), exist_ok=True)
-
-    # Load reference mapping
-
-    #val_groups = load_ref_mapping(os.path.join(args.ref, VAL_CSV))
     #test_groups = load_ref_mapping(os.path.join(args.ref, TEST_CSV))
-
-    # flattening directories
-
-    #copy_files(args.src, val_groups, os.path.join(args.dst, 'val'))
     #copy_files(args.src, test_groups, os.path.join(args.dst, 'test'))
