@@ -33,14 +33,28 @@ def load_ref_mapping(csv_file: str) -> Dict[str, List[str]]:
     return ref_mapping
 
 
-def gen_cmds(test_mapping: Dict[str, List[str]], lq_path: str, ref_path: str, dst: str, *, template: str = CMD_TEMPLATE) -> List[str]:
+def gen_cmds(test_mapping: Dict[str, List[str]], lq_path: str, ref_path: str, dst: str, *, variant: str = 'refldm') -> List[str]:
     '''
     Generate commands for FFHQ dataset
     '''
     cmds = ['set -x']
+
+    # load template
+    if variant == 'refldm':
+        template = CMD_TEMPLATE
+    elif variant == 'restoreid':
+        template = CMD_TEMPLATE_RESTOREID
+    else:
+        raise ValueError('Unknown variant')
+    
     for lq_image, ref_images in test_mapping.items():
         # Create output path
-        output_path = os.path.join(dst, lq_image)
+        if variant == 'refldm':
+            output_path = os.path.join(dst, lq_image)
+        elif variant == 'restoreid':
+            output_path = dst
+        else:
+            raise ValueError('Unknown variant')
         os.makedirs(output_path, exist_ok=True)
         ref_images = eval(ref_images)
         ref_images = [os.path.join(ref_path, ref_image) for ref_image in ref_images]
@@ -66,16 +80,8 @@ if __name__ == '__main__':
     test_mapping = load_ref_mapping(os.path.join(args.csv, TEST_CSV))
     print('Test Images:', len(test_mapping))
 
-    # load template
-    if args.variant == 'refldm':
-        template = CMD_TEMPLATE
-    elif args.variant == 'restoreid':
-        template = CMD_TEMPLATE_RESTOREID
-    else:
-        raise ValueError('Unknown variant')
-
     # Generate commands
-    cmds = gen_cmds(test_mapping, args.lq, args.ref, args.dst, template=template)
+    cmds = gen_cmds(test_mapping, args.lq, args.ref, args.dst, variant=args.variant)
     if args.output:
         with open(args.output, 'w') as f:
             for cmd in cmds:
