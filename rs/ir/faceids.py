@@ -44,25 +44,22 @@ class IDS:
             raise ValueError(f"Image at {img_path} could not be read.")
         return img
 
-    def embedding(self, img, session=None):
+    def embedding(self, img):
         img = cv2.resize(img, self.input_size)
         blob = cv2.dnn.blobFromImage(img,
                                      1.0 / self.input_std, self.input_size,
                                      (self.input_mean, self.input_mean, self.input_mean),
                                      swapRB=True)
-        if session is None:
-            net_out = self.session.run(self.output_names, {self.input_name: blob})[0]
-        else:
-            net_out = session.run(self.output_names, {self.input_name: blob})[0]
+        net_out = self.session.run(self.output_names, {self.input_name: blob})[0]
         return net_out
 
-    def __call__(self, img1, img2, session=None):
+    def __call__(self, img1, img2):
         if isinstance(img1, str):
             img1 = self.read_image(img1)
         if isinstance(img2, str):
             img2 = self.read_image(img2)
-        emb1 = self.embedding(img1, session).ravel()
-        emb2 = self.embedding(img2, session).ravel()
+        emb1 = self.embedding(img1).ravel()
+        emb2 = self.embedding(img2).ravel()
         # cosine similarity
         return np.dot(emb1, emb2) / (np.linalg.norm(emb1) * np.linalg.norm(emb2))
 
@@ -74,37 +71,23 @@ class IDS:
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('img1', help='Path to first image')
-    parser.add_argument('img2', help='Path to second image')
-    parser.add_argument('--dump', '-d', action='store_true', help='Dump the ids')
-    parser.add_argument('--jobs', '-j', type=int, default=1, help='Number of jobs')
+    parser.add_argument('--reference', '-r', help='Path to reference image(s)')
+    parser.add_argument('--generated', '-g', help='Path to generated image(s)')
+    parser.add_argument('--glob', default='*.png', help='Glob pattern for images in directories')
     args = parser.parse_args()
 
     ids = IDS()
-
-    if os.path.isfile(args.img1) and os.path.isfile(args.img2):
+    if os.path.isfile(args.reference) and os.path.isfile(args.generated):
         # two image files: compare them and report score
-        print(ids(args.img1, args.img2))
-    elif os.path.isdir(args.img1) and os.path.isdir(args.img2):
+        print(ids(args.reference, args.generated))
+    elif os.path.isdir(args.reference) and os.path.isdir(args.generated):
         # two directories: compare all pairs of images and report scores
-        targets = glob.glob(os.path.join(args.img2, '*.png'))
-        references = [os.path.join(args.img1, os.path.basename(target)) for target in targets]
-        if args.jobs > 1:
-            print('onnxruntime session seems not thread safe, so we create a new session for each thread')
-            with ThreadPoolExecutor(max_workers=args.jobs) as executor:
-                scores = track(executor.map(ids.reload_and_call, references, targets), total=len(references))
-            for ref, tar, score in zip(references, targets, scores):
-                print('Ref=', ref, 'Tar=', tar, 'IDS=', score)
-                if args.dump:
-                    with open(tar + '.ids', 'w') as f:
-                        f.write(f'{score}\n')
-        else:
-            scores = []
-            for ref, tar in zip(references, targets):
-                score = ids(ref, tar)
-                scores.append(score)
-                print('Ref=', ref, 'Tar=', tar, 'IDS=', score)
-                if args.dump:
-                    with open(tar + '.ids', 'w') as f:
-                        f.write(f'{score}\n')
+        generated = glob.glob(os.path.join(args.generated, args.glob))
+        references = [os.path.join(args.reference, os.path.basename(gen)) for gen in generated]
+
+        scores = []
+        for ref, gen in zip(references, generated):
+            score = ids(ref, gen)
+            scores.append(score)
+            print('Ref=', ref, 'Gen=', gen, 'IDS=', score)
         print('Mean IDS=', np.mean(scores))
