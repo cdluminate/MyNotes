@@ -104,6 +104,10 @@ if __name__ == '__main__':
         if key not in fn2lm:
             fn2lm[key] = avg_lm
 
+            basename = key.replace('.png', '.npy')
+            save_dest = os.path.join(args.individual_dst, basename)
+            np.save(save_dest, avg_lm)
+
     with open(args.dst, 'wb') as f:
         pickle.dump(fn2lm, f)
     print('landmarks saved to:', args.dst)
