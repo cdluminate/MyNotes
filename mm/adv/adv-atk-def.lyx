@@ -906,7 +906,7 @@ Adversarial example is the input that triggers model misbehavior.
 status open
 
 \begin_layout Plain Layout
-Adversarial Example
+Adversarial Example (for image classification task)
 \end_layout
 
 \end_inset
@@ -1044,6 +1044,26 @@ status open
 
 \begin_layout Plain Layout
 
+Gray Box:
+\end_layout
+
+\end_inset
+
+ The attacker has 
+\series bold
+partial knowledge
+\series default
+ about the model to be architecture,
+ e.g.,
+ the architecture but not the parameters.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
 Black Box:
 \end_layout
 
@@ -1159,6 +1179,32 @@ Fast Gradient Sign Method (FGSM)
 \end_inset
 
 
+\end_layout
+
+\begin_layout Block
+Let 
+\begin_inset Formula $x$
+\end_inset
+
+ be input image,
+ constant 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ be the magnitude of perturbation,
+ 
+\begin_inset Formula $J(\cdot)$
+\end_inset
+
+ be the objective function,
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ be the label.
+\end_layout
+
+\begin_layout Block
 \begin_inset Formula 
 \[
 x_{adv}=x+\epsilon\cdot\text{sign}(\nabla_{x}J(\theta,x,y))
@@ -1231,6 +1277,27 @@ Basic Iterative Method
 \end_inset
 
 
+\end_layout
+
+\begin_layout Block
+The symbol definition follows the previous page.
+ The time step is denoted as 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ The step size 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ should be smaller than the perturbation magnitude 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Block
 \begin_inset Formula 
 \[
 x_{adv}^{t+1}=\prod_{\epsilon}(x_{adv}^{t}+\alpha\cdot\text{sign}(\nabla_{x}J(\theta,x_{adv}^{t},y)))
@@ -1518,7 +1585,7 @@ status open
 
 \begin_layout Plain Layout
 Black-box Attack:
- Natural Evolution Strategy (1/2)
+ Natural Evolution Strategy
 \end_layout
 
 \end_inset
@@ -1583,7 +1650,7 @@ status open
 
 \begin_layout Plain Layout
 Black-box Attack:
- Natural Evolution Strategy (2/2)
+ Natural Evolution Strategy
 \end_layout
 
 \end_inset
@@ -1639,6 +1706,61 @@ centering
 \begin_inset Graphics
 	filename pasted12.png
 	special width=0.5\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Black-box Attack:
+ SPSA
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+[14] Adversarial Risk and the Dangers of Evaluating Against Weak Attacks
+\end_layout
+
+\begin_layout Standard
+This is a variant of Natural Evolution Strategy (NES).
+ It may better help you understand what this algorithm is doing.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted13.png
+	special width=0.7\linewidth
 
 \end_inset
 
@@ -1858,12 +1980,9 @@ Section 3:
 \end_layout
 
 \begin_layout Frame
-How to prevent the attacks?
-\end_layout
-
-\begin_layout Frame
-i.e.,
- How to make the deep learning model resistant to those 
+How to prevent the attacks,
+ i.e.,
+ making those models resistant to those 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1894,40 +2013,100 @@ Previous Attempts for Adversarial Defense
 
 \end_layout
 
-\begin_layout Frame
+\begin_deeper
+\begin_layout FrameSubtitle
+[15] On Adaptive Attacks to Adversarial Example Defenses
+\end_layout
+
+\begin_layout Description
+
+\bar under
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
 Adversarial Training:
+\end_layout
+
+\end_inset
+
  Augmenting training data with adversarial examples.
 \end_layout
 
-\begin_layout Frame
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
 Input Transformation/Preprocessing:
+\end_layout
+
+\end_inset
+
  Modifying inputs before feeding them to the model (e.g.,
  JPEG compression,
  spatial smoothing,
  randomization).
 \end_layout
 
-\begin_layout Frame
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
 Model Modification:
+\end_layout
+
+\end_inset
+
  Changing the network architecture or training procedure (e.g.,
  defensive distillation - though largely broken).
 \end_layout
 
-\begin_layout Frame
-Detection:
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Attack Detection:
+\end_layout
+
+\end_inset
+
  Training separate detectors to identify adversarial inputs.
 \end_layout
 
-\begin_layout Frame
-Certified defenses.
+\begin_layout Description
+
+\bar under
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Certified Defenses:
 \end_layout
 
-\begin_layout Frame
-Goal:
- Provide mathematical guarantees of robustness within a specific perturbation bound,
- such as random smoothing.
+\end_inset
+
+ Provide mathematical guarantees of robustness within a specific perturbation bound (e.g,
+ random smoothing).
 \end_layout
 
+\begin_layout Standard
+
+\color red
+!
+ Everything except for adversarial training and certified defenses is fragile in some way.
+ Some of them are easily to bypass.
+ See paper [15] for details.
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -1940,7 +2119,8 @@ Goal:
 status open
 
 \begin_layout Plain Layout
-Adversarial Training (Madry Defense)
+Defense:
+ Adversarial Training
 \end_layout
 
 \end_inset
@@ -1948,23 +2128,150 @@ Adversarial Training (Madry Defense)
 
 \end_layout
 
-\begin_layout Frame
-How it works:
- Generate adversarial examples (often using PGD) on-the-fly during training and include them in mini-batches.
+\begin_deeper
+\begin_layout FrameSubtitle
+[16] Towards Deep Learning Models Resistant to Adversarial Attacks
 \end_layout
 
+\end_deeper
 \begin_layout Frame
+Create adversarial examples (often using BIM/PGD) on-the-fly during training and include them in mini-batches.
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Adversarial Training
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+Notations:
+ 
+\begin_inset Formula $\theta$
+\end_inset
+
+ for model parameters;
+ 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ for (image,
+ label) pair from the data distribution 
+\begin_inset Formula $D$
+\end_inset
+
+;
+ The adversarial perturbation is 
+\begin_inset Formula $\delta$
+\end_inset
+
+,
+ within a pre-defined bound 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Block
+\begin_inset Formula 
+\[
+\min_{\theta}\rho(\theta),\quad\text{where}\quad\rho(\theta)=\mathbb{E}_{(x,y)\sim D}\Big[\max_{\delta\in S}L(\theta,x+\delta,y)\Big]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
 Pros:
- Currently the most effective empirical defense strategy.
 \end_layout
 
-\begin_layout Frame
+\begin_deeper
+\begin_layout Itemize
+Currently the most effective empirical defense strategy.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
 Cons:
- Computationally expensive,
- can slightly hurt accuracy on clean data ("robustness vs.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Computationally expensive (significantly increase the number of forward/backward passes).
+\end_layout
+
+\begin_layout Itemize
+can slightly hurt accuracy on clean data ("robustness vs.
  accuracy trade-off").
 \end_layout
 
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Defense:
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Free
+\begin_inset Quotes erd
+\end_inset
+
+ Adversarial Training
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+[17] Adversarial Training for Free!
+\end_layout
+
+\begin_layout Standard
+Core idea:
+ to reuse the gradient obtained from the normal learning process.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted14.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Frame
 
 \end_layout
@@ -1979,7 +2286,7 @@ status open
 
 \begin_layout Plain Layout
 Section 4:
- Attack & Defense in Other Tasks
+ What about Other Tasks
 \end_layout
 
 \end_inset
@@ -1988,8 +2295,408 @@ Section 4:
 \end_layout
 
 \begin_layout Frame
+Attack and defense can happen in tasks other than classification.
+\end_layout
+
+\begin_layout Frame
 For instance,
- in deep metric learning.
+ in deep metric learning (a computer vision task that differs from classification).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+What is 
+\begin_inset Quotes eld
+\end_inset
+
+Deep Metric Learning
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+[17] FaceNet:
+ A Unified Embedding for Face Recognition and Clustering
+\end_layout
+
+\begin_layout Columns
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted15.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted16.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Adversarial Attack in Deep Metric Learning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+[18] Adversarial Attack and Defense in Deep Ranking,
+ T-PAMI 2024
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset Graphics
+	filename pasted17.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Adversarial Attack in Deep Metric Learning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+[19] Practical Relative Order Attack in Deep Ranking,
+ ICCV 2021
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted18.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Adversarial Defense in Deep Metric Learning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+[20] Enhancing Adversarial Robustness for Deep Metric Learning
+\end_layout
+
+\begin_layout Standard
+Adversarial training with triplet loss can be adopted.
+ But there is a task specific issue – model collapse.
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Hardness manipulation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Graphics
+	filename pasted19.png
+	special width=0.4\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+Still adversarial training,
+ but the process of creating adversarial examples early stops halfway.
+ Namely,
+ the image triplet during the training process is:
+\end_layout
+
+\begin_layout Block
+\begin_inset Formula 
+\[
+\hat{r}_{a},\hat{r}_{p},\hat{r}_{n}=\arg\min_{r_{a},r_{n},r_{n}}\|\max(0,H_{D}-\tilde{H}_{S})\|_{2}^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+Then we can directly use triplet loss with this 
+\begin_inset Quotes eld
+\end_inset
+
+adversarial triplet
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+What about natural language?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Beyond today's scope,
+ but good to know there is some difference.
+\end_layout
+
+\begin_layout Columns
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.47
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Manipulating Images
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Image shape:
+ (height,
+ width,
+ channel)
+\end_layout
+
+\begin_layout Itemize
+Data type:
+ float (
+\begin_inset Quotes eld
+\end_inset
+
+continuous
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Naturally suitable for gradient-based optimization methods such as PGD,
+ or zeroth-order methods such as NES.
+\end_layout
+
+\end_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.47
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Manipulating Language
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Language shape:
+ (sequence length,
+ 1)
+\end_layout
+
+\begin_layout Itemize
+Data type:
+ int (discrete)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+each element is an token index (int) that corresponds to the pre-built dictionary.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Gradient is a problem here.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Frame
+
 \end_layout
 
 \begin_layout Section*
@@ -2014,15 +2721,15 @@ Summary
 Deep learning models are pretty fragile.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 Deep learning models are surprisingly brittle.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 Adversarial attacks exploit model internals (gradients) or transferability.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 Adversarial training is the leading defense,
  but challenges remain.
 \end_layout
@@ -2049,7 +2756,7 @@ vfill
 Comment:
 
 \series default
- Good to know about those attacks and defense methods.
+ Good to know about the existence of AI vulnerability and mitigations.
 \end_layout
 
 \begin_layout Standard
