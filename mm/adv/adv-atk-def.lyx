@@ -1,0 +1,1379 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+\usetheme{Boadilla}
+% or ...
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "times" "default"
+\font_sans "biolinum" "default"
+\font_typewriter "lmtt" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Adversarial Attack and Defense
+\end_layout
+
+\begin_layout Subtitle
+\begin_inset Quotes eld
+\end_inset
+
+AI Security Issues
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+Mo Zhou
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+and
+\end_layout
+
+\end_inset
+
+ Vishal M.
+ Patel
+\end_layout
+
+\begin_layout Institute
+Deep Learning (EN.520.638)
+\begin_inset Newline newline
+\end_inset
+
+Spring 2025
+\begin_inset Newline newline
+\end_inset
+
+Johns Hopkins University
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Outline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Safety & Security Issues of AI
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Section 1:
+ Safety & Security Issues of AI
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+There are lots of deep learning applications in real-world.
+ But how secure are them?
+ How robust are they when they face malicious users?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Deep learning models have a wide range of use cases.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+[1] ImageNet Classification with Deep Convolutional Neural Networks (Alexnet)
+\end_layout
+
+\begin_layout Standard
+Example in computer vision:
+ image classification.
+\end_layout
+
+\begin_layout Columns
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.65
+\backslash
+columnwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted2.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.35
+\backslash
+columnwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted1.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Input:
+ RGB image of shape (224,
+ 224,
+ 3)
+\end_layout
+
+\begin_layout Standard
+Output:
+ Category probability for 1000 classes (from ImageNet dataset).
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Deep learning models have a wide range of use cases.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+[2] Fast R-CNN,
+ https://arxiv.org/pdf/1504.08083
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+Example in computer vision:
+ object detection.
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename pasted3.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Input:
+ RGB image.
+\end_layout
+
+\begin_layout Frame
+Output:
+ a number of (bounding boxes,
+ classification result).
+\end_layout
+
+\begin_layout Frame
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+what objects are in this image,
+ and where are they?
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Deep learning models have a wide range of use cases.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+[3] Language Models are Unsupervised Multitask Learners (GPT-2)
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+Example in computational linguistics:
+ next-word prediction.
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Language Modeling
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+Assume we have a natural language example 
+\begin_inset Formula $x,$
+\end_inset
+
+ which is composed of a sequence of tokens 
+\begin_inset Formula $(s_{1,}s_{2},\ldots,s_{n})$
+\end_inset
+
+.
+ Since language has a natural sequential ordering,
+ it is common to factorize the joint probabilities over tokens as the product of conditional probabilities,
+ i.e.,
+\end_layout
+
+\begin_layout Block
+\begin_inset Formula 
+\[
+p(x)=p(s_{1},s_{2},\ldots,s_{n})=\prod_{i=1}^{n}p(s_{n}|s_{1},\ldots,s_{n-1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Input:
+ previous tokens (e.g.,
+ an unfinished sentence)
+\end_layout
+
+\begin_layout Standard
+Output:
+ the next token (or word)
+\end_layout
+
+\begin_layout Standard
+Auto-regressive:
+ append the predicted token to input,
+ and predict again.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Vulnerabilities exist in all deep learning models.
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Are deep learning models reliable?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+[4] Explaining and Harnessing Adversarial Examples (ICLR 2015)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted5.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Are deep learning models reliable?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+[5] Adversarial Patch,
+ https://arxiv.org/pdf/1712.09665
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted4.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Are deep learning models reliable?
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+[6] Robust Physical-World Attacks on Deep Learning Visual Classification,
+ CVPR 2018
+\end_layout
+
+\begin_layout Columns
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted6.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted7.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Language models too...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+[7] Jailbreaking Black Box Large Language Models in Twenty Queries
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted8.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+But today we will mainly cover the computer vision models,
+ in particular image classification models.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Adversarial Attack:
+ Compromising an AI Model
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Section 2:
+ Adversarial Attack:
+ Compromising a Deep Learning Model
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+To manipulate the input to the deep learning model,
+ and hence intentionally change the output of the model.
+\end_layout
+
+\begin_layout Frame
+Take 
+\series bold
+face recognition
+\series default
+ models,
+ they may be attacked for:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+
+\series bold
+Impersonation
+\series default
+
+\begin_inset Quotes erd
+\end_inset
+
+:
+ let the model recognize the user as another (high privilege) user.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+use case:
+ payment authorization / phone unlock with face.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\begin_inset Quotes eld
+\end_inset
+
+Avoiding detection
+\begin_inset Quotes erd
+\end_inset
+
+
+\series default
+:
+ let the model recognize the user as anybody else.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+use case:
+ criminal avoids the camera surveillance system.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+How does 
+\begin_inset Quotes eld
+\end_inset
+
+Adversarial Attack
+\begin_inset Quotes erd
+\end_inset
+
+ happen?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Columns
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.45
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+When Training A Model
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Constants:
+ input image.
+\end_layout
+
+\begin_layout Itemize
+Variables:
+ model parameters.
+\end_layout
+
+\begin_layout Standard
+The optimization algorithm (e.g.,
+ SGD,
+ Adam) updates the 
+\series bold
+model parameters
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.45
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout AlertBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+When Attacking A model
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Constants:
+ model parameters.
+\end_layout
+
+\begin_layout Itemize
+Variables:
+ input image.
+\end_layout
+
+\begin_layout Standard
+The attack algorithm (e.g.,
+ PGD,
+ NES) updates the 
+\series bold
+input image
+\series default
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Definition:
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Adversarial Example
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Adversarial example is the input that triggers model misbehavior.
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Adversarial Example
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+Given an image 
+\begin_inset Formula $x$
+\end_inset
+
+,
+ the adversarial example 
+\begin_inset Formula $x_{adv}$
+\end_inset
+
+ is the image itself with a perturbation 
+\begin_inset Formula $\delta$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+x_{adv}=x+\delta.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+It triggers the model 
+\begin_inset Formula $f(\cdot)$
+\end_inset
+
+ misbehavior,
+ such as untargeted attack:
+\begin_inset Formula 
+\[
+f(x_{adv})\neq f(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+Or targeted attack:
+\begin_inset Formula 
+\[
+f(x_{adv})=y_{target}\neq y_{original}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+The perturbation needs to be imperceptible by human (or it is too easy to tell something wrong on the image).
+ The literature usually use the 
+\begin_inset Formula $L_{\infty}$
+\end_inset
+
+ norm or 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+ norm for this constraint.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Threat Model:
+ White-box,
+ Grey-box,
+ and Black-box.
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Threat Models:
+ White-box,
+ Grey-box,
+ and Black-box
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+The amount of knowledge the attacker has.
+ (computer security term)
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+\begin_inset Formula $\uparrow$
+\end_inset
+
+ easier,
+ but less practical.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+White Box:
+\end_layout
+
+\end_inset
+
+ The attacker has the 
+\series bold
+full knowledge
+\series default
+ about the architecture,
+ the weights (parameters) of the model to be attacked.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Grey Box:
+\end_layout
+
+\end_inset
+
+ The attacker has 
+\series bold
+partial knowledge
+\series default
+ about model to be attacked.
+ For example,
+ architecture is known but not the weights.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Black Box:
+\end_layout
+
+\end_inset
+
+ The attacker has 
+\series bold
+very limited knowledge
+\series default
+ about the model,
+ e.g.,
+ can only access the input and output of the model – all the rest are unknown.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+\begin_inset Formula $\downarrow$
+\end_inset
+
+more difficult,
+ but more practical.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+White-Box Adversarial Attacks
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Make Titles Informative.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem
+On first slide.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Corollary
+On second slide.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Make Titles Informative.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+5cm
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+1-
+\end_layout
+
+\end_inset
+
+In left column.
+\end_layout
+
+\begin_layout Column
+5cm
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+2-
+\end_layout
+
+\end_inset
+
+In right column.
+\begin_inset Newline newline
+\end_inset
+
+New line
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsection
+Grey-box Adversarial Attacks
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Grey box
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Black-box Adversarial Attacks
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Black box
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Adversarial Defense:
+ Prevent the Attacks
+\end_layout
+
+\begin_layout Subsection
+Adversarial Defense
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Adversarial Defense
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Adversarial Attack & Defense in Other Tasks
+\end_layout
+
+\begin_layout Standard
+metric learning
+\end_layout
+
+\begin_layout Standard
+LLM jailbreak.
+\end_layout
+
+\begin_layout Section*
+Summary
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Summary
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Deep learning models are pretty fragile.
+\end_layout
+
+\begin_layout Itemize
+The
+\color none
+ 
+\color inherit
+
+\begin_inset Flex Alert
+status open
+
+\begin_layout Plain Layout
+first main message
+\end_layout
+
+\end_inset
+
+
+\color none
+ of your talk in one or two lines.
+\end_layout
+
+\begin_layout Itemize
+The
+\color none
+ 
+\color inherit
+
+\begin_inset Flex Alert
+status open
+
+\begin_layout Plain Layout
+second main message
+\end_layout
+
+\end_inset
+
+
+\color none
+ of your talk in one or two lines.
+\end_layout
+
+\begin_layout Itemize
+Perhaps a
+\color none
+ 
+\color inherit
+
+\begin_inset Flex Alert
+status open
+
+\begin_layout Plain Layout
+third message
+\end_layout
+
+\end_inset
+
+
+\color none
+,
+ but not more than that.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+An outlook is always optional.
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Outlook
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+What we have not done yet.
+\end_layout
+
+\begin_layout Itemize
+Even more stuff.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_body
+\end_document
