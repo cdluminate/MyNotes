@@ -1848,7 +1848,8 @@ Adversarial Defense
 status open
 
 \begin_layout Plain Layout
-Adversarial Defense
+Section 3:
+ Adversarial Defense
 \end_layout
 
 \end_inset
@@ -1917,6 +1918,16 @@ Detection:
  Training separate detectors to identify adversarial inputs.
 \end_layout
 
+\begin_layout Frame
+Certified defenses.
+\end_layout
+
+\begin_layout Frame
+Goal:
+ Provide mathematical guarantees of robustness within a specific perturbation bound,
+ such as random smoothing.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -1954,44 +1965,8 @@ Cons:
  accuracy trade-off").
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
 \begin_layout Frame
-\begin_inset Argument 4
-status open
 
-\begin_layout Plain Layout
-Certified Defenses
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-Goal:
- Provide mathematical guarantees of robustness within a specific perturbation bound.
-\end_layout
-
-\begin_layout Frame
-Example:
- Randomized Smoothing.
-\end_layout
-
-\begin_layout Frame
-Pros:
- Formal guarantee.
- Cons:
- Often limited to smaller perturbation bound,
- specific norms,
- or simpler models;
- can have lower standard accuracy.
 \end_layout
 
 \begin_layout Section
@@ -2050,6 +2025,36 @@ Adversarial attacks exploit model internals (gradients) or transferability.
 \begin_layout Standard
 Adversarial training is the leading defense,
  but challenges remain.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Comment:
+
+\series default
+ Good to know about those attacks and defense methods.
+\end_layout
+
+\begin_layout Standard
+LLM safety (e.g.,
+ jailbreak) is a more heated discussion nowadays.
 \end_layout
 
 \end_deeper
