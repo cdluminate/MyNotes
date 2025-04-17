@@ -995,9 +995,7 @@ status open
 
 \begin_layout Plain Layout
 Threat Models:
- White-box,
- Grey-box,
- and Black-box
+ White-box and Black-box
 \end_layout
 
 \end_inset
@@ -1038,26 +1036,6 @@ full knowledge
 \series default
  about the architecture,
  the weights (parameters) of the model to be attacked.
-\end_layout
-
-\begin_layout Description
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-Grey Box:
-\end_layout
-
-\end_inset
-
- The attacker has 
-\series bold
-partial knowledge
-\series default
- about model to be attacked.
- For example,
- architecture is known but not the weights.
 \end_layout
 
 \begin_layout Description
@@ -1282,86 +1260,10 @@ PGD is often considered the standard strong baseline.
 \end_layout
 
 \end_deeper
-\begin_layout Subsection
-Grey-box Adversarial Attacks
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Grey-box Adversarial Attack
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-The attacker has 
-\series bold
-partial knowledge
-\series default
- about model to be attacked.
- For example,
- architecture is known but not the weights.
-\end_layout
-
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Adversarial Example Transferrability
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-Concept:
- Adversarial examples crafted for one model often fool other models (even with different architectures).
-\end_layout
-
-\begin_layout Frame
-Attack Strategy:
- Train a local "substitute" model,
- craft white-box attacks,
- and transfer them to the target black-box model.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Universal Adversarial Perturbation
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
 
 \end_layout
 
@@ -1392,31 +1294,215 @@ very limited knowledge
  can only access the input and output of the model – all the rest are unknown.
 \end_layout
 
-\begin_layout Frame
-Mainly query-based.
+\begin_deeper
+\begin_layout Itemize
+Transferability and universal perturbations:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+find adversarial example on a known model A.
+\end_layout
+
+\begin_layout Itemize
+apply the adversarial example to an unknown model B.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Score-based and decision-based method
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Repeatedly query the target model
+\end_layout
+
+\begin_layout Itemize
+use the output to estimate gradients or find adversarial examples directly
+\end_layout
+
+\begin_layout Itemize
+Repeat until maximum time of query or the goal is achieved.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Frame
-Idea:
- Repeatedly query the target model and use the output to estimate gradients or find adversarial examples directly.
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Black/Gray-box:
+ Adversarial Example Transferrability
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+[11] Improving Transferability of Adversarial Examples with Input Diversity
+\begin_inset Newline newline
+\end_inset
+
+
+\bar under
+* Agnostic to model.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset Quotes eld
+\end_inset
+
+Transferrability
+\begin_inset Quotes erd
+\end_inset
+
+:
+ Adversarial examples crafted for one model often fool other models (even with different architectures).
 \end_layout
 
 \begin_layout Frame
-Score-Based:
- Use output probabilities/logits (e.g.,
- Zeroth-Order Optimization - ZOO).
+Attack Strategy:
+ Train a local "substitute" model,
+ craft white-box attacks,
+ and transfer them to the target black-box model.
 \end_layout
 
 \begin_layout Frame
-Decision-Based:
- Use only the final predicted label (e.g.,
- Boundary Attacks).
- Often requires many more queries.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Frame
-Black-box optimization methods can be used here,
- such as Natural Evolution Strategy.
+\begin_inset Graphics
+	filename pasted10.png
+	special width=0.7\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Black/Gray-box:
+ Universal Adversarial Perturbation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+[12] Universal adversarial perturbations
+\begin_inset Newline newline
+\end_inset
+
+
+\bar under
+* Agnostic to images
+\end_layout
+
+\begin_layout Columns
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.4
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted9.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.6
+\backslash
+linewidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted11.png
+	special width=\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
 \end_layout
 
 \begin_layout Standard
@@ -1432,7 +1518,7 @@ status open
 
 \begin_layout Plain Layout
 Black-box Attack:
- Natural Evolution Strategy
+ Natural Evolution Strategy (1/2)
 \end_layout
 
 \end_inset
@@ -1440,6 +1526,126 @@ Black-box Attack:
 
 \end_layout
 
+\begin_deeper
+\begin_layout FrameSubtitle
+[13] Black-box Adversarial Attacks with Limited Queries and Information
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $F(x)$
+\end_inset
+
+ be the objective function,
+ and 
+\begin_inset Formula $\pi(\theta|x)$
+\end_inset
+
+ be the search distribution,
+ e.g.,
+ Gaussian 
+\begin_inset Formula $\delta\sim\mathcal{N}(0,I)$
+\end_inset
+
+,
+ so that 
+\begin_inset Formula $\theta=x+\sigma\delta$
+\end_inset
+
+.
+ Here is a math trick:
+\begin_inset Formula 
+\begin{align*}
+\mathbb{E}_{\pi(\theta|x)}[F(\theta)] & =\int F(\theta)\pi(\theta|x)d\theta\\
+\nabla_{x}\mathbb{E}_{\pi(\theta|x)}[F(\theta)] & =\nabla_{x}\int F(\theta)\pi(\theta|x)d\theta\\
+ & =\int F(\theta)\nabla_{x}\pi(\theta|x)d\theta\\
+ & =\int F(\theta){\color{red}\frac{{\normalcolor \pi(\theta|x)}}{\pi(\theta|x)}}{\color{red}\nabla_{x}\pi(\theta|x)}d\theta\\
+ & =\int\pi(\theta|x)F(\theta){\color{red}\nabla_{x}\log(\pi(\theta|x))}d\theta\\
+ & =\mathbb{E}_{\pi(\theta|x)}\big[F(\theta)\nabla_{x}\log(\pi(\theta|x))\big]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Black-box Attack:
+ Natural Evolution Strategy (2/2)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+[13] Black-box Adversarial Attacks with Limited Queries and Information
+\end_layout
+
+\begin_layout Standard
+When we use Gaussian as the search distribution,
+ based on the previous page,
+ we have
+\begin_inset Formula 
+\[
+\nabla\mathbb{E}[F(\theta)]\approx\frac{1}{\sigma n}\sum_{i=1}^{n}\delta_{i}F(\theta+\sigma\delta_{i})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+That means the gradient can be estimated through a population of randomly sampled 
+\begin_inset Formula $n$
+\end_inset
+
+ points.
+ We can adopt this estimated gradient and perform basic iterative method mentioned before.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted12.png
+	special width=0.5\linewidth
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
