@@ -1100,8 +1100,7 @@ White-Box Adversarial Attacks
 status open
 
 \begin_layout Plain Layout
-Make Titles Informative.
- 
+White-box Attacks
 \end_layout
 
 \end_inset
@@ -1109,17 +1108,32 @@ Make Titles Informative.
 
 \end_layout
 
+\begin_layout Frame
+The attacker has the 
+\series bold
+full knowledge
+\series default
+ about the architecture,
+ the weights (parameters) of the model to be attacked.
+\end_layout
+
 \begin_deeper
-\begin_layout Theorem
-On first slide.
+\begin_layout Itemize
+
+\series bold
+Core idea:
+
+\series default
+ gradient-based optimization.
 \end_layout
 
-\begin_layout Pause
+\begin_layout Itemize
 
-\end_layout
+\series bold
+Intuition:
 
-\begin_layout Corollary
-On second slide.
+\series default
+ Move the input in the direction that increases the loss (for untargeted) or towards the target class loss.
 \end_layout
 
 \end_deeper
@@ -1135,8 +1149,8 @@ On second slide.
 status open
 
 \begin_layout Plain Layout
-Make Titles Informative.
- 
+White-box Attack:
+ Fast Gradient Sign Method
 \end_layout
 
 \end_inset
@@ -1145,52 +1159,128 @@ Make Titles Informative.
 \end_layout
 
 \begin_deeper
-\begin_layout ColumnsTopAligned
-
-\end_layout
-
-\begin_deeper
-\begin_layout Column
-5cm
-\end_layout
-
-\begin_layout Theorem
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-
-1-
-\end_layout
-
-\end_inset
-
-In left column.
-\end_layout
-
-\begin_layout Column
-5cm
-\end_layout
-
-\begin_layout Corollary
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-
-2-
-\end_layout
-
-\end_inset
-
-In right column.
-\begin_inset Newline newline
-\end_inset
-
-New line
+\begin_layout FrameSubtitle
+[8] Explaining and Harnessing Adversarial Examples
 \end_layout
 
 \end_deeper
+\begin_layout Frame
+This is a one-step algorithm,
+ in the direction of the sign of the gradient.
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Fast Gradient Sign Method (FGSM)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x_{adv}=x+\epsilon\cdot\text{sign}(\nabla_{x}J(\theta,x,y))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+Problem:
+ Fast but often not optimal.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+White-box Attack:
+ Basic Iterative Method
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+[9] adversarial machine learning at scale
+\begin_inset Newline newline
+\end_inset
+
+[10] Towards Deep Learning Models Resistant to Adversarial Attacks
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+This is an iterative algorithm that runs multiple small steps,
+ with projection back into the allowed 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-ball (using the chosen 
+\begin_inset Formula $L_{p}$
+\end_inset
+
+ norm).
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Basic Iterative Method
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x_{adv}^{t+1}=\prod_{\epsilon}(x_{adv}^{t}+\alpha\cdot\text{sign}(\nabla_{x}J(\theta,x_{adv}^{t},y)))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\color lightgray
+Note,
+ this is also called PGD sometimes based on whether the perturbation is randomly initialized or not.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+It is stronger than FGSM because the model is not linear,
+ such that the algorithm can better exploit the input space for a better point for attack.
+\end_layout
+
+\begin_layout Itemize
+PGD is often considered the standard strong baseline.
+\end_layout
+
 \end_deeper
 \begin_layout Subsection
 Grey-box Adversarial Attacks
@@ -1201,11 +1291,77 @@ Grey-box Adversarial Attacks
 status open
 
 \begin_layout Plain Layout
-Grey box
+Grey-box Adversarial Attack
 \end_layout
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Frame
+The attacker has 
+\series bold
+partial knowledge
+\series default
+ about model to be attacked.
+ For example,
+ architecture is known but not the weights.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Adversarial Example Transferrability
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Concept:
+ Adversarial examples crafted for one model often fool other models (even with different architectures).
+\end_layout
+
+\begin_layout Frame
+Attack Strategy:
+ Train a local "substitute" model,
+ craft white-box attacks,
+ and transfer them to the target black-box model.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Universal Adversarial Perturbation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
 
 \end_layout
 
@@ -1218,12 +1374,258 @@ Black-box Adversarial Attacks
 status open
 
 \begin_layout Plain Layout
-Black box
+Black-box Adversarial Attacks
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Frame
+The attacker has 
+\series bold
+very limited knowledge
+\series default
+ about the model,
+ e.g.,
+ can only access the input and output of the model – all the rest are unknown.
+\end_layout
+
+\begin_layout Frame
+Mainly query-based.
+\end_layout
+
+\begin_layout Frame
+Idea:
+ Repeatedly query the target model and use the output to estimate gradients or find adversarial examples directly.
+\end_layout
+
+\begin_layout Frame
+Score-Based:
+ Use output probabilities/logits (e.g.,
+ Zeroth-Order Optimization - ZOO).
+\end_layout
+
+\begin_layout Frame
+Decision-Based:
+ Use only the final predicted label (e.g.,
+ Boundary Attacks).
+ Often requires many more queries.
+\end_layout
+
+\begin_layout Frame
+Black-box optimization methods can be used here,
+ such as Natural Evolution Strategy.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Black-box Attack:
+ Natural Evolution Strategy
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Comparison between white-box and black-box
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+White-Box Attack
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Black-Box Attack
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Effectiveness
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+high
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+much less than white-box
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Efficiency (cost)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+low
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+much higher (e.g.
+ payed API calls)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Practical?
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+much better than white-box
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+,
+\backslash
+newline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+There are also some more challenging scenarios for physical world attacks.
+ They can survive the camera system as well compared to the attacks in the pure digital format.
+ That's beyond the scope of discussion today.
 \end_layout
 
 \begin_layout Section
@@ -1248,16 +1650,165 @@ Adversarial Defense
 
 \end_layout
 
+\begin_layout Frame
+How to prevent the attacks?
+\end_layout
+
+\begin_layout Frame
+i.e.,
+ How to make the deep learning model resistant to those 
+\begin_inset Quotes eld
+\end_inset
+
+imperceptible perturbations
+\begin_inset Quotes erd
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Previous Attempts for Adversarial Defense
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Adversarial Training:
+ Augmenting training data with adversarial examples.
+\end_layout
+
+\begin_layout Frame
+Input Transformation/Preprocessing:
+ Modifying inputs before feeding them to the model (e.g.,
+ JPEG compression,
+ spatial smoothing,
+ randomization).
+\end_layout
+
+\begin_layout Frame
+Model Modification:
+ Changing the network architecture or training procedure (e.g.,
+ defensive distillation - though largely broken).
+\end_layout
+
+\begin_layout Frame
+Detection:
+ Training separate detectors to identify adversarial inputs.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Adversarial Training (Madry Defense)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+How it works:
+ Generate adversarial examples (often using PGD) on-the-fly during training and include them in mini-batches.
+\end_layout
+
+\begin_layout Frame
+Pros:
+ Currently the most effective empirical defense strategy.
+\end_layout
+
+\begin_layout Frame
+Cons:
+ Computationally expensive,
+ can slightly hurt accuracy on clean data ("robustness vs.
+ accuracy trade-off").
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Certified Defenses
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Goal:
+ Provide mathematical guarantees of robustness within a specific perturbation bound.
+\end_layout
+
+\begin_layout Frame
+Example:
+ Randomized Smoothing.
+\end_layout
+
+\begin_layout Frame
+Pros:
+ Formal guarantee.
+ Cons:
+ Often limited to smaller perturbation bound,
+ specific norms,
+ or simpler models;
+ can have lower standard accuracy.
+\end_layout
+
 \begin_layout Section
 Adversarial Attack & Defense in Other Tasks
 \end_layout
 
-\begin_layout Standard
-metric learning
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Section 4:
+ Attack & Defense in Other Tasks
 \end_layout
 
-\begin_layout Standard
-LLM jailbreak.
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+For instance,
+ in deep metric learning.
 \end_layout
 
 \begin_layout Section*
@@ -1282,98 +1833,47 @@ Summary
 Deep learning models are pretty fragile.
 \end_layout
 
-\begin_layout Itemize
-The
-\color none
- 
-\color inherit
-
-\begin_inset Flex Alert
-status open
-
-\begin_layout Plain Layout
-first main message
-\end_layout
-
-\end_inset
-
-
-\color none
- of your talk in one or two lines.
-\end_layout
-
-\begin_layout Itemize
-The
-\color none
- 
-\color inherit
-
-\begin_inset Flex Alert
-status open
-
-\begin_layout Plain Layout
-second main message
-\end_layout
-
-\end_inset
-
-
-\color none
- of your talk in one or two lines.
-\end_layout
-
-\begin_layout Itemize
-Perhaps a
-\color none
- 
-\color inherit
-
-\begin_inset Flex Alert
-status open
-
-\begin_layout Plain Layout
-third message
-\end_layout
-
-\end_inset
-
-
-\color none
-,
- but not more than that.
+\begin_layout Standard
+Deep learning models are surprisingly brittle.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
+Adversarial attacks exploit model internals (gradients) or transferability.
+\end_layout
+
+\begin_layout Standard
+Adversarial training is the leading defense,
+ but challenges remain.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
 status open
 
 \begin_layout Plain Layout
-An outlook is always optional.
+Thanks!
 \end_layout
 
 \end_inset
 
 
-\begin_inset VSpace defskip
-\end_inset
-
-
 \end_layout
 
-\begin_layout Itemize
-Outlook
+\begin_layout Frame
+Q/A Session.
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-What we have not done yet.
+\begin_layout Frame
+The references can be found at the subtitles in the slides.
 \end_layout
 
-\begin_layout Itemize
-Even more stuff.
-\end_layout
-
-\end_deeper
-\end_deeper
 \end_body
 \end_document
