@@ -18,7 +18,8 @@ def resize(img: Image, size: int = 512):
     '''
     resize image to size. Only assume 1:1 aspect ratio.
     '''
-    img = img.resize((size, size), resample=Image.Resampling.BICUBIC)
+    #img = img.resize((size, size), resample=Image.Resampling.BICUBIC)
+    img = img.resize((size, size), resample=Image.Resampling.LANCZOS)
     return img
 
 
