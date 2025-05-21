@@ -33,7 +33,7 @@ def load_ref_mapping(csv_file: str) -> Dict[str, List[str]]:
     return ref_mapping
 
 
-def gen_cmds(test_mapping: Dict[str, List[str]], lq_path: str, ref_path: str, dst: str, *, variant: str = 'refldm') -> List[str]:
+def gen_cmds(test_mapping: Dict[str, List[str]], lq_path: str, ref_path: str, dst: str, *, variant: str = 'refldm', num_ref: int = 1) -> List[str]:
     '''
     Generate commands for FFHQ dataset
     '''
@@ -59,16 +59,23 @@ def gen_cmds(test_mapping: Dict[str, List[str]], lq_path: str, ref_path: str, ds
         ref_images = eval(ref_images)
         ref_images = [os.path.join(ref_path, ref_image) for ref_image in ref_images]
         # Create command
-        real_ref = None
+        real_refs = []
         for tmp in ref_images:
             if os.path.exists(tmp):
-                real_ref = tmp
-                break
+                real_refs.append(tmp)
+        if num_ref == 1:
+            real_ref = real_refs[0]
+        else:
+            tmp2 = []
+            for i in range(1, num_ref + 1):
+                idx = min(len(real_refs) - 1, i - 1)
+                tmp2.append(real_refs[i])
+            real_ref = ' '.join(tmp2)
         # for FFHQ-Ref, real_ref is the first image.
         # for CelebA-Ref-Test, real_ref is not necessarily the first image.
         cmd = template.format(lq_path=os.path.join(lq_path, lq_image),
                                   output_path=output_path, ref_paths=real_ref)
-        if real_ref != None:
+        if not real_refs:
             cmds.append(cmd)
         else:
             cmds.append('# ' + cmd)
@@ -84,14 +91,19 @@ if __name__ == '__main__':
     parser.add_argument('--csv', type=str, default='FFHQ-Ref', help='Path to FFHQ-Ref metadata')
     parser.add_argument('--output', type=str, default='')
     parser.add_argument('--variant', type=str, default='refldm', choices=['refldm', 'restoreid'])
+    parser.add_argument('--num_ref', type=int, default=1, help='Number of references to use')
     args = parser.parse_args()
+
+    # Check if args are valid
+    if args.variant == 'restoreid':
+        assert args.num_ref == 1, 'RestoreID only supports one reference image'
 
     # Load reference mapping
     test_mapping = load_ref_mapping(os.path.join(args.csv, TEST_CSV))
     print('Test Images:', len(test_mapping))
 
     # Generate commands
-    cmds = gen_cmds(test_mapping, args.lq, args.ref, args.dst, variant=args.variant)
+    cmds = gen_cmds(test_mapping, args.lq, args.ref, args.dst, variant=args.variant, num_ref=args.num_ref)
     if args.output:
         with open(args.output, 'w') as f:
             for cmd in cmds:
