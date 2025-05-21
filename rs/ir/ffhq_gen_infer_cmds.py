@@ -37,6 +37,7 @@ def gen_cmds(test_mapping: Dict[str, List[str]], lq_path: str, ref_path: str, ds
     '''
     Generate commands for FFHQ dataset
     '''
+    os.makedirs(output_path, exist_ok=True)
     cmds = ['set -x']
 
     # load template
@@ -55,7 +56,6 @@ def gen_cmds(test_mapping: Dict[str, List[str]], lq_path: str, ref_path: str, ds
             output_path = dst
         else:
             raise ValueError('Unknown variant')
-        os.makedirs(output_path, exist_ok=True)
         ref_images = eval(ref_images)
         ref_images = [os.path.join(ref_path, ref_image) for ref_image in ref_images]
         # Create command
