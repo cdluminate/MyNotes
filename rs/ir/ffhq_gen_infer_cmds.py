@@ -76,7 +76,7 @@ def gen_cmds(test_mapping: Dict[str, List[str]], lq_path: str, ref_path: str, ds
             tmp2 = []
             for i in range(1, num_ref + 1):
                 idx = min(len(real_refs) - 1, i - 1)
-                tmp2.append(real_refs[i])
+                tmp2.append(real_refs[idx])
             real_ref = ' '.join(tmp2)
         # for FFHQ-Ref, real_ref is the first image.
         # for CelebA-Ref-Test, real_ref is not necessarily the first image.
