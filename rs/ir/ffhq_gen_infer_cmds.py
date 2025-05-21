@@ -37,7 +37,7 @@ def gen_cmds(test_mapping: Dict[str, List[str]], lq_path: str, ref_path: str, ds
     '''
     Generate commands for FFHQ dataset
     '''
-    os.makedirs(output_path, exist_ok=True)
+    os.makedirs(dst, exist_ok=True)
     cmds = ['set -x']
 
     # load template
