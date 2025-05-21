@@ -60,10 +60,17 @@ def gen_cmds(test_mapping: Dict[str, List[str]], lq_path: str, ref_path: str, ds
         ref_images = [os.path.join(ref_path, ref_image) for ref_image in ref_images]
         # Create command
         real_refs = []
-        for tmp in ref_images:
-            if os.path.exists(tmp):
-                real_refs.append(tmp)
-        if num_ref == 1:
+        if False:
+            # for CelebA-Ref-Test
+            for tmp in ref_images:
+                if os.path.exists(tmp):
+                    real_refs.append(tmp)
+        else:
+            # for FFHQ-Ref Test
+            real_refs = ref_images
+        if not real_refs:
+            real_ref = '!not-available!'
+        elif num_ref == 1:
             real_ref = real_refs[0]
         else:
             tmp2 = []
@@ -75,7 +82,7 @@ def gen_cmds(test_mapping: Dict[str, List[str]], lq_path: str, ref_path: str, ds
         # for CelebA-Ref-Test, real_ref is not necessarily the first image.
         cmd = template.format(lq_path=os.path.join(lq_path, lq_image),
                                   output_path=output_path, ref_paths=real_ref)
-        if not real_refs:
+        if len(real_refs) > 0:
             cmds.append(cmd)
         else:
             cmds.append('# ' + cmd)
