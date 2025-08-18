@@ -1,4 +1,14 @@
 class Solution:
+    cache = {-1: 0, 0: 1, 1: 1}
+    def climbStairs(self, n: int) -> int:
+        if n in self.cache:
+            return self.cache[n]
+        else:
+            result = self.climbStairs(n-1) + self.climbStairs(n-2)
+            self.cache[n] = result
+            return result
+
+class Solution:
     cache = {0: 1, 1:1}
     def climbStairs(self, n: int) -> int:
         if n in (0, 1):
