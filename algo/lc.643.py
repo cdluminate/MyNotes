@@ -1,4 +1,18 @@
 class Solution:
+    def findMaxAverage(self, nums: List[int], k: int) -> float:
+        tmp = sum(nums[:k])
+        if len(nums) <= k:
+            return tmp / k
+        maxsum = tmp
+        for i in range(k, len(nums)):
+            to_pop = nums[i-k]
+            to_add = nums[i]
+            tmp = tmp - to_pop + to_add
+            if maxsum < tmp:
+                maxsum = tmp
+        return maxsum / k
+
+class Solution:
 
     def dot(self, a, b) -> float:
         assert len(a) == len(b)
