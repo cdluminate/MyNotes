@@ -1,4 +1,22 @@
 class Solution:
+    def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
+        if not intervals:
+            return 0
+        # find the number of non-overlapping intervals
+        result = 0
+        intervals.sort(key=lambda x: x[1])
+        state = -999999
+        for (i, j) in intervals:
+            if state <= i:
+                # no overlap
+                result += 1
+                state = j
+            else:
+                # overlap
+                pass
+        return len(intervals) - result
+
+class Solution:
 
     def isGood(self, intervals: List[List[int]]) -> bool:
         if not intervals:
