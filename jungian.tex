@@ -1,0 +1,697 @@
+\documentclass[UTF8,letter,10pt]{ctexart}
+\usepackage{geometry}
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
+\setmainfont{Times New Roman}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
+
+\definecolor{intjpurple}{HTML}{88619A}
+%\definecolor{intjpurple}{HTML}{4A148C}
+
+
+\begin{document}
+
+\begin{table}[h!]
+    \caption{Cheatsheet 索引表}
+    \centering
+    \resizebox{\textwidth}{!}{% 自动缩放以适应页面宽度
+    \begin{tabular}{cl@{\hspace{1.5cm}}cl} % 中间增加 1.5cm 间距
+        \toprule
+        链接 & 表格名称 & 链接 & 表格名称 \\
+        \midrule
+        \ref{tab:mbti-jung} & MBTI - 荣格八维映射表 (Function Stacks) & \ref{tab:cog-function-critical} & 认知功能的6*批判家长(Critical Parents)表现 \\
+        \ref{tab:cog-function-roles} & 认知功能的角色表（含标准定义符合度） & \ref{tab:cog-function-trickster} & 认知功能的7*盲点(Trickster)表现 \\
+        \ref{tab:cog-function-normal} & 认知功能的正常表现 & \ref{tab:cog-function-demon} & 认知功能的8*恶魔(Demon)表现 \\
+        \ref{tab:cog-function-child} & 认知功能的3*永恒之子(Child)表现 & \ref{tab:cog-function-demon-redemption} & 认知功能的8*恶魔(Demon)整合 \\
+        \ref{tab:cog-function-inferior} & 认知功能的4*阿尼玛(Inferior)表现 & \ref{tab:cog-function-loop} & 认知功能的防御机制/长期内耗循环(Loop) \\
+        \ref{tab:cog-function-inferior-remedy} & 极端压力/抓取状态(Grip)的解药 & \ref{tab:cog-function-loop-remedy} & 长期内耗循环(Loop)的解药 \\
+        \ref{tab:cog-function-opposing} & 认知功能的5*反向作用(Opposing/Nemesis)表现 & & \\
+        \bottomrule
+    \end{tabular}}
+\end{table}
+
+
+\begin{table}[h!]
+    \caption{MBTI - 荣格八维映射表 (Function Stacks)}
+    \label{tab:mbti-jung}
+    \centering
+    \begin{tabular}{cccc}
+        \toprule
+        \multicolumn{4}{c}{\textbf{NT -- 分析师 Analysts}} \\
+        \cellcolor{intjpurple}\color{white} INTJ (Ni-Te-Fi-Se) & INTP (Ti-Ne-Si-Fe) & ENTJ (Te-Ni-Se-Fi) & ENTP (Ne-Ti-Fe-Si) \\
+        \midrule
+        \multicolumn{4}{c}{\textbf{NF -- 外交官 Diplomats}} \\
+        INFJ (Ni-Fe-Ti-Se) & INFP (Fi-Ne-Si-Te) & ENFJ (Fe-Ni-Se-Ti) & ENFP (Ne-Fi-Te-Si) \\
+        \midrule
+        \multicolumn{4}{c}{\textbf{SJ -- 守护者 Sentinels}} \\
+        ISTJ (Si-Te-Fi-Ne) & ISFJ (Si-Fe-Ti-Ne) & ESTJ (Te-Si-Ne-Fi) & ESFJ (Fe-Si-Ne-Ti) \\
+        \midrule
+        \multicolumn{4}{c}{\textbf{SP -- 探索者 Explorers}} \\
+        ISTP (Ti-Se-Ni-Fe) & ISFP (Fi-Se-Ni-Te) & ESTP (Se-Ti-Fe-Ni) & ESFP (Se-Fi-Te-Ni) \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+
+\begin{table}[h!]
+    \caption{认知功能的角色表（含标准定义符合度）}
+    \label{tab:cog-function-roles}
+    \centering
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{ccccc}
+    \toprule
+    序号 & 位置 & 角色名称 & 典型表现 & 对标“正常表现”程度\tabularnewline
+    \midrule
+        1 & 主导 (Dominating) & 英雄(Hero) & 核心力量 & 120\% (本能超载：如呼吸般自然)\tabularnewline
+        2 & 辅助 (Auxiliary) & 家长(Parent) & 辅助工具 & 100\% (完美对标：最成熟可控)\tabularnewline
+        3 & 第三 (Tertiary) & 孩子(Child) & 舒适区 & 50\% $\sim$ 70\% (任性/游戏：表现不稳定)\tabularnewline
+        4 & 劣势 (Inferior) & 阿尼玛(Anima) & 压力源泉/理想 & 10\% (原始) $\rightarrow$ 70\% (整合后工具化)\tabularnewline
+    \midrule
+        5 & 影子 & 反向作用(Opposing) & 质疑者 & -20\% (抗拒/相反：态度厌恶)\tabularnewline
+        6 & 影子 & 批判家长(Critical) & 挑刺者 & -50\% (双标/虚伪：严于律人)\tabularnewline
+    \rowcolor{gray!17}7 & 影子 & 盲点(Trickster) & 真正盲区 & 0\% (黑洞/混乱：无法理解)\tabularnewline
+        8 & 影子 & 恶魔(Demon) & 毁灭者 & -100\% (彻底颠覆：旨在摧毁)\tabularnewline
+    \bottomrule
+    \end{tabular}}
+\end{table}
+
+
+\begin{table}[h!]
+    \caption{认知功能的标准健康表现(The Ideal State)。
+这通常是1*主导(Hero)与2*辅助(Parent)功能的天然状态。
+在个体化(Individuation)的高阶整合中，即便是劣势功能，通过刻意练习也能呈现出此表的特质。
+\textbf{核心区别}：原生功能是自动化的“充电器”(Charging)，而通过后天训练整合的功能——尽管外部表现完美——本质上仍是需要消耗专注力的“耗电器”(Draining)。}
+    \label{tab:cog-function-normal}
+    \centering
+\begin{tabular}{cccc}
+\toprule
+简称 & 全称 & 核心词 & 正常表现\tabularnewline
+\midrule
+Se & Extraverted Sensing & 体验，当下，刺激 & 活在当下，直接行动，现实主义\tabularnewline
+Si & Introverted Sensing & 经验，细节，稳健 & 参照经验，细节敏感，追求守序\tabularnewline
+Ne & Extraverted Intuition & 发散，脑洞，可能 & 跳跃思维，探索新奇，抽象关联\tabularnewline
+Ni & Introverted Intuition & 收敛，洞察，本质 & 预测未来，现象本质，单一愿景\tabularnewline
+Te & Extraverted Thinking & 效率，执行，调配 & 结果导向，逻辑外化，强势直接\tabularnewline
+Ti & Introverted Thinking & 逻辑，解构，精准 & 追求真理，刨根问底，无视权威\tabularnewline
+Fe & Extraverted Feeling & 和谐，人际，共情 & 情绪传染，维护关系，社交礼仪\tabularnewline
+Fi & Introverted Feeling & 本心，真实，价值 & 忠于自我，情感内化，排斥虚伪\tabularnewline
+\bottomrule
+\end{tabular}
+
+\end{table}
+
+
+\begin{table}[h!]
+\caption{认知功能的3*永恒之子(Child)表现： 治愈、游戏与任性。这是人格的“游乐场”与退行区。表现形式：天真单纯的创造力(Playfulness)，或是压力下像被宠坏的孩子般无理取闹(Immaturity)。}
+    \label{tab:cog-function-child}
+    \centering
+    \resizebox{\textwidth}{!}{
+\begin{tabular}{ccccc}
+\toprule
+孩童功能 & 涉及类型 & 核心台词 & 游戏表现 (Playfulness) & 幼稚表现 (Immaturity)\tabularnewline
+\midrule
+\multicolumn{5}{c}{理性游戏组：Judgement}\tabularnewline
+\midrule
+Ti  & INFJ, ISFJ & 居然是这样！ & 纯粹好奇，钻研冷门，解谜乐趣 & 逻辑死板，钻牛角尖，固执己见\tabularnewline
+Fi  & INTJ, ISTJ & 我偏要喜欢 & 傲娇(Tsundere)，深情忠诚，情感纯粹 & 情感任性，无视大局，敏感记仇\tabularnewline
+Te  & ENFP, ESFP & 我能搞定！ & 虚张声势，突发指挥，热衷整理 & 盲目自信，拒绝援助，三分钟热度\tabularnewline
+Fe  & ENTP, ESTP & 大家都爱我 & 迷人捣蛋，幽默风趣，活跃气氛 & 渴望关注，哗众取宠，惧怕被弃\tabularnewline
+\midrule
+\multicolumn{5}{c}{感知游戏组：Perception}\tabularnewline
+\midrule
+Ni  & ISTP, ISFP & 我有预感... & 迷信直觉，神秘主义，宿命感 & 盲信猜测，无端幻想，消极宿命\tabularnewline
+Si  & INTP, INFP & 还是旧的好 & 恋旧收藏，沉溺舒适，重复安稳 & 抗拒改变，退行童年，逃避现实\tabularnewline
+Ne  & ESTJ, ESFJ & 如果这样呢？ & 突发脑洞，冷笑话，无厘头创意 & 容易分心，盲目乐观，无法落地\tabularnewline
+Se  & ENTJ, ENFJ & 我全都要！ & 报复享乐，追求奢华，感官盛宴 & 挥霍无度，暴饮暴食，缺乏节制\tabularnewline
+\bottomrule
+\end{tabular}}
+\end{table}
+
+
+\begin{table}[h!]
+\caption{认知功能的4*阿尼玛(Inferior)表现： 渴望与劫持(The Grip)。这是人格的“阿喀琉斯之踵”，也是通往潜意识的桥梁。表现形式：平时极度崇拜拥有此功能的人(Aspiration)，但在极度压力或疲惫下，则会变成拙劣的模仿者或暴君，导致毁灭性的抓取状态。}
+    \label{tab:cog-function-inferior}
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{ccccc}
+\toprule
+劣势功能 & 涉及类型 & 核心渴望 (Aspiration) & 压力触发 (Trigger) & 抓取表现 (The Grip)\tabularnewline
+\midrule
+\multicolumn{5}{c}{感知型阿尼玛：Perception}\tabularnewline
+\midrule
+Se & INTJ, INFJ & 自由与现实掌控 & 脑力透支，现实失控 & 感官放纵，强迫行为，暴饮暴食\tabularnewline
+Si & ENTP, ENFP & 安稳与归属感 & 细节淹没，身体不适 & 疑病退缩，钻牛角尖，强迫守旧\tabularnewline
+Ne & ISTJ, ISFJ & 智慧与变通性 & 计划打乱，未知变故 & 灾难思维，阴谋论，过度联想\tabularnewline
+Ni & ESTP, ESFP & 深刻与人生意义 & 未来无望，理论困扰 & 宿命论，被害妄想，黑暗解读\tabularnewline
+\midrule
+\multicolumn{5}{c}{判断型阿尼玛：Judgement}\tabularnewline
+\midrule
+Te & INFP, ISFP & 高效成就与秩序 & 价值受挫，自觉无能 & 暴君模式，急功近利，归咎他人\tabularnewline
+Ti & ENFJ, ESFJ & 逻辑真理与独立 & 人际破裂，逻辑无效 & 冷酷逻辑，过度分析，自我贬低\tabularnewline
+Fe & INTP, ISTP & 情感接纳与和谐 & 遭忽视，情感冲突 & 情绪失控，受害心态，过度敏感\tabularnewline
+Fi & ENTJ, ESTJ & 内心平和与真实 & 权威挑战，计划失败 & 情感泛滥，自怜抑郁，被动攻击\tabularnewline
+\bottomrule
+\end{tabular}}
+\end{table}
+
+
+\begin{table}[h!]
+\caption{极端压力/抓取状态(Grip)的解药。当主导功能枯竭时，切忌（用主导功能）硬抗，此时唯一的解药是安抚劣势功能，顺应其最原始的需求。}
+    \label{tab:cog-function-inferior-remedy}
+    \centering
+    \resizebox{\textwidth}{!}{
+\begin{tabular}{ccccc}
+\toprule
+劣势功能 & 涉及类型 & 核心策略 (Strategy) & 停止行为 (Stop) & 执行清单 (Action)\tabularnewline
+\midrule
+\multicolumn{5}{c}{感知解药：回归生理与当下 (Perception)}\tabularnewline
+\midrule
+Se & INTJ, INFJ & \textbf{低压感官疗法} & 停止挖掘意义，停止死磕理论 & 高质量睡眠，接触大自然，摄影，无目的散步\tabularnewline
+Si & ENTP, ENFP & \textbf{熟悉感与滋养} & 停止探索新世界，停止焦虑未来 & 吃熟悉的舒适食物，温水澡，简化待办，回安全屋\tabularnewline
+Ne & ISTJ, ISFJ & \textbf{现实检验锚点} & 停止灾难化想象，停止过度推演 & 罗列已知事实，找人分担，做微小但确定的改变\tabularnewline
+Ni & ESTP, ESFP & \textbf{放过明天} & 停止当下反应，停止试图解决未来 & 推迟所有决策，借用他人愿景，纯粹的娱乐转移\tabularnewline
+\midrule
+\multicolumn{5}{c}{判断解药：回归秩序与人性 (Judgement)}\tabularnewline
+\midrule
+Te & INFP, ISFP & \textbf{小赢策略} & 停止宏大目标，停止自我攻击 & 整理一个抽屉，划掉简单任务，整理房间，承认无力\tabularnewline
+Ti & ENFJ, ESFJ & \textbf{逻辑隔离} & 停止情绪读心，停止人际纠结 & 独处充电，玩解谜/数字游戏，做不涉及人的智力活动\tabularnewline
+Fe & INTP, ISTP & \textbf{无压陪伴} & 停止彻底隔离，停止逻辑辩论 & 并在但各玩各的(Parallel Play)，书面沟通，身体接触\tabularnewline
+Fi & ENTJ, ESTJ & \textbf{允许脆弱} & 停止压抑分析，停止强撑坚强 & 私密环境哭泣宣泄，暂停工作，寻找安全盟友倾诉\tabularnewline
+\bottomrule
+\end{tabular}}
+\end{table}
+
+
+\begin{table}[h!]
+\caption{认知功能的5*反向作用(Opposing/Nemesis)表现：防御与质疑。
+这是进入潜意识的第一道防线。当我们的主导功能(Hero)受到挑战时，第5功能会跳出来“抬杠”。表现形式：固执、怀疑论、被动攻击，或者对他人的该功能表现感到莫名的厌烦。}
+    \label{tab:cog-function-opposing}
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{ccccc}
+\toprule
+反向功能 & 涉及类型 & 核心潜台词 & 防御表现 (Stubbornness) & 投射怀疑 (Paranoia)\tabularnewline
+\midrule
+\multicolumn{5}{c}{感知型反向：拒绝接受信息}\tabularnewline
+\midrule
+Ne & INTJ, INFJ & “别扯那些没用的” & \textbf{厌恶变数}：固执地坚持原计划，拒绝听取其他可能性，认为那是干扰 & \textbf{怀疑意图}：总觉得别人背信弃义，或者怀疑别人的忠诚度\tabularnewline
+Ni & ENTP, ENFP & “你想控制我？” & \textbf{抗拒定论}：讨厌被“贴标签”或被限制未来，故意反其道而行之 & \textbf{怀疑操控}：认为别人的愿景是洗脑，怀疑背后有阴谋\tabularnewline
+Se & ISTJ, ISFJ & “我不想看/听” & \textbf{感官屏蔽}：对外界的新体验表现出排斥，固守熟悉的物理环境 & \textbf{怀疑现实}：认为别人的衣着/表现是肤浅的作秀\tabularnewline
+Si & ESTP, ESFP & “别拿过去压我” & \textbf{轻视经验}：极度讨厌“老规矩”或繁琐的流程，故意打破常规 & \textbf{怀疑动机}：认为别人拿过去的数据是在限制自己的自由\tabularnewline
+\midrule
+\multicolumn{5}{c}{判断型反向：拒绝接受逻辑/价值}\tabularnewline
+\midrule
+Ti & ENTJ, ESTJ & “这没意义” & \textbf{傲慢驳斥}：若是不能马上应用，就拒绝深入思考逻辑细节，认为那是浪费时间 & \textbf{怀疑智商}：认为别人的精细逻辑是“书呆子气”，试图用权威压倒道理\tabularnewline
+Te & INTP, ISTP & “你在教我做事？” & \textbf{抗拒指挥}：极度厌恶被别人安排或催促，故意拖延以示反抗 & \textbf{怀疑能力}：认为别人的证书/头衔都是虚的，质疑权威的有效性\tabularnewline
+Fi & ENFJ, ESFJ & “你太自私了” & \textbf{否定个体}：为了群体和谐而压抑个人感受，也看不惯别人的特立独行 & \textbf{怀疑人品}：认为那些坚持自我价值的人是“破坏团结”的坏人\tabularnewline
+Fe & INFP, ISFP & “别以此绑架我” & \textbf{拒绝从众}：极度反感社交压力和“必须做的事”，故意表现得冷漠 & \textbf{怀疑虚伪}：认为别人的客套和热情都是有目的的操纵\tabularnewline
+\bottomrule
+\end{tabular}}
+\end{table}
+
+
+\begin{table}
+\caption{认知功能的6*批判家长(Critical Parents)表现: 如何打压别人和自己}
+    \label{tab:cog-function-critical}
+    \resizebox{\textwidth}{!}{
+\begin{tabular}{ccccc}
+\toprule
+批判功能 & 涉及类型 & 核心台词 & 对外打压 & 对内自毁\tabularnewline
+\midrule
+\multicolumn{5}{c}{理性审判组：Judgement}\tabularnewline
+\midrule
+Ti Critical 批判逻辑 & INTJ, ISTJ & 你真蠢 & 智力羞辱，冷漠指出他人逻辑漏洞 & 自我怀疑，质疑自己不够聪明\tabularnewline
+Fi Critical 批判道德 & INFJ, ISFJ & 你真坏 & 道德审判，指责自私虚伪冷血人品 & 自我羞耻，觉得自己是伪君子\tabularnewline
+Te Critical 批判能力 & ENTP, ESTP & 你没用 & 能力否定，嘲笑笨手笨脚一事无成 & 成就焦虑，成功仍觉一无是处\tabularnewline
+Fe Critical 批判社交 & ENFP, ESFP & 没人理你 & 社交孤立，攻击对方情商或者礼仪 & 归属崩塌，总觉自己格格不入\tabularnewline
+\midrule
+\multicolumn{5}{c}{感知审判组：Perception}\tabularnewline
+\midrule
+Ni Critical 批判远见 & INTP, INFP & 没希望 & 未来诅咒，否定愿景断言注定失败 & 虚无主义，觉得做什么都没意义\tabularnewline
+Si Critical 批判经验 & ISTP, ISFP & 你真弱 & 翻旧帐，指责不可靠不长记性/否定毅力 & 创伤反刍，不断回忆过去的痛苦\tabularnewline
+Ne Critical 批判意图 & ENTJ, ENFJ & 你想害我 & 动机阴谋论，怀疑忠诚指责对方鲁莽 & 选择障碍，看到无数会感到受困\tabularnewline
+Se Critical 批判现实 & ESTJ, ESFJ & 真难看 & 外貌/品味攻击，苛刻挑剔对方衣着审美 & 容貌/现实焦虑，觉得自己丑陋笨拙\tabularnewline
+\bottomrule
+\end{tabular}}
+\end{table}
+
+
+
+
+
+\begin{table}[h!]
+\caption{认知功能的7*盲点(Trickster)表现：无意识的黑洞。
+我们不仅不擅长此功能，而且往往会通过贬低它来保护自尊。表现形式：根本看不见其存在的必要性，将其视为多余、虚伪或荒谬的干扰。}
+    \label{tab:cog-function-trickster}
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{cccc}
+\toprule
+盲点功能 & 涉及类型 & 盲区心态/潜台词 (The Dismissal) & 盲点具象表现\tabularnewline
+\midrule
+\multicolumn{4}{c}{对人际与道德的盲视}\tabularnewline
+\midrule
+Fe & INTJ, ISTJ & “虚伪的客套有什么用？讲重点。” & 视社交礼仪为操纵，善意说真话却成冒犯，完全读不懂空气\tabularnewline
+Fi & ENTP, ESTP & “这也太矫情了，客观一点行不行？” & 情感逻辑化，不知道自己真实感受，无意间把别人的价值观踩得粉碎\tabularnewline
+\midrule
+\multicolumn{4}{c}{对现实与身体的盲视}\tabularnewline
+\midrule
+Se & INTP, INFP & “这重要吗？我没看见/没听见。” & 物理笨拙(平地摔)，极其忽视环境细节，活在脑洞里完全缺乏行动力\tabularnewline
+Si & ENTJ, ENFJ & “别提过去，我只要未来！” & 严重透支身体而不自知，极度厌恶怀旧和重复，记不住生活琐事\tabularnewline
+\midrule
+\multicolumn{4}{c}{对联想与愿景的盲视}\tabularnewline
+\midrule
+Ne & ISTP, ISFP & “你到底想说什么？别扯那些没用的。” & 极度字面化，理解不了暗示和隐喻，讨厌猜测，一条路走到黑\tabularnewline
+Ni & ESTJ, ESFJ & “别想太多，先做再说，这不切实际。” & 短期主义，只要确定的流程而不要愿景，瞎操心，对未知充满恐惧\tabularnewline
+\midrule
+\multicolumn{4}{c}{对逻辑与效率的盲视}\tabularnewline
+\midrule
+Te & INFJ, ISFJ & “你这人怎么这么冷血/功利？” & 无法理清外部资源，难以做客观决策，为了维护人际或信仰而抗拒数据\tabularnewline
+Ti & ENFP, ESFP & “太较真了没意思，差不多就行了。” & 逻辑疏松，讨厌定义和辩论，经常自我矛盾却不自知，只关注“好不好”\tabularnewline
+\bottomrule
+\end{tabular}}
+\end{table}
+
+
+\begin{table}
+
+\caption{认知功能的8*恶魔(Demon)表现： 彻底崩溃时的毁灭打击。这是人格结构中最深层，最黑暗，也是最原始的部分。触发条件：自尊彻底崩溃，核心界限被严重侵犯，或者感受到极度绝望。表现形式：毁灭一切，不在乎输赢，只想让一切归零
+-- “既然你毁了我的世界，那我就把整个宇宙都炸了陪葬”。转化潜力：如果能整合，它也能带来涅槃重生的力量(The Daemonic
+vs. The Demonic)。}
+    \label{tab:cog-function-demon}
+    \centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{cccc}
+\toprule
+恶魔功能 & 涉及类型 & 核心心态 & 毁灭性表现(The Destruction)\tabularnewline
+\midrule
+\multicolumn{4}{c}{感知型恶魔}\tabularnewline
+\midrule
+Si Demon & INTJ, INFJ & 彻底抹除 | Erasure & 记忆清洗与断连(The Door Slam)，肉体自毁倾向\tabularnewline
+Se Demon & ENTP, ENFP & 现实崩塌 | Burn it down & 物理毁灭与虚无，极度慵懒或狂躁\tabularnewline
+Ni Demon & ISTJ, ISFJ & 永恒绝望 | Hopelessness & 恐怖末日预言家，否定别人的梦想\tabularnewline
+Ne Demon & ISTP, ISFP & 恶意扭曲 | Gaslighting & 被害妄想与构陷，混乱制造者\tabularnewline
+\midrule
+\multicolumn{4}{c}{判断型恶魔}\tabularnewline
+\midrule
+Ti Demon & INFP, ISFP & 诛心真话 | Cold Truth & 最恶毒的逻辑穿刺，摧毁对方自尊\tabularnewline
+Te Demon & INTP, ISTP & 系统毁灭 | System Crash & 冷酷的暴君，破坏性执行，无视人性\tabularnewline
+Fi Demon & ENTP, ESTP & 道德虚无 | Nihilism & 反社会倾向，情感报复\tabularnewline
+Fe Demon & ENTJ, ESTJ & 名誉屠杀 | Character Assassination & 情感操纵与社会死亡，情感爆发\tabularnewline
+\bottomrule
+\end{tabular}}
+\end{table}
+
+
+
+
+\begin{table}
+
+\caption{认知功能的8*恶魔(Demon)整合：涅槃重生后的救赎之力(The Daemonic)。当恶魔功能被意识整合，它不再是毁灭者，而变成了通往完整人格的守门人。这种力量通常带有一种“非个人”的、超越小我的神性或宿命感。表现形式：大智若愚、绝地反击、或是对他人的深刻救赎。}
+    \label{tab:cog-function-demon-redemption}
+    \centering
+
+\resizebox{\textwidth}{!}{
+\begin{tabular}{cccc}
+\toprule
+恶魔功能 & 涉及类型 & 转化核心 & 整合后表现(The Redemption)\tabularnewline
+\midrule
+\multicolumn{4}{c}{感知型恶魔}\tabularnewline
+\midrule
+Si Demon & INTJ, INFJ & 历史和解 | Reconciliation & 成为传统的守护者，从过往创伤中提炼史诗般的意义，极致的身体掌控\tabularnewline
+Se Demon & ENTP, ENFP & 绝对显化 | Manifestation & 将抽象疯狂的灵感在现实中完美落地，极具感染力的舞台表现，活在当下\tabularnewline
+Ni Demon & ISTJ, ISFJ & 先知智慧 | Visionary & 突破经验主义的桎梏，在危机时刻涌现出精准的未来预判，指引方向\tabularnewline
+Ne Demon & ISTP, ISFP & 万物互联 | Interconnection & 极其通透的开放心态，理解复杂的混沌系统，成为打破僵局的创新者\tabularnewline
+\midrule
+\multicolumn{4}{c}{判断型恶魔}\tabularnewline
+\midrule
+Ti Demon & INFP, ISFP & 结构真理 | Structural Truth & 能够用最客观的逻辑捍卫价值观，不带情绪地通过理性解决最棘手的问题\tabularnewline
+Te Demon & INTP, ISTP & 建设秩序 | Constructive Order & 极具执行力的系统构建者，在混乱中建立坚不可摧的帝国，为了大局的高效\tabularnewline
+Fi Demon & ENTP, ESTP & 慈悲圣徒 | Universal Love & 浪子回头般的真诚，对他人的苦难产生深刻共情，为了信仰不惜一切\tabularnewline
+Fe Demon & ENTJ, ESTJ & 仁慈领袖 | Benevolent Ruler & 放下权力的傲慢，展现出真正的人性光辉，通过情感连接凝聚人心\tabularnewline
+\bottomrule
+\end{tabular}}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+\begin{table}[h!]
+\caption{认知功能的防御机制/长期内耗循环(Loop)。不同于瞬间压力的Grip，Loop是一种长期的、病态的舒适区，个体切断了辅助功能(第二功能)的平衡作用，只在第一和第三功能之间死循环。}
+    \label{tab:cog-function-loop}
+    \centering
+    \resizebox{\textwidth}{!}{
+\begin{tabular}{cccc}
+\toprule
+Loop组合 & 状态名称 & 涉及类型 & 典型表现 (Manifestation)\tabularnewline
+\midrule
+\multicolumn{4}{c}{内向Loop：切断外部互动 $\rightarrow$ 陷入大脑死循环 $\rightarrow$ 拒绝现实检验}\tabularnewline
+\midrule
+\multirow{2}{*}{Ni - Fi} & \multirow{2}{*}{偏执内耗 (Paranoid)} & INTJ & 沉溺消极愿景，觉得自己是受害者，全世界都在针对自己，无行动验证\tabularnewline
+ & & ISFP & 陷入深刻的负面自我定义，确信无人能理解自己，自我孤立\tabularnewline
+\midrule
+\multirow{2}{*}{Ti - Si} & \multirow{2}{*}{固步自封 (Stuck)} & INTP & 反复分析过去错误，抗拒新信息，甚至忽略饮食卫生等基本生存需求\tabularnewline
+ & & ISFJ & 翻旧账大师，逻辑证明自己注定失败，拒绝任何新尝试\tabularnewline
+\midrule
+\multirow{2}{*}{Ni - Ti} & \multirow{2}{*}{虚无主义 (Nihilistic)} & INFJ & 极度冷漠愤世嫉俗，切断同情心，构建宏大理论证明“人类没救了”\tabularnewline
+ & & ISTP & 对未来产生阴谋论，逻辑自洽地认为别人甚至宇宙都在算计自己\tabularnewline
+\midrule
+\multirow{2}{*}{Fi - Si} & \multirow{2}{*}{受害循环 (Resentful)} & INFP & 强迫性重温过去创伤，认为未来只会重复痛苦，丧失所有希望\tabularnewline
+ & & ISTJ & 变得情绪化且敏感，过度解读过去的细节，赋予其沉重的负面色彩\tabularnewline
+\midrule
+\multicolumn{4}{c}{外向Loop：切断内心联系 $\rightarrow$ 疯狂外部活动 $\rightarrow$ 逃避深度思考}\tabularnewline
+\midrule
+\multirow{2}{*}{Te - Se} & \multirow{2}{*}{鲁莽暴君 (Bulldozer)} & ENTJ & 为行动而行动，停不下来，通过高强度的感官/工作麻痹思考，独断专行\tabularnewline
+ & & ESFP & 极度强势急功近利，不仅自己享乐，还强迫别人服从自己的“效率”\tabularnewline
+\midrule
+\multirow{2}{*}{Ne - Fe} & \multirow{2}{*}{表演人格 (Manipulative)} & ENTP & 极度渴望关注，失去逻辑锚点，为获得反应故意挑衅或成为空洞梗王\tabularnewline
+ & & ESFJ & 脑洞大开地焦虑他人看法，变得八卦、戏剧化，为表面和谐撒谎\tabularnewline
+\midrule
+\multirow{2}{*}{Fe - Se} & \multirow{2}{*}{浅薄迎合 (Superficial)} & ENFJ & 沉迷当下感官与评价，冲动消费，过度社交，忘记长远目标\tabularnewline
+ & & ESTP & 虚伪的社交变色龙，为了群体认可过度表现情感，在不同圈子演戏\tabularnewline
+\midrule
+\multirow{2}{*}{Ne - Te} & \multirow{2}{*}{焦虑忙碌 (Burnout)} & ENFP & 开启一百个计划却无一完成，强迫性快速执行，无法容忍情感反思\tabularnewline
+ & & ESTJ & 异想天开却独断专行，提出不切实际的新规并强迫大家执行，抛弃经验\tabularnewline
+\bottomrule
+\end{tabular}}
+\end{table}
+
+
+
+\begin{table}[h!]
+\caption{长期内耗循环(Loop)的解药。核心逻辑：Loop 是因为忽略了辅助功能（家长），导致第一与第三功能恶性循环。解药是\textbf{强制调用第二功能}。}
+    \label{tab:cog-function-loop-remedy}
+    \centering
+    \resizebox{\textwidth}{!}{
+\begin{tabular}{cccc}
+\toprule
+解药 (辅助功能) & 涉及 Loop & 核心逻辑 (Logic) & 行动指南 (Actionable Steps)\tabularnewline
+\midrule
+\multicolumn{4}{c}{内向 Loop 解药：向外连接，破除自我封闭 (Externalize)}\tabularnewline
+\midrule
+\multirow{2}{*}{Te (外倾思考)} & Ni-Fi (INTJ) & \textbf{产出与秩序} & \multirow{2}{*}{列出清单，整理物理环境，追求“小赢”，将担忧转化为待办}\tabularnewline
+ & Si-Fi (ISTJ) & 停止感受，开始执行 & \tabularnewline
+\midrule
+\multirow{2}{*}{Fe (外倾情感)} & Ni-Ti (INFJ) & \textbf{表达与连接} & \multirow{2}{*}{找人倾诉，进行辅导/帮助他人，寻求外部的情感确认}\tabularnewline
+ & Si-Ti (ISFJ) & 停止自剖，关注他人 & \tabularnewline
+\midrule
+\multirow{2}{*}{Se (外倾感觉)} & Ti-Ni (ISTP) & \textbf{行动与感官} & \multirow{2}{*}{高强度运动，手工制造，大扫除，接触自然，强迫回到当下}\tabularnewline
+ & Fi-Ni (ISFP) & 停止空想，物理接触 & \tabularnewline
+\midrule
+\multirow{2}{*}{Ne (外倾直觉)} & Ti-Si (INTP) & \textbf{探索与发散} & \multirow{2}{*}{物理换环境，摄入随机信息(书/剧)，头脑风暴，尝试新路线}\tabularnewline
+ & Fi-Si (INFP) & 停止反刍，寻找新意 & \tabularnewline
+\midrule
+\multicolumn{4}{c}{外向 Loop 解药：内向沉淀，停下来检查内心 (Internalize)}\tabularnewline
+\midrule
+\multirow{2}{*}{Ni (内倾直觉)} & Te-Se (ENTJ) & \textbf{愿景与暂停} & \multirow{2}{*}{强制独处，断网冥想，推演长远后果，追问做事的根本意义}\tabularnewline
+ & Fe-Se (ENFJ) & 停止忙碌，寻找本质 & \tabularnewline
+\midrule
+\multirow{2}{*}{Si (内倾感觉)} & Te-Ne (ESTJ) & \textbf{复盘与稳健} & \multirow{2}{*}{查阅历史先例，关注身体感受，做可行性检查，休息与维护}\tabularnewline
+ & Fe-Ne (ESFJ) & 停止折腾，回归经验 & \tabularnewline
+\midrule
+\multirow{2}{*}{Fi (内倾情感)} & Ne-Te (ENFP) & \textbf{价值与本心} & \multirow{2}{*}{日记反思，道德审查，学会说“不”，确认是否符合真实喜好}\tabularnewline
+ & Se-Te (ESFP) & 停止取悦，自问本心 & \tabularnewline
+\midrule
+\multirow{2}{*}{Ti (内倾思考)} & Ne-Fe (ENTP) & \textbf{逻辑与真理} & \multirow{2}{*}{独立逻辑分析，精确定义概念，消除模糊，不论人情只论对错}\tabularnewline
+ & Se-Fe (ESTP) & 停止表演，回归事实 & \tabularnewline
+\bottomrule
+\end{tabular}}
+\end{table}
+
+
+
+
+
+\begin{table}[h!]
+\caption{状态(State) vs. 特质(Trait)：预期管理表。
+绝大多数人(80\%+)长期处于轻微 Loop 或 Grip 中，这是现代生活的常态。区分的关键在于“可逆性”与“自我认知”。}
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{cccc}
+\toprule
+维度 & 暂时状态 (State) & 固化特质 (Trait) & INTJ 的预期管理策略\tabularnewline
+\midrule
+\textbf{定义} & 应激反应 (Stress Response) & 人格结构 (Structure) & 哪怕是圣人也会有 Loop 时刻\tabularnewline
+\midrule
+\textbf{自我认知} & \textbf{自我失调 (Ego-dystonic)} & \textbf{自我协调 (Ego-syntonic)} & 观察他事后是否会道歉或反思\tabularnewline
+& 觉得“我不该这样，这不像我” & 觉得“我没错，是世界的错” & 只有前者值得深入交往\tabularnewline
+\midrule
+\textbf{触发机制} & 有明确的外部压力源 & 无需触发，是默认行为模式 & 寻找触发点，若无因却疯癫，则远离\tabularnewline
+& (如：失业、失恋、过劳) & (如：自恋、边缘、反社会) & \tabularnewline
+\midrule
+\textbf{表现形式} & \textbf{Grip/Loop} & \textbf{人格障碍 (PD)} & 区分“受伤的野兽”与“原本的恶魔”\tabularnewline
+& 情绪过后会回归 Hero/Parent & 阴影功能喧宾夺主，成为常态 & 前者需要空间，后者需要断联\tabularnewline
+\midrule
+\textbf{恢复弹性} & \textbf{高弹性} & \textbf{无弹性/僵化} & 不要试图“拯救”特质固化的人\tabularnewline
+& 给点解药(如休息)就能弹回 & 拒绝改变，拒绝辅助功能介入 & 那是心理医生的工作，不是朋友的\tabularnewline
+\bottomrule
+\end{tabular}}
+\end{table}
+
+
+\begin{table}[h!]
+\caption{全谱系战略应对表：针对 8 种内耗循环(Loop)的社交博弈策略。
+核心心法：诊断出 Loop 后，切忌在对方的逻辑里打转。内向 Loop 需要“外化引导”，外向 Loop 需要“边界阻断”。}
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{ccccc}
+\toprule
+Loop 类型 & 涉及人格 & 对方心态 (The Mindset) & 你的错误反应 (Don't) & 战略反应 (Do: 降维打击)\tabularnewline
+\midrule
+\multicolumn{5}{c}{外向 Loop：躁动、表演、强迫执行 (对策：设立边界，强制降速)}\tabularnewline
+\midrule
+\textbf{Te-Se} & ENTJ & “我要赢，立刻，马上” & “你太功利了，休息一下” & \textbf{顺势借力 (Aikido)}：\tabularnewline
+鲁莽暴君 & ESFP & (停不下来的推土机) & (试图让他慢下来) & 承认他的效率，给他一个极难的具体任务消耗其过剩精力\tabularnewline
+\midrule
+\textbf{Fe-Se} & ENFJ & “快看我，夸我，爱我” & “你太虚伪了，是个戏精” & \textbf{情绪喂养/隔离 (Grey Rock)}：\tabularnewline
+浅薄迎合 & ESTP & (活在他人眼里的空心人) & (当面揭穿或冷脸) & 像喂金鱼一样给点低成本赞美(Feed Fe)，然后迅速物理撤离\tabularnewline
+\midrule
+\textbf{Ne-Fe} & ENTP & “我要搞个大新闻/看反应” & “你逻辑不通/我很生气” & \textbf{逻辑锚点 (Logic Anchor)}：\tabularnewline
+表演人格 & ESFJ & (混乱善良/邪恶的乐子人) & (给他提供情绪反馈) & 不给情绪反应，冷漠地追问定义：“你刚才那个词具体指什么？”\tabularnewline
+\midrule
+\textbf{Ne-Te} & ENFP & “我有100个计划你必须配合” & “你这根本不落地/不现实” & \textbf{价值排序 (Prioritize)}：\tabularnewline
+焦虑忙碌 & ESTJ & (暴躁的无头苍蝇) & (试图用经验Si阻拦) & 不否认计划，但问核心：“哪个最重要？我们先只做这一个。”\tabularnewline
+\midrule
+\multicolumn{5}{c}{内向 Loop：封闭、偏执、自我反刍 (对策：打破真空，物理介入)}\tabularnewline
+\midrule
+\textbf{Ni-Fi} & \cellcolor{intjpurple}\color{white}INTJ & “众人皆醉，世界没救了” & “别想太多，出来玩” & \textbf{任务外化 (Externalize)}：\tabularnewline
+偏执内耗 & ISFP & (深陷消极愿景的受害者) & (试图用Se强行拉扯) & 别辩论观点。把话题变成物体：“这事依然无解，但能帮我递下杯子吗？”\tabularnewline
+\midrule
+\textbf{Ti-Si} & INTP & “过去失败证明未来不可行” & “你要勇敢尝试/别钻牛角尖” & \textbf{输入变量 (New Input)}：\tabularnewline
+固步自封 & ISFJ & (翻旧账的逻辑死循环) & (攻击他的逻辑闭环) & “你分析得对。但如果加入这个新参数(Ne)，结果会变吗？”\tabularnewline
+\midrule
+\textbf{Ni-Ti} & INFJ & “我在揭露宇宙/人性的黑暗” & “你太消极/阴谋论了” & \textbf{现实检验 (Reality Check)}：\tabularnewline
+虚无主义 & ISTP & (愤世嫉俗的旁观者) & (试图用正能量说教) & “这理论很完美。但它能解释为什么那个人刚刚对你笑了吗？”(引导看Se)\tabularnewline
+\midrule
+\textbf{Fi-Si} & INFP & “我永远走不出这个创伤” & “这点小事至于吗/向前看” & \textbf{允许哀悼 (Validation)}：\tabularnewline
+受害循环 & ISTJ & (沉溺于过去的痛苦细节) & (试图提供Te解决方案) & 不要给建议。只要点头确认：“那确实很痛。”(等到情绪耗尽再谈Te)\tabularnewline
+\bottomrule
+\end{tabular}}
+\end{table}
+
+
+\begin{table}[h!]
+\caption{全谱系社会控制矩阵：资本主义如何无死角收割 8 种认知循环(Loop)。
+核心逻辑：Loop 是个体在逃避痛苦时的防御机制，而市场经济将每一种“防御”都包装成了“消费需求”。}
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{ccccc}
+\toprule
+Loop 类型 & 涉及人格 & 资本主义的话术 (The Pitch) & 收割方式/产品 (The Product) & 典型受害者心态\tabularnewline
+\midrule
+\multicolumn{5}{c}{外向 Loop 收割：利用欲望、焦虑与虚荣}\tabularnewline
+\midrule
+\textbf{Te-Se} & ENTJ & “狼性文化” & \textbf{效率奢侈品 \& 成功学} & “我必须更强、更快、更富。”\tabularnewline
+鲁莽暴君 & ESFP & “Work Hard, Play Hard” & 豪车名表、能量饮料、高端商务舱、速成课 & (停不下来的生产/消费机器)\tabularnewline
+\midrule
+\textbf{Fe-Se} & ENFJ & “精致生活” & \textbf{颜值经济 \& 社交货币} & “如果不美/不合群，我就没价值。”\tabularnewline
+浅薄迎合 & ESTP & “对自己好一点” & 医美贷、网红打卡、快时尚、社交会员 & (活给别人看的流量奴隶)\tabularnewline
+\midrule
+\textbf{Ne-Fe} & ENTP & “错过即过错 (FOMO)” & \textbf{注意力收割 \& 炒作经济} & “大家都在玩这个，我不能落下。”\tabularnewline
+表演人格 & ESFJ & “跟上潮流/热梗” & 短视频算法、Meme币、盲盒、NFT、热搜 & (被算法随意调度的跟风者)\tabularnewline
+\midrule
+\textbf{Ne-Te} & ENFP & “副业刚需/斜杠青年” & \textbf{焦虑贩卖 \& 生产力工具} & “我还要做更多，睡觉就是浪费。”\tabularnewline
+焦虑忙碌 & ESTJ & “多任务并行/优化人生” & 知识付费、Notion模板、理财课、抢票加速包 & (被“机会”累死的无头苍蝇)\tabularnewline
+\midrule
+\multicolumn{5}{c}{内向 Loop 收割：利用恐惧、孤独与傲慢}\tabularnewline
+\midrule
+\textbf{Ti-Si} & INTP & “未雨绸缪” & \textbf{恐慌经济 \& 安全感} & “世界太危险，必须囤积一切。”\tabularnewline
+固步自封 & ISFJ & “规避风险/养老焦虑” & 保险、黄金、防脱发、囤积癖(Storage)、硬核养生 & (为“可能发生的灾难”买单)\tabularnewline
+\midrule
+\textbf{Fi-Si} & INFP & “治愈你的内在小孩” & \textbf{怀旧经济 \& 疗愈消费} & “现实太痛了，我要躲回过去。”\tabularnewline
+受害循环 & ISTJ & “还是过去的味道好” & 复古潮牌、解压玩具、甚至被滥用的心理咨询/灵修 & (沉溺于创伤抚慰的巨婴)\tabularnewline
+\midrule
+\textbf{Ni-Fi} & \cellcolor{intjpurple}\color{white}INTJ & “独立思考/品味隔离” & \textbf{鄙视链顶端 \& 智商税} & “只有我懂它的价值，你们都是俗人。”\tabularnewline
+偏执内耗 & ISFP & “为信仰/本质充值” & 极简主义天价单品、绝版收藏、Hi-Fi音响、徕卡 & (为“独特性”支付溢价的孤岛)\tabularnewline
+\midrule
+\textbf{Ni-Ti} & INFJ & “看清世界的真相” & \textbf{阴谋论 \& 替代性知识} & “主流都是谎言，我要寻找解药。”\tabularnewline
+虚无主义 & ISTP & “跳出矩阵 (Red Pill)” & 区块链信仰、甚至邪教课程、生存狂装备(Prepper) & (试图智力碾压系统的边缘人)\tabularnewline
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[h!]
+\caption{INTJ 的四重人格状态切换表：你体内的隐藏角色。
+核心原理：当主我(Ego)疲惫、自信爆棚或极度受挫时，我们会切换到其他象限接管身体。}
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{ccccc}
+\toprule
+状态名称 & 对应人格 & 触发条件 & 典型表现 (Mode) & INTJ 的体验\tabularnewline
+\midrule
+\textbf{本我 (Ego)} & \textbf{INTJ} & \textbf{默认状态} & \textbf{战略家 (The Strategist)} & 冷静、规划、内省、效率、低能量消耗\tabularnewline
+\midrule
+\textbf{潜意识 (Subconscious)} & \textbf{ESFP} & \textbf{极度自信/放松} & \textbf{表演者 (The Performer)} & \textbf{这解释了你的“高能量”时刻}！\tabularnewline
+(Hero的反面) & (Aspiring) & 或需要展示魅力时 & (Se-Fi 主导) & 当你拿起相机(Se)进入心流，不再焦虑未来(Ni)时，\tabularnewline
+& & & & 你会变得幽默、活在当下、极具感染力。\tabularnewline
+\midrule
+\textbf{无意识 (Unconscious)} & \textbf{ENTP} & \textbf{防御/被质疑} & \textbf{辩论家 (The Debater)} & 变得多疑、爱抬杠、为了赢而赢。\tabularnewline
+(Shadow 阴影) & & 智力受到挑战时 & (Ne-Ti 主导) & Ne Nemesis 让你怀疑一切，Ti Critic 让你刻薄地攻击别人的逻辑漏洞。\tabularnewline
+\midrule
+\textbf{超我 (Superego)} & \textbf{ISFJ} & \textbf{极度绝望/毁灭} & \textbf{复仇天使 (The Punisher)} & \textbf{地狱模式}。彻底放弃逻辑和愿景，\tabularnewline
+(Demon 恶魔) & & 核心价值被摧毁时 & (Si-Fe 主导) & 变得极度计较细节(Si Demon)，想要毁灭世界或彻底自我牺牲(Fe)。\tabularnewline
+\bottomrule
+\end{tabular}}
+\end{table}
+
+
+\begin{table}[h!]
+\caption{社交狩猎矩阵：PUA与精神控制是如何利用认知功能漏洞的。
+核心原理：操纵者通过攻击受害者的“劣势功能”引发焦虑，再通过扮演“完美拯救者”进行收割。不同类型的痛点（软肋）完全不同。}
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{ccccc}
+\toprule
+受害目标 & 软肋功能 & 典型操纵手段 (The Tactic) & 攻击话术/心理暗示 & 为什么会生效 (Mechanism)\tabularnewline
+\midrule
+\multicolumn{5}{c}{针对 NT 分析师：利用“傲慢”与“社交无能”}\tabularnewline
+\midrule
+\rowcolor{intjpurple!20} \textbf{INTJ} & \textbf{Se 劣势} & \textbf{Negging (打压/否定)} & “你确实很聪明，但有点无趣/死板。” & \textbf{攻击 Se 表演欲}：INTJ 潜意识渴望Se的潇洒，\tabularnewline
+\rowcolor{intjpurple!20} ENTJ & \textbf{Fi 劣势} & \& \textbf{冷读术} & “我知道你外表冷漠，其实内心渴望狂野。” & 一旦被定义为“无趣”，就会拼命通过顺从对方来证明自己。\tabularnewline
+\midrule
+\textbf{INTP} & \textbf{Fe 劣势} & \textbf{Frozen (冷冻/撤回)} & “既然你这么想，那随你便吧。(沉默)” & \textbf{制造 Fe 恐慌}：利用 TiUser 对人际氛围的不知所措，\tabularnewline
+ENTP & \textbf{Si 劣势} & \& \textbf{智力隔离} & “这点常识都不懂？我没法跟你解释。” & 突然撤回关注，迫使对方为了恢复“和谐”而放弃逻辑底线。\tabularnewline
+\midrule
+\multicolumn{5}{c}{针对 NF 外交官：利用“圣母心”与“自我怀疑”}\tabularnewline
+\midrule
+\textbf{INFJ} & \textbf{Se 劣势} & \textbf{Gaslighting (煤气灯)} & “你记错了，根本没发生过，你太敏感了。” & \textbf{瓦解 Se 现实感}：利用 NF 对物理现实的不确定，\tabularnewline
+ENFJ & \textbf{Ti 劣势} & \& \textbf{受害者扮演} & “都是因为爱你我才疯的，你却在分析我？” & 篡改记忆。同时利用 Fe 的同情心，让受害者对施暴者产生负疚感。\tabularnewline
+\midrule
+\textbf{INFP} & \textbf{Te 劣势} & \textbf{Dependence (习得性无助)} & “没有我，你连生活都不能自理。” & \textbf{打击 Te 能力感}：不断强调受害者在现实层面的无能，\tabularnewline
+ENFP & \textbf{Si 劣势} & \& \textbf{未来画饼} & “忍过这一阵，我们的未来会很美。” & 使其确信离开操纵者就无法生存。利用 Ne 给人造一个虚假的未来。\tabularnewline
+\midrule
+\multicolumn{5}{c}{针对 SJ 守护者：利用“责任感”与“恐惧变化”}\tabularnewline
+\midrule
+\textbf{ISTJ} & \textbf{Ne 劣势} & \textbf{Fear-Mongering (贩卖恐惧)} & “如果你离开我，你会孤独终老/一无所有。” & \textbf{引爆 Ne 灾难想象}：利用 SJ 对未知的极度恐惧，\tabularnewline
+ESTJ & \textbf{Fi 劣势} & \& \textbf{道德绑架} & “你怎么能这么自私？我不符合规矩吗？” & 让他们不敢踏出舒适区半步。利用 Fi 的道德枷锁使其服从。\tabularnewline
+\midrule
+\textbf{ISFJ} & \textbf{Ne 劣势} & \textbf{Love Bombing (爱意轰炸)} & (初期)“你是完美的女神” $\to$ (后期)撤回 & \textbf{多巴胺戒断}：先满足 Fe/Si 的被需要感，建立依赖，\tabularnewline
+ESFJ & \textbf{Ti 劣势} & \& \textbf{三角测量} & “前任比你懂事多了/别人都觉得你不对。” & 再引入竞争者制造焦虑，让其陷入“为了赢回爱”的内卷中。\tabularnewline
+\midrule
+\multicolumn{5}{c}{针对 SP 探索者：利用“自由”与“智力自卑”}\tabularnewline
+\midrule
+\textbf{ISTP} & \textbf{Fe 劣势} & \textbf{Provocation (激将法)} & “你是不是玩不起？/你这就是怂了。” & \textbf{劫持 Se 行动力}：利用 SP 渴望被认可为“强者/有趣”的心态，\tabularnewline
+ESTP & \textbf{Ni 劣势} & \& \textbf{捧杀} & “只有你这种高手才能帮我。” & 通过质疑其能力或胆量，诱导他们做出冲动的承诺或牺牲。\tabularnewline
+\midrule
+\textbf{ISFP} & \textbf{Te 劣势} & \textbf{Intellectual Bullying (智力霸凌)} & “你的逻辑完全不通，听我的就行。” & \textbf{碾压 Te 话语权}：利用 SP 不善言辞辩论的弱点，\tabularnewline
+ESFP & \textbf{Ni 劣势} & \& \textbf{宿命论暗示} & “我们是命中注定的，你逃不掉。” & 用复杂的术语或歪理让其闭嘴，确信自己“脑子不好”而交出控制权。\tabularnewline
+\bottomrule
+\end{tabular}}
+\end{table}
+
+
+\begin{table}[h!]
+\caption{反PUA防御矩阵：如何利用认知功能进行框架重置。
+核心心法：PUA 的本质是试图把你拉进你的劣势功能(Grip)里打败你。防御的唯一方式是拒绝进入那个战场，强制把战场拉回你的主导/辅助功能领域。}
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{ccccc}
+\toprule
+防御者类型 & 敌方主攻点 & 防御武器 (Function) & 战术逻辑 (The Logic) & 核心反杀话术 (Counter-Script)\tabularnewline
+\midrule
+\multicolumn{5}{c}{NT 分析师：用“客观标准”粉碎“主观打压”}\tabularnewline
+\midrule
+\rowcolor{intjpurple!20} \textbf{INTJ} & \textbf{Se 焦虑} & \textbf{Te Parent} & \textbf{现实审计 (Reality Audit)} & “你的评价很有趣，但在这个领域，\tabularnewline
+\rowcolor{intjpurple!20} ENTJ & (你真无趣/死板) & \textbf{外倾思考} & 拒绝自证。用客观标准替代对方的 & 我的KPI/成果是业内顶尖的。”\tabularnewline
+\rowcolor{intjpurple!20} & & & 评价体系。把“人身攻击”变成“数据讨论”。 & “我不需要显得有趣，我只需要有效。”\tabularnewline
+\midrule
+\textbf{INTP} & \textbf{Fe 恐慌} & \textbf{Ti Hero} & \textbf{定义拆解 (Deconstruction)} & “你刚才撤回关心的行为，逻辑上\tabularnewline
+ENTP & (撤回关注/冷暴力) & \textbf{内倾思考} & 无视情绪波动。像解剖尸体一样 & 属于操纵性惩罚。这对解决问题无效。”\tabularnewline
+& & & 分析对方行为的逻辑矛盾。 & “如果你无法清晰表达需求，沟通终止。”\tabularnewline
+\midrule
+\multicolumn{5}{c}{NF 外交官：用“事实记录”对抗“记忆篡改”}\tabularnewline
+\midrule
+\textbf{INFJ} & \textbf{Se 混乱} & \textbf{Ti Child} & \textbf{证据留痕 (Documentation)} & “我查了聊天记录(数据)，事实并非如你所说。”\tabularnewline
+ENFJ & (煤气灯/你记错了) & \textbf{内倾思考} & 相信逻辑记录，不相信模糊的记忆。 & “你的感受是你的，但物理事实是唯一的。”\tabularnewline
+& & & 建立外部的“真相锚点”(如日记/截图)。 & “我不接受你对我记忆的修改。”\tabularnewline
+\midrule
+\textbf{INFP} & \textbf{Te 无能} & \textbf{Si Child} & \textbf{经验回溯 (Reference)} & “我过去独自解决过比这更难的事。”\tabularnewline
+ENFP & (没有我你不行) & \textbf{内倾感觉} & 调取过去的成功经验。 & “我有手有脚，也有存款。分开是痛苦的，”\tabularnewline
+& & & 证明“独立生存”的历史事实。 & “但绝不是致命的。”\tabularnewline
+\midrule
+\multicolumn{5}{c}{SJ 守护者：用“止损核算”对抗“恐惧画饼”}\tabularnewline
+\midrule
+\textbf{ISTJ} & \textbf{Ne 恐惧} & \textbf{Te Parent} & \textbf{风险评估 (Risk Assessment)} & “我计算了一下，留下来被你消耗的成本，”\tabularnewline
+ESTJ & (离开会很惨) & \textbf{外倾思考} & 将“未知的恐惧”量化为“具体的损益表”。 & “远高于离开后重组生活的成本。”\tabularnewline
+& & & 用利益计算压倒情绪恐吓。 & “不画饼，看报表。”\tabularnewline
+\midrule
+\textbf{ISFJ} & \textbf{Ti 自卑} & \textbf{Ti Child} & \textbf{逻辑自洽 (Consistency Check)} & “你说爱我，但行为上却在伤害我。”\tabularnewline
+ESFJ & (为了赢回爱) & \textbf{内倾思考} & 强制检查言行一致性。 & “这在逻辑上是自相矛盾的。”\tabularnewline
+& & & 只要发现一个矛盾点，就全盘否定。 & “我不玩这个竞争游戏，我退出。”\tabularnewline
+\midrule
+\multicolumn{5}{c}{SP 探索者：用“价值/逻辑”对抗“激将捧杀”}\tabularnewline
+\midrule
+\textbf{ISTP} & \textbf{Fe 羞耻} & \textbf{Ni Child} & \textbf{动机洞察 (Intent Analysis)} & “你试图通过激将法让我免费干活？”\tabularnewline
+ESTP & (你敢不敢/是不是怂) & \textbf{内倾直觉} & 直接点破对方背后的意图。 & “这个策略对我太透明了，换一招吧。”\tabularnewline
+& & & 预判后果，拒绝冲动。 & “这不仅仅是怂，这是愚蠢的冒险。”\tabularnewline
+\midrule
+\textbf{ISFP} & \textbf{Te 霸凌} & \textbf{Fi Hero} & \textbf{价值隔离 (Value Shield)} & “你说的道理也许都对，但我不喜欢。”\tabularnewline
+ESFP & (你脑子笨听我的) & \textbf{内倾情感} & 承认逻辑弱势，但强调价值否决权。 & “我不需要辩赢你，我只需要拒绝你。”\tabularnewline
+& & & “千金难买我乐意/不乐意”。 & “你的逻辑无法解释我的感受，所以无效。”\tabularnewline
+\bottomrule
+\end{tabular}}
+\end{table}
+
+
+\begin{table}[h!]
+\caption{关系齿轮表：基于认知功能的深度兼容性分析。
+核心原理：最好的关系不是“相似”(会竞争)，也不是“相反”(会无法沟通)，而是“互补”(齿轮咬合)。}
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{cccc}
+\toprule
+关系类型 & 组合示例 & 动力学机制 (Mechanics) & 体验描述\tabularnewline
+\midrule
+\textbf{黄金配对} & \textbf{INTJ + ENFP} & \textbf{英雄救美 (Hero $\leftrightarrow$ Inferior)} & \textbf{极度吸引与治愈}。\tabularnewline
+(Golden Pair) & & INTJ 的 Ni Hero 给 ENFP 混乱的未来提供方向(Si Inferior)。 & 就像找到了失散多年的另一半。\tabularnewline
+& & ENFP 的 Ne Hero 给 INTJ 紧绷的当下带来无限可能(Se Inferior)。 & 甚至能无意识地激活彼此的潜意识。\tabularnewline
+\midrule
+\textbf{照镜子} & \textbf{INTJ + INTJ} & \textbf{共鸣与死局 (Hero $\leftrightarrow$ Hero)} & \textbf{懂你，但无法救你}。\tabularnewline
+(Mirror) & & 互相秒懂对方的 Ni 愿景和 Te 效率。 & 容易陷入 Ni-Fi Loop 共振。一旦发生矛盾，\tabularnewline
+& & 但两人都缺乏 Fe/Si，没人能处理细节和情绪。 & 谁也不愿先低头(Fi)，冷战到死。\tabularnewline
+\midrule
+\textbf{教师/学生} & \textbf{INTJ + INTP} & \textbf{家长引导 (Parent $\leftrightarrow$ Child)} & \textbf{智力巅峰，生活低能}。\tabularnewline
+(Pedagogue) & & INTJ 的 Te Parent 极其欣赏 INTP 的 Ti Hero (逻辑)。 & 聊天能聊通宵，哲学探讨极其过瘾。\tabularnewline
+& & INTP 的 Ne Parent 极其滋养 INTJ 的 Ni Child。 & 但两人都是 Se 盲点/劣势，一起出门可能会饿死/迷路。\tabularnewline
+\midrule
+\textbf{超我冲突} & \textbf{INTJ + ISFJ} & \textbf{互相听不懂 (Misunderstanding)} & \textbf{外星人对话}。\tabularnewline
+(Superego) & & 你的主导(Ni)是她的恶魔(Ni Demon)。 & 你觉得她平庸琐碎，她觉得你傲慢危险。\tabularnewline
+& & 她的主导(Si)是你的恶魔(Si Demon)。 & 除非极高阶的整合，否则通常是互相折磨。\tabularnewline
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\end{document}
