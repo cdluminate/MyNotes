@@ -1,8 +1,8 @@
 \documentclass[UTF8,letter,10pt]{ctexart}
 \usepackage{geometry}
 \geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
-%\setmainfont{Times New Roman}
-\setmainfont{TeX Gyre Termes}
+\setmainfont{Times New Roman}
+%\setmainfont{TeX Gyre Termes}
 \usepackage{booktabs}
 \usepackage{colortbl}
 \usepackage{xcolor}
@@ -20,26 +20,6 @@
 \begin{document}
 
 \listoftables
-
-\begin{table}[h!]
-\caption{Cheatsheet 索引表}
-    \centering
-    \resizebox{\textwidth}{!}{% 自动缩放以适应页面宽度
-    \begin{tabular}{cl@{\hspace{1.5cm}}cl} % 中间增加 1.5cm 间距
-        \toprule
-        链接 & 表格名称 & 链接 & 表格名称 \\
-        \midrule
-        \ref{tab:mbti-jung} & MBTI - 荣格八维映射表 (Function Stacks) & \ref{tab:cog-function-critical} & 认知功能的6*批判家长(Critical Parents)表现 \\
-        \ref{tab:cog-function-roles} & 认知功能的角色表（含标准定义符合度） & \ref{tab:cog-function-trickster} & 认知功能的7*盲点(Trickster)表现 \\
-        \ref{tab:cog-function-normal} & 认知功能的正常表现 & \ref{tab:cog-function-demon} & 认知功能的8*恶魔(Demon)表现 \\
-        \ref{tab:cog-function-child} & 认知功能的3*永恒之子(Child)表现 & \ref{tab:cog-function-demon-redemption} & 认知功能的8*恶魔(Demon)整合 \\
-        \ref{tab:cog-function-inferior} & 认知功能的4*阿尼玛(Inferior)表现 & \ref{tab:cog-function-loop} & 认知功能的防御机制/长期内耗循环(Loop) \\
-        \ref{tab:cog-function-inferior-remedy} & 极端压力/抓取状态(Grip)的解药 & \ref{tab:cog-function-loop-remedy} & 长期内耗循环(Loop)的解药 \\
-        \ref{tab:cog-function-opposing} & 认知功能的5*反向作用(Opposing/Nemesis)表现 & & \\
-        \bottomrule
-    \end{tabular}}
-\end{table}
-
 
 \begin{table}[h!]
 \caption[MBTI - 荣格八维映射表]{MBTI - 荣格八维映射表 (Function Stacks)}
@@ -64,7 +44,7 @@
 
 
 \begin{table}[h!]
-    \caption{认知功能的角色表（含标准定义符合度）}
+    \caption[认知功能的角色表]{认知功能的角色表（含标准定义符合度）}
     \label{tab:cog-function-roles}
     \centering
     \resizebox{\textwidth}{!}{%
@@ -87,7 +67,7 @@
 
 
 \begin{table}[h!]
-    \caption{认知功能的标准健康表现(The Ideal State)。
+    \caption[认知功能的1*2*标准健康表现]{认知功能的标准健康表现(The Ideal State)。
 这通常是1*主导(Hero)与2*辅助(Parent)功能的天然状态。
 在个体化(Individuation)的高阶整合中，即便是劣势功能，通过刻意练习也能呈现出此表的特质。
 \textbf{核心区别}：原生功能是自动化的“充电器”(Charging)，而通过后天训练整合的功能——尽管外部表现完美——本质上仍是需要消耗专注力的“耗电器”(Draining)。}
@@ -112,7 +92,7 @@ Fi & Introverted Feeling & 本心，真实，价值 & 忠于自我，情感内�
 
 
 \begin{table}[h!]
-\caption{认知功能的3*永恒之子(Child)表现： 治愈、游戏与任性。这是人格的“游乐场”与退行区。表现形式：天真单纯的创造力(Playfulness)，或是压力下像被宠坏的孩子般无理取闹(Immaturity)。}
+    \caption[认知功能的3*永恒之子(Child)表现]{认知功能的3*永恒之子(Child)表现： 治愈、游戏与任性。这是人格的“游乐场”与退行区。表现形式：天真单纯的创造力(Playfulness)，或是压力下像被宠坏的孩子般无理取闹(Immaturity)。}
     \label{tab:cog-function-child}
     \centering
     \resizebox{\textwidth}{!}{
@@ -139,7 +119,7 @@ Se  & ENTJ, ENFJ & 我全都要！ & 报复享乐，追求奢华，感官盛宴 
 
 
 \begin{table}[h!]
-\caption{认知功能的4*阿尼玛(Inferior)表现： 渴望与劫持(The Grip)。这是人格的“阿喀琉斯之踵”，也是通往潜意识的桥梁。表现形式：平时极度崇拜拥有此功能的人(Aspiration)，但在极度压力或疲惫下，则会变成拙劣的模仿者或暴君，导致毁灭性的抓取状态。}
+    \caption[认知功能的4*阿尼玛(Inferior)表现]{认知功能的4*阿尼玛(Inferior)表现： 渴望与劫持(The Grip)。这是人格的“阿喀琉斯之踵”，也是通往潜意识的桥梁。表现形式：平时极度崇拜拥有此功能的人(Aspiration)，但在极度压力或疲惫下，则会变成拙劣的模仿者或暴君，导致毁灭性的抓取状态。}
     \label{tab:cog-function-inferior}
 \centering
 \resizebox{\textwidth}{!}{
@@ -166,7 +146,7 @@ Fi & ENTJ, ESTJ & 内心平和与真实 & 权威挑战，计划失败 & 情感�
 
 
 \begin{table}[h!]
-\caption{极端压力/抓取状态(Grip)的解药。当主导功能枯竭时，切忌（用主导功能）硬抗，此时唯一的解药是安抚劣势功能，顺应其最原始的需求。}
+\caption[极端压力/抓取状态(Grip)的解药]{极端压力/抓取状态(Grip)的解药。当主导功能枯竭时，切忌（用主导功能）硬抗，此时唯一的解药是安抚劣势功能，顺应其最原始的需求。}
     \label{tab:cog-function-inferior-remedy}
     \centering
     \resizebox{\textwidth}{!}{
@@ -193,7 +173,7 @@ Fi & ENTJ, ESTJ & \textbf{允许脆弱} & 停止压抑分析，停止强撑坚�
 
 
 \begin{table}[h!]
-\caption{认知功能的5*反向作用(Opposing/Nemesis)表现：防御与质疑。
+\caption[认知功能的5*反向作用(Opposing/Nemesis)表现：防御与质疑]{认知功能的5*反向作用(Opposing/Nemesis)表现：防御与质疑。
 这是进入潜意识的第一道防线。当我们的主导功能(Hero)受到挑战时，第5功能会跳出来“抬杠”。表现形式：固执、怀疑论、被动攻击，或者对他人的该功能表现感到莫名的厌烦。}
     \label{tab:cog-function-opposing}
 \centering
@@ -221,7 +201,7 @@ Fe & INFP, ISFP & “别以此绑架我” & \textbf{拒绝从众}：极度反�
 
 
 \begin{table}
-\caption{认知功能的6*批判家长(Critical Parents)表现: 如何打压别人和自己}
+\caption[认知功能的6*批判家长(Critical Parents)表现]{认知功能的6*批判家长(Critical Parents)表现: 如何打压别人和自己}
     \label{tab:cog-function-critical}
     \resizebox{\textwidth}{!}{
 \begin{tabular}{ccccc}
@@ -250,7 +230,7 @@ Se Critical 批判现实 & ESTJ, ESFJ & 真难看 & 外貌/品味攻击，苛刻
 
 
 \begin{table}[h!]
-\caption{认知功能的7*盲点(Trickster)表现：无意识的黑洞。
+\caption[认知功能的7*盲点(Trickster)表现：无意识的黑洞]{认知功能的7*盲点(Trickster)表现：无意识的黑洞。
 我们不仅不擅长此功能，而且往往会通过贬低它来保护自尊。表现形式：根本看不见其存在的必要性，将其视为多余、虚伪或荒谬的干扰。}
     \label{tab:cog-function-trickster}
 \centering
@@ -285,7 +265,7 @@ Ti & ENFP, ESFP & “太较真了没意思，差不多就行了。” & 逻辑�
 
 \begin{table}
 
-\caption{认知功能的8*恶魔(Demon)表现： 彻底崩溃时的毁灭打击。这是人格结构中最深层，最黑暗，也是最原始的部分。触发条件：自尊彻底崩溃，核心界限被严重侵犯，或者感受到极度绝望。表现形式：毁灭一切，不在乎输赢，只想让一切归零
+\caption[认知功能的8*恶魔(Demon)表现]{认知功能的8*恶魔(Demon)表现： 彻底崩溃时的毁灭打击。这是人格结构中最深层，最黑暗，也是最原始的部分。触发条件：自尊彻底崩溃，核心界限被严重侵犯，或者感受到极度绝望。表现形式：毁灭一切，不在乎输赢，只想让一切归零
 -- “既然你毁了我的世界，那我就把整个宇宙都炸了陪葬”。转化潜力：如果能整合，它也能带来涅槃重生的力量(The Daemonic
 vs. The Demonic)。}
     \label{tab:cog-function-demon}
@@ -317,7 +297,7 @@ Fe Demon & ENTJ, ESTJ & 名誉屠杀 | Character Assassination & 情感操纵与
 
 \begin{table}
 
-\caption{认知功能的8*恶魔(Demon)整合：涅槃重生后的救赎之力(The Daemonic)。当恶魔功能被意识整合，它不再是毁灭者，而变成了通往完整人格的守门人。这种力量通常带有一种“非个人”的、超越小我的神性或宿命感。表现形式：大智若愚、绝地反击、或是对他人的深刻救赎。}
+\caption[认知功能的8*恶魔(Demon)整合]{认知功能的8*恶魔(Demon)整合：涅槃重生后的救赎之力(The Daemonic)。当恶魔功能被意识整合，它不再是毁灭者，而变成了通往完整人格的守门人。这种力量通常带有一种“非个人”的、超越小我的神性或宿命感。表现形式：大智若愚、绝地反击、或是对他人的深刻救赎。}
     \label{tab:cog-function-demon-redemption}
     \centering
 
@@ -353,7 +333,7 @@ Fe Demon & ENTJ, ESTJ & 仁慈领袖 | Benevolent Ruler & 放下权力的傲慢�
 
 
 \begin{table}[h!]
-\caption{认知功能的防御机制/长期内耗循环(Loop)。不同于瞬间压力的Grip，Loop是一种长期的、病态的舒适区，个体切断了辅助功能(第二功能)的平衡作用，只在第一和第三功能之间死循环。}
+\caption[认知功能的防御机制/长期内耗循环(Loop)]{认知功能的防御机制/长期内耗循环(Loop)。不同于瞬间压力的Grip，Loop是一种长期的、病态的舒适区，个体切断了辅助功能(第二功能)的平衡作用，只在第一和第三功能之间死循环。}
     \label{tab:cog-function-loop}
     \centering
     \resizebox{\textwidth}{!}{
@@ -395,7 +375,7 @@ Loop组合 & 状态名称 & 涉及类型 & 典型表现 (Manifestation)\tabularn
 
 
 \begin{table}[h!]
-\caption{长期内耗循环(Loop)的解药。核心逻辑：Loop 是因为忽略了辅助功能（家长），导致第一与第三功能恶性循环。解药是\textbf{强制调用第二功能}。}
+\caption[长期内耗循环(Loop)的解药]{长期内耗循环(Loop)的解药。核心逻辑：Loop 是因为忽略了辅助功能（家长），导致第一与第三功能恶性循环。解药是\textbf{强制调用第二功能}。}
     \label{tab:cog-function-loop-remedy}
     \centering
     \resizebox{\textwidth}{!}{
@@ -439,7 +419,7 @@ Loop组合 & 状态名称 & 涉及类型 & 典型表现 (Manifestation)\tabularn
 
 
 \begin{table}[h!]
-\caption{状态(State) vs. 特质(Trait)：预期管理表。
+\caption[状态(State) vs. 特质(Trait)：预期管理表]{状态(State) vs. 特质(Trait)：预期管理表。
 绝大多数人(80\%+)长期处于轻微 Loop 或 Grip 中，这是现代生活的常态。区分的关键在于“可逆性”与“自我认知”。}
 \centering
 \resizebox{\textwidth}{!}{
@@ -466,7 +446,7 @@ Loop组合 & 状态名称 & 涉及类型 & 典型表现 (Manifestation)\tabularn
 
 
 \begin{table}[h!]
-\caption{全谱系战略应对表：针对 8 种内耗循环(Loop)的社交博弈策略。
+\caption[全谱系战略应对表：针对 8 种内耗循环(Loop)的社交博弈策略]{全谱系战略应对表：针对 8 种内耗循环(Loop)的社交博弈策略。
 核心心法：诊断出 Loop 后，切忌在对方的逻辑里打转。内向 Loop 需要“外化引导”，外向 Loop 需要“边界阻断”。}
 \centering
 \resizebox{\textwidth}{!}{
@@ -507,7 +487,7 @@ Loop 类型 & 涉及人格 & 对方心态 (The Mindset) & 你的错误反应 (Do
 
 
 \begin{table}[h!]
-\caption{全谱系社会控制矩阵：资本主义如何无死角收割 8 种认知循环(Loop)。
+\caption[全谱系社会控制矩阵：资本主义如何无死角收割 8 种认知循环(Loop)]{全谱系社会控制矩阵：资本主义如何无死角收割 8 种认知循环(Loop)。
 核心逻辑：Loop 是个体在逃避痛苦时的防御机制，而市场经济将每一种“防御”都包装成了“消费需求”。}
 \centering
 \resizebox{\textwidth}{!}{
@@ -546,8 +526,9 @@ Loop 类型 & 涉及人格 & 资本主义的话术 (The Pitch) & 收割方式/�
 \end{tabular}}
 \end{table}
 
+
 \begin{table}[h!]
-\caption{INTJ 的四重人格状态切换表：你体内的隐藏角色。
+\caption[INTJ 的四重人格状态切换表：你体内的隐藏角色]{INTJ 的四重人格状态切换表：你体内的隐藏角色。
 核心原理：当主我(Ego)疲惫、自信爆棚或极度受挫时，我们会切换到其他象限接管身体。}
 \centering
 \resizebox{\textwidth}{!}{
@@ -572,7 +553,7 @@ Loop 类型 & 涉及人格 & 资本主义的话术 (The Pitch) & 收割方式/�
 
 
 \begin{table}[h!]
-\caption{社交狩猎矩阵：PUA与精神控制是如何利用认知功能漏洞的。
+\caption[社交狩猎矩阵：PUA与精神控制如何利用认知功能漏洞]{社交狩猎矩阵：PUA与精神控制是如何利用认知功能漏洞的。
 核心原理：操纵者通过攻击受害者的“劣势功能”引发焦虑，再通过扮演“完美拯救者”进行收割。不同类型的痛点（软肋）完全不同。}
 \centering
 \resizebox{\textwidth}{!}{
@@ -617,7 +598,7 @@ ESFP & \textbf{Ni 劣势} & \& \textbf{宿命论暗示} & “我们是命中注�
 
 
 \begin{table}[h!]
-\caption{反PUA防御矩阵：如何利用认知功能进行框架重置。
+\caption[反PUA防御矩阵：如何利用认知功能进行框架重置]{反PUA防御矩阵：如何利用认知功能进行框架重置。
 核心心法：PUA 的本质是试图把你拉进你的劣势功能(Grip)里打败你。防御的唯一方式是拒绝进入那个战场，强制把战场拉回你的主导/辅助功能领域。}
 \centering
 \resizebox{\textwidth}{!}{
@@ -670,7 +651,7 @@ ESFP & (你脑子笨听我的) & \textbf{内倾情感} & 承认逻辑弱势，�
 
 
 \begin{table}[h!]
-\caption{关系齿轮表：基于认知功能的深度兼容性分析。
+\caption[关系齿轮表：基于认知功能的深度兼容性分析]{关系齿轮表：基于认知功能的深度兼容性分析。
 核心原理：最好的关系不是“相似”(会竞争)，也不是“相反”(会无法沟通)，而是“互补”(齿轮咬合)。}
 \centering
 \resizebox{\textwidth}{!}{
