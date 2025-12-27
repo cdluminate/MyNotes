@@ -44,7 +44,6 @@
 
 \begin{table}[h!]
 \caption{MBTI 类型总览表 (功能栈、原型、核心特质与代表名人)}
-\centering
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{@{}l l c l l@{}}
 \toprule
@@ -79,6 +78,33 @@
 \textbf{ESFP} & Se - Fi - Te - Ni & 表演者 & 表现力强，乐享生活，感染力强 & 玛丽莲·梦露, 猫王 \\
 \bottomrule
 \end{tabular}}
+
+算法：MBTI 到认知功能栈的转换（简易版）
+\begin{enumerate}
+        \footnotesize
+    \item \textbf{第一步：J/P 指针（谁获得下标 $e$？）} \\
+    观察类型的\textbf{最后一个字母}。它决定了哪个功能是\textbf{外倾的 ($X_e$)}。
+    \begin{itemize}
+        \item 如果是 \textbf{J}：\textbf{判断}功能（$T$ 或 $F$）变为外倾（$Te$ 或 $Fe$）。
+        \item 如果是 \textbf{P}：\textbf{感知}功能（$S$ 或 $N$）变为外倾（$Se$ 或 $Ne$）。
+        \item \textit{注：剩余的那个功能自动变为内倾（$X_i$）。}
+    \end{itemize}
+
+    \item \textbf{第二步：E/I 指针（谁是主导？）} \\
+    观察类型的\textbf{第一个字母}。它决定了\textbf{主导功能}的位置。
+    \begin{itemize}
+        \item 如果是 \textbf{E}：带有 \textbf{$e$} 下标的功能排在第一位。
+        \item 如果是 \textbf{I}：带有 \textbf{$i$} 下标的功能排在第一位。
+    \end{itemize}
+
+    \item \textbf{第三步：镜像补全（推导第3与第4功能）} \\
+    功能栈的后半部分仅仅是前半部分的\textbf{反向镜像}。
+    \begin{itemize}
+        \item \textbf{第3功能} = 第2功能的完全对立面（如 $Te \to Fi$）。
+        \item \textbf{第4功能} = 第1功能的完全对立面（如 $Ni \to Se$）。
+    \end{itemize}
+\end{enumerate}
+
 \end{table}
 
 
