@@ -1,19 +1,22 @@
 \documentclass[UTF8,letter,10pt]{ctexart}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{float}
 \usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{makecell}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{soul}
+\usepackage{varwidth}
+\usepackage{xcolor}
+
 \geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
 \setmainfont{Times New Roman}
 %\setmainfont{TeX Gyre Termes}
-\usepackage{booktabs}
-\usepackage{colortbl}
-\usepackage{xcolor}
-\usepackage{microtype}
-\usepackage{multirow}
-\usepackage{makecell}
-\usepackage{graphicx}
-\usepackage{float}
-\usepackage{hyperref}
-\usepackage{amssymb}
-\usepackage{soul}
 
 \definecolor{intjpurple}{HTML}{88619A}
 %\definecolor{intjpurple}{HTML}{4A148C}
@@ -21,6 +24,12 @@
 \newcommand{\verified}{\colorbox{green!64}{\textcolor{white}{\checkmark Verified}}}
 \newcommand{\notverified}{\colorbox{orange}{\textcolor{white}{??? Not Verified}}} 
 \newcommand{\gemini}{\colorbox{blue!50}{\textcolor{white}{Gemini>}}~}
+
+%% Variable width box for table cells
+\newenvironment{cellvarwidth}[1][t]
+    {\begin{varwidth}[#1]{\linewidth}}
+    %{\@finalstrut\@arstrutbox\end{varwidth}}
+    {\end{varwidth}}
 
 
 \begin{document}
@@ -194,6 +203,8 @@ Fe & 和谐，确认，共情 & 情绪传染，维护关系，社交礼仪 & Fi 
 \end{description}
 \end{table}
 
+
+\include{src/thinking-function-manifest.tex}
 
 
 \begin{table}[h!]
@@ -955,6 +966,8 @@ TODO List
     \textit{Was that really me? : how everyday stress brings out our hidden personality — 1st ed}.
     Davies-Black Publishing, 2002.
 \end{thebibliography}
+
+
 
 
 \end{document}
