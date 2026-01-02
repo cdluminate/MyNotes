@@ -1,5 +1,5 @@
-#LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 620
+#LyX 2.5 created this file. For more info see https://www.lyx.org/
+\lyxformat 643
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -57,11 +57,19 @@
 \use_indices false
 \paperorientation portrait
 \suppress_date false
-\justification true
-\use_refstyle 1
+\justification default
+\crossref_package refstyle
 \use_formatted_ref 0
 \use_minted 0
 \use_lineno 0
+\backgroundcolor none
+\fontcolor none
+\notefontcolor lightgray
+\boxbgcolor red
+\table_border_color default
+\table_odd_row_color default
+\table_even_row_color default
+\table_alt_row_colors_start 1
 \index Index
 \shortcut idx
 \color #008000
@@ -87,6 +95,7 @@
 \html_be_strict false
 \docbook_table_output 0
 \docbook_mathml_prefix 1
+\docbook_mathml_version 0
 \end_header
 
 \begin_body
@@ -122,7 +131,6 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 resizebox{
 \backslash
@@ -136,7 +144,7 @@ linewidth}{!}{%
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="25" columns="7">
+<lyxtabular version="3" rows="13" columns="7">
 <features booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -219,853 +227,6 @@ linewidth}{!}{%
 
 \series bold
 表现形式 ｜ 例子
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Ne
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Hero/Parent
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-正常
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-N/A
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-发散，
-脑洞，
-赋能
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-跳跃思维，
-探索新奇，
-抽象关联 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Child
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-游戏(Playfulness)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-ESTJ,
- ESFJ 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-N/A
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-如果这样呢？
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-突发脑洞，
-冷笑话，
-无厘头创意 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-幼稚(Immaturity)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-ESTJ,
- ESFJ 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-压力
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-容易分心，
-盲目乐观，
-无法落地
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Anima
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-正常(Aspiration)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-ISTJ,
- ISFJ 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-N/A
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-“我想变得有趣” 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-冷幽默，
-安全冒险 
-\end_layout
-
-\begin_layout Plain Layout
-讲双关语笑话，
-看科幻片，
-交怪朋友
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-压抑(Suppression)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-ISTJ,
- ISFJ 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-防御性屏蔽
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-“变数是 Si 的敌人” 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-极端保守，
-拒绝想象
-\end_layout
-
-\begin_layout Plain Layout
-刻板重复昨日，
-不仅不做梦，
-还打击梦想
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-劫持/抓取(Grip)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-ISTJ,
- ISFJ 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-熟悉流程被打断，
-未知风险 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-“灾难马上就要降临”
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-灾难化想象 (Catastrophizing)，
-看到到处都是阴谋
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Nemesis
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-防御表现(Stubbornness)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-INTJ,
- INFJ 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-主导功能受到挑战
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-“别扯那些没用的” 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-厌恶变数：
-固执地坚持原计划，
-
-\end_layout
-
-\begin_layout Plain Layout
-拒绝听取其他可能性，
-认为那是干扰 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-投射怀疑(Paranoia)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-INTJ,
- INFJ 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-对他人该功能莫名厌烦
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-怀疑意图：
-总觉得别人背信弃义，
-
-\end_layout
-
-\begin_layout Plain Layout
-或者怀疑别人的忠诚度
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Critic
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-对外打压
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-ENTJ,
- ENFJ 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-防御机制
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-批判意图:你想害我
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-动机阴谋论，
-怀疑忠诚指责对方鲁莽 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-对内自毁
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-ENTJ,
- ENFJ 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-防御机制
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-选择障碍，
-看到无数会感到受困
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Trickster
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-忽视/贬低
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-ISTP,
- ISFP
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-无意识的黑洞
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-“你到底想说什么？
-
-\end_layout
-
-\begin_layout Plain Layout
-别扯那些没用的。
-” 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-极度字面化，
-理解不了暗示和隐喻，
-
-\end_layout
-
-\begin_layout Plain Layout
-讨厌猜测，
-一条路走到黑
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Demon
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-毁灭一切
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-ISTP,
- ISFP
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-彻底崩溃，
-严重侵犯，
-极度绝望
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-恶意扭曲 | Gaslighting 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-被害妄想与构陷，
-混乱制造者
 \end_layout
 
 \end_inset
@@ -1163,7 +324,7 @@ Child
 \begin_inset Text
 
 \begin_layout Plain Layout
-游戏(Playfulness)
+游戏
 \end_layout
 
 \end_inset
@@ -1232,7 +393,7 @@ N/A
 \begin_inset Text
 
 \begin_layout Plain Layout
-幼稚(Immaturity)
+幼稚
 \end_layout
 
 \end_inset
@@ -1300,7 +461,11 @@ Anima
 \begin_inset Text
 
 \begin_layout Plain Layout
-正常(Aspiration)
+正常
+\begin_inset Newline newline
+\end_inset
+
+(Aspiration)
 \end_layout
 
 \end_inset
@@ -1309,8 +474,8 @@ Anima
 \begin_inset Text
 
 \begin_layout Plain Layout
-ISTJ,
- ISFJ 
+ESTP,
+ ESFP
 \end_layout
 
 \end_inset
@@ -1372,7 +537,11 @@ N/A
 \begin_inset Text
 
 \begin_layout Plain Layout
-压抑(Suppression)
+压抑
+\begin_inset Newline newline
+\end_inset
+
+(Suppression)
 \end_layout
 
 \end_inset
@@ -1381,8 +550,8 @@ N/A
 \begin_inset Text
 
 \begin_layout Plain Layout
-ISTJ,
- ISFJ 
+ESTP,
+ ESFP
 \end_layout
 
 \end_inset
@@ -1445,7 +614,11 @@ ISTJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-劫持/抓取(Grip)
+劫持/抓取
+\begin_inset Newline newline
+\end_inset
+
+(Grip)
 \end_layout
 
 \end_inset
@@ -1454,8 +627,8 @@ ISTJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-ISTJ,
- ISFJ 
+ESTP,
+ ESFP
 \end_layout
 
 \end_inset
@@ -1523,7 +696,11 @@ Nemesis
 \begin_inset Text
 
 \begin_layout Plain Layout
-防御表现(Stubbornness)
+防御表现
+\begin_inset Newline newline
+\end_inset
+
+(Stubbornness)
 \end_layout
 
 \end_inset
@@ -1596,7 +773,11 @@ ENTP,
 \begin_inset Text
 
 \begin_layout Plain Layout
-投射怀疑(Paranoia)
+投射怀疑
+\begin_inset Newline newline
+\end_inset
+
+(Paranoia)
 \end_layout
 
 \end_inset
@@ -1903,6 +1084,10 @@ ISTJ,
 \begin_layout Plain Layout
 彻底崩溃，
 严重侵犯，
+
+\begin_inset Newline newline
+\end_inset
+
 极度绝望
 \end_layout
 
@@ -1940,7 +1125,6 @@ ISTJ,
 status open
 
 \begin_layout Plain Layout
-
 }
 \end_layout
 
@@ -1970,7 +1154,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-思考(Thinking)功能在不同状态下的表现形式。
+Te 在不同状态下的表现形式。
 
 \end_layout
 
@@ -1985,7 +1169,6 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 resizebox{
 \backslash
@@ -1999,7 +1182,7 @@ linewidth}{!}{%
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="25" columns="7">
+<lyxtabular version="3" rows="13" columns="7">
 <features booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -2930,849 +2113,6 @@ INTP,
 \end_inset
 </cell>
 </row>
-<row>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Ti
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Hero/Parent
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-正常
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-N/A
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-逻辑，
-解构，
-定义
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-追求真理，
-刨根问底，
-无视权威
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Child
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-游戏(Playfulness)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-INFJ,
- ISFJ
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-N/A
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-居然是这样！
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-纯粹好奇，
-钻研冷门，
-解谜乐趣
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-幼稚(Immaturity)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-INFJ,
- ISFJ
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-压力
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-逻辑死板，
-钻牛角尖，
-固执己见
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Anima
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-正常(Aspiration)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-INFP,
- ISFP
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-N/A
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-“我想拥有智慧”
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-引经据典，
-崇拜专家
-\end_layout
-
-\begin_layout Plain Layout
-读艰深晦涩的书，
-引用名人名言
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-压抑(Suppression)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-INFP,
- ISFP
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-防御性屏蔽
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-“质疑是 Fe 的破坏”
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-智力依赖，
-盲从共识
-\end_layout
-
-\begin_layout Plain Layout
-“大家都这么说”，
-拒绝独立思考，
-屏蔽异见
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-劫持/抓取(Grip)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-INFP,
- ISFP
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-人际背叛，
-缺乏反馈
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-“人类是愚蠢且无可救药的”
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-冷酷的犬儒主义，
-用刺耳的逻辑攻击他人软肋
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Nemesis
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-防御表现(Stubbornness)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-ENTJ,
- ESTJ
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-主导功能受到挑战
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-“这没意义”
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-傲慢驳斥：
-若是不能马上应用，
-
-\end_layout
-
-\begin_layout Plain Layout
-就拒绝深入思考逻辑细节，
-认为那是浪费时间
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-投射怀疑(Paranoia)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-ENTJ,
- ESTJ
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-对他人该功能莫名厌烦
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-怀疑智商：
-认为别人的精细逻辑是“书呆子气”，
-
-\end_layout
-
-\begin_layout Plain Layout
-试图用权威压倒道理
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Critic
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-对外打压
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-INTJ,
- ISTJ
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-防御机制
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-批判逻辑:
- 你真蠢
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-智力羞辱，
-冷漠指出他人逻辑漏洞
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-对内自毁
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-INTJ,
- ISTJ
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-防御机制
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-批判逻辑:
- 你真蠢
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-自我怀疑，
-质疑自己不够聪明
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Trickster
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-忽视/贬低
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-ENFP,
- ESFP
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-无意识的黑洞
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-“太较真了没意思，
-差不多就行了。
-”
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-逻辑疏松，
-讨厌定义和辩论
-\end_layout
-
-\begin_layout Plain Layout
-经常自我矛盾却不自知，
-只关注“好不好”
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Demon
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-毁灭一切
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-INFP,
- ISFP
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-彻底崩溃，
-严重侵犯，
-极度绝望
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-诛心真话 | Cold Truth
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-最恶毒的逻辑穿刺，
-摧毁对方自尊
-\end_layout
-
-\end_inset
-</cell>
-</row>
 </lyxtabular>
 
 \end_inset
@@ -3785,7 +2125,6 @@ INFP,
 status open
 
 \begin_layout Plain Layout
-
 }
 \end_layout
 
@@ -3823,7 +2162,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-直觉(Intuition)功能在不同状态下的表现形式。
+Ne 在不同状态下的表现形式。
 
 \end_layout
 
@@ -3838,7 +2177,6 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 resizebox{
 \backslash
@@ -3852,7 +2190,7 @@ linewidth}{!}{%
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="25" columns="7">
+<lyxtabular version="3" rows="13" columns="7">
 <features booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -4787,12 +3125,169 @@ ISTP,
 \end_inset
 </cell>
 </row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ti
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement !h
+alignment document
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ti 在不同状态下的表现形式。
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+resizebox{
+\backslash
+linewidth}{!}{%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="13" columns="7">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+功能
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+角色
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+状态
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+涉及类型
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+触发器
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+关键字/核心台词
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+表现形式 ｜ 例子
+\end_layout
+
+\end_inset
+</cell>
+</row>
 <row>
 <cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Ni
+Ti
 \end_layout
 
 \end_inset
@@ -4837,9 +3332,9 @@ N/A
 \begin_inset Text
 
 \begin_layout Plain Layout
-收敛，
-洞察，
-本质
+逻辑，
+解构，
+定义
 \end_layout
 
 \end_inset
@@ -4848,9 +3343,9 @@ N/A
 \begin_inset Text
 
 \begin_layout Plain Layout
-预测未来，
-现象本质，
-单一愿景
+追求真理，
+刨根问底，
+无视权威
 \end_layout
 
 \end_inset
@@ -4888,8 +3383,8 @@ Child
 \begin_inset Text
 
 \begin_layout Plain Layout
-ISTP,
- ISFP
+INFJ,
+ ISFJ
 \end_layout
 
 \end_inset
@@ -4907,7 +3402,8 @@ N/A
 \begin_inset Text
 
 \begin_layout Plain Layout
-我有预感...
+居然是这样！
+
 \end_layout
 
 \end_inset
@@ -4916,9 +3412,9 @@ N/A
 \begin_inset Text
 
 \begin_layout Plain Layout
-迷信直觉，
-神秘主义，
-宿命感
+纯粹好奇，
+钻研冷门，
+解谜乐趣
 \end_layout
 
 \end_inset
@@ -4956,8 +3452,8 @@ N/A
 \begin_inset Text
 
 \begin_layout Plain Layout
-ISTP,
- ISFP
+INFJ,
+ ISFJ
 \end_layout
 
 \end_inset
@@ -4984,9 +3480,9 @@ ISTP,
 \begin_inset Text
 
 \begin_layout Plain Layout
-盲信猜测，
-无端幻想，
-消极宿命
+逻辑死板，
+钻牛角尖，
+固执己见
 \end_layout
 
 \end_inset
@@ -5024,8 +3520,8 @@ Anima
 \begin_inset Text
 
 \begin_layout Plain Layout
-ISTJ,
- ISFJ
+INFP,
+ ISFP
 \end_layout
 
 \end_inset
@@ -5043,7 +3539,7 @@ N/A
 \begin_inset Text
 
 \begin_layout Plain Layout
-“我想看透本质”
+“我想拥有智慧”
 \end_layout
 
 \end_inset
@@ -5052,13 +3548,13 @@ N/A
 \begin_inset Text
 
 \begin_layout Plain Layout
-迷信玄学，
-瞬间深沉
+引经据典，
+崇拜专家
 \end_layout
 
 \begin_layout Plain Layout
-相信星座风水，
-酒后探讨人生意义
+读艰深晦涩的书，
+引用名人名言
 \end_layout
 
 \end_inset
@@ -5096,8 +3592,8 @@ N/A
 \begin_inset Text
 
 \begin_layout Plain Layout
-ISTJ,
- ISFJ
+INFP,
+ ISFP
 \end_layout
 
 \end_inset
@@ -5115,7 +3611,7 @@ ISTJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-“未来是 Se 的恐惧”
+“质疑是 Fe 的破坏”
 \end_layout
 
 \end_inset
@@ -5124,14 +3620,14 @@ ISTJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-激进务实，
-嘲讽深刻
+智力依赖，
+盲从共识
 \end_layout
 
 \begin_layout Plain Layout
-“想那么多没用”，
-只活在这一秒，
-拒绝规划
+“大家都这么说”，
+拒绝独立思考，
+屏蔽异见
 \end_layout
 
 \end_inset
@@ -5169,8 +3665,8 @@ ISTJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-ISTJ,
- ISFJ
+INFP,
+ ISFP
 \end_layout
 
 \end_inset
@@ -5179,8 +3675,8 @@ ISTJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-此路不通，
-未来迷茫
+人际背叛，
+缺乏反馈
 \end_layout
 
 \end_inset
@@ -5189,12 +3685,7 @@ ISTJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-“人生毫无意义，
-
-\end_layout
-
-\begin_layout Plain Layout
-我是受害者”
+“人类是愚蠢且无可救药的”
 \end_layout
 
 \end_inset
@@ -5203,13 +3694,8 @@ ISTJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-偏执妄想，
-把中性眼神解读为恶意，
-
-\end_layout
-
-\begin_layout Plain Layout
-相信宿命论
+冷酷的犬儒主义，
+用刺耳的逻辑攻击他人软肋
 \end_layout
 
 \end_inset
@@ -5247,8 +3733,8 @@ Nemesis
 \begin_inset Text
 
 \begin_layout Plain Layout
-ENTP,
- ENFP
+ENTJ,
+ ESTJ
 \end_layout
 
 \end_inset
@@ -5266,8 +3752,7 @@ ENTP,
 \begin_inset Text
 
 \begin_layout Plain Layout
-“你想控制我？
-”
+“这没意义”
 \end_layout
 
 \end_inset
@@ -5276,13 +3761,14 @@ ENTP,
 \begin_inset Text
 
 \begin_layout Plain Layout
-抗拒定论：
-讨厌被“贴标签”或被限制未来，
+傲慢驳斥：
+若是不能马上应用，
 
 \end_layout
 
 \begin_layout Plain Layout
-故意反其道而行之
+就拒绝深入思考逻辑细节，
+认为那是浪费时间
 \end_layout
 
 \end_inset
@@ -5320,8 +3806,8 @@ ENTP,
 \begin_inset Text
 
 \begin_layout Plain Layout
-ENTP,
- ENFP
+ENTJ,
+ ESTJ
 \end_layout
 
 \end_inset
@@ -5348,13 +3834,13 @@ ENTP,
 \begin_inset Text
 
 \begin_layout Plain Layout
-怀疑操控：
-认为别人的愿景是洗脑，
+怀疑智商：
+认为别人的精细逻辑是“书呆子气”，
 
 \end_layout
 
 \begin_layout Plain Layout
-怀疑背后有阴谋
+试图用权威压倒道理
 \end_layout
 
 \end_inset
@@ -5392,8 +3878,8 @@ Critic
 \begin_inset Text
 
 \begin_layout Plain Layout
-INTP,
- INFP
+INTJ,
+ ISTJ
 \end_layout
 
 \end_inset
@@ -5407,11 +3893,12 @@ INTP,
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-批判远见:没希望
+批判逻辑:
+ 你真蠢
 \end_layout
 
 \end_inset
@@ -5420,8 +3907,8 @@ INTP,
 \begin_inset Text
 
 \begin_layout Plain Layout
-未来诅咒，
-否定愿景断言注定失败
+智力羞辱，
+冷漠指出他人逻辑漏洞
 \end_layout
 
 \end_inset
@@ -5459,8 +3946,8 @@ INTP,
 \begin_inset Text
 
 \begin_layout Plain Layout
-INTP,
- INFP
+INTJ,
+ ISTJ
 \end_layout
 
 \end_inset
@@ -5474,11 +3961,12 @@ INTP,
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+批判逻辑:
+ 你真蠢
 \end_layout
 
 \end_inset
@@ -5487,8 +3975,8 @@ INTP,
 \begin_inset Text
 
 \begin_layout Plain Layout
-虚无主义，
-觉得做什么都没意义
+自我怀疑，
+质疑自己不够聪明
 \end_layout
 
 \end_inset
@@ -5526,8 +4014,8 @@ Trickster
 \begin_inset Text
 
 \begin_layout Plain Layout
-ESTJ,
- ESFJ
+ENFP,
+ ESFP
 \end_layout
 
 \end_inset
@@ -5545,13 +4033,8 @@ ESTJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-“别想太多，
-先做再说，
-
-\end_layout
-
-\begin_layout Plain Layout
-这不切实际。
+“太较真了没意思，
+差不多就行了。
 ”
 \end_layout
 
@@ -5561,14 +4044,13 @@ ESTJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-短期主义，
-只要确定的流程而不要愿景，
-
+逻辑疏松，
+讨厌定义和辩论
 \end_layout
 
 \begin_layout Plain Layout
-瞎操心，
-对未知充满恐惧
+经常自我矛盾却不自知，
+只关注“好不好”
 \end_layout
 
 \end_inset
@@ -5606,8 +4088,8 @@ Demon
 \begin_inset Text
 
 \begin_layout Plain Layout
-ISTJ,
- ISFJ
+INFP,
+ ISFP
 \end_layout
 
 \end_inset
@@ -5627,7 +4109,7 @@ ISTJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-永恒绝望 | Hopelessness
+诛心真话 | Cold Truth
 \end_layout
 
 \end_inset
@@ -5636,8 +4118,8 @@ ISTJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-恐怖末日预言家，
-否定别人的梦想
+最恶毒的逻辑穿刺，
+摧毁对方自尊
 \end_layout
 
 \end_inset
@@ -5655,7 +4137,6 @@ ISTJ,
 status open
 
 \begin_layout Plain Layout
-
 }
 \end_layout
 
@@ -5667,10 +4148,6 @@ status open
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Ti
 \end_layout
 
 \begin_layout Standard
