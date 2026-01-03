@@ -110,14 +110,13 @@ placement !h
 alignment document
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Ni 在不同状态下的表现形式。
-
+Ni 在不同状态下的表现形式
 \end_layout
 
 \end_inset
@@ -144,7 +143,7 @@ linewidth}{!}{%
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="13" columns="7">
+<lyxtabular version="3" rows="14" columns="7">
 <features booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -329,12 +328,15 @@ Child
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ISTP,
- ISFP
+ISTP
+\begin_inset Newline newline
+\end_inset
+
+ISFP
 \end_layout
 
 \end_inset
@@ -398,12 +400,11 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ISTP,
- ISFP
+
 \end_layout
 
 \end_inset
@@ -470,12 +471,15 @@ Anima
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ESTP,
- ESFP
+ESTP
+\end_layout
+
+\begin_layout Plain Layout
+ESFP
 \end_layout
 
 \end_inset
@@ -546,12 +550,11 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ESTP,
- ESFP
+
 \end_layout
 
 \end_inset
@@ -623,12 +626,11 @@ ESTP,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ESTP,
- ESFP
+
 \end_layout
 
 \end_inset
@@ -637,7 +639,10 @@ ESTP,
 \begin_inset Text
 
 \begin_layout Plain Layout
-此路不通，
+此路不通
+\begin_inset Newline newline
+\end_inset
+
 未来迷茫
 \end_layout
 
@@ -705,12 +710,15 @@ Nemesis
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ENTP,
- ENFP 
+ENTP
+\begin_inset Newline newline
+\end_inset
+
+ENFP
 \end_layout
 
 \end_inset
@@ -719,7 +727,11 @@ ENTP,
 \begin_inset Text
 
 \begin_layout Plain Layout
-主导功能受到挑战
+主导功能
+\begin_inset Newline newline
+\end_inset
+
+受到挑战
 \end_layout
 
 \end_inset
@@ -782,12 +794,11 @@ ENTP,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ENTP,
- ENFP 
+
 \end_layout
 
 \end_inset
@@ -796,7 +807,11 @@ ENTP,
 \begin_inset Text
 
 \begin_layout Plain Layout
-对他人该功能莫名厌烦
+对他人该功能
+\begin_inset Newline newline
+\end_inset
+
+莫名厌烦
 \end_layout
 
 \end_inset
@@ -854,12 +869,15 @@ Critic
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-INTP,
- INFP 
+INTP
+\begin_inset Newline newline
+\end_inset
+
+INFP
 \end_layout
 
 \end_inset
@@ -921,12 +939,11 @@ INTP,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-INTP,
- INFP 
+
 \end_layout
 
 \end_inset
@@ -992,8 +1009,11 @@ Trickster
 \begin_inset Text
 
 \begin_layout Plain Layout
-ESTJ,
- ESFJ
+ESTJ
+\begin_inset Newline newline
+\end_inset
+
+ESFJ
 \end_layout
 
 \end_inset
@@ -1050,7 +1070,7 @@ ESTJ,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1059,7 +1079,7 @@ Demon
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1068,23 +1088,28 @@ Demon
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ISTJ,
- ISFJ 
+ISTJ
+\begin_inset Newline newline
+\end_inset
+
+ISFJ
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-彻底崩溃，
-严重侵犯，
+彻底崩溃
+\begin_inset Newline newline
+\end_inset
 
+严重侵犯
 \begin_inset Newline newline
 \end_inset
 
@@ -1093,7 +1118,7 @@ ISTJ,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1102,12 +1127,83 @@ ISTJ,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 恐怖末日预言家，
 否定别人的梦想
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+整合
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N/A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+先知智慧 | Visionary
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+突破经验主义的桎梏，
+
+\begin_inset Newline newline
+\end_inset
+
+在危机时刻涌现出精准的未来预判，
+指引方向
 \end_layout
 
 \end_inset
@@ -1676,6 +1772,10 @@ INFP,
 
 \begin_layout Plain Layout
 价值观被践踏，
+
+\begin_inset Newline newline
+\end_inset
+
 感到无能
 \end_layout
 
@@ -1749,7 +1849,11 @@ INTP,
 \begin_inset Text
 
 \begin_layout Plain Layout
-主导功能受到挑战
+主导功能
+\begin_inset Newline newline
+\end_inset
+
+受到挑战
 \end_layout
 
 \end_inset
@@ -1825,7 +1929,11 @@ INTP,
 \begin_inset Text
 
 \begin_layout Plain Layout
-对他人该功能莫名厌烦
+对他人该功能
+\begin_inset Newline newline
+\end_inset
+
+莫名厌烦
 \end_layout
 
 \end_inset
@@ -2103,9 +2211,11 @@ INTP,
 \begin_inset Text
 
 \begin_layout Plain Layout
-彻底崩溃，
-严重侵犯，
+彻底崩溃
+\begin_inset Newline newline
+\end_inset
 
+严重侵犯
 \begin_inset Newline newline
 \end_inset
 
@@ -2726,6 +2836,10 @@ ENTJ,
 
 \begin_layout Plain Layout
 权威丧失，
+
+\begin_inset Newline newline
+\end_inset
+
 内鬼背叛
 \end_layout
 
@@ -2802,7 +2916,11 @@ ENFJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-主导功能受到挑战
+主导功能
+\begin_inset Newline newline
+\end_inset
+
+受到挑战
 \end_layout
 
 \end_inset
@@ -2878,7 +2996,11 @@ ENFJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-对他人该功能莫名厌烦
+对他人该功能
+\begin_inset Newline newline
+\end_inset
+
+莫名厌烦
 \end_layout
 
 \end_inset
@@ -3162,9 +3284,11 @@ ENTP,
 \begin_inset Text
 
 \begin_layout Plain Layout
-彻底崩溃，
-严重侵犯，
+彻底崩溃
+\begin_inset Newline newline
+\end_inset
 
+严重侵犯
 \begin_inset Newline newline
 \end_inset
 
@@ -3843,7 +3967,11 @@ ISTJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-主导功能受到挑战
+主导功能
+\begin_inset Newline newline
+\end_inset
+
+受到挑战
 \end_layout
 
 \end_inset
@@ -3919,7 +4047,11 @@ ISTJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-对他人该功能莫名厌烦
+对他人该功能
+\begin_inset Newline newline
+\end_inset
+
+莫名厌烦
 \end_layout
 
 \end_inset
@@ -4203,9 +4335,11 @@ ENTP,
 \begin_inset Text
 
 \begin_layout Plain Layout
-彻底崩溃，
-严重侵犯，
+彻底崩溃
+\begin_inset Newline newline
+\end_inset
 
+严重侵犯
 \begin_inset Newline newline
 \end_inset
 
@@ -4483,7 +4617,7 @@ Child
 \begin_inset Text
 
 \begin_layout Plain Layout
-游戏(Playfulness)
+游戏
 \end_layout
 
 \end_inset
@@ -4552,7 +4686,7 @@ N/A
 \begin_inset Text
 
 \begin_layout Plain Layout
-幼稚(Immaturity)
+幼稚
 \end_layout
 
 \end_inset
@@ -4620,7 +4754,11 @@ Anima
 \begin_inset Text
 
 \begin_layout Plain Layout
-正常(Aspiration)
+正常
+\begin_inset Newline newline
+\end_inset
+
+(Aspiration)
 \end_layout
 
 \end_inset
@@ -4693,7 +4831,11 @@ N/A
 \begin_inset Text
 
 \begin_layout Plain Layout
-压抑(Suppression)
+压抑
+\begin_inset Newline newline
+\end_inset
+
+(Suppression)
 \end_layout
 
 \end_inset
@@ -4766,7 +4908,11 @@ ISTJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-劫持/抓取(Grip)
+劫持/抓取
+\begin_inset Newline newline
+\end_inset
+
+(Grip)
 \end_layout
 
 \end_inset
@@ -4786,6 +4932,10 @@ ISTJ,
 
 \begin_layout Plain Layout
 熟悉流程被打断，
+
+\begin_inset Newline newline
+\end_inset
+
 未知风险
 \end_layout
 
@@ -4834,7 +4984,11 @@ Nemesis
 \begin_inset Text
 
 \begin_layout Plain Layout
-防御表现(Stubbornness)
+防御表现
+\begin_inset Newline newline
+\end_inset
+
+(Stubbornness)
 \end_layout
 
 \end_inset
@@ -4853,7 +5007,11 @@ INTJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-主导功能受到挑战
+主导功能
+\begin_inset Newline newline
+\end_inset
+
+受到挑战
 \end_layout
 
 \end_inset
@@ -4907,7 +5065,11 @@ INTJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-投射怀疑(Paranoia)
+投射怀疑
+\begin_inset Newline newline
+\end_inset
+
+(Paranoia)
 \end_layout
 
 \end_inset
@@ -4926,7 +5088,11 @@ INTJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-对他人该功能莫名厌烦
+对他人该功能
+\begin_inset Newline newline
+\end_inset
+
+莫名厌烦
 \end_layout
 
 \end_inset
@@ -5211,8 +5377,14 @@ ISTP,
 \begin_inset Text
 
 \begin_layout Plain Layout
-彻底崩溃，
-严重侵犯，
+彻底崩溃
+\begin_inset Newline newline
+\end_inset
+
+严重侵犯
+\begin_inset Newline newline
+\end_inset
+
 极度绝望
 \end_layout
 
@@ -5487,7 +5659,7 @@ Child
 \begin_inset Text
 
 \begin_layout Plain Layout
-游戏(Playfulness)
+游戏
 \end_layout
 
 \end_inset
@@ -5556,7 +5728,7 @@ N/A
 \begin_inset Text
 
 \begin_layout Plain Layout
-幼稚(Immaturity)
+幼稚
 \end_layout
 
 \end_inset
@@ -5624,7 +5796,11 @@ Anima
 \begin_inset Text
 
 \begin_layout Plain Layout
-正常(Aspiration)
+正常
+\begin_inset Newline newline
+\end_inset
+
+(Aspiration)
 \end_layout
 
 \end_inset
@@ -5696,7 +5872,11 @@ N/A
 \begin_inset Text
 
 \begin_layout Plain Layout
-压抑(Suppression)
+压抑
+\begin_inset Newline newline
+\end_inset
+
+(Suppression)
 \end_layout
 
 \end_inset
@@ -5769,7 +5949,11 @@ ENFJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-劫持/抓取(Grip)
+劫持/抓取
+\begin_inset Newline newline
+\end_inset
+
+(Grip)
 \end_layout
 
 \end_inset
@@ -5789,6 +5973,10 @@ ENFJ,
 
 \begin_layout Plain Layout
 人际背叛，
+
+\begin_inset Newline newline
+\end_inset
+
 缺乏反馈
 \end_layout
 
@@ -5837,7 +6025,11 @@ Nemesis
 \begin_inset Text
 
 \begin_layout Plain Layout
-防御表现(Stubbornness)
+防御表现
+\begin_inset Newline newline
+\end_inset
+
+(Stubbornness)
 \end_layout
 
 \end_inset
@@ -5856,7 +6048,11 @@ ENTJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-主导功能受到挑战
+主导功能
+\begin_inset Newline newline
+\end_inset
+
+受到挑战
 \end_layout
 
 \end_inset
@@ -5910,7 +6106,11 @@ ENTJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-投射怀疑(Paranoia)
+投射怀疑
+\begin_inset Newline newline
+\end_inset
+
+(Paranoia)
 \end_layout
 
 \end_inset
@@ -5929,7 +6129,11 @@ ENTJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-对他人该功能莫名厌烦
+对他人该功能
+\begin_inset Newline newline
+\end_inset
+
+莫名厌烦
 \end_layout
 
 \end_inset
@@ -6210,8 +6414,14 @@ INFP,
 \begin_inset Text
 
 \begin_layout Plain Layout
-彻底崩溃，
-严重侵犯，
+彻底崩溃
+\begin_inset Newline newline
+\end_inset
+
+严重侵犯
+\begin_inset Newline newline
+\end_inset
+
 极度绝望
 \end_layout
 
@@ -6486,7 +6696,7 @@ Child
 \begin_inset Text
 
 \begin_layout Plain Layout
-游戏(Playfulness)
+游戏
 \end_layout
 
 \end_inset
@@ -6554,7 +6764,7 @@ N/A
 \begin_inset Text
 
 \begin_layout Plain Layout
-幼稚(Immaturity)
+幼稚
 \end_layout
 
 \end_inset
@@ -6622,7 +6832,11 @@ Anima
 \begin_inset Text
 
 \begin_layout Plain Layout
-正常(Aspiration)
+正常
+\begin_inset Newline newline
+\end_inset
+
+(Aspiration)
 \end_layout
 
 \end_inset
@@ -6695,7 +6909,11 @@ N/A
 \begin_inset Text
 
 \begin_layout Plain Layout
-压抑(Suppression)
+压抑
+\begin_inset Newline newline
+\end_inset
+
+(Suppression)
 \end_layout
 
 \end_inset
@@ -6767,7 +6985,11 @@ INTP,
 \begin_inset Text
 
 \begin_layout Plain Layout
-劫持/抓取(Grip)
+劫持/抓取
+\begin_inset Newline newline
+\end_inset
+
+(Grip)
 \end_layout
 
 \end_inset
@@ -6787,6 +7009,10 @@ INTP,
 
 \begin_layout Plain Layout
 逻辑失效，
+
+\begin_inset Newline newline
+\end_inset
+
 被群体排斥
 \end_layout
 
@@ -6841,7 +7067,11 @@ Nemesis
 \begin_inset Text
 
 \begin_layout Plain Layout
-防御表现(Stubbornness)
+防御表现
+\begin_inset Newline newline
+\end_inset
+
+(Stubbornness)
 \end_layout
 
 \end_inset
@@ -6860,7 +7090,11 @@ INFP,
 \begin_inset Text
 
 \begin_layout Plain Layout
-主导功能受到挑战
+主导功能
+\begin_inset Newline newline
+\end_inset
+
+受到挑战
 \end_layout
 
 \end_inset
@@ -6913,7 +7147,11 @@ INFP,
 \begin_inset Text
 
 \begin_layout Plain Layout
-投射怀疑(Paranoia)
+投射怀疑
+\begin_inset Newline newline
+\end_inset
+
+(Paranoia)
 \end_layout
 
 \end_inset
@@ -6932,7 +7170,11 @@ INFP,
 \begin_inset Text
 
 \begin_layout Plain Layout
-对他人该功能莫名厌烦
+对他人该功能
+\begin_inset Newline newline
+\end_inset
+
+莫名厌烦
 \end_layout
 
 \end_inset
@@ -7230,8 +7472,14 @@ ENTJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-彻底崩溃，
-严重侵犯，
+彻底崩溃
+\begin_inset Newline newline
+\end_inset
+
+严重侵犯
+\begin_inset Newline newline
+\end_inset
+
 极度绝望
 \end_layout
 
@@ -7292,7 +7540,7 @@ placement !h
 alignment document
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -7819,6 +8067,10 @@ ENTP,
 
 \begin_layout Plain Layout
 无限可能变成混乱，
+
+\begin_inset Newline newline
+\end_inset
+
 生病
 \end_layout
 
@@ -7914,7 +8166,11 @@ ESTP,
 \begin_inset Text
 
 \begin_layout Plain Layout
-主导功能受到挑战
+主导功能
+\begin_inset Newline newline
+\end_inset
+
+受到挑战
 \end_layout
 
 \end_inset
@@ -7990,7 +8246,11 @@ ESTP,
 \begin_inset Text
 
 \begin_layout Plain Layout
-对他人该功能莫名厌烦
+对他人该功能
+\begin_inset Newline newline
+\end_inset
+
+莫名厌烦
 \end_layout
 
 \end_inset
@@ -8288,9 +8548,11 @@ INTJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-彻底崩溃，
-严重侵犯，
+彻底崩溃
+\begin_inset Newline newline
+\end_inset
 
+严重侵犯
 \begin_inset Newline newline
 \end_inset
 
