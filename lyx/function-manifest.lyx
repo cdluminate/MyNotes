@@ -4759,7 +4759,7 @@ placement !h
 alignment document
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -5908,14 +5908,13 @@ placement !h
 alignment document
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Ti 在不同状态下的表现形式。
-
+Ti 在不同状态下的表现形式
 \end_layout
 
 \end_inset
@@ -5942,7 +5941,7 @@ linewidth}{!}{%
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="13" columns="7">
+<lyxtabular version="3" rows="14" columns="7">
 <features booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -6127,12 +6126,15 @@ Child
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-INFJ,
- ISFJ
+INFJ
+\begin_inset Newline newline
+\end_inset
+
+ISFJ
 \end_layout
 
 \end_inset
@@ -6196,12 +6198,11 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-INFJ,
- ISFJ
+
 \end_layout
 
 \end_inset
@@ -6268,12 +6269,15 @@ Anima
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ENFJ,
- ESFJ
+ENFJ
+\begin_inset Newline newline
+\end_inset
+
+ESFJ
 \end_layout
 
 \end_inset
@@ -6344,12 +6348,11 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ENFJ,
- ESFJ
+
 \end_layout
 
 \end_inset
@@ -6383,6 +6386,10 @@ ENFJ,
 \begin_layout Plain Layout
 “大家都这么说”，
 拒绝独立思考，
+
+\begin_inset Newline newline
+\end_inset
+
 屏蔽异见
 \end_layout
 
@@ -6421,12 +6428,11 @@ ENFJ,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ENFJ,
- ESFJ
+
 \end_layout
 
 \end_inset
@@ -6449,7 +6455,11 @@ ENFJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-“人类是愚蠢且无可救药的”
+“人类是愚蠢
+\begin_inset Newline newline
+\end_inset
+
+且无可救药的”
 \end_layout
 
 \end_inset
@@ -6459,6 +6469,10 @@ ENFJ,
 
 \begin_layout Plain Layout
 冷酷的犬儒主义，
+
+\begin_inset Newline newline
+\end_inset
+
 用刺耳的逻辑攻击他人软肋
 \end_layout
 
@@ -6497,12 +6511,15 @@ Nemesis
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ENTJ,
- ESTJ
+ENTJ
+\begin_inset Newline newline
+\end_inset
+
+ESTJ
 \end_layout
 
 \end_inset
@@ -6540,6 +6557,10 @@ ENTJ,
 
 \begin_layout Plain Layout
 就拒绝深入思考逻辑细节，
+
+\begin_inset Newline newline
+\end_inset
+
 认为那是浪费时间
 \end_layout
 
@@ -6578,12 +6599,11 @@ ENTJ,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ENTJ,
- ESTJ
+
 \end_layout
 
 \end_inset
@@ -6615,6 +6635,10 @@ ENTJ,
 
 \begin_layout Plain Layout
 怀疑智商：
+
+\begin_inset Newline newline
+\end_inset
+
 认为别人的精细逻辑是“书呆子气”，
 
 \end_layout
@@ -6654,12 +6678,15 @@ Critic
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-INTJ,
- ISTJ
+INTJ
+\begin_inset Newline newline
+\end_inset
+
+ISTJ
 \end_layout
 
 \end_inset
@@ -6722,12 +6749,11 @@ INTJ,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-INTJ,
- ISTJ
+
 \end_layout
 
 \end_inset
@@ -6793,8 +6819,11 @@ Trickster
 \begin_inset Text
 
 \begin_layout Plain Layout
-ENFP,
- ESFP
+ENFP
+\begin_inset Newline newline
+\end_inset
+
+ESFP
 \end_layout
 
 \end_inset
@@ -6813,6 +6842,10 @@ ENFP,
 
 \begin_layout Plain Layout
 “太较真了没意思，
+
+\begin_inset Newline newline
+\end_inset
+
 差不多就行了。
 ”
 \end_layout
@@ -6829,6 +6862,10 @@ ENFP,
 
 \begin_layout Plain Layout
 经常自我矛盾却不自知，
+
+\begin_inset Newline newline
+\end_inset
+
 只关注“好不好”
 \end_layout
 
@@ -6845,7 +6882,7 @@ ENFP,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -6854,7 +6891,7 @@ Demon
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -6863,17 +6900,20 @@ Demon
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-INFP,
- ISFP
+INFP
+\begin_inset Newline newline
+\end_inset
+
+ISFP
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -6890,21 +6930,103 @@ INFP,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-诛心真话 | Cold Truth
+诛心真话
+\begin_inset Newline newline
+\end_inset
+
+ Cold Truth
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 最恶毒的逻辑穿刺，
+
+\begin_inset Newline newline
+\end_inset
+
 摧毁对方自尊
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+整合
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N/A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+结构真理
+\begin_inset Newline newline
+\end_inset
+
+ Structural Truth
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+能够用最客观的逻辑捍卫价值观，
+
+\begin_inset Newline newline
+\end_inset
+
+不带情绪地通过理性解决最棘手的问题
 \end_layout
 
 \end_inset
