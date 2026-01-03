@@ -7067,7 +7067,7 @@ placement !h
 alignment document
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -8226,14 +8226,13 @@ placement !h
 alignment document
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Si 在不同状态下的表现形式。
-
+Si 在不同状态下的表现形式
 \end_layout
 
 \end_inset
@@ -8260,7 +8259,7 @@ linewidth}{!}{%
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="13" columns="7">
+<lyxtabular version="3" rows="14" columns="7">
 <features booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -8445,12 +8444,15 @@ Child
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-INTP,
- INFP
+INTP
+\begin_inset Newline newline
+\end_inset
+
+INFP
 \end_layout
 
 \end_inset
@@ -8513,12 +8515,11 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-INTP,
- INFP
+
 \end_layout
 
 \end_inset
@@ -8585,12 +8586,15 @@ Anima
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ENTP,
- ENFP
+ENTP
+\begin_inset Newline newline
+\end_inset
+
+ENFP
 \end_layout
 
 \end_inset
@@ -8661,12 +8665,11 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ENTP,
- ENFP
+
 \end_layout
 
 \end_inset
@@ -8700,6 +8703,10 @@ ENTP,
 
 昼夜颠倒，
 生活区像垃圾场，
+
+\begin_inset Newline newline
+\end_inset
+
 拒绝体检
 \end_layout
 
@@ -8738,12 +8745,11 @@ ENTP,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ENTP,
- ENFP
+
 \end_layout
 
 \end_inset
@@ -8795,6 +8801,10 @@ ENTP,
 \noun off
 \color none
 隧道视野，
+
+\begin_inset Newline newline
+\end_inset
+
 甚至感觉身体正在腐烂(疑病)，
 
 \begin_inset Newline newline
@@ -8838,12 +8848,15 @@ Nemesis
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ESTP,
- ESFP
+ESTP
+\begin_inset Newline newline
+\end_inset
+
+ESFP
 \end_layout
 
 \end_inset
@@ -8875,6 +8888,10 @@ ESTP,
 
 \begin_layout Plain Layout
 轻视经验：
+
+\begin_inset Newline newline
+\end_inset
+
 极度讨厌“老规矩”或繁琐的流程，
 
 \begin_inset Newline newline
@@ -8918,12 +8935,11 @@ ESTP,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ESTP,
- ESFP
+
 \end_layout
 
 \end_inset
@@ -8969,6 +8985,10 @@ ESTP,
 \noun off
 \color none
 怀疑动机：
+
+\begin_inset Newline newline
+\end_inset
+
 认为别人拿过去的数据
 \begin_inset Newline newline
 \end_inset
@@ -9007,12 +9027,15 @@ Critic
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ISTP,
- ISFP
+ISTP
+\begin_inset Newline newline
+\end_inset
+
+ISFP
 \end_layout
 
 \end_inset
@@ -9075,12 +9098,11 @@ ISTP,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ISTP,
- ISFP
+
 \end_layout
 
 \end_inset
@@ -9146,8 +9168,11 @@ Trickster
 \begin_inset Text
 
 \begin_layout Plain Layout
-ENTJ,
- ENFJ
+ENTJ
+\begin_inset Newline newline
+\end_inset
+
+ENFJ
 \end_layout
 
 \end_inset
@@ -9181,6 +9206,10 @@ ENTJ,
 
 \begin_layout Plain Layout
 严重透支身体而不自知，
+
+\begin_inset Newline newline
+\end_inset
+
 极度厌恶怀旧和重复，
 
 \begin_inset Newline newline
@@ -9202,7 +9231,7 @@ ENTJ,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -9211,7 +9240,7 @@ Demon
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -9220,17 +9249,20 @@ Demon
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-INTJ,
- INFJ
+INTJ
+\begin_inset Newline newline
+\end_inset
+
+INFJ
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -9247,16 +9279,20 @@ INTJ,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-彻底抹除 | Erasure
+彻底抹除
+\begin_inset Newline newline
+\end_inset
+
+ Erasure
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -9266,6 +9302,85 @@ INTJ,
 \end_inset
 
 肉体自毁倾向
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+整合
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N/A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+历史和解
+\begin_inset Newline newline
+\end_inset
+
+Reconciliation
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+成为传统的守护者，
+
+\begin_inset Newline newline
+\end_inset
+
+从过往创伤中提炼史诗般的意义，
+
+\begin_inset Newline newline
+\end_inset
+
+极致的身体掌控
 \end_layout
 
 \end_inset
