@@ -5908,7 +5908,7 @@ placement !h
 alignment document
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -7067,14 +7067,13 @@ placement !h
 alignment document
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Fe 在不同状态下的表现形式。
-
+Fe 在不同状态下的表现形式
 \end_layout
 
 \end_inset
@@ -7101,7 +7100,7 @@ linewidth}{!}{%
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="13" columns="7">
+<lyxtabular version="3" rows="14" columns="7">
 <features booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -7286,7 +7285,7 @@ Child
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -7354,12 +7353,11 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ENTP,
- ESTP
+
 \end_layout
 
 \end_inset
@@ -7426,7 +7424,7 @@ Anima
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -7503,12 +7501,11 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-INTP,
- ISTP
+
 \end_layout
 
 \end_inset
@@ -7579,12 +7576,11 @@ INTP,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-INTP,
- ISTP
+
 \end_layout
 
 \end_inset
@@ -7608,6 +7604,10 @@ INTP,
 
 \begin_layout Plain Layout
 “没人爱我，
+
+\begin_inset Newline newline
+\end_inset
+
 我是多余的”
 \end_layout
 
@@ -7661,7 +7661,7 @@ Nemesis
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -7698,6 +7698,10 @@ INFP,
 
 \begin_layout Plain Layout
 拒绝从众：
+
+\begin_inset Newline newline
+\end_inset
+
 极度反感社交压力和“必须做的事”，
 
 \begin_inset Newline newline
@@ -7741,12 +7745,11 @@ INFP,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-INFP,
- ISFP
+
 \end_layout
 
 \end_inset
@@ -7816,7 +7819,7 @@ Critic
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -7850,6 +7853,10 @@ ENFP,
 
 \begin_layout Plain Layout
 社交孤立，
+
+\begin_inset Newline newline
+\end_inset
+
 攻击对方情商或者礼仪
 \end_layout
 
@@ -7884,12 +7891,11 @@ ENFP,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ENFP,
- ESFP
+
 \end_layout
 
 \end_inset
@@ -7974,7 +7980,11 @@ INTJ,
 \begin_inset Text
 
 \begin_layout Plain Layout
-“虚伪的客套有什么用？
+“虚伪的客套
+\begin_inset Newline newline
+\end_inset
+
+有什么用？
 
 \begin_inset Newline newline
 \end_inset
@@ -8004,6 +8014,10 @@ INTJ,
 \noun off
 \color none
 视社交礼仪为操纵，
+
+\begin_inset Newline newline
+\end_inset
+
 善意说真话却成冒犯，
 
 \begin_inset Newline newline
@@ -8025,7 +8039,7 @@ INTJ,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8034,7 +8048,7 @@ Demon
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8043,7 +8057,7 @@ Demon
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8053,7 +8067,7 @@ ENTJ,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8070,21 +8084,108 @@ ENTJ,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-名誉屠杀 | Character Assassination
+名誉屠杀
+\begin_inset Newline newline
+\end_inset
+
+Character Assassination
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 情感操纵与社会死亡，
+
+\begin_inset Newline newline
+\end_inset
+
 情感爆发
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+整合
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N/A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+仁慈领袖
+\begin_inset Newline newline
+\end_inset
+
+Benevolent Ruler
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+放下权力的傲慢，
+
+\begin_inset Newline newline
+\end_inset
+
+展现出真正的人性光辉，
+
+\begin_inset Newline newline
+\end_inset
+
+通过情感连接凝聚人心
 \end_layout
 
 \end_inset
