@@ -3228,7 +3228,7 @@ placement !h
 alignment document
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -5273,7 +5273,7 @@ placement !h
 alignment document
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -5633,8 +5633,8 @@ Anima
 \begin_inset Text
 
 \begin_layout Plain Layout
-INFP,
- ISFP
+ENFJ,
+ ESFJ
 \end_layout
 
 \end_inset
@@ -5705,8 +5705,8 @@ N/A
 \begin_inset Text
 
 \begin_layout Plain Layout
-INFP,
- ISFP
+ENFJ,
+ ESFJ
 \end_layout
 
 \end_inset
@@ -5778,8 +5778,8 @@ INFP,
 \begin_inset Text
 
 \begin_layout Plain Layout
-INFP,
- ISFP
+ENFJ,
+ ESFJ
 \end_layout
 
 \end_inset
@@ -6006,7 +6006,7 @@ INTJ,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -6074,12 +6074,11 @@ INTJ,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-批判逻辑:
- 你真蠢
+
 \end_layout
 
 \end_inset
