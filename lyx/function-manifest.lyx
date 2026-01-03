@@ -3603,7 +3603,7 @@ placement !h
 alignment document
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -4759,7 +4759,7 @@ placement !h
 alignment document
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -4793,7 +4793,7 @@ linewidth}{!}{%
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="13" columns="7">
+<lyxtabular version="3" rows="14" columns="7">
 <features booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -4978,12 +4978,15 @@ Child
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ESTJ,
- ESFJ
+ESTJ
+\begin_inset Newline newline
+\end_inset
+
+ESFJ
 \end_layout
 
 \end_inset
@@ -5047,12 +5050,11 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ESTJ,
- ESFJ
+
 \end_layout
 
 \end_inset
@@ -5119,12 +5121,15 @@ Anima
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ISTJ,
- ISFJ
+ISTJ
+\begin_inset Newline newline
+\end_inset
+
+ISFJ
 \end_layout
 
 \end_inset
@@ -5158,6 +5163,10 @@ N/A
 \begin_layout Plain Layout
 讲双关语笑话，
 看科幻片，
+
+\begin_inset Newline newline
+\end_inset
+
 交怪朋友
 \end_layout
 
@@ -5196,12 +5205,11 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ISTJ,
- ISFJ
+
 \end_layout
 
 \end_inset
@@ -5235,6 +5243,10 @@ ISTJ,
 \begin_layout Plain Layout
 刻板重复昨日，
 不仅不做梦，
+
+\begin_inset Newline newline
+\end_inset
+
 还打击梦想
 \end_layout
 
@@ -5273,12 +5285,11 @@ ISTJ,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ISTJ,
- ISFJ
+
 \end_layout
 
 \end_inset
@@ -5311,6 +5322,10 @@ ISTJ,
 
 \begin_layout Plain Layout
 灾难化想象 (Catastrophizing)，
+
+\begin_inset Newline newline
+\end_inset
+
 看到到处都是阴谋
 \end_layout
 
@@ -5349,12 +5364,15 @@ Nemesis
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-INTJ,
- INFJ
+INTJ
+\begin_inset Newline newline
+\end_inset
+
+INFJ
 \end_layout
 
 \end_inset
@@ -5430,12 +5448,11 @@ INTJ,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-INTJ,
- INFJ
+
 \end_layout
 
 \end_inset
@@ -5506,12 +5523,15 @@ Critic
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ENTJ,
- ENFJ
+ENTJ
+\begin_inset Newline newline
+\end_inset
+
+ENFJ
 \end_layout
 
 \end_inset
@@ -5573,12 +5593,11 @@ ENTJ,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ENTJ,
- ENFJ
+
 \end_layout
 
 \end_inset
@@ -5644,8 +5663,11 @@ Trickster
 \begin_inset Text
 
 \begin_layout Plain Layout
-ISTP,
- ISFP
+ISTP
+\begin_inset Newline newline
+\end_inset
+
+ISFP
 \end_layout
 
 \end_inset
@@ -5701,7 +5723,7 @@ ISTP,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5710,7 +5732,7 @@ Demon
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5719,17 +5741,20 @@ Demon
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ISTP,
- ISFP
+ISTP
+\begin_inset Newline newline
+\end_inset
+
+ISFP
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5746,21 +5771,104 @@ ISTP,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-恶意扭曲 | Gaslighting
+恶意扭曲
+\begin_inset Newline newline
+\end_inset
+
+Gaslighting
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 被害妄想与构陷，
 混乱制造者
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+整合
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N/A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+万物互联
+\begin_inset Newline newline
+\end_inset
+
+ Interconnection
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+极其通透的开放心态，
+
+\begin_inset Newline newline
+\end_inset
+
+理解复杂的混沌系统，
+
+\begin_inset Newline newline
+\end_inset
+
+成为打破僵局的创新者
 \end_layout
 
 \end_inset
