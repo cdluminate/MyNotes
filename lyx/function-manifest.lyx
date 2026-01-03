@@ -110,7 +110,7 @@ placement !h
 alignment document
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -587,6 +587,10 @@ N/A
 
 \begin_layout Plain Layout
 “想那么多没用”，
+
+\begin_inset Newline newline
+\end_inset
+
 只活在这一秒，
 拒绝规划
 \end_layout
@@ -751,6 +755,10 @@ ENFP
 
 \begin_layout Plain Layout
 抗拒定论：
+
+\begin_inset Newline newline
+\end_inset
+
 讨厌被“贴标签”或被限制未来，
 
 \end_layout
@@ -830,6 +838,10 @@ ENFP
 
 \begin_layout Plain Layout
 怀疑操控：
+
+\begin_inset Newline newline
+\end_inset
+
 认为别人的愿景是洗脑，
 
 \end_layout
@@ -905,6 +917,10 @@ INFP
 
 \begin_layout Plain Layout
 未来诅咒，
+
+\begin_inset Newline newline
+\end_inset
+
 否定愿景断言注定失败 
 \end_layout
 
@@ -971,6 +987,10 @@ INFP
 
 \begin_layout Plain Layout
 虚无主义，
+
+\begin_inset Newline newline
+\end_inset
+
 觉得做什么都没意义
 \end_layout
 
@@ -1203,6 +1223,10 @@ N/A
 \end_inset
 
 在危机时刻涌现出精准的未来预判，
+
+\begin_inset Newline newline
+\end_inset
+
 指引方向
 \end_layout
 
@@ -1244,14 +1268,13 @@ placement !h
 alignment document
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Te 在不同状态下的表现形式。
-
+Te 在不同状态下的表现形式
 \end_layout
 
 \end_inset
@@ -1278,7 +1301,7 @@ linewidth}{!}{%
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="13" columns="7">
+<lyxtabular version="3" rows="14" columns="7">
 <features booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -1463,12 +1486,15 @@ Child
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ENFP,
- ESFP
+ENFP
+\begin_inset Newline newline
+\end_inset
+
+ESFP
 \end_layout
 
 \end_inset
@@ -1532,12 +1558,11 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ENFP,
- ESFP
+
 \end_layout
 
 \end_inset
@@ -1604,12 +1629,15 @@ Anima
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-INFP,
- ISFP
+INFP
+\begin_inset Newline newline
+\end_inset
+
+ISFP
 \end_layout
 
 \end_inset
@@ -1680,12 +1708,11 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-INFP,
- ISFP
+
 \end_layout
 
 \end_inset
@@ -1757,12 +1784,11 @@ INFP,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-INFP,
- ISFP
+
 \end_layout
 
 \end_inset
@@ -1786,6 +1812,10 @@ INFP,
 
 \begin_layout Plain Layout
 “既然没人懂我，
+
+\begin_inset Newline newline
+\end_inset
+
 那我就毁了一切”
 \end_layout
 
@@ -1797,6 +1827,10 @@ INFP,
 \begin_layout Plain Layout
 暴君模式，
 极度苛刻批判他人，
+
+\begin_inset Newline newline
+\end_inset
+
 逻辑混乱的独裁
 \end_layout
 
@@ -1835,12 +1869,15 @@ Nemesis
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-INTP,
- ISTP
+INTP
+\begin_inset Newline newline
+\end_inset
+
+ISTP
 \end_layout
 
 \end_inset
@@ -1877,6 +1914,10 @@ INTP,
 
 \begin_layout Plain Layout
 极度厌恶被别人安排或催促，
+
+\begin_inset Newline newline
+\end_inset
+
 故意拖延以示反抗
 \end_layout
 
@@ -1915,12 +1956,11 @@ INTP,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-INTP,
- ISTP
+
 \end_layout
 
 \end_inset
@@ -1956,6 +1996,10 @@ INTP,
 
 \begin_layout Plain Layout
 认为别人的证书/头衔都是虚的，
+
+\begin_inset Newline newline
+\end_inset
+
 质疑权威的有效性
 \end_layout
 
@@ -1990,12 +2034,15 @@ Critic
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ENTP,
- ESTP
+ENTP
+\begin_inset Newline newline
+\end_inset
+
+ESTP
 \end_layout
 
 \end_inset
@@ -2058,12 +2105,11 @@ ENTP,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ENTP,
- ESTP
+
 \end_layout
 
 \end_inset
@@ -2129,8 +2175,11 @@ Trickster
 \begin_inset Text
 
 \begin_layout Plain Layout
-INFJ,
- ISFJ
+INFJ
+\begin_inset Newline newline
+\end_inset
+
+ISFJ
 \end_layout
 
 \end_inset
@@ -2159,6 +2208,10 @@ INFJ,
 
 \begin_layout Plain Layout
 无法理清外部资源，
+
+\begin_inset Newline newline
+\end_inset
+
 难以做客观决策
 \end_layout
 
@@ -2179,7 +2232,7 @@ INFJ,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2188,7 +2241,7 @@ Demon
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2197,17 +2250,20 @@ Demon
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-INTP,
- ISTP
+INTP
+\begin_inset Newline newline
+\end_inset
+
+ISTP
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2224,7 +2280,7 @@ INTP,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2233,13 +2289,92 @@ INTP,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 冷酷的暴君，
 破坏性执行，
+
+\begin_inset Newline newline
+\end_inset
+
 无视人性
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+整合
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N/A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+建设秩序 | Constructive Order
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+极具执行力的系统构建者，
+
+\begin_inset Newline newline
+\end_inset
+
+在混乱中建立坚不可摧的帝国，
+
+\begin_inset Newline newline
+\end_inset
+
+为了大局的高效
 \end_layout
 
 \end_inset
