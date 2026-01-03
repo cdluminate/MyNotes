@@ -2415,7 +2415,7 @@ placement !h
 alignment document
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -3603,14 +3603,13 @@ placement !h
 alignment document
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Se 在不同状态下的表现形式。
-
+Se 在不同状态下的表现形式
 \end_layout
 
 \end_inset
@@ -3637,7 +3636,7 @@ linewidth}{!}{%
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="13" columns="7">
+<lyxtabular version="3" rows="14" columns="7">
 <features booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -3822,7 +3821,7 @@ Child
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3891,12 +3890,11 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ENTJ,
- ENFJ
+
 \end_layout
 
 \end_inset
@@ -3963,7 +3961,7 @@ Anima
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4040,12 +4038,11 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-INTJ,
- INFJ
+
 \end_layout
 
 \end_inset
@@ -4079,6 +4076,10 @@ INTJ,
 
 全黑穿搭，
 极简装修，
+
+\begin_inset Newline newline
+\end_inset
+
 甚至忘记吃饭
 \end_layout
 
@@ -4117,12 +4118,11 @@ INTJ,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-INTJ,
- INFJ
+
 \end_layout
 
 \end_inset
@@ -4204,7 +4204,7 @@ Nemesis
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4241,6 +4241,10 @@ ISTJ,
 
 \begin_layout Plain Layout
 感官屏蔽：
+
+\begin_inset Newline newline
+\end_inset
+
 对外界的新体验表现出排斥，
 
 \begin_inset Newline newline
@@ -4284,12 +4288,11 @@ ISTJ,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ISTJ,
- ISFJ
+
 \end_layout
 
 \end_inset
@@ -4321,6 +4324,10 @@ ISTJ,
 
 \begin_layout Plain Layout
 怀疑现实：
+
+\begin_inset Newline newline
+\end_inset
+
 认为别人的衣着/表现
 \begin_inset Newline newline
 \end_inset
@@ -4359,7 +4366,7 @@ Critic
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4393,6 +4400,10 @@ ESTJ,
 
 \begin_layout Plain Layout
 外貌/品味攻击，
+
+\begin_inset Newline newline
+\end_inset
+
 苛刻挑剔对方衣着审美
 \end_layout
 
@@ -4427,12 +4438,11 @@ ESTJ,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ESTJ,
- ESFJ
+
 \end_layout
 
 \end_inset
@@ -4460,6 +4470,10 @@ ESTJ,
 
 \begin_layout Plain Layout
 容貌/现实焦虑，
+
+\begin_inset Newline newline
+\end_inset
+
 觉得自己丑陋笨拙
 \end_layout
 
@@ -4533,6 +4547,10 @@ INTP,
 
 \begin_layout Plain Layout
 物理笨拙(平地摔)，
+
+\begin_inset Newline newline
+\end_inset
+
 极其忽视环境细节，
 
 \begin_inset Newline newline
@@ -4554,7 +4572,7 @@ INTP,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4563,7 +4581,7 @@ Demon
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4572,7 +4590,7 @@ Demon
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4582,7 +4600,7 @@ ENTP,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4599,21 +4617,108 @@ ENTP,
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-现实崩塌 | Burn it down
+现实崩塌
+\begin_inset Newline newline
+\end_inset
+
+Burn it down
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 物理毁灭与虚无，
+
+\begin_inset Newline newline
+\end_inset
+
 极度慵懒或狂躁
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+整合
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N/A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+绝对显化
+\begin_inset Newline newline
+\end_inset
+
+Manifestation
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+将抽象疯狂的灵感在现实中完美落地，
+
+\begin_inset Newline newline
+\end_inset
+
+极具感染力的舞台表现，
+
+\begin_inset Newline newline
+\end_inset
+
+活在当下
 \end_layout
 
 \end_inset
