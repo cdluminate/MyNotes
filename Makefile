@@ -14,5 +14,5 @@ main: jungian.tex
 	xelatex jungian.tex
 	xelatex jungian.tex
 	xelatex jungian.tex
-	-$(RM) *.aux *.log *.out *.toc *.lot
+	-$(RM) *.aux *.log *.out *.toc *.lot src/*.aux
 	-$(VIEWER) jungian.pdf &
