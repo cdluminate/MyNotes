@@ -31,6 +31,9 @@
     %{\@finalstrut\@arstrutbox\end{varwidth}}
     {\end{varwidth}}
 
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
 
 \begin{document}
 
@@ -606,6 +609,52 @@ ESFP & (你脑子笨听我的) & \textbf{内倾情感} & 承认逻辑弱势，�
         低强度，高安全感则是高斯分布的中心，也是大部分健康长久关系的归宿。
         高强度，高安全感通常需要双方都是高阶人格，并且能完美平衡自我边界与融合。
 \end{enumerate}
+\end{table}
+
+
+\begin{table}[h!]
+    \caption{16种人格类型：人口占比与发展水平分布形态}
+    \centering
+    \renewcommand{\arraystretch}{1.2} % 增加行高，提升阅读体验
+    %\footnotesize % 字体调整为小号，防止爆行
+    \begin{tabular}{c c c c L{4.2cm} L{4.2cm}}
+        \toprule
+        \textbf{维度} & \textbf{类型} & \textbf{占比} & \textbf{分布形态} & \textbf{低阶表现 (下限)} & \textbf{高阶表现 (上限)} \\
+        \midrule
+
+        % NT系
+        \multirow{4}{*}{\shortstack{\textbf{NT系} \\ \scriptsize ($\approx 10\%$)}}
+        & INTJ & 2.1\% & U型 (极化) & 愤世嫉俗、Ni-Fi死循环、傲慢且无能 & 战略宗师、系统构建者、神性与人性整合 \\
+        & ENTP & 3.2\% & 高方差正态 & 杠精、缺乏定性、混乱邪恶 & 创新发明家、打破僵局的变革者 \\
+        & INTP & 3.3\% & 双峰分布 & 虚无主义、生活低能、思维瘫痪 & 逻辑构建者、超越时代的真理探索者 \\
+        & ENTJ & 1.8\% & 右偏 (高下限) & 冷酷暴君、为目的不择手段 & 帝国统帅、高效且目光长远的建设者 \\
+        \midrule
+
+        % NF系
+        \multirow{4}{*}{\shortstack{\textbf{NF系} \\ \scriptsize ($\approx 16\%$)}}
+        & INFJ & 1.5\% & U型 (极化) & 极度敏感、操控型圣母、脱离现实 & 精神领袖、洞察世俗的智者 \\
+        & INFP & 4.4\% & 左偏 (低均值) & 抑郁倾向、受害者心态、行动瘫痪 & 治愈者、深刻的哲学家、纯粹理想载体 \\
+        & ENFJ & 2.5\% & 右偏 (高下限) & 伪善、控制欲强、强加价值观 & 真正的导师、凝聚人心的领袖 \\
+        & ENFP & 8.1\% & 正态 (扁平) & 三分钟热度、情绪过山车 & 启发他人的缪斯、拥有无限可能性的探索者 \\
+        \midrule
+
+        % SJ系
+        \multirow{4}{*}{\shortstack{\textbf{SJ系} \\ \scriptsize ($\approx 46\%$)}}
+        & ISTJ & 11.6\% & 右偏 (高下限) & 刻板固执、机械执行的工具人 & 社会基石、极其可靠的执行者 \\
+        & ISFJ & 13.8\% & 右偏 (高下限) & 过度牺牲、讨好型人格、缺乏主见 & 温柔坚定的守护者、润物细无声 \\
+        & ESTJ & 8.7\% & 右偏 (高下限) & 控制狂、缺乏共情的官僚 & 高效管理者、秩序维护者、公正无私 \\
+        & ESFJ & 12.3\% & 右偏 (高下限) & 八卦、随波逐流、依赖群体评价 & 社群核心、极具号召力的关怀者 \\
+        \midrule
+
+        % SP系
+        \multirow{4}{*}{\shortstack{\textbf{SP系} \\ \scriptsize ($\approx 27\%$)}}
+        & ISTP & 5.4\% & 正态分布 & 冷漠孤僻、寻求刺激却无目的 & 精通技艺的大师、极度冷静的破局者 \\
+        & ISFP & 8.8\% & 左偏 (低均值) & 自我沉溺、情绪化、无病呻吟 & 灵魂艺术家、极致的审美与道德感 \\
+        & ESTP & 4.3\% & M型 (双极) & 鲁莽赌徒、享乐主义、反社会倾向 & 极具魅力的领袖、高风险问题解决者 \\
+        & ESFP & 8.5\% & 正态分布 & 肤浅、冲动、无法忍受寂寞 & 点燃他人的生命之火、活在当下的智者 \\
+
+        \bottomrule
+    \end{tabular}
 \end{table}
 
 \begin{table}[h]
