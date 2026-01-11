@@ -35,7 +35,7 @@
 \index_command default
 \float_placement class
 \float_alignment class
-\paperfontsize default
+\paperfontsize 12
 \spacing single
 \use_hyperref false
 \papersize default
@@ -108,20 +108,127 @@ LatexCommand tableofcontents
 金刚经摘录
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Subsection
+大乘正宗分 · 第三
+\end_layout
+
+\begin_layout Standard
+须菩提，
+若菩萨有我相、人相、众生相、寿者相，
+即非菩萨。
+
+\end_layout
+
+\begin_layout Subsection
+如理实见分 · 第五
+\end_layout
+
+\begin_layout Standard
+凡所有相，
+皆是虚妄。
+若见诸相非相，
+则见如来。
+
+\end_layout
+
+\begin_layout Subsection
+正信希有分 · 第六
+\end_layout
+
+\begin_layout Standard
+以是义故，
+如来常说汝等比丘知我说法如筏喻者。
+法尚应舍，
+何况非法。
+
+\end_layout
+
+\begin_layout Subsection
+庄严净土分 · 第十
+\end_layout
+
+\begin_layout Standard
+是故，
+须菩提，
+诸菩萨摩诃萨应如是生清净心，
+不应住色生心，
+不应住声、香、味、触、法生心，
+应无所住而生其心。
+
+\end_layout
+
+\begin_layout Subsection
+一体同观分 · 第十八
+\end_layout
+
+\begin_layout Standard
+如来说诸心皆为非心，
+是名为心。
+所以者何？
+须菩提，
+过去心不可得，
+现在心不可得，
+未来心不可得。
+
+\end_layout
+
+\begin_layout Subsection
+法身非相分 · 第二十六
+\end_layout
+
+\begin_layout Standard
+若以色见我，
+以音声求我，
+是人行邪道，
+不能见如来。
+
+\end_layout
+
+\begin_layout Subsection
+威仪寂静分 · 第二十九
+\end_layout
+
+\begin_layout Standard
+如来者，
+无所从来，
+亦无所去，
+故名如来。
+
+\end_layout
+
+\begin_layout Subsection
+应化非真分 · 第三十二
+\end_layout
+
+\begin_layout Standard
 一切有为法，
 如梦幻泡影，
 如露亦如电，
 应做如是观。
 
-\begin_inset Newline newline
-\end_inset
-
-第三十二品 · 应化非真分
 \end_layout
 
 \begin_layout Section
 六祖坛经摘录
+\end_layout
+
+\begin_layout Section
+参考书目
+\end_layout
+
+\begin_layout Enumerate
+南怀瑾 著述，
+《金刚经说什么》，
+复旦大学出版社 （不推荐该书，
+口语逻辑过于发散。
+）
+\end_layout
+
+\begin_layout Enumerate
+陈秋平，
+尚荣 译著，
+《金刚经 心经 坛经》，
+中华书局
 \end_layout
 
 \end_body
