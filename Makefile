@@ -5,9 +5,11 @@ UNAME_S := $(shell uname -s)
 ifeq ($(UNAME_S),Darwin)
 	# macOS
 	VIEWER := open -a preview
+	LYX := /Applications/LyX.app/Contents/MacOS/lyx
 else
 	# Linux
 	VIEWER := evince
+	LYX := lyx
 endif
 
 main: jungian.tex
@@ -16,3 +18,8 @@ main: jungian.tex
 	xelatex jungian.tex
 	-$(RM) *.aux *.log *.out *.toc *.lot src/*.aux
 	-$(VIEWER) jungian.pdf &
+
+sutra:
+	# pdf4 is xelatex
+	$(LYX) -E pdf4 sutra.pdf lyx/Sutra.lyx
+	-$(VIEWER) sutra.pdf &
