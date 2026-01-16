@@ -105,7 +105,14 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Section
-金刚经摘录
+金刚经(Diamond Sutra)摘录
+\end_layout
+
+\begin_layout Standard
+TODO:
+ 梵语，
+英文对照。
+
 \end_layout
 
 \begin_layout Subsection
@@ -209,7 +216,72 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Section
-六祖坛经摘录
+心经(Heart Sutra)摘录
+\end_layout
+
+\begin_layout Standard
+观自在菩萨，
+行深般若波罗蜜多时，
+照见五蕴皆空，
+度一切苦厄。
+
+\end_layout
+
+\begin_layout Standard
+舍利子，
+色不异空，
+空不异色，
+色即是空，
+空即是色。
+
+\end_layout
+
+\begin_layout Standard
+舍利子，
+是诸法空相，
+不生不灭，
+不垢不净，
+不增不减。
+
+\end_layout
+
+\begin_layout Standard
+远离颠倒梦想，
+究竟涅槃。
+
+\end_layout
+
+\begin_layout Section
+六祖坛经(Platform Sutra)摘录
+\end_layout
+
+\begin_layout Subsection
+行由品 · 第一
+\end_layout
+
+\begin_layout Standard
+无上菩提，
+须得言下识自本心，
+见自本性。
+不生不灭，
+于一切时中，
+念念自见，
+万法无滞，
+一真一切真，
+万境自如如。
+如如之心，
+即是真实。
+若如是见，
+即是无上菩提之自性也。
+
+\end_layout
+
+\begin_layout Standard
+下下人有上上智，
+上上人有没意智。
+若轻人，
+即有无量无边罪。
+
 \end_layout
 
 \begin_layout Section
