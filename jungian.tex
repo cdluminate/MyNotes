@@ -15,8 +15,11 @@
 \usepackage{xcolor}
 
 \geometry{left=2.0cm, right=2.0cm, top=2.5cm, bottom=2.5cm}
-\setmainfont{Times New Roman}
-%\setmainfont{TeX Gyre Termes}
+\IfFontExistsTF{Times New Roman}{
+    \setmainfont{Times New Roman}
+}{
+    \setmainfont{TeX Gyre Termes}
+}
 
 \definecolor{intjpurple}{HTML}{88619A}
 %\definecolor{intjpurple}{HTML}{4A148C}

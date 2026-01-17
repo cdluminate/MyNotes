@@ -6,7 +6,11 @@
 \origin unavailable
 \textclass ctex-article
 \begin_preamble
-\setmainfont{Times New Roman}
+\IfFontExistsTF{Times New Roman}{
+    \setmainfont{Times New Roman}
+}{
+    \setmainfont{TeX Gyre Termes}
+}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children no

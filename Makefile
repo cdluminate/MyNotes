@@ -29,10 +29,10 @@ sutra:
 	-$(VIEWER) sutra.pdf &
 
 # CI target: build all PDFs without opening viewers
+# Future newly added build targets can be appended here
 ci:
 	xelatex jungian.tex
 	xelatex jungian.tex
 	xelatex jungian.tex
-	$(LYX) -E pdf4 sutra.pdf lyx/Sutra.lyx
-#   Future newly added build targets can be appended here
 	-$(RM) *.aux *.log *.out *.toc *.lot src/*.aux
+	$(LYX) -E pdf4 sutra.pdf lyx/Sutra.lyx
