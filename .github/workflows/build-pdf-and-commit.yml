@@ -1,0 +1,63 @@
+name: build-and-commit-pdf
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "**/*.tex"
+      - "**/*.bib"
+      - "**/*.sty"
+      - "**/*.cls"
+      - "**/*.png"
+      - "**/*.jpg"
+      - "**/*.pdf"
+      - "**/*.lyx"
+      - "Makefile"
+      - ".github/workflows/build-pdf-and-commit.yml"
+  workflow_dispatch:
+
+# 同一分组只保留最新一次 run
+concurrency:
+  group: latex-pdf-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    # 防止 bot 回写 pdf 触发自循环
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install TeX Live and LyX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            texlive-xetex \
+            texlive-lang-chinese \
+            texlive-fonts-recommended \
+            texlive-latex-extra \
+            fonts-noto-cjk \
+            lyx
+
+      - name: Build all PDFs
+        run: make ci
+
+      - name: Commit PDFs if changed
+        run: |
+          set -euo pipefail
+          git add *.pdf
+          if git diff --cached --quiet; then
+            echo "No PDF changes; skip commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update PDF [skip ci]"
+          git push
