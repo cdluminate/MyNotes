@@ -1,5 +1,5 @@
-#LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 620
+#LyX 2.5 created this file. For more info see https://www.lyx.org/
+\lyxformat 643
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -14,6 +14,13 @@
 \setCJKmainfont{Noto Serif CJK SC}
 \setCJKsansfont{Noto Sans CJK SC}
 \setCJKmonofont{Noto Sans Mono CJK SC}
+
+\usepackage[
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=black
+]{hyperref}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children no
@@ -64,11 +71,19 @@
 \use_indices false
 \paperorientation portrait
 \suppress_date false
-\justification true
-\use_refstyle 1
+\justification default
+\crossref_package refstyle
 \use_formatted_ref 0
 \use_minted 0
 \use_lineno 0
+\backgroundcolor none
+\fontcolor none
+\notefontcolor lightgray
+\boxbgcolor red
+\table_border_color default
+\table_odd_row_color default
+\table_even_row_color default
+\table_alt_row_colors_start 1
 \index Index
 \shortcut idx
 \color #008000
@@ -98,6 +113,7 @@
 \html_be_strict false
 \docbook_table_output 0
 \docbook_mathml_prefix 1
+\docbook_mathml_version 0
 \end_header
 
 \begin_body
@@ -116,6 +132,8 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Standard
+
+\color red
 TODO:
  梵语，
 英文对照。
@@ -126,7 +144,7 @@ TODO:
 大乘正宗分 · 第三
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 须菩提，
 若菩萨有我相、人相、众生相、寿者相，
 即非菩萨。
@@ -137,11 +155,11 @@ TODO:
 如理实见分 · 第五
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 凡所有相，
 皆是虚妄。
 若见诸相非相，
-则见如来。
+即见如来。
 
 \end_layout
 
@@ -149,7 +167,7 @@ TODO:
 正信希有分 · 第六
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 以是义故，
 如来常说汝等比丘知我说法如筏喻者。
 法尚应舍，
@@ -161,7 +179,7 @@ TODO:
 庄严净土分 · 第十
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 是故，
 须菩提，
 诸菩萨摩诃萨应如是生清净心，
@@ -175,7 +193,7 @@ TODO:
 一体同观分 · 第十八
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 如来说诸心皆为非心，
 是名为心。
 所以者何？
@@ -190,7 +208,7 @@ TODO:
 法身非相分 · 第二十六
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 若以色见我，
 以音声求我，
 是人行邪道，
@@ -202,7 +220,7 @@ TODO:
 威仪寂静分 · 第二十九
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 如来者，
 无所从来，
 亦无所去，
@@ -214,11 +232,11 @@ TODO:
 应化非真分 · 第三十二
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 一切有为法，
 如梦幻泡影，
 如露亦如电，
-应做如是观。
+应作如是观。
 
 \end_layout
 
@@ -226,7 +244,7 @@ TODO:
 心经(Heart Sutra)摘录
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 观自在菩萨，
 行深般若波罗蜜多时，
 照见五蕴皆空，
@@ -234,7 +252,7 @@ TODO:
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 舍利子，
 色不异空，
 空不异色，
@@ -243,7 +261,7 @@ TODO:
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 舍利子，
 是诸法空相，
 不生不灭，
@@ -252,7 +270,7 @@ TODO:
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 远离颠倒梦想，
 究竟涅槃。
 
@@ -266,7 +284,7 @@ TODO:
 行由品 · 第一
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 无上菩提，
 须得言下识自本心，
 见自本性。
@@ -283,12 +301,53 @@ TODO:
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 下下人有上上智，
 上上人有没意智。
 若轻人，
 即有无量无边罪。
 
+\end_layout
+
+\begin_layout Itemize
+菩提本无树，
+明镜亦非台。
+本来无一物，
+何处惹尘埃。
+
+\end_layout
+
+\begin_layout Itemize
+何期自性，
+本自清净；
+何期自性，
+本不生灭；
+何期自性，
+本自具足；
+何期自性，
+本无动摇；
+何期自性，
+能生万法。
+
+\end_layout
+
+\begin_layout Itemize
+不思善，
+不思恶，
+正与么时，
+那个是明上座本来面目。
+
+\end_layout
+
+\begin_layout Itemize
+不是风动，
+不是幡动，
+仁者心动。
+
+\end_layout
+
+\begin_layout Subsection
+般若品 · 第二
 \end_layout
 
 \begin_layout Section
