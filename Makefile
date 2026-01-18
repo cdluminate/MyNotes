@@ -12,7 +12,7 @@ else
 	LYX := lyx
 endif
 
-.PHONY: main
+.PHONY: main ci
 main: jungian.tex
 	xelatex jungian.tex
 	xelatex jungian.tex
@@ -27,3 +27,12 @@ sutra:
 	# pdf4 is xelatex
 	$(LYX) -E pdf4 sutra.pdf lyx/Sutra.lyx
 	-$(VIEWER) sutra.pdf &
+
+# CI target: build all PDFs without opening viewers
+# Future newly added build targets can be appended here
+ci:
+	xelatex jungian.tex
+	xelatex jungian.tex
+	xelatex jungian.tex
+	-$(RM) *.aux *.log *.out *.toc *.lot src/*.aux
+	$(LYX) -E pdf4 sutra.pdf lyx/Sutra.lyx
