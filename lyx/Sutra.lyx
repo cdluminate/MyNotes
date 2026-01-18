@@ -81,10 +81,10 @@
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 2cm
-\topmargin 2cm
-\rightmargin 2cm
-\bottommargin 2cm
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -475,6 +475,62 @@ literal "false"
 般若品 · 第二
 \end_layout
 
+\begin_layout Itemize
+当知愚人智人，
+佛性本无差别，
+只缘迷悟不同，
+所以有愚有智。
+
+\end_layout
+
+\begin_layout Itemize
+世人妙性本空，
+无有一法可得。
+自性真空，
+亦复如是。
+
+\end_layout
+
+\begin_layout Itemize
+一切即一，
+一即一切，
+去来自由，
+心体无滞，
+即是般若。
+
+\end_layout
+
+\begin_layout Itemize
+善知识！
+凡夫即佛，
+烦恼即菩提。
+前念迷即凡夫，
+后念悟即佛。
+前念著境即烦恼，
+后念离境即菩提。
+
+\end_layout
+
+\begin_layout Itemize
+善知识！
+不悟即佛是众生；
+一念悟时，
+众生是佛。
+故知万法尽在自心，
+何不从自心中，
+顿见真如本性？
+
+\end_layout
+
+\begin_layout Itemize
+若不同见行，
+在别法中，
+不得传付，
+损彼前人，
+究竟无益。
+
+\end_layout
+
 \begin_layout Subsection*
 参考书目
 \end_layout
@@ -484,6 +540,12 @@ literal "false"
 尚荣 译著，
 《金刚经 心经 坛经》，
 中华书局
+\end_layout
+
+\begin_layout Enumerate
+王德峰哲学课：
+《六祖坛经》与禅宗修行，
+Bilibili
 \end_layout
 
 \end_body
