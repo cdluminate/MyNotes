@@ -1,4 +1,4 @@
-\documentclass[UTF8,letter,10pt]{ctexart}
+\documentclass[UTF8,letter,11pt]{ctexart}
 \usepackage{amssymb}
 \usepackage{array}
 \usepackage{booktabs}
@@ -6,7 +6,12 @@
 \usepackage{float}
 \usepackage{geometry}
 \usepackage{graphicx}
-\usepackage{hyperref}
+\usepackage[
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=black
+]{hyperref}
 \usepackage{makecell}
 \usepackage{microtype}
 \usepackage{multirow}
@@ -43,6 +48,8 @@
 \listoftables
 
 \include{src/beebe-function-attitudes.tex}
+
+\include{src/beebe-once-more-feeling.tex}
 
 
 \begin{table}[h!]
@@ -661,7 +668,7 @@ ESFP & (你脑子笨听我的) & \textbf{内倾情感} & 承认逻辑弱势，�
 \end{table}
 
 \begin{table}[h!]
-    \caption{基于 DSM-5 标准的人格障碍分类汇总。注：人格障碍是指一种持久的、死板的思维和行为模式，显著偏离个体所属文化背景的预期，导致严重的痛苦或功能受损。}
+\caption[基于 DSM-5 标准的人格障碍分类汇总]{基于 DSM-5 标准的人格障碍分类汇总。注：人格障碍是指一种持久的、死板的思维和行为模式，显著偏离个体所属文化背景的预期，导致严重的痛苦或功能受损。}
     \centering
     \renewcommand{\arraystretch}{1.6}
     \footnotesize
