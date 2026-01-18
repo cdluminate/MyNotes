@@ -14,13 +14,6 @@
 \setCJKmainfont{Noto Serif CJK SC}
 \setCJKsansfont{Noto Sans CJK SC}
 \setCJKmonofont{Noto Sans Mono CJK SC}
-
-\usepackage[
-  colorlinks=true,
-  linkcolor=black,
-  citecolor=black,
-  urlcolor=black
-]{hyperref}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children no
@@ -131,24 +124,30 @@ LatexCommand tableofcontents
 金刚经(Diamond Sutra)摘录
 \end_layout
 
-\begin_layout Standard
-
-\color red
-TODO:
- 梵语，
-英文对照。
-
-\end_layout
-
 \begin_layout Subsection
 大乘正宗分 · 第三
 \end_layout
 
 \begin_layout Itemize
+【什译】何以故？
 须菩提，
 若菩萨有我相、人相、众生相、寿者相，
 即非菩萨。
 
+\begin_inset Newline newline
+\end_inset
+
+【奘译】所以者何？
+善現，
+若諸菩薩摩訶薩，
+不應說言有情想轉，
+如是命者想、士夫想、補特伽羅想、意生想、摩納婆想、作者想、受者想轉，
+當知亦爾。
+何以故？
+ 善現，
+無有少法，
+名為發趣菩薩乘者 。
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -156,10 +155,20 @@ TODO:
 \end_layout
 
 \begin_layout Itemize
-凡所有相，
+【什译】凡所有相，
 皆是虚妄。
 若见诸相非相，
 即见如来。
+
+\begin_inset Newline newline
+\end_inset
+
+【奘译】善現！
+乃至諸相具足，
+皆是虛妄！
+乃至非相具足，
+皆非虛妄！
+如是以相、非相應觀如來！
 
 \end_layout
 
@@ -168,10 +177,19 @@ TODO:
 \end_layout
 
 \begin_layout Itemize
-以是义故，
+【什译】以是义故，
 如来常说汝等比丘知我说法如筏喻者。
 法尚应舍，
 何况非法。
+
+\begin_inset Newline newline
+\end_inset
+
+【奘译】是故，
+如來密意而說筏喻法門。
+諸有智者，
+法尚應斷，
+何況非法！
 
 \end_layout
 
@@ -180,12 +198,24 @@ TODO:
 \end_layout
 
 \begin_layout Itemize
-是故，
+【什译】是故，
 须菩提，
 诸菩萨摩诃萨应如是生清净心，
 不应住色生心，
 不应住声、香、味、触、法生心，
 应无所住而生其心。
+
+\begin_inset Newline newline
+\end_inset
+
+【奘译】是故，
+善現，
+菩薩如是都無所住應生其心，
+不住於色應生其心，
+不住非色應生其心，
+不住聲、香、味、觸、法應生其心，
+不住非聲、香、味、觸、法應生其心，
+都無所住應生其心。
 
 \end_layout
 
@@ -194,14 +224,35 @@ TODO:
 \end_layout
 
 \begin_layout Itemize
+【什译】何以故？
 如来说诸心皆为非心，
 是名为心。
-所以者何？
+
+\begin_inset Newline newline
+\end_inset
+
+【奘译】何以故？
+善現，
+心流注心流注者，
+如來說非流注，
+是故如來說名心流注心流注！
+
+\end_layout
+
+\begin_layout Itemize
+【什译】所以者何？
 须菩提，
 过去心不可得，
 现在心不可得，
 未来心不可得。
 
+\begin_inset Newline newline
+\end_inset
+
+【奘译】所以者何？
+善現，
+過去心不可得、未來心不可得、現在心不可得！
+」 
 \end_layout
 
 \begin_layout Subsection
@@ -209,10 +260,17 @@ TODO:
 \end_layout
 
 \begin_layout Itemize
-若以色见我，
+【什译】若以色见我，
 以音声求我，
 是人行邪道，
 不能见如来。
+
+\begin_inset Newline newline
+\end_inset
+
+【奘译】諸以色觀我、以音聲尋我，
+彼生履邪斷，
+不能當見我。
 
 \end_layout
 
@@ -221,10 +279,22 @@ TODO:
 \end_layout
 
 \begin_layout Itemize
+【什译】何以故？
 如来者，
 无所从来，
 亦无所去，
 故名如来。
+
+\begin_inset Newline newline
+\end_inset
+
+【奘译】何以故？
+善現，
+言如來者，
+即是真實、真如增語，
+都無所去，
+無所從來，
+故名如來、應、正等覺！
 
 \end_layout
 
@@ -233,11 +303,55 @@ TODO:
 \end_layout
 
 \begin_layout Itemize
-一切有为法，
+【什译】 一切有为法，
 如梦幻泡影，
 如露亦如电，
 应作如是观。
 
+\begin_inset Newline newline
+\end_inset
+
+【奘译】 爾時世尊而說頌曰：
+「諸和合所為，
+如星翳燈幻，
+露泡夢電雲，
+應作如是觀！
+」
+\end_layout
+
+\begin_layout Subsection*
+参考书目
+\end_layout
+
+\begin_layout Enumerate
+南怀瑾 著述，
+《金刚经说什么》，
+复旦大学出版社 （不推荐该书，
+口语逻辑过于发散。
+）
+\end_layout
+
+\begin_layout Enumerate
+陈秋平，
+尚荣 译著，
+《金刚经 心经 坛经》，
+中华书局
+\end_layout
+
+\begin_layout Enumerate
+沈阳北塔翻译组 ，
+
+\begin_inset CommandInset href
+LatexCommand href
+name "《金剛經梵文注解》"
+target "http://www.tbmgar.com/admin/kindeditor/attached/file/20140831/20140831124164086408.pdf"
+literal "false"
+
+\end_inset
+
+，
+中国人民大学国际佛学研究中心 ，
+二零一三年元月 
 \end_layout
 
 \begin_layout Section
@@ -274,6 +388,17 @@ TODO:
 远离颠倒梦想，
 究竟涅槃。
 
+\end_layout
+
+\begin_layout Subsection*
+参考书目
+\end_layout
+
+\begin_layout Enumerate
+陈秋平，
+尚荣 译著，
+《金刚经 心经 坛经》，
+中华书局
 \end_layout
 
 \begin_layout Section
@@ -350,16 +475,8 @@ TODO:
 般若品 · 第二
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection*
 参考书目
-\end_layout
-
-\begin_layout Enumerate
-南怀瑾 著述，
-《金刚经说什么》，
-复旦大学出版社 （不推荐该书，
-口语逻辑过于发散。
-）
 \end_layout
 
 \begin_layout Enumerate
