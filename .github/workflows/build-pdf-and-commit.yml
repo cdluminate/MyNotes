@@ -29,7 +29,7 @@ jobs:
     # 防止 bot 回写 pdf 触发自循环
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
-    container: ubuntu:devel
+    container: debian:unstable
     steps:
       - name: Install pre-checkout dependencies
         run: |
