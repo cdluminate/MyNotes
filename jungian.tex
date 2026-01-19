@@ -1,4 +1,4 @@
-\documentclass[UTF8,letter,11pt]{ctexart}
+\documentclass[UTF8,letter,12pt]{ctexart}
 \usepackage{amssymb}
 \usepackage{array}
 \usepackage{booktabs}
@@ -45,13 +45,15 @@
 
 \begin{document}
 
+\tableofcontents
 \listoftables
 
 % Beebe's book excerpts.
-\include{src/beebe-function-attitudes.tex}
-\include{src/beebe-once-more-feeling.tex}
-\include{src/beebe-understanding-consciousness.tex}
+\part{Beebe's Book~\cite{beebe} Excerpts}
 
+\include{src/beebe.tex}
+
+\part{Types and Cognitive Functions Collected from Gemini}
 
 \begin{table}[h!]
 \caption{MBTI 类型总览表 (功能栈、原型、核心特质与代表名人)}
