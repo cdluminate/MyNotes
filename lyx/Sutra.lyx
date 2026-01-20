@@ -7,7 +7,8 @@
 \textclass ctex-article
 \begin_preamble
 \IfFontExistsTF{Times New Roman}{
-    \setmainfont{Times New Roman}
+    %\setmainfont{Times New Roman}
+	\setmainfont{Gentium}
 }{
     \setmainfont{TeX Gyre Termes}
 }
@@ -44,7 +45,16 @@
 \float_alignment class
 \paperfontsize 12
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -252,7 +262,7 @@ LatexCommand tableofcontents
 【奘译】所以者何？
 善現，
 過去心不可得、未來心不可得、現在心不可得！
-」 
+
 \end_layout
 
 \begin_layout Subsection
@@ -316,7 +326,7 @@ LatexCommand tableofcontents
 如星翳燈幻，
 露泡夢電雲，
 應作如是觀！
-」
+
 \end_layout
 
 \begin_layout Subsection*
@@ -571,7 +581,7 @@ literal "false"
 \end_layout
 
 \begin_layout Subsection
-忏悔品第六
+忏悔品 · 第六
 \end_layout
 
 \begin_layout Itemize
@@ -592,6 +602,107 @@ literal "false"
 自心烦恼无边誓愿断，
 自性法门无尽誓愿学，
 自性无伤佛道誓愿成。
+
+\end_layout
+
+\begin_layout Subsection
+机缘品 · 第七
+\end_layout
+
+\begin_layout Itemize
+诸佛妙理，
+非关文字。
+
+\end_layout
+
+\begin_layout Itemize
+前念不生即心，
+后念不灭即佛；
+成一切相即心，
+离一切相即佛。
+
+\end_layout
+
+\begin_layout Itemize
+若能正心，
+常生智慧，
+关照自心，
+止恶行善，
+是自开佛之见。
+
+\end_layout
+
+\begin_layout Subsection
+顿渐品 · 第八
+\end_layout
+
+\begin_layout Itemize
+心地无非自性戒，
+心地无痴自性慧，
+心地无乱自性定，
+不增不减自金刚，
+身去身来本三昧。
+
+\end_layout
+
+\begin_layout Itemize
+学道之人，
+一切善念恶念，
+应当尽除。
+无名可名，
+名于自性；
+无二之性，
+是名实性。
+于实性上建立一切教门，
+言下便须自见。
+
+\end_layout
+
+\begin_layout Subsection
+宣诏品 · 第九
+\end_layout
+
+\begin_layout Itemize
+烦恼即菩提，
+无二分别。
+若以智慧照破烦恼者，
+此是二乘见解，
+羊鹿等机；
+上智大根，
+悉不如是。
+
+\end_layout
+
+\begin_layout Subsection
+付嘱品 · 第十
+\end_layout
+
+\begin_layout Itemize
+若于一切处而不住相，
+于彼相中不生憎爱，
+亦无取舍，
+不念利益成坏等事，
+安闲恬静，
+虚融澹泊，
+此名一相三昧。
+
+\end_layout
+
+\begin_layout Itemize
+若于一切处，
+行住坐卧，
+纯一直心，
+不动道场，
+真成净土，
+此名一行三昧。
+
+\end_layout
+
+\begin_layout Itemize
+自性若悟，
+众生是佛；
+自性若迷，
+佛是众生。
 
 \end_layout
 
