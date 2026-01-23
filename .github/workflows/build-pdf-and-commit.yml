@@ -59,6 +59,7 @@ jobs:
       - name: Commit PDFs if changed
         run: |
           set -euo pipefail
+          git config --global --add safe.directory /__w/Jungian/Jungian
           git add *.pdf
           if git diff --cached --quiet; then
             echo "No PDF changes; skip commit."
