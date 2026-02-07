@@ -15,6 +15,8 @@
 \setCJKmainfont{Noto Serif CJK SC}
 \setCJKsansfont{Noto Sans CJK SC}
 \setCJKmonofont{Noto Sans Mono CJK SC}
+
+\newfontfamily\sanskritfont{Noto Sans Devanagari}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children no
@@ -406,6 +408,13 @@ a dharma teaching is like a raft.
 彼生履邪斷，
 不能當見我。
 
+\begin_inset Newline newline
+\end_inset
+
+【Red Pine】Who looks for me in form,
+ who seeks me in a voice,
+ indulges in wasted effort,
+ such people see me not.
 \end_layout
 
 \begin_layout Subsection
@@ -430,6 +439,16 @@ a dharma teaching is like a raft.
 無所從來，
 故名如來、應、正等覺！
 
+\begin_inset Newline newline
+\end_inset
+
+【Red Pine】And why not?
+ Subhuti,
+ those who are called 'tathagatas' do not go anywhere,
+ nor do they come from anywhere.
+ Thus are they called 'tathagatas,
+ arhans,
+ fully-enlightened ones.'
 \end_layout
 
 \begin_layout Subsection
@@ -437,6 +456,93 @@ a dharma teaching is like a raft.
 \end_layout
 
 \begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+{
+\backslash
+sanskritfont
+\end_layout
+
+\begin_layout Plain Layout
+तद्यथाकाशो-तारका तिमिरं दीपो मायावश्याय बुद्बुदम्। 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+स्वप्नं च विद्युदभ्रं च एवं द्रष्टव्यं संस्कृतम्॥
+\end_layout
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+【Sanskrit / IAST】
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+t
+\backslash
+=arak
+\backslash
+=a timira
+\backslash
+d{m} d
+\backslash
+=ipo m
+\backslash
+=ay
+\backslash
+=a-ava
+\backslash
+'sy
+\backslash
+=aya budbuda
+\backslash
+d{m} | 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+svapna
+\backslash
+d{m} ca vidyud abhra
+\backslash
+d{m} ca eva
+\backslash
+d{m} dra
+\backslash
+d{s}
+\backslash
+d{t}avya
+\backslash
+d{m} sa
+\backslash
+d{m}sk
+\backslash
+d{r}tam ||
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
 【什译】 一切有为法，
 如梦幻泡影，
 如露亦如电，
@@ -450,7 +556,42 @@ a dharma teaching is like a raft.
 如星翳燈幻，
 露泡夢電雲，
 應作如是觀！
+」
+\begin_inset Newline newline
+\end_inset
 
+【凈譯】 爾時世尊說伽他曰：
+「一切有為法，
+如星翳燈幻，
+露泡夢電雲，
+應作如是觀！
+」
+\begin_inset Newline newline
+\end_inset
+
+【Red Pine】As a lamp,
+ a cataract,
+ a star in space,
+ an illusion,
+ a dew drop,
+ a bubble,
+ a dream,
+ a cloud,
+ a flash of lighting,
+ view all created things like this.
+\begin_inset Newline newline
+\end_inset
+
+【Edward Conze】 As stars,
+ a fault of vision,
+ as a lamp,
+ A mock show,
+ dew drops,
+ or a bubble,
+ A dream,
+ a lightning flash,
+ or cloud,
+ So should one view what is conditioned.
 \end_layout
 
 \begin_layout Subsection*
