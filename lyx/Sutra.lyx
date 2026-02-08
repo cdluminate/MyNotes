@@ -133,6 +133,645 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Section
+大乘百法明门论图表
+\end_layout
+
+\begin_layout Standard
+唯识宗(Yogacara)将一切存在(Dharmas)细分为五位，
+一百法。
+这份术语表也可以作为一份精密的心智模型。
+在阅读楞伽经和解深密经时，
+这份表格会很有帮助。
+首先，
+五位百法整个系统分为两大部分：
+有为法（conditioned,
+ 94种）和无为法（unconditioned,
+ 6种）。
+
+\end_layout
+
+\begin_layout Subsection
+心法(Citta / 8种) – 核心处理器 (The CPU)
+\end_layout
+
+\begin_layout Standard
+这是心理活动的主体，
+“识”的本体。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features booktabs="true" borderColor="default" oddRowsColor="default" evenRowsColor="default" tabularvalignment="middle">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+序号
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+名称
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+心理学对应
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+备注
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1-5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+前五识
+\begin_inset Newline newline
+\end_inset
+
+Pancavijnana
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+感官输入
+\begin_inset Newline newline
+\end_inset
+
+(sensory inputs)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+眼，
+耳，
+鼻，
+舌，
+身
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+第六意识
+\begin_inset Newline newline
+\end_inset
+
+Manovijnana
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+思维与统觉
+\begin_inset Newline newline
+\end_inset
+
+(active thinking)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+负责分别，
+推理，
+
+\begin_inset Newline newline
+\end_inset
+
+概念化 (Ti/Te)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+末那识
+\begin_inset Newline newline
+\end_inset
+
+Manas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+自我意识中心
+\begin_inset Newline newline
+\end_inset
+
+(ego center)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+恒审思量，
+“我执”的根源，
+
+\begin_inset Newline newline
+\end_inset
+
+潜意识的过滤器
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+阿赖耶识
+\begin_inset Newline newline
+\end_inset
+
+Alayavijnana
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+深层潜意识
+\begin_inset Newline newline
+\end_inset
+
+(仓库，
+the repository)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+存储一切“种子”（记忆，
+业力），
+
+\begin_inset Newline newline
+\end_inset
+
+构建世界的底层数据库
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+心所法(Caitasika / 51种) – 心理功能模块 (The Functions)
+\end_layout
+
+\begin_layout Standard
+这是依附于“心法”运行的具体心理状态或者功能。
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+遍行 (Omnipresent - 5种)
+\series default
+：
+任何心理活动发生时必具备的底层逻辑。
+
+\begin_inset Newline newline
+\end_inset
+
+作意 (Attention),
+ 触 (Contact),
+ 受 (Feeling),
+ 想 (Perception),
+ 思 (Volition)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+别境 (Object-Determined - 5种)
+\series default
+：
+针对特定境遇才启动的高级功能。
+
+\begin_inset Newline newline
+\end_inset
+
+欲 (Desire),
+ 胜解 (Resolve/Decision),
+ 念 (Memory/Mindfulness),
+ 定 (Concentration/Samadhi),
+ 慧 (Wisdom/Prajna)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+善 (Wholesome - 11种)
+\series default
+：
+建设性的心理状态 (Positive Psychology)。
+
+\begin_inset Newline newline
+\end_inset
+
+信 (Faith),
+ 精进 (Diligence),
+ 惭,
+ 愧,
+ 无贪,
+ 无嗔,
+ 无痴 (Non-delusion),
+ 轻安 (Tranquility),
+ 不放逸,
+ 行舍 (Equanimity),
+ 不害
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+烦恼 (Fundamental Defilements - 6种)
+\series default
+：
+核心的认知偏差与情绪干扰 (Root Bugs)。
+
+\begin_inset Newline newline
+\end_inset
+
+贪 (Greed),
+ 嗔 (Anger),
+ 痴 (Ignorance),
+ 慢 (Pride),
+ 疑 (Doubt),
+ 不正见 (Wrong View)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+随烦恼 (Secondary Defilements - 20种)
+\series default
+：
+由核心烦恼衍生出的次级情绪。
+
+\begin_inset Newline newline
+\end_inset
+
+分为小随（忿、恨、恼...）、中随（无惭、无愧）、大随（掉举、昏沉、散乱...）。
+ 
+\begin_inset Newline newline
+\end_inset
+
+注：
+阅读《楞严经》时，
+这些细节非常重要，
+用于识别静坐中的心理偏差。
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+不定 (Indeterminate - 4种)
+\series default
+：
+中性，
+取决于上下文。
+
+\begin_inset Newline newline
+\end_inset
+
+悔 (Regret),
+ 眠 (Sleep),
+ 寻 (Rough investigation),
+ 伺 (Precise analysis)
+\end_layout
+
+\begin_layout Subsection
+色法 (Rupa / 11种) – 物质/感知对象 (Interface)
+\end_layout
+
+\begin_layout Standard
+心识投射出的“物质”相状。
+
+\end_layout
+
+\begin_layout Itemize
+五根（Sensors）：
+眼、耳、鼻、舌、身
+\end_layout
+
+\begin_layout Itemize
+五尘（Objects）：
+色、声、香、味、触
+\end_layout
+
+\begin_layout Itemize
+法处所摄色（Mental Objects）：
+仅存在于意识中的影像（如梦中境、禅定中的光影）。
+
+\end_layout
+
+\begin_layout Subsection
+心不相应行法 (Citta-viprayukta / 24种) —
+—
+ 抽象概念与关系 (Abstract Relations)
+\end_layout
+
+\begin_layout Standard
+它们既不是物质，
+也不是直接的心理状态，
+而是系统运行的规则、时间、逻辑关系。
+
+\end_layout
+
+\begin_layout Itemize
+时间/空间类：
+时 (Time),
+ 方 (Space),
+ 势速 (Speed/Velocity)
+\end_layout
+
+\begin_layout Itemize
+语言/逻辑类：
+名身 (Words),
+ 句身 (Sentences),
+ 文身 (Phonemes)
+\end_layout
+
+\begin_layout Itemize
+状态类：
+生,
+ 老,
+ 住,
+ 无常 (Impermanence),
+ 命根 (Life-force)
+\end_layout
+
+\begin_layout Standard
+理解这一点对研读《圆觉经》和唯识很重要：
+佛教认为“时间”不是实体，
+而是一种认知构建的“不相应行法”。
+
+\end_layout
+
+\begin_layout Subsection
+无为法 (Asamskrta / 6种) —
+—
+ 终极实相 (The Absolute)
+\end_layout
+
+\begin_layout Standard
+超越因果逻辑，
+不生不灭的本质。
+这六种无为法，
+前五种其实是**真如（第6种）**在不同条件下的“投影”或“侧面”，
+只有最后一种是本体。
+
+\end_layout
+
+\begin_layout Enumerate
+虚空无为 (Akasa-asamskrta)
+\begin_inset Newline newline
+\end_inset
+
+定义：
+ 像虚空一样，
+无障碍、容纳万物但不受万物影响。
+
+\begin_inset Newline newline
+\end_inset
+
+逻辑：
+ 这是一个物理/空间类比。
+指心性原本具有的“开放性”和“无阻碍性”。
+
+\end_layout
+
+\begin_layout Enumerate
+择灭无为 (Pratisamkhya-nirodha-asamskrta)
+\begin_inset Newline newline
+\end_inset
+
+定义：
+ 通过智慧的简择（分析、修证），
+断除了烦恼（Bug），
+从而显现出的寂灭真理。
+
+\begin_inset Newline newline
+\end_inset
+
+逻辑：
+ 这是Active Debugging的结果。
+你主动运行了“Debug程序”（智慧），
+杀死了进程（烦恼），
+系统恢复了干净的状态。
+这是狭义上的“涅槃”。
+
+\end_layout
+
+\begin_layout Enumerate
+非择灭无为 (Apratisamkhya-nirodha-asamskrta)
+\begin_inset Newline newline
+\end_inset
+
+定义：
+ 并非通过智慧断除，
+而是因为**“缘缺不生”**。
+即：
+因为缺乏触发条件，
+某些法（现象/Bug）根本就没有生起，
+从而呈现出的一种清净状态。
+
+\begin_inset Newline newline
+\end_inset
+
+逻辑：
+ 这是Dependency Missing导致的不运行。
+如果一个程序因为缺乏输入数据而永远处于静默状态，
+这种“静默”也是一种无为。
+它强调了因缘（Conditions）的重要性—
+—
+没有缘，
+果就不生。
+
+\end_layout
+
+\begin_layout Enumerate
+不动无为 (Acala-asamskrta)
+\begin_inset Newline newline
+\end_inset
+
+定义：
+ 对应第四禅（色界四禅）。
+在此状态下，
+苦、乐的感受都被舍弃，
+心不再随情绪波动，
+如如不动。
+
+\begin_inset Newline newline
+\end_inset
+
+逻辑：
+ 这是一个High Stability State。
+系统负载极低，
+不再处理“苦/乐”这种高优先级的感受信号，
+达到了动态平衡。
+
+\end_layout
+
+\begin_layout Enumerate
+想受灭无为 (Samjna-vedayita-nirodha-asamskrta)
+\begin_inset Newline newline
+\end_inset
+
+定义：
+ 对应灭尽定（Nirodha-samapatti）。
+前六识的心（想）和心所（受）都不起作用，
+类似于深度的“休眠模式”。
+
+\begin_inset Newline newline
+\end_inset
+
+逻辑：
+ 这是System Hibernation。
+它是圣者（阿罗汉/八地菩萨）才能进入的高级定境，
+切断了感知（想）和情绪（受）的回路，
+虽然还有微细的生理机能（寿、暖），
+但意识流（前七识）暂停了。
+
+\end_layout
+
+\begin_layout Enumerate
+真如无为 (Tathata-asamskrta)
+\begin_inset Newline newline
+\end_inset
+
+定义：
+ 诸法的实相，
+真实的本体。
+
+\begin_inset Newline newline
+\end_inset
+
+逻辑：
+ 這是The Source Code / The Reality Itself。
+前五种都是为了描述它而设立的“假名”或“特定状态”，
+而“真如”是统摄一切的、去除了所有虚妄分别后的本来面目。
+
+\end_layout
+
+\begin_layout Section
 金刚经(Diamond Sutra)摘录
 \end_layout
 
@@ -1434,6 +2073,124 @@ Bilibili
 \begin_layout Enumerate
 鸠摩罗什，
 《维摩诘经》
+\end_layout
+
+\begin_layout Section
+圆觉经 (Complete Enlightenment Sutra)
+\end_layout
+
+\begin_layout Subsection
+文殊师利菩萨
+\end_layout
+
+\begin_layout Itemize
+一切众生于无生中，
+妄见生灭，
+是故说名轮转生死。
+
+\end_layout
+
+\begin_layout Itemize
+善男子，
+如来因地修圆觉者，
+知是空华，
+即无轮转，
+亦无身心受彼生死。
+
+\end_layout
+
+\begin_layout Subsection
+普贤菩萨
+\end_layout
+
+\begin_layout Itemize
+善男子，
+一切菩萨及末世众生，
+应当远离一切幻化虚妄境界。
+由坚执持远离心故，
+心如幻者，
+亦复远离；
+远离为幻，
+亦复远离；
+离远离幻，
+亦复远离。
+得无所离，
+即除诸幻。
+
+\end_layout
+
+\begin_layout Itemize
+善男子，
+知幻即离，
+不作方便；
+离幻即觉，
+亦无渐次。
+
+\end_layout
+
+\begin_layout Subsection
+普眼菩萨
+\end_layout
+
+\begin_layout Itemize
+善男子，
+此菩萨及末世众生，
+修习此心得成就者，
+于此无修亦无成就，
+圆觉普照，
+寂灭无二，
+于中百千万亿阿僧祇不可说恒河沙诸佛世界，
+犹如空华乱起乱灭，
+不即不离，
+无缚无脱，
+始知众生本来成佛，
+生死、涅槃犹如昨梦。
+
+\end_layout
+
+\begin_layout Subsection
+金刚藏菩萨
+\end_layout
+
+\begin_layout Subsection
+弥勒菩萨
+\end_layout
+
+\begin_layout Subsection
+清净慧菩萨
+\end_layout
+
+\begin_layout Subsection
+威德自在菩萨
+\end_layout
+
+\begin_layout Subsection
+辩音菩萨
+\end_layout
+
+\begin_layout Subsection
+净诸业障菩萨
+\end_layout
+
+\begin_layout Subsection
+普觉菩萨
+\end_layout
+
+\begin_layout Subsection
+圆觉菩萨
+\end_layout
+
+\begin_layout Subsection
+贤善首菩萨
+\end_layout
+
+\begin_layout Subsection*
+参考书目
+\end_layout
+
+\begin_layout Enumerate
+佛陀多罗 (唐)，
+《大方广圆觉修多罗了义经》
 \end_layout
 
 \end_body
