@@ -147,16 +147,29 @@ LatexCommand tableofcontents
 有为法（conditioned,
  94种）和无为法（unconditioned,
  6种）。
+一切法分为五种：
+心法，
+心所有法，
+色法，
+心不相应行法，
+无为法。
 
 \end_layout
 
 \begin_layout Subsection
-心法(Citta / 8种) – 核心处理器 (The CPU)
+心法(Citta / 8种) | 一切最胜故
 \end_layout
 
 \begin_layout Standard
+核心处理器 (The CPU)。
 这是心理活动的主体，
 “识”的本体。
+在大乘唯识宗看来，
+心是万法的主宰。
+它能造作、能感知、能生起一切。
+因为它是动力的源泉，
+在一切法中效用最强、地位最高，
+所以排在第一位。
 
 \end_layout
 
@@ -429,11 +442,18 @@ the repository)
 \end_layout
 
 \begin_layout Subsection
-心所法(Caitasika / 51种) – 心理功能模块 (The Functions)
+心所有法(Caitasika / 51种) | 与此相应故
 \end_layout
 
 \begin_layout Standard
+心理功能模块 (The Functions)。
 这是依附于“心法”运行的具体心理状态或者功能。
+这一类法（如贪、嗔、信、解等）不能独立存在，
+它们必须依附于“心法”才能起作用，
+就像大臣随从国王一样，
+与心王“相应”而起。
+因为它们是心王的附属品，
+所以紧随其后。
 
 \end_layout
 
@@ -558,10 +578,11 @@ the repository)
 \end_layout
 
 \begin_layout Subsection
-色法 (Rupa / 11种) – 物质/感知对象 (Interface)
+色法 (Rupa / 11种) | 二所现影故
 \end_layout
 
 \begin_layout Standard
+物质/感知对象 (Interface)。
 心识投射出的“物质”相状。
 
 \end_layout
@@ -583,12 +604,19 @@ the repository)
 \end_layout
 
 \begin_layout Subsection
-心不相应行法 (Citta-viprayukta / 24种) —
-—
- 抽象概念与关系 (Abstract Relations)
+心不相应行法 (Citta-viprayukta / 24种) | 三位差别故
 \end_layout
 
 \begin_layout Standard
+抽象概念与关系 (Abstract Relations)。
+这里的“三”指前三类：
+心、心所、色。
+这类法既不是纯精神的，
+也不是纯物质的，
+而是基于前三者的相互关系、位置关系或状态变化而人为假立的概念。
+没有前三者的存在，
+这些抽象概念就无从谈起，
+因此排在第四。
 它们既不是物质，
 也不是直接的心理状态，
 而是系统运行的规则、时间、逻辑关系。
@@ -626,12 +654,18 @@ the repository)
 \end_layout
 
 \begin_layout Subsection
-无为法 (Asamskrta / 6种) —
-—
- 终极实相 (The Absolute)
+无为法 (Asamskrta / 6种) | 四所显示故
 \end_layout
 
 \begin_layout Standard
+终极实相 (The Absolute)。
+这里的“四”指前面所有的“有为法”（心、心所、色、不相应行）。
+无为法是恒常不变的本体。
+但凡夫无法直接触及本体，
+只能在彻底了达、看破前四类有为法的虚幻本质后，
+才能显现出这最后的真如本性。
+它是通过对前四者的“否定”或“透视”而显示的实相，
+故排在最后。
 超越因果逻辑，
 不生不灭的本质。
 这六种无为法，
@@ -768,6 +802,25 @@ the repository)
  這是The Source Code / The Reality Itself。
 前五种都是为了描述它而设立的“假名”或“特定状态”，
 而“真如”是统摄一切的、去除了所有虚妄分别后的本来面目。
+
+\end_layout
+
+\begin_layout Subsection*
+参考资料
+\end_layout
+
+\begin_layout Standard
+1.
+ 玄奘，
+
+\begin_inset CommandInset href
+LatexCommand href
+name "《大乘百法明门论》"
+target "https://csbjs.99.com/wp-content/uploads/sites/2/2021/02/%E3%80%8A%E5%A4%A7%E4%B9%98%E7%99%BE%E6%B3%95%E6%98%8E%E9%97%A8%E8%AE%BA%E3%80%8B%EF%BC%88%E7%AE%80%E4%BD%93%E6%B3%A8%E9%9F%B3%E7%89%88%EF%BC%89.pdf"
+literal "false"
+
+\end_inset
+
 
 \end_layout
 
@@ -2076,7 +2129,7 @@ Bilibili
 \end_layout
 
 \begin_layout Section
-圆觉经 (Complete Enlightenment Sutra)
+圆觉经 (Complete Enlightenment Sutra)摘录
 \end_layout
 
 \begin_layout Subsection
@@ -2152,12 +2205,63 @@ Bilibili
 金刚藏菩萨
 \end_layout
 
+\begin_layout Itemize
+世尊，
+若诸众生本来成佛，
+何故复有一切无明？
+
+\end_layout
+
+\begin_layout Itemize
+善男子，
+一切世界始终生灭，
+前后有无，
+聚散起止，
+念念相续，
+循环往复，
+种种取舍，
+皆是轮回。
+未出轮回，
+而辩圆觉，
+彼圆觉性即同流转，
+若免轮回，
+无有是处。
+
+\end_layout
+
+\begin_layout Itemize
+善男子，
+一切如来妙圆觉心，
+本无菩提及与涅槃，
+亦无成佛及不成佛，
+无妄轮回及非轮回。
+
+\end_layout
+
 \begin_layout Subsection
 弥勒菩萨
 \end_layout
 
+\begin_layout Itemize
+善男子，
+一切众生从无始际，
+由有种种恩爱贪欲故有轮回。
+
+\end_layout
+
+\begin_layout Itemize
+是故众生欲脱生死，
+免诸轮回，
+先断贪欲及除爱渴。
+
+\end_layout
+
 \begin_layout Subsection
 清净慧菩萨
+\end_layout
+
+\begin_layout Standard
+TODO
 \end_layout
 
 \begin_layout Subsection
