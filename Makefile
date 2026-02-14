@@ -8,7 +8,7 @@ ifeq ($(UNAME_S),Darwin)
 	LYX := /Applications/LyX.app/Contents/MacOS/lyx
 else
 	# Linux
-	VIEWER := evince
+	VIEWER := papers
 	LYX := lyx
 endif
 
