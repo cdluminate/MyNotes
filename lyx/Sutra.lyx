@@ -45,7 +45,7 @@
 \index_command default
 \float_placement class
 \float_alignment class
-\paperfontsize 12
+\paperfontsize 10
 \spacing single
 \use_hyperref true
 \pdf_bookmarks true
@@ -2293,18 +2293,122 @@ Bilibili
 清净慧菩萨
 \end_layout
 
-\begin_layout Standard
-TODO
+\begin_layout Itemize
+善男子，
+一切众生从无始来，
+由妄想我及爱我者，
+曾不自知念念生灭，
+故起憎爱，
+耽著五欲。
+
 \end_layout
 
+\begin_layout Itemize
+善男子，
+有照有觉，
+俱名障碍，
+是故菩萨常觉不住，
+照与照者同时寂灭。
+譬如有人自断其首，
+首已断故，
+无能断者；
+则以碍心自灭诸碍，
+碍已断灭，
+无灭碍者。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\color gray
+《圆觉经》通过**“照与照者同时寂灭”**直接拔掉了电源。
+它告诉我们：
+真正的真理不是“看”到的，
+因为只要有“看（照）”和“看的执行者（照者）”，
+就依然存在主客对立。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+一切障碍即究竟觉
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\color gray
+一切障碍本质上就是究竟的觉悟
+\end_layout
+
+\end_deeper
 \begin_layout Subsection
 威德自在菩萨
 \end_layout
 
+\begin_layout Itemize
+如来总开示，
+便有三种类：
+ 寂静奢摩他，
+如镜照诸像；
+ 如幻三摩提，
+如苗渐增长；
+ 禅那唯寂灭，
+如彼器中锽。
+ 三种妙法门，
+皆是觉随顺。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\color lime
+“奢摩他”像Post-processing,
+ 
+\begin_inset Quotes eld
+\end_inset
+
+三摩钵提
+\begin_inset Quotes erd
+\end_inset
+
+像Pre-processing,
+ 而“禅那”像Run-time processing。
+静力，
+变化力，
+寂灭力。
+
+\end_layout
+
+\end_deeper
 \begin_layout Subsection
 辩音菩萨
 \end_layout
 
+\begin_layout Itemize
+若诸菩萨以圆觉慧圆合一切，
+于诸性相无离觉性。
+此菩萨者，
+名为圆修三种自性清净随顺。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\color gray
+如果诸位菩萨能够凭借圆满觉悟的智慧，
+将一切万事万物圆融整合，
+在面对任何事物的本质（性）与现象（相）时，
+都不离开觉悟的本性。
+那么这位菩萨，
+就称作是能够圆满修持三种自性清净的随顺修行。
+
+\end_layout
+
+\end_deeper
 \begin_layout Subsection
 净诸业障菩萨
 \end_layout
