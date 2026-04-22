@@ -28,7 +28,11 @@ class IDS:
         self.model_path = model_path
         self.input_mean = 127.5
         self.input_std = 127.5
-        self.session = ort.InferenceSession(self.model_path)
+        try:
+            # pip install onnxruntime-gpu
+            self.session = ort.InferenceSession(self.model_path, providers=["CUDAExecutionProvider"])
+        except Exception as e:
+            self.session = ort.InferenceSession(self.model_path)
         input_cfg = self.session.get_inputs()[0]
         self.input_name = input_cfg.name
         self.input_size = tuple(input_cfg.shape[2:4][::-1])
