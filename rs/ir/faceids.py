@@ -94,4 +94,4 @@ if __name__ == '__main__':
             score = ids(ref, gen)
             scores.append(score)
             print('Ref=', ref, 'Gen=', gen, 'IDS=', score)
-        print('Mean IDS=', np.mean(scores))
+        print('Mean IDS=', np.mean(scores), np.std(scores))
