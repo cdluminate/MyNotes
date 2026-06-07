@@ -18,6 +18,7 @@ main: jungian.tex
 	xelatex jungian.tex
 	xelatex jungian.tex
 	-$(RM) *.aux *.log *.out *.toc *.lot src/*.aux
+	-$(RM) src/beebe-energies-and-patterns/main.aux
 	-$(VIEWER) jungian.pdf &
 
 tobook: main
