@@ -37,3 +37,10 @@ ci:
 	xelatex jungian.tex
 	-$(RM) *.aux *.log *.out *.toc *.lot src/*.aux
 	$(LYX) -E pdf4 sutra.pdf lyx/Sutra.lyx
+
+PHONY: fix-symbol
+fix-symbol:
+	find . -type f -name '*.tex' -exec sed -i -e "s/‘/'/g" '{}' +
+	find . -type f -name '*.tex' -exec sed -i -e "s/’/'/g" '{}' +
+	find . -type f -name '*.tex' -exec sed -i -e 's/“/``/g' '{}' +
+	find . -type f -name '*.tex' -exec sed -i -e "s/”/''/g" '{}' +
