@@ -124,7 +124,118 @@ merely personal to me, but is actually universal.
 
 \end{itemize}
 
-\input{src/beebe-fig71.tex}
+\begin{figure}[t]
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[
+    % 定义方框的样式
+    box/.style={
+        rectangle,
+        draw=black,               % 边框颜色
+        thick,                    % 边框粗细
+        rounded corners=8pt,      % 圆角大小
+        fill=gray!15,             % 填充颜色 (浅灰)
+        align=center,             % 文字居中
+        minimum width=4.2cm,      % 最小宽度
+        minimum height=2cm,       % 最小高度
+        font=\small,              % 字体大小
+        inner sep=5pt
+    },
+    % 定义连接线的样式
+    connector/.style={
+        draw=gray!90,             % 线条颜色 (深灰)
+        line width=3.5pt          % 线条粗细
+    }
+]
+
+    % --- 左侧组 (Left Cluster) ---
+    
+    % 1. 定义中心点坐标 (看不见的锚点，用于定位十字交叉点)
+    \coordinate (L_center) at (0, 0);
+
+    % 2. 放置节点
+    % Hero/heroine (#1) - 在中心上方
+    \node[box] (hero) at ($(L_center)+(0, 2.2)$) {
+        \textbf{Hero/heroine}\\
+        \#1 (\textit{superior or dominant}\\
+        \textit{function})
+    };
+
+    % Anima/animus (#4) - 在中心下方
+    \node[box] (anima) at ($(L_center)+(0, -2.2)$) {
+        \textbf{Anima/animus}\\[1em] % 增加一点行间距
+        \#4 (\textit{inferior function})
+    };
+
+    % Father/mother (#2) - 在中心左侧
+    \node[box] (father) at ($(L_center)+(-3.0, 0)$) {
+        \textbf{Father/mother}\\[1em]
+        \#2 (\textit{auxiliary function})
+    };
+
+    % Puer/puella (#3) - 在中心右侧
+    \node[box] (puer) at ($(L_center)+(3.0, 0)$) {
+        \textbf{Puer/puella}\\[1em]
+        \#3 (\textit{tertiary function})
+    };
+
+
+    % --- 右侧组 (Right Cluster) ---
+    
+    % 定义右侧组的中心点 (向右偏移 11cm)
+    \coordinate (R_center) at (11, 0);
+
+    % Opposing personality (#5)
+    \node[box] (opposing) at ($(R_center)+(0, 2.2)$) {
+        \textbf{Opposing personality}\\
+        \#5 (\textit{same function as \#1}\\
+        \textit{but with opposite attitude})
+    };
+
+    % Demonic personality (#8)
+    \node[box] (demonic) at ($(R_center)+(0, -2.2)$) {
+        \textbf{Demonic personality}\\
+        \#8 (\textit{same function as \#4}\\
+        \textit{but with opposite attitude})
+    };
+
+    % Senex/witch (#6)
+    \node[box] (senex) at ($(R_center)+(-3.0, 0)$) {
+        \textbf{Senex/witch}\\
+        \#6 (\textit{same function as \#2}\\
+        \textit{but with opposite attitude})
+    };
+
+    % Trickster (#7)
+    \node[box] (trickster) at ($(R_center)+(3.0, 0)$) {
+        \textbf{Trickster}\\
+        \#7 (\textit{same function as \#3}\\
+        \textit{but with opposite attitude})
+    };
+
+
+    % --- 绘制连接线 (放在背景层，以免遮挡文字框) ---
+    \begin{scope}[on background layer]
+        % 左侧十字
+        \draw[connector] (hero.south) -- (anima.north);
+        \draw[connector] (father.east) -- (puer.west);
+        
+        % 右侧十字
+        \draw[connector] (opposing.south) -- (demonic.north);
+        \draw[connector] (senex.east) -- (trickster.west);
+
+        % 中间连接桥 (连接两个十字中心)
+        % 从左侧十字中心 画到 右侧十字中心
+        % 为了美观，我们直接画一条横贯线连接两个内部节点
+        %\draw[connector] (puer.east) -- (senex.west);
+    \end{scope}
+
+\end{tikzpicture}}
+
+\caption{Archetypal complexes carrying the eight functions of consciousness. \verified}
+\label{fig:beebe-fig71}
+
+\end{figure}
+
 
 
 \subsection{Type and Archetype: The spine and its shadow}
