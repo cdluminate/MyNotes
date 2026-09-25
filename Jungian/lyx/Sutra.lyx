@@ -1,0 +1,3009 @@
+#LyX 2.5 created this file. For more info see https://www.lyx.org/
+\lyxformat 643
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-article
+\begin_preamble
+\IfFontExistsTF{Times New Roman}{
+    %\setmainfont{Times New Roman}
+	\setmainfont{Gentium}
+}{
+    \setmainfont{TeX Gyre Termes}
+}
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans Mono CJK SC}
+
+\newfontfamily\sanskritfont{Noto Sans Devanagari}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language american
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize 10
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification default
+\crossref_package refstyle
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\backgroundcolor none
+\fontcolor none
+\notefontcolor lightgray
+\boxbgcolor red
+\table_border_color default
+\table_odd_row_color default
+\table_even_row_color default
+\table_alt_row_colors_start 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content true
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\docbook_mathml_version 0
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+大乘百法明门论图表
+\end_layout
+
+\begin_layout Standard
+唯识宗(Yogacara)将一切存在(Dharmas)细分为五位，
+一百法。
+这份术语表也可以作为一份精密的心智模型。
+在阅读楞伽经和解深密经时，
+这份表格会很有帮助。
+首先，
+五位百法整个系统分为两大部分：
+有为法（conditioned,
+ 94种）和无为法（unconditioned,
+ 6种）。
+一切法分为五种：
+心法，
+心所有法，
+色法，
+心不相应行法，
+无为法。
+
+\end_layout
+
+\begin_layout Subsection
+心法(Citta / 8种) | 一切最胜故
+\end_layout
+
+\begin_layout Standard
+核心处理器 (The CPU)。
+这是心理活动的主体，
+“识”的本体。
+在大乘唯识宗看来，
+心是万法的主宰。
+它能造作、能感知、能生起一切。
+因为它是动力的源泉，
+在一切法中效用最强、地位最高，
+所以排在第一位。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features booktabs="true" borderColor="default" oddRowsColor="default" evenRowsColor="default" tabularvalignment="middle">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<column alignment="center" valignment="top" color="default">
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+序号
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+名称
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+心理学对应
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+备注
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1-5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+前五识
+\begin_inset Newline newline
+\end_inset
+
+Pancavijnana
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+感官输入
+\begin_inset Newline newline
+\end_inset
+
+(sensory inputs)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+眼，
+耳，
+鼻，
+舌，
+身
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+意识
+\begin_inset Newline newline
+\end_inset
+
+Manovijnana
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+思维与统觉
+\begin_inset Newline newline
+\end_inset
+
+(active thinking)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+负责分别，
+推理，
+
+\begin_inset Newline newline
+\end_inset
+
+概念化 (Ti/Te)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+末那识
+\begin_inset Newline newline
+\end_inset
+
+Manas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+自我意识中心
+\begin_inset Newline newline
+\end_inset
+
+(ego center)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+恒审思量，
+“我执”的根源，
+
+\begin_inset Newline newline
+\end_inset
+
+潜意识的过滤器
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row color="default">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+阿赖耶识
+\begin_inset Newline newline
+\end_inset
+
+Alayavijnana
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+深层潜意识
+\begin_inset Newline newline
+\end_inset
+
+(仓库，
+the repository)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" color="default" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+存储一切“种子”（记忆，
+业力），
+
+\begin_inset Newline newline
+\end_inset
+
+构建世界的底层数据库
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+心所有法(Caitasika / 51种) | 与此相应故
+\end_layout
+
+\begin_layout Standard
+心理功能模块 (The Functions)。
+这是依附于“心法”运行的具体心理状态或者功能。
+这一类法（如贪、嗔、信、解等）不能独立存在，
+它们必须依附于“心法”才能起作用，
+就像大臣随从国王一样，
+与心王“相应”而起。
+因为它们是心王的附属品，
+所以紧随其后。
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+遍行 (Omnipresent - 5种)
+\series default
+：
+任何心理活动发生时必具备的底层逻辑。
+
+\begin_inset Newline newline
+\end_inset
+
+作意 (Attention),
+ 触 (Contact),
+ 受 (Feeling),
+ 想 (Perception),
+ 思 (Volition)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+别境 (Object-Determined - 5种)
+\series default
+：
+针对特定境遇才启动的高级功能。
+
+\begin_inset Newline newline
+\end_inset
+
+欲 (Desire),
+ 胜解 (Resolve/Decision),
+ 念 (Memory/Mindfulness),
+ 定 (Concentration/Samadhi),
+ 慧 (Wisdom/Prajna)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+善 (Wholesome - 11种)
+\series default
+：
+建设性的心理状态 (Positive Psychology)。
+
+\begin_inset Newline newline
+\end_inset
+
+信 (Faith),
+ 精进 (Diligence),
+ 惭,
+ 愧,
+ 无贪,
+ 无嗔,
+ 无痴 (Non-delusion),
+ 轻安 (Tranquility),
+ 不放逸,
+ 舍 (Equanimity),
+ 不害
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+烦恼 (Fundamental Defilements - 6种)
+\series default
+：
+核心的认知偏差与情绪干扰 (Root Bugs)。
+
+\begin_inset Newline newline
+\end_inset
+
+贪 (Greed),
+ 嗔 (Anger),
+ 慢 (Pride),
+ 无明，
+疑 (Doubt),
+ 不正见 (Wrong View)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+随烦恼 (Secondary Defilements - 20种)
+\series default
+：
+由核心烦恼衍生出的次级情绪。
+
+\begin_inset Newline newline
+\end_inset
+
+分为小随（忿、恨、恼、覆、诳、谄、害、嫉、悭）、中随（、无惭、无愧、不信、懈怠、放逸、昏沉、）、大随（掉举、失念、不正知、散乱）。
+ 
+\begin_inset Newline newline
+\end_inset
+
+注：
+阅读《楞严经》时，
+这些细节非常重要，
+用于识别静坐中的心理偏差。
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+不定 (Indeterminate - 4种)
+\series default
+：
+中性，
+取决于上下文。
+
+\begin_inset Newline newline
+\end_inset
+
+睡眠、恶作，
+ 寻 (Rough investigation),
+ 伺 (Precise analysis)
+\end_layout
+
+\begin_layout Subsection
+色法 (Rupa / 11种) | 二所现影故
+\end_layout
+
+\begin_layout Standard
+物质/感知对象 (Interface)。
+心识投射出的“物质”相状。
+
+\end_layout
+
+\begin_layout Itemize
+五根（Sensors）：
+眼、耳、鼻、舌、身
+\end_layout
+
+\begin_layout Itemize
+五尘（Objects）：
+色、声、香、味、触
+\end_layout
+
+\begin_layout Itemize
+法处所摄色（Mental Objects）：
+仅存在于意识中的影像（如梦中境、禅定中的光影）。
+
+\end_layout
+
+\begin_layout Subsection
+心不相应行法 (Citta-viprayukta / 24种) | 三位差别故
+\end_layout
+
+\begin_layout Standard
+抽象概念与关系 (Abstract Relations)。
+这里的“三”指前三类：
+心、心所、色。
+这类法既不是纯精神的，
+也不是纯物质的，
+而是基于前三者的相互关系、位置关系或状态变化而人为假立的概念。
+没有前三者的存在，
+这些抽象概念就无从谈起，
+因此排在第四。
+它们既不是物质，
+也不是直接的心理状态，
+而是系统运行的规则、时间、逻辑关系。
+
+\end_layout
+
+\begin_layout Itemize
+得，
+命根，
+众同分，
+异生性，
+无想定，
+灭尽定，
+无想报，
+名身，
+句身，
+文身，
+生，
+老，
+住，
+无常，
+流转，
+定异，
+相应，
+势速，
+次第，
+时，
+方，
+数，
+和合性，
+不合性
+\end_layout
+
+\begin_layout Standard
+理解这一点对研读《圆觉经》和唯识很重要：
+佛教认为“时间”不是实体，
+而是一种认知构建的“不相应行法”。
+
+\end_layout
+
+\begin_layout Subsection
+无为法 (Asamskrta / 6种) | 四所显示故
+\end_layout
+
+\begin_layout Standard
+终极实相 (The Absolute)。
+这里的“四”指前面所有的“有为法”（心、心所、色、不相应行）。
+无为法是恒常不变的本体。
+但凡夫无法直接触及本体，
+只能在彻底了达、看破前四类有为法的虚幻本质后，
+才能显现出这最后的真如本性。
+它是通过对前四者的“否定”或“透视”而显示的实相，
+故排在最后。
+超越因果逻辑，
+不生不灭的本质。
+这六种无为法，
+前五种其实是**真如（第6种）**在不同条件下的“投影”或“侧面”，
+只有最后一种是本体。
+
+\end_layout
+
+\begin_layout Enumerate
+虚空无为 (Akasa-asamskrta)
+\begin_inset Newline newline
+\end_inset
+
+定义：
+ 像虚空一样，
+无障碍、容纳万物但不受万物影响。
+
+\begin_inset Newline newline
+\end_inset
+
+逻辑：
+ 这是一个物理/空间类比。
+指心性原本具有的“开放性”和“无阻碍性”。
+
+\end_layout
+
+\begin_layout Enumerate
+择灭无为 (Pratisamkhya-nirodha-asamskrta)
+\begin_inset Newline newline
+\end_inset
+
+定义：
+ 通过智慧的简择（分析、修证），
+断除了烦恼（Bug），
+从而显现出的寂灭真理。
+
+\begin_inset Newline newline
+\end_inset
+
+逻辑：
+ 这是Active Debugging的结果。
+你主动运行了“Debug程序”（智慧），
+杀死了进程（烦恼），
+系统恢复了干净的状态。
+这是狭义上的“涅槃”。
+
+\end_layout
+
+\begin_layout Enumerate
+非择灭无为 (Apratisamkhya-nirodha-asamskrta)
+\begin_inset Newline newline
+\end_inset
+
+定义：
+ 并非通过智慧断除，
+而是因为**“缘缺不生”**。
+即：
+因为缺乏触发条件，
+某些法（现象/Bug）根本就没有生起，
+从而呈现出的一种清净状态。
+
+\begin_inset Newline newline
+\end_inset
+
+逻辑：
+ 这是Dependency Missing导致的不运行。
+如果一个程序因为缺乏输入数据而永远处于静默状态，
+这种“静默”也是一种无为。
+它强调了因缘（Conditions）的重要性—
+—
+没有缘，
+果就不生。
+
+\end_layout
+
+\begin_layout Enumerate
+不动灭无为 (Acala-asamskrta)
+\begin_inset Newline newline
+\end_inset
+
+定义：
+ 对应第四禅（色界四禅）。
+在此状态下，
+苦、乐的感受都被舍弃，
+心不再随情绪波动，
+如如不动。
+
+\begin_inset Newline newline
+\end_inset
+
+逻辑：
+ 这是一个High Stability State。
+系统负载极低，
+不再处理“苦/乐”这种高优先级的感受信号，
+达到了动态平衡。
+
+\end_layout
+
+\begin_layout Enumerate
+想受灭无为 (Samjna-vedayita-nirodha-asamskrta)
+\begin_inset Newline newline
+\end_inset
+
+定义：
+ 对应灭尽定（Nirodha-samapatti）。
+前六识的心（想）和心所（受）都不起作用，
+类似于深度的“休眠模式”。
+
+\begin_inset Newline newline
+\end_inset
+
+逻辑：
+ 这是System Hibernation。
+它是圣者（阿罗汉/八地菩萨）才能进入的高级定境，
+切断了感知（想）和情绪（受）的回路，
+虽然还有微细的生理机能（寿、暖），
+但意识流（前七识）暂停了。
+
+\end_layout
+
+\begin_layout Enumerate
+真如无为 (Tathata-asamskrta)
+\begin_inset Newline newline
+\end_inset
+
+定义：
+ 诸法的实相，
+真实的本体。
+
+\begin_inset Newline newline
+\end_inset
+
+逻辑：
+ 這是The Source Code / The Reality Itself。
+前五种都是为了描述它而设立的“假名”或“特定状态”，
+而“真如”是统摄一切的、去除了所有虚妄分别后的本来面目。
+
+\end_layout
+
+\begin_layout Standard
+无我有两种：
+补特伽罗无我，
+法无我。
+
+\end_layout
+
+\begin_layout Subsection*
+参考资料
+\end_layout
+
+\begin_layout Standard
+1.
+ 玄奘，
+
+\begin_inset CommandInset href
+LatexCommand href
+name "《大乘百法明门论》"
+target "https://csbjs.99.com/wp-content/uploads/sites/2/2021/02/%E3%80%8A%E5%A4%A7%E4%B9%98%E7%99%BE%E6%B3%95%E6%98%8E%E9%97%A8%E8%AE%BA%E3%80%8B%EF%BC%88%E7%AE%80%E4%BD%93%E6%B3%A8%E9%9F%B3%E7%89%88%EF%BC%89.pdf"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+八识规矩颂
+\end_layout
+
+\begin_layout Subsection
+前五識頌
+\end_layout
+
+\begin_layout Standard
+性境現量通三性，
+眼耳身三二地居，
+遍行別境善十一，
+中二大八貪嗔癡。
+
+\end_layout
+
+\begin_layout Standard
+五識同依淨色根，
+九緣七八好相鄰，
+合三離二觀塵世，
+愚者難分識與根。
+
+\end_layout
+
+\begin_layout Standard
+變相觀空唯後得，
+果中猶自不詮真，
+圓明初發成無漏，
+三類分身息苦輪。
+
+\end_layout
+
+\begin_layout Subsection
+第六識頌
+\end_layout
+
+\begin_layout Standard
+三性三量通三境，
+三界輪時易可知，
+相應心所五十一，
+善惡臨時別配之。
+
+\end_layout
+
+\begin_layout Standard
+性界受三恒轉易，
+根隨信等總相連，
+動身發語獨為最，
+引滿能招業力牽。
+
+\end_layout
+
+\begin_layout Standard
+發起初心歡喜地，
+俱生猶自現纏眠，
+遠行地後純無漏，
+觀察圓明照大千。
+
+\end_layout
+
+\begin_layout Subsection
+第七識頌
+\end_layout
+
+\begin_layout Standard
+帶質有覆通情本，
+隨緣執我量為非，
+八大遍行別境慧，
+貪癡我見慢相隨。
+
+\end_layout
+
+\begin_layout Standard
+恒審思量我相隨，
+有情日夜鎮昏迷，
+四惑八大相應起，
+六轉呼為染淨依。
+
+\end_layout
+
+\begin_layout Standard
+極喜初心平等性，
+無功用行我恒摧，
+如來現起他受用，
+十地菩薩所被機。
+
+\end_layout
+
+\begin_layout Subsection
+第八識頌
+\end_layout
+
+\begin_layout Standard
+性唯無覆五遍行，
+界地隨他業力生，
+二乘不了因迷執，
+由此能興論主爭。
+
+\end_layout
+
+\begin_layout Standard
+浩浩三藏不可窮，
+淵深七浪境為風，
+受薰持種根身器，
+去後來先作主公。
+
+\end_layout
+
+\begin_layout Standard
+不動地前才舍藏，
+金剛道後異熟空，
+大圓無垢同時發，
+普照十方塵剎中。
+
+\end_layout
+
+\begin_layout Subsection*
+参考资料
+\end_layout
+
+\begin_layout Standard
+1.
+ 维基文库，
+八识规矩颂
+\end_layout
+
+\begin_layout Section
+金刚经(Diamond Sutra)摘录
+\end_layout
+
+\begin_layout Subsection
+大乘正宗分 · 第三
+\end_layout
+
+\begin_layout Itemize
+【什译】如是灭度无量无数无边众生，
+实无众生得灭度者。
+
+\begin_inset Newline newline
+\end_inset
+
+【奘译】雖度如是無量有情，
+令滅度已，
+而無有情得滅度者。
+
+\begin_inset Newline newline
+\end_inset
+
+【Red Pine】And though I thus liberate countless beings,
+ not a single being is liberated.
+\end_layout
+
+\begin_layout Itemize
+【什译】何以故？
+须菩提，
+若菩萨有我相、人相、众生相、寿者相，
+即非菩萨。
+
+\begin_inset Newline newline
+\end_inset
+
+【奘译】所以者何？
+善現，
+若諸菩薩摩訶薩，
+不應說言有情想轉，
+如是命者想、士夫想、補特伽羅想、意生想、摩納婆想、作者想、受者想轉，
+當知亦爾。
+何以故？
+ 善現，
+無有少法，
+名為發趣菩薩乘者 。
+ 
+\begin_inset Newline newline
+\end_inset
+
+【Red Pine】And why not?
+ Subhuti,
+ a bodhisattva who creates the perception of a being cannot be called a 'bodhisattva.' And why not?
+ Subhuti,
+ no one can be called a bodhisattva who creates the perception of a self or who creates the perception of a being,
+ a life,
+ or a soul.
+\end_layout
+
+\begin_layout Subsection
+如理实见分 · 第五
+\end_layout
+
+\begin_layout Itemize
+【什译】凡所有相，
+皆是虚妄。
+若见诸相非相，
+即见如来。
+
+\begin_inset Newline newline
+\end_inset
+
+【奘译】善現！
+乃至諸相具足，
+皆是虛妄！
+乃至非相具足，
+皆非虛妄！
+如是以相、非相應觀如來！
+
+\begin_inset Newline newline
+\end_inset
+
+【Red Pine】Since the possession of attributes is an illusion,
+ Subhuti,
+ and no possession of attributes is no illusion,
+ by means of attributes that are no attributes the Tathagata can,
+ indeed,
+ be seen.
+\end_layout
+
+\begin_layout Subsection
+正信希有分 · 第六
+\end_layout
+
+\begin_layout Itemize
+【什译】以是义故，
+如来常说汝等比丘知我说法如筏喻者。
+法尚应舍，
+何况非法。
+
+\begin_inset Newline newline
+\end_inset
+
+【奘译】是故，
+如來密意而說筏喻法門。
+諸有智者，
+法尚應斷，
+何況非法！
+
+\begin_inset Newline newline
+\end_inset
+
+【Red Pine】This is the meaning behind the Tathagata's saying,
+ 
+\begin_inset Quotes eld
+\end_inset
+
+a dharma teaching is like a raft.
+ If you should let go of dharmas,
+ how much more so no dharmas.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+依法出生分 · 第八
+\end_layout
+
+\begin_layout Itemize
+【什译】须菩提！
+所谓佛法者，
+即非佛法，
+是名佛法。
+
+\begin_inset Newline newline
+\end_inset
+
+【奘译】所以者何？
+善現，
+諸佛法諸佛法者，
+如來說為非諸佛法，
+是故如來說名諸佛法諸佛法。
+
+\begin_inset Newline newline
+\end_inset
+
+【Red Pine】Buddha dharmas,
+ Subhuti,
+ 'buddha dharmas' are spoken of by the Tathagata as no buddha dharmas.
+ Thus are they called 'buddha dharmas.'
+\end_layout
+
+\begin_layout Subsection
+庄严净土分 · 第十
+\end_layout
+
+\begin_layout Itemize
+【什译】是故，
+须菩提，
+诸菩萨摩诃萨应如是生清净心，
+不应住色生心，
+不应住声、香、味、触、法生心，
+应无所住而生其心。
+
+\begin_inset Newline newline
+\end_inset
+
+【奘译】是故，
+善現，
+菩薩如是都無所住應生其心，
+不住於色應生其心，
+不住非色應生其心，
+不住聲、香、味、觸、法應生其心，
+不住非聲、香、味、觸、法應生其心，
+都無所住應生其心。
+
+\begin_inset Newline newline
+\end_inset
+
+【Red Pine】Therefore,
+ Subhuti,
+ fearless hodhisattvas should thus give birth to a thought that is not attached and not give birth to a thought attached to anything.
+ They should not give birth to a thought attached to a slight.
+ Nor should they give birth to a thought attached to a sound,
+ a smell,
+ a taste,
+ a touch,
+ or a dharma.
+\end_layout
+
+\begin_layout Subsection
+离相寂灭分 · 第十四
+\end_layout
+
+\begin_layout Itemize
+【什译】何以故？
+ 离一切诸相，
+则名诸佛。
+
+\begin_inset Newline newline
+\end_inset
+
+【Red Pine】And why not?
+ Because buddhas and bhagavans are free of all perceptions.
+\end_layout
+
+\begin_layout Subsection
+一体同观分 · 第十八
+\end_layout
+
+\begin_layout Itemize
+【什译】何以故？
+如来说诸心皆为非心，
+是名为心。
+
+\begin_inset Newline newline
+\end_inset
+
+【奘译】何以故？
+善現，
+心流注心流注者，
+如來說非流注，
+是故如來說名心流注心流注！
+
+\begin_inset Newline newline
+\end_inset
+
+【Red Pine】And how so?
+ Streams of thought,
+ Subhuti,
+ what the Tathagata speaks of as 'streams of thought' are not streams.
+ Thus are they called 'streams of thought.' 
+\end_layout
+
+\begin_layout Itemize
+【什译】所以者何？
+须菩提，
+过去心不可得，
+现在心不可得，
+未来心不可得。
+
+\begin_inset Newline newline
+\end_inset
+
+【奘译】所以者何？
+善現，
+過去心不可得、未來心不可得、現在心不可得！
+
+\begin_inset Newline newline
+\end_inset
+
+【Red Pine】And how so?
+ Subhuti,
+ a past thought cannot be found.
+ A future thought cannot be found.
+ Nor can a present thought be found.
+\end_layout
+
+\begin_layout Subsection
+法身非相分 · 第二十六
+\end_layout
+
+\begin_layout Itemize
+【什译】若以色见我，
+以音声求我，
+是人行邪道，
+不能见如来。
+
+\begin_inset Newline newline
+\end_inset
+
+【奘译】諸以色觀我、以音聲尋我，
+彼生履邪斷，
+不能當見我。
+
+\begin_inset Newline newline
+\end_inset
+
+【Red Pine】Who looks for me in form,
+ who seeks me in a voice,
+ indulges in wasted effort,
+ such people see me not.
+\end_layout
+
+\begin_layout Subsection
+威仪寂静分 · 第二十九
+\end_layout
+
+\begin_layout Itemize
+【什译】何以故？
+如来者，
+无所从来，
+亦无所去，
+故名如来。
+
+\begin_inset Newline newline
+\end_inset
+
+【奘译】何以故？
+善現，
+言如來者，
+即是真實、真如增語，
+都無所去，
+無所從來，
+故名如來、應、正等覺！
+
+\begin_inset Newline newline
+\end_inset
+
+【Red Pine】And why not?
+ Subhuti,
+ those who are called 'tathagatas' do not go anywhere,
+ nor do they come from anywhere.
+ Thus are they called 'tathagatas,
+ arhans,
+ fully-enlightened ones.'
+\end_layout
+
+\begin_layout Subsection
+应化非真分 · 第三十二
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+{
+\backslash
+sanskritfont
+\end_layout
+
+\begin_layout Plain Layout
+तद्यथाकाशो-तारका तिमिरं दीपो मायावश्याय बुद्बुदम्। 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+स्वप्नं च विद्युदभ्रं च एवं द्रष्टव्यं संस्कृतम्॥
+\end_layout
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+【Sanskrit / IAST】
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+t
+\backslash
+=arak
+\backslash
+=a timira
+\backslash
+d{m} d
+\backslash
+=ipo m
+\backslash
+=ay
+\backslash
+=a-ava
+\backslash
+'sy
+\backslash
+=aya budbuda
+\backslash
+d{m} | 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+svapna
+\backslash
+d{m} ca vidyud abhra
+\backslash
+d{m} ca eva
+\backslash
+d{m} dra
+\backslash
+d{s}
+\backslash
+d{t}avya
+\backslash
+d{m} sa
+\backslash
+d{m}sk
+\backslash
+d{r}tam ||
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+【什译】 一切有为法，
+如梦幻泡影，
+如露亦如电，
+应作如是观。
+
+\begin_inset Newline newline
+\end_inset
+
+【奘译】 爾時世尊而說頌曰：
+「諸和合所為，
+如星翳燈幻，
+露泡夢電雲，
+應作如是觀！
+」
+\begin_inset Newline newline
+\end_inset
+
+【凈譯】 爾時世尊說伽他曰：
+「一切有為法，
+如星翳燈幻，
+露泡夢電雲，
+應作如是觀！
+」
+\begin_inset Newline newline
+\end_inset
+
+【Red Pine】As a lamp,
+ a cataract,
+ a star in space,
+ an illusion,
+ a dew drop,
+ a bubble,
+ a dream,
+ a cloud,
+ a flash of lighting,
+ view all created things like this.
+\begin_inset Newline newline
+\end_inset
+
+【Edward Conze】 As stars,
+ a fault of vision,
+ as a lamp,
+ A mock show,
+ dew drops,
+ or a bubble,
+ A dream,
+ a lightning flash,
+ or cloud,
+ So should one view what is conditioned.
+\end_layout
+
+\begin_layout Subsection*
+参考书目
+\end_layout
+
+\begin_layout Enumerate
+南怀瑾 著述，
+《金刚经说什么》，
+复旦大学出版社 （不推荐该书，
+口语逻辑过于发散。
+）
+\end_layout
+
+\begin_layout Enumerate
+陈秋平，
+尚荣 译著，
+《金刚经 心经 坛经》，
+中华书局
+\end_layout
+
+\begin_layout Enumerate
+沈阳北塔翻译组 ，
+
+\begin_inset CommandInset href
+LatexCommand href
+name "《金剛經梵文注解》"
+target "http://www.tbmgar.com/admin/kindeditor/attached/file/20140831/20140831124164086408.pdf"
+literal "false"
+
+\end_inset
+
+，
+中国人民大学国际佛学研究中心 ，
+二零一三年元月 
+\end_layout
+
+\begin_layout Enumerate
+Red Pine,
+ The Diamond Sutra:
+ The Perfection of Wisdom,
+ Counterpoint Berkeley
+\end_layout
+
+\begin_layout Section
+心经(Heart Sutra)摘录
+\end_layout
+
+\begin_layout Itemize
+【奘译】观自在菩萨，
+行深般若波罗蜜多时，
+照见五蕴皆空，
+度一切苦厄。
+
+\begin_inset Newline newline
+\end_inset
+
+【Hanh】 Avalokiteshvara while practicing deeply with the Insight that Brings Us to the Other Shore,
+ suddenly discovered that all the five Skandhas are equally empty,
+ and with this realisation he overcame all Ill-being.
+\end_layout
+
+\begin_layout Itemize
+【奘译】舍利子，
+色不异空，
+空不异色，
+色即是空，
+空即是色。
+
+\begin_inset Newline newline
+\end_inset
+
+【Hanh】 Listen Sariputra,
+ this Body itself is Emptiness and Emptiness itself is this Body.
+ This body is not other than Emptiness and Emptiness is not other than this Body.
+\end_layout
+
+\begin_layout Itemize
+【奘译】舍利子，
+是诸法空相，
+不生不灭，
+不垢不净，
+不增不减。
+
+\begin_inset Newline newline
+\end_inset
+
+【Hanh】 Listen Sariputra,
+ all phenomena bear the mark of Emptiness;
+ their true nature is the nature of no Birth no Death,
+ no Being no Non-being,
+ no Defilement no Purity,
+ no Increasing no Decreasing.
+\end_layout
+
+\begin_layout Itemize
+【奘译】无罣碍故，
+无有恐怖，
+远离颠倒梦想，
+究竟涅槃。
+
+\begin_inset Newline newline
+\end_inset
+
+【Hanh】 Bodhisttavas who practice the Insight that Brings Us to the Other Shore see no more obstacles in their mind,
+ and because there are no more obstacles in their mind,
+ they can overcome all fear,
+ destroy all wrong perceptions and realize Perfect Nirvana.
+\end_layout
+
+\begin_layout Subsection*
+参考书目
+\end_layout
+
+\begin_layout Enumerate
+陈秋平，
+尚荣 译著，
+《金刚经 心经 坛经》，
+中华书局
+\end_layout
+
+\begin_layout Enumerate
+Thich Nhat Hanh （一行禅师）,
+ Heart Sutra,
+ 2014
+\end_layout
+
+\begin_layout Section
+六祖坛经(Platform Sutra)摘录
+\end_layout
+
+\begin_layout Subsection
+行由品 · 第一
+\end_layout
+
+\begin_layout Itemize
+无上菩提，
+须得言下识自本心，
+见自本性。
+不生不灭，
+于一切时中，
+念念自见，
+万法无滞，
+一真一切真，
+万境自如如。
+如如之心，
+即是真实。
+若如是见，
+即是无上菩提之自性也。
+
+\end_layout
+
+\begin_layout Itemize
+下下人有上上智，
+上上人有没意智。
+若轻人，
+即有无量无边罪。
+
+\end_layout
+
+\begin_layout Itemize
+菩提本无树，
+明镜亦非台。
+本来无一物，
+何处惹尘埃。
+
+\end_layout
+
+\begin_layout Itemize
+何期自性，
+本自清净；
+何期自性，
+本不生灭；
+何期自性，
+本自具足；
+何期自性，
+本无动摇；
+何期自性，
+能生万法。
+
+\end_layout
+
+\begin_layout Itemize
+不思善，
+不思恶，
+正与么时，
+那个是明上座本来面目。
+
+\end_layout
+
+\begin_layout Itemize
+不是风动，
+不是幡动，
+仁者心动。
+
+\end_layout
+
+\begin_layout Subsection
+般若品 · 第二
+\end_layout
+
+\begin_layout Itemize
+当知愚人智人，
+佛性本无差别，
+只缘迷悟不同，
+所以有愚有智。
+
+\end_layout
+
+\begin_layout Itemize
+世人妙性本空，
+无有一法可得。
+自性真空，
+亦复如是。
+
+\end_layout
+
+\begin_layout Itemize
+一切即一，
+一即一切，
+去来自由，
+心体无滞，
+即是般若。
+
+\end_layout
+
+\begin_layout Itemize
+善知识！
+凡夫即佛，
+烦恼即菩提。
+前念迷即凡夫，
+后念悟即佛。
+前念著境即烦恼，
+后念离境即菩提。
+
+\end_layout
+
+\begin_layout Itemize
+善知识！
+不悟即佛是众生；
+一念悟时，
+众生是佛。
+故知万法尽在自心，
+何不从自心中，
+顿见真如本性？
+
+\end_layout
+
+\begin_layout Itemize
+若不同见行，
+在别法中，
+不得传付，
+损彼前人，
+究竟无益。
+
+\end_layout
+
+\begin_layout Subsection
+疑问品 · 第三
+\end_layout
+
+\begin_layout Itemize
+凡愚不了自性，
+不识身中净土，
+愿东愿西；
+悟人在处一般。
+所以佛言：
+随所住处恒安乐。
+
+\end_layout
+
+\begin_layout Subsection
+定慧品 · 第四
+\end_layout
+
+\begin_layout Itemize
+定是慧体，
+慧是定用，
+即慧之时定在慧，
+即定之时慧在定。
+
+\end_layout
+
+\begin_layout Subsection
+坐禅品 · 第五
+\end_layout
+
+\begin_layout Itemize
+善知识！
+若修不动者，
+但见一切人时，
+不见人之是非善恶过患，
+即是自性不动。
+
+\end_layout
+
+\begin_layout Subsection
+忏悔品 · 第六
+\end_layout
+
+\begin_layout Itemize
+凡夫愚迷，
+只知忏其前愆，
+不知悔其后过。
+以不悔故，
+前愆不灭，
+后过又生；
+前愆既不灭，
+后过复又生，
+何名忏悔？
+
+\end_layout
+
+\begin_layout Itemize
+自心众生无边誓愿度，
+自心烦恼无边誓愿断，
+自性法门无尽誓愿学，
+自性无伤佛道誓愿成。
+
+\end_layout
+
+\begin_layout Subsection
+机缘品 · 第七
+\end_layout
+
+\begin_layout Itemize
+诸佛妙理，
+非关文字。
+
+\end_layout
+
+\begin_layout Itemize
+前念不生即心，
+后念不灭即佛；
+成一切相即心，
+离一切相即佛。
+
+\end_layout
+
+\begin_layout Itemize
+若能正心，
+常生智慧，
+关照自心，
+止恶行善，
+是自开佛之见。
+
+\end_layout
+
+\begin_layout Subsection
+顿渐品 · 第八
+\end_layout
+
+\begin_layout Itemize
+心地无非自性戒，
+心地无痴自性慧，
+心地无乱自性定，
+不增不减自金刚，
+身去身来本三昧。
+
+\end_layout
+
+\begin_layout Itemize
+学道之人，
+一切善念恶念，
+应当尽除。
+无名可名，
+名于自性；
+无二之性，
+是名实性。
+于实性上建立一切教门，
+言下便须自见。
+
+\end_layout
+
+\begin_layout Subsection
+宣诏品 · 第九
+\end_layout
+
+\begin_layout Itemize
+烦恼即菩提，
+无二分别。
+若以智慧照破烦恼者，
+此是二乘见解，
+羊鹿等机；
+上智大根，
+悉不如是。
+
+\end_layout
+
+\begin_layout Subsection
+付嘱品 · 第十
+\end_layout
+
+\begin_layout Itemize
+若于一切处而不住相，
+于彼相中不生憎爱，
+亦无取舍，
+不念利益成坏等事，
+安闲恬静，
+虚融澹泊，
+此名一相三昧。
+
+\end_layout
+
+\begin_layout Itemize
+若于一切处，
+行住坐卧，
+纯一直心，
+不动道场，
+真成净土，
+此名一行三昧。
+
+\end_layout
+
+\begin_layout Itemize
+自性若悟，
+众生是佛；
+自性若迷，
+佛是众生。
+
+\end_layout
+
+\begin_layout Subsection*
+参考书目
+\end_layout
+
+\begin_layout Enumerate
+陈秋平，
+尚荣 译著，
+《金刚经 心经 坛经》，
+中华书局
+\end_layout
+
+\begin_layout Enumerate
+王德峰哲学课：
+《六祖坛经》与禅宗修行，
+Bilibili
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+维摩诘经(Vimalakirti Sutra)摘录（又名：
+不可思议解脱经）
+\end_layout
+
+\begin_layout Subsection
+佛国品第一
+\end_layout
+
+\begin_layout Itemize
+菩萨取于净国，
+皆为饶益诸众生故。
+譬如有人，
+欲于空地造立宫室，
+随意无碍，
+若于虚空，
+终不能成。
+菩萨如是，
+为成就众生故，
+愿取佛国，
+愿取佛国者，
+非于空也。
+
+\end_layout
+
+\begin_layout Itemize
+是故宝积，
+若菩萨欲得净土，
+当净其心。
+随其心净，
+则佛土净。
+
+\end_layout
+
+\begin_layout Itemize
+舍利弗言：
+“我见此土，
+邱陵坑坎，
+荆棘沙砾，
+土石诸山，
+秽恶充满。
+” 螺髻梵王言：
+“仁者心有高下，
+不依佛慧，
+故见此土为不净耳！
+
+\end_layout
+
+\begin_layout Subsection
+方便品第二
+\end_layout
+
+\begin_layout Itemize
+诸仁者，
+是身无常，
+无强无力无坚，
+速朽之法，
+不可信也。
+
+\end_layout
+
+\begin_layout Subsection
+弟子品第三
+\end_layout
+
+\begin_layout Itemize
+诸法，
+如幻化相，
+汝今不应有所惧也！
+
+\end_layout
+
+\begin_layout Itemize
+有佛世尊，
+得真天眼，
+常有三昧，
+悉见诸佛国，
+不以二相。
+
+\end_layout
+
+\begin_layout Itemize
+优波离，
+一切法生灭不住，
+如幻如电，
+诸法不相待，
+乃至一念不住，
+诸法皆妄见。
+如梦，
+如焰，
+如水中月，
+如镜中像，
+以妄想生。
+其如此者，
+是名奉律；
+其知此者，
+是名善解。
+
+\end_layout
+
+\begin_layout Subsection
+菩萨品第四
+\end_layout
+
+\begin_layout Itemize
+一念知一切法是道场，
+成就一切智故。
+
+\end_layout
+
+\begin_layout Subsection
+文殊师利问疾品第五
+\end_layout
+
+\begin_layout Itemize
+从痴有爱，
+则我病生。
+以一切众生病，
+是故我病，
+若一切众生得不病者，
+则我病灭。
+
+\end_layout
+
+\begin_layout Subsection
+不思议品第六
+\end_layout
+
+\begin_layout Itemize
+是故舍利弗，
+若求法者，
+于一切法应无所求。
+
+\end_layout
+
+\begin_layout Subsection
+观众生品第七
+\end_layout
+
+\begin_layout Itemize
+文殊师利又问：
+“何谓为悲？
+” 答曰：
+“菩萨所作功德，
+皆与一切从生共之。
+” “何谓为喜？
+” 答曰：
+“有所饶益，
+欢喜无悔。
+” “何谓为舍？
+” 答曰：
+“所作福祜，
+无所希望。
+”
+\end_layout
+
+\begin_layout Subsection
+佛道品第八
+\end_layout
+
+\begin_layout Itemize
+有身为种，
+无明有爱为种，
+贪恚痴为种，
+四颠倒为种，
+ 五盖为种，
+六入为种，
+七识处为种，
+八邪法为种，
+九恼处为种，
+十不善道为种，
+以要言之，
+六十二见及一切烦恼皆是佛种。
+
+\end_layout
+
+\begin_layout Itemize
+是故当知，
+一切烦恼，
+为如来种。
+ 譬如不下巨海，
+不能得无价宝珠，
+如是不入烦恼大海，
+则不能得一切智宝。
+
+\end_layout
+
+\begin_layout Itemize
+智度菩萨母，
+方便以为父；
+一切众导师，
+无不由是生。
+
+\end_layout
+
+\begin_layout Itemize
+一切国土中，
+诸有地狱处；
+辄往到于彼，
+勉济其苦恼。
+ 一切国土中，
+畜生相食啖；
+皆现生于彼，
+为之作利益。
+ 示受于五欲，
+亦复现行禅；
+令魔心愦乱，
+不能得其便。
+ 火中生莲华，
+是可谓希有；
+在欲而行禅，
+希有亦如是。
+
+\end_layout
+
+\begin_layout Subsection
+不二法门品第九
+\end_layout
+
+\begin_layout Itemize
+乐涅槃不乐世间为二，
+若不乐涅槃不厌世间，
+则无有二，
+所以者何？
+若有缚，
+则有解，
+若本无缚，
+其谁求解？
+无缚无解，
+则无乐厌，
+是为入不二法门。
+
+\end_layout
+
+\begin_layout Itemize
+时维摩诘默然无言。
+文殊师利叹曰：
+“善哉！
+善哉！
+乃至无有文字语言，
+是真入不二法门。
+
+\end_layout
+
+\begin_layout Subsection
+香积佛品第十
+\end_layout
+
+\begin_layout Itemize
+以难化之人，
+心如猿猴，
+故以若干种法，
+制御其心，
+乃可调伏。
+譬如象马戾不调，
+加诸楚毒，
+乃至彻骨，
+然后调伏。
+如是刚强难化众生，
+故以一切苦切之言，
+乃可入律。
+
+\end_layout
+
+\begin_layout Itemize
+维摩诘言：
+“菩萨成就八法，
+于此世界行无疮疣，
+生于净土。
+何等为八？
+饶益从生而不望报；
+代一切众生受诸苦恼，
+所作功德尽以施之；
+等心众生，
+谦下无碍；
+于诸菩萨视之如佛；
+所未闻经闻之不疑；
+不与声闻而相违背；
+不嫉彼供，
+不高已利，
+而于其中调伏其心；
+常省已过，
+不讼彼短；
+恒以一心求诸功德，
+是为八法。
+”
+\end_layout
+
+\begin_layout Subsection
+菩萨行品第十一
+\end_layout
+
+\begin_layout Itemize
+发行善根，
+无有齐限，
+以诸净国严饰之事，
+成已佛土，
+行无限施具足相好，
+除一切恶，
+净身口意，
+生死无数劫，
+意而有勇，
+闻佛无量德志而不倦，
+以智慧剑，
+破烦恼贼，
+出阴界入，
+荷负众生，
+永使解脱。
+
+\end_layout
+
+\begin_layout Subsection
+见阿閦佛品第十二
+\end_layout
+
+\begin_layout Itemize
+舍利弗言：
+“未曾有也，
+世尊！
+是人乃能舍清净土，
+而来乐此多怒害处。
+”维摩诘语舍利弗：
+“于意云何？
+日光出时，
+与冥合乎？
+”
+\end_layout
+
+\begin_layout Subsection
+法供养品第十三
+\end_layout
+
+\begin_layout Itemize
+法供养者，
+诸佛所说深经，
+一切世间难信难爱，
+微妙难见，
+清净无染，
+非但分别思惟之所能得。
+
+\end_layout
+
+\begin_layout Itemize
+依于义，
+不依语；
+依于智，
+不依识；
+依了义经，
+不依不了义经，
+依于法，
+不依人；
+随顺法相，
+无所入，
+无所归，
+无明毕竟灭故，
+诸行亦毕竟灭，
+乃至生毕竟灭故，
+老死亦毕竟灭。
+作如是观，
+十二因缘无有尽相，
+不复起相，
+是名最上法之供养。
+
+\end_layout
+
+\begin_layout Subsection
+嘱累品第十四
+\end_layout
+
+\begin_layout Itemize
+弥勒当知，
+菩萨有二相，
+何谓为二？
+一者好于杂句文饰之事；
+二者不畏深义，
+如实能入。
+若好杂句文饰事者，
+当知是为新学菩萨，
+苦于如是无染无著，
+甚深经典，
+无有恐畏，
+能入其中，
+闻已心净，
+受持读诵，
+如说修行，
+当知是为久修道行。
+
+\end_layout
+
+\begin_layout Subsection*
+参考书目
+\end_layout
+
+\begin_layout Enumerate
+鸠摩罗什，
+《维摩诘经》
+\end_layout
+
+\begin_layout Section
+圆觉经 (Complete Enlightenment Sutra)摘录
+\end_layout
+
+\begin_layout Subsection
+文殊师利菩萨
+\end_layout
+
+\begin_layout Itemize
+一切众生于无生中，
+妄见生灭，
+是故说名轮转生死。
+
+\end_layout
+
+\begin_layout Itemize
+善男子，
+如来因地修圆觉者，
+知是空华，
+即无轮转，
+亦无身心受彼生死。
+
+\end_layout
+
+\begin_layout Subsection
+普贤菩萨
+\end_layout
+
+\begin_layout Itemize
+善男子，
+一切菩萨及末世众生，
+应当远离一切幻化虚妄境界。
+由坚执持远离心故，
+心如幻者，
+亦复远离；
+远离为幻，
+亦复远离；
+离远离幻，
+亦复远离。
+得无所离，
+即除诸幻。
+
+\end_layout
+
+\begin_layout Itemize
+善男子，
+知幻即离，
+不作方便；
+离幻即觉，
+亦无渐次。
+
+\end_layout
+
+\begin_layout Subsection
+普眼菩萨
+\end_layout
+
+\begin_layout Itemize
+善男子，
+此菩萨及末世众生，
+修习此心得成就者，
+于此无修亦无成就，
+圆觉普照，
+寂灭无二，
+于中百千万亿阿僧祇不可说恒河沙诸佛世界，
+犹如空华乱起乱灭，
+不即不离，
+无缚无脱，
+始知众生本来成佛，
+生死、涅槃犹如昨梦。
+
+\end_layout
+
+\begin_layout Subsection
+金刚藏菩萨
+\end_layout
+
+\begin_layout Itemize
+世尊，
+若诸众生本来成佛，
+何故复有一切无明？
+
+\end_layout
+
+\begin_layout Itemize
+善男子，
+一切世界始终生灭，
+前后有无，
+聚散起止，
+念念相续，
+循环往复，
+种种取舍，
+皆是轮回。
+未出轮回，
+而辩圆觉，
+彼圆觉性即同流转，
+若免轮回，
+无有是处。
+
+\end_layout
+
+\begin_layout Itemize
+善男子，
+一切如来妙圆觉心，
+本无菩提及与涅槃，
+亦无成佛及不成佛，
+无妄轮回及非轮回。
+
+\end_layout
+
+\begin_layout Subsection
+弥勒菩萨
+\end_layout
+
+\begin_layout Itemize
+善男子，
+一切众生从无始际，
+由有种种恩爱贪欲故有轮回。
+
+\end_layout
+
+\begin_layout Itemize
+当知轮回，
+爱为根本。
+由有诸欲，
+助发爱性，
+是故能令生死相续。
+
+\end_layout
+
+\begin_layout Itemize
+是故众生欲脱生死，
+免诸轮回，
+先断贪欲及除爱渴。
+
+\end_layout
+
+\begin_layout Itemize
+善男子，
+菩萨变化示现世间，
+非爱为本，
+但以慈悲令彼舍爱，
+假诸贪欲而入生死。
+若诸末世一切众生，
+能舍诸欲及除憎爱，
+永断轮回，
+勤求如来圆觉境界，
+于清净心便得开悟。
+
+\end_layout
+
+\begin_layout Itemize
+若诸众生虽求善友，
+遇邪见者，
+未得正悟，
+是则名为外道种性，
+邪师过谬，
+非众生咎。
+
+\end_layout
+
+\begin_layout Subsection
+清净慧菩萨
+\end_layout
+
+\begin_layout Itemize
+善男子，
+一切众生从无始来，
+由妄想我及爱我者，
+曾不自知念念生灭，
+故起憎爱，
+耽著五欲。
+
+\end_layout
+
+\begin_layout Itemize
+善男子，
+有照有觉，
+俱名障碍，
+是故菩萨常觉不住，
+照与照者同时寂灭。
+譬如有人自断其首，
+首已断故，
+无能断者；
+则以碍心自灭诸碍，
+碍已断灭，
+无灭碍者。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\color gray
+《圆觉经》通过**“照与照者同时寂灭”**直接拔掉了电源。
+它告诉我们：
+真正的真理不是“看”到的，
+因为只要有“看（照）”和“看的执行者（照者）”，
+就依然存在主客对立。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+一切障碍即究竟觉
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\color gray
+一切障碍本质上就是究竟的觉悟
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+威德自在菩萨
+\end_layout
+
+\begin_layout Itemize
+如来总开示，
+便有三种类：
+ 寂静奢摩他，
+如镜照诸像；
+ 如幻三摩提，
+如苗渐增长；
+ 禅那唯寂灭，
+如彼器中锽。
+ 三种妙法门，
+皆是觉随顺。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\color lime
+“奢摩他”像Post-processing,
+ 
+\begin_inset Quotes eld
+\end_inset
+
+三摩钵提
+\begin_inset Quotes erd
+\end_inset
+
+像Pre-processing,
+ 而“禅那”像Run-time processing。
+静力，
+变化力，
+寂灭力。
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+辩音菩萨
+\end_layout
+
+\begin_layout Itemize
+若诸菩萨以圆觉慧圆合一切，
+于诸性相无离觉性。
+此菩萨者，
+名为圆修三种自性清净随顺。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\color gray
+如果诸位菩萨能够凭借圆满觉悟的智慧，
+将一切万事万物圆融整合，
+在面对任何事物的本质（性）与现象（相）时，
+都不离开觉悟的本性。
+那么这位菩萨，
+就称作是能够圆满修持三种自性清净的随顺修行。
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+净诸业障菩萨
+\end_layout
+
+\begin_layout Itemize
+譬如有人不自断命，
+是故当知，
+有爱我者我与随顺，
+非随顺者便生憎怨，
+为憎爱心养无明故，
+相续求道皆不成就。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\color gray
+就像人无法亲手结束自己的性命一样（我执无法靠我执来断除），
+所以应当知道：
+凡是关爱‘我’的，
+我就随顺他；
+不随顺‘我’的，
+我就产生憎恨。
+这种憎恨与喜爱的心，
+滋养了无明。
+因此，
+带着这种心态断断续续地求道，
+最终都不能成就。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+何以故？
+有我爱者亦爱涅槃，
+伏我爱根为涅槃相，
+有憎我者亦憎生死，
+不知爱者真生死故，
+别憎生死名不解脱。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\color gray
+为什么这么说？
+因为那些心中还有‘我爱’的人，
+也会喜爱涅槃，
+他们只是压伏了‘我爱’的根源，
+并将其包装成‘涅槃’的假象。
+凡是有憎恨‘我’的人，
+也会憎恨生死轮回。
+殊不知，
+那种贪爱（包括对涅槃的贪爱）才是真正的生死轮回之根；
+而那种刻意去憎恨生死的心，
+本身也是一种不解脱。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+善男子，
+若知我空，
+无毁我者。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\color gray
+善男子，
+如果能真正照见‘我’本身是空的，
+那么也就没有谁能毁谤‘我’了。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+善男子，
+末世众生希望成道，
+无令求悟、唯益多闻、增长我见，
+但当精勤降伏烦恼，
+起大勇猛，
+未得令得，
+未断令断，
+贪、瞋、爱、慢、谄曲、嫉妒对境不生，
+彼我恩爱一切寂灭。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\color gray
+善男子，
+末世众生如果希望成就道果，
+千万不要只是一味求取头脑中的‘悟点’，
+那样只会增加见闻、增长‘我见’（变得更自大、更主观）。
+应当做的是：
+精进勤奋地去降伏当下的烦恼，
+发起大勇猛心，
+让未得的清净本心得以显现，
+让未断的习气彻底断除。
+当贪婪、嗔恨、贪爱、傲慢、谄媚虚伪、嫉妒这些负面情绪在面对外境时不再生起，
+当对他人的恩怨、对自我的偏爱全部归于寂灭时，
+佛说这样的人才能‘渐次成就’。
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+普觉菩萨
+\end_layout
+
+\begin_layout Itemize
+“善男子，
+彼善知识所证妙法应离四病。
+云何四病？
+一者、作病，
+若复有人作如是言‘我于本心作种种行’欲求圆觉，
+彼圆觉性非作得故，
+说名为病。
+二者、任病，
+若复有人作如是言‘我等今者不断生死，
+不求涅槃。
+涅槃、生死无起灭念，
+任彼一切，
+随诸法性’欲求圆觉，
+彼圆觉性非任有故，
+说名为病。
+三者、止病，
+若复有人作如是言‘我今自心永息诸念，
+得一切性寂然平等’欲求圆觉，
+彼圆觉性非止合故，
+说名为病。
+四者、灭病，
+若复有人作如是言‘我今永断一切烦恼，
+身心毕竟空无所有，
+何况根尘虚妄境界，
+一切永寂！
+’欲求圆觉，
+彼圆觉性非寂相故，
+说名为病。
+离四病者，
+则知清净。
+作是观者，
+名为正观；
+若他观者，
+名为邪观。
+
+\end_layout
+
+\begin_layout Itemize
+善男子，
+末世众生欲求圆觉，
+应当发心作如是言：
+‘尽于虚空一切众生，
+我皆令入究竟圆觉。
+于圆觉中，
+无取觉者，
+除彼我人一切诸相。
+’如是发心，
+不堕邪见。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\color gray
+善男子，
+末世众生如果想求取圆觉，
+应当发起这样的誓愿：
+‘虚空界中所有的众生，
+我都要引导他们进入究竟圆觉的境界。
+在圆觉的境界中，
+并没有一个“正在觉悟”的我，
+也没有“被我度化”的人，
+彻底除去我相、人相、众生相、寿者相。
+’能够这样发心，
+才不会坠入偏邪的见解之中。
+”
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+圆觉菩萨
+\end_layout
+
+\begin_layout Itemize
+善男子，
+若诸众生修奢摩他，
+先取至静，
+不起思念，
+静极便觉。
+
+\end_layout
+
+\begin_layout Subsection*
+参考书目
+\end_layout
+
+\begin_layout Enumerate
+佛陀多罗 (唐)，
+《大方广圆觉修多罗了义经》
+\end_layout
+
+\begin_layout Section
+楞伽经 (Lankavatara Sutra)
+\end_layout
+
+\begin_layout Subsection
+序
+\end_layout
+
+\begin_layout Itemize
+所言入楞伽经者。
+斯乃诸佛心量之玄枢。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\color gray
+所谓《入楞伽经》，
+其实就是诸佛悟证境界中最为深奥玄妙的枢纽（或核心要义）。
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+罗婆那王劝请品第一
+\end_layout
+
+\begin_layout Itemize
+心自性法藏，
+无我离见垢。
+证智之所知，
+愿佛为宣说。
+善法集为身，
+证智常安乐。
+变化自在者，
+愿入楞伽城。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\color gray
+自性清净的心灵即是法藏，
+它本无自我，
+也远离了偏见与尘垢。
+这是唯有凭借证悟的智慧才能了知的境界，
+祈愿佛陀为此宣说。
+佛以一切善法集结为法身，
+始终安住在证智的常乐之中。
+这位掌握变化、圆满自在的觉者啊，
+祈愿您进入楞伽城（慈悲开示）。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+我等于今日，
+及住楞伽众。
+一心共欲闻，
+离言自证法。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\color gray
+我们这些人（法会大众）在今天，
+以及所有居住在楞伽山上的大众，
+正满怀至诚、一心一意地渴望听闻：
+那种超越言语文字、唯有通过自身实证才能契入的法门。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+一切诸法性皆如是。
+唯是自心分别境界。
+凡夫迷惑不能解了。
+无有能见亦无所见。
+无有能说亦无所说。
+见佛闻法皆是分别。
+如向所见不能见佛。
+不起分别是则能见。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\color gray
+世间一切事物的本性都是如此：
+它们仅仅是由于自己内心的虚妄分别所幻现出来的境界。
+凡夫因为迷惑，
+无法了悟这个真相。
+其实（在实相中），
+既没有一个能看的主体，
+也没有一个被看的客体。
+既没有一个能说的演法者，
+也没有一段被说的法。
+甚至“看见佛陀”、“听闻佛法”，
+本质上也都属于自心的虚妄分别。
+如果像刚才那样带着执着去观察，
+是见不到真佛的；
+唯有不再生起虚妄的分别心，
+那才是真正见到了佛。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+及观未来一切众生。
+皆悉乐著语言文字。
+随言取义而生迷惑。
+执取二乘外道之行。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\color gray
+再观察未来的所有众生，
+他们全都贪恋、执着于言语和文字。
+他们往往随着言语的表面意思去揣摩佛理，
+结果反而产生种种迷惑。
+他们由于拘泥于字面，
+无法领悟真实的本意，
+从而固执地去修持小乘（二乘）或是世俗外道的修行方法。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+法与非法唯是分别。
+由分别故不能舍离。
+但更增长一切虚妄不得寂灭。
+寂灭者所谓一缘。
+一缘者是最胜三昧。
+从此能生自证圣智。
+以如来藏而为境界。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\color gray
+所谓的“正法”与“非正法”，
+本质上都只是人内心的虚妄分别。
+正是因为有了这种分别心，
+众生才无法从幻象中解脱。
+不仅如此，
+这种分别还会进一步滋长种种虚妄的执念，
+使人永远无法达到寂静不动的涅槃境界。
+真正的“寂灭”，
+是指一种名为“一缘”的状态。
+所谓的“一缘”，
+就是最殊胜的正定（三昧）。
+通过这种定力，
+能够生起由自己亲身体证的圣者智慧。
+而这种智慧，
+是以“如来藏”（众生本具的清净自性）作为其观察和感知的境界。
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+集一切法品第二之一
+\end_layout
+
+\begin_layout Itemize
+世间离生灭，
+譬如虚空花。
+智不得有无，
+而兴大悲心。
+
+\begin_inset Newline newline
+\end_inset
+
+一切法如幻，
+远离于心识。
+智不得有无，
+而兴大悲心。
+
+\begin_inset Newline newline
+\end_inset
+
+世间恒如梦，
+远离于断常。
+智不得有无，
+而兴大悲心。
+
+\begin_inset Newline newline
+\end_inset
+
+知人法无我，
+烦恼及尔焰。
+常清净无相，
+而兴大悲心。
+
+\begin_inset Newline newline
+\end_inset
+
+佛不住涅槃，
+涅槃不住佛。
+远离觉不觉，
+若有若非有。
+
+\begin_inset Newline newline
+\end_inset
+
+法身如幻梦，
+云何可称赞？
+知无性无生，
+乃名称赞佛。
+
+\begin_inset Newline newline
+\end_inset
+
+佛无根境相，
+不见名见佛。
+云何于牟尼，
+而能有赞毁？
+
+\begin_inset Newline newline
+\end_inset
+
+若见于牟尼，
+寂静远离生。
+是人今后世，
+离著无所见。
+
+\end_layout
+
+\begin_layout Itemize
+云何名藏识云何名意识
+\end_layout
+
+\begin_layout Subsection*
+参考书目
+\end_layout
+
+\begin_layout Enumerate
+实叉难陀，
+《楞伽经》
+\end_layout
+
+\end_body
+\end_document
