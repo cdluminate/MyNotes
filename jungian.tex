@@ -22,6 +22,9 @@
 \usepackage{enumitem}
 \usepackage{marginnote}
 \usepackage{fancybox}
+\usepackage[most]{tcolorbox}
+\usepackage{fontawesome5}
+
 
 \usepackage{tikz}
 \usetikzlibrary{positioning, shapes, backgrounds, calc}
@@ -48,6 +51,34 @@
 
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+% Define color palette
+\definecolor{tipblue}{RGB}{30, 100, 180}
+\definecolor{tipbg}{RGB}{246, 249, 253}
+
+\newtcolorbox{tipbox}[1][Tip]{%
+  enhanced,
+  breakable,
+  sidebyside,
+  sidebyside align=top,
+  lefthand width=4.8em,              % Width allocated to [Icon + Title]
+  sidebyside gap=6pt,                % Space between columns
+  segmentation style={draw=none},    % Completely removes the dotted separator line
+  colback=tipbg,
+  colframe=tipblue,
+  boxrule=0pt,
+  leftrule=3pt,
+  arc=0mm,
+  boxsep=0pt,
+  top=8pt,
+  bottom=8pt,
+  left=8pt,
+  right=8pt,
+  before upper={%
+    \leavevmode\textcolor{tipblue}{\textbf{\faLightbulb[regular]\enspace #1:}}%
+    \tcblower\ignorespaces
+  }
+}
 
 \setcounter{tocdepth}{2}
 
