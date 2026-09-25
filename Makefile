@@ -47,5 +47,7 @@ fix-symbol:
 
 beebe-energies-and-patterns:
 	pdflatex src/beebe-energies-and-patterns.tex
+	pdflatex src/beebe-energies-and-patterns.tex
+	pdflatex src/beebe-energies-and-patterns.tex
 	-$(VIEWER) beebe-energies-and-patterns.pdf
 
