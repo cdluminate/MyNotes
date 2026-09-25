@@ -1,0 +1,80 @@
+\documentclass[11pt,letter]{article}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=cyan]{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{colortbl}
+%\usepackage{ebgaramond}
+\usepackage{times}
+\usepackage{enumitem}
+\usepackage{fancybox}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{fontawesome5}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{inconsolata}
+\usepackage{indentfirst}
+\usepackage{longtable}
+\usepackage{makecell}
+\usepackage{marginnote}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{soul}
+\usepackage{twemojis}
+\usepackage{varwidth}
+\usepackage{xcolor}
+
+% tikz
+\usepackage{tikz}
+\usetikzlibrary{positioning, shapes, backgrounds, calc}
+
+% color
+\definecolor{intjpurple}{HTML}{88619A}
+%\definecolor{intjpurple}{HTML}{4A148C}
+
+% tip box
+\definecolor{tipblue}{RGB}{30, 100, 180}
+\definecolor{tipbg}{RGB}{246, 249, 253}
+\newtcolorbox{tipbox}[1][Tip]{%
+  enhanced,
+  breakable,
+  sidebyside,
+  sidebyside align=top,
+  lefthand width=4.8em,              % Width allocated to [Icon + Title]
+  sidebyside gap=6pt,                % Space between columns
+  segmentation style={draw=none},    % Completely removes the dotted separator line
+  colback=tipbg,
+  colframe=tipblue,
+  boxrule=0pt,
+  leftrule=3pt,
+  arc=0mm,
+  boxsep=0pt,
+  top=8pt,
+  bottom=8pt,
+  left=8pt,
+  right=8pt,
+  before upper={%
+    \leavevmode\textcolor{tipblue}{\textbf{\faLightbulb[regular]\enspace #1:}}%
+    \tcblower\ignorespaces
+  }
+}
+
+% macro
+\newcommand{\verified}{\colorbox{green!64}{\textcolor{white}{\checkmark Verified}}}
+
+% toc setting
+\setcounter{tocdepth}{2}
+
+\title{Energies and Patterns in Psychological Type\\ John Beebe\\ Excerpts and Memo}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\input{src/beebe-energies-and-patterns/main.tex}
+\end{document}

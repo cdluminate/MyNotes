@@ -44,3 +44,8 @@ fix-symbol:
 	find . -type f -name '*.tex' -exec sed -i -e "s/’/'/g" '{}' +
 	find . -type f -name '*.tex' -exec sed -i -e 's/“/``/g' '{}' +
 	find . -type f -name '*.tex' -exec sed -i -e "s/”/''/g" '{}' +
+
+beebe-energies-and-patterns:
+	pdflatex src/beebe-energies-and-patterns.tex
+	-$(VIEWER) beebe-energies-and-patterns.pdf
+
